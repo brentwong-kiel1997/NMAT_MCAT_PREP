@@ -8,12 +8,15 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import urllib.error
 import urllib.request
 from pathlib import Path
 
 
 SECRET_FILE = Path("/home/ubuntu/runtime/secrets/minimax.env")
+# MiniMax M3 often wraps private reasoning in <think>...</think>
+_THINK_RE = re.compile(r"<think>[\s\S]*?</think>", re.IGNORECASE)
 
 
 def _load_secret_file() -> None:
@@ -36,6 +39,11 @@ def minimax_config() -> dict[str, str]:
         "base_url": os.environ.get("MINIMAX_BASE_URL", "https://api.minimaxi.com/v1").rstrip("/"),
         "model": os.environ.get("MINIMAX_MODEL", "MiniMax-M3"),
     }
+
+
+def _clean_content(content: str) -> str:
+    text = _THINK_RE.sub("", content or "")
+    return text.strip()
 
 
 def chat_completion(
@@ -73,11 +81,17 @@ def chat_completion(
         raise RuntimeError(f"MiniMax network error: {exc}") from exc
 
     try:
-        content = data["choices"][0]["message"]["content"]
+        message = data["choices"][0]["message"]
+        content = message.get("content") or ""
     except (KeyError, IndexError, TypeError) as exc:
         raise RuntimeError(f"Unexpected MiniMax response: {str(data)[:300]}") from exc
 
-    # MiniMax sometimes wraps thinking tags; strip for learner-facing text.
-    if isinstance(content, str) and "</think>" in content:
-        content = content.split("</think>", 1)[-1].strip()
-    return (content or "").strip()
+    cleaned = _clean_content(content if isinstance(content, str) else str(content))
+    if cleaned:
+        return cleaned
+    reasoning = message.get("reasoning") if isinstance(message, dict) else None
+    if reasoning:
+        cleaned_r = _clean_content(str(reasoning))
+        if cleaned_r:
+            return cleaned_r
+    return "（模型未返回可见正文，请再试一次）"
