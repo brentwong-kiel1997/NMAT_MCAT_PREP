@@ -61,6 +61,8 @@ def chat_completion(
         "messages": messages,
         "max_tokens": max_tokens,
         "temperature": temperature,
+        # Study UI needs visible answers; M3 thinking can consume the whole budget.
+        "thinking": {"type": "disabled"},
     }
     req = urllib.request.Request(
         f"{cfg['base_url']}/chat/completions",
