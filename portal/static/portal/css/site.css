@@ -264,6 +264,48 @@ html:not([lang]) .only-en { display: none !important; }
   color: var(--ink-soft);
 }
 
+.section-lead {
+  max-width: 40rem;
+  color: var(--ink-soft);
+  margin: 0.35rem 0 1.25rem;
+}
+
+.path-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.path-steps a {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--line);
+  text-decoration: none;
+}
+
+.path-steps li:first-child a {
+  border-top: 0;
+  padding-top: 0.2rem;
+}
+
+.path-steps strong {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--brand);
+}
+
+.path-steps span {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.path-steps a:hover strong {
+  color: var(--brand-deep);
+}
+
 .disease-list {
   list-style: none;
   margin: 2rem 0 0;

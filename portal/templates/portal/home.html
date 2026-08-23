@@ -9,15 +9,46 @@
   <div class="hero-visual" aria-hidden="true"></div>
   <div class="hero-content">
     <p class="hero-brand">Gabay</p>
-    <h1 data-i18n data-zh="NMAT 与 MCAT，按科目分开走" data-en="NMAT and MCAT, mapped by subject">NMAT 与 MCAT，按科目分开走</h1>
-    <p class="hero-lead" data-i18n data-zh="考试结构严格按 CEM / AAMC。重叠科目合并；独有科目单独建页。MiniMax-M3 教练可讲解、提问、出题。" data-en="Structure follows CEM / AAMC. Shared subjects merge; unique sections stay separate. MiniMax-M3 coach can explain, ask, and quiz.">考试结构严格按 CEM / AAMC。重叠科目合并；独有科目单独建页。MiniMax-M3 教练可讲解、提问、出题。</p>
+    <h1 data-i18n data-zh="打开就能学：笔记、闪卡、练习、教练" data-en="Ready to study: notes, cards, drills, coach">打开就能学：笔记、闪卡、练习、教练</h1>
+    <p class="hero-lead" data-i18n data-zh="按 CEM / AAMC 科目地图走。先读高收益要点，再刷题，不会就问 MiniMax-M3。" data-en="Follow the CEM / AAMC subject map. Read high-yield notes, drill MCQs, then ask MiniMax-M3.">按 CEM / AAMC 科目地图走。先读高收益要点，再刷题，不会就问 MiniMax-M3。</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="{% url 'study_hub' %}" data-i18n data-zh="开始学习" data-en="Start studying">开始学习</a>
+      <a class="btn btn-primary" href="{% url 'subject_detail' 'biology' %}" data-i18n data-zh="从生物学开始" data-en="Start with Biology">从生物学开始</a>
+      <a class="btn btn-ghost" href="{% url 'study_hub' %}" data-i18n data-zh="学习台" data-en="Study desk">学习台</a>
       <a class="btn btn-ghost" href="{% url 'practice_hub' %}" data-i18n data-zh="做练习" data-en="Practice">做练习</a>
-      <a class="btn btn-ghost" href="{% url 'nmat_hub' %}">NMAT</a>
-      <a class="btn btn-ghost" href="{% url 'mcat_hub' %}">MCAT</a>
     </div>
   </div>
+</section>
+
+<section class="section">
+  <p class="section-kicker" data-i18n data-zh="学习环" data-en="Study loop">学习环</p>
+  <h2 data-i18n data-zh="四步就能开练" data-en="Four steps to start">四步就能开练</h2>
+  <p class="section-lead" data-i18n data-zh="不必先读完全部大纲。选一科，勾已读，翻闪卡，做几道题，再让教练讲透卡点。" data-en="You don’t need the whole syllabus first. Pick a subject, mark chapters, flip cards, drill a few items, then ask the coach.">不必先读完全部大纲。选一科，勾已读，翻闪卡，做几道题，再让教练讲透卡点。</p>
+  <ol class="path-steps">
+    <li>
+      <a href="{% url 'subject_detail' 'biology' %}">
+        <strong data-i18n data-zh="1 · 读要点" data-en="1 · Notes">1 · 读要点</strong>
+        <span data-i18n data-zh="打开 Biology，看章节下的高收益笔记" data-en="Open Biology and read the high-yield notes under each chapter">打开 Biology，看章节下的高收益笔记</span>
+      </a>
+    </li>
+    <li>
+      <a href="{% url 'subject_detail' 'biology' %}#ch-1-unity-and-diversity-of-life">
+        <strong data-i18n data-zh="2 · 闪卡" data-en="2 · Cards">2 · 闪卡</strong>
+        <span data-i18n data-zh="右侧闪卡快速回忆，勾选已读进度" data-en="Use the side flashcards and mark chapters done">右侧闪卡快速回忆，勾选已读进度</span>
+      </a>
+    </li>
+    <li>
+      <a href="{% url 'practice_detail' 'biology' %}">
+        <strong data-i18n data-zh="3 · 练习" data-en="3 · Practice">3 · 练习</strong>
+        <span data-i18n data-zh="做几道选择题，立刻看解析" data-en="Do a few MCQs and check explanations right away">做几道选择题，立刻看解析</span>
+      </a>
+    </li>
+    <li>
+      <a href="{% url 'study_hub' %}">
+        <strong data-i18n data-zh="4 · 教练" data-en="4 · Coach">4 · 教练</strong>
+        <span data-i18n data-zh="卡住就让 MiniMax 讲解或出题" data-en="Stuck? Ask MiniMax to explain or quiz you">卡住就让 MiniMax 讲解或出题</span>
+      </a>
+    </li>
+  </ol>
 </section>
 
 <section class="section">
