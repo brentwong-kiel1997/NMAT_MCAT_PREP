@@ -47,4 +47,6 @@ fi
   --error-logfile "${LOGS}/gunicorn.error.log" \
   --daemon
 
-echo "Deployed $(git -C "$DEPLOY" rev-parse --short HEAD 2>/dev/null || echo initial) → gunicorn ${SOCK}"
+BARE="/home/ubuntu/repos/django-wsgi.git"
+REV="$(git --git-dir="$BARE" rev-parse --short HEAD 2>/dev/null || echo unknown)"
+echo "Deployed ${REV} → gunicorn ${SOCK}"
