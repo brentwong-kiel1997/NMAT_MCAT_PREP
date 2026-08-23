@@ -1,0 +1,53 @@
+{% extends "portal/base.html" %}
+
+{% block title %}{{ subject.name }} · Gabay{% endblock %}
+{% block description %}{{ subject.summary }}{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <header class="site-header">
+      <a class="nav-brand" href="{% url 'home' %}">Gabay</a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="{% url 'subject_list' %}">共用科目</a>
+        <a href="{% url 'nmat_hub' %}">NMAT</a>
+        <a href="{% url 'mcat_hub' %}">MCAT</a>
+      </nav>
+    </header>
+    <p class="section-kicker">{{ subject.name_zh }} · 共用</p>
+    <h1>{{ subject.name }}</h1>
+    <p class="lead">{{ subject.summary }}</p>
+    <ul class="tags">
+      {% for e in subject.exams %}<li>{{ e }}</li>{% endfor %}
+    </ul>
+  </div>
+</div>
+
+<section class="section">
+  <div class="detail-grid">
+    <div>
+      <article class="block" style="margin-bottom:1.75rem;">
+        <h2>范围骨架</h2>
+        <ul>
+          {% for item in subject.scope %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+        <p class="note-line">后续讲义与题感会按这条骨架往下填，不先堆无关内容。</p>
+      </article>
+    </div>
+    <aside>
+      <article class="block aside-note" style="border-top:0;padding-top:0;">
+        <h2>在 NMAT</h2>
+        <p>{{ subject.nmat_role }}</p>
+        <p>{{ subject.exam_notes.NMAT }}</p>
+        <p><a href="{% url 'nmat_hub' %}">回 NMAT 地图</a></p>
+      </article>
+      <article class="block aside-note">
+        <h2>在 MCAT</h2>
+        <p>{{ subject.mcat_role }}</p>
+        <p>{{ subject.exam_notes.MCAT }}</p>
+        <p><a href="{% url 'mcat_hub' %}">回 MCAT 地图</a></p>
+      </article>
+    </aside>
+  </div>
+</section>
+{% endblock %}

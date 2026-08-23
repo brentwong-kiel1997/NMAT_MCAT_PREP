@@ -6,8 +6,10 @@
 <header class="site-header">
   <a class="nav-brand" href="{% url 'home' %}">Gabay</a>
   <nav class="nav-links" aria-label="主导航">
+    <a href="{% url 'nmat_hub' %}">NMAT</a>
+    <a href="{% url 'mcat_hub' %}">MCAT</a>
+    <a href="{% url 'subject_list' %}">共用科目</a>
     <a href="{% url 'disease_list' %}">疾病</a>
-    <a href="{% url 'disease_list' %}#library">题感笔记</a>
   </nav>
 </header>
 
@@ -15,28 +17,28 @@
   <div class="hero-visual" aria-hidden="true"></div>
   <div class="hero-content">
     <p class="hero-brand">Gabay</p>
-    <h1>NMAT 与 MCAT 的私人备考向导</h1>
-    <p class="hero-lead">先从高收益疾病切入：机制、临床线索与考试桥接，一页把菲律宾医学院入学与 MCAT 串起来。</p>
+    <h1>NMAT 与 MCAT，按科目分开走</h1>
+    <p class="hero-lead">考试结构严格按 CEM / AAMC。重叠的生物、化学、物理、行为社科合并成共用页；独有科目单独建页。</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="{% url 'disease_list' %}">进入疾病库</a>
-      <a class="btn btn-ghost" href="{% url 'disease_detail' 'tuberculosis' %}">从结核病开始</a>
+      <a class="btn btn-primary" href="{% url 'nmat_hub' %}">NMAT 八科</a>
+      <a class="btn btn-ghost" href="{% url 'mcat_hub' %}">MCAT 四科</a>
     </div>
   </div>
 </section>
 
-<section class="section" id="focus">
-  <p class="section-kicker">本季重点</p>
-  <h2>疾病先打底，再铺生理与题感</h2>
-  <p class="section-lead">当前先上线感染、代谢、心肺与肾脏等高频病种。后面你补充讲义或错题后，我会继续往里加模块。</p>
+<section class="section">
+  <p class="section-kicker">Merge map</p>
+  <h2>能合并的先合并</h2>
+  <p class="section-lead">Part 2 学业科与 MCAT 科学/行为科有交集，共用一个知识库，页内标明两边考法差异。</p>
   <ul class="disease-list">
-    {% for d in featured %}
+    {% for s in shared_subjects %}
     <li>
-      <a href="{% url 'disease_detail' d.slug %}">
+      <a href="{% url 'subject_detail' s.slug %}">
         <div>
-          <h3>{{ d.name }} <span style="color:var(--ink-soft);font-weight:500;font-size:0.92rem;">{{ d.name_zh }}</span></h3>
-          <p>{{ d.short }}</p>
+          <h3>{{ s.name }} <span class="muted-inline">{{ s.name_zh }}</span></h3>
+          <p>{{ s.summary }}</p>
         </div>
-        <span class="disease-meta">{{ d.exams|join:" · " }}</span>
+        <span class="disease-meta">{{ s.exams|join:" · " }}</span>
       </a>
     </li>
     {% endfor %}

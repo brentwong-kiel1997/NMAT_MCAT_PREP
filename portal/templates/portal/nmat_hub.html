@@ -1,0 +1,43 @@
+{% extends "portal/base.html" %}
+
+{% block title %}NMAT · Gabay{% endblock %}
+{% block description %}菲律宾 NMAT：8 个分测验结构与科目入口{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <header class="site-header">
+      <a class="nav-brand" href="{% url 'home' %}">Gabay</a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="{% url 'mcat_hub' %}">MCAT</a>
+        <a href="{% url 'subject_list' %}">共用科目</a>
+        <a href="{% url 'home' %}">首页</a>
+      </nav>
+    </header>
+    <p class="section-kicker">{{ exam.admin }}</p>
+    <h1>{{ exam.name }}</h1>
+    <p class="lead">{{ exam.full_name }}（{{ exam.name_zh }}）。{{ exam.format }}</p>
+  </div>
+</div>
+
+{% for part in exam.parts %}
+<section class="section">
+  <p class="section-kicker">{{ part.id|upper }}</p>
+  <h2>{{ part.name }} <span class="muted-inline">{{ part.name_zh }}</span></h2>
+  <p class="section-lead">{{ part.items }} 题 · {{ part.time }}</p>
+  <ul class="disease-list">
+    {% for s in part.subjects %}
+    <li>
+      <a href="{% if s.shared %}{% url 'subject_detail' s.shared %}{% else %}{% url 'nmat_subject' s.slug %}{% endif %}">
+        <div>
+          <h3>{{ s.name }} <span class="muted-inline">{{ s.name_zh }}</span></h3>
+          <p>{{ s.focus }}{% if s.shared %} · 进入共用科目页{% endif %}</p>
+        </div>
+        <span class="disease-meta">{% if s.shared %}共用{% else %}独有{% endif %} · {{ s.items }} 题</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}
+{% endblock %}

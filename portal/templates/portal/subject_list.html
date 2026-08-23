@@ -1,0 +1,38 @@
+{% extends "portal/base.html" %}
+
+{% block title %}共用科目 · Gabay{% endblock %}
+{% block description %}NMAT 与 MCAT 重叠科目的合并知识库{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <header class="site-header">
+      <a class="nav-brand" href="{% url 'home' %}">Gabay</a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="{% url 'nmat_hub' %}">NMAT</a>
+        <a href="{% url 'mcat_hub' %}">MCAT</a>
+        <a href="{% url 'subject_list' %}">共用科目</a>
+      </nav>
+    </header>
+    <p class="section-kicker">Shared subjects</p>
+    <h1>共用科目</h1>
+    <p class="lead">生物学、化学、物理学、行为与社会科学、生物化学：两边都会碰到，知识合并，考法分开标注。</p>
+  </div>
+</div>
+
+<section class="section">
+  <ul class="disease-list">
+    {% for s in subjects %}
+    <li>
+      <a href="{% url 'subject_detail' s.slug %}">
+        <div>
+          <h3>{{ s.name }} <span class="muted-inline">{{ s.name_zh }}</span></h3>
+          <p>{{ s.summary }}</p>
+        </div>
+        <span class="disease-meta">{{ s.exams|join:" · " }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

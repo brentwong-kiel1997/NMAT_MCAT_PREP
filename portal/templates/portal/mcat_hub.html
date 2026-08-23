@@ -1,0 +1,41 @@
+{% extends "portal/base.html" %}
+
+{% block title %}MCAT · Gabay{% endblock %}
+{% block description %}AAMC MCAT 四个官方科目入口{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <header class="site-header">
+      <a class="nav-brand" href="{% url 'home' %}">Gabay</a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="{% url 'nmat_hub' %}">NMAT</a>
+        <a href="{% url 'subject_list' %}">共用科目</a>
+        <a href="{% url 'home' %}">首页</a>
+      </nav>
+    </header>
+    <p class="section-kicker">{{ exam.admin }}</p>
+    <h1>{{ exam.name }}</h1>
+    <p class="lead">{{ exam.full_name }}（{{ exam.name_zh }}）。{{ exam.format }}</p>
+  </div>
+</div>
+
+<section class="section">
+  <p class="section-kicker">Four sections</p>
+  <h2>按官方四科进入</h2>
+  <p class="section-lead">考试日顺序固定。科学/行为科会链到共用知识页；CARS 单独成页。</p>
+  <ul class="disease-list">
+    {% for s in exam.sections %}
+    <li>
+      <a href="{% url 'mcat_section' s.slug %}">
+        <div>
+          <h3>{{ s.short }} <span class="muted-inline">{{ s.name_zh }}</span></h3>
+          <p>{{ s.name }}</p>
+        </div>
+        <span class="disease-meta">{% if s.unique %}独有{% else %}可合并{% endif %} · {{ s.questions }} 题</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

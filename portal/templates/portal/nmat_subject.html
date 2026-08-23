@@ -1,0 +1,50 @@
+{% extends "portal/base.html" %}
+
+{% block title %}{{ subject.name }} · NMAT · Gabay{% endblock %}
+{% block description %}NMAT {{ subject.name }} 独有科目页{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <header class="site-header">
+      <a class="nav-brand" href="{% url 'home' %}">Gabay</a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="{% url 'nmat_hub' %}">NMAT</a>
+        <a href="{% url 'subject_list' %}">共用科目</a>
+      </nav>
+    </header>
+    <p class="section-kicker">NMAT Part 1 · 独有</p>
+    <h1>{{ subject.name }}</h1>
+    <p class="lead">{{ subject.name_zh }} · {{ subject.items }} 题。{{ subject.focus }}</p>
+    <ul class="tags">
+      <li>NMAT only</li>
+      <li>{{ subject.items }} items</li>
+    </ul>
+  </div>
+</div>
+
+<section class="section">
+  <div class="detail-grid">
+    <div>
+      <article class="block">
+        <h2>题型（CEM BOI）</h2>
+        <ul>
+          {% for t in subject.item_types %}<li>{{ t }}</li>{% endfor %}
+        </ul>
+        <p class="note-line">此科与 MCAT 无直接对等科目，不并入共用库。练习与策略后续单独加。</p>
+      </article>
+    </div>
+    <aside>
+      <article class="block aside-note" style="border-top:0;padding-top:0;">
+        <h2>同 Part 其他独有科</h2>
+        <ul>
+          <li><a href="{% url 'nmat_subject' 'verbal' %}">Verbal</a></li>
+          <li><a href="{% url 'nmat_subject' 'inductive-reasoning' %}">Inductive Reasoning</a></li>
+          <li><a href="{% url 'nmat_subject' 'quantitative' %}">Quantitative</a></li>
+          <li><a href="{% url 'nmat_subject' 'perceptual-acuity' %}">Perceptual Acuity</a></li>
+        </ul>
+      </article>
+    </aside>
+  </div>
+</section>
+{% endblock %}
