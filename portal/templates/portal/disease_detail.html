@@ -6,15 +6,9 @@
 {% block body %}
 <div class="page-hero">
   <div class="page-hero-inner">
-    <header class="site-header">
-      <a class="nav-brand" href="{% url 'home' %}">Gabay</a>
-      <nav class="nav-links" aria-label="主导航">
-        <a href="{% url 'disease_list' %}">疾病库</a>
-        <a href="{% url 'subject_list' %}">共用科目</a>
-        <a href="{% url 'home' %}">首页</a>
-      </nav>
-    </header>
-    <p class="section-kicker">{{ disease.name_zh }}</p>
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker only-zh">{{ disease.name_zh }}</p>
+    <p class="section-kicker only-en">{{ disease.name }}</p>
     <h1>{{ disease.name }}</h1>
     <p class="lead">{{ disease.short }}</p>
     {% if disease.exam_fit %}<p class="lead" style="margin-top:0.75rem;">{{ disease.exam_fit }}</p>{% endif %}

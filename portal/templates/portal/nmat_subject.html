@@ -20,30 +20,15 @@
 <section class="section">
   <div class="detail-grid">
     <div>
-      {% for group in subject.chapters %}
-      <article class="block chapter-block">
-        <h2><span class="only-zh">{{ group.heading }}</span><span class="only-en">{{ group.heading_en }}</span></h2>
-        <ol class="chapter-list">
-          {% for ch in group.items %}
-          <li>
-            <h3>{{ ch.title }}</h3>
-            <ul>
-              {% for pair in ch.points|zip_en:ch.points_en %}
-              <li><span class="only-zh">{{ pair.zh }}</span><span class="only-en">{{ pair.en }}</span></li>
-              {% endfor %}
-            </ul>
-          </li>
-          {% endfor %}
-        </ol>
-      </article>
-      {% endfor %}
+      {% include "portal/includes/chapters.html" with chapters=subject.chapters %}
       {% if subject.source_note %}
       <p class="note-line"><span class="only-zh">来源：{{ subject.source_note }}</span><span class="only-en">Source: {{ subject.source_note_en }}</span></p>
       {% endif %}
       {% include "portal/includes/tutor.html" %}
     </div>
-    <aside>
-      <article class="block aside-note" style="border-top:0;padding-top:0;">
+    <div class="aside-stack">
+      {% include "portal/includes/study_rail.html" %}
+      <article class="block aside-note">
         <h2 data-i18n data-zh="题型一览" data-en="Item types">题型一览</h2>
         <ul>
           {% for t in subject.item_types %}<li>{{ t }}</li>{% endfor %}
@@ -58,7 +43,7 @@
           <li><a href="{% url 'nmat_subject' 'perceptual-acuity' %}">Perceptual Acuity</a></li>
         </ul>
       </article>
-    </aside>
+    </div>
   </div>
 </section>
 {% endblock %}

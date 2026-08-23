@@ -67,8 +67,9 @@ def enrich_subject(subject: dict | None) -> dict | None:
     # bilingual name display helpers
     out["label_zh"] = out.get("name_zh") or out.get("name")
     out["label_en"] = out.get("name") or out.get("name_zh")
-    return out
+    from .notes import attach_notes
 
+    return attach_notes(out)
 
 def enrich_exam(exam: dict) -> dict:
     out = deepcopy(exam)

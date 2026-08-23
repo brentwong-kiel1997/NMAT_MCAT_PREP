@@ -21,23 +21,7 @@
 <section class="section">
   <div class="detail-grid">
     <div>
-      {% for group in section.chapters %}
-      <article class="block chapter-block">
-        <h2><span class="only-zh">{{ group.heading }}</span><span class="only-en">{{ group.heading_en }}</span></h2>
-        <ol class="chapter-list">
-          {% for ch in group.items %}
-          <li>
-            <h3>{{ ch.title }}</h3>
-            <ul>
-              {% for pair in ch.points|zip_en:ch.points_en %}
-              <li><span class="only-zh">{{ pair.zh }}</span><span class="only-en">{{ pair.en }}</span></li>
-              {% endfor %}
-            </ul>
-          </li>
-          {% endfor %}
-        </ol>
-      </article>
-      {% endfor %}
+      {% include "portal/includes/chapters.html" with chapters=section.chapters %}
       {% if section.source_note %}
       <p class="note-line"><span class="only-zh">来源：{{ section.source_note }}</span><span class="only-en">Source: {{ section.source_note_en }}</span></p>
       {% endif %}
@@ -53,9 +37,10 @@
       </article>
       {% include "portal/includes/tutor.html" %}
     </div>
-    <aside>
+    <div class="aside-stack">
+      {% include "portal/includes/study_rail.html" %}
       {% if linked_subjects %}
-      <article class="block aside-note" style="border-top:0;padding-top:0;">
+      <article class="block aside-note">
         <h2 data-i18n data-zh="跳到共用知识" data-en="Jump to shared knowledge">跳到共用知识</h2>
         <ul>
           {% for s in linked_subjects %}
@@ -64,7 +49,7 @@
         </ul>
       </article>
       {% else %}
-      <article class="block aside-note" style="border-top:0;padding-top:0;">
+      <article class="block aside-note">
         <h2 data-i18n data-zh="为何不合并" data-en="Why not merged">为何不合并</h2>
         <p data-i18n data-zh="CARS 无学科内容大纲；与 NMAT Verbal 相关但考试目标不同，分开练。" data-en="CARS has no content syllabus; related to NMAT Verbal but different goals — practice separately.">CARS 无学科内容大纲；与 NMAT Verbal 相关但考试目标不同，分开练。</p>
       </article>
@@ -78,7 +63,7 @@
           <li><a href="{% url 'mcat_section' 'psych-soc' %}">Psych/Soc</a></li>
         </ul>
       </article>
-    </aside>
+    </div>
   </div>
 </section>
 {% endblock %}

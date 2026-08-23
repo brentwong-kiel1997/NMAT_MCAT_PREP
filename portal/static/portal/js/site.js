@@ -48,6 +48,232 @@
     return m ? decodeURIComponent(m[1]) : "";
   }
 
+  function readJson(el) {
+    if (!el) return null;
+    try {
+      return JSON.parse(el.textContent || "null");
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function mountProgress(root) {
+    if (!root || root.dataset.ready === "1") return;
+    root.dataset.ready = "1";
+    const key = root.dataset.progressKey || "gabay_progress";
+    const checks = Array.from(document.querySelectorAll(".progress-check"));
+    if (!checks.length) return;
+
+    let saved = {};
+    try {
+      saved = JSON.parse(localStorage.getItem(key) || "{}") || {};
+    } catch (_) {
+      saved = {};
+    }
+
+    const countEl = root.querySelector(".progress-count");
+    const totalEl = root.querySelector(".progress-total");
+    const fill = root.querySelector(".progress-fill");
+    if (totalEl) totalEl.textContent = String(checks.length);
+
+    function persist() {
+      localStorage.setItem(key, JSON.stringify(saved));
+    }
+
+    function refresh() {
+      let n = 0;
+      checks.forEach((box) => {
+        const id = box.dataset.chapterId;
+        const on = !!saved[id];
+        box.checked = on;
+        const item = box.closest(".chapter-item");
+        if (item) item.classList.toggle("is-done", on);
+        if (on) n += 1;
+      });
+      if (countEl) countEl.textContent = String(n);
+      if (fill) fill.style.width = checks.length ? `${(100 * n) / checks.length}%` : "0%";
+    }
+
+    checks.forEach((box) => {
+      box.addEventListener("change", () => {
+        const id = box.dataset.chapterId;
+        if (box.checked) saved[id] = 1;
+        else delete saved[id];
+        persist();
+        refresh();
+      });
+    });
+
+    const reset = root.querySelector(".progress-reset");
+    if (reset) {
+      reset.addEventListener("click", () => {
+        saved = {};
+        persist();
+        refresh();
+      });
+    }
+    refresh();
+  }
+
+  function mountFlashcards(panel) {
+    if (!panel || panel.dataset.ready === "1") return;
+    panel.dataset.ready = "1";
+    const cards = readJson(panel.querySelector(".flash-data")) || [];
+    if (!cards.length) return;
+
+    let i = 0;
+    let flipped = false;
+    const chapterEl = panel.querySelector(".flash-chapter");
+    const indexEl = panel.querySelector(".flash-index");
+    const cardBtn = panel.querySelector(".flash-card");
+
+    function paint() {
+      const c = cards[i];
+      if (chapterEl) chapterEl.textContent = c.chapter || "";
+      const zhFront = panel.querySelector(".flash-front.only-zh");
+      const enFront = panel.querySelector(".flash-front.only-en");
+      const zhBack = panel.querySelector(".flash-back.only-zh");
+      const enBack = panel.querySelector(".flash-back.only-en");
+      if (zhFront) {
+        zhFront.textContent = "点按翻转 · 回忆要点";
+        zhFront.hidden = flipped;
+      }
+      if (enFront) {
+        enFront.textContent = "Tap to flip · recall the point";
+        enFront.hidden = flipped;
+      }
+      if (zhBack) {
+        zhBack.textContent = c.zh || "";
+        zhBack.hidden = !flipped;
+      }
+      if (enBack) {
+        enBack.textContent = c.en || "";
+        enBack.hidden = !flipped;
+      }
+      if (indexEl) indexEl.textContent = String(i + 1);
+      if (cardBtn) cardBtn.classList.toggle("is-flipped", flipped);
+    }
+
+    function go(delta) {
+      i = (i + delta + cards.length) % cards.length;
+      flipped = false;
+      paint();
+    }
+
+    cardBtn && cardBtn.addEventListener("click", () => {
+      flipped = !flipped;
+      paint();
+    });
+    panel.querySelector(".flash-flip")?.addEventListener("click", () => {
+      flipped = !flipped;
+      paint();
+    });
+    panel.querySelector(".flash-prev")?.addEventListener("click", () => go(-1));
+    panel.querySelector(".flash-next")?.addEventListener("click", () => go(1));
+    document.addEventListener("gabay:lang", paint);
+    paint();
+  }
+
+  function mountPractice(root) {
+    if (!root || root.dataset.ready === "1") return;
+    root.dataset.ready = "1";
+    const items = readJson(root.querySelector(".practice-data")) || [];
+    if (!items.length) return;
+
+    const key = root.dataset.practiceKey || "gabay_practice";
+    let state = { i: 0, score: 0, answered: {} };
+    try {
+      state = Object.assign(state, JSON.parse(localStorage.getItem(key) || "{}"));
+    } catch (_) {}
+
+    const posEl = root.querySelector(".practice-pos");
+    const scoreEl = root.querySelector(".practice-score");
+    const chapterEl = root.querySelector(".practice-chapter");
+    const qZh = root.querySelector(".practice-q.only-zh");
+    const qEn = root.querySelector(".practice-q.only-en");
+    const choicesEl = root.querySelector(".practice-choices");
+    const feedback = root.querySelector(".practice-feedback");
+    const verdict = root.querySelector(".practice-verdict");
+    const explainZh = root.querySelector(".practice-explain.only-zh");
+    const explainEn = root.querySelector(".practice-explain.only-en");
+
+    function save() {
+      localStorage.setItem(
+        key,
+        JSON.stringify({ i: state.i, score: state.score, answered: state.answered })
+      );
+    }
+
+    function showFeedback(item, pick) {
+      const ok = pick === item.answer;
+      feedback.hidden = false;
+      verdict.textContent =
+        currentLang() === "en"
+          ? ok
+            ? `Correct · ${item.answer}`
+            : `Incorrect · answer ${item.answer}`
+          : ok
+            ? `正确 · ${item.answer}`
+            : `不对 · 答案 ${item.answer}`;
+      verdict.className = "practice-verdict " + (ok ? "is-ok" : "is-bad");
+      if (explainZh) explainZh.textContent = item.explain_zh || "";
+      if (explainEn) explainEn.textContent = item.explain_en || "";
+    }
+
+    function paint() {
+      const item = items[state.i];
+      if (posEl) posEl.textContent = String(state.i + 1);
+      if (scoreEl) scoreEl.textContent = String(state.score);
+      if (chapterEl) chapterEl.textContent = item.chapter || "";
+      if (qZh) qZh.textContent = item.q_zh || "";
+      if (qEn) qEn.textContent = item.q_en || "";
+      choicesEl.innerHTML = "";
+      const prior = state.answered[item.id];
+      ["A", "B", "C", "D"].forEach((letter) => {
+        const choice = item.choices[letter];
+        if (!choice) return;
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "practice-choice";
+        btn.dataset.letter = letter;
+        btn.innerHTML =
+          `<strong>${letter}</strong> ` +
+          `<span class="only-zh">${choice.zh}</span><span class="only-en">${choice.en}</span>`;
+        if (prior) {
+          btn.disabled = true;
+          if (letter === item.answer) btn.classList.add("is-correct");
+          if (letter === prior && prior !== item.answer) btn.classList.add("is-wrong");
+        } else {
+          btn.addEventListener("click", () => {
+            if (state.answered[item.id]) return;
+            state.answered[item.id] = letter;
+            if (letter === item.answer) state.score += 1;
+            save();
+            paint();
+          });
+        }
+        choicesEl.appendChild(btn);
+      });
+      if (prior) showFeedback(item, prior);
+      else {
+        feedback.hidden = true;
+      }
+    }
+
+    root.querySelector(".practice-prev")?.addEventListener("click", () => {
+      state.i = Math.max(0, state.i - 1);
+      save();
+      paint();
+    });
+    root.querySelector(".practice-next")?.addEventListener("click", () => {
+      state.i = Math.min(items.length - 1, state.i + 1);
+      save();
+      paint();
+    });
+    document.addEventListener("gabay:lang", paint);
+    paint();
+  }
+
   function mountTutor(root) {
     if (!root || root.dataset.ready === "1") return;
     root.dataset.ready = "1";
@@ -206,5 +432,8 @@
     document.querySelectorAll("[data-lang-host]").forEach(mountLangToggle);
     applyLang(currentLang());
     document.querySelectorAll(".tutor[data-tutor]").forEach(mountTutor);
+    document.querySelectorAll("[data-progress-root]").forEach(mountProgress);
+    document.querySelectorAll("[data-flashcards]").forEach(mountFlashcards);
+    document.querySelectorAll("[data-practice]").forEach(mountPractice);
   });
 })();

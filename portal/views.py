@@ -6,7 +6,34 @@ import json
 from .diseases import all_diseases, get_disease
 from . import exams
 from .minimax import chat_completion, minimax_config
+from .notes import flashcards_for
+from .practice import practice_for, practice_catalog, all_practice_slugs, LABELS
 from .study import build_curriculum_context, tutor_messages
+
+
+def _json_for_script(data) -> str:
+    return json.dumps(data, ensure_ascii=False).replace("<", "\\u003c")
+
+
+def _chapter_titles(entity: dict) -> list[str]:
+    chapters = []
+    for group in entity.get("chapters", []):
+        for item in group.get("items", []):
+            chapters.append(item["title"])
+    return chapters
+
+
+def _study_extras(slug: str, entity: dict) -> dict:
+    cards = flashcards_for(slug, limit=36)
+    items = practice_for(slug)
+    return {
+        "chapters_for_toc": entity.get("chapters") or [],
+        "progress_key": f"gabay_progress_{slug}",
+        "practice_slug": slug if items else "",
+        "practice_count": len(items),
+        "flashcards": cards,
+        "flashcards_json": _json_for_script(cards),
+    }
 
 
 def home(request):
@@ -18,6 +45,7 @@ def home(request):
             "nmat": exams.nmat_exam(),
             "mcat": exams.mcat_exam(),
             "tutor_ready": bool(minimax_config()["api_key"]),
+            "practice_catalog": practice_catalog()[:6],
         },
     )
 
@@ -54,24 +82,18 @@ def subject_detail(request, slug):
     subject = exams.get_shared(slug)
     if not subject:
         raise Http404("Subject not found")
-    chapters = []
-    for group in subject.get("chapters", []):
-        for item in group.get("items", []):
-            chapters.append(item["title"])
-    return render(
-        request,
-        "portal/subject_detail.html",
-        {
-            "subject": subject,
-            "tutor_context": {
-                "exam": "SHARED",
-                "subject_slug": subject["slug"],
-                "section_slug": "",
-                "label": subject["name"],
-                "chapters": chapters,
-            },
+    ctx = {
+        "subject": subject,
+        "tutor_context": {
+            "exam": "SHARED",
+            "subject_slug": subject["slug"],
+            "section_slug": "",
+            "label": subject["name"],
+            "chapters": _chapter_titles(subject),
         },
-    )
+    }
+    ctx.update(_study_extras(slug, subject))
+    return render(request, "portal/subject_detail.html", ctx)
 
 
 def nmat_hub(request):
@@ -94,25 +116,19 @@ def nmat_subject(request, slug):
         if slug in aliases:
             return redirect("subject_detail", slug=aliases[slug])
         raise Http404("NMAT subject not found")
-    chapters = []
-    for group in subject.get("chapters", []):
-        for item in group.get("items", []):
-            chapters.append(item["title"])
-    return render(
-        request,
-        "portal/nmat_subject.html",
-        {
-            "exam": exams.nmat_exam(),
-            "subject": subject,
-            "tutor_context": {
-                "exam": "NMAT",
-                "subject_slug": subject["slug"],
-                "section_slug": "",
-                "label": f"NMAT · {subject['name']}",
-                "chapters": chapters,
-            },
+    ctx = {
+        "exam": exams.nmat_exam(),
+        "subject": subject,
+        "tutor_context": {
+            "exam": "NMAT",
+            "subject_slug": subject["slug"],
+            "section_slug": "",
+            "label": f"NMAT · {subject['name']}",
+            "chapters": _chapter_titles(subject),
         },
-    )
+    }
+    ctx.update(_study_extras(slug, subject))
+    return render(request, "portal/nmat_subject.html", ctx)
 
 
 def mcat_hub(request):
@@ -130,26 +146,20 @@ def mcat_section(request, slug):
     linked = [
         exams.get_shared(s) for s in section.get("shared_links", []) if exams.get_shared(s)
     ]
-    chapters = []
-    for group in section.get("chapters", []):
-        for item in group.get("items", []):
-            chapters.append(item["title"])
-    return render(
-        request,
-        "portal/mcat_section.html",
-        {
-            "exam": exams.mcat_exam(),
-            "section": section,
-            "linked_subjects": linked,
-            "tutor_context": {
-                "exam": "MCAT",
-                "subject_slug": "",
-                "section_slug": section["slug"],
-                "label": f"MCAT · {section['short']}",
-                "chapters": chapters,
-            },
+    ctx = {
+        "exam": exams.mcat_exam(),
+        "section": section,
+        "linked_subjects": linked,
+        "tutor_context": {
+            "exam": "MCAT",
+            "subject_slug": "",
+            "section_slug": section["slug"],
+            "label": f"MCAT · {section['short']}",
+            "chapters": _chapter_titles(section),
         },
-    )
+    }
+    ctx.update(_study_extras(slug, section))
+    return render(request, "portal/mcat_section.html", ctx)
 
 
 @require_GET
@@ -161,6 +171,7 @@ def study_hub(request):
             "shared_subjects": exams.shared_list(),
             "nmat_unique": exams.nmat_unique_subjects(),
             "mcat_sections": exams.mcat_exam()["sections"],
+            "practice_catalog": practice_catalog(),
             "tutor_ready": bool(minimax_config()["api_key"]),
             "tutor_context": {
                 "exam": "",
@@ -169,6 +180,45 @@ def study_hub(request):
                 "label": "General",
                 "chapters": [],
             },
+        },
+    )
+
+
+@require_GET
+def practice_hub(request):
+    return render(
+        request,
+        "portal/practice_hub.html",
+        {"catalog": practice_catalog()},
+    )
+
+
+@require_GET
+def practice_detail(request, slug):
+    items = practice_for(slug)
+    if not items:
+        raise Http404("Practice set not found")
+
+    label = LABELS.get(slug, {"zh": slug, "en": slug})
+    back = None
+    if exams.get_shared(slug):
+        back = ("subject_detail", slug)
+    elif exams.get_nmat_unique(slug):
+        back = ("nmat_subject", slug)
+    elif exams.get_mcat_section(slug):
+        back = ("mcat_section", slug)
+
+    return render(
+        request,
+        "portal/practice_detail.html",
+        {
+            "slug": slug,
+            "label_zh": label["zh"],
+            "label_en": label["en"],
+            "items": items,
+            "items_json": _json_for_script(items),
+            "back": back,
+            "all_slugs": all_practice_slugs(),
         },
     )
 

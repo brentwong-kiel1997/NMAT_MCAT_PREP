@@ -8,7 +8,7 @@
     {% include "portal/includes/nav.html" with solid=1 %}
     <p class="section-kicker">MiniMax-M3</p>
     <h1 data-i18n data-zh="学习台" data-en="Study Desk">学习台</h1>
-    <p class="lead" data-i18n data-zh="选科目进入页面后，用下方教练讲解、提问、出题。也可先在这里做综合问答。" data-en="Open a subject page to explain, ask, and quiz — or start with a general question here.">选科目进入页面后，用下方教练讲解、提问、出题。也可先在这里做综合问答。</p>
+    <p class="lead" data-i18n data-zh="读章节要点 → 闪卡记忆 → 练习选择题 → 用教练讲透。一条可执行的学习环。" data-en="Read high-yield notes → flashcards → practice MCQs → ask the coach. One usable study loop.">读章节要点 → 闪卡记忆 → 练习选择题 → 用教练讲透。一条可执行的学习环。</p>
     {% if not tutor_ready %}
     <p class="lead" style="color:#a33;">MiniMax key not loaded on server.</p>
     {% endif %}
@@ -16,8 +16,27 @@
 </div>
 
 <section class="section">
+  <p class="section-kicker">Practice</p>
+  <h2 data-i18n data-zh="先做几道题热身" data-en="Warm up with a few items">先做几道题热身</h2>
+  <ul class="disease-list">
+    {% for p in practice_catalog %}
+    <li>
+      <a href="{% url 'practice_detail' p.slug %}">
+        <div>
+          <h3><span class="only-zh">{{ p.label_zh }}</span><span class="only-en">{{ p.label_en }}</span></h3>
+          <p><span class="only-zh">{{ p.count }} 题 · 即时对错与解析</span><span class="only-en">{{ p.count }} items · instant feedback</span></p>
+        </div>
+        <span class="disease-meta">MCQ</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  <p style="margin-top:1rem;"><a href="{% url 'practice_hub' %}" data-i18n data-zh="全部练习集 →" data-en="All practice sets →">全部练习集 →</a></p>
+</section>
+
+<section class="section">
   <p class="section-kicker">Jump in</p>
-  <h2 data-i18n data-zh="从科目开始" data-en="Start from a subject">从科目开始</h2>
+  <h2 data-i18n data-zh="从科目大纲开始" data-en="Start from a subject outline">从科目大纲开始</h2>
   <ul class="disease-list">
     {% for s in nmat_unique %}
     <li>

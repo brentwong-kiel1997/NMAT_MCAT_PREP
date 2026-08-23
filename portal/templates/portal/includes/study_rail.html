@@ -1,0 +1,48 @@
+<aside class="study-rail" data-progress-root data-progress-key="{{ progress_key }}">
+  <article class="block aside-note" style="border-top:0;padding-top:0;">
+    <h2 data-i18n data-zh="本章进度" data-en="Chapter progress">本章进度</h2>
+    <p class="progress-line"><span class="progress-count">0</span> / <span class="progress-total">0</span>
+      <span class="only-zh">已读</span><span class="only-en">done</span></p>
+    <div class="progress-bar" aria-hidden="true"><span class="progress-fill"></span></div>
+    <button type="button" class="btn-text progress-reset" data-i18n data-zh="重置进度" data-en="Reset progress">重置进度</button>
+  </article>
+
+  <article class="block aside-note">
+    <h2 data-i18n data-zh="目录" data-en="On this page">目录</h2>
+    <nav class="toc" aria-label="Chapters">
+      {% for group in chapters_for_toc %}
+        {% for ch in group.items %}
+        <a href="#{{ ch.chapter_id }}">{{ ch.title }}</a>
+        {% endfor %}
+      {% endfor %}
+    </nav>
+  </article>
+
+  {% if practice_count %}
+  <article class="block aside-note">
+    <h2 data-i18n data-zh="练习" data-en="Practice">练习</h2>
+    <p><span class="only-zh">{{ practice_count }} 道精炼选择题</span><span class="only-en">{{ practice_count }} focused MCQs</span></p>
+    <p><a class="btn btn-primary" href="{% url 'practice_detail' practice_slug %}" data-i18n data-zh="开始练习" data-en="Start practice">开始练习</a></p>
+  </article>
+  {% endif %}
+
+  {% if flashcards %}
+  <article class="block aside-note flashcard-panel" data-flashcards>
+    <h2 data-i18n data-zh="闪卡" data-en="Flashcards">闪卡</h2>
+    <p class="flash-meta"><span class="flash-index">1</span> / <span class="flash-total">{{ flashcards|length }}</span></p>
+    <button type="button" class="flash-card" aria-live="polite">
+      <span class="flash-chapter"></span>
+      <span class="flash-front only-zh"></span>
+      <span class="flash-front only-en"></span>
+      <span class="flash-back only-zh" hidden></span>
+      <span class="flash-back only-en" hidden></span>
+    </button>
+    <div class="flash-actions">
+      <button type="button" class="flash-prev" data-i18n data-zh="上一张" data-en="Prev">上一张</button>
+      <button type="button" class="flash-flip" data-i18n data-zh="翻转" data-en="Flip">翻转</button>
+      <button type="button" class="flash-next" data-i18n data-zh="下一张" data-en="Next">下一张</button>
+    </div>
+    <script type="application/json" class="flash-data">{{ flashcards_json|safe }}</script>
+  </article>
+  {% endif %}
+</aside>
