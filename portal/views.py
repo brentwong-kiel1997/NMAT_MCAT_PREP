@@ -5,10 +5,19 @@ import json
 
 from .diseases import all_diseases, get_disease
 from . import exams
+from .learners import progress_map, record_practice, set_chapter_done
 from .minimax import chat_completion, minimax_config
 from .notes import flashcards_for
 from .practice import practice_for, practice_catalog, all_practice_slugs, LABELS
 from .study import build_curriculum_context, tutor_messages
+
+
+def _learner_name(request) -> str:
+    return (
+        request.META.get("HTTP_X_REMOTE_USER")
+        or request.headers.get("X-Remote-User")
+        or ""
+    ).strip() or "guest"
 
 
 def _json_for_script(data) -> str:
@@ -29,6 +38,7 @@ def _study_extras(slug: str, entity: dict) -> dict:
     return {
         "chapters_for_toc": entity.get("chapters") or [],
         "progress_key": f"gabay_progress_{slug}",
+        "progress_subject": slug,
         "practice_slug": slug if items else "",
         "practice_count": len(items),
         "flashcards": cards,
@@ -220,6 +230,77 @@ def practice_detail(request, slug):
             "back": back,
             "all_slugs": all_practice_slugs(),
         },
+    )
+
+
+@require_GET
+def progress_api(request):
+    subject_slug = (request.GET.get("subject_slug") or "").strip()
+    if not subject_slug:
+        return JsonResponse({"ok": False, "error": "subject_slug required"}, status=400)
+    username = _learner_name(request)
+    return JsonResponse(
+        {
+            "ok": True,
+            "username": username,
+            "subject_slug": subject_slug,
+            "done": progress_map(username, subject_slug),
+        }
+    )
+
+
+@require_POST
+def progress_update_api(request):
+    try:
+        payload = json.loads(request.body.decode("utf-8"))
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        return JsonResponse({"ok": False, "error": "Invalid JSON"}, status=400)
+
+    subject_slug = (payload.get("subject_slug") or "").strip()
+    chapter_id = (payload.get("chapter_id") or "").strip()
+    if not subject_slug or not chapter_id:
+        return JsonResponse(
+            {"ok": False, "error": "subject_slug and chapter_id required"}, status=400
+        )
+    done = bool(payload.get("done", True))
+    username = _learner_name(request)
+    set_chapter_done(username, subject_slug, chapter_id, done)
+    return JsonResponse(
+        {
+            "ok": True,
+            "username": username,
+            "done": progress_map(username, subject_slug),
+        }
+    )
+
+
+@require_POST
+def practice_attempt_api(request):
+    try:
+        payload = json.loads(request.body.decode("utf-8"))
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        return JsonResponse({"ok": False, "error": "Invalid JSON"}, status=400)
+
+    subject_slug = (payload.get("subject_slug") or "").strip()
+    question_id = (payload.get("question_id") or "").strip()
+    chosen = (payload.get("chosen") or "").strip().upper()[:1]
+    if not subject_slug or not question_id or chosen not in "ABCD":
+        return JsonResponse({"ok": False, "error": "Invalid attempt"}, status=400)
+
+    items = {q["id"]: q for q in practice_for(subject_slug)}
+    item = items.get(question_id)
+    if not item:
+        return JsonResponse({"ok": False, "error": "Unknown question"}, status=404)
+    correct = chosen == item["answer"]
+    username = _learner_name(request)
+    record_practice(username, subject_slug, question_id, chosen, correct)
+    return JsonResponse(
+        {
+            "ok": True,
+            "correct": correct,
+            "answer": item["answer"],
+            "username": username,
+        }
     )
 
 

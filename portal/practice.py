@@ -111,6 +111,21 @@ PRACTICE: dict[str, list[dict]] = {
             "explain_en": "Accuracy = closeness to truth; precision = repeatability.",
             "chapter": "Analytical Chemistry",
         },
+        {
+            "id": "chem-4",
+            "q_zh": "催化剂加快反应的方式是：",
+            "q_en": "A catalyst speeds a reaction by:",
+            "choices": {
+                "A": {"zh": "提高反应的 ΔG", "en": "Raising ΔG of the reaction"},
+                "B": {"zh": "提供更低活化能的路径", "en": "Providing a lower-activation-energy path"},
+                "C": {"zh": "改变产物元素组成", "en": "Changing product element identities"},
+                "D": {"zh": "永久消耗反应物平衡常数方向", "en": "Permanently consuming reactants against K"},
+            },
+            "answer": "B",
+            "explain_zh": "催化剂改变路径、降低活化能；不改变总 ΔG / 平衡位置。",
+            "explain_en": "Catalysts change the path and lower Ea; overall ΔG / equilibrium position stay the same.",
+            "chapter": "5E · Chemical thermodynamics and kinetics",
+        },
     ],
     "physics": [
         {

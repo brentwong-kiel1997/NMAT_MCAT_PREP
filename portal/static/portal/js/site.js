@@ -61,6 +61,7 @@
     if (!root || root.dataset.ready === "1") return;
     root.dataset.ready = "1";
     const key = root.dataset.progressKey || "gabay_progress";
+    const subject = root.dataset.progressSubject || "";
     const checks = Array.from(document.querySelectorAll(".progress-check"));
     if (!checks.length) return;
 
@@ -94,6 +95,40 @@
       if (fill) fill.style.width = checks.length ? `${(100 * n) / checks.length}%` : "0%";
     }
 
+    async function syncFromServer() {
+      if (!subject) return;
+      try {
+        const res = await fetch(
+          "/api/progress/?subject_slug=" + encodeURIComponent(subject),
+          { credentials: "same-origin" }
+        );
+        const data = await res.json();
+        if (!data.ok || !data.done) return;
+        saved = Object.assign({}, saved, data.done);
+        persist();
+        refresh();
+      } catch (_) {}
+    }
+
+    async function pushChapter(id, done) {
+      if (!subject) return;
+      try {
+        await fetch("/api/progress/update/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": csrfToken(),
+          },
+          credentials: "same-origin",
+          body: JSON.stringify({
+            subject_slug: subject,
+            chapter_id: id,
+            done: !!done,
+          }),
+        });
+      } catch (_) {}
+    }
+
     checks.forEach((box) => {
       box.addEventListener("change", () => {
         const id = box.dataset.chapterId;
@@ -101,18 +136,22 @@
         else delete saved[id];
         persist();
         refresh();
+        pushChapter(id, box.checked);
       });
     });
 
     const reset = root.querySelector(".progress-reset");
     if (reset) {
       reset.addEventListener("click", () => {
+        const ids = Object.keys(saved);
         saved = {};
         persist();
         refresh();
+        ids.forEach((id) => pushChapter(id, false));
       });
     }
     refresh();
+    syncFromServer();
   }
 
   function mountFlashcards(panel) {
@@ -250,6 +289,22 @@
             if (letter === item.answer) state.score += 1;
             save();
             paint();
+            const subject = root.dataset.practiceSubject || "";
+            if (subject) {
+              fetch("/api/practice/attempt/", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  "X-CSRFToken": csrfToken(),
+                },
+                credentials: "same-origin",
+                body: JSON.stringify({
+                  subject_slug: subject,
+                  question_id: item.id,
+                  chosen: letter,
+                }),
+              }).catch(() => {});
+            }
           });
         }
         choicesEl.appendChild(btn);
