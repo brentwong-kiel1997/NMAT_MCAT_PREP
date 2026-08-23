@@ -71,7 +71,7 @@ def home(request):
     <p class="brand">Django WSGI</p>
     <h1>HTTPS + Basic Auth · 端口 8888</h1>
     <p>本页由 Gunicorn 通过 WSGI 提供，经 Nginx 强制 HTTPS 并要求访问密码。</p>
-    <p class="meta">服务时间：{now}</p>
+    <p class="meta">自动部署就绪 · 服务时间：{now}</p>
   </main>
 </body>
 </html>
