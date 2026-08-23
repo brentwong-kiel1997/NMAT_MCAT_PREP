@@ -259,15 +259,9 @@ html:not([lang]) .only-en { display: none !important; }
 }
 
 .section-lead {
-  margin: 0;
-  max-width: 40rem;
-  color: var(--ink-soft);
-}
-
-.section-lead {
-  max-width: 40rem;
-  color: var(--ink-soft);
   margin: 0.35rem 0 1.25rem;
+  max-width: 40rem;
+  color: var(--ink-soft);
 }
 
 .path-steps {
