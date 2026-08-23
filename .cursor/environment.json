@@ -1,0 +1,6 @@
+{
+  "name": "django-wsgi",
+  "install": "python3 -m venv /home/ubuntu/runtime/django-wsgi/venv && /home/ubuntu/runtime/django-wsgi/venv/bin/pip install -q -r requirements.txt",
+  "start": "bash /home/ubuntu/deploy/django-wsgi/scripts/deploy.sh && sudo nginx -t && sudo systemctl reload nginx",
+  "ports": [8888]
+}

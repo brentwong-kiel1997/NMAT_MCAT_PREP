@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Git post-receive: auto-deploy pushed commits to the live checkout.
+set -euo pipefail
+
+BARE="/home/ubuntu/repos/django-wsgi.git"
+DEPLOY="/home/ubuntu/deploy/django-wsgi"
+DEPLOY_SCRIPT="/home/ubuntu/deploy/django-wsgi/scripts/deploy.sh"
+
+mkdir -p "$DEPLOY"
+GIT_WORK_TREE="$DEPLOY" GIT_DIR="$BARE" git checkout -f main 2>/dev/null \
+  || GIT_WORK_TREE="$DEPLOY" GIT_DIR="$BARE" git checkout -f master
+
+chmod +x "$DEPLOY/scripts/deploy.sh" 2>/dev/null || true
+exec "$DEPLOY/scripts/deploy.sh"
