@@ -18,20 +18,20 @@
   <div class="hero-visual" aria-hidden="true"></div>
   <div class="hero-content">
     <p class="hero-brand">Gabay</p>
-    <h1>NMAT 与 MCAT，按科目分开走</h1>
-    <p class="hero-lead">考试结构严格按 CEM / AAMC。重叠的生物、化学、物理、行为社科合并成共用页；独有科目单独建页。</p>
+    <h1 data-i18n data-zh="NMAT 与 MCAT，按科目分开走" data-en="NMAT and MCAT, mapped by subject">NMAT 与 MCAT，按科目分开走</h1>
+    <p class="hero-lead" data-i18n data-zh="考试结构严格按 CEM / AAMC。重叠科目合并；独有科目单独建页。下方 MiniMax-M3 教练可讲解、提问、出题。" data-en="Structure follows CEM / AAMC. Overlaps are shared; unique sections stay separate. MiniMax-M3 coach can explain, ask, and quiz.">考试结构严格按 CEM / AAMC。重叠科目合并；独有科目单独建页。下方 MiniMax-M3 教练可讲解、提问、出题。</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="{% url 'study_hub' %}">开始学习</a>
-      <a class="btn btn-ghost" href="{% url 'nmat_hub' %}">NMAT 八科</a>
-      <a class="btn btn-ghost" href="{% url 'mcat_hub' %}">MCAT 四科</a>
+      <a class="btn btn-primary" href="{% url 'study_hub' %}" data-i18n data-zh="开始学习" data-en="Start studying">开始学习</a>
+      <a class="btn btn-ghost" href="{% url 'nmat_hub' %}">NMAT</a>
+      <a class="btn btn-ghost" href="{% url 'mcat_hub' %}">MCAT</a>
     </div>
   </div>
 </section>
 
 <section class="section">
   <p class="section-kicker">Merge map</p>
-  <h2>能合并的先合并</h2>
-  <p class="section-lead">Part 2 学业科与 MCAT 科学/行为科有交集，共用一个知识库，页内标明两边考法差异。</p>
+  <h2 data-i18n data-zh="能合并的先合并" data-en="Shared subjects first">能合并的先合并</h2>
+  <p class="section-lead" data-i18n data-zh="Part 2 学业科与 MCAT 科学/行为科有交集，共用一个知识库，页内标明两边考法差异。" data-en="Part 2 academics overlap MCAT science/behavior — one knowledge base, exam-specific notes kept separate.">Part 2 学业科与 MCAT 科学/行为科有交集，共用一个知识库，页内标明两边考法差异。</p>
   <ul class="disease-list">
     {% for s in shared_subjects %}
     <li>

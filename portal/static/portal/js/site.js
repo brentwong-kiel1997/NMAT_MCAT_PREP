@@ -103,12 +103,16 @@
     const input = root.querySelector(".tutor-input");
     const chapterSel = root.querySelector(".tutor-chapter");
 
+    let lastMode = null;
+    let lastAssistant = "";
+
     function addBubble(role, text) {
       const div = document.createElement("div");
       div.className = `tutor-bubble ${role}`;
       div.textContent = text;
       log.appendChild(div);
       log.scrollTop = log.scrollHeight;
+      if (role === "assistant") lastAssistant = text;
     }
 
     addBubble(
@@ -118,8 +122,30 @@
         : `已加载：${ctx.label}。可选章节后提问、讲解或出题。`
     );
 
+    function looksLikeAnswer(msg) {
+      return /^[ABCDabcd]([\s.、:：).-]|$)/.test((msg || "").trim());
+    }
+
     async function run(mode, message) {
-      addBubble("user", message || (mode === "explain" ? "讲解章节" : mode === "quiz" ? "出一题" : message));
+      let effectiveMode = mode;
+      if (mode === "ask" && lastMode === "quiz" && looksLikeAnswer(message)) {
+        effectiveMode = "grade";
+        message = `上一题内容：\n${lastAssistant}\n\n我的答案：${message}`;
+      }
+
+      addBubble(
+        "user",
+        message ||
+          (mode === "explain"
+            ? currentLang() === "en"
+              ? "Explain this chapter"
+              : "讲解章节"
+            : mode === "quiz"
+              ? currentLang() === "en"
+                ? "Quiz me"
+                : "出一题"
+              : message)
+      );
       const pending = document.createElement("div");
       pending.className = "tutor-bubble system";
       pending.textContent = currentLang() === "en" ? "Thinking…" : "思考中…";
@@ -135,7 +161,7 @@
           },
           credentials: "same-origin",
           body: JSON.stringify({
-            mode,
+            mode: effectiveMode,
             message,
             exam: ctx.exam,
             subject_slug: ctx.subject_slug,
@@ -151,6 +177,11 @@
           return;
         }
         addBubble("assistant", data.answer);
+        lastMode = effectiveMode === "grade" ? "ask" : effectiveMode;
+        try {
+          const key = "gabay_study_count";
+          localStorage.setItem(key, String(Number(localStorage.getItem(key) || 0) + 1));
+        } catch (_) {}
       } catch (err) {
         pending.remove();
         addBubble("system", String(err));
