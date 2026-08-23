@@ -1,21 +1,15 @@
 {% extends "portal/base.html" %}
+{% load i18n_extras %}
 
 {% block title %}{{ section.short }} · MCAT · Gabay{% endblock %}
-{% block description %}{{ section.name }}{% endblock %}
 
 {% block body %}
 <div class="page-hero">
   <div class="page-hero-inner">
-    <header class="site-header">
-      <a class="nav-brand" href="{% url 'home' %}">Gabay</a>
-      <nav class="nav-links" aria-label="主导航">
-        <a href="{% url 'mcat_hub' %}">MCAT</a>
-        <a href="{% url 'subject_list' %}">共用科目</a>
-      </nav>
-    </header>
-    <p class="section-kicker">MCAT · {{ section.name_zh }}{% if section.unique %} · 独有{% endif %}</p>
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">MCAT · <span class="only-zh">{{ section.name_zh }}{% if section.unique %} · 独有{% endif %}</span><span class="only-en">{{ section.short }}{% if section.unique %} · Unique{% endif %}</span></p>
     <h1>{{ section.short }}</h1>
-    <p class="lead">{{ section.name }}。{{ section.questions }} 题 · {{ section.time }}。{{ section.focus }}</p>
+    <p class="lead"><span class="only-zh">{{ section.name }}。{{ section.questions }} 题 · {{ section.time }}。{{ section.focus }}</span><span class="only-en">{{ section.name }}. {{ section.questions }} items · {{ section.time }}. {{ section.focus_en }}</span></p>
     <ul class="tags">
       <li>MCAT</li>
       <li>{{ section.questions }} questions</li>
@@ -29,36 +23,29 @@
     <div>
       {% for group in section.chapters %}
       <article class="block chapter-block">
-        <h2>{{ group.heading }}</h2>
+        <h2><span class="only-zh">{{ group.heading }}</span><span class="only-en">{{ group.heading_en }}</span></h2>
         <ol class="chapter-list">
           {% for ch in group.items %}
           <li>
             <h3>{{ ch.title }}</h3>
             <ul>
-              {% for p in ch.points %}<li>{{ p }}</li>{% endfor %}
+              {% for pair in ch.points|zip_en:ch.points_en %}
+              <li><span class="only-zh">{{ pair.zh }}</span><span class="only-en">{{ pair.en }}</span></li>
+              {% endfor %}
             </ul>
           </li>
           {% endfor %}
         </ol>
       </article>
-      {% empty %}
-      {% if section.skills %}
-      <article class="block chapter-block">
-        <h2>CARS 技能轴</h2>
-        <ul>
-          {% for sk in section.skills %}<li>{{ sk }}</li>{% endfor %}
-        </ul>
-      </article>
-      {% endif %}
       {% endfor %}
       {% if section.source_note %}
-      <p class="note-line">来源：{{ section.source_note }}</p>
+      <p class="note-line"><span class="only-zh">来源：{{ section.source_note }}</span><span class="only-en">Source: {{ section.source_note_en }}</span></p>
       {% endif %}
 
       <article class="block" style="margin-top:1.75rem;">
-        <h2>学科权重备忘</h2>
+        <h2 data-i18n data-zh="学科权重备忘" data-en="Discipline mix notes">学科权重备忘</h2>
         {% if exam.discipline_mix_note %}
-        <p class="note-line">{{ exam.discipline_mix_note }}</p>
+        <p class="note-line"><span class="only-zh">{{ exam.discipline_mix_note }}</span><span class="only-en">{{ exam.discipline_mix_note_en }}</span></p>
         {% endif %}
         <ul>
           {% for d in section.discipline_mix %}<li>{{ d }}</li>{% endfor %}
@@ -69,21 +56,21 @@
     <aside>
       {% if linked_subjects %}
       <article class="block aside-note" style="border-top:0;padding-top:0;">
-        <h2>跳到共用知识</h2>
+        <h2 data-i18n data-zh="跳到共用知识" data-en="Jump to shared knowledge">跳到共用知识</h2>
         <ul>
           {% for s in linked_subjects %}
-          <li><a href="{% url 'subject_detail' s.slug %}">{{ s.name }}</a> — {{ s.name_zh }}</li>
+          <li><a href="{% url 'subject_detail' s.slug %}">{{ s.name }}</a> — <span class="only-zh">{{ s.name_zh }}</span><span class="only-en">{{ s.name }}</span></li>
           {% endfor %}
         </ul>
       </article>
       {% else %}
       <article class="block aside-note" style="border-top:0;padding-top:0;">
-        <h2>为何不合并</h2>
-        <p>CARS 无学科内容大纲；与 NMAT Verbal 相关但考试目标不同，分开练。</p>
+        <h2 data-i18n data-zh="为何不合并" data-en="Why not merged">为何不合并</h2>
+        <p data-i18n data-zh="CARS 无学科内容大纲；与 NMAT Verbal 相关但考试目标不同，分开练。" data-en="CARS has no content syllabus; related to NMAT Verbal but different goals — practice separately.">CARS 无学科内容大纲；与 NMAT Verbal 相关但考试目标不同，分开练。</p>
       </article>
       {% endif %}
       <article class="block aside-note">
-        <h2>其他 MCAT 科</h2>
+        <h2 data-i18n data-zh="其他 MCAT 科" data-en="Other MCAT sections">其他 MCAT 科</h2>
         <ul>
           <li><a href="{% url 'mcat_section' 'chem-phys' %}">Chem/Phys</a></li>
           <li><a href="{% url 'mcat_section' 'cars' %}">CARS</a></li>

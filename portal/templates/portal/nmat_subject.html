@@ -1,21 +1,15 @@
 {% extends "portal/base.html" %}
+{% load i18n_extras %}
 
 {% block title %}{{ subject.name }} · NMAT · Gabay{% endblock %}
-{% block description %}NMAT {{ subject.name }} 独有科目页{% endblock %}
 
 {% block body %}
 <div class="page-hero">
   <div class="page-hero-inner">
-    <header class="site-header">
-      <a class="nav-brand" href="{% url 'home' %}">Gabay</a>
-      <nav class="nav-links" aria-label="主导航">
-        <a href="{% url 'nmat_hub' %}">NMAT</a>
-        <a href="{% url 'subject_list' %}">共用科目</a>
-      </nav>
-    </header>
-    <p class="section-kicker">NMAT Part 1 · 独有</p>
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker"><span class="only-zh">NMAT Part 1 · 独有</span><span class="only-en">NMAT Part 1 · Unique</span></p>
     <h1>{{ subject.name }}</h1>
-    <p class="lead">{{ subject.name_zh }} · {{ subject.items }} 题{% if subject.pacing %} · {{ subject.pacing }}{% endif %}。{{ subject.focus }}</p>
+    <p class="lead"><span class="only-zh">{{ subject.name_zh }} · {{ subject.items }} 题{% if subject.pacing %} · {{ subject.pacing }}{% endif %}。{{ subject.focus }}</span><span class="only-en">{{ subject.name }} · {{ subject.items }} items{% if subject.pacing %} · {{ subject.pacing }}{% endif %}. {{ subject.focus_en }}</span></p>
     <ul class="tags">
       <li>NMAT only</li>
       <li>{{ subject.items }} items</li>
@@ -28,13 +22,15 @@
     <div>
       {% for group in subject.chapters %}
       <article class="block chapter-block">
-        <h2>{{ group.heading }}</h2>
+        <h2><span class="only-zh">{{ group.heading }}</span><span class="only-en">{{ group.heading_en }}</span></h2>
         <ol class="chapter-list">
           {% for ch in group.items %}
           <li>
             <h3>{{ ch.title }}</h3>
             <ul>
-              {% for p in ch.points %}<li>{{ p }}</li>{% endfor %}
+              {% for pair in ch.points|zip_en:ch.points_en %}
+              <li><span class="only-zh">{{ pair.zh }}</span><span class="only-en">{{ pair.en }}</span></li>
+              {% endfor %}
             </ul>
           </li>
           {% endfor %}
@@ -42,19 +38,19 @@
       </article>
       {% endfor %}
       {% if subject.source_note %}
-      <p class="note-line">来源：{{ subject.source_note }}</p>
+      <p class="note-line"><span class="only-zh">来源：{{ subject.source_note }}</span><span class="only-en">Source: {{ subject.source_note_en }}</span></p>
       {% endif %}
       {% include "portal/includes/tutor.html" %}
     </div>
     <aside>
       <article class="block aside-note" style="border-top:0;padding-top:0;">
-        <h2>题型一览</h2>
+        <h2 data-i18n data-zh="题型一览" data-en="Item types">题型一览</h2>
         <ul>
           {% for t in subject.item_types %}<li>{{ t }}</li>{% endfor %}
         </ul>
       </article>
       <article class="block aside-note">
-        <h2>同 Part 其他独有科</h2>
+        <h2 data-i18n data-zh="同 Part 其他独有科" data-en="Other Part 1 unique subjects">同 Part 其他独有科</h2>
         <ul>
           <li><a href="{% url 'nmat_subject' 'verbal' %}">Verbal</a></li>
           <li><a href="{% url 'nmat_subject' 'inductive-reasoning' %}">Inductive Reasoning</a></li>

@@ -596,27 +596,38 @@ MCAT: dict = {
 }
 
 
+from .bilingual import enrich_exam, enrich_subject
+
+
 def shared_list() -> list[dict]:
-    return list(SHARED_SUBJECTS.values())
+    return [enrich_subject(s) for s in SHARED_SUBJECTS.values()]
 
 
 def get_shared(slug: str) -> dict | None:
-    return SHARED_SUBJECTS.get(slug)
+    return enrich_subject(SHARED_SUBJECTS.get(slug))
 
 
 def nmat_unique_subjects() -> list[dict]:
-    return list(NMAT["parts"][0]["subjects"])
+    return [enrich_subject(s) for s in NMAT["parts"][0]["subjects"]]
 
 
 def get_nmat_unique(slug: str) -> dict | None:
-    for s in nmat_unique_subjects():
+    for s in NMAT["parts"][0]["subjects"]:
         if s["slug"] == slug:
-            return s
+            return enrich_subject(s)
     return None
 
 
 def get_mcat_section(slug: str) -> dict | None:
     for s in MCAT["sections"]:
         if s["slug"] == slug:
-            return s
+            return enrich_subject(s)
     return None
+
+
+def nmat_exam() -> dict:
+    return enrich_exam(NMAT)
+
+
+def mcat_exam() -> dict:
+    return enrich_exam(MCAT)

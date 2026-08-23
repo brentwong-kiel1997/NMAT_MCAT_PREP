@@ -1,41 +1,32 @@
 {% extends "portal/base.html" %}
 
 {% block title %}NMAT · Gabay{% endblock %}
-{% block description %}菲律宾 NMAT：8 个分测验结构与科目入口{% endblock %}
 
 {% block body %}
 <div class="page-hero">
   <div class="page-hero-inner">
-    <header class="site-header">
-      <a class="nav-brand" href="{% url 'home' %}">Gabay</a>
-      <nav class="nav-links" aria-label="主导航">
-        <a href="{% url 'mcat_hub' %}">MCAT</a>
-        <a href="{% url 'subject_list' %}">共用科目</a>
-        <a href="{% url 'study_hub' %}">Study</a>
-        <a href="{% url 'home' %}">首页</a>
-      </nav>
-    </header>
+    {% include "portal/includes/nav.html" with solid=1 %}
     <p class="section-kicker">{{ exam.admin }}</p>
     <h1>{{ exam.name }}</h1>
-    <p class="lead">{{ exam.full_name }}（{{ exam.name_zh }}）。{{ exam.format }}</p>
-    <p class="lead" style="margin-top:0.75rem;">结构依据：CEM NMAT Bulletin of Information（Part 1 Mental Ability + Part 2 Academic Proficiency，8×30 题）。</p>
+    <p class="lead"><span class="only-zh">{{ exam.full_name }}（{{ exam.name_zh }}）。{{ exam.format }}</span><span class="only-en">{{ exam.full_name }}. {{ exam.format_en }}</span></p>
+    <p class="lead" style="margin-top:0.75rem;"><span class="only-zh">结构依据：CEM NMAT Bulletin of Information（Part 1 + Part 2，8×30 题）。</span><span class="only-en">Source: CEM NMAT Bulletin of Information (Part 1 + Part 2, 8×30 items).</span></p>
   </div>
 </div>
 
 {% for part in exam.parts %}
 <section class="section">
   <p class="section-kicker">{{ part.id|upper }}</p>
-  <h2>{{ part.name }} <span class="muted-inline">{{ part.name_zh }}</span></h2>
-  <p class="section-lead">{{ part.items }} 题 · {{ part.time }}</p>
+  <h2>{{ part.name }} <span class="muted-inline only-zh">{{ part.name_zh }}</span></h2>
+  <p class="section-lead"><span class="only-zh">{{ part.items }} 题 · {{ part.time }}</span><span class="only-en">{{ part.items }} items · {{ part.time }}</span></p>
   <ul class="disease-list">
     {% for s in part.subjects %}
     <li>
       <a href="{% if s.shared %}{% url 'subject_detail' s.shared %}{% else %}{% url 'nmat_subject' s.slug %}{% endif %}">
         <div>
-          <h3>{{ s.name }} <span class="muted-inline">{{ s.name_zh }}</span></h3>
-          <p>{{ s.focus }}{% if s.shared %} · 进入共用科目页{% endif %}</p>
+          <h3>{{ s.name }} <span class="muted-inline only-zh">{{ s.name_zh }}</span></h3>
+          <p><span class="only-zh">{{ s.focus }}{% if s.shared %} · 进入共用科目页{% endif %}</span><span class="only-en">{{ s.focus_en }}{% if s.shared %} · Open shared subject{% endif %}</span></p>
         </div>
-        <span class="disease-meta">{% if s.shared %}共用{% else %}独有{% endif %} · {{ s.items }} 题</span>
+        <span class="disease-meta"><span class="only-zh">{% if s.shared %}共用{% else %}独有{% endif %} · {{ s.items }} 题</span><span class="only-en">{% if s.shared %}Shared{% else %}Unique{% endif %} · {{ s.items }} items</span></span>
       </a>
     </li>
     {% endfor %}

@@ -1,0 +1,15 @@
+{% load static %}
+<header class="site-header {% if solid %}site-header-solid{% endif %}">
+  <a class="nav-brand" href="{% url 'home' %}">Gabay</a>
+  <div class="nav-right">
+    <nav class="nav-links" aria-label="Primary">
+      <a href="{% url 'nmat_hub' %}">NMAT</a>
+      <a href="{% url 'mcat_hub' %}">MCAT</a>
+      <a href="{% url 'subject_list' %}" data-i18n data-zh="共用科目" data-en="Shared">共用科目</a>
+      <a href="{% url 'study_hub' %}" data-i18n data-zh="学习" data-en="Study">学习</a>
+      <a href="{% url 'disease_list' %}" data-i18n data-zh="疾病" data-en="Diseases">疾病</a>
+      <a href="{% url 'home' %}" data-i18n data-zh="首页" data-en="Home">首页</a>
+    </nav>
+    <span data-lang-host class="lang-host"></span>
+  </div>
+</header>

@@ -15,8 +15,8 @@ def home(request):
         "portal/home.html",
         {
             "shared_subjects": exams.shared_list(),
-            "nmat": exams.NMAT,
-            "mcat": exams.MCAT,
+            "nmat": exams.nmat_exam(),
+            "mcat": exams.mcat_exam(),
             "tutor_ready": bool(minimax_config()["api_key"]),
         },
     )
@@ -78,7 +78,7 @@ def nmat_hub(request):
     return render(
         request,
         "portal/nmat_hub.html",
-        {"exam": exams.NMAT, "shared": exams.SHARED_SUBJECTS},
+        {"exam": exams.nmat_exam(), "shared": exams.SHARED_SUBJECTS},
     )
 
 
@@ -102,7 +102,7 @@ def nmat_subject(request, slug):
         request,
         "portal/nmat_subject.html",
         {
-            "exam": exams.NMAT,
+            "exam": exams.nmat_exam(),
             "subject": subject,
             "tutor_context": {
                 "exam": "NMAT",
@@ -119,7 +119,7 @@ def mcat_hub(request):
     return render(
         request,
         "portal/mcat_hub.html",
-        {"exam": exams.MCAT, "shared": exams.SHARED_SUBJECTS},
+        {"exam": exams.mcat_exam(), "shared": exams.SHARED_SUBJECTS},
     )
 
 
@@ -138,7 +138,7 @@ def mcat_section(request, slug):
         request,
         "portal/mcat_section.html",
         {
-            "exam": exams.MCAT,
+            "exam": exams.mcat_exam(),
             "section": section,
             "linked_subjects": linked,
             "tutor_context": {
@@ -160,7 +160,7 @@ def study_hub(request):
         {
             "shared_subjects": exams.shared_list(),
             "nmat_unique": exams.nmat_unique_subjects(),
-            "mcat_sections": exams.MCAT["sections"],
+            "mcat_sections": exams.mcat_exam()["sections"],
             "tutor_ready": bool(minimax_config()["api_key"]),
             "tutor_context": {
                 "exam": "",

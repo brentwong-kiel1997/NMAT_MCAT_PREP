@@ -1,25 +1,16 @@
 {% extends "portal/base.html" %}
 
-{% block title %}Gabay · NMAT & MCAT 备考助手{% endblock %}
+{% block title %}Gabay · NMAT & MCAT{% endblock %}
 
 {% block body %}
-<header class="site-header">
-  <a class="nav-brand" href="{% url 'home' %}">Gabay</a>
-  <nav class="nav-links" aria-label="主导航">
-    <a href="{% url 'nmat_hub' %}">NMAT</a>
-    <a href="{% url 'mcat_hub' %}">MCAT</a>
-    <a href="{% url 'subject_list' %}">共用科目</a>
-    <a href="{% url 'study_hub' %}">Study</a>
-    <a href="{% url 'disease_list' %}">疾病</a>
-  </nav>
-</header>
+{% include "portal/includes/nav.html" %}
 
-<section class="hero" aria-label="首页">
+<section class="hero" aria-label="Home">
   <div class="hero-visual" aria-hidden="true"></div>
   <div class="hero-content">
     <p class="hero-brand">Gabay</p>
     <h1 data-i18n data-zh="NMAT 与 MCAT，按科目分开走" data-en="NMAT and MCAT, mapped by subject">NMAT 与 MCAT，按科目分开走</h1>
-    <p class="hero-lead" data-i18n data-zh="考试结构严格按 CEM / AAMC。重叠科目合并；独有科目单独建页。下方 MiniMax-M3 教练可讲解、提问、出题。" data-en="Structure follows CEM / AAMC. Overlaps are shared; unique sections stay separate. MiniMax-M3 coach can explain, ask, and quiz.">考试结构严格按 CEM / AAMC。重叠科目合并；独有科目单独建页。下方 MiniMax-M3 教练可讲解、提问、出题。</p>
+    <p class="hero-lead" data-i18n data-zh="考试结构严格按 CEM / AAMC。重叠科目合并；独有科目单独建页。MiniMax-M3 教练可讲解、提问、出题。" data-en="Structure follows CEM / AAMC. Shared subjects merge; unique sections stay separate. MiniMax-M3 coach can explain, ask, and quiz.">考试结构严格按 CEM / AAMC。重叠科目合并；独有科目单独建页。MiniMax-M3 教练可讲解、提问、出题。</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="{% url 'study_hub' %}" data-i18n data-zh="开始学习" data-en="Start studying">开始学习</a>
       <a class="btn btn-ghost" href="{% url 'nmat_hub' %}">NMAT</a>
@@ -31,14 +22,14 @@
 <section class="section">
   <p class="section-kicker">Merge map</p>
   <h2 data-i18n data-zh="能合并的先合并" data-en="Shared subjects first">能合并的先合并</h2>
-  <p class="section-lead" data-i18n data-zh="Part 2 学业科与 MCAT 科学/行为科有交集，共用一个知识库，页内标明两边考法差异。" data-en="Part 2 academics overlap MCAT science/behavior — one knowledge base, exam-specific notes kept separate.">Part 2 学业科与 MCAT 科学/行为科有交集，共用一个知识库，页内标明两边考法差异。</p>
+  <p class="section-lead" data-i18n data-zh="Part 2 学业科与 MCAT 科学/行为科有交集，共用一个知识库，页内标明两边考法差异。" data-en="Part 2 academics overlap MCAT science/behavior — one knowledge base, with exam-specific notes.">Part 2 学业科与 MCAT 科学/行为科有交集，共用一个知识库，页内标明两边考法差异。</p>
   <ul class="disease-list">
     {% for s in shared_subjects %}
     <li>
       <a href="{% url 'subject_detail' s.slug %}">
         <div>
-          <h3>{{ s.name }} <span class="muted-inline">{{ s.name_zh }}</span></h3>
-          <p>{{ s.summary }}</p>
+          <h3>{{ s.name }} <span class="muted-inline only-zh">{{ s.name_zh }}</span></h3>
+          <p><span class="only-zh">{{ s.summary }}</span><span class="only-en">{{ s.summary_en }}</span></p>
         </div>
         <span class="disease-meta">{{ s.exams|join:" · " }}</span>
       </a>

@@ -5,7 +5,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}Gabay{% endblock %}</title>
-  <meta name="description" content="{% block description %}Gabay — NMAT 菲律宾医学院入学与 MCAT 备考个人助手{% endblock %}">
+  <meta name="description" content="{% block description %}Gabay — NMAT & MCAT study companion{% endblock %}">
+  <script>
+    (function () {
+      try {
+        var lang = localStorage.getItem("gabay_lang") || "zh";
+        document.documentElement.lang = lang === "en" ? "en" : "zh-CN";
+        document.documentElement.dataset.lang = lang === "en" ? "en" : "zh";
+      } catch (e) {}
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
@@ -17,7 +26,7 @@
   <footer class="site-footer">
     <div class="site-footer-inner">
       <span data-i18n data-zh="Gabay · NMAT & MCAT 个人备考助手" data-en="Gabay · NMAT & MCAT study companion">Gabay · NMAT &amp; MCAT 个人备考助手</span>
-      <span data-lang-host></span>
+      <span data-i18n data-zh="中英可切换 · MiniMax-M3 学习教练" data-en="ZH/EN toggle · MiniMax-M3 study coach">中英可切换 · MiniMax-M3 学习教练</span>
     </div>
   </footer>
   <script src="{% static 'portal/js/site.js' %}" defer></script>

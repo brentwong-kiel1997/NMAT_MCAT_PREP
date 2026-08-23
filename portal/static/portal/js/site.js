@@ -9,6 +9,7 @@
     const resolved = lang === "en" ? "en" : "zh";
     localStorage.setItem(LANG_KEY, resolved);
     document.documentElement.lang = resolved === "en" ? "en" : "zh-CN";
+    document.documentElement.dataset.lang = resolved;
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const zh = el.getAttribute("data-zh");
       const en = el.getAttribute("data-en");

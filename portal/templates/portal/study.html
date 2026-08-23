@@ -1,23 +1,14 @@
 {% extends "portal/base.html" %}
 
 {% block title %}Study · Gabay{% endblock %}
-{% block description %}MiniMax-M3 powered NMAT/MCAT study coach{% endblock %}
 
 {% block body %}
 <div class="page-hero">
   <div class="page-hero-inner">
-    <header class="site-header">
-      <a class="nav-brand" href="{% url 'home' %}">Gabay</a>
-      <nav class="nav-links" aria-label="主导航">
-        <a href="{% url 'nmat_hub' %}">NMAT</a>
-        <a href="{% url 'mcat_hub' %}">MCAT</a>
-        <a href="{% url 'subject_list' %}">共用科目</a>
-        <a href="{% url 'study_hub' %}">Study</a>
-      </nav>
-    </header>
+    {% include "portal/includes/nav.html" with solid=1 %}
     <p class="section-kicker">MiniMax-M3</p>
     <h1 data-i18n data-zh="学习台" data-en="Study Desk">学习台</h1>
-    <p class="lead" data-i18n data-zh="选科目进入页面后，用下方教练讲解、提问、出题。也可先在这里做综合问答。" data-en="Open a subject page to explain, ask, and quiz against its outline — or ask generally here first.">选科目进入页面后，用下方教练讲解、提问、出题。也可先在这里做综合问答。</p>
+    <p class="lead" data-i18n data-zh="选科目进入页面后，用下方教练讲解、提问、出题。也可先在这里做综合问答。" data-en="Open a subject page to explain, ask, and quiz — or start with a general question here.">选科目进入页面后，用下方教练讲解、提问、出题。也可先在这里做综合问答。</p>
     {% if not tutor_ready %}
     <p class="lead" style="color:#a33;">MiniMax key not loaded on server.</p>
     {% endif %}
@@ -33,7 +24,7 @@
       <a href="{% url 'nmat_subject' s.slug %}">
         <div>
           <h3>NMAT · {{ s.name }}</h3>
-          <p>{{ s.focus }}</p>
+          <p><span class="only-zh">{{ s.focus }}</span><span class="only-en">{{ s.focus_en }}</span></p>
         </div>
         <span class="disease-meta">Part 1</span>
       </a>
@@ -43,8 +34,8 @@
     <li>
       <a href="{% url 'subject_detail' s.slug %}">
         <div>
-          <h3>{{ s.name }} <span class="muted-inline">{{ s.name_zh }}</span></h3>
-          <p>{{ s.summary }}</p>
+          <h3>{{ s.name }} <span class="muted-inline only-zh">{{ s.name_zh }}</span></h3>
+          <p><span class="only-zh">{{ s.summary }}</span><span class="only-en">{{ s.summary_en }}</span></p>
         </div>
         <span class="disease-meta">{{ s.exams|join:" · " }}</span>
       </a>

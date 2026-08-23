@@ -1,22 +1,15 @@
 {% extends "portal/base.html" %}
+{% load i18n_extras %}
 
 {% block title %}{{ subject.name }} · Gabay{% endblock %}
-{% block description %}{{ subject.summary }}{% endblock %}
 
 {% block body %}
 <div class="page-hero">
   <div class="page-hero-inner">
-    <header class="site-header">
-      <a class="nav-brand" href="{% url 'home' %}">Gabay</a>
-      <nav class="nav-links" aria-label="主导航">
-        <a href="{% url 'subject_list' %}">共用科目</a>
-        <a href="{% url 'nmat_hub' %}">NMAT</a>
-        <a href="{% url 'mcat_hub' %}">MCAT</a>
-      </nav>
-    </header>
-    <p class="section-kicker">{{ subject.name_zh }} · 共用</p>
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker"><span class="only-zh">{{ subject.name_zh }} · 共用</span><span class="only-en">{{ subject.name }} · Shared</span></p>
     <h1>{{ subject.name }}</h1>
-    <p class="lead">{{ subject.summary }}</p>
+    <p class="lead"><span class="only-zh">{{ subject.summary }}</span><span class="only-en">{{ subject.summary_en }}</span></p>
     <ul class="tags">
       {% for e in subject.exams %}<li>{{ e }}</li>{% endfor %}
     </ul>
@@ -28,13 +21,15 @@
     <div>
       {% for group in subject.chapters %}
       <article class="block chapter-block">
-        <h2>{{ group.heading }}</h2>
+        <h2><span class="only-zh">{{ group.heading }}</span><span class="only-en">{{ group.heading_en }}</span></h2>
         <ol class="chapter-list">
           {% for ch in group.items %}
           <li>
             <h3>{{ ch.title }}</h3>
             <ul>
-              {% for p in ch.points %}<li>{{ p }}</li>{% endfor %}
+              {% for pair in ch.points|zip_en:ch.points_en %}
+              <li><span class="only-zh">{{ pair.zh }}</span><span class="only-en">{{ pair.en }}</span></li>
+              {% endfor %}
             </ul>
           </li>
           {% endfor %}
@@ -42,22 +37,22 @@
       </article>
       {% endfor %}
       {% if subject.source_note %}
-      <p class="note-line">来源：{{ subject.source_note }}</p>
+      <p class="note-line"><span class="only-zh">来源：{{ subject.source_note }}</span><span class="only-en">Source: {{ subject.source_note_en }}</span></p>
       {% endif %}
       {% include "portal/includes/tutor.html" %}
     </div>
     <aside>
       <article class="block aside-note" style="border-top:0;padding-top:0;">
-        <h2>在 NMAT</h2>
-        <p>{{ subject.nmat_role }}</p>
-        <p>{{ subject.exam_notes.NMAT }}</p>
-        <p><a href="{% url 'nmat_hub' %}">回 NMAT 地图</a></p>
+        <h2 data-i18n data-zh="在 NMAT" data-en="On NMAT">在 NMAT</h2>
+        <p><span class="only-zh">{{ subject.nmat_role }}</span><span class="only-en">{{ subject.nmat_role_en }}</span></p>
+        <p><span class="only-zh">{{ subject.exam_notes.NMAT }}</span><span class="only-en">{{ subject.exam_notes_en.NMAT }}</span></p>
+        <p><a href="{% url 'nmat_hub' %}" data-i18n data-zh="回 NMAT 地图" data-en="Back to NMAT map">回 NMAT 地图</a></p>
       </article>
       <article class="block aside-note">
-        <h2>在 MCAT</h2>
-        <p>{{ subject.mcat_role }}</p>
-        <p>{{ subject.exam_notes.MCAT }}</p>
-        <p><a href="{% url 'mcat_hub' %}">回 MCAT 地图</a></p>
+        <h2 data-i18n data-zh="在 MCAT" data-en="On MCAT">在 MCAT</h2>
+        <p><span class="only-zh">{{ subject.mcat_role }}</span><span class="only-en">{{ subject.mcat_role_en }}</span></p>
+        <p><span class="only-zh">{{ subject.exam_notes.MCAT }}</span><span class="only-en">{{ subject.exam_notes_en.MCAT }}</span></p>
+        <p><a href="{% url 'mcat_hub' %}" data-i18n data-zh="回 MCAT 地图" data-en="Back to MCAT map">回 MCAT 地图</a></p>
       </article>
     </aside>
   </div>
