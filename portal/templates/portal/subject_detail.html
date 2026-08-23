@@ -26,13 +26,24 @@
 <section class="section">
   <div class="detail-grid">
     <div>
-      <article class="block" style="margin-bottom:1.75rem;">
-        <h2>范围骨架</h2>
-        <ul>
-          {% for item in subject.scope %}<li>{{ item }}</li>{% endfor %}
-        </ul>
-        <p class="note-line">后续讲义与题感会按这条骨架往下填，不先堆无关内容。</p>
+      {% for group in subject.chapters %}
+      <article class="block chapter-block">
+        <h2>{{ group.heading }}</h2>
+        <ol class="chapter-list">
+          {% for ch in group.items %}
+          <li>
+            <h3>{{ ch.title }}</h3>
+            <ul>
+              {% for p in ch.points %}<li>{{ p }}</li>{% endfor %}
+            </ul>
+          </li>
+          {% endfor %}
+        </ol>
       </article>
+      {% endfor %}
+      {% if subject.source_note %}
+      <p class="note-line">来源：{{ subject.source_note }}</p>
+      {% endif %}
     </div>
     <aside>
       <article class="block aside-note" style="border-top:0;padding-top:0;">

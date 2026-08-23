@@ -15,7 +15,7 @@
     </header>
     <p class="section-kicker">NMAT Part 1 · 独有</p>
     <h1>{{ subject.name }}</h1>
-    <p class="lead">{{ subject.name_zh }} · {{ subject.items }} 题。{{ subject.focus }}</p>
+    <p class="lead">{{ subject.name_zh }} · {{ subject.items }} 题{% if subject.pacing %} · {{ subject.pacing }}{% endif %}。{{ subject.focus }}</p>
     <ul class="tags">
       <li>NMAT only</li>
       <li>{{ subject.items }} items</li>
@@ -26,16 +26,33 @@
 <section class="section">
   <div class="detail-grid">
     <div>
-      <article class="block">
-        <h2>题型（CEM BOI）</h2>
-        <ul>
-          {% for t in subject.item_types %}<li>{{ t }}</li>{% endfor %}
-        </ul>
-        <p class="note-line">此科与 MCAT 无直接对等科目，不并入共用库。练习与策略后续单独加。</p>
+      {% for group in subject.chapters %}
+      <article class="block chapter-block">
+        <h2>{{ group.heading }}</h2>
+        <ol class="chapter-list">
+          {% for ch in group.items %}
+          <li>
+            <h3>{{ ch.title }}</h3>
+            <ul>
+              {% for p in ch.points %}<li>{{ p }}</li>{% endfor %}
+            </ul>
+          </li>
+          {% endfor %}
+        </ol>
       </article>
+      {% endfor %}
+      {% if subject.source_note %}
+      <p class="note-line">来源：{{ subject.source_note }}</p>
+      {% endif %}
     </div>
     <aside>
       <article class="block aside-note" style="border-top:0;padding-top:0;">
+        <h2>题型一览</h2>
+        <ul>
+          {% for t in subject.item_types %}<li>{{ t }}</li>{% endfor %}
+        </ul>
+      </article>
+      <article class="block aside-note">
         <h2>同 Part 其他独有科</h2>
         <ul>
           <li><a href="{% url 'nmat_subject' 'verbal' %}">Verbal</a></li>

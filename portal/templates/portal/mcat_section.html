@@ -27,8 +27,36 @@
 <section class="section">
   <div class="detail-grid">
     <div>
-      <article class="block" style="margin-bottom:1.75rem;">
-        <h2>学科权重</h2>
+      {% for group in section.chapters %}
+      <article class="block chapter-block">
+        <h2>{{ group.heading }}</h2>
+        <ol class="chapter-list">
+          {% for ch in group.items %}
+          <li>
+            <h3>{{ ch.title }}</h3>
+            <ul>
+              {% for p in ch.points %}<li>{{ p }}</li>{% endfor %}
+            </ul>
+          </li>
+          {% endfor %}
+        </ol>
+      </article>
+      {% empty %}
+      {% if section.skills %}
+      <article class="block chapter-block">
+        <h2>CARS 技能轴</h2>
+        <ul>
+          {% for sk in section.skills %}<li>{{ sk }}</li>{% endfor %}
+        </ul>
+      </article>
+      {% endif %}
+      {% endfor %}
+      {% if section.source_note %}
+      <p class="note-line">来源：{{ section.source_note }}</p>
+      {% endif %}
+
+      <article class="block" style="margin-top:1.75rem;">
+        <h2>学科权重备忘</h2>
         {% if exam.discipline_mix_note %}
         <p class="note-line">{{ exam.discipline_mix_note }}</p>
         {% endif %}
@@ -36,15 +64,6 @@
           {% for d in section.discipline_mix %}<li>{{ d }}</li>{% endfor %}
         </ul>
       </article>
-      {% if section.skills %}
-      <article class="block">
-        <h2>CARS 技能轴</h2>
-        <ul>
-          {% for sk in section.skills %}<li>{{ sk }}</li>{% endfor %}
-        </ul>
-        <p class="note-line">CARS 不并入共用科目；与 NMAT Verbal 相关但考试目标不同，分开练。</p>
-      </article>
-      {% endif %}
     </div>
     <aside>
       {% if linked_subjects %}
@@ -59,7 +78,7 @@
       {% else %}
       <article class="block aside-note" style="border-top:0;padding-top:0;">
         <h2>为何不合并</h2>
-        <p>本页是 MCAT 独有结构页。知识复习走左边技能轴，不混进 NMAT Part 2 科目库。</p>
+        <p>CARS 无学科内容大纲；与 NMAT Verbal 相关但考试目标不同，分开练。</p>
       </article>
       {% endif %}
       <article class="block aside-note">
