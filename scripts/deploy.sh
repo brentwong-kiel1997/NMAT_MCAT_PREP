@@ -16,6 +16,17 @@ mkdir -p "$LOGS" "$DEPLOY"
 export DJANGO_DEBUG="${DJANGO_DEBUG:-0}"
 export DJANGO_ALLOWED_HOSTS="${DJANGO_ALLOWED_HOSTS:-localhost,127.0.0.1,*}"
 
+# MiniMax study tutor secrets (never stored in git)
+if [[ -f /home/ubuntu/runtime/secrets/load-minimax.sh ]]; then
+  # shellcheck disable=SC1091
+  source /home/ubuntu/runtime/secrets/load-minimax.sh
+elif [[ -f /home/ubuntu/runtime/secrets/minimax.env ]]; then
+  set -a
+  # shellcheck disable=SC1091
+  source /home/ubuntu/runtime/secrets/minimax.env
+  set +a
+fi
+
 cd "$DEPLOY"
 
 if [[ ! -d "$VENV" ]]; then

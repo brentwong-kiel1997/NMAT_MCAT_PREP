@@ -5,6 +5,8 @@ from portal import views
 
 urlpatterns = [
     path("", views.home, name="home"),
+    path("study/", views.study_hub, name="study_hub"),
+    path("api/study/", views.study_api, name="study_api"),
     path("subjects/", views.subject_list, name="subject_list"),
     path("subjects/<slug:slug>/", views.subject_detail, name="subject_detail"),
     path("nmat/", views.nmat_hub, name="nmat_hub"),

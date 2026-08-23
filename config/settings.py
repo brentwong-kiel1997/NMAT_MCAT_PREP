@@ -90,3 +90,18 @@ USE_X_FORWARDED_HOST = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 SECURE_SSL_REDIRECT = False  # Nginx enforces HTTPS; avoid redirect loops
+
+CSRF_TRUSTED_ORIGINS = [
+    o.strip()
+    for o in os.environ.get(
+        "DJANGO_CSRF_TRUSTED_ORIGINS",
+        "https://127.0.0.1:8888,https://localhost:8888,https://124.222.115.8:8888,https://10.0.0.14:8888",
+    ).split(",")
+    if o.strip()
+]
+
+# MiniMax study tutor (key lives outside the repo)
+MINIMAX_SECRET_FILE = os.environ.get(
+    "MINIMAX_SECRET_FILE",
+    "/home/ubuntu/runtime/secrets/minimax.env",
+)

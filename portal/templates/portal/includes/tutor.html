@@ -1,0 +1,11 @@
+{% if tutor_context %}
+{{ tutor_context.chapters|json_script:"tutor-chapters" }}
+<section class="tutor"
+  data-tutor
+  data-exam="{{ tutor_context.exam }}"
+  data-subject="{{ tutor_context.subject_slug }}"
+  data-section="{{ tutor_context.section_slug }}"
+  data-label="{{ tutor_context.label }}">
+  {% csrf_token %}
+</section>
+{% endif %}
