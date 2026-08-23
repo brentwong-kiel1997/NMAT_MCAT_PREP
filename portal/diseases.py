@@ -1,4 +1,9 @@
-"""High-yield disease notes for NMAT / MCAT prep. Expand later."""
+"""Disease enrichment notes.
+
+These are NOT official NMAT/MCAT blueprints. NMAT Part 2 Biology is
+introductory college biology (CEM BOI), not clinical medicine. Use these
+pages as biology/immunology/pathophys bridges and later med-school context.
+"""
 
 from __future__ import annotations
 
@@ -7,9 +12,10 @@ DISEASES: dict[str, dict] = {
         "slug": "tuberculosis",
         "name": "Tuberculosis",
         "name_zh": "结核病",
-        "short": "Mycobacterium tuberculosis 引起的慢性肉芽肿感染；菲律宾高负担病，NMAT 常考传播与免疫。",
+        "short": "Mycobacterium tuberculosis 引起的慢性肉芽肿感染；菲律宾高负担病；作生物学/免疫学延伸阅读，非 NMAT 独立考科。",
         "systems": ["Respiratory", "Infectious"],
-        "exams": ["NMAT", "MCAT"],
+        "exams": ["Enrichment"],
+        "exam_fit": "MCAT：免疫/感染基础可迁移；NMAT：仅当落到细胞/免疫导论概念时有间接帮助，临床诊疗细节不在 CEM 考纲。",
         "pathogen": "Mycobacterium tuberculosis（抗酸杆菌，胞内寄生）",
         "transmission": "飞沫核（airborne droplet nuclei）；密闭空间、长时间接触风险最高。",
         "pathophysiology": [
@@ -47,7 +53,8 @@ DISEASES: dict[str, dict] = {
         "name_zh": "登革热",
         "short": "登革病毒经埃及伊蚊传播；菲律宾常见虫媒病，考点在血浆渗漏与抗体依赖性增强。",
         "systems": ["Infectious", "Hematologic"],
-        "exams": ["NMAT", "MCAT"],
+        "exams": ["Enrichment"],
+        "exam_fit": "延伸阅读：服务生物学/病理生理直觉；NMAT 考纲是导论课不是临床诊疗；MCAT 可迁移机制，不考指南级用药方案。",
         "pathogen": "Dengue virus（黄病毒科，+ssRNA）；血清型 DENV-1–4",
         "transmission": "Aedes aegypti（白天叮咬）；人—蚊—人周期。",
         "pathophysiology": [
@@ -84,7 +91,8 @@ DISEASES: dict[str, dict] = {
         "name_zh": "2型糖尿病",
         "short": "胰岛素抵抗 + 相对胰岛素分泌不足；代谢综合征核心疾病，NMAT/MCAT 双高频。",
         "systems": ["Endocrine", "Metabolic"],
-        "exams": ["NMAT", "MCAT"],
+        "exams": ["Enrichment"],
+        "exam_fit": "延伸阅读：服务生物学/病理生理直觉；NMAT 考纲是导论课不是临床诊疗；MCAT 可迁移机制，不考指南级用药方案。",
         "pathogen": "非传染性；遗传易感 + 环境（肥胖、久坐、饮食）",
         "transmission": "不适用（非传染）。家族聚集与生活方式相关。",
         "pathophysiology": [
@@ -121,7 +129,8 @@ DISEASES: dict[str, dict] = {
         "name_zh": "原发性高血压",
         "short": "多数高血压无单一病因；心脑血管事件的核心可改变危险因素。",
         "systems": ["Cardiovascular", "Renal"],
-        "exams": ["NMAT", "MCAT"],
+        "exams": ["Enrichment"],
+        "exam_fit": "延伸阅读：服务生物学/病理生理直觉；NMAT 考纲是导论课不是临床诊疗；MCAT 可迁移机制，不考指南级用药方案。",
         "pathogen": "多因素：遗传、盐敏感、交感张力、RAAS、血管硬化",
         "transmission": "不适用。",
         "pathophysiology": [
@@ -158,7 +167,8 @@ DISEASES: dict[str, dict] = {
         "name_zh": "社区获得性肺炎",
         "short": "肺泡感染导致渗出与气体交换障碍；病原谱与经验性治疗是高频考点。",
         "systems": ["Respiratory", "Infectious"],
-        "exams": ["NMAT", "MCAT"],
+        "exams": ["Enrichment"],
+        "exam_fit": "延伸阅读：服务生物学/病理生理直觉；NMAT 考纲是导论课不是临床诊疗；MCAT 可迁移机制，不考指南级用药方案。",
         "pathogen": "常见：Streptococcus pneumoniae；非典型：Mycoplasma、Chlamydia、Legionella",
         "transmission": "吸入口咽定植菌或飞沫；宿主防御下降时发病。",
         "pathophysiology": [
@@ -196,7 +206,8 @@ DISEASES: dict[str, dict] = {
         "name_zh": "哮喘",
         "short": "可逆性气道阻塞 + 高反应性 + 慢性炎症；I 型超敏与 Th2 通路是机制核心。",
         "systems": ["Respiratory", "Immunologic"],
-        "exams": ["NMAT", "MCAT"],
+        "exams": ["Enrichment"],
+        "exam_fit": "延伸阅读：服务生物学/病理生理直觉；NMAT 考纲是导论课不是临床诊疗；MCAT 可迁移机制，不考指南级用药方案。",
         "pathogen": "非传染；过敏原、感染、运动、冷空气等触发",
         "transmission": "不适用。",
         "pathophysiology": [
@@ -233,7 +244,8 @@ DISEASES: dict[str, dict] = {
         "name_zh": "心肌梗死",
         "short": "冠脉急性闭塞导致心肌坏死；缺血时间与再灌注是生死线。",
         "systems": ["Cardiovascular"],
-        "exams": ["NMAT", "MCAT"],
+        "exams": ["Enrichment"],
+        "exam_fit": "延伸阅读：服务生物学/病理生理直觉；NMAT 考纲是导论课不是临床诊疗；MCAT 可迁移机制，不考指南级用药方案。",
         "pathogen": "多数为动脉粥样硬化斑块破裂 + 血栓",
         "transmission": "不适用。危险因素：吸烟、高血压、糖尿病、血脂异常、家族史。",
         "pathophysiology": [
@@ -270,7 +282,8 @@ DISEASES: dict[str, dict] = {
         "name_zh": "急性肾损伤",
         "short": "数小时至数日内肾功能骤降；先分清肾前/肾性/肾后，再谈机制题。",
         "systems": ["Renal"],
-        "exams": ["NMAT", "MCAT"],
+        "exams": ["Enrichment"],
+        "exam_fit": "延伸阅读：服务生物学/病理生理直觉；NMAT 考纲是导论课不是临床诊疗；MCAT 可迁移机制，不考指南级用药方案。",
         "pathogen": "病因分类：灌注不足、实质损伤、梗阻",
         "transmission": "不适用。",
         "pathophysiology": [

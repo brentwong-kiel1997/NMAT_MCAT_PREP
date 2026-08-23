@@ -28,7 +28,10 @@
   <div class="detail-grid">
     <div>
       <article class="block" style="margin-bottom:1.75rem;">
-        <h2>学科权重（常见公开分解）</h2>
+        <h2>学科权重</h2>
+        {% if exam.discipline_mix_note %}
+        <p class="note-line">{{ exam.discipline_mix_note }}</p>
+        {% endif %}
         <ul>
           {% for d in section.discipline_mix %}<li>{{ d }}</li>{% endfor %}
         </ul>

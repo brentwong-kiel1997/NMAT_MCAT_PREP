@@ -1,23 +1,15 @@
 from django.http import Http404
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 
 from .diseases import all_diseases, get_disease
 from . import exams
 
 
 def home(request):
-    featured_slugs = [
-        "tuberculosis",
-        "dengue",
-        "type-2-diabetes",
-        "myocardial-infarction",
-    ]
-    featured = [get_disease(s) for s in featured_slugs if get_disease(s)]
     return render(
         request,
         "portal/home.html",
         {
-            "featured": featured,
             "shared_subjects": exams.shared_list(),
             "nmat": exams.NMAT,
             "mcat": exams.MCAT,
@@ -83,8 +75,6 @@ def nmat_subject(request, slug):
             "social-science": "behavioral-social",
         }
         if slug in aliases:
-            from django.shortcuts import redirect
-
             return redirect("subject_detail", slug=aliases[slug])
         raise Http404("NMAT subject not found")
     return render(

@@ -17,6 +17,7 @@
     <p class="section-kicker">{{ disease.name_zh }}</p>
     <h1>{{ disease.name }}</h1>
     <p class="lead">{{ disease.short }}</p>
+    {% if disease.exam_fit %}<p class="lead" style="margin-top:0.75rem;">{{ disease.exam_fit }}</p>{% endif %}
     <ul class="tags">
       {% for s in disease.systems %}<li>{{ s }}</li>{% endfor %}
       {% for e in disease.exams %}<li>{{ e }}</li>{% endfor %}
