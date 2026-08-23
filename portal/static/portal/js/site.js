@@ -306,6 +306,10 @@
       else {
         feedback.hidden = true;
       }
+      const prev = root.querySelector(".practice-prev");
+      const next = root.querySelector(".practice-next");
+      if (prev) prev.disabled = state.i <= 0;
+      if (next) next.disabled = state.i >= items.length - 1;
     }
 
     root.querySelector(".practice-prev")?.addEventListener("click", () => {
