@@ -61,19 +61,22 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "config.wsgi.application"
 
-# User / auth / progress DB (separate from curriculum knowledge)
+# User DB (default) and Knowledge DB are separate SQLite files under RUNTIME_DIR.
+# Never point both aliases at the same path.
 RUNTIME_DIR = Path(
     os.environ.get("GABAY_RUNTIME_DIR", "/home/ubuntu/runtime/django-wsgi")
 )
 RUNTIME_DIR.mkdir(parents=True, exist_ok=True)
 
 DATABASES = {
+    # learners / Django auth / sessions / progress
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": Path(
             os.environ.get("GABAY_USER_DB", str(RUNTIME_DIR / "users.sqlite3"))
         ),
     },
+    # curriculum outlines, notes, practice, diseases
     "knowledge": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": Path(
@@ -83,6 +86,9 @@ DATABASES = {
 }
 
 DATABASE_ROUTERS = ["knowledge.db_router.KnowledgeRouter"]
+
+if str(DATABASES["default"]["NAME"]) == str(DATABASES["knowledge"]["NAME"]):
+    raise RuntimeError("GABAY_USER_DB and GABAY_KNOWLEDGE_DB must be different files")
 
 AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},

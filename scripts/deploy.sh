@@ -35,10 +35,15 @@ fi
 
 "${VENV}/bin/pip" install -q --upgrade pip
 "${VENV}/bin/pip" install -q -r requirements.txt
-# default = users/auth/progress ; knowledge = curriculum content
+
+# --- Two separate SQLite files under $RUNTIME ---
+# users.sqlite3     (default): auth / sessions / learner progress
+# knowledge.sqlite3 (knowledge): curriculum / notes / practice / diseases
 "${VENV}/bin/python" manage.py migrate --database=default --noinput
-"${VENV}/bin/python" manage.py migrate --database=knowledge --noinput
+# Only migrate the knowledge app into the knowledge DB (avoids auth tables there)
+"${VENV}/bin/python" manage.py migrate knowledge --database=knowledge --noinput
 "${VENV}/bin/python" manage.py load_knowledge
+"${VENV}/bin/python" manage.py db_status
 "${VENV}/bin/python" manage.py collectstatic --noinput
 
 if [[ -f "$PIDFILE" ]]; then
