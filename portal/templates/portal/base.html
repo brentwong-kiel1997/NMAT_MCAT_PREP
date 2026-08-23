@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="{% static 'portal/css/tutor.css' %}">
 </head>
 <body>
+  <div class="csrf-slot" hidden>{% csrf_token %}</div>
   {% block body %}{% endblock %}
   <footer class="site-footer">
     <div class="site-footer-inner">

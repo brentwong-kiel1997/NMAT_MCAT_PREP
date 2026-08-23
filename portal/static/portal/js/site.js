@@ -45,7 +45,9 @@
 
   function csrfToken() {
     const m = document.cookie.match(/(?:^|; )csrftoken=([^;]+)/);
-    return m ? decodeURIComponent(m[1]) : "";
+    if (m) return decodeURIComponent(m[1]);
+    const input = document.querySelector(".csrf-slot input[name=csrfmiddlewaretoken], input[name=csrfmiddlewaretoken]");
+    return input ? input.value : "";
   }
 
   function readJson(el) {
@@ -168,26 +170,17 @@
 
     function paint() {
       const c = cards[i];
+      const prompt = panel.querySelector(".flash-prompt");
+      const answer = panel.querySelector(".flash-answer");
       if (chapterEl) chapterEl.textContent = c.chapter || "";
-      const zhFront = panel.querySelector(".flash-front.only-zh");
-      const enFront = panel.querySelector(".flash-front.only-en");
-      const zhBack = panel.querySelector(".flash-back.only-zh");
-      const enBack = panel.querySelector(".flash-back.only-en");
-      if (zhFront) {
-        zhFront.textContent = "点按翻转 · 回忆要点";
-        zhFront.hidden = flipped;
+      if (prompt) {
+        prompt.textContent =
+          currentLang() === "en" ? "Tap to flip · recall the point" : "点按翻转 · 回忆要点";
+        prompt.hidden = flipped;
       }
-      if (enFront) {
-        enFront.textContent = "Tap to flip · recall the point";
-        enFront.hidden = flipped;
-      }
-      if (zhBack) {
-        zhBack.textContent = c.zh || "";
-        zhBack.hidden = !flipped;
-      }
-      if (enBack) {
-        enBack.textContent = c.en || "";
-        enBack.hidden = !flipped;
+      if (answer) {
+        answer.textContent = currentLang() === "en" ? c.en || "" : c.zh || "";
+        answer.hidden = !flipped;
       }
       if (indexEl) indexEl.textContent = String(i + 1);
       if (cardBtn) cardBtn.classList.toggle("is-flipped", flipped);

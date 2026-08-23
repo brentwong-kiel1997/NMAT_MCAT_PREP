@@ -32,10 +32,8 @@
     <p class="flash-meta"><span class="flash-index">1</span> / <span class="flash-total">{{ flashcards|length }}</span></p>
     <button type="button" class="flash-card" aria-live="polite">
       <span class="flash-chapter"></span>
-      <span class="flash-front only-zh"></span>
-      <span class="flash-front only-en"></span>
-      <span class="flash-back only-zh" hidden></span>
-      <span class="flash-back only-en" hidden></span>
+      <span class="flash-face flash-prompt"></span>
+      <span class="flash-face flash-answer" hidden></span>
     </button>
     <div class="flash-actions">
       <button type="button" class="flash-prev" data-i18n data-zh="上一张" data-en="Prev">上一张</button>

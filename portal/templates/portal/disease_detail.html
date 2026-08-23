@@ -23,34 +23,34 @@
   <div class="detail-grid">
     <div>
       <article class="block" style="margin-bottom:1.75rem;">
-        <h2>病因 / 病原</h2>
+        <h2 data-i18n data-zh="病因 / 病原" data-en="Cause / pathogen">病因 / 病原</h2>
         <p>{{ disease.pathogen }}</p>
         <p style="margin-top:0.75rem;">{{ disease.transmission }}</p>
       </article>
 
       <article class="block" style="margin-bottom:1.75rem;">
-        <h2>病理生理</h2>
+        <h2 data-i18n data-zh="病理生理" data-en="Pathophysiology">病理生理</h2>
         <ul>
           {% for item in disease.pathophysiology %}<li>{{ item }}</li>{% endfor %}
         </ul>
       </article>
 
       <article class="block" style="margin-bottom:1.75rem;">
-        <h2>临床表现</h2>
+        <h2 data-i18n data-zh="临床表现" data-en="Clinical features">临床表现</h2>
         <ul>
           {% for item in disease.clinical %}<li>{{ item }}</li>{% endfor %}
         </ul>
       </article>
 
       <article class="block" style="margin-bottom:1.75rem;">
-        <h2>诊断要点</h2>
+        <h2 data-i18n data-zh="诊断要点" data-en="Diagnosis">诊断要点</h2>
         <ul>
           {% for item in disease.diagnosis %}<li>{{ item }}</li>{% endfor %}
         </ul>
       </article>
 
       <article class="block">
-        <h2>治疗框架</h2>
+        <h2 data-i18n data-zh="治疗框架" data-en="Treatment frame">治疗框架</h2>
         <ul>
           {% for item in disease.treatment %}<li>{{ item }}</li>{% endfor %}
         </ul>
@@ -59,22 +59,22 @@
 
     <aside>
       <article class="block aside-note" style="border-top:0;padding-top:0;">
-        <h2>高收益考点</h2>
+        <h2 data-i18n data-zh="高收益考点" data-en="High-yield points">高收益考点</h2>
         <ul>
           {% for item in disease.high_yield %}<li>{{ item }}</li>{% endfor %}
         </ul>
       </article>
       <article class="block aside-note">
-        <h2>MCAT 桥接</h2>
+        <h2 data-i18n data-zh="MCAT 桥接" data-en="MCAT bridge">MCAT 桥接</h2>
         <p>{{ disease.mcat_bridge }}</p>
       </article>
       <article class="block aside-note">
-        <h2>NMAT 桥接</h2>
+        <h2 data-i18n data-zh="NMAT 桥接" data-en="NMAT bridge">NMAT 桥接</h2>
         <p>{{ disease.nmat_bridge }}</p>
       </article>
       {% if neighbors %}
       <article class="block aside-note">
-        <h2>继续读</h2>
+        <h2 data-i18n data-zh="继续读" data-en="Read next">继续读</h2>
         <ul>
           {% for n in neighbors %}
           <li><a href="{% url 'disease_detail' n.slug %}">{{ n.name }}</a></li>
