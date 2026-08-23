@@ -1,0 +1,39 @@
+{% extends "portal/base.html" %}
+
+{% block title %}疾病库 · Gabay{% endblock %}
+{% block description %}NMAT / MCAT 高收益疾病笔记库{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <header class="site-header">
+      <a class="nav-brand" href="{% url 'home' %}">Gabay</a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="{% url 'home' %}">首页</a>
+        <a href="{% url 'disease_list' %}">疾病</a>
+      </nav>
+    </header>
+    <p class="section-kicker">Disease library</p>
+    <h1>疾病库</h1>
+    <p class="lead">每篇按病原/病因、机制、临床、诊断、治疗与高收益考点组织，并标出 NMAT 与 MCAT 的桥接角度。</p>
+  </div>
+</div>
+
+<section class="section" id="library">
+  <ul class="disease-list">
+    {% for d in diseases %}
+    <li>
+      <a href="{% url 'disease_detail' d.slug %}">
+        <div>
+          <h3>{{ d.name }} <span style="color:var(--ink-soft);font-weight:500;font-size:0.92rem;">{{ d.name_zh }}</span></h3>
+          <p>{{ d.short }}</p>
+        </div>
+        <span class="disease-meta">{{ d.systems|join:" / " }}</span>
+      </a>
+    </li>
+    {% empty %}
+    <li><p>暂无疾病条目。</p></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

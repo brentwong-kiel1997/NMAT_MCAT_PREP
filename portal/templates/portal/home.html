@@ -1,0 +1,45 @@
+{% extends "portal/base.html" %}
+
+{% block title %}Gabay · NMAT & MCAT 备考助手{% endblock %}
+
+{% block body %}
+<header class="site-header">
+  <a class="nav-brand" href="{% url 'home' %}">Gabay</a>
+  <nav class="nav-links" aria-label="主导航">
+    <a href="{% url 'disease_list' %}">疾病</a>
+    <a href="{% url 'disease_list' %}#library">题感笔记</a>
+  </nav>
+</header>
+
+<section class="hero" aria-label="首页">
+  <div class="hero-visual" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="hero-brand">Gabay</p>
+    <h1>NMAT 与 MCAT 的私人备考向导</h1>
+    <p class="hero-lead">先从高收益疾病切入：机制、临床线索与考试桥接，一页把菲律宾医学院入学与 MCAT 串起来。</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="{% url 'disease_list' %}">进入疾病库</a>
+      <a class="btn btn-ghost" href="{% url 'disease_detail' 'tuberculosis' %}">从结核病开始</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="focus">
+  <p class="section-kicker">本季重点</p>
+  <h2>疾病先打底，再铺生理与题感</h2>
+  <p class="section-lead">当前先上线感染、代谢、心肺与肾脏等高频病种。后面你补充讲义或错题后，我会继续往里加模块。</p>
+  <ul class="disease-list">
+    {% for d in featured %}
+    <li>
+      <a href="{% url 'disease_detail' d.slug %}">
+        <div>
+          <h3>{{ d.name }} <span style="color:var(--ink-soft);font-weight:500;font-size:0.92rem;">{{ d.name_zh }}</span></h3>
+          <p>{{ d.short }}</p>
+        </div>
+        <span class="disease-meta">{{ d.exams|join:" · " }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

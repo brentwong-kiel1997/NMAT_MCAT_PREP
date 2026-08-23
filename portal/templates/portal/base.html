@@ -1,0 +1,23 @@
+{% load static %}
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Gabay{% endblock %}</title>
+  <meta name="description" content="{% block description %}Gabay — NMAT 菲律宾医学院入学与 MCAT 备考个人助手{% endblock %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'portal/css/site.css' %}">
+</head>
+<body>
+  {% block body %}{% endblock %}
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <span>Gabay · NMAT &amp; MCAT 个人备考助手</span>
+      <span>疾病库会持续扩充</span>
+    </div>
+  </footer>
+</body>
+</html>

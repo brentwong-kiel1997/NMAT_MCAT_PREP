@@ -5,6 +5,7 @@ set -euo pipefail
 APP_NAME="django-wsgi"
 DEPLOY="/home/ubuntu/deploy/${APP_NAME}"
 RUNTIME="/home/ubuntu/runtime/${APP_NAME}"
+BARE="/home/ubuntu/repos/${APP_NAME}.git"
 VENV="${RUNTIME}/venv"
 LOGS="${RUNTIME}/logs"
 PIDFILE="${RUNTIME}/gunicorn.pid"
@@ -47,6 +48,5 @@ fi
   --error-logfile "${LOGS}/gunicorn.error.log" \
   --daemon
 
-BARE="/home/ubuntu/repos/django-wsgi.git"
 REV="$(git --git-dir="$BARE" rev-parse --short HEAD 2>/dev/null || echo unknown)"
 echo "Deployed ${REV} → gunicorn ${SOCK}"
