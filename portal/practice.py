@@ -173,6 +173,21 @@ PRACTICE: dict[str, list[dict]] = {
             "explain_en": "V = IR is the basic linear-resistor relation.",
             "chapter": "Electricity and Magnetism",
         },
+        {
+            "id": "phy-4",
+            "q_zh": "光子能量与频率的关系是：",
+            "q_en": "Photon energy relates to frequency as:",
+            "choices": {
+                "A": {"zh": "E = hf", "en": "E = hf"},
+                "B": {"zh": "E = h/f", "en": "E = h/f"},
+                "C": {"zh": "E = f/h", "en": "E = f/h"},
+                "D": {"zh": "E = h + f", "en": "E = h + f"},
+            },
+            "answer": "A",
+            "explain_zh": "E = hf（或 E = hc/λ）。",
+            "explain_en": "E = hf (or E = hc/λ).",
+            "chapter": "Modern Physics",
+        },
     ],
     "behavioral-social": [
         {
@@ -204,6 +219,21 @@ PRACTICE: dict[str, list[dict]] = {
             "explain_zh": "观察他人时常过度归因于人格而非情境。",
             "explain_en": "Observers over-attribute others’ acts to personality vs situation.",
             "chapter": "FC8 · Self, others, interactions",
+        },
+        {
+            "id": "beh-3",
+            "q_zh": "操作条件反射中，强化的作用是：",
+            "q_en": "In operant conditioning, reinforcement serves to:",
+            "choices": {
+                "A": {"zh": "降低行为再发生概率", "en": "Decrease the chance the behavior recurs"},
+                "B": {"zh": "提高行为再发生概率", "en": "Increase the chance the behavior recurs"},
+                "C": {"zh": "只改变态度不改行为", "en": "Change attitudes only, never behavior"},
+                "D": {"zh": "消除所有刺激", "en": "Eliminate all stimuli"},
+            },
+            "answer": "B",
+            "explain_zh": "强化增加目标行为频率；惩罚降低。",
+            "explain_en": "Reinforcement raises target-behavior frequency; punishment lowers it.",
+            "chapter": "Psychology",
         },
     ],
     "biochemistry": [
@@ -351,6 +381,21 @@ PRACTICE: dict[str, list[dict]] = {
             "explain_zh": "先分清写什么与主张什么。",
             "explain_en": "Separate what it’s about from what it argues.",
             "chapter": "Foundations of Comprehension",
+        },
+        {
+            "id": "cars-3",
+            "q_zh": "Reasoning Beyond the Text 题通常要求：",
+            "q_en": "Reasoning Beyond the Text items usually require you to:",
+            "choices": {
+                "A": {"zh": "引入文外事实并忽略作者原则", "en": "Import outside facts and ignore the author’s principle"},
+                "B": {"zh": "把文中原则一致地应用到新情境", "en": "Apply the passage principle consistently to a new scenario"},
+                "C": {"zh": "只计算词频", "en": "Only count word frequency"},
+                "D": {"zh": "改写作者结论为相反意思", "en": "Invert the author’s conclusion"},
+            },
+            "answer": "B",
+            "explain_zh": "超文推理仍须保持与原文原则一致。",
+            "explain_en": "Beyond-text reasoning still has to keep the passage principle intact.",
+            "chapter": "Reasoning Beyond the Text",
         },
     ],
     "chem-phys": [
