@@ -1,11 +1,21 @@
-"""Load curriculum notes, practice, and diseases into the knowledge database."""
+"""Load curriculum outlines, notes, practice, and diseases into knowledge DB."""
 
 from __future__ import annotations
+
+from copy import deepcopy
 
 from django.core.management.base import BaseCommand
 from django.db import transaction
 
-from knowledge.models import ChapterNote, DiseaseArticle, PracticeQuestion, SubjectRef
+from knowledge.models import (
+    ChapterNote,
+    CurriculumSubject,
+    DiseaseArticle,
+    OutlineChapter,
+    PracticeQuestion,
+    SubjectRef,
+)
+from portal import exams
 from portal.diseases import DISEASES
 from portal.notes import NOTES
 from portal.practice import LABELS, PRACTICE
@@ -23,8 +33,35 @@ KIND_HINTS = {
 }
 
 
+def _upsert_curriculum(slug: str, kind: str, subject: dict) -> None:
+    payload = deepcopy(subject)
+    CurriculumSubject.objects.update_or_create(
+        slug=slug,
+        defaults={
+            "kind": kind,
+            "name": subject.get("name") or subject.get("short") or slug,
+            "name_zh": subject.get("name_zh") or "",
+            "summary": subject.get("summary") or subject.get("focus") or "",
+            "payload": payload,
+        },
+    )
+    OutlineChapter.objects.filter(subject_slug=slug).delete()
+    order = 0
+    for group in subject.get("chapters") or []:
+        heading = group.get("heading") or ""
+        for item in group.get("items") or []:
+            OutlineChapter.objects.create(
+                subject_slug=slug,
+                group_heading=heading,
+                title=item.get("title") or "",
+                sort_order=order,
+                points=list(item.get("points") or []),
+            )
+            order += 1
+
+
 class Command(BaseCommand):
-    help = "Seed / refresh the knowledge SQLite database from Python source modules."
+    help = "Seed / refresh the knowledge SQLite database from Python curriculum sources."
 
     def add_arguments(self, parser):
         parser.add_argument(
@@ -39,9 +76,48 @@ class Command(BaseCommand):
             ChapterNote.objects.all().delete()
             PracticeQuestion.objects.all().delete()
             DiseaseArticle.objects.all().delete()
+            OutlineChapter.objects.all().delete()
+            CurriculumSubject.objects.all().delete()
             SubjectRef.objects.all().delete()
             self.stdout.write("Flushed knowledge tables.")
 
+        # ---- subject outlines from exams.py ----
+        for slug, subject in exams.SHARED_SUBJECTS.items():
+            _upsert_curriculum(slug, "shared", subject)
+            SubjectRef.objects.update_or_create(
+                slug=slug,
+                defaults={
+                    "label_zh": subject.get("name_zh") or subject.get("name") or slug,
+                    "label_en": subject.get("name") or slug,
+                    "kind": "shared",
+                },
+            )
+
+        for subject in exams.NMAT["parts"][0]["subjects"]:
+            slug = subject["slug"]
+            _upsert_curriculum(slug, "nmat", subject)
+            SubjectRef.objects.update_or_create(
+                slug=slug,
+                defaults={
+                    "label_zh": subject.get("name_zh") or subject.get("name") or slug,
+                    "label_en": subject.get("name") or slug,
+                    "kind": "nmat",
+                },
+            )
+
+        for subject in exams.MCAT["sections"]:
+            slug = subject["slug"]
+            _upsert_curriculum(slug, "mcat", subject)
+            SubjectRef.objects.update_or_create(
+                slug=slug,
+                defaults={
+                    "label_zh": subject.get("name_zh") or subject.get("short") or slug,
+                    "label_en": subject.get("short") or subject.get("name") or slug,
+                    "kind": "mcat",
+                },
+            )
+
+        # ---- notes / practice catalog extras ----
         slugs = set(NOTES) | set(PRACTICE) | set(LABELS)
         for slug in sorted(slugs):
             label = LABELS.get(slug, {"zh": slug, "en": slug})
@@ -102,7 +178,10 @@ class Command(BaseCommand):
 
         self.stdout.write(
             self.style.SUCCESS(
-                f"Knowledge DB ready: subjects={SubjectRef.objects.count()} "
+                "Knowledge DB ready: "
+                f"curriculum={CurriculumSubject.objects.count()} "
+                f"outline_chapters={OutlineChapter.objects.count()} "
+                f"subjects={SubjectRef.objects.count()} "
                 f"notes={note_rows} practice={practice_rows} diseases={disease_rows}"
             )
         )

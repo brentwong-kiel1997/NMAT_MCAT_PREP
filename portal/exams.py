@@ -599,19 +599,57 @@ MCAT: dict = {
 from .bilingual import enrich_exam, enrich_subject
 
 
+def _from_knowledge(slug: str, kind: str | None = None) -> dict | None:
+    try:
+        from knowledge.models import CurriculumSubject
+
+        qs = CurriculumSubject.objects.filter(slug=slug)
+        if kind:
+            qs = qs.filter(kind=kind)
+        row = qs.first()
+        if row:
+            return enrich_subject(row.as_dict())
+    except Exception:
+        return None
+    return None
+
+
 def shared_list() -> list[dict]:
+    try:
+        from knowledge.models import CurriculumSubject
+
+        rows = list(CurriculumSubject.objects.filter(kind="shared"))
+        if rows:
+            return [enrich_subject(r.as_dict()) for r in rows]
+    except Exception:
+        pass
     return [enrich_subject(s) for s in SHARED_SUBJECTS.values()]
 
 
 def get_shared(slug: str) -> dict | None:
-    return enrich_subject(SHARED_SUBJECTS.get(slug))
+    found = _from_knowledge(slug, kind="shared")
+    if found:
+        return found
+    raw = SHARED_SUBJECTS.get(slug)
+    return enrich_subject(raw) if raw else None
 
 
 def nmat_unique_subjects() -> list[dict]:
+    try:
+        from knowledge.models import CurriculumSubject
+
+        rows = list(CurriculumSubject.objects.filter(kind="nmat"))
+        if rows:
+            return [enrich_subject(r.as_dict()) for r in rows]
+    except Exception:
+        pass
     return [enrich_subject(s) for s in NMAT["parts"][0]["subjects"]]
 
 
 def get_nmat_unique(slug: str) -> dict | None:
+    found = _from_knowledge(slug, kind="nmat")
+    if found:
+        return found
     for s in NMAT["parts"][0]["subjects"]:
         if s["slug"] == slug:
             return enrich_subject(s)
@@ -619,6 +657,9 @@ def get_nmat_unique(slug: str) -> dict | None:
 
 
 def get_mcat_section(slug: str) -> dict | None:
+    found = _from_knowledge(slug, kind="mcat")
+    if found:
+        return found
     for s in MCAT["sections"]:
         if s["slug"] == slug:
             return enrich_subject(s)
@@ -626,8 +667,26 @@ def get_mcat_section(slug: str) -> dict | None:
 
 
 def nmat_exam() -> dict:
-    return enrich_exam(NMAT)
+    exam = enrich_exam(NMAT)
+    try:
+        from knowledge.models import CurriculumSubject
+
+        rows = list(CurriculumSubject.objects.filter(kind="nmat"))
+        if rows and exam.get("parts"):
+            exam["parts"][0]["subjects"] = [enrich_subject(r.as_dict()) for r in rows]
+    except Exception:
+        pass
+    return exam
 
 
 def mcat_exam() -> dict:
-    return enrich_exam(MCAT)
+    exam = enrich_exam(MCAT)
+    try:
+        from knowledge.models import CurriculumSubject
+
+        rows = list(CurriculumSubject.objects.filter(kind="mcat"))
+        if rows:
+            exam["sections"] = [enrich_subject(r.as_dict()) for r in rows]
+    except Exception:
+        pass
+    return exam

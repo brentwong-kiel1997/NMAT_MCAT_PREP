@@ -23,6 +23,55 @@ class SubjectRef(models.Model):
         return self.slug
 
 
+class CurriculumSubject(models.Model):
+    """Full subject/section outline stored in the knowledge database."""
+
+    KIND_CHOICES = SubjectRef.KIND_CHOICES
+
+    slug = models.SlugField(max_length=80, unique=True)
+    kind = models.CharField(max_length=16, choices=KIND_CHOICES, default="shared")
+    name = models.CharField(max_length=160)
+    name_zh = models.CharField(max_length=160, blank=True)
+    summary = models.TextField(blank=True)
+    payload = models.JSONField(default=dict)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["kind", "slug"]
+
+    def __str__(self) -> str:
+        return f"{self.kind}:{self.slug}"
+
+    def as_dict(self) -> dict:
+        data = dict(self.payload or {})
+        data.setdefault("slug", self.slug)
+        data.setdefault("name", self.name)
+        if self.name_zh:
+            data.setdefault("name_zh", self.name_zh)
+        if self.summary:
+            data.setdefault("summary", self.summary)
+        return data
+
+
+class OutlineChapter(models.Model):
+    """Normalized chapter row for SQL queries / joins with notes."""
+
+    subject_slug = models.SlugField(max_length=80, db_index=True)
+    group_heading = models.CharField(max_length=240, blank=True)
+    title = models.CharField(max_length=240)
+    sort_order = models.PositiveSmallIntegerField(default=0)
+    points = models.JSONField(default=list)
+
+    class Meta:
+        ordering = ["subject_slug", "sort_order", "id"]
+        indexes = [
+            models.Index(fields=["subject_slug", "title"]),
+        ]
+
+    def __str__(self) -> str:
+        return f"{self.subject_slug}:{self.title[:40]}"
+
+
 class ChapterNote(models.Model):
     """High-yield bilingual note under a chapter title."""
 

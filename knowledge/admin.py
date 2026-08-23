@@ -1,12 +1,33 @@
 from django.contrib import admin
 
-from .models import ChapterNote, DiseaseArticle, PracticeQuestion, SubjectRef
+from .models import (
+    ChapterNote,
+    CurriculumSubject,
+    DiseaseArticle,
+    OutlineChapter,
+    PracticeQuestion,
+    SubjectRef,
+)
 
 
 @admin.register(SubjectRef)
 class SubjectRefAdmin(admin.ModelAdmin):
     list_display = ("slug", "label_en", "label_zh", "kind", "updated_at")
     search_fields = ("slug", "label_en", "label_zh")
+
+
+@admin.register(CurriculumSubject)
+class CurriculumSubjectAdmin(admin.ModelAdmin):
+    list_display = ("slug", "kind", "name", "name_zh", "updated_at")
+    list_filter = ("kind",)
+    search_fields = ("slug", "name", "name_zh")
+
+
+@admin.register(OutlineChapter)
+class OutlineChapterAdmin(admin.ModelAdmin):
+    list_display = ("subject_slug", "sort_order", "title", "group_heading")
+    list_filter = ("subject_slug",)
+    search_fields = ("title", "group_heading")
 
 
 @admin.register(ChapterNote)
