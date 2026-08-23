@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "portal",
+    "knowledge",
 ]
 
 MIDDLEWARE = [
@@ -60,12 +61,28 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "config.wsgi.application"
 
+# User / auth / progress DB (separate from curriculum knowledge)
+RUNTIME_DIR = Path(
+    os.environ.get("GABAY_RUNTIME_DIR", "/home/ubuntu/runtime/django-wsgi")
+)
+RUNTIME_DIR.mkdir(parents=True, exist_ok=True)
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+        "NAME": Path(
+            os.environ.get("GABAY_USER_DB", str(RUNTIME_DIR / "users.sqlite3"))
+        ),
+    },
+    "knowledge": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": Path(
+            os.environ.get("GABAY_KNOWLEDGE_DB", str(RUNTIME_DIR / "knowledge.sqlite3"))
+        ),
+    },
 }
+
+DATABASE_ROUTERS = ["knowledge.db_router.KnowledgeRouter"]
 
 AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},

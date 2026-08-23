@@ -466,6 +466,36 @@ def _chapter_id(title: str, index: int) -> str:
 
 
 def notes_for(slug: str, chapter_title: str) -> list[dict[str, str]]:
+    try:
+        from knowledge.models import ChapterNote
+
+        rows = list(
+            ChapterNote.objects.filter(subject_slug=slug, chapter_title=chapter_title)
+            .order_by("sort_order", "id")
+            .values("text_zh", "text_en")
+        )
+        if rows:
+            return [{"zh": r["text_zh"], "en": r["text_en"]} for r in rows]
+        title_l = chapter_title.lower()
+        left = chapter_title.split("·")[0].strip().lower()
+        qs = ChapterNote.objects.filter(subject_slug=slug).order_by(
+            "chapter_title", "sort_order", "id"
+        )
+        grouped: dict[str, list[dict[str, str]]] = {}
+        for r in qs:
+            grouped.setdefault(r.chapter_title, []).append(
+                {"zh": r.text_zh, "en": r.text_en}
+            )
+        for key, val in grouped.items():
+            k = key.lower()
+            if k in title_l or title_l in k:
+                return list(val)
+            kleft = key.split("·")[0].strip().lower()
+            if left and kleft == left and len(left) <= 4:
+                return list(val)
+    except Exception:
+        pass
+
     bucket = NOTES.get(slug) or {}
     if chapter_title in bucket:
         return list(bucket[chapter_title])
@@ -500,16 +530,24 @@ def attach_notes(subject: dict) -> dict:
 
 def flashcards_for(slug: str, limit: int = 40) -> list[dict]:
     """Derive flashcards from study notes for a subject slug."""
+    try:
+        from knowledge.models import ChapterNote
+
+        qs = ChapterNote.objects.filter(subject_slug=slug).order_by(
+            "chapter_title", "sort_order", "id"
+        )[:limit]
+        cards = [
+            {"chapter": r.chapter_title, "zh": r.text_zh, "en": r.text_en} for r in qs
+        ]
+        if cards:
+            return cards
+    except Exception:
+        pass
+
     cards: list[dict] = []
     for title, notes in (NOTES.get(slug) or {}).items():
         for note in notes:
-            cards.append(
-                {
-                    "chapter": title,
-                    "zh": note["zh"],
-                    "en": note["en"],
-                }
-            )
+            cards.append({"chapter": title, "zh": note["zh"], "en": note["en"]})
             if len(cards) >= limit:
                 return cards
     return cards

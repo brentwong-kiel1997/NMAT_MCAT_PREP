@@ -319,8 +319,24 @@ DISEASES: dict[str, dict] = {
 
 
 def all_diseases() -> list[dict]:
+    try:
+        from knowledge.models import DiseaseArticle
+
+        rows = [d.as_dict() for d in DiseaseArticle.objects.all()]
+        if rows:
+            return sorted(rows, key=lambda d: (d.get("name") or "").lower())
+    except Exception:
+        pass
     return sorted(DISEASES.values(), key=lambda d: d["name"].lower())
 
 
 def get_disease(slug: str) -> dict | None:
+    try:
+        from knowledge.models import DiseaseArticle
+
+        row = DiseaseArticle.objects.filter(slug=slug).first()
+        if row:
+            return row.as_dict()
+    except Exception:
+        pass
     return DISEASES.get(slug)

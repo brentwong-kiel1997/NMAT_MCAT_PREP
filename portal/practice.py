@@ -410,10 +410,33 @@ LABELS = {
 
 
 def practice_for(slug: str) -> list[dict]:
+    try:
+        from knowledge.models import PracticeQuestion
+
+        qs = PracticeQuestion.objects.filter(subject_slug=slug).order_by(
+            "sort_order", "id"
+        )
+        rows = [q.as_dict() for q in qs]
+        if rows:
+            return rows
+    except Exception:
+        pass
     return list(PRACTICE.get(slug) or [])
 
 
 def all_practice_slugs() -> list[str]:
+    try:
+        from knowledge.models import PracticeQuestion
+
+        slugs = list(
+            PracticeQuestion.objects.order_by("subject_slug")
+            .values_list("subject_slug", flat=True)
+            .distinct()
+        )
+        if slugs:
+            return slugs
+    except Exception:
+        pass
     return sorted(PRACTICE.keys())
 
 
@@ -421,12 +444,23 @@ def practice_catalog() -> list[dict]:
     out = []
     for slug in all_practice_slugs():
         label = LABELS.get(slug, {"zh": slug, "en": slug})
+        try:
+            from knowledge.models import PracticeQuestion, SubjectRef
+
+            ref = SubjectRef.objects.filter(slug=slug).first()
+            if ref:
+                label = {"zh": ref.label_zh, "en": ref.label_en}
+            count = PracticeQuestion.objects.filter(subject_slug=slug).count()
+            if not count:
+                count = len(PRACTICE.get(slug) or [])
+        except Exception:
+            count = len(PRACTICE.get(slug) or [])
         out.append(
             {
                 "slug": slug,
                 "label_zh": label["zh"],
                 "label_en": label["en"],
-                "count": len(PRACTICE[slug]),
+                "count": count,
             }
         )
     return out

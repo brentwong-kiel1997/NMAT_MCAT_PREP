@@ -35,7 +35,10 @@ fi
 
 "${VENV}/bin/pip" install -q --upgrade pip
 "${VENV}/bin/pip" install -q -r requirements.txt
-"${VENV}/bin/python" manage.py migrate --noinput
+# default = users/auth/progress ; knowledge = curriculum content
+"${VENV}/bin/python" manage.py migrate --database=default --noinput
+"${VENV}/bin/python" manage.py migrate --database=knowledge --noinput
+"${VENV}/bin/python" manage.py load_knowledge
 "${VENV}/bin/python" manage.py collectstatic --noinput
 
 if [[ -f "$PIDFILE" ]]; then
