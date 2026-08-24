@@ -28,6 +28,7 @@ the single source of truth — there is no generated artifact to keep in sync.
 | `tutorials/<subject>/<chapter>.yml` | Full textbook chapters: overview, teaching sections, tables, worked examples, key points, pitfalls, exam map, sources | 1 → 90 (growing) |
 | `docs/TUTORIAL_TEMPLATE.md` | Authoring template + field reference for new chapters | — |
 | `docs/PROGRESS.md` | Per-chapter fill progress tracker (90 chapters) | 1 / 90 |
+| `docs/CHAPTER_LOG.md` | Per-chapter development log — what was actually done, decisions, landmines | 001 / 90 |
 | `MANIFEST.json` | Counts and SHA-256 hashes of every file, for integrity checks | — |
 
 ## Editing rules
