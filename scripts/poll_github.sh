@@ -41,7 +41,7 @@ if [[ "$fetched" == "$last" ]]; then
   exit 0
 fi
 
-log "new commit ${fetched:0:7} on GitHub (last deployed: ${last:0:7:-none}) — deploying"
+log "new commit ${fetched:0:7} on GitHub (last deployed: ${last:-none}) — deploying"
 
 # Mirror the post-receive sequence: move main to GitHub's tip, sync the
 # checkout, then deploy. Guarded by `if` so a failure retries next tick.
