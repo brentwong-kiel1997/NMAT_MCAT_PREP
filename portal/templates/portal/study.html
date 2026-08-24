@@ -16,6 +16,27 @@
 </div>
 
 <section class="section">
+  <p class="section-kicker" data-i18n data-zh="路径" data-en="Paths">路径</p>
+  <h2 data-i18n data-zh="按目标推进" data-en="Advance by goal">按目标推进</h2>
+  <ul class="disease-list">
+    {% for p in study_paths %}
+    <li>
+      <div>
+        <h3><span class="only-zh">{{ p.title_zh }}</span><span class="only-en">{{ p.title_en }}</span></h3>
+        <p><span class="only-zh">{{ p.blurb_zh }}</span><span class="only-en">{{ p.blurb_en }}</span></p>
+        <ol class="path-mini">
+          {% for s in p.steps %}
+          <li><a href="{{ s.href }}"><span class="only-zh">{{ s.label_zh }}</span><span class="only-en">{{ s.label_en }}</span></a></li>
+          {% endfor %}
+        </ol>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  <p style="margin-top:1rem;"><a href="{% url 'materials_hub' %}" data-i18n data-zh="全部教材资料 →" data-en="All materials →">全部教材资料 →</a></p>
+</section>
+
+<section class="section">
   <p class="section-kicker">Practice</p>
   <h2 data-i18n data-zh="先做几道题热身" data-en="Warm up with a few items">先做几道题热身</h2>
   <ul class="disease-list">

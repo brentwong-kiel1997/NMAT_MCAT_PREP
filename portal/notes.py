@@ -439,10 +439,22 @@ NOTES: dict[str, dict[str, list[dict[str, str]]]] = {
     },
 }
 
+# Supplemental high-yield notes (textbook expansion pack)
+from .extra_notes import merge_notes
+from .pack_enrich import merge_note_pack
+
+NOTES = merge_note_pack(merge_notes(NOTES))
+
 # Merge overlapping buckets so shared subject pages pick up MCAT chapter notes
-NOTES["biology"] = {**NOTES["biology"], **NOTES["bio-biochem"]}
-NOTES["chemistry"] = {**NOTES["chemistry"], **{k: v for k, v in NOTES["chem-phys"].items() if k.startswith("5") or k.startswith("4E")}}
-NOTES["physics"] = {**NOTES["physics"], **{k: v for k, v in NOTES["chem-phys"].items() if k.startswith("4")}}
+NOTES["biology"] = {**NOTES["biology"], **NOTES.get("bio-biochem", {})}
+NOTES["chemistry"] = {
+    **NOTES["chemistry"],
+    **{k: v for k, v in NOTES.get("chem-phys", {}).items() if k.startswith("5") or k.startswith("4E")},
+}
+NOTES["physics"] = {
+    **NOTES["physics"],
+    **{k: v for k, v in NOTES.get("chem-phys", {}).items() if k.startswith("4")},
+}
 NOTES["chem-phys"] = {
     **NOTES.get("physics", {}),
     **NOTES.get("chemistry", {}),

@@ -1,0 +1,33 @@
+{% extends "portal/base.html" %}
+
+{% block title %}{{ label_en }} Formulas · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker"><a href="{% url 'materials_hub' %}" data-i18n data-zh="教材" data-en="Materials">教材</a></p>
+    <h1><span class="only-zh">公式 · {{ label_zh }}</span><span class="only-en">Formulas · {{ label_en }}</span></h1>
+    <p class="lead" data-i18n data-zh="速查卡：公式 + 使用直觉。不是完整推导讲义。" data-en="Quick cards: formula + intuition — not full derivations.">速查卡：公式 + 使用直觉。不是完整推导讲义。</p>
+  </div>
+</div>
+
+<section class="section">
+  <ul class="formula-list">
+    {% for f in items %}
+    <li>
+      <h3><span class="only-zh">{{ f.title_zh }}</span><span class="only-en">{{ f.title_en }}</span></h3>
+      <p class="formula-line"><code>{{ f.formula }}</code></p>
+      <p><span class="only-zh">{{ f.note_zh }}</span><span class="only-en">{{ f.note_en }}</span></p>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <p class="note-line" style="margin-top:1.5rem;">
+    <span class="only-zh">其他公式表：</span><span class="only-en">Other sheets: </span>
+    {% for c in catalog %}
+      <a href="{% url 'materials_formulas' c.slug %}"><span class="only-zh">{{ c.label_zh }}</span><span class="only-en">{{ c.label_en }}</span></a>{% if not forloop.last %} · {% endif %}
+    {% endfor %}
+  </p>
+</section>
+{% endblock %}

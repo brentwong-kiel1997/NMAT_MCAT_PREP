@@ -148,3 +148,65 @@ class DiseaseArticle(models.Model):
         data.setdefault("name_zh", self.name_zh)
         data.setdefault("short", self.short)
         return data
+
+
+class GlossaryTerm(models.Model):
+    term = models.CharField(max_length=120)
+    term_zh = models.CharField(max_length=120, blank=True)
+    def_zh = models.TextField()
+    def_en = models.TextField()
+    subjects = models.JSONField(default=list)
+    sort_order = models.PositiveSmallIntegerField(default=0)
+
+    class Meta:
+        ordering = ["sort_order", "term"]
+
+    def __str__(self) -> str:
+        return self.term
+
+
+class FormulaEntry(models.Model):
+    subject_slug = models.SlugField(max_length=80, db_index=True)
+    title_zh = models.CharField(max_length=200)
+    title_en = models.CharField(max_length=200)
+    formula = models.CharField(max_length=240)
+    note_zh = models.TextField(blank=True)
+    note_en = models.TextField(blank=True)
+    sort_order = models.PositiveSmallIntegerField(default=0)
+
+    class Meta:
+        ordering = ["subject_slug", "sort_order", "id"]
+
+    def __str__(self) -> str:
+        return f"{self.subject_slug}:{self.formula}"
+
+
+class ExamTip(models.Model):
+    exam = models.CharField(max_length=16)  # NMAT / MCAT / BOTH
+    title_zh = models.CharField(max_length=200)
+    title_en = models.CharField(max_length=200)
+    body_zh = models.TextField()
+    body_en = models.TextField()
+    sort_order = models.PositiveSmallIntegerField(default=0)
+
+    class Meta:
+        ordering = ["sort_order", "id"]
+
+    def __str__(self) -> str:
+        return self.title_en
+
+
+class StudyPath(models.Model):
+    path_id = models.SlugField(max_length=80, unique=True)
+    title_zh = models.CharField(max_length=200)
+    title_en = models.CharField(max_length=200)
+    blurb_zh = models.TextField()
+    blurb_en = models.TextField()
+    steps = models.JSONField(default=list)
+    sort_order = models.PositiveSmallIntegerField(default=0)
+
+    class Meta:
+        ordering = ["sort_order", "id"]
+
+    def __str__(self) -> str:
+        return self.path_id

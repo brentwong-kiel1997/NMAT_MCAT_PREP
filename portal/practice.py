@@ -452,6 +452,11 @@ PRACTICE: dict[str, list[dict]] = {
 }
 
 
+from .extra_practice import merge_practice
+from .pack_enrich import merge_practice_pack
+
+PRACTICE = merge_practice_pack(merge_practice(PRACTICE))
+
 LABELS = {
     "biology": {"zh": "生物学", "en": "Biology"},
     "chemistry": {"zh": "化学", "en": "Chemistry"},

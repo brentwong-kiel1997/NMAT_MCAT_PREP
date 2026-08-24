@@ -5,6 +5,14 @@ Consumed by study/materials views; kept separate from notes.py for maintainabili
 
 from __future__ import annotations
 
+from .pack_enrich import (
+    CHECKLISTS as _PACK_CHECKLISTS,
+    merge_formulas,
+    merge_glossary,
+    merge_paths,
+    merge_tips,
+)
+
 GLOSSARY: list[dict[str, str | list[str]]] = [
     {"term": "Km", "term_zh": "米氏常数", "def_zh": "酶促反应速率为最大速率一半时的底物浓度；反映酶与底物亲和力。", "def_en": "Substrate concentration at half-maximal reaction rate; reflects enzyme–substrate affinity.", "subjects": ["biochemistry", "biology", "bio-biochem"]},
     {"term": "Vmax", "term_zh": "最大反应速率", "def_zh": "酶饱和底物时单位时间产物生成量；受酶浓度影响。", "def_en": "Product formed per time when enzyme is substrate-saturated; scales with enzyme concentration.", "subjects": ["biochemistry", "bio-biochem"]},
@@ -367,3 +375,10 @@ STUDY_PATHS: list[dict[str, str | list[dict[str, str]]]] = [
         ],
     },
 ]
+
+# Enrichment pack merges
+GLOSSARY = merge_glossary(GLOSSARY)
+FORMULAS = merge_formulas(FORMULAS)
+EXAM_TIPS = merge_tips(EXAM_TIPS)
+STUDY_PATHS = merge_paths(STUDY_PATHS)
+CHECKLISTS = list(_PACK_CHECKLISTS)

@@ -26,6 +26,14 @@
   </article>
   {% endif %}
 
+  {% if has_formulas %}
+  <article class="block aside-note">
+    <h2 data-i18n data-zh="公式卡" data-en="Formulas">公式卡</h2>
+    <p><span class="only-zh">{{ formula_count }} 条速查</span><span class="only-en">{{ formula_count }} quick references</span></p>
+    <p><a href="{% url 'materials_formulas' progress_subject %}" data-i18n data-zh="打开公式表 →" data-en="Open formula sheet →">打开公式表 →</a></p>
+  </article>
+  {% endif %}
+
   {% if flashcards %}
   <article class="block aside-note flashcard-panel" data-flashcards>
     <h2 data-i18n data-zh="闪卡" data-en="Flashcards">闪卡</h2>

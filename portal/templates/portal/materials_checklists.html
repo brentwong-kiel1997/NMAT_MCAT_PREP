@@ -1,0 +1,42 @@
+{% extends "portal/base.html" %}
+
+{% block title %}Checklists · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker"><a href="{% url 'materials_hub' %}" data-i18n data-zh="教材" data-en="Materials">教材</a></p>
+    <h1 data-i18n data-zh="备考清单" data-en="Exam checklists">备考清单</h1>
+    <p class="lead" data-i18n data-zh="考试日与每周复习动作清单，配合策略页使用。" data-en="Exam-day and weekly review actions — use with the tips page.">考试日与每周复习动作清单，配合策略页使用。</p>
+  </div>
+</div>
+
+<section class="section">
+  <nav class="materials-filters" aria-label="Exam filter">
+    <a href="{% url 'materials_checklists' %}" class="{% if not exam %}is-active{% endif %}" data-i18n data-zh="全部" data-en="All">全部</a>
+    <a href="{% url 'materials_checklists' %}?exam=NMAT" class="{% if exam == 'NMAT' %}is-active{% endif %}">NMAT</a>
+    <a href="{% url 'materials_checklists' %}?exam=MCAT" class="{% if exam == 'MCAT' %}is-active{% endif %}">MCAT</a>
+    <a href="{% url 'materials_checklists' %}?exam=BOTH" class="{% if exam == 'BOTH' %}is-active{% endif %}" data-i18n data-zh="共用" data-en="Both">共用</a>
+  </nav>
+
+  <ul class="checklist-list">
+    {% for c in checklists %}
+    <li>
+      <p class="tip-exam">{{ c.exam }}</p>
+      <h3><span class="only-zh">{{ c.title_zh }}</span><span class="only-en">{{ c.title_en }}</span></h3>
+      <ul>
+        {% for item in c.items_zh %}
+        <li class="only-zh">{{ item }}</li>
+        {% endfor %}
+        {% for item in c.items_en %}
+        <li class="only-en">{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </li>
+    {% empty %}
+    <li><p data-i18n data-zh="暂无清单。" data-en="No checklists.">暂无清单。</p></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

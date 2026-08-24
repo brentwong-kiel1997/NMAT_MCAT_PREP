@@ -1,4 +1,4 @@
-"""Load curriculum outlines, notes, practice, and diseases into knowledge DB."""
+"""Load curriculum outlines, notes, practice, diseases, and textbook materials."""
 
 from __future__ import annotations
 
@@ -11,12 +11,17 @@ from knowledge.models import (
     ChapterNote,
     CurriculumSubject,
     DiseaseArticle,
+    ExamTip,
+    FormulaEntry,
+    GlossaryTerm,
     OutlineChapter,
     PracticeQuestion,
+    StudyPath,
     SubjectRef,
 )
 from portal import exams
 from portal.diseases import DISEASES
+from portal.materials_data import EXAM_TIPS, FORMULAS, GLOSSARY, STUDY_PATHS
 from portal.notes import NOTES
 from portal.practice import LABELS, PRACTICE
 
@@ -79,9 +84,12 @@ class Command(BaseCommand):
             OutlineChapter.objects.all().delete()
             CurriculumSubject.objects.all().delete()
             SubjectRef.objects.all().delete()
+            GlossaryTerm.objects.all().delete()
+            FormulaEntry.objects.all().delete()
+            ExamTip.objects.all().delete()
+            StudyPath.objects.all().delete()
             self.stdout.write("Flushed knowledge tables.")
 
-        # ---- subject outlines from exams.py ----
         for slug, subject in exams.SHARED_SUBJECTS.items():
             _upsert_curriculum(slug, "shared", subject)
             SubjectRef.objects.update_or_create(
@@ -117,7 +125,6 @@ class Command(BaseCommand):
                 },
             )
 
-        # ---- notes / practice catalog extras ----
         slugs = set(NOTES) | set(PRACTICE) | set(LABELS)
         for slug in sorted(slugs):
             label = LABELS.get(slug, {"zh": slug, "en": slug})
@@ -176,12 +183,65 @@ class Command(BaseCommand):
             )
             disease_rows += 1
 
+        GlossaryTerm.objects.all().delete()
+        for i, g in enumerate(GLOSSARY):
+            GlossaryTerm.objects.create(
+                term=g["term"],
+                term_zh=g.get("term_zh") or "",
+                def_zh=g["def_zh"],
+                def_en=g["def_en"],
+                subjects=list(g.get("subjects") or []),
+                sort_order=i,
+            )
+
+        FormulaEntry.objects.all().delete()
+        formula_rows = 0
+        for slug, items in FORMULAS.items():
+            for i, f in enumerate(items):
+                FormulaEntry.objects.create(
+                    subject_slug=slug,
+                    title_zh=f["title_zh"],
+                    title_en=f["title_en"],
+                    formula=f["formula"],
+                    note_zh=f.get("note_zh") or "",
+                    note_en=f.get("note_en") or "",
+                    sort_order=i,
+                )
+                formula_rows += 1
+
+        ExamTip.objects.all().delete()
+        for i, tip in enumerate(EXAM_TIPS):
+            ExamTip.objects.create(
+                exam=tip["exam"],
+                title_zh=tip["title_zh"],
+                title_en=tip["title_en"],
+                body_zh=tip["body_zh"],
+                body_en=tip["body_en"],
+                sort_order=i,
+            )
+
+        StudyPath.objects.all().delete()
+        for i, path in enumerate(STUDY_PATHS):
+            StudyPath.objects.create(
+                path_id=path["id"],
+                title_zh=path["title_zh"],
+                title_en=path["title_en"],
+                blurb_zh=path["blurb_zh"],
+                blurb_en=path["blurb_en"],
+                steps=list(path.get("steps") or []),
+                sort_order=i,
+            )
+
         self.stdout.write(
             self.style.SUCCESS(
                 "Knowledge DB ready: "
                 f"curriculum={CurriculumSubject.objects.count()} "
                 f"outline_chapters={OutlineChapter.objects.count()} "
                 f"subjects={SubjectRef.objects.count()} "
-                f"notes={note_rows} practice={practice_rows} diseases={disease_rows}"
+                f"notes={note_rows} practice={practice_rows} diseases={disease_rows} "
+                f"glossary={GlossaryTerm.objects.count()} "
+                f"formulas={formula_rows} "
+                f"tips={ExamTip.objects.count()} "
+                f"paths={StudyPath.objects.count()}"
             )
         )

@@ -4,8 +4,12 @@ from .models import (
     ChapterNote,
     CurriculumSubject,
     DiseaseArticle,
+    ExamTip,
+    FormulaEntry,
+    GlossaryTerm,
     OutlineChapter,
     PracticeQuestion,
+    StudyPath,
     SubjectRef,
 )
 
@@ -48,3 +52,28 @@ class PracticeQuestionAdmin(admin.ModelAdmin):
 class DiseaseArticleAdmin(admin.ModelAdmin):
     list_display = ("slug", "name", "name_zh", "updated_at")
     search_fields = ("slug", "name", "name_zh")
+
+
+@admin.register(GlossaryTerm)
+class GlossaryTermAdmin(admin.ModelAdmin):
+    list_display = ("term", "term_zh", "sort_order")
+    search_fields = ("term", "term_zh", "def_zh", "def_en")
+
+
+@admin.register(FormulaEntry)
+class FormulaEntryAdmin(admin.ModelAdmin):
+    list_display = ("subject_slug", "formula", "title_en")
+    list_filter = ("subject_slug",)
+    search_fields = ("formula", "title_zh", "title_en")
+
+
+@admin.register(ExamTip)
+class ExamTipAdmin(admin.ModelAdmin):
+    list_display = ("exam", "title_en", "sort_order")
+    list_filter = ("exam",)
+
+
+@admin.register(StudyPath)
+class StudyPathAdmin(admin.ModelAdmin):
+    list_display = ("path_id", "title_en", "sort_order")
+    search_fields = ("path_id", "title_zh", "title_en")

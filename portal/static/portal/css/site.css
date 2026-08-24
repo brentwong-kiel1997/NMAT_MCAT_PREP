@@ -911,3 +911,130 @@ html:not([lang]) .only-en { display: none !important; }
     transition: none !important;
   }
 }
+
+
+/* —— Materials desk —— */
+.path-mini {
+  margin: 0.65rem 0 0;
+  padding-left: 1.15rem;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.path-mini a {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+.path-mini a:hover {
+  text-decoration: underline;
+}
+
+.glossary-list,
+.formula-list,
+.tips-list,
+.checklist-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.glossary-list li,
+.formula-list li,
+.tips-list li,
+.checklist-list li {
+  padding: 1rem 1.05rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+}
+
+.glossary-list h3,
+.formula-list h3,
+.tips-list h3,
+.checklist-list h3 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 650;
+}
+
+.glossary-list p,
+.formula-list p,
+.tips-list p,
+.checklist-list p {
+  margin: 0.35rem 0 0;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.formula-line code {
+  display: inline-block;
+  margin: 0.35rem 0;
+  padding: 0.35rem 0.65rem;
+  border-radius: 8px;
+  background: rgba(15, 92, 76, 0.08);
+  color: var(--brand-deep);
+  font-size: 1.02rem;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
+.tip-exam {
+  display: inline-block;
+  margin: 0 0 0.35rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.materials-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.85rem 0 1.1rem;
+}
+
+.materials-filters a {
+  text-decoration: none;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 252, 247, 0.85);
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.materials-filters a.is-active {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+.auth-form input[type="search"] {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font: inherit;
+  background: #fff;
+}
+
+.checklist-list ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.15rem;
+  color: var(--ink);
+}
+
+.checklist-list li li {
+  padding: 0.15rem 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}

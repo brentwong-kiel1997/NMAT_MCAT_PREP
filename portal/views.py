@@ -6,6 +6,15 @@ import json
 from .diseases import all_diseases, get_disease
 from . import exams
 from .learners import progress_map, record_practice, set_chapter_done
+from .materials import (
+    exam_checklists,
+    exam_tips,
+    formula_catalog,
+    formulas_for,
+    glossary_subject_slugs,
+    glossary_terms,
+    study_paths,
+)
 from .minimax import chat_completion, minimax_config
 from .notes import flashcards_for
 from .practice import practice_for, practice_catalog, all_practice_slugs, LABELS
@@ -35,8 +44,9 @@ def _chapter_titles(entity: dict) -> list[str]:
 
 
 def _study_extras(slug: str, entity: dict) -> dict:
-    cards = flashcards_for(slug, limit=36)
+    cards = flashcards_for(slug, limit=60)
     items = practice_for(slug)
+    formulas = formulas_for(slug)
     return {
         "chapters_for_toc": entity.get("chapters") or [],
         "progress_key": f"gabay_progress_{slug}",
@@ -45,6 +55,8 @@ def _study_extras(slug: str, entity: dict) -> dict:
         "practice_count": len(items),
         "flashcards": cards,
         "flashcards_json": _json_for_script(cards),
+        "formula_count": len(formulas),
+        "has_formulas": bool(formulas),
     }
 
 
@@ -184,6 +196,7 @@ def study_hub(request):
             "nmat_unique": exams.nmat_unique_subjects(),
             "mcat_sections": exams.mcat_exam()["sections"],
             "practice_catalog": practice_catalog(),
+            "study_paths": study_paths(),
             "tutor_ready": bool(minimax_config()["api_key"]),
             "tutor_context": {
                 "exam": "",
@@ -193,6 +206,79 @@ def study_hub(request):
                 "chapters": [],
             },
         },
+    )
+
+
+@require_GET
+def materials_hub(request):
+    return render(
+        request,
+        "portal/materials_hub.html",
+        {
+            "paths": study_paths(),
+            "tips": exam_tips()[:6],
+            "checklists": exam_checklists(),
+            "formula_catalog": formula_catalog(),
+            "glossary_count": len(glossary_terms()),
+            "practice_catalog": practice_catalog()[:8],
+        },
+    )
+
+
+@require_GET
+def materials_glossary(request):
+    q = (request.GET.get("q") or "").strip()
+    subject = (request.GET.get("subject") or "").strip()
+    return render(
+        request,
+        "portal/materials_glossary.html",
+        {
+            "terms": glossary_terms(q, subject),
+            "q": q,
+            "subject": subject,
+            "subject_filters": glossary_subject_slugs(),
+        },
+    )
+
+
+@require_GET
+def materials_formulas(request, slug: str):
+    items = formulas_for(slug)
+    if not items:
+        raise Http404("Formula sheet not found")
+    label = LABELS.get(slug, {"zh": slug, "en": slug})
+    return render(
+        request,
+        "portal/materials_formulas.html",
+        {
+            "slug": slug,
+            "label_zh": label["zh"],
+            "label_en": label["en"],
+            "items": items,
+            "catalog": formula_catalog(),
+        },
+    )
+
+
+@require_GET
+def materials_tips(request):
+    exam = (request.GET.get("exam") or "").strip().upper()
+    tips = exam_tips(exam) if exam in {"NMAT", "MCAT", "BOTH"} else exam_tips()
+    return render(
+        request,
+        "portal/materials_tips.html",
+        {"tips": tips, "exam": exam},
+    )
+
+
+@require_GET
+def materials_checklists(request):
+    exam = (request.GET.get("exam") or "").strip().upper()
+    items = exam_checklists(exam) if exam in {"NMAT", "MCAT", "BOTH"} else exam_checklists()
+    return render(
+        request,
+        "portal/materials_checklists.html",
+        {"checklists": items, "exam": exam},
     )
 
 
