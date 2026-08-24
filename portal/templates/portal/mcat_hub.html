@@ -20,26 +20,23 @@
   <p class="section-lead">Each section is one big project; study it as the smaller units beneath it.
      Units marked <strong>shares with NMAT</strong> cover the same chapters as the linked NMAT unit.</p>
 
-  {% for group, units in unit_groups %}
-  <div class="unit-group">
-    <h3 class="unit-group-title">{{ group }}</h3>
-    <div class="project-grid">
-      {% for u in units %}
-      <article class="project-card">
-        <a href="{% url 'unit_detail' 'mcat' u.key %}">
-          <h4>{{ u.label }}</h4>
-          <p class="muted-inline">{{ u.chapters|length }} chapters</p>
-        </a>
-        {% if u.cross_labels %}
-        <p class="unit-shared-note">
-          <span class="exam-badge exam-nmat">shares with NMAT</span>
-          {{ u.cross_labels|join:", " }}
-        </p>
-        {% endif %}
-      </article>
-      {% endfor %}
-    </div>
+  <div class="project-grid">
+    {% for u in hub_units %}
+    <article class="project-card">
+      <a href="{% url 'unit_detail' proj_key u.key %}">
+        <h4>{{ u.label }}</h4>
+        <p class="muted-inline">{{ u.chapters|length }} chapters</p>
+      </a>
+      {% if u.cross_labels %}
+      <p class="unit-shared-note">
+        <span class="exam-badge exam-{{ u.project|lower }}">only {{ u.project|upper }} chapters</span>
+        shared with {{ u.cross_labels|join:", " }}
+      </p>
+      {% else %}
+      <p class="unit-shared-note"><span class="exam-badge exam-{{ u.project|lower }}">{{ u.project|upper }} only</span></p>
+      {% endif %}
+    </article>
+    {% endfor %}
   </div>
-  {% endfor %}
 </section>
 {% endblock %}

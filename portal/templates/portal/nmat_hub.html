@@ -20,26 +20,23 @@
   <p class="section-lead">Part 2 science units share their chapters with MCAT units — progress made
      under one project carries over chapter by chapter.</p>
 
-  {% for group, units in unit_groups %}
-  <div class="unit-group">
-    <h3 class="unit-group-title">{{ group }}</h3>
-    <div class="project-grid">
-      {% for u in units %}
-      <article class="project-card">
-        <a href="{% url 'unit_detail' 'nmat' u.key %}">
-          <h4>{{ u.label }}</h4>
-          <p class="muted-inline">{{ u.chapters|length }} chapters</p>
-        </a>
-        {% if u.cross_labels %}
-        <p class="unit-shared-note">
-          <span class="exam-badge exam-mcat">shares with MCAT</span>
-          {{ u.cross_labels|join:", " }}
-        </p>
-        {% endif %}
-      </article>
-      {% endfor %}
-    </div>
+  <div class="project-grid">
+    {% for u in hub_units %}
+    <article class="project-card">
+      <a href="{% url 'unit_detail' proj_key u.key %}">
+        <h4>{{ u.label }}</h4>
+        <p class="muted-inline">{{ u.chapters|length }} chapters</p>
+      </a>
+      {% if u.cross_labels %}
+      <p class="unit-shared-note">
+        <span class="exam-badge exam-{{ u.project|lower }}">only {{ u.project|upper }} chapters</span>
+        shared with {{ u.cross_labels|join:", " }}
+      </p>
+      {% else %}
+      <p class="unit-shared-note"><span class="exam-badge exam-{{ u.project|lower }}">{{ u.project|upper }} only</span></p>
+      {% endif %}
+    </article>
+    {% endfor %}
   </div>
-  {% endfor %}
 </section>
 {% endblock %}

@@ -1,8 +1,8 @@
 {
-  "source_rev": "f1649e6",
+  "source_rev": "f9c17e9",
   "counts": {
-    "chapters": 72,
-    "note_bullets": 458,
+    "chapters": 71,
+    "note_bullets": 454,
     "practice": 116,
     "glossary": 105,
     "formulas": 108,
@@ -24,8 +24,7 @@
     "chapters/2b-prokaryotes-and-viruses.yml": "d29f24aac4762d63bf225a22267e2c0d4d26fb6b47b357293a5fe42ce00c2819",
     "chapters/2c-cell-division-differentiation-specialization.yml": "d57484596661f98e1fd575c35c8a50cc5d3895ff00eeeb1f977bd003215b6f17",
     "chapters/3a-nervous-and-endocrine-systems.yml": "a907358809316edc3cfe9af41fa1c84d92e2965011bf8157f057b54660b6ea42",
-    "chapters/3b-main-organ-systems-2.yml": "da251d57a61f2e83f4d3319a10479cdab9c7b872789a132580da875cc67d599f",
-    "chapters/3b-main-organ-systems.yml": "2134271ce31a1b7a6b9a201c4d0c8c6a8bd1599081c551b338af01fcc4bad9eb",
+    "chapters/3b-main-organ-systems.yml": "f6cbbb7bb816c56553d87a80f5fbfdbad387cc3cbf82e74070c3acc408e8d87b",
     "chapters/4a-motion-forces-work-energy-equilibrium.yml": "6326b61e26c40448c9457a49ddfe0db25f74be6bcb58ce7eddb21d3c6b55a565",
     "chapters/4b-fluids-for-circulation-and-gas-exchange.yml": "a4f2a193fb2482e656db32c36a9f40c2ce0ce00c525f716b3161b38bd0780137",
     "chapters/4c-electrochemistry-and-electrical-circuits.yml": "e1ac0fc1d579ebd76ac1f69b479b5dbe9306da47c7fe815e2551a0325e5792d2",
@@ -127,6 +126,6 @@
     "tutorials/biology/organisms-and-their-environment.yml": "fe881965a4475eb4cd1d638a4a81b915efe76eea8518890d21c29ac45c4c3bdf",
     "tutorials/biology/the-world-of-plants-and-animals.yml": "83866f80d88262be281e66d8e9078d209f8a165ea4ef5c2422424b508a08d03d",
     "tutorials/biology/unity-and-diversity-of-life.yml": "9c8b0a160b192978e2a9e8910a2bf8f8aa7ef85b36ca0efb7ae8493360c34411",
-    "units.yml": "d1d18d8b86c1fa59336d4fbd39b37e190716d4a5c30fb485a2eeebf91b71a345"
+    "units.yml": "8f325c358eead2f8ba0f6534ace934fd1b938ddc4b5ec90c83537a12455d6ece"
   }
 }

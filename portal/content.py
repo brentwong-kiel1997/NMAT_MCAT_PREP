@@ -482,34 +482,41 @@ def _units_stamp_value() -> tuple:
 
 
 def units_store() -> dict:
-    """Parsed units.yml plus resolved per-unit chapter lists (mtime-cached)."""
+    """Parsed units.yml plus DERIVED per-unit chapter lists (mtime-cached).
+
+    A unit is a discipline: its chapters are every library chapter of that
+    discipline, filtered by the owning project's exam (NMAT units show the
+    discipline's NMAT-annotated chapters, MCAT units the MCAT ones — shared
+    chapters appear in both views by design). No chapter lists are stored.
+    """
     global _units_cache, _units_stamp
     stamp = _units_stamp_value()
     if _units_cache is None or stamp != _units_stamp:
         data = store()
         doc = _read("units.yml") if (CONTENT_DIR / "units.yml").exists() else {}
+        proj_exam = {"nmat": "NMAT", "mcat": "MCAT"}
+
+        by_discipline: dict[str, list] = {}
+        for slug, ch in data["chapters"].items():
+            by_discipline.setdefault(ch.get("discipline", ""), []).append((slug, ch))
 
         units: dict[str, dict] = {}
         for proj_key, proj in (doc.get("projects") or {}).items():
+            exam = proj_exam.get(proj_key, "NMAT")
             for u in (proj.get("units") or []):
                 key = u["key"]
-                refs = list(u.get("chapters") or [])
-                chapters = []
-                for slug in refs:
-                    ch = data["chapters"].get(slug)
-                    if not ch:
-                        raise ContentError(
-                            f"units.yml: unit {key!r} references unknown chapter {slug!r}"
-                        )
-                    chapters.append(
-                        {
-                            "subject": ch.get("discipline", ""),
-                            "title": ch.get("title", ""),
-                            "chapter_id": slug,
-                            "group": "",
-                            "exams": list(ch.get("exams") or []),
-                        }
-                    )
+                chapters = [
+                    {
+                        "subject": disc,
+                        "title": ch.get("title", ""),
+                        "chapter_id": slug,
+                        "group": "",
+                        "exams": list(ch.get("exams") or []),
+                    }
+                    for disc in [u.get("source", "")]
+                    for slug, ch in by_discipline.get(disc, [])
+                    if exam in (ch.get("exams") or [])
+                ]
                 units[key] = {
                     "key": key,
                     "project": proj_key,
