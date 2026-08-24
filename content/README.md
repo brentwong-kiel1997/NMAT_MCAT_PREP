@@ -14,6 +14,7 @@ the single source of truth — there is no generated artifact to keep in sync.
 | Path | Contents | Scale |
 | --- | --- | --- |
 | `catalog.yml` | Subject ordering per exam kind, formula-sheet order, subject display labels | 13 labels |
+| `units.yml` | Two learning projects (NMAT/MCAT) split into study units with per-chapter exam annotations and cross-project links | 15 units |
 | `exams/nmat.yml` | NMAT structure: parts, timing, item counts, Part-2 subject links | 2 parts |
 | `exams/mcat.yml` | MCAT structure: sections, timing, discipline mix | 4 sections |
 | `subjects/*.yml` | One file per subject: positioning, exam roles, chapter outline | 13 subjects |
@@ -89,6 +90,18 @@ A practice item (`practice/biology.yml`):
   explain: The Golgi apparatus modifies, sorts, and packages proteins...
   chapter: Cells and Cellular Processes
 ```
+
+## Learning projects & annotations
+
+`units.yml` models the product structure over the one unified library: two
+learning projects (NMAT / MCAT) split into study units, MCAT exam-day
+sections separated into learnable units (Chem/Phys → Chemical + Physical;
+Bio/Biochem → Biology + Biochemistry; Psych/Soc → Psychology + Sociology;
+CARS stays whole). Each chapter's exam annotation is derived (shared →
+[NMAT, MCAT]; nmat → [NMAT]; mcat → [MCAT]) and adjustable per
+chapter-instance via `exam_overrides`. Units declare `cross` links so the
+two projects' overlaps are explicit and progress carries over chapter by
+chapter.
 
 ## Tutorial chapters
 
