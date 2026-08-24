@@ -477,3 +477,131 @@ def tutorial_titles(subject_slug: str) -> set[str]:
 
 def source_info(source_id: str) -> dict:
     return deepcopy(store()["source_registry"].get(source_id, {}))
+
+
+# --------------------------------------------------------------------------
+# learning projects & study units (content/units.yml)
+#
+# One unified content library; two learning projects (NMAT / MCAT). A unit
+# aggregates a prefix-filtered set of one source subject's chapters — MCAT
+# exam-day sections like Chem/Phys are split into Chemical / Physical study
+# units. Exam annotation per chapter instance is DERIVED from the subject's
+# kind (shared → [NMAT, MCAT]; nmat → [NMAT]; mcat → [MCAT]), adjustable via
+# exam_overrides.
+# --------------------------------------------------------------------------
+
+_units_cache: dict | None = None
+_units_stamp: tuple | None = None
+
+
+def _units_stamp_value() -> tuple:
+    path = CONTENT_DIR / "units.yml"
+    if not path.exists():
+        return (("units.yml", -1, -1),)
+    st = path.stat()
+    return (("units.yml", st.st_mtime_ns, st.st_size),)
+
+
+def units_store() -> dict:
+    """Parsed units.yml plus resolved per-unit chapter lists (mtime-cached)."""
+    global _units_cache, _units_stamp
+    stamp = _units_stamp_value()
+    if _units_cache is None or stamp != _units_stamp:
+        data = store()
+        doc = _read("units.yml") if (CONTENT_DIR / "units.yml").exists() else {}
+        overrides = {}
+        for ov in (doc.get("exam_overrides") or []):
+            overrides[(ov.get("subject"), ov.get("chapter"))] = list(ov.get("exams") or [])
+
+        kinds = data.get("subject_kinds", {})
+
+        def flat_of(subject_slug: str) -> list:
+            subject = data["subjects"].get(subject_slug)
+            if not subject:
+                return []
+            # chapter_id derivation matches attach_notes: index runs continuously
+            out = []
+            idx = 0
+            for group in subject.get("chapters") or []:
+                for it in group.get("items") or []:
+                    idx += 1
+                    item = dict(it)
+                    item["chapter_id"] = _chapter_id(item.get("title", ""), idx)
+                    item["group"] = group.get("heading", "")
+                    item["subject"] = subject_slug
+                    out.append(item)
+            return out
+
+        def exams_of(subject_slug: str, title: str) -> list:
+            ov = overrides.get((subject_slug, title))
+            if ov is not None:
+                return ov
+            kind = kinds.get(subject_slug, "shared")
+            if kind == "shared":
+                return ["NMAT", "MCAT"]
+            if kind == "nmat":
+                return ["NMAT"]
+            return ["MCAT"]
+
+        units: dict[str, dict] = {}
+        for proj_key, proj in (doc.get("projects") or {}).items():
+            for u in (proj.get("units") or []):
+                key = u["key"]
+                source = u["source"]
+                codes = list(u.get("chapters") or [])
+                flat = flat_of(source)
+                if codes:
+                    flat = [
+                        it for it in flat
+                        if any(it["title"] == c or it["title"].startswith(c + " ·") for c in codes)
+                    ]
+                chapters = [
+                    {
+                        "subject": it["subject"],
+                        "title": it["title"],
+                        "chapter_id": it["chapter_id"],
+                        "group": it["group"],
+                        "exams": exams_of(it["subject"], it["title"]),
+                    }
+                    for it in flat
+                ]
+                units[key] = {
+                    "key": key,
+                    "project": proj_key,
+                    "label": u.get("label", key),
+                    "source": source,
+                    "cross": list(u.get("cross") or []),
+                    "chapters": chapters,
+                }
+        _units_cache = {
+            "projects": doc.get("projects") or {},
+            "units": units,
+            "subject_kinds": kinds,
+        }
+        _units_stamp = stamp
+    return _units_cache
+
+
+def projects() -> dict:
+    return deepcopy(units_store()["projects"])
+
+
+def unit(key: str) -> dict | None:
+    u = units_store()["units"].get(key)
+    return deepcopy(u) if u else None
+
+
+def unit_chapters(key: str) -> list:
+    u = units_store()["units"].get(key)
+    return deepcopy(u["chapters"]) if u else []
+
+
+def chapter_exams(subject_slug: str, chapter_title: str) -> list:
+    for u in units_store()["units"].values():
+        if u["source"] != subject_slug:
+            continue
+        for ch in u["chapters"]:
+            if ch["title"] == chapter_title:
+                return list(ch["exams"])
+    kind = units_store()["subject_kinds"].get(subject_slug, "shared")
+    return ["NMAT", "MCAT"] if kind == "shared" else (["NMAT"] if kind == "nmat" else ["MCAT"])

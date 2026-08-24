@@ -1,0 +1,95 @@
+# Learning projects and their study units.
+#
+# Content is ONE unified library (content/subjects etc.). The NMAT and MCAT
+# exams are two LEARNING PROJECTS over that library; each project is split
+# into small study units ("small projects under the big project"). A unit
+# aggregates a set of outline chapters — usually one source subject, with an
+# optional `chapters` prefix filter (MCAT exam sections like Chem/Phys are
+# split into Chemical / Physical study units because the exam-day grouping
+# is not how you learn).
+#
+# Exam annotation is DERIVED, per chapter instance (subject+chapter):
+#   kind=shared → [NMAT, MCAT]   (both exams need it)
+#   kind=nmat   → [NMAT]
+#   kind=mcat   → [MCAT]
+# `exam_overrides` below adjusts specific chapter instances when needed.
+
+projects:
+  nmat:
+    name: NMAT
+    units:
+      - key: nmat-verbal
+        source: verbal
+        label: Verbal
+        cross: []
+      - key: nmat-inductive
+        source: inductive-reasoning
+        label: Inductive Reasoning
+        cross: []
+      - key: nmat-quant
+        source: quantitative
+        label: Quantitative
+        cross: []
+      - key: nmat-perceptual
+        source: perceptual-acuity
+        label: Perceptual Acuity
+        cross: []
+      - key: nmat-biology
+        source: biology
+        label: Biology (Part 2)
+        cross: [mcat-biology, mcat-biochemistry]
+      - key: nmat-chemistry
+        source: chemistry
+        label: Chemistry (Part 2)
+        cross: [mcat-chemical]
+      - key: nmat-physics
+        source: physics
+        label: Physics (Part 2)
+        cross: [mcat-physical]
+      - key: nmat-behavioral
+        source: behavioral-social
+        label: Behavioral & Social (Part 2)
+        cross: [mcat-psychology, mcat-sociology]
+
+  mcat:
+    name: MCAT
+    units:
+      - key: mcat-chemical
+        source: chem-phys
+        label: Chemical Foundations
+        chapters: [4E, 5A, 5B, 5C, 5D, 5E]
+        cross: [nmat-chemistry]
+      - key: mcat-physical
+        source: chem-phys
+        label: Physical Foundations
+        chapters: [4A, 4B, 4C, 4D]
+        cross: [nmat-physics]
+      - key: mcat-biology
+        source: bio-biochem
+        label: Biology (Bio/Biochem)
+        chapters: [1C, 2A, 2B, 2C, 3A, 3B]
+        cross: [nmat-biology]
+      - key: mcat-biochemistry
+        source: bio-biochem
+        label: Biochemistry (Bio/Biochem)
+        chapters: [1A, 1B, 1D]
+        cross: [nmat-biology, nmat-chemistry]
+      - key: mcat-psychology
+        source: psych-soc
+        label: Psychology
+        chapters: [6A, 6B, 6C, 7A, 7B, 7C]
+        cross: [nmat-behavioral]
+      - key: mcat-sociology
+        source: psych-soc
+        label: Sociology
+        chapters: [8A, 8B, 8C, 9A, 9B, 10A]
+        cross: [nmat-behavioral]
+      - key: mcat-cars
+        source: cars
+        label: CARS
+        chapters: []
+        cross: []
+
+# Chapter-instance annotation overrides (subject + exact chapter title).
+# Empty by default: derivation covers everything today.
+exam_overrides: []

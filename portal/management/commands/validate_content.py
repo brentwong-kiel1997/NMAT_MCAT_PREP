@@ -133,6 +133,20 @@ class Command(BaseCommand):
         if not store["kinds"].get("shared") or not store["kinds"].get("mcat"):
             problems.append("catalog.yml kinds missing shared/mcat lists")
 
+        # ---- learning projects / units (content/units.yml) ----------------------
+        units_path = CONTENT / "units.yml"
+        if units_path.exists():
+            unit_doc = yaml.safe_load(units_path.read_text(encoding="utf-8")) or {}
+            unit_source_set = set(store["subjects"])
+            for proj_key, proj in (unit_doc.get("projects") or {}).items():
+                for u in (proj.get("units") or []):
+                    if u.get("source") not in unit_source_set:
+                        problems.append(
+                            f"units.yml: unit {u.get('key')!r} unknown source {u.get('source')!r}"
+                        )
+                    if not u.get("key") or not u.get("label"):
+                        problems.append(f"units.yml: project {proj_key} unit missing key/label")
+
         # ---- tutorial chapters (the growing textbook) --------------------------
         sources_path = CONTENT / "SOURCES.yml"
         known_sources = set()
