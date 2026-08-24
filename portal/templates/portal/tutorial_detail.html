@@ -1,0 +1,127 @@
+{% extends "portal/base.html" %}
+
+{% block title %}{{ tutorial.title }} · {{ subject.name }} · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">{{ subject.name }} · Chapter tutorial</p>
+    <h1>{{ tutorial.title }}</h1>
+    {% if tutorial.overview %}
+    <p class="lead">{{ tutorial.overview }}</p>
+    {% endif %}
+    <p class="muted-inline">
+      <a href="{% url back.0 subject.slug %}">← Back to {{ subject.name }}</a>
+    </p>
+  </div>
+</div>
+
+<section class="section tutorial">
+  <div class="tutorial-body">
+
+    {% for section in tutorial.sections %}
+    <article class="block tutorial-section" id="section-{{ forloop.counter }}">
+      <h2>{{ section.heading }}</h2>
+      {% for para in section.body %}
+      <p>{{ para }}</p>
+      {% endfor %}
+      {% if section.table %}
+      <div class="table-wrap">
+        {% if section.table.caption %}<p class="muted-inline">{{ section.table.caption }}</p>{% endif %}
+        <table>
+          <thead>
+            <tr>{% for h in section.table.headers %}<th>{{ h }}</th>{% endfor %}</tr>
+          </thead>
+          <tbody>
+            {% for row in section.table.rows %}
+            <tr>{% for cell in row %}<td>{{ cell }}</td>{% endfor %}</tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% endif %}
+    </article>
+    {% endfor %}
+
+    {% if tutorial.examples %}
+    <article class="block tutorial-section tutorial-example">
+      <h2>Worked example</h2>
+      {% for example in tutorial.examples %}
+      <p class="example-prompt">{{ example.prompt }}</p>
+      {% for step in example.solution %}
+      <p>{{ step }}</p>
+      {% endfor %}
+      {% endfor %}
+    </article>
+    {% endif %}
+
+    {% if tutorial.key_points %}
+    <article class="block tutorial-section">
+      <h2>Key points</h2>
+      <ul>
+        {% for point in tutorial.key_points %}
+        <li>{{ point }}</li>
+        {% endfor %}
+      </ul>
+    </article>
+    {% endif %}
+
+    {% if tutorial.pitfalls %}
+    <article class="block tutorial-section">
+      <h2>Common pitfalls</h2>
+      <ul>
+        {% for pitfall in tutorial.pitfalls %}
+        <li>{{ pitfall }}</li>
+        {% endfor %}
+      </ul>
+    </article>
+    {% endif %}
+
+    {% if tutorial.exam_map %}
+    <article class="block tutorial-section">
+      <h2>How each exam tests this</h2>
+      <dl class="exam-map">
+        {% for exam, text in tutorial.exam_map.items %}
+        <dt>{{ exam }}</dt>
+        <dd>{{ text }}</dd>
+        {% endfor %}
+      </dl>
+    </article>
+    {% endif %}
+
+    <article class="block tutorial-sources">
+      <h2>Sources</h2>
+      <p class="muted-inline">Facts and structure were checked against the references below;
+        all prose is written for this site. Editions and access dates are tracked in
+        <a href="https://github.com/brentwong-kiel1997/NMAT_MCAT_PREP/blob/main/content/SOURCES.yml">SOURCES.yml</a>.</p>
+      <ul>
+        {% for src in tutorial.sources %}
+        <li>
+          <strong>{{ src.detail.title|default:src.ref }}</strong>
+          {% if src.detail.publisher %}· {{ src.detail.publisher }}{% endif %}
+          {% if src.detail.license %}· {{ src.detail.license }}{% endif %}
+          {% if src.detail.accessed %}· accessed {{ src.detail.accessed }}{% endif %}
+          — used: {{ src.relation }}{% if src.used %} ({{ src.used|join:"; " }}){% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </article>
+
+    <nav class="tutorial-nav">
+      {% if prev_ch %}
+      <a class="btn" href="{% url 'tutorial_detail' subject.slug prev_ch.chapter_id %}">
+        ← {{ prev_ch.title }}</a>
+      {% endif %}
+      <a class="btn" href="{% url back.0 subject.slug %}">All chapters</a>
+      {% if next_ch %}
+      <a class="btn btn-primary" href="{% url 'tutorial_detail' subject.slug next_ch.chapter_id %}">
+        {{ next_ch.title }} →</a>
+      {% else %}
+      <span class="muted-inline">Next chapter tutorial is being written — check back soon.</span>
+      {% endif %}
+    </nav>
+
+  </div>
+</section>
+{% endblock %}

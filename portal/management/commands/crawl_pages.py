@@ -20,6 +20,7 @@ from django.core.management.base import BaseCommand
 from django.test import Client
 
 from portal import content
+from portal.content import tutorial_titles
 
 SHARED = ("biology", "chemistry", "physics", "behavioral-social", "biochemistry")
 NMAT = ("verbal", "inductive-reasoning", "quantitative", "perceptual-acuity")
@@ -71,6 +72,12 @@ def urls() -> list[str]:
         out.append(f"/materials/formulas/{slug}/")
     for slug in DISEASE_SLUGS:
         out.append(f"/diseases/{slug}/")
+    for slug in SHARED + NMAT + MCAT:
+        subject = content.get_subject(slug) or {}
+        for group in subject.get("chapters") or []:
+            for item in group.get("items") or []:
+                if item.get("title") in tutorial_titles(slug):
+                    out.append(f"/tutorials/{slug}/{item['chapter_id']}/")
     return out
 
 

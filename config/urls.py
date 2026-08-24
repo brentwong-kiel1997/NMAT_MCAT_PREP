@@ -35,6 +35,11 @@ urlpatterns = [
     path("practice/<slug:slug>/", views.practice_detail, name="practice_detail"),
     path("subjects/", views.subject_list, name="subject_list"),
     path("subjects/<slug:slug>/", views.subject_detail, name="subject_detail"),
+    path(
+        "tutorials/<slug:slug>/<str:chapter_id>/",
+        views.tutorial_detail,
+        name="tutorial_detail",
+    ),
     path("nmat/", views.nmat_hub, name="nmat_hub"),
     path("nmat/<slug:slug>/", views.nmat_subject, name="nmat_subject"),
     path("mcat/", views.mcat_hub, name="mcat_hub"),

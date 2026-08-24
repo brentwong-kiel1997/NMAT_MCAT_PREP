@@ -10,6 +10,9 @@
           Done
         </label>
         <h3>{{ ch.title }}</h3>
+        {% if ch.title in tutorial_titles %}
+        <a class="tutorial-link" href="{% url 'tutorial_detail' progress_subject ch.chapter_id %}">Read the chapter tutorial →</a>
+        {% endif %}
       </div>
       <ul>
         {% for p in ch.points %}

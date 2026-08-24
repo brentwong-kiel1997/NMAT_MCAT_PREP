@@ -213,6 +213,22 @@ def _build() -> dict:
         doc = _read(f"diseases/{file.name}")
         diseases[doc["slug"]] = doc
 
+    # tutorial chapters: subject → chapter title → doc (the growing textbook)
+    tutorials: dict[str, dict[str, dict]] = {}
+    tut_dir = CONTENT_DIR / "tutorials"
+    if tut_dir.is_dir():
+        for file in sorted(tut_dir.rglob("*.yml")):
+            doc = _read(str(file.relative_to(CONTENT_DIR)))
+            tutorials.setdefault(doc.get("subject", ""), {})[
+                doc.get("chapter", "")
+            ] = doc
+
+    sources: dict[str, dict] = {}
+    sources_file = CONTENT_DIR / "SOURCES.yml"
+    if sources_file.exists():
+        registry = _read("SOURCES.yml")
+        sources = {s.get("id", ""): s for s in registry.get("sources") or []}
+
     return {
         "catalog": catalog,
         "kinds": kinds,
@@ -227,6 +243,8 @@ def _build() -> dict:
         "paths": paths,
         "checklists": checklists,
         "diseases": diseases,
+        "tutorials": tutorials,
+        "source_registry": sources,
         "nmat": _read("exams/nmat.yml"),
         "mcat": _read("exams/mcat.yml"),
     }
@@ -444,3 +462,18 @@ def all_diseases() -> list[dict]:
 def get_disease(slug: str) -> dict | None:
     row = store()["diseases"].get(slug)
     return deepcopy(row) if row else None
+
+
+def tutorial_for(subject_slug: str, chapter_title: str) -> dict | None:
+    """Full tutorial chapter document, or None when not yet written."""
+    doc = store()["tutorials"].get(subject_slug, {}).get(chapter_title)
+    return deepcopy(doc) if doc else None
+
+
+def tutorial_titles(subject_slug: str) -> set[str]:
+    """Outline chapter titles of this subject that have a tutorial."""
+    return set(store()["tutorials"].get(subject_slug, {}))
+
+
+def source_info(source_id: str) -> dict:
+    return deepcopy(store()["source_registry"].get(source_id, {}))

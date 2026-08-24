@@ -19,6 +19,7 @@ from .llm import active_provider, chat_completion
 from .notes import flashcards_for
 from .practice import practice_for, practice_catalog, all_practice_slugs, LABELS
 from .study import build_curriculum_context, tutor_messages
+from .content import source_info, tutorial_for, tutorial_titles
 
 
 def _learner_name(request) -> str:
@@ -47,6 +48,7 @@ def _study_extras(slug: str, entity: dict) -> dict:
     cards = flashcards_for(slug, limit=60)
     items = practice_for(slug)
     formulas = formulas_for(slug)
+    written = tutorial_titles(slug)
     return {
         "chapters_for_toc": entity.get("chapters") or [],
         "progress_key": f"gabay_progress_{slug}",
@@ -57,7 +59,61 @@ def _study_extras(slug: str, entity: dict) -> dict:
         "flashcards_json": _json_for_script(cards),
         "formula_count": len(formulas),
         "has_formulas": bool(formulas),
+        "tutorial_titles": written,
     }
+
+
+@require_GET
+def tutorial_detail(request, slug, chapter_id):
+    subject = exams.get_shared(slug) or exams.get_nmat_unique(slug) or exams.get_mcat_section(slug)
+    if not subject:
+        raise Http404("Subject not found")
+    chapter = None
+    flat = [
+        item
+        for group in subject.get("chapters") or []
+        for item in group.get("items") or []
+    ]
+    for item in flat:
+        if item.get("chapter_id") == chapter_id:
+            chapter = item
+            break
+    if chapter is None:
+        raise Http404("Chapter not found")
+    tutorial = tutorial_for(slug, chapter.get("title", ""))
+    if tutorial is None:
+        raise Http404("Tutorial not written yet")
+
+    for entry in tutorial.get("sources") or []:
+        entry["detail"] = source_info(entry.get("ref", ""))
+
+    index = flat.index(chapter)
+    prev_ch = next(
+        (c for c in reversed(flat[:index]) if c.get("title") in tutorial_titles(slug)), None
+    )
+    next_ch = next(
+        (c for c in flat[index + 1 :] if c.get("title") in tutorial_titles(slug)), None
+    )
+
+    back = ("subject_detail", slug)
+    if not exams.get_shared(slug):
+        if exams.get_nmat_unique(slug):
+            back = ("nmat_subject", slug)
+        elif exams.get_mcat_section(slug):
+            back = ("mcat_section", slug)
+
+    return render(
+        request,
+        "portal/tutorial_detail.html",
+        {
+            "subject": subject,
+            "chapter": chapter,
+            "tutorial": tutorial,
+            "prev_ch": prev_ch,
+            "next_ch": next_ch,
+            "back": back,
+        },
+    )
 
 
 def home(request):
