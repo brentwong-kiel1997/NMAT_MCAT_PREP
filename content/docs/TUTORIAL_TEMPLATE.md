@@ -192,13 +192,19 @@ Same expectation rules for the chapter-level blocks:
 - `review_questions` — 4 minimum at chapter level, always with distractors
   on the choices that are actually tempting.
 
-# g) Videos — short lectures to watch alongside the chapter
+# g) Videos — concrete videos with verified watch URLs and descriptions
 videos:
-  - title: "Channel/series name — the specific video"
-    url: "https://www.youtube.com/@ChannelName"
-    note: "What to search for, or why this fits the chapter."
-# (chapter-level; stable channel URLs + the searchable title beat hand-copied
-#  watch-IDs. Same shape for further_reading below.)
+  - title: "Creator — exact video title"
+    url: "https://www.youtube.com/watch?v=<verified-id>"
+    note: "Why this fits the chapter (our editorial line)."
+    description: "The video's own description, quoted from its page."
+# Workflow per video: (1) find it with the search harness (domain-filtered
+# youtube.com) — never guess watch-IDs; (2) copy the description from the
+# search result/video page; (3) transcripts: the server cannot reach
+# youtube.com directly (network-blocked), so transcripts are NOT extracted
+# today — if that changes, store them under content/transcripts/<id>.txt
+# and link from the chapter. Same title/url/note/description shape for
+# further_reading below.
 
 # h) Further reading — extension links for deeper study
 further_reading:

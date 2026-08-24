@@ -1,5 +1,5 @@
 {
-  "source_rev": "06c141f",
+  "source_rev": "6bca4fa",
   "counts": {
     "chapters": 72,
     "note_bullets": 458,
@@ -114,7 +114,7 @@
     "subjects/psych-soc.yml": "bb6a4d60979b66c38e2fc171786ee4aa4adc9f769a4f26b912147142f10404fb",
     "subjects/quantitative.yml": "7b326baa3490001fa74dc32ba44fb72d75bc272d88b8ee4f26d4298352b4f74b",
     "subjects/verbal.yml": "00fce8aa8cbbdda8d86bf0811249f357f142c7464eeaa731db4da4be363e387d",
-    "tutorials/biology/unity-and-diversity-of-life.yml": "f10bc33ed4dc9772f034dc9db4d4c973c5fff23516d33e403c7ee9a9346101b2",
+    "tutorials/biology/unity-and-diversity-of-life.yml": "367298ef4d4b417fa5e3f0a60b00752aae283c3bef1506befc785648bae730bc",
     "units.yml": "d1d18d8b86c1fa59336d4fbd39b37e190716d4a5c30fb485a2eeebf91b71a345"
   }
 }

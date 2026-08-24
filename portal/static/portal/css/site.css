@@ -1262,3 +1262,10 @@ details.tut-question[open] summary, details.tut-check-q[open] summary { margin-b
 .project-card a { text-decoration: none; color: inherit; }
 .unit-shared-note { margin: 0.55rem 0 0; font-size: 0.84rem; color: #44423c;
   display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; }
+
+/* --- Video descriptions --- */
+.tut-video-list li { margin: 0.55rem 0; line-height: 1.55; }
+.tut-video-desc { margin-top: 0.25rem; font-size: 0.88rem; color: #44423c; }
+.tut-video-desc summary { cursor: pointer; color: #105652; font-weight: 600; }
+.tut-video-desc p { margin: 0.3rem 0 0; }
+.tut-video-desc-inline { display: block; font-size: 0.86rem; margin-top: 0.15rem; }

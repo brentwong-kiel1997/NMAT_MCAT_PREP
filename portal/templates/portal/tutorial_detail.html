@@ -36,7 +36,6 @@
         {% if tutorial.pitfalls %}<a href="#pitfalls">Common pitfalls</a>{% endif %}
         <a href="#exam-map">How each exam tests this</a>
         {% if tutorial.review_questions %}<a href="#review-questions">Review questions</a>{% endif %}
-        <a href="#exam-map">How each exam tests this</a>
       </nav>
     </aside>
     {% endif %}
@@ -85,7 +84,7 @@
           <p class="tut-block-label">Watch</p>
           <ul>
             {% for v in section.videos %}
-            <li><a href="{{ v.url }}" target="_blank" rel="noopener noreferrer">{{ v.title }}</a>{% if v.note %} — {{ v.note|rich }}{% endif %}</li>
+            <li><a href="{{ v.url }}" target="_blank" rel="noopener noreferrer">{{ v.title }}</a>{% if v.note %} — {{ v.note|rich }}{% endif %}{% if v.description %}<span class="muted-inline tut-video-desc-inline">{{ v.description|rich }}</span>{% endif %}</li>
             {% endfor %}
           </ul>
         </div>
@@ -137,6 +136,12 @@
           <li>
             <a href="{{ v.url }}" target="_blank" rel="noopener noreferrer">{{ v.title }}</a>
             {% if v.note %} — {{ v.note|rich }}{% endif %}
+            {% if v.description %}
+            <details class="tut-video-desc">
+              <summary>About this video</summary>
+              <p>{{ v.description|rich }}</p>
+            </details>
+            {% endif %}
           </li>
           {% endfor %}
         </ul>
