@@ -8,3 +8,4 @@ staticfiles/
 venv/
 *.log
 .DS_Store
+DEPLOYMENT.local.md

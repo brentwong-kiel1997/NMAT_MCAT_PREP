@@ -1,86 +1,99 @@
-# Gabay — personal NMAT & MCAT study companion
+# Gabay — NMAT & MCAT Study Companion
 
-A single-learner Django site for preparing for both the Philippine NMAT (CEM)
-and the US MCAT (AAMC): curriculum outlines, high-yield notes, practice MCQs,
-a materials desk (glossary / formulas / tips / paths / checklists), a disease
-library for mechanism reading, and a MiniMax-M3 study coach grounded in the
-current subject's outline. All content and UI are English.
+A single-learner study site for two medical-school entrance exams:
 
-## Layout
+- **NMAT** — National Medical Admission Test (Philippines, administered by CEM)
+- **MCAT** — Medical College Admission Test (USA, administered by AAMC)
 
-- Working repository: `/home/ubuntu/django-wsgi`
-- Bare repo (deploy source): `/home/ubuntu/repos/django-wsgi.git`
-- Live checkout: `/home/ubuntu/deploy/django-wsgi`
-- Site: `https://<host>:8888/` (HTTPS + Basic Auth)
-- Curriculum content lives in `content/` as YAML — see `content/README.md`
-  (a standalone, deployment-agnostic description of the content pack)
+Gabay organizes the full journey: curriculum outlines mapped to the official
+exam blueprints, teaching chapters, high-yield notes, practice questions with
+explanations, a materials desk (glossary / formulas / exam tips / study paths /
+checklists), a disease library for mechanism reading, per-chapter progress
+tracking, and an AI study coach grounded in whichever chapter you are reading.
 
-## Configuration (.env)
+All content and UI are English. The curriculum itself is plain YAML in
+`content/` — no database involved.
 
-Secrets are read from a `.env` file, never from exported environment
-variables. Copy the template and fill it in:
+## Features
 
-```bash
-cp .env.example .env && chmod 600 .env
-python manage.py env_status   # shows which file supplies each key, masked
-```
+- **13 subjects** covering NMAT Part 1 & 2 and all four MCAT sections, with
+  shared science subjects merged between the two exams
+- **90-chapter outline** mapped to the CEM syllabus and AAMC foundational
+  concepts / content categories
+- **Tutorial chapters** (growing one by one): overview, teaching sections,
+  worked examples, key points, pitfalls, and per-exam mapping — each citing
+  its sources
+- **790 high-yield note bullets**, 116 practice MCQs with explanations
+- **Materials desk**: 105-term glossary with search, 108 formulas in per-subject
+  sheets, exam tips, study paths, and checklists
+- **Progress tracking**: per-chapter completion and practice attempts stored
+  per learner account
+- **AI study coach** (MiniMax-M3): explain / quiz / grade modes constrained to
+  the current subject's outline
+- **File-based content**: edit YAML, push, done — with structural validation
+  as a deploy gate
 
-Lookup order: `GABAY_ENV_FILE` → `<repo>/.env` → `/home/ubuntu/runtime/.env` →
-`/home/ubuntu/runtime/secrets/minimax.env`. `.env` is gitignored; changes take
-effect on the next request without restarting Gunicorn.
+## Quickstart
 
-## Databases
-
-One SQLite file, `users.sqlite3` under `/home/ubuntu/runtime/django-wsgi/`:
-Django auth/sessions plus learner progress (`LearnerProfile`,
-`ChapterProgress`, `PracticeAttempt`). Curriculum knowledge is NOT in a
-database — it is read from `content/*.yml` at runtime by `portal/content.py`
-(mtime-cached, so edits apply on the next request).
-
-## Curriculum content (content/)
-
-Edit the YAML, validate, commit, push:
+Requirements: Python 3.12+.
 
 ```bash
-# edit content/**/*.yml
-python manage.py validate_content     # optional local self-check
-python manage.py refresh_manifest     # regenerate MANIFEST.json (commit it too)
-git add content/ && git commit -m "..."
-git push origin main
+git clone https://github.com/brentwong-kiel1997/NMAT_MCAT_PREP.git
+cd NMAT_MCAT_PREP
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+
+# keep runtime data (user DB) inside the checkout
+export GABAY_RUNTIME_DIR="$PWD/runtime"
+
+.venv/bin/python manage.py migrate
+.venv/bin/python manage.py ensure_admin --username admin --password <pick-one>
+.venv/bin/python manage.py runserver
 ```
 
-`validate_content` also runs as a deploy gate. Stability rules (subject slugs,
-question ids, chapter order/titles drive learner-progress keys) are documented
-in `content/README.md`.
+Then open http://127.0.0.1:8000/ and sign in with the admin account.
 
-## Pushing and auto-deploy
+### Study coach (optional)
 
-Auto-deploy prefers the local bare repo, then the remote:
-`scripts/poll_github.sh` runs from cron every 2 minutes — if the local bare
-repo holds commits the remote does not have (pushed via `git push deploy
-main`), those win and are never rolled back; otherwise it follows
-`origin/main` (GitHub).
+The tutor needs a MiniMax API key. Copy `.env.example` to `.env` and fill in
+`MINIMAX_API_KEY` (the file is gitignored; `python manage.py env_status`
+verifies it is found). Without a key everything else works — only the coach
+is disabled.
+
+## The content pack
+
+Everything taught lives in `content/` as version-controlled YAML — subjects,
+notes, questions, glossary, formulas, tips, paths, checklists, diseases, and
+the exam structures — described standalone in
+[`content/README.md`](content/README.md). Source attribution (edition, access
+date, license, how each source was used) is tracked in
+[`content/SOURCES.yml`](content/SOURCES.yml).
+
+To edit curriculum content:
 
 ```bash
-cd /home/ubuntu/django-wsgi
-git add -A && git commit -m "..."
-git push deploy main    # local bare repo: immediate post-receive deploy (preferred channel)
-git push origin main    # GitHub backup; polling deploys it within ~2 min
+# edit content/**/*.yml, then:
+.venv/bin/python manage.py validate_content    # structural self-check
+.venv/bin/python manage.py refresh_manifest    # update MANIFEST.json (commit it too)
 ```
 
-- The poller never rolls a local-only deployment back to an older remote tip;
-  the remote takes over once it has caught up
-- Impatient? Run `scripts/poll_github.sh` manually
-- Poll log (each deploy tagged local/github):
-  `/home/ubuntu/runtime/django-wsgi/logs/poll_github.log`
-- Failed deploys retry on the next tick (state advances only on success)
+Stability rules (subject slugs, question ids, chapter order — they key the
+progress records) are documented in the content README.
 
-## Handy commands
+## Project layout
 
-```bash
-python manage.py validate_content    # content gate (also runs during deploy)
-python manage.py refresh_manifest    # after editing content files
-python manage.py crawl_pages --out DIR --login   # crawl all pages (normalized HTML)
-python manage.py db_status           # user DB path + tables
-python manage.py env_status          # .env lookup + masked values
 ```
+content/        curriculum content pack (YAML, standalone)
+portal/         Django app: views, templates, static, content reader
+config/         Django project settings
+scripts/        reference deployment tooling (see DEPLOYMENT notes)
+manage.py       standard Django entry point
+```
+
+## Sources & license
+
+Tutorial chapters and practice items are original writing for this project.
+External references (OpenStax textbooks, AAMC and CEM public outlines) are
+consulted for facts and structure only, never copied — see the `relation`
+field in `content/SOURCES.yml`. Exam names are trademarks of their respective
+owners; this project is not affiliated with CEM or the AAMC.
