@@ -1,5 +1,5 @@
 {
-  "source_rev": "fe6d7b9",
+  "source_rev": "4389db5",
   "counts": {
     "chapters": 72,
     "note_bullets": 458,
@@ -114,6 +114,7 @@
     "subjects/psych-soc.yml": "bb6a4d60979b66c38e2fc171786ee4aa4adc9f769a4f26b912147142f10404fb",
     "subjects/quantitative.yml": "7b326baa3490001fa74dc32ba44fb72d75bc272d88b8ee4f26d4298352b4f74b",
     "subjects/verbal.yml": "00fce8aa8cbbdda8d86bf0811249f357f142c7464eeaa731db4da4be363e387d",
+    "tutorials/biology/cells-and-cellular-processes.yml": "a8065834bfce6ad12d9c666a1fb256d741225a2d871f9249d1dceb4787e37377",
     "tutorials/biology/unity-and-diversity-of-life.yml": "47f6e65d0c5943504df74680ecdff2f8b8b7eb0620dcf9ac8d35bd778a9e854d",
     "units.yml": "d1d18d8b86c1fa59336d4fbd39b37e190716d4a5c30fb485a2eeebf91b71a345"
   }
