@@ -92,8 +92,34 @@ manage.py       standard Django entry point
 
 ## Sources & license
 
-Tutorial chapters and practice items are original writing for this project.
-External references (OpenStax textbooks, AAMC and CEM public outlines) are
-consulted for facts and structure only, never copied — see the `relation`
-field in `content/SOURCES.yml`. Exam names are trademarks of their respective
-owners; this project is not affiliated with CEM or the AAMC.
+### License of this repository
+
+| Part | License | In one line |
+| --- | --- | --- |
+| Source code & config (everything except `content/`) | **MIT** — see [LICENSE](LICENSE) | use for any purpose, keep the notice |
+| Curriculum content pack (`content/`) | **CC BY-NC-SA 4.0** — see [content/LICENSE.md](content/LICENSE.md) | free to use, adapt, and redistribute non-commercially with credit; adaptations carry the same license |
+
+### Data sources
+
+All teaching content — tutorial chapters, notes, practice questions,
+glossary, formulas, tips, study paths, checklists, and disease articles — is
+**original writing for this project**. External references are consulted for
+facts and coverage only; no text is copied from them.
+
+| Source | Used for | Source's license | How it is used |
+| --- | --- | --- | --- |
+| OpenStax textbooks (Biology 2e et al.) | Tutorial facts & chapter structure | CC BY-NC-SA 4.0 | consulted only — facts and structure, no text |
+| AAMC, "What's on the MCAT Exam" | MCAT section / content-category mapping | © AAMC — public outline | paraphrased mapping, no reproduction |
+| CEM NMAT test description | NMAT structure, timing, item counts | © CEM — public description | paraphrased mapping, no reproduction |
+| MiniMax API | Study coach backend (runtime service) | commercial API | called at runtime; no content sourced |
+
+Exact editions, access dates, and a per-source usage declaration for every
+tutorial chapter are recorded in [`content/SOURCES.yml`](content/SOURCES.yml)
+and enforced by the content validation gate.
+
+### Trademarks
+
+NMAT is a trademark of the Center for Educational Measurement, Inc. MCAT is a
+trademark of the Association of American Medical Colleges. This independent
+study project is not affiliated with, sponsored by, or endorsed by either
+organization.

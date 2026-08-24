@@ -114,6 +114,12 @@ it together with your changes. Consumers typically verify, before serving:
 - question ids unique per subject; `answer` is one of the choice keys
 - every stored learner chapter-id still resolves to an outline item
 
+## License
+
+This content pack is licensed **CC BY-NC-SA 4.0** — see
+[LICENSE.md](LICENSE.md) in this directory. The surrounding project code is
+MIT-licensed (repository root `LICENSE`).
+
 ## Sourcing disclaimer
 
 Outlines follow the public exam blueprints (CEM's Board-of-Interior guidance
