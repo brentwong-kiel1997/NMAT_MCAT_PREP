@@ -45,10 +45,12 @@ log "new commit ${fetched:0:7} on GitHub (last deployed: ${last:0:7:-none}) — 
 
 # Mirror the post-receive sequence: move main to GitHub's tip, sync the
 # checkout, then deploy. Guarded by `if` so a failure retries next tick.
+# `9>&-` stops the daemonized Gunicorn from inheriting this script's lock
+# fd — an inherited fd would hold the flock forever and stall every poll.
 if git -C "$BARE" update-ref "refs/heads/$BRANCH" "$fetched" \
    && GIT_WORK_TREE="$DEPLOY" GIT_DIR="$BARE" git checkout -f "$BRANCH" >>"$LOG" 2>&1 \
    && chmod +x "$DEPLOY/scripts/deploy.sh" \
-   && "$DEPLOY/scripts/deploy.sh" >>"$LOG" 2>&1; then
+   && "$DEPLOY/scripts/deploy.sh" >>"$LOG" 2>&1 9>&-; then
   echo "$fetched" >"$STATE"
   log "deployed ${fetched:0:7}"
 else

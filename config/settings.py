@@ -29,7 +29,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "portal",
-    "knowledge",
 ]
 
 MIDDLEWARE = [
@@ -61,8 +60,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "config.wsgi.application"
 
-# User DB (default) and Knowledge DB are separate SQLite files under RUNTIME_DIR.
-# Never point both aliases at the same path.
+# The user DB (accounts, sessions, learner progress) lives under RUNTIME_DIR.
+# Curriculum knowledge is file-based now: content/*.yml read by portal/content.py.
 RUNTIME_DIR = Path(
     os.environ.get("GABAY_RUNTIME_DIR", "/home/ubuntu/runtime/django-wsgi")
 )
@@ -76,19 +75,7 @@ DATABASES = {
             os.environ.get("GABAY_USER_DB", str(RUNTIME_DIR / "users.sqlite3"))
         ),
     },
-    # curriculum outlines, notes, practice, diseases
-    "knowledge": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": Path(
-            os.environ.get("GABAY_KNOWLEDGE_DB", str(RUNTIME_DIR / "knowledge.sqlite3"))
-        ),
-    },
 }
-
-DATABASE_ROUTERS = ["knowledge.db_router.KnowledgeRouter"]
-
-if str(DATABASES["default"]["NAME"]) == str(DATABASES["knowledge"]["NAME"]):
-    raise RuntimeError("GABAY_USER_DB and GABAY_KNOWLEDGE_DB must be different files")
 
 AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
