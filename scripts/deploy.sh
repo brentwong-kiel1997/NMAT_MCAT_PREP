@@ -16,8 +16,14 @@ mkdir -p "$LOGS" "$DEPLOY"
 export DJANGO_DEBUG="${DJANGO_DEBUG:-0}"
 export DJANGO_ALLOWED_HOSTS="${DJANGO_ALLOWED_HOSTS:-localhost,127.0.0.1,*}"
 
-# MiniMax study tutor keys are read from a .env file at request time
-# (portal/envfile.py), so nothing secret is exported into this shell.
+# Tutor keys are read from .env per request (portal/envfile.py). Drop any model
+# credentials inherited from the pushing shell so the server process and its
+# children never carry them in /proc/<pid>/environ.
+while IFS='=' read -r _name _; do
+  case "$_name" in
+    MINIMAX_*|OPENAI_API_KEY|OPENAI_BASE_URL|ANTHROPIC_*) unset "$_name" ;;
+  esac
+done < <(env)
 
 cd "$DEPLOY"
 
