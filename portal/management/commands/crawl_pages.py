@@ -121,16 +121,23 @@ class Command(BaseCommand):
                 failures.append(f"{url} → {resp.status_code}")
 
         if options["login"]:
-            # exercise the study API with a quiz request (no external tutor call
-            # in quiz mode; pins loader behavior through build_curriculum_context)
+            # exercise the study API: the model's answer text is nondeterministic,
+            # so only the status/ok/mode fields are pinned
             resp = client.post(
                 "/api/study/",
                 data=json.dumps({"mode": "quiz", "subject_slug": "biology"}),
                 content_type="application/json",
             )
+            try:
+                body = resp.json()
+                pinned = json.dumps(
+                    {k: v for k, v in body.items() if k not in ("answer", "question")},
+                    sort_keys=True,
+                )
+            except Exception:
+                pinned = resp.content.decode("utf-8")[:200]
             (out / "api_study.html").write_text(
-                f"STATUS {resp.status_code}\n" + normalize(resp.content.decode("utf-8")),
-                encoding="utf-8",
+                f"STATUS {resp.status_code}\n{pinned}\n", encoding="utf-8"
             )
             if resp.status_code >= 400:
                 failures.append(f"/api/study/ → {resp.status_code}")

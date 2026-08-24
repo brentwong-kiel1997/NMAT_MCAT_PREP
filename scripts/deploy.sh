@@ -34,13 +34,12 @@ fi
 "${VENV}/bin/pip" install -q --upgrade pip
 "${VENV}/bin/pip" install -q -r requirements.txt
 
-# --- Two separate SQLite files under $RUNTIME ---
-# users.sqlite3     (default): auth / sessions / learner progress
-# knowledge.sqlite3 (knowledge): curriculum / notes / practice / diseases
+# --- Databases under $RUNTIME ---
+# users.sqlite3 (default): auth / sessions / learner progress.
+# Knowledge content now ships in git as content/ YAML and is read by
+# portal/content.py; validate_content gates the deploy before restart.
 "${VENV}/bin/python" manage.py migrate --database=default --noinput
-# Only migrate the knowledge app into the knowledge DB (avoids auth tables there)
-"${VENV}/bin/python" manage.py migrate knowledge --database=knowledge --noinput
-"${VENV}/bin/python" manage.py load_knowledge
+"${VENV}/bin/python" manage.py validate_content
 "${VENV}/bin/python" manage.py ensure_admin
 "${VENV}/bin/python" manage.py db_status
 "${VENV}/bin/python" manage.py env_status

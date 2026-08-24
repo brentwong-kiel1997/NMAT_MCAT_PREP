@@ -124,7 +124,7 @@ def nmat_hub(request):
     return render(
         request,
         "portal/nmat_hub.html",
-        {"exam": exams.nmat_exam(), "shared": exams.SHARED_SUBJECTS},
+        {"exam": exams.nmat_exam()},
     )
 
 
@@ -159,7 +159,7 @@ def mcat_hub(request):
     return render(
         request,
         "portal/mcat_hub.html",
-        {"exam": exams.mcat_exam(), "shared": exams.SHARED_SUBJECTS},
+        {"exam": exams.mcat_exam()},
     )
 
 
