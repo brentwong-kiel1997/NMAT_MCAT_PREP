@@ -1,0 +1,190 @@
+slug: biology
+chapters:
+- title: Unity and Diversity of Life
+  bullets:
+  - zh: 生命共同特征：细胞、代谢、稳态、繁殖、进化适应
+    en: 'Shared traits: cells, metabolism, homeostasis, reproduction, adaptation'
+  - zh: 域/界层级用于组织多样性，不是死记全部物种名
+    en: Domain/kingdom hierarchy organizes diversity — not rote species lists
+  - zh: 同源 vs 同功：进化关系 vs 功能相似
+    en: 'Homology vs analogy: shared ancestry vs similar function'
+  - zh: 三域系统：细菌、古菌、真核生物
+    en: 'Three-domain system: Bacteria, Archaea, Eukarya'
+  - zh: 自然选择：变异 + 选择 + 时间 → 适应
+    en: 'Natural selection: variation + selection + time → adaptation'
+  - zh: 物种概念：可繁殖隔离是核心判据之一
+    en: 'Species concept: reproductive isolation is a core criterion'
+- title: Cells and Cellular Processes
+  bullets:
+  - zh: 原核无膜包细胞核；真核有细胞器分区
+    en: Prokaryotes lack membrane-bound nucleus; eukaryotes have compartmentalization
+  - zh: 膜转运：简单扩散、协助扩散、主动转运、胞吞/胞吐
+    en: 'Transport: simple/facilitated diffusion, active transport, endo/exocytosis'
+  - zh: 酶：降低活化能；受温度、pH、抑制剂影响
+    en: Enzymes lower activation energy; affected by T, pH, inhibitors
+  - zh: 细胞呼吸主线：糖酵解 → 丙酮酸氧化 → TCA → ETC/氧化磷酸化
+    en: 'Respiration spine: glycolysis → pyruvate oxidation → TCA → ETC/oxphos'
+  - zh: 线粒体与叶绿体支持内共生理论
+    en: Mitochondria and chloroplasts support endosymbiosis theory
+  - zh: Na⁺/K⁺泵维持膜电位与细胞体积
+    en: Na⁺/K⁺ pump maintains membrane potential and cell volume
+  - zh: 竞争性 vs 非竞争性抑制：Km 与 Vmax 变化不同
+    en: 'Competitive vs noncompetitive inhibition: different Km/Vmax shifts'
+  - zh: 有氧呼吸最终电子受体是 O₂；无氧用其他受体
+    en: Aerobic ETC uses O₂ as terminal acceptor; anaerobic uses alternatives
+- title: Genetics
+  bullets:
+  - zh: 中心法则：DNA → RNA → 蛋白质（及常见例外语境）
+    en: 'Central dogma: DNA → RNA → protein (plus common caveats)'
+  - zh: 孟德尔：分离与自由组合；表型/基因型比
+    en: 'Mendel: segregation & independent assortment; phenotype/genotype ratios'
+  - zh: 突变类型：点突变、移码、染色体结构/数目异常
+    en: 'Mutations: point, frameshift, chromosomal structure/number'
+  - zh: 减数分裂产生单倍体配子并重组遗传多样性
+    en: Meiosis yields haploid gametes and reassorts diversity
+  - zh: 显性/隐性/共显性/不完全显性改变表型比
+    en: Dominant/recessive/codominant/incomplete dominance alter ratios
+  - zh: 连锁基因偏离 9:3:3:1；重组率反映距离
+    en: Linked genes deviate from 9:3:3:1; recombination rate reflects distance
+  - zh: X 连锁：男性更易表现隐性性状
+    en: 'X-linked: males more often express recessive traits'
+  - zh: 表观遗传：不改变 DNA 序列的可遗传表达改变
+    en: 'Epigenetics: heritable expression changes without DNA sequence change'
+- title: The World of Plants and Animals
+  bullets:
+  - zh: 植物：光合作用光反应/暗反应分工；气孔与蒸腾
+    en: 'Plants: light/dark reactions; stomata and transpiration'
+  - zh: 动物：交换表面积、循环与气体交换的权衡
+    en: 'Animals: surface-area tradeoffs for exchange, circulation, gas exchange'
+  - zh: 比较解剖关注功能约束，不堆术语
+    en: Comparative anatomy emphasizes functional constraints, not jargon piles
+  - zh: C₃/C₄/ CAM 植物：固碳路径与气候适应
+    en: 'C₃/C₄/CAM plants: carbon-fixation paths and climate adaptation'
+  - zh: 开管式 vs 闭管式循环：昆虫 vs 脊椎动物
+    en: 'Open vs closed circulation: insects vs vertebrates'
+  - zh: 适应性辐射：共同祖先 → 多生态位形态
+    en: 'Adaptive radiation: common ancestor → diverse niche forms'
+- title: Development
+  bullets:
+  - zh: 受精 → 卵裂 → 囊胚 → 原肠胚 → 器官发生（导论级）
+    en: Fertilization → cleavage → blastula → gastrula → organogenesis (intro)
+  - zh: 细胞分化：基因选择性表达，而非基因组丢失（多数情况）
+    en: 'Differentiation: selective gene expression, not genome loss (usually)'
+  - zh: 诱导与信号决定细胞命运
+    en: Induction and signaling set cell fates
+  - zh: 形态发生素梯度决定体轴与器官位置
+    en: Morphogen gradients set body axes and organ positions
+  - zh: 同源框基因（Hox）保守调控发育模式
+    en: Hox genes conservatively pattern development
+  - zh: 干细胞全能性随发育阶段递减
+    en: Stem-cell potency decreases with developmental stage
+- title: 'Life Processes: Regulation and Homeostasis'
+  bullets:
+  - zh: 负反馈维持稳态；正反馈放大短暂过程
+    en: Negative feedback stabilizes; positive feedback amplifies brief events
+  - zh: 内分泌与神经是两大协调系统
+    en: Endocrine and nervous systems are the two major coordinators
+  - zh: 体温、血糖、渗透压是经典稳态例子
+    en: Temperature, glucose, and osmolarity are classic homeostasis examples
+  - zh: 胰岛素↓血糖；胰高血糖素↑血糖
+    en: Insulin lowers glucose; glucagon raises glucose
+  - zh: 肾单位：滤过→重吸收→分泌调节体液
+    en: 'Nephron: filtration → reabsorption → secretion regulates fluids'
+  - zh: 体温调节：出汗/血管舒缩 + 行为调节
+    en: 'Thermoregulation: sweating/vasomotion plus behavioral adjustments'
+- title: Organisms and Their Environment
+  bullets:
+  - zh: 种群、群落、生态系统层次
+    en: Population, community, ecosystem levels
+  - zh: 能量流单向、物质循环
+    en: Energy flows one way; matter cycles
+  - zh: 种间关系：捕食、竞争、共生
+    en: 'Species interactions: predation, competition, symbiosis'
+  - zh: 10% 能量传递法则：营养级间大量耗散
+    en: '~10% energy transfer rule: heavy loss between trophic levels'
+  - zh: 演替：先锋物种改变环境 → 群落更替
+    en: 'Succession: pioneer species alter environment → community turnover'
+  - zh: 生态位：资源与时间维度的功能角色
+    en: 'Niche: functional role across resource and time dimensions'
+- title: 1C · Heritable information & genetic diversity
+  bullets:
+  - zh: DNA 复制半保守；突变是变异原料
+    en: Semiconservative replication; mutation feeds variation
+  - zh: 减数分裂重组 + 独立分配 → 配子多样性
+    en: Meiotic recombination + assortment → gamete diversity
+  - zh: Hardy–Weinberg 条件：无突变/选择/漂变/迁徙且随机交配（理想）
+    en: 'HWE ideal: no mutation/selection/drift/migration + random mating'
+  - zh: DNA 聚合酶校对 + 错配修复保真度
+    en: Polymerase proofreading + mismatch repair boost fidelity
+  - zh: 交叉互换发生在减数分裂前期 I
+    en: Crossing over occurs in prophase I of meiosis
+  - zh: Hardy–Weinberg：p² + 2pq + q² = 1
+    en: 'Hardy–Weinberg: p² + 2pq + q² = 1'
+- title: 2A · Assemblies of molecules, cells, and cell groups
+  bullets:
+  - zh: 从大分子 → 细胞器 → 组织的层级组装
+    en: 'Hierarchy: macromolecules → organelles → tissues'
+  - zh: 细胞连接与细胞外基质支持组织功能
+    en: Junctions and ECM support tissue function
+  - zh: 磷脂双层的两亲性决定膜基本结构
+    en: Amphipathic phospholipids define the bilayer core
+  - zh: 紧密连接阻旁细胞泄漏；桥粒抗牵拉
+    en: Tight junctions block leak; desmosomes resist pull
+  - zh: 组织：上皮、结缔、肌肉、神经四大类
+    en: 'Tissues: epithelial, connective, muscle, nervous'
+- title: 2B · Prokaryotes and viruses
+  bullets:
+  - zh: 细菌：细胞壁、质粒、二元分裂
+    en: 'Bacteria: cell wall, plasmids, binary fission'
+  - zh: 病毒：需宿主；溶原/裂解周期思想
+    en: Viruses need hosts; lysogeny/lysis idea
+  - zh: 抗生素靶点常是原核特有结构（如细胞壁）
+    en: Antibiotics often hit prokaryote-specific targets (e.g., cell wall)
+  - zh: 革兰阳性壁厚肽聚糖；阴性有外膜
+    en: Gram-positive thick peptidoglycan; negative outer membrane
+  - zh: 操纵子：原核基因共调控单元
+    en: 'Operon: prokaryotic co-regulated gene cluster'
+  - zh: 逆转录病毒携带逆转录酶整合宿主基因组
+    en: Retroviruses use reverse transcriptase to integrate into host genome
+- title: 2C · Cell division, differentiation, specialization
+  bullets:
+  - zh: 有丝分裂保染色体数；减数分裂减半
+    en: Mitosis keeps chromosome number; meiosis halves it
+  - zh: 细胞周期检查点与癌变失控（导论）
+    en: Checkpoints vs uncontrolled growth (intro)
+  - zh: 干细胞：自我更新 + 分化潜能
+    en: 'Stem cells: self-renewal + differentiation potential'
+  - zh: G₁/S/G₂/M 检查点：DNA 损伤与纺锤体监控
+    en: G₁/S/G₂/M checkpoints monitor DNA damage and spindle attachment
+  - zh: cyclin–CDK 复合体驱动细胞周期
+    en: Cyclin–CDK complexes drive the cell cycle
+  - zh: 接触抑制丧失是体外培养癌细胞特征
+    en: Loss of contact inhibition marks cultured cancer cells
+- title: 3A · Nervous & endocrine coordination
+  bullets:
+  - zh: 神经：快、局部；内分泌：慢、广泛
+    en: 'Neural: fast/local; endocrine: slower/broad'
+  - zh: 动作电位：去极化→复极化；突触化学传递
+    en: 'AP: depol→repol; chemical synaptic transmission'
+  - zh: 激素：肽类/类固醇信号路径不同
+    en: Peptide vs steroid hormone signaling differs
+  - zh: 静息电位 ≈ K⁺外流；动作电位 Na⁺内流
+    en: Resting potential ≈ K⁺ outflow; AP peak from Na⁺ influx
+  - zh: 髓鞘盐跃传导加速长距离信号
+    en: Myelin enables saltatory conduction over long distances
+  - zh: 负反馈轴：甲状腺轴、肾上腺皮质轴范例
+    en: 'Negative-feedback axes: thyroid and adrenal cortex examples'
+- title: 3B · Main organ systems
+  bullets:
+  - zh: 交换界面：肺泡、小肠绒毛、肾单位
+    en: 'Exchange surfaces: alveoli, villi, nephrons'
+  - zh: 循环：心输出、血压与阻力关系直觉
+    en: 'Circulation: cardiac output, pressure, resistance intuition'
+  - zh: 每个系统问：输入、处理、输出、稳态回路
+    en: 'Per system ask: input, processing, output, feedback loop'
+  - zh: 血红蛋白 O₂ 结合曲线：协同结合、 Bohr 效应
+    en: 'Hb-O₂ curve: cooperative binding and Bohr effect'
+  - zh: 心输出量 = 心率 × 每搏输出量
+    en: Cardiac output = heart rate × stroke volume
+  - zh: 免疫：先天（速发）vs 适应性（特异记忆）
+    en: 'Immunity: innate (fast) vs adaptive (specific memory)'

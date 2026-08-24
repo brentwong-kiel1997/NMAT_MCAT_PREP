@@ -1,0 +1,64 @@
+slug: nmat
+name: NMAT
+full_name: National Medical Admission Test
+name_zh: 菲律宾医学院入学考试
+admin: CEM (Center for Educational Measurement)
+format:
+  zh: 两部分共 240 道选择题；每科 30 题。Part 1 心智能力 2h15m，Part 2 学业能力 1h30m，中间约 10 分钟休息。
+  en: Two parts, 240 MCQs, 30 per subtest. Part 1 mental ability 2h15m; Part 2 academic 1h30m; ~10-minute
+    break.
+parts:
+- id: part1
+  name: Part 1 · Mental Ability
+  name_zh: 心智能力
+  time: 2 hours 15 minutes
+  items: 120
+  subject_refs:
+  - inductive-reasoning
+  - perceptual-acuity
+  - quantitative
+  - verbal
+- id: part2
+  name: Part 2 · Academic Proficiency
+  name_zh: 学业能力
+  time: 1 hour 30 minutes
+  items: 120
+  subjects:
+  - slug: biology
+    name: Biology
+    name_zh: 生物学
+    shared: biology
+    items: 30
+    item_types: []
+    focus:
+      zh: 大学导论生物学。章节见共用科目页。
+      en: Intro college biology. See shared subject page for chapters.
+  - slug: physics
+    name: Physics
+    name_zh: 物理学
+    shared: physics
+    items: 30
+    item_types: []
+    focus:
+      zh: 大学导论物理学。章节见共用科目页。
+      en: Intro college physics. See shared subject page for chapters.
+  - slug: social-science
+    name: Social Science
+    name_zh: 社会科学
+    shared: behavioral-social
+    items: 30
+    item_types:
+    - Psychology
+    - Sociology and Anthropology
+    focus:
+      zh: 心理 / 社会与人类学导论。章节见共用科目页。
+      en: Intro psych / sociology & anthropology. See shared subject page.
+  - slug: chemistry
+    name: Chemistry
+    name_zh: 化学
+    shared: chemistry
+    items: 30
+    item_types: []
+    focus:
+      zh: 普化、分析、有机与生化导论。章节见共用科目页。
+      en: Intro gen/analytical/organic/biochem. See shared subject page.

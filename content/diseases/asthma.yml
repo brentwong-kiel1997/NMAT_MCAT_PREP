@@ -1,0 +1,34 @@
+slug: asthma
+name: Asthma
+name_zh: 哮喘
+short: 可逆性气道阻塞 + 高反应性 + 慢性炎症；I 型超敏与 Th2 通路是机制核心。
+systems:
+- Respiratory
+- Immunologic
+exams:
+- Enrichment
+exam_fit: 延伸阅读：服务生物学/病理生理直觉；NMAT 考纲是导论课不是临床诊疗；MCAT 可迁移机制，不考指南级用药方案。
+pathogen: 非传染；过敏原、感染、运动、冷空气等触发
+transmission: 不适用。
+pathophysiology:
+- Th2：IL-4/IL-5/IL-13 → IgE、嗜酸粒细胞、黏液高分泌。
+- 早期：支气管痉挛；晚期：炎症细胞浸润。
+- 长期：气道重构（基底膜增厚、平滑肌增生）。
+clinical:
+- 发作性喘息、气短、胸闷、干咳；夜间/清晨加重。
+- 呼气性哮鸣音；使用辅助呼吸肌。
+- 危重时可出现沉默肺（近乎无哮鸣）——危险信号。
+diagnosis:
+- 肺功能：可逆性 FEV1 改善（支气管舒张试验）。
+- 峰值流速变异；过敏评估按需。
+treatment:
+- 缓解：短效 β2 激动剂（SABA）。
+- 控制：吸入糖皮质激素（ICS）是抗炎基石；可加 LABA。
+- 重度：全身激素、镁剂、升级治疗（生物制剂了解即可）。
+high_yield:
+- I 型超敏 = IgE + 肥大细胞脱颗粒。
+- ICS 依从性差是失控常见原因。
+- 阿司匹林敏感型哮喘 ↔ 鼻息肉（Samter）三联征了解。
+- 与 COPD：可逆性与发病年龄/吸烟史是鉴别主轴。
+mcat_bridge: 超敏反应分型、呼吸系统力学（阻力↑）。
+nmat_bridge: 免疫病理与吸入治疗阶梯。

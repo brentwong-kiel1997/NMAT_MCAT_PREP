@@ -1,0 +1,38 @@
+slug: perceptual-acuity
+chapters:
+- title: Hidden Figure（隐藏图形）
+  bullets:
+  - zh: 盯轮廓而非填充
+    en: Track outline, not fill
+  - zh: 分段匹配比整体硬找更快
+    en: Match in segments faster than whole-figure search
+  - zh: 旋转试卷角度有时降低视觉噪声
+    en: Rotating the page can reduce visual clutter
+  - zh: 锁定目标轮廓，忽略背景纹理
+    en: Lock onto target contours; ignore background texture
+  - zh: 旋转/镜像后仍识别同一形状
+    en: Recognize the same shape after rotation or mirroring
+- title: Mirror Image（镜像）
+  bullets:
+  - zh: 左右镜像 ≠ 旋转
+    en: Left-right mirror ≠ rotation
+  - zh: 对不对称特征做快速检查
+    en: Spot-check asymmetric features quickly
+  - zh: 数字与字母镜像：b/d、p/q 易混
+    en: 'Mirrored digits/letters: b/d and p/q confuse easily'
+  - zh: 先判镜像轴（竖直/水平），再比对特征
+    en: Decide mirror axis (vertical/horizontal), then compare features
+  - zh: 旋转 ≠ 镜像；易混干扰项常见
+    en: Rotation ≠ reflection; common trap distractors
+- title: Identical Information（相同信息）
+  bullets:
+  - zh: 系统扫视：上→下或左→右
+    en: 'Scan systematically: top→bottom or left→right'
+  - zh: 先找决定性差异
+    en: Hunt decisive differences first
+  - zh: 标点与空格差异是常见陷阱
+    en: Punctuation and spacing gaps are common traps
+  - zh: 逐项比对数字/字母串，防漏看一位
+    en: Compare digit/letter strings item-by-item; don’t skip a place
+  - zh: 注意大小写与符号差异
+    en: Watch case and symbol differences

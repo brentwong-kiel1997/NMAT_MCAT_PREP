@@ -1,0 +1,71 @@
+kinds:
+  mcat:
+  - bio-biochem
+  - cars
+  - chem-phys
+  - psych-soc
+  nmat:
+  - inductive-reasoning
+  - perceptual-acuity
+  - quantitative
+  - verbal
+  shared:
+  - behavioral-social
+  - biochemistry
+  - biology
+  - chemistry
+  - physics
+formula_slugs:
+- biology
+- chemistry
+- physics
+- biochemistry
+- chem-phys
+- bio-biochem
+- quantitative
+- behavioral-social
+- psych-soc
+- verbal
+- cars
+- inductive-reasoning
+- perceptual-acuity
+labels:
+  behavioral-social:
+    zh: 行为与社会
+    en: Behavioral & Social
+  bio-biochem:
+    zh: Bio/Biochem
+    en: Bio/Biochem
+  biochemistry:
+    zh: 生物化学
+    en: Biochemistry
+  biology:
+    zh: 生物学
+    en: Biology
+  cars:
+    zh: CARS
+    en: CARS
+  chem-phys:
+    zh: Chem/Phys
+    en: Chem/Phys
+  chemistry:
+    zh: 化学
+    en: Chemistry
+  inductive-reasoning:
+    zh: 归纳推理
+    en: Inductive Reasoning
+  perceptual-acuity:
+    zh: 知觉敏锐
+    en: Perceptual Acuity
+  physics:
+    zh: 物理
+    en: Physics
+  psych-soc:
+    zh: Psych/Soc
+    en: Psych/Soc
+  quantitative:
+    zh: 数量
+    en: Quantitative
+  verbal:
+    zh: 言语
+    en: Verbal

@@ -1,0 +1,43 @@
+slug: quantitative
+name: Quantitative
+name_zh: 数量推理
+shared: null
+items: 30
+pacing: 约 40 minutes（BOI 建议）
+item_types:
+- Fundamental Operations
+- Problem Solving
+- Data Interpretation
+focus:
+  zh: 组织并应用基础数学与推理求解。
+  en: Organize and apply basic math and reasoning to solve.
+source_note:
+  zh: 章节按 CEM BOI Quantitative 题型划分。
+  en: Chapters follow CEM BOI Quantitative item types.
+chapters:
+- heading:
+    zh: 大知识点 / 章节
+    en: Major topics / chapters
+  items:
+  - title: Fundamental Operations（基本运算）
+    points:
+    - zh: 四则与优先级
+      en: Four operations and order of operations
+    - zh: 分数/百分数/比与比例速算
+      en: Quick work with fractions, percents, ratios
+  - title: Problem Solving（应用题）
+    points:
+    - zh: 把文字转成数量关系
+      en: Turn word problems into quantitative relations
+    - zh: 单位换算与合理性检查
+      en: Unit conversion and reasonableness checks
+  - title: Data Interpretation（资料判读）
+    points:
+    - zh: 表/图读取
+      en: Read tables/graphs
+    - zh: 比较、趋势与简单统计推理
+      en: Comparisons, trends, and simple stats reasoning
+summary:
+  zh: 组织并应用基础数学与推理求解。
+  en: Organize and apply basic math and reasoning to solve.
+kind: nmat

@@ -1,0 +1,134 @@
+slug: psych-soc
+chapters:
+- title: 6A · Sensing the environment
+  bullets:
+  - zh: 绝对阈值与差别阈值
+    en: Absolute and difference thresholds
+  - zh: 信号检测：击中/虚报
+    en: 'Signal detection: hits/false alarms'
+  - zh: 感受器适应：持续刺激反应减弱
+    en: 'Sensory adaptation: response wanes under constant stimulus'
+  - zh: 视觉：杆细胞暗视觉、锥细胞色觉
+    en: 'Vision: rods for dim light, cones for color'
+  - zh: 绝对阈值 vs 差别阈值（Weber）
+    en: Absolute threshold vs difference threshold (Weber)
+  - zh: 信号检测：击中、虚报、漏报、正确拒绝
+    en: 'Signal detection: hit, false alarm, miss, correct rejection'
+- title: 6B · Making sense of the environment
+  bullets:
+  - zh: 格式塔组织原则；深度线索
+    en: Gestalt organization; depth cues
+  - zh: 自上而下期望塑造知觉
+    en: Top-down expectations shape perception
+  - zh: 知觉恒常性：距离变化仍识物体大小
+    en: 'Perceptual constancy: recognize size despite distance change'
+  - zh: 错觉揭示知觉组织规则
+    en: Illusions reveal perceptual organization rules
+  - zh: 自上而下加工：期望与知识塑造知觉
+    en: 'Top-down processing: expectations and knowledge shape perception'
+  - zh: 格式塔原则：邻近、相似、闭合、连续
+    en: 'Gestalt: proximity, similarity, closure, continuity'
+- title: 6C · Responding to the world
+  bullets:
+  - zh: 情绪理论对照（导论）
+    en: Emotion theories contrasted (intro)
+  - zh: 应激：原发/次级评估与应对
+    en: 'Stress: primary/secondary appraisal and coping'
+  - zh: 詹姆斯–兰格：生理唤醒先于情绪体验
+    en: 'James–Lange: physiological arousal precedes emotional experience'
+  - zh: 一般适应综合征：警觉→抵抗→衰竭
+    en: 'General adaptation syndrome: alarm → resistance → exhaustion'
+  - zh: 应激：警报–抵抗–耗竭（GAS）
+    en: 'Stress: alarm–resistance–exhaustion (GAS)'
+  - zh: 应对：问题中心 vs 情绪中心
+    en: 'Coping: problem-focused vs emotion-focused'
+- title: 7A · Individual influences on behavior
+  bullets:
+  - zh: 人格特质 vs 情境论张力
+    en: Trait vs situationist tension
+  - zh: 生物因素与行为的交互
+    en: Biological factors interact with behavior
+  - zh: 五因素模型：OCEAN 人格维度
+    en: 'Five-factor model: OCEAN personality dimensions'
+  - zh: 基因–环境交互：同一基因不同环境不同表型
+    en: 'Gene–environment interaction: same gene, different outcomes by context'
+- title: 7B · Social processes that influence behavior
+  bullets:
+  - zh: 从众、服从、群体影响
+    en: Conformity, obedience, group influence
+  - zh: 社会促进与社会懈怠
+    en: Social facilitation and social loafing
+  - zh: Milgram 服从：权威情境提高服从率
+    en: 'Milgram obedience: authority context raises compliance'
+  - zh: 去个体化：群体降低自我觉察
+    en: 'Deindividuation: crowds reduce self-awareness'
+- title: 7C · Attitude and behavior change
+  bullets:
+  - zh: 认知失调与说服双路径
+    en: Cognitive dissonance and dual-process persuasion
+  - zh: 习惯化 vs 敏感化
+    en: Habituation vs sensitization
+  - zh: 认知失调：态度与行为不一致引发不适
+    en: 'Cognitive dissonance: attitude–behavior mismatch causes discomfort'
+  - zh: 外周路径：线索与情绪说服
+    en: 'Peripheral route: persuasion via cues and emotion'
+- title: 8A · Self-identity
+  bullets:
+  - zh: 自我概念、角色认同、社会认同
+    en: Self-concept, role identity, social identity
+  - zh: 自我呈现与印象管理
+    en: Self-presentation and impression management
+  - zh: 自我图式：组织关于自我的知识
+    en: Self-schemas organize self-related knowledge
+  - zh: 社会认同：群体成员身份影响自尊
+    en: 'Social identity: group membership shapes self-esteem'
+- title: 8B · Social thinking
+  bullets:
+  - zh: 归因偏差与刻板印象
+    en: Attribution biases and stereotypes
+  - zh: 态度形成：情感、行为、认知成分
+    en: 'Attitudes: affective, behavioral, cognitive components'
+  - zh: 可得性启发：易想起事件高估频率
+    en: 'Availability heuristic: vivid recall inflates frequency estimates'
+  - zh: 刻板印象威胁：担心验证偏见损害表现
+    en: 'Stereotype threat: fear of confirming bias hurts performance'
+- title: 8C · Social interactions
+  bullets:
+  - zh: 吸引、依恋、攻击与利他（导论）
+    en: Attraction, attachment, aggression, altruism (intro)
+  - zh: 歧视行为 vs 偏见态度
+    en: Discriminatory behavior vs prejudiced attitudes
+  - zh: 互惠规范：回报他人给予
+    en: 'Reciprocity norm: return what others provide'
+  - zh: 依恋风格影响亲密关系模式
+    en: Attachment styles shape close-relationship patterns
+- title: 9A · Understanding social structure
+  bullets:
+  - zh: 地位、角色、群体、网络
+    en: Status, roles, groups, networks
+  - zh: 制度如何塑造机会结构
+    en: Institutions shape opportunity structures
+  - zh: 社会角色：期望行为集合
+    en: 'Social roles: sets of expected behaviors'
+  - zh: 科层制：理性权威与规则导向
+    en: 'Bureaucracy: rational authority and rule orientation'
+- title: 9B · Demographic characteristics and processes
+  bullets:
+  - zh: 年龄、性别、种族/族群、移民作为社会类别
+    en: Age, gender, race/ethnicity, migration as social categories
+  - zh: 人口过程：出生、死亡、迁移
+    en: 'Demographic processes: fertility, mortality, migration'
+  - zh: 人口转型：高出生死亡 → 低出生死亡
+    en: 'Demographic transition: high birth/death → low birth/death'
+  - zh: 老龄化：依赖比与医疗需求上升
+    en: Aging populations raise dependency ratios and care demand
+- title: 10A · Social inequality
+  bullets:
+  - zh: 社会经济地位与健康结果
+    en: SES and health outcomes
+  - zh: 文化资本、社会资本概念
+    en: Cultural and social capital concepts
+  - zh: 马太效应：优势累积放大不平等
+    en: 'Matthew effect: advantage accumulates, amplifying inequality'
+  - zh: 医疗差距：保险、地理、语言均影响可及性
+    en: 'Healthcare gaps: insurance, geography, language affect access'

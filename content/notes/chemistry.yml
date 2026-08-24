@@ -1,0 +1,174 @@
+slug: chemistry
+chapters:
+- title: General Chemistry
+  bullets:
+  - zh: 摩尔、限量反应物、产率
+    en: Mole, limiting reagent, yield
+  - zh: 酸碱：pH、缓冲、滴定曲线直觉
+    en: 'Acids/bases: pH, buffers, titration-curve intuition'
+  - zh: 平衡：Le Chatelier；K 与 Q
+    en: 'Equilibrium: Le Chatelier; K vs Q'
+  - zh: 氧化还原：氧化数、半反应
+    en: 'Redox: oxidation numbers, half-reactions'
+  - zh: 理想气体 PV = nRT；注意 R 单位匹配
+    en: Ideal gas PV = nRT; match R units to pressure/volume
+  - zh: ΔG = ΔH − TΔS；自发需 ΔG < 0
+    en: ΔG = ΔH − TΔS; spontaneity requires ΔG < 0
+  - zh: 缓冲：弱酸 + 共轭碱抵抗 pH 变化
+    en: 'Buffer: weak acid + conjugate base resists pH change'
+  - zh: 氧化还原：电子从还原剂流向氧化剂
+    en: 'Redox: electrons flow from reductant to oxidant'
+- title: Analytical Chemistry
+  bullets:
+  - zh: 准确度 vs 精密度
+    en: Accuracy vs precision
+  - zh: 滴定、分光、色谱的“测什么/怎么分开”
+    en: 'Titration/spectroscopy/chromatography: what is measured vs separated'
+  - zh: 校准曲线与空白对照思想
+    en: Calibration curves and blank controls
+  - zh: Beer 定律：A = εlc（稀溶液线性区）
+    en: 'Beer’s law: A = εlc (linear region for dilute solutions)'
+  - zh: 系统误差可校正；随机误差靠重复减小
+    en: Systematic error is correctable; random error shrinks with replication
+  - zh: 内标法校正进样与仪器漂移
+    en: Internal standards correct injection and instrument drift
+- title: Organic Chemistry
+  bullets:
+  - zh: 官能团决定反应性（醇、羰基、羧酸、胺）
+    en: Functional groups drive reactivity (alcohol, carbonyl, acid, amine)
+  - zh: 亲核/亲电、酸碱性影响反应路径
+    en: Nucleophile/electrophile and acid-base character shape pathways
+  - zh: 异构：结构异构与立体异构（导论）
+    en: 'Isomerism: structural and stereo (intro)'
+  - zh: SN1：三级底物、弱亲核、溶剂稳定碳正离子
+    en: 'SN1: tertiary substrate, weak nucleophile, solvent stabilizes carbocation'
+  - zh: SN2：一级底物、强亲核、背面进攻立体化学翻转
+    en: 'SN2: primary substrate, strong nucleophile, backside attack inversion'
+  - zh: 羰基亲核加成：醛酮 vs 羧酸衍生物反应性差异
+    en: 'Carbonyl addition: aldehyde/ketone vs carboxyl derivative reactivity'
+- title: Biochemistry
+  bullets:
+  - zh: 氨基酸侧链极性/电荷决定蛋白质折叠与功能
+    en: Side-chain polarity/charge shape folding and function
+  - zh: 酶动力学：Vmax、Km 的直觉含义
+    en: 'Enzyme kinetics: intuitive Vmax and Km'
+  - zh: 代谢枢纽：葡萄糖、乙酰 CoA、ATP/NADH
+    en: 'Metabolic hubs: glucose, acetyl-CoA, ATP/NADH'
+  - zh: 肽键平面性限制主链旋转
+    en: Peptide bond planarity restricts backbone rotation
+  - zh: 别构酶：底物结合改变其他位点亲和力
+    en: 'Allosteric enzymes: substrate binding alters other-site affinity'
+  - zh: 辅酶 NAD⁺/FAD 作氧化还原载体
+    en: Coenzymes NAD⁺/FAD serve as redox carriers
+- title: 5A · Water and its solutions
+  bullets:
+  - zh: 水的氢键解释高比热与溶解能力
+    en: H-bonding explains heat capacity and solvent power
+  - zh: 亲水/疏水驱动折叠与胶束
+    en: Hydrophilic/hydrophobic drive folding and micelles
+  - zh: pH、pKa 与电离分数
+    en: pH, pKa, and ionization fractions
+  - zh: Henderson–Hasselbalch：pH = pKa + log([A⁻]/[HA])
+    en: 'Henderson–Hasselbalch: pH = pKa + log([A⁻]/[HA])'
+  - zh: 疏水效应：水合壳破坏驱动折叠/聚集
+    en: 'Hydrophobic effect: hydration-shell disruption drives folding/aggregation'
+  - zh: 依数性：蒸气压降、沸点升、凝固点降
+    en: 'Colligative properties: vapor-pressure lowering, boiling-point elevation, freezing-point depression'
+- title: 5B · Molecules and intermolecular interactions
+  bullets:
+  - zh: 离子键、氢键、范德华、疏水效应强度层级直觉
+    en: Ion, H-bond, van der Waals, hydrophobic hierarchy
+  - zh: 极性决定溶解度与沸点趋势
+    en: Polarity shapes solubility and boiling trends
+  - zh: 氢键方向性与强度低于共价键
+    en: Hydrogen bonds are directional and weaker than covalent bonds
+  - zh: London 色散力：瞬时偶极诱导所有分子
+    en: 'London dispersion: instantaneous dipoles affect all molecules'
+  - zh: 极性分子溶解极性溶剂（相似相溶）
+    en: Polar molecules dissolve in polar solvents (like dissolves like)
+  - zh: 氢键：N/O/F 与 H 的强偶极作用
+    en: 'H-bonds: strong dipole interactions with H on N/O/F'
+  - zh: 伦敦色散随极化率与表面积增大
+    en: London dispersion grows with polarizability and surface area
+  - zh: 极性分子偶极–偶极提高沸点
+    en: Dipole–dipole interactions raise boiling points of polar molecules
+- title: 5C · Separation and purification methods
+  bullets:
+  - zh: 萃取：分配系数思想
+    en: 'Extraction: partition-coefficient idea'
+  - zh: 色谱：极性/大小/电荷分离原理
+    en: 'Chromatography: polarity/size/charge separation'
+  - zh: 蒸馏与重结晶适用场景
+    en: When distillation vs recrystallization fit
+  - zh: 凝胶过滤：按分子大小分离
+    en: Size-exclusion chromatography separates by molecular size
+  - zh: 离子交换：按净电荷与 pH 分离蛋白
+    en: Ion exchange separates proteins by net charge at given pH
+  - zh: SDS-PAGE：变性胶按分子量分离
+    en: SDS-PAGE separates denatured proteins by molecular weight
+  - zh: 蒸馏按沸点差分离液体混合物
+    en: Distillation separates liquids by boiling-point differences
+  - zh: 萃取利用分配系数在两相间转移溶质
+    en: Extraction moves solute between phases by partition coefficient
+  - zh: 色谱：固定相亲和差异 → 保留时间不同
+    en: 'Chromatography: affinity for stationary phase → different retention'
+- title: 5D · Biologically relevant molecules
+  bullets:
+  - zh: 官能团在水中的酸碱/氢键行为
+    en: Acid-base/H-bonding of groups in water
+  - zh: 肽键形成/水解；糖苷键
+    en: Peptide bond formation/hydrolysis; glycosidic bonds
+  - zh: 脂质：两亲性与膜双层
+    en: 'Lipids: amphiphilicity and bilayers'
+  - zh: α 螺旋/β 折叠靠主链氢键稳定
+    en: α-helix/β-sheet stabilized by backbone hydrogen bonds
+  - zh: 糖异构：葡萄糖/果糖/半乳糖结构差异
+    en: 'Sugar isomers: glucose/fructose/galactose structural differences'
+  - zh: 脂肪酸饱和度影响熔点与膜流动性
+    en: Fatty-acid saturation affects melting point and membrane fluidity
+  - zh: 氨基酸两性：羧基与氨基可质子化/去质子化
+    en: Amino acids are zwitterionic; carboxyl and amino groups ionize
+  - zh: 糖：醛糖/酮糖；环状半缩醛形式常见
+    en: 'Sugars: aldose/ketose; cyclic hemiacetals dominate in solution'
+  - zh: 脂质：疏水尾驱动双层自组装
+    en: 'Lipids: hydrophobic tails drive bilayer self-assembly'
+- title: 5E · Chemical thermodynamics and kinetics
+  bullets:
+  - zh: ΔG 决定自发；动力学决定快慢
+    en: ΔG = spontaneity; kinetics = rate
+  - zh: 酶/催化剂改路径不改 ΔG
+    en: Catalysts change path, not ΔG
+  - zh: 反应级数与速率定律读法
+    en: How to read rate laws and reaction order
+  - zh: 活化能：过渡态与反应速率相关
+    en: Activation energy links transition state to reaction rate
+  - zh: 催化剂提供低能路径，不改变 ΔG
+    en: Catalysts lower pathway energy without changing ΔG
+  - zh: 平衡常数 K 只随温度变（理想条件下）
+    en: Equilibrium constant K depends on temperature only (ideal conditions)
+  - zh: ΔG° = −RT ln K；K>1 偏向产物
+    en: ΔG° = −RT ln K; K>1 favors products
+  - zh: 催化剂降活化能，不改 ΔG 或平衡组成
+    en: Catalysts lower Ea; they do not change ΔG or equilibrium composition
+  - zh: 速率定律由机制决定，不一定等于总反应计量
+    en: Rate law follows mechanism, not necessarily overall stoichiometry
+- title: 4E · Atoms, nuclear decay, electronic structure
+  bullets:
+  - zh: 电子构型与周期性趋势（半径、电负性）
+    en: Configs and periodic trends (radius, electronegativity)
+  - zh: 衰变类型与半衰期指数直觉
+    en: Decay modes and half-life exponential intuition
+  - zh: ' aufbau + Pauli + Hund 填电子'
+    en: Aufbau + Pauli + Hund rules fill orbitals
+  - zh: 同周期电负性右增；同族金属性下增
+    en: Electronegativity rises right across period; metallic character rises down group
+  - zh: α/β/γ 衰变：质量数与电荷变化不同
+    en: α/β/γ decay differ in mass-number and charge changes
+  - zh: α 衰变减核电荷 2、质量数 4；β⁻ 增质子数 1
+    en: 'α decay: −2 Z, −4 A; β⁻ decay: +1 proton'
+  - zh: 半衰期与初始量无关；指数衰减 N=N₀e^(−λt)
+    en: Half-life independent of amount; N=N₀e^(−λt)
+  - zh: 电子构型决定周期表族化学相似性
+    en: Electron configuration drives group chemical similarity
+  - zh: 电离能沿周期大致升高；原子半径大致减小
+    en: Ionization energy rises across a period; atomic radius shrinks

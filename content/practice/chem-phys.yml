@@ -1,0 +1,180 @@
+slug: chem-phys
+items:
+- id: cp-1
+  q:
+    zh: 血管半径略减时，层流流量通常：
+    en: 'A small drop in vessel radius typically makes laminar flow:'
+  choices:
+    A:
+      zh: 几乎不变
+      en: Almost unchanged
+    B:
+      zh: 显著下降（对半径高度敏感）
+      en: Drop sharply (highly radius-sensitive)
+    C:
+      zh: 一定升高
+      en: Must rise
+    D:
+      zh: 与半径无关
+      en: Independent of radius
+  answer: B
+  explain:
+    zh: Poiseuille 关系中流量与半径四次方相关。
+    en: Poiseuille flow scales with radius to the fourth power.
+  chapter: 4B · Fluids for circulation and gas exchange
+- id: cp-2
+  q:
+    zh: 可逆反应达到平衡时：
+    en: 'At equilibrium in a reversible reaction:'
+  choices:
+    A:
+      zh: 正逆反应速率相等、宏观组成不变
+      en: Forward and reverse rates are equal; macroscopic composition is steady
+    B:
+      zh: 反应完全停止
+      en: All reactions stop
+    C:
+      zh: 只有产物存在
+      en: Only products remain
+    D:
+      zh: 温度必须为零
+      en: Temperature must be zero
+  answer: A
+  explain:
+    zh: 平衡是动态平衡：微观反应继续，宏观量不变。
+    en: 'Equilibrium is dynamic: reactions continue microscopically while macroscopic amounts stay constant.'
+  chapter: 5E · Chemical thermodynamics and kinetics
+- id: cp-3
+  q:
+    zh: 强电解质在水溶液中：
+    en: 'A strong electrolyte in aqueous solution:'
+  choices:
+    A:
+      zh: 几乎完全电离
+      en: Ionizes almost completely
+    B:
+      zh: 完全不电离
+      en: Does not ionize at all
+    C:
+      zh: 只以分子形式存在
+      en: Exists only as neutral molecules
+    D:
+      zh: 不能导电
+      en: Cannot conduct electricity
+  answer: A
+  explain:
+    zh: 如 NaCl、强酸强碱几乎全离解；弱电解质仅部分电离。
+    en: E.g., NaCl and strong acids/bases dissociate nearly fully; weak electrolytes dissociate partially.
+  chapter: 5A · Unique nature of water and its solutions
+- id: cp-4
+  q:
+    zh: 串联电路中电流的特点是：
+    en: 'In a series circuit, the current:'
+  choices:
+    A:
+      zh: 各元件处相同
+      en: Is the same through each element
+    B:
+      zh: 各元件处不同且随机
+      en: Differs randomly at each element
+    C:
+      zh: 恒为零
+      en: Is always zero
+    D:
+      zh: 只存在于电源内
+      en: Exists only inside the battery
+  answer: A
+  explain:
+    zh: 串联单一路径，电荷守恒 → 电流处处相等；电压按阻抗分配。
+    en: One path in series → charge conservation gives the same current everywhere; voltage divides across
+      elements.
+  chapter: 4C · Electrochemistry and electrical circuits
+- id: cp-5
+  q:
+    zh: 声波在空气中传播时，介质质点振动方向与波传播方向关系是（纵波）：
+    en: 'For sound in air (a longitudinal wave), particle vibration is:'
+  choices:
+    A:
+      zh: 平行于传播方向
+      en: Parallel to the direction of propagation
+    B:
+      zh: 垂直于传播方向
+      en: Perpendicular to propagation
+    C:
+      zh: 不存在振动
+      en: There is no vibration
+    D:
+      zh: 只横向不纵向
+      en: Only transverse, never longitudinal
+  answer: A
+  explain:
+    zh: 纵波通过压缩/稀疏传播；横波（如绳波）振动垂直于传播方向。
+    en: Longitudinal waves travel via compressions and rarefactions; transverse waves vibrate perpendicular
+      to travel.
+  chapter: 4D · Light and sound interacting with matter
+- id: cp-6
+  q:
+    zh: 凝胶电泳分离 DNA 片段主要依据：
+    en: 'Gel electrophoresis separates DNA fragments mainly by:'
+  choices:
+    A:
+      zh: 大小（长度）
+      en: Size (length)
+    B:
+      zh: 颜色
+      en: Color
+    C:
+      zh: 样品气味
+      en: Odor
+    D:
+      zh: 放射性 alone
+      en: Radioactivity alone
+  answer: A
+  explain:
+    zh: 负电 DNA 向阳极移动；短片段迁移更快。
+    en: Negatively charged DNA migrates toward the anode; shorter fragments move faster.
+  chapter: 5C · Separation and purification methods
+- id: cp-7
+  q:
+    zh: 半衰期是指：
+    en: 'Half-life is:'
+  choices:
+    A:
+      zh: 放射性核素活度减半所需时间
+      en: Time for activity of a radionuclide to fall by half
+    B:
+      zh: 化学反应完成一半所需时间（通用动力学定义）
+      en: Time for any reaction to reach 50% completion (general kinetics)
+    C:
+      zh: 电子轨道半径
+      en: Electron orbital radius
+    D:
+      zh: 光速的一半
+      en: Half the speed of light
+  answer: A
+  explain:
+    zh: 放射性衰变呈指数规律；半衰期为一级衰变特征时间。
+    en: Radioactive decay is exponential; half-life is the characteristic time for first-order decay.
+  chapter: 4E · Atoms, nuclear decay, electronic structure
+- id: cp-8
+  q:
+    zh: 光电效应中，增大光强（频率高于阈值）主要增加：
+    en: 'In the photoelectric effect, raising intensity (above threshold frequency) mainly increases:'
+  choices:
+    A:
+      zh: 每个电子最大动能
+      en: Max KE per electron
+    B:
+      zh: 单位时间发射电子数
+      en: Number of electrons emitted per time
+    C:
+      zh: 功函数
+      en: Work function
+    D:
+      zh: 阈值频率
+      en: Threshold frequency
+  answer: B
+  explain:
+    zh: 强度影响光子数→光电流；频率影响最大动能。
+    en: Intensity sets photon count → photocurrent; frequency sets max KE.
+  chapter: 4E · Atoms, nuclear decay, electronic structure

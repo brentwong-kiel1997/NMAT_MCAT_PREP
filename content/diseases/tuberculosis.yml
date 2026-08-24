@@ -1,0 +1,35 @@
+slug: tuberculosis
+name: Tuberculosis
+name_zh: 结核病
+short: Mycobacterium tuberculosis 引起的慢性肉芽肿感染；菲律宾高负担病；作生物学/免疫学延伸阅读，非 NMAT 独立考科。
+systems:
+- Respiratory
+- Infectious
+exams:
+- Enrichment
+exam_fit: MCAT：免疫/感染基础可迁移；NMAT：仅当落到细胞/免疫导论概念时有间接帮助，临床诊疗细节不在 CEM 考纲。
+pathogen: Mycobacterium tuberculosis（抗酸杆菌，胞内寄生）
+transmission: 飞沫核（airborne droplet nuclei）；密闭空间、长时间接触风险最高。
+pathophysiology:
+- 吸入后被肺泡巨噬细胞吞噬，但细菌可在细胞内存活。
+- 细胞介导免疫（Th1 / IFN-γ）驱动肉芽肿形成，限制扩散。
+- 原发感染多为潜伏性（LTBI）；免疫抑制时可再激活为活动性 TB。
+clinical:
+- 慢性咳嗽、咯血、盗汗、体重下降、午后低热。
+- 肺尖后段常见空洞性病变（再激活型）。
+- 肺外：淋巴结、骨、泌尿生殖道、脑膜（粟粒性 TB）。
+diagnosis:
+- 痰涂片抗酸染色、GeneXpert / NAAT、培养（金标准但慢）。
+- 胸部 X 线：上叶浸润/空洞。
+- LTBI：TST 或 IGRA（不能区分活动与潜伏）。
+treatment:
+- 活动性肺 TB 标准：RIPE（Rifampin, Isoniazid, Pyrazinamide, Ethambutol）强化期后巩固。
+- 注意肝毒性、视神经炎（乙胺丁醇）、橘红色尿（利福平）。
+- LTBI：异烟肼或利福平短程方案（依指南）。
+high_yield:
+- 肉芽肿 = 巨噬细胞 + 淋巴细胞；干酪样坏死是经典病理。
+- BCG 可影响 TST，IGRA 相对不受 BCG 干扰。
+- HIV 是再激活最强危险因素之一；CD4 低时表现可不典型。
+- 菲律宾情境：公共卫生负担高，接触史与拥挤居住很关键。
+mcat_bridge: 连接细胞免疫、肉芽肿炎症与公共卫生流行病学（传染病传播模型）。
+nmat_bridge: 生物/健康科学：病原、免疫逃逸、抗酸染色与一线药物副作用对应。

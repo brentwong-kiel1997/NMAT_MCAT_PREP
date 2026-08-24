@@ -1,0 +1,57 @@
+slug: biochemistry
+name: Biochemistry
+name_zh: 生物化学
+exams:
+- MCAT
+- NMAT via Chemistry
+summary:
+  zh: MCAT 高权重专题；NMAT 不单开此科，CEM 将其放在 Chemistry 的 Biochemistry。
+  en: High-weight MCAT topic; not a separate NMAT subtest — CEM places it under Chemistry → Biochemistry.
+nmat_role:
+  zh: 非独立分测验；归入 Part 2 Chemistry · Biochemistry
+  en: Not a standalone subtest; under Part 2 Chemistry · Biochemistry
+mcat_role:
+  zh: 主要落在 Bio/Biochem FC1，并与 Chem/Phys 生化交叉
+  en: Primarily Bio/Biochem FC1, with Chem/Phys biochem overlap
+source_note:
+  zh: 章节按 AAMC Bio/Biochem Foundational Concept 1 的 Content Categories；NMAT 仅作 Chemistry 子块对照。
+  en: Chapters follow AAMC Bio/Biochem FC1 Content Categories; NMAT only as Chemistry sub-block.
+exam_notes:
+  NMAT:
+    zh: 不要当成第九科；跟 Chemistry · Biochemistry 一起复习。
+    en: Not a 9th subtest — review with Chemistry · Biochemistry.
+  MCAT:
+    zh: AAMC 估计 Bio/Biochem 中 FC1 约占该科 55%（约到 5%）。
+    en: AAMC estimates FC1 is about 55% of Bio/Biochem (rounded to 5%).
+chapters:
+- heading:
+    zh: NMAT 对照
+    en: NMAT crosswalk
+  items:
+  - title: Chemistry · Biochemistry（CEM）
+    points:
+    - zh: 生物大分子导论
+      en: Intro biological macromolecules
+    - zh: 与导论化学衔接的代谢基本概念
+      en: Intro metabolism concepts linked to intro chemistry
+- heading:
+    zh: MCAT · Foundational Concept 1（AAMC）
+    en: MCAT · Foundational Concept 1 (AAMC)
+  items:
+  - title: 1A · Proteins and amino acids
+    points:
+    - zh: 氨基酸与蛋白质结构/功能
+      en: Amino acid and protein structure/function
+  - title: 1B · Gene to protein
+    points:
+    - zh: 遗传信息从基因到蛋白质
+      en: Genetic information from gene to protein
+  - title: 1C · Heritable information & diversity
+    points:
+    - zh: 跨代遗传与遗传多样性过程
+      en: Heritable information and genetic diversity processes
+  - title: 1D · Bioenergetics and fuel metabolism
+    points:
+    - zh: 生物能学与燃料分子代谢
+      en: Bioenergetics and fuel molecule metabolism
+kind: shared

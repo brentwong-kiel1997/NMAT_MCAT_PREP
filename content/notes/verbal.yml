@@ -1,0 +1,46 @@
+slug: verbal
+chapters:
+- title: Analogies（词义类比）
+  bullets:
+  - zh: 先用一句话定义词对关系，再套到选项
+    en: State the pair relation in one sentence, then test options
+  - zh: 警惕同题材但关系不同的干扰项
+    en: Watch same-topic distractors with different relations
+  - zh: 程度/因果/部分-整体是高频关系
+    en: Degree, cause-effect, and part-whole are high-frequency
+  - zh: 先排除关系类型不匹配的选项
+    en: Eliminate options whose relation type mismatches first
+  - zh: 动词对注意及物/不及物与因果方向
+    en: For verb pairs watch transitivity and causal direction
+  - zh: 先写清 A:B 关系，再套到 C:?
+    en: State the A:B relation first, then map C:?
+  - zh: 常见关系：同义、反义、部分–整体、因果、程度
+    en: 'Common relations: synonym, antonym, part–whole, cause, degree'
+- title: Reading Comprehension（阅读理解）
+  bullets:
+  - zh: 先抓主旨句与转折词
+    en: Hunt thesis sentences and contrast markers first
+  - zh: 细节题回文定位，避免凭印象
+    en: 'Detail items: relocate in text; don’t rely on memory'
+  - zh: 推断必须被文本支持
+    en: Inferences must be text-supported
+  - zh: 段落功能题：定义、举例、反驳、过渡
+    en: 'Paragraph-function items: define, exemplify, refute, transition'
+  - zh: 排除绝对化措辞除非原文支持
+    en: Reject absolute wording unless the passage supports it
+  - zh: 主旨题优先看首尾段与转折词
+    en: 'Main-idea items: prioritize openings, closings, and contrast markers'
+  - zh: 细节题回文定位，忌凭记忆选题
+    en: 'Detail items: return to the text; don’t rely on memory alone'
+- title: Word Analogies / Vocabulary
+  bullets:
+  - zh: 先写清 A:B 关系，再套到 C:?
+    en: State the A:B relation first, then map C:?
+  - zh: 常见关系：同义、反义、部分–整体、因果、程度
+    en: 'Common relations: synonym, antonym, part–whole, cause, degree'
+- title: Reading Comprehension / Verbal Ability
+  bullets:
+  - zh: 主旨题优先看首尾段与转折词
+    en: 'Main-idea items: prioritize openings, closings, and contrast markers'
+  - zh: 细节题回文定位，忌凭记忆选题
+    en: 'Detail items: return to the text; don’t rely on memory alone'

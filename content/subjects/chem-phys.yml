@@ -1,0 +1,77 @@
+slug: chem-phys
+name: Chemical and Physical Foundations of Biological Systems
+short: Chem/Phys
+name_zh: 化学与物理基础
+unique: false
+questions: 59
+time: 95 minutes
+shared_links:
+- chemistry
+- physics
+- biochemistry
+discipline_mix:
+- General chemistry ~30%（备考分解）
+- First-semester biochemistry ~25%（备考分解）
+- Introductory physics ~25%（备考分解）
+- Organic chemistry ~15%（备考分解）
+- Introductory biology ~5%（备考分解）
+- AAMC FC4 ~40% / FC5 ~60%（该科内）
+focus:
+  zh: 把普化、有机、物理、生化放进生命系统情境里考。
+  en: Test gen/organic chem, physics, and biochem in living-system contexts.
+source_note:
+  zh: 章节 = AAMC Foundational Concepts 4–5 及全部 Content Categories。
+  en: Chapters = AAMC Foundational Concepts 4–5 and all Content Categories.
+chapters:
+- heading:
+    zh: Foundational Concept 4（约 40%）
+    en: Foundational Concept 4 (~40%)
+  items:
+  - title: 4A · Motion, forces, work, energy, equilibrium
+    points:
+    - zh: 生命系统中的平动、力、功、能与平衡
+      en: Translational motion, forces, work, energy, and equilibrium in living systems
+  - title: 4B · Fluids for circulation and gas exchange
+    points:
+    - zh: 血液循环、气体运动与交换中的流体
+      en: Fluids in circulation, gas movement, and gas exchange
+  - title: 4C · Electrochemistry and electrical circuits
+    points:
+    - zh: 电化学与电路元件
+      en: Electrochemistry and circuit elements
+  - title: 4D · Light and sound interacting with matter
+    points:
+    - zh: 光、声与物质相互作用
+      en: Light and sound interacting with matter
+  - title: 4E · Atoms, nuclear decay, electronic structure
+    points:
+    - zh: 原子、核衰变、电子结构与原子化学行为
+      en: Atoms, nuclear decay, electronic structure, and atomic chemical behavior
+- heading:
+    zh: Foundational Concept 5（约 60%）
+    en: Foundational Concept 5 (~60%)
+  items:
+  - title: 5A · Unique nature of water and its solutions
+    points:
+    - zh: 水及其溶液
+      en: Water and its solutions
+  - title: 5B · Molecules and intermolecular interactions
+    points:
+    - zh: 分子与分子间作用
+      en: Molecules and intermolecular interactions
+  - title: 5C · Separation and purification methods
+    points:
+    - zh: 分离与纯化
+      en: Separation and purification
+  - title: 5D · Biologically relevant molecules
+    points:
+    - zh: 生物相关分子的结构、功能与反应性
+      en: Structure, function, and reactivity of biologically relevant molecules
+  - title: 5E · Chemical thermodynamics and kinetics
+    points:
+    - zh: 化学热力学与动力学
+      en: Chemical thermodynamics and kinetics
+summary:
+  zh: 把普化、有机、物理、生化放进生命系统情境里考。
+  en: Test gen/organic chem, physics, and biochem in living-system contexts.
+kind: mcat

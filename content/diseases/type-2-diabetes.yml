@@ -1,0 +1,34 @@
+slug: type-2-diabetes
+name: Type 2 Diabetes Mellitus
+name_zh: 2型糖尿病
+short: 胰岛素抵抗 + 相对胰岛素分泌不足；代谢综合征核心疾病，NMAT/MCAT 双高频。
+systems:
+- Endocrine
+- Metabolic
+exams:
+- Enrichment
+exam_fit: 延伸阅读：服务生物学/病理生理直觉；NMAT 考纲是导论课不是临床诊疗；MCAT 可迁移机制，不考指南级用药方案。
+pathogen: 非传染性；遗传易感 + 环境（肥胖、久坐、饮食）
+transmission: 不适用（非传染）。家族聚集与生活方式相关。
+pathophysiology:
+- 脂肪/肌肉对胰岛素不敏感 → 代偿性高胰岛素血症。
+- β 细胞逐渐失代偿 → 高血糖。
+- 慢性高糖：AGE、氧化应激、微血管与大血管损伤。
+clinical:
+- 多饮、多尿、多食、疲乏；常隐匿起病。
+- 并发症：视网膜病、肾病、神经病变、ASCVD、足溃疡。
+- 急性：HHS（高渗高糖状态）多于 DKA（DKA 更偏 1 型）。
+diagnosis:
+- 空腹血糖 ≥126 mg/dL，或 HbA1c ≥6.5%，或 OGTT 2h ≥200（标准阈值需记牢）。
+- 症状 + 随机血糖 ≥200 亦可诊断。
+treatment:
+- 生活方式是基石；一线口服常考二甲双胍（减少肝糖输出）。
+- 其他：SGLT2i、GLP-1 RA、胰岛素（进展期）。
+- 控压控脂、筛查眼底与尿白蛋白。
+high_yield:
+- 胰岛素抵抗 vs 1 型绝对缺乏——机制题常考。
+- 二甲双胍：GI 副作用；乳酸酸中毒罕见但经典关联。
+- HbA1c 反映约 2–3 个月平均血糖。
+- MCAT：信号转导（胰岛素受体酪氨酸激酶）常串联。
+mcat_bridge: 激素信号、代谢通路、反馈调节与慢性病流行病学。
+nmat_bridge: 内分泌生理、诊断阈值与一线药物机制。

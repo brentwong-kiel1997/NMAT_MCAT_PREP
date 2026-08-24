@@ -1,0 +1,244 @@
+slug: psych-soc
+items:
+- id: ps-1
+  q:
+    zh: 绝对阈值指的是：
+    en: 'An absolute threshold is:'
+  choices:
+    A:
+      zh: 刚能察觉刺激的最小强度（统计定义下）
+      en: The minimum intensity detectable (under a statistical definition)
+    B:
+      zh: 两刺激间可分辨的最小差别
+      en: The smallest difference between two stimuli
+    C:
+      zh: 最大可耐受刺激
+      en: The maximum tolerable stimulus
+    D:
+      zh: 反应时平均值
+      en: Mean reaction time
+  answer: A
+  explain:
+    zh: 绝对阈值是察觉有无；差别阈值是分辨差异。
+    en: Absolute = detect presence; difference = detect change.
+  chapter: 6A · Sensing the environment
+- id: ps-2
+  q:
+    zh: 差别阈值（just noticeable difference）衡量的是：
+    en: 'The just noticeable difference (JND) measures:'
+  choices:
+    A:
+      zh: 可察觉两刺激间最小差异
+      en: The smallest detectable difference between two stimuli
+    B:
+      zh: 绝对觉察阈限
+      en: The absolute threshold
+    C:
+      zh: 最大耐受痛阈
+      en: Maximum pain tolerance
+    D:
+      zh: 记忆保持年限
+      en: Years of memory retention
+  answer: A
+  explain:
+    zh: 差别阈限关注变化量；绝对阈限关注能否察觉存在。
+    en: JND concerns change detection; absolute threshold concerns detecting presence.
+  chapter: 6A · Sensing the environment
+- id: ps-3
+  q:
+    zh: 自下而上（data-driven）加工主要依赖：
+    en: 'Bottom-up (data-driven) processing relies mainly on:'
+  choices:
+    A:
+      zh: 感觉输入本身的特征
+      en: Features of the sensory input itself
+    B:
+      zh: 先验期望 alone
+      en: Prior expectations alone
+    C:
+      zh: 完全忽略刺激
+      en: Ignoring the stimulus entirely
+    D:
+      zh: 只使用长时记忆
+      en: Using only long-term memory
+  answer: A
+  explain:
+    zh: 自下而上从感觉数据构建知觉；自上而下用情境/期望引导解释。
+    en: Bottom-up builds percepts from sensory data; top-down uses context and expectations.
+  chapter: 6B · Making sense of the environment
+- id: ps-4
+  q:
+    zh: 战斗-逃跑反应主要涉及哪个系统？
+    en: 'The fight-or-flight response mainly involves the:'
+  choices:
+    A:
+      zh: 交感神经系统
+      en: Sympathetic nervous system
+    B:
+      zh: 副交感主导消化 alone
+      en: Parasympathetic digestion alone
+    C:
+      zh: 视觉皮层 alone
+      en: Visual cortex alone
+    D:
+      zh: 小脑语言区
+      en: Cerebellar language area
+  answer: A
+  explain:
+    zh: 交感激活提高心率、呼吸、血糖动员以应对威胁。
+    en: Sympathetic activation raises heart rate, breathing, and glucose mobilization for threat response.
+  chapter: 6C · Responding to the world
+- id: ps-5
+  q:
+    zh: 经典条件反射中，消退（extinction）指：
+    en: 'In classical conditioning, extinction is:'
+  choices:
+    A:
+      zh: 反复呈现 CS 而无 UCS 后 CR 减弱
+      en: Weakening of the CR after repeated CS without UCS
+    B:
+      zh: 永久删除记忆基因
+      en: Permanent deletion of memory genes
+    C:
+      zh: 强化增加行为
+      en: Reinforcement increasing behavior
+    D:
+      zh: 只发生在操作条件反射
+      en: Occurring only in operant conditioning
+  answer: A
+  explain:
+    zh: 消退是学习性抑制，非“抹去”原关联；自发恢复可能发生。
+    en: Extinction reflects learned inhibition, not erasure; spontaneous recovery can occur.
+  chapter: 7A · Individual influences on behavior
+- id: ps-6
+  q:
+    zh: 从众（conformity）最常与下列哪项实验联系？
+    en: 'Conformity is most famously linked to:'
+  choices:
+    A:
+      zh: Asch 线段实验
+      en: Asch’s line-judgment studies
+    B:
+      zh: Miller–Urey 实验
+      en: The Miller–Urey experiment
+    C:
+      zh: 双缝干涉实验
+      en: The double-slit experiment
+    D:
+      zh: Krebs 循环
+      en: The Krebs cycle
+  answer: A
+  explain:
+    zh: Asch 显示群体压力可使人给出明显错误答案。
+    en: Asch showed group pressure can make people give clearly wrong answers.
+  chapter: 7B · Social processes that influence behavior
+- id: ps-7
+  q:
+    zh: 说服的中心路径（central route）强调：
+    en: 'The central route to persuasion emphasizes:'
+  choices:
+    A:
+      zh: 论据质量与深思熟虑
+      en: Argument quality and careful elaboration
+    B:
+      zh: 名人魅力 alone
+      en: Celebrity attractiveness alone
+    C:
+      zh: 刺激数量 alone
+      en: Number of stimuli alone
+    D:
+      zh: 拒绝一切信息
+      en: Rejecting all information
+  answer: A
+  explain:
+    zh: 中心路径靠逻辑与证据；外周路径靠线索与启发式。
+    en: Central route uses logic and evidence; peripheral route uses cues and heuristics.
+  chapter: 7C · Attitude and behavior change
+- id: ps-8
+  q:
+    zh: 自我服务偏差（self-serving bias）指：
+    en: 'The self-serving bias is the tendency to:'
+  choices:
+    A:
+      zh: 把成功归因于自己、失败归因于外因
+      en: Credit success to oneself and failures to external factors
+    B:
+      zh: 永远责备自己
+      en: Always blame oneself
+    C:
+      zh: 否认任何自我存在
+      en: Deny any self
+    D:
+      zh: 只记住他人失败
+      en: Remember only others’ failures
+  answer: A
+  explain:
+    zh: 该偏差维护自尊与积极自我形象。
+    en: This bias protects self-esteem and a positive self-image.
+  chapter: 8B · Social thinking
+- id: ps-9
+  q:
+    zh: 社会阶层（social stratification）指的是：
+    en: 'Social stratification refers to:'
+  choices:
+    A:
+      zh: 社会中不平等、分层的地位与资源分配
+      en: Hierarchical ranking and unequal distribution of status and resources
+    B:
+      zh: 所有人资源完全均等
+      en: Perfectly equal resources for everyone
+    C:
+      zh: 仅指地质分层
+      en: Geological rock layers only
+    D:
+      zh: 神经元分层
+      en: Neuronal lamination only
+  answer: A
+  explain:
+    zh: 阶层体现阶级、教育、收入等维度的结构性不平等。
+    en: Stratification reflects structural inequality across class, education, income, and related dimensions.
+  chapter: 10A · Social inequality
+- id: ps-10
+  q:
+    zh: 经典条件反射中，铃声在食物配对后单独引发唾液，铃声是：
+    en: 'After pairing a bell with food, the bell alone elicits salivation. The bell is the:'
+  choices:
+    A:
+      zh: 无条件刺激
+      en: Unconditioned stimulus
+    B:
+      zh: 条件刺激
+      en: Conditioned stimulus
+    C:
+      zh: 无条件反应
+      en: Unconditioned response
+    D:
+      zh: 强化物消退
+      en: Extinguished reinforcer
+  answer: B
+  explain:
+    zh: 原中性刺激经配对成为条件刺激（CS）。
+    en: The once-neutral cue becomes the conditioned stimulus (CS).
+  chapter: 6B · Making sense of the environment
+- id: ps-11
+  q:
+    zh: 社会经济地位（SES）通常不包括：
+    en: 'Socioeconomic status (SES) usually does NOT include:'
+  choices:
+    A:
+      zh: 收入
+      en: Income
+    B:
+      zh: 教育
+      en: Education
+    C:
+      zh: 职业
+      en: Occupation
+    D:
+      zh: 血型
+      en: Blood type
+  answer: D
+  explain:
+    zh: SES 综合收入、教育、职业等社会地位指标。
+    en: SES composites income, education, occupation — not blood type.
+  chapter: 10A · Social inequality

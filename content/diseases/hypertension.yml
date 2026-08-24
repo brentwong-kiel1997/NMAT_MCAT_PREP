@@ -1,0 +1,34 @@
+slug: hypertension
+name: Essential Hypertension
+name_zh: 原发性高血压
+short: 多数高血压无单一病因；心脑血管事件的核心可改变危险因素。
+systems:
+- Cardiovascular
+- Renal
+exams:
+- Enrichment
+exam_fit: 延伸阅读：服务生物学/病理生理直觉；NMAT 考纲是导论课不是临床诊疗；MCAT 可迁移机制，不考指南级用药方案。
+pathogen: 多因素：遗传、盐敏感、交感张力、RAAS、血管硬化
+transmission: 不适用。
+pathophysiology:
+- 心输出量与外周阻力失衡；长期导致血管重构。
+- RAAS：肾素 → 血管紧张素 II → 醛固酮 → 保钠与血管收缩。
+- 靶器官：心（LVH）、脑、肾、视网膜、血管。
+clinical:
+- 多数无症状（silent）；头痛并非可靠标志。
+- 急症：极高血压伴急性靶器官损害（脑病、ACS、肺水肿等）。
+- 长期：卒中、心衰、CKD、PAD。
+diagnosis:
+- 重复、规范测量；诊室与动态血压相互印证。
+- 继发性线索：年轻起病、低钾、腹部杂音、阵发三联征等。
+treatment:
+- 限盐、减重、运动、限酒。
+- 一线药类：ACEI/ARB、CCB、噻嗪类利尿剂（个体化）。
+- 合并糖尿病/CKD 常优先 ACEI/ARB（考点）。
+high_yield:
+- BP = CO × TPR——公式级理解题。
+- ACEI：干咳、高钾、血管性水肿；妊娠禁忌。
+- 原发性占绝大多数；先想常见，再筛继发。
+- MCAT：稳态、负反馈与内分泌轴。
+mcat_bridge: 循环生理、激素调节与稳态。
+nmat_bridge: 心血管药理与靶器官损害路径。

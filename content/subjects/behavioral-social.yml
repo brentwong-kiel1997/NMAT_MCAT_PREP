@@ -1,0 +1,65 @@
+slug: behavioral-social
+name: Behavioral & Social Sciences
+name_zh: 行为与社会科学
+exams:
+- NMAT
+- MCAT
+summary:
+  zh: 心理、社会、人类学交叉；NMAT 叫 Social Science，MCAT 对应 Psych/Soc。
+  en: Psych, sociology, anthropology overlap; NMAT Social Science ↔ MCAT Psych/Soc.
+nmat_role: NMAT Part 2 · Social Science（Psychology / Sociology and Anthropology）
+mcat_role: MCAT Psychological, Social, and Biological Foundations of Behavior
+source_note:
+  zh: NMAT 按 CEM BOI：Psychology + Sociology and Anthropology。MCAT 按 AAMC FC6–10。
+  en: 'NMAT per CEM BOI: Psychology + Sociology and Anthropology. MCAT per AAMC FC6–10.'
+exam_notes:
+  NMAT:
+    zh: Social Science = psychology + sociology + anthropology，导论深度。
+    en: Social Science = psychology + sociology + anthropology at intro depth.
+  MCAT:
+    zh: 以心理、社会为主，并带少量生物基础；人类学不是独立主轴。
+    en: Mostly psych/soc with some biology; anthropology is not a separate MCAT spine.
+chapters:
+- heading:
+    zh: NMAT · CEM BOI 章节
+    en: NMAT · CEM BOI chapters
+  items:
+  - title: Psychology
+    points:
+    - zh: 导论心理学概念
+      en: Introductory psychology concepts
+    - zh: 行为与心理过程基础
+      en: Basics of behavior and mental processes
+  - title: Sociology and Anthropology
+    points:
+    - zh: 社会结构与文化导论
+      en: Intro social structure and culture
+    - zh: 人类学基本视角（NMAT 明确包含）
+      en: Basic anthropology perspectives (explicitly in NMAT)
+- heading:
+    zh: MCAT · Foundational Concepts 6–10（AAMC）
+    en: MCAT · Foundational Concepts 6–10 (AAMC)
+  items:
+  - title: FC6 · Perceive, think, react
+    points:
+    - 6A Sensing the environment
+    - 6B Making sense of the environment
+    - 6C Responding to the world
+  - title: FC7 · Behavior and behavior change
+    points:
+    - 7A Individual influences on behavior
+    - 7B Social processes that influence human behavior
+    - 7C Attitude and behavior change
+  - title: FC8 · Self, others, interactions
+    points:
+    - 8A Self-identity
+    - 8B Social thinking
+    - 8C Social interactions
+  - title: FC9 · Cultural and social differences
+    points:
+    - 9A Understanding social structure
+    - 9B Demographic characteristics and processes
+  - title: FC10 · Stratification and resources
+    points:
+    - 10A Social inequality
+kind: shared

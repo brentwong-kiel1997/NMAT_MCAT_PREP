@@ -1,0 +1,155 @@
+paths:
+- id: nmat-part1-week
+  title:
+    zh: NMAT Part 1 一周冲刺
+    en: NMAT Part 1 one-week sprint
+  blurb:
+    zh: 按 CEM BOI 四科心智能力：每天一科精练 + 隔天全套计时。
+    en: 'CEM BOI mental-ability blocks: one subject deep drill daily plus timed full Part 1 every other
+      day.'
+  steps:
+  - zh: 语文 Verbal
+    en: Verbal
+    href: /subjects/verbal/
+  - zh: 归纳推理
+    en: Inductive Reasoning
+    href: /subjects/inductive-reasoning/
+  - zh: 数量推理
+    en: Quantitative
+    href: /subjects/quantitative/
+  - zh: 知觉敏锐
+    en: Perceptual Acuity
+    href: /subjects/perceptual-acuity/
+  - zh: Part 1 练习
+    en: Part 1 practice
+    href: /practice/verbal/
+- id: nmat-part2-sciences
+  title:
+    zh: NMAT Part 2 理科四科
+    en: NMAT Part 2 sciences
+  blurb:
+    zh: Biology、Physics、Social Science、Chemistry 各 30 题。按 BOI 章节笔记 + 分科练习。
+    en: Biology, Physics, Social Science, Chemistry — 30 items each. BOI-chapter notes plus per-subject
+      practice.
+  steps:
+  - zh: 生物学
+    en: Biology
+    href: /subjects/biology/
+  - zh: 物理学
+    en: Physics
+    href: /subjects/physics/
+  - zh: 社会科学
+    en: Social Science
+    href: /subjects/behavioral-social/
+  - zh: 化学
+    en: Chemistry
+    href: /subjects/chemistry/
+  - zh: 生物练习
+    en: Biology practice
+    href: /practice/biology/
+- id: mcat-science-core
+  title:
+    zh: MCAT 科学三科核心
+    en: MCAT science core
+  blurb:
+    zh: Chem/Phys、Bio/Biochem、Psych/Soc 按 AAMC FC 章节推进；共用 Biology/Chemistry/Physics 笔记打底。
+    en: Chem/Phys, Bio/Biochem, Psych/Soc along AAMC FC chapters; shared Biology/Chemistry/Physics notes
+      as foundation.
+  steps:
+  - zh: Chem/Phys
+    en: Chem/Phys
+    href: /subjects/chem-phys/
+  - zh: Bio/Biochem
+    en: Bio/Biochem
+    href: /subjects/bio-biochem/
+  - zh: Psych/Soc
+    en: Psych/Soc
+    href: /subjects/psych-soc/
+  - zh: 生物化学
+    en: Biochemistry
+    href: /subjects/biochemistry/
+  - zh: Chem/Phys 练习
+    en: Chem/Phys practice
+    href: /practice/chem-phys/
+- id: cars-verbal-skills
+  title:
+    zh: CARS + 语文技能
+    en: CARS and verbal skills
+  blurb:
+    zh: MCAT CARS 三技能轴 + NMAT Verbal 类比与阅读；强调证据与关系，不背学科事实。
+    en: MCAT CARS three skill axes plus NMAT Verbal analogies and reading — evidence and relations, not
+      science facts.
+  steps:
+  - zh: CARS
+    en: CARS
+    href: /subjects/cars/
+  - zh: 语文 Verbal
+    en: Verbal
+    href: /subjects/verbal/
+  - zh: CARS 练习
+    en: CARS practice
+    href: /practice/cars/
+  - zh: 语文练习
+    en: Verbal practice
+    href: /practice/verbal/
+- id: biochem-bridge
+  title:
+    zh: 生化桥梁（NMAT↔MCAT）
+    en: Biochemistry bridge (NMAT↔MCAT)
+  blurb:
+    zh: 从 NMAT Chemistry·Biochemistry 到 MCAT FC1（1A–1D）与 FC1D 代谢；一套笔记两边用。
+    en: From NMAT Chemistry·Biochemistry to MCAT FC1 (1A–1D) and FC1D metabolism — one note set for both
+      exams.
+  steps:
+  - zh: 化学（含生化块）
+    en: Chemistry (biochem block)
+    href: /subjects/chemistry/
+  - zh: 生物化学专题
+    en: Biochemistry
+    href: /subjects/biochemistry/
+  - zh: Bio/Biochem
+    en: Bio/Biochem
+    href: /subjects/bio-biochem/
+  - zh: 生化练习
+    en: Biochemistry practice
+    href: /practice/biochemistry/
+- id: exam-week-final
+  title:
+    zh: 考前一周总复习
+    en: Final-week review
+  blurb:
+    zh: 术语表 + 公式卡 + 错题练习 + 策略提示，不再开新大章。
+    en: Glossary + formulas + miss drills + tips — no new major chapters.
+  steps:
+  - zh: 术语表
+    en: Glossary
+    href: /materials/glossary/
+  - zh: 考试策略
+    en: Exam tips
+    href: /materials/tips/
+  - zh: 清单
+    en: Checklists
+    href: /materials/checklists/
+  - zh: 练习总览
+    en: Practice hub
+    href: /practice/
+- id: daily-loop
+  title:
+    zh: 每日 90 分钟学习环
+    en: Daily 90-minute loop
+  blurb:
+    zh: 30 分钟笔记 → 20 分钟闪卡 → 30 分钟练习 → 10 分钟教练答疑。
+    en: 30 min notes → 20 min cards → 30 min drills → 10 min coach.
+  steps:
+  - zh: 教材资料台
+    en: Materials desk
+    href: /materials/
+  - zh: 生物学笔记
+    en: Biology notes
+    href: /subjects/biology/
+  - zh: 生物练习
+    en: Biology practice
+    href: /practice/biology/
+  - zh: 学习台教练
+    en: Study coach
+    href: /study/

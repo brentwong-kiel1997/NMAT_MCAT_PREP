@@ -1,0 +1,120 @@
+slug: bio-biochem
+chapters:
+- title: 1A · Proteins and amino acids
+  bullets:
+  - zh: 侧链化学决定酶催化与结合
+    en: Side-chain chemistry drives catalysis and binding
+  - zh: 电泳/层析分离逻辑
+    en: Logic of electrophoresis/chromatography separations
+  - zh: 锌指、亮氨酸拉链：DNA 结合基序
+    en: 'Zinc finger, leucine zipper: DNA-binding motifs'
+  - zh: 变性剂：尿素、加热破坏非共价相互作用
+    en: 'Denaturants: urea, heat disrupt noncovalent interactions'
+  - zh: 侧链分类：非极性、极性不带电、酸碱性
+    en: 'Side-chain classes: nonpolar, polar uncharged, acidic/basic'
+  - zh: 二硫键稳定胞外蛋白三级/四级结构
+    en: Disulfide bonds stabilize extracellular tertiary/quaternary structure
+  - zh: 血红蛋白协同与波尔效应：O₂ 与 CO₂/H⁺ 互调
+    en: 'Hb cooperativity and Bohr effect: O₂ traded with CO₂/H⁺'
+- title: 1B · Gene to protein
+  bullets:
+  - zh: 转录调控与翻译起始是高频考点
+    en: Transcriptional control and translation initiation are high-yield
+  - zh: 密码子简并降低部分突变影响
+    en: Degeneracy softens some mutation effects
+  - zh: 原核：转录与翻译可偶联
+    en: 'Prokaryotes: transcription and translation can couple'
+  - zh: RNAi：小 RNA 沉默基因表达
+    en: 'RNAi: small RNAs silence gene expression'
+  - zh: 启动子与转录因子决定表达时机
+    en: Promoters and transcription factors set expression timing
+  - zh: tRNA 反密码子配对 mRNA；氨酰-tRNA 合成酶保真
+    en: tRNA anticodons pair mRNA; aminoacyl-tRNA synthetases ensure fidelity
+  - zh: 翻译：起始→延伸→终止；核糖体三相位点
+    en: 'Translation: initiation→elongation→termination; A/P/E sites'
+- title: 1C · Heritable information & diversity
+  bullets:
+  - zh: 复制保真与修复路径（导论）
+    en: Replication fidelity and repair paths (intro)
+  - zh: 减数分裂错误 → 非整倍体思想
+    en: Meiotic errors → aneuploidy idea
+  - zh: CRISPR 导向 Cas 切割特定 DNA 序列
+    en: CRISPR guides Cas to cut specific DNA sequences
+  - zh: 非整倍体：染色体数目异常
+    en: 'Aneuploidy: abnormal chromosome number'
+  - zh: 点突变 vs 移码：后果严重程度常不同
+    en: Point vs frameshift mutations often differ in severity
+  - zh: 杂合优势可维持有害等位基因频率
+    en: Heterozygote advantage can maintain deleterious allele frequencies
+- title: 1D · Bioenergetics and fuel metabolism
+  bullets:
+  - zh: 代谢路径按能量状态（ATP/NADH）调节
+    en: Pathways regulated by energy charge (ATP/NADH)
+  - zh: 有氧 vs 无氧产物与 ATP 产率对比
+    en: Aerobic vs anaerobic products and ATP yield
+  - zh: 磷酸肌酸快速缓冲 ATP 需求
+    en: Phosphocreatine buffers rapid ATP demand
+  - zh: Cori 循环：肌肉乳酸→肝糖异生
+    en: 'Cori cycle: muscle lactate → liver gluconeogenesis'
+  - zh: 进食态：胰岛素主导储存；空腹：胰高血糖素动员
+    en: 'Fed: insulin-driven storage; fasting: glucagon mobilization'
+  - zh: β 氧化在线粒体基质产生乙酰 CoA
+    en: β-oxidation in the mitochondrial matrix yields acetyl-CoA
+- title: 2A · Assemblies of molecules, cells, cell groups
+  bullets:
+  - zh: 膜结构：流动镶嵌与选择性通透
+    en: Fluid mosaic and selective permeability
+  - zh: 组织类型与功能匹配
+    en: Tissue types matched to function
+  - zh: 间隙连接允许小分子胞间通讯
+    en: Gap junctions permit small-molecule intercellular signaling
+  - zh: 基底膜：上皮与结缔组织界面
+    en: 'Basement membrane: epithelial–connective interface'
+  - zh: 细胞骨架：微管、微丝、中间丝分工
+    en: 'Cytoskeleton roles: microtubules, microfilaments, intermediate filaments'
+  - zh: 细胞外基质胶原提供张力强度
+    en: ECM collagen supplies tensile strength
+- title: 2B · Prokaryotes and viruses
+  bullets:
+  - zh: 原核与真核基因表达差异
+    en: Prokaryotic vs eukaryotic gene expression differences
+  - zh: 病毒生命周期决定治疗靶点思路
+    en: Viral life cycle shapes therapy-target thinking
+  - zh: 抗生素耐药：酶降解、靶点改变、外排泵
+    en: 'Antibiotic resistance: enzymatic degradation, target change, efflux'
+  - zh: 噬菌体：细菌病毒；溶菌 vs 溶原
+    en: 'Bacteriophages: bacterial viruses; lytic vs lysogenic'
+  - zh: 质粒可携带抗性基因水平转移
+    en: Plasmids can carry resistance genes via horizontal transfer
+  - zh: 病毒生活史：吸附→进入→复制→装配→释放
+    en: 'Viral life cycle: attach→enter→replicate→assemble→release'
+- title: 2C · Division, differentiation, specialization
+  bullets:
+  - zh: 细胞周期阶段与检查点
+    en: Cell-cycle phases and checkpoints
+  - zh: 凋亡 vs 坏死（导论）
+    en: Apoptosis vs necrosis (intro)
+  - zh: MPF：cyclin B + CDK1 驱动 M 期
+    en: 'MPF: cyclin B + CDK1 drives M phase'
+  - zh: 诱导分化：外源信号启动特定基因程序
+    en: 'Induced differentiation: extrinsic signals launch gene programs'
+- title: 3A · Nervous and endocrine systems
+  bullets:
+  - zh: 突触传递与神经递质类别直觉
+    en: Synaptic transmission and transmitter-class intuition
+  - zh: 反馈环：下丘脑—垂体—靶腺
+    en: 'Feedback: hypothalamus–pituitary–target gland'
+  - zh: 血脑屏障限制亲水性物质进入 CNS
+    en: Blood–brain barrier limits hydrophilic entry to CNS
+  - zh: 肾上腺素：战或逃交感反应
+    en: Epinephrine mediates fight-or-flight sympathetic response
+- title: 3B · Main organ systems
+  bullets:
+  - zh: 交换界面：肺泡、绒毛、肾单位
+    en: 'Exchange interfaces: alveoli, villi, nephrons'
+  - zh: 稳态回路：感受器-整合-效应器
+    en: 'Homeostasis loop: sensor–integrator–effector'
+  - zh: 肾糖阈：超过阈值出现糖尿
+    en: 'Renal glucose threshold: glycosuria above limit'
+  - zh: 抗体多样性：V(D)J 重组
+    en: Antibody diversity via V(D)J recombination

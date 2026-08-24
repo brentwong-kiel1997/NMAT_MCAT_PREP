@@ -1,0 +1,313 @@
+slug: biology
+items:
+- id: bio-1
+  q:
+    zh: 下列哪项最能区分原核细胞与真核细胞？
+    en: Which best distinguishes prokaryotic from eukaryotic cells?
+  choices:
+    A:
+      zh: 是否有核糖体
+      en: Presence of ribosomes
+    B:
+      zh: 是否有膜包被的细胞核
+      en: Membrane-bound nucleus
+    C:
+      zh: 是否能进行代谢
+      en: Ability to metabolize
+    D:
+      zh: 是否有细胞膜
+      en: Presence of a cell membrane
+  answer: B
+  explain:
+    zh: 真核有膜包细胞核与细胞器分区；核糖体与细胞膜两者都有。
+    en: Eukaryotes have a membrane-bound nucleus/compartments; both have ribosomes and membranes.
+  chapter: Cells and Cellular Processes
+- id: bio-2
+  q:
+    zh: 负反馈的主要作用是：
+    en: 'The main role of negative feedback is to:'
+  choices:
+    A:
+      zh: 放大偏离并完成短暂过程
+      en: Amplify deviation to finish a brief process
+    B:
+      zh: 维持内环境相对稳定
+      en: Keep the internal environment relatively stable
+    C:
+      zh: 增加突变率
+      en: Increase mutation rate
+    D:
+      zh: 阻止所有生理变化
+      en: Block all physiological change
+  answer: B
+  explain:
+    zh: 负反馈抑制偏离设定点；正反馈才放大过程（如分娩）。
+    en: Negative feedback opposes drift from set points; positive feedback amplifies (e.g., labor).
+  chapter: 'Life Processes: Regulation and Homeostasis'
+- id: bio-3
+  q:
+    zh: 减数分裂对遗传多样性的关键贡献是：
+    en: 'A key meiotic contribution to genetic diversity is:'
+  choices:
+    A:
+      zh: 有丝分裂式复制而不分离
+      en: Mitotic copying without segregation
+    B:
+      zh: 同源重组与独立分配
+      en: Crossing over and independent assortment
+    C:
+      zh: 删除全部杂合位点
+      en: Deleting all heterozygous loci
+    D:
+      zh: 阻止 DNA 复制
+      en: Blocking DNA replication
+  answer: B
+  explain:
+    zh: 交叉互换与同源染色体独立分配重排等位基因组合。
+    en: Crossing over and independent assortment reshuffle allele combinations.
+  chapter: Genetics
+- id: bio-4
+  q:
+    zh: 生态系统中能量流动的基本特征是：
+    en: 'Energy flow in ecosystems is basically:'
+  choices:
+    A:
+      zh: 完全循环且无损失
+      en: Fully cyclic with no loss
+    B:
+      zh: 单向流动并逐级耗散
+      en: One-way with stepwise dissipation
+    C:
+      zh: 只在生产者内部循环
+      en: Cycling only inside producers
+    D:
+      zh: 与物质流动完全相同
+      en: Identical to matter cycling
+  answer: B
+  explain:
+    zh: 能量单向流经营养级并有热损失；物质可循环。
+    en: Energy moves one way with heat loss; matter can cycle.
+  chapter: Organisms and Their Environment
+- id: bio-5
+  q:
+    zh: 主动运输与简单扩散的主要区别是：
+    en: 'Active transport differs from simple diffusion mainly because it:'
+  choices:
+    A:
+      zh: 沿浓度梯度、不需能量
+      en: Moves down a gradient without energy
+    B:
+      zh: 可逆浓度梯度并消耗 ATP（或电化学梯度）
+      en: Can move against a gradient using ATP (or an electrochemical gradient)
+    C:
+      zh: 只通过核孔
+      en: Occurs only through nuclear pores
+    D:
+      zh: 只运输气体
+      en: Transports only gases
+  answer: B
+  explain:
+    zh: 主动运输需要载体/泵并消耗能量；简单扩散顺浓度梯度、不需代谢能。
+    en: Active transport uses carriers/pumps and energy; simple diffusion follows a gradient without metabolic
+      energy.
+  chapter: Cells and Cellular Processes
+- id: bio-6
+  q:
+    zh: 孟德尔分离定律的核心含义是：
+    en: 'Mendel’s law of segregation states that:'
+  choices:
+    A:
+      zh: 同源染色体上的等位基因在配子形成时分离
+      en: Alleles of a gene separate into gametes during gamete formation
+    B:
+      zh: 所有基因永远连锁
+      en: All genes are permanently linked
+    C:
+      zh: 显性等位基因会消失
+      en: Dominant alleles disappear
+    D:
+      zh: 配子总是二倍体
+      en: Gametes are always diploid
+  answer: A
+  explain:
+    zh: 减数分裂使每对等位基因进入不同配子，恢复单倍体。
+    en: Meiosis puts one allele of each pair into each gamete, restoring haploidy.
+  chapter: Genetics
+- id: bio-7
+  q:
+    zh: 胰岛素升高血糖还是降低血糖？
+    en: Insulin raises or lowers blood glucose?
+  choices:
+    A:
+      zh: 升高
+      en: Raises it
+    B:
+      zh: 降低（促进细胞摄取与储存）
+      en: Lowers it (promotes uptake and storage)
+    C:
+      zh: 对血糖无影响
+      en: Has no effect on glucose
+    D:
+      zh: 只影响血钙
+      en: Affects only blood calcium
+  answer: B
+  explain:
+    zh: 胰岛素促进葡萄糖进入细胞并促进糖原/脂肪合成，从而降低血糖。
+    en: Insulin drives glucose into cells and promotes glycogen/fat synthesis, lowering blood glucose.
+  chapter: 'Life Processes: Regulation and Homeostasis'
+- id: bio-8
+  q:
+    zh: 食物网比食物链更能反映生态系统的什么特征？
+    en: 'A food web better reflects an ecosystem’s:'
+  choices:
+    A:
+      zh: 单一线性取食路径
+      en: Single linear feeding path
+    B:
+      zh: 多物种间复杂取食关系
+      en: Complex feeding links among many species
+    C:
+      zh: 能量完全循环无损失
+      en: Energy cycling with no loss
+    D:
+      zh: 所有营养级生物量相等
+      en: Equal biomass at every trophic level
+  answer: B
+  explain:
+    zh: 大多数物种参与多条取食关系；食物网比单链更接近现实。
+    en: Most species participate in multiple feeding links; webs are more realistic than single chains.
+  chapter: Organisms and Their Environment
+- id: bio-9
+  q:
+    zh: 有丝分裂结束时，子细胞染色体数目相对母细胞：
+    en: 'After mitosis, daughter cells have chromosome number:'
+  choices:
+    A:
+      zh: 减半
+      en: Halved
+    B:
+      zh: 与母细胞相同（二倍体维持）
+      en: The same as the parent (diploidy maintained)
+    C:
+      zh: 变为四倍体
+      en: Quadrupled
+    D:
+      zh: 随机变化
+      en: Randomly variable
+  answer: B
+  explain:
+    zh: 有丝分裂复制后均分，产生遗传相同的二倍体子细胞。
+    en: Mitosis duplicates then evenly partitions chromosomes, yielding genetically identical diploid
+      daughters.
+  chapter: 2C · Cell division, differentiation, specialization
+- id: bio-10
+  q:
+    zh: 原核生物与病毒相比，原核细胞通常具有：
+    en: 'Compared with viruses, prokaryotic cells typically have:'
+  choices:
+    A:
+      zh: 核糖体与可独立代谢的胞质
+      en: Ribosomes and cytoplasm capable of independent metabolism
+    B:
+      zh: 膜包被的细胞核
+      en: A membrane-bound nucleus
+    C:
+      zh: 只能在宿主内复制
+      en: Replication only inside a host
+    D:
+      zh: 没有遗传物质
+      en: No genetic material
+  answer: A
+  explain:
+    zh: 原核细胞是独立生命体；病毒需宿主细胞复制且非完整细胞结构。
+    en: Prokaryotes are free-living cells; viruses depend on host machinery and lack full cellular organization.
+  chapter: 2B · Prokaryotes and viruses
+- id: bio-11
+  q:
+    zh: 胚胎发育中细胞分化主要意味着：
+    en: 'Cell differentiation during development mainly means:'
+  choices:
+    A:
+      zh: 基因组被随机删除
+      en: The genome is randomly deleted
+    B:
+      zh: 不同细胞类型选择性表达不同基因
+      en: Different cell types selectively express different genes
+    C:
+      zh: 所有细胞功能完全相同
+      en: All cells become functionally identical
+    D:
+      zh: 停止所有蛋白质合成
+      en: All protein synthesis stops
+  answer: B
+  explain:
+    zh: 分化通过基因表达调控实现，而非改变 DNA 序列（体细胞克隆除外）。
+    en: Differentiation arises from regulated gene expression, not wholesale DNA change (except somatic
+      mutations).
+  chapter: Development
+- id: bio-12
+  q:
+    zh: 神经元动作电位“全或无”特性是指：
+    en: 'The “all-or-none” property of a neuronal action potential means:'
+  choices:
+    A:
+      zh: 刺激越强，单个动作电位幅度越大
+      en: Stronger stimuli produce larger single action potentials
+    B:
+      zh: 达到阈值则产生固定幅度脉冲，否则不产生
+      en: At threshold a fixed-size spike occurs; below threshold, none
+    C:
+      zh: 神经元永不兴奋
+      en: Neurons never fire
+    D:
+      zh: 突触传递不需要递质
+      en: Synaptic transmission needs no neurotransmitter
+  answer: B
+  explain:
+    zh: 单个动作电位幅度恒定；刺激强度影响频率而非单次幅度。
+    en: Single spike amplitude is constant; stimulus strength mainly affects firing frequency.
+  chapter: 3A · Nervous & endocrine coordination
+- id: bio-13
+  q:
+    zh: 转录主要发生在真核细胞的何处？
+    en: Where does transcription mainly occur in eukaryotic cells?
+  choices:
+    A:
+      zh: 细胞质
+      en: Cytoplasm
+    B:
+      zh: 细胞核
+      en: Nucleus
+    C:
+      zh: 高尔基体
+      en: Golgi apparatus
+    D:
+      zh: 溶酶体
+      en: Lysosome
+  answer: B
+  explain:
+    zh: 真核转录在核内；翻译在细胞质核糖体。
+    en: Eukaryotic transcription is nuclear; translation occurs on cytoplasmic ribosomes.
+  chapter: Genetics
+- id: bio-14
+  q:
+    zh: 下列哪项最符合自然选择？
+    en: Which best matches natural selection?
+  choices:
+    A:
+      zh: 个体主动改变基因以适应环境
+      en: Individuals actively change genes to fit the environment
+    B:
+      zh: 有利变异个体留下更多后代
+      en: Individuals with advantageous variants leave more offspring
+    C:
+      zh: 所有变异同等传递
+      en: All variants are transmitted equally
+    D:
+      zh: 环境直接创造所需突变
+      en: The environment directly creates needed mutations
+  answer: B
+  explain:
+    zh: 选择作用于已有变异的差异繁殖成功。
+    en: Selection acts via differential reproductive success on existing variation.
+  chapter: Unity and Diversity of Life

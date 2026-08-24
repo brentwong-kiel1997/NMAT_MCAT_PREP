@@ -1,0 +1,170 @@
+slug: verbal
+items:
+- id: verb-1
+  q: 'WORD : DICTIONARY :: NOTE : ?'
+  choices:
+    A:
+      zh: Symphony（交响曲）
+      en: Symphony
+    B:
+      zh: Composer（作曲家）
+      en: Composer
+    C:
+      zh: Silence（沉默）
+      en: Silence
+    D:
+      zh: Volume（音量）
+      en: Volume
+  answer: A
+  explain:
+    zh: 词收录于词典；音符组织成交响曲（部分-整体/收录关系）。
+    en: Words are collected in a dictionary; notes are organized into a symphony.
+  chapter: Analogies（词义类比）
+- id: verb-2
+  q:
+    zh: 阅读理解中，细节题最稳妥的策略是：
+    en: 'For reading-comprehension detail items, the safest move is to:'
+  choices:
+    A:
+      zh: 凭第一印象选
+      en: Trust first impressions
+    B:
+      zh: 回原文定位再比选项
+      en: Relocate in the passage, then compare options
+    C:
+      zh: 选最长选项
+      en: Pick the longest option
+    D:
+      zh: 忽略转折词
+      en: Ignore contrast markers
+  answer: B
+  explain:
+    zh: 细节必须有文本依据，回文定位最稳。
+    en: Details need textual support — relocate first.
+  chapter: Reading Comprehension（阅读理解）
+- id: verb-3
+  q: 'SURGEON : SCALPEL :: WRITER : ?'
+  choices:
+    A:
+      zh: Pen（笔）
+      en: Pen
+    B:
+      zh: Hospital（医院）
+      en: Hospital
+    C:
+      zh: Patient（病人）
+      en: Patient
+    D:
+      zh: Medicine（药物）
+      en: Medicine
+  answer: A
+  explain:
+    zh: 职业与其常用工具；手术刀之于外科医生，如同笔之于作家。
+    en: Profession to characteristic tool—a scalpel for a surgeon, a pen for a writer.
+  chapter: Analogies（词义类比）
+- id: verb-4
+  q: 'HOT : COLD :: GENEROUS : ?'
+  choices:
+    A:
+      zh: Stingy（吝啬的）
+      en: Stingy
+    B:
+      zh: Wealthy（富有的）
+      en: Wealthy
+    C:
+      zh: Happy（快乐的）
+      en: Happy
+    D:
+      zh: Tall（高的）
+      en: Tall
+  answer: A
+  explain:
+    zh: 反义关系：热/冷，慷慨/吝啬。
+    en: 'Antonym relation: hot/cold, generous/stingy.'
+  chapter: Analogies（词义类比）
+- id: verb-5
+  q:
+    zh: 推断题（reading）与细节题的关键区别是：
+    en: 'Inference items differ from detail items because inferences:'
+  choices:
+    A:
+      zh: 需合理推出但未逐字写明
+      en: Must be reasonably drawn though not stated verbatim
+    B:
+      zh: 可完全脱离文本
+      en: May ignore the text entirely
+    C:
+      zh: 必须逐字复制原文
+      en: Must copy the passage word for word
+    D:
+      zh: 只考词义
+      en: Test only vocabulary
+  answer: A
+  explain:
+    zh: 推断须有文本证据链，但不能要求文中原句。
+    en: Inferences need a textual evidence chain but need not be verbatim quotes.
+  chapter: Reading Comprehension（阅读理解）
+- id: verb-6
+  q: 'TREE : FOREST :: STAR : ?'
+  choices:
+    A:
+      zh: Galaxy（星系）
+      en: Galaxy
+    B:
+      zh: Planet（行星）
+      en: Planet
+    C:
+      zh: Moon（月亮）
+      en: Moon
+    D:
+      zh: Telescope（望远镜）
+      en: Telescope
+  answer: A
+  explain:
+    zh: 部分-整体：树组成森林，恒星（大量）组成星系。
+    en: 'Part-to-whole: trees make a forest; stars (collectively) make a galaxy.'
+  chapter: Analogies（词义类比）
+- id: ver-7
+  q:
+    zh: '类比：医生 : 医院 :: 教师 : ?'
+    en: 'Analogy: doctor : hospital :: teacher : ?'
+  choices:
+    A:
+      zh: 课本
+      en: textbook
+    B:
+      zh: 学校
+      en: school
+    C:
+      zh: 学生
+      en: student
+    D:
+      zh: 粉笔
+      en: chalk
+  answer: B
+  explain:
+    zh: 职业与主要工作场所的关系。
+    en: Profession mapped to primary workplace.
+  chapter: Word Analogies / Vocabulary
+- id: ver-8
+  q:
+    zh: 阅读主旨题最应优先寻找：
+    en: 'Main-idea reading items should prioritize finding:'
+  choices:
+    A:
+      zh: 最生动的例子
+      en: The most vivid example
+    B:
+      zh: 作者核心主张
+      en: The author’s central claim
+    C:
+      zh: 生僻词定义
+      en: Definitions of rare words
+    D:
+      zh: 作者家乡
+      en: The author’s hometown
+  answer: B
+  explain:
+    zh: 主旨是作者要证明/传达的核心主张，不是细节例子。
+    en: Main idea is the author’s central claim, not a detail or example.
+  chapter: Reading Comprehension / Verbal Ability

@@ -1,0 +1,112 @@
+slug: chem-phys
+chapters:
+- title: 4A · Motion, forces, work, energy, equilibrium
+  bullets:
+  - zh: 把生理情境翻译成受力/能量问题
+    en: Translate physio scenarios into force/energy problems
+  - zh: 静力平衡：合力与合力矩为零
+    en: 'Static equilibrium: net force and torque zero'
+  - zh: Chem/Phys 常把肌肉骨骼题化为力矩平衡
+    en: Chem/Phys often casts musculoskeletal items as torque balance
+  - zh: 能量守恒需明确是否非保守力做功
+    en: Energy conservation requires noting nonconservative work
+- title: 4B · Fluids for circulation and gas exchange
+  bullets:
+  - zh: 连续性方程与伯努利直觉
+    en: Continuity equation and Bernoulli intuition
+  - zh: 阻力、半径与流量关系（Poiseuille 思想）
+    en: Resistance, radius, flow (Poiseuille idea)
+  - zh: 血流层流假设下 Poiseuille Q ∝ r⁴
+    en: Under laminar flow, Poiseuille Q ∝ r⁴
+  - zh: 肺泡气体交换依赖扩散与血流灌注匹配
+    en: Alveolar gas exchange depends on diffusion–perfusion matching
+- title: 4C · Electrochemistry and electrical circuits
+  bullets:
+  - zh: 氧化还原半反应与电子流向
+    en: Half-reactions and electron flow
+  - zh: 欧姆定律与串并联
+    en: Ohm’s law with series/parallel
+  - zh: 标准氢电极 E° = 0 V 作参照
+    en: Standard hydrogen electrode E° = 0 V as reference
+  - zh: 电解质浓度影响电池电压（非标准态）
+    en: Electrolyte concentration shifts cell voltage (nonstandard conditions)
+- title: 4D · Light and sound interacting with matter
+  bullets:
+  - zh: 折射、全反射、透镜；声波强度与多普勒
+    en: Refraction/TIR/lenses; sound intensity and Doppler
+  - zh: 超声频率高 → 分辨率高、穿透浅
+    en: Higher ultrasound frequency → better resolution, less penetration
+  - zh: 全反射临界角 sinθc = n₂/n₁（n₁ > n₂）
+    en: TIR critical angle sinθc = n₂/n₁ when n₁ > n₂
+  - zh: 超声成像依赖反射与组织声阻抗差
+    en: Ultrasound imaging uses reflection from acoustic-impedance mismatches
+  - zh: 透镜公式 1/f=1/o+1/i；放大率 m=−i/o
+    en: 'Lens: 1/f=1/o+1/i; magnification m=−i/o'
+- title: 4E · Atoms, nuclear decay, electronic structure
+  bullets:
+  - zh: 能级、光谱、半衰期指数衰减
+    en: Levels, spectra, exponential half-life
+  - zh: 医学成像同位素：半衰期适中、γ 发射
+    en: 'Medical isotopes: moderate half-life with gamma emission'
+  - zh: MCAT：核衰变常与半衰期、半衰期曲线读图联考
+    en: MCAT often pairs nuclear decay with half-life graphs
+  - zh: 电子跃迁能量差对应吸收/发射光谱线
+    en: Electronic energy gaps map to absorption/emission lines
+  - zh: 质量数 A = 质子 + 中子；同位素同 Z 异 A
+    en: Mass number A = protons + neutrons; isotopes share Z, differ in A
+- title: 5A · Unique nature of water and its solutions
+  bullets:
+  - zh: 氢键、比热、疏水效应
+    en: H-bonding, heat capacity, hydrophobic effect
+  - zh: 酸碱平衡与缓冲
+    en: Acid–base balance and buffers
+  - zh: 质子跳跃使酸在水中快速平衡
+    en: Proton hopping enables fast acid equilibration in water
+  - zh: 两亲分子在水中自组装成胶束/双层
+    en: Amphiphiles self-assemble into micelles/bilayers in water
+- title: 5B · Molecules and intermolecular interactions
+  bullets:
+  - zh: 分子间作用力决定熔点/溶解度
+    en: IMFs shape melting point and solubility
+  - zh: 氢键给体/受体配对决定特异性
+    en: H-bond donor/acceptor pairing drives specificity
+  - zh: 分子间力强弱：离子 > 氢键 > 偶极 > 色散（粗略）
+    en: 'Rough IMF strength: ionic > H-bond > dipole > dispersion'
+  - zh: 理想溶液拉乌尔定律：蒸气压与摩尔分数相关
+    en: 'Raoult’s law: vapor pressure tracks mole fraction in ideal solutions'
+- title: 5C · Separation and purification methods
+  bullets:
+  - zh: 色谱/电泳：按性质分离
+    en: Chromatography/electrophoresis separate by property
+  - zh: HPLC：高压提高分辨率与速度
+    en: 'HPLC: high pressure boosts resolution and speed'
+  - zh: 电泳迁移率受电荷与分子大小影响
+    en: Electrophoretic mobility depends on charge and size
+  - zh: 薄层色谱 Rf = 斑点距离 / 溶剂前沿距离
+    en: TLC Rf = spot distance / solvent-front distance
+  - zh: 电泳按电荷/质量比分离；等电点用于蛋白
+    en: Electrophoresis separates by charge/mass; pI used for proteins
+- title: 5D · Biologically relevant molecules
+  bullets:
+  - zh: 官能团在水中的酸碱/氢键行为
+    en: Acid-base/H-bonding behavior of groups in water
+  - zh: 肽键形成/水解
+    en: Peptide bond formation/hydrolysis
+  - zh: 酶活性位点常含催化性酸碱残基
+    en: Active sites often harbor catalytic acid/base residues
+  - zh: 磷酸二酯键连接核酸主链
+    en: Phosphodiester bonds link nucleic-acid backbones
+  - zh: 肽键平面共振限制旋转
+    en: Peptide-bond resonance planarizes and restricts rotation
+- title: 5E · Chemical thermodynamics and kinetics
+  bullets:
+  - zh: ΔG vs 速率；催化剂不改平衡常数本质位置
+    en: ΔG vs rate; catalysts don’t change equilibrium position
+  - zh: 米氏动力学 v = Vmax[S]/(Km + [S])
+    en: Michaelis–Menten v = Vmax[S]/(Km + [S])
+  - zh: 过渡态理论：k 与 exp(−Ea/RT) 相关
+    en: 'Transition-state theory: k linked to exp(−Ea/RT)'
+  - zh: 篇章常给能量图：读出 ΔH、Ea、中间体
+    en: 'Passage energy diagrams: read ΔH, Ea, and intermediates'
+  - zh: 零级/一级/二级：浓度–时间图形状不同
+    en: 'Zero/first/second order: distinct concentration–time plots'

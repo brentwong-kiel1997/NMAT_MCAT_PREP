@@ -1,0 +1,267 @@
+slug: chemistry
+items:
+- id: chem-1
+  q:
+    zh: 缓冲溶液抵抗 pH 变化，主要因为：
+    en: 'A buffer resists pH change mainly because it has:'
+  choices:
+    A:
+      zh: 强酸与强碱等量
+      en: Equal strong acid and strong base
+    B:
+      zh: 弱酸及其共轭碱（或弱碱及其共轭酸）
+      en: A weak acid and its conjugate base (or weak base + conjugate acid)
+    C:
+      zh: 只有纯水
+      en: Only pure water
+    D:
+      zh: 金属单质
+      en: Elemental metals
+  answer: B
+  explain:
+    zh: 弱酸/共轭碱对可中和少量外加酸或碱。
+    en: Weak acid/conjugate-base pairs neutralize small added acid or base.
+  chapter: General Chemistry
+- id: chem-2
+  q:
+    zh: Le Chatelier 原理指出：体系平衡被扰动时会：
+    en: 'Le Chatelier’s principle says a stressed equilibrium will:'
+  choices:
+    A:
+      zh: 永久停止反应
+      en: Stop reacting forever
+    B:
+      zh: 向减弱该扰动的方向移动
+      en: Shift to counteract the stress
+    C:
+      zh: 只向产物方向移动
+      en: Only shift toward products
+    D:
+      zh: 改变原子种类
+      en: Change atom identities
+  answer: B
+  explain:
+    zh: 平衡移动以部分抵消浓度/压力/温度扰动。
+    en: The system shifts to partially offset concentration/pressure/temperature stress.
+  chapter: General Chemistry
+- id: chem-3
+  q:
+    zh: 准确度与精密度的区别是：
+    en: 'Accuracy differs from precision in that accuracy is about:'
+  choices:
+    A:
+      zh: 结果彼此靠近
+      en: Results clustering together
+    B:
+      zh: 结果接近真值
+      en: Results near the true value
+    C:
+      zh: 仪器价格
+      en: Instrument price
+    D:
+      zh: 样品颜色
+      en: Sample color
+  answer: B
+  explain:
+    zh: 准确度看接近真值；精密度看重复性。
+    en: Accuracy = closeness to truth; precision = repeatability.
+  chapter: Analytical Chemistry
+- id: chem-4
+  q:
+    zh: 催化剂加快反应的方式是：
+    en: 'A catalyst speeds a reaction by:'
+  choices:
+    A:
+      zh: 提高反应的 ΔG
+      en: Raising ΔG of the reaction
+    B:
+      zh: 提供更低活化能的路径
+      en: Providing a lower-activation-energy path
+    C:
+      zh: 改变产物元素组成
+      en: Changing product element identities
+    D:
+      zh: 永久消耗反应物平衡常数方向
+      en: Permanently consuming reactants against K
+  answer: B
+  explain:
+    zh: 催化剂改变路径、降低活化能；不改变总 ΔG / 平衡位置。
+    en: Catalysts change the path and lower Ea; overall ΔG / equilibrium position stay the same.
+  chapter: 5E · Chemical thermodynamics and kinetics
+- id: chem-5
+  q:
+    zh: 下列哪种溶液 pH 最接近 7（25 °C）？
+    en: Which solution has a pH closest to 7 at 25 °C?
+  choices:
+    A:
+      zh: 0.1 M HCl
+      en: 0.1 M HCl
+    B:
+      zh: 0.1 M NaOH
+      en: 0.1 M NaOH
+    C:
+      zh: 纯水
+      en: Pure water
+    D:
+      zh: 浓硫酸
+      en: Concentrated sulfuric acid
+  answer: C
+  explain:
+    zh: 中性水 pH = 7；强酸强碱溶液远离 7。
+    en: Neutral water has pH 7; strong acid/base solutions are far from 7.
+  chapter: General Chemistry
+- id: chem-6
+  q:
+    zh: 碳在有机化学中常呈四价，主要因为：
+    en: 'Carbon is tetravalent in organic chemistry mainly because it:'
+  choices:
+    A:
+      zh: 有 4 个价电子，可形成 4 个共价键
+      en: Has 4 valence electrons and forms 4 covalent bonds
+    B:
+      zh: 只能形成离子键
+      en: Forms only ionic bonds
+    C:
+      zh: 原子核带负电
+      en: Its nucleus is negatively charged
+    D:
+      zh: 不能形成双键
+      en: Cannot form double bonds
+  answer: A
+  explain:
+    zh: 碳的 sp³/sp²/sp 杂化使其可单、双、三键连接，构成有机骨架。
+    en: Carbon’s hybridization allows single, double, and triple bonds that scaffold organic molecules.
+  chapter: Organic Chemistry
+- id: chem-7
+  q:
+    zh: 滴定终点最接近：
+    en: 'The titration endpoint is closest to:'
+  choices:
+    A:
+      zh: 指示剂变色的实验点
+      en: The experimental point where indicator color changes
+    B:
+      zh: 溶液体积为零
+      en: Zero solution volume
+    C:
+      zh: 反应永远不发生
+      en: A reaction that never occurs
+    D:
+      zh: 样品质量加倍
+      en: Doubling sample mass
+  answer: A
+  explain:
+    zh: 终点由指示剂或仪器信号判定；化学计量点（当量点）是理论等量点，二者应尽量接近。
+    en: The endpoint is signaled by indicator/instrument; the equivalence point is theoretical—they should
+      be close.
+  chapter: Analytical Chemistry
+- id: chem-8
+  q:
+    zh: 水的氢键对其高比热容的主要贡献是：
+    en: 'Hydrogen bonding in water mainly contributes to its high specific heat by:'
+  choices:
+    A:
+      zh: 吸收热量打断氢键而不大幅升温
+      en: Absorbing heat to break H-bonds without large temperature rise
+    B:
+      zh: 使水在 0 °C 沸腾
+      en: Making water boil at 0 °C
+    C:
+      zh: 消除分子间作用
+      en: Eliminating intermolecular forces
+    D:
+      zh: 使水成为强电解质
+      en: Making water a strong electrolyte
+  answer: A
+  explain:
+    zh: 氢键网络储存热能，缓冲温度变化——对生命系统重要。
+    en: The H-bond network stores thermal energy, buffering temperature swings—critical for life.
+  chapter: 5A · Water and its solutions
+- id: chem-9
+  q:
+    zh: 升高温度对吸热反应的平衡常数 K 通常：
+    en: 'Raising temperature on an endothermic reaction typically:'
+  choices:
+    A:
+      zh: 使 K 增大
+      en: Increases K
+    B:
+      zh: 使 K 减小
+      en: Decreases K
+    C:
+      zh: 使 K 恒为 1
+      en: Fixes K at 1
+    D:
+      zh: 与 K 无关
+      en: Has no relation to K
+  answer: A
+  explain:
+    zh: 吸热反应加热有利于产物，K 增大；放热反应则相反。
+    en: Heating favors products in endothermic reactions (K rises); exothermic reactions show the opposite.
+  chapter: 5E · Chemical thermodynamics and kinetics
+- id: chem-10
+  q:
+    zh: 肽键在蛋白质中的主要性质是：
+    en: 'The peptide bond in proteins is mainly characterized by:'
+  choices:
+    A:
+      zh: 部分双键性、平面刚性
+      en: Partial double-bond character and planarity
+    B:
+      zh: 极易在生理 pH 自发断裂
+      en: Spontaneous cleavage at physiological pH
+    C:
+      zh: 只连接脂质
+      en: Linking only lipids
+    D:
+      zh: 不含氮原子
+      en: Containing no nitrogen
+  answer: A
+  explain:
+    zh: 肽键共振使其呈平面、旋转受限，决定蛋白质主链构象。
+    en: Resonance gives the peptide bond planarity and restricted rotation, shaping the protein backbone.
+  chapter: Biochemistry
+- id: chem-11
+  q:
+    zh: 弱酸 HA 的 pKa=4.8。当 pH=4.8 时，[A⁻]/[HA] 约为：
+    en: 'For weak acid HA with pKa=4.8, at pH=4.8 the ratio [A⁻]/[HA] is about:'
+  choices:
+    A:
+      zh: '0.1'
+      en: '0.1'
+    B:
+      zh: '1'
+      en: '1'
+    C:
+      zh: '10'
+      en: '10'
+    D:
+      zh: '100'
+      en: '100'
+  answer: B
+  explain:
+    zh: Henderson–Hasselbalch：pH=pKa 时共轭碱与酸浓度比约为 1。
+    en: 'Henderson–Hasselbalch: at pH=pKa the conjugate base/acid ratio is ~1.'
+  chapter: General Chemistry
+- id: chem-12
+  q:
+    zh: 催化剂如何影响可逆反应？
+    en: How does a catalyst affect a reversible reaction?
+  choices:
+    A:
+      zh: 改变平衡常数 K
+      en: Changes equilibrium constant K
+    B:
+      zh: 加快正逆反应速率，更快达平衡
+      en: Speeds forward and reverse rates, reaching equilibrium sooner
+    C:
+      zh: 只加快正反应
+      en: Speeds only the forward reaction
+    D:
+      zh: 提高 ΔG
+      en: Raises ΔG
+  answer: B
+  explain:
+    zh: 催化剂同等影响正逆路径，不改平衡组成。
+    en: Catalysts affect both directions equally and do not change equilibrium composition.
+  chapter: 5E · Chemical thermodynamics and kinetics

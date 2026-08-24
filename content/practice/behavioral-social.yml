@@ -1,0 +1,201 @@
+slug: behavioral-social
+items:
+- id: beh-1
+  q:
+    zh: 经典条件反射中，条件刺激最初是：
+    en: 'In classical conditioning, the conditioned stimulus starts as:'
+  choices:
+    A:
+      zh: 已能引发反应的刺激
+      en: A stimulus that already elicits the response
+    B:
+      zh: 中性刺激，经配对后引发反应
+      en: A neutral stimulus that comes to elicit the response after pairing
+    C:
+      zh: 惩罚物
+      en: A punisher
+    D:
+      zh: 强化程式
+      en: A reinforcement schedule
+  answer: B
+  explain:
+    zh: 中性刺激与无条件刺激配对后成为条件刺激。
+    en: A neutral cue paired with a UCS becomes a CS.
+  chapter: Psychology
+- id: beh-2
+  q:
+    zh: 基本归因错误倾向于：
+    en: 'The fundamental attribution error tends to:'
+  choices:
+    A:
+      zh: 高估情境、低估个性
+      en: Overweight situation, underweight disposition
+    B:
+      zh: 高估个性、低估情境
+      en: Overweight disposition, underweight situation
+    C:
+      zh: 否认一切归因
+      en: Deny all attribution
+    D:
+      zh: 只发生在实验室
+      en: Occur only in labs
+  answer: B
+  explain:
+    zh: 观察他人时常过度归因于人格而非情境。
+    en: Observers over-attribute others’ acts to personality vs situation.
+  chapter: FC8 · Self, others, interactions
+- id: beh-3
+  q:
+    zh: 操作条件反射中，强化的作用是：
+    en: 'In operant conditioning, reinforcement serves to:'
+  choices:
+    A:
+      zh: 降低行为再发生概率
+      en: Decrease the chance the behavior recurs
+    B:
+      zh: 提高行为再发生概率
+      en: Increase the chance the behavior recurs
+    C:
+      zh: 只改变态度不改行为
+      en: Change attitudes only, never behavior
+    D:
+      zh: 消除所有刺激
+      en: Eliminate all stimuli
+  answer: B
+  explain:
+    zh: 强化增加目标行为频率；惩罚降低。
+    en: Reinforcement raises target-behavior frequency; punishment lowers it.
+  chapter: Psychology
+- id: beh-4
+  q:
+    zh: 短时记忆的容量与持续时间大致是：
+    en: 'Short-term memory capacity and duration are roughly:'
+  choices:
+    A:
+      zh: 无限容量、终生保持
+      en: Unlimited capacity, lifelong
+    B:
+      zh: 有限容量（约 7±2 组块）、秒到分钟级
+      en: Limited (~7±2 chunks), seconds to a minute
+    C:
+      zh: 只有视觉、无听觉
+      en: Visual only, no auditory
+    D:
+      zh: 与长时记忆完全相同
+      en: Identical to long-term memory
+  answer: B
+  explain:
+    zh: STM 容量小、保持短；复述与组块可延长保持。
+    en: STM holds few chunks briefly; rehearsal and chunking extend retention.
+  chapter: Psychology
+- id: beh-5
+  q:
+    zh: 社会规范与法律的主要区别是：
+    en: 'Social norms differ from laws mainly because norms:'
+  choices:
+    A:
+      zh: 由群体共享期待维系，未必有正式制裁
+      en: Are shared group expectations, not always formally enforced
+    B:
+      zh: 只适用于个人内心
+      en: Apply only inside one person’s mind
+    C:
+      zh: 永远比法律更宽松
+      en: Are always looser than laws
+    D:
+      zh: 与行为无关
+      en: Are unrelated to behavior
+  answer: A
+  explain:
+    zh: 规范靠社会化与舆论维系；法律有正式制定与强制力。
+    en: Norms rely on socialization and informal sanction; laws are codified with formal enforcement.
+  chapter: Sociology and Anthropology
+- id: beh-6
+  q:
+    zh: 知觉组织中的“图形-背景”原则指：
+    en: 'Figure–ground organization in perception means:'
+  choices:
+    A:
+      zh: 把刺激分为突出的对象与较不突出的背景
+      en: Splitting a scene into a salient object and a less salient background
+    B:
+      zh: 否认深度知觉
+      en: Denying depth perception
+    C:
+      zh: 只处理听觉
+      en: Processing only audition
+    D:
+      zh: 所有刺激同等突出
+      en: All stimuli are equally salient
+  answer: A
+  explain:
+    zh: 知觉系统倾向将一部分组织为“图形”、其余退为背景。
+    en: The perceptual system tends to organize one region as figure and the rest as ground.
+  chapter: FC6 · Perceive, think, react
+- id: beh-7
+  q:
+    zh: 认知失调理论预测：态度与行为不一致时，人们常：
+    en: 'Cognitive dissonance theory predicts that when attitudes and behavior clash, people often:'
+  choices:
+    A:
+      zh: 改变态度或重新解释行为以减少不适
+      en: Change attitudes or reinterpret behavior to reduce discomfort
+    B:
+      zh: 永久丧失记忆
+      en: Permanently lose memory
+    C:
+      zh: 只增加生理唤醒而无心理变化
+      en: Only increase arousal with no psychological change
+    D:
+      zh: 必然承认错误
+      en: Always admit error immediately
+  answer: A
+  explain:
+    zh: 不一致产生心理不适，动机驱使态度/信念调整以恢复一致。
+    en: Inconsistency is aversive, motivating attitude/belief shifts to restore consistency.
+  chapter: FC7 · Behavior and behavior change
+- id: beh-8
+  q:
+    zh: 旁观者效应是指：
+    en: 'The bystander effect is:'
+  choices:
+    A:
+      zh: 在场他人越多，个体提供帮助的可能性越低
+      en: More bystanders lower the chance any one person helps
+    B:
+      zh: 独处时从不助人
+      en: People never help when alone
+    C:
+      zh: 只影响听觉注意
+      en: Affects only auditory attention
+    D:
+      zh: 与责任扩散无关
+      en: Unrelated to diffusion of responsibility
+  answer: A
+  explain:
+    zh: 责任分散与多元无知降低干预率；明确责任可减弱该效应。
+    en: Diffusion of responsibility and pluralistic ignorance reduce helping; clear responsibility weakens
+      the effect.
+  chapter: FC8 · Self, others, interactions
+- id: beh-9
+  q:
+    zh: 社会促进通常表现为：
+    en: 'Social facilitation typically means:'
+  choices:
+    A:
+      zh: 他人在场提高简单/熟练任务表现
+      en: Others’ presence improves simple/well-learned performance
+    B:
+      zh: 他人在场总是降低所有任务表现
+      en: Others’ presence always worsens all performance
+    C:
+      zh: 完全无社会影响
+      en: No social influence at all
+    D:
+      zh: 只发生在网络环境
+      en: Occurs only online
+  answer: A
+  explain:
+    zh: 简单任务易被唤醒促进；复杂新任务可能受损（抑制）。
+    en: Arousal helps simple tasks; complex novel tasks may suffer.
+  chapter: FC9 · Cultural and social differences

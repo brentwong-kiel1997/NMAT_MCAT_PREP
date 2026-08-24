@@ -1,0 +1,43 @@
+slug: perceptual-acuity
+name: Perceptual Acuity
+name_zh: 知觉敏锐
+shared: null
+items: 30
+pacing: 约 30 minutes（BOI 建议）
+item_types:
+- Hidden Figure
+- Mirror Image
+- Identical Information
+focus:
+  zh: 干扰条件下的视觉识别、细节与空间关系。
+  en: Visual recognition, detail, and spatial relations under distraction.
+source_note:
+  zh: 章节按 CEM BOI Perceptual Acuity 题型划分。
+  en: Chapters follow CEM BOI Perceptual Acuity item types.
+chapters:
+- heading:
+    zh: 大知识点 / 章节
+    en: Major topics / chapters
+  items:
+  - title: Hidden Figure（隐藏图形）
+    points:
+    - zh: 在复杂图中定位目标轮廓
+      en: Find a target outline in a complex figure
+    - zh: 抗干扰与局部匹配
+      en: Resist distraction; match local features
+  - title: Mirror Image（镜像）
+    points:
+    - zh: 左右镜像判断
+      en: Left-right mirror judgments
+    - zh: 翻转 vs 旋转区分
+      en: Distinguish flip vs rotation
+  - title: Identical Information（相同信息）
+    points:
+    - zh: 快速比对相同/差异
+      en: Quick same/different comparisons
+    - zh: 细节精度与速度权衡
+      en: Trade-off between detail accuracy and speed
+summary:
+  zh: 干扰条件下的视觉识别、细节与空间关系。
+  en: Visual recognition, detail, and spatial relations under distraction.
+kind: nmat

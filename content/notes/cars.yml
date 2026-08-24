@@ -1,0 +1,44 @@
+slug: cars
+chapters:
+- title: Foundations of Comprehension
+  bullets:
+  - zh: Topic ≠ Thesis
+    en: Topic ≠ Thesis
+  - zh: 标出例证、让步、转折的功能
+    en: 'Label functions: example, concession, contrast'
+  - zh: 区分作者声音与引述他人观点
+    en: Separate author voice from quoted viewpoints
+  - zh: 段落首句不一定是主旨；找综合句
+    en: First sentence may not be thesis; find synthesizing lines
+  - zh: 标出作者态度词：强调、质疑、让步
+    en: 'Mark attitude cues: emphasis, skepticism, concession'
+  - zh: 段落功能：举例、对比、定义、推进论点
+    en: 'Paragraph jobs: exemplify, contrast, define, advance claim'
+- title: Reasoning Within the Text
+  bullets:
+  - zh: 问“作者凭什么支持这个主张”
+    en: Ask what supports the author’s claim
+  - zh: 强干扰项：说得对但不在文中
+    en: 'Strong distractor: true in world, absent in passage'
+  - zh: 加强题：找支持结论的前提或证据
+    en: 'Strengthen items: premises or evidence backing the conclusion'
+  - zh: 削弱题：攻击假设或找反例
+    en: 'Weaken items: attack assumptions or supply counterexamples'
+  - zh: 推断必须被文本支持，不能引入课外知识当证据
+    en: Inferences must be text-supported; outside knowledge isn’t evidence
+  - zh: 找支持句：同义改写常是正确答案特征
+    en: 'Find support lines: correct answers often paraphrase the text'
+- title: Reasoning Beyond the Text
+  bullets:
+  - zh: 新情境必须保持原则一致
+    en: New scenarios must keep the principle intact
+  - zh: 类推失败常常是关系不匹配
+    en: Failed analogies usually mismatch the relation
+  - zh: 应用题：新情境需映射核心原则而非表面相似
+    en: Application items map core principles, not surface similarity
+  - zh: 整合外部信息时不可 contradict 文本
+    en: Integrated outside info must not contradict the passage
+  - zh: 应用题：把文中原则迁移到新情境
+    en: 'Application: transfer a passage principle to a new scenario'
+  - zh: 削弱/加强：瞄准论证的关键假设
+    en: 'Weaken/strengthen: target the argument’s key assumption'

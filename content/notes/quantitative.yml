@@ -1,0 +1,62 @@
+slug: quantitative
+chapters:
+- title: Fundamental Operations（基本运算）
+  bullets:
+  - zh: 分数/百分数互换要熟练
+    en: Be fluent converting fractions ↔ percents
+  - zh: 估算可排除离谱选项
+    en: Estimation kills absurd options
+  - zh: 比例题：交叉相乘前检查单位一致
+    en: 'Proportions: cross-multiply only after unit alignment'
+  - zh: 科学记数法便于大数乘除
+    en: Scientific notation simplifies large-number multiply/divide
+  - zh: 先估数量级，再精算；排除离谱选项
+    en: Estimate magnitude first, then compute; drop absurd choices
+  - zh: 百分数变化：分清“增加了多少点”与“增加了百分之几”
+    en: 'Percent change: distinguish percentage points from relative percent'
+- title: Problem Solving（应用题）
+  bullets:
+  - zh: 先定义未知数与单位
+    en: Define unknowns and units first
+  - zh: 画关系再计算
+    en: Sketch the relation before computing
+  - zh: 行程问题：画图标相遇/追及方向
+    en: 'Motion problems: sketch directions for meet/chase setups'
+  - zh: 混合物：溶质守恒列方程
+    en: 'Mixtures: conserve solute when setting equations'
+  - zh: 设未知数，翻译句子为方程
+    en: Define unknowns and translate sentences into equations
+  - zh: 单位换算先统一再计算
+    en: Convert units to a common system before computing
+- title: Data Interpretation（资料判读）
+  bullets:
+  - zh: 先读轴、图例、单位
+    en: Read axes, legend, units first
+  - zh: 问的是差值、比例还是趋势
+    en: 'Ask: difference, ratio, or trend?'
+  - zh: 百分比变化 ≠ 百分点变化
+    en: Percent change ≠ percentage-point change
+  - zh: 平均数受极端值拉动；中位数更稳健
+    en: Mean pulled by extremes; median is more robust
+  - zh: 图表题先读轴标签与单位
+    en: 'Graph items: read axis labels and units first'
+  - zh: 均值受极端值拉扯；中位数更稳健
+    en: Mean is pulled by outliers; median is more robust
+- title: Arithmetic and Number Sense
+  bullets:
+  - zh: 先估数量级，再精算；排除离谱选项
+    en: Estimate magnitude first, then compute; drop absurd choices
+  - zh: 百分数变化：分清“增加了多少点”与“增加了百分之几”
+    en: 'Percent change: distinguish percentage points from relative percent'
+- title: Algebra, Data, and Word Problems
+  bullets:
+  - zh: 设未知数，翻译句子为方程
+    en: Define unknowns and translate sentences into equations
+  - zh: 图表题先读轴标签与单位
+    en: 'Graph items: read axis labels and units first'
+- title: Probability and Basic Statistics
+  bullets:
+  - zh: 独立事件 P(A∩B)=P(A)P(B)
+    en: 'Independent events: P(A∩B)=P(A)P(B)'
+  - zh: 均值受极端值拉扯；中位数更稳健
+    en: Mean is pulled by outliers; median is more robust

@@ -1,0 +1,104 @@
+slug: biochemistry
+chapters:
+- title: Chemistry · Biochemistry（CEM）
+  bullets:
+  - zh: NMAT Chemistry 内的生化块：氨基酸、酶、代谢枢纽
+    en: 'NMAT Chemistry biochem block: amino acids, enzymes, metabolic hubs'
+  - zh: 与 MCAT Bio/Biochem FC1 重叠，可共用复习
+    en: Overlaps MCAT Bio/Biochem FC1 — shared review works
+  - zh: NMAT 生化块常与酶、氨基酸、代谢路径联动
+    en: NMAT biochem block often ties enzymes, amino acids, and pathways
+  - zh: 记住中心代谢物：葡萄糖、丙酮酸、乙酰 CoA
+    en: 'Hub metabolites: glucose, pyruvate, acetyl-CoA'
+- title: 1A · Proteins and amino acids
+  bullets:
+  - zh: 20 种常见氨基酸：非极性/极性/酸碱侧链
+    en: '20 common amino acids: nonpolar/polar/acidic/basic sides'
+  - zh: 一级→四级结构；变性破坏高级结构
+    en: Primary→quaternary structure; denaturation hits higher order
+  - zh: 酶：活性部位、辅因子、别构调节
+    en: 'Enzymes: active site, cofactors, allosteric regulation'
+  - zh: 等电点 pI：净电荷为零的 pH
+    en: 'Isoelectric point pI: pH where net charge is zero'
+  - zh: 协同结合使氧合曲线 S 形
+    en: Cooperative binding yields sigmoid oxygenation curves
+  - zh: 不可逆抑制：共价修饰活性位点
+    en: 'Irreversible inhibition: covalent modification of active site'
+- title: 1B · Gene to protein
+  bullets:
+  - zh: 转录与 RNA 加工（真核）
+    en: Transcription and eukaryotic RNA processing
+  - zh: 遗传密码简并；起止密码子
+    en: Degenerate code; start/stop codons
+  - zh: 翻译：核糖体、tRNA、多肽延伸
+    en: 'Translation: ribosome, tRNA, peptide elongation'
+  - zh: 5' 帽与 poly-A 尾稳定真核 mRNA
+    en: 5' cap and poly-A tail stabilize eukaryotic mRNA
+  - zh: 内含子剪接：snRNP 催化
+    en: Intron splicing catalyzed by snRNPs
+  - zh: 摆动假说解释第三密码子简并
+    en: Wobble hypothesis explains third-base codon degeneracy
+- title: 1C · Heritable information & diversity
+  bullets:
+  - zh: DNA 复制半保守；校对与修复
+    en: Semiconservative replication; proofreading/repair
+  - zh: 减数分裂重组与独立分配
+    en: Meiotic recombination and independent assortment
+  - zh: 突变与选择/漂变改变等位基因频率（导论）
+    en: Mutation plus selection/drift change allele frequencies (intro)
+  - zh: 端粒酶在生殖/干细胞中补偿末端缩短
+    en: Telomerase compensates end shortening in germline/stem cells
+  - zh: 移码突变常比错义突变影响更大
+    en: Frameshift mutations often impact more than missense
+- title: 1D · Bioenergetics and fuel metabolism
+  bullets:
+  - zh: ATP 作为能量货币；偶联反应
+    en: ATP as energy currency; coupled reactions
+  - zh: 糖酵解/糖异生对照；糖原调节
+    en: Glycolysis vs gluconeogenesis; glycogen regulation
+  - zh: 脂肪酸氧化与酮体（导论）
+    en: Fatty-acid oxidation and ketone bodies (intro)
+  - zh: 氧化磷酸化：质子梯度驱动 ATP 合成
+    en: 'OxPhos: proton gradient drives ATP synthesis'
+  - zh: 糖酵解净产 2 ATP + 2 NADH（胞质）
+    en: Glycolysis nets 2 ATP + 2 NADH (cytoplasm)
+  - zh: TCA 每乙酰 CoA 产 3 NADH、1 FADH₂、1 GTP
+    en: 'TCA per acetyl-CoA: 3 NADH, 1 FADH₂, 1 GTP'
+  - zh: 脂肪酸 β 氧化在线粒体产生乙酰 CoA
+    en: Fatty-acid β-oxidation in mitochondria yields acetyl-CoA
+- title: Amino acids, peptides, and proteins
+  bullets:
+  - zh: 必需氨基酸须从饮食摄入
+    en: Essential amino acids must come from the diet
+  - zh: 一级结构：肽键序列；高级结构靠非共价作用
+    en: Primary structure is peptide sequence; higher orders use noncovalent forces
+  - zh: 变性破坏高级结构，不一定断肽键
+    en: Denaturation disrupts higher structure without necessarily breaking peptide bonds
+- title: Enzymes and regulation
+  bullets:
+  - zh: 别构效应：效应物结合远位点改变活性
+    en: 'Allostery: effector at a distant site changes activity'
+  - zh: 反馈抑制：通路末端产物抑制上游酶
+    en: 'Feedback inhibition: end product inhibits an upstream enzyme'
+  - zh: 协同酶：底物结合改变其他亚基亲和力
+    en: 'Cooperative enzymes: substrate binding alters affinity of other subunits'
+- title: Metabolism and bioenergetics
+  bullets:
+  - zh: 糖异生主要在肝；逆转糖酵解非平衡步骤
+    en: Gluconeogenesis is mainly hepatic; bypasses irreversible glycolytic steps
+  - zh: 酮体在长期禁食时供脑部分能量
+    en: Ketone bodies partially fuel the brain in prolonged fasting
+  - zh: NADH/FADH₂ 进入 ETC 的入口不同，ATP 当量不同
+    en: NADH and FADH₂ enter the ETC at different points → different ATP yields
+- title: Nucleic acids and gene expression
+  bullets:
+  - zh: 密码子简并：多数氨基酸对应多个密码子
+    en: 'Codon degeneracy: most amino acids have multiple codons'
+  - zh: 剪接：内含子去除；可变剪接增加蛋白多样
+    en: Splicing removes introns; alternative splicing increases protein diversity
+- title: Lab techniques and analysis
+  bullets:
+  - zh: PCR：变性–退火–延伸循环扩增 DNA
+    en: 'PCR: denature–anneal–extend cycles amplify DNA'
+  - zh: Western blot 检测特定蛋白；Southern 检测 DNA
+    en: Western detects specific proteins; Southern detects DNA

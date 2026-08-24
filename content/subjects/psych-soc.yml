@@ -1,0 +1,94 @@
+slug: psych-soc
+name: Psychological, Social, and Biological Foundations of Behavior
+short: Psych/Soc
+name_zh: 心理、社会与行为基础
+unique: false
+questions: 59
+time: 95 minutes
+shared_links:
+- behavioral-social
+- biology
+discipline_mix:
+- Introductory psychology ~65%（备考分解）
+- Introductory sociology ~30%（备考分解）
+- Introductory biology ~5%（备考分解）
+- AAMC FC6 ~25% / FC7 ~35% / FC8 ~20% / FC9 ~15% / FC10 ~5%
+focus:
+  zh: 行为的心理、社会与生物基础。
+  en: Psychological, social, and biological foundations of behavior.
+source_note:
+  zh: 章节 = AAMC Foundational Concepts 6–10 及全部 Content Categories。
+  en: Chapters = AAMC Foundational Concepts 6–10 and all Content Categories.
+chapters:
+- heading:
+    zh: Foundational Concept 6（约 25%）
+    en: Foundational Concept 6 (~25%)
+  items:
+  - title: 6A · Sensing the environment
+    points:
+    - zh: 感觉环境
+      en: Sensing the environment
+  - title: 6B · Making sense of the environment
+    points:
+    - zh: 理解/组织环境信息
+      en: Making sense of / organizing environmental information
+  - title: 6C · Responding to the world
+    points:
+    - zh: 对世界作出反应
+      en: Responding to the world
+- heading:
+    zh: Foundational Concept 7（约 35%）
+    en: Foundational Concept 7 (~35%)
+  items:
+  - title: 7A · Individual influences on behavior
+    points:
+    - zh: 影响行为的个体因素
+      en: Individual influences on behavior
+  - title: 7B · Social processes that influence behavior
+    points:
+    - zh: 影响行为的社会过程
+      en: Social processes that influence behavior
+  - title: 7C · Attitude and behavior change
+    points:
+    - zh: 态度与行为改变
+      en: Attitude and behavior change
+- heading:
+    zh: Foundational Concept 8（约 20%）
+    en: Foundational Concept 8 (~20%)
+  items:
+  - title: 8A · Self-identity
+    points:
+    - zh: 自我认同
+      en: Self-identity
+  - title: 8B · Social thinking
+    points:
+    - zh: 社会思维
+      en: Social thinking
+  - title: 8C · Social interactions
+    points:
+    - zh: 社会互动
+      en: Social interactions
+- heading:
+    zh: Foundational Concept 9（约 15%）
+    en: Foundational Concept 9 (~15%)
+  items:
+  - title: 9A · Understanding social structure
+    points:
+    - zh: 理解社会结构
+      en: Understanding social structure
+  - title: 9B · Demographic characteristics and processes
+    points:
+    - zh: 人口特征与过程
+      en: Demographic characteristics and processes
+- heading:
+    zh: Foundational Concept 10（约 5%）
+    en: Foundational Concept 10 (~5%)
+  items:
+  - title: 10A · Social inequality
+    points:
+    - zh: 社会不平等与资源可及性
+      en: Social inequality and access to resources
+summary:
+  zh: 行为的心理、社会与生物基础。
+  en: Psychological, social, and biological foundations of behavior.
+kind: mcat
