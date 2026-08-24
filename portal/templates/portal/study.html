@@ -16,6 +16,30 @@
 </div>
 
 <section class="section">
+  <p class="section-kicker">Two projects</p>
+  <h2>One library, two exam projects</h2>
+  <p class="section-lead">Study units are small projects inside each exam project. The same chapter
+     is annotated per exam — progress made under one project carries over to the other.</p>
+  <div class="project-grid">
+    {% for proj in projects %}
+    <article class="project-card">
+      <h3>{{ proj.name }}</h3>
+      <ul class="project-units">
+        {% for u in proj.units %}
+        <li>
+          <a href="{% url 'unit_detail' proj.key u.key %}">
+            <span class="project-unit-name">{{ u.label }}</span>
+            <span class="muted-inline">{{ u.chapters }} ch</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section">
   <p class="section-kicker">Paths</p>
   <h2>Advance by goal</h2>
   <ul class="disease-list">

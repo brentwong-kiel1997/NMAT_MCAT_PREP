@@ -20,6 +20,7 @@
   <div class="detail-grid">
     <div>
       {% include "portal/includes/chapters.html" with chapters=subject.chapters %}
+{% include "portal/includes/cross_map.html" %}
       {% if subject.source_note %}
       <p class="note-line">Source: {{ subject.source_note }}</p>
       {% endif %}

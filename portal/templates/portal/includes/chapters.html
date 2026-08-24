@@ -9,7 +9,11 @@
           <input type="checkbox" class="progress-check" data-chapter-id="{{ ch.chapter_id }}" aria-label="Mark chapter done">
           Done
         </label>
-        <h3>{{ ch.title }}</h3>
+        <h3>{{ ch.title }}
+          {% if ch.exams %}<span class="exam-badges">
+            {% for e in ch.exams %}<span class="exam-badge exam-{{ e|lower }}">{{ e }}</span>{% endfor %}
+          </span>{% endif %}
+        </h3>
         {% if ch.title in tutorial_titles %}
         <a class="tutorial-link" href="{% url 'tutorial_detail' progress_subject ch.chapter_id %}">Read the chapter tutorial →</a>
         {% endif %}

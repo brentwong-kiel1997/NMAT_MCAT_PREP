@@ -49,7 +49,10 @@ def _study_extras(slug: str, entity: dict) -> dict:
     items = practice_for(slug)
     formulas = formulas_for(slug)
     written = tutorial_titles(slug)
+    from .content import units_of
+
     return {
+        "cross_units": units_of(slug),
         "chapters_for_toc": entity.get("chapters") or [],
         "progress_key": f"gabay_progress_{slug}",
         "progress_subject": slug,
@@ -250,6 +253,26 @@ def mcat_section(request, slug):
     return render(request, "portal/mcat_section.html", ctx)
 
 
+def unit_project_view() -> list:
+    """Projects with their units resolved, for the study hub."""
+    from .content import project_units
+
+    out = []
+    for proj in project_units():
+        units = []
+        for u in proj["units"]:
+            units.append(
+                {
+                    "key": u["key"],
+                    "label": u["label"],
+                    "chapters": len(u["chapters"]),
+                    "cross": u["cross"],
+                }
+            )
+        out.append({"key": proj["key"], "name": proj["name"], "units": units})
+    return out
+
+
 @require_GET
 def study_hub(request):
     return render(
@@ -261,6 +284,7 @@ def study_hub(request):
             "mcat_sections": exams.mcat_exam()["sections"],
             "practice_catalog": practice_catalog(),
             "study_paths": study_paths(),
+            "projects": unit_project_view(),
             "tutor_context": {
                 "exam": "",
                 "subject_slug": "",
@@ -499,4 +523,45 @@ def study_api(request):
             "answer": answer,
             "model": str(active_provider()) or "unconfigured",
         }
+    )
+
+
+@require_GET
+def unit_detail(request, project, unit_key):
+    from .content import projects as content_projects
+    from .content import tutorial_titles as _tt
+    from .content import unit as content_unit_get
+
+    u = content_unit_get(unit_key)
+    if u is None or u["project"] != project:
+        raise Http404("Study unit not found")
+    projects = content_projects()
+    if project not in projects:
+        raise Http404("Project not found")
+
+    username = _learner_name(request)
+    done_set = set(progress_map(username, u["source"]))
+    chapters = u["chapters"]
+    done_count = sum(1 for c in chapters if c["chapter_id"] in done_set)
+    written = _tt(u["source"])
+    cross_units = [content_unit_get(k) for k in u.get("cross") or []]
+    cross_units = [c for c in cross_units if c]
+
+    return render(
+        request,
+        "portal/unit_detail.html",
+        {
+            "project_key": project,
+            "project_name": projects[project].get("name", project),
+            "unit": u,
+            "chapters": chapters,
+            "done_count": done_count,
+            "total_count": len(chapters),
+            "written_titles": written,
+            "cross_units": cross_units,
+            "siblings": [
+                content_unit_get(su["key"])
+                for su in (projects.get(project) or {}).get("units") or []
+            ],
+        },
     )

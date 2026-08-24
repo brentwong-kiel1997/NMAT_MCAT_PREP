@@ -104,6 +104,7 @@ def attach_notes(subject: dict) -> dict:
             title = item.get("title") or ""
             idx += 1
             item["chapter_id"] = _chapter_id(title, idx)
+            item.setdefault("exams", chapter_exams(slug, title))
             notes = notes_for(slug, title)
             if notes:
                 item["study_notes"] = notes
@@ -605,3 +606,26 @@ def chapter_exams(subject_slug: str, chapter_title: str) -> list:
                 return list(ch["exams"])
     kind = units_store()["subject_kinds"].get(subject_slug, "shared")
     return ["NMAT", "MCAT"] if kind == "shared" else (["NMAT"] if kind == "nmat" else ["MCAT"])
+
+
+def project_units() -> list:
+    """Projects with their units resolved (for hub pages)."""
+    store_v = units_store()
+    out = []
+    for proj_key, proj in (store_v["projects"] or {}).items():
+        units = []
+        for u in (proj.get("units") or []):
+            resolved = store_v["units"].get(u["key"])
+            if resolved:
+                units.append(resolved)
+        out.append({"key": proj_key, "name": proj.get("name", proj_key), "units": units})
+    return out
+
+
+def units_of(subject_slug: str) -> list:
+    """Study units this subject participates in (source + cross), with project."""
+    out = []
+    for u in units_store()["units"].values():
+        if u["source"] == subject_slug or subject_slug in u.get("cross", []):
+            out.append({"key": u["key"], "project": u["project"], "label": u["label"]})
+    return out

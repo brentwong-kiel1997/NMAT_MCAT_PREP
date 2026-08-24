@@ -1,0 +1,16 @@
+{% if cross_units %}
+<aside class="block cross-map">
+  <p class="section-kicker">Cross-exam map</p>
+  <h2>Studied under these projects</h2>
+  <p class="muted-inline">This material is annotated for the exams below — progress made in one
+     project carries over to the other, chapter by chapter.</p>
+  <ul>
+    {% for u in cross_units %}
+    <li>
+      <a href="{% url 'unit_detail' u.project u.key %}">{{ u.label }}</a>
+      <span class="exam-badges"><span class="exam-badge exam-{{ u.project|lower }}">{{ u.project|upper }}</span></span>
+    </li>
+    {% endfor %}
+  </ul>
+</aside>
+{% endif %}

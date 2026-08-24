@@ -1,0 +1,59 @@
+{% extends "portal/base.html" %}
+
+{% block title %}{{ unit.label }} · {{ project_name }} · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">{{ project_name }} · study unit</p>
+    <h1>{{ unit.label }}</h1>
+    {% if total_count %}
+    <p class="muted-inline">{{ done_count }} of {{ total_count }} chapters done</p>
+    {% endif %}
+    <p class="muted-inline"><a href="{% url 'study_hub' %}">← All projects</a></p>
+  </div>
+</div>
+
+<section class="section">
+  {% if siblings %}
+  <nav class="unit-siblings">
+    {% for s in siblings %}{% if s %}
+    <a class="btn{% if s.key == unit.key %} btn-primary{% endif %}" href="{% url 'unit_detail' project_key s.key %}">{{ s.label }} · {{ s.chapters|length }}</a>
+    {% endif %}{% endfor %}
+  </nav>
+  {% endif %}
+
+  <h2>Chapters</h2>
+  <ol class="unit-chapters">
+    {% for ch in chapters %}
+    <li class="unit-chapter">
+      <div class="unit-chapter-head">
+        <h3>{{ ch.title }}</h3>
+        <span class="exam-badges">
+          {% for e in ch.exams %}<span class="exam-badge exam-{{ e|lower }}">{{ e }}</span>{% endfor %}
+        </span>
+      </div>
+      <p class="muted-inline">{{ ch.group }}</p>
+      {% if ch.title in written_titles %}
+      <a class="tutorial-link" href="{% url 'tutorial_detail' ch.subject ch.chapter_id %}">Read tutorial →</a>
+      {% else %}
+      <span class="muted-inline">Tutorial: not yet written</span>
+      {% endif %}
+    </li>
+    {% empty %}
+    <p class="muted-inline">No chapters in this unit yet.</p>
+    {% endfor %}
+  </ol>
+
+  {% if cross_units %}
+  <h2>Cross-exam overlaps</h2>
+  <p class="section-lead">These study units share this material with the other exam.</p>
+  <ul class="unit-cross">
+    {% for c in cross_units %}
+    <li><a href="{% url 'unit_detail' c.project c.key %}">{{ c.label }} <span class="muted-inline">({{ c.project|upper }})</span></a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</section>
+{% endblock %}

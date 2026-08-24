@@ -35,6 +35,7 @@ urlpatterns = [
     path("practice/<slug:slug>/", views.practice_detail, name="practice_detail"),
     path("subjects/", views.subject_list, name="subject_list"),
     path("subjects/<slug:slug>/", views.subject_detail, name="subject_detail"),
+    path("learn/<slug:project>/<slug:unit_key>/", views.unit_detail, name="unit_detail"),
     path(
         "tutorials/<slug:slug>/<str:chapter_id>/",
         views.tutorial_detail,

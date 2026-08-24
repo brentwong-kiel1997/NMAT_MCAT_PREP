@@ -1212,3 +1212,41 @@ details.tut-question[open] summary, details.tut-check-q[open] summary { margin-b
 /* --- Mnemonics / passage spacing --- */
 .tut-mnemonics ul, .tut-passage { line-height: 1.7; }
 .tut-passage p { margin: 0 0 0.75rem; }
+
+/* --- Learning projects & study units --- */
+.project-grid { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
+.project-card {
+  border: 1px solid var(--line, #d8d2c6); border-radius: 0.6rem;
+  background: var(--paper, #fffdf8); padding: 1rem 1.15rem;
+}
+.project-card h3 { margin: 0 0 0.5rem; color: var(--brand-deep, #0d3d3a); }
+.project-units { list-style: none; margin: 0; padding: 0; }
+.project-units li { margin: 0.15rem 0; }
+.project-units a {
+  display: flex; justify-content: space-between; gap: 1rem;
+  padding: 0.4rem 0.5rem; border-radius: 0.35rem; text-decoration: none;
+}
+.project-units a:hover { background: rgba(16, 86, 82, 0.06); }
+.project-unit-name { font-weight: 600; color: var(--ink, #22302e); }
+
+.unit-siblings { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0 0 1.25rem; }
+.unit-siblings .btn { text-decoration: none; }
+.unit-chapters { list-style: none; margin: 0.75rem 0 0; padding: 0; display: grid; gap: 0.55rem; }
+.unit-chapter {
+  border: 1px solid var(--line, #d8d2c6); border-radius: 0.5rem;
+  padding: 0.65rem 0.9rem; background: var(--paper, #fffdf8);
+}
+.unit-chapter-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; }
+.unit-chapter-head h3 { margin: 0; font-size: 1.02rem; }
+.unit-cross { margin: 0.5rem 0 0; padding-left: 1.1rem; display: grid; gap: 0.35rem; }
+.tutorial-link { font-size: 0.9rem; font-weight: 600; color: var(--brand, #105652); }
+.unit-chapter .tutorial-link { display: inline-block; margin-top: 0.35rem; }
+
+/* --- Exam badges on chapters --- */
+.exam-badges { display: inline-flex; gap: 0.3rem; vertical-align: middle; }
+.exam-badge {
+  font-size: 0.66rem; font-weight: 700; letter-spacing: 0.06em;
+  padding: 0.12rem 0.45rem; border-radius: 999px; white-space: nowrap;
+}
+.exam-nmat { background: rgba(14, 116, 144, 0.12); color: #0e7490; }
+.exam-mcat { background: rgba(91, 33, 182, 0.12); color: #5b21b6; }
