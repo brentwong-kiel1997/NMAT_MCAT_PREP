@@ -313,6 +313,35 @@ passage:
       B: "A behavior can converge independently; behavior is weaker evidence of unity than molecular machinery."
       C: "That is phylogeny within the tree, not evidence of cross-domain unity (both already share the machinery)."
       D: "A shared absence (no nucleus) is a trait both could have retained or lost; it does not show unity of machinery."
+videos:
+- title: "Amoeba Sisters — Prokaryotic vs. Eukaryotic Cells"
+  url: https://www.youtube.com/@AmoebaSisters
+  note: Domain-level cell structure; the channel's "Prokaryotic vs
+    Eukaryotic" video fits this chapter.
+- title: "Bozeman Science — Classification & phylogenetics"
+  url: https://www.youtube.com/@BozemanScience
+  note: Search the channel for "Classification" and "Phylogenetic Trees";
+    good for clade reading.
+- title: "CrashCourse Biology — Taxonomy: Life's Filing System"
+  url: https://www.youtube.com/@crashcourse
+  note: Search for the Taxonomy episode in the CrashCourse Biology playlist.
+- title: "Khan Academy — MCAT: evolution & diversity"
+  url: https://www.khanacademy.org/test-prep/mcat
+  note: Foundational Concept 1 videos — tree reading, homology, sources of
+    variation.
+further_reading:
+- title: "OpenStax Biology 2e — Ch 1: The Study of Life"
+  url: https://openstax.org/books/biology-2e/pages/1-introduction
+  note: Properties of life, levels of organization, taxonomy (free, CC BY-NC-SA).
+- title: "OpenStax Biology 2e — Ch 20: Phylogenies and the History of Life"
+  url: https://openstax.org/books/biology-2e/pages/20-introduction
+  note: Tree reading, clades, shared derived characters.
+- title: "OpenStax Biology 2e — Ch 12: Diversity of Life"
+  url: https://openstax.org/books/biology-2e/pages/12-introduction
+  note: Three domains and kingdoms in more depth.
+- title: "AAMC — What's on the MCAT Exam"
+  url: https://www.aamc.org/whats-on-the-mcat
+  note: Official Content Categories and percentages; the source of our exam map.
 review_questions:
 - q: A student argues that a virus is alive because it evolves over time.
     Which reply is most consistent with the biological definition used in

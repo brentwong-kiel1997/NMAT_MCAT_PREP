@@ -95,6 +95,19 @@ for how to run the same process again.
     Full schema + authoring rules live in `docs/TUTORIAL_TEMPLATE.md`
     ("Extended fields") and `content/README.md` (field table).
 
+11. **Two more blocks (user: "add YouTube lectures + more reading")** —
+    `videos` and `further_reading`, optional at chapter level:
+    - `videos` — short lectures (stable channel URLs like
+      `youtube.com/@AmoebaSisters` + a searchable title in `note`; no
+      hand-copied watch-IDs where they cannot be verified);
+    - `further_reading` — extension links (OpenStax chapter pages, AAMC
+      outlines) with a note on what the reader finds there.
+    Rendered as link lists (new-window, rel=noopener) with TOC entries;
+    validate_content requires title/url on each. Chapter 001 carries 4+4.
+    Lesson: Edit/Write tool calls began failing with a PreToolUse hook
+    timeout mid-turn — fall back to script-driven file edits when the hook
+    host is unreachable.
+
 ### Decisions worth keeping
 
 - **Original prose, consulted sources.** Facts and outline structure follow

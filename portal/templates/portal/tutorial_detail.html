@@ -30,6 +30,8 @@
         <a href="#key-points">Key points</a>
         {% if tutorial.mnemonics %}<a href="#mnemonics">Mnemonics</a>{% endif %}
         {% if tutorial.maps %}<a href="#maps">Concept maps</a>{% endif %}
+        {% if tutorial.videos %}<a href="#videos">Videos</a>{% endif %}
+        {% if tutorial.further_reading %}<a href="#further-reading">Further reading</a>{% endif %}
         {% if tutorial.passage %}<a href="#passage">Passage</a>{% endif %}
         {% if tutorial.pitfalls %}<a href="#pitfalls">Common pitfalls</a>{% endif %}
         <a href="#exam-map">How each exam tests this</a>
@@ -117,6 +119,20 @@
       </article>
       {% endif %}
 
+      {% if tutorial.videos %}
+      <article class="tut-videos" id="videos">
+        <h2>Recommended videos</h2>
+        <ul class="tut-video-list">
+          {% for v in tutorial.videos %}
+          <li>
+            <a href="{{ v.url }}" target="_blank" rel="noopener noreferrer">{{ v.title }}</a>
+            {% if v.note %} — {{ v.note|rich }}{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </article>
+      {% endif %}
+
       {% if tutorial.maps %}
       <article class="tut-maps" id="maps">
         <h2>Concept maps</h2>
@@ -191,7 +207,18 @@
       </article>
       {% endif %}
 
-      <article class="tut-sources">
+      <article class="tut-sources" id="further-reading">
+        {% if tutorial.further_reading %}
+        <h2>Further reading</h2>
+        <ul class="tut-reading-list">
+          {% for r in tutorial.further_reading %}
+          <li>
+            <a href="{{ r.url }}" target="_blank" rel="noopener noreferrer">{{ r.title }}</a>
+            {% if r.note %} — {{ r.note|rich }}{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
         <p class="tut-block-label">Sources</p>
         <p class="muted-inline">Facts and structure checked against the references below; all prose is
           written for this site. Editions and access dates are tracked in

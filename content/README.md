@@ -111,9 +111,11 @@ Each chapter file carries the fields:
 | `sources` | Every reference cited: `ref` (an id from `SOURCES.yml`), `used` (chapters/sections), `relation` |
 | `sections[].check` | "Check yourself" — 1–2 quick questions per section (same question shape) |
 | `mnemonics` | Memory hooks: `phrase` + `means` |
-| `maps` | Concept maps / pathways as monospace arrow lines: `title` + `lines` |
+| `maps` | Concept maps / pathways as a flow: `title` + `steps` + optional `note` |
 | `examples[].distractors` | Why each wrong option is wrong (MCAT-style answer analysis) |
 | `passage` | Optional MCAT-style passage + its `questions` |
+| `videos` | Recommended short lectures (stable channel URLs + searchable titles) |
+| `further_reading` | Extension links for deeper study of the chapter |
 | `review_questions` | End-of-chapter question set, each with answer analysis |
 
 Inline prose supports two markers (everything else is plain text):

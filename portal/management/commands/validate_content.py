@@ -188,6 +188,12 @@ class Command(BaseCommand):
                 for i, q in enumerate(questions, 1):
                     if not q.get("q") or not q.get("answer"):
                         problems.append(f"{rel}: review question {i} missing q/answer")
+                for i, v in enumerate(doc.get("videos") or [], 1):
+                    if not v.get("title") or not v.get("url"):
+                        problems.append(f"{rel}: video {i} missing title/url")
+                for i, r in enumerate(doc.get("further_reading") or [], 1):
+                    if not r.get("title") or not r.get("url"):
+                        problems.append(f"{rel}: further_reading {i} missing title/url")
                 for src in doc.get("sources") or []:
                     if src.get("ref") not in known_sources:
                         problems.append(

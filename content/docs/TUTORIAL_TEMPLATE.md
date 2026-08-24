@@ -192,6 +192,20 @@ Same expectation rules for the chapter-level blocks:
 - `review_questions` — 4 minimum at chapter level, always with distractors
   on the choices that are actually tempting.
 
+# g) Videos — short lectures to watch alongside the chapter
+videos:
+  - title: "Channel/series name — the specific video"
+    url: "https://www.youtube.com/@ChannelName"
+    note: "What to search for, or why this fits the chapter."
+# (chapter-level; stable channel URLs + the searchable title beat hand-copied
+#  watch-IDs. Same shape for further_reading below.)
+
+# h) Further reading — extension links for deeper study
+further_reading:
+  - title: "OpenStax Biology 2e — Ch 1: The Study of Life"
+    url: "https://openstax.org/books/biology-2e/pages/1-introduction"
+    note: "What the reader will find there (free textbook chapters)."
+
 ## File naming
 
 Place the file at `content/tutorials/<subject>/<title-slug>.yml` where
