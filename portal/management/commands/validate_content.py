@@ -13,6 +13,8 @@ import hashlib
 import json
 from pathlib import Path
 
+import yaml
+
 from django.core.management.base import BaseCommand
 
 from portal import content
@@ -130,6 +132,43 @@ class Command(BaseCommand):
 
         if not store["kinds"].get("shared") or not store["kinds"].get("mcat"):
             problems.append("catalog.yml kinds missing shared/mcat lists")
+
+        # ---- tutorial chapters (optional, growing one by one) ---------------
+        sources_path = CONTENT / "SOURCES.yml"
+        source_ids = set()
+        if sources_path.exists():
+            source_ids = {
+                s.get("id")
+                for s in (yaml.safe_load(sources_path.read_text(encoding="utf-8")) or {})
+                .get("sources", [])
+            }
+        tut_dir = CONTENT / "tutorials"
+        if tut_dir.is_dir():
+            outline_titles = {
+                slug: {
+                    it.get("title", "")
+                    for subject in store["subjects"].values()
+                    if subject.get("slug") == slug
+                    for group in subject.get("chapters") or []
+                    for it in group.get("items") or []
+                }
+                for slug in store["subjects"]
+            }
+            for file in sorted(tut_dir.rglob("*.yml")):
+                doc = yaml.safe_load(file.read_text(encoding="utf-8"))
+                rel = str(file.relative_to(CONTENT))
+                if doc.get("subject") not in store["subjects"]:
+                    problems.append(f"{rel}: unknown subject {doc.get('subject')!r}")
+                    continue
+                if doc.get("chapter") not in outline_titles.get(doc["subject"], set()):
+                    problems.append(
+                        f"{rel}: chapter {doc.get('chapter')!r} not in the subject outline"
+                    )
+                if not doc.get("sections"):
+                    problems.append(f"{rel}: no sections")
+                for src in doc.get("sources") or []:
+                    if src.get("ref") not in source_ids:
+                        problems.append(f"{rel}: unknown source ref {src.get('ref')!r}")
 
         # ---- learner progress still resolves (warn on legacy junk) -----------
         try:

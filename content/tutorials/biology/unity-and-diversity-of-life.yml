@@ -1,0 +1,202 @@
+subject: biology
+chapter: Unity and Diversity of Life
+title: Unity and Diversity of Life
+overview: >-
+  This opening chapter answers two questions that the rest of biology hangs
+  on: what do all living things share, and where does their staggering
+  variety come from? For the NMAT it supplies the vocabulary that Part 2
+  biology items assume you already own. For the MCAT it builds the frame
+  that Content Category 1B (transmission of heritable information) and the
+  evolution reasoning scattered through Bio/Biochem passages slot into.
+  Prerequisites: none — this is the entry point.
+sections:
+  - heading: What makes something alive
+    body:
+      - >-
+        Biology has no single-sentence definition of life, but it has a
+        checklist that exam writers draw from constantly. A living organism
+        maintains order — its internal arrangement is far from random.
+        It senses and responds to stimuli: a plant bends toward light, a
+        bacterium swims toward nutrients. It reproduces, passing heritable
+        information to offspring. It grows and develops along a programmed
+        trajectory. It regulates its internal environment — a concept that
+        peaks later as homeostasis. It processes energy, taking it in and
+        converting it (metabolism). And populations of it evolve: heritable
+        variation is filtered by the environment across generations.
+      - >-
+        The classic boundary case is the virus. A virus carries heritable
+        information (nucleic acid) and evolves by natural selection, but it
+        has no metabolism of its own, cannot maintain homeostasis, and
+        cannot reproduce without hijacking a cell's machinery. Because it
+        fails most of the checklist outside a host, biology treats viruses
+        as infectious particles rather than organisms — a favorite
+        "which statement is true" discriminator on both exams.
+      - >-
+        A useful habit for exam items: when asked whether something is
+        alive, do not reach for a definition. Run the checklist and see
+        which properties fail. The answer almost always names the property
+        that fails, not the thing itself.
+  - heading: Levels of organization and emergent properties
+    body:
+      - >-
+        Life is organized as a nested series of levels: atoms, molecules,
+        organelles, cells, tissues, organs, organ systems, organisms,
+        populations, communities, ecosystems, and finally the biosphere.
+        Each level contains the one below it, and each level shows
+        properties the level below does not have. An individual protein
+        cannot metabolize; a cell can. A single organism does not have a
+        predator-prey cycle; an ecosystem does.
+      - >-
+        These are called emergent properties, and they carry a method
+        split that shows up in MCAT passage logic. Reductionism studies a
+        system by taking it apart down to its components; systems biology
+        studies how the interactions between components produce behavior
+        that no component shows alone. Expect passages that ask what level
+        a described process belongs to — the trap is usually jumping two
+        levels (calling a change in one enzyme's activity an "ecosystem
+        response") rather than one.
+  - heading: The universal tree — three domains
+    body:
+      - >-
+        Modern classification is phylogenetic: it groups organisms by
+        evolutionary relatedness, not by surface resemblance. The top split
+        is into three domains — Bacteria and Archaea (both prokaryotes: no
+        nucleus, no membrane-bound organelles) and Eukarya (cells with a
+        true nucleus). Within Eukarya sit the familiar kingdoms, including
+        plants, fungi, and animals, plus the largely unicellular protists.
+      - >-
+        Note the counterintuitive exam fact: Archaea are more closely
+        related to Eukarya than to Bacteria, even though Archaea look
+        prokaryotic. Two organisms sharing a more recent common ancestor
+        are more closely related, regardless of how similar their
+        habitats or shapes are.
+      - >-
+        Every species carries a two-part binomial name — Homo sapiens,
+        Escherichia coli — written in italics with the genus capitalized.
+        Older, broader group words (class, order, family) still appear in
+        passages as rungs on the hierarchy ladder.
+      - >-
+        Phylogenetic trees are the exam's favorite diagram. Read them by
+        three rules. First, nodes (branch points) represent the most recent
+        common ancestor of everything downstream of them. Second, only
+        branching order matters for relatedness — a branch that rotates
+        around its node changes nothing. Third, unless the diagram says
+        otherwise, branch length is not time. The most common tree question
+        is simply: which two listed organisms share the most recent common
+        ancestor? Trace each pair back to their meeting node and pick the
+        pair whose node is closest to the tips.
+    table:
+      headers: [Domain, Cell type, Nucleus, Typical members]
+      rows:
+        - [Bacteria, Prokaryotic, Absent, "E. coli, Staphylococcus, gut flora"]
+        - [Archaea, Prokaryotic, Absent, "Methanogens, thermophiles, extremophiles"]
+        - [Eukarya, Eukaryotic, Present, "Plants, fungi, animals, protists"]
+  - heading: Unity — the shared molecular toolkit
+    body:
+      - >-
+        Under the diversity, the machinery is startlingly uniform. DNA is
+        the hereditary molecule across all three domains, and the genetic
+        code — which triplet specifies which amino acid — is nearly
+        universal. The flow of information DNA → RNA → protein, the use of
+        ATP as the energy currency, and the core pathways of metabolism
+        recur in organisms that last shared an ancestor billions of years
+        ago. That is why model organisms work: what you learn about a
+        mouse gene usually illuminates the human one.
+      - >-
+        Anatomy repeats the same story at a larger scale. The forelimb of a
+        whale, a bat, a cat, and a human is built from the same set of
+        bones arranged in the same pattern despite doing completely
+        different jobs — swimming, flying, walking, grasping. Structures
+        like these are homologous: shared because they were inherited from
+        a common ancestor. Contrast them with analogous structures — a
+        bat wing and an insect wing both fly, but they are built from
+        entirely different parts and were not inherited from a shared
+        flying ancestor. Homology signals common ancestry; analogy
+        signals convergent evolution under similar selection pressure.
+        Forgetting which word is which is one of the highest-frequency
+        vocabulary errors in MCAT questions.
+  - heading: Diversity — where the variety comes from
+    body:
+      - >-
+        If all life shares one toolkit, variety enters through two doors.
+        The first is mutation — errors in copying DNA that create new
+        alleles. Mutation is the ultimate source of genetic variation and
+        is random with respect to what an organism needs. The second is
+        recombination — the shuffling of existing alleles that sexual
+        reproduction performs, which rearranges variation far faster than
+        mutation alone creates it.
+      - >-
+        Natural selection then does the filtering: in a given environment,
+        heritable variants that improve survival or reproduction become
+        more common over generations. The result is adaptation — and,
+        given isolation and time, new species. The deeper point for the
+        exams: diversity is not a menu of unrelated designs. It is one
+        design, endlessly varied by descent with modification. Later
+        chapters (Genetics; MCAT 1C) fill in the machinery behind this
+        sketch.
+examples:
+  - prompt: >-
+      A passage describes a newly sampled organism: it has a cell wall and
+      no membrane-bound nucleus, and its RNA sequences place it closer to
+      Eukarya than to Bacteria. Question: which domain does it most likely
+      belong to, and which other domain does the finding echo?
+    steps:
+      - No nucleus and no membrane-bound organelles rules out Eukarya — the organism is prokaryotic.
+      - That leaves Bacteria or Archaea. The molecular evidence (RNA sequence relatedness) is the tiebreaker.
+      - Phylogenetically, Archaea cluster with Eukarya to the exclusion of Bacteria, so an organism "closer to Eukarya" is an archaean.
+      - The finding echoes the standard tree: Archaea and Eukarya share a more recent common ancestor than either shares with Bacteria.
+    answer: >-
+      Archaea. The result matches the established relationship that
+      Archaea are prokaryotes yet more closely related to Eukarya than to
+      Bacteria.
+  - prompt: >-
+      In a phylogenetic tree, species P and Q meet at a node near the tips;
+      species R joins their branch lower down. Which statement is correct?
+    steps:
+      - The node joining P and Q is their most recent common ancestor.
+      - R's branch attaches below that node, so R shares an older common ancestor with either of them.
+      - Relatedness is judged by recency of the shared node, not by how the branches are drawn left to right.
+    answer: P and Q are more closely related to each other than either is to R.
+key_points:
+  - >-
+    Life's checklist: order, response, reproduction, growth/development,
+    regulation/homeostasis, energy processing, evolution — viruses fail
+    most of it outside a host.
+  - Levels of organization run from atom to biosphere; each level has
+    emergent properties its parts lack.
+  - Three domains: Bacteria, Archaea (both prokaryotic), Eukarya — and
+    Archaea are closer to Eukarya than to Bacteria.
+  - Trees encode relatedness through nodes; only branching order matters.
+  - Unity = DNA, near-universal genetic code, ATP, homologous structures.
+    Diversity = mutation + recombination, filtered by natural selection.
+pitfalls:
+  - Calling a virus alive — most exam items want it excluded because it
+    lacks independent metabolism and reproduction.
+  - Reading branch tips left-to-right as "more advanced" or "more
+    evolved"; modern lineages are all equally evolved.
+  - Confusing homologous (shared ancestry) with analogous (convergent
+    function).
+  - Assuming prokaryotic appearance implies relatedness — Archaea are
+    prokaryotes but not close to Bacteria.
+exam_map:
+  NMAT: >-
+    Part 2 Biology items drawn from this chapter are mostly vocabulary and
+    comprehension level: properties of life, the levels of organization,
+    binomial naming, and the three domains. Expect direct-recall stems in
+    the CEM style rather than multi-step reasoning.
+  MCAT: >-
+    Content Category 1B (transmission of heritable information) touches
+    the variation story; homology/analogies and tree reading appear in
+    Bio/Biochem passages, and evolution-flavored reasoning can surface in
+    Psych/Soc methodology items. The chapter is foundation, not the peak
+    of MCAT testing.
+sources:
+  - ref: openstax-biology-2e
+    used:
+      - "Ch 1: The Study of Life"
+      - "Ch 20: Phylogenies and the History of Life"
+    relation: consulted
+  - ref: aamc-whatson-mcat
+    used:
+      - "Foundational Concept 1, Content Category 1B"
+    relation: consulted
