@@ -1,45 +1,60 @@
-# Gabay — NMAT & MCAT Study Companion
+<div align="center">
 
-A single-learner study site for two medical-school entrance exams:
+# 🧬 Gabay
 
-- **NMAT** — National Medical Admission Test (Philippines, administered by CEM)
-- **MCAT** — Medical College Admission Test (USA, administered by AAMC)
+**From outline to mastery — a complete study companion for two medical-school entrance exams.**
 
-Gabay organizes the full journey: curriculum outlines mapped to the official
-exam blueprints, teaching chapters, high-yield notes, practice questions with
-explanations, a materials desk (glossary / formulas / exam tips / study paths /
-checklists), a disease library for mechanism reading, per-chapter progress
-tracking, and an AI study coach grounded in whichever chapter you are reading.
+*Philippine NMAT (CEM) · US MCAT (AAMC)*
 
-All content and UI are English. The curriculum itself is plain YAML in
-`content/` — no database involved.
+![License](https://img.shields.io/badge/code-MIT-blue)
+![Content](https://img.shields.io/badge/content-CC%20BY--NC--SA%204.0-orange)
+![Python](https://img.shields.io/badge/python-3.12%2B-3776AB?logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django-5.x-0C4B33?logo=django&logoColor=white)
+![Subjects](https://img.shields.io/badge/subjects-13-purple)
+![Chapters](https://img.shields.io/badge/outline%20chapters-90-teal)
+![Questions](https://img.shields.io/badge/practice%20MCQs-116-red)
 
-## Features
+[Features](#-features) · [Curriculum](#-the-curriculum-at-a-glance) · [Quickstart](#-quickstart) · [How it works](#-how-it-works) · [Built with AI](#-built-with-ai-agents) · [License](#%EF%B8%8F-sources--license)
 
-- **13 subjects** covering NMAT Part 1 & 2 and all four MCAT sections, with
-  shared science subjects merged between the two exams
-- **90-chapter outline** mapped to the CEM syllabus and AAMC foundational
-  concepts / content categories
-- **Tutorial chapters** (growing one by one): overview, teaching sections,
-  worked examples, key points, pitfalls, and per-exam mapping — each citing
-  its sources
-- **790 high-yield note bullets**, 116 practice MCQs with explanations
-- **Materials desk**: 105-term glossary with search, 108 formulas in per-subject
-  sheets, exam tips, study paths, and checklists
-- **Progress tracking**: per-chapter completion and practice attempts stored
-  per learner account
-- **AI study coach** (MiniMax-M3): explain / quiz / grade modes constrained to
-  the current subject's outline
-- **File-based content**: edit YAML, push, done — with structural validation
-  as a deploy gate
+</div>
 
-## Quickstart
+---
 
-Requirements: Python 3.12+.
+## ✨ Features
+
+| | |
+| --- | --- |
+| 🗺️ **Dual-exam curriculum map** | 13 subjects covering NMAT Part 1 & 2 and all four MCAT sections, with shared science subjects merged — no duplicated pages, no fake chapters beyond the official blueprints |
+| 📖 **Teaching chapters** | Full-textbook tutorials, written one chapter at a time: overview → teaching sections → worked examples → key points → pitfalls → per-exam mapping, every chapter citing its sources |
+| 📝 **High-yield notes** | 790 one-line bullets across 90 outline chapters, plus 116 explained practice MCQs |
+| 🔎 **Materials desk** | 105-term searchable glossary, 108 formulas in per-subject sheets, exam tips, study paths, and checklists |
+| 🩺 **Disease library** | 8 mechanism-first articles (TB, dengue, MI, …) bridging basic science to clinical intuition — enrichment reading, honestly labeled as such |
+| ✅ **Progress tracking** | Per-chapter completion and practice attempts, stored per learner account |
+| 🤖 **AI study coach** | Explain / quiz / grade modes, grounded in whichever chapter you are reading — it cannot wander off the outline |
+| 📁 **File-based content** | The entire curriculum is version-controlled YAML: edit, validate, push — no database migration, no build step |
+
+## 📚 The curriculum at a glance
+
+| Collection | Count |
+| --- | --- |
+| Subjects (5 shared · 4 NMAT-only · 4 MCAT sections) | **13** |
+| Outline chapters mapped to CEM / AAMC blueprints | **90** |
+| High-yield note bullets | **790** |
+| Practice MCQs with explanations | **116** |
+| Glossary terms / formula entries | **105 / 108** |
+| Exam tips / study paths / checklists | **21 / 7 / 3** |
+| Disease articles | **8** |
+| Full textbook tutorials *(growing weekly)* | **1 → 90** |
+
+Everything lives in [`content/`](content/) as plain YAML and is documented
+standalone in [`content/README.md`](content/README.md).
+
+## 🚀 Quickstart
 
 ```bash
 git clone https://github.com/brentwong-kiel1997/NMAT_MCAT_PREP.git
 cd NMAT_MCAT_PREP
+
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 
@@ -51,25 +66,19 @@ export GABAY_RUNTIME_DIR="$PWD/runtime"
 .venv/bin/python manage.py runserver
 ```
 
-Then open http://127.0.0.1:8000/ and sign in with the admin account.
+Open <http://127.0.0.1:8000/> and sign in.
 
-### Study coach (optional)
+<details>
+<summary><strong>Enabling the AI study coach (optional)</strong></summary>
 
 The tutor needs a MiniMax API key. Copy `.env.example` to `.env` and fill in
-`MINIMAX_API_KEY` (the file is gitignored; `python manage.py env_status`
-verifies it is found). Without a key everything else works — only the coach
-is disabled.
+`MINIMAX_API_KEY` (gitignored; `python manage.py env_status` verifies it is
+found). Without a key, everything else works — only the coach is disabled.
 
-## The content pack
+</details>
 
-Everything taught lives in `content/` as version-controlled YAML — subjects,
-notes, questions, glossary, formulas, tips, paths, checklists, diseases, and
-the exam structures — described standalone in
-[`content/README.md`](content/README.md). Source attribution (edition, access
-date, license, how each source was used) is tracked in
-[`content/SOURCES.yml`](content/SOURCES.yml).
-
-To edit curriculum content:
+<details>
+<summary><strong>Editing curriculum content</strong></summary>
 
 ```bash
 # edit content/**/*.yml, then:
@@ -77,45 +86,68 @@ To edit curriculum content:
 .venv/bin/python manage.py refresh_manifest    # update MANIFEST.json (commit it too)
 ```
 
-Stability rules (subject slugs, question ids, chapter order — they key the
-progress records) are documented in the content README.
+Stability rules — subject slugs, question ids, and chapter order key the
+progress records — are documented in
+[`content/README.md`](content/README.md#editing-rules).
 
-## Project layout
+</details>
 
+## 🧩 How it works
+
+```mermaid
+flowchart LR
+    A["content/*.yml<br/>curriculum pack<br/>(single source of truth)"] -->|"portal/content.py<br/>mtime-cached reader"| B["Django app"]
+    B --> C["Learner UI<br/>outlines · tutorials · practice<br/>flashcards · materials desk"]
+    B --> D[("users.sqlite3<br/>accounts · progress")]
+    C -->|"explain / quiz / grade"| E["MiniMax-M3<br/>outline-grounded coach"]
 ```
-content/        curriculum content pack (YAML, standalone)
-portal/         Django app: views, templates, static, content reader
-config/         Django project settings
-scripts/        reference deployment tooling (see DEPLOYMENT notes)
-manage.py       standard Django entry point
-```
 
-## Sources & license
+- **Content is files, not tables.** The reader parses YAML on demand and
+  caches on file mtimes — an edit takes effect on the next request.
+- **One small database, for the right reason.** `users.sqlite3` holds only
+  what truly mutates at runtime: accounts, sessions, and learner progress.
+- **A deploy gate guards content.** Every deploy runs `validate_content`
+  against `MANIFEST.json` hashes and structural invariants; broken content
+  fails loudly while the old processes keep serving.
+
+## 🤖 Built with AI agents
+
+This project was developed pair-style with an AI coding agent end to end —
+architecture, migrations, content pipeline, and this README:
+
+| | |
+| --- | --- |
+| **Agent** | [Claude Code](https://claude.com/claude-code) — CLI coding agent (file edits, shell, git, deploys) |
+| **Model** | **GLM**, trained by Z.ai — the model powering the agent |
+
+The AI *inside the product* is separate and swappable: the on-site study
+coach calls the **MiniMax-M3** API (see `.env.example`). All curriculum
+content written by the agent is original prose, with every external source
+declared in [`content/SOURCES.yml`](content/SOURCES.yml).
+
+## ⚖️ Sources & license
 
 ### License of this repository
 
 | Part | License | In one line |
 | --- | --- | --- |
-| Source code & config (everything except `content/`) | **MIT** — see [LICENSE](LICENSE) | use for any purpose, keep the notice |
-| Curriculum content pack (`content/`) | **CC BY-NC-SA 4.0** — see [content/LICENSE.md](content/LICENSE.md) | free to use, adapt, and redistribute non-commercially with credit; adaptations carry the same license |
+| Source code & config (everything except `content/`) | **MIT** — [LICENSE](LICENSE) | use for any purpose, keep the notice |
+| Curriculum content pack (`content/`) | **CC BY-NC-SA 4.0** — [content/LICENSE.md](content/LICENSE.md) | use, adapt, and redistribute non-commercially with credit; adaptations carry the same license |
 
 ### Data sources
 
-All teaching content — tutorial chapters, notes, practice questions,
-glossary, formulas, tips, study paths, checklists, and disease articles — is
-**original writing for this project**. External references are consulted for
-facts and coverage only; no text is copied from them.
+All teaching content is **original writing for this project**. External
+references are consulted for facts and coverage only — never copied:
 
-| Source | Used for | Source's license | How it is used |
+| Source | Used for | Source's license | How |
 | --- | --- | --- | --- |
-| OpenStax textbooks (Biology 2e et al.) | Tutorial facts & chapter structure | CC BY-NC-SA 4.0 | consulted only — facts and structure, no text |
-| AAMC, "What's on the MCAT Exam" | MCAT section / content-category mapping | © AAMC — public outline | paraphrased mapping, no reproduction |
-| CEM NMAT test description | NMAT structure, timing, item counts | © CEM — public description | paraphrased mapping, no reproduction |
-| MiniMax API | Study coach backend (runtime service) | commercial API | called at runtime; no content sourced |
+| OpenStax textbooks (*Biology 2e* et al.) | Tutorial facts & structure | CC BY-NC-SA 4.0 | consulted only — facts and outline, no text |
+| AAMC, *What's on the MCAT Exam* | MCAT section mapping | © AAMC — public outline | paraphrased mapping |
+| CEM NMAT test description | NMAT structure & timing | © CEM — public description | paraphrased mapping |
+| MiniMax API | Study-coach backend | commercial API | runtime calls; no content sourced |
 
-Exact editions, access dates, and a per-source usage declaration for every
-tutorial chapter are recorded in [`content/SOURCES.yml`](content/SOURCES.yml)
-and enforced by the content validation gate.
+Exact editions, access dates, and per-chapter declarations live in
+[`content/SOURCES.yml`](content/SOURCES.yml), enforced by the validation gate.
 
 ### Trademarks
 
@@ -123,3 +155,11 @@ NMAT is a trademark of the Center for Educational Measurement, Inc. MCAT is a
 trademark of the Association of American Medical Colleges. This independent
 study project is not affiliated with, sponsored by, or endorsed by either
 organization.
+
+---
+
+<div align="center">
+
+**Gabay** · tagalog for *guide* · built one chapter at a time
+
+</div>
