@@ -1,119 +1,125 @@
 subject: biology
 chapter: Cells and Cellular Processes
 title: Cells and Cellular Processes
-overview: >-
-  Chapter 1 named the cell as the lowest level where all life-properties
-  operate; this chapter opens the hood. You will map the organelles as a
-  division of labor, master how membranes control what enters and leaves,
-  and follow energy through the cell from glucose to ATP. Both exams lean
-  on this material constantly — NMAT tests the vocabulary directly, while
-  the MCAT builds passages on transport, secretion, and energy flow.
-  Prerequisite: Unity and Diversity of Life (levels of organization).
+overview: 'Chapter 1 named the cell as the lowest level where all life-properties operate; this chapter
+  opens the hood. You will map the organelles as a division of labor, master how membranes control what
+  enters and leaves, and follow energy through the cell from glucose to ATP. Both exams lean on this material
+  constantly — NMAT tests the vocabulary directly, while the MCAT builds passages on transport, secretion,
+  and energy flow. Prerequisite: Unity and Diversity of Life (levels of organization).'
 sections:
 - heading: Cell theory and the two architectures
   body:
-  - Three statements make up the **cell theory**, and each has been an exam
-    stem at one time or another — all living things are made of one or more
-    cells; the cell is the basic unit of structure and function; and all
-    cells arise from pre-existing cells by division. ==Nothing in the
-    modern world of biology contradicts these three claims==, and the third
-    one — no spontaneous generation — is the historical experiment
-    exam-writers love to retell.
-  - Architecturally there are exactly two plans. **Prokaryotic** cells
-    (bacteria and archaea) have no membrane-bound nucleus — their DNA sits
-    in a nucleoid region, and they lack membrane-bound organelles, though
-    they may carry ribosomes, a cell wall, and a plasmid. **Eukaryotic**
-    cells keep their DNA inside a true **nucleus** and run specialized
-    organelles in membrane-bound compartments. ==Compartmentalization is
-    the eukaryotic advantage== — incompatible reactions are kept apart,
-    concentrations differ across compartments, and work gets divided.
-  - Keep perspective for later chapters — the domain-level consequences of
-    this split are treated with the three domains, and the prokaryotic
-    lifestyle in detail with 2B. Here the exam question is usually simple —
-    which structure implies which architecture, and what does the
-    compartment buy the cell?
+  - Three statements make up the **cell theory**, and each has been an exam stem at one time or another
+    — all living things are made of one or more cells; the cell is the basic unit of structure and function;
+    and all cells arise from pre-existing cells by division. ==Nothing in the modern world of biology
+    contradicts these three claims==, and the third one — no spontaneous generation — is the historical
+    experiment exam-writers love to retell.
+  - Architecturally there are exactly two plans. **Prokaryotic** cells (bacteria and archaea) have no
+    membrane-bound nucleus — their DNA sits in a nucleoid region, and they lack membrane-bound organelles,
+    though they may carry ribosomes, a cell wall, and a plasmid. **Eukaryotic** cells keep their DNA inside
+    a true **nucleus** and run specialized organelles in membrane-bound compartments. ==Compartmentalization
+    is the eukaryotic advantage== — incompatible reactions are kept apart, concentrations differ across
+    compartments, and work gets divided.
+  - Keep perspective for later chapters — the domain-level consequences of this split are treated with
+    the three domains, and the prokaryotic lifestyle in detail with 2B. Here the exam question is usually
+    simple — which structure implies which architecture, and what does the compartment buy the cell?
   check:
-  - q: A cell is found to contain a region of DNA that is not surrounded
-      by a membrane. Which conclusion follows?
+  - q: A cell is found to contain a region of DNA that is not surrounded by a membrane. Which conclusion
+      follows?
     options:
       A: It is a eukaryotic cell caught between divisions
       B: It is a prokaryotic cell, or a eukaryotic organelle like mitochondria
       C: It must be a virus
       D: The DNA is misfolded and will be degraded
     answer: B
-    explain: A non-membrane-bound DNA region is a nucleoid — the prokaryotic
-      signature. Mitochondria and chloroplasts also keep circular DNA
-      without a nuclear membrane, which is exactly the endosymbiosis clue
-      developed later.
+    explain: A non-membrane-bound DNA region is a nucleoid — the prokaryotic signature. Mitochondria and
+      chloroplasts also keep circular DNA without a nuclear membrane, which is exactly the endosymbiosis
+      clue developed later.
     distractors:
-      A: "Even during division, eukaryotic DNA stays within the nuclear-envelope lineage; a naked nucleoid is not a eukaryotic state."
-      C: "A virus has no cell at all — the question describes a cell."
-      D: "Naked-but-organized DNA is a normal architecture, not damage."
+      A: Even during division, eukaryotic DNA stays within the nuclear-envelope lineage; a naked nucleoid
+        is not a eukaryotic state.
+      C: A virus has no cell at all — the question describes a cell.
+      D: Naked-but-organized DNA is a normal architecture, not damage.
 - heading: 'Organelles: a division of labor'
   body:
-  - Treat the organelles as departments, not a list to memorize.
-    **Ribosomes** translate mRNA into protein in every cell type. The
-    **rough ER** studded with ribosomes folds and checks proteins destined
-    for secretion or membranes; the **smooth ER** makes lipids and
-    detoxifies. The **Golgi apparatus** receives vesicles, modifies,
-    sorts, and ships — the post office. **Lysosomes** are the recycling
-    and digestion department, full of acid hydrolases. **Mitochondria**
-    and (in plants) **chloroplasts** generate usable energy, and both
-    carry their own DNA and double membranes — the key evidence for
-    ==endosymbiosis==.
-  - Two structural facts earn exam questions every year. First, membrane
-    composition matches function — the mitochondrial inner membrane is
-    folded into cristae to pack in electron-transport machinery, while
-    lysosomal membranes resist their own acid. Second, the
-    endomembrane system is continuous in a functional, not literal, sense
-    — nuclear envelope → ER → Golgi → vesicles → plasma membrane — and a
-    protein's destination is stamped by the signals it carries, not by
-    chance.
+  - Treat the organelles as departments, not a list to memorize. **Ribosomes** translate mRNA into protein
+    in every cell type. The **rough ER** studded with ribosomes folds and checks proteins destined for
+    secretion or membranes; the **smooth ER** makes lipids and detoxifies. The **Golgi apparatus** receives
+    vesicles, modifies, sorts, and ships — the post office. **Lysosomes** are the recycling and digestion
+    department, full of acid hydrolases. **Mitochondria** and (in plants) **chloroplasts** generate usable
+    energy, and both carry their own DNA and double membranes — the key evidence for ==endosymbiosis==.
+  - Two structural facts earn exam questions every year. First, membrane composition matches function
+    — the mitochondrial inner membrane is folded into cristae to pack in electron-transport machinery,
+    while lysosomal membranes resist their own acid. Second, the endomembrane system is continuous in
+    a functional, not literal, sense — nuclear envelope → ER → Golgi → vesicles → plasma membrane — and
+    a protein's destination is stamped by the signals it carries, not by chance.
   table:
     caption: The organelle map (eukaryotic cell)
-    headers: [Organelle, Department, Exam hook]
+    headers:
+    - Organelle
+    - Department
+    - Exam hook
     rows:
-    - ["Nucleus", "Information storage", "Double membrane; pores control mRNA exit"]
-    - ["Ribosome", "Protein synthesis", "No membrane — NOT an organelle in the strict sense"]
-    - ["Rough ER", "Protein folding/QC", "Ribosome-studded; entry ramp for secretion"]
-    - ["Smooth ER", "Lipids, detox", "Calcium storage in muscle"]
-    - ["Golgi", "Sorting and shipping", "Cis receives, trans ships"]
-    - ["Lysosome", "Digestion, recycling", "Acidic pH; ruptured lysosomes = cell suicide"]
-    - ["Mitochondrion", "ATP generation", "Own DNA + double membrane → endosymbiosis"]
-    - ["Chloroplast", "Photosynthesis", "Own DNA + double membrane (plants, algae)"]
+    - - Nucleus
+      - Information storage
+      - Double membrane; pores control mRNA exit
+    - - Ribosome
+      - Protein synthesis
+      - No membrane — NOT an organelle in the strict sense
+    - - Rough ER
+      - Protein folding/QC
+      - Ribosome-studded; entry ramp for secretion
+    - - Smooth ER
+      - Lipids, detox
+      - Calcium storage in muscle
+    - - Golgi
+      - Sorting and shipping
+      - Cis receives, trans ships
+    - - Lysosome
+      - Digestion, recycling
+      - Acidic pH; ruptured lysosomes = cell suicide
+    - - Mitochondrion
+      - ATP generation
+      - Own DNA + double membrane → endosymbiosis
+    - - Chloroplast
+      - Photosynthesis
+      - Own DNA + double membrane (plants, algae)
   check:
   - q: A protein destined for export from the cell is synthesized and then…
     options:
-      A: "Freely diffuses through the cytosol to the plasma membrane"
-      B: "Enters the rough ER, moves to the Golgi, and leaves in a vesicle"
-      C: "Is packaged directly by the lysosome"
-      D: "Crosses the nuclear envelope to be modified by DNA"
+      A: Freely diffuses through the cytosol to the plasma membrane
+      B: Enters the rough ER, moves to the Golgi, and leaves in a vesicle
+      C: Is packaged directly by the lysosome
+      D: Crosses the nuclear envelope to be modified by DNA
     answer: B
-    explain: Secreted proteins enter the endomembrane route at the rough
-      ER, are modified and sorted in the Golgi, and exit toward the
-      membrane in Golgi-derived vesicles.
+    explain: Secreted proteins enter the endomembrane route at the rough ER, are modified and sorted in
+      the Golgi, and exit toward the membrane in Golgi-derived vesicles.
     distractors:
-      A: "Secreted proteins never swim free in the cytosol — that is the point of the vesicle system."
-      C: "Lysosomes digest; they do not export."
-      D: "The nucleus stores DNA; proteins are not modified there."
+      A: Secreted proteins never swim free in the cytosol — that is the point of the vesicle system.
+      C: Lysosomes digest; they do not export.
+      D: The nucleus stores DNA; proteins are not modified there.
+  figures:
+  - src: cells-and-cellular-processes/animal-cell.webp
+    caption: A typical animal cell — nucleus, ER, Golgi, mitochondria, and the cytoskeleton in place.
+    credit: Fig 4.8(a) · OpenStax Biology 2e — CC BY-NC-SA 4.0
+  - src: cells-and-cellular-processes/plant-cell.webp
+    caption: A typical plant cell — note the cell wall, chloroplasts, and central vacuole absent from
+      animal cells.
+    credit: Fig 4.8(b) · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Membranes and transport
   body:
-  - The **fluid mosaic** membrane is a phospholipid bilayer with embedded
-    proteins, and its logic is selective permeability — small nonpolar
-    molecules cross freely; ions and polar molecules need help. Every
-    transport question resolves into one axis — ==does it cost ATP?==
-    **Simple diffusion** and **facilitated diffusion** (through channels
-    or carriers) both run DOWN the gradient and cost nothing. **Active
-    transport** pumps AGAINST the gradient and spends ATP, the classic
-    being the **sodium-potassium pump** — 3 Na⁺ out, 2 K⁺ in, one ATP.
-  - Water gets its own vocabulary. **Osmosis** is water diffusion across a
-    semipermeable membrane toward the higher solute concentration. Name
-    the environment relative to the cell — **isotonic** (no net flow),
-    **hypotonic** (water enters; animal cells swell and can lyse; plant
-    cells press happily against their wall), **hypertonic** (water leaves;
-    the cell shrinks — plasmolysis in plants). Tonicity questions are
-    cheap points once you fix the direction rule — ==water moves toward the
-    side with more dissolved solute==.
+  - The **fluid mosaic** membrane is a phospholipid bilayer with embedded proteins, and its logic is selective
+    permeability — small nonpolar molecules cross freely; ions and polar molecules need help. Every transport
+    question resolves into one axis — ==does it cost ATP?== **Simple diffusion** and **facilitated diffusion**
+    (through channels or carriers) both run DOWN the gradient and cost nothing. **Active transport** pumps
+    AGAINST the gradient and spends ATP, the classic being the **sodium-potassium pump** — 3 Na⁺ out,
+    2 K⁺ in, one ATP.
+  - Water gets its own vocabulary. **Osmosis** is water diffusion across a semipermeable membrane toward
+    the higher solute concentration. Name the environment relative to the cell — **isotonic** (no net
+    flow), **hypotonic** (water enters; animal cells swell and can lyse; plant cells press happily against
+    their wall), **hypertonic** (water leaves; the cell shrinks — plasmolysis in plants). Tonicity questions
+    are cheap points once you fix the direction rule — ==water moves toward the side with more dissolved
+    solute==.
   check:
   - q: A cell is placed in a solution and begins to swell. The solution is best described as…
     options:
@@ -122,32 +128,30 @@ sections:
       C: Isotonic to the cell
       D: Active compared to the cell
     answer: B
-    explain: Swelling means net water inflow, which happens when the
-      outside solution has LOWER solute concentration than the cell —
-      hypotonic.
+    explain: Swelling means net water inflow, which happens when the outside solution has LOWER solute
+      concentration than the cell — hypotonic.
     distractors:
-      A: "Hypertonic pulls water OUT — the cell would shrink."
-      C: "Isotonic means no net movement."
-      D: "'Active' is not a tonicity term."
+      A: Hypertonic pulls water OUT — the cell would shrink.
+      C: Isotonic means no net movement.
+      D: '''Active'' is not a tonicity term.'
+  figures:
+  - src: cells-and-cellular-processes/plasma-membrane.webp
+    caption: The fluid mosaic — phospholipid bilayer with integral and peripheral proteins.
+    credit: Fig 4.9 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Energy flow and ATP coupling
   body:
-  - Cells do work by **coupling** — they run an exergonic reaction (like
-    ATP hydrolysis, releasing energy as a phosphate is removed) and
-    strap it to an endergonic one that would not proceed alone. ==ATP is
-    the energy currency, not the energy warehouse== — it is made and spent
-    continuously, not stored in bulk.
-  - Follow one glucose molecule through a eukaryotic cell.
-    **Glycolysis** in the cytosol splits glucose to two pyruvates, netting
-    a small ATP profit. Pyruvate enters the mitochondrion, feeding the
-    **citric acid (Krebs) cycle**, which harvests electrons onto NADH and
-    FADH₂. Those carriers donate to the **electron transport chain** on
-    the inner membrane, which pumps protons into the intermembrane space;
-    the stored gradient drives **ATP synthase** — chemiosmosis. Oxygen is
-    the final electron acceptor; without it the chain backs up and
-    fermentation keeps glycolysis alive at a low yield.
-  - The detailed enzyme logic belongs to the biochemistry chapters; what
-    this chapter must secure is the MAP — where each stage happens, what
-    goes in, what comes out, and where oxygen enters. Passage questions
+  - Cells do work by **coupling** — they run an exergonic reaction (like ATP hydrolysis, releasing energy
+    as a phosphate is removed) and strap it to an endergonic one that would not proceed alone. ==ATP is
+    the energy currency, not the energy warehouse== — it is made and spent continuously, not stored in
+    bulk.
+  - Follow one glucose molecule through a eukaryotic cell. **Glycolysis** in the cytosol splits glucose
+    to two pyruvates, netting a small ATP profit. Pyruvate enters the mitochondrion, feeding the **citric
+    acid (Krebs) cycle**, which harvests electrons onto NADH and FADH₂. Those carriers donate to the **electron
+    transport chain** on the inner membrane, which pumps protons into the intermembrane space; the stored
+    gradient drives **ATP synthase** — chemiosmosis. Oxygen is the final electron acceptor; without it
+    the chain backs up and fermentation keeps glycolysis alive at a low yield.
+  - The detailed enzyme logic belongs to the biochemistry chapters; what this chapter must secure is the
+    MAP — where each stage happens, what goes in, what comes out, and where oxygen enters. Passage questions
     routinely test location and order, not enzyme names.
   check:
   - q: In a eukaryotic cell, the electron transport chain operates…
@@ -157,24 +161,25 @@ sections:
       C: Inside the lysosome
       D: On the nuclear envelope
     answer: B
-    explain: The chain and ATP synthase are embedded in the inner
-      mitochondrial membrane, using the proton gradient built across it.
+    explain: The chain and ATP synthase are embedded in the inner mitochondrial membrane, using the proton
+      gradient built across it.
     distractors:
-      A: "Glycolysis is cytosolic — the chain is not."
-      C: "Lysosomes digest; they hold no electron chain."
-      D: "The nucleus is not an energy organelle."
+      A: Glycolysis is cytosolic — the chain is not.
+      C: Lysosomes digest; they hold no electron chain.
+      D: The nucleus is not an energy organelle.
+  figures:
+  - src: cells-and-cellular-processes/mitochondrion.webp
+    caption: Transmission electron micrograph — outer membrane, folded cristae, matrix.
+    credit: Fig 4.14 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Why cells stay small — surface area to volume
   body:
-  - As a cell grows, volume increases faster than surface area (area goes
-    with the square, volume with the cube). Everything the cell needs must
-    cross the surface while metabolism scales with volume, so
-    ==surface-to-volume ratio sets a hard ceiling on cell size==. Big
-    cells solve it by flattening (flat, thin shapes keep area high) or by
-    compartmentalizing — which is one reason eukaryotic cells can afford
+  - As a cell grows, volume increases faster than surface area (area goes with the square, volume with
+    the cube). Everything the cell needs must cross the surface while metabolism scales with volume, so
+    ==surface-to-volume ratio sets a hard ceiling on cell size==. Big cells solve it by flattening (flat,
+    thin shapes keep area high) or by compartmentalizing — which is one reason eukaryotic cells can afford
     to be larger than prokaryotic ones.
-  - This ratio is one of the most reused MCAT passage setups — exchange
-    surfaces (intestine microvilli, alveoli, capillary beds) are all the
-    same idea wearing different organs. When a passage shows a shape
+  - This ratio is one of the most reused MCAT passage setups — exchange surfaces (intestine microvilli,
+    alveoli, capillary beds) are all the same idea wearing different organs. When a passage shows a shape
     change, compute or compare the ratio before reading the questions.
   check:
   - q: A cell doubles all its linear dimensions. Its surface-to-volume ratio…
@@ -184,87 +189,79 @@ sections:
       C: Is cut in half
       D: Quadruples
     answer: C
-    explain: Area scales with the square (×4) and volume with the cube
-      (×8), so the ratio drops to 4/8 = half.
+    explain: Area scales with the square (×4) and volume with the cube (×8), so the ratio drops to 4/8
+      = half.
     distractors:
-      A: "Ratio tracking is not linear — compute both scalings."
-      B: "They scale differently, so the ratio cannot stay fixed."
-      D: "That would require area to outgrow volume, which never happens with pure enlargement."
+      A: Ratio tracking is not linear — compute both scalings.
+      B: They scale differently, so the ratio cannot stay fixed.
+      D: That would require area to outgrow volume, which never happens with pure enlargement.
 examples:
-- prompt: >-
-    A pancreatic cell secretes a digestive enzyme. Trace the enzyme's path
-    from mRNA to release, and identify the membrane each crossing uses.
+- prompt: A pancreatic cell secretes a digestive enzyme. Trace the enzyme's path from mRNA to release,
+    and identify the membrane each crossing uses.
   solution:
-  - A ribosome docked on the ROUGH ER translates the protein directly into the ER lumen — the first membrane system is entered, not crossed freely.
-  - The protein travels in a vesicle from ER to the GOLGI (cis face), is glycosylated and sorted, and exits from the trans face.
-  - A secretory vesicle fuses with the PLASMA MEMBRANE (exocytosis), releasing the enzyme outside the cell.
+  - A ribosome docked on the ROUGH ER translates the protein directly into the ER lumen — the first membrane
+    system is entered, not crossed freely.
+  - The protein travels in a vesicle from ER to the GOLGI (cis face), is glycosylated and sorted, and
+    exits from the trans face.
+  - A secretory vesicle fuses with the PLASMA MEMBRANE (exocytosis), releasing the enzyme outside the
+    cell.
   - Note what never happened — the protein never dissolved in the cytosol, and never entered the nucleus.
-  answer: mRNA → rough ER (entry via signal sequence) → Golgi → secretory vesicle → exocytosis through the plasma membrane.
+  answer: mRNA → rough ER (entry via signal sequence) → Golgi → secretory vesicle → exocytosis through
+    the plasma membrane.
   distractors:
-    A: "Cytosolic ribosomes make CYTOSOLIC proteins; a secretory protein's ribosome docks on the ER first."
-    B: "Lysosomes are the destination for incoming material, not outgoing enzyme export."
-    C: "The nucleus exports RNA, not proteins; proteins enter only in special signaled cases."
+    A: Cytosolic ribosomes make CYTOSOLIC proteins; a secretory protein's ribosome docks on the ER first.
+    B: Lysosomes are the destination for incoming material, not outgoing enzyme export.
+    C: The nucleus exports RNA, not proteins; proteins enter only in special signaled cases.
 key_points:
-- >-
-    Cell theory — all life is cellular; the cell is the basic unit; cells
-    come only from cells.
-- Compartmentalization is the eukaryotic advantage; prokaryotes run the
-    same chemistry without membrane-bound departments.
-- Organelles are a division of labor — match the department to the
-    destination of its product.
-- Transport axis — down the gradient is free (simple/facilitated
-    diffusion); against the gradient costs ATP (active transport).
-- Water moves toward the higher solute concentration; name tonicity from
-    the solution's perspective.
-- ATP couples exergonic to endergonic reactions; it is currency, not
-    storage.
-- "Energy map — glycolysis (cytosol) → Krebs (mitochondrial matrix) →
-    electron transport + ATP synthase (inner membrane)."
-- Surface-to-volume ratio caps cell size; exchange surfaces and
-    compartmentalization are the workarounds.
+- Cell theory — all life is cellular; the cell is the basic unit; cells come only from cells.
+- Compartmentalization is the eukaryotic advantage; prokaryotes run the same chemistry without membrane-bound
+  departments.
+- Organelles are a division of labor — match the department to the destination of its product.
+- Transport axis — down the gradient is free (simple/facilitated diffusion); against the gradient costs
+  ATP (active transport).
+- Water moves toward the higher solute concentration; name tonicity from the solution's perspective.
+- ATP couples exergonic to endergonic reactions; it is currency, not storage.
+- Energy map — glycolysis (cytosol) → Krebs (mitochondrial matrix) → electron transport + ATP synthase
+  (inner membrane).
+- Surface-to-volume ratio caps cell size; exchange surfaces and compartmentalization are the workarounds.
 mnemonics:
-- phrase: "Really Great Vehicles Deliver"
+- phrase: Really Great Vehicles Deliver
   means: Secretory path — Rough ER → Golgi → Vesicle → Delivery (exocytosis).
-- phrase: "3 out, 2 in, 1 ATP"
+- phrase: 3 out, 2 in, 1 ATP
   means: The sodium-potassium pump's stoichiometry per cycle.
 maps:
 - title: Secretory protein route
   steps:
-    - "ribosome docks on rough ER → protein enters ER lumen"
-    - "ER vesicle → cis Golgi → modified and sorted → trans Golgi"
-    - "secretory vesicle → fuses with plasma membrane → ==exocytosis=="
+  - ribosome docks on rough ER → protein enters ER lumen
+  - ER vesicle → cis Golgi → modified and sorted → trans Golgi
+  - secretory vesicle → fuses with plasma membrane → ==exocytosis==
 - title: Energy flow through the cell (one glucose)
   steps:
-    - "glucose → glycolysis (cytosol) → 2 pyruvate + small ATP"
-    - "pyruvate → mitochondrion → Krebs cycle → NADH / FADH₂"
-    - "electron transport chain (inner membrane) → proton gradient"
-    - "ATP synthase → ==ATP== (oxygen = final electron acceptor)"
+  - glucose → glycolysis (cytosol) → 2 pyruvate + small ATP
+  - pyruvate → mitochondrion → Krebs cycle → NADH / FADH₂
+  - electron transport chain (inner membrane) → proton gradient
+  - ATP synthase → ==ATP== (oxygen = final electron acceptor)
 passage:
-  text: >-
-    A researcher grows spherical cells in culture and measures glucose
-    uptake per cell per minute across three diameters — 10 µm, 20 µm, and
-    40 µm. Uptake per cell rises with diameter, but uptake per unit
-    volume falls sharply — the 40 µm cells import less than a third of
-    the glucose per µm³ that the 10 µm cells do. The researcher then
-    engineers the large cells to fold their membranes into deep
-    finger-like invaginations, roughly doubling surface area at constant
-    volume. The per-volume uptake of the engineered cells recovers to
-    near the small-cell value.
+  text: A researcher grows spherical cells in culture and measures glucose uptake per cell per minute
+    across three diameters — 10 µm, 20 µm, and 40 µm. Uptake per cell rises with diameter, but uptake
+    per unit volume falls sharply — the 40 µm cells import less than a third of the glucose per µm³ that
+    the 10 µm cells do. The researcher then engineers the large cells to fold their membranes into deep
+    finger-like invaginations, roughly doubling surface area at constant volume. The per-volume uptake
+    of the engineered cells recovers to near the small-cell value.
   questions:
-  - q: The falling per-volume uptake in the unmodified cells is best
-      explained by…
+  - q: The falling per-volume uptake in the unmodified cells is best explained by…
     options:
       A: The larger cells running out of DNA
       B: Surface area scaling with the square of diameter while volume scales with the cube
       C: Glucose becoming limiting in the medium
       D: Larger cells losing their mitochondria
     answer: B
-    explain: Import capacity lives on the surface while demand lives in
-      the volume; the cube outgrows the square, so per-volume import falls.
+    explain: Import capacity lives on the surface while demand lives in the volume; the cube outgrows
+      the square, so per-volume import falls.
     distractors:
-      A: "DNA content does not set import rate here, and the passage gives no evidence of it."
-      C: "The passage fixes the medium and varies only cell size."
-      D: "No mitochondrial loss is described."
+      A: DNA content does not set import rate here, and the passage gives no evidence of it.
+      C: The passage fixes the medium and varies only cell size.
+      D: No mitochondrial loss is described.
   - q: The invagination experiment supports which general conclusion?
     options:
       A: Cell size is limited by membrane composition, not geometry
@@ -272,12 +269,11 @@ passage:
       C: Large cells must switch to fermentation
       D: Glucose transport is ATP-driven in these cells
     answer: B
-    explain: Holding volume fixed and raising area recovered uptake — a
-      clean geometry result.
+    explain: Holding volume fixed and raising area recovered uptake — a clean geometry result.
     distractors:
-      A: "Composition was not manipulated; geometry was."
-      C: "Oxygen and fermentation are not part of this setup."
-      D: "Nothing in the passage tests transport energetics."
+      A: Composition was not manipulated; geometry was.
+      C: Oxygen and fermentation are not part of this setup.
+      D: Nothing in the passage tests transport energetics.
   - q: Which natural structure is the same solution in a tissue?
     options:
       A: Microvilli on intestinal epithelial cells
@@ -285,110 +281,96 @@ passage:
       C: Ribosomes attached to the ER
       D: The nuclear envelope
     answer: A
-    explain: Microvilli are membrane folds that raise surface area for
-      absorption at roughly constant cell volume — the tissue-level echo
-      of the experiment.
+    explain: Microvilli are membrane folds that raise surface area for absorption at roughly constant
+      cell volume — the tissue-level echo of the experiment.
     distractors:
-      B: "The bilayer is the barrier, not an area-amplifying fold."
-      C: "Ribosome attachment addresses protein synthesis, not import area."
-      D: "The nuclear envelope compartmentalizes; it does not amplify exchange with the environment."
+      B: The bilayer is the barrier, not an area-amplifying fold.
+      C: Ribosome attachment addresses protein synthesis, not import area.
+      D: The nuclear envelope compartmentalizes; it does not amplify exchange with the environment.
 pitfalls:
-- Calling ribosomes organelles with membranes — they have no membrane and
-  exist in every cell type.
-- Mixing up tonicity direction — water goes toward the MORE concentrated
-  solute side; name the solution, then decide.
-- Forgetting that facilitated diffusion is still passive — a channel is
-  not a pump.
+- Calling ribosomes organelles with membranes — they have no membrane and exist in every cell type.
+- Mixing up tonicity direction — water goes toward the MORE concentrated solute side; name the solution,
+  then decide.
+- Forgetting that facilitated diffusion is still passive — a channel is not a pump.
 - Placing glycolysis inside the mitochondrion — it is cytosolic, always.
-- Treating ATP as stored energy — it is spent almost as fast as it is
-  made; fats and glycogen are the actual stores.
+- Treating ATP as stored energy — it is spent almost as fast as it is made; fats and glycogen are the
+  actual stores.
 exam_map:
-  NMAT: >-
-    Direct recall of organelle functions, transport types, and the
-    cell-theory statements dominates — CEM items ask which organelle does
-    a named job or whether a transport mode costs ATP. Osmosis and
+  NMAT: Direct recall of organelle functions, transport types, and the cell-theory statements dominates
+    — CEM items ask which organelle does a named job or whether a transport mode costs ATP. Osmosis and
     tonicity appear as one-step application items.
-  MCAT: >-
-    Content categories 2A and 1D lean on this chapter — passages build on
-    secretion routes, membrane transport curves, chemiosmosis, and
-    surface-to-volume reasoning. Expect data or experiment framing rather
-    than definition lists.
+  MCAT: Content categories 2A and 1D lean on this chapter — passages build on secretion routes, membrane
+    transport curves, chemiosmosis, and surface-to-volume reasoning. Expect data or experiment framing
+    rather than definition lists.
 sources:
 - ref: openstax-biology-2e
   used:
-  - "Ch 4 — Cell Structure (organelles, endomembrane system)"
-  - "Ch 5 — Structure and Function of Plasma Membranes (transport, tonicity)"
-  - "Ch 7 — Cellular Respiration (glycolysis, Krebs, electron transport)"
+  - Ch 4 — Cell Structure (organelles, endomembrane system)
+  - Ch 5 — Structure and Function of Plasma Membranes (transport, tonicity)
+  - Ch 7 — Cellular Respiration (glycolysis, Krebs, electron transport)
   relation: consulted
 - ref: aamc-whatson-mcat
   used:
-  - "Foundational Concept 2, Content Category 2A"
+  - Foundational Concept 2, Content Category 2A
   relation: consulted
 further_reading:
-- title: "OpenStax Biology 2e — Ch 4: Cell Structure"
+- title: 'OpenStax Biology 2e — Ch 4: Cell Structure'
   url: https://openstax.org/books/biology-2e/pages/4-introduction
   note: The organelle tour with full figures.
-- title: "OpenStax Biology 2e — Ch 5: Plasma Membranes"
+- title: 'OpenStax Biology 2e — Ch 5: Plasma Membranes'
   url: https://openstax.org/books/biology-2e/pages/5-introduction
   note: Transport and osmosis in depth.
-- title: "OpenStax Biology 2e — Ch 7: Cellular Respiration"
+- title: 'OpenStax Biology 2e — Ch 7: Cellular Respiration'
   url: https://openstax.org/books/biology-2e/pages/7-introduction
   note: The energy map stage by stage.
 review_questions:
 - q: Which pair correctly matches organelle to function?
   options:
-      A: Golgi — lipid synthesis only
-      B: Lysosome — intracellular digestion in an acidic interior
-      C: Smooth ER — protein export folding
-      D: Nucleolus — ATP production
+    A: Golgi — lipid synthesis only
+    B: Lysosome — intracellular digestion in an acidic interior
+    C: Smooth ER — protein export folding
+    D: Nucleolus — ATP production
   answer: B
   explain: Lysosomes are acid-filled digestion and recycling compartments.
   distractors:
-    A: "Lipid synthesis is smooth ER; the Golgi sorts and ships."
-    C: "Folding secretory proteins is ROUGH ER's job."
-    D: "The nucleolus assembles ribosomal subunits; ATP is mitochondrial."
-- q: A cell in an isotonic solution is moved to a hypertonic one. Net
-    water movement will be…
+    A: Lipid synthesis is smooth ER; the Golgi sorts and ships.
+    C: Folding secretory proteins is ROUGH ER's job.
+    D: The nucleolus assembles ribosomal subunits; ATP is mitochondrial.
+- q: A cell in an isotonic solution is moved to a hypertonic one. Net water movement will be…
   options:
-      A: Into the cell
-      B: Out of the cell
-      C: Zero in both solutions
-      D: Into the cell only if transport is active
+    A: Into the cell
+    B: Out of the cell
+    C: Zero in both solutions
+    D: Into the cell only if transport is active
   answer: B
-  explain: Hypertonic means higher outside solute, so water exits and the
-    cell shrinks.
+  explain: Hypertonic means higher outside solute, so water exits and the cell shrinks.
   distractors:
-    A: "That is the hypotonic outcome."
-    C: "Zero net flow defines isotonic — the new solution is not."
-    D: "Osmosis is passive; no ATP argument changes the direction."
-- q: Cyanide blocks the final electron acceptor step of the mitochondrial
-    chain. The FIRST process to slow is…
+    A: That is the hypotonic outcome.
+    C: Zero net flow defines isotonic — the new solution is not.
+    D: Osmosis is passive; no ATP argument changes the direction.
+- q: Cyanide blocks the final electron acceptor step of the mitochondrial chain. The FIRST process to
+    slow is…
   options:
-      A: Glycolysis in the cytosol
-      B: The proton gradient's ability to drive ATP synthase
-      C: Nuclear transcription
-      D: Vesicle budding from the Golgi
+    A: Glycolysis in the cytosol
+    B: The proton gradient's ability to drive ATP synthase
+    C: Nuclear transcription
+    D: Vesicle budding from the Golgi
   answer: B
-  explain: With electrons unable to pass to oxygen, pumping stops, the
-    gradient collapses, and ATP synthase stalls — glycolysis slows only
-    secondarily as NAD⁺ runs out.
+  explain: With electrons unable to pass to oxygen, pumping stops, the gradient collapses, and ATP synthase
+    stalls — glycolysis slows only secondarily as NAD⁺ runs out.
   distractors:
-    A: "Glycolysis keeps running (fermentation may follow) before feeling
-      the NAD⁺ shortage."
-    C: "Transcription is downstream of energy failure, not the first
-      casualty."
-    D: "Vesicle traffic needs ATP but is further removed than the
-      gradient itself."
+    A: Glycolysis keeps running (fermentation may follow) before feeling the NAD⁺ shortage.
+    C: Transcription is downstream of energy failure, not the first casualty.
+    D: Vesicle traffic needs ATP but is further removed than the gradient itself.
 - q: A bacterium and a liver cell are compared. Which statement is true?
   options:
-      A: Only the liver cell has ribosomes
-      B: Only the liver cell keeps DNA in a membrane-bound nucleus
-      C: Only the bacterium has a plasma membrane
-      D: Both lack compartmentalization
+    A: Only the liver cell has ribosomes
+    B: Only the liver cell keeps DNA in a membrane-bound nucleus
+    C: Only the bacterium has a plasma membrane
+    D: Both lack compartmentalization
   answer: B
-  explain: The nuclear envelope is the eukaryotic signature; ribosomes
-    and plasma membranes are universal.
+  explain: The nuclear envelope is the eukaryotic signature; ribosomes and plasma membranes are universal.
   distractors:
-    A: "Ribosomes are in every cell — prokaryotes too."
-    C: "Every cell has a plasma membrane."
-    D: "The liver cell is compartmentalized; that IS its architecture."
+    A: Ribosomes are in every cell — prokaryotes too.
+    C: Every cell has a plasma membrane.
+    D: The liver cell is compartmentalized; that IS its architecture.

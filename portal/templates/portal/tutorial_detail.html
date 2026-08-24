@@ -70,6 +70,17 @@
           </table>
         </div>
         {% endif %}
+        {% if section.figures %}
+        {% for fig in section.figures %}
+        <figure class="tut-figure">
+          <img src="{% url 'content_image' fig.src %}" alt="{{ fig.caption }}" loading="lazy">
+          <figcaption>
+            {{ fig.caption|rich }}
+            {% if fig.credit %}<span class="fig-credit">{{ fig.credit }}</span>{% endif %}
+          </figcaption>
+        </figure>
+        {% endfor %}
+        {% endif %}
         {% if section.check %}
         <div class="tut-check">
           <p class="tut-block-label">Check yourself</p>

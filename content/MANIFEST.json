@@ -1,5 +1,5 @@
 {
-  "source_rev": "3accd20",
+  "source_rev": "64b6ab6",
   "counts": {
     "chapters": 72,
     "note_bullets": 458,
@@ -120,7 +120,7 @@
     "tutorials/biology/2c-cell-division-differentiation-specialization.yml": "5806a87b48c98e4c0a6343fc59f903b7421fcb847a8e20e662f40e8dbf519453",
     "tutorials/biology/3a-nervous-and-endocrine-systems.yml": "2e2801434b86efce140efcbdb9f1d9077b4feb2365945c456ac67143315e608e",
     "tutorials/biology/3b-main-organ-systems.yml": "d9860a5326512fec8524d4fc1d4ced1a12fdead68161a470a8bfd0dc034dfb37",
-    "tutorials/biology/cells-and-cellular-processes.yml": "a8065834bfce6ad12d9c666a1fb256d741225a2d871f9249d1dceb4787e37377",
+    "tutorials/biology/cells-and-cellular-processes.yml": "c8d9b3f994329a4f426d5afbb85d1d0946fca52ca78a4ac6962f6dc6f697bb25",
     "tutorials/biology/development.yml": "3f9efa4a034847d48307df78451d4aa3b0ffb3b5929e3a8eaa1f0d33048f2189",
     "tutorials/biology/genetics.yml": "7602e48745d732a3d744e59251541487d436dd1de28e02e24ad09dc4efc9d94d",
     "tutorials/biology/life-processes-regulation-and-homeostasis.yml": "43d1035ad43ed81adf1e7bebf20c6d3f0d840dca13f5167877a0fff022f49bbd",

@@ -1269,3 +1269,17 @@ details.tut-question[open] summary, details.tut-check-q[open] summary { margin-b
 .tut-video-desc summary { cursor: pointer; color: #105652; font-weight: 600; }
 .tut-video-desc p { margin: 0.3rem 0 0; }
 .tut-video-desc-inline { display: block; font-size: 0.86rem; margin-top: 0.15rem; }
+
+/* --- Chapter figures --- */
+.tut-figure { margin: 1rem 0 1.25rem; }
+.tut-figure img {
+  max-width: 100%; height: auto; display: block;
+  border: 1px solid var(--line, #d8d2c6); border-radius: 0.5rem;
+  background: #fff;
+}
+.tut-figure figcaption {
+  font-size: 0.84rem; color: #44423c; margin-top: 0.4rem; line-height: 1.5;
+}
+.tut-figure .fig-credit {
+  display: block; font-size: 0.78rem; opacity: 0.75; margin-top: 0.15rem;
+}

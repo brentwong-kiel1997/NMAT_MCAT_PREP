@@ -599,3 +599,20 @@ def unit_detail(request, project, unit_key):
             ],
         },
     )
+
+
+@require_GET
+def content_image(request, path):
+    """Serve committed content images (content/images/**) with content-type."""
+    from django.http import FileResponse
+    from pathlib import Path as _P
+    import mimetypes
+
+    base = (_P(__file__).resolve().parent.parent / "content" / "images").resolve()
+    target = (base / path).resolve()
+    if not str(target).startswith(str(base)) or not target.is_file():
+        raise Http404("Image not found")
+    content_type = mimetypes.guess_type(str(target))[0] or "application/octet-stream"
+    response = FileResponse(open(target, "rb"), content_type=content_type)
+    response["Cache-Control"] = "public, max-age=86400"
+    return response
