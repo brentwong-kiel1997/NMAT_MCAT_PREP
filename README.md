@@ -39,9 +39,15 @@ git add -A && git commit -m "..."  # 3. 源码 + 快照一起提交
 
 ## 推送与自动部署
 
+自动部署跟随 GitHub：`scripts/poll_github.sh` 由 cron 每 2 分钟轮询一次，发现 `origin/main`（NMAT_MCAT_PREP）有新提交就自动部署上线。
+
 ```bash
 cd /home/ubuntu/django-wsgi
 git add -A && git commit -m "..."
-git push origin main    # GitHub 备份（NMAT_MCAT_PREP）
-git push deploy main    # 触发裸仓 post-receive 自动部署
+git push origin main    # 推 GitHub，约 2 分钟内自动部署
 ```
+
+- 等不及轮询时可手动触发：`scripts/poll_github.sh`
+- 旧通道仍然可用：`git push deploy main` 立即触发裸仓 post-receive 部署
+- 轮询日志：`/home/ubuntu/runtime/django-wsgi/logs/poll_github.log`
+- 部署失败会在下一个轮询周期自动重试（状态只在部署成功后才前进）
