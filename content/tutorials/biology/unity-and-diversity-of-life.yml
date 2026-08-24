@@ -9,6 +9,10 @@ overview: 'This opening chapter answers two questions that both exams return to 
   where diversity comes from. No prerequisites; everything later in biology builds on it.'
 sections:
 - heading: A working definition of life
+  videos:
+  - title: 'Amoeba Sisters — Characteristics of Life'
+    url: https://www.youtube.com/watch?v=cQPVXrV0GNA
+    note: "The chapter's property checklist, one video."
   body:
   - Biology has no single-sentence definition of life that everyone accepts, but exams expect you to know
     the property checklist that living things share. A living organism maintains **order**, harvests **energy**
@@ -41,6 +45,10 @@ sections:
       B: "Wrong — a virus's nucleic acid IS heritable information."
       D: "Wrong — inside a host, viruses do respond to (hijack) cellular machinery."
 - heading: Levels of organization and **emergent properties**
+  videos:
+  - title: 'Amoeba Sisters — Biological Levels in Biology: The World Tour'
+    url: https://www.youtube.com/watch?v=EtWknf1gzKo
+    note: 'Cell → biosphere, with emergent properties along the way.'
   body:
   - 'Life is organized on a nested ladder: atoms, molecules, organelles, cells, tissues, organs, organ
     systems, organisms, populations, communities, ecosystems, and the biosphere. Each rung is built entirely
@@ -68,6 +76,10 @@ sections:
       B: "Organs already depend on cells — they are ABOVE the basic unit, not the lowest level."
       D: "The organism shows the full checklist, but it is built of cells; the lowest level is not the most complex."
 - heading: 'Naming and classifying: taxonomy and the three domains'
+  videos:
+  - title: 'Amoeba Sisters — Prokaryotic vs. Eukaryotic Cells (Updated)'
+    url: https://www.youtube.com/watch?v=Pxujitlv8wc
+    note: 'The three-domain cell split, side by side.'
   body:
   - Taxonomy is the discipline of naming and classifying organisms. Every species has a two-part name,
     Homo sapiens, where the first word is the **genus** (capitalized) and the second is the specific epithet;
@@ -123,6 +135,10 @@ sections:
       C: "Eukarya's membrane biology resembles archaea more than bacteria; sequence data agree."
       D: "The three-domain split is not a three-way simultaneous event; Archaea and Eukarya share a later node."
 - heading: 'Unity: the shared molecular toolkit'
+  videos:
+  - title: 'Amoeba Sisters — DNA, Chromosomes, Genes, and Traits'
+    url: https://www.youtube.com/watch?v=8m6hHRlKwxY
+    note: 'The universal genetic toolkit behind unity.'
   body:
   - 'Underneath the diversity, every known organism runs on the same chemistry. All use DNA as the hereditary
     material, and the **genetic code** — which triplet codon specifies which amino acid — ==is essentially
@@ -183,6 +199,10 @@ sections:
       A: "Selection REMOVES or amplifies variation; it does not create it."
       B: "Recombination rearranges existing alleles into new combinations — new to an individual, but not new to the species."
       D: "Drift changes allele frequencies by chance; the alleles already existed."
+  videos:
+  - title: "CrashCourse Biology #17 — Phylogeny: How We're All Related"
+    url: https://www.youtube.com/watch?v=YM6Ekb5De2o
+    note: 'Trees, clades, and why taxonomy is going phylogenetic.'
 examples:
 - prompt: A researcher isolates an unidentified microbe from a deep-sea
     hydrothermal vent. It has no membrane-bound nucleus. Its small-subunit
@@ -314,21 +334,14 @@ passage:
       C: "That is phylogeny within the tree, not evidence of cross-domain unity (both already share the machinery)."
       D: "A shared absence (no nucleus) is a trait both could have retained or lost; it does not show unity of machinery."
 videos:
-- title: "Amoeba Sisters — Prokaryotic vs. Eukaryotic Cells"
-  url: https://www.youtube.com/@AmoebaSisters
-  note: Domain-level cell structure; the channel's "Prokaryotic vs
-    Eukaryotic" video fits this chapter.
-- title: "Bozeman Science — Classification & phylogenetics"
-  url: https://www.youtube.com/@BozemanScience
-  note: Search the channel for "Classification" and "Phylogenetic Trees";
-    good for clade reading.
-- title: "CrashCourse Biology — Taxonomy: Life's Filing System"
-  url: https://www.youtube.com/@crashcourse
-  note: Search for the Taxonomy episode in the CrashCourse Biology playlist.
-- title: "Khan Academy — MCAT: evolution & diversity"
+- title: "Amoeba Sisters — Stroll Through the Playlist (Biology Review)"
+  url: https://www.youtube.com/watch?v=7xeFP0SEDdc
+  note: A whirlwind review of the whole course — perfect after finishing
+    this chapter.
+- title: "Khan Academy — MCAT: evolution & diversity (FC1)"
   url: https://www.khanacademy.org/test-prep/mcat
-  note: Foundational Concept 1 videos — tree reading, homology, sources of
-    variation.
+  note: Officially aligned FC1 videos — tree reading, homology, sources of
+    variation; pick per topic.
 further_reading:
 - title: "OpenStax Biology 2e — Ch 1: The Study of Life"
   url: https://openstax.org/books/biology-2e/pages/1-introduction

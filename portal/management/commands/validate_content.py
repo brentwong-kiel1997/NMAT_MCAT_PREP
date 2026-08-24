@@ -169,6 +169,9 @@ class Command(BaseCommand):
                     for check in section.get("check") or []:
                         if not check.get("q") or not check.get("answer"):
                             problems.append(f"{rel}: section check missing q/answer")
+                    for i, v in enumerate(section.get("videos") or [], 1):
+                        if not v.get("title") or not v.get("url"):
+                            problems.append(f"{rel}: section {i} video missing title/url")
                 if not doc.get("sources"):
                     problems.append(f"{rel}: no sources block")
                 for mn in doc.get("mnemonics") or []:
