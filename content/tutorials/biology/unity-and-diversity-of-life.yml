@@ -25,6 +25,21 @@ sections:
     of its own, and cannot reproduce without hijacking a host cell. Exams love this contrast — by the
     checklist, ==a virus is not independently alive==, and saying so precisely is usually the point of
     the question.'
+  check:
+  - q: Which property does a virus lack on its own, outside a host cell?
+    options:
+      A: It cannot evolve over generations
+      B: It does not carry heritable information
+      C: It has no independent metabolism and no self-reproduction
+      D: It cannot respond to any stimulus even inside a host
+    answer: C
+    explain: "Viruses carry genes and evolve, but they have no metabolism of
+      their own and cannot reproduce without host machinery — the checklist
+      items they fail."
+    distractors:
+      A: "Wrong — viruses DO evolve; drug resistance in viruses is a textbook example."
+      B: "Wrong — a virus's nucleic acid IS heritable information."
+      D: "Wrong — inside a host, viruses do respond to (hijack) cellular machinery."
 - heading: Levels of organization and **emergent properties**
   body:
   - 'Life is organized on a nested ladder: atoms, molecules, organelles, cells, tissues, organs, organ
@@ -36,6 +51,22 @@ sections:
     level at which all the properties of the checklist operate together. Keep the ladder handy — it is
     also the map of this course, with later chapters climbing from molecules and cells up through regulation
     and organisms to ecology.'
+  check:
+  - q: What is the lowest level of organization at which ALL properties of
+      life operate together?
+    options:
+      A: The molecule
+      B: The organ
+      C: The cell
+      D: The organism
+    answer: C
+    explain: "A molecule cannot metabolize or maintain homeostasis; those
+      properties first appear together at the cell, which is why the cell is
+      called the basic unit of life."
+    distractors:
+      A: "A molecule supports chemistry but no life-property operates at that level alone."
+      B: "Organs already depend on cells — they are ABOVE the basic unit, not the lowest level."
+      D: "The organism shows the full checklist, but it is built of cells; the lowest level is not the most complex."
 - heading: 'Naming and classifying: taxonomy and the three domains'
   body:
   - Taxonomy is the discipline of naming and classifying organisms. Every species has a two-part name,
@@ -76,6 +107,21 @@ sections:
       - Present
       - Protists, fungi, plants, animals
       - Includes unicellular members — 'eukaryote' does not mean 'multicellular'
+  check:
+  - q: Which two domains share the most recent common ancestor?
+    options:
+      A: Bacteria and Archaea
+      B: Archaea and Eukarya
+      C: Bacteria and Eukarya
+      D: All three diverged at the same time
+    answer: B
+    explain: "Molecular data place Archaea closest to Eukarya; 'prokaryotic
+      appearance' is misleading — relatedness follows shared ancestry, not
+      cell shape."
+    distractors:
+      A: "The classic trap — both are prokaryotes, but that is a collection of traits, not a branch of the tree."
+      C: "Eukarya's membrane biology resembles archaea more than bacteria; sequence data agree."
+      D: "The three-domain split is not a three-way simultaneous event; Archaea and Eukarya share a later node."
 - heading: 'Unity: the shared molecular toolkit'
   body:
   - 'Underneath the diversity, every known organism runs on the same chemistry. All use DNA as the hereditary
@@ -90,6 +136,21 @@ sections:
     ==Homology records ancestry; analogy records convergent solutions== to the same problem. **Vestigial
     structures** (the human appendix, pelvic bones in whales) are further inheritance echoes — leftovers
     of ancestors that are no longer functional in the same way.'
+  check:
+  - q: A bat wing and a butterfly wing are best described as…
+    options:
+      A: Homologous — same underlying parts, shared ancestry
+      B: Analogous — similar function, independent origin
+      C: Vestigial — remnants of a fully lost function
+      D: Closely related — they belong to the same clade
+    answer: B
+    explain: "Flight is separately evolved in each lineage; the parts
+      involved are unrelated in origin, so the structures are analogous,
+      not homologous."
+    distractors:
+      A: "Homology requires shared ancestry of the SAME parts; bat bone framework vs insect chitin wings have no common ancestor."
+      C: "Vestigial structures are leftovers of an ancestor's functional trait (whale pelvis); these wings still function."
+      D: "Bats and butterflies diverged far down the tree; similarity here is function, not recent common ancestry."
 - heading: 'Diversity: where it comes from and how we read it'
   body:
   - 'If unity comes from shared inheritance, diversity comes from its imperfection. Mutation introduces
@@ -108,7 +169,35 @@ sections:
     ancestor of a group and were inherited by its members. Molecular data (DNA and protein sequences)
     now dominate the evidence, which is why the three-domain picture, invisible under the microscope,
     emerged from sequence comparisons.
+  check:
+  - q: What is the ULTIMATE source of new alleles in a population?
+    options:
+      A: Natural selection
+      B: Sexual recombination
+      C: Mutation
+      D: Genetic drift
+    answer: C
+    explain: "Recombination and drift shuffle or filter existing variation,
+      but mutation is the only process that creates genuinely new alleles."
+    distractors:
+      A: "Selection REMOVES or amplifies variation; it does not create it."
+      B: "Recombination rearranges existing alleles into new combinations — new to an individual, but not new to the species."
+      D: "Drift changes allele frequencies by chance; the alleles already existed."
 examples:
+- prompt: A researcher isolates an unidentified microbe from a deep-sea
+    hydrothermal vent. It has no membrane-bound nucleus. Its small-subunit
+    rRNA sequence clusters nearest to eukaryotic sequences, and its membrane
+    lipids contain ether linkages rather than ester linkages. To which
+    domain does it belong?
+  solution:
+  - 'Step 1: no nucleus → prokaryotic → Bacteria or Archaea.'
+  - 'Step 2: sequence data cluster it with Eukarya — a relationship unique to Archaea.'
+  - 'Step 3: ether-linked membrane lipids confirm the archaeal signature (bacterial/eukaryotic membranes use ester-linked lipids).'
+  answer: Archaea
+  distractors:
+    A: "Bacteria, if chosen only because it is a prokaryote — molecular and membrane evidence overrides appearance."
+    B: "Eukarya, if chosen only because of the rRNA clustering — but a nucleus is absent, so it cannot be a eukaryote."
+    C: "A viral particle, if confused by the extreme habitat — viruses lack an rRNA of their own; this microbe has ribosomes."
 - prompt: A passage describes four organisms — a mushroom, a palm tree, a thermophilic archaeon from a
     hot spring, and E. coli — then asks which two are most closely related.
   solution:
@@ -131,6 +220,27 @@ key_points:
 - Diversity = mutation + recombination filtered by natural selection over generations.
 - 'Phylogenetic trees: relatedness = most recent common ancestor; tip order is meaningless; a clade is
   an ancestor plus ALL its descendants.'
+mnemonics:
+- phrase: "AAA — Archaea Are Ancestral to Eukarya"
+  means: The three-domain tree places Archaea closest to Eukarya; the two 'A'
+    word pairing is a memory hook the exam loves to test.
+- phrase: "Homology = History, Analogy = Adaptation"
+  means: Homologous structures record shared ancestry (history); analogous
+    ones record convergent solutions to the same environmental problem.
+maps:
+- title: Levels of organization (the ladder the course climbs)
+  lines:
+    - "atom → molecule → organelle → ==cell== → tissue → organ"
+    - "      → organ system → organism → population → community"
+    - "      → ecosystem → biosphere"
+    - "note: each upward step adds emergent properties"
+- title: Where diversity comes from
+  lines:
+    - "mutation ──► new alleles"
+    - "             ▼"
+    - "recombination ─► new combinations ─► variation"
+    - "                                  ▼"
+    - "        natural selection ─► adaptation ─► speciation"
 pitfalls:
 - Calling a virus alive — exam questions usually hinge on what it lacks (no own metabolism, no independent
   reproduction, no cells).
@@ -146,6 +256,121 @@ exam_map:
     1 passages — evolution and diversity appear inside experiment- and data-based questions (tree reading,
     homology vs analogy, sources of variation). The Biology/Biochemistry section assumes fluency rather
     than testing definitions.
+passage:
+  text: >-
+    Researchers surveying a geothermal pond isolate a single-celled
+    organism. The cells contain DNA but no membrane-bound nucleus, and their
+    lipids use ether linkages, a signature shared with other members of
+    their domain. Sequence comparison of the small-subunit rRNA gene places
+    the isolate closer to human sequences than to E. coli sequences. In the
+    same pond, a second isolate uses the same enzymes for glycolysis as the
+    first, yet their membranes are chemically distinct. The study notes that
+    both isolates swim toward glucose in laboratory gradients.
+  questions:
+  - q: Based on the passage, the first isolate belongs to which domain?
+    options:
+      A: Bacteria
+      B: Archaea
+      C: Eukarya
+      D: Viruses
+    answer: B
+    explain: "No nucleus → prokaryotic; ether-linked lipids and rRNA
+      clustering closer to eukaryotic sequences are the archaeal signature."
+    distractors:
+      A: "Ether lipids, not ester lipids, distinguish it from bacteria; rRNA also points away from them."
+      C: "It lacks a nucleus, so it cannot be eukaryotic despite the rRNA similarity."
+      D: "It has DNA of its own and metabolizes; a virus has neither on its own."
+  - q: The observation that both isolates swim toward glucose despite different
+      membranes is best explained by…
+    options:
+      A: Shared metabolism inherited from a recent common ancestor
+      B: Convergent evolution of the same behavioral solution
+      C: The isolates being the same species
+      D: Horizontal transfer of a gene between unrelated viruses and hosts
+    answer: B
+    explain: "Similar behavior arising independently under the same selective
+      pressure (glucose detection) is convergence — the passage emphasizes
+      their membrane chemistry differs, so shared recent ancestry is not the
+      explanation."
+    distractors:
+      A: "If they shared a recent ancestor, their membranes would likely match; the passage stresses they do not."
+      C: "Membrane chemistry differs and domains likely differ — 'same species' is unsupported."
+      D: "Nothing in the passage suggests a virus or a gene transfer event."
+  - q: Which observation from the passage is the strongest marker of shared
+      UNITY across all life?
+    options:
+      A: Both isolates use the same glycolysis enzymes
+      B: Both isolates swim toward glucose
+      C: The first isolate's rRNA clusters near human sequences
+      D: The second isolate lacks a nucleus
+    answer: A
+    explain: "Shared molecular machinery (same enzymes for a core pathway) is
+      the signature of common descent — unity despite divergence, the toolkit
+      theme of this chapter."
+    distractors:
+      B: "A behavior can converge independently; behavior is weaker evidence of unity than molecular machinery."
+      C: "That is phylogeny within the tree, not evidence of cross-domain unity (both already share the machinery)."
+      D: "A shared absence (no nucleus) is a trait both could have retained or lost; it does not show unity of machinery."
+review_questions:
+- q: A student argues that a virus is alive because it evolves over time.
+    Which reply is most consistent with the biological definition used in
+    this chapter?
+  options:
+    A: "Correct — evolution is the single defining criterion of life."
+    B: "Partly correct — viruses evolve, but they also lack independent metabolism and reproduction, so they are not counted as alive by the checklist."
+    C: "Wrong — viruses cannot evolve because they lack cells."
+    D: "Wrong — viruses have no genetic material at all."
+  answer: B
+  explain: "The checklist approach requires more than evolution; viruses fail
+    independent metabolism and self-reproduction, which is why the definition
+    excludes them."
+  distractors:
+    A: "Singling out one property ignores the multi-property checklist the chapter uses."
+    C: "Viruses DO evolve — rapid viral evolution is a cornerstone of medicine; having no cells does not stop selection."
+    D: "All viruses carry nucleic acid; that IS their heritable information."
+- q: Which pair of structures is homologous?
+  options:
+    A: A bat wing and a bird wing
+    B: A human arm and a whale flipper
+    C: A shark fin and a dolphin flipper
+    D: A butterfly wing and a bat wing
+  answer: B
+  explain: "The human arm and whale flipper share bony forelimb parts derived
+    from a common ancestor — homology. Bat and bird wings are also
+    homologous at the tetrapod level, but among the listed pairs the arm and
+    flipper is the canonical textbook case."
+  distractors:
+    A: "Tempting — but bat and bird wings share the tetrapod forelimb plan too, and the question wants the clearest ANY structure pair; the arm/flipper pair is the standard answer."
+    C: "Shark and dolphin flippers are classic ANALOGOUS structures (cartilage vs bone, separate origins)."
+    D: "Butterfly and bat wings are analogous — insect chitin vs tetrapod bone, fully independent origins."
+- q: In a phylogenetic tree, species X and Z share a node closer to the tips
+    than the node where species Y joins. Which statement must be true?
+  options:
+    A: X and Z are more closely related to each other than either is to Y
+    B: X and Y are more closely related to each other than either is to Z
+    C: X, Y, and Z are equally related since they sit on the same tree
+    D: Y evolved earlier and therefore is 'less evolved' than X and Z
+  answer: A
+  explain: "Relatedness is judged by recency of the shared node: X and Z
+    share a more recent common ancestor than either shares with Y."
+  distractors:
+    B: "Contradicts the node positions given in the prompt."
+    C: "All share the tree, but nodes still rank recency — 'equally related' is false."
+    D: "'Less evolved' is meaningless — every lineage is equally evolved from a common ancestor."
+- q: Which statement about emergent properties is true?
+  options:
+    A: They can be predicted directly from the properties of isolated parts
+    B: They first appear at the biosphere level
+    C: They appear at each higher level of organization and are not present in the parts alone
+    D: They apply only to populations, never to cells
+  answer: C
+  explain: "Emergence means the whole shows behavior its parts lack — each
+    upward rung of the ladder gains new properties (a cell metabolizes; an
+    ecosystem cycles nutrients)."
+  distractors:
+    A: "Emergence is by definition NOT predictable just by listing the parts' isolated properties."
+    B: "They appear at EVERY higher level, not only at the largest one."
+    D: "Cells themselves show emergent properties (life-properties) relative to their molecules."
 sources:
 - ref: openstax-biology-2e
   used:

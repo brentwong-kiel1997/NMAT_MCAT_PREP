@@ -78,6 +78,23 @@ for how to run the same process again.
    - `content/README.md` — "Tutorial chapters" section + inventory rows;
    - root `README.md` — feature line + progress link.
 
+10. **Schema extension (same day, user: "add what other MCAT prep
+    materials include")** — six blocks, all optional, all added to this
+    chapter as the pilot:
+    - `sections[].check` — per-section "Check yourself" (1 per section);
+    - `mnemonics` (2), `maps` (2 concept maps as monospace arrow lines);
+    - `examples[].distractors` — why-each-wrong-option analysis;
+    - `passage` — one MCAT-style passage + 3 questions with distractors;
+    - `review_questions` — 4 end-of-chapter questions with distractors.
+    Renderer: new `includes/tutorial_question.html` include (shapes shared
+    by check/passage/review) — remembering include templates do NOT inherit
+    `{% load %}` from the parent (first render threw `Invalid filter:
+    'rich'`); views pre-split `passage.text` into paragraphs. All blocks
+    validated by `validate_content.py`; gate stays permissive (blocks
+    optional, non-breaking for older chapters).
+    Full schema + authoring rules live in `docs/TUTORIAL_TEMPLATE.md`
+    ("Extended fields") and `content/README.md` (field table).
+
 ### Decisions worth keeping
 
 - **Original prose, consulted sources.** Facts and outline structure follow

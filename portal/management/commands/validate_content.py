@@ -166,8 +166,28 @@ class Command(BaseCommand):
                 for section in doc.get("sections") or []:
                     if not section.get("heading") or not section.get("body"):
                         problems.append(f"{rel}: section missing heading/body")
+                    for check in section.get("check") or []:
+                        if not check.get("q") or not check.get("answer"):
+                            problems.append(f"{rel}: section check missing q/answer")
                 if not doc.get("sources"):
                     problems.append(f"{rel}: no sources block")
+                for mn in doc.get("mnemonics") or []:
+                    if not mn.get("phrase"):
+                        problems.append(f"{rel}: mnemonic missing phrase")
+                for mp in doc.get("maps") or []:
+                    if not mp.get("title") or not mp.get("lines"):
+                        problems.append(f"{rel}: map missing title/lines")
+                passage = doc.get("passage")
+                if passage is not None:
+                    if not passage.get("text"):
+                        problems.append(f"{rel}: passage missing text")
+                    for q in passage.get("questions") or []:
+                        if not q.get("q") or not q.get("answer"):
+                            problems.append(f"{rel}: passage question missing q/answer")
+                questions = doc.get("review_questions") or []
+                for i, q in enumerate(questions, 1):
+                    if not q.get("q") or not q.get("answer"):
+                        problems.append(f"{rel}: review question {i} missing q/answer")
                 for src in doc.get("sources") or []:
                     if src.get("ref") not in known_sources:
                         problems.append(

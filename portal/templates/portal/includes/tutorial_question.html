@@ -1,0 +1,25 @@
+{% load rich %}
+{% comment %}
+Reusable question block for tutorial chapters: a collapsible question with
+options, answer + explanation, and optional distractor analysis.
+Usage: {% include "portal/includes/tutorial_question.html" with q=question %}
+{% endcomment %}
+<details class="tut-question">
+  <summary>{{ q.q|rich }}</summary>
+  {% if q.options %}
+  <ul class="tut-q-options">
+    {% for opt, text in q.options.items %}
+    <li><strong>{{ opt }}.</strong> {{ text|rich }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  <p class="tut-q-answer"><strong>Answer: {{ q.answer }}</strong> — {{ q.explain|rich }}</p>
+  {% if q.distractors %}
+  <p class="tut-q-distractors-label">Why the others are wrong</p>
+  <ul class="tut-q-distractors">
+    {% for opt, why in q.distractors.items %}
+    <li><strong>{{ opt }}.</strong> {{ why|rich }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</details>

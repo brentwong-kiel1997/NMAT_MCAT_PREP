@@ -84,6 +84,13 @@ def tutorial_detail(request, slug, chapter_id):
     if tutorial is None:
         raise Http404("Tutorial not written yet")
 
+    if tutorial.get("passage"):
+        tutorial["passage"]["text_paragraphs"] = [
+            p.strip()
+            for p in (tutorial["passage"].get("text") or "").split("\n\n")
+            if p.strip()
+        ]
+
     for entry in tutorial.get("sources") or []:
         entry["detail"] = source_info(entry.get("ref", ""))
 

@@ -28,7 +28,12 @@
         {% endfor %}
         {% if tutorial.examples %}<a href="#worked-example">Worked example</a>{% endif %}
         <a href="#key-points">Key points</a>
+        {% if tutorial.mnemonics %}<a href="#mnemonics">Mnemonics</a>{% endif %}
+        {% if tutorial.maps %}<a href="#maps">Concept maps</a>{% endif %}
+        {% if tutorial.passage %}<a href="#passage">Passage</a>{% endif %}
         {% if tutorial.pitfalls %}<a href="#pitfalls">Common pitfalls</a>{% endif %}
+        <a href="#exam-map">How each exam tests this</a>
+        {% if tutorial.review_questions %}<a href="#review-questions">Review questions</a>{% endif %}
         <a href="#exam-map">How each exam tests this</a>
       </nav>
     </aside>
@@ -65,6 +70,14 @@
           </table>
         </div>
         {% endif %}
+        {% if section.check %}
+        <div class="tut-check">
+          <p class="tut-block-label">Check yourself</p>
+          {% for check in section.check %}
+          {% include "portal/includes/tutorial_question.html" with q=check %}
+          {% endfor %}
+        </div>
+        {% endif %}
       </article>
       {% endfor %}
 
@@ -78,6 +91,53 @@
           <li>{{ step|rich }}</li>
           {% endfor %}
         </ol>
+        {% if example.answer %}
+        <p class="tut-example-answer"><strong>Answer:</strong> {{ example.answer|rich }}</p>
+        {% endif %}
+        {% if example.distractors %}
+        <p class="tut-q-distractors-label">Why the others are wrong</p>
+        <ul class="tut-q-distractors">
+          {% for opt, why in example.distractors.items %}
+          <li><strong>{{ opt }}.</strong> {{ why|rich }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% endfor %}
+      </article>
+      {% endif %}
+
+      {% if tutorial.mnemonics %}
+      <article class="tut-mnemonics" id="mnemonics">
+        <h2>Mnemonics</h2>
+        <ul>
+          {% for m in tutorial.mnemonics %}
+          <li><strong>{{ m.phrase }}</strong>{% if m.means %} — {{ m.means|rich }}{% endif %}</li>
+          {% endfor %}
+        </ul>
+      </article>
+      {% endif %}
+
+      {% if tutorial.maps %}
+      <article class="tut-maps" id="maps">
+        <h2>Concept maps</h2>
+        {% for mp in tutorial.maps %}
+        <div class="tut-map">
+          <p class="tut-block-label">{{ mp.title }}</p>
+          <pre>{% for line in mp.lines %}{{ line }}
+{% endfor %}</pre>
+        </div>
+        {% endfor %}
+      </article>
+      {% endif %}
+
+      {% if tutorial.passage %}
+      <article class="tut-passage" id="passage">
+        <h2>Passage</h2>
+        {% for para in tutorial.passage.text_paragraphs %}
+        <p>{{ para|rich }}</p>
+        {% endfor %}
+        {% for question in tutorial.passage.questions %}
+        {% include "portal/includes/tutorial_question.html" with q=question %}
         {% endfor %}
       </article>
       {% endif %}
@@ -115,6 +175,15 @@
           </div>
           {% endfor %}
         </div>
+      </article>
+      {% endif %}
+
+      {% if tutorial.review_questions %}
+      <article class="tut-review" id="review-questions">
+        <h2>Review questions</h2>
+        {% for question in tutorial.review_questions %}
+        {% include "portal/includes/tutorial_question.html" with q=question %}
+        {% endfor %}
       </article>
       {% endif %}
 

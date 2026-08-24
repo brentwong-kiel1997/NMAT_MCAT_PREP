@@ -94,7 +94,69 @@ sources:
     relation: consulted
 ```
 
-### File naming
+#### Extended fields (all optional, add per chapter as they earn their place)
+
+```yaml
+# a) Check yourself — 1–2 quick questions per section, answer hidden below
+sections:
+  - heading: "Section 1 — main concept"
+    body: [...]
+    check:
+      - q: "Which level shows emergent properties that none of its parts have?"
+        options: {A: Cell, B: Molecule, C: Atom, D: Electron}
+        answer: A
+        explain: "Cells are the lowest level at which all life-properties operate together."
+
+# b) Mnemonics — short memory hooks worth capturing
+mnemonics:
+  - phrase: "Homology = History, Analogy = Adaptation"
+    means: "Homologous structures share ancestry; analogous ones share function only."
+
+# c) Concept maps / pathways — monospace arrow flow lines (text only)
+maps:
+  - title: Where diversity comes from
+    lines:
+      - "mutation → new alleles"
+      - "recombination → new combinations"
+      - "   └→ variation → natural selection → adaptation → speciation"
+
+# d) Worked-example distractors — why each wrong option is wrong (MCAT-style)
+examples:
+  - prompt: "..."
+    solution: [...]
+    answer: "..."
+    distractors:
+      A: "Confuses the cell with the biosphere — two levels off."
+      B: "A property of populations, not of this structure."
+
+# e) Passage — optional MCAT-style passage plus its questions
+passage:
+  text: >-
+    One paragraph of passage-style prose the questions hang on.
+  questions:
+    - q: "..."
+      options: {A: ..., B: ..., C: ..., D: ...}
+      answer: B
+      explain: "..."
+      distractors:
+        A: "Why A is tempting but wrong."
+
+# f) Review questions — end-of-chapter set, AAMC-style with full analysis
+review_questions:
+  - q: "..."
+    options: {A: ..., B: ..., C: ..., D: ...}
+    answer: C
+    explain: "..."
+    distractors:
+      A: "..."
+      B: "..."
+```
+
+All five sub-blocks reuse the same question shape
+(`q / options / answer / explain / distractors`). `distractors` only makes
+sense for multiple-choice; omit it for conceptually-open questions.
+
+## File naming
 
 Place the file at `content/tutorials/<subject>/<title-slug>.yml` where
 `<title-slug>` is the chapter title lowercased, spaces → dashes (e.g.
