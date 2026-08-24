@@ -1,6 +1,6 @@
 # Tutorial Fill Progress (content/tutorials)
 
-> 72 unique chapters (unified library) · **2 published tutorials** (Biology · ch 1–2).
+> 72 unique chapters (unified library) · **3 published tutorials** (Biology · ch 1–3).
    Update this file **together with** every chapter you publish.
 
 Legend: **✅ Published** · 🟨 Drafting · ⬜ Not started
@@ -54,7 +54,7 @@ chapter's DISCIPLINE, so a shared chapter has one tutorial whichever unit views 
 |---|---|---|---|---|
 | 1 | Unity and Diversity of Life | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/unity-and-diversity-of-life.yml) |
 | 2 | Cells and Cellular Processes | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/cells-and-cellular-processes.yml) |
-| 3 | Genetics | NMAT · MCAT | ⬜ Not started | — |
+| 3 | Genetics | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/genetics.yml) |
 | 4 | The World of Plants and Animals | NMAT · MCAT | ⬜ Not started | — |
 | 5 | Development | NMAT · MCAT | ⬜ Not started | — |
 | 6 | Life Processes: Regulation and Homeostasis | NMAT · MCAT | ⬜ Not started | — |
