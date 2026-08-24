@@ -1,0 +1,35 @@
+{% extends "portal/base.html" %}
+
+{% block title %}Login · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker" data-i18n data-zh="账户" data-en="Account">账户</p>
+    <h1 data-i18n data-zh="登录" data-en="Sign in">登录</h1>
+    <p class="lead" data-i18n data-zh="登录后，章节进度与练习记录会记到你的用户库账号。" data-en="After sign-in, chapter progress and practice attempts save to your user-DB account.">登录后，章节进度与练习记录会记到你的用户库账号。</p>
+  </div>
+</div>
+
+<section class="section">
+  <form class="auth-form" method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    {% if next %}<input type="hidden" name="next" value="{{ next }}">{% endif %}
+    {% if error == "invalid" %}
+    <p class="form-error" data-i18n data-zh="用户名或密码不对。" data-en="Wrong username or password.">用户名或密码不对。</p>
+    {% elif error == "inactive" %}
+    <p class="form-error" data-i18n data-zh="账号已停用，请联系管理员。" data-en="Account disabled — contact an admin.">账号已停用，请联系管理员。</p>
+    {% endif %}
+    <label>
+      <span data-i18n data-zh="用户名" data-en="Username">用户名</span>
+      <input type="text" name="username" value="{{ username_prefill }}" autocomplete="username" required>
+    </label>
+    <label>
+      <span data-i18n data-zh="密码" data-en="Password">密码</span>
+      <input type="password" name="password" autocomplete="current-password" required>
+    </label>
+    <button class="btn btn-primary" type="submit" data-i18n data-zh="登录" data-en="Sign in">登录</button>
+  </form>
+</section>
+{% endblock %}

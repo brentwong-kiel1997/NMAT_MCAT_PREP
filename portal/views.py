@@ -13,6 +13,8 @@ from .study import build_curriculum_context, tutor_messages
 
 
 def _learner_name(request) -> str:
+    if getattr(request, "user", None) is not None and request.user.is_authenticated:
+        return request.user.username
     return (
         request.META.get("HTTP_X_REMOTE_USER")
         or request.headers.get("X-Remote-User")

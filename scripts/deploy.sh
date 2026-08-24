@@ -43,6 +43,7 @@ fi
 # Only migrate the knowledge app into the knowledge DB (avoids auth tables there)
 "${VENV}/bin/python" manage.py migrate knowledge --database=knowledge --noinput
 "${VENV}/bin/python" manage.py load_knowledge
+"${VENV}/bin/python" manage.py ensure_admin
 "${VENV}/bin/python" manage.py db_status
 "${VENV}/bin/python" manage.py collectstatic --noinput
 

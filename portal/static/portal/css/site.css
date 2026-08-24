@@ -749,6 +749,124 @@ html:not([lang]) .only-en { display: none !important; }
   color: #f7f3ea;
 }
 
+.auth-form {
+  width: min(28rem, 100%);
+  display: grid;
+  gap: 0.85rem;
+}
+
+.auth-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.92rem;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="password"] {
+  font: inherit;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 252, 246, 0.9);
+  color: var(--ink);
+}
+
+.auth-form .check-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-error {
+  color: #a33;
+  margin: 0;
+}
+
+.form-ok {
+  color: var(--brand);
+  margin: 0;
+}
+
+.stat-list {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.stat-list li + li {
+  margin-top: 0.35rem;
+}
+
+.user-admin-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.user-admin-list > li {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.user-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.user-actions button,
+.reset-form button {
+  font: inherit;
+  font-size: 0.82rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  cursor: pointer;
+}
+
+.reset-form {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.reset-form input {
+  font: inherit;
+  font-size: 0.82rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--line);
+  min-width: 9rem;
+}
+
+.badge-off,
+.badge-staff {
+  display: inline-block;
+  margin-left: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+}
+
+.flash-msgs {
+  margin: 0 0 1rem;
+  padding-left: 1.1rem;
+  color: var(--brand);
+}
+
+.page-hero .btn-primary {
+  background: var(--brand);
+  color: #f7f3ea;
+}
+
+.section .btn-primary {
+  background: var(--brand);
+  color: #f7f3ea;
+}
+
+.section .btn-primary:hover {
+  background: var(--brand-deep);
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 1.5rem clamp(1rem, 4vw, 2.5rem) 2.5rem;

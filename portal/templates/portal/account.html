@@ -1,0 +1,53 @@
+{% extends "portal/base.html" %}
+
+{% block title %}Account · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker" data-i18n data-zh="我的学习" data-en="My study">我的学习</p>
+    <h1>{{ profile.display_name|default:user.username }}</h1>
+    <p class="lead"><span class="only-zh">用户名 {{ user.username }}{% if user.is_staff %} · 管理员{% endif %}</span><span class="only-en">Username {{ user.username }}{% if user.is_staff %} · staff{% endif %}</span></p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="detail-grid">
+    <div>
+      <article class="block">
+        <h2 data-i18n data-zh="学习摘要" data-en="Study summary">学习摘要</h2>
+        <ul class="stat-list">
+          <li><span class="only-zh">已读章节</span><span class="only-en">Chapters done</span> · <strong>{{ stats.chapters_done }}</strong></li>
+          <li><span class="only-zh">练习作答</span><span class="only-en">Practice attempts</span> · <strong>{{ stats.attempts }}</strong></li>
+          <li><span class="only-zh">正确</span><span class="only-en">Correct</span> · <strong>{{ stats.correct }}</strong> ({{ stats.accuracy }}%)</li>
+        </ul>
+        {% if stats.by_subject %}
+        <h3 data-i18n data-zh="按科目" data-en="By subject">按科目</h3>
+        <ul>
+          {% for row in stats.by_subject %}
+          <li>{{ row.subject_slug }} · {{ row.n }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </article>
+      <p style="margin-top:1.25rem;">
+        <a class="btn btn-primary" href="{% url 'study_hub' %}" data-i18n data-zh="去学习台" data-en="Study desk">去学习台</a>
+        <a class="btn" href="{% url 'password_change' %}" data-i18n data-zh="修改密码" data-en="Change password" style="margin-left:0.5rem;border:1px solid var(--line);background:var(--paper);color:var(--ink);">修改密码</a>
+      </p>
+    </div>
+    <aside>
+      <article class="block aside-note" style="border-top:0;padding-top:0;">
+        <h2 data-i18n data-zh="账号" data-en="Account">账号</h2>
+        <form method="post" action="{% url 'logout' %}">
+          {% csrf_token %}
+          <button class="btn-text" type="submit" data-i18n data-zh="退出登录" data-en="Sign out">退出登录</button>
+        </form>
+        {% if user.is_staff %}
+        <p style="margin-top:1rem;"><a href="{% url 'manage_users' %}" data-i18n data-zh="用户管理 →" data-en="Manage users →">用户管理 →</a></p>
+        {% endif %}
+      </article>
+    </aside>
+  </div>
+</section>
+{% endblock %}

@@ -9,6 +9,14 @@
       <a href="{% url 'study_hub' %}" data-i18n data-zh="学习" data-en="Study">学习</a>
       <a href="{% url 'practice_hub' %}" data-i18n data-zh="练习" data-en="Practice">练习</a>
       <a href="{% url 'disease_list' %}" data-i18n data-zh="疾病" data-en="Diseases">疾病</a>
+      {% if user.is_authenticated %}
+      <a href="{% url 'account' %}" data-i18n data-zh="账户" data-en="Account">账户</a>
+      {% if user.is_staff %}
+      <a href="{% url 'manage_users' %}" data-i18n data-zh="管理" data-en="Manage">管理</a>
+      {% endif %}
+      {% else %}
+      <a href="{% url 'login' %}" data-i18n data-zh="登录" data-en="Sign in">登录</a>
+      {% endif %}
       <a href="{% url 'home' %}" data-i18n data-zh="首页" data-en="Home">首页</a>
     </nav>
     <span data-lang-host class="lang-host"></span>
