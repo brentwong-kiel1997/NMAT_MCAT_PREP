@@ -41,15 +41,16 @@ git push origin main     # 约 2 分钟自动部署；validate_content 会在部
 
 ## 推送与自动部署
 
-自动部署跟随 GitHub：`scripts/poll_github.sh` 由 cron 每 2 分钟轮询一次，发现 `origin/main`（NMAT_MCAT_PREP）有新提交就自动部署上线。
+自动部署**优先本地库，其次远端仓库**：`scripts/poll_github.sh` 由 cron 每 2 分钟运行一次——若本地裸仓的 main 上有 GitHub 还没有的提交（`git push deploy main` 推上去的），优先部署它们；否则跟随 GitHub 的 `origin/main`（NMAT_MCAT_PREP）。
 
 ```bash
 cd /home/ubuntu/django-wsgi
 git add -A && git commit -m "..."
-git push origin main    # 推 GitHub，约 2 分钟内自动部署
+git push deploy main    # 本地裸仓：立即触发 post-receive 部署（优先通道）
+git push origin main    # GitHub 备份；只推这里的话约 2 分钟内轮询自动部署
 ```
 
+- 轮询永远不会把本地独有部署回滚到 GitHub 的旧 tip；GitHub 只在追上本地后接管
 - 等不及轮询时可手动触发：`scripts/poll_github.sh`
-- 旧通道仍然可用：`git push deploy main` 立即触发裸仓 post-receive 部署
-- 轮询日志：`/home/ubuntu/runtime/django-wsgi/logs/poll_github.log`
+- 轮询日志（标注每次部署来自 local/github）：`/home/ubuntu/runtime/django-wsgi/logs/poll_github.log`
 - 部署失败会在下一个轮询周期自动重试（状态只在部署成功后才前进）
