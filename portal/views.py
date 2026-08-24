@@ -108,6 +108,8 @@ def tutorial_detail(request, slug, chapter_id):
         {
             "subject": subject,
             "chapter": chapter,
+            "chapter_index": index + 1,
+            "chapter_total": len(flat),
             "tutorial": tutorial,
             "prev_ch": prev_ch,
             "next_ch": next_ch,

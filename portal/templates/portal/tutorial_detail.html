@@ -1,4 +1,5 @@
 {% extends "portal/base.html" %}
+{% load rich %}
 
 {% block title %}{{ tutorial.title }} · {{ subject.name }} · Gabay{% endblock %}
 
@@ -6,122 +7,152 @@
 <div class="page-hero">
   <div class="page-hero-inner">
     {% include "portal/includes/nav.html" with solid=1 %}
-    <p class="section-kicker">{{ subject.name }} · Chapter tutorial</p>
+    <p class="section-kicker">{{ subject.label }} · Chapter tutorial {{ chapter_index }} of {{ chapter_total }}</p>
     <h1>{{ tutorial.title }}</h1>
-    {% if tutorial.overview %}
-    <p class="lead">{{ tutorial.overview }}</p>
-    {% endif %}
     <p class="muted-inline">
-      <a href="{% url back.0 subject.slug %}">← Back to {{ subject.name }}</a>
+      <a href="{% url back.0 subject.slug %}">← All {{ subject.name }} chapters</a>
     </p>
   </div>
 </div>
 
 <section class="section tutorial">
-  <div class="tutorial-body">
+  <div class="tutorial-wrap">
 
-    {% for section in tutorial.sections %}
-    <article class="block tutorial-section" id="section-{{ forloop.counter }}">
-      <h2>{{ section.heading }}</h2>
-      {% for para in section.body %}
-      <p>{{ para }}</p>
-      {% endfor %}
-      {% if section.table %}
-      <div class="table-wrap">
-        {% if section.table.caption %}<p class="muted-inline">{{ section.table.caption }}</p>{% endif %}
-        <table>
-          <thead>
-            <tr>{% for h in section.table.headers %}<th>{{ h }}</th>{% endfor %}</tr>
-          </thead>
-          <tbody>
-            {% for row in section.table.rows %}
-            <tr>{% for cell in row %}<td>{{ cell }}</td>{% endfor %}</tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
+    {% if tutorial.overview %}
+    <aside class="tutorial-toc" aria-label="On this page">
+      <p class="toc-title">On this page</p>
+      <nav class="toc">
+        <a href="#why-this-chapter">Why this chapter</a>
+        {% for section in tutorial.sections %}
+        <a href="#section-{{ forloop.counter }}">{{ forloop.counter|stringformat:"02d" }} · {{ section.heading }}</a>
+        {% endfor %}
+        {% if tutorial.examples %}<a href="#worked-example">Worked example</a>{% endif %}
+        <a href="#key-points">Key points</a>
+        {% if tutorial.pitfalls %}<a href="#pitfalls">Common pitfalls</a>{% endif %}
+        <a href="#exam-map">How each exam tests this</a>
+      </nav>
+    </aside>
+    {% endif %}
+
+    <div class="tutorial-body">
+
+      {% if tutorial.overview %}
+      <article class="block tut-callout" id="why-this-chapter">
+        <p class="tut-callout-label">Why this chapter</p>
+        <p class="tut-overview">{{ tutorial.overview|rich }}</p>
+      </article>
       {% endif %}
-    </article>
-    {% endfor %}
 
-    {% if tutorial.examples %}
-    <article class="block tutorial-section tutorial-example">
-      <h2>Worked example</h2>
-      {% for example in tutorial.examples %}
-      <p class="example-prompt">{{ example.prompt }}</p>
-      {% for step in example.solution %}
-      <p>{{ step }}</p>
+      {% for section in tutorial.sections %}
+      <article class="tut-section" id="section-{{ forloop.counter }}">
+        <p class="tut-section-no">Section {{ forloop.counter|stringformat:"02d" }}</p>
+        <h2>{{ section.heading }}</h2>
+        {% for para in section.body %}
+        <p{% if forloop.first %} class="tut-lead-para"{% endif %}>{{ para|rich }}</p>
+        {% endfor %}
+        {% if section.table %}
+        <div class="table-wrap">
+          {% if section.table.caption %}<p class="muted-inline">{{ section.table.caption }}</p>{% endif %}
+          <table>
+            <thead>
+              <tr>{% for h in section.table.headers %}<th>{{ h }}</th>{% endfor %}</tr>
+            </thead>
+            <tbody>
+              {% for row in section.table.rows %}
+              <tr>{% for cell in row %}<td>{{ cell|rich }}</td>{% endfor %}</tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        {% endif %}
+      </article>
       {% endfor %}
-      {% endfor %}
-    </article>
-    {% endif %}
 
-    {% if tutorial.key_points %}
-    <article class="block tutorial-section">
-      <h2>Key points</h2>
-      <ul>
-        {% for point in tutorial.key_points %}
-        <li>{{ point }}</li>
+      {% if tutorial.examples %}
+      <article class="tut-example" id="worked-example">
+        <p class="tut-block-label">Worked example</p>
+        {% for example in tutorial.examples %}
+        <p class="tut-example-prompt">{{ example.prompt|rich }}</p>
+        <ol class="tut-example-steps">
+          {% for step in example.solution %}
+          <li>{{ step|rich }}</li>
+          {% endfor %}
+        </ol>
         {% endfor %}
-      </ul>
-    </article>
-    {% endif %}
-
-    {% if tutorial.pitfalls %}
-    <article class="block tutorial-section">
-      <h2>Common pitfalls</h2>
-      <ul>
-        {% for pitfall in tutorial.pitfalls %}
-        <li>{{ pitfall }}</li>
-        {% endfor %}
-      </ul>
-    </article>
-    {% endif %}
-
-    {% if tutorial.exam_map %}
-    <article class="block tutorial-section">
-      <h2>How each exam tests this</h2>
-      <dl class="exam-map">
-        {% for exam, text in tutorial.exam_map.items %}
-        <dt>{{ exam }}</dt>
-        <dd>{{ text }}</dd>
-        {% endfor %}
-      </dl>
-    </article>
-    {% endif %}
-
-    <article class="block tutorial-sources">
-      <h2>Sources</h2>
-      <p class="muted-inline">Facts and structure were checked against the references below;
-        all prose is written for this site. Editions and access dates are tracked in
-        <a href="https://github.com/brentwong-kiel1997/NMAT_MCAT_PREP/blob/main/content/SOURCES.yml">SOURCES.yml</a>.</p>
-      <ul>
-        {% for src in tutorial.sources %}
-        <li>
-          <strong>{{ src.detail.title|default:src.ref }}</strong>
-          {% if src.detail.publisher %}· {{ src.detail.publisher }}{% endif %}
-          {% if src.detail.license %}· {{ src.detail.license }}{% endif %}
-          {% if src.detail.accessed %}· accessed {{ src.detail.accessed }}{% endif %}
-          — used: {{ src.relation }}{% if src.used %} ({{ src.used|join:"; " }}){% endif %}
-        </li>
-        {% endfor %}
-      </ul>
-    </article>
-
-    <nav class="tutorial-nav">
-      {% if prev_ch %}
-      <a class="btn" href="{% url 'tutorial_detail' subject.slug prev_ch.chapter_id %}">
-        ← {{ prev_ch.title }}</a>
+      </article>
       {% endif %}
-      <a class="btn" href="{% url back.0 subject.slug %}">All chapters</a>
-      {% if next_ch %}
-      <a class="btn btn-primary" href="{% url 'tutorial_detail' subject.slug next_ch.chapter_id %}">
-        {{ next_ch.title }} →</a>
-      {% else %}
-      <span class="muted-inline">Next chapter tutorial is being written — check back soon.</span>
-      {% endif %}
-    </nav>
 
+      {% if tutorial.key_points %}
+      <article class="tut-keypoints" id="key-points">
+        <h2>Key points</h2>
+        <ul class="tut-kp-grid">
+          {% for point in tutorial.key_points %}
+          <li>{{ point|rich }}</li>
+          {% endfor %}
+        </ul>
+      </article>
+      {% endif %}
+
+      {% if tutorial.pitfalls %}
+      <article class="tut-pitfalls" id="pitfalls">
+        <h2>Common pitfalls</h2>
+        <ul>
+          {% for pitfall in tutorial.pitfalls %}
+          <li>{{ pitfall|rich }}</li>
+          {% endfor %}
+        </ul>
+      </article>
+      {% endif %}
+
+      {% if tutorial.exam_map %}
+      <article class="tut-exam-map" id="exam-map">
+        <h2>How each exam tests this</h2>
+        <div class="tut-exam-grid">
+          {% for exam, text in tutorial.exam_map.items %}
+          <div class="tut-exam-card tut-exam-{{ exam|lower }}">
+            <p class="tut-exam-name">{{ exam }}</p>
+            <p>{{ text|rich }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </article>
+      {% endif %}
+
+      <article class="tut-sources">
+        <p class="tut-block-label">Sources</p>
+        <p class="muted-inline">Facts and structure checked against the references below; all prose is
+          written for this site. Editions and access dates are tracked in
+          <a href="https://github.com/brentwong-kiel1997/NMAT_MCAT_PREP/blob/main/content/SOURCES.yml">SOURCES.yml</a>.</p>
+        <ul>
+          {% for src in tutorial.sources %}
+          <li>
+            <strong>{{ src.detail.title|default:src.ref }}</strong>
+            {% if src.detail.publisher %}· {{ src.detail.publisher }}{% endif %}
+            {% if src.detail.license %}· {{ src.detail.license }}{% endif %}
+            {% if src.detail.accessed %}· accessed {{ src.detail.accessed }}{% endif %}
+            — used: {{ src.relation }}{% if src.used %} ({{ src.used|join:"; " }}){% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </article>
+
+      <nav class="tutorial-nav">
+        {% if prev_ch %}
+        <a class="btn" href="{% url 'tutorial_detail' subject.slug prev_ch.chapter_id %}">
+          ← {{ prev_ch.title }}</a>
+        {% else %}
+        <span></span>
+        {% endif %}
+        <a class="btn" href="{% url back.0 subject.slug %}">All chapters</a>
+        {% if next_ch %}
+        <a class="btn btn-primary" href="{% url 'tutorial_detail' subject.slug next_ch.chapter_id %}">
+          Next: {{ next_ch.title }} →</a>
+        {% else %}
+        <span class="muted-inline">Next chapter tutorial is being written</span>
+        {% endif %}
+      </nav>
+
+    </div>
   </div>
 </section>
 {% endblock %}

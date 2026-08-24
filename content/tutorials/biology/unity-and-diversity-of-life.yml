@@ -1,66 +1,57 @@
 subject: biology
 chapter: Unity and Diversity of Life
 title: Unity and Diversity of Life
-overview: 'This opening chapter answers two questions that both exams return to again
-  and again: what makes something alive, and how do biologists organize the enormous
-  variety that life takes? For the NMAT this is direct vocabulary territory — the
-  CEM outline names it as the first biology chapter. For the MCAT it supplies the
-  framing you need for Foundational Concept 1 (evolution): passages constantly assume
-  you can read a phylogenetic tree, tell homologous from analogous structures, and
-  reason about where diversity comes from. No prerequisites; everything later in biology
-  builds on it.'
+overview: 'This opening chapter answers two questions that both exams return to again and again: what
+  makes something alive, and how do biologists organize the enormous variety that life takes? For the
+  NMAT this is direct vocabulary territory — the CEM outline names it as the first biology chapter. For
+  the MCAT it supplies the framing you need for Foundational Concept 1 (evolution): passages constantly
+  assume you can read a phylogenetic tree, tell homologous from **analogous structures**, and reason about
+  where diversity comes from. No prerequisites; everything later in biology builds on it.'
 sections:
 - heading: A working definition of life
   body:
-  - Biology has no single-sentence definition of life that everyone accepts, but exams
-    expect you to know the property checklist that living things share. A living organism
-    maintains order, harvests energy from its environment, is made of one or more
-    cells, responds to stimuli, grows, reproduces with inheritance, keeps its internal
-    conditions within limits, and — the property that ultimately explains all the
-    others — evolves. Order and organization mean highly structured arrangements that
-    resist decay; energy processing means taking in energy and transforming it to
-    do work, a theme that reappears in metabolism and cellular respiration.
-  - Reproduction with inheritance carries information from one generation to the next,
-    and because that copying is imperfect, variation arises — the raw material of
-    evolution. Homeostasis is the active maintenance of a tolerable internal range
-    (think body temperature or blood pH), which later chapters connect to feedback
-    loops in the endocrine and nervous systems.
-  - 'The classic boundary case is the virus: it has genes and evolves, but it has
-    no cells, no metabolism of its own, and cannot reproduce without hijacking a host
-    cell. Exams love this contrast — by the checklist, a virus is not independently
-    alive, and saying so precisely is usually the point of the question.'
-- heading: Levels of organization and emergent properties
+  - Biology has no single-sentence definition of life that everyone accepts, but exams expect you to know
+    the property checklist that living things share. A living organism maintains **order**, harvests **energy**
+    from its environment, is made of one or more **cells**, **responds to stimuli**, grows, **reproduces
+    with inheritance**, **keeps its internal conditions within limits**, and — the property that ultimately
+    explains all the others — ==evolves==. Order and organization mean highly structured arrangements
+    that resist decay; energy processing means taking in energy and transforming it to do work, a theme
+    that reappears in metabolism and cellular respiration.
+  - Reproduction with inheritance carries information from one generation to the next, and because that
+    copying is imperfect, variation arises — the raw material of evolution. Homeostasis is the active
+    maintenance of a tolerable internal range (think body temperature or blood pH), which later chapters
+    connect to feedback loops in the endocrine and nervous systems.
+  - 'The classic boundary case is the virus: it has genes and evolves, but it has no cells, no metabolism
+    of its own, and cannot reproduce without hijacking a host cell. Exams love this contrast — by the
+    checklist, ==a virus is not independently alive==, and saying so precisely is usually the point of
+    the question.'
+- heading: Levels of organization and **emergent properties**
   body:
-  - 'Life is organized on a nested ladder: atoms, molecules, organelles, cells, tissues,
-    organs, organ systems, organisms, populations, communities, ecosystems, and the
-    biosphere. Each rung is built entirely from the one below, yet each rung shows
-    behaviors the parts alone do not have — biologists call these emergent properties.
-    A single sodium atom cannot carry a nerve impulse and a single actin filament
+  - 'Life is organized on a nested ladder: atoms, molecules, organelles, cells, tissues, organs, organ
+    systems, organisms, populations, communities, ecosystems, and the biosphere. Each rung is built entirely
+    from the one below, yet each rung shows behaviors the parts alone do not have — biologists call these
+    **emergent properties**. A single sodium atom cannot carry a nerve impulse and a single actin filament
     cannot contract a muscle; those abilities belong to the assembled structure.'
-  - 'This is why the cell is the basic unit of life rather than the molecule: the
-    cell is the lowest level at which all the properties of the checklist operate
-    together. Keep the ladder handy — it is also the map of this course, with later
-    chapters climbing from molecules and cells up through regulation and organisms
-    to ecology.'
+  - 'This is why ==the cell is the basic unit of life== rather than the molecule: the cell is the lowest
+    level at which all the properties of the checklist operate together. Keep the ladder handy — it is
+    also the map of this course, with later chapters climbing from molecules and cells up through regulation
+    and organisms to ecology.'
 - heading: 'Naming and classifying: taxonomy and the three domains'
   body:
-  - Taxonomy is the discipline of naming and classifying organisms. Every species
-    has a two-part name, Homo sapiens, where the first word is the genus (capitalized)
-    and the second is the specific epithet; together they are unique, and the name
-    is written in italics. This binomial system, introduced by Linnaeus, replaced
-    a chaos of common names — 'mayap' and 'sweet potato' refer to the same plant,
+  - Taxonomy is the discipline of naming and classifying organisms. Every species has a two-part name,
+    Homo sapiens, where the first word is the **genus** (capitalized) and the second is the specific epithet;
+    together they are unique, and the name is written in italics. This **binomial system**, introduced
+    by Linnaeus, replaced a chaos of common names — 'mayap' and 'sweet potato' refer to the same plant,
     while 'corn' means different crops in different countries.
-  - Species are grouped into a nested hierarchy — genus, family, order, class, phylum,
-    kingdom, domain — where each higher rung collects a larger set of organisms sharing
-    a more ancient common ancestor. Modern classification tries to reflect evolutionary
-    history (phylogeny) rather than mere resemblance, which is why it keeps being
-    revised as molecular data arrive.
-  - 'The broadest split recognized today is three domains: Bacteria and Archaea (both
-    prokaryotic — no nucleus) and Eukarya (cells with a nucleus and membrane-bound
-    organelles). Eukarya in turn holds the kingdoms protists (a grab-bag, mostly unicellular),
-    fungi, plants, and animals. A frequent exam trap is to classify by superficial
-    looks: fungi look plant-like but are closer to animals biochemically, and archaea
-    look bacterial but differ in membrane chemistry and genetics.'
+  - Species are grouped into a nested hierarchy — genus, family, order, class, phylum, kingdom, domain
+    — where each higher rung collects a larger set of organisms sharing a more ancient common ancestor.
+    Modern classification tries to reflect evolutionary history (**phylogeny**) rather than mere resemblance,
+    which is why it keeps being revised as molecular data arrive.
+  - 'The broadest split recognized today is **three domains: Bacteria and Archaea** (both prokaryotic
+    — no nucleus) and Eukarya (cells with a nucleus and membrane-bound organelles). Eukarya in turn holds
+    the kingdoms protists (a grab-bag, mostly unicellular), fungi, plants, and animals. A frequent exam
+    trap is to classify by superficial looks: fungi look plant-like but are closer to animals biochemically,
+    and archaea look bacterial but differ in membrane chemistry and genetics.'
   table:
     caption: The three domains at a glance
     headers:
@@ -87,85 +78,74 @@ sections:
       - Includes unicellular members — 'eukaryote' does not mean 'multicellular'
 - heading: 'Unity: the shared molecular toolkit'
   body:
-  - 'Underneath the diversity, every known organism runs on the same chemistry. All
-    use DNA as the hereditary material, and the genetic code — which triplet codon
-    specifies which amino acid — is essentially universal: the codon that reads methionine
-    in a bacterium reads methionine in you. The information flows DNA → RNA → protein
-    in every domain, and the ATP molecule is the universal energy currency. Shared
-    biochemistry is the strongest evidence that all life descends from a common ancestor.'
-  - 'The same logic shows up in anatomy. Homologous structures — the human arm, the
-    whale flipper, the bat wing — share an underlying arrangement of bones inherited
-    from a common ancestor even though their functions differ. Do not confuse them
-    with analogous structures: the wings of a bat and the wings of a insect both fly,
-    but they are built from entirely different parts and evolved independently. Homology
-    records ancestry; analogy records convergent solutions to the same problem. Vestigial
-    structures (the human appendix, pelvic bones in whales) are further inheritance
-    echoes — leftovers of ancestors that are no longer functional in the same way.'
+  - 'Underneath the diversity, every known organism runs on the same chemistry. All use DNA as the hereditary
+    material, and the **genetic code** — which triplet codon specifies which amino acid — ==is essentially
+    universal==: the codon that reads methionine in a bacterium reads methionine in you. The information
+    flows DNA → RNA → protein in every domain, and the ATP molecule is the universal energy currency.
+    Shared biochemistry is the strongest evidence that all life descends from a common ancestor.'
+  - 'The same logic shows up in anatomy. Homologous structures — the human arm, the whale flipper, the
+    bat wing — share an underlying arrangement of bones inherited from a common ancestor even though their
+    functions differ. Do not confuse them with **analogous structures**: the wings of a bat and the wings
+    of a insect both fly, but they are built from entirely different parts and evolved independently.
+    ==Homology records ancestry; analogy records convergent solutions== to the same problem. **Vestigial
+    structures** (the human appendix, pelvic bones in whales) are further inheritance echoes — leftovers
+    of ancestors that are no longer functional in the same way.'
 - heading: 'Diversity: where it comes from and how we read it'
   body:
-  - 'If unity comes from shared inheritance, diversity comes from its imperfection.
-    Mutation introduces new alleles; sexual reproduction and genetic recombination
-    shuffle existing alleles into new combinations. Natural selection then filters
-    this variation: variants that happen to work better in a given environment leave
-    more offspring, so their traits become more common over generations. Combined
-    with isolation of populations, this process — evolution — generates the branching
-    tree of life and the adaptations that fill every habitat.'
-  - 'That history is drawn as a phylogenetic tree, and both exams expect you to read
-    one fluently. The rules are mechanical: a node is a common ancestor, a branch
-    is a lineage, and the order of branching is what matters — the spatial left-to-right
-    order of tips carries no information. Two groups are most closely related if they
-    share the most recent common ancestor, not if they sit next to each other on the
-    page. A clade is an ancestor plus all of its descendants, and a valid tree only
-    ever depicts clades nested inside clades.'
-  - Trees are built from shared derived characters — traits that appeared in the most
-    recent common ancestor of a group and were inherited by its members. Molecular
-    data (DNA and protein sequences) now dominate the evidence, which is why the three-domain
-    picture, invisible under the microscope, emerged from sequence comparisons.
+  - 'If unity comes from shared inheritance, diversity comes from its imperfection. Mutation introduces
+    new alleles; sexual reproduction and genetic recombination shuffle existing alleles into new combinations.
+    Natural selection then filters this variation: variants that happen to work better in a given environment
+    leave more offspring, so their traits become more common over generations. Combined with isolation
+    of populations, this process — evolution — generates the branching tree of life and the adaptations
+    that fill every habitat.'
+  - 'That history is drawn as a phylogenetic tree, and both exams expect you to read one fluently. The
+    rules are mechanical: a node is a common ancestor, a branch is a lineage, and the order of branching
+    is what matters — the spatial left-to-right order of tips carries no information. Two groups are ==most
+    closely related if they share the most recent common ancestor==, not if they sit next to each other
+    on the page. ==A clade is an ancestor plus all of its descendants==, and a valid tree only ever depicts
+    clades nested inside clades.'
+  - Trees are built from **shared derived characters** — traits that appeared in the most recent common
+    ancestor of a group and were inherited by its members. Molecular data (DNA and protein sequences)
+    now dominate the evidence, which is why the three-domain picture, invisible under the microscope,
+    emerged from sequence comparisons.
 examples:
-- prompt: A passage describes four organisms — a mushroom, a palm tree, a thermophilic
-    archaeon from a hot spring, and E. coli — then asks which two are most closely
-    related.
+- prompt: A passage describes four organisms — a mushroom, a palm tree, a thermophilic archaeon from a
+    hot spring, and E. coli — then asks which two are most closely related.
   solution:
-  - 'Step 1: sort by domain first. The archaeon is Archaea; E. coli is Bacteria; the
-    mushroom (a fungus) and the palm (a plant) are both Eukarya.'
-  - 'Step 2: within Eukarya, fungi and plants are distinct kingdoms, but they still
-    share the much more recent eukaryotic common ancestor than either shares with
-    a prokaryote.'
-  - 'Answer: the mushroom and the palm. The trap is picking organisms that look alike
-    (palm and any ''plant-like'' thing) or live alike — relatedness is about recency
-    of common ancestry, nothing else.'
+  - 'Step 1: sort by domain first. The archaeon is Archaea; E. coli is Bacteria; the mushroom (a fungus)
+    and the palm (a plant) are both Eukarya.'
+  - 'Step 2: within Eukarya, fungi and plants are distinct kingdoms, but they still share the much more
+    recent eukaryotic common ancestor than either shares with a prokaryote.'
+  - 'Answer: the mushroom and the palm. The trap is picking organisms that look alike (palm and any ''plant-like''
+    thing) or live alike — ==relatedness is about recency of common ancestry, nothing else==.'
 key_points:
-- 'Life''s checklist: order, energy processing, cellular organization, response to
-  stimuli, reproduction with inheritance, homeostasis/growth, and evolution; viruses
-  fail most items outside a host cell.'
-- The cell is the lowest level with all properties of life; higher levels show emergent
-  properties.
-- 'Binomial names (Genus species, italicized); hierarchy: domain > kingdom > phylum
-  > class > order > family > genus > species.'
-- 'Three domains: Bacteria, Archaea (both prokaryotic), Eukarya; archaea are NOT ''odd
-  bacteria'' — they are an independent domain.'
-- Unity = shared DNA, universal genetic code, DNA → RNA → protein, ATP; homologous
-  structures record common ancestry.
+- 'Life''s checklist: order, energy processing, cellular organization, response to stimuli, reproduction
+  with inheritance, homeostasis/growth, and evolution; viruses fail most items outside a host cell.'
+- The cell is the lowest level with all properties of life; higher levels show **emergent properties**.
+- 'Binomial names (Genus species, italicized); hierarchy: domain > kingdom > phylum > class > order >
+  family > genus > species.'
+- 'Three domains: Bacteria, Archaea (both prokaryotic), Eukarya; archaea are NOT ''odd bacteria'' — they
+  are an independent domain.'
+- Unity = shared DNA, universal genetic code, DNA → RNA → protein, ATP; homologous structures record common
+  ancestry.
 - Diversity = mutation + recombination filtered by natural selection over generations.
-- 'Phylogenetic trees: relatedness = most recent common ancestor; tip order is meaningless;
-  a clade is an ancestor plus ALL its descendants.'
+- 'Phylogenetic trees: relatedness = most recent common ancestor; tip order is meaningless; a clade is
+  an ancestor plus ALL its descendants.'
 pitfalls:
-- Calling a virus alive — exam questions usually hinge on what it lacks (no own metabolism,
-  no independent reproduction, no cells).
+- Calling a virus alive — exam questions usually hinge on what it lacks (no own metabolism, no independent
+  reproduction, no cells).
 - Reading a tree by tip adjacency — next to each other does not mean most related.
 - Classifying archaea as bacteria because both are prokaryotic.
-- Confusing homologous (shared ancestry) with analogous (similar function, separate
-  evolution).
+- Confusing homologous (shared ancestry) with analogous (similar function, separate evolution).
 - Treating 'eukaryotic' as synonymous with 'multicellular' — protists are eukaryotes.
 exam_map:
-  NMAT: 'Direct vocabulary and one-step classification items under the CEM biology
-    outline: properties of life, binomial naming, taxonomic ranks, three domains,
-    and the prokaryote/eukaryote split. Expect recall-level questions answered straight
-    from the checklist and the domain table above.'
-  MCAT: Rarely tested as standalone facts; instead this chapter is the toolkit for
-    Foundational Concept 1 passages — evolution and diversity appear inside experiment-
-    and data-based questions (tree reading, homology vs analogy, sources of variation).
-    The Biology/Biochemistry section assumes fluency rather than testing definitions.
+  NMAT: 'Direct vocabulary and one-step classification items under the CEM biology outline: properties
+    of life, binomial naming, taxonomic ranks, three domains, and the prokaryote/eukaryote split. Expect
+    recall-level questions answered straight from the checklist and the domain table above.'
+  MCAT: Rarely tested as standalone facts; instead this chapter is the toolkit for Foundational Concept
+    1 passages — evolution and diversity appear inside experiment- and data-based questions (tree reading,
+    homology vs analogy, sources of variation). The Biology/Biochemistry section assumes fluency rather
+    than testing definitions.
 sources:
 - ref: openstax-biology-2e
   used:
