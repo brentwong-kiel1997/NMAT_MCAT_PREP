@@ -112,13 +112,15 @@ mnemonics:
   - phrase: "Homology = History, Analogy = Adaptation"
     means: "Homologous structures share ancestry; analogous ones share function only."
 
-# c) Concept maps / pathways — monospace arrow flow lines (text only)
+# c) Concept maps / pathways — a vertical flow of steps (rendered with
+#    arrows between steps; steps support **bold** / ==mark==)
 maps:
   - title: Where diversity comes from
-    lines:
-      - "mutation → new alleles"
-      - "recombination → new combinations"
-      - "   └→ variation → natural selection → adaptation → speciation"
+    steps:
+      - "mutation and recombination → genetic variation"
+      - "natural selection filters variation → adaptation"
+      - "isolation over time → speciation"
+    note: "Mutation creates new alleles; selection decides which persist."
 
 # d) Worked-example distractors — why each wrong option is wrong (MCAT-style)
 examples:

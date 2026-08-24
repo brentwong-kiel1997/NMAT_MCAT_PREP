@@ -123,8 +123,12 @@
         {% for mp in tutorial.maps %}
         <div class="tut-map">
           <p class="tut-block-label">{{ mp.title }}</p>
-          <pre>{% for line in mp.lines %}{{ line }}
-{% endfor %}</pre>
+          <ol class="tut-map-steps">
+            {% for step in mp.steps %}
+            <li>{{ step|rich }}</li>
+            {% endfor %}
+          </ol>
+          {% if mp.note %}<p class="muted-inline tut-map-note">{{ mp.note|rich }}</p>{% endif %}
         </div>
         {% endfor %}
       </article>

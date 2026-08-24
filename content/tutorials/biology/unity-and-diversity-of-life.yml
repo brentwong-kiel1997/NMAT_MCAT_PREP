@@ -229,18 +229,20 @@ mnemonics:
     ones record convergent solutions to the same environmental problem.
 maps:
 - title: Levels of organization (the ladder the course climbs)
-  lines:
+  steps:
     - "atom → molecule → organelle → ==cell== → tissue → organ"
-    - "      → organ system → organism → population → community"
-    - "      → ecosystem → biosphere"
-    - "note: each upward step adds emergent properties"
+    - "organ system → organism → population → community → ecosystem"
+    - "biosphere"
+  note: "Each upward step adds emergent properties — properties the parts
+    alone do not have."
 - title: Where diversity comes from
-  lines:
-    - "mutation ──► new alleles"
-    - "             ▼"
-    - "recombination ─► new combinations ─► variation"
-    - "                                  ▼"
-    - "        natural selection ─► adaptation ─► speciation"
+  steps:
+    - "mutation and recombination → genetic variation"
+    - "natural selection filters variation"
+    - "→ adaptation in a given environment"
+    - "→ isolation over time → speciation"
+  note: "Mutation creates new alleles; recombination shuffles them;
+    selection decides which persist."
 pitfalls:
 - Calling a virus alive — exam questions usually hinge on what it lacks (no own metabolism, no independent
   reproduction, no cells).

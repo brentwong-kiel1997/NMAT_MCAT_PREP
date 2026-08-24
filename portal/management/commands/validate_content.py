@@ -175,8 +175,8 @@ class Command(BaseCommand):
                     if not mn.get("phrase"):
                         problems.append(f"{rel}: mnemonic missing phrase")
                 for mp in doc.get("maps") or []:
-                    if not mp.get("title") or not mp.get("lines"):
-                        problems.append(f"{rel}: map missing title/lines")
+                    if not mp.get("title") or not mp.get("steps"):
+                        problems.append(f"{rel}: map missing title/steps")
                 passage = doc.get("passage")
                 if passage is not None:
                     if not passage.get("text"):
