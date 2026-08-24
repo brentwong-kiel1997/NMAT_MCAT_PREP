@@ -1,5 +1,5 @@
 {
-  "source_rev": "64b6ab6",
+  "source_rev": "f1649e6",
   "counts": {
     "chapters": 72,
     "note_bullets": 458,
@@ -114,19 +114,19 @@
     "subjects/psych-soc.yml": "bb6a4d60979b66c38e2fc171786ee4aa4adc9f769a4f26b912147142f10404fb",
     "subjects/quantitative.yml": "7b326baa3490001fa74dc32ba44fb72d75bc272d88b8ee4f26d4298352b4f74b",
     "subjects/verbal.yml": "00fce8aa8cbbdda8d86bf0811249f357f142c7464eeaa731db4da4be363e387d",
-    "tutorials/biology/1c-heritable-information-genetic-diversity.yml": "542cdd2e2d5c31717105db9aa470a59477a5d744a54caf076d21300dacd6b9a9",
-    "tutorials/biology/2a-assemblies-of-molecules-cells-and-cell-groups.yml": "6fc216531f1f16f988afd5615b163f01275c6cb636001d6418990a3f027e7bd0",
-    "tutorials/biology/2b-prokaryotes-and-viruses.yml": "060a16766e02e210e0fd0d0fc6e93d5bca1e28933c1e7634012b1255f808edc6",
-    "tutorials/biology/2c-cell-division-differentiation-specialization.yml": "5806a87b48c98e4c0a6343fc59f903b7421fcb847a8e20e662f40e8dbf519453",
-    "tutorials/biology/3a-nervous-and-endocrine-systems.yml": "2e2801434b86efce140efcbdb9f1d9077b4feb2365945c456ac67143315e608e",
-    "tutorials/biology/3b-main-organ-systems.yml": "d9860a5326512fec8524d4fc1d4ced1a12fdead68161a470a8bfd0dc034dfb37",
+    "tutorials/biology/1c-heritable-information-genetic-diversity.yml": "a751d8baca467eeb3e4f378e854955d4622dc58604db01af72ec6019deb94d34",
+    "tutorials/biology/2a-assemblies-of-molecules-cells-and-cell-groups.yml": "a7df2dfec0eb3caae438721201bfe0981389dabd6b123f5ee5a0006ba2d2ff78",
+    "tutorials/biology/2b-prokaryotes-and-viruses.yml": "1368fa60990a8164d141ad25162b4b5c7fc19e10c861bba1a22a56e535788761",
+    "tutorials/biology/2c-cell-division-differentiation-specialization.yml": "dc7ba318ec01630d7620204a7731118b003f60da41bf53678195a305070cfa09",
+    "tutorials/biology/3a-nervous-and-endocrine-systems.yml": "cb43acc6d23b276324476503a528fb5a106dd9078cbc7a5f1e5e0eef7e57fac3",
+    "tutorials/biology/3b-main-organ-systems.yml": "e4261ee670c41959418245f17416209c956b175602021945b4a23bf1fc586ed7",
     "tutorials/biology/cells-and-cellular-processes.yml": "c8d9b3f994329a4f426d5afbb85d1d0946fca52ca78a4ac6962f6dc6f697bb25",
-    "tutorials/biology/development.yml": "3f9efa4a034847d48307df78451d4aa3b0ffb3b5929e3a8eaa1f0d33048f2189",
-    "tutorials/biology/genetics.yml": "7602e48745d732a3d744e59251541487d436dd1de28e02e24ad09dc4efc9d94d",
-    "tutorials/biology/life-processes-regulation-and-homeostasis.yml": "43d1035ad43ed81adf1e7bebf20c6d3f0d840dca13f5167877a0fff022f49bbd",
-    "tutorials/biology/organisms-and-their-environment.yml": "506816c6c83d56aa3608346dc10c061f12b311c655e0fc465fa991e741a901ba",
-    "tutorials/biology/the-world-of-plants-and-animals.yml": "e845403423585d16d0b9a2196358aea4e61a34a1e6a56758bd3b8fe77cbc5595",
-    "tutorials/biology/unity-and-diversity-of-life.yml": "bda7ce08d2d5e04a985d672f4dbd6f9b117ebe1496193cdf64a48a0f787561b8",
+    "tutorials/biology/development.yml": "91c318908dd26938ff8c2051a1da5a4eb7f896cc7ecfea12c8e3f25ae1b524d2",
+    "tutorials/biology/genetics.yml": "4314610565f68db3023bababb7fd045b4df1ccd06a800e2cf6a3d6d3529e8f33",
+    "tutorials/biology/life-processes-regulation-and-homeostasis.yml": "c39c02af4c50c6d621b96f162a4d93c204153879a47b47575234ab02f51cf5fa",
+    "tutorials/biology/organisms-and-their-environment.yml": "fe881965a4475eb4cd1d638a4a81b915efe76eea8518890d21c29ac45c4c3bdf",
+    "tutorials/biology/the-world-of-plants-and-animals.yml": "83866f80d88262be281e66d8e9078d209f8a165ea4ef5c2422424b508a08d03d",
+    "tutorials/biology/unity-and-diversity-of-life.yml": "9c8b0a160b192978e2a9e8910a2bf8f8aa7ef85b36ca0efb7ae8493360c34411",
     "units.yml": "d1d18d8b86c1fa59336d4fbd39b37e190716d4a5c30fb485a2eeebf91b71a345"
   }
 }

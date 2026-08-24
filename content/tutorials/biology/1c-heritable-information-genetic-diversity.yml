@@ -1,29 +1,21 @@
 subject: biology
 chapter: 1C · Heritable information & genetic diversity
 title: 1C · Heritable information & genetic diversity
-overview: >-
-  AAMC's 1C asks how information flows from DNA to function and how
-  processes generate, preserve, and shuffle variation. The NMAT side
-  needs the same molecular vocabulary at intro depth, so this chapter
-  serves both — replication fidelity, expression logic, the variation
-  toolkit, and the experiments (PCR, CRISPR) that test it all.
-  Prerequisites — Genetics (meiosis, mutation), Cells (nucleus,
-  ribosome).
+overview: AAMC's 1C asks how information flows from DNA to function and how processes generate, preserve,
+  and shuffle variation. The NMAT side needs the same molecular vocabulary at intro depth, so this chapter
+  serves both — replication fidelity, expression logic, the variation toolkit, and the experiments (PCR,
+  CRISPR) that test it all. Prerequisites — Genetics (meiosis, mutation), Cells (nucleus, ribosome).
 sections:
 - heading: Replication — copying with fidelity
   body:
-  - Semi-conservative replication — each old strand templates a new
-    partner — is the Meselson-Stahl result and the design logic of
-    DNA. Replication bubbles open at origins; ==DNA polymerase only
-    synthesizes 5'→3'==, so the lagging strand is built in Okazaki
-    fragments stitched by ligase. Proofreading polymerases and
-    mismatch repair push error rates to ~10⁻⁹ per base — fidelity is
-    not one mechanism but a stack of them.
-  - Repair matters clinically — excision repair (one strand's damage
-    cut out and re-filled) handles bulky lesions; the BRCA-linked
-    pathway mends double-strand breaks. When repair fails, mutation
-    rates climb and cancer risk follows — the MCAT's favorite causal
-    chain from molecule to disease.
+  - Semi-conservative replication — each old strand templates a new partner — is the Meselson-Stahl result
+    and the design logic of DNA. Replication bubbles open at origins; ==DNA polymerase only synthesizes
+    5'→3'==, so the lagging strand is built in Okazaki fragments stitched by ligase. Proofreading polymerases
+    and mismatch repair push error rates to ~10⁻⁹ per base — fidelity is not one mechanism but a stack
+    of them.
+  - Repair matters clinically — excision repair (one strand's damage cut out and re-filled) handles bulky
+    lesions; the BRCA-linked pathway mends double-strand breaks. When repair fails, mutation rates climb
+    and cancer risk follows — the MCAT's favorite causal chain from molecule to disease.
   check:
   - q: DNA polymerase's directionality forces which arrangement?
     options:
@@ -32,28 +24,27 @@ sections:
       C: Replication runs 3'→5'
       D: RNA polymerase replaces DNA polymerase
     answer: B
-    explain: Antiparallel template + 5'→3' enzyme = discontinuous
-      lagging-strand synthesis (Okazaki fragments).
+    explain: Antiparallel template + 5'→3' enzyme = discontinuous lagging-strand synthesis (Okazaki fragments).
     distractors:
-      A: "Only the leading strand is continuous."
-      C: "No known DNA polymerase does that."
-      D: "RNA primers START replication; DNA polymerase extends it."
+      A: Only the leading strand is continuous.
+      C: No known DNA polymerase does that.
+      D: RNA primers START replication; DNA polymerase extends it.
+  figures:
+  - src: 1c-heritable-information-genetic-diversity/dna-double-helix.webp
+    caption: Antiparallel strands, A-T (2 H-bonds) and G-C (3 H-bonds) pairing — the template logic of
+      replication.
+    credit: Fig 14.7 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Expression — from gene to working protein
   body:
-  - The central dogma runs ==DNA → (transcription) → RNA →
-    (translation) → protein==, and the control points are where exams
-    live. In prokaryotes, the **operon** clusters regulated genes —
-    the lac operon's logic (repressor blocks unless lactose removes
-    it; CAP boosts only when glucose is low) is a signal-integration
-    circuit worth practicing on. Eukaryotes regulate at every step —
-    chromatin openness, transcription factors, RNA processing
-    (splicing, capping, poly-A), and translation itself.
-  - The genetic code's properties are question bank staples — a
-    **triplet** code, ==degenerate== (multiple codons per amino acid,
-    which buffers silent mutations), nearly universal, with fixed
-    start (AUG) and three stops. Transcription makes any gene's RNA;
-    translation reads it in the ribosome's 5'→3' groove with charged
-    tRNAs delivering amino acids.
+  - The central dogma runs ==DNA → (transcription) → RNA → (translation) → protein==, and the control
+    points are where exams live. In prokaryotes, the **operon** clusters regulated genes — the lac operon's
+    logic (repressor blocks unless lactose removes it; CAP boosts only when glucose is low) is a signal-integration
+    circuit worth practicing on. Eukaryotes regulate at every step — chromatin openness, transcription
+    factors, RNA processing (splicing, capping, poly-A), and translation itself.
+  - The genetic code's properties are question bank staples — a **triplet** code, ==degenerate== (multiple
+    codons per amino acid, which buffers silent mutations), nearly universal, with fixed start (AUG) and
+    three stops. Transcription makes any gene's RNA; translation reads it in the ribosome's 5'→3' groove
+    with charged tRNAs delivering amino acids.
   check:
   - q: The degeneracy of the genetic code means…
     options:
@@ -62,234 +53,206 @@ sections:
       C: The code differs among organelles of one cell
       D: Codons overlap
     answer: B
-    explain: Synonymous codons — the buffer that turns many point
-      mutations silent.
+    explain: Synonymous codons — the buffer that turns many point mutations silent.
     distractors:
-      A: "That would be the opposite of degenerate."
-      C: "Mitochondrial code differences exist but are not the
-        definition."
-      D: "The code is non-overlapping."
+      A: That would be the opposite of degenerate.
+      C: Mitochondrial code differences exist but are not the definition.
+      D: The code is non-overlapping.
 - heading: The variation toolkit — sources and shufflers
   body:
-  - Variation enters by three doors — **mutation** (new alleles,
-    ultimate source, mostly neutral or harmful), ==recombination==
-    (crossing over shuffles existing alleles into new combinations),
-    and **assortment + fertilization** (randomized packaging and
-    union). Add migration (gene flow) bringing alleles in, and drift
-    sampling them at random, and you hold the full microevolution
-    kit.
-  - The Hardy-Weinberg equilibrium formalizes "no evolution" — allele
-    frequencies p and q stay put when five conditions hold (no
-    mutation, no selection, no drift [large population], no
-    migration, random mating), giving ==p² + 2pq + q²==. Its exam use
-    is as a NULL MODEL — real populations deviate, and the deviation
-    tells you which force acts.
+  - Variation enters by three doors — **mutation** (new alleles, ultimate source, mostly neutral or harmful),
+    ==recombination== (crossing over shuffles existing alleles into new combinations), and **assortment
+    + fertilization** (randomized packaging and union). Add migration (gene flow) bringing alleles in,
+    and drift sampling them at random, and you hold the full microevolution kit.
+  - The Hardy-Weinberg equilibrium formalizes "no evolution" — allele frequencies p and q stay put when
+    five conditions hold (no mutation, no selection, no drift [large population], no migration, random
+    mating), giving ==p² + 2pq + q²==. Its exam use is as a NULL MODEL — real populations deviate, and
+    the deviation tells you which force acts.
   check:
-  - q: In a population at H-W equilibrium with q = 0.2, the frequency
-      of heterozygotes is…
+  - q: In a population at H-W equilibrium with q = 0.2, the frequency of heterozygotes is…
     options:
-      A: "0.04"
-      B: "0.32"
-      C: "0.64"
-      D: "0.16"
+      A: '0.04'
+      B: '0.32'
+      C: '0.64'
+      D: '0.16'
     answer: B
     explain: p = 0.8; 2pq = 2(0.8)(0.2) = 0.32.
     distractors:
-      A: "That is q² — homozygous recessive."
-      C: "That is p² — homozygous dominant."
-      D: "That is q(1−q), a common slip."
+      A: That is q² — homozygous recessive.
+      C: That is p² — homozygous dominant.
+      D: That is q(1−q), a common slip.
 - heading: Chromosomal variation — when the packages mis-segregate
   body:
-  - Nondisjunction in meiosis I or II yields gametes with extra or
-    missing chromosomes — after fertilization, ==aneuploidy==.
-    Autosomal survivors are few — trisomy 21 (Down syndrome) the
-    classic; sex-chromosome aneuploids tolerate better (Turner XO,
-    Klinefelter XXY). Structural rearrangements complete the set —
-    deletion, duplication, inversion, and reciprocal translocation,
-    where balanced carriers are healthy but unbalanced gametes are
-    not.
-  - Detection technology closes the loop — karyotypes see
-    chromosome-scale changes; amniocentesis/chorionic villus sampling
-    sample fetal material; and modern screens read fetal DNA in
-    maternal blood. A passage pairing "what test sees what scale of
-    change" is standard MCAT furniture.
+  - Nondisjunction in meiosis I or II yields gametes with extra or missing chromosomes — after fertilization,
+    ==aneuploidy==. Autosomal survivors are few — trisomy 21 (Down syndrome) the classic; sex-chromosome
+    aneuploids tolerate better (Turner XO, Klinefelter XXY). Structural rearrangements complete the set
+    — deletion, duplication, inversion, and reciprocal translocation, where balanced carriers are healthy
+    but unbalanced gametes are not.
+  - Detection technology closes the loop — karyotypes see chromosome-scale changes; amniocentesis/chorionic
+    villus sampling sample fetal material; and modern screens read fetal DNA in maternal blood. A passage
+    pairing "what test sees what scale of change" is standard MCAT furniture.
   check:
-  - q: A phenotypically normal parent carries a balanced reciprocal
-      translocation. The main reproductive risk is…
+  - q: A phenotypically normal parent carries a balanced reciprocal translocation. The main reproductive
+      risk is…
     options:
       A: The parent will develop cancer
       B: Gametes may receive unbalanced chromosome sets
       C: All children will have Down syndrome
       D: Infertility is certain
     answer: B
-    explain: Segregation of translocated chromosomes can produce
-      gametes with duplications and deletions — miscarriage or
-      abnormal offspring.
+    explain: Segregation of translocated chromosomes can produce gametes with duplications and deletions
+      — miscarriage or abnormal offspring.
     distractors:
-      A: "Not a somatic-disease mechanism."
-      C: "Trisomy 21 requires specific chromosome 21 mis-segregation."
-      D: "Fertility may be reduced but is not certainly absent."
+      A: Not a somatic-disease mechanism.
+      C: Trisomy 21 requires specific chromosome 21 mis-segregation.
+      D: Fertility may be reduced but is not certainly absent.
 - heading: Reading and writing DNA — the technology toolkit
   body:
-  - PCR amplifies a chosen segment exponentially — denature, anneal
-    primers, extend, repeat; ==each cycle roughly doubles the target==,
-    so copy number is 2ⁿ. Gel electrophoresis separates fragments by
-    size (small run fast); restriction enzymes cut at specific
-    palindromes; and sequencing reads the order itself. Know what
-    each tool OBSERVES — PCR sees presence/quantity, gels see length,
-    sequencing sees identity.
-  - CRISPR-Cas9 writes rather than reads — a guide RNA pairs with the
-    target locus and Cas9 cuts; the cell's repair (often error-prone)
-    disrupts the gene, or a supplied template edits it. Ethics
-    passages aside, the exam logic is mechanical — ==guide RNA defines
-    the address; repair defines the outcome==.
+  - PCR amplifies a chosen segment exponentially — denature, anneal primers, extend, repeat; ==each cycle
+    roughly doubles the target==, so copy number is 2ⁿ. Gel electrophoresis separates fragments by size
+    (small run fast); restriction enzymes cut at specific palindromes; and sequencing reads the order
+    itself. Know what each tool OBSERVES — PCR sees presence/quantity, gels see length, sequencing sees
+    identity.
+  - CRISPR-Cas9 writes rather than reads — a guide RNA pairs with the target locus and Cas9 cuts; the
+    cell's repair (often error-prone) disrupts the gene, or a supplied template edits it. Ethics passages
+    aside, the exam logic is mechanical — ==guide RNA defines the address; repair defines the outcome==.
   check:
-  - q: After 5 PCR cycles starting from one template molecule, the
-      maximum number of target copies is closest to…
+  - q: After 5 PCR cycles starting from one template molecule, the maximum number of target copies is
+      closest to…
     options:
-      A: "5"
-      B: "10"
-      C: "32"
-      D: "25"
+      A: '5'
+      B: '10'
+      C: '32'
+      D: '25'
     answer: C
     explain: Doubling per cycle — 2⁵ = 32.
     distractors:
-      A: "Linear, not exponential, thinking."
-      B: "That is 2×5."
-      D: "That is 5² — the wrong exponent base."
+      A: Linear, not exponential, thinking.
+      B: That is 2×5.
+      D: That is 5² — the wrong exponent base.
+  figures:
+  - src: 1c-heritable-information-genetic-diversity/gel-electrophoresis.webp
+    caption: Gel electrophoresis — fragments separate by size; the smallest run farthest.
+    credit: Fig 14.9 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+  - src: 1c-heritable-information-genetic-diversity/xray-diffraction.webp
+    caption: Photo 51 — Franklin's X-ray diffraction pattern that revealed the double helix.
+    credit: Fig 14.6 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 examples:
-- prompt: >-
-    A lab finds a 3-bp deletion in exon 7 of a gene. Predict the mRNA
-    and protein consequences and the best detection method.
+- prompt: A lab finds a 3-bp deletion in exon 7 of a gene. Predict the mRNA and protein consequences and
+    the best detection method.
   solution:
-  - "Step 1 — a 3-bp deletion removes exactly one codon from the mRNA after processing."
-  - "Step 2 — the protein loses ONE amino acid but keeps the reading frame — an in-frame deletion."
-  - "Step 3 — consequence ranges from silent-ish (loop region) to serious (domain core) — but no frameshift downstream."
-  - "Step 4 — detection — a size shift of 3 bp is invisible on routine gels; allele-specific PCR or sequencing is the right tool."
-  answer: In-frame single-amino-acid deletion; detect by sequencing (or allele-specific assays), not standard gel size.
+  - Step 1 — a 3-bp deletion removes exactly one codon from the mRNA after processing.
+  - Step 2 — the protein loses ONE amino acid but keeps the reading frame — an in-frame deletion.
+  - Step 3 — consequence ranges from silent-ish (loop region) to serious (domain core) — but no frameshift
+    downstream.
+  - Step 4 — detection — a size shift of 3 bp is invisible on routine gels; allele-specific PCR or sequencing
+    is the right tool.
+  answer: In-frame single-amino-acid deletion; detect by sequencing (or allele-specific assays), not standard
+    gel size.
   distractors:
-    A: "Calling it a frameshift — three bases is exactly one codon; the frame survives."
-    B: "Expecting a nonsense stop — deletion of a codon does not create a stop."
-    C: "Choosing gel electrophoresis — 3 bp is far below gel resolution for large exons."
+    A: Calling it a frameshift — three bases is exactly one codon; the frame survives.
+    B: Expecting a nonsense stop — deletion of a codon does not create a stop.
+    C: Choosing gel electrophoresis — 3 bp is far below gel resolution for large exons.
 key_points:
-- Semi-conservative replication; 5'→3' synthesis; Okazaki on the
-  lagging strand; repair stacks (proofread, mismatch, excision,
-  DSB) deliver 10⁻⁹ fidelity.
-- Prokaryotic operons integrate signals (lac — lactose on, glucose
-  off); eukaryotes regulate at chromatin, transcription, processing,
-  translation.
+- Semi-conservative replication; 5'→3' synthesis; Okazaki on the lagging strand; repair stacks (proofread,
+  mismatch, excision, DSB) deliver 10⁻⁹ fidelity.
+- Prokaryotic operons integrate signals (lac — lactose on, glucose off); eukaryotes regulate at chromatin,
+  transcription, processing, translation.
 - Triplet, degenerate, near-universal code — AUG starts, three stops.
-- Variation kit — mutation creates, recombination shuffles,
-  assortment randomizes; H-W (p²+2pq+q²) is the no-evolution null.
-- Nondisjunction → aneuploidy; structural rearrangements balanced in
-  carriers, unbalanced in gametes.
-- Toolkit observables — PCR counts, gels size, sequencing reads,
-  CRISPR edits.
+- Variation kit — mutation creates, recombination shuffles, assortment randomizes; H-W (p²+2pq+q²) is
+  the no-evolution null.
+- Nondisjunction → aneuploidy; structural rearrangements balanced in carriers, unbalanced in gametes.
+- Toolkit observables — PCR counts, gels size, sequencing reads, CRISPR edits.
 mnemonics:
-- phrase: "5 to 3, build as you flee"
-  means: Nucleic-acid polymerases synthesize 5'→3' — every strand,
-    every enzyme.
-- phrase: "p² + 2pq + q² — the population's ledger"
-  means: Homozygous dominant, heterozygote, homozygous recessive
-    frequencies at one locus.
+- phrase: 5 to 3, build as you flee
+  means: Nucleic-acid polymerases synthesize 5'→3' — every strand, every enzyme.
+- phrase: p² + 2pq + q² — the population's ledger
+  means: Homozygous dominant, heterozygote, homozygous recessive frequencies at one locus.
 maps:
 - title: Information flow and its controls
   steps:
-    - "DNA →(transcription)→ RNA →(translation)→ protein"
-    - "controls — chromatin · transcription factors · splicing · translation"
-    - "==each arrow is a regulation point the exams probe=="
+  - DNA →(transcription)→ RNA →(translation)→ protein
+  - controls — chromatin · transcription factors · splicing · translation
+  - ==each arrow is a regulation point the exams probe==
 - title: Variation sources
   steps:
-    - "mutation → NEW alleles (ultimate source)"
-    - "recombination → new allele COMBINATIONS on one chromosome"
-    - "assortment + fertilization → new genome-level mixes"
-    - "selection / drift / migration → change allele FREQUENCIES"
+  - mutation → NEW alleles (ultimate source)
+  - recombination → new allele COMBINATIONS on one chromosome
+  - assortment + fertilization → new genome-level mixes
+  - selection / drift / migration → change allele FREQUENCIES
 passage:
-  text: >-
-    Cystic fibrosis is autosomal recessive and affects 1 in 2,500
-    newborns in a population. A student screens 1,000 unrelated adults
-    with a sequencing panel and finds 40 carriers. The student then
-    compares a nearby STR marker and notices carriers share marker
-    haplotypes far more often than expected by chance.
+  text: Cystic fibrosis is autosomal recessive and affects 1 in 2,500 newborns in a population. A student
+    screens 1,000 unrelated adults with a sequencing panel and finds 40 carriers. The student then compares
+    a nearby STR marker and notices carriers share marker haplotypes far more often than expected by chance.
   questions:
-  - q: From the disease incidence alone, the EXPECTED carrier rate is
-      closest to…
+  - q: From the disease incidence alone, the EXPECTED carrier rate is closest to…
     options:
-      A: "1/50"
-      B: "1/25"
-      C: "1/2500"
-      D: "1/100"
+      A: 1/50
+      B: 1/25
+      C: 1/2500
+      D: 1/100
     answer: A
-    explain: q² = 1/2500 → q = 1/50 → carriers 2pq ≈ 2(0.98)(0.02) ≈
-      1/25·(0.98) ≈ 1/50.
+    explain: q² = 1/2500 → q = 1/50 → carriers 2pq ≈ 2(0.98)(0.02) ≈ 1/25·(0.98) ≈ 1/50.
     distractors:
-      B: "1/25 doubles the true value."
-      C: "That is the AFFECTED rate."
-      D: "Half the correct estimate."
-  - q: The observed 40/1000 differs from the expectation. The most
-      likely statistical explanation is…
+      B: 1/25 doubles the true value.
+      C: That is the AFFECTED rate.
+      D: Half the correct estimate.
+  - q: The observed 40/1000 differs from the expectation. The most likely statistical explanation is…
     options:
       A: The H-W model never applies
       B: Sampling variation around a small expected count
       C: Mutation hotspots raised the rate
       D: The trait is dominant
     answer: B
-    explain: Expected carriers ≈ 20; observing 40 needs a check of
-      sample size and confidence intervals before any biological
-      claim.
+    explain: Expected carriers ≈ 20; observing 40 needs a check of sample size and confidence intervals
+      before any biological claim.
     distractors:
-      A: "H-W is a null model — it applies as a baseline."
-      C: "Possible but not first-line."
-      D: "Dominance contradicts the given inheritance."
+      A: H-W is a null model — it applies as a baseline.
+      C: Possible but not first-line.
+      D: Dominance contradicts the given inheritance.
   - q: The shared marker haplotypes among carriers suggest…
     options:
       A: Independent origins of every carrier allele
-      B: A founder effect — many carriers descend from one ancestral
-        mutation
+      B: A founder effect — many carriers descend from one ancestral mutation
       C: High mutation rate at the STR
       D: Random mating is violated
     answer: B
-    explain: Haplotype sharing around an allele is the signature of
-      common descent from one origin (founder mutation).
+    explain: Haplotype sharing around an allele is the signature of common descent from one origin (founder
+      mutation).
     distractors:
-      A: "Independent origins would scramble haplotypes."
-      C: "STR mutation would break, not build, sharing."
-      D: "Mating pattern is not what haplotypes show."
+      A: Independent origins would scramble haplotypes.
+      C: STR mutation would break, not build, sharing.
+      D: Mating pattern is not what haplotypes show.
 pitfalls:
-- Confusing mutation (creates alleles) with recombination (shuffles
-  them) — the toolkit's most common mix-up.
-- Reading H-W as a law of nature — it is the null; deviations are the
-  data.
+- Confusing mutation (creates alleles) with recombination (shuffles them) — the toolkit's most common
+  mix-up.
+- Reading H-W as a law of nature — it is the null; deviations are the data.
 - Calling every deletion a frameshift — check multiples of three.
-- Expecting karyotypes to show point mutations — scale must match
-  tool.
+- Expecting karyotypes to show point mutations — scale must match tool.
 - Forgetting PCR's exponential arithmetic — n cycles, 2ⁿ copies.
 exam_map:
-  NMAT: >-
-    Intro-depth molecular vocabulary — central dogma terms, operon
-    names, aneuploidy examples, and one-step H-W algebra.
-  MCAT: >-
-    Content Category 1C builds passages on replication/repair defects,
-    operon logic, pedigree-plus-H-W calculation, aneuploidy
-    mechanisms, and PCR/CRISPR experiment interpretation.
+  NMAT: Intro-depth molecular vocabulary — central dogma terms, operon names, aneuploidy examples, and
+    one-step H-W algebra.
+  MCAT: Content Category 1C builds passages on replication/repair defects, operon logic, pedigree-plus-H-W
+    calculation, aneuploidy mechanisms, and PCR/CRISPR experiment interpretation.
 sources:
 - ref: openstax-biology-2e
   used:
-  - "Ch 14 — DNA Structure and Function; Ch 15 — Genes and Proteins"
-  - "Ch 16 — Gene Expression; Ch 19 — The Evolution of Populations"
+  - Ch 14 — DNA Structure and Function; Ch 15 — Genes and Proteins
+  - Ch 16 — Gene Expression; Ch 19 — The Evolution of Populations
   relation: consulted
 - ref: aamc-whatson-mcat
   used:
-  - "Foundational Concept 1, Content Category 1C"
+  - Foundational Concept 1, Content Category 1C
   relation: consulted
 further_reading:
-- title: "OpenStax Biology 2e — Ch 15: Genes and Proteins"
+- title: 'OpenStax Biology 2e — Ch 15: Genes and Proteins'
   url: https://openstax.org/books/biology-2e/pages/15-introduction
   note: Expression logic and the code.
-- title: "OpenStax Biology 2e — Ch 16: Gene Expression"
+- title: 'OpenStax Biology 2e — Ch 16: Gene Expression'
   url: https://openstax.org/books/biology-2e/pages/16-introduction
   note: Operons and eukaryotic control.
-- title: "OpenStax Biology 2e — Ch 19: The Evolution of Populations"
+- title: 'OpenStax Biology 2e — Ch 19: The Evolution of Populations'
   url: https://openstax.org/books/biology-2e/pages/19-introduction
   note: Hardy-Weinberg in population context.
 review_questions:
@@ -300,14 +263,12 @@ review_questions:
     C: Ligase alone
     D: Okazaki processing
   answer: B
-  explain: Bulky lesions are cut out as a patch and re-synthesized by
-    the excision system.
+  explain: Bulky lesions are cut out as a patch and re-synthesized by the excision system.
   distractors:
-    A: "Mismatch repair fixes replication mispairing."
-    C: "Ligase seals nicks — it cannot remove damage."
-    D: "That is lagging-strand maturation."
-- q: A mutation changes one codon from AAA to AAG, both coding
-    lysine. This is…
+    A: Mismatch repair fixes replication mispairing.
+    C: Ligase seals nicks — it cannot remove damage.
+    D: That is lagging-strand maturation.
+- q: A mutation changes one codon from AAA to AAG, both coding lysine. This is…
   options:
     A: A missense mutation
     B: A silent mutation
@@ -316,9 +277,9 @@ review_questions:
   answer: B
   explain: Degenerate code — same amino acid, no protein change.
   distractors:
-    A: "Missense CHANGES the amino acid."
-    C: "Nonsense creates a stop."
-    D: "No insertion/deletion occurred."
+    A: Missense CHANGES the amino acid.
+    C: Nonsense creates a stop.
+    D: No insertion/deletion occurred.
 - q: In the lac operon, high lactose AND low glucose produce…
   options:
     A: Maximal transcription
@@ -326,12 +287,11 @@ review_questions:
     C: Termination of translation
     D: CRP detachment from DNA
   answer: A
-  explain: Lactose frees the repressor; low glucose raises cAMP,
-      CAP binds, transcription runs high.
+  explain: Lactose frees the repressor; low glucose raises cAMP, CAP binds, transcription runs high.
   distractors:
-    B: "Repression needs lactose ABSENT."
-    C: "Transcriptional control, not translational termination."
-    D: "Low glucose ATTACHES CAP (via cAMP)."
+    B: Repression needs lactose ABSENT.
+    C: Transcriptional control, not translational termination.
+    D: Low glucose ATTACHES CAP (via cAMP).
 - q: Klinefelter syndrome (XXY) most often arises by…
   options:
     A: A reciprocal translocation
@@ -341,6 +301,6 @@ review_questions:
   answer: B
   explain: Extra sex chromosome from meiotic mis-segregation.
   distractors:
-    A: "Structural rearrangement, wrong scale."
-    C: "Sequence-level, wrong scale."
-    D: "Not a natural meiotic event."
+    A: Structural rearrangement, wrong scale.
+    C: Sequence-level, wrong scale.
+    D: Not a natural meiotic event.

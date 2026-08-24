@@ -1,63 +1,47 @@
 subject: biology
 chapter: 3B · Main organ systems
 title: 3B · Main organ systems
-overview: >-
-  3B tours the organ systems as integrated machines — exchange
-  surfaces, pumps, tubes, filters, and defenders — always asking how
-  structure serves the transport-and-barrier logic of the whole body.
-  The MCAT frames it in pressure-flow data, gas-exchange chemistry,
-  filtration arithmetic, and immune experiments. Prerequisites —
-  Life Processes (homeostasis), 3A (neural-hormonal control).
+overview: 3B tours the organ systems as integrated machines — exchange surfaces, pumps, tubes, filters,
+  and defenders — always asking how structure serves the transport-and-barrier logic of the whole body.
+  The MCAT frames it in pressure-flow data, gas-exchange chemistry, filtration arithmetic, and immune
+  experiments. Prerequisites — Life Processes (homeostasis), 3A (neural-hormonal control).
 sections:
 - heading: Circulation and respiration — the transport pair
   body:
-  - The heart is two pumps in series — right side to the lungs
-    (pulmonary circuit), left side to the body (systemic). The cardiac
-    cycle squeezes in **systole** and refills in **diastole**; the
-    ==SA node paces== the electrical wave, AV node delays it so atria
-    finish, and the bundle/Purkinje system fires the ventricles —
-    an ECG is this choreography on paper. Vessels match role —
-    arteries (thick, elastic, high pressure), capillaries (one cell
-    thick — ==the only exchange surface==), veins (thin, valved,
-    volume reservoirs).
-  - Gas exchange rides partial pressures — alveolar air trades O₂
-    and CO₂ with blood across an enormous, blood-film-thin surface;
-    ==hemoglobin's O₂ saturation curve is sigmoid== (cooperative
-    binding) and shifts right with ↑CO₂, ↑H⁺, ↑temperature, ↑2,3-BPG
-    — the Bohr effect that unloads oxygen exactly where metabolism
-    runs hot. The counter-layout — air and blood flowing in opposite
-    directions in fish gills — maximizes gradient along the whole
-    surface.
+  - The heart is two pumps in series — right side to the lungs (pulmonary circuit), left side to the body
+    (systemic). The cardiac cycle squeezes in **systole** and refills in **diastole**; the ==SA node paces==
+    the electrical wave, AV node delays it so atria finish, and the bundle/Purkinje system fires the ventricles
+    — an ECG is this choreography on paper. Vessels match role — arteries (thick, elastic, high pressure),
+    capillaries (one cell thick — ==the only exchange surface==), veins (thin, valved, volume reservoirs).
+  - Gas exchange rides partial pressures — alveolar air trades O₂ and CO₂ with blood across an enormous,
+    blood-film-thin surface; ==hemoglobin's O₂ saturation curve is sigmoid== (cooperative binding) and
+    shifts right with ↑CO₂, ↑H⁺, ↑temperature, ↑2,3-BPG — the Bohr effect that unloads oxygen exactly
+    where metabolism runs hot. The counter-layout — air and blood flowing in opposite directions in fish
+    gills — maximizes gradient along the whole surface.
   check:
-  - q: The Bohr effect helps working muscle because increased CO₂ and
-      H⁺…
+  - q: The Bohr effect helps working muscle because increased CO₂ and H⁺…
     options:
       A: Increase hemoglobin's oxygen affinity
       B: Shift the curve right — hemoglobin RELEASES more O₂
       C: Stop the heart
       D: Reverse blood flow
     answer: B
-    explain: Acid and CO₂ lower affinity precisely where oxygen is
-      needed most.
+    explain: Acid and CO₂ lower affinity precisely where oxygen is needed most.
     distractors:
-      A: "Affinity DROPS — that is the point."
-      C: "Not a cardiac effect."
-      D: "Not a flow effect."
+      A: Affinity DROPS — that is the point.
+      C: Not a cardiac effect.
+      D: Not a flow effect.
 - heading: Digestion — a selective disassembly line
   body:
-  - The gut is a tube open at both ends, technically OUTSIDE the
-    body — so digestion is disassembly in a channel, and ==absorption
-    is the border crossing==. Enzymes by station — salivary amylase
-    (starch, mouth), pepsin (protein, acidic stomach), pancreatic
-    enzymes + bile (small intestine — the absorption workhorse with
-    its villi and microvilli multiplying surface). Most absorption
-    happens in the small intestine; the large intestine reclaims
-    water.
-  - Access organs matter — liver makes bile (emulsification, not
-    digestion), gallbladder stores it, pancreas supplies enzymes and
-    bicarbonate to neutralize stomach acid. Regulation is hormonal as
-    much as neural — gastrin (stomach acid), secretin (bicarbonate),
-    CCK (enzyme and bile release) — a feedback loop per station.
+  - The gut is a tube open at both ends, technically OUTSIDE the body — so digestion is disassembly in
+    a channel, and ==absorption is the border crossing==. Enzymes by station — salivary amylase (starch,
+    mouth), pepsin (protein, acidic stomach), pancreatic enzymes + bile (small intestine — the absorption
+    workhorse with its villi and microvilli multiplying surface). Most absorption happens in the small
+    intestine; the large intestine reclaims water.
+  - Access organs matter — liver makes bile (emulsification, not digestion), gallbladder stores it, pancreas
+    supplies enzymes and bicarbonate to neutralize stomach acid. Regulation is hormonal as much as neural
+    — gastrin (stomach acid), secretin (bicarbonate), CCK (enzyme and bile release) — a feedback loop
+    per station.
   check:
   - q: Bile's digestive role is to…
     options:
@@ -66,27 +50,22 @@ sections:
       C: Absorb glucose
       D: Neutralize acid
     answer: B
-    explain: Detergent action disperses fat droplets so lipase can
-      work; bicarbonate neutralization is the pancreas's job.
+    explain: Detergent action disperses fat droplets so lipase can work; bicarbonate neutralization is
+      the pancreas's job.
     distractors:
-      A: "Proteases do that."
-      C: "Enterocytes absorb."
-      D: "Pancreatic bicarbonate."
+      A: Proteases do that.
+      C: Enterocytes absorb.
+      D: Pancreatic bicarbonate.
 - heading: Excretion — the kidney as precision filter
   body:
-  - The nephron does three jobs in order — ==filtration== (glomerulus
-    — pressure drives plasma into Bowman's capsule, cells and protein
-    stay behind), **reabsorption** (tubules reclaim glucose, salts,
-    water — mostly proximal), **secretion** (tubules actively add
-    wastes like H⁺ and drugs to the filtrate). What is neither
-    reabsorbed nor secreted out becomes urine — the arithmetic of
-    everything downstream.
-  - Fine control lives at the end — ==ADH makes the collecting duct
-    water-permeable== (concentrated urine when dehydrated), and
-    **aldosterone** trades Na⁺ reabsorption for K⁺ secretion. The
-    kidney also secretes erythropoietin (red-cell production) and
-    renin (blood-pressure axis) — an endocrine organ wearing a
-    filter's clothes.
+  - The nephron does three jobs in order — ==filtration== (glomerulus — pressure drives plasma into Bowman's
+    capsule, cells and protein stay behind), **reabsorption** (tubules reclaim glucose, salts, water —
+    mostly proximal), **secretion** (tubules actively add wastes like H⁺ and drugs to the filtrate). What
+    is neither reabsorbed nor secreted out becomes urine — the arithmetic of everything downstream.
+  - Fine control lives at the end — ==ADH makes the collecting duct water-permeable== (concentrated urine
+    when dehydrated), and **aldosterone** trades Na⁺ reabsorption for K⁺ secretion. The kidney also secretes
+    erythropoietin (red-cell production) and renin (blood-pressure axis) — an endocrine organ wearing
+    a filter's clothes.
   check:
   - q: Glucose appearing in urine most directly indicates…
     options:
@@ -95,29 +74,23 @@ sections:
       C: Enhanced aldosterone
       D: Renal failure of filtration itself
     answer: B
-    explain: Glucose is filtered freely and normally reabsorbed to the
-      last molecule — saturation of carriers spills it (the glycosuria
-      of uncontrolled diabetes).
+    explain: Glucose is filtered freely and normally reabsorbed to the last molecule — saturation of carriers
+      spills it (the glycosuria of uncontrolled diabetes).
     distractors:
-      A: "ADH governs water only."
-      C: "Aldosterone handles Na⁺/K⁺."
-      D: "Filtration failure reduces urine, not glycosuria."
+      A: ADH governs water only.
+      C: Aldosterone handles Na⁺/K⁺.
+      D: Filtration failure reduces urine, not glycosuria.
 - heading: Defense — innate first, adaptive after
   body:
-  - The **innate** system answers instantly and generically — barriers
-    (skin, acid, mucus), phagocytes (neutrophils, macrophages),
-    natural killer cells, complement, and inflammation (the
-    vascular response — redness, heat, swelling, pain — delivering
-    cells and plasma to the breach). No memory, same response every
-    time.
-  - The ==adaptive== system answers slowly but specifically — B
-    lymphocytes make **antibodies** (humoral, tags for neutralization
-    and phagocytosis), T lymphocytes run the cell-mediated branch
-    (cytotoxic CD8 kills infected cells; helper CD4 orchestrates).
-    ==Memory cells== are the whole logic of vaccination — faster,
-    stronger response on re-encounter. Self-tolerance failures
-    complete the picture — autoimmunity (attacking self) and allergy
-    (misdirected IgE against harmless antigen).
+  - The **innate** system answers instantly and generically — barriers (skin, acid, mucus), phagocytes
+    (neutrophils, macrophages), natural killer cells, complement, and inflammation (the vascular response
+    — redness, heat, swelling, pain — delivering cells and plasma to the breach). No memory, same response
+    every time.
+  - The ==adaptive== system answers slowly but specifically — B lymphocytes make **antibodies** (humoral,
+    tags for neutralization and phagocytosis), T lymphocytes run the cell-mediated branch (cytotoxic CD8
+    kills infected cells; helper CD4 orchestrates). ==Memory cells== are the whole logic of vaccination
+    — faster, stronger response on re-encounter. Self-tolerance failures complete the picture — autoimmunity
+    (attacking self) and allergy (misdirected IgE against harmless antigen).
   check:
   - q: Which feature belongs ONLY to adaptive immunity?
     options:
@@ -126,24 +99,27 @@ sections:
       C: Antigen-specific memory
       D: Skin barrier
     answer: C
-    explain: Memory and specificity define adaptive responses;
-      everything else listed is innate.
+    explain: Memory and specificity define adaptive responses; everything else listed is innate.
     distractors:
-      A: "Innate, always available."
-      B: "Innate effector."
-      D: "The first innate barrier."
+      A: Innate, always available.
+      B: Innate effector.
+      D: The first innate barrier.
+  figures:
+  - src: 3b-main-organ-systems/wbc-lineup.webp
+    caption: The innate immune cast — each leukocyte type with its job and location.
+    credit: Fig 42.2 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+  - src: 3b-main-organ-systems/inflammation.webp
+    caption: The inflammatory response — mast-cell histamine, vasodilation, and phagocyte arrival.
+    credit: Fig 42.5 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Integration — one demand, every system at once
   body:
-  - Exercise is the canonical integration exam — muscle demand
-    raises CO₂ and H⁺ (chemoreceptors), sympathetic output climbs
-    (heart rate and stroke volume), breathing deepens (more CO₂
-    cleared), skin vessels dilate while splanchnic vessels
-    constrict (blood routed to muscle and surface), and liver
-    glycogenolysis feeds the fibers. Each system's chapter explains
-    one arrow; integration questions ask you to draw them together.
-  - The exam habit — when a passage stresses one system, tabulate the
-    responses of the other four before reading the questions. Most
-    integration items are matching problems wearing a story.
+  - Exercise is the canonical integration exam — muscle demand raises CO₂ and H⁺ (chemoreceptors), sympathetic
+    output climbs (heart rate and stroke volume), breathing deepens (more CO₂ cleared), skin vessels dilate
+    while splanchnic vessels constrict (blood routed to muscle and surface), and liver glycogenolysis
+    feeds the fibers. Each system's chapter explains one arrow; integration questions ask you to draw
+    them together.
+  - The exam habit — when a passage stresses one system, tabulate the responses of the other four before
+    reading the questions. Most integration items are matching problems wearing a story.
   check:
   - q: During intense exercise, blood is redistributed mainly toward…
     options:
@@ -152,63 +128,56 @@ sections:
       C: The kidneys exclusively
       D: Bone marrow
     answer: B
-    explain: Sympathetic vasomotor priorities — working muscle gets
-      fuel and flow; skin handles heat; digestion waits.
+    explain: Sympathetic vasomotor priorities — working muscle gets fuel and flow; skin handles heat;
+      digestion waits.
     distractors:
-      A: "Gut flow FALLS."
-      C: "Renal flow drops moderately."
-      D: "Not an acute redistribution target."
+      A: Gut flow FALLS.
+      C: Renal flow drops moderately.
+      D: Not an acute redistribution target.
 examples:
-- prompt: >-
-    Predict the shifts, and their causes, when a person moves from
-    sea level to high altitude for two weeks.
+- prompt: Predict the shifts, and their causes, when a person moves from sea level to high altitude for
+    two weeks.
   solution:
-  - "Step 1 — immediate — low inspired PO₂ → lower arterial O₂ content → hyperventilation via peripheral chemoreceptors (CO₂ drops, pH rises slightly)."
-  - "Step 2 — days — kidney erythropoietin rises → red-cell mass climbs → O₂ capacity restored."
-  - "Step 3 — tissues — 2,3-BPG rises → curve shifts right → unloading eased at tissues."
-  answer: Hyperventilation acutely, erythropoiesis and a right-shifted curve chronically — three systems converging on one gas.
+  - Step 1 — immediate — low inspired PO₂ → lower arterial O₂ content → hyperventilation via peripheral
+    chemoreceptors (CO₂ drops, pH rises slightly).
+  - Step 2 — days — kidney erythropoietin rises → red-cell mass climbs → O₂ capacity restored.
+  - Step 3 — tissues — 2,3-BPG rises → curve shifts right → unloading eased at tissues.
+  answer: Hyperventilation acutely, erythropoiesis and a right-shifted curve chronically — three systems
+    converging on one gas.
   distractors:
-    A: "Claiming the curve shifts left — unloading would worsen."
-    B: "Expecting instant red-cell change — erythropoiesis takes days-to-weeks."
-    C: "Blaming the medulla's pH sensor alone — it responds to CO₂/pH, not O₂."
+    A: Claiming the curve shifts left — unloading would worsen.
+    B: Expecting instant red-cell change — erythropoiesis takes days-to-weeks.
+    C: Blaming the medulla's pH sensor alone — it responds to CO₂/pH, not O₂.
 key_points:
-- Two pumps in series; SA node paces; capillaries are the exchange
-  surface; pressure falls artery → capillary → vein.
-- Sigmoid Hb curve shifts right with CO₂/H⁺/heat/2,3-BPG — unloading
-  where metabolism burns.
-- Digestion = tube chemistry; absorption = border crossing at villi;
-  station hormones gastrin/secretin/CCK.
-- Nephron — filter (glomerulus), reabsorb (proximal), secrete
-  (distal); ADH controls water, aldosterone Na⁺/K⁺; EPO and renin
-  are renal hormones.
-- Innate = fast, generic, no memory; adaptive = slow, specific,
-  memory (B antibodies, CD8 kill, CD4 orchestrate).
-- Integration — exercise recruits every system; tabulate before
-  answering.
+- Two pumps in series; SA node paces; capillaries are the exchange surface; pressure falls artery → capillary
+  → vein.
+- Sigmoid Hb curve shifts right with CO₂/H⁺/heat/2,3-BPG — unloading where metabolism burns.
+- Digestion = tube chemistry; absorption = border crossing at villi; station hormones gastrin/secretin/CCK.
+- Nephron — filter (glomerulus), reabsorb (proximal), secrete (distal); ADH controls water, aldosterone
+  Na⁺/K⁺; EPO and renin are renal hormones.
+- Innate = fast, generic, no memory; adaptive = slow, specific, memory (B antibodies, CD8 kill, CD4 orchestrate).
+- Integration — exercise recruits every system; tabulate before answering.
 mnemonics:
-- phrase: "Right heart to lungs (Right is Reduced pressure)"
+- phrase: Right heart to lungs (Right is Reduced pressure)
   means: Pulmonary circuit pressures are far below systemic.
-- phrase: "Filter, Fetch back, Fling out"
-  means: "Nephron order — glomerular filtration, tubular
-    reabsorption, tubular secretion."
+- phrase: Filter, Fetch back, Fling out
+  means: Nephron order — glomerular filtration, tubular reabsorption, tubular secretion.
 maps:
 - title: Oxygen's journey
   steps:
-    - "alveolar air (high PO₂) → blood → ==Hb binds cooperatively (sigmoid)=="
-    - "tissues (high CO₂/H⁺, hot) → curve shifts right → ==O₂ unloads=="
-    - "CO₂ returns as bicarbonate, reconverted in lungs"
+  - alveolar air (high PO₂) → blood → ==Hb binds cooperatively (sigmoid)==
+  - tissues (high CO₂/H⁺, hot) → curve shifts right → ==O₂ unloads==
+  - CO₂ returns as bicarbonate, reconverted in lungs
 - title: Nephron processing order
   steps:
-    - "glomerulus — pressure FILTERS plasma (no proteins)"
-    - "proximal tubule — REABSORB glucose, salts, most water"
-    - "distal/collecting — ADH tunes water; aldosterone tunes Na⁺/K⁺"
-    - "==what remains is urine=="
+  - glomerulus — pressure FILTERS plasma (no proteins)
+  - proximal tubule — REABSORB glucose, salts, most water
+  - distal/collecting — ADH tunes water; aldosterone tunes Na⁺/K⁺
+  - ==what remains is urine==
 passage:
-  text: >-
-    A patient's lab values — low blood pressure, low plasma Na⁺, high
-    plasma K⁺, and high renin — follow adrenal insufficiency
-    (cortisol and aldosterone both low). Urine output is modestly
-    high despite dehydration signs.
+  text: A patient's lab values — low blood pressure, low plasma Na⁺, high plasma K⁺, and high renin —
+    follow adrenal insufficiency (cortisol and aldosterone both low). Urine output is modestly high despite
+    dehydration signs.
   questions:
   - q: The high K⁺ is best explained by…
     options:
@@ -217,27 +186,24 @@ passage:
       C: Excess ADH
       D: Hemolysis of the sample
     answer: B
-    explain: Aldosterone's exchange — Na⁺ back, K⁺ out — is
-      aldosterone's job; without it K⁺ climbs.
+    explain: Aldosterone's exchange — Na⁺ back, K⁺ out — is aldosterone's job; without it K⁺ climbs.
     distractors:
-      A: "Filtration failure retains everything, including Na⁺."
-      C: "ADH moves water only."
-      D: "Not an artifact question."
+      A: Filtration failure retains everything, including Na⁺.
+      C: ADH moves water only.
+      D: Not an artifact question.
   - q: High renin makes sense because…
     options:
       A: The adrenal cortex directly drives renin
-      B: Low blood pressure and low Na⁺ at the kidney's apparatus
-        stimulate renin release — the axis is intact, the gland is not
+      B: Low blood pressure and low Na⁺ at the kidney's apparatus stimulate renin release — the axis is
+        intact, the gland is not
       C: Renin substitutes for aldosterone
       D: K⁺ directly inhibits renin
     answer: B
-    explain: The kidney correctly senses trouble and signals — the
-      adrenal target simply cannot respond.
+    explain: The kidney correctly senses trouble and signals — the adrenal target simply cannot respond.
     distractors:
-      A: "Direction reversed."
-      C: "Renin is an enzyme of the angiotensin cascade, not a
-        substitute mineralocorticoid."
-      D: "Data show the opposite."
+      A: Direction reversed.
+      C: Renin is an enzyme of the angiotensin cascade, not a substitute mineralocorticoid.
+      D: Data show the opposite.
   - q: Which replacement therapy would correct the Na⁺ and K⁺ fastest?
     options:
       A: ADH analog
@@ -245,50 +211,41 @@ passage:
       C: Insulin
       D: Erythropoietin
     answer: B
-    explain: Replace the missing mineralocorticoid and the distal
-      tubule exchange resumes.
+    explain: Replace the missing mineralocorticoid and the distal tubule exchange resumes.
     distractors:
-      A: "Water handling, not electrolyte exchange."
-      C: "Glucose axis."
-      D: "Red-cell production."
+      A: Water handling, not electrolyte exchange.
+      C: Glucose axis.
+      D: Red-cell production.
 pitfalls:
-- Assigning digestion to the large intestine — the small intestine is
-  the absorber; the colon only reclaims water.
-- Forgetting proteins cannot cross the glomerulus — their presence
-  means filter damage, not overflow.
-- Putting memory into innate immunity — memory is the adaptive
-  signature.
-- Reading the Hb curve as linear — sigmoid cooperativity is the
-  tested property.
-- Treating organ systems as independent — integration items punish
-  silo thinking.
+- Assigning digestion to the large intestine — the small intestine is the absorber; the colon only reclaims
+  water.
+- Forgetting proteins cannot cross the glomerulus — their presence means filter damage, not overflow.
+- Putting memory into innate immunity — memory is the adaptive signature.
+- Reading the Hb curve as linear — sigmoid cooperativity is the tested property.
+- Treating organ systems as independent — integration items punish silo thinking.
 exam_map:
-  NMAT: >-
-    Organ-name and function matching, enzyme-station recall, nephron
-    step order, and innate/adaptive vocabulary.
-  MCAT: >-
-    Content Category 3B runs pressure-flow and Hb-curve data, enzyme
-    localization experiments, filtration/reabsorption arithmetic,
-    immune-assay interpretation, and cross-system integration
-    scenarios.
+  NMAT: Organ-name and function matching, enzyme-station recall, nephron step order, and innate/adaptive
+    vocabulary.
+  MCAT: Content Category 3B runs pressure-flow and Hb-curve data, enzyme localization experiments, filtration/reabsorption
+    arithmetic, immune-assay interpretation, and cross-system integration scenarios.
 sources:
 - ref: openstax-biology-2e
   used:
-  - "The Circulatory, Respiratory, Digestive systems chapters"
-  - "Osmotic Regulation and the Immune System chapters"
+  - The Circulatory, Respiratory, Digestive systems chapters
+  - Osmotic Regulation and the Immune System chapters
   relation: consulted
 - ref: aamc-whatson-mcat
   used:
-  - "Foundational Concept 3, Content Category 3B"
+  - Foundational Concept 3, Content Category 3B
   relation: consulted
 further_reading:
-- title: "OpenStax Biology 2e — The Circulatory System"
+- title: OpenStax Biology 2e — The Circulatory System
   url: https://openstax.org/books/biology-2e/pages/40-introduction
   note: Pumps, vessels, and pressure.
-- title: "OpenStax Biology 2e — The Respiratory System"
+- title: OpenStax Biology 2e — The Respiratory System
   url: https://openstax.org/books/biology-2e/pages/39-introduction
   note: Gas exchange and the Hb curve.
-- title: "OpenStax Biology 2e — The Immune System"
+- title: OpenStax Biology 2e — The Immune System
   url: https://openstax.org/books/biology-2e/pages/42-introduction
   note: Innate, adaptive, and the memory logic.
 review_questions:
@@ -299,26 +256,23 @@ review_questions:
     C: Veins
     D: Lymphatics
   answer: B
-  explain: One-cell walls and maximal total area — everything crosses
-    there.
+  explain: One-cell walls and maximal total area — everything crosses there.
   distractors:
-    A: "Thick-walled conduits."
-    C: "Low-pressure reservoirs."
-    D: "Return drainage, not the main exchange."
-- q: Secretin is released when acidic chyme reaches the duodenum and
-    stimulates…
+    A: Thick-walled conduits.
+    C: Low-pressure reservoirs.
+    D: Return drainage, not the main exchange.
+- q: Secretin is released when acidic chyme reaches the duodenum and stimulates…
   options:
     A: Gastric acid secretion
     B: Pancreatic bicarbonate release
     C: Bile salt synthesis only
     D: Colon water absorption
   answer: B
-  explain: Acid in the duodenum → secretin → bicarbonate to
-    neutralize — station-matched feedback.
+  explain: Acid in the duodenum → secretin → bicarbonate to neutralize — station-matched feedback.
   distractors:
-    A: "That is gastrin's role at the stomach."
-    C: "CCK handles bile release."
-    D: "Not a colon hormone."
+    A: That is gastrin's role at the stomach.
+    C: CCK handles bile release.
+    D: Not a colon hormone.
 - q: ADH acts mainly by…
   options:
     A: Increasing Na⁺ reabsorption
@@ -326,12 +280,11 @@ review_questions:
     C: Raising glomerular pressure
     D: Secreting K⁺
   answer: B
-  explain: Aquaporin insertion makes the final tubule water-permeable
-    — concentrated urine.
+  explain: Aquaporin insertion makes the final tubule water-permeable — concentrated urine.
   distractors:
-    A: "Aldosterone's role."
-    C: "Not ADH's mechanism."
-    D: "Aldosterone again."
+    A: Aldosterone's role.
+    C: Not ADH's mechanism.
+    D: Aldosterone again.
 - q: A secondary immune response is stronger and faster because…
   options:
     A: Innate barriers thickened
@@ -339,9 +292,8 @@ review_questions:
     C: Complement doubled
     D: Antibodies never decay
   answer: B
-  explain: Clones selected last time stand ready — vaccination's
-    principle.
+  explain: Clones selected last time stand ready — vaccination's principle.
   distractors:
-    A: "Innate components do not learn."
-    C: "Complement is not amplified by memory."
-    D: "Titers do fall; memory cells do not."
+    A: Innate components do not learn.
+    C: Complement is not amplified by memory.
+    D: Titers do fall; memory cells do not.

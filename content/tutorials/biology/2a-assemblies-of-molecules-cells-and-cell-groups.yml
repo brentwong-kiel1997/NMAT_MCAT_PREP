@@ -1,31 +1,23 @@
 subject: biology
 chapter: 2A · Assemblies of molecules, cells, and cell groups
 title: 2A · Assemblies of molecules, cells, and cell groups
-overview: >-
-  AAMC's 2A treats the cell as an engineered assembly — how molecules
-  self-organize into membranes, how membranes and junctions turn cells
-  into tissues, and how polarity makes epithelia work as selective
-  barriers. The MCAT frames it in transport data and tissue function;
-  the NMAT meets the same vocabulary in intro-cell items.
-  Prerequisites — Cells and Cellular Processes (full chapter).
+overview: AAMC's 2A treats the cell as an engineered assembly — how molecules self-organize into membranes,
+  how membranes and junctions turn cells into tissues, and how polarity makes epithelia work as selective
+  barriers. The MCAT frames it in transport data and tissue function; the NMAT meets the same vocabulary
+  in intro-cell items. Prerequisites — Cells and Cellular Processes (full chapter).
 sections:
 - heading: Self-assembly — why membranes build themselves
   body:
-  - Phospholipids are **amphipathic** — charged head, fatty tail — and
-    in water they hide their tails by forming bilayers, micelles, or
-    liposomes ==with no energy input==. Every biological membrane is
-    this self-assembly plus proteins doing the work. Membrane
-    **fluidity** is tuned by composition — unsaturated (kinked) tails
-    keep membranes loose; cholesterol buffers extremes, stiffening at
-    high temperature and preventing crystal packing at low.
-  - The fluid mosaic consequence matters for exams — proteins drift
-    laterally (Frye-Edidin fusion experiments), rafts cluster signaling
-    molecules, and anisotropy measurements report fluidity. When a
-    passage changes temperature or tail saturation, ask what happens to
-    fluidity first — everything else follows.
+  - Phospholipids are **amphipathic** — charged head, fatty tail — and in water they hide their tails
+    by forming bilayers, micelles, or liposomes ==with no energy input==. Every biological membrane is
+    this self-assembly plus proteins doing the work. Membrane **fluidity** is tuned by composition — unsaturated
+    (kinked) tails keep membranes loose; cholesterol buffers extremes, stiffening at high temperature
+    and preventing crystal packing at low.
+  - The fluid mosaic consequence matters for exams — proteins drift laterally (Frye-Edidin fusion experiments),
+    rafts cluster signaling molecules, and anisotropy measurements report fluidity. When a passage changes
+    temperature or tail saturation, ask what happens to fluidity first — everything else follows.
   check:
-  - q: A membrane is enriched with unsaturated fatty-acyl tails. At a
-      given temperature it will be…
+  - q: A membrane is enriched with unsaturated fatty-acyl tails. At a given temperature it will be…
     options:
       A: More fluid, because kinked tails pack poorly
       B: More rigid, because tails interlock
@@ -34,52 +26,43 @@ sections:
     answer: A
     explain: Double bonds kink tails — loose packing, more fluid.
     distractors:
-      B: "That is saturated-tail behavior."
-      C: "Composition shifts always move fluidity."
-      D: "Proteins stay anchored regardless."
+      B: That is saturated-tail behavior.
+      C: Composition shifts always move fluidity.
+      D: Proteins stay anchored regardless.
 - heading: The extracellular matrix — the cell's load-bearing exterior
   body:
-  - Animal cells sit in the **ECM** — a mesh of **collagen** (tensile
-    rods), **proteoglycans** (water-trapping ground substance), and
-    **fibronectin** and friends linking it all to cells through
-    **integrins** — receptors that physically connect the outside
-    scaffold to the inside cytoskeleton and, crucially, ==signal both
-    ways== (outside-in mechanical information, inside-out cell state).
-  - The exam hooks — connective tissue's ECM IS its function (tendon,
-    cartilage, bone's organic scaffold); plants run the parallel system
-    with the **cell wall** (cellulose fibers in a polysaccharide glue),
-    rigid yet porous, joined between cells by plasmodesmata. Collagen
-    pathology (scurvy — vitamin C needed for hydroxylation) shows the
-    chemistry-clinical bridge.
+  - Animal cells sit in the **ECM** — a mesh of **collagen** (tensile rods), **proteoglycans** (water-trapping
+    ground substance), and **fibronectin** and friends linking it all to cells through **integrins** —
+    receptors that physically connect the outside scaffold to the inside cytoskeleton and, crucially,
+    ==signal both ways== (outside-in mechanical information, inside-out cell state).
+  - The exam hooks — connective tissue's ECM IS its function (tendon, cartilage, bone's organic scaffold);
+    plants run the parallel system with the **cell wall** (cellulose fibers in a polysaccharide glue),
+    rigid yet porous, joined between cells by plasmodesmata. Collagen pathology (scurvy — vitamin C needed
+    for hydroxylation) shows the chemistry-clinical bridge.
   check:
-  - q: Which molecule physically links the ECM to a cell's
-      cytoskeleton?
+  - q: Which molecule physically links the ECM to a cell's cytoskeleton?
     options:
       A: Collagen directly
       B: Integrins spanning the membrane
       C: Cholesterol
       D: Glycine
     answer: B
-    explain: Integrins are the transmembrane handshakes — ECM outside,
-      cytoskeleton inside, signals both directions.
+    explain: Integrins are the transmembrane handshakes — ECM outside, cytoskeleton inside, signals both
+      directions.
     distractors:
-      A: "Collagen is the scaffold itself, not the link."
-      C: "Cholesterol tunes fluidity."
-      D: "An amino acid, not a connector."
+      A: Collagen is the scaffold itself, not the link.
+      C: Cholesterol tunes fluidity.
+      D: An amino acid, not a connector.
 - heading: Junctions — how cells weld, rivet, and wire together
   body:
-  - Four junctions, four jobs. **Tight junctions** seal neighboring
-    epithelial cells into a leak-proof belt — nothing slips BETWEEN
-    the cells. **Adherens and desmosomes** rivet cells together
-    (cadherins into intermediate filaments) — mechanical strength in
-    skin and heart. ==**Gap junctions** are the wires== — connexon
-    channels passing small molecules and ions directly between
-    cytoplasms, synchronizing heart muscle and coupling development.
-  - The plant counterpart is the plasmodesma — a membrane-lined tunnel
-    through the wall. Expect a matching question — desmosome for
-    strength, tight for barrier, gap for communication — and remember
-    ==tight junctions also create epithelial polarity== by fencing the
-    membrane into apical and basal domains.
+  - Four junctions, four jobs. **Tight junctions** seal neighboring epithelial cells into a leak-proof
+    belt — nothing slips BETWEEN the cells. **Adherens and desmosomes** rivet cells together (cadherins
+    into intermediate filaments) — mechanical strength in skin and heart. ==**Gap junctions** are the
+    wires== — connexon channels passing small molecules and ions directly between cytoplasms, synchronizing
+    heart muscle and coupling development.
+  - The plant counterpart is the plasmodesma — a membrane-lined tunnel through the wall. Expect a matching
+    question — desmosome for strength, tight for barrier, gap for communication — and remember ==tight
+    junctions also create epithelial polarity== by fencing the membrane into apical and basal domains.
   check:
   - q: Cardiac muscle cells contract nearly in unison largely via…
     options:
@@ -88,26 +71,21 @@ sections:
       C: Desmosomes only
       D: ECM collagen
     answer: B
-    explain: Electrical coupling through connexons coordinates the
-      heartbeat.
+    explain: Electrical coupling through connexons coordinates the heartbeat.
     distractors:
-      A: "Sealing junctions — no channel."
-      C: "Desmosomes add strength, not signaling."
-      D: "Scaffold, not conduction."
+      A: Sealing junctions — no channel.
+      C: Desmosomes add strength, not signaling.
+      D: Scaffold, not conduction.
 - heading: Tissues — the four fabrics
   body:
-  - Assemblies of cells plus ECM make four tissue types —
-    **epithelial** (sheets — barriers, absorption, secretion; tightly
-    joined, polarized, avascular), **connective** (cells sparse in a
-    rich ECM — bone, tendon, blood, fat), **muscle** (contractile
-    bundles), **nervous** (irritable, signaling). Organ architecture
-    is these fabrics layered — the gut's epithelial lining on
-    connective lamina with muscle driving peristalsis is the canonical
-    cross-section.
-  - Function follows fabric — a barrier organ leads with epithelium; a
-    load-bearing organ leads with connective tissue; a pump leads with
-    muscle wrapped in its own wiring. When a passage names an organ,
-    sketch its fabric order before answering structure questions.
+  - Assemblies of cells plus ECM make four tissue types — **epithelial** (sheets — barriers, absorption,
+    secretion; tightly joined, polarized, avascular), **connective** (cells sparse in a rich ECM — bone,
+    tendon, blood, fat), **muscle** (contractile bundles), **nervous** (irritable, signaling). Organ architecture
+    is these fabrics layered — the gut's epithelial lining on connective lamina with muscle driving peristalsis
+    is the canonical cross-section.
+  - Function follows fabric — a barrier organ leads with epithelium; a load-bearing organ leads with connective
+    tissue; a pump leads with muscle wrapped in its own wiring. When a passage names an organ, sketch
+    its fabric order before answering structure questions.
   check:
   - q: Blood is classified as which tissue type?
     options:
@@ -116,112 +94,105 @@ sections:
       C: Muscle
       D: Nervous
     answer: B
-    explain: Cells sparse in an abundant extracellular fluid — the
-      connective-tissue design rule.
+    explain: Cells sparse in an abundant extracellular fluid — the connective-tissue design rule.
     distractors:
-      A: "Blood is not a sheet."
-      C: "No fibers contracting."
-      D: "No neurons."
+      A: Blood is not a sheet.
+      C: No fibers contracting.
+      D: No neurons.
+  figures:
+  - src: 2a-assemblies-of-molecules-cells-and-cell-groups/body-symmetry.webp
+    caption: Body symmetry — asymmetrical sponge, radial sea anemone, bilateral goat with its directional
+      axes.
+    credit: Fig 33.2 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Polarity — the epithelium as a one-way valve
   body:
-  - An absorptive epithelial cell is two different machines bolted
-    together — apical (lumen-facing) transporters for uptake, basal
-    (blood-facing) transporters for export, kept apart by the tight
-    junction fence. ==Glucose absorption in the gut is the classic
-    loop== — apical Na⁺-glucose cotransport pulls glucose IN against
-    its gradient (riding the sodium gradient), then basal GLUT
-    transporters let it OUT down its gradient into blood.
-  - This vectorial transport answers a classic MCAT puzzle — why
-    inhibiting the Na⁺/K⁺-ATPase (ouabain, for example) kills glucose
-    absorption — the apical cotransporter depends on the sodium
-    gradient that the pump maintains on the basolateral side. No
-    gradient, no cotransport, no absorption.
+  - An absorptive epithelial cell is two different machines bolted together — apical (lumen-facing) transporters
+    for uptake, basal (blood-facing) transporters for export, kept apart by the tight junction fence.
+    ==Glucose absorption in the gut is the classic loop== — apical Na⁺-glucose cotransport pulls glucose
+    IN against its gradient (riding the sodium gradient), then basal GLUT transporters let it OUT down
+    its gradient into blood.
+  - This vectorial transport answers a classic MCAT puzzle — why inhibiting the Na⁺/K⁺-ATPase (ouabain,
+    for example) kills glucose absorption — the apical cotransporter depends on the sodium gradient that
+    the pump maintains on the basolateral side. No gradient, no cotransport, no absorption.
   check:
-  - q: Apical Na⁺-glucose cotransport across the gut epithelium is
-      classified as…
+  - q: Apical Na⁺-glucose cotransport across the gut epithelium is classified as…
     options:
       A: Simple diffusion
       B: Secondary active transport
       C: Primary active transport
       D: Facilitated diffusion of glucose
     answer: B
-    explain: It stores no ATP itself but spends the Na⁺ gradient that
-      primary pumping built — secondary active.
+    explain: It stores no ATP itself but spends the Na⁺ gradient that primary pumping built — secondary
+      active.
     distractors:
-      A: "Charged ion + uphill glucose = not simple."
-      C: "The ATP is burned elsewhere (basolateral pump)."
-      D: "GLUT on the basal side is the facilitated step — wrong side."
+      A: Charged ion + uphill glucose = not simple.
+      C: The ATP is burned elsewhere (basolateral pump).
+      D: GLUT on the basal side is the facilitated step — wrong side.
+  figures:
+  - src: 2a-assemblies-of-molecules-cells-and-cell-groups/body-cavities.webp
+    caption: Vertebrate body cavities — dorsal (cranial, spinal) and ventral (thoracic, abdominopelvic)
+      compartments.
+    credit: Fig 33.6 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 examples:
-- prompt: >-
-    A drug blocks the basolateral Na⁺/K⁺-ATPase of gut epithelial
-    cells. Predict glucose absorption and explain the chain of
-    causation.
+- prompt: A drug blocks the basolateral Na⁺/K⁺-ATPase of gut epithelial cells. Predict glucose absorption
+    and explain the chain of causation.
   solution:
-  - "Step 1 — the pump normally keeps intracellular Na⁺ LOW, storing energy as the sodium gradient."
-  - "Step 2 — with the pump blocked, intracellular Na⁺ rises; the apical Na⁺-glucose cotransporter loses its driving force."
-  - "Step 3 — apical glucose uptake collapses even though the apical transporter and the basal GLUT are both intact."
-  - "Step 4 — result — glucose absorption falls despite normal luminal glucose."
-  answer: Pump blockade collapses the sodium gradient that powers secondary active uptake at the apical membrane.
+  - Step 1 — the pump normally keeps intracellular Na⁺ LOW, storing energy as the sodium gradient.
+  - Step 2 — with the pump blocked, intracellular Na⁺ rises; the apical Na⁺-glucose cotransporter loses
+    its driving force.
+  - Step 3 — apical glucose uptake collapses even though the apical transporter and the basal GLUT are
+    both intact.
+  - Step 4 — result — glucose absorption falls despite normal luminal glucose.
+  answer: Pump blockade collapses the sodium gradient that powers secondary active uptake at the apical
+    membrane.
   distractors:
-    A: "Blaming the apical cotransporter directly — the drug never touched it."
-    B: "Blaming GLUT — basal exit is passive and intact; entry is the failed step."
-    C: "Claiming cell death — acute pharmacology before pathology."
+    A: Blaming the apical cotransporter directly — the drug never touched it.
+    B: Blaming GLUT — basal exit is passive and intact; entry is the failed step.
+    C: Claiming cell death — acute pharmacology before pathology.
 key_points:
-- Amphipathic lipids self-assemble into bilayers; unsaturation loosens
-  packing, cholesterol buffers fluidity.
-- ECM — collagen for tensile strength, proteoglycans for hydration,
-  integrins as two-way links to the cytoskeleton.
-- Junction matching — tight seals, desmosome rivets, gap junction
-  wires, plasmodesmata in plants.
-- Four tissues — epithelial, connective, muscle, nervous; organs are
-  fabric layerings.
-- Epithelial polarity — apical in, basal out; tight junctions are the
-  fence.
-- Vectorial transport — apical secondary-active uptake powered by the
-  basolateral pump's sodium gradient.
+- Amphipathic lipids self-assemble into bilayers; unsaturation loosens packing, cholesterol buffers fluidity.
+- ECM — collagen for tensile strength, proteoglycans for hydration, integrins as two-way links to the
+  cytoskeleton.
+- Junction matching — tight seals, desmosome rivets, gap junction wires, plasmodesmata in plants.
+- Four tissues — epithelial, connective, muscle, nervous; organs are fabric layerings.
+- Epithelial polarity — apical in, basal out; tight junctions are the fence.
+- Vectorial transport — apical secondary-active uptake powered by the basolateral pump's sodium gradient.
 mnemonics:
-- phrase: "Seal, Rivet, Wire"
-  means: "Tight junctions seal; desmosomes rivet; gap junctions wire."
-- phrase: "In by sodium, out by GLUT"
+- phrase: Seal, Rivet, Wire
+  means: Tight junctions seal; desmosomes rivet; gap junctions wire.
+- phrase: In by sodium, out by GLUT
   means: The two-step glucose trip across an absorbing epithelium.
 maps:
 - title: Epithelial glucose absorption
   steps:
-    - "lumen — apical Na⁺/glucose ==cotransporter== (secondary active, rides Na⁺ gradient)"
-    - "cell — glucose accumulates"
-    - "blood — basal ==GLUT== (facilitated diffusion OUT)"
-    - "the Na⁺/K⁺-ATPase on the basal side rebuilds the gradient — the power plant"
+  - lumen — apical Na⁺/glucose ==cotransporter== (secondary active, rides Na⁺ gradient)
+  - cell — glucose accumulates
+  - blood — basal ==GLUT== (facilitated diffusion OUT)
+  - the Na⁺/K⁺-ATPase on the basal side rebuilds the gradient — the power plant
 - title: Junction jobs
   steps:
-    - "tight — barrier + polarity fence"
-    - "adherens/desmosomes — mechanical strength (cadherins)"
-    - "gap — direct cytoplasm channels (connexons)"
+  - tight — barrier + polarity fence
+  - adherens/desmosomes — mechanical strength (cadherins)
+  - gap — direct cytoplasm channels (connexons)
 passage:
-  text: >-
-    A tissue model uses epithelial cells grown as a monolayer on a
-    porous support. Adding calcium-chelating EDTA disrupts
-    cadherin-based junctions within minutes; transepithelial electrical
-    resistance (a leak measure) drops after a longer delay. In a
-    second condition, a gap-junction blocker is added instead —
-    electrical coupling between neighbors vanishes, but the resistance
-    reading is unchanged.
+  text: A tissue model uses epithelial cells grown as a monolayer on a porous support. Adding calcium-chelating
+    EDTA disrupts cadherin-based junctions within minutes; transepithelial electrical resistance (a leak
+    measure) drops after a longer delay. In a second condition, a gap-junction blocker is added instead
+    — electrical coupling between neighbors vanishes, but the resistance reading is unchanged.
   questions:
   - q: The delayed resistance drop after EDTA implies…
     options:
       A: Cadherins directly form the seal
-      B: The sealing junctions depend on or disassemble together with
-        cadherin-anchored structure
+      B: The sealing junctions depend on or disassemble together with cadherin-anchored structure
       C: Gap junctions carry current
       D: The cells died instantly
     answer: B
-    explain: Adherens disruption destabilizes the junctional complex —
-      the seal fails as the architecture collapses, not instantly as a
-      direct effect.
+    explain: Adherens disruption destabilizes the junctional complex — the seal fails as the architecture
+      collapses, not instantly as a direct effect.
     distractors:
-      A: "If cadherins sealed directly, resistance would fall in
-        minutes, not after a delay."
-      C: "That is the OTHER experiment's result."
-      D: "Instant death contradicts graded, condition-specific results."
+      A: If cadherins sealed directly, resistance would fall in minutes, not after a delay.
+      C: That is the OTHER experiment's result.
+      D: Instant death contradicts graded, condition-specific results.
   - q: The gap-junction blocker result shows gap junctions…
     options:
       A: Provide the paracellular barrier
@@ -229,112 +200,98 @@ passage:
       C: Anchor the cytoskeleton
       D: Transport glucose
     answer: B
-    explain: Coupling vanished while resistance (sealing) held — two
-      independent functions.
+    explain: Coupling vanished while resistance (sealing) held — two independent functions.
     distractors:
-      A: "Resistance was unchanged — sealing is tight-junction work."
-      C: "Anchoring is desmosome work."
-      D: "Wrong molecule and wrong junction."
-  - q: Which junction type most likely maintains the monolayer's
-      barrier in the blocker experiment?
+      A: Resistance was unchanged — sealing is tight-junction work.
+      C: Anchoring is desmosome work.
+      D: Wrong molecule and wrong junction.
+  - q: Which junction type most likely maintains the monolayer's barrier in the blocker experiment?
     options:
       A: Gap junctions
       B: Tight junctions
       C: Desmosomes
       D: Plasmodesmata
     answer: B
-    explain: Tight junctions are the paracellular seal — unaffected by
-      the gap blocker.
+    explain: Tight junctions are the paracellular seal — unaffected by the gap blocker.
     distractors:
-      A: "Blocker removed their coupling."
-      B: "Desmosomes add strength, not sealing."
-      D: "Plant-specific."
+      A: Blocker removed their coupling.
+      B: Desmosomes add strength, not sealing.
+      D: Plant-specific.
 pitfalls:
-- Assigning fluidity backwards — unsaturated = fluid; saturated =
-  rigid.
-- Confusing junction jobs under time pressure — seal/rivet/wire,
-  one each.
-- Calling apical cotransport primary active — the ATPase is on the
-  OTHER side of the cell.
-- Treating blood as epithelial — cell-sparse in abundant matrix is
-  connective by definition.
-- Expecting tight junctions to pass anything — they are the fence, not
-  a channel.
+- Assigning fluidity backwards — unsaturated = fluid; saturated = rigid.
+- Confusing junction jobs under time pressure — seal/rivet/wire, one each.
+- Calling apical cotransport primary active — the ATPase is on the OTHER side of the cell.
+- Treating blood as epithelial — cell-sparse in abundant matrix is connective by definition.
+- Expecting tight junctions to pass anything — they are the fence, not a channel.
 exam_map:
-  NMAT: >-
-    Junction names and tissue categories at recall level; membrane
-    fluidity determinants; one-step transport classification.
-  MCAT: >-
-    Content Category 2A passages test fluidity manipulation,
-    integrin/ECM signaling logic, junction pharmacology, and epithelial
-    vectorial transport with pump inhibitors.
+  NMAT: Junction names and tissue categories at recall level; membrane fluidity determinants; one-step
+    transport classification.
+  MCAT: Content Category 2A passages test fluidity manipulation, integrin/ECM signaling logic, junction
+    pharmacology, and epithelial vectorial transport with pump inhibitors.
 sources:
 - ref: openstax-biology-2e
   used:
-  - "Ch 4 — Cell Structure (ECM, junctions)"
-  - "Ch 5 — Membranes (fluidity, transport)"
-  - "Animal Tissues overview (Histology chapter)"
+  - Ch 4 — Cell Structure (ECM, junctions)
+  - Ch 5 — Membranes (fluidity, transport)
+  - Animal Tissues overview (Histology chapter)
   relation: consulted
 - ref: aamc-whatson-mcat
   used:
-  - "Foundational Concept 2, Content Category 2A"
+  - Foundational Concept 2, Content Category 2A
   relation: consulted
 further_reading:
-- title: "OpenStax Biology 2e — Ch 4: Cell Structure"
+- title: 'OpenStax Biology 2e — Ch 4: Cell Structure'
   url: https://openstax.org/books/biology-2e/pages/4-introduction
   note: ECM, junctions, and the extracellular view.
-- title: "OpenStax Biology 2e — Ch 5: Membranes"
+- title: 'OpenStax Biology 2e — Ch 5: Membranes'
   url: https://openstax.org/books/biology-2e/pages/5-introduction
   note: Fluidity and transport mechanics.
 review_questions:
 - q: Cholesterol in a membrane at LOW temperature acts to…
   options:
-      A: Further stiffen it
-      B: Prevent tight packing and keep it fluid
-      C: Dissolve the bilayer
-      D: Form junctions
+    A: Further stiffen it
+    B: Prevent tight packing and keep it fluid
+    C: Dissolve the bilayer
+    D: Form junctions
   answer: B
-  explain: Cholesterol is the buffer — it disrupts packing in the cold
-    and restrains motion in the heat.
+  explain: Cholesterol is the buffer — it disrupts packing in the cold and restrains motion in the heat.
   distractors:
-    A: "Stiffening is its HIGH-temperature role."
-    C: "It is a membrane component, not a solvent."
-    D: "Protein function, not lipid."
-- q: Which junction allows direct cytoplasmic exchange of small
-    molecules?
+    A: Stiffening is its HIGH-temperature role.
+    C: It is a membrane component, not a solvent.
+    D: Protein function, not lipid.
+- q: Which junction allows direct cytoplasmic exchange of small molecules?
   options:
-      A: Desmosome
-      B: Tight junction
-      C: Gap junction
-      D: Adherens junction
+    A: Desmosome
+    B: Tight junction
+    C: Gap junction
+    D: Adherens junction
   answer: C
   explain: Connexon channels bridge cytoplasms.
   distractors:
-    A: "Mechanical rivet."
-    B: "Seal — nothing passes between cells."
-    D: "Belt of adhesion."
+    A: Mechanical rivet.
+    B: Seal — nothing passes between cells.
+    D: Belt of adhesion.
 - q: Vitamin C deficiency weakens tendons because it is required for…
   options:
-      A: Collagen hydroxylation
-      B: DNA repair
-      C: Sodium pumping
-      D: Phospholipid synthesis
+    A: Collagen hydroxylation
+    B: DNA repair
+    C: Sodium pumping
+    D: Phospholipid synthesis
   answer: A
-  explain: Proline/lysine hydroxylation stabilizes collagen's triple
-    helix — scurvy is the failure state.
+  explain: Proline/lysine hydroxylation stabilizes collagen's triple helix — scurvy is the failure state.
   distractors:
-    B: "Unrelated axis."
-    C: "Transport, not structure."
-    D: "Membranes self-assemble without it."
+    B: Unrelated axis.
+    C: Transport, not structure.
+    D: Membranes self-assemble without it.
 - q: A tissue with cells widely separated in an abundant matrix is…
   options:
-      A: Epithelial
-      B: Muscle
-      C: Nervous
-      D: Connective
+    A: Epithelial
+    B: Muscle
+    C: Nervous
+    D: Connective
   answer: D
   explain: Sparse cells + dominant ECM defines connective tissue.
   distractors:
-    A: "Epithelium is a packed sheet."
-    B: "Muscle is bundled fibers."
-    C: "Nervous is a signaling network."
+    A: Epithelium is a packed sheet.
+    B: Muscle is bundled fibers.
+    C: Nervous is a signaling network.

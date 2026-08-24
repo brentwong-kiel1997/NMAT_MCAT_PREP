@@ -1,147 +1,132 @@
 subject: biology
 chapter: Genetics
 title: Genetics
-overview: >-
-  Genetics is where biology starts predicting instead of only describing —
-  from meiosis through Mendel's ratios to the DNA that carries it all.
-  NMAT leans on vocabulary and one-step ratio questions; the MCAT wraps
-  the same logic in pedigrees, linkage data, and experiment passages.
-  Prerequisites — Cells and Cellular Processes (mitosis, nucleus) and
-  Unity and Diversity (variation as raw material for evolution).
+overview: Genetics is where biology starts predicting instead of only describing — from meiosis through
+  Mendel's ratios to the DNA that carries it all. NMAT leans on vocabulary and one-step ratio questions;
+  the MCAT wraps the same logic in pedigrees, linkage data, and experiment passages. Prerequisites — Cells
+  and Cellular Processes (mitosis, nucleus) and Unity and Diversity (variation as raw material for evolution).
 sections:
 - heading: Meiosis — the engine of variation
   body:
-  - Where mitosis makes two identical copies for growth and repair,
-    ==meiosis makes four genetically different gametes==, each with half
-    the chromosome number. One diploid cell (2n) passes through DNA
-    replication, then TWO divisions. **Meiosis I** separates homologous
-    chromosome pairs; **meiosis II** separates sister chromatids — the
-    mechanics look like mitosis, but the ploidy was already halved in I.
-  - Two events generate the diversity this chapter keeps selling.
-    **Crossing over** (prophase I) exchanges segments between homologs, so
-    every chromatid becomes a mosaic of maternal and paternal DNA.
-    **Independent assortment** (metaphase I) orients each homolog pair
-    independently, giving 2ⁿ combinations before crossing over even
-    counts. Nondisjunction — a pair failing to separate — produces gametes
-    with the wrong count and, after fertilization, ==aneuploidy== such as
-    trisomy 21.
+  - Where mitosis makes two identical copies for growth and repair, ==meiosis makes four genetically different
+    gametes==, each with half the chromosome number. One diploid cell (2n) passes through DNA replication,
+    then TWO divisions. **Meiosis I** separates homologous chromosome pairs; **meiosis II** separates
+    sister chromatids — the mechanics look like mitosis, but the ploidy was already halved in I.
+  - Two events generate the diversity this chapter keeps selling. **Crossing over** (prophase I) exchanges
+    segments between homologs, so every chromatid becomes a mosaic of maternal and paternal DNA. **Independent
+    assortment** (metaphase I) orients each homolog pair independently, giving 2ⁿ combinations before
+    crossing over even counts. Nondisjunction — a pair failing to separate — produces gametes with the
+    wrong count and, after fertilization, ==aneuploidy== such as trisomy 21.
   check:
-  - q: A cell with 20 chromosomes (2n = 20) enters meiosis. Each gamete
-      receives…
+  - q: A cell with 20 chromosomes (2n = 20) enters meiosis. Each gamete receives…
     options:
       A: 20 chromosomes, identical to the parent
       B: 10 chromosomes, recombined
       C: 40 chromosomes
       D: 10 identical copies of one homolog
     answer: B
-    explain: Meiosis halves the ploidy (n = 10) and recombines every
-      chromatid by crossing over — gametes are haploid AND mosaic.
+    explain: Meiosis halves the ploidy (n = 10) and recombines every chromatid by crossing over — gametes
+      are haploid AND mosaic.
     distractors:
-      A: "That describes mitosis products."
-      C: "Meiosis halves; it never doubles."
-      D: "Haploid sets draw from BOTH homologs after recombination, not one."
+      A: That describes mitosis products.
+      C: Meiosis halves; it never doubles.
+      D: Haploid sets draw from BOTH homologs after recombination, not one.
+  figures:
+  - src: genetics/meiosis-stages.webp
+    caption: Meiosis end to end (2n = 4) — one replication, two divisions, four haploid gametes.
+    credit: Fig 11.7 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+  - src: genetics/crossing-over.webp
+    caption: Crossing over between nonsister chromatids of homologous chromosomes — the first variation
+      engine.
+    credit: Fig 11.4 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+  - src: genetics/meiosis-vs-mitosis.webp
+    caption: Meiosis versus mitosis — synapsis, crossover, and tetrad alignment happen only in meiosis
+      I.
+    credit: Fig 11.8 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Mendel's laws and the Punnett toolkit
   body:
-  - Mendel's two laws are bookkeeping for what meiosis does physically.
-    The **law of segregation** — two alleles separate into different
-    gametes — IS the behavior of homologs at meiosis I. The **law of
-    independent assortment** — genes on different chromosomes segregate
-    freely — IS independent orientation at metaphase I. When a passage
-    offers you Mendel, translate it back to meiosis and half the traps
-    evaporate.
-  - The working ratios — a monohybrid cross Aa × Aa gives the ==3:1
-    phenotype ratio== (and 1:2:1 genotype); a dihybrid AaBb × AaBb gives
-    ==9:3:3:1==; a testcross with a homozygous recessive exposes any
-    genotype as a 1:1 ratio. Always write the gametes before multiplying
-    probabilities; branch diagrams beat giant grids under time pressure.
+  - Mendel's two laws are bookkeeping for what meiosis does physically. The **law of segregation** — two
+    alleles separate into different gametes — IS the behavior of homologs at meiosis I. The **law of independent
+    assortment** — genes on different chromosomes segregate freely — IS independent orientation at metaphase
+    I. When a passage offers you Mendel, translate it back to meiosis and half the traps evaporate.
+  - The working ratios — a monohybrid cross Aa × Aa gives the ==3:1 phenotype ratio== (and 1:2:1 genotype);
+    a dihybrid AaBb × AaBb gives ==9:3:3:1==; a testcross with a homozygous recessive exposes any genotype
+    as a 1:1 ratio. Always write the gametes before multiplying probabilities; branch diagrams beat giant
+    grids under time pressure.
   check:
-  - q: AaBb × AaBb (unlinked genes). What fraction shows the dominant A
-      trait and the recessive b trait?
+  - q: AaBb × AaBb (unlinked genes). What fraction shows the dominant A trait and the recessive b trait?
     options:
-      A: "1/16"
-      B: "3/16"
-      C: "9/16"
-      D: "1/4"
+      A: 1/16
+      B: 3/16
+      C: 9/16
+      D: 1/4
     answer: B
-    explain: P(A_) = 3/4 and P(bb) = 1/4; independent genes multiply —
-      3/4 × 1/4 = 3/16, the second class of the classic 9:3:3:1.
+    explain: P(A_) = 3/4 and P(bb) = 1/4; independent genes multiply — 3/4 × 1/4 = 3/16, the second class
+      of the classic 9:3:3:1.
     distractors:
-      A: "That is the double-recessive class aabb."
-      C: "That is the double-dominant class."
-      D: "1/4 is P(bb) alone; you dropped the A trait."
+      A: That is the double-recessive class aabb.
+      C: That is the double-dominant class.
+      D: 1/4 is P(bb) alone; you dropped the A trait.
 - heading: Beyond simple dominance
   body:
-  - Complete dominance is the exception, not the rule, and the MCAT
-    tests the exceptions. **Incomplete dominance** blends (red × white →
-    pink; genotype shows through phenotype). **Codominance** expresses
-    both alleles fully (AB blood type; MN glycoproteins). **Multiple
-    alleles** (ABO — three alleles, IA, IB, i) and **epistasis** (one gene
-    masks another) expand single-locus thinking into networks.
-  - Human inheritance patterns to recognize on sight in pedigrees —
-    **autosomal recessive** (skips generations, both sexes equally),
-    **autosomal dominant** (every generation, no skipping),
-    ==X-linked recessive== (mostly affected males, passed mother → son,
-    no father → son transmission). A pedigree question is pattern
-    recognition plus one Punnett square, nothing more.
+  - Complete dominance is the exception, not the rule, and the MCAT tests the exceptions. **Incomplete
+    dominance** blends (red × white → pink; genotype shows through phenotype). **Codominance** expresses
+    both alleles fully (AB blood type; MN glycoproteins). **Multiple alleles** (ABO — three alleles, IA,
+    IB, i) and **epistasis** (one gene masks another) expand single-locus thinking into networks.
+  - Human inheritance patterns to recognize on sight in pedigrees — **autosomal recessive** (skips generations,
+    both sexes equally), **autosomal dominant** (every generation, no skipping), ==X-linked recessive==
+    (mostly affected males, passed mother → son, no father → son transmission). A pedigree question is
+    pattern recognition plus one Punnett square, nothing more.
   check:
   - q: Two pink-flowered plants (RW) cross. Expected phenotype ratio?
     options:
-      A: "3 red : 1 white"
-      B: "1 red : 2 pink : 1 white"
-      C: "All pink"
-      D: "2 red : 2 white"
+      A: '3 red : 1 white'
+      B: '1 red : 2 pink : 1 white'
+      C: All pink
+      D: '2 red : 2 white'
     answer: B
-    explain: Incomplete dominance makes genotype directly visible, and
-      RW × RW yields the 1:2:1 genotype ratio as phenotypes.
+    explain: Incomplete dominance makes genotype directly visible, and RW × RW yields the 1:2:1 genotype
+      ratio as phenotypes.
     distractors:
-      A: "That is complete-dominance thinking (Aa × Aa)."
-      C: "Only RW × RR-or-ww style crosses fix one phenotype."
-      D: "There is no mechanism that erases the heterozygote class."
+      A: That is complete-dominance thinking (Aa × Aa).
+      C: Only RW × RR-or-ww style crosses fix one phenotype.
+      D: There is no mechanism that erases the heterozygote class.
 - heading: Linkage, recombination, and gene maps
   body:
-  - Genes on the SAME chromosome do not assort independently — they
-    travel together unless crossing over separates them. Two loci close
-    together recombine rarely; distant loci recombine often. This
-    gradient is the whole logic of ==recombination frequency as a distance
-    unit== — 1 map unit (centimorgan) = 1% recombinant offspring. The
-    classic calculation — count recombinant classes, divide by total,
-    read distance directly.
-  - Expect the familiar cross to come out distorted — linked genes in a
-    dihybrid testcross give a majority of parental combinations and a
-    small recombinant tail, NOT the 1:1:1:1 an unlinked testcross
-    predicts. When the numbers scream parental-heavy, linkage is the
-    answer before any other consideration.
+  - Genes on the SAME chromosome do not assort independently — they travel together unless crossing over
+    separates them. Two loci close together recombine rarely; distant loci recombine often. This gradient
+    is the whole logic of ==recombination frequency as a distance unit== — 1 map unit (centimorgan) =
+    1% recombinant offspring. The classic calculation — count recombinant classes, divide by total, read
+    distance directly.
+  - Expect the familiar cross to come out distorted — linked genes in a dihybrid testcross give a majority
+    of parental combinations and a small recombinant tail, NOT the 1:1:1:1 an unlinked testcross predicts.
+    When the numbers scream parental-heavy, linkage is the answer before any other consideration.
   check:
-  - q: A testcross of AaBb (genes linked, 20 map units apart) × aabb
-      yields offspring ratios closest to…
+  - q: A testcross of AaBb (genes linked, 20 map units apart) × aabb yields offspring ratios closest to…
     options:
-      A: "1:1:1:1 across all classes"
-      B: "40% each parental class, 10% each recombinant class"
-      C: "9:3:3:1"
-      D: "All parental, no recombinants"
+      A: 1:1:1:1 across all classes
+      B: 40% each parental class, 10% each recombinant class
+      C: '9:3:3:1'
+      D: All parental, no recombinants
     answer: B
-    explain: 20 map units = 20% total recombinants, split between the two
-      recombinant classes (10% each); the remaining 80% splits between
-      parental classes.
+    explain: 20 map units = 20% total recombinants, split between the two recombinant classes (10% each);
+      the remaining 80% splits between parental classes.
     distractors:
-      A: "That is the UNLINKED testcross signature."
-      C: "9:3:3:1 belongs to a dihybrid self-cross, not a testcross."
-      D: "Only complete linkage (0 map units) forbids recombinants."
+      A: That is the UNLINKED testcross signature.
+      C: 9:3:3:1 belongs to a dihybrid self-cross, not a testcross.
+      D: Only complete linkage (0 map units) forbids recombinants.
 - heading: From genotype to molecule — DNA and mutation
   body:
-  - Watson-Crick pairing is the machine behind every ratio above —
-    ==A bonds T (2 hydrogen bonds), G bonds C (3)==, antiparallel strands,
-    sugar-phosphate backbone outside. The complementarity is what makes
-    faithful replication, transcription, and repair possible; Chapter 1C
-    takes the molecular machinery deeper.
-  - Mutation classes in genetic terms — a **point mutation** swaps one
-    base (silent, missense, or nonsense depending on the protein
-    outcome), a **frameshift** (insertion/deletion not in multiples of
-    three) scrambles everything downstream, and **chromosomal
-    mutations** (deletion, duplication, inversion, translocation)
-    rearrange large spans. The exam link to keep — meiosis errors give
-    whole-chromosome changes; replication errors give sequence changes,
-    and only those in gametes (or early lineages) are heritable.
+  - Watson-Crick pairing is the machine behind every ratio above — ==A bonds T (2 hydrogen bonds), G bonds
+    C (3)==, antiparallel strands, sugar-phosphate backbone outside. The complementarity is what makes
+    faithful replication, transcription, and repair possible; Chapter 1C takes the molecular machinery
+    deeper.
+  - Mutation classes in genetic terms — a **point mutation** swaps one base (silent, missense, or nonsense
+    depending on the protein outcome), a **frameshift** (insertion/deletion not in multiples of three)
+    scrambles everything downstream, and **chromosomal mutations** (deletion, duplication, inversion,
+    translocation) rearrange large spans. The exam link to keep — meiosis errors give whole-chromosome
+    changes; replication errors give sequence changes, and only those in gametes (or early lineages) are
+    heritable.
   check:
   - q: A deletion of one nucleotide pair within an exon most likely causes…
     options:
@@ -150,65 +135,58 @@ sections:
       C: Improved protein folding
       D: Trisomy
     answer: B
-    explain: One removed pair shifts the reading frame from that point
-      on — the classic frameshift.
+    explain: One removed pair shifts the reading frame from that point on — the classic frameshift.
     distractors:
-      A: "Silent changes leave the amino acid unchanged; frameshifts rarely do."
-      C: "No mechanism improves folding as a rule."
-      D: "Trisomy is a whole-chromosome nondisjunction outcome, not a one-pair deletion."
+      A: Silent changes leave the amino acid unchanged; frameshifts rarely do.
+      C: No mechanism improves folding as a rule.
+      D: Trisomy is a whole-chromosome nondisjunction outcome, not a one-pair deletion.
 examples:
-- prompt: >-
-    In a testcross of AaBb × aabb, the offspring are 420 Ab, 400 aB, 90
-    AB, and 90 ab. What is happening, and what is the distance between
-    the genes?
+- prompt: In a testcross of AaBb × aabb, the offspring are 420 Ab, 400 aB, 90 AB, and 90 ab. What is happening,
+    and what is the distance between the genes?
   solution:
-  - "Step 1 — find the parental classes (the big numbers) — Ab and aB; the parent was therefore Ab/aB in repulsion configuration."
-  - "Step 2 — recombinants are the small classes — AB and ab, totaling 180 of 1000 offspring."
-  - "Step 3 — recombination frequency = 180/1000 = 18%, so the genes are 18 map units apart."
+  - Step 1 — find the parental classes (the big numbers) — Ab and aB; the parent was therefore Ab/aB in
+    repulsion configuration.
+  - Step 2 — recombinants are the small classes — AB and ab, totaling 180 of 1000 offspring.
+  - Step 3 — recombination frequency = 180/1000 = 18%, so the genes are 18 map units apart.
   answer: The genes are linked about 18 cM apart; the excess parental classes prove linkage.
   distractors:
-    A: "Calling 1:1:1:1 — ignores the glaring parental excess."
-    B: "Taking 90/1000 as the distance — forgot to add BOTH recombinant classes."
-    C: "Concluding independent assortment — the data scream against it."
+    A: Calling 1:1:1:1 — ignores the glaring parental excess.
+    B: Taking 90/1000 as the distance — forgot to add BOTH recombinant classes.
+    C: Concluding independent assortment — the data scream against it.
 key_points:
 - Meiosis — one replication, two divisions, four recombined haploid gametes.
 - Segregation and independent assortment are meiosis I in genetic language.
 - Core ratios — monohybrid 3:1, dihybrid 9:3:3:1, testcross 1:1:1:1 (unlinked).
-- Incomplete dominance blends; codominance expresses both; ABO is both a
-  multiple-allele and codominance system.
-- Pedigree patterns on sight — autosomal dominant never skips;
-  X-linked recessive tracks mother → son.
+- Incomplete dominance blends; codominance expresses both; ABO is both a multiple-allele and codominance
+  system.
+- Pedigree patterns on sight — autosomal dominant never skips; X-linked recessive tracks mother → son.
 - Recombination frequency IS map distance — 1% recombinants = 1 cM.
 - Linked testcrosses give parental-heavy ratios, never 1:1:1:1.
 - Mutation ladder — silent → missense → nonsense → frameshift → chromosomal.
 mnemonics:
-- phrase: "Meiosis Minus, Mitosis More"
+- phrase: Meiosis Minus, Mitosis More
   means: Meiosis halves the chromosome number; mitosis preserves it.
-- phrase: "Criss-cross, never father-to-son"
-  means: X-linked recessive traits pass carrier mother → affected son;
-    a father passes his X only to daughters.
+- phrase: Criss-cross, never father-to-son
+  means: X-linked recessive traits pass carrier mother → affected son; a father passes his X only to daughters.
 maps:
 - title: Meiosis at a glance
   steps:
-    - "2n cell → DNA replicates (S phase)"
-    - "prophase I — ==crossing over== between homologs"
-    - "metaphase I — independent orientation of pairs"
-    - "division I — homologs separate → 2 haploid cells (recombined)"
-    - "division II — chromatids separate → ==4 haploid gametes=="
+  - 2n cell → DNA replicates (S phase)
+  - prophase I — ==crossing over== between homologs
+  - metaphase I — independent orientation of pairs
+  - division I — homologs separate → 2 haploid cells (recombined)
+  - division II — chromatids separate → ==4 haploid gametes==
 - title: Reading a dihybrid testcross
   steps:
-    - "count classes → identify the two parental (largest)"
-    - "recombinant % = (sum of two smallest) / total"
-    - "==that % IS the map distance in cM=="
+  - count classes → identify the two parental (largest)
+  - recombinant % = (sum of two smallest) / total
+  - ==that % IS the map distance in cM==
 passage:
-  text: >-
-    A family presents with red-green color blindness, an X-linked
-    recessive trait. The proband is an affected son; his mother is
-    unaffected but has an affected brother. The father has normal color
-    vision. The parents have two other children — an unaffected daughter
-    and another son with normal vision. The family asks the genetic
-    counselor for the risk that the unaffected daughter's future sons
-    will be color-blind, assuming she marries a man with normal vision.
+  text: A family presents with red-green color blindness, an X-linked recessive trait. The proband is
+    an affected son; his mother is unaffected but has an affected brother. The father has normal color
+    vision. The parents have two other children — an unaffected daughter and another son with normal vision.
+    The family asks the genetic counselor for the risk that the unaffected daughter's future sons will
+    be color-blind, assuming she marries a man with normal vision.
   questions:
   - q: The mother of the proband is best described as…
     options:
@@ -217,135 +195,124 @@ passage:
       C: Unlinked to the trait
       D: X-linked dominant
     answer: B
-    explain: An unaffected woman with an affected father-less son and an
-      affected brother must carry one recessible X — she is an obligate
-      carrier.
+    explain: An unaffected woman with an affected father-less son and an affected brother must carry one
+      recessible X — she is an obligate carrier.
     distractors:
-      A: "Homozygous affected women would be color-blind themselves."
-      C: "Her sons' affected status derives from her X."
-      D: "Dominance would affect daughters and sons equally without skipping."
+      A: Homozygous affected women would be color-blind themselves.
+      C: Her sons' affected status derives from her X.
+      D: Dominance would affect daughters and sons equally without skipping.
   - q: Probability that the unaffected daughter is a carrier?
     options:
-      A: "1/4"
-      B: "1/2"
-      C: "1"
-      D: "0"
+      A: 1/4
+      B: 1/2
+      C: '1'
+      D: '0'
     answer: B
-    explain: Carrier mother (XᶜX) × normal father (XY) daughters get the
-      father's normal X plus one of the mother's two X — half receive the
-      carrier X.
+    explain: Carrier mother (XᶜX) × normal father (XY) daughters get the father's normal X plus one of
+      the mother's two X — half receive the carrier X.
     distractors:
-      A: "1/4 is the chance of being an affected MALE in this cross."
-      C: "She would only be certain if the father were affected."
-      D: "Zero ignores that the mother passes either X at random."
+      A: 1/4 is the chance of being an affected MALE in this cross.
+      C: She would only be certain if the father were affected.
+      D: Zero ignores that the mother passes either X at random.
   - q: If the daughter IS a carrier, the chance her son is affected?
     options:
-      A: "1/4"
-      B: "1/2 of sons regardless of sex, i.e. 1/4 of all children"
-      C: "1/2 of her sons"
-      D: "All sons"
+      A: 1/4
+      B: 1/2 of sons regardless of sex, i.e. 1/4 of all children
+      C: 1/2 of her sons
+      D: All sons
     answer: C
-    explain: A carrier passes her X at random — each son has a 50% chance
-      of receiving the X carrying the trait.
+    explain: A carrier passes her X at random — each son has a 50% chance of receiving the X carrying
+      the trait.
     distractors:
-      A: "That conflates sex probability with transmission."
-      B: "Numerically fine but stated confusingly; the clean form is 1/2 OF SONS."
-      D: "Only a homozygous-affected mother would affect all sons."
+      A: That conflates sex probability with transmission.
+      B: Numerically fine but stated confusingly; the clean form is 1/2 OF SONS.
+      D: Only a homozygous-affected mother would affect all sons.
 pitfalls:
-- Confusing meiosis I with meiosis II — homologs separate first,
-  chromatids second; ploidy drops at I.
-- Applying 9:3:3:1 to a testcross — that ratio belongs to a dihybrid
-  SELF-cross.
+- Confusing meiosis I with meiosis II — homologs separate first, chromatids second; ploidy drops at I.
+- Applying 9:3:3:1 to a testcross — that ratio belongs to a dihybrid SELF-cross.
 - Treating linked genes as independent — always check class sizes first.
 - Forgetting X-linked recessive fathers cannot pass the trait to sons.
-- Counting one recombinant class instead of both when computing map
-  distance.
+- Counting one recombinant class instead of both when computing map distance.
 exam_map:
-  NMAT: >-
-    CEM-style items hit the definitions and ratios directly — Mendel's
-    laws, monohybrid and dihybrid ratios, dominance variants, and basic
-    pedigree reading. Expect one-step application rather than multi-gene
+  NMAT: CEM-style items hit the definitions and ratios directly — Mendel's laws, monohybrid and dihybrid
+    ratios, dominance variants, and basic pedigree reading. Expect one-step application rather than multi-gene
     synthesis.
-  MCAT: >-
-    Content Category 1C and 3B passages dress this chapter in pedigrees,
-    linkage data tables, and crosses with marker genes. Recombination
-    math, X-linked inheritance probabilities, and mutation-type
+  MCAT: Content Category 1C and 3B passages dress this chapter in pedigrees, linkage data tables, and
+    crosses with marker genes. Recombination math, X-linked inheritance probabilities, and mutation-type
     identification are the recurring tasks.
 sources:
 - ref: openstax-biology-2e
   used:
-  - "Ch 11 — Meiosis and Sexual Reproduction"
-  - "Ch 12 — Mendel's Experiments and Heredity"
-  - "Ch 13 — Modern Understandings of Inheritance"
-  - "Ch 14 — DNA Structure and Function"
+  - Ch 11 — Meiosis and Sexual Reproduction
+  - Ch 12 — Mendel's Experiments and Heredity
+  - Ch 13 — Modern Understandings of Inheritance
+  - Ch 14 — DNA Structure and Function
   relation: consulted
 - ref: aamc-whatson-mcat
   used:
-  - "Foundational Concept 1, Content Category 1C"
+  - Foundational Concept 1, Content Category 1C
   relation: consulted
 further_reading:
-- title: "OpenStax Biology 2e — Ch 11: Meiosis and Sexual Reproduction"
+- title: 'OpenStax Biology 2e — Ch 11: Meiosis and Sexual Reproduction'
   url: https://openstax.org/books/biology-2e/pages/11-introduction
   note: The variation engine, stage by stage.
-- title: "OpenStax Biology 2e — Ch 12: Mendel's Experiments and Heredity"
+- title: 'OpenStax Biology 2e — Ch 12: Mendel''s Experiments and Heredity'
   url: https://openstax.org/books/biology-2e/pages/12-introduction
   note: Ratios from first principles.
-- title: "OpenStax Biology 2e — Ch 14: DNA Structure and Function"
+- title: 'OpenStax Biology 2e — Ch 14: DNA Structure and Function'
   url: https://openstax.org/books/biology-2e/pages/14-introduction
   note: The molecule behind the ratios.
 review_questions:
 - q: Which event contributes DIRECTLY to genetic variation among gametes?
   options:
-      A: Cytokinesis after meiosis II
-      B: Crossing over during prophase I
-      C: DNA replication before meiosis
-      D: Telophase chromosome decondensation
+    A: Cytokinesis after meiosis II
+    B: Crossing over during prophase I
+    C: DNA replication before meiosis
+    D: Telophase chromosome decondensation
   answer: B
-  explain: Crossing over mosaics each chromatid — the direct variation
-    source alongside independent assortment.
+  explain: Crossing over mosaics each chromatid — the direct variation source alongside independent assortment.
   distractors:
-    A: "Cytokinesis only partitions what already exists."
-    C: "Replication copies faithfully; it adds no new combinations."
-    D: "Decondensation is packaging, not recombination."
-- q: A cross yields a 1:1:1:1 phenotypic ratio in the offspring. The most
-    likely cross is…
+    A: Cytokinesis only partitions what already exists.
+    C: Replication copies faithfully; it adds no new combinations.
+    D: Decondensation is packaging, not recombination.
+- q: A cross yields a 1:1:1:1 phenotypic ratio in the offspring. The most likely cross is…
   options:
-      A: "Aa × Aa at one locus"
-      B: "AaBb × aabb with unlinked genes (testcross)"
-      C: "AaBb × AaBb with unlinked genes"
-      D: "AaBb × aabb with tightly linked genes"
+    A: Aa × Aa at one locus
+    B: AaBb × aabb with unlinked genes (testcross)
+    C: AaBb × AaBb with unlinked genes
+    D: AaBb × aabb with tightly linked genes
   answer: B
-  explain: An unlinked dihybrid testcross makes four gamete types at
-    equal frequency, each revealed by the recessive parent.
+  explain: An unlinked dihybrid testcross makes four gamete types at equal frequency, each revealed by
+    the recessive parent.
   distractors:
-    A: "Single-locus Aa × Aa gives 3:1, not four classes."
-    C: "The dihybrid self-cross gives 9:3:3:1."
-    D: "Tight linkage collapses classes toward parentals only."
-- q: Andalusian chickens — black (BB) × white (WW) give slate-blue (BW).
-    Two slate-blue birds are crossed. Phenotype ratio?
+    A: Single-locus Aa × Aa gives 3:1, not four classes.
+    C: The dihybrid self-cross gives 9:3:3:1.
+    D: Tight linkage collapses classes toward parentals only.
+- q: Andalusian chickens — black (BB) × white (WW) give slate-blue (BW). Two slate-blue birds are crossed.
+    Phenotype ratio?
   options:
-      A: "3 black : 1 white"
-      B: "1 black : 2 blue : 1 white"
-      C: "2 black : 2 white"
-      D: "All blue"
+    A: '3 black : 1 white'
+    B: '1 black : 2 blue : 1 white'
+    C: '2 black : 2 white'
+    D: All blue
   answer: B
-  explain: Incomplete dominance — heterozygotes are visibly distinct, so
-    the 1:2:1 genotype ratio surfaces as phenotypes.
+  explain: Incomplete dominance — heterozygotes are visibly distinct, so the 1:2:1 genotype ratio surfaces
+    as phenotypes.
   distractors:
-      A: "Complete-dominance arithmetic; the heterozygote is not black here."
-      C: "Heterozygotes do not vanish in incomplete dominance."
-      D: "Only true when both parents are the SAME genotype pairing."
-- q: Genes A and B are 12 map units apart. In an AaBb × aabb testcross,
-    the EXPECTED recombinant fraction is…
+    A: Complete-dominance arithmetic; the heterozygote is not black here.
+    C: Heterozygotes do not vanish in incomplete dominance.
+    D: Only true when both parents are the SAME genotype pairing.
+- q: Genes A and B are 12 map units apart. In an AaBb × aabb testcross, the EXPECTED recombinant fraction
+    is…
   options:
-      A: "12% total"
-      B: "6% total"
-      C: "24% total"
-      D: "88% total"
+    A: 12% total
+    B: 6% total
+    C: 24% total
+    D: 88% total
   answer: A
-  explain: Map distance equals total recombinant percentage — 12 cM
-    means 12% recombinants across both classes.
+  explain: Map distance equals total recombinant percentage — 12 cM means 12% recombinants across both
+    classes.
   distractors:
-    B: "6% would be ONE recombinant class; the distance counts both."
-    C: "Doubling mistakes the per-class value for the total."
-    D: "88% is the PARENTAL fraction — inverted reading."
+    B: 6% would be ONE recombinant class; the distance counts both.
+    C: Doubling mistakes the per-class value for the total.
+    D: 88% is the PARENTAL fraction — inverted reading.
