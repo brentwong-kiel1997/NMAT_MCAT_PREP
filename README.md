@@ -23,9 +23,25 @@ python manage.py env_status   # 查看命中的文件与遮罩后的值
 查找顺序：`GABAY_ENV_FILE` → `<仓库>/.env` → `/home/ubuntu/runtime/.env` → `/home/ubuntu/runtime/secrets/minimax.env`。
 `.env` 已被 gitignore；改动即时生效，无需重启 Gunicorn。
 
-## 自动部署
+## 知识库快照（knowledge.sqlite3）
+
+教材知识的源头是 Python 数据文件（`portal/notes.py`、`practice.py`、`materials_data.py`、`pack_enrich.py`、`exams.py`、`diseases.py`）。仓库根目录的 `knowledge.sqlite3` 是从这些源码重建出来的快照，随 git 提交、可直接配套使用。
+
+改教材的固定流程——源码和快照必须成对提交，避免两份真相漂移：
+
+```bash
+# 1. 改 portal/*.py 里的内容
+scripts/snapshot-knowledge.sh   # 2. 重建快照（含完整性校验）
+git add -A && git commit -m "..."  # 3. 源码 + 快照一起提交
+```
+
+部署脚本仍会在服务器上用 `load_knowledge` 重建运行时知识库，所以即使某次忘了重建快照，线上也不会错；快照主要保证 clone 即用、GitHub 上的数据完整。
+
+## 推送与自动部署
 
 ```bash
 cd /home/ubuntu/django-wsgi
-git add -A && git commit -m "..." && git push origin main
+git add -A && git commit -m "..."
+git push origin main    # GitHub 备份（NMAT_MCAT_PREP）
+git push deploy main    # 触发裸仓 post-receive 自动部署
 ```
