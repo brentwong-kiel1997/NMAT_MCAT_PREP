@@ -16,16 +16,8 @@ mkdir -p "$LOGS" "$DEPLOY"
 export DJANGO_DEBUG="${DJANGO_DEBUG:-0}"
 export DJANGO_ALLOWED_HOSTS="${DJANGO_ALLOWED_HOSTS:-localhost,127.0.0.1,*}"
 
-# MiniMax study tutor secrets (never stored in git)
-if [[ -f /home/ubuntu/runtime/secrets/load-minimax.sh ]]; then
-  # shellcheck disable=SC1091
-  source /home/ubuntu/runtime/secrets/load-minimax.sh
-elif [[ -f /home/ubuntu/runtime/secrets/minimax.env ]]; then
-  set -a
-  # shellcheck disable=SC1091
-  source /home/ubuntu/runtime/secrets/minimax.env
-  set +a
-fi
+# MiniMax study tutor keys are read from a .env file at request time
+# (portal/envfile.py), so nothing secret is exported into this shell.
 
 cd "$DEPLOY"
 
@@ -45,6 +37,7 @@ fi
 "${VENV}/bin/python" manage.py load_knowledge
 "${VENV}/bin/python" manage.py ensure_admin
 "${VENV}/bin/python" manage.py db_status
+"${VENV}/bin/python" manage.py env_status
 "${VENV}/bin/python" manage.py collectstatic --noinput
 
 if [[ -f "$PIDFILE" ]]; then

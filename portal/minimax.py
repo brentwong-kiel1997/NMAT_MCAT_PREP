@@ -1,43 +1,28 @@
 """MiniMax M3 client for Gabay study tutor.
 
-API key is loaded from environment or /home/ubuntu/runtime/secrets/minimax.env
-and must never be committed to the repository.
+Credentials come from a .env file (see portal/envfile.py); they are never read
+from the process environment and never committed to the repository.
 """
 
 from __future__ import annotations
 
 import json
-import os
 import re
 import urllib.error
 import urllib.request
-from pathlib import Path
+
+from .envfile import env_value
 
 
-SECRET_FILE = Path("/home/ubuntu/runtime/secrets/minimax.env")
 # MiniMax M3 often wraps private reasoning in <think>...</think>
 _THINK_RE = re.compile(r"<think>[\s\S]*?</think>", re.IGNORECASE)
 
 
-def _load_secret_file() -> None:
-    if not SECRET_FILE.exists():
-        return
-    for raw in SECRET_FILE.read_text().splitlines():
-        line = raw.strip()
-        if not line or line.startswith("#") or "=" not in line:
-            continue
-        key, value = line.split("=", 1)
-        os.environ.setdefault(key.strip(), value.strip())
-
-
-_load_secret_file()
-
-
 def minimax_config() -> dict[str, str]:
     return {
-        "api_key": os.environ.get("MINIMAX_API_KEY", ""),
-        "base_url": os.environ.get("MINIMAX_BASE_URL", "https://api.minimaxi.com/v1").rstrip("/"),
-        "model": os.environ.get("MINIMAX_MODEL", "MiniMax-M3"),
+        "api_key": env_value("MINIMAX_API_KEY"),
+        "base_url": env_value("MINIMAX_BASE_URL", "https://api.minimaxi.com/v1").rstrip("/"),
+        "model": env_value("MINIMAX_MODEL", "MiniMax-M3"),
     }
 
 
@@ -54,7 +39,7 @@ def chat_completion(
 ) -> str:
     cfg = minimax_config()
     if not cfg["api_key"]:
-        raise RuntimeError("MINIMAX_API_KEY is not configured on this server.")
+        raise RuntimeError("MINIMAX_API_KEY is missing from the .env file on this server.")
 
     payload = {
         "model": cfg["model"],

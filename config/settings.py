@@ -127,8 +127,6 @@ CSRF_TRUSTED_ORIGINS = [
     if o.strip()
 ]
 
-# MiniMax study tutor (key lives outside the repo)
-MINIMAX_SECRET_FILE = os.environ.get(
-    "MINIMAX_SECRET_FILE",
-    "/home/ubuntu/runtime/secrets/minimax.env",
-)
+# MiniMax study tutor keys are read from a .env file by portal.envfile.
+# Override the file location with GABAY_ENV_FILE; see `manage.py env_status`.
+GABAY_ENV_FILE = os.environ.get("GABAY_ENV_FILE", str(BASE_DIR / ".env"))
