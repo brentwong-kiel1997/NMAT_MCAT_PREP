@@ -25,6 +25,8 @@ the single source of truth — there is no generated artifact to keep in sync.
 | `materials/tips.yml` | Exam strategy tips (NMAT / MCAT / BOTH) | 21 tips |
 | `materials/paths.yml` | Suggested study paths with step links | 7 paths |
 | `materials/checklists.yml` | Exam-day and study checklists | 3 lists |
+| `tutorials/<subject>/<chapter>.yml` | Full textbook chapters: overview, teaching sections, tables, worked examples, key points, pitfalls, exam map, sources | 1 → 90 (growing) |
+| `docs/TUTORIAL_TEMPLATE.md` | Authoring template + field reference for new chapters | — |
 | `MANIFEST.json` | Counts and SHA-256 hashes of every file, for integrity checks | — |
 
 ## Editing rules
@@ -85,6 +87,39 @@ A practice item (`practice/biology.yml`):
   explain: The Golgi apparatus modifies, sorts, and packages proteins...
   chapter: Cells and Cellular Processes
 ```
+
+## Tutorial chapters
+
+Full textbook chapters live in `tutorials/<subject-slug>/<title-slug>.yml`.
+A chapter is keyed to exactly one outline chapter (`subject` + `chapter`
+must match an item in `subjects/`), so progress records and navigation stay
+consistent. The URL shape is `/tutorials/<subject>/<chapter-id>/`, where
+`chapter-id` is the derived `ch-N-slugified-title` value from the outline.
+
+Each chapter file carries the fields:
+
+| Field | Purpose |
+| --- | --- |
+| `overview` | Why this chapter matters, what each exam tests with it, prerequisites |
+| `sections` | Teaching body: `heading` + `body` (paragraphs) + optional `table` (`caption`, `headers`, `rows`) |
+| `examples` | Worked examples: `prompt` + `solution` steps + optional `answer` |
+| `key_points` | Must-not-miss bullet takeaways |
+| `pitfalls` | Common wrong answers and misconceptions |
+| `exam_map` | Map of `NMAT:` / `MCAT:` — how each exam tests this chapter |
+| `sources` | Every reference cited: `ref` (an id from `SOURCES.yml`), `used` (chapters/sections), `relation` |
+
+Inline prose supports two markers (everything else is plain text):
+`**bold**` for key terms and `==mark==` for must-not-miss exam takeaways.
+Facts and structure may follow the referenced sources, but prose must stay
+original — the content pack maintains its own copyright, and `sources`
+records exactly what was consulted and how.
+
+A fill-in template with every field documented is in
+[`docs/TUTORIAL_TEMPLATE.md`](docs/TUTORIAL_TEMPLATE.md); a complete worked
+example is `tutorials/biology/unity-and-diversity-of-life.yml`. The
+validation gate checks that every tutorial keys to a real outline chapter
+and cites only registered sources, so writing a chapter is: copy the
+template → fill it → run `validate_content` → `refresh_manifest` → commit.
 
 ## Note overlay (read-time copies)
 
