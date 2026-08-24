@@ -192,6 +192,9 @@ Same expectation rules for the chapter-level blocks:
 - `review_questions` — 4 minimum at chapter level, always with distractors
   on the choices that are actually tempting.
 
+# g) Videos — CURRENTLY PARKED (user decision 2026-08-24): do not add
+#    recommendation videos to chapters for now; the schema and rendering
+#    remain, data is empty.
 # g) Videos — concrete videos with verified watch URLs and descriptions
 videos:
   - title: "Creator — exact video title"

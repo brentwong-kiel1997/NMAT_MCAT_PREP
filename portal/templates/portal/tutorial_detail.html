@@ -30,7 +30,6 @@
         <a href="#key-points">Key points</a>
         {% if tutorial.mnemonics %}<a href="#mnemonics">Mnemonics</a>{% endif %}
         {% if tutorial.maps %}<a href="#maps">Concept maps</a>{% endif %}
-        {% if tutorial.videos %}<a href="#videos">Videos</a>{% endif %}
         {% if tutorial.further_reading %}<a href="#further-reading">Further reading</a>{% endif %}
         {% if tutorial.passage %}<a href="#passage">Passage</a>{% endif %}
         {% if tutorial.pitfalls %}<a href="#pitfalls">Common pitfalls</a>{% endif %}
@@ -79,16 +78,6 @@
           {% endfor %}
         </div>
         {% endif %}
-        {% if section.videos %}
-        <div class="tut-section-videos">
-          <p class="tut-block-label">Watch</p>
-          <ul>
-            {% for v in section.videos %}
-            <li><a href="{{ v.url }}" target="_blank" rel="noopener noreferrer">{{ v.title }}</a>{% if v.note %} — {{ v.note|rich }}{% endif %}{% if v.description %}<span class="muted-inline tut-video-desc-inline">{{ v.description|rich }}</span>{% endif %}</li>
-            {% endfor %}
-          </ul>
-        </div>
-        {% endif %}
       </article>
       {% endfor %}
 
@@ -123,26 +112,6 @@
         <ul>
           {% for m in tutorial.mnemonics %}
           <li><strong>{{ m.phrase }}</strong>{% if m.means %} — {{ m.means|rich }}{% endif %}</li>
-          {% endfor %}
-        </ul>
-      </article>
-      {% endif %}
-
-      {% if tutorial.videos %}
-      <article class="tut-videos" id="videos">
-        <h2>Recommended videos</h2>
-        <ul class="tut-video-list">
-          {% for v in tutorial.videos %}
-          <li>
-            <a href="{{ v.url }}" target="_blank" rel="noopener noreferrer">{{ v.title }}</a>
-            {% if v.note %} — {{ v.note|rich }}{% endif %}
-            {% if v.description %}
-            <details class="tut-video-desc">
-              <summary>About this video</summary>
-              <p>{{ v.description|rich }}</p>
-            </details>
-            {% endif %}
-          </li>
           {% endfor %}
         </ul>
       </article>

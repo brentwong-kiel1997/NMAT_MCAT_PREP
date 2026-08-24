@@ -9,11 +9,6 @@ overview: 'This opening chapter answers two questions that both exams return to 
   where diversity comes from. No prerequisites; everything later in biology builds on it.'
 sections:
 - heading: A working definition of life
-  videos:
-  - title: Amoeba Sisters — Characteristics of Life
-    url: https://www.youtube.com/watch?v=cQPVXrV0GNA
-    note: The chapter's property checklist, one video.
-    description: Join the Amoeba Sisters as they explore several characteristics of life.
   body:
   - Biology has no single-sentence definition of life that everyone accepts, but exams expect you to know
     the property checklist that living things share. A living organism maintains **order**, harvests **energy**
@@ -45,12 +40,6 @@ sections:
       B: Wrong — a virus's nucleic acid IS heritable information.
       D: Wrong — inside a host, viruses do respond to (hijack) cellular machinery.
 - heading: Levels of organization and **emergent properties**
-  videos:
-  - title: 'Amoeba Sisters — Biological Levels in Biology: The World Tour'
-    url: https://www.youtube.com/watch?v=EtWknf1gzKo
-    note: Cell → biosphere, with emergent properties along the way.
-    description: 'The Amoeba Sisters tour through the biological levels of organization: cells, tissues,
-      organs, organ systems, organism, population, community, ecosystem, and biosphere.'
   body:
   - 'Life is organized on a nested ladder: atoms, molecules, organelles, cells, tissues, organs, organ
     systems, organisms, populations, communities, ecosystems, and the biosphere. Each rung is built entirely
@@ -77,12 +66,6 @@ sections:
       D: The organism shows the full checklist, but it is built of cells; the lowest level is not the
         most complex.
 - heading: 'Naming and classifying: taxonomy and the three domains'
-  videos:
-  - title: Amoeba Sisters — Prokaryotic vs. Eukaryotic Cells (Updated)
-    url: https://www.youtube.com/watch?v=Pxujitlv8wc
-    note: The three-domain cell split, side by side.
-    description: This Amoeba Sisters video starts with providing examples of prokaryotes and eukaryotes
-      before comparing and contrasting prokaryotic cells and eukaryotic cells.
   body:
   - Taxonomy is the discipline of naming and classifying organisms. Every species has a two-part name,
     Homo sapiens, where the first word is the **genus** (capitalized) and the second is the specific epithet;
@@ -139,12 +122,6 @@ sections:
       D: The three-domain split is not a three-way simultaneous event; Archaea and Eukarya share a later
         node.
 - heading: 'Unity: the shared molecular toolkit'
-  videos:
-  - title: Amoeba Sisters — DNA, Chromosomes, Genes, and Traits
-    url: https://www.youtube.com/watch?v=8m6hHRlKwxY
-    note: The universal genetic toolkit behind unity.
-    description: Explore DNA structure/function, chromosomes, genes, and traits and how this relates to
-      heredity!
   body:
   - 'Underneath the diversity, every known organism runs on the same chemistry. All use DNA as the hereditary
     material, and the **genetic code** — which triplet codon specifies which amino acid — ==is essentially
@@ -208,12 +185,6 @@ sections:
       B: Recombination rearranges existing alleles into new combinations — new to an individual, but not
         new to the species.
       D: Drift changes allele frequencies by chance; the alleles already existed.
-  videos:
-  - title: 'CrashCourse Biology #17 — Phylogeny: How We''re All Related'
-    url: https://www.youtube.com/watch?v=YM6Ekb5De2o
-    note: Trees, clades, and why taxonomy is going phylogenetic.
-    description: Crocodiles, and birds, and dinosaurs—oh my! While classifying organisms is nothing new,
-      phylogeny—or, grouping organisms by their evolutionary history—is.
 examples:
 - prompt: A researcher isolates an unidentified microbe from a deep-sea hydrothermal vent. It has no membrane-bound
     nucleus. Its small-subunit rRNA sequence clusters nearest to eukaryotic sequences, and its membrane
@@ -341,22 +312,6 @@ passage:
         machinery).
       D: A shared absence (no nucleus) is a trait both could have retained or lost; it does not show unity
         of machinery.
-videos:
-- title: Amoeba Sisters — Stroll Through the Playlist (a Biology Review)
-  url: https://www.youtube.com/watch?v=7xeFP0SEDdc
-  note: A 41-minute mega review of the whole biology playlist — perfect after finishing this chapter.
-  description: Join the Amoeba Sisters as they take a brisk "stroll" through their biology playlist! This
-    review video can refresh your memory of major biology concepts.
-- title: Khan Academy (MCAT) — Evolution and natural selection
-  url: https://www.youtube.com/watch?v=Me_041nrRZk
-  note: Officially MCAT-aligned (Biomolecules Foundational Concept).
-  description: Learn the fundamental principles about how natural selection can drive the process of evolution.
-    By Ross Firestone.
-- title: 'CrashCourse Biology #19 — Taxonomy: Life''s Filing System'
-  url: https://www.youtube.com/watch?v=F38BmgPcZ_I
-  note: The classification side of this chapter, told properly.
-  description: Hank tells us the background story and explains the importance of the science of classifying
-    living things, also known as taxonomy.
 further_reading:
 - title: 'OpenStax Biology 2e — Ch 1: The Study of Life'
   url: https://openstax.org/books/biology-2e/pages/1-introduction
