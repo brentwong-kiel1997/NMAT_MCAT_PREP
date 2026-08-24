@@ -133,6 +133,52 @@ class Command(BaseCommand):
         if not store["kinds"].get("shared") or not store["kinds"].get("mcat"):
             problems.append("catalog.yml kinds missing shared/mcat lists")
 
+        # ---- tutorial chapters (the growing textbook) --------------------------
+        sources_path = CONTENT / "SOURCES.yml"
+        known_sources = set()
+        if sources_path.exists():
+            registry = yaml.safe_load(sources_path.read_text(encoding="utf-8")) or {}
+            known_sources = {s.get("id") for s in registry.get("sources") or []}
+        tutorials_dir = CONTENT / "tutorials"
+        if tutorials_dir.is_dir():
+            for file in sorted(tutorials_dir.rglob("*.yml")):
+                rel = str(file.relative_to(CONTENT))
+                try:
+                    doc = yaml.safe_load(file.read_text(encoding="utf-8")) or {}
+                except yaml.YAMLError as exc:
+                    problems.append(f"{rel}: invalid YAML ({exc})")
+                    continue
+                subject = store["subjects"].get(doc.get("subject", ""))
+                if subject is None:
+                    problems.append(f"{rel}: unknown subject {doc.get('subject')!r}")
+                    continue
+                outline = {
+                    item.get("title", "")
+                    for group in subject.get("chapters") or []
+                    for item in group.get("items") or []
+                }
+                if doc.get("chapter") not in outline:
+                    problems.append(
+                        f"{rel}: chapter {doc.get('chapter')!r} not in the subject outline"
+                    )
+                if not doc.get("sections"):
+                    problems.append(f"{rel}: no sections")
+                for section in doc.get("sections") or []:
+                    if not section.get("heading") or not section.get("body"):
+                        problems.append(f"{rel}: section missing heading/body")
+                if not doc.get("sources"):
+                    problems.append(f"{rel}: no sources block")
+                for src in doc.get("sources") or []:
+                    if src.get("ref") not in known_sources:
+                        problems.append(
+                            f"{rel}: source ref {src.get('ref')!r} not in SOURCES.yml"
+                        )
+                    if src.get("relation") not in ("consulted", "adapted"):
+                        problems.append(
+                            f"{rel}: source {src.get('ref')!r} needs relation "
+                            f"consulted|adapted"
+                        )
+
         # ---- tutorial chapters (optional, growing one by one) ---------------
         sources_path = CONTENT / "SOURCES.yml"
         source_ids = set()
