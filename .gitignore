@@ -2,8 +2,6 @@ __pycache__/
 *.py[cod]
 *.sqlite3
 db.sqlite3
-# The knowledge snapshot ships in git; everything else stays out.
-!knowledge.sqlite3
 staticfiles/
 .env
 .venv/
