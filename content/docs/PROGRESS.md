@@ -1,6 +1,6 @@
 # Tutorial Fill Progress (content/tutorials)
 
-> 90 outline chapters · **1 published tutorial** (Biology · Unity and Diversity of Life). Update this file **together with** every chapter you publish.
+> 72 unique chapters (unified library) · **1 published tutorial** (Biology · Unity and Diversity of Life). Update this file **together with** every chapter you publish.
 
 Legend: **✅ Published** · 🟨 Drafting · ⬜ Not started · (—) Not planned
 

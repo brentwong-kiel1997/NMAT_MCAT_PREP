@@ -17,9 +17,8 @@ the single source of truth — there is no generated artifact to keep in sync.
 | `units.yml` | Two learning projects (NMAT/MCAT) split into study units with per-chapter exam annotations and cross-project links | 15 units |
 | `exams/nmat.yml` | NMAT structure: parts, timing, item counts, Part-2 subject links | 2 parts |
 | `exams/mcat.yml` | MCAT structure: sections, timing, discipline mix | 4 sections |
-| `subjects/*.yml` | One file per subject: positioning, exam roles, chapter outline | 13 subjects |
-| `notes/*.yml` | Chapter note buckets (high-yield bullets) — canonical, see Overlay below | 545 bullets |
-| `practice/*.yml` | Multiple-choice questions (4 options, answer, explanation) | 116 items |
+| `chapters/<slug>.yml` | **The unified chapter library** — one file per unique chapter: title, discipline, exams, points, notes, practice items | 72 chapters |
+| `subjects/*.yml` | Exam-facing ordered reference lists over the library (group headings + chapter slugs) | 13 subjects |
 | `diseases/*.yml` | Disease articles (enrichment reading, not a clinical syllabus) | 8 articles |
 | `materials/glossary.yml` | Terms with definitions and subject tags | 105 terms |
 | `materials/formulas.yml` | Formula sheets grouped by subject | 108 entries |
@@ -57,39 +56,40 @@ when editing.
 
 ## Schema highlights
 
-A subject file (`subjects/biology.yml`):
+A chapter (`chapters/4a-motion-forces-work-energy-equilibrium.yml`):
 
 ```yaml
-slug: biology
-kind: shared            # shared | nmat | mcat
-name: Biology
-summary: Cells, genetics, homeostasis...
-exams: [NMAT, MCAT]
-exam_notes:
-  NMAT: How CEM frames this subject...
-  MCAT: How AAMC frames this subject...
-chapters:               # outline; order defines chapter IDs
+id: 4a-motion-forces-work-energy-equilibrium   # stable progress key
+title: 4A · Motion, forces, work, energy, equilibrium
+discipline: physics
+exams: [NMAT, MCAT]        # annotation: both exams use this chapter
+points:
+  - Translational motion, forces, work, energy, and equilibrium in living systems
+notes:
+  - Translate physio scenarios into force/energy problems
+practice:
+  - id: phys-1
+    q: "…"
+    choices: {A: …, B: …, C: …, D: …}
+    answer: B
+    explain: …
+```
+
+A subject (`subjects/physics.yml`) is a reference list:
+
+```yaml
+slug: physics
+kind: shared
+chapters:
   - heading: NMAT · CEM BOI chapters
-    items:
-      - title: Unity and Diversity of Life
-        points:
-          - Shared traits: cells, metabolism, homeostasis, reproduction, adaptation
+    chapters: [mechanics, thermodynamics, …]
+  - heading: MCAT · Foundational Concept 4
+    chapters: [4a-motion-forces-work-energy-equilibrium, …]
 ```
 
-A practice item (`practice/biology.yml`):
-
-```yaml
-- id: bio-1
-  q: Which organelle packages proteins for secretion?
-  choices:
-    A: Rough endoplasmic reticulum
-    B: Golgi apparatus
-    C: Lysosome
-    D: Peroxisome
-  answer: B
-  explain: The Golgi apparatus modifies, sorts, and packages proteins...
-  chapter: Cells and Cellular Processes
-```
+Editing rules carry over: question ids are globally unique; chapter slugs
+are progress keys — never rename casually; ordering in reference lists is
+display order.
 
 ## Learning projects & annotations
 
@@ -146,23 +146,6 @@ template → fill it → run `validate_content` → `refresh_manifest` → commi
 Fill progress per chapter is tracked in
 [`docs/PROGRESS.md`](docs/PROGRESS.md) — update it alongside every chapter
 you publish.
-
-## Note overlay (read-time copies)
-
-Note files are canonical: each subject owns only its own bullets. Some shared
-subject pages intentionally show another subject's notes. Consumers should
-apply this overlay when reading (later sources override per chapter title):
-
-```
-biology      <- biology + bio-biochem
-chemistry    <- chemistry + chem-phys{titles starting 5 or 4E}
-physics      <- physics   + chem-phys{titles starting 4}
-chem-phys    <- physics(staged) + chemistry(staged) + chem-phys
-bio-biochem  <- biology(staged) + biochemistry + bio-biochem
-psych-soc    <- behavioral-social + psych-soc
-```
-
-After the overlay the corpus renders as 150 chapter buckets / 790 bullets.
 
 ## Integrity checks
 
