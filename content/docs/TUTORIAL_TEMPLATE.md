@@ -24,7 +24,7 @@ Authoring rules that the gate does NOT enforce, keep them anyway:
   science.
 
 ```yaml
-subject: <subject-slug>
+subject: <chapter-discipline>   # e.g. physics for 4A, whichever unit links it
 chapter: "<exact outline chapter title>"
 title: "<short display title — may equal chapter>"
 
