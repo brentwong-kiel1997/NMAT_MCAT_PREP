@@ -1,0 +1,339 @@
+subject: biology
+chapter: Organisms and Their Environment
+title: Organisms and Their Environment
+overview: >-
+  Ecology scales biology from the organism outward — population,
+  community, ecosystem, biosphere — and supplies the energy-flow and
+  cycle logic the MCAT loves to wrap in data. NMAT keeps to vocabulary
+  and simple pyramids; the MCAT runs growth curves, interaction
+  tables, and nutrient-cycle isotope tricks. Prerequisites — Unity and
+  Diversity (niches, adaptation), Life Processes (regulation).
+sections:
+- heading: Populations — growth models that explain the curves
+  body:
+  - A population grows exponentially whenever per-capita growth stays
+    positive — the ==J-curve==. Real environments impose limits —
+    food, space, waste — producing the ==logistic S-curve== that
+    decelerates toward a **carrying capacity (K)**. Read any growth
+    graph by three landmarks — the exponential knee, the inflection
+    where braking begins, and the plateau at K.
+  - Life-history strategy follows the regime — **r-selected** species
+    (many small offspring, little care, boom-bust — insects, weeds)
+    fit uncrowded, chance openings; **K-selected** species (few
+    offspring, heavy investment, strong competition — large mammals)
+    fit saturated habitats. Survivorship curves complete the picture —
+    Type I (die old, humans), Type II (constant risk, some birds),
+    Type III (mass juvenile death, most fish and plants).
+  check:
+  - q: A population at logistic inflection is…
+    options:
+      A: Growing fastest
+      B: At carrying capacity
+      C: Shrinking
+      D: Extinct locally
+    answer: A
+    explain: At half of K, growth peaks — resources still ample, numbers
+      already compounding.
+    distractors:
+      B: "At K, growth is zero."
+      C: "Decline requires negative net growth."
+      D: "No — it is thriving."
+- heading: Interactions — who does what to whom
+  body:
+  - Community interactions reduce to a payoff matrix.
+    **Competition** (−/−) — two species share a limiting resource; the
+    ==competitive exclusion principle== says full overlap is unstable —
+    one wins, or **natural selection forces niche partitioning**
+    (character displacement — Galápagos finch beaks). **Predation**
+    (+/−) drives adaptation cycles in both parties. **Parasitism** is
+    predation in slow motion. **Mutualism** (+/+) and **commensalism**
+    (+/0) complete the sign table — identify the signs and the
+    interaction names itself.
+  - The ==keystone species== holds community structure out of proportion to
+    their number — remove the sea star Pisaster and mussels overrun
+    the tide pool. **Invasive species** are the pathology case —
+    released from their co-evolved enemies, they competitively exclude
+    natives.
+  check:
+  - q: Two barnacle species overlap; one shifts to a drier zone. This is…
+    options:
+      A: Competitive exclusion
+      B: Niche partitioning after competition
+      C: Mutualism
+      D: Predation
+    answer: B
+    explain: The shift allows coexistence — classic partitioning (the
+      real Balanus/Chthamalus result).
+    distractors:
+      A: "Exclusion is the OUTCOME when partitioning fails."
+      C: "No benefit flows both ways."
+      D: "Nobody is eaten."
+- heading: Communities — succession and structure
+  body:
+  - After a disturbance, structure reassembles. **Primary succession**
+    starts on bare rock (pioneer lichens → soil → grasses → shrubs →
+    forest); **secondary succession** starts where soil survives
+    (after fire or flood) and moves faster. The classical endpoint —
+    a stable **climax community** — is now treated more honestly as a
+    shifting mosaic, since disturbance never stops for long.
+  - Diversity has two axes — richness (how many species) and
+    evenness (how evenly numbers spread). A community of ten equally
+    common species is more diverse than ten individuals of one plus
+    stragglers; both axes appear in MCAT index questions (Shannon-style
+    setups).
+  check:
+  - q: Lava creates new land; the first colonizers are most likely…
+    options:
+      A: Tall trees
+      B: Pioneer lichens and microbes that make soil
+      C: Large grazing mammals
+      D: Climax forest species
+    answer: B
+    explain: Primary succession begins with soil-makers that tolerate
+      bareness.
+    distractors:
+      A: "Trees need the soil the pioneers build."
+      C: "Grazers need forage first."
+      D: "Climax arrives last."
+- heading: Ecosystems — energy flows, one-way
+  body:
+  - The master sentence of ecology — ==energy flows; matter cycles==.
+    Producers fix sunlight (or chemicals); each transfer up the trophic
+    ladder loses roughly 90% to heat and respiration, so ==about 10%
+    makes the jump== from one level to the next. That arithmetic
+    explains pyramids of energy (always upright), biomass (usually),
+    and numbers (sometimes inverted — one tree, many insects).
+  - Follow the food chain upward and the numbers shrink — 10,000 kg
+    phytoplankton → 1,000 kg zooplankton → 100 kg fish → 10 kg
+    secondary-fish → 1 kg of top-predator growth. Any passage asking
+    "how much base supports X kg of top predator" is testing powers of
+    ten, nothing more.
+  check:
+  - q: How much producer biomass is needed to add 5 kg of a
+      third-level carnivore's mass (three transfers above producers)?
+    options:
+      A: "50 kg"
+      B: "5,000 kg"
+      C: "50,000 kg"
+      D: "500 kg"
+    answer: B
+    explain: Three transfers at 10% each — 5 × 10³ = 5,000 kg of
+      producers.
+    distractors:
+      A: "That assumes ONE 10% transfer."
+      C: "Four transfers, one too many."
+      D: "Two transfers."
+- heading: Biogeochemical cycles — carbon and nitrogen
+  body:
+  - The ==Carbon== moves fast through the living loop (photosynthesis    fixes CO₂; respiration and decomposition return it) and slowly
+    through the rock pool; the modern imbalance — fossil-carbon
+    burned into the fast loop — is the engine of climate change. Any
+    cycle diagram question — follow the arrows, note where
+    photosynthesis draws down and combustion adds.
+  - The ==Nitrogen== is the bacteria chapter in disguise — ==nitrogen    fixation (N₂ → usable), nitrification, denitrification== run by
+    prokaryotes at every step; plants absorb nitrate/ammonium, animals
+    eat plants, decomposers return ammonium. Legumes' root-nodule
+    mutualists are the classic fixation example. Water cycles by
+    evaporation-transpiration-condensation-precipitation, with the
+    ocean as reservoir and land as throughput.
+  check:
+  - q: The conversion of atmospheric N₂ into biologically usable forms
+      is performed by…
+    options:
+      A: Plants directly
+      B: Nitrogen-fixing bacteria (free-living or in legume nodules)
+      C: Fungi alone
+      D: Animals
+    answer: B
+    explain: Only certain prokaryotes carry nitrogenase — every other
+      organism inherits fixed nitrogen downstream.
+    distractors:
+      A: "Plants absorb but cannot split N₂."
+      C: "Fungi decompose, they do not fix N₂."
+      D: "Animals neither fix nor absorb N₂ directly."
+examples:
+- prompt: >-
+    A wildlife reserve's wolf population is removed. Over a decade,
+    elk numbers triple, young willows and aspens vanish, beavers
+    decline, and songbird diversity drops. Name the mechanism and
+    predict the outcome of wolf reintroduction.
+  solution:
+  - "Step 1 — wolves are a predator limiting elk — removal is a top-down cascade (trophic cascade)."
+  - "Step 2 — elk over-browse riparian vegetation — producers are suppressed, habitat engineers (beavers) lose material."
+  - "Step 3 — bird diversity depends on the vegetation structure the beavers create — the cascade reaches the songbirds."
+  - "Step 4 — reintroduction reverses the chain — elk behavior and numbers fall, willows recover, beavers and birds return (the Yellowstone pattern)."
+  answer: Keystone-predator removal triggered a trophic cascade; reintroduction rebuilds it bottom-up from the plants.
+  distractors:
+    A: "Blaming climate alone — the timing and trophic specificity point at predator loss."
+    B: "Calling elk invasive — they are native; the predator, not the prey, was removed."
+    C: "Mutualism collapse — the interactions lost were predation and habitat engineering."
+key_points:
+- Exponential J-curve versus logistic S-curve; growth peaks at K/2,
+  stops at K.
+- r-strategist versus K-strategist; survivorship Types I/II/III.
+- Interaction sign table — competition −/−, predation +/−, mutualism
+  +/+, commensalism +/0.
+- Competitive exclusion forces niche partitioning; keystones hold
+  structure disproportionate to numbers.
+- Energy flows one-way with ~10% per transfer; matter cycles.
+- Carbon's fast (living) versus slow (rock) loop; nitrogen's bacterial
+  steps — fixation, nitrification, denitrification.
+mnemonics:
+- phrase: "10-10-10 up the chain"
+  means: Roughly a tenth of energy survives each trophic transfer —
+    pyramids are arithmetic.
+- phrase: "Fix, Nitrify, Denitrify — all bacteria"
+  means: The nitrogen cycle's engine room is prokaryotic.
+maps:
+- title: Trophic energy flow
+  steps:
+    - "producers fix sunlight → 10,000 kg"
+    - "primary consumers → ==1,000 kg== (10%)"
+    - "secondary → 100 kg · tertiary → ==10 kg=="
+    - "heat exits at every arrow (energy does NOT cycle)"
+- title: Nitrogen cycle
+  steps:
+    - "N₂ in air → ==fixing bacteria== → NH₃/NH₄⁺"
+    - "nitrifying bacteria → NO₃⁻ (plants absorb)"
+    - "consumers → decomposition → NH₄⁺ returns"
+    - "denitrifying bacteria → N₂ back to air"
+passage:
+  text: >-
+    An island's rabbit population is introduced without predators.
+    For six years the population follows a steepening curve; in year
+    seven it crashes, recovering to a lower plateau that then oscillates
+    mildly. Vegetation cover, measured by satellite, declines with a
+    lag behind rabbit peaks and recovers after each crash. A competitor
+    hare species introduced earlier remains at low, steady numbers
+    throughout.
+  questions:
+  - q: The year-seven crash is most consistent with…
+    options:
+      A: Overshoot of carrying capacity followed by resource collapse
+      B: A trophic cascade
+      C: Competitive exclusion of the hares
+      D: Improved food supply
+    answer: A
+    explain: The lagging vegetation decline shows resource depletion
+      after overshoot — the classic boom-bust of an unrestrained
+      herbivore.
+    distractors:
+      B: "No predator exists to trigger a cascade."
+      C: "The hare data show stable coexistence, not exclusion."
+      D: "Contradicts a crash."
+  - q: The lag between rabbit peaks and vegetation decline shows that…
+    options:
+      A: Vegetation drives rabbit numbers instantly
+      B: Resource response integrates over time — depletion and recovery trail the consumer
+      C: Rabbits do not eat plants
+      D: The satellite data are wrong
+    answer: B
+    explain: Plant biomass responds cumulatively to grazing pressure —
+      effect trails cause.
+    distractors:
+      A: "Instant response contradicts the lag."
+      C: "They obviously do."
+      D: "Trust the data given."
+  - q: The hare's low steady numbers despite rabbit boom-bust suggest…
+    options:
+      A: The hare is the better competitor
+      B: Niche partitioning — the hare persists on resources the rabbit boom does not deplete
+      C: Hares are carnivores
+      D: Hares migrate seasonally
+    answer: B
+    explain: Stable coexistence at low density indicates the species
+      divide the resource base.
+    distractors:
+      A: "Better competitors would rise, not hold low."
+      C: "Hares are herbivores."
+      D: "No migration is described."
+pitfalls:
+- Reading energy pyramids as matter pyramids — energy never cycles;
+  nutrients do.
+- Placing maximum growth at K — it is at K/2 (inflection).
+- Assigning nitrogen fixation to plants — only prokaryotes fix N₂.
+- Treating keystone species as the most numerous — they are the most
+  structurally load-bearing.
+- Forgetting succession needs a disturbance-free window — climax is a
+  mosaic, not a statue.
+exam_map:
+  NMAT: >-
+    Vocabulary and pyramid logic dominate — interaction definitions,
+    r/K matching, succession stages, and 10% arithmetic at one-step
+    level.
+  MCAT: >-
+    Foundational Concept 4 passages run growth-curve interpretation,
+    interaction tables, diversity indices, isotope-labeled cycle
+    tracing, and cascade scenarios from data.
+sources:
+- ref: openstax-biology-2e
+  used:
+  - "Population and Community Ecology chapters"
+  - "Ecosystems and the Biosphere chapters (energy, cycles)"
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - "Foundational Concept 4, Content Category 4B"
+  relation: consulted
+further_reading:
+- title: "OpenStax Biology 2e — Population and Community Ecology"
+  url: https://openstax.org/books/biology-2e/pages/45-introduction
+  note: Growth models and interaction theory.
+- title: "OpenStax Biology 2e — Ecosystems"
+  url: https://openstax.org/books/biology-2e/pages/46-introduction
+  note: Energy flow and the 10% rule in full.
+- title: "OpenStax Biology 2e — The Biosphere"
+  url: https://openstax.org/books/biology-2e/pages/47-introduction
+  note: Climate and biomes.
+review_questions:
+- q: A pyramid of ENERGY is always upright because…
+  options:
+      A: Producers are always numerous
+      B: Each transfer dissipates ~90% as heat
+      C: Consumers are larger
+      D: Matter cycles
+  answer: B
+  explain: The Second Law taxes every arrow — less energy remains
+    available at each level.
+  distractors:
+    A: "Numbers pyramids can invert (one tree, many insects)."
+    C: "Size does not set energy availability."
+    D: "Matter cycling says nothing about one-way energy."
+- q: Two species cannot stably occupy the exact same niche — this is the…
+  options:
+      A: Competitive exclusion principle
+      B: Carrying capacity law
+      C: 10% rule
+      D: Allee effect
+  answer: A
+  explain: Gause's principle — complete overlap ends in exclusion or
+    evolutionary divergence.
+  distractors:
+    B: "K is a population-growth concept."
+    C: "Energy-transfer arithmetic."
+    D: "A low-density growth effect."
+- q: Which process returns nitrogen to the atmosphere?
+  options:
+      A: Nitrification
+      B: Nitrogen fixation
+      C: Denitrification
+      D: Assimilation
+  answer: C
+  explain: Denitrifiers reduce nitrate back to N₂ gas.
+  distractors:
+    A: "Nitrification makes nitrate from ammonium."
+    B: "Fixation brings N₂ IN."
+    D: "Assimilation builds biomass."
+- q: Secondary succession differs from primary by starting…
+  options:
+      A: On bare rock with no soil
+      B: Where soil and often seeds survive a disturbance
+      C: In the ocean
+      D: With a climax forest
+  answer: B
+  explain: The soil head-start is why fields-to-forest runs decades,
+    not centuries.
+  distractors:
+    A: "That is primary."
+    C: "Habitat irrelevant."
+    D: "Climax is the END."

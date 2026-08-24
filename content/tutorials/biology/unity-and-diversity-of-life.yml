@@ -4,7 +4,7 @@ title: Unity and Diversity of Life
 overview: 'This opening chapter answers two questions that both exams return to again and again: what
   makes something alive, and how do biologists organize the enormous variety that life takes? For the
   NMAT this is direct vocabulary territory — the CEM outline names it as the first biology chapter. For
-  the MCAT it supplies the framing you need for Foundational Concept 1 (evolution): passages constantly
+  the MCAT it supplies the framing you need for Foundational Concept 1 (evolution) — passages constantly
   assume you can read a phylogenetic tree, tell homologous from **analogous structures**, and reason about
   where diversity comes from. No prerequisites; everything later in biology builds on it.'
 sections:
@@ -21,7 +21,7 @@ sections:
     copying is imperfect, variation arises — the raw material of evolution. Homeostasis is the active
     maintenance of a tolerable internal range (think body temperature or blood pH), which later chapters
     connect to feedback loops in the endocrine and nervous systems.
-  - 'The classic boundary case is the virus: it has genes and evolves, but it has no cells, no metabolism
+  - 'The classic boundary case is the virus — it has genes and evolves, but it has no cells, no metabolism
     of its own, and cannot reproduce without hijacking a host cell. Exams love this contrast — by the
     checklist, ==a virus is not independently alive==, and saying so precisely is usually the point of
     the question.'
@@ -41,12 +41,12 @@ sections:
       D: Wrong — inside a host, viruses do respond to (hijack) cellular machinery.
 - heading: Levels of organization and **emergent properties**
   body:
-  - 'Life is organized on a nested ladder: atoms, molecules, organelles, cells, tissues, organs, organ
+  - 'Life is organized on a nested ladder — atoms, molecules, organelles, cells, tissues, organs, organ
     systems, organisms, populations, communities, ecosystems, and the biosphere. Each rung is built entirely
     from the one below, yet each rung shows behaviors the parts alone do not have — biologists call these
     **emergent properties**. A single sodium atom cannot carry a nerve impulse and a single actin filament
     cannot contract a muscle; those abilities belong to the assembled structure.'
-  - 'This is why ==the cell is the basic unit of life== rather than the molecule: the cell is the lowest
+  - 'This is why ==the cell is the basic unit of life== rather than the molecule — the cell is the lowest
     level at which all the properties of the checklist operate together. Keep the ladder handy — it is
     also the map of this course, with later chapters climbing from molecules and cells up through regulation
     and organisms to ecology.'
@@ -76,10 +76,10 @@ sections:
     — where each higher rung collects a larger set of organisms sharing a more ancient common ancestor.
     Modern classification tries to reflect evolutionary history (**phylogeny**) rather than mere resemblance,
     which is why it keeps being revised as molecular data arrive.
-  - 'The broadest split recognized today is **three domains: Bacteria and Archaea** (both prokaryotic
+  - 'The broadest split recognized today is **three domains — Bacteria and Archaea** (both prokaryotic
     — no nucleus) and Eukarya (cells with a nucleus and membrane-bound organelles). Eukarya in turn holds
     the kingdoms protists (a grab-bag, mostly unicellular), fungi, plants, and animals. A frequent exam
-    trap is to classify by superficial looks: fungi look plant-like but are closer to animals biochemically,
+    trap is to classify by superficial looks — fungi look plant-like but are closer to animals biochemically,
     and archaea look bacterial but differ in membrane chemistry and genetics.'
   table:
     caption: The three domains at a glance
@@ -156,12 +156,12 @@ sections:
   body:
   - 'If unity comes from shared inheritance, diversity comes from its imperfection. Mutation introduces
     new alleles; sexual reproduction and genetic recombination shuffle existing alleles into new combinations.
-    Natural selection then filters this variation: variants that happen to work better in a given environment
+    Natural selection then filters this variation — variants that happen to work better in a given environment
     leave more offspring, so their traits become more common over generations. Combined with isolation
     of populations, this process — evolution — generates the branching tree of life and the adaptations
     that fill every habitat.'
   - 'That history is drawn as a phylogenetic tree, and both exams expect you to read one fluently. The
-    rules are mechanical: a node is a common ancestor, a branch is a lineage, and the order of branching
+    rules are mechanical — a node is a common ancestor, a branch is a lineage, and the order of branching
     is what matters — the spatial left-to-right order of tips carries no information. Two groups are ==most
     closely related if they share the most recent common ancestor==, not if they sit next to each other
     on the page. ==A clade is an ancestor plus all of its descendants==, and a valid tree only ever depicts
@@ -190,9 +190,9 @@ examples:
     nucleus. Its small-subunit rRNA sequence clusters nearest to eukaryotic sequences, and its membrane
     lipids contain ether linkages rather than ester linkages. To which domain does it belong?
   solution:
-  - 'Step 1: no nucleus → prokaryotic → Bacteria or Archaea.'
-  - 'Step 2: sequence data cluster it with Eukarya — a relationship unique to Archaea.'
-  - 'Step 3: ether-linked membrane lipids confirm the archaeal signature (bacterial/eukaryotic membranes
+  - 'Step 1 — no nucleus → prokaryotic → Bacteria or Archaea.'
+  - 'Step 2 — sequence data cluster it with Eukarya — a relationship unique to Archaea.'
+  - 'Step 3 — ether-linked membrane lipids confirm the archaeal signature (bacterial/eukaryotic membranes
     use ester-linked lipids).'
   answer: Archaea
   distractors:
@@ -205,24 +205,24 @@ examples:
 - prompt: A passage describes four organisms — a mushroom, a palm tree, a thermophilic archaeon from a
     hot spring, and E. coli — then asks which two are most closely related.
   solution:
-  - 'Step 1: sort by domain first. The archaeon is Archaea; E. coli is Bacteria; the mushroom (a fungus)
+  - 'Step 1 — sort by domain first. The archaeon is Archaea; E. coli is Bacteria; the mushroom (a fungus)
     and the palm (a plant) are both Eukarya.'
-  - 'Step 2: within Eukarya, fungi and plants are distinct kingdoms, but they still share the much more
+  - 'Step 2 — within Eukarya, fungi and plants are distinct kingdoms, but they still share the much more
     recent eukaryotic common ancestor than either shares with a prokaryote.'
-  - 'Answer: the mushroom and the palm. The trap is picking organisms that look alike (palm and any ''plant-like''
+  - 'Answer — the mushroom and the palm. The trap is picking organisms that look alike (palm and any ''plant-like''
     thing) or live alike — ==relatedness is about recency of common ancestry, nothing else==.'
 key_points:
-- 'Life''s checklist: order, energy processing, cellular organization, response to stimuli, reproduction
+- 'Life''s checklist — order, energy processing, cellular organization, response to stimuli, reproduction
   with inheritance, homeostasis/growth, and evolution; viruses fail most items outside a host cell.'
 - The cell is the lowest level with all properties of life; higher levels show **emergent properties**.
-- 'Binomial names (Genus species, italicized); hierarchy: domain > kingdom > phylum > class > order >
+- 'Binomial names (Genus species, italicized); hierarchy — domain > kingdom > phylum > class > order >
   family > genus > species.'
-- 'Three domains: Bacteria, Archaea (both prokaryotic), Eukarya; archaea are NOT ''odd bacteria'' — they
+- 'Three domains — Bacteria, Archaea (both prokaryotic), Eukarya; archaea are NOT ''odd bacteria'' — they
   are an independent domain.'
 - Unity = shared DNA, universal genetic code, DNA → RNA → protein, ATP; homologous structures record common
   ancestry.
 - Diversity = mutation + recombination filtered by natural selection over generations.
-- 'Phylogenetic trees: relatedness = most recent common ancestor; tip order is meaningless; a clade is
+- 'Phylogenetic trees — relatedness = most recent common ancestor; tip order is meaningless; a clade is
   an ancestor plus ALL its descendants.'
 mnemonics:
 - phrase: AAA — Archaea Are Ancestral to Eukarya
@@ -387,9 +387,9 @@ review_questions:
 sources:
 - ref: openstax-biology-2e
   used:
-  - 'Ch 1: The Study of Life (properties, levels of organization, taxonomy)'
-  - 'Ch 12: Diversity of Life (three domains, kingdoms)'
-  - 'Ch 20: Phylogenies and the History of Life (tree reading, clades)'
+  - 'Ch 1 — The Study of Life (properties, levels of organization, taxonomy)'
+  - 'Ch 12 — Diversity of Life (three domains, kingdoms)'
+  - 'Ch 20 — Phylogenies and the History of Life (tree reading, clades)'
   relation: consulted
   note: Facts and organization used as reference; prose written for this pack.
 - ref: aamc-whatson-mcat

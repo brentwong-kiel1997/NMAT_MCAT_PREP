@@ -1,19 +1,18 @@
 # Tutorial Fill Progress (content/tutorials)
 
-> 72 unique chapters (unified library) · **3 published tutorials** (Biology · ch 1–3).
+> 72 unique chapters (unified library) · **13 published tutorials — the Biology unit is COMPLETE**.
    Update this file **together with** every chapter you publish.
 
 Legend: **✅ Published** · 🟨 Drafting · ⬜ Not started
 
 ## Production order
 
-Biology unit first (user order: sequential), then MCAT science units
-(chemical → physical → biology → biochemistry), then the rest.
-Each chapter: sources consulted → full template (videos parked) →
+Biology unit ✅ complete. Next — MCAT science units (chemical → physical →
+biochemistry → psychology → sociology → CARS), then the NMAT-specific units.
+Each chapter — sources consulted → full template (videos parked) →
 `validate_content` → `refresh_manifest` → flip ✅ here → commit.
 
-Tutorials live at `tutorials/<discipline>/<chapter-slug>.yml` — keyed by the
-chapter's DISCIPLINE, so a shared chapter has one tutorial whichever unit views it.
+Tutorials live at `tutorials/<discipline>/<chapter-slug>.yml`.
 
 ## NMAT project (nmat)
 
@@ -55,16 +54,16 @@ chapter's DISCIPLINE, so a shared chapter has one tutorial whichever unit views 
 | 1 | Unity and Diversity of Life | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/unity-and-diversity-of-life.yml) |
 | 2 | Cells and Cellular Processes | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/cells-and-cellular-processes.yml) |
 | 3 | Genetics | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/genetics.yml) |
-| 4 | The World of Plants and Animals | NMAT · MCAT | ⬜ Not started | — |
-| 5 | Development | NMAT · MCAT | ⬜ Not started | — |
-| 6 | Life Processes: Regulation and Homeostasis | NMAT · MCAT | ⬜ Not started | — |
-| 7 | Organisms and Their Environment | NMAT · MCAT | ⬜ Not started | — |
-| 8 | 1C · Heritable information & genetic diversity | NMAT · MCAT | ⬜ Not started | — |
-| 9 | 2A · Assemblies of molecules, cells, and cell groups | NMAT · MCAT | ⬜ Not started | — |
-| 10 | 2B · Prokaryotes and viruses | NMAT · MCAT | ⬜ Not started | — |
-| 11 | 2C · Cell division, differentiation, specialization | NMAT · MCAT | ⬜ Not started | — |
-| 12 | 3A · Nervous and endocrine systems | NMAT · MCAT | ⬜ Not started | — |
-| 13 | 3B · Main organ systems | NMAT · MCAT | ⬜ Not started | — |
+| 4 | The World of Plants and Animals | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/the-world-of-plants-and-animals.yml) |
+| 5 | Development | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/development.yml) |
+| 6 | Life Processes: Regulation and Homeostasis | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/life-processes-regulation-and-homeostasis.yml) |
+| 7 | Organisms and Their Environment | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/organisms-and-their-environment.yml) |
+| 8 | 1C · Heritable information & genetic diversity | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/1c-heritable-information-genetic-diversity.yml) |
+| 9 | 2A · Assemblies of molecules, cells, and cell groups | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/2a-assemblies-of-molecules-cells-and-cell-groups.yml) |
+| 10 | 2B · Prokaryotes and viruses | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/2b-prokaryotes-and-viruses.yml) |
+| 11 | 2C · Cell division, differentiation, specialization | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/2c-cell-division-differentiation-specialization.yml) |
+| 12 | 3A · Nervous and endocrine systems | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/3a-nervous-and-endocrine-systems.yml) |
+| 13 | 3B · Main organ systems | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/3b-main-organ-systems.yml) |
 
 ### Chemistry · 10 chapters
 
@@ -134,12 +133,12 @@ chapter's DISCIPLINE, so a shared chapter has one tutorial whichever unit views 
 
 | # | Chapter | Exams | Status | Tutorial |
 |---|---|---|---|---|
-| 1 | 1C · Heritable information & genetic diversity | NMAT · MCAT | ⬜ Not started | — |
-| 2 | 2A · Assemblies of molecules, cells, and cell groups | NMAT · MCAT | ⬜ Not started | — |
-| 3 | 2B · Prokaryotes and viruses | NMAT · MCAT | ⬜ Not started | — |
-| 4 | 2C · Cell division, differentiation, specialization | NMAT · MCAT | ⬜ Not started | — |
-| 5 | 3A · Nervous and endocrine systems | NMAT · MCAT | ⬜ Not started | — |
-| 6 | 3B · Main organ systems | NMAT · MCAT | ⬜ Not started | — |
+| 1 | 1C · Heritable information & genetic diversity | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/1c-heritable-information-genetic-diversity.yml) |
+| 2 | 2A · Assemblies of molecules, cells, and cell groups | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/2a-assemblies-of-molecules-cells-and-cell-groups.yml) |
+| 3 | 2B · Prokaryotes and viruses | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/2b-prokaryotes-and-viruses.yml) |
+| 4 | 2C · Cell division, differentiation, specialization | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/2c-cell-division-differentiation-specialization.yml) |
+| 5 | 3A · Nervous and endocrine systems | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/3a-nervous-and-endocrine-systems.yml) |
+| 6 | 3B · Main organ systems | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biology/3b-main-organ-systems.yml) |
 
 ### Biochemistry · 3 chapters
 
@@ -178,8 +177,6 @@ chapter's DISCIPLINE, so a shared chapter has one tutorial whichever unit views 
 | 1 | Foundations of Comprehension | MCAT | ⬜ Not started | — |
 | 2 | Reasoning Within the Text | MCAT | ⬜ Not started | — |
 | 3 | Reasoning Beyond the Text | MCAT | ⬜ Not started | — |
-
-Total rows: unit views of 72 unique chapters · Published: 2
 
 ## How to update
 

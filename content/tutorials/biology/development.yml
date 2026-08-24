@@ -1,0 +1,329 @@
+subject: biology
+chapter: Development
+title: Development
+overview: >-
+  Development is the question of how one fertilized egg becomes an
+  organized body — cleavage, gastrulation, and the pattern signals that
+  tell cells who they are. NMAT keeps it to stage names and germ-layer
+  fates; the MCAT tests induction, totipotency, and experimental
+  reasoning about fate maps. Prerequisites — Cells (mitosis), Genetics
+  (meiosis, fertilization).
+sections:
+- heading: Fertilization and cleavage — setting up the blueprint
+  body:
+  - Fertilization does two jobs at once — restore diploidy and
+    ==activate the egg==. Species block polyspermy fast (the cortical
+    reaction hardens the fertilization envelope) because a third
+    chromosome set is lethal. The zygote then enters **cleavage** —
+    rapid mitotic divisions WITHOUT growth, partitioning the same cytoplasm
+    into ever-smaller cells. Frog eggs divide unequally because yolk
+    slows the vegetal side; mammalian eggs divide equally and early,
+    arriving at a compacted ball.
+  - Cleavage produces the **blastula** — a hollow ball of small cells
+    (blastomeres) around a blastocoel. Crucial fact for exam logic —
+    ==early blastomeres are totipotent== in many animals; separate one
+    and it can make a whole individual, which is the biology behind
+    identical twins.
+  check:
+  - q: Cleavage differs from ordinary mitosis because…
+    options:
+      A: It skips DNA replication
+      B: It skips cytokinesis
+      C: It divides without cell growth between divisions
+      D: It reduces the chromosome number
+    answer: C
+    explain: Rapid G1/S cycles with no growth phase — the embryo's total
+      volume stays nearly constant.
+    distractors:
+      A: "Every division needs replicated DNA."
+      B: "Cytokinesis is what makes them separate cells."
+      D: "Reduction is meiosis, not cleavage."
+- heading: Gastrulation — the decisive rearrangement
+  body:
+  - Gastrulation physically moves cells into place — "the most important
+    time in your life," as Lewis Wolpert put it. Sheet movements
+    (invagination, involution, epiboly) form three germ layers whose
+    fates are the exam's favorite table — **ectoderm** (nervous system
+    and epidermis), **mesoderm** (muscle, skeleton, kidney, heart,
+    blood), **endoderm** (gut lining, liver, pancreas, lungs'
+    epithelium). ==Know the layer fates cold== — every embryology
+    question eventually lands on one.
+  - The archenteron (new cavity) opens through the **blastopore** —
+    mouth-first in protostomes, anus-first in deuterostomes, linking
+    this stage back to the body-plan chapter. The blastocoel largely
+    collapses; the body axis is now committed.
+  check:
+  - q: The pancreas derives from which germ layer?
+    options:
+      A: Ectoderm
+      B: Mesoderm
+      C: Endoderm
+      D: Blastocoel
+    answer: C
+    explain: Pancreas, liver, and gut lining are endodermal organs.
+    distractors:
+      A: "Ectoderm is skin and nervous system."
+      B: "Mesoderm is muscle, bone, kidney, heart."
+      D: "The blastocoel is a cavity, not a layer."
+- heading: Pattern formation — position becomes identity
+  body:
+  - Cells discover their identity from neighbors and gradients.
+    **Induction** — one tissue changes another's fate by signal — is the
+    master mechanism; the classical example is the vertebrate eye cup
+    inducing overlying ectoderm to become lens. **Morphogen gradients** —
+    a diffusible signal read out as concentration — set positional
+    value; a cell far from the source receives a low dose and chooses a
+    different fate than a near neighbor.
+  - The toolkit is conserved to a startling degree. Homeobox (Hox) genes
+    arrange body regions in colinear clusters — ==the same genes order a
+    fly and a mouse== — which is why development is the strongest
+    evidence for common ancestry in the unity chapter. Apoptosis is
+    part of the program too — sculpting fingers from a paddle requires
+    scheduled cell death, not just growth.
+  check:
+  - q: A morphogen gradient assigns cell fate because…
+    options:
+      A: All cells receive identical signals
+      B: Concentration of the signal encodes position along the field
+      C: The gradient destroys distant cells
+      D: Only mesoderm can respond to any signal
+    answer: B
+    explain: Threshold concentrations trigger different gene programs,
+      mapping position to identity.
+    distractors:
+      A: "Identical signaling cannot make different fates."
+      C: "Gradients instruct, not execute."
+      D: "Competence varies, but is not mesoderm-exclusive."
+- heading: Development in plants — a different operating system
+  body:
+  - Animals commit fates early and mostly stop; plants keep
+    ==totipotent stem-cell zones for life==. **Meristems** at root and
+    shoot tips produce new organs continuously, and many differentiated
+    plant cells can dedifferentiate and regenerate a whole plant — the
+    basis of vegetative propagation. Pattern still uses positional
+    signals, but the body plan stays open-ended, branching from
+    environmental cues as much as from the genome.
+  - This contrast is a compact essay topic for the MCAT — commitment
+    versus perpetual juvenility; migration-and-induction versus
+    wall-bound positional information; apoptosis as sculpture versus
+    rarely used in plants.
+  check:
+  - q: A gardener roots a cutting from a stem and grows a full plant.
+      The cellular basis is…
+    options:
+      A: Animal-style induced pluripotency of neurons
+      B: Dedifferentiation of living cells back to meristem-like states
+      C: Meiosis in the cut surface
+      D: Fusion of two cuttings
+    answer: B
+    explain: Mature plant cells reclaim meristem identity — totipotency
+      that animals have largely lost.
+    distractors:
+      A: "Plants have no neurons; the mechanism is cellular, not neural."
+      C: "Meiosis would halve the genome; propagation stays diploid."
+      D: "One cutting suffices."
+- heading: When development goes wrong — teratogens and windows
+  body:
+  - Sensitivity is stage-dependent. The **embryonic period** (organogenesis,
+    roughly weeks 3–8 in humans) is the ==critical window for structural
+    birth defects== — organs are being patterned, and a signal disrupted
+    then leaves a permanent mark. Earlier exposure tends to kill or be
+    fully repaired; later exposure more often affects growth or function.
+  - Classic agents anchor the concept — thalidomide (limb defects),
+    alcohol (fetal alcohol spectrum), rubella, retinoids. The general
+    exam rule — identify the stage, predict the system disrupted —
+    works for any teratogen a passage invents.
+  check:
+  - q: A drug taken during organogenesis is MOST likely to cause…
+    options:
+      A: Nothing, since organs are already formed
+      B: Structural malformations in organs under construction
+      C: Aging effects only
+      D: Chromosomal nondisjunction
+    answer: B
+    explain: Organogenesis is the structural-defect window.
+    distractors:
+      A: "Weeks 3–8 organs are forming, not formed."
+      C: "Long-latency effects are not the primary teratogen risk."
+      D: "Nondisjunction is a meiotic error, not a drug effect."
+examples:
+- prompt: >-
+    Spemann-style experiment — a transplanted dorsal blastopore lip
+    (the organizer) into a host embryo's ventral side yields a second
+    body axis. Explain the logic.
+  solution:
+  - "Step 1 — the organizer emits diffusible signals (morphogens such as the BMP antagonists)."
+  - "Step 2 — host ventral cells read the new signal source and interpret their position as dorsal."
+  - "Step 3 — a second axis is induced from host tissue, proving position — not lineage — sets fate."
+  answer: Induction by organizer signals respecifies host position, doubling the axis.
+  distractors:
+    A: "Claiming the graft itself became the second body — most of the new axis is host tissue."
+    B: "Mutation of host genes — nothing heritable changed; fates were re-addressed."
+    C: "Random migration — responses follow the signal gradient, not chance."
+key_points:
+- Fertilization restores diploidy and activates the egg; blocks prevent
+  polyspermy.
+- Cleavage is mitosis without growth — blastula, totipotent early
+  blastomeres.
+- Gastrulation forms ectoderm / mesoderm / endoderm — learn their organ
+  fates.
+- Induction and morphogen gradients convert position into identity; Hox
+  genes order bodies across phyla.
+- Apoptosis sculpts; its absence (webbed digits) or excess (neural
+  degeneration) both disease.
+- Plants keep meristems — lifelong organogenesis and totipotent
+  regeneration.
+- The organogenesis window is the teratogen-sensitive period.
+mnemonics:
+- phrase: "Skin-Brain, Meat-Middle, Gut-Tube"
+  means: "Ectoderm = skin + brain; Mesoderm = the meaty middle organs;
+    Endoderm = the gut tube and its glands."
+- phrase: "Same address, new tenant"
+  means: Induction changes the fate of cells at a position without
+    changing their lineage.
+maps:
+- title: Early animal development
+  steps:
+    - "fertilization → zygote (2n restored)"
+    - "cleavage (no growth) → ==blastula=="
+    - "gastrulation → three germ layers + archenteron"
+    - "organogenesis + induction → organs (teratogen window)"
+- title: Germ layer fates
+  steps:
+    - "ectoderm → epidermis · nervous system"
+    - "mesoderm → muscle · skeleton · heart · kidney · blood"
+    - "==endoderm → gut lining · liver · pancreas · lung epithelium=="
+passage:
+  text: >-
+    Embryologists transplant cells from a frog embryo's future gut region
+    into the future skin region of a host embryo at early gastrulation.
+    The transplanted cells develop as skin. In a second experiment, the
+    same donor cells are transplanted at a LATER tailbud stage into the
+    same skin region and now develop as gut tissue.
+  questions:
+  - q: The early experiment shows that donor cells were…
+    options:
+      A: Genetically skin cells already
+      B: Still labile and respecified by host positional signals
+      C: Killed and replaced by host cells
+      D: Totipotent
+    answer: B
+    explain: At gastrulation, fate is specified by position — the
+      transplant obeyed the new address.
+    distractors:
+      A: "They were destined gut cells; genotype did not change."
+      C: "Replacement is unnecessary; the data show respecification."
+      D: "Totipotency means forming a WHOLE embryo; a tissue switch is lesser."
+  - q: The later experiment differs because…
+    options:
+      A: Transplant technique improved
+      B: Donor cells had become DETERMINED and now resist host signals
+      C: Host signals weakened with age
+      D: Gut fate became dominant over skin
+    answer: B
+    explain: Determination locks fate — the same operation at a later
+      stage no longer redirects it.
+    distractors:
+      A: "Irrelevant to outcome."
+      C: "Host positional cues persist; the cells' competence closed."
+      D: "No dominance hierarchy is shown."
+  - q: Which molecular concept best explains the early result?
+    options:
+      A: Induction by host morphogen gradients
+      B: Random mutation in donor cells
+      C: Meiotic recombination
+      D: Apoptosis of donor cells
+    answer: A
+    explain: Neighbor signals read as position instructed the donor
+      cells' new program.
+    distractors:
+      B: "No heritable change is involved."
+      C: "No meiosis in embryonic somatic cells."
+      D: "Cells survived — they changed identity, not life status."
+pitfalls:
+- Timing errors — cleavage is BEFORE gastrulation; organs come after;
+  teratogen damage peaks during organogenesis, not fertilization.
+- Assigning pancreas/liver to mesoderm — glands of the gut tube are
+  endoderm.
+- Treating determination and differentiation as one event —
+  determination is commitment (still looks identical); differentiation
+  is the visible change.
+- Assuming Hox genes are human-specific — they pattern most animals.
+exam_map:
+  NMAT: >-
+    Stage order and germ-layer fates dominate — expect matching items on
+    cleavage/gastrula/organogenesis and one-step organ-to-layer
+    questions.
+  MCAT: >-
+    Foundational Concept 2 and 3 passages test induction, determination
+    versus differentiation, morphogen readouts, and teratogen-window
+    reasoning from experimental data.
+sources:
+- ref: openstax-biology-2e
+  used:
+  - "Animal Reproduction and Development chapters (cleavage, gastrulation, organogenesis)"
+  - "Plant Growth chapters (meristems)"
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - "Foundational Concept 2, Content Categories 2C/3B"
+  relation: consulted
+further_reading:
+- title: "OpenStax Biology 2e — Animal Reproduction and Development"
+  url: https://openstax.org/books/biology-2e/pages/43-introduction
+  note: The stage-by-stage tour with fate maps.
+- title: "OpenStax Biology 2e — Plant Form and Physiology"
+  url: https://openstax.org/books/biology-2e/pages/30-introduction
+  note: Meristems versus committed animal cells.
+review_questions:
+- q: The nervous system derives from…
+  options:
+      A: Mesoderm
+      B: Ectoderm
+      C: Endoderm
+      D: Blastopore
+  answer: B
+  explain: Neural plate folds from dorsal ectoderm.
+  distractors:
+    A: "Mesoderm makes muscle, bone, kidney, heart."
+    C: "Endoderm lines the gut and its glands."
+    D: "The blastopore is an opening, not a layer."
+- q: Cells that can give rise to ANY cell including placenta are…
+  options:
+      A: Totipotent
+      B: Pluripotent
+      C: Multipotent
+      D: Determined
+  answer: A
+  explain: Totipotency includes extraembryonic lineages; the zygote and
+    early blastomeres have it.
+  distractors:
+    B: "Pluripotent cells make all embryo tissues but not placenta."
+    C: "Multipotent cells cover one family, like blood lineages."
+    D: "Determined cells are locked, by definition."
+- q: Webbed fingers result most directly from…
+  options:
+      A: Excess mitosis
+      B: Failure of apoptosis between digits
+      C: Extra Hox genes
+      D: Failed cleavage
+  answer: B
+  explain: Interdigital cells must die on schedule; when they persist,
+    webbing remains.
+  distractors:
+    A: "Growth is not the issue — sculpting is."
+    C: "Hox patterning is upstream region identity, not webbing."
+    D: "Cleavage failure is early and lethal."
+- q: A plant's lifelong production of new leaves depends on…
+  options:
+      A: Apoptosis of the root
+      B: Continuous meristem activity
+      C: Gastrulation each spring
+      D: Germline mutations
+  answer: B
+  explain: Shoot apical meristem keeps generating organs — plants never
+    fully commit their tips.
+  distractors:
+    A: "Roots must live."
+    C: "Gastrulation is an animal stage."
+    D: "Mutations are not a growth program."

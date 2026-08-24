@@ -1,5 +1,5 @@
 {
-  "source_rev": "b239c71",
+  "source_rev": "3accd20",
   "counts": {
     "chapters": 72,
     "note_bullets": 458,
@@ -114,9 +114,19 @@
     "subjects/psych-soc.yml": "bb6a4d60979b66c38e2fc171786ee4aa4adc9f769a4f26b912147142f10404fb",
     "subjects/quantitative.yml": "7b326baa3490001fa74dc32ba44fb72d75bc272d88b8ee4f26d4298352b4f74b",
     "subjects/verbal.yml": "00fce8aa8cbbdda8d86bf0811249f357f142c7464eeaa731db4da4be363e387d",
+    "tutorials/biology/1c-heritable-information-genetic-diversity.yml": "542cdd2e2d5c31717105db9aa470a59477a5d744a54caf076d21300dacd6b9a9",
+    "tutorials/biology/2a-assemblies-of-molecules-cells-and-cell-groups.yml": "6fc216531f1f16f988afd5615b163f01275c6cb636001d6418990a3f027e7bd0",
+    "tutorials/biology/2b-prokaryotes-and-viruses.yml": "060a16766e02e210e0fd0d0fc6e93d5bca1e28933c1e7634012b1255f808edc6",
+    "tutorials/biology/2c-cell-division-differentiation-specialization.yml": "5806a87b48c98e4c0a6343fc59f903b7421fcb847a8e20e662f40e8dbf519453",
+    "tutorials/biology/3a-nervous-and-endocrine-systems.yml": "2e2801434b86efce140efcbdb9f1d9077b4feb2365945c456ac67143315e608e",
+    "tutorials/biology/3b-main-organ-systems.yml": "d9860a5326512fec8524d4fc1d4ced1a12fdead68161a470a8bfd0dc034dfb37",
     "tutorials/biology/cells-and-cellular-processes.yml": "a8065834bfce6ad12d9c666a1fb256d741225a2d871f9249d1dceb4787e37377",
+    "tutorials/biology/development.yml": "3f9efa4a034847d48307df78451d4aa3b0ffb3b5929e3a8eaa1f0d33048f2189",
     "tutorials/biology/genetics.yml": "7602e48745d732a3d744e59251541487d436dd1de28e02e24ad09dc4efc9d94d",
-    "tutorials/biology/unity-and-diversity-of-life.yml": "47f6e65d0c5943504df74680ecdff2f8b8b7eb0620dcf9ac8d35bd778a9e854d",
+    "tutorials/biology/life-processes-regulation-and-homeostasis.yml": "43d1035ad43ed81adf1e7bebf20c6d3f0d840dca13f5167877a0fff022f49bbd",
+    "tutorials/biology/organisms-and-their-environment.yml": "506816c6c83d56aa3608346dc10c061f12b311c655e0fc465fa991e741a901ba",
+    "tutorials/biology/the-world-of-plants-and-animals.yml": "e845403423585d16d0b9a2196358aea4e61a34a1e6a56758bd3b8fe77cbc5595",
+    "tutorials/biology/unity-and-diversity-of-life.yml": "bda7ce08d2d5e04a985d672f4dbd6f9b117ebe1496193cdf64a48a0f787561b8",
     "units.yml": "d1d18d8b86c1fa59336d4fbd39b37e190716d4a5c30fb485a2eeebf91b71a345"
   }
 }

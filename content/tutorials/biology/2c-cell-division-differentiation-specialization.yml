@@ -1,0 +1,339 @@
+subject: biology
+chapter: 2C · Cell division, differentiation, specialization
+title: 2C · Cell division, differentiation, specialization
+overview: >-
+  2C is the cell's biography — the cycle that copies it, the controls
+  that license it, and the decisions that specialize it, with cancer
+  as the failure mode the MCAT tests from every angle. Prerequisites —
+  Cells (organelles, mitosis mechanics), Genetics (chromosomes),
+  Development (determination).
+sections:
+- heading: The cell cycle — phases and licenses
+  body:
+  - The cycle runs **G1 → S → G2 → M**, with G0 as the parking lot for
+    cells that exited. DNA replicates once in ==S==; the cycle exists
+    to partition those copies exactly. Duration lives mostly in G1 —
+    which is where the GO/NO-GO decision is made.
+  - Checkpoints sample the state before permitting passage — the
+    **G1 checkpoint** (is the cell big, undamaged, and signalled to
+    divide? — the ==restriction point== that commits the cycle),
+    **G2/M** (is DNA fully and correctly replicated?), and
+    **spindle/kinetochore checkpoint** in metaphase (are all
+    chromosomes attached under tension?). Pass requires clearance;
+    damage forces pause, repair, or apoptosis.
+  check:
+  - q: The restriction point commits the cell to…
+    options:
+      A: Exiting to G0 permanently
+      B: Passing G1 and entering S phase
+      C: Immediately entering mitosis
+      D: Apoptosis
+    answer: B
+    explain: G1's GO signal is the once-per-cycle commitment to
+      replicate DNA and finish the round.
+    distractors:
+      A: "That is the no-signal outcome, not commitment."
+      C: "M is two phases away."
+      D: "Suicide is the damaged-cell branch."
+- heading: The engine — cyclins and CDKs
+  body:
+  - Progression is driven by **cyclin-dependent kinases** — always
+    present, ==active only when bound to a cyclin== partner whose
+    concentration oscillates. The archetypal **MPF** (M-phase
+    promoting factor = cyclin B + CDK1) triggers mitosis; the same
+    kinase activity later destroys its own cyclin in a beautiful
+    negative-feedback tail. Each phase transition has its
+    cyclin-CDK pair — match the cyclin letter to the transition (D
+    and E at G1/S, B at G2/M).
+  - Brakes matter as much as accelerators — **p53** pauses the cycle
+    after DNA damage (inducing p21, which inhibits G1/S CDKs) and
+    routes unsalvageable cells to apoptosis; **Rb** holds E2F
+    transcription (and thus S phase) shut until growth signals
+    phosphorylate it aside. ==Lose p53 or Rb and the checkpoint system
+    goes blind== — both are classic tumor suppressors.
+  check:
+  - q: CDKs are enzymatically active only when…
+    options:
+      A: DNA is damaged
+      B: Bound to their cyclin partner
+      C: The cell is in G0
+      D: Phosphorylated by p53
+    answer: B
+    explain: Cyclin binding is the on-switch; oscillating cyclin
+      levels make CDK activity pulse.
+    distractors:
+      A: "Damage turns the cycle OFF."
+      C: "G0 cells idle without cycling."
+      D: "p53 is not a kinase of CDKs."
+- heading: Differentiation — same genome, different readers
+  body:
+  - Every nucleated cell carries the same DNA; differentiation is
+    ==differential gene expression==, set by transcription factors and
+    sealed by chromatin state (methylation, histone marks). Stem cells
+    sit at branch points — **totipotent** (everything incl. placenta),
+    **pluripotent** (all embryonic lineages), **multipotent** (one
+    family, e.g. hematopoietic). Induced pluripotent stem cells
+    (iPSCs) walk differentiated cells BACKWARD with four
+    transcription factors — the experiment that proved identity is
+    reversible information, not lost DNA.
+  - Induction and morphogens (Development chapter) drive the choices
+    in embryos; in adults, niches hold stem cells in reserve — bone
+    marrow's hematopoietic stem cell is the exam's favorite, replenishing
+    blood and immune lineages for life.
+  check:
+  - q: A cell that can produce all blood cell types but not muscle is…
+    options:
+      A: Totipotent
+      B: Pluripotent
+      C: Multipotent
+      D: Determined for nothing
+    answer: C
+    explain: One lineage family at a time — multipotency, the stem
+      cell of adult niches.
+    distractors:
+      A: "Totipotency includes extraembryonic tissues."
+      B: "Pluripotency spans ALL embryonic lineages."
+      D: "The opposite — it is committed to blood."
+- heading: Apoptosis and necrosis — two ways to die
+  body:
+  - ==Apoptosis== is programmed, tidy death — caspase cascade, membrane
+    blebs, DNA laddering, no inflammation, corpses eaten by neighbors.
+    ==Necrosis== is accidental, messy death — swelling, rupture,
+    inflammation. Development uses apoptosis to sculpt; homeostasis
+    uses it to retire damaged cells; chemotherapy aims to invoke it in
+    tumor cells.
+  - The intrinsic pathway reads internal damage (mitochondrial outer
+    membrane permeabilization — Bcl-2 family as the rheostat); the
+    extrinsic pathway reads death receptors (Fas, TNF). Both converge
+    on executioner caspases — the shared demolition crew.
+  check:
+  - q: Which feature belongs to apoptosis rather than necrosis?
+    options:
+      A: Cell swelling and rupture
+      B: Inflammatory response
+      C: Caspase-mediated, membrane-bounded blebbing
+      D: Random DNA smearing
+    answer: C
+    explain: Neat, packaged, non-inflammatory demolition is the
+      apoptotic signature.
+    distractors:
+      A: "Necrosis."
+      B: "Necrosis provokes it."
+      D: "Necrosis."
+- heading: Cancer — the cycle with the brakes cut
+  body:
+  - Cancer is a multi-hit failure of growth control — oncogenes
+    (accelerators stuck on — HER2, RAS) versus **tumor suppressors**
+    (brakes cut — p53, Rb); ==oncogenes act dominantly, suppressors
+    recessively==, which is why it takes two hits to lose a brake.
+    Multistep progression — initiation (mutation), promotion
+    (division of the mutant clone), progression (further instability)
+    — explains why cancer risk climbs with age and with divisions.
+  - Metastasis is the lethal upgrade — local invasion, intravasation,
+    survival in circulation, extravasation, and colony founding.
+    Treatment logic follows the biology — surgery and radiation for
+    local disease; chemotherapy for dividing cells broadly; targeted
+    therapy against the specific stuck accelerator (HER2 inhibitors).
+  check:
+  - q: Why do tumor-suppressor loss mutations behave recessively at
+      the cellular level?
+    options:
+      A: The genes are silent in all cells
+      B: Both alleles must fail before the brake is gone
+      C: They are on the X chromosome only
+      D: Suppressors are dominant, oncogenes are not
+    answer: B
+    explain: One working copy still brakes the cycle — two hits
+      needed (Knudson's logic).
+    distractors:
+      A: "They are active in dividing cells."
+      C: "p53, Rb are autosomal."
+      D: "Inverted statement."
+examples:
+- prompt: >-
+    HPV's E6 protein binds p53 and targets it for destruction; E7
+    inactivates Rb. Explain why persistent HPV infection is a
+    cervical-cancer risk in one causal chain.
+  solution:
+  - "Step 1 — E7 disables Rb, freeing E2F and pushing the cell into S phase without growth-signal clearance."
+  - "Step 2 — E6 destroys p53, so DNA damage no longer pauses the cycle or triggers apoptosis."
+  - "Step 3 — division with damaged DNA accumulates mutations — genomic instability."
+  - "Step 4 — decades of this double failure yield the multi-hit progression to carcinoma."
+  answer: E6+E7 remove both brakes (p53, Rb); unchecked cycling with unrepaired damage accumulates the hits cancer needs.
+  distractors:
+    A: "Calling HPV directly mutagenic like radiation — its risk is checkpoint sabotage, not DNA damage per se."
+    B: "Blaming inflammation alone — the mechanism is molecular, not just irritative."
+    C: "Saying one hit suffices — progression still needs accumulated mutation."
+key_points:
+- Cycle order G1→S→G2→M with G0 parking; S replicates DNA once.
+- Checkpoints — G1 restriction (commitment), G2/M (replication
+  complete), metaphase spindle (attachment/tension).
+- Cyclin-CDK pairs drive transitions; cyclin levels oscillate, CDK
+  constants wait.
+- p53 pauses/repairs/apoptoses; Rb gates E2F and S phase — the two
+  brakes tumors love to cut.
+- Differentiation is expression regulation; potency ladder
+  toti→pluri→multi; iPSCs proved reversibility.
+- Apoptosis (caspases, tidy) versus necrosis (rupture, inflamed).
+- Oncogene stuck-on is dominant; suppressor loss is recessive — two
+  hits; metastasis is the killer.
+mnemonics:
+- phrase: "Restriction point — the point of no return"
+  means: G1's GO decision commits the cell to finish a full cycle.
+- phrase: "Accelerators dominant, brakes recessive"
+  means: Oncogene activation needs one bad copy; suppressor loss
+    needs two.
+maps:
+- title: Checkpoint circuitry
+  steps:
+    - "growth signal → cyclin D/CDK → Rb phosphorylated → E2F free → ==S phase=="
+    - "DNA damage → p53 → p21 → CDK inhibition → ==pause for repair=="
+    - "unrepairable → p53 → apoptosis"
+- title: From mutation to metastasis
+  steps:
+    - "initiation — mutation in a control gene"
+    - "promotion — clonal division amplifies it"
+    - "progression — instability breeds more hits"
+    - "==invasion → circulation → distant colony (metastasis)=="
+passage:
+  text: >-
+    Researchers culture cells from a family cancer syndrome. The cells
+    show normal p53 protein levels but a homozygous loss of a
+    checkpoint kinase that monitors spindle attachment. In vitro, the
+    cells escape a mitotic arrest that normal cells enter when
+    treated with a microtubule poison, and chromosome counts drift
+    upward over passages.
+  questions:
+  - q: The lost kinase most likely operates at…
+    options:
+      A: The G1 restriction point
+      B: The spindle (metaphase) checkpoint
+      C: The S-phase origin-licensing step
+      D: Apoptosis initiation only
+    answer: B
+    explain: Cells ignoring a microtubule poison's arrest and
+      drifting aneuploid define spindle-checkpoint failure.
+    distractors:
+      A: "G1 failure would not read as mitotic escape."
+      C: "Licensing failure blocks replication, not mitosis."
+      D: "p53-mediated apoptosis is intact here."
+  - q: The rising chromosome counts (aneuploidy) arise because…
+    options:
+      A: DNA polymerase is absent
+      B: Misattached chromosomes proceed into anaphase without
+        correction
+      C: Cells fuse spontaneously
+      D: The medium mutates them
+    answer: B
+    explain: Without the checkpoint, unaligned or misattached
+      chromosomes are pulled apart anyway — gains and losses follow.
+    distractors:
+      A: "Replication still occurs."
+      C: "Cell fusion is not the mechanism described."
+      D: "Not a media artifact."
+  - q: Predict these cells' sensitivity to microtubule-targeting
+      chemotherapy compared with normal cells.
+    options:
+      A: More sensitive, because the poison still depolymerizes their
+        microtubules and they cannot arrest or die properly
+      B: Less sensitive in the sense that the mitotic-arrest death
+        pathway is bypassed — though division fails, targeted cell
+        death pathways may be weakened
+      C: Identical to normal
+      D: Immune to all drugs
+    answer: B
+    explain: Checkpoint-deficient cells fail to arrest-and-die the
+      way normal cells do — resistance to the poison's KILLING
+      pathway, even as division suffers.
+    distractors:
+      A: "Confuses physical drug action with the death response."
+      C: "The deleted checkpoint changes the outcome."
+      D: "No cell is immune to all drugs."
+pitfalls:
+- Putting the restriction point in G2 — commitment is a G1 event.
+- Treating CDKs as oscillating — cyclins oscillate; CDK levels are
+  steady.
+- Calling necrosis programmed — programming is the apoptotic
+  signature.
+- Reading tumor suppressors as dominant — cellular recessivity
+  (two hits) is the exam answer.
+- Confusing differentiation with determination — commitment comes
+  first, visible change later.
+exam_map:
+  NMAT: >-
+    Phase order, checkpoint names, and cancer-vocabulary matching at
+    recall level.
+  MCAT: >-
+    Content Category 2C tests cyclin-CDK experiments, checkpoint-mutant
+    phenotypes, apoptosis versus necrosis readouts, and oncogene/
+    suppressor genetics from family or culture data.
+sources:
+- ref: openstax-biology-2e
+  used:
+  - "Ch 10 — Cell Reproduction (cycle, checkpoints, MPF)"
+  - "Cancer chapters (oncogenes, suppressors)"
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - "Foundational Concept 2, Content Category 2C"
+  relation: consulted
+further_reading:
+- title: "OpenStax Biology 2e — Ch 10: Cell Reproduction"
+  url: https://openstax.org/books/biology-2e/pages/10-introduction
+  note: The cycle, its controls, and MPF.
+- title: "OpenStax Biology 2e — Cancer and Gene Regulation"
+  url: https://openstax.org/books/biology-2e/pages/16-introduction
+  note: Regulation and its tumor-pathology failures.
+review_questions:
+- q: MPF (maturation promoting factor) is composed of…
+  options:
+      A: "Cyclin B + CDK1"
+      B: "p53 + Rb"
+      C: "E2F + cyclin D"
+      D: "Caspase + Fas"
+  answer: A
+  explain: The classic G2/M driver — cyclin B with CDK1.
+  distractors:
+    B: "Both are brake proteins."
+    C: "E2F pairs with Rb, not cyclin D."
+    D: "Apoptosis machinery."
+- q: A mutation causing continuous E2F activity without growth signal
+    most directly disables…
+  options:
+      A: p53
+      B: The Rb brake on S-phase entry
+      C: The spindle checkpoint
+      D: Apoptosis
+  answer: B
+  explain: Rb normally sequesters E2F; losing it frees S phase
+    constitutively.
+  distractors:
+    A: "p53 governs damage response."
+    C: "Spindle checkpoint monitors attachment."
+    D: "Not the E2F axis."
+- q: DNA laddering and membrane blebbing indicate…
+  options:
+      A: Necrosis
+      B: Apoptosis
+      C: Mitosis
+      D: Transformation
+  answer: B
+  explain: Oligonucleosomal laddering is caspase-activated nuclease
+    work — apoptotic.
+  distractors:
+    A: "Necrosis smears DNA randomly."
+    C: "Division, not death."
+    D: "Oncogenic change, not death morphology."
+- q: A pluripotent cell differs from a multipotent one by…
+  options:
+      A: Being less versatile
+      B: Able to form all embryonic lineages, not just one family
+      C: Lacking a nucleus
+      D: Being cancer by definition
+  answer: B
+  explain: Potency ladder breadth — embryonic-wide versus
+    lineage-restricted.
+  distractors:
+    A: "Reverse."
+    C: "All these cells are nucleated."
+    D: "Pluripotency is not malignancy."

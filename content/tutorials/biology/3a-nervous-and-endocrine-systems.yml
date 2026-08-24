@@ -1,0 +1,353 @@
+subject: biology
+chapter: 3A · Nervous and endocrine systems
+title: 3A · Nervous and endocrine systems
+overview: >-
+  3A is the body's telecom — electrical signaling down neurons,
+  chemical signaling across synapses, and hormonal broadcasting from
+  glands, all converging on feedback control. The MCAT wires it into
+  membrane-potential data, drug-receptor logic, and endocrine-axis
+  experiments; the NMAT wants the physiology vocabulary solid.
+  Prerequisites — Cells (membrane transport), Life Processes
+  (feedback).
+sections:
+- heading: The resting potential — a battery made of gradients
+  body:
+  - A neuron at rest sits near ==−70 mV==, and the battery is built
+    from two forces — the ==Na⁺/K⁺ ATPase== (3 out, 2 in, keeping Na⁺
+    low and K⁺ high inside) and K⁺ leak channels (K⁺ drifts OUT down
+    its concentration gradient, leaving negative charge behind). The
+    result — inside negative, outside positive — with Na⁺ READY to
+    rush in the moment a channel opens.
+  - Two vocabularies to keep straight — **graded potentials** (receptor
+    and synaptic; decrement with distance, can sum) versus **action
+    potentials** (all-or-none, self-regenerating, ==identical every
+    time== — strength is coded by FREQUENCY, not amplitude). Myelin
+    speeds propagation by saltatory conduction — the signal leaps
+    node to node; demyelination (multiple sclerosis) is a
+    conduction-velocity disease.
+  check:
+  - q: The resting potential is closest to…
+    options:
+      A: "+30 mV"
+      B: "−70 mV"
+      C: "0 mV"
+      D: "−9 mV"
+    answer: B
+    explain: Typical neuronal resting potential — inside negative
+      relative to outside.
+    distractors:
+      A: "That is near the AP peak."
+      C: "No gradient, no signaling."
+      D: "Too small — pump plus K⁺ leak goes much further."
+- heading: The action potential — a stereotyped spike
+  body:
+  - The spike is a voltage-gated channel ballet — a stimulus
+    depolarizes to ==threshold== (≈−55 mV); voltage-gated **Na⁺
+    channels open** (rising phase), then inactivate while slower
+    **K⁺ channels open** (falling phase), producing a brief
+    ==overshoot (inside positive)== then an **afterhyperpolarization**
+    before settling. The **absolute refractory period** (Na⁺ channels
+    inactivated) enforces one-way propagation and caps firing
+    frequency; the relative refractory period needs a bigger
+    stimulus.
+  - Tetrodotoxin blocks Na⁺ channels (no spikes at all); tetraethyl-
+    ammonium blocks K⁺ channels (broadened spikes); local anesthetics
+    hold Na⁺ channels shut. Drug-versus-waveform questions reduce to
+    which gate is jammed.
+  check:
+  - q: During the absolute refractory period…
+    options:
+      A: Any stimulus fires a new spike
+      B: No stimulus can fire a spike because Na⁺ channels are inactivated
+      C: K⁺ channels are closed the whole time
+      D: The neuron is dead
+    answer: B
+    explain: Inactivation is un-jammable by voltage — the pause that
+      sets maximum firing rate.
+    distractors:
+      A: "That is the opposite of 'absolute'."
+      C: "K⁺ closure is not what defines the period."
+      D: "It is a functional state, not death."
+- heading: The synapse — chemistry across a 20-nanometer gap
+  body:
+  - A spike reaches the terminal, ==voltage-gated Ca²⁺ channels open==,
+    vesicles fuse, and neurotransmitter crosses the cleft to receptors
+    on the far side. The post-synaptic response can excite
+    (depolarize) or inhibit (hyperpolarize) — and the SAME molecule
+    can do either depending on the receptor, which is why "what does
+    acetylcholine do?" is a wrong question and "at WHICH receptor?"
+    is the right one.
+  - Transmission ends by reuptake, degradation (acetylcholinesterase),
+    or diffusion — the three handles every psychiatric drug grabs.
+    Know the classes — acetylcholine (neuromuscular junction),
+    biogenic amines (dopamine, serotonin, norepinephrine), amino
+    acids (glutamate excites, GABA inhibits), and peptides.
+    Summation — the postsynaptic cell integrates EPSPs and IPSPs and
+    fires when the axon hillock crosses threshold.
+  check:
+  - q: Release of neurotransmitter requires which ion's entry?
+    options:
+      A: Na⁺
+      B: K⁺
+      C: Ca²⁺
+      D: Cl⁻
+    answer: C
+    explain: Voltage-gated calcium influx is the vesicle-fusion
+      trigger.
+    distractors:
+      A: "Sodium drives the spike, not the fusion."
+      B: "Potassium ends the spike."
+      D: "Chloride mediates inhibition receptors."
+- heading: Hormones — broadcasting through blood
+  body:
+  - Endocrine glands release hormones that reach all cells but act
+    only on those with the receptor — ==selectivity by receptor, not
+    by address==. Chemistry splits the mechanism — **peptide/protein
+    hormones** (insulin) bind surface receptors and act fast through
+    second messengers (cAMP, Ca²⁺, kinase cascades); **steroid
+    hormones** (cortisol, sex steroids) being lipid-soluble slip
+    through membranes and act on intracellular receptors as
+    transcription factors — slower onset, longer duration, gene-level
+    effect.
+  - The hypothalamus-pituitary axis is the master architecture — the
+    hypothalamus's releasing hormones drive the **anterior pituitary**
+    (which makes true hormones — TSH, ACTH, FSH/LH, GH, prolactin),
+    while the **posterior pituitary** merely stores and releases
+    hypothalamic oxytocin and ADH. Axis-negative-feedback is the
+    default — thyroid hormones suppress TSH and TRH; cortisol
+    suppresses ACTH and CRH.
+  check:
+  - q: A steroid hormone's receptor is located…
+    options:
+      A: On the cell surface only
+      B: In the cytosol/nucleus, acting on DNA
+      C: In the synaptic cleft
+      D: On the mitochondrial outer membrane only
+    answer: B
+    explain: Lipid-soluble hormones enter cells and pair with
+      intracellular receptors that regulate transcription.
+    distractors:
+      A: "Surface receptors are the peptide-hormone pattern."
+      C: "Not a neurotransmitter arrangement."
+      D: "Wrong compartment story."
+- heading: One body, two speeds — integration of neural and hormonal
+  body:
+  - The systems differ by design — neural signaling is ==millisecond
+    and point-to-point== (a wire); hormonal signaling is ==seconds-to-
+    hours and broadcast== (a radio station) — and they interlock. The
+    stress response is the canonical chain — hypothalamus (nerves)
+    → CRH (portal blood) → anterior pituitary ACTH (systemic blood)
+    → adrenal cortex cortisol (hours, gene-level effect), while the
+    adrenal MEDULLA (a neural crest derivative) releases
+    epinephrine within seconds on sympathetic firing — fast and slow
+    arms of one program.
+  - Pathology teaches the physiology — diabetes insipidus (no ADH
+    response — liters of dilute urine) versus diabetes mellitus (no
+    insulin response — sweet urine); hyper- versus hypothyroidism
+    (with TSH levels telling you WHERE the lesion sits — high TSH
+    means the gland is failing, low TSH means the pituitary or
+    above).
+  check:
+  - q: A patient has low thyroid hormone with HIGH TSH. The lesion is
+      most likely in the…
+    options:
+      A: Thyroid gland itself
+      B: Anterior pituitary
+      C: Hypothalamus only
+      D: Liver
+    answer: A
+    explain: An intact axis responds to low T3/T4 by PUSHING TSH —
+      high TSH plus low hormone = failing gland.
+    distractors:
+      B: "Pituitary failure would give low TSH."
+      C: "Also presents with low driving hormones."
+      D: "Not a thyroid-command organ."
+examples:
+- prompt: >-
+    Curare blocks the nicotinic receptor at the neuromuscular
+    junction; botulinum toxin blocks ACh vesicle release; and
+    organophosphates inhibit acetylcholinesterase. Predict each
+    effect on muscle and explain the locus of action.
+  solution:
+  - "Step 1 — curare — receptor-level block — ACh is released but muscle cannot read it — flaccid paralysis."
+  - "Step 2 — botulinum — release-level block — no ACh leaves the terminal — same flaccid result, earlier step."
+  - "Step 3 — organophosphate — removal-level failure — ACh accumulates endlessly at junctions and synapses — overstimulation, then desensitization/spasm and autonomic chaos."
+  answer: Same pathway, three different blocked steps — receptor, vesicle release, degradation.
+  distractors:
+    A: "Calling all three 'the same poison' — locus determines the physiology."
+    B: "Expecting organophosphate to mimic curare — accumulation overstimulates first."
+    C: "Claiming botulinum blocks the receptor — its target is the fusion machinery."
+key_points:
+- Resting −70 mV from Na⁺/K⁺ pump + K⁺ leak; Na⁺ gradient is loaded
+  ammunition.
+- Graded potentials sum and decay; action potentials are all-or-none
+  and code by frequency.
+- Spike phases — threshold → Na⁺ in → overshoot → K⁺ out →
+  afterhyperpolarization; refractory periods enforce direction and
+  rate.
+- Synaptic flow — spike → Ca²⁺ entry → vesicle fusion → receptor →
+  EPSP/IPSP summation at the hillock.
+- Peptide hormones act on surface receptors, fast, second
+  messengers; steroids enter cells, act on DNA, slow and lasting.
+- Hypothalamus commands; anterior pituitary secretes true hormones;
+  posterior stores hypothalamic ones; axes self-brake by negative
+  feedback.
+- Lesion logic — low hormone + high trophic hormone = target-gland
+  failure.
+mnemonics:
+- phrase: "Na in fast, K out slow"
+  means: The rising and falling limbs of the spike in four words.
+- phrase: "High TSH = sick thyroid"
+  means: Trophic hormones rise when the target gland fails — the
+    lesion-localizing rule.
+maps:
+- title: Action potential timeline
+  steps:
+    - "stimulus → threshold (≈−55 mV)"
+    - "==voltage-gated Na⁺ opens → depolarization to +30 mV=="
+    - "Na⁺ inactivates; K⁺ opens → repolarization"
+    - "K⁺ overshoots → hyperpolarization → pump/leak restore −70 mV"
+- title: The HPA stress axis
+  steps:
+    - "hypothalamus — CRH (seconds, portal blood)"
+    - "anterior pituitary — ==ACTH== (blood)"
+    - "adrenal cortex — ==cortisol== (hours, transcriptional)"
+    - "cortisol feeds back on both — the loop closes"
+passage:
+  text: >-
+    A research subject's sympathetic activity is pharmacologically
+    blocked at the adrenal medulla only, so catecholamine release
+    stops while direct sympathetic innervation of the heart
+    continues. The subject then exercises. Heart rate still rises
+    through neural drive, but plasma glucose rise is blunted relative
+    to control trials, and free fatty acid mobilization lags.
+  questions:
+  - q: The blunted glucose response occurs because…
+    options:
+      A: Muscle cannot receive neural input
+      B: Adrenal-medullary epinephrine normally amplifies
+        glycogenolysis and mobilization alongside direct neural effects
+      C: Insulin secretion rose
+      D: Cortisol was also blocked
+    answer: B
+    explain: Neural drive remains, but the hormonal arm — epinephrine
+      acting on liver and fat — is missing.
+    distractors:
+      A: "The block is at the medulla, not at target innervation."
+      C: "Exercise suppresses insulin; nothing raised it."
+      D: "Only the medulla was blocked."
+  - q: Heart rate still climbing in this experiment demonstrates…
+    options:
+      A: Hormones are unnecessary for the heart entirely
+      B: Direct sympathetic innervation suffices for the cardiac
+        chronotropic response
+      C: The vagus was cut
+      D: Parasympathetic tone rose
+    answer: B
+    explain: Two arms drive the exercised heart; the neural one alone
+      still delivers most of the rate response.
+    distractors:
+      A: "Overclaims — the data only show sufficiency here."
+      C: "No vagotomy described."
+      D: "Opposite of what exercise does."
+  - q: Which treatment arm would restore the full glucose response?
+    options:
+      A: Infusing epinephrine
+      B: Infusing cortisol
+      C: Giving a beta-blocker
+      D: Stimulating the vagus
+    answer: A
+    explain: Replacing the missing catecholamine replaces the missing
+      arm.
+    distractors:
+      B: "Cortisol's timing is hours, not the exercise window."
+      C: "Beta-blockade would REMOVE adrenergic effects."
+      D: "Parasympathetic stimulation does not mobilize fuel."
+pitfalls:
+- Asking what a transmitter does without naming the receptor — the
+  receptor defines the response.
+- Confusing absolute with relative refractory — inactivated Na⁺
+  channels versus elevated threshold.
+- Placing steroid receptors on the surface — lipid-soluble hormones
+  enter the cell.
+- Mixing up anterior and posterior pituitary — one makes hormones,
+  the other only ships hypothalamic ones.
+- Reading TSH without the hormone level — the PAIR localizes the
+  lesion.
+exam_map:
+  NMAT: >-
+    Physiology vocabulary — potential values, synapse steps, hormone
+    classes, gland names, and feedback definitions.
+  MCAT: >-
+    Content Category 3A runs membrane-potential traces, toxin and drug
+    locus-of-action items, receptor pharmacology, axis-lesion
+    interpretation, and stress-response integration experiments.
+sources:
+- ref: openstax-biology-2e
+  used:
+  - "The Nervous System chapters (potential, synapse)"
+  - "The Endocrine System chapters (axes, hormone classes)"
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - "Foundational Concept 3, Content Category 3A"
+  relation: consulted
+further_reading:
+- title: "OpenStax Biology 2e — The Nervous System"
+  url: https://openstax.org/books/biology-2e/pages/35-introduction
+  note: Potentials, synapses, and circuits.
+- title: "OpenStax Biology 2e — The Endocrine System"
+  url: https://openstax.org/books/biology-2e/pages/37-introduction
+  note: Glands, axes, and feedback.
+review_questions:
+- q: Which event directly triggers neurotransmitter vesicle fusion?
+  options:
+    A: Na⁺ influx at the axon hillock
+    B: Ca²⁺ influx at the terminal
+    C: K⁺ efflux during repolarization
+    D: Myelin compression
+  answer: B
+  explain: Voltage-gated calcium is the fusion signal.
+  distractors:
+    A: "That starts the spike upstream."
+    C: "That ends the spike."
+    D: "Not a mechanism."
+- q: Insulin differs from cortisol in that insulin…
+  options:
+    A: Enters cells and binds DNA
+    B: Binds a surface receptor and acts via second messengers
+    C: Is a steroid
+    D: Acts only on the liver
+  answer: B
+  explain: Peptide hormone — membrane receptor, fast signaling.
+  distractors:
+    A: "That is the steroid route."
+    C: "Insulin is a protein."
+    D: "Insulin acts on muscle, fat, and liver broadly."
+- q: Saltatory conduction refers to…
+  options:
+    A: Continuous slow depolarization
+    B: Action potentials jumping between nodes of Ranvier in myelinated axons
+    C: Neurotransmitter diffusion
+    D: Hormone pulsatility
+  answer: B
+  explain: Myelin forces regeneration at nodes — speed with energy
+    economy.
+  distractors:
+    A: "Contradicts 'saltatory'."
+    C: "Synaptic, not axonal."
+    D: "Endocrine concept."
+- q: Oxytocin and ADH reach blood through the…
+  options:
+    A: Anterior pituitary
+    B: Posterior pituitary (axons of hypothalamic neurons)
+    C: Adrenal medulla
+    D: Thyroid follicles
+  answer: B
+  explain: Made in hypothalamic nuclei, shipped down axons, released
+    posteriorly.
+  distractors:
+    A: "The anterior gland makes its own hormones under releasing-
+      hormone control."
+    C: "Catecholamines live there."
+    D: "Thyroid hormones' home."

@@ -1,0 +1,337 @@
+subject: biology
+chapter: The World of Plants and Animals
+title: The World of Plants and Animals
+overview: >-
+  This chapter surveys the two multicellular kingdoms exam writers expect
+  you to navigate — how plants build a body that feeds itself, and how
+  animals are organized into the major body plans. NMAT asks the
+  vocabulary; the MCAT uses plant transport and animal diversity as
+  passage furniture. Prerequisites — Cells (organelles, walls) and Unity
+  and Diversity (domains, kingdoms).
+sections:
+- heading: The plant body — three tissue systems
+  body:
+  - A plant is built from three tissue systems that repeat in every
+    organ. The **dermal** system is the skin (epidermis, cuticle, and in
+    roots the water-absorbing root hairs). The **ground** system fills
+    the interior — **parenchyma** (thin, metabolic, healing), the
+    thick-walled **sclerenchyma** (support), and **collenchyma** (flexible
+    support in growing parts). The **vascular** system is the plumbing —
+    ==xylem carries water and minerals UP, phloem carries sugars BOTH
+    WAYS==, and remembering the direction kills half the transport
+    questions.
+  - Growth happens in zones, not everywhere. **Apical meristems** at tips
+    lengthen the plant (primary growth); **lateral meristems** — the
+    vascular cambium and cork cambium — thicken it (secondary growth,
+    which makes wood). A tree ring is a year of cambium activity, dense
+    late-season wood against looser spring wood.
+  check:
+  - q: Sugars from a source leaf travel to a growing root through…
+    options:
+      A: Xylem, upward only
+      B: Phloem, bidirectional
+      C: Cambium
+      D: Sclerenchyma fibers
+    answer: B
+    explain: Phloem translocates sugars from sources to sinks in either
+      direction along the plant.
+    distractors:
+      A: "Xylem is the water-and-mineral one-way elevator."
+      C: "Cambium is the growth layer, not a transport tissue."
+      D: "Sclerenchyma is dead support tissue."
+- heading: Plant reproduction and the alternation of generations
+  body:
+  - Plants live ==two alternating lives== — a diploid **sporophyte**
+    that makes spores by meiosis, and a haploid **gametophyte** that
+    makes gametes by mitosis. Fertilization restores the diploid and the
+    cycle turns. The trend across plant evolution is the shrinking of
+    the gametophyte — dominant and free-living in mosses, a tiny
+    few-celled passenger inside the flower in angiosperms.
+  - The flower is an angiosperm sporophyte organ. Pollen (male
+    gametophyte) lands on the stigma, grows a tube to the ovule, and
+    double fertilization follows — one sperm fuses the egg (→ embryo),
+    a second fuses polar nuclei (→ ==triploid endosperm==, the food
+    supply). Seed plus ovary wall becomes fruit — a dispersal vehicle
+    the animals of this chapter's second half help spread.
+  check:
+  - q: In flowering plants, endosperm is…
+    options:
+      A: Haploid food from the egg
+      B: Triploid food from a second fertilization
+      C: The diploid embryo itself
+      D: A spore
+    answer: B
+    explain: Double fertilization — one sperm + egg (diploid embryo),
+      one sperm + two polar nuclei (triploid endosperm).
+    distractors:
+      A: "Wrong ploidy and wrong parentage."
+      C: "The embryo is the other product of double fertilization."
+      D: "Spores are made by meiosis in the anther/ovule, not by fusion."
+- heading: Animal body plans — the organizing decisions
+  body:
+  - Animal diversity is easier to learn as a chain of developmental
+    decisions. **Symmetry** — radial (jellyfish, hydra) versus bilateral
+    (everything that crawls or swims with a front end). **Germ layers** —
+    diploblastic (two layers) versus ==triploblastic (ectoderm, mesoderm,
+    endoderm)==. **Coelom** — the triploblasts split into acoelomates,
+    pseudocoelomates, and true **coelomates** with a fluid-filled cavity
+    lined entirely by mesoderm, the cushion that lets organs move and
+    muscles work independently of the gut.
+  - Two more forks finish the map — protostome versus deuterostome
+    (the blastopore becomes mouth or anus respectively, with spiral
+    versus radial cleavage), and segmentation (repeated body blocks,
+    powerful because each segment can specialize).
+  check:
+  - q: A true coelom is best described as…
+    options:
+      A: Any body cavity
+      B: A fluid cavity lined entirely by mesoderm
+      C: The gut lumen
+      D: The space inside a blastocoel
+    answer: B
+    explain: Complete mesoderm lining defines a TRUE coelom and
+      distinguishes it from a pseudocoel.
+    distractors:
+      A: "Pseudocoels and acoels are cavities too — the lining decides."
+      C: "The gut is endoderm-derived and open to the outside."
+      D: "The blastocoel is an early embryo space, not an adult cavity."
+- heading: The invertebrate hallmarks
+  body:
+  - Do not memorize thirty phyla — anchor six. **Porifera** (sponges —
+    no true tissues, filter feeding). **Cnidaria** (radial, cnidocyte
+    stinging cells). **Platyhelminthes** (flatworms — flat because
+    diffusion feeds them; no coelom). **Nematoda** (roundworms —
+    pseudocoel, complete gut). **Annelida** (segmented worms — coelom as
+    hydrostatic skeleton). **Arthropoda** — ==jointed appendages and an
+    exoskeleton of chitin==, the most successful phylum by numbers, with
+    molting as the price of armor. Mollusca (mantle, radula, muscular
+    foot) completes the ecdysozoan/lophotrochozoan picture the MCAT
+    occasionally probes.
+  check:
+  - q: An animal sheds its outer covering to grow. Which phylum?
+    options:
+      A: Porifera
+      B: Arthropoda
+      C: Annelida
+      D: Chordata
+    answer: B
+    explain: A rigid chitin exoskeleton forces molting (ecdysis) at
+      every growth step.
+    distractors:
+      A: "Sponges have no exoskeleton to shed."
+      C: "Annelids grow within soft segments."
+      D: "Chordates grow continuously; no molting."
+- heading: Chordates and the amniotic revolution
+  body:
+  - Chordate trademarks at some life stage — **notochord**, dorsal
+    hollow nerve cord, pharyngeal slits, post-anal tail. Vertebrates add
+    the backbone; the vertebrate story runs jawless → cartilaginous →
+    bony fish → amphibians (water-bound eggs) → reptiles and birds →
+    mammals. The great divide — ==the amniotic egg==, with its
+    extraembryonic membranes (amnion, chorion, yolk sac, allantois),
+    freed reproduction from water and colonized dry land.
+  - Mammals split three ways — monotremes (egg-laying), marsupials
+    (pouched, brief placenta), and eutherians (long placenta, birth to
+    relatively independent young). The placenta itself is a
+    MCAT-friendly organ — maternal and fetal blood exchange materials
+    WITHOUT mixing.
+  check:
+  - q: Which innovation most directly freed vertebrates from needing
+      water to reproduce?
+    options:
+      A: The lateral line system
+      B: The amniotic egg with extraembryonic membranes
+      C: Gills
+      D: The notochord
+    answer: B
+    explain: Amnion (bath), chorion (gas exchange), yolk sac (food),
+      allantois (waste) package an aquatic nursery inside a shell or
+      womb.
+    distractors:
+      A: "That is a fish sensory system."
+      C: "Gills are the opposite — they bind you to water."
+      D: "The notochord is a support rod, present even in aquatic chordates."
+examples:
+- prompt: >-
+    A student sectioned a stem and a root and must tell them apart in
+    one field of view. Give the fastest discriminating features.
+  solution:
+  - "Step 1 — xylem and phloem arrangement — roots keep vascular tissue in a central cylinder with xylem star; stems scatter bundles in a ring."
+  - "Step 2 — outer layer — roots carry root hairs and no cuticle; stems have cuticle and may carry trichomes."
+  - "Step 3 — ground tissue proportions — roots store (large cortex), stems support (more sclerenchyma near bundles)."
+  answer: Bundle arrangement plus root hairs versus cuticle separates root from stem in seconds.
+  distractors:
+    A: "Counting chloroplasts — both can lack or carry them depending on light; not decisive."
+    B: "Looking for phloem only — both organs have it; direction does not differ by organ."
+    C: "Checking cell walls — cellulose is everywhere in plants."
+key_points:
+- Three plant tissue systems — dermal (boundary), ground (metabolism,
+  support), vascular (xylem up, phloem both ways).
+- Apical meristems lengthen; lateral meristems (cambia) thicken.
+- Alternation of generations — sporophyte (2n, meiosis → spores) and
+  gametophyte (n, mitosis → gametes); angiosperms shrink the
+  gametophyte and double-fertilize.
+- Animal body plan decisions — symmetry, germ layers, coelom type,
+  protostome/deuterostome, segmentation.
+- Arthropod success — jointed appendages + chitin exoskeleton; molting
+  is the cost.
+- Amniotic extraembryonic membranes (amnion, chorion, yolk, allantois)
+  broke the water dependence.
+mnemonics:
+- phrase: "Xylem Up, Phloem Flow"
+  means: Xylem carries water up from roots; phloem flows sugars to
+    wherever sinks demand.
+- phrase: "Amnion = bath, Chorion = breath, Yolk = lunch, Allantois = trash"
+  means: The four extraembryonic membranes by function.
+maps:
+- title: Plant alternation of generations (angiosperm)
+  steps:
+    - "sporophyte (2n, the plant you see) → meiosis → spores (n)"
+    - "spores → mitosis → tiny gametophytes (pollen / embryo sac)"
+    - "==double fertilization== → diploid embryo + triploid endosperm"
+    - "seed → new sporophyte (cycle turns)"
+- title: Animal body-plan decision tree
+  steps:
+    - "tissues? no → sponges · yes → symmetry"
+    - "radial → cnidarians · bilateral → germ layers"
+    - "triploblast → coelom? none / pseudo / true"
+    - "true coelom → blastopore fate — mouth (protostome) or ==anus (deuterostome)=="
+passage:
+  text: >-
+    A botanist grafts a ring of bark (phloem included) off a tree trunk
+    in a complete circle, leaving xylem intact. Over weeks the bark
+    above the ring swells, and roots below the ring show depleted sugar
+    stores while leaves remain healthy and photosynthesizing.
+  questions:
+  - q: The swelling above the ring happens because…
+    options:
+      A: Xylem transport is blocked
+      B: Phloem sugars from leaves cannot pass the girdle and accumulate above it
+      C: The cambium dies immediately
+      D: Water flow reverses direction
+    answer: B
+    explain: Removing the phloem ring blocks sugar translocation; the
+      intact xylem keeps leaves supplied with water.
+    distractors:
+      A: "Xylem is intact — leaves stay healthy for exactly that reason."
+      C: "Cambium damage matters for regrowth, not for sugar pile-up."
+      D: "Water direction is fixed by transpiration pull."
+  - q: Predict the tree's fate over months.
+    options:
+      A: Immediate death of the canopy
+      B: Gradual root starvation, since roots receive no new sugars
+      C: Faster growth above the ring
+      D: No effect at all
+    answer: B
+    explain: Roots are the sugar sinks below the block; starved roots
+      fail to absorb, and the whole tree eventually declines.
+    distractors:
+      A: "Leaves have water and light; they persist for a long while."
+      C: "Swelling is accumulation, not growth."
+      D: "Complete girdling is a classic killing technique."
+  - q: Which process directly delivers the accumulating sugars to tissue
+      above the ring?
+    options:
+      A: Transpiration stream
+      B: Pressure-flow loading into sieve tubes
+      C: Active transport through xylem vessels
+      D: Root pressure
+    answer: B
+    explain: Phloem loading at sources builds pressure that pushes sap
+      toward sinks through sieve tubes.
+    distractors:
+      A: "Transpiration moves water, not sugars."
+      C: "Xylem vessels carry no sugar in normal plants."
+      D: "Root pressure pushes xylem water up at night, not sap."
+pitfalls:
+- Assigning phloem one direction — it runs source-to-sink, which flips
+  seasonally.
+- Treating the blastocoel or gut as a coelom — the mesoderm lining is
+  the deciding trait.
+- Forgetting ferns and mosses also alternate generations — it is a
+  plant-wide cycle, not a flower-only one.
+- Calling every shed an exoskeleton molt — only arthropods (and
+  nematode relatives) ecdyse.
+- Confusing notochord with backbone — one is a support rod, the other a
+  vertebral column that mostly replaces it.
+exam_map:
+  NMAT: >-
+    CEM items hit tissue names, xylem/phloem function, life-cycle terms,
+    and phylum-characteristic matching — recall level with one-step
+    application.
+  MCAT: >-
+    Plant transport and double fertilization appear inside 1B/2A-style
+    passages; animal body plans usually serve 3B organ-system framing
+    rather than standing alone.
+sources:
+- ref: openstax-biology-2e
+  used:
+  - "Ch 25 — Seedless Plants; Ch 26 — Seed Plants"
+  - "Ch 27 — Introduction to Animal Diversity; Ch 28 — Invertebrates; Ch 29 — Vertebrates"
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - "Foundational Concept 2, Content Category 2A"
+  relation: consulted
+further_reading:
+- title: "OpenStax Biology 2e — Ch 26: Seed Plants"
+  url: https://openstax.org/books/biology-2e/pages/26-introduction
+  note: Flowers, seeds, and fruit in full.
+- title: "OpenStax Biology 2e — Ch 27: Introduction to Animal Diversity"
+  url: https://openstax.org/books/biology-2e/pages/27-introduction
+  note: Body-plan logic before the phyla.
+- title: "OpenStax Biology 2e — Ch 29: Vertebrates"
+  url: https://openstax.org/books/biology-2e/pages/29-introduction
+  note: The amniotic story.
+review_questions:
+- q: Which pair correctly matches tissue to function?
+  options:
+      A: "Sclerenchyma — photosynthesis"
+      B: "Parenchyma — rigid dead support"
+      C: "Xylem — water conduction"
+      D: "Phloem — mineral uptake only"
+  answer: C
+  explain: Xylem conducts water and dissolved minerals from root to leaf.
+  distractors:
+    A: "Sclerenchyma is the dead support tissue."
+    B: "Parenchyma is the living, metabolic generalist."
+    D: "Mineral uptake is root hair work; phloem moves sugars."
+- q: Triploblastic animals with a false coelom are…
+  options:
+      A: "Annelids"
+      B: "Nematodes"
+      C: "Flatworms"
+      D: "Cnidarians"
+  answer: B
+  explain: Nematodes carry a pseudocoel — a cavity not fully lined by
+    mesoderm.
+  distractors:
+    A: "Annelids have true coeloms."
+    C: "Flatworms are acoelomate."
+    D: "Cnidarians are diploblastic."
+- q: In double fertilization the two sperm nuclei produce…
+  options:
+      A: "Two embryos"
+      B: "Diploid embryo and triploid endosperm"
+      C: "Two haploid gametes"
+      D: "Zygote and spore"
+  answer: B
+  explain: One fertilizes the egg, the other the polar nuclei — embryo
+    plus food supply.
+  distractors:
+    A: "Only one sperm meets the egg."
+    C: "Gametes come from gametophytes by mitosis, not from fertilization."
+    D: "Spores are meiotic products of the sporophyte."
+- q: Deuterostomes are defined by…
+  options:
+      A: "Blastopore becoming the mouth"
+      B: "Blastopore becoming the anus"
+      C: "Lacking mesoderm"
+      D: "Having chitin exoskeletons"
+  answer: B
+  explain: Deuteros = second mouth; the anus forms first, the mouth
+    second.
+  distractors:
+    A: "That is the protostome trait."
+    C: "Deuterostomes are triploblastic coelomates."
+    D: "That is arthropods — protostomes."

@@ -1,0 +1,331 @@
+subject: biology
+chapter: 'Life Processes: Regulation and Homeostasis'
+title: 'Life Processes: Regulation and Homeostasis'
+overview: >-
+  Homeostasis is the master idea of physiology — every organ in the
+  chapters that follow exists to hold some internal variable inside a
+  livable range. This chapter builds the control-system vocabulary
+  (set points, sensors, effectors, feedback) and applies it to
+  temperature, water, and sugar before 3A/3B supply the organ-by-organ
+  detail. NMAT wants the definitions; the MCAT runs experiments on the
+  loops. Prerequisites — Cells (transport), Development (signal
+  reading).
+sections:
+- heading: The homeostatic machine — set points and feedback
+  body:
+  - A homeostatic system has four parts — a **variable** with a set
+    point (e.g. 37°C), a **sensor** that measures it, a **control
+    center** that compares measurement to set point, and **effectors**
+    that correct. ==Negative feedback — the corrective loop that
+    opposes the disturbance== — is the default architecture of healthy
+    physiology; the correction shuts itself off as the variable
+    returns to target.
+  - The pattern of ==positive feedback== amplifies instead of correcting — blood
+    clotting, the birthing contraction cascade, an action potential's
+    rising phase. It is normal and useful ONLY when a fast, self-ending
+    climax is the goal; unbounded positive feedback is the physiology
+    of collapse.
+  check:
+  - q: Sweating cools the body and stops when temperature normalizes.
+      This is…
+    options:
+      A: Positive feedback
+      B: Negative feedback
+      C: Feed-forward failure
+      D: A set point shift
+    answer: B
+    explain: The response removes its own stimulus — the negative
+      feedback signature.
+    distractors:
+      A: "Positive feedback reinforces the deviation."
+      C: "No anticipatory pathway is described."
+      D: "The target never moved."
+- heading: Temperature — endotherms, ectotherms, and countercurrents
+  body:
+  - The ==Endotherms== generate heat metabolically and hold temperature near    constant; **ectotherms** ride the environment but behaviorally
+    regulate (basking, burrowing). Both obey the same physics — heat
+    exchange by radiation, conduction, convection, evaporation — and
+    the effectors are shared — vasodilation dumps heat, vasoconstriction
+    keeps it, shivering and brown fat make it, ==sweating and panting
+    spend it==.
+  - Countercurrent exchange is the elegant trick to know — arteries and
+    veins lying side by side let cold venous blood warm on arterial
+    heat, conserving core temperature in flippers and legs. A heat map
+    of "who loses least" explains most thermoregulation passages.
+  check:
+  - q: Countercurrent heat exchange in a duck's legs primarily serves to…
+    options:
+      A: Cool the core faster
+      B: Conserve core heat while keeping limbs supplied with blood
+      C: Mix arterial and venous blood directly
+      D: Generate heat by friction
+    answer: B
+    explain: Warmth flows from outbound arteries to returning veins —
+      the core keeps its heat, the foot stays cold, the blood stays
+      separate.
+    distractors:
+      A: "It is a conservation device, not a radiator."
+      C: "Vessels exchange heat, not contents."
+      D: "Friction is negligible; this is passive physics."
+- heading: Water and solutes — osmoregulation across habitats
+  body:
+  - Water follows solutes, so osmoregulation IS solute management.
+    Marine bony fish (surrounded by salt) drink seawater and pump ions
+    out at the gills; freshwater fish (surrounded by dilution) never
+    drink and excrete dilute floods of urine; terrestrial animals
+    reclaim water in the kidney. ==The environment sets the problem;
+    the epithelium implements the answer== — the same transport logic
+    as the cell chapter, scaled to organs.
+  - Nitrogen disposal is the chemical companion — ammonia (toxic,
+    water-cheap, aquatic), urea (liver-made, moderate cost, mammals),
+    uric acid (water-expensive paste, birds and reptiles). Passages
+    predict habitat from nitrogen product and vice versa.
+  check:
+  - q: A freshwater fish's problem and response are…
+    options:
+      A: Water loss — drink constantly
+      B: Water flooding — excrete large volumes of dilute urine
+      C: Salt loading — pump salt from gills
+      D: Ammonia buildup — convert to uric acid
+    answer: B
+    explain: The hypotonic pond pushes water in; the fish voids it
+      dilute while reclaiming ions.
+    distractors:
+      A: "That is the marine bony fish strategy."
+      C: "Salt EXCRETION belongs to seawater fish."
+      D: "Freshwater fish release ammonia directly."
+- heading: Fuel regulation — glucose as a case study
+  body:
+  - Blood glucose is the cleanest loop to learn because both arms have
+    names. After a meal, pancreatic **beta cells** release ==insulin==
+    — cells take up glucose, liver and muscle store it as glycogen,
+    fat stores fat — glucose falls. Fasting, pancreatic **alpha cells**
+    release ==glucagon== — liver breaks glycogen and synthesizes new
+    glucose — glucose rises. Two hormones, opposite arrows, one set
+    point; the insulin/glucagon ratio is the answer key to nearly every
+    fuel passage.
+  - Diabetes shows what loop failure looks like — type 1 (no insulin,
+    autoimmune beta-cell loss) versus type 2 (insulin resistance of
+    target tissues). Same hyperglycemia, different broken part, which
+    is exactly the question the exams ask.
+  check:
+  - q: Between meals, blood glucose is maintained mainly by…
+    options:
+      A: Insulin-driven uptake
+      B: Glucagon-driven liver glycogenolysis
+      C: Sweating
+      D: Countercurrent exchange
+    answer: B
+    explain: Glucagon tells the liver to release stored glucose.
+    distractors:
+      A: "Insulin LOWERS glucose — that arm is quiet while fasting."
+      C: "Thermoregulation, not fuel."
+      D: "Heat conservation, not fuel."
+- heading: When loops fail — fever, dehydration, and the general rule
+  body:
+  - Fever is instructive — infection pyrogens RAISE the hypothalamic
+    set point, so the body shivers to reach a higher target; antipyretics
+    lower the set point and the patient sweats. It is still negative
+    feedback — around a moved set point. Dehydration illustrates
+    cascade failure — volume falls, compensation (thirst, ADH,
+    vasoconstriction) engages, and beyond a threshold the loops
+    themselves starve.
+  - The transferable rule — in any pathology passage, first name the
+    variable, then the broken part (sensor, center, or effector), and
+    the intervention follows. This chapter's frame is the physiology
+    section's skeleton.
+  check:
+  - q: During a rising fever, a patient shivers because…
+    options:
+      A: The set point has been reset upward and the body generates heat to reach it
+      B: Positive feedback is out of control
+      C: Sweating has failed entirely
+      D: Glucagon is high
+    answer: A
+    explain: Pyrogens raise the hypothalamic target; chills are the
+      effector response to the gap.
+    distractors:
+      B: "The loop still closes at the new set point."
+      C: "Sweating returns as fever breaks."
+      D: "Unrelated axis."
+examples:
+- prompt: >-
+    A marathon runner drinks only seawater by mistake. Predict the
+    osmotic events and the body's compensations.
+  solution:
+  - "Step 1 — gut absorbs salt and water — plasma osmolarity RISES."
+  - "Step 2 — water shifts OUT of cells (cells shrink); thirst intensifies."
+  - "Step 3 — ADH rises maximally (concentrated urine); the kidney excretes the salt load spending water."
+  - "Step 4 — net effect — dehydration worsens; drinking seawater accelerates water loss."
+  answer: Seawater intake raises osmolarity, pulls water from cells, and forces the kidney to spend water excreting salt — worsening dehydration.
+  distractors:
+    A: "Saying seawater hydrates — its salt demands MORE water to excrete than it provides."
+    B: "Cells swelling — water flows toward the hyperosmolar plasma, not into cells."
+    C: "ADH suppression — high osmolarity maximally stimulates ADH."
+key_points:
+- Homeostasis loop — variable, set point, sensor, control center,
+  effector; negative feedback self-limits.
+- Positive feedback is a climax tool — clotting, birth, action
+  potential.
+- Thermoregulation toolkit — vasodilation/constriction, shivering,
+  sweating; countercurrent exchange conserves.
+- Osmoregulation — habitat dictates strategy; nitrogen form is the
+  water-cost fingerprint.
+- Insulin stores, glucagon mobilizes — the liver is the switchboard.
+- Fever is a raised set point, not broken feedback.
+- Diagnose by naming the variable and the broken loop part.
+mnemonics:
+- phrase: "Beta cells Bring glucose down; Alpha cells Ask for more"
+  means: Insulin (beta) lowers; glucagon (alpha) raises blood glucose.
+- phrase: "AmmOnia = Ocean, Urea = mamUal, Uric = bird-dry"
+  means: Nitrogen waste products track the water available.
+maps:
+- title: The homeostatic loop
+  steps:
+    - "disturbance moves the variable from set point"
+    - "sensor → control center compares"
+    - "==effectors correct against the disturbance=="
+    - "correction removes its own stimulus (negative feedback)"
+- title: Glucose regulation
+  steps:
+    - "meal → glucose rises → beta cells → ==insulin== → uptake + storage"
+    - "fasting → glucose falls → alpha cells → ==glucagon=="
+    - "liver glycogenolysis + gluconeogenesis → glucose restored"
+passage:
+  text: >-
+    Researchers record core temperature and skin blood flow in a subject
+    immersed in cold water. In the first minutes, skin blood flow drops
+    sharply and shivering begins; core temperature holds nearly steady
+    for twenty minutes, then drifts downward despite continuous
+    shivering. When the subject is removed and warmed, skin blood flow
+    rises and sweating begins while core temperature is still above the
+    normal set point.
+  questions:
+  - q: The initial skin vasoconstriction serves to…
+    options:
+      A: Increase heat loss from the core
+      B: Reduce heat loss by routing blood away from the surface
+      C: Raise the set point
+      D: Supply muscles with oxygen for shivering
+    answer: B
+    explain: Cutting surface flow insulates the core — the shell
+      sacrifices itself.
+    distractors:
+      A: "That would accelerate cooling."
+      C: "Set-point resetting is hypothalamic, not vascular."
+      D: "Muscle supply is real but not vasoconstriction's primary role here."
+  - q: Continued shivering with falling core temperature shows that…
+    options:
+      A: Feedback has reversed polarity
+      B: Effector output can no longer match the heat debt — the loop is overwhelmed
+      C: Positive feedback dominates
+      D: The sensor has failed
+    answer: B
+    explain: Shivering persists (loop engaged) but heat loss exceeds
+      production — compensation, not control failure.
+    distractors:
+      A: "Polarity is unchanged; capacity is exceeded."
+      C: "No self-amplification of cold is shown."
+      D: "Sensors still report — shivering and later sweating prove loops live."
+  - q: Sweating while still hot after removal is best explained by…
+    options:
+      A: A broken effector
+      B: Normal lag — the loop keeps correcting until the variable reaches set point
+      C: Set point dropping below normal
+      D: Positive feedback
+    answer: B
+    explain: Overshoot correction continues while the error persists —
+      classic negative-feedback dynamics.
+    distractors:
+      A: "Effectors are working, not broken."
+      C: "No evidence the target moved."
+      D: "No amplification here."
+pitfalls:
+- Calling fever a positive-feedback failure — it is feedback to a
+  raised set point.
+- Mixing up insulin and glucagon sources — beta brings down, alpha
+  asks up.
+- Assigning marine-fish strategy to freshwater fish — the surrounding
+  water's tonicity decides the problem.
+- Forgetting positive feedback's legitimate jobs — it is not
+  pathological by definition.
+- Treating homeostasis as constancy — it is dynamic balance around a
+  set point (and set points can move).
+exam_map:
+  NMAT: >-
+    Definition-level items on feedback types, thermoregulator terms,
+    and insulin/glucagon effects; one-step "which hormone rises"
+    questions.
+  MCAT: >-
+    Passages test loop identification from data (temperature, osmolarity,
+    glucose curves), countercurrent reasoning, and diabetic/fever
+    scenarios — Foundational Concept 3 framing throughout.
+sources:
+- ref: openstax-biology-2e
+  used:
+  - "Animal Homeostasis / Osmotic Regulation chapters"
+  - "The Endocrine System chapters (insulin/glucagon)"
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - "Foundational Concept 3, Content Categories 3A/3B"
+  relation: consulted
+further_reading:
+- title: "OpenStax Biology 2e — Osmotic Regulation and Excretion"
+  url: https://openstax.org/books/biology-2e/pages/41-introduction
+  note: Habitat-by-habitat osmoregulation.
+- title: "OpenStax Biology 2e — The Endocrine System"
+  url: https://openstax.org/books/biology-2e/pages/37-introduction
+  note: Hormonal loops in full.
+review_questions:
+- q: Which is a NORMAL positive-feedback process?
+  options:
+    A: Thermoregulation in cold water
+    B: Oxytocin cascade during labor
+    C: Insulin release after glucose load
+    D: Blood glucose recovery while fasting
+  answer: B
+  explain: Contractions stretch the cervix, more oxytocin, stronger
+    contractions — amplification to a self-ending climax.
+  distractors:
+    A: "Shivering and vasoconstriction correct — negative feedback."
+    C: "Insulin removes its own stimulus — negative feedback."
+    D: "Glucagon corrects a fall — negative feedback."
+- q: Uric acid as nitrogen waste indicates an animal that most likely…
+  options:
+    A: Lives in fresh water
+    B: Must conserve water (birds, reptiles, insects)
+    C: Has constant access to seawater
+    D: Is a deep-sea fish
+  answer: B
+  explain: Uric acid's near-solid paste excretion costs almost no
+    water.
+  distractors:
+    A: "Freshwater dwellers excrete dilute ammonia."
+    C: "Marine bony fish excrete ammonia/urea with salt pumping."
+    D: "Aquatic ammonia again."
+- q: In type 2 diabetes the primary defect is…
+  options:
+    A: Beta cells are destroyed
+    B: Target tissues respond poorly to insulin
+    C: Glucagon is absent
+    D: Alpha cells make insulin
+  answer: B
+  explain: Insulin resistance — hormone present, response blunted.
+  distractors:
+    A: "That is type 1."
+    C: "Glucagon is typically normal or high."
+    D: "Cell identities do not swap."
+- q: Skin blood flow rising during rewarming functions to…
+  options:
+    A: Conserve core heat
+    B: Dump heat at the surface as the variable nears set point
+    C: Raise blood pressure
+    D: Reduce sensor sensitivity
+  answer: B
+  explain: Vasodilation delivers heat to the surface for loss — the
+    anti-disturbance arm switching on.
+  distractors:
+    A: "Conservation is vasoconstriction's job."
+    C: "Widespread dilation if anything lowers resistance."
+    D: "Unrelated mechanism."

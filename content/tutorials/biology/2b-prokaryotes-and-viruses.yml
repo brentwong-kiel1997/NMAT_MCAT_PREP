@@ -1,0 +1,354 @@
+subject: biology
+chapter: 2B · Prokaryotes and viruses
+title: 2B · Prokaryotes and viruses
+overview: >-
+  Prokaryotes and viruses run the planet's small end and supply the
+  MCAT's favorite experimental systems — gene transfer, operon logic,
+  and lytic life cycles. NMAT meets the same content as intro
+  microbiology vocabulary. Prerequisites — Cells (architectures),
+  Genetics (expression basics), 1C (operon detail).
+sections:
+- heading: The prokaryotic body — small, fast, layered in armor
+  body:
+  - The prokaryotic plan — nucleoid (no envelope), ribosomes, plasmids,
+    and a cell envelope built as ==inner membrane + peptidoglycan wall
+    (+ outer membrane in Gram-negatives)==. The Gram stain rides on
+    that architecture — thick peptidoglycan holds crystal violet
+    (**Gram-positive**, purple); the thin wall plus outer membrane
+    loses it and takes the counterstain (**Gram-negative**, pink). The
+    outer membrane's lipopolysaccharide is an endotoxin — Gram-negative
+    sepsis is a wall-chemistry disease.
+  - Beyond the wall — capsule (immune evasion), pili (adhesion and
+    conjugation), flagella (rotation-driven motility), and endospores
+    (survival capsules that laugh at boiling). ==Fast division
+    (~20 minutes in rich media)== is a feature, not a bug — it is why
+    resistance evolves in weeks and why cultures saturate overnight.
+  check:
+  - q: Lipopolysaccharide (endotoxin) is found in the envelope of…
+    options:
+      A: Gram-positive bacteria only
+      B: Gram-negative bacteria's outer membrane
+      C: Viruses
+      D: All cells
+    answer: B
+    explain: LPS anchors the Gram-negative outer membrane and drives
+      endotoxic shock.
+    distractors:
+      A: "Gram-positives lack an outer membrane entirely."
+      C: "Viruses have no envelope chemistry of this kind."
+      D: "Eukaryotic plasma membranes carry no LPS."
+- heading: Horizontal gene transfer — sex without reproduction
+  body:
+  - Prokaryotes shuffle genes three ways without dividing.
+    **Transformation** — uptake of free environmental DNA (the Griffith
+    mouse experiment's mechanism). **Transduction** — bacteriophages
+    accidentally package host DNA and deliver it to the next cell.
+    ==**Conjugation** — the F plasmid's pilus connects cells and copies
+    itself across==, sometimes dragging chromosomal genes with it. All
+    three are exam-grade mechanisms; match the vector to the story.
+  - This is the engine of real-world microbiology — resistance genes
+    hopping between species on plasmids (R plasmids), and virulence
+    genes moving by phage (diphtheria toxin is phage-encoded). Any
+    "how did the non-resistant strain become resistant" passage is one
+    of these three doors.
+  check:
+  - q: A phage carries a segment of its previous host's chromosome
+      into a new bacterium. This is…
+    options:
+      A: Transformation
+      B: Transduction
+      C: Conjugation
+      D: Binary fission
+    answer: B
+    explain: Virus-mediated horizontal transfer is transduction.
+    distractors:
+      A: "Transformation is naked-DNA uptake."
+      C: "Conjugation requires cell-to-cell contact."
+      D: "Fission is reproduction, not transfer."
+- heading: Viruses — genomes in boxes
+  body:
+  - A virus is genome (DNA or RNA, single- or double-stranded) in a
+    **capsid** of repeating units, sometimes wrapped in a stolen host
+    **envelope** studded with spike glycoproteins. They have no
+    metabolism, no ribosomes, ==no independent reproduction== — which
+    is why antibiotics (which hit wall synthesis, ribosomes, folate
+    pathways) do nothing to them, and why antivirals must target
+    virus-specific enzymes.
+  - Classification keys worth memorizing — genome chemistry, +/−
+    strandedness for RNA viruses, and envelope presence (enveloped
+    viruses are environmentally fragile but fuse into cells; naked
+    capsids are tough and often fecal-oral). Baltimore-style grouping
+    appears in passages as "what must this genome encode to be
+    infectious?" — a +ssRNA virus is read as mRNA; a −ssRNA virus must
+    carry an RNA-dependent RNA polymerase; a retrovirus must carry
+    reverse transcriptase.
+  check:
+  - q: Why are antibiotics ineffective against viruses?
+    options:
+      A: Viruses metabolize too fast
+      B: Viruses lack the targets — walls, ribosomes, folate pathways
+      C: Viruses are too small
+      D: Viruses live inside red blood cells
+    answer: B
+    explain: Antibiotics hit prokaryote-specific machinery viruses
+      simply do not have.
+    distractors:
+      A: "They have no metabolism at all."
+      C: "Size is not the mechanism."
+      D: "Most viruses do not; location is irrelevant."
+- heading: The viral life cycle — lytic, lysogenic, and the economy of bursts
+  body:
+  - The cycle is a fixed script — **attach** to a specific receptor,
+    **enter**, **uncoat**, **replicate** genome and proteins, **assemble**,
+    **release** (lysis or budding). In bacteriophages the choice is
+    binary — ==lytic== (immediate replication, host bursts) versus
+    ==lysogenic== (genome integrates as prophage, replicates with the
+    host, exits under stress). Lambda's switch is the canonical
+    regulatory circuit.
+  - Two quantitative habits pay off — burst size arithmetic (one
+    infection → N progeny → N new cells infected next round) and the
+    one-step growth curve's eclipse period (no infectious particles
+    detectable intracellularly — the exam loves asking why plaque
+    counts drop then jump).
+  check:
+  - q: During the eclipse period of a lytic infection, infectious
+      particles inside the cell are undetectable because…
+    options:
+      A: The virus is dormant
+      B: Genomes and capsids are being made but not yet assembled
+      C: The host degraded all viral DNA
+      D: Release has already occurred
+    answer: B
+    explain: Eclipse = replication and synthesis before assembly —
+      parts exist, infective wholes do not.
+    distractors:
+      A: "Dormancy is lysogeny, not eclipse."
+      C: "Degradation would end the infection."
+      D: "Release defines the end of the cycle."
+- heading: Defense and counterattack — vaccines, antivirals, resistance
+  body:
+  - Vaccines train ahead of time — attenuated, inactivated, subunit,
+    and mRNA platforms all deliver antigen without disease. Antiviral
+    drugs target virus-specific steps — entry inhibitors, polymerase
+    inhibitors (acyclovir needs a viral kinase to activate — selectivity
+    by parasitizing viral enzymes), integrase and protease inhibitors
+    for HIV.
+  - The resistance story runs both directions — bacteria acquire
+    resistance (efflux pumps, degrading enzymes, target modification —
+    often on transmissible plasmids), and viruses escape through
+    antigenic **drift** (point-mutation accumulation) and **shift**
+    (segment reassortment — the pandemic-flu mechanism). ==Drift is
+    slow accumulation; shift is sudden recombination== — the pair is a
+    guaranteed exam distinction.
+  check:
+  - q: A new influenza subtype appears suddenly with genes from two
+      strains infecting one host. The mechanism is…
+    options:
+      A: Antigenic drift
+      B: Antigenic shift via segment reassortment
+      C: Conjugation
+      D: Lysogenic conversion
+    answer: B
+    explain: Segmented genomes reassort wholesale — shift, not
+      gradual drift.
+    distractors:
+      A: "Drift is year-to-year point-mutation accumulation."
+      C: "Bacterial DNA transfer."
+      D: "Phage-to-bacterium gene gift — wrong player."
+examples:
+- prompt: >-
+    In the Hershey-Chase style logic — one culture's phage particles
+    are labeled in protein (³⁵S), another's in DNA (³²P). After
+    infection and blending, which label enters the cells and enters
+    the progeny, and what does that prove?
+  solution:
+  - "Step 1 — the phage attaches and injects its genome; blender shears off empty capsids."
+  - "Step 2 — ³²P (DNA) is found inside cells and in progeny phage; ³⁵S (protein) stays with the capsids outside."
+  - "Step 3 — therefore the heritable instruction is DNA, not protein."
+  answer: DNA enters and is inherited by progeny — the injecting genome is the hereditary material.
+  distractors:
+    A: "Claiming both enter — the shear step separates them cleanly."
+    B: "Claiming protein enters — radioactivity says otherwise."
+    C: "Claiming it proves RNA is the genetic material — that is tobacco mosaic virus work, not phage."
+key_points:
+- Envelope architecture sets Gram reaction; LPS is the Gram-negative
+  endotoxin.
+- Division speed (~20 min) explains culture behavior and resistance
+  tempo.
+- Horizontal transfer trio — transformation (naked DNA),
+  transduction (phage), conjugation (pilus + plasmid).
+- Viruses are genome + capsid ± envelope; no metabolism; antibiotic
+  targets absent by definition.
+- Genome chemistry dictates what a virus must carry — +ssRNA is
+  mRNA; −ssRNA carries its polymerase; retroviruses carry reverse
+  transcriptase.
+- Life-cycle script — attach, enter, uncoat, replicate, assemble,
+  release; lytic versus lysogenic; eclipse = unassembled parts.
+- Drift accumulates; shift reassorts.
+mnemonics:
+- phrase: "T-T-C — Take up DNA, Transduce by phage, Conjugate by pilus"
+  means: The three horizontal gene-transfer doors.
+- phrase: "Positive RNA reads like mail; Negative needs a copier"
+  means: "+ssRNA is directly translatable; −ssRNA must carry an
+    RNA-dependent RNA polymerase."
+maps:
+- title: Viral life cycle
+  steps:
+    - "attach (receptor lock-and-key) → enter → uncoat"
+    - "replicate genome + make proteins → assemble"
+    - "==lyse or bud== — release and reinfect"
+    - "lysogenic branch — integrate as prophage, wait for stress"
+- title: Where resistance comes from
+  steps:
+    - "mutation (chromosomal) — slow, vertical"
+    - "==R plasmids by conjugation — fast, horizontal=="
+    - "transposons shuttle resistance cassettes between plasmid and chromosome"
+passage:
+  text: >-
+    A lab isolates two E. coli strains — strain A is streptomycin-
+    sensitive, strain B is resistant via a chromosomal ribosomal
+    mutation. Mixing the two strains in broth without phage and
+    without free DNA still yields a small number of streptomycin-
+    resistant descendants of strain A. Adding DNase (which degrades
+    extracellular DNA) does not change the result; removing cell
+    contact with a filter does.
+  questions:
+  - q: The resistance moved by…
+    options:
+      A: Transformation by free DNA
+      B: Transduction
+      C: Conjugation
+      D: New mutation in strain A
+    answer: C
+    explain: Cell contact was required and free DNA irrelevant — the
+      pilus-mediated route.
+    distractors:
+      A: "DNase would have abolished transformation."
+      B: "No phage is present in the setup."
+      D: "The result tracks strain A DESCENDANTS acquiring B's marker —
+        transfer, not fresh mutation at this rate."
+  - q: Which gene location most plausibly moved?
+    options:
+      A: Any chromosomal gene by itself
+      B: Resistance is most efficiently spread when carried on mobile
+        elements; here the chromosomal marker moved via an Hfr-like
+        conjugation event
+      C: The gene jumped by transposon directly
+      D: The gene was in a phage head
+    answer: B
+    explain: Chromosomal markers transfer when conjugation drags the
+      chromosome across (Hfr logic) — slower and rarer than plasmid
+      transfer, matching the small number observed.
+    distractors:
+      A: "Chromosomal genes do not transfer alone — they need the
+        conjugation bridge."
+      C: "Transposons move within/between replicons in the SAME cell
+        lineage, not between cells."
+      D: "No phage present."
+  - q: If the experiment were repeated with a Gram-positive
+      streptomycin-resistant donor instead, conjugation rates would
+      likely be lower because…
+    options:
+      A: Gram-positives have no genome
+      B: Conjugation machinery differs and is generally less efficient
+        in Gram-positives
+      C: Peptidoglycan blocks all DNA
+      D: Gram-positives cannot be resistant
+    answer: B
+    explain: The pilus-driven conjugation classic is Gram-negative;
+      Gram-positive transfer exists but by other, generally less
+      efficient systems.
+    distractors:
+      A: "Absurd on its face."
+      C: "Their walls pass DNA-transferring systems fine."
+      D: "Resistance exists across both groups."
+pitfalls:
+- Treating Gram stain as membrane thickness alone — it is the
+  peptidoglycan/outer-membrane architecture that holds or loses the
+  dye.
+- Calling conjugation reproduction — it is gene transfer, usually
+  without cell division.
+- Expecting antibiotics to treat flu — no wall, no ribosomes, no
+  target.
+- Confusing eclipse with lysogeny — eclipse is intracellular
+  unassembled lytic phase.
+- Mixing drift with shift — accumulation versus reassortment.
+exam_map:
+  NMAT: >-
+    Structure-label and mechanism-matching items — Gram walls,
+    transfer definitions, lytic/lysogenic vocabulary, drug-class
+    recall.
+  MCAT: >-
+    Content Category 2B runs experiments — labeled phage, transfer
+    conditions with DNase and filters, growth curves with eclipse and
+    burst, and resistance-epidemiology logic.
+sources:
+- ref: openstax-biology-2e
+  used:
+  - "Ch 21 — Viruses; Ch 22 — Prokaryotes — Bacteria and Archaea"
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - "Foundational Concept 2, Content Category 2B"
+  relation: consulted
+further_reading:
+- title: "OpenStax Biology 2e — Ch 21: Viruses"
+  url: https://openstax.org/books/biology-2e/pages/21-introduction
+  note: Life cycles and classification.
+- title: "OpenStax Biology 2e — Ch 22: Prokaryotes"
+  url: https://openstax.org/books/biology-2e/pages/22-introduction
+  note: Structure, Gram walls, and transfer.
+review_questions:
+- q: Which structure mediates bacterial conjugation?
+  options:
+    A: Flagellum
+    B: Sex pilus (F plasmid encoded)
+    C: Capsule
+    D: Endospore
+  answer: B
+  explain: The F pilus builds the bridge; the plasmid copies across
+    it.
+  distractors:
+    A: "Motility organelle."
+    C: "Adherence and immune evasion."
+    D: "Survival capsule."
+- q: A retrovirus such as HIV must carry…
+  options:
+    A: DNA polymerase only
+    B: Reverse transcriptase
+    C: Ribosomes
+    D: Peptidoglycan
+  answer: B
+  explain: RNA → DNA conversion is the defining retroviral step and
+    the drug target.
+  distractors:
+    A: "Wrong direction of synthesis."
+    C: "Viruses never carry ribosomes."
+    D: "Bacterial polymer, no place in a virus."
+- q: In the lysogenic cycle, the phage genome…
+  options:
+    A: Immediately lyses the host
+    B: Integrates as a prophage and replicates with the host
+    C: Is destroyed by host restriction enzymes
+    D: Becomes an endospore
+  answer: B
+  explain: Integration plus co-replication is lysogeny; stress can
+    later induce the lytic exit.
+  distractors:
+    A: "That is the lytic path."
+    C: "Successful phage avoid this."
+    D: "Endospores are bacterial."
+- q: Bacterial resistance spreading between species in a hospital is
+    most often mediated by…
+  options:
+    A: Vertical mutation alone
+    B: Horizontal transfer of R plasmids
+    C: Mitosis
+    D: Viral envelopes
+  answer: B
+  explain: Plasmid-borne resistance genes conjugate across species
+    boundaries — the hospital epidemiology engine.
+  distractors:
+    A: "Vertical descent is too slow for the pattern."
+    C: "Bacteria do not do mitosis."
+    D: "Category error."
