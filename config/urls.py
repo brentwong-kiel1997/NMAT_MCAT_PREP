@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 
-from portal import accounts, views
+from portal import accounts, coach_admin, views
 
 urlpatterns = [
     path("", views.home, name="home"),
@@ -14,6 +14,12 @@ urlpatterns = [
         "manage/users/<int:user_id>/",
         accounts.manage_user_action,
         name="manage_user_action",
+    ),
+    path("manage/models/", coach_admin.manage_models, name="manage_models"),
+    path(
+        "manage/models/<int:provider_id>/",
+        coach_admin.manage_model_action,
+        name="manage_model_action",
     ),
     path("study/", views.study_hub, name="study_hub"),
     path("materials/", views.materials_hub, name="materials_hub"),

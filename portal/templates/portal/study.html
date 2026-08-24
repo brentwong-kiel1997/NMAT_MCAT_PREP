@@ -6,11 +6,11 @@
 <div class="page-hero">
   <div class="page-hero-inner">
     {% include "portal/includes/nav.html" with solid=1 %}
-    <p class="section-kicker">MiniMax-M3</p>
+    <p class="section-kicker">{{ coach_label|default:"AI coach" }}</p>
     <h1>Study Desk</h1>
     <p class="lead">Suggested order: open a subject → flashcards → practice → coach. Warm up with drills below.</p>
-    {% if not tutor_ready %}
-    <p class="lead" style="color:#a33;">MiniMax key not loaded on server.</p>
+    {% if not coach_ready %}
+    <p class="lead" style="color:#a33;">No AI model configured — an admin can add one under Manage → Models.</p>
     {% endif %}
   </div>
 </div>

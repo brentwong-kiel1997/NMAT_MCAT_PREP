@@ -15,7 +15,7 @@ from .materials import (
     glossary_terms,
     study_paths,
 )
-from .minimax import chat_completion, minimax_config
+from .llm import active_provider, chat_completion
 from .notes import flashcards_for
 from .practice import practice_for, practice_catalog, all_practice_slugs, LABELS
 from .study import build_curriculum_context, tutor_messages
@@ -68,7 +68,6 @@ def home(request):
             "shared_subjects": exams.shared_list(),
             "nmat": exams.nmat_exam(),
             "mcat": exams.mcat_exam(),
-            "tutor_ready": bool(minimax_config()["api_key"]),
             "practice_catalog": practice_catalog()[:6],
         },
     )
@@ -197,7 +196,6 @@ def study_hub(request):
             "mcat_sections": exams.mcat_exam()["sections"],
             "practice_catalog": practice_catalog(),
             "study_paths": study_paths(),
-            "tutor_ready": bool(minimax_config()["api_key"]),
             "tutor_context": {
                 "exam": "",
                 "subject_slug": "",
@@ -434,6 +432,6 @@ def study_api(request):
             "ok": True,
             "mode": mode,
             "answer": answer,
-            "model": minimax_config()["model"],
+            "model": str(active_provider()) or "unconfigured",
         }
     )

@@ -277,6 +277,7 @@
       subject_slug: root.dataset.subject || "",
       section_slug: root.dataset.section || "",
       label: root.dataset.label || "Gabay",
+      coach: root.dataset.coach || "AI Study Coach",
       chapters: [],
     };
     const chaptersNode = document.getElementById("tutor-chapters");
@@ -299,8 +300,8 @@
     root.innerHTML = `
       <div class="tutor-head">
         <div>
-          <h2>MiniMax Study Coach</h2>
-          <p>Grounded in this subject's outline · MiniMax-M3</p>
+          <h2>${ctx.coach}</h2>
+          <p>Grounded in this subject's outline</p>
         </div>
       </div>
       <div class="tutor-controls">

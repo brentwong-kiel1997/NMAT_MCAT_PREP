@@ -1,0 +1,90 @@
+{% extends "portal/base.html" %}
+
+{% block title %}Manage AI models · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">Admin</p>
+    <h1>AI models</h1>
+    <p class="lead">The study coach calls whichever model is marked current. Add any
+      OpenAI-compatible endpoint or an Anthropic API key; keys stay on this server.</p>
+  </div>
+</div>
+
+<section class="section">
+  {% if messages %}
+  <ul class="flash-msgs">
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <article class="block" style="margin-bottom:2rem;">
+    <h2>Add a model</h2>
+    <form class="auth-form" method="post">
+      {% csrf_token %}
+      {% if create_error == "invalid" %}
+      <p class="form-error">Name, style, https base URL, and model id are required.</p>
+      {% elif create_error == "exists" %}
+      <p class="form-error">A model with that name already exists.</p>
+      {% endif %}
+      <label>
+        <span>Display name</span>
+        <input type="text" name="name" required placeholder="GPT-4o mini" autocomplete="off">
+      </label>
+      <label>
+        <span>API style</span>
+        <select name="api_style">
+          {% for value, label in styles %}
+          <option value="{{ value }}" {% if forloop.first %}selected{% endif %}>{{ label }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label>
+        <span>Base URL</span>
+        <input type="url" name="base_url" required placeholder="https://api.openai.com/v1" autocomplete="off">
+      </label>
+      <label>
+        <span>Model id</span>
+        <input type="text" name="model_id" required placeholder="gpt-4o-mini" autocomplete="off">
+      </label>
+      <label>
+        <span>API key</span>
+        <input type="password" name="api_key" required autocomplete="new-password" placeholder="sk-…">
+      </label>
+      <label class="check-row">
+        <input type="checkbox" name="make_active">
+        <span>Make current immediately</span>
+      </label>
+      <button class="btn btn-primary" type="submit">Add model</button>
+    </form>
+  </article>
+
+  <h2>Configured models</h2>
+  {% if providers %}
+  <ul class="user-admin-list">
+    {% for p in providers %}
+    <li>
+      <div>
+        <strong>{{ p.name }}</strong>
+        {% if p.is_active %}<span class="badge-staff">current</span>{% endif %}
+        <p class="muted-inline">{{ p.get_api_style_display }} · {{ p.base_url }} ·
+          {{ p.model_id }} · key ···{{ p.api_key|slice:"-4:" }}</p>
+      </div>
+      <div class="user-actions">
+        {% if not p.is_active %}
+        <form method="post" action="{% url 'manage_model_action' p.id %}">{% csrf_token %}<input type="hidden" name="action" value="activate"><button type="submit">Set current</button></form>
+        {% endif %}
+        <form method="post" action="{% url 'manage_model_action' p.id %}" onsubmit="return confirm('Delete model {{ p.name }}?')">{% csrf_token %}<input type="hidden" name="action" value="delete"><button type="submit">Delete</button></form>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="muted-inline">No models yet — the study coach is offline until one is added.</p>
+  {% endif %}
+</section>
+{% endblock %}

@@ -41,6 +41,7 @@ fi
 "${VENV}/bin/python" manage.py migrate --database=default --noinput
 "${VENV}/bin/python" manage.py validate_content
 "${VENV}/bin/python" manage.py ensure_admin
+"${VENV}/bin/python" manage.py ensure_ai_model
 "${VENV}/bin/python" manage.py db_status
 "${VENV}/bin/python" manage.py env_status
 "${VENV}/bin/python" manage.py collectstatic --noinput

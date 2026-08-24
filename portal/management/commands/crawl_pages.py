@@ -54,6 +54,7 @@ def urls() -> list[str]:
         "/mcat/",
         "/diseases/",
         "/login/",
+        "/manage/models/",
         "/nope/",
     ]
     for slug in SHARED:

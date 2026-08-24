@@ -30,7 +30,7 @@
 | 🔎 **Materials desk** | 105-term searchable glossary, 108 formulas in per-subject sheets, exam tips, study paths, and checklists |
 | 🩺 **Disease library** | 8 mechanism-first articles (TB, dengue, MI, …) bridging basic science to clinical intuition — enrichment reading, honestly labeled as such |
 | ✅ **Progress tracking** | Per-chapter completion and practice attempts, stored per learner account |
-| 🤖 **AI study coach** | Explain / quiz / grade modes, grounded in whichever chapter you are reading — it cannot wander off the outline |
+| 🤖 **AI study coach, model-agnostic** | Explain / quiz / grade modes, grounded in whichever chapter you are reading. Any OpenAI-compatible endpoint or Anthropic API — admins add, delete, and switch models at runtime |
 | 📁 **File-based content** | The entire curriculum is version-controlled YAML: edit, validate, push — no database migration, no build step |
 
 ## 📚 The curriculum at a glance
@@ -71,9 +71,10 @@ Open <http://127.0.0.1:8000/> and sign in.
 <details>
 <summary><strong>Enabling the AI study coach (optional)</strong></summary>
 
-The tutor needs a MiniMax API key. Copy `.env.example` to `.env` and fill in
-`MINIMAX_API_KEY` (gitignored; `python manage.py env_status` verifies it is
-found). Without a key, everything else works — only the coach is disabled.
+The coach needs at least one AI model. Sign in as a staff user and open
+**Manage → Models** to add any OpenAI-compatible endpoint or an Anthropic API
+key, then mark one model as current. Without a model, everything else works —
+only the coach is offline.
 
 </details>
 
@@ -99,7 +100,7 @@ flowchart LR
     A["content/*.yml<br/>curriculum pack<br/>(single source of truth)"] -->|"portal/content.py<br/>mtime-cached reader"| B["Django app"]
     B --> C["Learner UI<br/>outlines · tutorials · practice<br/>flashcards · materials desk"]
     B --> D[("users.sqlite3<br/>accounts · progress")]
-    C -->|"explain / quiz / grade"| E["MiniMax-M3<br/>outline-grounded coach"]
+    C -->|"explain / quiz / grade"| E["AI coach<br/>OpenAI-compatible · Anthropic<br/>(admin-managed models)"]
 ```
 
 - **Content is files, not tables.** The reader parses YAML on demand and
@@ -120,8 +121,9 @@ architecture, migrations, content pipeline, and this README:
 | **Agent** | [Claude Code](https://claude.com/claude-code) — CLI coding agent (file edits, shell, git, deploys) |
 | **Model** | **GLM**, trained by Z.ai — the model powering the agent |
 
-The AI *inside the product* is separate and swappable: the on-site study
-coach calls the **MiniMax-M3** API (see `.env.example`). All curriculum
+The AI *inside the product* is separate and swappable: the study coach calls
+whatever model an administrator registers — any **OpenAI-compatible** endpoint
+or the **Anthropic** Messages API (see *Manage → Models*). All curriculum
 content written by the agent is original prose, with every external source
 declared in [`content/SOURCES.yml`](content/SOURCES.yml).
 
@@ -144,7 +146,7 @@ references are consulted for facts and coverage only — never copied:
 | OpenStax textbooks (*Biology 2e* et al.) | Tutorial facts & structure | CC BY-NC-SA 4.0 | consulted only — facts and outline, no text |
 | AAMC, *What's on the MCAT Exam* | MCAT section mapping | © AAMC — public outline | paraphrased mapping |
 | CEM NMAT test description | NMAT structure & timing | © CEM — public description | paraphrased mapping |
-| MiniMax API | Study-coach backend | commercial API | runtime calls; no content sourced |
+| AI provider APIs (OpenAI-compatible / Anthropic) | Study-coach backend | commercial APIs | runtime calls; no content sourced |
 
 Exact editions, access dates, and per-chapter declarations live in
 [`content/SOURCES.yml`](content/SOURCES.yml), enforced by the validation gate.
