@@ -82,6 +82,14 @@ def tutorial_detail(request, slug, chapter_id):
             chapter = item
             break
     if chapter is None:
+        # legacy ids were ch-<index>-<slug>; redirect them to the slug form
+        import re as _re
+
+        m = _re.match(r"^ch-\d+-(.+)$", chapter_id)
+        if m:
+            for item in flat:
+                if item.get("chapter_id") == m.group(1):
+                    return redirect("tutorial_detail", slug=slug, chapter_id=m.group(1))
         raise Http404("Chapter not found")
     tutorial = tutorial_for(slug, chapter.get("title", ""))
     if tutorial is None:

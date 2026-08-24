@@ -1,0 +1,36 @@
+id: 1c-heritable-information-diversity
+title: 1C · Heritable information & diversity
+discipline: biochemistry
+exams:
+- NMAT
+- MCAT
+points:
+- Heritable information and genetic diversity processes
+notes:
+- Semiconservative replication; proofreading/repair
+- Meiotic recombination and independent assortment
+- Mutation plus selection/drift change allele frequencies (intro)
+- Telomerase compensates end shortening in germline/stem cells
+- Frameshift mutations often impact more than missense
+practice:
+- id: bb-2
+  q: 'In the DNA double helix, base pairing follows:'
+  choices:
+    A: A–T (2 H-bonds), G–C (3 H-bonds)
+    B: A–G, T–C
+    C: Random pairing of any bases
+    D: Only U participates
+  answer: A
+  explain: Watson–Crick pairing enables complementary-strand replication and transcription templates.
+  chapter: 1C · Heritable information & diversity
+- id: bioc-5
+  q: 'A missense point mutation means:'
+  choices:
+    A: One codon codes for a different amino acid
+    B: A premature stop codon appears
+    C: The amino acid sequence is unchanged
+    D: An entire chromosome is deleted
+  answer: A
+  explain: Missense swaps one amino acid; nonsense introduces stop; silent leaves the protein sequence
+    unchanged.
+  chapter: 1C · Heritable information & diversity

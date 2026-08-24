@@ -4,9 +4,6 @@ from __future__ import annotations
 
 from . import content
 
-# kept under its historical private name for straggler callers
-_chapter_id = content._chapter_id
-
 
 def notes_for(slug: str, chapter_title: str) -> list[dict[str, str]]:
     return content.notes_for(slug, chapter_title)

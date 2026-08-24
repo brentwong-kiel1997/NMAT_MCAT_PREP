@@ -1,0 +1,34 @@
+id: 10a-social-inequality
+title: 10A · Social inequality
+discipline: psych-soc
+exams:
+- MCAT
+points:
+- Social inequality and access to resources
+notes:
+- SES and health outcomes
+- Cultural and social capital concepts
+- 'Matthew effect: advantage accumulates, amplifying inequality'
+- 'Healthcare gaps: insurance, geography, language affect access'
+practice:
+- id: ps-9
+  q: 'Social stratification refers to:'
+  choices:
+    A: Hierarchical ranking and unequal distribution of status and resources
+    B: Perfectly equal resources for everyone
+    C: Geological rock layers only
+    D: Neuronal lamination only
+  answer: A
+  explain: Stratification reflects structural inequality across class, education, income, and related
+    dimensions.
+  chapter: 10A · Social inequality
+- id: ps-11
+  q: 'Socioeconomic status (SES) usually does NOT include:'
+  choices:
+    A: Income
+    B: Education
+    C: Occupation
+    D: Blood type
+  answer: D
+  explain: SES composites income, education, occupation — not blood type.
+  chapter: 10A · Social inequality

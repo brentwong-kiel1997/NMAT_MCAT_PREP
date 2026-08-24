@@ -1,0 +1,31 @@
+id: 4c-electrochemistry-and-electrical-circuits
+title: 4C · Electrochemistry and electrical circuits
+discipline: physics
+exams:
+- NMAT
+- MCAT
+points:
+- Electrochemistry and circuit elements
+notes:
+- 'Cells: redox and electron flow'
+- Series/parallel resistance and equivalents
+- Capacitor charge/discharge and time-constant idea
+- E°cell = E°red − E°ox (watch sign convention)
+- Capacitance C = Q/V; parallel capacitors add
+- RC time constant τ = RC
+- Half-reactions and electron flow
+- Ohm’s law with series/parallel
+- Standard hydrogen electrode E° = 0 V as reference
+- Electrolyte concentration shifts cell voltage (nonstandard conditions)
+practice:
+- id: cp-4
+  q: 'In a series circuit, the current:'
+  choices:
+    A: Is the same through each element
+    B: Differs randomly at each element
+    C: Is always zero
+    D: Exists only inside the battery
+  answer: A
+  explain: One path in series → charge conservation gives the same current everywhere; voltage divides
+    across elements.
+  chapter: 4C · Electrochemistry and electrical circuits

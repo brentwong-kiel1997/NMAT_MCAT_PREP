@@ -1,0 +1,36 @@
+id: fundamental-operations
+title: Fundamental Operations
+discipline: quantitative
+exams:
+- NMAT
+points:
+- Four operations and order of operations
+- Quick work with fractions, percents, ratios
+notes:
+- Be fluent converting fractions ↔ percents
+- Estimation kills absurd options
+- 'Proportions: cross-multiply only after unit alignment'
+- Scientific notation simplifies large-number multiply/divide
+- Estimate magnitude first, then compute; drop absurd choices
+- 'Percent change: distinguish percentage points from relative percent'
+practice:
+- id: quant-2
+  q: '15% of 80 equals:'
+  choices:
+    A: '12'
+    B: '8'
+    C: '15'
+    D: '120'
+  answer: A
+  explain: 0.15 × 80 = 12.
+  chapter: Fundamental Operations
+- id: quan-6
+  q: If x/3 = 12/9, then x =
+  choices:
+    A: '3'
+    B: '4'
+    C: '9'
+    D: '36'
+  answer: B
+  explain: 'Cross-multiply: 9x=36 → x=4.'
+  chapter: Fundamental Operations

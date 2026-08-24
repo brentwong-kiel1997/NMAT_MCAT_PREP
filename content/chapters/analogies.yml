@@ -1,0 +1,67 @@
+id: analogies
+title: Analogies
+discipline: verbal
+exams:
+- NMAT
+points:
+- Identify word-pair relations (synonym, antonym, part-whole, cause, degree, etc.)
+- Transfer the relation to choices; eliminate look-alike distractors
+notes:
+- State the pair relation in one sentence, then test options
+- Watch same-topic distractors with different relations
+- Degree, cause-effect, and part-whole are high-frequency
+- Eliminate options whose relation type mismatches first
+- For verb pairs watch transitivity and causal direction
+- State the A:B relation first, then map C:?
+- 'Common relations: synonym, antonym, part–whole, cause, degree'
+practice:
+- id: verb-1
+  q: 'WORD : DICTIONARY :: NOTE : ?'
+  choices:
+    A: Symphony
+    B: Composer
+    C: Silence
+    D: Volume
+  answer: A
+  explain: Words are collected in a dictionary; notes are organized into a symphony.
+  chapter: Analogies
+- id: verb-3
+  q: 'SURGEON : SCALPEL :: WRITER : ?'
+  choices:
+    A: Pen
+    B: Hospital
+    C: Patient
+    D: Medicine
+  answer: A
+  explain: Profession to characteristic tool—a scalpel for a surgeon, a pen for a writer.
+  chapter: Analogies
+- id: verb-4
+  q: 'HOT : COLD :: GENEROUS : ?'
+  choices:
+    A: Stingy
+    B: Wealthy
+    C: Happy
+    D: Tall
+  answer: A
+  explain: 'Antonym relation: hot/cold, generous/stingy.'
+  chapter: Analogies
+- id: verb-6
+  q: 'TREE : FOREST :: STAR : ?'
+  choices:
+    A: Galaxy
+    B: Planet
+    C: Moon
+    D: Telescope
+  answer: A
+  explain: 'Part-to-whole: trees make a forest; stars (collectively) make a galaxy.'
+  chapter: Analogies
+- id: ver-7
+  q: 'Analogy: doctor : hospital :: teacher : ?'
+  choices:
+    A: textbook
+    B: school
+    C: student
+    D: chalk
+  answer: B
+  explain: Profession mapped to primary workplace.
+  chapter: Analogies

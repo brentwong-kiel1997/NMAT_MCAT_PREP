@@ -10,55 +10,22 @@ source_note: NMAT chapter titles from CEM BOI Part 2 Biology; MCAT lists overlap
 exam_notes:
   NMAT: Aligned to intro biology; concepts plus understanding/applying/analyzing.
   MCAT: Interwoven with biochem; many passage items; research design and data reasoning.
+kind: shared
 chapters:
 - heading: NMAT · CEM BOI chapters
-  items:
-  - title: Unity and Diversity of Life
-    points:
-    - Unity and diversity of life
-    - Intro ideas in classification and evolution
-  - title: Cells and Cellular Processes
-    points:
-    - Cell structure and function
-    - Cellular processes (intro metabolism, membrane transport, etc.)
-  - title: Genetics
-    points:
-    - Transmission of genetic information
-    - Intro variation and inheritance patterns
-  - title: The World of Plants and Animals
-    points:
-    - Intro world of plants and animals
-    - Common structure/function comparison points
-  - title: Development
-    points:
-    - Basic developmental concepts
-  - title: 'Life Processes: Regulation and Homeostasis'
-    points:
-    - Regulation and homeostasis
-    - Maintaining the internal environment
-  - title: Organisms and Their Environment
-    points:
-    - Organisms and their environment
-    - Intro ecological relationships
+  chapters:
+  - unity-and-diversity-of-life
+  - cells-and-cellular-processes
+  - genetics
+  - the-world-of-plants-and-animals
+  - development
+  - life-processes-regulation-and-homeostasis
+  - organisms-and-their-environment
 - heading: MCAT · related Content Categories (AAMC)
-  items:
-  - title: 1C · Heritable information & genetic diversity
-    points:
-    - Transmission across generations
-    - Processes that increase genetic diversity
-  - title: 2A · Assemblies of molecules, cells, and cell groups
-    points:
-    - Organization from single cells to multicellular assemblies
-  - title: 2B · Prokaryotes and viruses
-    points:
-    - Structure, growth, physiology, and genetics
-  - title: 2C · Cell division, differentiation, specialization
-    points:
-    - Division, differentiation, and specialization
-  - title: 3A · Nervous & endocrine coordination
-    points:
-    - How nervous/endocrine systems coordinate organs
-  - title: 3B · Main organ systems
-    points:
-    - Structure and integrative functions of major organ systems
-kind: shared
+  chapters:
+  - 1c-heritable-information-genetic-diversity
+  - 2a-assemblies-of-molecules-cells-and-cell-groups
+  - 2b-prokaryotes-and-viruses
+  - 2c-cell-division-differentiation-specialization
+  - 3a-nervous-and-endocrine-systems
+  - 3b-main-organ-systems

@@ -1,0 +1,46 @@
+id: data-interpretation
+title: Data Interpretation
+discipline: quantitative
+exams:
+- NMAT
+points:
+- Read tables/graphs
+- Comparisons, trends, and simple stats reasoning
+notes:
+- Read axes, legend, units first
+- 'Ask: difference, ratio, or trend?'
+- Percent change ≠ percentage-point change
+- Mean pulled by extremes; median is more robust
+- 'Graph items: read axis labels and units first'
+- Mean is pulled by outliers; median is more robust
+practice:
+- id: quant-1
+  q: 'Data-interpretation items usually start by:'
+  choices:
+    A: Computing before reading the question
+    B: Reading axes, legend, and units
+    C: Ignoring the title
+    D: Looking only at the largest number
+  answer: B
+  explain: Axes and units define what numbers mean.
+  chapter: Data Interpretation
+- id: quant-4
+  q: 'If a bar chart shows rising sales over three years, the safest conclusion is:'
+  choices:
+    A: Sales trend upward over those three years (within the chart’s scope)
+    B: Sales will rise forever
+    C: Profit must have doubled
+    D: The sample represents the whole world
+  answer: A
+  explain: Data items cannot exceed the chart’s time frame and variables—avoid over-extrapolation.
+  chapter: Data Interpretation
+- id: quan-5
+  q: 'For 2, 3, 3, 100 the median is:'
+  choices:
+    A: '2'
+    B: '3'
+    C: '27'
+    D: '100'
+  answer: B
+  explain: 'Even count: average the two middle values (3+3)/2=3.'
+  chapter: Data Interpretation

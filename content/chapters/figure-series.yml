@@ -1,0 +1,34 @@
+id: figure-series
+title: Figure Series
+discipline: inductive-reasoning
+exams:
+- NMAT
+points:
+- Rotation/reflection/add-remove elements
+- Infer rules of position, shading, and overlays
+notes:
+- Track position, count, fill, and rotation as separate threads
+- Multiple rules may stack — find the steadiest change first
+- Odd/even terms may follow different sub-rules
+- Rotation often uses fixed steps (90°, 45°)
+practice:
+- id: ind-1
+  q: 'On figure-series items, prioritize:'
+  choices:
+    A: Guessing every rule at once then quitting
+    B: Tracking position, count, fill, and rotation separately
+    C: Only color, ignore shape
+    D: Picking the middle option
+  answer: B
+  explain: Rules often stack — separate threads are safer.
+  chapter: Figure Series
+- id: ind-4
+  q: 'An “every other term” rule in a figure series means:'
+  choices:
+    A: Odd and even positions may follow different sub-rules
+    B: The series has only two terms
+    C: Rotation must be ignored
+    D: The answer is always A
+  answer: A
+  explain: Alternating rules are common—e.g., odd terms rotate, even terms add elements.
+  chapter: Figure Series

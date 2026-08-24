@@ -1,0 +1,27 @@
+id: vibrations-waves-and-optics
+title: Vibrations, Waves, and Optics
+discipline: physics
+exams:
+- NMAT
+- MCAT
+points:
+- Vibrations and waves
+- Basics of geometric/wave optics
+notes:
+- 'SHM: period and energy exchange'
+- Wave speed v = fλ; interference/diffraction conditions
+- Reflection/refraction; keep lens-sign conventions consistent
+- SHM period T = 2π√(m/k)
+- 'Standing waves: fixed node and antinode positions'
+- 'Thin lens: 1/f = 1/do + 1/di'
+practice:
+- id: phy-7
+  q: 'When light goes from air into glass, it generally:'
+  choices:
+    A: Speeds up with longer wavelength
+    B: Slows and bends toward the normal (refraction)
+    C: Does not refract
+    D: Changes frequency
+  answer: B
+  explain: Light slows in a denser medium; the refracted ray bends toward the normal.
+  chapter: Vibrations, Waves, and Optics

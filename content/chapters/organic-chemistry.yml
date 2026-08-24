@@ -1,0 +1,27 @@
+id: organic-chemistry
+title: Organic Chemistry
+discipline: chemistry
+exams:
+- NMAT
+- MCAT
+points:
+- Functional groups and basic reaction types
+- Organic foundations relevant to biomolecules
+notes:
+- Functional groups drive reactivity (alcohol, carbonyl, acid, amine)
+- Nucleophile/electrophile and acid-base character shape pathways
+- 'Isomerism: structural and stereo (intro)'
+- 'SN1: tertiary substrate, weak nucleophile, solvent stabilizes carbocation'
+- 'SN2: primary substrate, strong nucleophile, backside attack inversion'
+- 'Carbonyl addition: aldehyde/ketone vs carboxyl derivative reactivity'
+practice:
+- id: chem-6
+  q: 'Carbon is tetravalent in organic chemistry mainly because it:'
+  choices:
+    A: Has 4 valence electrons and forms 4 covalent bonds
+    B: Forms only ionic bonds
+    C: Its nucleus is negatively charged
+    D: Cannot form double bonds
+  answer: A
+  explain: Carbon’s hybridization allows single, double, and triple bonds that scaffold organic molecules.
+  chapter: Organic Chemistry

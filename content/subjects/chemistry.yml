@@ -12,44 +12,19 @@ exam_notes:
   NMAT: 'Intro scope: common gen/analytical/organic/biochem ideas.'
   MCAT: Chem/Phys emphasizes gen/organic chem and interactions; Bio/Biochem emphasizes biomolecules and
     metabolism.
+kind: shared
 chapters:
 - heading: NMAT · CEM BOI chapters
-  items:
-  - title: General Chemistry
-    points:
-    - Atomic structure and periodicity
-    - Bonding and stoichiometry
-    - Intro acids/bases, redox, and equilibrium
-  - title: Analytical Chemistry
-    points:
-    - Basics of quantitative analysis
-    - Common separation/assay ideas (intro level)
-  - title: Organic Chemistry
-    points:
-    - Functional groups and basic reaction types
-    - Organic foundations relevant to biomolecules
-  - title: Biochemistry
-    points:
-    - Intro biological macromolecules
-    - Basic metabolism ideas (see Biochemistry hub)
+  chapters:
+  - general-chemistry
+  - analytical-chemistry
+  - organic-chemistry
+  - biochemistry
 - heading: MCAT · related Content Categories (AAMC)
-  items:
-  - title: 5A · Water and its solutions
-    points:
-    - Unique properties of water and solutions
-  - title: 5B · Molecules and intermolecular interactions
-    points:
-    - Nature of molecules and intermolecular forces
-  - title: 5C · Separation and purification methods
-    points:
-    - Separations/purifications (including peptide/protein methods)
-  - title: 5D · Biologically relevant molecules
-    points:
-    - Structure, function, and reactivity
-  - title: 5E · Chemical thermodynamics and kinetics
-    points:
-    - Principles of thermodynamics and kinetics
-  - title: 4E · Atoms, nuclear decay, electronic structure
-    points:
-    - Atomic chemical behavior (Chem/Phys)
-kind: shared
+  chapters:
+  - 5a-unique-nature-of-water-and-its-solutions
+  - 5b-molecules-and-intermolecular-interactions
+  - 5c-separation-and-purification-methods
+  - 5d-biologically-relevant-molecules
+  - 5e-chemical-thermodynamics-and-kinetics
+  - 4e-atoms-nuclear-decay-electronic-structure

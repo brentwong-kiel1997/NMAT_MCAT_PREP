@@ -1,0 +1,32 @@
+id: 2a-assemblies-of-molecules-cells-and-cell-groups
+title: 2A · Assemblies of molecules, cells, and cell groups
+discipline: biology
+exams:
+- NMAT
+- MCAT
+points:
+- Organization from single cells to multicellular assemblies
+- Assemblies of molecules, cells, and cell groups
+notes:
+- 'Hierarchy: macromolecules → organelles → tissues'
+- Junctions and ECM support tissue function
+- Amphipathic phospholipids define the bilayer core
+- Tight junctions block leak; desmosomes resist pull
+- 'Tissues: epithelial, connective, muscle, nervous'
+- Fluid mosaic and selective permeability
+- Tissue types matched to function
+- Gap junctions permit small-molecule intercellular signaling
+- 'Basement membrane: epithelial–connective interface'
+- 'Cytoskeleton roles: microtubules, microfilaments, intermediate filaments'
+- ECM collagen supplies tensile strength
+practice:
+- id: bb-4
+  q: 'The plasma membrane bilayer is mainly built from:'
+  choices:
+    A: Phospholipids
+    B: Free glucose
+    C: Nucleic acid duplexes
+    D: Metallic ion crystals
+  answer: A
+  explain: Amphipathic phospholipids form the bilayer; proteins and cholesterol are embedded within.
+  chapter: 2A · Assemblies of molecules, cells, and cell groups

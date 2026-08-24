@@ -1,0 +1,25 @@
+id: hidden-figure
+title: Hidden Figure
+discipline: perceptual-acuity
+exams:
+- NMAT
+points:
+- Find a target outline in a complex figure
+- Resist distraction; match local features
+notes:
+- Track outline, not fill
+- Match in segments faster than whole-figure search
+- Rotating the page can reduce visual clutter
+- Lock onto target contours; ignore background texture
+- Recognize the same shape after rotation or mirroring
+practice:
+- id: perc-2
+  q: 'A useful strategy on hidden-figure items is to:'
+  choices:
+    A: Lock onto the target outline and match segments in the clutter
+    B: Look only at the figure’s center
+    C: Ignore line orientation
+    D: Closing one eye is always faster
+  answer: A
+  explain: Piecewise outline matching beats unfocused whole-figure scanning.
+  chapter: Hidden Figure

@@ -1,0 +1,25 @@
+id: 6c-responding-to-the-world
+title: 6C · Responding to the world
+discipline: psych-soc
+exams:
+- MCAT
+points:
+- Responding to the world
+notes:
+- Emotion theories contrasted (intro)
+- 'Stress: primary/secondary appraisal and coping'
+- 'James–Lange: physiological arousal precedes emotional experience'
+- 'General adaptation syndrome: alarm → resistance → exhaustion'
+- 'Stress: alarm–resistance–exhaustion (GAS)'
+- 'Coping: problem-focused vs emotion-focused'
+practice:
+- id: ps-4
+  q: 'The fight-or-flight response mainly involves the:'
+  choices:
+    A: Sympathetic nervous system
+    B: Parasympathetic digestion alone
+    C: Visual cortex alone
+    D: Cerebellar language area
+  answer: A
+  explain: Sympathetic activation raises heart rate, breathing, and glucose mobilization for threat response.
+  chapter: 6C · Responding to the world

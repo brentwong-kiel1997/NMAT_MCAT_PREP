@@ -1,0 +1,57 @@
+id: 5e-chemical-thermodynamics-and-kinetics
+title: 5E · Chemical thermodynamics and kinetics
+discipline: chemistry
+exams:
+- NMAT
+- MCAT
+points:
+- Principles of thermodynamics and kinetics
+- Chemical thermodynamics and kinetics
+notes:
+- ΔG vs rate; catalysts don’t change equilibrium position
+- Michaelis–Menten v = Vmax[S]/(Km + [S])
+- 'Transition-state theory: k linked to exp(−Ea/RT)'
+- 'Passage energy diagrams: read ΔH, Ea, and intermediates'
+- 'Zero/first/second order: distinct concentration–time plots'
+practice:
+- id: cp-2
+  q: 'At equilibrium in a reversible reaction:'
+  choices:
+    A: Forward and reverse rates are equal; macroscopic composition is steady
+    B: All reactions stop
+    C: Only products remain
+    D: Temperature must be zero
+  answer: A
+  explain: 'Equilibrium is dynamic: reactions continue microscopically while macroscopic amounts stay
+    constant.'
+  chapter: 5E · Chemical thermodynamics and kinetics
+- id: chem-4
+  q: 'A catalyst speeds a reaction by:'
+  choices:
+    A: Raising ΔG of the reaction
+    B: Providing a lower-activation-energy path
+    C: Changing product element identities
+    D: Permanently consuming reactants against K
+  answer: B
+  explain: Catalysts change the path and lower Ea; overall ΔG / equilibrium position stay the same.
+  chapter: 5E · Chemical thermodynamics and kinetics
+- id: chem-9
+  q: 'Raising temperature on an endothermic reaction typically:'
+  choices:
+    A: Increases K
+    B: Decreases K
+    C: Fixes K at 1
+    D: Has no relation to K
+  answer: A
+  explain: Heating favors products in endothermic reactions (K rises); exothermic reactions show the opposite.
+  chapter: 5E · Chemical thermodynamics and kinetics
+- id: chem-12
+  q: How does a catalyst affect a reversible reaction?
+  choices:
+    A: Changes equilibrium constant K
+    B: Speeds forward and reverse rates, reaching equilibrium sooner
+    C: Speeds only the forward reaction
+    D: Raises ΔG
+  answer: B
+  explain: Catalysts affect both directions equally and do not change equilibrium composition.
+  chapter: 5E · Chemical thermodynamics and kinetics

@@ -1,0 +1,49 @@
+id: genetics
+title: Genetics
+discipline: biology
+exams:
+- NMAT
+- MCAT
+points:
+- Transmission of genetic information
+- Intro variation and inheritance patterns
+notes:
+- 'Central dogma: DNA → RNA → protein (plus common caveats)'
+- 'Mendel: segregation & independent assortment; phenotype/genotype ratios'
+- 'Mutations: point, frameshift, chromosomal structure/number'
+- Meiosis yields haploid gametes and reassorts diversity
+- Dominant/recessive/codominant/incomplete dominance alter ratios
+- Linked genes deviate from 9:3:3:1; recombination rate reflects distance
+- 'X-linked: males more often express recessive traits'
+- 'Epigenetics: heritable expression changes without DNA sequence change'
+practice:
+- id: bio-3
+  q: 'A key meiotic contribution to genetic diversity is:'
+  choices:
+    A: Mitotic copying without segregation
+    B: Crossing over and independent assortment
+    C: Deleting all heterozygous loci
+    D: Blocking DNA replication
+  answer: B
+  explain: Crossing over and independent assortment reshuffle allele combinations.
+  chapter: Genetics
+- id: bio-6
+  q: 'Mendel’s law of segregation states that:'
+  choices:
+    A: Alleles of a gene separate into gametes during gamete formation
+    B: All genes are permanently linked
+    C: Dominant alleles disappear
+    D: Gametes are always diploid
+  answer: A
+  explain: Meiosis puts one allele of each pair into each gamete, restoring haploidy.
+  chapter: Genetics
+- id: bio-13
+  q: Where does transcription mainly occur in eukaryotic cells?
+  choices:
+    A: Cytoplasm
+    B: Nucleus
+    C: Golgi apparatus
+    D: Lysosome
+  answer: B
+  explain: Eukaryotic transcription is nuclear; translation occurs on cytoplasmic ribosomes.
+  chapter: Genetics

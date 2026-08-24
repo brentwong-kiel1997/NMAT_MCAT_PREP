@@ -1,0 +1,24 @@
+id: number-and-letter-series
+title: Number and Letter Series
+discipline: inductive-reasoning
+exams:
+- NMAT
+points:
+- Arithmetic/geometric/alternating rules
+- Letter positions and interleaved dual series
+notes:
+- Check arithmetic, multiplicative, alternating, place-value rules
+- Letters often map to alphabet indices
+- 'Second-order difference: deltas form an arithmetic series'
+- Prime/composite or square/cube subsequences
+practice:
+- id: ind-3
+  q: 'In the number series 2, 6, 18, 54, … the next term is most likely:'
+  choices:
+    A: '162'
+    B: '108'
+    C: '72'
+    D: '60'
+  answer: A
+  explain: 'Geometric sequence with ratio 3: 54 × 3 = 162.'
+  chapter: Number and Letter Series

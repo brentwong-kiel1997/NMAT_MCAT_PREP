@@ -1,0 +1,27 @@
+id: development
+title: Development
+discipline: biology
+exams:
+- NMAT
+- MCAT
+points:
+- Basic developmental concepts
+notes:
+- Fertilization → cleavage → blastula → gastrula → organogenesis (intro)
+- 'Differentiation: selective gene expression, not genome loss (usually)'
+- Induction and signaling set cell fates
+- Morphogen gradients set body axes and organ positions
+- Hox genes conservatively pattern development
+- Stem-cell potency decreases with developmental stage
+practice:
+- id: bio-11
+  q: 'Cell differentiation during development mainly means:'
+  choices:
+    A: The genome is randomly deleted
+    B: Different cell types selectively express different genes
+    C: All cells become functionally identical
+    D: All protein synthesis stops
+  answer: B
+  explain: Differentiation arises from regulated gene expression, not wholesale DNA change (except somatic
+    mutations).
+  chapter: Development

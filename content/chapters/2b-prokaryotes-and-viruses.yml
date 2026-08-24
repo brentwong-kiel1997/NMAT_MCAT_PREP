@@ -1,0 +1,28 @@
+id: 2b-prokaryotes-and-viruses
+title: 2B · Prokaryotes and viruses
+discipline: biology
+exams:
+- NMAT
+- MCAT
+points:
+- Structure, growth, physiology, and genetics
+- Structure, growth, physiology, and genetics of prokaryotes and viruses
+notes:
+- Prokaryotic vs eukaryotic gene expression differences
+- Viral life cycle shapes therapy-target thinking
+- 'Antibiotic resistance: enzymatic degradation, target change, efflux'
+- 'Bacteriophages: bacterial viruses; lytic vs lysogenic'
+- Plasmids can carry resistance genes via horizontal transfer
+- 'Viral life cycle: attach→enter→replicate→assemble→release'
+practice:
+- id: bio-10
+  q: 'Compared with viruses, prokaryotic cells typically have:'
+  choices:
+    A: Ribosomes and cytoplasm capable of independent metabolism
+    B: A membrane-bound nucleus
+    C: Replication only inside a host
+    D: No genetic material
+  answer: A
+  explain: Prokaryotes are free-living cells; viruses depend on host machinery and lack full cellular
+    organization.
+  chapter: 2B · Prokaryotes and viruses

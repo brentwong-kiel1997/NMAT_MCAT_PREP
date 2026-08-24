@@ -9,20 +9,11 @@ item_types:
 - Data Interpretation
 focus: Organize and apply basic math and reasoning to solve.
 source_note: Chapters follow CEM BOI Quantitative item types.
-chapters:
-- heading: Major topics / chapters
-  items:
-  - title: Fundamental Operations
-    points:
-    - Four operations and order of operations
-    - Quick work with fractions, percents, ratios
-  - title: Problem Solving
-    points:
-    - Turn word problems into quantitative relations
-    - Unit conversion and reasonableness checks
-  - title: Data Interpretation
-    points:
-    - Read tables/graphs
-    - Comparisons, trends, and simple stats reasoning
 summary: Organize and apply basic math and reasoning to solve.
 kind: nmat
+chapters:
+- heading: Major topics / chapters
+  chapters:
+  - fundamental-operations
+  - problem-solving
+  - data-interpretation

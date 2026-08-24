@@ -1,0 +1,33 @@
+id: 4d-light-and-sound-interacting-with-matter
+title: 4D · Light and sound interacting with matter
+discipline: physics
+exams:
+- NMAT
+- MCAT
+points:
+- How light and sound interact with matter
+- Light and sound interacting with matter
+notes:
+- 'Sound: intensity, attenuation, Doppler'
+- 'Light: index, TIR, lens imaging'
+- Physical limits of ultrasound/optics in diagnosis (intro)
+- Index n = c/v; Snell’s law n₁sinθ₁ = n₂sinθ₂
+- 'Doppler: source/observer motion shifts frequency'
+- Resonance when driving frequency matches natural frequency
+- Refraction/TIR/lenses; sound intensity and Doppler
+- Higher ultrasound frequency → better resolution, less penetration
+- TIR critical angle sinθc = n₂/n₁ when n₁ > n₂
+- Ultrasound imaging uses reflection from acoustic-impedance mismatches
+- 'Lens: 1/f=1/o+1/i; magnification m=−i/o'
+practice:
+- id: cp-5
+  q: 'For sound in air (a longitudinal wave), particle vibration is:'
+  choices:
+    A: Parallel to the direction of propagation
+    B: Perpendicular to propagation
+    C: There is no vibration
+    D: Only transverse, never longitudinal
+  answer: A
+  explain: Longitudinal waves travel via compressions and rarefactions; transverse waves vibrate perpendicular
+    to travel.
+  chapter: 4D · Light and sound interacting with matter

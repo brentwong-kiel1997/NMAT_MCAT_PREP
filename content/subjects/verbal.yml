@@ -8,17 +8,10 @@ item_types:
 - Reading Comprehension
 focus: Lexical relations and reading comprehension.
 source_note: Chapters follow CEM BOI Verbal item types.
-chapters:
-- heading: Major topics / chapters
-  items:
-  - title: Analogies
-    points:
-    - Identify word-pair relations (synonym, antonym, part-whole, cause, degree, etc.)
-    - Transfer the relation to choices; eliminate look-alike distractors
-  - title: Reading Comprehension
-    points:
-    - Capture main idea and paragraph function
-    - Detail location and inference (stay inside the text)
-    - Tone/attitude and argument structure
 summary: Lexical relations and reading comprehension.
 kind: nmat
+chapters:
+- heading: Major topics / chapters
+  chapters:
+  - analogies
+  - reading-comprehension

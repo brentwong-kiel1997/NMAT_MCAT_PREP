@@ -14,23 +14,11 @@ skills:
 - Reasoning Within the Text
 - Reasoning Beyond the Text
 source_note: Chapters follow AAMC CARS three skill axes (no content syllabus).
-chapters:
-- heading: CARS skill chapters (AAMC)
-  items:
-  - title: Foundations of Comprehension
-    points:
-    - Understand main idea and key claims
-    - Identify roles of information (example, definition, turn)
-    - Track author attitude and argumentative tone
-  - title: Reasoning Within the Text
-    points:
-    - Infer supported but unstated conclusions in-text
-    - Evaluate argument strength and relevance
-    - Identify assumptions and logical links
-  - title: Reasoning Beyond the Text
-    points:
-    - Apply a principle to a new situation
-    - Integrate outside info without violating the passage
-    - Judge whether an analogy holds
 summary: All passage-based; no required content knowledge — comprehension and reasoning.
 kind: mcat
+chapters:
+- heading: CARS skill chapters (AAMC)
+  chapters:
+  - foundations-of-comprehension
+  - reasoning-within-the-text
+  - reasoning-beyond-the-text

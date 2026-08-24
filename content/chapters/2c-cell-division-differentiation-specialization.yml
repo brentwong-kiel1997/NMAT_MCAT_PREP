@@ -1,0 +1,42 @@
+id: 2c-cell-division-differentiation-specialization
+title: 2C · Cell division, differentiation, specialization
+discipline: biology
+exams:
+- NMAT
+- MCAT
+points:
+- Division, differentiation, and specialization
+- Cell division, differentiation, and specialization
+notes:
+- Mitosis keeps chromosome number; meiosis halves it
+- Checkpoints vs uncontrolled growth (intro)
+- 'Stem cells: self-renewal + differentiation potential'
+- G₁/S/G₂/M checkpoints monitor DNA damage and spindle attachment
+- Cyclin–CDK complexes drive the cell cycle
+- Loss of contact inhibition marks cultured cancer cells
+- Cell-cycle phases and checkpoints
+- Apoptosis vs necrosis (intro)
+- 'MPF: cyclin B + CDK1 drives M phase'
+- 'Induced differentiation: extrinsic signals launch gene programs'
+practice:
+- id: bb-6
+  q: 'A defining feature of stem cells is:'
+  choices:
+    A: Self-renewal plus differentiation potential
+    B: Inability to divide
+    C: Loss of the nucleus
+    D: Production of only one terminal cell type ever
+  answer: A
+  explain: Stem cells replenish themselves and can differentiate; potency varies by stem-cell type.
+  chapter: 2C · Cell division, differentiation, specialization
+- id: bio-9
+  q: 'After mitosis, daughter cells have chromosome number:'
+  choices:
+    A: Halved
+    B: The same as the parent (diploidy maintained)
+    C: Quadrupled
+    D: Randomly variable
+  answer: B
+  explain: Mitosis duplicates then evenly partitions chromosomes, yielding genetically identical diploid
+    daughters.
+  chapter: 2C · Cell division, differentiation, specialization

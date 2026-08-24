@@ -9,20 +9,11 @@ item_types:
 - Identical Information
 focus: Visual recognition, detail, and spatial relations under distraction.
 source_note: Chapters follow CEM BOI Perceptual Acuity item types.
-chapters:
-- heading: Major topics / chapters
-  items:
-  - title: Hidden Figure
-    points:
-    - Find a target outline in a complex figure
-    - Resist distraction; match local features
-  - title: Mirror Image
-    points:
-    - Left-right mirror judgments
-    - Distinguish flip vs rotation
-  - title: Identical Information
-    points:
-    - Quick same/different comparisons
-    - Trade-off between detail accuracy and speed
 summary: Visual recognition, detail, and spatial relations under distraction.
 kind: nmat
+chapters:
+- heading: Major topics / chapters
+  chapters:
+  - hidden-figure
+  - mirror-image
+  - identical-information

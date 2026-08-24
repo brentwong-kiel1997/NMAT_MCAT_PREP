@@ -1,0 +1,31 @@
+id: 3a-nervous-and-endocrine-systems
+title: 3A · Nervous and endocrine systems
+discipline: biology
+exams:
+- NMAT
+- MCAT
+points:
+- How nervous/endocrine systems coordinate organs
+- How nervous and endocrine systems coordinate organ systems
+notes:
+- 'Neural: fast/local; endocrine: slower/broad'
+- 'AP: depol→repol; chemical synaptic transmission'
+- Peptide vs steroid hormone signaling differs
+- Resting potential ≈ K⁺ outflow; AP peak from Na⁺ influx
+- Myelin enables saltatory conduction over long distances
+- 'Negative-feedback axes: thyroid and adrenal cortex examples'
+- Synaptic transmission and transmitter-class intuition
+- 'Feedback: hypothalamus–pituitary–target gland'
+- Blood–brain barrier limits hydrophilic entry to CNS
+- Epinephrine mediates fight-or-flight sympathetic response
+practice:
+- id: bio-12
+  q: 'The “all-or-none” property of a neuronal action potential means:'
+  choices:
+    A: Stronger stimuli produce larger single action potentials
+    B: At threshold a fixed-size spike occurs; below threshold, none
+    C: Neurons never fire
+    D: Synaptic transmission needs no neurotransmitter
+  answer: B
+  explain: Single spike amplitude is constant; stimulus strength mainly affects firing frequency.
+  chapter: 3A · Nervous and endocrine systems

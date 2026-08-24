@@ -87,70 +87,39 @@ def store() -> dict:
 # --------------------------------------------------------------------------
 
 
-def _chapter_id(title: str, index: int) -> str:
-    raw = re.sub(r"[^a-zA-Z0-9一-鿿]+", "-", title).strip("-").lower()
-    raw = raw[:48] or "ch"
-    return f"ch-{index}-{raw}"
-
-
 def attach_notes(subject: dict) -> dict:
-    """Return subject with study_notes and chapter_id on matching items."""
+    """Resolve a subject's chapter REFERENCES against the chapter library.
+
+    Each reference group becomes {heading, items:[...]}; items are views of
+    library chapters: title/points/chapter_id(=slug)/exams/study_notes.
+    """
     if not subject:
         return subject
-    slug = subject.get("slug") or ""
-    idx = 0
+    data = store()
     for group in subject.get("chapters") or []:
-        for item in group.get("items") or []:
-            title = item.get("title") or ""
-            idx += 1
-            item["chapter_id"] = _chapter_id(title, idx)
-            item.setdefault("exams", chapter_exams(slug, title))
-            notes = notes_for(slug, title)
-            if notes:
-                item["study_notes"] = notes
+        items = []
+        for slug in group.get("chapters") or []:
+            ch = data["chapters"].get(slug)
+            if not ch:
+                raise ContentError(
+                    f"subject {subject.get('slug')!r} references unknown chapter {slug!r}"
+                )
+            item = {
+                "title": ch.get("title", ""),
+                "points": list(ch.get("points") or []),
+                "chapter_id": slug,
+                "exams": list(ch.get("exams") or []),
+            }
+            if ch.get("notes"):
+                item["study_notes"] = list(ch["notes"])
+            items.append(item)
+        group["items"] = items
     return subject
 
 
 # --------------------------------------------------------------------------
 # store construction
 # --------------------------------------------------------------------------
-
-# Forward overlay from the original note sources: shared subject pages pick
-# up MCAT chapter notes. Canonical buckets live in content/notes/; copies are
-# made here at read time. chem-phys and bio-biochem merge from the
-# ALREADY-STAGED physics/chemistry/biology buckets, exactly like the
-# historical import ordering.
-def _overlay(base: dict) -> dict:
-    staged = dict(base)
-    staged["biology"] = {**base["biology"], **base.get("bio-biochem", {})}
-    staged["chemistry"] = {
-        **base["chemistry"],
-        **{
-            k: v
-            for k, v in base.get("chem-phys", {}).items()
-            if k.startswith("5") or k.startswith("4E")
-        },
-    }
-    staged["physics"] = {
-        **base["physics"],
-        **{k: v for k, v in base.get("chem-phys", {}).items() if k.startswith("4")},
-    }
-    staged["chem-phys"] = {
-        **staged["physics"],
-        **staged["chemistry"],
-        **base.get("chem-phys", {}),
-    }
-    staged["bio-biochem"] = {
-        **staged["biology"],
-        **base.get("biochemistry", {}),
-        **base.get("bio-biochem", {}),
-    }
-    staged["psych-soc"] = {
-        **base.get("behavioral-social", {}),
-        **base.get("psych-soc", {}),
-    }
-    return staged
-
 
 def _build() -> dict:
     catalog = _read("catalog.yml")
@@ -160,6 +129,18 @@ def _build() -> dict:
         for slug, label in (catalog.get("labels") or {}).items()
     }
 
+    # unified chapter library — ONE instance per chapter (content/chapters/)
+    chapters: dict[str, dict] = {}
+    chap_dir = CONTENT_DIR / "chapters"
+    if not chap_dir.is_dir():
+        raise ContentError(f"missing directory {chap_dir}")
+    for file in sorted(chap_dir.glob("*.yml")):
+        doc = _read(f"chapters/{file.name}")
+        doc.setdefault("id", file.stem)
+        chapters[doc["id"]] = doc
+    chapter_by_title = {c.get("title", ""): c for c in chapters.values()}
+
+    # subjects = exam-facing ordered REFERENCE lists over the chapter library
     subjects: dict[str, dict] = {}
     subject_kinds: dict[str, str] = {}
     subj_dir = CONTENT_DIR / "subjects"
@@ -169,25 +150,6 @@ def _build() -> dict:
         doc = _read(f"subjects/{file.name}")
         subjects[doc["slug"]] = doc
         subject_kinds[doc["slug"]] = doc.get("kind", "shared")
-
-    # canonical note buckets → forward overlay
-    base_notes: dict[str, dict] = {}
-    notes_dir = CONTENT_DIR / "notes"
-    if notes_dir.is_dir():
-        for file in sorted(notes_dir.glob("*.yml")):
-            doc = _read(f"notes/{file.name}")
-            base_notes[doc["slug"]] = {
-                ch["title"]: list(ch.get("bullets") or [])
-                for ch in doc.get("chapters") or []
-            }
-    staged_notes = _overlay(base_notes)
-
-    practice: dict[str, list] = {}
-    prac_dir = CONTENT_DIR / "practice"
-    if prac_dir.is_dir():
-        for file in sorted(prac_dir.glob("*.yml")):
-            doc = _read(f"practice/{file.name}")
-            practice[doc["slug"]] = list(doc.get("items") or [])
 
     glossary = [
         {
@@ -236,8 +198,8 @@ def _build() -> dict:
         "labels": labels,
         "subjects": subjects,
         "subject_kinds": subject_kinds,
-        "notes": staged_notes,
-        "practice": practice,
+        "chapters": chapters,
+        "chapter_by_title": chapter_by_title,
         "glossary": glossary,
         "formulas": formulas,
         "tips": tips,
@@ -346,38 +308,54 @@ def mcat_exam() -> dict:
 
 
 def notes_for(slug: str, chapter_title: str) -> list[str]:
-    bucket = store()["notes"].get(slug) or {}
-    if chapter_title in bucket:
-        return list(bucket[chapter_title])
+    """Notes of the referenced chapter (exact title, then fuzzy)."""
+    ch = store()["chapter_by_title"].get(chapter_title)
+    if ch:
+        return list(ch.get("notes") or [])
     title_l = chapter_title.lower()
-    left = chapter_title.split("·")[0].strip().lower()
-    for key in sorted(bucket):
-        k = key.lower()
+    for title, ch2 in sorted(store()["chapter_by_title"].items()):
+        k = title.lower()
         if k in title_l or title_l in k:
-            return list(bucket[key])
-        kleft = key.split("·")[0].strip().lower()
-        if left and kleft == left and len(left) <= 4:
-            return list(bucket[key])
+            return list(ch2.get("notes") or [])
     return []
 
 
+def _subject_chapter_slugs(slug: str) -> list[str]:
+    subject = store()["subjects"].get(slug) or {}
+    return [
+        s for group in subject.get("chapters") or [] for s in (group.get("chapters") or [])
+    ]
+
+
 def flashcards_for(slug: str, limit: int = 40) -> list[dict]:
-    bucket = store()["notes"].get(slug) or {}
+    data = store()
     cards: list[dict] = []
-    for title in sorted(bucket):
-        for note in bucket[title]:
-            cards.append({"chapter": title, "text": note})
-            if len(cards) >= limit:
-                return cards
+    pairs = []
+    for s in _subject_chapter_slugs(slug):
+        ch = data["chapters"].get(s) or {}
+        for note in ch.get("notes") or []:
+            pairs.append((ch.get("title", ""), note))
+    for title, note in sorted(pairs):
+        cards.append({"chapter": title, "text": note})
+        if len(cards) >= limit:
+            return cards
     return cards
 
 
 def practice_for(slug: str) -> list[dict]:
-    return deepcopy(store()["practice"].get(slug) or [])
+    data = store()
+    items: list[dict] = []
+    for s in _subject_chapter_slugs(slug):
+        ch = data["chapters"].get(s) or {}
+        items.extend(deepcopy(ch.get("practice") or []))
+    return items
 
 
 def all_practice_slugs() -> list[str]:
-    return sorted(store()["practice"])
+    data = store()
+    return sorted(
+        slug for slug in data["subjects"] if practice_for(slug)
+    )
 
 
 def practice_catalog() -> list[dict]:
@@ -388,7 +366,7 @@ def practice_catalog() -> list[dict]:
             {
                 "slug": slug,
                 "label": data["labels"].get(slug, slug),
-                "count": len(data["practice"].get(slug) or []),
+                "count": len(practice_for(slug)),
             }
         )
     return out
@@ -510,75 +488,41 @@ def units_store() -> dict:
     if _units_cache is None or stamp != _units_stamp:
         data = store()
         doc = _read("units.yml") if (CONTENT_DIR / "units.yml").exists() else {}
-        overrides = {}
-        for ov in (doc.get("exam_overrides") or []):
-            overrides[(ov.get("subject"), ov.get("chapter"))] = list(ov.get("exams") or [])
-
-        kinds = data.get("subject_kinds", {})
-
-        def flat_of(subject_slug: str) -> list:
-            subject = data["subjects"].get(subject_slug)
-            if not subject:
-                return []
-            # chapter_id derivation matches attach_notes: index runs continuously
-            out = []
-            idx = 0
-            for group in subject.get("chapters") or []:
-                for it in group.get("items") or []:
-                    idx += 1
-                    item = dict(it)
-                    item["chapter_id"] = _chapter_id(item.get("title", ""), idx)
-                    item["group"] = group.get("heading", "")
-                    item["subject"] = subject_slug
-                    out.append(item)
-            return out
-
-        def exams_of(subject_slug: str, title: str) -> list:
-            ov = overrides.get((subject_slug, title))
-            if ov is not None:
-                return ov
-            kind = kinds.get(subject_slug, "shared")
-            if kind == "shared":
-                return ["NMAT", "MCAT"]
-            if kind == "nmat":
-                return ["NMAT"]
-            return ["MCAT"]
 
         units: dict[str, dict] = {}
         for proj_key, proj in (doc.get("projects") or {}).items():
             for u in (proj.get("units") or []):
                 key = u["key"]
-                source = u["source"]
-                codes = list(u.get("chapters") or [])
-                flat = flat_of(source)
-                if codes:
-                    flat = [
-                        it for it in flat
-                        if any(it["title"] == c or it["title"].startswith(c + " ·") for c in codes)
-                    ]
-                chapters = [
-                    {
-                        "subject": it["subject"],
-                        "title": it["title"],
-                        "chapter_id": it["chapter_id"],
-                        "group": it["group"],
-                        "exams": exams_of(it["subject"], it["title"]),
-                    }
-                    for it in flat
-                ]
+                refs = list(u.get("chapters") or [])
+                chapters = []
+                for slug in refs:
+                    ch = data["chapters"].get(slug)
+                    if not ch:
+                        raise ContentError(
+                            f"units.yml: unit {key!r} references unknown chapter {slug!r}"
+                        )
+                    chapters.append(
+                        {
+                            "subject": ch.get("discipline", ""),
+                            "title": ch.get("title", ""),
+                            "chapter_id": slug,
+                            "group": "",
+                            "exams": list(ch.get("exams") or []),
+                        }
+                    )
                 units[key] = {
                     "key": key,
                     "project": proj_key,
                     "label": u.get("label", key),
                     "group": u.get("group", ""),
-                    "source": source,
+                    "source": u.get("source", ""),
                     "cross": list(u.get("cross") or []),
                     "chapters": chapters,
                 }
         _units_cache = {
             "projects": doc.get("projects") or {},
             "units": units,
-            "subject_kinds": kinds,
+            "subject_kinds": data.get("subject_kinds", {}),
         }
         _units_stamp = stamp
     return _units_cache
@@ -599,14 +543,10 @@ def unit_chapters(key: str) -> list:
 
 
 def chapter_exams(subject_slug: str, chapter_title: str) -> list:
-    for u in units_store()["units"].values():
-        if u["source"] != subject_slug:
-            continue
-        for ch in u["chapters"]:
-            if ch["title"] == chapter_title:
-                return list(ch["exams"])
-    kind = units_store()["subject_kinds"].get(subject_slug, "shared")
-    return ["NMAT", "MCAT"] if kind == "shared" else (["NMAT"] if kind == "nmat" else ["MCAT"])
+    ch = store()["chapter_by_title"].get(chapter_title)
+    if ch:
+        return list(ch.get("exams") or [])
+    return []
 
 
 def project_units() -> list:

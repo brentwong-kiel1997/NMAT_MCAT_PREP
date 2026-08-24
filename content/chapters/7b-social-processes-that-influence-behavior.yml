@@ -1,0 +1,23 @@
+id: 7b-social-processes-that-influence-behavior
+title: 7B · Social processes that influence behavior
+discipline: psych-soc
+exams:
+- MCAT
+points:
+- Social processes that influence behavior
+notes:
+- Conformity, obedience, group influence
+- Social facilitation and social loafing
+- 'Milgram obedience: authority context raises compliance'
+- 'Deindividuation: crowds reduce self-awareness'
+practice:
+- id: ps-6
+  q: 'Conformity is most famously linked to:'
+  choices:
+    A: Asch’s line-judgment studies
+    B: The Miller–Urey experiment
+    C: The double-slit experiment
+    D: The Krebs cycle
+  answer: A
+  explain: Asch showed group pressure can make people give clearly wrong answers.
+  chapter: 7B · Social processes that influence behavior

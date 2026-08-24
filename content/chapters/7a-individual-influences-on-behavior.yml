@@ -1,0 +1,23 @@
+id: 7a-individual-influences-on-behavior
+title: 7A · Individual influences on behavior
+discipline: psych-soc
+exams:
+- MCAT
+points:
+- Individual influences on behavior
+notes:
+- Trait vs situationist tension
+- Biological factors interact with behavior
+- 'Five-factor model: OCEAN personality dimensions'
+- 'Gene–environment interaction: same gene, different outcomes by context'
+practice:
+- id: ps-5
+  q: 'In classical conditioning, extinction is:'
+  choices:
+    A: Weakening of the CR after repeated CS without UCS
+    B: Permanent deletion of memory genes
+    C: Reinforcement increasing behavior
+    D: Occurring only in operant conditioning
+  answer: A
+  explain: Extinction reflects learned inhibition, not erasure; spontaneous recovery can occur.
+  chapter: 7A · Individual influences on behavior

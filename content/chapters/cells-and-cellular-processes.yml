@@ -1,0 +1,40 @@
+id: cells-and-cellular-processes
+title: Cells and Cellular Processes
+discipline: biology
+exams:
+- NMAT
+- MCAT
+points:
+- Cell structure and function
+- Cellular processes (intro metabolism, membrane transport, etc.)
+notes:
+- Prokaryotes lack membrane-bound nucleus; eukaryotes have compartmentalization
+- 'Transport: simple/facilitated diffusion, active transport, endo/exocytosis'
+- Enzymes lower activation energy; affected by T, pH, inhibitors
+- 'Respiration spine: glycolysis → pyruvate oxidation → TCA → ETC/oxphos'
+- Mitochondria and chloroplasts support endosymbiosis theory
+- Na⁺/K⁺ pump maintains membrane potential and cell volume
+- 'Competitive vs noncompetitive inhibition: different Km/Vmax shifts'
+- Aerobic ETC uses O₂ as terminal acceptor; anaerobic uses alternatives
+practice:
+- id: bio-1
+  q: Which best distinguishes prokaryotic from eukaryotic cells?
+  choices:
+    A: Presence of ribosomes
+    B: Membrane-bound nucleus
+    C: Ability to metabolize
+    D: Presence of a cell membrane
+  answer: B
+  explain: Eukaryotes have a membrane-bound nucleus/compartments; both have ribosomes and membranes.
+  chapter: Cells and Cellular Processes
+- id: bio-5
+  q: 'Active transport differs from simple diffusion mainly because it:'
+  choices:
+    A: Moves down a gradient without energy
+    B: Can move against a gradient using ATP (or an electrochemical gradient)
+    C: Occurs only through nuclear pores
+    D: Transports only gases
+  answer: B
+  explain: Active transport uses carriers/pumps and energy; simple diffusion follows a gradient without
+    metabolic energy.
+  chapter: Cells and Cellular Processes

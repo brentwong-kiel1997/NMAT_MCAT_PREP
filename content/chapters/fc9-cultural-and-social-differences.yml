@@ -1,0 +1,28 @@
+id: fc9-cultural-and-social-differences
+title: FC9 · Cultural and social differences
+discipline: behavioral-social
+exams:
+- NMAT
+- MCAT
+points:
+- 9A Understanding social structure
+- 9B Demographic characteristics and processes
+notes:
+- Cultural norms shape behavioral expectations
+- Distinguish prejudice, stereotype, discrimination
+- 'Cultural intelligence: cross-cultural adaptation and communication'
+- Minority status links to health via stress burden
+- 'Cultural relativism: interpret behavior in cultural context'
+- 'Assimilation vs multiculturalism: merge vs retain plural identities'
+- 'Health belief model: perceived threat and efficacy shape care-seeking'
+practice:
+- id: beh-9
+  q: 'Social facilitation typically means:'
+  choices:
+    A: Others’ presence improves simple/well-learned performance
+    B: Others’ presence always worsens all performance
+    C: No social influence at all
+    D: Occurs only online
+  answer: A
+  explain: Arousal helps simple tasks; complex novel tasks may suffer.
+  chapter: FC9 · Cultural and social differences

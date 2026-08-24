@@ -1,0 +1,47 @@
+id: reasoning-within-the-text
+title: Reasoning Within the Text
+discipline: cars
+exams:
+- MCAT
+points:
+- Infer supported but unstated conclusions in-text
+- Evaluate argument strength and relevance
+- Identify assumptions and logical links
+notes:
+- Ask what supports the author’s claim
+- 'Strong distractor: true in world, absent in passage'
+- 'Strengthen items: premises or evidence backing the conclusion'
+- 'Weaken items: attack assumptions or supply counterexamples'
+- Inferences must be text-supported; outside knowledge isn’t evidence
+- 'Find support lines: correct answers often paraphrase the text'
+practice:
+- id: cars-1
+  q: 'On CARS, an option that is true in the world but absent from the passage is usually:'
+  choices:
+    A: Preferred
+    B: A strong distractor to eliminate
+    C: Equal to the main idea
+    D: Proof of author bias
+  answer: B
+  explain: CARS is passage-bound; externally true claims without textual support are traps.
+  chapter: Reasoning Within the Text
+- id: cars-4
+  q: 'On CARS, options with extreme wording (always, never, only) should usually be:'
+  choices:
+    A: Chosen first
+    B: Treated skeptically—they often overstate the passage
+    C: Chosen while ignoring the stem
+    D: Assumed to equal the author’s view
+  answer: B
+  explain: Academic prose is qualified; absolutist options are often overgeneralized distractors.
+  chapter: Reasoning Within the Text
+- id: cars-9
+  q: 'Within-the-text reasoning answers must:'
+  choices:
+    A: Rely on outside specialist knowledge
+    B: Be supported by passage evidence
+    C: Always contradict the author
+    D: Be as long as possible
+  answer: B
+  explain: Within the Text emphasizes locating textual support.
+  chapter: Reasoning Within the Text

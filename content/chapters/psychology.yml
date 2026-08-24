@@ -1,0 +1,48 @@
+id: psychology
+title: Psychology
+discipline: behavioral-social
+exams:
+- NMAT
+- MCAT
+points:
+- Introductory psychology concepts
+- Basics of behavior and mental processes
+notes:
+- Sensation vs perception; top-down/bottom-up processing
+- 'Learning: classical/operant conditioning; reinforcement vs punishment'
+- 'Memory: encoding, storage, retrieval; working-memory limits'
+- 'Emotion/stress: sympathetic/parasympathetic and coping'
+- 'Classical conditioning: stimulus generalization and discrimination'
+- 'Operant conditioning: reinforcement schedules shape behavior'
+- Working memory capacity is limited (~4±1 chunks)
+practice:
+- id: beh-1
+  q: 'In classical conditioning, the conditioned stimulus starts as:'
+  choices:
+    A: A stimulus that already elicits the response
+    B: A neutral stimulus that comes to elicit the response after pairing
+    C: A punisher
+    D: A reinforcement schedule
+  answer: B
+  explain: A neutral cue paired with a UCS becomes a CS.
+  chapter: Psychology
+- id: beh-3
+  q: 'In operant conditioning, reinforcement serves to:'
+  choices:
+    A: Decrease the chance the behavior recurs
+    B: Increase the chance the behavior recurs
+    C: Change attitudes only, never behavior
+    D: Eliminate all stimuli
+  answer: B
+  explain: Reinforcement raises target-behavior frequency; punishment lowers it.
+  chapter: Psychology
+- id: beh-4
+  q: 'Short-term memory capacity and duration are roughly:'
+  choices:
+    A: Unlimited capacity, lifelong
+    B: Limited (~7±2 chunks), seconds to a minute
+    C: Visual only, no auditory
+    D: Identical to long-term memory
+  answer: B
+  explain: STM holds few chunks briefly; rehearsal and chunking extend retention.
+  chapter: Psychology

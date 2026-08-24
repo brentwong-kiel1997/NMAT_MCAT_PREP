@@ -1,0 +1,37 @@
+id: modern-physics
+title: Modern Physics
+discipline: physics
+exams:
+- NMAT
+- MCAT
+points:
+- Intro modern physics (e.g., quantum/nuclear basics)
+notes:
+- Photon energy E = hf; photoelectric highlights
+- Energy levels and spectral lines
+- 'Nuclear decay: half-life and conserved quantities'
+- E = hf; photon momentum p = h/λ
+- de Broglie λ = h/p
+- Half-life decay N = N₀(½)^(t/t½)
+practice:
+- id: phy-4
+  q: 'Photon energy relates to frequency as:'
+  choices:
+    A: E = hf
+    B: E = h/f
+    C: E = f/h
+    D: E = h + f
+  answer: A
+  explain: E = hf (or E = hc/λ).
+  chapter: Modern Physics
+- id: phy-9
+  q: 'The photoelectric effect shows that light has:'
+  choices:
+    A: Wave nature only, no particle nature
+    B: Quantized energy (photons)
+    C: Energy independent of frequency
+    D: Infinitely long wavelength
+  answer: B
+  explain: Electrons emit only when hf exceeds the work function; classical waves cannot explain a cutoff
+    frequency.
+  chapter: Modern Physics

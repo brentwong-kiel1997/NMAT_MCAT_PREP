@@ -10,25 +10,14 @@ source_note: Chapters follow AAMC Bio/Biochem FC1 Content Categories; NMAT only 
 exam_notes:
   NMAT: Not a 9th subtest — review with Chemistry · Biochemistry.
   MCAT: AAMC estimates FC1 is about 55% of Bio/Biochem (rounded to 5%).
+kind: shared
 chapters:
 - heading: NMAT crosswalk
-  items:
-  - title: Chemistry of Biochemistry (CEM)
-    points:
-    - Intro biological macromolecules
-    - Intro metabolism concepts linked to intro chemistry
+  chapters:
+  - chemistry-of-biochemistry-cem
 - heading: MCAT · Foundational Concept 1 (AAMC)
-  items:
-  - title: 1A · Proteins and amino acids
-    points:
-    - Amino acid and protein structure/function
-  - title: 1B · Gene to protein
-    points:
-    - Genetic information from gene to protein
-  - title: 1C · Heritable information & diversity
-    points:
-    - Heritable information and genetic diversity processes
-  - title: 1D · Bioenergetics and fuel metabolism
-    points:
-    - Bioenergetics and fuel molecule metabolism
-kind: shared
+  chapters:
+  - 1a-proteins-and-amino-acids
+  - 1b-gene-to-protein
+  - 1c-heritable-information-diversity
+  - 1d-bioenergetics-and-fuel-metabolism

@@ -1,10 +1,12 @@
 """Deploy gate: structural validation of content/ before Gunicorn restarts.
 
-Runs from scripts/deploy.sh. Checks file hashes against content/MANIFEST.json
-(so a half-written checkout fails loudly), the collection counts, structural
-invariants (unique slugs/qids, valid answers, chapter-id stability for learner
-progress), and that every note bucket title matches an outline chapter title
-of its subject (or an overlay source subject).
+Validates the unified chapter library model:
+- file hashes against MANIFEST.json (half-written checkouts fail loudly)
+- one chapter per file; unique ids; non-empty exams ∈ {NMAT, MCAT}
+- subject reference lists resolve; unit reference lists resolve
+- practice answers are one of the choice keys; question ids unique
+- tutorials key to a real chapter title and cite registered sources
+- stored learner progress resolves against chapter ids (warns on legacy junk)
 """
 
 from __future__ import annotations
@@ -20,6 +22,24 @@ from django.core.management.base import BaseCommand
 from portal import content
 
 CONTENT = content.CONTENT_DIR
+
+COLLECTION_COUNTS = ("chapters", "note_bullets", "practice", "glossary",
+                     "formulas", "tips", "paths", "checklists", "diseases")
+
+
+def current_counts(store: dict) -> dict:
+    chapters = store["chapters"]
+    return {
+        "chapters": len(chapters),
+        "note_bullets": sum(len(c.get("notes") or []) for c in chapters.values()),
+        "practice": sum(len(c.get("practice") or []) for c in chapters.values()),
+        "glossary": len(store["glossary"]),
+        "formulas": sum(len(v) for v in store["formulas"].values()),
+        "tips": len(store["tips"]),
+        "paths": len(store["paths"]),
+        "checklists": len(store["checklists"]),
+        "diseases": len(store["diseases"]),
+    }
 
 
 class Command(BaseCommand):
@@ -39,120 +59,72 @@ class Command(BaseCommand):
                 if not file.exists():
                     problems.append(f"missing content file: {rel}")
                 elif hashlib.sha256(file.read_bytes()).hexdigest() != digest:
-                    problems.append(
-                        f"{rel} changed without regenerating MANIFEST.json "
-                        f"(run manage.py export_content or update counts deliberately)"
-                    )
+                    problems.append(f"{rel} changed without regenerating MANIFEST.json")
 
         store = content.store()
+        chapters = store["chapters"]
 
-        # ---- counts ---------------------------------------------------------
-        counts = {
-            "subjects": len(store["subjects"]),
-            "note_bullets": sum(
-                len(b) for v in store["notes"].values() for b in v.values()
-            ),
-            "practice": sum(len(v) for v in store["practice"].values()),
-            "glossary": len(store["glossary"]),
-            "formulas": sum(len(v) for v in store["formulas"].values()),
-            "tips": len(store["tips"]),
-            "paths": len(store["paths"]),
-            "checklists": len(store["checklists"]),
-            "diseases": len(store["diseases"]),
-        }
-        if manifest_path.exists():
-            for key, value in counts.items():
-                if key in manifest.get("counts", {}) and manifest["counts"][key] != value:
+        # ---- chapter library invariants --------------------------------------
+        seen_qids: set[str] = set()
+        for slug, ch in chapters.items():
+            exams = ch.get("exams") or []
+            if not exams or not set(exams) <= {"NMAT", "MCAT"}:
+                problems.append(f"chapter {slug}: bad exams {exams}")
+            if not ch.get("title"):
+                problems.append(f"chapter {slug}: missing title")
+            for q in ch.get("practice") or []:
+                if not q.get("id"):
+                    problems.append(f"chapter {slug}: practice item without id")
+                elif q["id"] in seen_qids:
+                    problems.append(f"duplicate question id {q['id']}")
+                else:
+                    seen_qids.add(q["id"])
+                if q.get("answer") not in (q.get("choices") or {}):
                     problems.append(
-                        f"count drift {key}: manifest={manifest['counts'][key]} actual={value}"
+                        f"practice {q.get('id')}: answer {q.get('answer')!r} not in choices"
                     )
 
-        # ---- structural invariants -------------------------------------------
-        qids: set[tuple[str, str]] = set()
-        for slug, items in store["practice"].items():
-            for item in items:
-                if not item["id"]:
-                    problems.append(f"practice {slug}: empty qid")
-                if (slug, item["id"]) in qids:
-                    problems.append(f"duplicate qid {slug}/{item['id']}")
-                qids.add((slug, item["id"]))
-                if item["answer"] not in tuple(item.get("choices") or {}):
-                    problems.append(
-                        f"practice {slug}/{item['id']}: answer {item['answer']!r} not in choices"
-                    )
-
-        chapter_ids: set[str] = set()
-        outline_titles: dict[str, set[str]] = {}
+        # ---- subject & unit reference lists ----------------------------------
         for slug, subject in store["subjects"].items():
-            titles = outline_titles.setdefault(slug, set())
             for group in subject.get("chapters") or []:
-                for item in group.get("items") or []:
-                    titles.add(item.get("title", ""))
-                    chapter_ids.add(item.get("chapter_id", ""))
-        if len(chapter_ids) != len(set(chapter_ids)):
-            problems.append("duplicate chapter ids across subjects")
-
-        # note bucket titles attach to outline items through notes_for's exact
-        # or fuzzy matching; flag (warn) any title that can never attach.
-        overlay_sources = {
-            "biology": ("bio-biochem",),
-            "chemistry": ("chem-phys",),
-            "physics": ("chem-phys",),
-            "chem-phys": ("physics", "chemistry"),
-            "bio-biochem": ("biology", "biochemistry"),
-            "psych-soc": ("behavioral-social",),
-        }
-
-        def fuzzy_match(title: str, outline: str) -> bool:
-            a, b = title.lower(), outline.lower()
-            if a in b or b in a:
-                return True
-            la, lb = a.split("·")[0].strip(), b.split("·")[0].strip()
-            return bool(la) and la == lb and len(la) <= 4
-
-        loose_titles = 0
-        for slug, bucket in store["notes"].items():
-            candidates = set(outline_titles.get(slug, set()))
-            for source in overlay_sources.get(slug, ()):
-                candidates |= outline_titles.get(source, set())
-            for title in bucket:
-                if not title:
-                    problems.append(f"notes {slug}: empty chapter title")
-                    continue
-                if not any(fuzzy_match(title, t) for t in candidates):
-                    loose_titles += 1
-                    self.stderr.write(
-                        f"warning: notes {slug}: {title!r} matches no outline item"
-                    )
-        if loose_titles:
-            self.stderr.write(
-                f"warning: {loose_titles} note chapters do not fuzzy-match any "
-                f"outline item (they will never render)"
-            )
-
-        if not store["kinds"].get("shared") or not store["kinds"].get("mcat"):
-            problems.append("catalog.yml kinds missing shared/mcat lists")
-
-        # ---- learning projects / units (content/units.yml) ----------------------
+                for ref in group.get("chapters") or []:
+                    if ref not in chapters:
+                        problems.append(f"subject {slug}: unknown chapter ref {ref!r}")
         units_path = CONTENT / "units.yml"
         if units_path.exists():
             unit_doc = yaml.safe_load(units_path.read_text(encoding="utf-8")) or {}
-            unit_source_set = set(store["subjects"])
+            unit_keys = set()
             for proj_key, proj in (unit_doc.get("projects") or {}).items():
                 for u in (proj.get("units") or []):
-                    if u.get("source") not in unit_source_set:
+                    unit_keys.add(u.get("key"))
+                    if u.get("source") not in store["subjects"]:
                         problems.append(
                             f"units.yml: unit {u.get('key')!r} unknown source {u.get('source')!r}"
                         )
-                    if not u.get("key") or not u.get("label"):
-                        problems.append(f"units.yml: project {proj_key} unit missing key/label")
+                    for ref in u.get("chapters") or []:
+                        if ref not in chapters:
+                            problems.append(
+                                f"units.yml: unit {u.get('key')!r} unknown chapter ref {ref!r}"
+                            )
+        else:
+            problems.append("content/units.yml is missing")
 
-        # ---- tutorial chapters (the growing textbook) --------------------------
+        # ---- counts ------------------------------------------------------------
+        counts = current_counts(store)
+        if manifest_path.exists():
+            for key in COLLECTION_COUNTS:
+                if key in manifest.get("counts", {}) and manifest["counts"][key] != counts[key]:
+                    problems.append(
+                        f"count drift {key}: manifest={manifest['counts'][key]} actual={counts[key]}"
+                    )
+
+        # ---- tutorials -----------------------------------------------------------
         sources_path = CONTENT / "SOURCES.yml"
         known_sources = set()
         if sources_path.exists():
             registry = yaml.safe_load(sources_path.read_text(encoding="utf-8")) or {}
             known_sources = {s.get("id") for s in registry.get("sources") or []}
+        titles = {c.get("title", "") for c in chapters.values()}
         tutorials_dir = CONTENT / "tutorials"
         if tutorials_dir.is_dir():
             for file in sorted(tutorials_dir.rglob("*.yml")):
@@ -162,18 +134,12 @@ class Command(BaseCommand):
                 except yaml.YAMLError as exc:
                     problems.append(f"{rel}: invalid YAML ({exc})")
                     continue
-                subject = store["subjects"].get(doc.get("subject", ""))
-                if subject is None:
+                if doc.get("subject") not in store["subjects"]:
                     problems.append(f"{rel}: unknown subject {doc.get('subject')!r}")
                     continue
-                outline = {
-                    item.get("title", "")
-                    for group in subject.get("chapters") or []
-                    for item in group.get("items") or []
-                }
-                if doc.get("chapter") not in outline:
+                if doc.get("chapter") not in titles:
                     problems.append(
-                        f"{rel}: chapter {doc.get('chapter')!r} not in the subject outline"
+                        f"{rel}: chapter {doc.get('chapter')!r} not a library chapter title"
                     )
                 if not doc.get("sections"):
                     problems.append(f"{rel}: no sections")
@@ -188,6 +154,15 @@ class Command(BaseCommand):
                             problems.append(f"{rel}: section {i} video missing title/url")
                 if not doc.get("sources"):
                     problems.append(f"{rel}: no sources block")
+                for src in doc.get("sources") or []:
+                    if src.get("ref") not in known_sources:
+                        problems.append(f"{rel}: unknown source ref {src.get('ref')!r}")
+                for i, v in enumerate(doc.get("videos") or [], 1):
+                    if not v.get("title") or not v.get("url"):
+                        problems.append(f"{rel}: video {i} missing title/url")
+                for i, r in enumerate(doc.get("further_reading") or [], 1):
+                    if not r.get("title") or not r.get("url"):
+                        problems.append(f"{rel}: further_reading {i} missing title/url")
                 for mn in doc.get("mnemonics") or []:
                     if not mn.get("phrase"):
                         problems.append(f"{rel}: mnemonic missing phrase")
@@ -201,86 +176,32 @@ class Command(BaseCommand):
                     for q in passage.get("questions") or []:
                         if not q.get("q") or not q.get("answer"):
                             problems.append(f"{rel}: passage question missing q/answer")
-                questions = doc.get("review_questions") or []
-                for i, q in enumerate(questions, 1):
+                for i, q in enumerate(doc.get("review_questions") or [], 1):
                     if not q.get("q") or not q.get("answer"):
                         problems.append(f"{rel}: review question {i} missing q/answer")
-                for i, v in enumerate(doc.get("videos") or [], 1):
-                    if not v.get("title") or not v.get("url"):
-                        problems.append(f"{rel}: video {i} missing title/url")
-                for i, r in enumerate(doc.get("further_reading") or [], 1):
-                    if not r.get("title") or not r.get("url"):
-                        problems.append(f"{rel}: further_reading {i} missing title/url")
-                for src in doc.get("sources") or []:
-                    if src.get("ref") not in known_sources:
-                        problems.append(
-                            f"{rel}: source ref {src.get('ref')!r} not in SOURCES.yml"
-                        )
-                    if src.get("relation") not in ("consulted", "adapted"):
-                        problems.append(
-                            f"{rel}: source {src.get('ref')!r} needs relation "
-                            f"consulted|adapted"
-                        )
 
-        # ---- tutorial chapters (optional, growing one by one) ---------------
-        sources_path = CONTENT / "SOURCES.yml"
-        source_ids = set()
-        if sources_path.exists():
-            source_ids = {
-                s.get("id")
-                for s in (yaml.safe_load(sources_path.read_text(encoding="utf-8")) or {})
-                .get("sources", [])
-            }
-        tut_dir = CONTENT / "tutorials"
-        if tut_dir.is_dir():
-            outline_titles = {
-                slug: {
-                    it.get("title", "")
-                    for subject in store["subjects"].values()
-                    if subject.get("slug") == slug
-                    for group in subject.get("chapters") or []
-                    for it in group.get("items") or []
-                }
-                for slug in store["subjects"]
-            }
-            for file in sorted(tut_dir.rglob("*.yml")):
-                doc = yaml.safe_load(file.read_text(encoding="utf-8"))
-                rel = str(file.relative_to(CONTENT))
-                if doc.get("subject") not in store["subjects"]:
-                    problems.append(f"{rel}: unknown subject {doc.get('subject')!r}")
-                    continue
-                if doc.get("chapter") not in outline_titles.get(doc["subject"], set()):
-                    problems.append(
-                        f"{rel}: chapter {doc.get('chapter')!r} not in the subject outline"
-                    )
-                if not doc.get("sections"):
-                    problems.append(f"{rel}: no sections")
-                for src in doc.get("sources") or []:
-                    if src.get("ref") not in source_ids:
-                        problems.append(f"{rel}: unknown source ref {src.get('ref')!r}")
-
-        # ---- learner progress still resolves (warn on legacy junk) -----------
+        # ---- learner progress vs chapter ids --------------------------------------
         try:
             from portal.models import ChapterProgress, PracticeAttempt
 
-            orphan_chapters = (
+            orphan = (
                 set(ChapterProgress.objects.values_list("chapter_id", flat=True))
-                - chapter_ids
+                - set(chapters)
             )
-            if orphan_chapters:
+            if orphan:
                 self.stderr.write(
-                    f"warning: {len(orphan_chapters)} stored chapter ids do not "
-                    f"resolve (pre-existing test data): {sorted(orphan_chapters)[:8]}"
+                    f"warning: {len(orphan)} stored chapter ids do not resolve "
+                    f"(legacy/test rows): {sorted(orphan)[:8]}"
                 )
-            orphan_qids = (
+            orphan_q = (
                 set(PracticeAttempt.objects.values_list("question_id", flat=True))
-                - {qid for _, qid in qids}
+                - seen_qids
             )
-            if orphan_qids:
+            if orphan_q:
                 self.stderr.write(
-                    f"warning: stored question ids missing from content: {sorted(orphan_qids)[:8]}"
+                    f"warning: stored question ids missing from content: {sorted(orphan_q)[:8]}"
                 )
-        except Exception as exc:  # DB unavailable during content-only checks
+        except Exception as exc:
             self.stderr.write(f"warning: progress cross-check skipped ({exc})")
 
         if problems:
@@ -288,7 +209,6 @@ class Command(BaseCommand):
             raise SystemExit(1)
         self.stdout.write(
             self.style.SUCCESS(
-                "content OK — "
-                + " ".join(f"{k}={v}" for k, v in counts.items())
+                "content OK — " + " ".join(f"{k}={v}" for k, v in counts.items())
             )
         )

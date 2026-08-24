@@ -1,0 +1,35 @@
+id: 6a-sensing-the-environment
+title: 6A · Sensing the environment
+discipline: psych-soc
+exams:
+- MCAT
+points:
+- Sensing the environment
+notes:
+- Absolute and difference thresholds
+- 'Signal detection: hits/false alarms'
+- 'Sensory adaptation: response wanes under constant stimulus'
+- 'Vision: rods for dim light, cones for color'
+- Absolute threshold vs difference threshold (Weber)
+- 'Signal detection: hit, false alarm, miss, correct rejection'
+practice:
+- id: ps-1
+  q: 'An absolute threshold is:'
+  choices:
+    A: The minimum intensity detectable (under a statistical definition)
+    B: The smallest difference between two stimuli
+    C: The maximum tolerable stimulus
+    D: Mean reaction time
+  answer: A
+  explain: Absolute = detect presence; difference = detect change.
+  chapter: 6A · Sensing the environment
+- id: ps-2
+  q: 'The just noticeable difference (JND) measures:'
+  choices:
+    A: The smallest detectable difference between two stimuli
+    B: The absolute threshold
+    C: Maximum pain tolerance
+    D: Years of memory retention
+  answer: A
+  explain: JND concerns change detection; absolute threshold concerns detecting presence.
+  chapter: 6A · Sensing the environment

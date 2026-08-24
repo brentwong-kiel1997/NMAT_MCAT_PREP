@@ -1,0 +1,28 @@
+id: sociology-and-anthropology
+title: Sociology and Anthropology
+discipline: behavioral-social
+exams:
+- NMAT
+- MCAT
+points:
+- Intro social structure and culture
+- Basic anthropology perspectives (explicitly in NMAT)
+notes:
+- Socialization, norms, roles, status
+- 'Culture: material/nonmaterial; relativism vs ethnocentrism'
+- Stratification, inequality, and health disparities (intro)
+- 'Anthropological lens: compare cultures and human commonalities'
+- 'Social construction: reality partly defined collectively'
+- 'Ethnography: participant observation to grasp cultural meaning'
+- 'Functionalism vs conflict theory: stability vs power-struggle lens'
+practice:
+- id: beh-5
+  q: 'Social norms differ from laws mainly because norms:'
+  choices:
+    A: Are shared group expectations, not always formally enforced
+    B: Apply only inside one person’s mind
+    C: Are always looser than laws
+    D: Are unrelated to behavior
+  answer: A
+  explain: Norms rely on socialization and informal sanction; laws are codified with formal enforcement.
+  chapter: Sociology and Anthropology

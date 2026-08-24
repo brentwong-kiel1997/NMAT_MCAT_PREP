@@ -10,39 +10,16 @@ source_note: 'NMAT per CEM BOI: Psychology + Sociology and Anthropology. MCAT pe
 exam_notes:
   NMAT: Social Science = psychology + sociology + anthropology at intro depth.
   MCAT: Mostly psych/soc with some biology; anthropology is not a separate MCAT spine.
+kind: shared
 chapters:
 - heading: NMAT · CEM BOI chapters
-  items:
-  - title: Psychology
-    points:
-    - Introductory psychology concepts
-    - Basics of behavior and mental processes
-  - title: Sociology and Anthropology
-    points:
-    - Intro social structure and culture
-    - Basic anthropology perspectives (explicitly in NMAT)
+  chapters:
+  - psychology
+  - sociology-and-anthropology
 - heading: MCAT · Foundational Concepts 6–10 (AAMC)
-  items:
-  - title: FC6 · Perceive, think, react
-    points:
-    - 6A Sensing the environment
-    - 6B Making sense of the environment
-    - 6C Responding to the world
-  - title: FC7 · Behavior and behavior change
-    points:
-    - 7A Individual influences on behavior
-    - 7B Social processes that influence human behavior
-    - 7C Attitude and behavior change
-  - title: FC8 · Self, others, interactions
-    points:
-    - 8A Self-identity
-    - 8B Social thinking
-    - 8C Social interactions
-  - title: FC9 · Cultural and social differences
-    points:
-    - 9A Understanding social structure
-    - 9B Demographic characteristics and processes
-  - title: FC10 · Stratification and resources
-    points:
-    - 10A Social inequality
-kind: shared
+  chapters:
+  - fc6-perceive-think-react
+  - fc7-behavior-and-behavior-change
+  - fc8-self-others-interactions
+  - fc9-cultural-and-social-differences
+  - fc10-stratification-and-resources

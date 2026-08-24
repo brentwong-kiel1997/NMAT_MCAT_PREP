@@ -1,0 +1,26 @@
+id: thermodynamics
+title: Thermodynamics
+discipline: physics
+exams:
+- NMAT
+- MCAT
+points:
+- Intro temperature, heat, and thermo laws
+notes:
+- Distinguish temperature, internal energy, heat
+- 'First law: ΔU = Q − W (watch sign convention)'
+- Entropy intuition and irreversible processes
+- Heat-engine efficiency bounded by Carnot limit
+- 'Isothermal vs adiabatic: different Q and ΔU relations'
+- 'Entropy increase: spontaneous processes in isolated systems raise ΔS'
+practice:
+- id: phy-6
+  q: 'For an ideal gas undergoing isothermal expansion, ΔU equals:'
+  choices:
+    A: A large positive value
+    B: Zero (ideal-gas internal energy depends only on temperature)
+    C: Negative infinity
+    D: Equals pressure
+  answer: B
+  explain: Ideal-gas internal energy is a function of T; isothermal means ΔU = 0.
+  chapter: Thermodynamics

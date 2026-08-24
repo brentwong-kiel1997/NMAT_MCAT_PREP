@@ -1,0 +1,39 @@
+id: mechanics
+title: Mechanics
+discipline: physics
+exams:
+- NMAT
+- MCAT
+points:
+- Motion, forces, work, and energy
+- Intro equilibrium and momentum
+notes:
+- Newton’s laws and free-body diagrams
+- Work–energy theorem; when mechanical energy is conserved
+- 'Momentum conservation: collisions and impulse'
+- 'Newton’s second law: ΣF = ma (vector form)'
+- Kinetic energy Ek = ½mv²; gravitational Ep = mgh
+- Impulse J = FΔt = Δp
+- 'Rotation: τ = Iα; angular momentum L = Iω'
+practice:
+- id: phy-1
+  q: 'If net work on an object is positive, its kinetic energy:'
+  choices:
+    A: Must decrease
+    B: Must increase
+    C: Stays the same
+    D: Is unrelated to work
+  answer: B
+  explain: 'Work–energy theorem: net work equals change in kinetic energy.'
+  chapter: Mechanics
+- id: phy-5
+  q: 'In uniform circular motion, centripetal acceleration points:'
+  choices:
+    A: Tangent to the path, same as velocity
+    B: Toward the center of the circle
+    C: Away from the center
+    D: Is zero
+  answer: B
+  explain: Centripetal acceleration changes velocity direction; velocity is tangential, acceleration points
+    inward.
+  chapter: Mechanics

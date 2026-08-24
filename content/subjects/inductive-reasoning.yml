@@ -9,20 +9,11 @@ item_types:
 - Number and Letter Series
 focus: Infer rules or relations from limited information.
 source_note: Chapters follow CEM BOI Inductive Reasoning item types.
-chapters:
-- heading: Major topics / chapters
-  items:
-  - title: Figure Series
-    points:
-    - Rotation/reflection/add-remove elements
-    - Infer rules of position, shading, and overlays
-  - title: Figure Grouping
-    points:
-    - Group by shared attributes
-    - Exclude the odd one out
-  - title: Number and Letter Series
-    points:
-    - Arithmetic/geometric/alternating rules
-    - Letter positions and interleaved dual series
 summary: Infer rules or relations from limited information.
 kind: nmat
+chapters:
+- heading: Major topics / chapters
+  chapters:
+  - figure-series
+  - figure-grouping
+  - number-and-letter-series

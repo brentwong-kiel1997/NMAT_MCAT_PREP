@@ -1,0 +1,25 @@
+id: identical-information
+title: Identical Information
+discipline: perceptual-acuity
+exams:
+- NMAT
+points:
+- Quick same/different comparisons
+- Trade-off between detail accuracy and speed
+notes:
+- 'Scan systematically: top→bottom or left→right'
+- Hunt decisive differences first
+- Punctuation and spacing gaps are common traps
+- Compare digit/letter strings item-by-item; don’t skip a place
+- Watch case and symbol differences
+practice:
+- id: perc-3
+  q: 'To decide whether two columns show identical information, you should:'
+  choices:
+    A: Compare character by character, watching confusable glyphs (0/O)
+    B: Check only first and last characters
+    C: Assume they are always identical
+    D: Ignore all punctuation
+  answer: A
+  explain: Subtle differences often hide in middle characters, punctuation, or case.
+  chapter: Identical Information

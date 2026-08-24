@@ -1,0 +1,62 @@
+id: 4b-fluids-for-circulation-and-gas-exchange
+title: 4B · Fluids for circulation and gas exchange
+discipline: physics
+exams:
+- NMAT
+- MCAT
+points:
+- Fluids in blood circulation and gas exchange
+- Fluids in circulation, gas movement, and gas exchange
+notes:
+- 'Continuity: A₁v₁ = A₂v₂'
+- 'Bernoulli: speed up → pressure down (ideal intuition)'
+- 'Poiseuille: flow extremely sensitive to radius'
+- Buoyancy Fb = ρfluid Vdisplaced g
+- Blood pressure ≈ flow × resistance (Ohm-like analogy)
+- Surface tension and capillary rise in narrow tubes
+- Continuity equation and Bernoulli intuition
+- Resistance, radius, flow (Poiseuille idea)
+- Under laminar flow, Poiseuille Q ∝ r⁴
+- Alveolar gas exchange depends on diffusion–perfusion matching
+practice:
+- id: cp-1
+  q: 'A small drop in vessel radius typically makes laminar flow:'
+  choices:
+    A: Almost unchanged
+    B: Drop sharply (highly radius-sensitive)
+    C: Must rise
+    D: Independent of radius
+  answer: B
+  explain: Poiseuille flow scales with radius to the fourth power.
+  chapter: 4B · Fluids for circulation and gas exchange
+- id: phy-2
+  q: 'The continuity equation for ideal flow mainly says:'
+  choices:
+    A: Smaller area → higher speed (volume flow conserved)
+    B: Pressure is equal everywhere
+    C: Temperature must rise
+    D: Density must be zero
+  answer: A
+  explain: 'For incompressible flow: A₁v₁ = A₂v₂.'
+  chapter: 4B · Fluids for circulation and gas exchange
+- id: phy-10
+  q: 'By Bernoulli’s principle (ideal, steady, incompressible flow), where a pipe narrows:'
+  choices:
+    A: Speed rises and static pressure drops
+    B: Speed falls and static pressure rises
+    C: Both speed and pressure stay constant
+    D: Density must be zero
+  answer: A
+  explain: Continuity (Av = constant) raises speed in a narrow region; Bernoulli links higher speed to
+    lower static pressure.
+  chapter: 4B · Fluids for circulation and gas exchange
+- id: phy-11
+  q: In ideal flow, what happens to speed where a pipe narrows?
+  choices:
+    A: Decreases
+    B: Increases
+    C: Stays the same
+    D: Becomes zero
+  answer: B
+  explain: 'Continuity: A₁v₁=A₂v₂; smaller area means higher speed.'
+  chapter: 4B · Fluids for circulation and gas exchange

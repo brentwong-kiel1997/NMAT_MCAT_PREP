@@ -1,0 +1,35 @@
+id: 6b-making-sense-of-the-environment
+title: 6B · Making sense of the environment
+discipline: psych-soc
+exams:
+- MCAT
+points:
+- Making sense of / organizing environmental information
+notes:
+- Gestalt organization; depth cues
+- Top-down expectations shape perception
+- 'Perceptual constancy: recognize size despite distance change'
+- Illusions reveal perceptual organization rules
+- 'Top-down processing: expectations and knowledge shape perception'
+- 'Gestalt: proximity, similarity, closure, continuity'
+practice:
+- id: ps-3
+  q: 'Bottom-up (data-driven) processing relies mainly on:'
+  choices:
+    A: Features of the sensory input itself
+    B: Prior expectations alone
+    C: Ignoring the stimulus entirely
+    D: Using only long-term memory
+  answer: A
+  explain: Bottom-up builds percepts from sensory data; top-down uses context and expectations.
+  chapter: 6B · Making sense of the environment
+- id: ps-10
+  q: 'After pairing a bell with food, the bell alone elicits salivation. The bell is the:'
+  choices:
+    A: Unconditioned stimulus
+    B: Conditioned stimulus
+    C: Unconditioned response
+    D: Extinguished reinforcer
+  answer: B
+  explain: The once-neutral cue becomes the conditioned stimulus (CS).
+  chapter: 6B · Making sense of the environment

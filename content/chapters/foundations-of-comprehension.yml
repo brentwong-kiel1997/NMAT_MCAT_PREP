@@ -1,0 +1,47 @@
+id: foundations-of-comprehension
+title: Foundations of Comprehension
+discipline: cars
+exams:
+- MCAT
+points:
+- Understand main idea and key claims
+- Identify roles of information (example, definition, turn)
+- Track author attitude and argumentative tone
+notes:
+- Topic ≠ Thesis
+- 'Label functions: example, concession, contrast'
+- Separate author voice from quoted viewpoints
+- First sentence may not be thesis; find synthesizing lines
+- 'Mark attitude cues: emphasis, skepticism, concession'
+- 'Paragraph jobs: exemplify, contrast, define, advance claim'
+practice:
+- id: cars-2
+  q: 'Topic relates to thesis as:'
+  choices:
+    A: Always identical
+    B: Topic is the subject; thesis is the author’s claim
+    C: Thesis only appears in the last sentence
+    D: Topic matters more so claims can be ignored
+  answer: B
+  explain: Separate what it’s about from what it argues.
+  chapter: Foundations of Comprehension
+- id: cars-5
+  q: 'When judging a paragraph’s function, ask:'
+  choices:
+    A: What role it plays in the argument (define, exemplify, rebut, etc.)
+    B: Whether it is the longest paragraph
+    C: Whether it contains numbers
+    D: The author’s nationality
+  answer: A
+  explain: Structure questions test informational role, not isolated fact recall.
+  chapter: Foundations of Comprehension
+- id: cars-7
+  q: 'Tone questions should be answered using:'
+  choices:
+    A: Overall diction and rhetorical stance in the text
+    B: Your personal opinion of the topic
+    C: The shortest option
+    D: Publication year alone
+  answer: A
+  explain: Tone comes from word choice (cautious, critical, approving, etc.) and must be text-supported.
+  chapter: Foundations of Comprehension

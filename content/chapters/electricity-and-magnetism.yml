@@ -1,0 +1,47 @@
+id: electricity-and-magnetism
+title: Electricity and Magnetism
+discipline: physics
+exams:
+- NMAT
+- MCAT
+points:
+- Basics of electric fields and circuits
+- Intro magnetism
+notes:
+- Coulomb force/fields; potential difference and work
+- Ohm’s law, series/parallel, power in circuits
+- Magnetic force on moving charges (Lorentz intuition)
+- Coulomb force F = kq₁q₂/r²
+- Parallel 1/R = Σ1/Ri; series R = ΣRi
+- 'Lenz’s law: induced current opposes flux change'
+practice:
+- id: phy-3
+  q: 'Ohm’s law relates V, I, and R as:'
+  choices:
+    A: V = I/R
+    B: V = IR
+    C: V = I + R
+    D: V = R/I
+  answer: B
+  explain: V = IR is the basic linear-resistor relation.
+  chapter: Electricity and Magnetism
+- id: phy-8
+  q: 'In a parallel circuit, the voltage across each branch:'
+  choices:
+    A: Is the same
+    B: Is proportional to resistance
+    C: Is always zero
+    D: Is random
+  answer: A
+  explain: Parallel elements share the same potential difference; total current splits among branches.
+  chapter: Electricity and Magnetism
+- id: phy-12
+  q: 'If voltage across a capacitor doubles at fixed C, stored charge:'
+  choices:
+    A: Halves
+    B: Unchanged
+    C: Doubles
+    D: Quadruples
+  answer: C
+  explain: Q=CV; at fixed C, Q scales with V.
+  chapter: Electricity and Magnetism

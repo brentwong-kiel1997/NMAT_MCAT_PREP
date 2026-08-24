@@ -1,0 +1,29 @@
+id: fc6-perceive-think-react
+title: FC6 · Perceive, think, react
+discipline: behavioral-social
+exams:
+- NMAT
+- MCAT
+points:
+- 6A Sensing the environment
+- 6B Making sense of the environment
+- 6C Responding to the world
+notes:
+- Thresholds, signal detection, selective attention
+- Biases and heuristics shape judgment
+- 'Weber’s law: detectable difference scales with stimulus intensity'
+- 'Dual process: fast heuristic System 1 vs slow analytic System 2'
+- 'Sensory adaptation: receptor response falls with sustained stimulus'
+- Working memory is limited; chunking expands effective capacity
+- 'Emotion and decision-making: limbic–prefrontal interaction'
+practice:
+- id: beh-6
+  q: 'Figure–ground organization in perception means:'
+  choices:
+    A: Splitting a scene into a salient object and a less salient background
+    B: Denying depth perception
+    C: Processing only audition
+    D: All stimuli are equally salient
+  answer: A
+  explain: The perceptual system tends to organize one region as figure and the rest as ground.
+  chapter: FC6 · Perceive, think, react

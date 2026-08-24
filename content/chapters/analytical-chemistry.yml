@@ -1,0 +1,38 @@
+id: analytical-chemistry
+title: Analytical Chemistry
+discipline: chemistry
+exams:
+- NMAT
+- MCAT
+points:
+- Basics of quantitative analysis
+- Common separation/assay ideas (intro level)
+notes:
+- Accuracy vs precision
+- 'Titration/spectroscopy/chromatography: what is measured vs separated'
+- Calibration curves and blank controls
+- 'Beer’s law: A = εlc (linear region for dilute solutions)'
+- Systematic error is correctable; random error shrinks with replication
+- Internal standards correct injection and instrument drift
+practice:
+- id: chem-3
+  q: 'Accuracy differs from precision in that accuracy is about:'
+  choices:
+    A: Results clustering together
+    B: Results near the true value
+    C: Instrument price
+    D: Sample color
+  answer: B
+  explain: Accuracy = closeness to truth; precision = repeatability.
+  chapter: Analytical Chemistry
+- id: chem-7
+  q: 'The titration endpoint is closest to:'
+  choices:
+    A: The experimental point where indicator color changes
+    B: Zero solution volume
+    C: A reaction that never occurs
+    D: Doubling sample mass
+  answer: A
+  explain: The endpoint is signaled by indicator/instrument; the equivalence point is theoretical—they
+    should be close.
+  chapter: Analytical Chemistry

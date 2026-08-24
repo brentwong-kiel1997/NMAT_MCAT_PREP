@@ -1,0 +1,24 @@
+id: 3b-main-organ-systems-2
+title: 3B · Main organ systems
+discipline: bio-biochem
+exams:
+- MCAT
+points:
+- Structure and integrative functions of major organ systems
+notes:
+- 'Exchange interfaces: alveoli, villi, nephrons'
+- 'Homeostasis loop: sensor–integrator–effector'
+- 'Renal glucose threshold: glycosuria above limit'
+- Antibody diversity via V(D)J recombination
+practice:
+- id: bb-7
+  q: 'In the nephron, the glomerulus mainly:'
+  choices:
+    A: Filters plasma to form filtrate
+    B: Synthesizes insulin
+    C: Generates action-potential conduction
+    D: Secretes bile
+  answer: A
+  explain: The glomerular barrier retains cells and large proteins; tubules reabsorb and secrete to refine
+    urine.
+  chapter: 3B · Main organ systems

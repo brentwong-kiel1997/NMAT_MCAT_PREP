@@ -1,0 +1,45 @@
+id: mirror-image
+title: Mirror Image
+discipline: perceptual-acuity
+exams:
+- NMAT
+points:
+- Left-right mirror judgments
+- Distinguish flip vs rotation
+notes:
+- Left-right mirror ≠ rotation
+- Spot-check asymmetric features quickly
+- 'Mirrored digits/letters: b/d and p/q confuse easily'
+- Decide mirror axis (vertical/horizontal), then compare features
+- Rotation ≠ reflection; common trap distractors
+practice:
+- id: perc-1
+  q: 'The key reminder on mirror-image items is:'
+  choices:
+    A: A mirror equals a 180° rotation
+    B: Left–right mirroring is not the same as rotation
+    C: Asymmetric features can be ignored
+    D: Only compare area
+  answer: B
+  explain: Mirroring flips left–right; rotation is a different transform.
+  chapter: Mirror Image
+- id: perc-4
+  q: 'A horizontal mirror flip differs from a vertical flip because:'
+  choices:
+    A: Horizontal swaps left–right; vertical swaps top–bottom
+    B: They are identical
+    C: Mirroring equals translation
+    D: Only color changes
+  answer: A
+  explain: Mirror-axis orientation sets which axis flips; neither is the same as rotation.
+  chapter: Mirror Image
+- id: per-5
+  q: 'In mirror items, a vertical-axis reflection mainly changes:'
+  choices:
+    A: Up–down positions
+    B: Left–right positions
+    C: Color
+    D: Number of sides
+  answer: B
+  explain: Vertical-axis mirrors swap left–right; horizontal mirrors swap up–down.
+  chapter: Mirror Image

@@ -1,114 +1,196 @@
-# Learning projects and their study units.
-#
-# Content is ONE unified library (content/subjects etc.). The NMAT and MCAT
-# exams are two LEARNING PROJECTS over that library; each project is split
-# into small study units ("small projects under the big project"). A unit
-# aggregates a set of outline chapters — usually one source subject, with an
-# optional `chapters` prefix filter (MCAT exam sections like Chem/Phys are
-# split into Chemical / Physical study units because the exam-day grouping
-# is not how you learn).
-#
-# `group` is the exam-day section a unit belongs to, used only on hub pages
-# ("Bio/Biochem" is a big project; Biology and Biochemistry study separately
-# beneath it).
-#
-# Exam annotation is DERIVED, per chapter instance (subject+chapter):
-#   kind=shared → [NMAT, MCAT]   (both exams need it)
-#   kind=nmat   → [NMAT]
-#   kind=mcat   → [MCAT]
-# `exam_overrides` adjusts specific chapter instances when needed.
-
 projects:
   nmat:
     name: NMAT
     units:
-      - key: nmat-verbal
-        source: verbal
-        label: Verbal
-        group: Part 1 · Mental Ability
-        cross: []
-      - key: nmat-inductive
-        source: inductive-reasoning
-        label: Inductive Reasoning
-        group: Part 1 · Mental Ability
-        cross: []
-      - key: nmat-quant
-        source: quantitative
-        label: Quantitative
-        group: Part 1 · Mental Ability
-        cross: []
-      - key: nmat-perceptual
-        source: perceptual-acuity
-        label: Perceptual Acuity
-        group: Part 1 · Mental Ability
-        cross: []
-      - key: nmat-biology
-        source: biology
-        label: Biology
-        group: Part 2 · Academic Proficiency
-        cross: [mcat-biology, mcat-biochemistry]
-      - key: nmat-chemistry
-        source: chemistry
-        label: Chemistry
-        group: Part 2 · Academic Proficiency
-        cross: [mcat-chemical]
-      - key: nmat-physics
-        source: physics
-        label: Physics
-        group: Part 2 · Academic Proficiency
-        cross: [mcat-physical]
-      - key: nmat-behavioral
-        source: behavioral-social
-        label: Behavioral & Social
-        group: Part 2 · Academic Proficiency
-        cross: [mcat-psychology, mcat-sociology]
-
+    - key: nmat-verbal
+      source: verbal
+      label: Verbal
+      group: Part 1 · Mental Ability
+      cross: []
+      chapters:
+      - analogies
+      - reading-comprehension
+    - key: nmat-inductive
+      source: inductive-reasoning
+      label: Inductive Reasoning
+      group: Part 1 · Mental Ability
+      cross: []
+      chapters:
+      - figure-series
+      - figure-grouping
+      - number-and-letter-series
+    - key: nmat-quant
+      source: quantitative
+      label: Quantitative
+      group: Part 1 · Mental Ability
+      cross: []
+      chapters:
+      - fundamental-operations
+      - problem-solving
+      - data-interpretation
+    - key: nmat-perceptual
+      source: perceptual-acuity
+      label: Perceptual Acuity
+      group: Part 1 · Mental Ability
+      cross: []
+      chapters:
+      - hidden-figure
+      - mirror-image
+      - identical-information
+    - key: nmat-biology
+      source: biology
+      label: Biology
+      group: Part 2 · Academic Proficiency
+      cross:
+      - mcat-biology
+      - mcat-biochemistry
+      chapters:
+      - unity-and-diversity-of-life
+      - cells-and-cellular-processes
+      - genetics
+      - the-world-of-plants-and-animals
+      - development
+      - life-processes-regulation-and-homeostasis
+      - organisms-and-their-environment
+      - 1c-heritable-information-genetic-diversity
+      - 2a-assemblies-of-molecules-cells-and-cell-groups
+      - 2b-prokaryotes-and-viruses
+      - 2c-cell-division-differentiation-specialization
+      - 3a-nervous-and-endocrine-systems
+      - 3b-main-organ-systems
+    - key: nmat-chemistry
+      source: chemistry
+      label: Chemistry
+      group: Part 2 · Academic Proficiency
+      cross:
+      - mcat-chemical
+      chapters:
+      - general-chemistry
+      - analytical-chemistry
+      - organic-chemistry
+      - biochemistry
+      - 5a-unique-nature-of-water-and-its-solutions
+      - 5b-molecules-and-intermolecular-interactions
+      - 5c-separation-and-purification-methods
+      - 5d-biologically-relevant-molecules
+      - 5e-chemical-thermodynamics-and-kinetics
+      - 4e-atoms-nuclear-decay-electronic-structure
+    - key: nmat-physics
+      source: physics
+      label: Physics
+      group: Part 2 · Academic Proficiency
+      cross:
+      - mcat-physical
+      chapters:
+      - mechanics
+      - thermodynamics
+      - vibrations-waves-and-optics
+      - electricity-and-magnetism
+      - modern-physics
+      - 4a-motion-forces-work-energy-equilibrium
+      - 4b-fluids-for-circulation-and-gas-exchange
+      - 4c-electrochemistry-and-electrical-circuits
+      - 4d-light-and-sound-interacting-with-matter
+      - 4e-atoms-nuclear-decay-electronic-structure
+    - key: nmat-behavioral
+      source: behavioral-social
+      label: Behavioral & Social
+      group: Part 2 · Academic Proficiency
+      cross:
+      - mcat-psychology
+      - mcat-sociology
+      chapters:
+      - psychology
+      - sociology-and-anthropology
+      - fc6-perceive-think-react
+      - fc7-behavior-and-behavior-change
+      - fc8-self-others-interactions
+      - fc9-cultural-and-social-differences
+      - fc10-stratification-and-resources
   mcat:
     name: MCAT
     units:
-      - key: mcat-chemical
-        source: chem-phys
-        label: Chemical Foundations
-        group: Chem/Phys
-        chapters: [4E, 5A, 5B, 5C, 5D, 5E]
-        cross: [nmat-chemistry]
-      - key: mcat-physical
-        source: chem-phys
-        label: Physical Foundations
-        group: Chem/Phys
-        chapters: [4A, 4B, 4C, 4D]
-        cross: [nmat-physics]
-      - key: mcat-biology
-        source: bio-biochem
-        label: Biology
-        group: Bio/Biochem
-        chapters: [1C, 2A, 2B, 2C, 3A, 3B]
-        cross: [nmat-biology]
-      - key: mcat-biochemistry
-        source: bio-biochem
-        label: Biochemistry
-        group: Bio/Biochem
-        chapters: [1A, 1B, 1D]
-        cross: [nmat-biology, nmat-chemistry]
-      - key: mcat-psychology
-        source: psych-soc
-        label: Psychology
-        group: Psych/Soc
-        chapters: [6A, 6B, 6C, 7A, 7B, 7C]
-        cross: [nmat-behavioral]
-      - key: mcat-sociology
-        source: psych-soc
-        label: Sociology
-        group: Psych/Soc
-        chapters: [8A, 8B, 8C, 9A, 9B, 10A]
-        cross: [nmat-behavioral]
-      - key: mcat-cars
-        source: cars
-        label: CARS
-        group: CARS
-        chapters: []
-        cross: []
-
-# Chapter-instance annotation overrides (subject + exact chapter title).
-# Empty by default: derivation covers everything today.
+    - key: mcat-chemical
+      source: chem-phys
+      label: Chemical Foundations
+      group: Chem/Phys
+      cross:
+      - nmat-chemistry
+      chapters:
+      - 4e-atoms-nuclear-decay-electronic-structure
+      - 5a-unique-nature-of-water-and-its-solutions
+      - 5b-molecules-and-intermolecular-interactions
+      - 5c-separation-and-purification-methods
+      - 5d-biologically-relevant-molecules
+      - 5e-chemical-thermodynamics-and-kinetics
+    - key: mcat-physical
+      source: chem-phys
+      label: Physical Foundations
+      group: Chem/Phys
+      cross:
+      - nmat-physics
+      chapters:
+      - 4a-motion-forces-work-energy-equilibrium
+      - 4b-fluids-for-circulation-and-gas-exchange
+      - 4c-electrochemistry-and-electrical-circuits
+      - 4d-light-and-sound-interacting-with-matter
+    - key: mcat-biology
+      source: bio-biochem
+      label: Biology
+      group: Bio/Biochem
+      cross:
+      - nmat-biology
+      chapters:
+      - 1c-heritable-information-genetic-diversity
+      - 2a-assemblies-of-molecules-cells-and-cell-groups
+      - 2b-prokaryotes-and-viruses
+      - 2c-cell-division-differentiation-specialization
+      - 3a-nervous-and-endocrine-systems
+      - 3b-main-organ-systems
+    - key: mcat-biochemistry
+      source: bio-biochem
+      label: Biochemistry
+      group: Bio/Biochem
+      cross:
+      - nmat-biology
+      - nmat-chemistry
+      chapters:
+      - 1a-proteins-and-amino-acids
+      - 1b-gene-to-protein
+      - 1d-bioenergetics-and-fuel-metabolism
+    - key: mcat-psychology
+      source: psych-soc
+      label: Psychology
+      group: Psych/Soc
+      cross:
+      - nmat-behavioral
+      chapters:
+      - 6a-sensing-the-environment
+      - 6b-making-sense-of-the-environment
+      - 6c-responding-to-the-world
+      - 7a-individual-influences-on-behavior
+      - 7b-social-processes-that-influence-behavior
+      - 7c-attitude-and-behavior-change
+    - key: mcat-sociology
+      source: psych-soc
+      label: Sociology
+      group: Psych/Soc
+      cross:
+      - nmat-behavioral
+      chapters:
+      - 8a-self-identity
+      - 8b-social-thinking
+      - 8c-social-interactions
+      - 9a-understanding-social-structure
+      - 9b-demographic-characteristics-and-processes
+      - 10a-social-inequality
+    - key: mcat-cars
+      source: cars
+      label: CARS
+      group: CARS
+      cross: []
+      chapters:
+      - foundations-of-comprehension
+      - reasoning-within-the-text
+      - reasoning-beyond-the-text
 exam_overrides: []

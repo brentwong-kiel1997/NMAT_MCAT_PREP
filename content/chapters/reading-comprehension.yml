@@ -1,0 +1,48 @@
+id: reading-comprehension
+title: Reading Comprehension
+discipline: verbal
+exams:
+- NMAT
+points:
+- Capture main idea and paragraph function
+- Detail location and inference (stay inside the text)
+- Tone/attitude and argument structure
+notes:
+- Hunt thesis sentences and contrast markers first
+- 'Detail items: relocate in text; don’t rely on memory'
+- Inferences must be text-supported
+- 'Paragraph-function items: define, exemplify, refute, transition'
+- Reject absolute wording unless the passage supports it
+- 'Main-idea items: prioritize openings, closings, and contrast markers'
+- 'Detail items: return to the text; don’t rely on memory alone'
+practice:
+- id: verb-2
+  q: 'For reading-comprehension detail items, the safest move is to:'
+  choices:
+    A: Trust first impressions
+    B: Relocate in the passage, then compare options
+    C: Pick the longest option
+    D: Ignore contrast markers
+  answer: B
+  explain: Details need textual support — relocate first.
+  chapter: Reading Comprehension
+- id: verb-5
+  q: 'Inference items differ from detail items because inferences:'
+  choices:
+    A: Must be reasonably drawn though not stated verbatim
+    B: May ignore the text entirely
+    C: Must copy the passage word for word
+    D: Test only vocabulary
+  answer: A
+  explain: Inferences need a textual evidence chain but need not be verbatim quotes.
+  chapter: Reading Comprehension
+- id: ver-8
+  q: 'Main-idea reading items should prioritize finding:'
+  choices:
+    A: The most vivid example
+    B: The author’s central claim
+    C: Definitions of rare words
+    D: The author’s hometown
+  answer: B
+  explain: Main idea is the author’s central claim, not a detail or example.
+  chapter: Reading Comprehension

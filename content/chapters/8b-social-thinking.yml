@@ -1,0 +1,23 @@
+id: 8b-social-thinking
+title: 8B · Social thinking
+discipline: psych-soc
+exams:
+- MCAT
+points:
+- Social thinking
+notes:
+- Attribution biases and stereotypes
+- 'Attitudes: affective, behavioral, cognitive components'
+- 'Availability heuristic: vivid recall inflates frequency estimates'
+- 'Stereotype threat: fear of confirming bias hurts performance'
+practice:
+- id: ps-8
+  q: 'The self-serving bias is the tendency to:'
+  choices:
+    A: Credit success to oneself and failures to external factors
+    B: Always blame oneself
+    C: Deny any self
+    D: Remember only others’ failures
+  answer: A
+  explain: This bias protects self-esteem and a positive self-image.
+  chapter: 8B · Social thinking

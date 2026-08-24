@@ -1,0 +1,41 @@
+id: 5a-unique-nature-of-water-and-its-solutions
+title: 5A · Unique nature of water and its solutions
+discipline: chemistry
+exams:
+- NMAT
+- MCAT
+points:
+- Unique properties of water and solutions
+- Water and its solutions
+notes:
+- H-bonding explains heat capacity and solvent power
+- Hydrophilic/hydrophobic drive folding and micelles
+- pH, pKa, and ionization fractions
+- 'Henderson–Hasselbalch: pH = pKa + log([A⁻]/[HA])'
+- 'Hydrophobic effect: hydration-shell disruption drives folding/aggregation'
+- 'Colligative properties: vapor-pressure lowering, boiling-point elevation, freezing-point depression'
+- H-bonding, heat capacity, hydrophobic effect
+- Acid–base balance and buffers
+- Proton hopping enables fast acid equilibration in water
+- Amphiphiles self-assemble into micelles/bilayers in water
+practice:
+- id: cp-3
+  q: 'A strong electrolyte in aqueous solution:'
+  choices:
+    A: Ionizes almost completely
+    B: Does not ionize at all
+    C: Exists only as neutral molecules
+    D: Cannot conduct electricity
+  answer: A
+  explain: E.g., NaCl and strong acids/bases dissociate nearly fully; weak electrolytes dissociate partially.
+  chapter: 5A · Unique nature of water and its solutions
+- id: chem-8
+  q: 'Hydrogen bonding in water mainly contributes to its high specific heat by:'
+  choices:
+    A: Absorbing heat to break H-bonds without large temperature rise
+    B: Making water boil at 0 °C
+    C: Eliminating intermolecular forces
+    D: Making water a strong electrolyte
+  answer: A
+  explain: The H-bond network stores thermal energy, buffering temperature swings—critical for life.
+  chapter: 5A · Unique nature of water and its solutions

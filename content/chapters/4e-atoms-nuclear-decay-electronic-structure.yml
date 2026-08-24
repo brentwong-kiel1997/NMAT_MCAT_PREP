@@ -1,0 +1,20 @@
+id: 4e-atoms-nuclear-decay-electronic-structure
+title: 4E · Atoms, nuclear decay, electronic structure
+discipline: chemistry
+exams:
+- NMAT
+- MCAT
+points:
+- Atoms, nuclear decay, and electronic structure
+- Atoms, nuclear decay, electronic structure, and atomic chemical behavior
+notes:
+- Level transitions and absorption/emission spectra
+- 'Photoelectric: frequency threshold and KE'
+- 'Absorption spectra: electrons jump to higher levels'
+- Photoelectric threshold frequency is material-specific
+- Levels, spectra, exponential half-life
+- 'Medical isotopes: moderate half-life with gamma emission'
+- MCAT often pairs nuclear decay with half-life graphs
+- Electronic energy gaps map to absorption/emission lines
+- Mass number A = protons + neutrons; isotopes share Z, differ in A
+practice: []

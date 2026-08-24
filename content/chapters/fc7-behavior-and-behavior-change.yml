@@ -1,0 +1,27 @@
+id: fc7-behavior-and-behavior-change
+title: FC7 · Behavior and behavior change
+discipline: behavioral-social
+exams:
+- NMAT
+- MCAT
+points:
+- 7A Individual influences on behavior
+- 7B Social processes that influence human behavior
+- 7C Attitude and behavior change
+notes:
+- Attitude–behavior gap; cognitive dissonance
+- 'Persuasion: central vs peripheral routes'
+- Habituation vs sensitization
+- Self-efficacy affects persistence and goal attainment
+- 'Theory of planned behavior: attitude, subjective norm, perceived control'
+practice:
+- id: beh-7
+  q: 'Cognitive dissonance theory predicts that when attitudes and behavior clash, people often:'
+  choices:
+    A: Change attitudes or reinterpret behavior to reduce discomfort
+    B: Permanently lose memory
+    C: Only increase arousal with no psychological change
+    D: Always admit error immediately
+  answer: A
+  explain: Inconsistency is aversive, motivating attitude/belief shifts to restore consistency.
+  chapter: FC7 · Behavior and behavior change

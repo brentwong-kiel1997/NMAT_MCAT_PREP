@@ -55,6 +55,8 @@ def urls() -> list[str]:
         "/mcat/",
         "/diseases/",
         "/login/",
+        "/tutorials/biology/unity-and-diversity-of-life/",
+        "/tutorials/biology/ch-1-unity-and-diversity-of-life/",  # legacy → redirect
         "/manage/models/",
         "/nope/",
     ]

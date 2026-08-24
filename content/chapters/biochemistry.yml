@@ -1,0 +1,27 @@
+id: biochemistry
+title: Biochemistry
+discipline: chemistry
+exams:
+- NMAT
+- MCAT
+points:
+- Intro biological macromolecules
+- Basic metabolism ideas (see Biochemistry hub)
+notes:
+- Side-chain polarity/charge shape folding and function
+- 'Enzyme kinetics: intuitive Vmax and Km'
+- 'Metabolic hubs: glucose, acetyl-CoA, ATP/NADH'
+- Peptide bond planarity restricts backbone rotation
+- 'Allosteric enzymes: substrate binding alters other-site affinity'
+- Coenzymes NAD⁺/FAD serve as redox carriers
+practice:
+- id: chem-10
+  q: 'The peptide bond in proteins is mainly characterized by:'
+  choices:
+    A: Partial double-bond character and planarity
+    B: Spontaneous cleavage at physiological pH
+    C: Linking only lipids
+    D: Containing no nitrogen
+  answer: A
+  explain: Resonance gives the peptide bond planarity and restricted rotation, shaping the protein backbone.
+  chapter: Biochemistry

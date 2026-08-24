@@ -14,52 +14,28 @@ discipline_mix:
 - AAMC FC6 ~25% / FC7 ~35% / FC8 ~20% / FC9 ~15% / FC10 ~5%
 focus: Psychological, social, and biological foundations of behavior.
 source_note: Chapters = AAMC Foundational Concepts 6–10 and all Content Categories.
-chapters:
-- heading: Foundational Concept 6 (~25%)
-  items:
-  - title: 6A · Sensing the environment
-    points:
-    - Sensing the environment
-  - title: 6B · Making sense of the environment
-    points:
-    - Making sense of / organizing environmental information
-  - title: 6C · Responding to the world
-    points:
-    - Responding to the world
-- heading: Foundational Concept 7 (~35%)
-  items:
-  - title: 7A · Individual influences on behavior
-    points:
-    - Individual influences on behavior
-  - title: 7B · Social processes that influence behavior
-    points:
-    - Social processes that influence behavior
-  - title: 7C · Attitude and behavior change
-    points:
-    - Attitude and behavior change
-- heading: Foundational Concept 8 (~20%)
-  items:
-  - title: 8A · Self-identity
-    points:
-    - Self-identity
-  - title: 8B · Social thinking
-    points:
-    - Social thinking
-  - title: 8C · Social interactions
-    points:
-    - Social interactions
-- heading: Foundational Concept 9 (~15%)
-  items:
-  - title: 9A · Understanding social structure
-    points:
-    - Understanding social structure
-  - title: 9B · Demographic characteristics and processes
-    points:
-    - Demographic characteristics and processes
-- heading: Foundational Concept 10 (~5%)
-  items:
-  - title: 10A · Social inequality
-    points:
-    - Social inequality and access to resources
 summary: Psychological, social, and biological foundations of behavior.
 kind: mcat
+chapters:
+- heading: Foundational Concept 6 (~25%)
+  chapters:
+  - 6a-sensing-the-environment
+  - 6b-making-sense-of-the-environment
+  - 6c-responding-to-the-world
+- heading: Foundational Concept 7 (~35%)
+  chapters:
+  - 7a-individual-influences-on-behavior
+  - 7b-social-processes-that-influence-behavior
+  - 7c-attitude-and-behavior-change
+- heading: Foundational Concept 8 (~20%)
+  chapters:
+  - 8a-self-identity
+  - 8b-social-thinking
+  - 8c-social-interactions
+- heading: Foundational Concept 9 (~15%)
+  chapters:
+  - 9a-understanding-social-structure
+  - 9b-demographic-characteristics-and-processes
+- heading: Foundational Concept 10 (~5%)
+  chapters:
+  - 10a-social-inequality

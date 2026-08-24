@@ -1,0 +1,37 @@
+id: life-processes-regulation-and-homeostasis
+title: 'Life Processes: Regulation and Homeostasis'
+discipline: biology
+exams:
+- NMAT
+- MCAT
+points:
+- Regulation and homeostasis
+- Maintaining the internal environment
+notes:
+- Negative feedback stabilizes; positive feedback amplifies brief events
+- Endocrine and nervous systems are the two major coordinators
+- Temperature, glucose, and osmolarity are classic homeostasis examples
+- Insulin lowers glucose; glucagon raises glucose
+- 'Nephron: filtration → reabsorption → secretion regulates fluids'
+- 'Thermoregulation: sweating/vasomotion plus behavioral adjustments'
+practice:
+- id: bio-2
+  q: 'The main role of negative feedback is to:'
+  choices:
+    A: Amplify deviation to finish a brief process
+    B: Keep the internal environment relatively stable
+    C: Increase mutation rate
+    D: Block all physiological change
+  answer: B
+  explain: Negative feedback opposes drift from set points; positive feedback amplifies (e.g., labor).
+  chapter: 'Life Processes: Regulation and Homeostasis'
+- id: bio-7
+  q: Insulin raises or lowers blood glucose?
+  choices:
+    A: Raises it
+    B: Lowers it (promotes uptake and storage)
+    C: Has no effect on glucose
+    D: Affects only blood calcium
+  answer: B
+  explain: Insulin drives glucose into cells and promotes glycogen/fat synthesis, lowering blood glucose.
+  chapter: 'Life Processes: Regulation and Homeostasis'

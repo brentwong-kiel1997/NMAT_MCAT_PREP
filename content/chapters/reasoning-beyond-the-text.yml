@@ -1,0 +1,47 @@
+id: reasoning-beyond-the-text
+title: Reasoning Beyond the Text
+discipline: cars
+exams:
+- MCAT
+points:
+- Apply a principle to a new situation
+- Integrate outside info without violating the passage
+- Judge whether an analogy holds
+notes:
+- New scenarios must keep the principle intact
+- Failed analogies usually mismatch the relation
+- Application items map core principles, not surface similarity
+- Integrated outside info must not contradict the passage
+- 'Application: transfer a passage principle to a new scenario'
+- 'Weaken/strengthen: target the argument’s key assumption'
+practice:
+- id: cars-3
+  q: 'Reasoning Beyond the Text items usually require you to:'
+  choices:
+    A: Import outside facts and ignore the author’s principle
+    B: Apply the passage principle consistently to a new scenario
+    C: Only count word frequency
+    D: Invert the author’s conclusion
+  answer: B
+  explain: Beyond-text reasoning still has to keep the passage principle intact.
+  chapter: Reasoning Beyond the Text
+- id: cars-6
+  q: 'An analogy item (Beyond the Text) works only if:'
+  choices:
+    A: The correspondence matches the passage principle
+    B: The new scenario is as unfamiliar as possible
+    C: It may violate the author’s premises
+    D: Surface wording similarity is enough
+  answer: A
+  explain: Valid analogies preserve the logical relation, not mere surface similarity.
+  chapter: Reasoning Beyond the Text
+- id: cars-8
+  q: 'CARS weaken questions should preferentially attack:'
+  choices:
+    A: The author’s hometown
+    B: A key assumption or evidence link
+    C: Font size
+    D: Paragraph count
+  answer: B
+  explain: Weaken targets the reasoning structure, not irrelevant author trivia.
+  chapter: Reasoning Beyond the Text

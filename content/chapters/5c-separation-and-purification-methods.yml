@@ -1,0 +1,26 @@
+id: 5c-separation-and-purification-methods
+title: 5C · Separation and purification methods
+discipline: chemistry
+exams:
+- NMAT
+- MCAT
+points:
+- Separations/purifications (including peptide/protein methods)
+- Separation and purification
+notes:
+- Chromatography/electrophoresis separate by property
+- 'HPLC: high pressure boosts resolution and speed'
+- Electrophoretic mobility depends on charge and size
+- TLC Rf = spot distance / solvent-front distance
+- Electrophoresis separates by charge/mass; pI used for proteins
+practice:
+- id: cp-6
+  q: 'Gel electrophoresis separates DNA fragments mainly by:'
+  choices:
+    A: Size (length)
+    B: Color
+    C: Odor
+    D: Radioactivity alone
+  answer: A
+  explain: Negatively charged DNA migrates toward the anode; shorter fragments move faster.
+  chapter: 5C · Separation and purification methods

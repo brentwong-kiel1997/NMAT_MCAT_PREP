@@ -1,0 +1,37 @@
+id: organisms-and-their-environment
+title: Organisms and Their Environment
+discipline: biology
+exams:
+- NMAT
+- MCAT
+points:
+- Organisms and their environment
+- Intro ecological relationships
+notes:
+- Population, community, ecosystem levels
+- Energy flows one way; matter cycles
+- 'Species interactions: predation, competition, symbiosis'
+- '~10% energy transfer rule: heavy loss between trophic levels'
+- 'Succession: pioneer species alter environment → community turnover'
+- 'Niche: functional role across resource and time dimensions'
+practice:
+- id: bio-4
+  q: 'Energy flow in ecosystems is basically:'
+  choices:
+    A: Fully cyclic with no loss
+    B: One-way with stepwise dissipation
+    C: Cycling only inside producers
+    D: Identical to matter cycling
+  answer: B
+  explain: Energy moves one way with heat loss; matter can cycle.
+  chapter: Organisms and Their Environment
+- id: bio-8
+  q: 'A food web better reflects an ecosystem’s:'
+  choices:
+    A: Single linear feeding path
+    B: Complex feeding links among many species
+    C: Energy cycling with no loss
+    D: Equal biomass at every trophic level
+  answer: B
+  explain: Most species participate in multiple feeding links; webs are more realistic than single chains.
+  chapter: Organisms and Their Environment

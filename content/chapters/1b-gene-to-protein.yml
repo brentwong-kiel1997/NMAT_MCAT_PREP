@@ -1,0 +1,44 @@
+id: 1b-gene-to-protein
+title: 1B · Gene to protein
+discipline: biochemistry
+exams:
+- NMAT
+- MCAT
+points:
+- Genetic information from gene to protein
+- Transmission of genetic information from gene to protein
+notes:
+- Transcription and eukaryotic RNA processing
+- Degenerate code; start/stop codons
+- 'Translation: ribosome, tRNA, peptide elongation'
+- 5' cap and poly-A tail stabilize eukaryotic mRNA
+- Intron splicing catalyzed by snRNPs
+- Wobble hypothesis explains third-base codon degeneracy
+- Transcriptional control and translation initiation are high-yield
+- Degeneracy softens some mutation effects
+- 'Prokaryotes: transcription and translation can couple'
+- 'RNAi: small RNAs silence gene expression'
+- Promoters and transcription factors set expression timing
+- tRNA anticodons pair mRNA; aminoacyl-tRNA synthetases ensure fidelity
+- 'Translation: initiation→elongation→termination; A/P/E sites'
+practice:
+- id: bb-3
+  q: 'Ribosomes directly:'
+  choices:
+    A: Catalyze peptide-bond formation (translation)
+    B: Replicate DNA
+    C: Synthesize fatty acids
+    D: Pump protons
+  answer: A
+  explain: Ribosomes read mRNA; tRNAs deliver amino acids; rRNA/protein components catalyze peptide elongation.
+  chapter: 1B · Gene to protein
+- id: bioc-4
+  q: Where does transcription occur in eukaryotes?
+  choices:
+    A: Nucleus
+    B: Mitochondrial intermembrane space alone
+    C: Golgi lumen
+    D: Outside the plasma membrane
+  answer: A
+  explain: DNA is transcribed to mRNA in the nucleus; mature mRNA is translated in the cytoplasm.
+  chapter: 1B · Gene to protein

@@ -1,0 +1,24 @@
+id: 1c-heritable-information-genetic-diversity
+title: 1C · Heritable information & genetic diversity
+discipline: biology
+exams:
+- NMAT
+- MCAT
+points:
+- Transmission across generations
+- Processes that increase genetic diversity
+- Heritable transmission and processes that increase diversity
+notes:
+- Semiconservative replication; mutation feeds variation
+- Meiotic recombination + assortment → gamete diversity
+- 'HWE ideal: no mutation/selection/drift/migration + random mating'
+- Polymerase proofreading + mismatch repair boost fidelity
+- Crossing over occurs in prophase I of meiosis
+- 'Hardy–Weinberg: p² + 2pq + q² = 1'
+- Replication fidelity and repair paths (intro)
+- Meiotic errors → aneuploidy idea
+- CRISPR guides Cas to cut specific DNA sequences
+- 'Aneuploidy: abnormal chromosome number'
+- Point vs frameshift mutations often differ in severity
+- Heterozygote advantage can maintain deleterious allele frequencies
+practice: []

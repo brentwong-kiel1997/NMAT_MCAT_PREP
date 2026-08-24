@@ -10,42 +10,19 @@ source_note: NMAT headings from CEM BOI Physics; MCAT side maps to AAMC Foundati
 exam_notes:
   NMAT: Typical intro physics themes; concepts and reasoning.
   MCAT: Often embedded in physio/clinical passages; less pure calc, more relations and estimation.
+kind: shared
 chapters:
 - heading: NMAT · CEM BOI chapters
-  items:
-  - title: Mechanics
-    points:
-    - Motion, forces, work, and energy
-    - Intro equilibrium and momentum
-  - title: Thermodynamics
-    points:
-    - Intro temperature, heat, and thermo laws
-  - title: Vibrations, Waves, and Optics
-    points:
-    - Vibrations and waves
-    - Basics of geometric/wave optics
-  - title: Electricity and Magnetism
-    points:
-    - Basics of electric fields and circuits
-    - Intro magnetism
-  - title: Modern Physics
-    points:
-    - Intro modern physics (e.g., quantum/nuclear basics)
+  chapters:
+  - mechanics
+  - thermodynamics
+  - vibrations-waves-and-optics
+  - electricity-and-magnetism
+  - modern-physics
 - heading: MCAT · Foundational Concept 4 (AAMC)
-  items:
-  - title: 4A · Motion, forces, work, energy, equilibrium
-    points:
-    - Translational motion, forces, work, energy, and equilibrium in living systems
-  - title: 4B · Fluids, circulation, gas exchange
-    points:
-    - Fluids in blood circulation and gas exchange
-  - title: 4C · Electrochemistry and circuits
-    points:
-    - Electrochemistry and circuit elements
-  - title: 4D · Light and sound with matter
-    points:
-    - How light and sound interact with matter
-  - title: 4E · Atoms and electronic structure
-    points:
-    - Atoms, nuclear decay, and electronic structure
-kind: shared
+  chapters:
+  - 4a-motion-forces-work-energy-equilibrium
+  - 4b-fluids-for-circulation-and-gas-exchange
+  - 4c-electrochemistry-and-electrical-circuits
+  - 4d-light-and-sound-interacting-with-matter
+  - 4e-atoms-nuclear-decay-electronic-structure

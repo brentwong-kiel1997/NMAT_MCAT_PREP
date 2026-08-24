@@ -29,22 +29,12 @@ class Command(BaseCommand):
             ["git", "rev-parse", "--short", "HEAD"],
             capture_output=True, text=True, cwd=CONTENT.parent,
         ).stdout.strip() or "unknown"
+        from portal.management.commands.validate_content import current_counts
+
+        counts = current_counts(store)
         manifest = {
             "source_rev": rev,
-            "counts": {
-                "subjects": len(store["subjects"]),
-                "note_buckets": sum(len(v) for v in store["notes"].values()),
-                "note_bullets": sum(
-                    len(b) for v in store["notes"].values() for b in v.values()
-                ),
-                "practice": sum(len(v) for v in store["practice"].values()),
-                "glossary": len(store["glossary"]),
-                "formulas": sum(len(v) for v in store["formulas"].values()),
-                "tips": len(store["tips"]),
-                "paths": len(store["paths"]),
-                "checklists": len(store["checklists"]),
-                "diseases": len(store["diseases"]),
-            },
+            "counts": counts,
             "files": {
                 str(p.relative_to(CONTENT)): hashlib.sha256(p.read_bytes()).hexdigest()
                 for p in sorted(CONTENT.rglob("*.yml"))

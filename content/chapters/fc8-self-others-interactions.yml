@@ -1,0 +1,38 @@
+id: fc8-self-others-interactions
+title: FC8 · Self, others, interactions
+discipline: behavioral-social
+exams:
+- NMAT
+- MCAT
+points:
+- 8A Self-identity
+- 8B Social thinking
+- 8C Social interactions
+notes:
+- Self-concept, self-esteem, social identity
+- 'Attribution: internal/external; fundamental attribution error'
+- Conformity, obedience, group polarization
+- 'Bystander effect: others’ presence lowers helping likelihood'
+- 'Self-serving bias: credit success internally, blame failure externally'
+practice:
+- id: beh-2
+  q: 'The fundamental attribution error tends to:'
+  choices:
+    A: Overweight situation, underweight disposition
+    B: Overweight disposition, underweight situation
+    C: Deny all attribution
+    D: Occur only in labs
+  answer: B
+  explain: Observers over-attribute others’ acts to personality vs situation.
+  chapter: FC8 · Self, others, interactions
+- id: beh-8
+  q: 'The bystander effect is:'
+  choices:
+    A: More bystanders lower the chance any one person helps
+    B: People never help when alone
+    C: Affects only auditory attention
+    D: Unrelated to diffusion of responsibility
+  answer: A
+  explain: Diffusion of responsibility and pluralistic ignorance reduce helping; clear responsibility
+    weakens the effect.
+  chapter: FC8 · Self, others, interactions

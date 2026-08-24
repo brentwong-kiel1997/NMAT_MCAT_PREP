@@ -1,0 +1,27 @@
+id: unity-and-diversity-of-life
+title: Unity and Diversity of Life
+discipline: biology
+exams:
+- NMAT
+- MCAT
+points:
+- Unity and diversity of life
+- Intro ideas in classification and evolution
+notes:
+- 'Shared traits: cells, metabolism, homeostasis, reproduction, adaptation'
+- Domain/kingdom hierarchy organizes diversity — not rote species lists
+- 'Homology vs analogy: shared ancestry vs similar function'
+- 'Three-domain system: Bacteria, Archaea, Eukarya'
+- 'Natural selection: variation + selection + time → adaptation'
+- 'Species concept: reproductive isolation is a core criterion'
+practice:
+- id: bio-14
+  q: Which best matches natural selection?
+  choices:
+    A: Individuals actively change genes to fit the environment
+    B: Individuals with advantageous variants leave more offspring
+    C: All variants are transmitted equally
+    D: The environment directly creates needed mutations
+  answer: B
+  explain: Selection acts via differential reproductive success on existing variation.
+  chapter: Unity and Diversity of Life

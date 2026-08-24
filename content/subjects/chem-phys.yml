@@ -17,40 +17,20 @@ discipline_mix:
 - AAMC FC4 ~40% / FC5 ~60% (within this section)
 focus: Test gen/organic chem, physics, and biochem in living-system contexts.
 source_note: Chapters = AAMC Foundational Concepts 4–5 and all Content Categories.
-chapters:
-- heading: Foundational Concept 4 (~40%)
-  items:
-  - title: 4A · Motion, forces, work, energy, equilibrium
-    points:
-    - Translational motion, forces, work, energy, and equilibrium in living systems
-  - title: 4B · Fluids for circulation and gas exchange
-    points:
-    - Fluids in circulation, gas movement, and gas exchange
-  - title: 4C · Electrochemistry and electrical circuits
-    points:
-    - Electrochemistry and circuit elements
-  - title: 4D · Light and sound interacting with matter
-    points:
-    - Light and sound interacting with matter
-  - title: 4E · Atoms, nuclear decay, electronic structure
-    points:
-    - Atoms, nuclear decay, electronic structure, and atomic chemical behavior
-- heading: Foundational Concept 5 (~60%)
-  items:
-  - title: 5A · Unique nature of water and its solutions
-    points:
-    - Water and its solutions
-  - title: 5B · Molecules and intermolecular interactions
-    points:
-    - Molecules and intermolecular interactions
-  - title: 5C · Separation and purification methods
-    points:
-    - Separation and purification
-  - title: 5D · Biologically relevant molecules
-    points:
-    - Structure, function, and reactivity of biologically relevant molecules
-  - title: 5E · Chemical thermodynamics and kinetics
-    points:
-    - Chemical thermodynamics and kinetics
 summary: Test gen/organic chem, physics, and biochem in living-system contexts.
 kind: mcat
+chapters:
+- heading: Foundational Concept 4 (~40%)
+  chapters:
+  - 4a-motion-forces-work-energy-equilibrium
+  - 4b-fluids-for-circulation-and-gas-exchange
+  - 4c-electrochemistry-and-electrical-circuits
+  - 4d-light-and-sound-interacting-with-matter
+  - 4e-atoms-nuclear-decay-electronic-structure
+- heading: Foundational Concept 5 (~60%)
+  chapters:
+  - 5a-unique-nature-of-water-and-its-solutions
+  - 5b-molecules-and-intermolecular-interactions
+  - 5c-separation-and-purification-methods
+  - 5d-biologically-relevant-molecules
+  - 5e-chemical-thermodynamics-and-kinetics

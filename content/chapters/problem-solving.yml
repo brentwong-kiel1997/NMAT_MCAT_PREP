@@ -1,0 +1,26 @@
+id: problem-solving
+title: Problem Solving
+discipline: quantitative
+exams:
+- NMAT
+points:
+- Turn word problems into quantitative relations
+- Unit conversion and reasonableness checks
+notes:
+- Define unknowns and units first
+- Sketch the relation before computing
+- 'Motion problems: sketch directions for meet/chase setups'
+- 'Mixtures: conserve solute when setting equations'
+- Define unknowns and translate sentences into equations
+- Convert units to a common system before computing
+practice:
+- id: quant-3
+  q: 'A train at 60 km/h for 2.5 hours travels:'
+  choices:
+    A: 150 km
+    B: 120 km
+    C: 62.5 km
+    D: 240 km
+  answer: A
+  explain: Distance = rate × time = 60 × 2.5 = 150 km.
+  chapter: Problem Solving

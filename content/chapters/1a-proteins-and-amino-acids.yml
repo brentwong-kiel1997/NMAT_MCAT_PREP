@@ -1,0 +1,75 @@
+id: 1a-proteins-and-amino-acids
+title: 1A · Proteins and amino acids
+discipline: biochemistry
+exams:
+- NMAT
+- MCAT
+points:
+- Amino acid and protein structure/function
+- Structure and function of proteins and their amino acids
+notes:
+- '20 common amino acids: nonpolar/polar/acidic/basic sides'
+- Primary→quaternary structure; denaturation hits higher order
+- 'Enzymes: active site, cofactors, allosteric regulation'
+- 'Isoelectric point pI: pH where net charge is zero'
+- Cooperative binding yields sigmoid oxygenation curves
+- 'Irreversible inhibition: covalent modification of active site'
+- Side-chain chemistry drives catalysis and binding
+- Logic of electrophoresis/chromatography separations
+- 'Zinc finger, leucine zipper: DNA-binding motifs'
+- 'Denaturants: urea, heat disrupt noncovalent interactions'
+- 'Side-chain classes: nonpolar, polar uncharged, acidic/basic'
+- Disulfide bonds stabilize extracellular tertiary/quaternary structure
+- 'Hb cooperativity and Bohr effect: O₂ traded with CO₂/H⁺'
+practice:
+- id: bb-1
+  q: 'Peptide-bond formation involves:'
+  choices:
+    A: Hydrolysis that consumes water
+    B: Condensation linking amino acids with water loss
+    C: Breaking all hydrogen bonds
+    D: Changing element identities
+  answer: B
+  explain: Carboxyl + amino condense with water loss; hydrolysis reverses it.
+  chapter: 1A · Proteins and amino acids
+- id: bioc-1
+  q: 'Enzymes speed reactions primarily by:'
+  choices:
+    A: Raising temperature
+    B: Lowering activation energy
+    C: Changing the sign of ΔG°
+    D: Destroying all products
+  answer: B
+  explain: Enzymes stabilize the transition state and lower Ea; overall ΔG is unchanged.
+  chapter: 1A · Proteins and amino acids
+- id: bioc-3
+  q: 'Primary protein structure refers to:'
+  choices:
+    A: The linear sequence of amino acids
+    B: Alpha-helix content alone
+    C: Assembly of multiple subunits
+    D: The binding site alone
+  answer: A
+  explain: Primary structure is residue order, which constrains higher-order folding and function.
+  chapter: 1A · Proteins and amino acids
+- id: bioc-7
+  q: 'A competitive inhibitor typically:'
+  choices:
+    A: Increases Km with unchanged Vmax
+    B: Drops Vmax to zero with unchanged Km
+    C: Leaves both Km and Vmax unchanged
+    D: Denatures and precipitates the enzyme
+  answer: A
+  explain: Competitive inhibitors bind the active site; high substrate can overcome inhibition, so Vmax
+    is reachable.
+  chapter: 1A · Proteins and amino acids
+- id: bch-8
+  q: 'Competitive inhibition typically:'
+  choices:
+    A: Raises Km, leaves Vmax unchanged
+    B: Lowers Km and raises Vmax
+    C: Lowers both Km and Vmax
+    D: Leaves Km unchanged and raises Vmax
+  answer: A
+  explain: Competitor fights for the active site; more substrate can still reach Vmax.
+  chapter: 1A · Proteins and amino acids

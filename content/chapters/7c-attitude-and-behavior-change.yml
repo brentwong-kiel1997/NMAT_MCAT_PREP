@@ -1,0 +1,23 @@
+id: 7c-attitude-and-behavior-change
+title: 7C · Attitude and behavior change
+discipline: psych-soc
+exams:
+- MCAT
+points:
+- Attitude and behavior change
+notes:
+- Cognitive dissonance and dual-process persuasion
+- Habituation vs sensitization
+- 'Cognitive dissonance: attitude–behavior mismatch causes discomfort'
+- 'Peripheral route: persuasion via cues and emotion'
+practice:
+- id: ps-7
+  q: 'The central route to persuasion emphasizes:'
+  choices:
+    A: Argument quality and careful elaboration
+    B: Celebrity attractiveness alone
+    C: Number of stimuli alone
+    D: Rejecting all information
+  answer: A
+  explain: Central route uses logic and evidence; peripheral route uses cues and heuristics.
+  chapter: 7C · Attitude and behavior change
