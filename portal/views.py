@@ -187,11 +187,37 @@ def subject_detail(request, slug):
     return render(request, "portal/subject_detail.html", ctx)
 
 
+def hub_unit_groups(project_key: str) -> list:
+    """(group, [unit cards]) pairs in units.yml order, with cross labels resolved."""
+    from .content import project_units
+
+    units_by_key = {}
+    for proj in project_units():
+        for u in proj["units"]:
+            units_by_key[u["key"]] = u
+    groups: list = []
+    for proj in project_units():
+        if proj["key"] != project_key:
+            continue
+        for u in proj["units"]:
+            card = dict(u)
+            card["cross_labels"] = [
+                (units_by_key.get(k) or {}).get("label", k) for k in u.get("cross") or []
+            ]
+            g = card.get("group") or "—"
+            cand = next((grp for grp in groups if grp[0] == g), None)
+            if cand:
+                cand[1].append(card)
+            else:
+                groups.append([g, [card]])
+    return groups
+
+
 def nmat_hub(request):
     return render(
         request,
         "portal/nmat_hub.html",
-        {"exam": exams.nmat_exam()},
+        {"exam": exams.nmat_exam(), "unit_groups": hub_unit_groups("nmat")},
     )
 
 
@@ -226,7 +252,7 @@ def mcat_hub(request):
     return render(
         request,
         "portal/mcat_hub.html",
-        {"exam": exams.mcat_exam()},
+        {"exam": exams.mcat_exam(), "unit_groups": hub_unit_groups("mcat")},
     )
 
 

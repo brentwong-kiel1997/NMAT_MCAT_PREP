@@ -9,28 +9,37 @@
     <p class="section-kicker">{{ exam.admin }}</p>
     <h1>{{ exam.name }}</h1>
     <p class="lead">{{ exam.full_name }}. {{ exam.format }}</p>
-    <p class="lead" style="margin-top:0.75rem;">Source: CEM NMAT Bulletin of Information (Part 1 + Part 2, 8×30 items).</p>
+    <p class="lead" style="margin-top:0.75rem;">Source: CEM NMAT test description.</p>
+    <p class="muted-inline"><a href="{% url 'study_hub' %}">← Study desk</a></p>
   </div>
 </div>
 
-{% for part in exam.parts %}
 <section class="section">
-  <p class="section-kicker">{{ part.id|upper }}</p>
-  <h2>{{ part.name }}</h2>
-  <p class="section-lead">{{ part.items }} items · {{ part.time }}</p>
-  <ul class="disease-list">
-    {% for s in part.subjects %}
-    <li>
-      <a href="{% if s.shared %}{% url 'subject_detail' s.shared %}{% else %}{% url 'nmat_subject' s.slug %}{% endif %}">
-        <div>
-          <h3>{{ s.name }}</h3>
-          <p>{{ s.focus }}{% if s.shared %} · Open shared subject{% endif %}</p>
-        </div>
-        <span class="disease-meta">{% if s.shared %}Shared{% else %}Unique{% endif %} · {{ s.items }} items</span>
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
+  <p class="section-kicker">Study units</p>
+  <h2>Learn by unit, part by part</h2>
+  <p class="section-lead">Part 2 science units share their chapters with MCAT units — progress made
+     under one project carries over chapter by chapter.</p>
+
+  {% for group, units in unit_groups %}
+  <div class="unit-group">
+    <h3 class="unit-group-title">{{ group }}</h3>
+    <div class="project-grid">
+      {% for u in units %}
+      <article class="project-card">
+        <a href="{% url 'unit_detail' 'nmat' u.key %}">
+          <h4>{{ u.label }}</h4>
+          <p class="muted-inline">{{ u.chapters|length }} chapters</p>
+        </a>
+        {% if u.cross_labels %}
+        <p class="unit-shared-note">
+          <span class="exam-badge exam-mcat">shares with MCAT</span>
+          {{ u.cross_labels|join:", " }}
+        </p>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
 </section>
-{% endfor %}
 {% endblock %}

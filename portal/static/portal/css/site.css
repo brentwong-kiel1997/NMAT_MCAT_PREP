@@ -1250,3 +1250,15 @@ details.tut-question[open] summary, details.tut-check-q[open] summary { margin-b
 }
 .exam-nmat { background: rgba(14, 116, 144, 0.12); color: #0e7490; }
 .exam-mcat { background: rgba(91, 33, 182, 0.12); color: #5b21b6; }
+
+/* --- Exam hub unit groups --- */
+.unit-group { margin: 1.25rem 0 1.6rem; }
+.unit-group-title {
+  font-size: 1.05rem; color: var(--brand-deep, #0d3d3a);
+  border-bottom: 2px solid var(--brand, #105652);
+  padding-bottom: 0.3rem; margin: 0 0 0.7rem;
+}
+.project-card h4 { margin: 0 0 0.25rem; }
+.project-card a { text-decoration: none; color: inherit; }
+.unit-shared-note { margin: 0.55rem 0 0; font-size: 0.84rem; color: #44423c;
+  display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; }

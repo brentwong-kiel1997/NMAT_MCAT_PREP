@@ -570,6 +570,7 @@ def units_store() -> dict:
                     "key": key,
                     "project": proj_key,
                     "label": u.get("label", key),
+                    "group": u.get("group", ""),
                     "source": source,
                     "cross": list(u.get("cross") or []),
                     "chapters": chapters,

@@ -9,26 +9,37 @@
     <p class="section-kicker">{{ exam.admin }}</p>
     <h1>{{ exam.name }}</h1>
     <p class="lead">{{ exam.full_name }}. {{ exam.format }}</p>
-    <p class="lead" style="margin-top:0.75rem;">Source: AAMC About the MCAT / What’s on the MCAT.</p>
+    <p class="lead" style="margin-top:0.75rem;">Source: AAMC About the MCAT / What's on the MCAT.</p>
+    <p class="muted-inline"><a href="{% url 'study_hub' %}">← Study desk</a></p>
   </div>
 </div>
 
 <section class="section">
-  <p class="section-kicker">Four sections</p>
-  <h2>Enter by the four official sections</h2>
-  <p class="section-lead">Fixed test-day order. Science/behavior sections link to shared hubs; CARS stays separate.</p>
-  <ul class="disease-list">
-    {% for s in exam.sections %}
-    <li>
-      <a href="{% url 'mcat_section' s.slug %}">
-        <div>
-          <h3>{{ s.short }}</h3>
-          <p>{{ s.name }}</p>
-        </div>
-        <span class="disease-meta">{% if s.unique %}Unique{% else %}Shared links{% endif %} · {{ s.questions }} items</span>
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
+  <p class="section-kicker">Study units</p>
+  <h2>Exam-day sections, learned as small projects</h2>
+  <p class="section-lead">Each section is one big project; study it as the smaller units beneath it.
+     Units marked <strong>shares with NMAT</strong> cover the same chapters as the linked NMAT unit.</p>
+
+  {% for group, units in unit_groups %}
+  <div class="unit-group">
+    <h3 class="unit-group-title">{{ group }}</h3>
+    <div class="project-grid">
+      {% for u in units %}
+      <article class="project-card">
+        <a href="{% url 'unit_detail' 'mcat' u.key %}">
+          <h4>{{ u.label }}</h4>
+          <p class="muted-inline">{{ u.chapters|length }} chapters</p>
+        </a>
+        {% if u.cross_labels %}
+        <p class="unit-shared-note">
+          <span class="exam-badge exam-nmat">shares with NMAT</span>
+          {{ u.cross_labels|join:", " }}
+        </p>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
 </section>
 {% endblock %}
