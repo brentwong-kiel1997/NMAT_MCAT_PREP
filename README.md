@@ -47,7 +47,9 @@
 | Full textbook tutorials *(growing weekly)* | **1 → 90** |
 
 Everything lives in [`content/`](content/) as plain YAML and is documented
-standalone in [`content/README.md`](content/README.md).
+standalone in [`content/README.md`](content/README.md). Per-chapter tutorial
+fill progress is tracked in
+[`content/docs/PROGRESS.md`](content/docs/PROGRESS.md).
 
 ## 🚀 Quickstart
 

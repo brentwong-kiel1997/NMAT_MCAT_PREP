@@ -27,6 +27,7 @@ the single source of truth — there is no generated artifact to keep in sync.
 | `materials/checklists.yml` | Exam-day and study checklists | 3 lists |
 | `tutorials/<subject>/<chapter>.yml` | Full textbook chapters: overview, teaching sections, tables, worked examples, key points, pitfalls, exam map, sources | 1 → 90 (growing) |
 | `docs/TUTORIAL_TEMPLATE.md` | Authoring template + field reference for new chapters | — |
+| `docs/PROGRESS.md` | Per-chapter fill progress tracker (90 chapters) | 1 / 90 |
 | `MANIFEST.json` | Counts and SHA-256 hashes of every file, for integrity checks | — |
 
 ## Editing rules
@@ -120,6 +121,9 @@ example is `tutorials/biology/unity-and-diversity-of-life.yml`. The
 validation gate checks that every tutorial keys to a real outline chapter
 and cites only registered sources, so writing a chapter is: copy the
 template → fill it → run `validate_content` → `refresh_manifest` → commit.
+Fill progress per chapter is tracked in
+[`docs/PROGRESS.md`](docs/PROGRESS.md) — update it alongside every chapter
+you publish.
 
 ## Note overlay (read-time copies)
 
