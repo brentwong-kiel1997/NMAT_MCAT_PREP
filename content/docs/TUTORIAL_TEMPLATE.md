@@ -158,6 +158,40 @@ All five sub-blocks reuse the same question shape
 (`q / options / answer / explain / distractors`). `distractors` only makes
 sense for multiple-choice; omit it for conceptually-open questions.
 
+### A section, element by element (the checklist)
+
+Every `section` exists to teach **one concept fully**. Build each section
+from this checklist — elements in **bold** are required, the rest optional
+but expected when the concept calls for them:
+
+| # | Element | YAML | What it must contain |
+|---|---------|------|----------------------|
+| 1 | **Title** | `heading` | The concept in plain exam language; appears in the page TOC and anchor. One concept per section — split, don't cram. |
+| 2 | **Body** | `body[]` (2–4 paragraphs) | Intuition first: what is it, why care, what comes to mind. Then mechanism: how it works, step by step. Then exam angle: how a question would test it. End each paragraph the way a candidate reads it. |
+| 3 | **Key terms** | `**term**` in body | Bold every term the exam asks for by name (homologous, binomial, clade). Readers scan bolds for revision. |
+| 4 | **Must-not-miss** | `==takeaway==` in body | At least one per section: the single fact/relationship that is most commonly tested in this section. If a section has no such candidate, you have not found the crux yet. |
+| 5 | Contrast (as needed) | a body paragraph | The classic exam discriminator: what is this NOT? Compare against its closest confusable (homology vs analogy, virus vs cell, pre-renal vs ATN). Every section should name its main confusable. |
+| 6 | Table | `table` (optional) | Use when 2+ parallel items must be compared (domains, hormones, methods). 4 no more than 6 rows reads best. |
+| 7 | Check yourself | `check` (1 question ideally) | One quick A–D recall or classification item on the section's crux, answer hidden below the fold. |
+| 8 | Exam tag | inside body or check | One sentence (implicit or explicit) on how NMAT/MCAT would use this — recall here, reasoning there. The full exam map lives at chapter level; each section should still earn its place in it. |
+
+A section that fills 1–5 fully is already useful; add 6–8 when the concept
+has natural comparisons, a single crux worth self-testing, or a clear
+exam-side usage.
+
+### The five out-of-section blocks (short forms)
+
+Same expectation rules for the chapter-level blocks:
+
+- `examples` — **one per chapter minimum**: a realistic stem, explicit
+  reasoning steps, and `distractors` explaining every wrong option.
+- `key_points` — the revision cheat-sheet: 5–8 bullets that stand alone.
+- `mnemonics` — only real hooks that stick (skip forced ones).
+- `maps` — 1 per chapter when a pathway/flow benefits from a visual chain.
+- `passage` — optional; include when the concept is passage-style by nature.
+- `review_questions` — 4 minimum at chapter level, always with distractors
+  on the choices that are actually tempting.
+
 ## File naming
 
 Place the file at `content/tutorials/<subject>/<title-slug>.yml` where
