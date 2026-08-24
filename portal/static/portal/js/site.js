@@ -1,48 +1,4 @@
 (function () {
-  const LANG_KEY = "gabay_lang";
-
-  function currentLang() {
-    return localStorage.getItem(LANG_KEY) || "zh";
-  }
-
-  function applyLang(lang) {
-    const resolved = lang === "en" ? "en" : "zh";
-    localStorage.setItem(LANG_KEY, resolved);
-    document.documentElement.lang = resolved === "en" ? "en" : "zh-CN";
-    document.documentElement.dataset.lang = resolved;
-    document.querySelectorAll("[data-i18n]").forEach((el) => {
-      const zh = el.getAttribute("data-zh");
-      const en = el.getAttribute("data-en");
-      if (zh == null || en == null) return;
-      el.textContent = resolved === "en" ? en : zh;
-    });
-    document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
-      const zh = el.getAttribute("data-zh-ph");
-      const en = el.getAttribute("data-en-ph");
-      if (zh == null || en == null) return;
-      el.setAttribute("placeholder", resolved === "en" ? en : zh);
-    });
-    document.querySelectorAll(".lang-toggle button").forEach((btn) => {
-      btn.classList.toggle("is-active", btn.dataset.lang === resolved);
-    });
-    document.dispatchEvent(new CustomEvent("gabay:lang", { detail: { lang: resolved } }));
-  }
-
-  function mountLangToggle(host) {
-    if (!host || host.querySelector(".lang-toggle")) return;
-    const wrap = document.createElement("div");
-    wrap.className = "lang-toggle";
-    wrap.innerHTML =
-      '<button type="button" data-lang="zh">中文</button>' +
-      '<button type="button" data-lang="en">EN</button>';
-    wrap.addEventListener("click", (e) => {
-      const btn = e.target.closest("button[data-lang]");
-      if (!btn) return;
-      applyLang(btn.dataset.lang);
-    });
-    host.appendChild(wrap);
-  }
-
   function csrfToken() {
     const m = document.cookie.match(/(?:^|; )csrftoken=([^;]+)/);
     if (m) return decodeURIComponent(m[1]);
@@ -174,12 +130,11 @@
       const answer = panel.querySelector(".flash-answer");
       if (chapterEl) chapterEl.textContent = c.chapter || "";
       if (prompt) {
-        prompt.textContent =
-          currentLang() === "en" ? "Tap to flip · recall the point" : "点按翻转 · 回忆要点";
+        prompt.textContent = "Tap to flip · recall the point";
         prompt.hidden = flipped;
       }
       if (answer) {
-        answer.textContent = currentLang() === "en" ? c.en || "" : c.zh || "";
+        answer.textContent = c.text || "";
         answer.hidden = !flipped;
       }
       if (indexEl) indexEl.textContent = String(i + 1);
@@ -202,7 +157,6 @@
     });
     panel.querySelector(".flash-prev")?.addEventListener("click", () => go(-1));
     panel.querySelector(".flash-next")?.addEventListener("click", () => go(1));
-    document.addEventListener("gabay:lang", paint);
     paint();
   }
 
@@ -221,13 +175,11 @@
     const posEl = root.querySelector(".practice-pos");
     const scoreEl = root.querySelector(".practice-score");
     const chapterEl = root.querySelector(".practice-chapter");
-    const qZh = root.querySelector(".practice-q.only-zh");
-    const qEn = root.querySelector(".practice-q.only-en");
+    const qEl = root.querySelector(".practice-q");
     const choicesEl = root.querySelector(".practice-choices");
     const feedback = root.querySelector(".practice-feedback");
     const verdict = root.querySelector(".practice-verdict");
-    const explainZh = root.querySelector(".practice-explain.only-zh");
-    const explainEn = root.querySelector(".practice-explain.only-en");
+    const explainEl = root.querySelector(".practice-explain");
 
     function save() {
       localStorage.setItem(
@@ -239,17 +191,11 @@
     function showFeedback(item, pick) {
       const ok = pick === item.answer;
       feedback.hidden = false;
-      verdict.textContent =
-        currentLang() === "en"
-          ? ok
-            ? `Correct · ${item.answer}`
-            : `Incorrect · answer ${item.answer}`
-          : ok
-            ? `正确 · ${item.answer}`
-            : `不对 · 答案 ${item.answer}`;
+      verdict.textContent = ok
+        ? `Correct · ${item.answer}`
+        : `Incorrect · answer ${item.answer}`;
       verdict.className = "practice-verdict " + (ok ? "is-ok" : "is-bad");
-      if (explainZh) explainZh.textContent = item.explain_zh || "";
-      if (explainEn) explainEn.textContent = item.explain_en || "";
+      if (explainEl) explainEl.textContent = item.explain || "";
     }
 
     function paint() {
@@ -257,8 +203,7 @@
       if (posEl) posEl.textContent = String(state.i + 1);
       if (scoreEl) scoreEl.textContent = String(state.score);
       if (chapterEl) chapterEl.textContent = item.chapter || "";
-      if (qZh) qZh.textContent = item.q_zh || "";
-      if (qEn) qEn.textContent = item.q_en || "";
+      if (qEl) qEl.textContent = item.q || "";
       choicesEl.innerHTML = "";
       const prior = state.answered[item.id];
       ["A", "B", "C", "D"].forEach((letter) => {
@@ -268,9 +213,7 @@
         btn.type = "button";
         btn.className = "practice-choice";
         btn.dataset.letter = letter;
-        btn.innerHTML =
-          `<strong>${letter}</strong> ` +
-          `<span class="only-zh">${choice.zh}</span><span class="only-en">${choice.en}</span>`;
+        btn.innerHTML = `<strong>${letter}</strong> ${choice}`;
         if (prior) {
           btn.disabled = true;
           if (letter === item.answer) btn.classList.add("is-correct");
@@ -322,7 +265,6 @@
       save();
       paint();
     });
-    document.addEventListener("gabay:lang", paint);
     paint();
   }
 
@@ -346,7 +288,7 @@
       }
     }
 
-    const chapterOptions = ['<option value="">' + "整科 / Whole subject" + "</option>"]
+    const chapterOptions = ['<option value="">Whole subject</option>']
       .concat(
         ctx.chapters.map(
           (c) => `<option value="${c.replace(/"/g, "&quot;")}">${c}</option>`
@@ -357,25 +299,21 @@
     root.innerHTML = `
       <div class="tutor-head">
         <div>
-          <h2 data-i18n data-zh="MiniMax 学习教练" data-en="MiniMax Study Coach">MiniMax 学习教练</h2>
-          <p data-i18n data-zh="基于当前科目大纲 · 模型 MiniMax-M3" data-en="Grounded in this subject's outline · MiniMax-M3">基于当前科目大纲 · 模型 MiniMax-M3</p>
+          <h2>MiniMax Study Coach</h2>
+          <p>Grounded in this subject's outline · MiniMax-M3</p>
         </div>
-        <div class="lang-slot"></div>
       </div>
       <div class="tutor-controls">
         <select class="tutor-chapter" aria-label="chapter">${chapterOptions}</select>
-        <button type="button" data-mode="explain" data-i18n data-zh="讲解章节" data-en="Explain">讲解章节</button>
-        <button type="button" data-mode="quiz" data-i18n data-zh="出一题" data-en="Quiz me">出一题</button>
+        <button type="button" data-mode="explain">Explain</button>
+        <button type="button" data-mode="quiz">Quiz me</button>
       </div>
       <div class="tutor-log" aria-live="polite"></div>
       <form class="tutor-form">
-        <textarea class="tutor-input" rows="2" data-i18n-placeholder data-zh-ph="问这一科 / 这一章…" data-en-ph="Ask about this subject or chapter…" placeholder="问这一科 / 这一章…"></textarea>
-        <button class="btn btn-primary" type="submit" data-i18n data-zh="发送" data-en="Send">发送</button>
+        <textarea class="tutor-input" rows="2" placeholder="Ask about this subject or chapter…"></textarea>
+        <button class="btn btn-primary" type="submit">Send</button>
       </form>
     `;
-
-    mountLangToggle(root.querySelector(".lang-slot"));
-    applyLang(currentLang());
 
     const log = root.querySelector(".tutor-log");
     const form = root.querySelector(".tutor-form");
@@ -396,9 +334,7 @@
 
     addBubble(
       "system",
-      currentLang() === "en"
-        ? `Ready for ${ctx.label}. Pick a chapter, ask, explain, or quiz.`
-        : `已加载：${ctx.label}。可选章节后提问、讲解或出题。`
+      `Ready for ${ctx.label}. Pick a chapter, ask, explain, or quiz.`
     );
 
     function looksLikeAnswer(msg) {
@@ -409,25 +345,21 @@
       let effectiveMode = mode;
       if (mode === "ask" && lastMode === "quiz" && looksLikeAnswer(message)) {
         effectiveMode = "grade";
-        message = `上一题内容：\n${lastAssistant}\n\n我的答案：${message}`;
+        message = `Previous question:\n${lastAssistant}\n\nMy answer: ${message}`;
       }
 
       addBubble(
         "user",
         message ||
           (mode === "explain"
-            ? currentLang() === "en"
-              ? "Explain this chapter"
-              : "讲解章节"
+            ? "Explain this chapter"
             : mode === "quiz"
-              ? currentLang() === "en"
-                ? "Quiz me"
-                : "出一题"
+              ? "Quiz me"
               : message)
       );
       const pending = document.createElement("div");
       pending.className = "tutor-bubble system";
-      pending.textContent = currentLang() === "en" ? "Thinking…" : "思考中…";
+      pending.textContent = "Thinking…";
       log.appendChild(pending);
       log.scrollTop = log.scrollHeight;
 
@@ -446,7 +378,6 @@
             subject_slug: ctx.subject_slug,
             section_slug: ctx.section_slug,
             chapter: chapterSel.value,
-            lang: currentLang(),
           }),
         });
         const data = await res.json();
@@ -481,8 +412,6 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("[data-lang-host]").forEach(mountLangToggle);
-    applyLang(currentLang());
     document.querySelectorAll(".tutor[data-tutor]").forEach(mountTutor);
     document.querySelectorAll("[data-progress-root]").forEach(mountProgress);
     document.querySelectorAll("[data-flashcards]").forEach(mountFlashcards);

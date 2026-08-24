@@ -1,38 +1,24 @@
 slug: verbal
 name: Verbal
-name_zh: 语文
 shared: null
 items: 30
-pacing: 约 30 minutes（BOI 建议）
+pacing: ~30 minutes (CEM BOI suggestion)
 item_types:
 - Analogies
 - Reading Comprehension
-focus:
-  zh: 词汇关系与阅读理解。
-  en: Lexical relations and reading comprehension.
-source_note:
-  zh: 章节按 CEM BOI Verbal 题型划分。
-  en: Chapters follow CEM BOI Verbal item types.
+focus: Lexical relations and reading comprehension.
+source_note: Chapters follow CEM BOI Verbal item types.
 chapters:
-- heading:
-    zh: 大知识点 / 章节
-    en: Major topics / chapters
+- heading: Major topics / chapters
   items:
-  - title: Analogies（词义类比）
+  - title: Analogies
     points:
-    - zh: 识别词对关系（同义、反义、部分-整体、因果、程度等）
-      en: Identify word-pair relations (synonym, antonym, part-whole, cause, degree, etc.)
-    - zh: 把关系迁移到选项，排除貌合神离干扰项
-      en: Transfer the relation to choices; eliminate look-alike distractors
-  - title: Reading Comprehension（阅读理解）
+    - Identify word-pair relations (synonym, antonym, part-whole, cause, degree, etc.)
+    - Transfer the relation to choices; eliminate look-alike distractors
+  - title: Reading Comprehension
     points:
-    - zh: 抓主旨与段落功能
-      en: Capture main idea and paragraph function
-    - zh: 细节定位与推断（不超出文本）
-      en: Detail location and inference (stay inside the text)
-    - zh: 语气/态度与论证结构
-      en: Tone/attitude and argument structure
-summary:
-  zh: 词汇关系与阅读理解。
-  en: Lexical relations and reading comprehension.
+    - Capture main idea and paragraph function
+    - Detail location and inference (stay inside the text)
+    - Tone/attitude and argument structure
+summary: Lexical relations and reading comprehension.
 kind: nmat

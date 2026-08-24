@@ -1,857 +1,542 @@
 terms:
 - term: Km
-  term_zh: 米氏常数
-  def:
-    zh: 酶促反应速率为最大速率一半时的底物浓度；反映酶与底物亲和力。
-    en: Substrate concentration at half-maximal reaction rate; reflects enzyme–substrate affinity.
+  def: Substrate concentration at half-maximal reaction rate; reflects enzyme–substrate affinity.
   subjects:
   - biochemistry
   - biology
   - bio-biochem
 - term: Vmax
-  term_zh: 最大反应速率
-  def:
-    zh: 酶饱和底物时单位时间产物生成量；受酶浓度影响。
-    en: Product formed per time when enzyme is substrate-saturated; scales with enzyme concentration.
+  def: Product formed per time when enzyme is substrate-saturated; scales with enzyme concentration.
   subjects:
   - biochemistry
   - bio-biochem
 - term: ATP
-  term_zh: 三磷酸腺苷
-  def:
-    zh: 细胞主要能量货币；水解释放能量驱动吸能反应。
-    en: Primary cellular energy currency; hydrolysis drives endergonic processes.
+  def: Primary cellular energy currency; hydrolysis drives endergonic processes.
   subjects:
   - biochemistry
   - biology
   - bio-biochem
 - term: DNA
-  term_zh: 脱氧核糖核酸
-  def:
-    zh: 双链核酸储存遗传信息；由核苷酸聚合而成。
-    en: Double-stranded nucleic acid storing genetic information as nucleotide polymers.
+  def: Double-stranded nucleic acid storing genetic information as nucleotide polymers.
   subjects:
   - biology
   - biochemistry
   - bio-biochem
 - term: RNA
-  term_zh: 核糖核酸
-  def:
-    zh: 单链核酸；参与转录、翻译与调控。
-    en: Single-stranded nucleic acid in transcription, translation, and regulation.
+  def: Single-stranded nucleic acid in transcription, translation, and regulation.
   subjects:
   - biology
   - biochemistry
   - bio-biochem
 - term: Central dogma
-  term_zh: 中心法则
-  def:
-    zh: 遗传信息从 DNA 流向 RNA 再流向蛋白质。
-    en: Genetic information flows DNA → RNA → protein.
+  def: Genetic information flows DNA → RNA → protein.
   subjects:
   - biology
   - biochemistry
   - bio-biochem
 - term: Homeostasis
-  term_zh: 稳态
-  def:
-    zh: 内环境参数在反馈调节下维持相对稳定。
-    en: Internal parameters kept relatively stable via feedback regulation.
+  def: Internal parameters kept relatively stable via feedback regulation.
   subjects:
   - biology
   - bio-biochem
 - term: Osmosis
-  term_zh: 渗透
-  def:
-    zh: 水分子经半透膜从低溶质浓度侧向高浓度侧扩散。
-    en: Water diffuses across a semipermeable membrane toward higher solute concentration.
+  def: Water diffuses across a semipermeable membrane toward higher solute concentration.
   subjects:
   - biology
   - chemistry
   - physics
 - term: Mitosis
-  term_zh: 有丝分裂
-  def:
-    zh: 体细胞分裂产生遗传相同的子细胞。
-    en: Somatic cell division producing genetically identical daughter cells.
+  def: Somatic cell division producing genetically identical daughter cells.
   subjects:
   - biology
   - bio-biochem
 - term: Meiosis
-  term_zh: 减数分裂
-  def:
-    zh: 产生单倍体配子；包含重组增加遗传多样性。
-    en: Produces haploid gametes with recombination increasing diversity.
+  def: Produces haploid gametes with recombination increasing diversity.
   subjects:
   - biology
   - bio-biochem
 - term: Allele
-  term_zh: 等位基因
-  def:
-    zh: 同一基因座的不同版本。
-    en: Alternative versions of a gene at a locus.
+  def: Alternative versions of a gene at a locus.
   subjects:
   - biology
   - bio-biochem
 - term: pH
-  term_zh: 酸碱度
-  def:
-    zh: 溶液氢离子活度的负对数；酸性 <7，碱性 >7。
-    en: Negative log of hydrogen-ion activity; acidic <7, basic >7.
+  def: Negative log of hydrogen-ion activity; acidic <7, basic >7.
   subjects:
   - chemistry
   - chem-phys
   - biochemistry
 - term: pKa
-  term_zh: 酸解离常数负对数
-  def:
-    zh: 酸一半电离时的 pH；衡量酸强度。
-    en: pH at which half the acid is deprotonated; measures acid strength.
+  def: pH at which half the acid is deprotonated; measures acid strength.
   subjects:
   - chemistry
   - chem-phys
   - biochemistry
 - term: Buffer
-  term_zh: 缓冲溶液
-  def:
-    zh: 弱酸及其共轭碱（或反之）抵抗 pH 变化。
-    en: Weak acid/conjugate base pair resists pH change upon acid/base addition.
+  def: Weak acid/conjugate base pair resists pH change upon acid/base addition.
   subjects:
   - chemistry
   - chem-phys
   - biochemistry
 - term: Oxidation
-  term_zh: 氧化
-  def:
-    zh: 失去电子或氧化数升高。
-    en: Loss of electrons or increase in oxidation number.
+  def: Loss of electrons or increase in oxidation number.
   subjects:
   - chemistry
   - chem-phys
 - term: Reduction
-  term_zh: 还原
-  def:
-    zh: 获得电子或氧化数降低。
-    en: Gain of electrons or decrease in oxidation number.
+  def: Gain of electrons or decrease in oxidation number.
   subjects:
   - chemistry
   - chem-phys
 - term: Equilibrium constant
-  term_zh: 平衡常数 K
-  def:
-    zh: 反应达平衡时产物与反应物浓度比（按化学计量）。
-    en: Ratio of product to reactant concentrations at equilibrium (stoichiometric).
+  def: Ratio of product to reactant concentrations at equilibrium (stoichiometric).
   subjects:
   - chemistry
   - chem-phys
 - term: Enthalpy
-  term_zh: 焓 ΔH
-  def:
-    zh: 系统热含量变化；放热 ΔH<0，吸热 ΔH>0。
-    en: Heat content change; exothermic ΔH<0, endothermic ΔH>0.
+  def: Heat content change; exothermic ΔH<0, endothermic ΔH>0.
   subjects:
   - chemistry
   - physics
   - chem-phys
 - term: Entropy
-  term_zh: 熵 ΔS
-  def:
-    zh: 系统无序度度量；自发过程常伴随总熵增。
-    en: Measure of disorder; spontaneous processes often increase total entropy.
+  def: Measure of disorder; spontaneous processes often increase total entropy.
   subjects:
   - chemistry
   - physics
   - chem-phys
 - term: Gibbs free energy
-  term_zh: 吉布斯自由能 ΔG
-  def:
-    zh: ΔG = ΔH − TΔS；ΔG<0 反应在恒定 T、P 下自发。
-    en: ΔG = ΔH − TΔS; ΔG<0 means spontaneous at constant T and P.
+  def: ΔG = ΔH − TΔS; ΔG<0 means spontaneous at constant T and P.
   subjects:
   - chemistry
   - biochemistry
   - chem-phys
 - term: Activation energy
-  term_zh: 活化能 Ea
-  def:
-    zh: 反应物到达过渡态所需额外能量；决定速率。
-    en: Extra energy to reach transition state; governs reaction rate.
+  def: Extra energy to reach transition state; governs reaction rate.
   subjects:
   - chemistry
   - chem-phys
   - biochemistry
 - term: Nucleophile
-  term_zh: 亲核试剂
-  def:
-    zh: 富电子物种进攻缺电子中心。
-    en: Electron-rich species attacking electron-deficient centers.
+  def: Electron-rich species attacking electron-deficient centers.
   subjects:
   - chemistry
   - chem-phys
 - term: Electrophile
-  term_zh: 亲电试剂
-  def:
-    zh: 缺电子物种接受电子对。
-    en: Electron-deficient species accepting electron pairs.
+  def: Electron-deficient species accepting electron pairs.
   subjects:
   - chemistry
   - chem-phys
 - term: Stereoisomer
-  term_zh: 立体异构体
-  def:
-    zh: 连接相同但空间排列不同的异构体。
-    en: Isomers with identical connectivity but different spatial arrangement.
+  def: Isomers with identical connectivity but different spatial arrangement.
   subjects:
   - chemistry
   - chem-phys
 - term: Peptide bond
-  term_zh: 肽键
-  def:
-    zh: 氨基酸羧基与氨基脱水缩合形成的酰胺键。
-    en: Amide linkage from condensation of amino acid carboxyl and amino groups.
+  def: Amide linkage from condensation of amino acid carboxyl and amino groups.
   subjects:
   - biochemistry
   - bio-biochem
   - chemistry
 - term: Isoelectric point
-  term_zh: 等电点 pI
-  def:
-    zh: 分子净电荷为零的 pH。
-    en: pH where a molecule has zero net charge.
+  def: pH where a molecule has zero net charge.
   subjects:
   - biochemistry
   - bio-biochem
 - term: Glycolysis
-  term_zh: 糖酵解
-  def:
-    zh: 胞质中将葡萄糖分解为丙酮酸并产少量 ATP。
-    en: Cytoplasmic pathway splitting glucose to pyruvate with modest ATP yield.
+  def: Cytoplasmic pathway splitting glucose to pyruvate with modest ATP yield.
   subjects:
   - biochemistry
   - bio-biochem
   - biology
 - term: TCA cycle
-  term_zh: 三羧酸循环
-  def:
-    zh: 线粒体氧化乙酰 CoA 产 NADH/FADH₂ 与 GTP。
-    en: Mitochondrial oxidation of acetyl-CoA yielding NADH/FADH₂ and GTP.
+  def: Mitochondrial oxidation of acetyl-CoA yielding NADH/FADH₂ and GTP.
   subjects:
   - biochemistry
   - bio-biochem
 - term: Oxidative phosphorylation
-  term_zh: 氧化磷酸化
-  def:
-    zh: ETC 电子传递驱动质子梯度合成 ATP。
-    en: ETC electron transfer drives proton gradient for ATP synthesis.
+  def: ETC electron transfer drives proton gradient for ATP synthesis.
   subjects:
   - biochemistry
   - bio-biochem
   - biology
 - term: Newton's second law
-  term_zh: 牛顿第二定律
-  def:
-    zh: 物体加速度与合外力成正比、与质量成反比 ΣF=ma。
-    en: 'Acceleration proportional to net force and inversely to mass: ΣF=ma.'
+  def: 'Acceleration proportional to net force and inversely to mass: ΣF=ma.'
   subjects:
   - physics
   - chem-phys
 - term: Work
-  term_zh: 功
-  def:
-    zh: 力在位移方向上的分量与位移的乘积 W=F·d。
-    en: 'Force component along displacement times distance: W=F·d.'
+  def: 'Force component along displacement times distance: W=F·d.'
   subjects:
   - physics
   - chem-phys
 - term: Power
-  term_zh: 功率
-  def:
-    zh: 单位时间所做的功或能量转移速率 P=W/t。
-    en: 'Rate of work or energy transfer per time: P=W/t.'
+  def: 'Rate of work or energy transfer per time: P=W/t.'
   subjects:
   - physics
   - chem-phys
 - term: Momentum
-  term_zh: 动量
-  def:
-    zh: 质量与速度的乘积 p=mv；孤立系统动量守恒。
-    en: Mass times velocity p=mv; conserved in isolated systems.
+  def: Mass times velocity p=mv; conserved in isolated systems.
   subjects:
   - physics
   - chem-phys
 - term: Bernoulli principle
-  term_zh: 伯努利原理
-  def:
-    zh: 理想流体沿流线：速度增则静压降。
-    en: 'Along a streamline in ideal flow: higher speed lowers static pressure.'
+  def: 'Along a streamline in ideal flow: higher speed lowers static pressure.'
   subjects:
   - physics
   - chem-phys
 - term: Poiseuille's law
-  term_zh: 泊肃叶定律
-  def:
-    zh: 层流管状流体流量与半径四次方成正比。
-    en: Laminar tube flow proportional to radius to the fourth power.
+  def: Laminar tube flow proportional to radius to the fourth power.
   subjects:
   - physics
   - chem-phys
 - term: Ohm's law
-  term_zh: 欧姆定律
-  def:
-    zh: 电压等于电流与电阻之积 V=IR。
-    en: 'Voltage equals current times resistance: V=IR.'
+  def: 'Voltage equals current times resistance: V=IR.'
   subjects:
   - physics
   - chem-phys
 - term: Capacitance
-  term_zh: 电容
-  def:
-    zh: 储存电荷能力 C=Q/V；平行板电容与面积/间距相关。
-    en: Charge storage ability C=Q/V; parallel plates depend on area and separation.
+  def: Charge storage ability C=Q/V; parallel plates depend on area and separation.
   subjects:
   - physics
   - chem-phys
 - term: Snell's law
-  term_zh: 斯涅尔定律
-  def:
-    zh: 折射时 n₁sinθ₁ = n₂sinθ₂。
-    en: Refraction relation n₁sinθ₁ = n₂sinθ₂.
+  def: Refraction relation n₁sinθ₁ = n₂sinθ₂.
   subjects:
   - physics
   - chem-phys
 - term: Doppler effect
-  term_zh: 多普勒效应
-  def:
-    zh: 波源或观察者运动改变观测频率。
-    en: Relative motion of source/observer shifts observed frequency.
+  def: Relative motion of source/observer shifts observed frequency.
   subjects:
   - physics
   - chem-phys
 - term: Photoelectric effect
-  term_zh: 光电效应
-  def:
-    zh: 光电子动能取决于频率而非光强；需阈值频率。
-    en: Photoelectron KE depends on frequency, not intensity; threshold frequency required.
+  def: Photoelectron KE depends on frequency, not intensity; threshold frequency required.
   subjects:
   - physics
   - chem-phys
 - term: Half-life
-  term_zh: 半衰期
-  def:
-    zh: 放射性或反应物浓度降至一半所需时间。
-    en: Time for radioactivity or reactant concentration to halve.
+  def: Time for radioactivity or reactant concentration to halve.
   subjects:
   - physics
   - chemistry
   - chem-phys
 - term: Classical conditioning
-  term_zh: 经典条件反射
-  def:
-    zh: 中性刺激与无条件刺激配对后诱发反应。
-    en: Neutral stimulus paired with unconditioned stimulus elicits conditioned response.
+  def: Neutral stimulus paired with unconditioned stimulus elicits conditioned response.
   subjects:
   - behavioral-social
   - psych-soc
 - term: Operant conditioning
-  term_zh: 操作条件反射
-  def:
-    zh: 行为后果（强化/惩罚）塑造未来行为。
-    en: Behavior consequences (reinforcement/punishment) shape future actions.
+  def: Behavior consequences (reinforcement/punishment) shape future actions.
   subjects:
   - behavioral-social
   - psych-soc
 - term: Cognitive dissonance
-  term_zh: 认知失调
-  def:
-    zh: 态度与行为或信念不一致引发心理不适。
-    en: Psychological discomfort when attitudes, behaviors, or beliefs conflict.
+  def: Psychological discomfort when attitudes, behaviors, or beliefs conflict.
   subjects:
   - behavioral-social
   - psych-soc
 - term: Social facilitation
-  term_zh: 社会促进
-  def:
-    zh: 他人在场提高简单或熟练任务表现。
-    en: Others’ presence improves performance on simple or well-learned tasks.
+  def: Others’ presence improves performance on simple or well-learned tasks.
   subjects:
   - behavioral-social
   - psych-soc
 - term: Stereotype threat
-  term_zh: 刻板印象威胁
-  def:
-    zh: 担心证实负面刻板印象损害任务表现。
-    en: Fear of confirming negative stereotypes impairs performance.
+  def: Fear of confirming negative stereotypes impairs performance.
   subjects:
   - behavioral-social
   - psych-soc
 - term: SES
-  term_zh: 社会经济地位
-  def:
-    zh: 收入、教育、职业等综合社会地位指标。
-    en: Composite social standing from income, education, and occupation.
+  def: Composite social standing from income, education, and occupation.
   subjects:
   - behavioral-social
   - psych-soc
 - term: Social capital
-  term_zh: 社会资本
-  def:
-    zh: 社会关系网络带来的资源与机会。
-    en: Resources and opportunities from social networks and relationships.
+  def: Resources and opportunities from social networks and relationships.
   subjects:
   - behavioral-social
   - psych-soc
 - term: Signal detection
-  term_zh: 信号检测
-  def:
-    zh: 区分真实信号与噪声；击中率与虚报率权衡。
-    en: Discriminating signal from noise; trade hits vs false alarms.
+  def: Discriminating signal from noise; trade hits vs false alarms.
   subjects:
   - psych-soc
   - behavioral-social
 - term: Thesis
-  term_zh: 主旨论点
-  def:
-    zh: 作者试图证明或传达的核心主张；区别于话题。
-    en: Author’s central claim to establish; distinct from topic.
+  def: Author’s central claim to establish; distinct from topic.
   subjects:
   - cars
   - verbal
 - term: Inference
-  term_zh: 推断
-  def:
-    zh: 基于文本证据的合理结论，非凭空猜测。
-    en: Reasonable conclusion grounded in textual evidence, not guesswork.
+  def: Reasonable conclusion grounded in textual evidence, not guesswork.
   subjects:
   - cars
   - verbal
 - term: Analogy relation
-  term_zh: 类比关系
-  def:
-    zh: 词对之间的逻辑关系（同义、反义、因果等）。
-    en: Logical relation between word pairs (synonym, antonym, cause-effect, etc.).
+  def: Logical relation between word pairs (synonym, antonym, cause-effect, etc.).
   subjects:
   - verbal
 - term: Proportion
-  term_zh: 比例
-  def:
-    zh: 两比值相等的关系 a/b = c/d。
-    en: 'Equality of two ratios: a/b = c/d.'
+  def: 'Equality of two ratios: a/b = c/d.'
   subjects:
   - quantitative
 - term: Mean
-  term_zh: 平均数
-  def:
-    zh: 数值总和除以个数；受极端值影响。
-    en: Sum divided by count; sensitive to outliers.
+  def: Sum divided by count; sensitive to outliers.
   subjects:
   - quantitative
 - term: Median
-  term_zh: 中位数
-  def:
-    zh: 排序后中间值；对极端值更稳健。
-    en: Middle value when ordered; robust to outliers.
+  def: Middle value when ordered; robust to outliers.
   subjects:
   - quantitative
 - term: Antigen
-  term_zh: 抗原
-  def:
-    zh: 引发免疫识别的外来分子表位。
-    en: Foreign molecular epitope triggering immune recognition.
+  def: Foreign molecular epitope triggering immune recognition.
   subjects:
   - biology
   - bio-biochem
 - term: Antibody
-  term_zh: 抗体
-  def:
-    zh: B 细胞分泌的免疫球蛋白，特异性结合抗原。
-    en: Immunoglobulin from B cells binding specific antigens.
+  def: Immunoglobulin from B cells binding specific antigens.
   subjects:
   - biology
   - bio-biochem
 - term: Action potential
-  term_zh: 动作电位
-  def:
-    zh: 膜去极化触发的全或无电信号脉冲。
-    en: All-or-none electrical spike from membrane depolarization.
+  def: All-or-none electrical spike from membrane depolarization.
   subjects:
   - biology
   - bio-biochem
   - psych-soc
 - term: Synapse
-  term_zh: 突触
-  def:
-    zh: 神经元间或神经元–效应器间的信号传递界面。
-    en: Junction for signaling between neurons or neuron and effector.
+  def: Junction for signaling between neurons or neuron and effector.
   subjects:
   - biology
   - bio-biochem
   - psych-soc
 - term: Operon
-  term_zh: 操纵子
-  def:
-    zh: 原核中受共同调控的一组相邻基因。
-    en: Cluster of adjacent prokaryotic genes under shared regulation.
+  def: Cluster of adjacent prokaryotic genes under shared regulation.
   subjects:
   - biology
   - bio-biochem
 - term: Hardy-Weinberg equilibrium
-  term_zh: 哈迪–温伯格平衡
-  def:
-    zh: 理想条件下等位基因频率代际不变的模型。
-    en: Model where allele frequencies stay constant across generations under ideal conditions.
+  def: Model where allele frequencies stay constant across generations under ideal conditions.
   subjects:
   - biology
   - bio-biochem
 - term: Colligative property
-  term_zh: 依数性
-  def:
-    zh: 取决于溶质粒子数而非种类的性质（沸点升等）。
-    en: Property depending on solute particle count, not chemical identity.
+  def: Property depending on solute particle count, not chemical identity.
   subjects:
   - chemistry
   - chem-phys
 - term: Michaelis-Menten kinetics
-  term_zh: 米氏动力学
-  def:
-    zh: 酶促速率 v = Vmax[S]/(Km + [S])。
-    en: Enzyme rate law v = Vmax[S]/(Km + [S]).
+  def: Enzyme rate law v = Vmax[S]/(Km + [S]).
   subjects:
   - biochemistry
   - bio-biochem
   - chem-phys
 - term: Foundational Concept
-  term_zh: 基础概念（FC）
-  def:
-    zh: AAMC MCAT 大纲按 FC 组织科学内容。
-    en: AAMC MCAT content organized by Foundational Concepts.
+  def: AAMC MCAT content organized by Foundational Concepts.
   subjects:
   - bio-biochem
   - chem-phys
   - psych-soc
 - term: CARS
-  term_zh: 批判分析与推理
-  def:
-    zh: MCAT 篇章阅读科；考理解、文内与文外推理。
-    en: MCAT passage section testing comprehension and within/beyond-text reasoning.
+  def: MCAT passage section testing comprehension and within/beyond-text reasoning.
   subjects:
   - cars
 - term: Henderson–Hasselbalch
-  term_zh: 亨德森–哈塞尔巴尔赫方程
-  def:
-    zh: pH = pKa + log([A⁻]/[HA])，描述缓冲体系。
-    en: pH = pKa + log([A⁻]/[HA]) for buffer systems.
+  def: pH = pKa + log([A⁻]/[HA]) for buffer systems.
   subjects:
   - chemistry
   - chem-phys
   - biochemistry
 - term: Le Chatelier's principle
-  term_zh: 勒夏特列原理
-  def:
-    zh: 平衡体系受扰动时向减弱扰动的方向移动。
-    en: Equilibria shift to counteract applied disturbances.
+  def: Equilibria shift to counteract applied disturbances.
   subjects:
   - chemistry
   - chem-phys
 - term: Raoult's law
-  term_zh: 拉乌尔定律
-  def:
-    zh: 理想溶液组分蒸气压正比于其摩尔分数。
-    en: Ideal-solution component vapor pressure proportional to mole fraction.
+  def: Ideal-solution component vapor pressure proportional to mole fraction.
   subjects:
   - chemistry
   - chem-phys
 - term: Nernst equation
-  term_zh: 能斯特方程
-  def:
-    zh: 电极电位随离子浓度/反应商变化。
-    en: Electrode potential changes with ion concentrations/reaction quotient.
+  def: Electrode potential changes with ion concentrations/reaction quotient.
   subjects:
   - chemistry
   - chem-phys
   - physics
 - term: Continuity equation
-  term_zh: 连续性方程
-  def:
-    zh: 不可压缩流体 A₁v₁ = A₂v₂。
-    en: 'Incompressible flow: A₁v₁ = A₂v₂.'
+  def: 'Incompressible flow: A₁v₁ = A₂v₂.'
   subjects:
   - physics
   - chem-phys
 - term: Coulomb's law
-  term_zh: 库仑定律
-  def:
-    zh: 点电荷作用力 F ∝ q₁q₂/r²。
-    en: Point-charge force F ∝ q₁q₂/r².
+  def: Point-charge force F ∝ q₁q₂/r².
   subjects:
   - physics
   - chem-phys
 - term: Refraction
-  term_zh: 折射
-  def:
-    zh: 波进入另一介质时因波速变化而偏折。
-    en: Wave bending when speed changes across media.
+  def: Wave bending when speed changes across media.
   subjects:
   - physics
   - chem-phys
 - term: Diffraction
-  term_zh: 衍射
-  def:
-    zh: 波绕过障碍或通过狭缝后的扩展。
-    en: Wave spreading past obstacles or through apertures.
+  def: Wave spreading past obstacles or through apertures.
   subjects:
   - physics
   - chem-phys
 - term: Work function
-  term_zh: 功函数
-  def:
-    zh: 使电子脱离金属表面所需最小能量。
-    en: Minimum energy to free an electron from a metal surface.
+  def: Minimum energy to free an electron from a metal surface.
   subjects:
   - physics
   - chem-phys
 - term: Allosteric regulation
-  term_zh: 别构调节
-  def:
-    zh: 效应物结合非活性位点改变酶活性。
-    en: Effector binding away from the active site alters enzyme activity.
+  def: Effector binding away from the active site alters enzyme activity.
   subjects:
   - biochemistry
   - bio-biochem
 - term: Competitive inhibition
-  term_zh: 竞争性抑制
-  def:
-    zh: 抑制剂与底物竞争活性位点；Km↑，Vmax 不变。
-    en: Inhibitor competes for active site; Km↑, Vmax unchanged.
+  def: Inhibitor competes for active site; Km↑, Vmax unchanged.
   subjects:
   - biochemistry
   - bio-biochem
 - term: Noncompetitive inhibition
-  term_zh: 非竞争性抑制
-  def:
-    zh: 抑制剂结合其他位点；Vmax↓，Km 常不变。
-    en: Inhibitor binds elsewhere; Vmax↓, Km often unchanged.
+  def: Inhibitor binds elsewhere; Vmax↓, Km often unchanged.
   subjects:
   - biochemistry
   - bio-biochem
 - term: Gluconeogenesis
-  term_zh: 糖异生
-  def:
-    zh: 非糖前体合成葡萄糖，主要在肝。
-    en: Glucose synthesis from noncarbohydrate precursors, mainly in liver.
+  def: Glucose synthesis from noncarbohydrate precursors, mainly in liver.
   subjects:
   - biochemistry
   - bio-biochem
 - term: Beta oxidation
-  term_zh: β 氧化
-  def:
-    zh: 脂肪酸在线粒体降解为乙酰 CoA。
-    en: Mitochondrial fatty-acid breakdown to acetyl-CoA.
+  def: Mitochondrial fatty-acid breakdown to acetyl-CoA.
   subjects:
   - biochemistry
   - bio-biochem
 - term: Transcription factor
-  term_zh: 转录因子
-  def:
-    zh: 结合 DNA 调控转录的蛋白质。
-    en: Protein that binds DNA to regulate transcription.
+  def: Protein that binds DNA to regulate transcription.
   subjects:
   - biology
   - bio-biochem
 - term: Operant extinction
-  term_zh: 操作性消退
-  def:
-    zh: 停止强化后反应频率下降。
-    en: Response rate falls when reinforcement stops.
+  def: Response rate falls when reinforcement stops.
   subjects:
   - behavioral-social
   - psych-soc
 - term: Fundamental attribution error
-  term_zh: 基本归因错误
-  def:
-    zh: 高估特质、低估情境对他人行为的影响。
-    en: Overweight traits and underweight situations for others’ behavior.
+  def: Overweight traits and underweight situations for others’ behavior.
   subjects:
   - behavioral-social
   - psych-soc
 - term: Groupthink
-  term_zh: 群体思维
-  def:
-    zh: 追求一致压制异议，损害决策质量。
-    en: Pressure for consensus suppresses dissent and harms decisions.
+  def: Pressure for consensus suppresses dissent and harms decisions.
   subjects:
   - behavioral-social
   - psych-soc
 - term: Social loafing
-  term_zh: 社会懈怠
-  def:
-    zh: 群体作业中个人努力下降。
-    en: Reduced individual effort in group tasks.
+  def: Reduced individual effort in group tasks.
   subjects:
   - behavioral-social
   - psych-soc
 - term: Confirmation bias
-  term_zh: 确认偏误
-  def:
-    zh: 偏好寻找支持已有信念的证据。
-    en: Preferentially seeking evidence that supports existing beliefs.
+  def: Preferentially seeking evidence that supports existing beliefs.
   subjects:
   - psych-soc
   - cars
 - term: Working memory
-  term_zh: 工作记忆
-  def:
-    zh: 短暂保存并操作信息的有限容量系统。
-    en: Limited-capacity system for briefly holding and manipulating information.
+  def: Limited-capacity system for briefly holding and manipulating information.
   subjects:
   - psych-soc
   - behavioral-social
 - term: Semantic memory
-  term_zh: 语义记忆
-  def:
-    zh: 关于事实与概念的长时记忆。
-    en: Long-term memory for facts and concepts.
+  def: Long-term memory for facts and concepts.
   subjects:
   - psych-soc
 - term: Episodic memory
-  term_zh: 情景记忆
-  def:
-    zh: 关于个人经历事件的长时记忆。
-    en: Long-term memory for personally experienced events.
+  def: Long-term memory for personally experienced events.
   subjects:
   - psych-soc
 - term: Incidence
-  term_zh: 发病率
-  def:
-    zh: 特定时期内新发病例数。
-    en: Number of new cases in a defined period.
+  def: Number of new cases in a defined period.
   subjects:
   - behavioral-social
   - psych-soc
 - term: Prevalence
-  term_zh: 患病率
-  def:
-    zh: 特定时点存在的病例总数（新旧合计）。
-    en: Total existing cases (new + old) at a time point.
+  def: Total existing cases (new + old) at a time point.
   subjects:
   - behavioral-social
   - psych-soc
 - term: Independent assortment
-  term_zh: 自由组合
-  def:
-    zh: 不同基因座等位基因在减数分裂中独立分配。
-    en: Alleles at different loci segregate independently in meiosis.
+  def: Alleles at different loci segregate independently in meiosis.
   subjects:
   - biology
   - bio-biochem
 - term: Crossing over
-  term_zh: 交叉互换
-  def:
-    zh: 同源染色体非姐妹染色单体交换片段。
-    en: Exchange of segments between nonsister chromatids of homologs.
+  def: Exchange of segments between nonsister chromatids of homologs.
   subjects:
   - biology
   - bio-biochem
 - term: Endosymbiosis
-  term_zh: 内共生
-  def:
-    zh: 线粒体/叶绿体起源于被吞噬的原核生物假说。
-    en: Hypothesis that mitochondria/chloroplasts arose from engulfed prokaryotes.
+  def: Hypothesis that mitochondria/chloroplasts arose from engulfed prokaryotes.
   subjects:
   - biology
   - bio-biochem
 - term: Action spectrum
-  term_zh: 作用光谱
-  def:
-    zh: 不同波长光引起生理反应的效率曲线。
-    en: Efficiency of physiological response across wavelengths.
+  def: Efficiency of physiological response across wavelengths.
   subjects:
   - biology
   - chem-phys
 - term: Titration
-  term_zh: 滴定
-  def:
-    zh: 用已知浓度试剂测定未知浓度分析物。
-    en: Using a known reagent concentration to determine an analyte.
+  def: Using a known reagent concentration to determine an analyte.
   subjects:
   - chemistry
   - chem-phys
 - term: Equivalence point
-  term_zh: 等当点
-  def:
-    zh: 滴定中化学计量恰好完全反应的点。
-    en: Point where stoichiometrically equivalent amounts have reacted.
+  def: Point where stoichiometrically equivalent amounts have reacted.
   subjects:
   - chemistry
   - chem-phys
 - term: Buffer capacity
-  term_zh: 缓冲容量
-  def:
-    zh: 缓冲液抵抗 pH 变化的能力，与组分浓度相关。
-    en: Ability of a buffer to resist pH change; depends on component amounts.
+  def: Ability of a buffer to resist pH change; depends on component amounts.
   subjects:
   - chemistry
   - biochemistry
 - term: Series circuit
-  term_zh: 串联电路
-  def:
-    zh: 同一电流流经各元件；总阻相加。
-    en: Same current through components; resistances add.
+  def: Same current through components; resistances add.
   subjects:
   - physics
   - chem-phys
 - term: Parallel circuit
-  term_zh: 并联电路
-  def:
-    zh: 各支路电压相同；电导相加。
-    en: Same voltage across branches; conductances add.
+  def: Same voltage across branches; conductances add.
   subjects:
   - physics
   - chem-phys
 - term: Focal length
-  term_zh: 焦距
-  def:
-    zh: 平行光线经透镜后会聚（或反向延长线会聚）的距离。
-    en: Distance where parallel rays meet after a lens (or appear to meet).
+  def: Distance where parallel rays meet after a lens (or appear to meet).
   subjects:
   - physics
   - chem-phys
 - term: Impulse
-  term_zh: 冲量
-  def:
-    zh: 力对时间的积分，等于动量变化。
-    en: Integral of force over time; equals change in momentum.
+  def: Integral of force over time; equals change in momentum.
   subjects:
   - physics
   - chem-phys
 - term: Elastic collision
-  term_zh: 弹性碰撞
-  def:
-    zh: 动量与动能均守恒的碰撞。
-    en: Collision conserving both momentum and kinetic energy.
+  def: Collision conserving both momentum and kinetic energy.
   subjects:
   - physics
   - chem-phys
 - term: Inelastic collision
-  term_zh: 非弹性碰撞
-  def:
-    zh: 动量守恒但动能不守恒（部分转为其他形式）。
-    en: Momentum conserved but kinetic energy not (some converts).
+  def: Momentum conserved but kinetic energy not (some converts).
   subjects:
   - physics
   - chem-phys
 - term: Passage map
-  term_zh: 篇章地图
-  def:
-    zh: CARS/阅读中快速标注段落功能与作者态度。
-    en: Quick CARS/reading annotation of paragraph roles and attitude.
+  def: Quick CARS/reading annotation of paragraph roles and attitude.
   subjects:
   - cars
   - verbal
 - term: Scope trap
-  term_zh: 范围陷阱
-  def:
-    zh: 选项过宽/过窄或引入文外内容的干扰。
-    en: Distractor that is too broad/narrow or outside the passage.
+  def: Distractor that is too broad/narrow or outside the passage.
   subjects:
   - cars
   - verbal

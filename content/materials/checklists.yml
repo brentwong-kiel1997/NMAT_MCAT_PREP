@@ -1,49 +1,28 @@
 checklists:
 - id: nmat-day
   exam: NMAT
-  title:
-    zh: NMAT 考试日清单
-    en: NMAT exam-day checklist
+  title: NMAT exam-day checklist
   items:
-  - zh: 确认准考证与身份证件
-    en: Confirm permit and ID
-  - zh: 提前到达考场，预留安检时间
-    en: Arrive early; allow security time
-  - zh: Part 1 先稳准确再提速；知觉题防眼疲劳
-    en: 'Part 1: accuracy before speed; watch eye fatigue on perceptual items'
-  - zh: Part 2 四科按时间盒推进，标记难题回看
-    en: 'Part 2: time-box each subject; mark hard items to revisit'
-  - zh: 交卷前快速扫未作答题
-    en: Final sweep for unanswered items
+  - Confirm permit and ID
+  - Arrive early; allow security time
+  - 'Part 1: accuracy before speed; watch eye fatigue on perceptual items'
+  - 'Part 2: time-box each subject; mark hard items to revisit'
+  - Final sweep for unanswered items
 - id: mcat-day
   exam: MCAT
-  title:
-    zh: MCAT 考试日清单
-    en: MCAT exam-day checklist
+  title: MCAT exam-day checklist
   items:
-  - zh: 确认 AAMC 预约与身份要求
-    en: Confirm AAMC appointment and ID rules
-  - zh: 按官方休息节奏进食补水
-    en: Eat/hydrate on the official break rhythm
-  - zh: 科学科：图表与实验设计优先定位
-    en: 'Science: prioritize figures and experimental design'
-  - zh: CARS：先段落地图再答题，避免超时纠缠
-    en: 'CARS: map paragraphs before answering; don’t over-invest'
-  - zh: 每科结束用 1–2 分钟检查标记题
-    en: Use 1–2 minutes at section end for marked items
+  - Confirm AAMC appointment and ID rules
+  - Eat/hydrate on the official break rhythm
+  - 'Science: prioritize figures and experimental design'
+  - 'CARS: map paragraphs before answering; don’t over-invest'
+  - Use 1–2 minutes at section end for marked items
 - id: weekly-review
   exam: BOTH
-  title:
-    zh: 每周复习清单
-    en: Weekly review checklist
+  title: Weekly review checklist
   items:
-  - zh: 本周新笔记 → 闪卡过一遍
-    en: Run flashcards on this week’s new notes
-  - zh: 错题按科目归档并回看解析
-    en: File misses by subject and reread explanations
-  - zh: 术语表抽 15 个词英汉互译
-    en: Quiz 15 glossary terms ZH↔EN
-  - zh: 公式卡说出物理意义 + 一个陷阱
-    en: 'For each formula: meaning + one trap'
-  - zh: 用学习台教练讲清一个卡点
-    en: Use the study coach on one stuck point
+  - Run flashcards on this week’s new notes
+  - File misses by subject and reread explanations
+  - Quiz 15 glossary terms ZH↔EN
+  - 'For each formula: meaning + one trap'
+  - Use the study coach on one stuck point

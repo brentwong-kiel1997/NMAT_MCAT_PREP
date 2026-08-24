@@ -6,9 +6,9 @@
 <div class="page-hero">
   <div class="page-hero-inner">
     {% include "portal/includes/nav.html" with solid=1 %}
-    <p class="section-kicker" data-i18n data-zh="精炼练习" data-en="Focused drills">精炼练习</p>
-    <h1 data-i18n data-zh="练习集" data-en="Practice sets">练习集</h1>
-    <p class="lead" data-i18n data-zh="非官方真题。用来巩固高收益概念；答完立刻看解析，再回科目页用闪卡与教练加深。" data-en="Not official past papers. Drill high-yield ideas, check explanations, then deepen with flashcards and the coach.">非官方真题。用来巩固高收益概念；答完立刻看解析，再回科目页用闪卡与教练加深。</p>
+    <p class="section-kicker">Focused drills</p>
+    <h1>Practice sets</h1>
+    <p class="lead">Not official past papers. Drill high-yield ideas, check explanations, then deepen with flashcards and the coach.</p>
   </div>
 </div>
 
@@ -18,8 +18,8 @@
     <li>
       <a href="{% url 'practice_detail' p.slug %}">
         <div>
-          <h3><span class="only-zh">{{ p.label_zh }}</span><span class="only-en">{{ p.label_en }}</span></h3>
-          <p><span class="only-zh">{{ p.count }} 道选择题</span><span class="only-en">{{ p.count }} multiple-choice items</span></p>
+          <h3>{{ p.label }}</h3>
+          <p>{{ p.count }} multiple-choice items</p>
         </div>
         <span class="disease-meta">{{ p.count }}</span>
       </a>

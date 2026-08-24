@@ -1,34 +1,35 @@
 slug: asthma
 name: Asthma
-name_zh: 哮喘
-short: 可逆性气道阻塞 + 高反应性 + 慢性炎症；I 型超敏与 Th2 通路是机制核心。
+short: Reversible airway obstruction + hyperresponsiveness + chronic inflammation; type I hypersensitivity
+  and the Th2 pathway are the mechanistic core.
 systems:
 - Respiratory
 - Immunologic
 exams:
 - Enrichment
-exam_fit: 延伸阅读：服务生物学/病理生理直觉；NMAT 考纲是导论课不是临床诊疗；MCAT 可迁移机制，不考指南级用药方案。
-pathogen: 非传染；过敏原、感染、运动、冷空气等触发
-transmission: 不适用。
+exam_fit: Extension reading serving biology/pathophysiology intuition; the NMAT syllabus is introductory
+  coursework, not clinical management; MCAT transfers the mechanisms, not guideline-level drug regimens.
+pathogen: Non-infectious; triggers include allergens, infection, exercise, cold air
+transmission: Not applicable.
 pathophysiology:
-- Th2：IL-4/IL-5/IL-13 → IgE、嗜酸粒细胞、黏液高分泌。
-- 早期：支气管痉挛；晚期：炎症细胞浸润。
-- 长期：气道重构（基底膜增厚、平滑肌增生）。
+- Th2 cytokines IL-4/IL-5/IL-13 → IgE class switching, eosinophilia, mucus hypersecretion.
+- 'Early phase: bronchospasm; late phase: inflammatory cell influx.'
+- 'Long term: airway remodeling (thickened basement membrane, smooth-muscle hyperplasia).'
 clinical:
-- 发作性喘息、气短、胸闷、干咳；夜间/清晨加重。
-- 呼气性哮鸣音；使用辅助呼吸肌。
-- 危重时可出现沉默肺（近乎无哮鸣）——危险信号。
+- Episodic wheeze, dyspnea, chest tightness, dry cough; worse at night and early morning.
+- Expiratory wheezing; accessory-muscle use in severe attacks.
+- In critical attacks the chest may go "silent" (almost no wheeze) — a danger sign.
 diagnosis:
-- 肺功能：可逆性 FEV1 改善（支气管舒张试验）。
-- 峰值流速变异；过敏评估按需。
+- 'Spirometry: reversible FEV1 improvement (bronchodilator responsiveness).'
+- Peak-flow variability; allergy workup as indicated.
 treatment:
-- 缓解：短效 β2 激动剂（SABA）。
-- 控制：吸入糖皮质激素（ICS）是抗炎基石；可加 LABA。
-- 重度：全身激素、镁剂、升级治疗（生物制剂了解即可）。
+- 'Relief: short-acting β2 agonist (SABA).'
+- 'Control: inhaled corticosteroid (ICS) is the anti-inflammatory cornerstone; LABA may be added.'
+- 'Severe: systemic steroids, magnesium, escalation (biologics — awareness level only).'
 high_yield:
-- I 型超敏 = IgE + 肥大细胞脱颗粒。
-- ICS 依从性差是失控常见原因。
-- 阿司匹林敏感型哮喘 ↔ 鼻息肉（Samter）三联征了解。
-- 与 COPD：可逆性与发病年龄/吸烟史是鉴别主轴。
-mcat_bridge: 超敏反应分型、呼吸系统力学（阻力↑）。
-nmat_bridge: 免疫病理与吸入治疗阶梯。
+- Type I hypersensitivity = IgE + mast-cell degranulation.
+- Poor ICS adherence is a common cause of uncontrolled disease.
+- Aspirin-sensitive asthma ↔ nasal polyps (Samter's triad) — awareness level.
+- 'Versus COPD: reversibility, age of onset, and smoking history are the key discriminators.'
+mcat_bridge: Hypersensitivity classifications and respiratory mechanics (increased resistance).
+nmat_bridge: Immune pathology and the inhaled-therapy stepwise approach.

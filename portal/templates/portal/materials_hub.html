@@ -6,24 +6,24 @@
 <div class="page-hero">
   <div class="page-hero-inner">
     {% include "portal/includes/nav.html" with solid=1 %}
-    <p class="section-kicker" data-i18n data-zh="教材资料" data-en="Study materials">教材资料</p>
-    <h1 data-i18n data-zh="完整备考资料台" data-en="Full study materials desk">完整备考资料台</h1>
-    <p class="lead" data-i18n data-zh="学习路径 · 术语表 · 公式卡 · 考试策略 · 清单 · 练习题。大纲对齐 CEM / AAMC。" data-en="Paths · glossary · formulas · tips · checklists · drills. Outlines follow CEM / AAMC.">学习路径 · 术语表 · 公式卡 · 考试策略 · 清单 · 练习题。大纲对齐 CEM / AAMC。</p>
+    <p class="section-kicker">Study materials</p>
+    <h1>Full study materials desk</h1>
+    <p class="lead">Paths · glossary · formulas · tips · checklists · drills. Outlines follow CEM / AAMC.</p>
   </div>
 </div>
 
 <section class="section">
-  <p class="section-kicker" data-i18n data-zh="路径" data-en="Paths">路径</p>
-  <h2 data-i18n data-zh="按目标选一条学习线" data-en="Pick a study line by goal">按目标选一条学习线</h2>
+  <p class="section-kicker">Paths</p>
+  <h2>Pick a study line by goal</h2>
   <ul class="disease-list">
     {% for p in paths %}
     <li>
       <div>
-        <h3><span class="only-zh">{{ p.title_zh }}</span><span class="only-en">{{ p.title_en }}</span></h3>
-        <p><span class="only-zh">{{ p.blurb_zh }}</span><span class="only-en">{{ p.blurb_en }}</span></p>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.blurb }}</p>
         <ol class="path-mini">
           {% for s in p.steps %}
-          <li><a href="{{ s.href }}"><span class="only-zh">{{ s.label_zh }}</span><span class="only-en">{{ s.label_en }}</span></a></li>
+          <li><a href="{{ s.href }}">{{ s.label }}</a></li>
           {% endfor %}
         </ol>
       </div>
@@ -33,14 +33,14 @@
 </section>
 
 <section class="section">
-  <p class="section-kicker" data-i18n data-zh="速查" data-en="Reference">速查</p>
-  <h2 data-i18n data-zh="术语 · 公式 · 策略 · 清单" data-en="Glossary · formulas · tips · checklists">术语 · 公式 · 策略 · 清单</h2>
+  <p class="section-kicker">Reference</p>
+  <h2>Glossary · formulas · tips · checklists</h2>
   <ul class="disease-list">
     <li>
       <a href="{% url 'materials_glossary' %}">
         <div>
-          <h3 data-i18n data-zh="术语表" data-en="Glossary">术语表</h3>
-          <p><span class="only-zh">{{ glossary_count }} 个高收益词条，可搜索</span><span class="only-en">{{ glossary_count }} high-yield terms, searchable</span></p>
+          <h3>Glossary</h3>
+          <p>{{ glossary_count }} high-yield terms, searchable</p>
         </div>
         <span class="disease-meta">{{ glossary_count }}</span>
       </a>
@@ -48,8 +48,8 @@
     <li>
       <a href="{% url 'materials_tips' %}">
         <div>
-          <h3 data-i18n data-zh="考试策略" data-en="Exam tips">考试策略</h3>
-          <p data-i18n data-zh="NMAT / MCAT 节奏、合并科目、易错陷阱" data-en="NMAT / MCAT pacing, merged subjects, trap patterns">NMAT / MCAT 节奏、合并科目、易错陷阱</p>
+          <h3>Exam tips</h3>
+          <p>NMAT / MCAT pacing, merged subjects, trap patterns</p>
         </div>
         <span class="disease-meta">Tips</span>
       </a>
@@ -57,8 +57,8 @@
     <li>
       <a href="{% url 'materials_checklists' %}">
         <div>
-          <h3 data-i18n data-zh="备考清单" data-en="Checklists">备考清单</h3>
-          <p data-i18n data-zh="考试日与每周复习动作" data-en="Exam-day and weekly review actions">考试日与每周复习动作</p>
+          <h3>Checklists</h3>
+          <p>Exam-day and weekly review actions</p>
         </div>
         <span class="disease-meta">{{ checklists|length }}</span>
       </a>
@@ -67,8 +67,8 @@
     <li>
       <a href="{% url 'materials_formulas' f.slug %}">
         <div>
-          <h3><span class="only-zh">公式 · {{ f.label_zh }}</span><span class="only-en">Formulas · {{ f.label_en }}</span></h3>
-          <p><span class="only-zh">{{ f.count }} 条速查</span><span class="only-en">{{ f.count }} quick refs</span></p>
+          <h3>Formulas · {{ f.label }}</h3>
+          <p>{{ f.count }} quick refs</p>
         </div>
         <span class="disease-meta">{{ f.count }}</span>
       </a>
@@ -79,20 +79,20 @@
 
 <section class="section">
   <p class="section-kicker">Practice</p>
-  <h2 data-i18n data-zh="配套练习（节选）" data-en="Matching drills (sample)">配套练习（节选）</h2>
+  <h2>Matching drills (sample)</h2>
   <ul class="disease-list">
     {% for p in practice_catalog %}
     <li>
       <a href="{% url 'practice_detail' p.slug %}">
         <div>
-          <h3><span class="only-zh">{{ p.label_zh }}</span><span class="only-en">{{ p.label_en }}</span></h3>
-          <p><span class="only-zh">{{ p.count }} 题</span><span class="only-en">{{ p.count }} items</span></p>
+          <h3>{{ p.label }}</h3>
+          <p>{{ p.count }} items</p>
         </div>
         <span class="disease-meta">MCQ</span>
       </a>
     </li>
     {% endfor %}
   </ul>
-  <p style="margin-top:1rem;"><a href="{% url 'practice_hub' %}" data-i18n data-zh="全部练习 →" data-en="All practice →">全部练习 →</a></p>
+  <p style="margin-top:1rem;"><a href="{% url 'practice_hub' %}">All practice →</a></p>
 </section>
 {% endblock %}

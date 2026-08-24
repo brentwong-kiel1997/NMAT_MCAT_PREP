@@ -6,31 +6,31 @@
 <div class="page-hero">
   <div class="page-hero-inner">
     {% include "portal/includes/nav.html" with solid=1 %}
-    <p class="section-kicker"><a href="{% url 'materials_hub' %}" data-i18n data-zh="教材" data-en="Materials">教材</a></p>
-    <h1 data-i18n data-zh="考试策略" data-en="Exam tips">考试策略</h1>
-    <p class="lead" data-i18n data-zh="基于 CEM BOI / AAMC 结构的备考提示，不是官方原题。" data-en="Prep tips framed by CEM BOI / AAMC structure — not official past papers.">基于 CEM BOI / AAMC 结构的备考提示，不是官方原题。</p>
+    <p class="section-kicker"><a href="{% url 'materials_hub' %}">Materials</a></p>
+    <h1>Exam tips</h1>
+    <p class="lead">Prep tips framed by CEM BOI / AAMC structure — not official past papers.</p>
   </div>
 </div>
 
 <section class="section">
   <nav class="materials-filters" aria-label="Exam filter">
-    <a href="{% url 'materials_tips' %}" class="{% if not exam %}is-active{% endif %}" data-i18n data-zh="全部" data-en="All">全部</a>
+    <a href="{% url 'materials_tips' %}" class="{% if not exam %}is-active{% endif %}">All</a>
     <a href="{% url 'materials_tips' %}?exam=NMAT" class="{% if exam == 'NMAT' %}is-active{% endif %}">NMAT</a>
     <a href="{% url 'materials_tips' %}?exam=MCAT" class="{% if exam == 'MCAT' %}is-active{% endif %}">MCAT</a>
-    <a href="{% url 'materials_tips' %}?exam=BOTH" class="{% if exam == 'BOTH' %}is-active{% endif %}" data-i18n data-zh="共用" data-en="Both">共用</a>
+    <a href="{% url 'materials_tips' %}?exam=BOTH" class="{% if exam == 'BOTH' %}is-active{% endif %}">Both</a>
   </nav>
 
   <ol class="tips-list">
     {% for tip in tips %}
     <li>
       <p class="tip-exam">{{ tip.exam }}</p>
-      <h3><span class="only-zh">{{ tip.title_zh }}</span><span class="only-en">{{ tip.title_en }}</span></h3>
-      <p><span class="only-zh">{{ tip.body_zh }}</span><span class="only-en">{{ tip.body_en }}</span></p>
+      <h3>{{ tip.title }}</h3>
+      <p>{{ tip.body }}</p>
     </li>
     {% empty %}
-    <li><p data-i18n data-zh="暂无提示。" data-en="No tips.">暂无提示。</p></li>
+    <li><p>No tips.</p></li>
     {% endfor %}
   </ol>
-  <p style="margin-top:1.25rem;"><a href="{% url 'materials_checklists' %}" data-i18n data-zh="打开备考清单 →" data-en="Open checklists →">打开备考清单 →</a></p>
+  <p style="margin-top:1.25rem;"><a href="{% url 'materials_checklists' %}">Open checklists →</a></p>
 </section>
 {% endblock %}

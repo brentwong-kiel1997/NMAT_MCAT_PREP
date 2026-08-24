@@ -1,44 +1,27 @@
 slug: behavioral-social
 name: Behavioral & Social Sciences
-name_zh: 行为与社会科学
 exams:
 - NMAT
 - MCAT
-summary:
-  zh: 心理、社会、人类学交叉；NMAT 叫 Social Science，MCAT 对应 Psych/Soc。
-  en: Psych, sociology, anthropology overlap; NMAT Social Science ↔ MCAT Psych/Soc.
+summary: Psych, sociology, anthropology overlap; NMAT Social Science ↔ MCAT Psych/Soc.
 nmat_role: NMAT Part 2 · Social Science（Psychology / Sociology and Anthropology）
 mcat_role: MCAT Psychological, Social, and Biological Foundations of Behavior
-source_note:
-  zh: NMAT 按 CEM BOI：Psychology + Sociology and Anthropology。MCAT 按 AAMC FC6–10。
-  en: 'NMAT per CEM BOI: Psychology + Sociology and Anthropology. MCAT per AAMC FC6–10.'
+source_note: 'NMAT per CEM BOI: Psychology + Sociology and Anthropology. MCAT per AAMC FC6–10.'
 exam_notes:
-  NMAT:
-    zh: Social Science = psychology + sociology + anthropology，导论深度。
-    en: Social Science = psychology + sociology + anthropology at intro depth.
-  MCAT:
-    zh: 以心理、社会为主，并带少量生物基础；人类学不是独立主轴。
-    en: Mostly psych/soc with some biology; anthropology is not a separate MCAT spine.
+  NMAT: Social Science = psychology + sociology + anthropology at intro depth.
+  MCAT: Mostly psych/soc with some biology; anthropology is not a separate MCAT spine.
 chapters:
-- heading:
-    zh: NMAT · CEM BOI 章节
-    en: NMAT · CEM BOI chapters
+- heading: NMAT · CEM BOI chapters
   items:
   - title: Psychology
     points:
-    - zh: 导论心理学概念
-      en: Introductory psychology concepts
-    - zh: 行为与心理过程基础
-      en: Basics of behavior and mental processes
+    - Introductory psychology concepts
+    - Basics of behavior and mental processes
   - title: Sociology and Anthropology
     points:
-    - zh: 社会结构与文化导论
-      en: Intro social structure and culture
-    - zh: 人类学基本视角（NMAT 明确包含）
-      en: Basic anthropology perspectives (explicitly in NMAT)
-- heading:
-    zh: MCAT · Foundational Concepts 6–10（AAMC）
-    en: MCAT · Foundational Concepts 6–10 (AAMC)
+    - Intro social structure and culture
+    - Basic anthropology perspectives (explicitly in NMAT)
+- heading: MCAT · Foundational Concepts 6–10 (AAMC)
   items:
   - title: FC6 · Perceive, think, react
     points:

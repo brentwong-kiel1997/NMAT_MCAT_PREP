@@ -1,34 +1,36 @@
 slug: acute-kidney-injury
 name: Acute Kidney Injury
-name_zh: 急性肾损伤
-short: 数小时至数日内肾功能骤降；先分清肾前/肾性/肾后，再谈机制题。
+short: Abrupt loss of kidney function over hours to days; classify pre-renal / intrinsic / post-renal
+  first, then answer mechanism questions.
 systems:
 - Renal
 exams:
 - Enrichment
-exam_fit: 延伸阅读：服务生物学/病理生理直觉；NMAT 考纲是导论课不是临床诊疗；MCAT 可迁移机制，不考指南级用药方案。
-pathogen: 病因分类：灌注不足、实质损伤、梗阻
-transmission: 不适用。
+exam_fit: Extension reading serving biology/pathophysiology intuition; the NMAT syllabus is introductory
+  coursework, not clinical management; MCAT transfers the mechanisms, not guideline-level drug regimens.
+pathogen: Causes classified as hypoperfusion, parenchymal injury, obstruction
+transmission: Not applicable.
 pathophysiology:
-- 肾前性：有效血容量↓ → GFR↓（肾结构初期可逆）。
-- 急性肾小管坏死（ATN）：缺血/毒物；管型尿常见。
-- 肾后性：尿路梗阻 → 压力传导损伤肾单位。
+- 'Pre-renal: reduced effective circulating volume → lower GFR (kidney structure initially intact, process
+  reversible).'
+- 'Acute tubular necrosis (ATN): ischemic or toxic injury; muddy-brown granular casts are typical.'
+- 'Post-renal: urinary obstruction → pressure injury to nephrons.'
 clinical:
-- 少尿或非少尿；乏力、恶心、水肿、高血压。
-- 高钾、代谢性酸中毒、容量过负荷、尿毒症症状。
-- 药物史（NSAID、氨基糖苷、造影剂）很关键。
+- Oliguria or non-oliguria; fatigue, nausea, edema, hypertension.
+- Hyperkalemia, metabolic acidosis, volume overload, uremic symptoms.
+- Medication history (NSAIDs, aminoglycosides, contrast) matters.
 diagnosis:
-- 肌酐急性上升、尿量变化。
-- FeNa/FeUrea、尿检、超声排除梗阻。
-- 肾前 vs ATN：尿钠、浓缩能力差异是经典比较题。
+- Acute creatinine rise, urine-output changes.
+- FeNa/FeUrea, urinalysis, ultrasound to exclude obstruction.
+- 'Pre-renal vs ATN: urine sodium and concentrating ability — the classic comparison question.'
 treatment:
-- 纠正病因与灌注；停肾毒性药。
-- 处理并发症：高钾、酸中毒、肺水肿。
-- 透析指征：AEIOU 记忆（酸中毒、电解质、中毒、过负荷、尿毒症）。
+- Correct the cause and restore perfusion; stop nephrotoxic drugs.
+- 'Manage complications: hyperkalemia, acidosis, pulmonary edema.'
+- 'Dialysis indications: the AEIOU mnemonic (Acidosis, Electrolytes, Intoxication, Overload, Uremia).'
 high_yield:
-- 先定位：pre-renal / intrinsic / post-renal。
-- 泥沙色颗粒管型 ↔ ATN。
-- ACEI + NSAID + 利尿剂可促成血流动力学性 AKI。
-- MCAT：滤过、重吸收与稳态（钾/酸碱）。
-mcat_bridge: 肾脏生理与体液电解质平衡。
-nmat_bridge: 临床分类思维与急症处理优先级。
+- 'Localize first: pre-renal / intrinsic / post-renal.'
+- Muddy-brown granular casts ↔ ATN.
+- ACEI + NSAID + diuretic can combine into hemodynamic AKI.
+- 'MCAT: filtration, reabsorption, and homeostasis (potassium / acid-base).'
+mcat_bridge: Renal physiology and body-fluid electrolyte balance.
+nmat_bridge: Clinical classification reasoning and acute-care priorities.

@@ -1,269 +1,125 @@
 slug: physics
 items:
 - id: phy-1
-  q:
-    zh: 若对物体做的净功为正，则其动能：
-    en: 'If net work on an object is positive, its kinetic energy:'
+  q: 'If net work on an object is positive, its kinetic energy:'
   choices:
-    A:
-      zh: 一定减少
-      en: Must decrease
-    B:
-      zh: 一定增加
-      en: Must increase
-    C:
-      zh: 不变
-      en: Stays the same
-    D:
-      zh: 与功无关
-      en: Is unrelated to work
+    A: Must decrease
+    B: Must increase
+    C: Stays the same
+    D: Is unrelated to work
   answer: B
-  explain:
-    zh: 功-能定理：净功等于动能变化。
-    en: 'Work–energy theorem: net work equals change in kinetic energy.'
+  explain: 'Work–energy theorem: net work equals change in kinetic energy.'
   chapter: Mechanics
 - id: phy-2
-  q:
-    zh: 理想流体连续方程的核心含义是：
-    en: 'The continuity equation for ideal flow mainly says:'
+  q: 'The continuity equation for ideal flow mainly says:'
   choices:
-    A:
-      zh: 截面积减小则流速增大（体积流量守恒）
-      en: Smaller area → higher speed (volume flow conserved)
-    B:
-      zh: 压力处处相等
-      en: Pressure is equal everywhere
-    C:
-      zh: 温度必须升高
-      en: Temperature must rise
-    D:
-      zh: 密度必须为零
-      en: Density must be zero
+    A: Smaller area → higher speed (volume flow conserved)
+    B: Pressure is equal everywhere
+    C: Temperature must rise
+    D: Density must be zero
   answer: A
-  explain:
-    zh: 不可压缩流：A₁v₁ = A₂v₂。
-    en: 'For incompressible flow: A₁v₁ = A₂v₂.'
+  explain: 'For incompressible flow: A₁v₁ = A₂v₂.'
   chapter: 4B · Fluids, circulation, gas exchange
 - id: phy-3
-  q:
-    zh: 欧姆定律把电压、电流、电阻联系起来为：
-    en: 'Ohm’s law relates V, I, and R as:'
+  q: 'Ohm’s law relates V, I, and R as:'
   choices:
-    A:
-      zh: V = I/R
-      en: V = I/R
-    B:
-      zh: V = IR
-      en: V = IR
-    C:
-      zh: V = I + R
-      en: V = I + R
-    D:
-      zh: V = R/I
-      en: V = R/I
+    A: V = I/R
+    B: V = IR
+    C: V = I + R
+    D: V = R/I
   answer: B
-  explain:
-    zh: V = IR 是线性电阻的基本关系。
-    en: V = IR is the basic linear-resistor relation.
+  explain: V = IR is the basic linear-resistor relation.
   chapter: Electricity and Magnetism
 - id: phy-4
-  q:
-    zh: 光子能量与频率的关系是：
-    en: 'Photon energy relates to frequency as:'
+  q: 'Photon energy relates to frequency as:'
   choices:
-    A:
-      zh: E = hf
-      en: E = hf
-    B:
-      zh: E = h/f
-      en: E = h/f
-    C:
-      zh: E = f/h
-      en: E = f/h
-    D:
-      zh: E = h + f
-      en: E = h + f
+    A: E = hf
+    B: E = h/f
+    C: E = f/h
+    D: E = h + f
   answer: A
-  explain:
-    zh: E = hf（或 E = hc/λ）。
-    en: E = hf (or E = hc/λ).
+  explain: E = hf (or E = hc/λ).
   chapter: Modern Physics
 - id: phy-5
-  q:
-    zh: 物体在匀速圆周运动中，向心加速度方向：
-    en: 'In uniform circular motion, centripetal acceleration points:'
+  q: 'In uniform circular motion, centripetal acceleration points:'
   choices:
-    A:
-      zh: 沿切线、与速度同向
-      en: Tangent to the path, same as velocity
-    B:
-      zh: 指向圆心
-      en: Toward the center of the circle
-    C:
-      zh: 背离圆心
-      en: Away from the center
-    D:
-      zh: 为零
-      en: Is zero
+    A: Tangent to the path, same as velocity
+    B: Toward the center of the circle
+    C: Away from the center
+    D: Is zero
   answer: B
-  explain:
-    zh: 向心加速度改变速度方向；速度沿切线，加速度指向圆心。
-    en: Centripetal acceleration changes velocity direction; velocity is tangential, acceleration points
-      inward.
+  explain: Centripetal acceleration changes velocity direction; velocity is tangential, acceleration points
+    inward.
   chapter: Mechanics
 - id: phy-6
-  q:
-    zh: 理想气体在等温膨胀时，内能变化 ΔU 为：
-    en: 'For an ideal gas undergoing isothermal expansion, ΔU equals:'
+  q: 'For an ideal gas undergoing isothermal expansion, ΔU equals:'
   choices:
-    A:
-      zh: 正值且很大
-      en: A large positive value
-    B:
-      zh: 零（理想气体内能只取决于温度）
-      en: Zero (ideal-gas internal energy depends only on temperature)
-    C:
-      zh: 负无穷
-      en: Negative infinity
-    D:
-      zh: 等于压强
-      en: Equals pressure
+    A: A large positive value
+    B: Zero (ideal-gas internal energy depends only on temperature)
+    C: Negative infinity
+    D: Equals pressure
   answer: B
-  explain:
-    zh: 理想气体内能是温度的函数；等温过程温度不变故 ΔU = 0。
-    en: Ideal-gas internal energy is a function of T; isothermal means ΔU = 0.
+  explain: Ideal-gas internal energy is a function of T; isothermal means ΔU = 0.
   chapter: Thermodynamics
 - id: phy-7
-  q:
-    zh: 光从空气进入玻璃时，一般：
-    en: 'When light goes from air into glass, it generally:'
+  q: 'When light goes from air into glass, it generally:'
   choices:
-    A:
-      zh: 速率增大、波长变长
-      en: Speeds up with longer wavelength
-    B:
-      zh: 速率减小、向法线偏折（折射）
-      en: Slows and bends toward the normal (refraction)
-    C:
-      zh: 不发生折射
-      en: Does not refract
-    D:
-      zh: 频率改变
-      en: Changes frequency
+    A: Speeds up with longer wavelength
+    B: Slows and bends toward the normal (refraction)
+    C: Does not refract
+    D: Changes frequency
   answer: B
-  explain:
-    zh: 进入光密介质速度降低；折射角小于入射角（向法线偏折）。
-    en: Light slows in a denser medium; the refracted ray bends toward the normal.
+  explain: Light slows in a denser medium; the refracted ray bends toward the normal.
   chapter: Vibrations, Waves, and Optics
 - id: phy-8
-  q:
-    zh: 并联电路中各支路电压关系是：
-    en: 'In a parallel circuit, the voltage across each branch:'
+  q: 'In a parallel circuit, the voltage across each branch:'
   choices:
-    A:
-      zh: 相同
-      en: Is the same
-    B:
-      zh: 与电阻成正比
-      en: Is proportional to resistance
-    C:
-      zh: 总是为零
-      en: Is always zero
-    D:
-      zh: 随机分布
-      en: Is random
+    A: Is the same
+    B: Is proportional to resistance
+    C: Is always zero
+    D: Is random
   answer: A
-  explain:
-    zh: 并联元件两端电势差相同；总电流分流各支。
-    en: Parallel elements share the same potential difference; total current splits among branches.
+  explain: Parallel elements share the same potential difference; total current splits among branches.
   chapter: Electricity and Magnetism
 - id: phy-9
-  q:
-    zh: 光电效应说明光具有：
-    en: 'The photoelectric effect shows that light has:'
+  q: 'The photoelectric effect shows that light has:'
   choices:
-    A:
-      zh: 波动性但无粒子性
-      en: Wave nature only, no particle nature
-    B:
-      zh: 量子化能量（光子）
-      en: Quantized energy (photons)
-    C:
-      zh: 与频率无关的能量
-      en: Energy independent of frequency
-    D:
-      zh: 无限大的波长
-      en: Infinitely long wavelength
+    A: Wave nature only, no particle nature
+    B: Quantized energy (photons)
+    C: Energy independent of frequency
+    D: Infinitely long wavelength
   answer: B
-  explain:
-    zh: 只有当 hf 超过逸出功才发射电子；经典波动理论无法解释截止频率。
-    en: Electrons emit only when hf exceeds the work function; classical waves cannot explain a cutoff
-      frequency.
+  explain: Electrons emit only when hf exceeds the work function; classical waves cannot explain a cutoff
+    frequency.
   chapter: Modern Physics
 - id: phy-10
-  q:
-    zh: 根据伯努利原理（理想、定常、不可压缩流），管径缩小处：
-    en: 'By Bernoulli’s principle (ideal, steady, incompressible flow), where a pipe narrows:'
+  q: 'By Bernoulli’s principle (ideal, steady, incompressible flow), where a pipe narrows:'
   choices:
-    A:
-      zh: 流速增大、静压降低
-      en: Speed rises and static pressure drops
-    B:
-      zh: 流速降低、静压升高
-      en: Speed falls and static pressure rises
-    C:
-      zh: 流速与压力均不变
-      en: Both speed and pressure stay constant
-    D:
-      zh: 密度必须为零
-      en: Density must be zero
+    A: Speed rises and static pressure drops
+    B: Speed falls and static pressure rises
+    C: Both speed and pressure stay constant
+    D: Density must be zero
   answer: A
-  explain:
-    zh: 连续性方程 A v = 常数 → 窄处流速大；伯努利 → 动能增则静压降。
-    en: Continuity (Av = constant) raises speed in a narrow region; Bernoulli links higher speed to lower
-      static pressure.
+  explain: Continuity (Av = constant) raises speed in a narrow region; Bernoulli links higher speed to
+    lower static pressure.
   chapter: 4B · Fluids, circulation, gas exchange
 - id: phy-11
-  q:
-    zh: 理想流体中，管道变窄处流速如何变化？
-    en: In ideal flow, what happens to speed where a pipe narrows?
+  q: In ideal flow, what happens to speed where a pipe narrows?
   choices:
-    A:
-      zh: 减小
-      en: Decreases
-    B:
-      zh: 增大
-      en: Increases
-    C:
-      zh: 不变
-      en: Stays the same
-    D:
-      zh: 变为零
-      en: Becomes zero
+    A: Decreases
+    B: Increases
+    C: Stays the same
+    D: Becomes zero
   answer: B
-  explain:
-    zh: 连续性：A₁v₁=A₂v₂，截面积减小则速度增大。
-    en: 'Continuity: A₁v₁=A₂v₂; smaller area means higher speed.'
+  explain: 'Continuity: A₁v₁=A₂v₂; smaller area means higher speed.'
   chapter: Fluids
 - id: phy-12
-  q:
-    zh: 电容两端电压加倍、电容不变，储存电荷：
-    en: 'If voltage across a capacitor doubles at fixed C, stored charge:'
+  q: 'If voltage across a capacitor doubles at fixed C, stored charge:'
   choices:
-    A:
-      zh: 减半
-      en: Halves
-    B:
-      zh: 不变
-      en: Unchanged
-    C:
-      zh: 加倍
-      en: Doubles
-    D:
-      zh: 变为四倍
-      en: Quadruples
+    A: Halves
+    B: Unchanged
+    C: Doubles
+    D: Quadruples
   answer: C
-  explain:
-    zh: Q=CV，C 不变则 Q 与 V 成正比。
-    en: Q=CV; at fixed C, Q scales with V.
+  explain: Q=CV; at fixed C, Q scales with V.
   chapter: Electricity and Magnetism

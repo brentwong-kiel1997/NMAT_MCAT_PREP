@@ -1,170 +1,85 @@
 tips:
 - exam: NMAT
-  title:
-    zh: Part 1 时间分配
-    en: Part 1 time budget
-  body:
-    zh: CEM BOI 建议：Verbal ~30 分、Inductive ~35 分、Quantitative ~40 分、Perceptual ~30 分。先按建议计时练整套，再微调弱项。
-    en: 'CEM BOI pacing: Verbal ~30 min, Inductive ~35 min, Quantitative ~40 min, Perceptual ~30 min.
-      Practice full Part 1 on those clocks, then adjust for weak areas.'
+  title: Part 1 time budget
+  body: 'CEM BOI pacing: Verbal ~30 min, Inductive ~35 min, Quantitative ~40 min, Perceptual ~30 min.
+    Practice full Part 1 on those clocks, then adjust for weak areas.'
 - exam: NMAT
-  title:
-    zh: Part 2 四科轮转
-    en: Part 2 four-subject rotation
-  body:
-    zh: Biology、Physics、Social Science、Chemistry 各 30 题共 90 分钟。不要在一科耗尽时间；每题平均约 45 秒，难题先标记再回看。
-    en: Biology, Physics, Social Science, Chemistry — 30 items each in 90 minutes. Don’t drain time on
-      one subject; ~45 s per item average, mark hard ones and return.
+  title: Part 2 four-subject rotation
+  body: Biology, Physics, Social Science, Chemistry — 30 items each in 90 minutes. Don’t drain time on
+    one subject; ~45 s per item average, mark hard ones and return.
 - exam: NMAT
-  title:
-    zh: Social Science 范围
-    en: Social Science scope
-  body:
-    zh: CEM 明确包含 Psychology 与 Sociology and Anthropology，不是纯心理学。人类学文化视角题会出现，按 BOI 两章复习。
-    en: CEM lists Psychology plus Sociology and Anthropology — not psychology alone. Anthropology culture
-      items appear; study both BOI blocks.
+  title: Social Science scope
+  body: CEM lists Psychology plus Sociology and Anthropology — not psychology alone. Anthropology culture
+    items appear; study both BOI blocks.
 - exam: NMAT
-  title:
-    zh: 生化在 Chemistry 内
-    en: Biochemistry inside Chemistry
-  body:
-    zh: NMAT 无独立 Biochemistry 科；CEM 将其列在 Chemistry 的 Biochemistry 块。与 MCAT Bio/Biochem 重叠部分可共用 Gabay 生化章节。
-    en: NMAT has no separate Biochemistry subtest; CEM nests it under Chemistry. Overlap with MCAT Bio/Biochem
-      can share Gabay biochemistry chapters.
+  title: Biochemistry inside Chemistry
+  body: NMAT has no separate Biochemistry subtest; CEM nests it under Chemistry. Overlap with MCAT Bio/Biochem
+    can share Gabay biochemistry chapters.
 - exam: MCAT
-  title:
-    zh: 考试日四科顺序
-    en: Test-day section order
-  body:
-    zh: AAMC 固定顺序：Chem/Phys → CARS → Bio/Biochem → Psych/Soc。每科中间约 10 分钟可选休息。模考按此顺序练耐力。
-    en: 'AAMC fixed order: Chem/Phys → CARS → Bio/Biochem → Psych/Soc, with optional ~10-minute breaks.
-      Simulate endurance in that order.'
+  title: Test-day section order
+  body: 'AAMC fixed order: Chem/Phys → CARS → Bio/Biochem → Psych/Soc, with optional ~10-minute breaks.
+    Simulate endurance in that order.'
 - exam: MCAT
-  title:
-    zh: Chem/Phys FC 权重
-    en: Chem/Phys FC weighting
-  body:
-    zh: AAMC 在该科内 FC4（物理相关）约 40%、FC5（化学相关）约 60%。Gabay 按官方 Content Categories 4A–5E 分章，不按备考百分比拆页。
-    en: AAMC weights FC4 ~40% and FC5 ~60% within Chem/Phys. Gabay chapters follow official Content Categories
-      4A–5E, not prep-percent splits.
+  title: Chem/Phys FC weighting
+  body: AAMC weights FC4 ~40% and FC5 ~60% within Chem/Phys. Gabay chapters follow official Content Categories
+    4A–5E, not prep-percent splits.
 - exam: MCAT
-  title:
-    zh: Bio/Biochem FC 权重
-    en: Bio/Biochem FC weighting
-  body:
-    zh: AAMC：FC1 ~55%、FC2 ~20%、FC3 ~25%。生化 FC1（1A–1D）权重最高；与 NMAT Chemistry·Biochemistry 块可交叉复习。
-    en: 'AAMC: FC1 ~55%, FC2 ~20%, FC3 ~25%. Biochemistry-heavy FC1 (1A–1D) dominates; cross-review with
-      NMAT Chemistry·Biochemistry.'
+  title: Bio/Biochem FC weighting
+  body: 'AAMC: FC1 ~55%, FC2 ~20%, FC3 ~25%. Biochemistry-heavy FC1 (1A–1D) dominates; cross-review with
+    NMAT Chemistry·Biochemistry.'
 - exam: MCAT
-  title:
-    zh: Psych/Soc 人类学定位
-    en: Anthropology on Psych/Soc
-  body:
-    zh: MCAT Psych/Soc 以心理学与社会学为主（AAMC FC6–10）；人类学不是 NMAT 式独立主轴。文化差异在 FC9 等类别出现。
-    en: MCAT Psych/Soc emphasizes psychology and sociology (AAMC FC6–10); anthropology isn’t a separate
-      axis like NMAT. Cultural content appears in FC9 categories.
+  title: Anthropology on Psych/Soc
+  body: MCAT Psych/Soc emphasizes psychology and sociology (AAMC FC6–10); anthropology isn’t a separate
+    axis like NMAT. Cultural content appears in FC9 categories.
 - exam: MCAT
-  title:
-    zh: CARS 无内容大纲
-    en: CARS has no content outline
-  body:
-    zh: CARS 按 AAMC 三技能轴：Foundations、Within the Text、Beyond the Text。不需背学科事实；练篇章节奏与证据定位。
-    en: 'CARS follows AAMC’s three skills: Foundations, Within the Text, Beyond the Text. No science memorization
-      — train passage pacing and evidence location.'
+  title: CARS has no content outline
+  body: 'CARS follows AAMC’s three skills: Foundations, Within the Text, Beyond the Text. No science memorization
+    — train passage pacing and evidence location.'
 - exam: BOTH
-  title:
-    zh: Gabay 共用科目页
-    en: Gabay shared subject pages
-  body:
-    zh: Biology、Chemistry、Physics、Behavioral-Social 在 NMAT Part 2 与 MCAT 多科共用。章节标题合并 CEM BOI 与 AAMC Content
-      Categories，避免重复建第九科。
-    en: Biology, Chemistry, Physics, and Behavioral-Social are shared across NMAT Part 2 and multiple
-      MCAT sections. Chapters merge CEM BOI and AAMC categories without inventing extra subjects.
+  title: Gabay shared subject pages
+  body: Biology, Chemistry, Physics, and Behavioral-Social are shared across NMAT Part 2 and multiple
+    MCAT sections. Chapters merge CEM BOI and AAMC categories without inventing extra subjects.
 - exam: BOTH
-  title:
-    zh: 篇章 vs 独立题
-    en: Passage vs standalone items
-  body:
-    zh: NMAT 以独立选择题为主；MCAT 科学三科大量篇章题（每段多题）。MCAT 练读图、实验设计与数据表；NMAT 练速度与广覆盖。
-    en: NMAT is mostly standalone multiple choice; MCAT science sections are passage-heavy. MCAT trains
-      graphs, experimental design, and data tables; NMAT trains speed and breadth.
+  title: Passage vs standalone items
+  body: NMAT is mostly standalone multiple choice; MCAT science sections are passage-heavy. MCAT trains
+    graphs, experimental design, and data tables; NMAT trains speed and breadth.
 - exam: BOTH
-  title:
-    zh: 先官方大纲再刷题
-    en: Outline before drill
-  body:
-    zh: 以 CEM BOI 与 AAMC What’s on the MCAT 为章节目录；笔记与练习挂在官方章节下，不凭空加“第 X 章”伪标题。
-    en: Use CEM BOI and AAMC What’s on the MCAT as the chapter spine; notes and practice attach to official
-      headings — no invented pseudo-chapters.
+  title: Outline before drill
+  body: Use CEM BOI and AAMC What’s on the MCAT as the chapter spine; notes and practice attach to official
+    headings — no invented pseudo-chapters.
 - exam: BOTH
-  title:
-    zh: 双语笔记用法
-    en: Using bilingual notes
-  body:
-    zh: Gabay 笔记中英对照：先读中文抓要点，再用英文核对考试常用表述。MCAT 题干为英文，NMAT 亦大量英文题干。
-    en: 'Gabay notes are bilingual: grasp points in Chinese, then verify exam phrasing in English. MCAT
-      is English; NMAT stems are largely English too.'
+  title: Using bilingual notes
+  body: 'Gabay notes are bilingual: grasp points in Chinese, then verify exam phrasing in English. MCAT
+    is English; NMAT stems are largely English too.'
 - exam: MCAT
-  title:
-    zh: 科学科读题顺序
-    en: Science section reading order
-  body:
-    zh: 篇章题可先扫图表与问题干，再回文定位；纯概念题直接做。95 分钟内 59 题，留 5–8 分钟检查标记题。
-    en: For passages, skim figures and question stems first, then locate evidence; tackle standalone concept
-      items directly. In 95 minutes for 59 items, reserve 5–8 min for marked questions.
+  title: Science section reading order
+  body: For passages, skim figures and question stems first, then locate evidence; tackle standalone concept
+    items directly. In 95 minutes for 59 items, reserve 5–8 min for marked questions.
 - exam: NMAT
-  title:
-    zh: Part 1 知觉题防疲劳
-    en: Part 1 perceptual fatigue control
-  body:
-    zh: Hidden Figure / Mirror 连续做易眼疲劳。每 8–10 题短暂眨眼休息；先做 Identical Information 热身再进隐藏图形。
-    en: Hidden Figure / Mirror sets tire the eyes. Blink-rest every 8–10 items; warm up with Identical
-      Information before hidden figures.
+  title: Part 1 perceptual fatigue control
+  body: Hidden Figure / Mirror sets tire the eyes. Blink-rest every 8–10 items; warm up with Identical
+    Information before hidden figures.
 - exam: NMAT
-  title:
-    zh: Part 2 四科时间盒
-    en: Part 2 four-subject time boxes
-  body:
-    zh: 每科约 30 题。建议单科内部也分“必会 / 可猜 / 标记回看”，避免在一道计算卡死整科。
-    en: About 30 items per subject. Inside each subject, triage must-know / guess / mark-and-return so
-      one calculation doesn’t sink the section.
+  title: Part 2 four-subject time boxes
+  body: About 30 items per subject. Inside each subject, triage must-know / guess / mark-and-return so
+    one calculation doesn’t sink the section.
 - exam: MCAT
-  title:
-    zh: 实验设计题清单
-    en: Experimental-design checklist
-  body:
-    zh: 看自变量、因变量、对照组、混淆变量与样本。很多 Chem/Phys、Bio/Biochem 篇章题考的是设计逻辑而非背公式。
-    en: Track IV, DV, controls, confounders, and sample. Many Chem/Phys and Bio/Biochem items test design
-      logic more than formula recall.
+  title: Experimental-design checklist
+  body: Track IV, DV, controls, confounders, and sample. Many Chem/Phys and Bio/Biochem items test design
+    logic more than formula recall.
 - exam: MCAT
-  title:
-    zh: Psych/Soc 术语精确度
-    en: Psych/Soc term precision
-  body:
-    zh: 区分经典/操作条件、同化/顺应、发病率/患病率、刻板印象/歧视/偏见。近义词陷阱极多。
-    en: Distinguish classical/operant, assimilation/accommodation, incidence/prevalence, stereotype/discrimination/prejudice.
-      Near-synonym traps are common.
+  title: Psych/Soc term precision
+  body: Distinguish classical/operant, assimilation/accommodation, incidence/prevalence, stereotype/discrimination/prejudice.
+    Near-synonym traps are common.
 - exam: BOTH
-  title:
-    zh: 错题本三问
-    en: Wrong-item three questions
-  body:
-    zh: ① 概念缺口还是粗心？② 对应哪条官方章节？③ 能否用一句话教给别人？教不出来就回 Gabay 笔记与闪卡。
-    en: ① Concept gap or carelessness? ② Which official chapter? ③ Can you teach it in one sentence? If
-      not, return to Gabay notes and cards.
+  title: Wrong-item three questions
+  body: ① Concept gap or carelessness? ② Which official chapter? ③ Can you teach it in one sentence? If
+    not, return to Gabay notes and cards.
 - exam: BOTH
-  title:
-    zh: 公式卡用法
-    en: How to use formula sheets
-  body:
-    zh: 公式页是“触发器”不是题库。看到公式先说物理意义与典型陷阱，再去做对应练习集。
-    en: Formula sheets are triggers, not a question bank. State meaning and traps, then drill the matching
-      practice set.
+  title: How to use formula sheets
+  body: Formula sheets are triggers, not a question bank. State meaning and traps, then drill the matching
+    practice set.
 - exam: BOTH
-  title:
-    zh: 考前 48 小时
-    en: Final 48 hours
-  body:
-    zh: 停开新章节；只复习错题、术语表与高频公式。保证睡眠与通勤路线，比临时抱佛脚更提分。
-    en: Stop opening new chapters; review misses, glossary, and high-yield formulas. Sleep and logistics
-      beat last-minute cramming.
+  title: Final 48 hours
+  body: Stop opening new chapters; review misses, glossary, and high-yield formulas. Sleep and logistics
+    beat last-minute cramming.

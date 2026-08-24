@@ -1,33 +1,36 @@
 slug: myocardial-infarction
 name: Myocardial Infarction
-name_zh: 心肌梗死
-short: 冠脉急性闭塞导致心肌坏死；缺血时间与再灌注是生死线。
+short: Acute coronary occlusion causing myocyte necrosis; ischemic time and reperfusion are the life-or-death
+  axis.
 systems:
 - Cardiovascular
 exams:
 - Enrichment
-exam_fit: 延伸阅读：服务生物学/病理生理直觉；NMAT 考纲是导论课不是临床诊疗；MCAT 可迁移机制，不考指南级用药方案。
-pathogen: 多数为动脉粥样硬化斑块破裂 + 血栓
-transmission: 不适用。危险因素：吸烟、高血压、糖尿病、血脂异常、家族史。
+exam_fit: Extension reading serving biology/pathophysiology intuition; the NMAT syllabus is introductory
+  coursework, not clinical management; MCAT transfers the mechanisms, not guideline-level drug regimens.
+pathogen: Usually atherosclerotic plaque rupture + thrombosis
+transmission: 'Not applicable. Risk factors: smoking, hypertension, diabetes, dyslipidemia, family history.'
 pathophysiology:
-- 氧供需失衡 → 缺血 → 损伤 → 坏死（时间依赖）。
-- STEMI：透壁性损伤，ST 抬高；NSTEMI：心内膜下为主。
-- 坏死标志物：Troponin（高敏）最关键。
+- Oxygen supply–demand mismatch → ischemia → injury → necrosis (time-dependent).
+- 'STEMI: transmural injury with ST elevation; NSTEMI: predominantly subendocardial.'
+- 'Necrosis biomarkers: (high-sensitivity) troponin is the key marker.'
 clinical:
-- 压榨性胸痛，可放射至左臂/下颌；冷汗、恶心。
-- 女性、糖尿病、老年：症状可不典型。
-- 并发症：心律失常、心衰、室壁瘤、机械并发症（时间窗记忆）。
+- Crushing chest pressure radiating to the left arm/jaw; diaphoresis, nausea.
+- Women, diabetics, and the elderly may present atypically.
+- 'Complications: arrhythmia, heart failure, ventricular aneurysm, mechanical complications (memorize
+  the time windows).'
 diagnosis:
-- ECG + 肌钙蛋白 + 临床表现。
-- STEMI：紧急再灌注指征识别。
+- ECG + troponin + clinical presentation.
+- 'STEMI: recognize the urgent reperfusion criteria.'
 treatment:
-- MONA-BASH 等记忆框架了解；核心是抗血小板、抗凝、再灌注。
-- STEMI：PCI 优先；无条件时溶栓。
-- 二级预防：他汀、双抗、β阻滞剂、ACEI、生活方式。
+- Memory frameworks like MONA-BASH at awareness level; the core is antiplatelet, anticoagulation, and
+  reperfusion.
+- 'STEMI: primary PCI preferred; thrombolysis when PCI is unavailable.'
+- 'Secondary prevention: statin, dual antiplatelet therapy, β-blocker, ACEI, lifestyle.'
 high_yield:
-- 时间就是心肌：door-to-balloon 概念。
-- Troponin 比 CK-MB 更特异/敏感（现代考点）。
-- 左前降支闭塞常累及前壁。
-- MCAT：有氧代谢中断 → 乳酸、ATP 衰竭、膜泵失效。
-mcat_bridge: 细胞呼吸、膜电位与循环解剖。
-nmat_bridge: 急性冠脉综合征分型与急救优先级。
+- '"Time is muscle": the door-to-balloon concept.'
+- Troponin is more specific/sensitive than CK-MB (modern exam standard).
+- Left anterior descending occlusion typically involves the anterior wall.
+- 'MCAT: interrupted aerobic metabolism → lactate, ATP depletion, membrane-pump failure.'
+mcat_bridge: Cellular respiration, membrane potential, and circulatory anatomy.
+nmat_bridge: Acute coronary syndrome classification and emergency priorities.

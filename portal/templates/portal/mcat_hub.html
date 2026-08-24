@@ -8,24 +8,24 @@
     {% include "portal/includes/nav.html" with solid=1 %}
     <p class="section-kicker">{{ exam.admin }}</p>
     <h1>{{ exam.name }}</h1>
-    <p class="lead"><span class="only-zh">{{ exam.full_name }}（{{ exam.name_zh }}）。{{ exam.format }}</span><span class="only-en">{{ exam.full_name }}. {{ exam.format_en }}</span></p>
-    <p class="lead" style="margin-top:0.75rem;"><span class="only-zh">结构依据：AAMC About the MCAT / What’s on the MCAT。</span><span class="only-en">Source: AAMC About the MCAT / What’s on the MCAT.</span></p>
+    <p class="lead">{{ exam.full_name }}. {{ exam.format }}</p>
+    <p class="lead" style="margin-top:0.75rem;">Source: AAMC About the MCAT / What’s on the MCAT.</p>
   </div>
 </div>
 
 <section class="section">
   <p class="section-kicker">Four sections</p>
-  <h2 data-i18n data-zh="按官方四科进入" data-en="Enter by the four official sections">按官方四科进入</h2>
-  <p class="section-lead" data-i18n data-zh="考试日顺序固定。科学/行为科链到共用知识页；CARS 单独成页。" data-en="Fixed test-day order. Science/behavior sections link to shared hubs; CARS stays separate.">考试日顺序固定。科学/行为科链到共用知识页；CARS 单独成页。</p>
+  <h2>Enter by the four official sections</h2>
+  <p class="section-lead">Fixed test-day order. Science/behavior sections link to shared hubs; CARS stays separate.</p>
   <ul class="disease-list">
     {% for s in exam.sections %}
     <li>
       <a href="{% url 'mcat_section' s.slug %}">
         <div>
-          <h3>{{ s.short }} <span class="muted-inline only-zh">{{ s.name_zh }}</span></h3>
+          <h3>{{ s.short }}</h3>
           <p>{{ s.name }}</p>
         </div>
-        <span class="disease-meta"><span class="only-zh">{% if s.unique %}独有{% else %}可合并{% endif %} · {{ s.questions }} 题</span><span class="only-en">{% if s.unique %}Unique{% else %}Shared links{% endif %} · {{ s.questions }} items</span></span>
+        <span class="disease-meta">{% if s.unique %}Unique{% else %}Shared links{% endif %} · {{ s.questions }} items</span>
       </a>
     </li>
     {% endfor %}

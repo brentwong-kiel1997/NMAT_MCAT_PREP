@@ -1,81 +1,51 @@
 slug: physics
 name: Physics
-name_zh: 物理学
 exams:
 - NMAT
 - MCAT
-summary:
-  zh: 力学到近代物理的导论框架；NMAT 独立成科，MCAT 主要落在 Chem/Phys。
-  en: Intro arc from mechanics to modern physics; separate NMAT subtest; mainly Chem/Phys on MCAT.
-nmat_role:
-  zh: NMAT Part 2 · Physics（30 题）
-  en: NMAT Part 2 · Physics (30 items)
-mcat_role:
-  zh: MCAT Chem/Phys 中的物理学（AAMC FC4）
-  en: Physics within MCAT Chem/Phys (AAMC FC4)
-source_note:
-  zh: NMAT 五块标题取自 CEM BOI Physics；MCAT 侧对应 AAMC Foundational Concept 4。
-  en: NMAT headings from CEM BOI Physics; MCAT side maps to AAMC Foundational Concept 4.
+summary: Intro arc from mechanics to modern physics; separate NMAT subtest; mainly Chem/Phys on MCAT.
+nmat_role: NMAT Part 2 · Physics (30 items)
+mcat_role: Physics within MCAT Chem/Phys (AAMC FC4)
+source_note: NMAT headings from CEM BOI Physics; MCAT side maps to AAMC Foundational Concept 4.
 exam_notes:
-  NMAT:
-    zh: 大学导论物理常见主题，强调概念与推理。
-    en: Typical intro physics themes; concepts and reasoning.
-  MCAT:
-    zh: 常嵌在生理/医疗情境篇章里，少纯算、多关系与估算。
-    en: Often embedded in physio/clinical passages; less pure calc, more relations and estimation.
+  NMAT: Typical intro physics themes; concepts and reasoning.
+  MCAT: Often embedded in physio/clinical passages; less pure calc, more relations and estimation.
 chapters:
-- heading:
-    zh: NMAT · CEM BOI 章节
-    en: NMAT · CEM BOI chapters
+- heading: NMAT · CEM BOI chapters
   items:
   - title: Mechanics
     points:
-    - zh: 运动、力、功与能
-      en: Motion, forces, work, and energy
-    - zh: 平衡与动量导论
-      en: Intro equilibrium and momentum
+    - Motion, forces, work, and energy
+    - Intro equilibrium and momentum
   - title: Thermodynamics
     points:
-    - zh: 温度、热量与热力学定律导论
-      en: Intro temperature, heat, and thermo laws
+    - Intro temperature, heat, and thermo laws
   - title: Vibrations, Waves, and Optics
     points:
-    - zh: 振动与波
-      en: Vibrations and waves
-    - zh: 几何/波动光学基础
-      en: Basics of geometric/wave optics
+    - Vibrations and waves
+    - Basics of geometric/wave optics
   - title: Electricity and Magnetism
     points:
-    - zh: 电场、电路基础
-      en: Basics of electric fields and circuits
-    - zh: 磁学导论
-      en: Intro magnetism
+    - Basics of electric fields and circuits
+    - Intro magnetism
   - title: Modern Physics
     points:
-    - zh: 近代物理导论概念（如量子/核现象入门）
-      en: Intro modern physics (e.g., quantum/nuclear basics)
-- heading:
-    zh: MCAT · Foundational Concept 4（AAMC）
-    en: MCAT · Foundational Concept 4 (AAMC)
+    - Intro modern physics (e.g., quantum/nuclear basics)
+- heading: MCAT · Foundational Concept 4 (AAMC)
   items:
   - title: 4A · Motion, forces, work, energy, equilibrium
     points:
-    - zh: 生命系统中的平动、力、功、能与平衡
-      en: Translational motion, forces, work, energy, and equilibrium in living systems
+    - Translational motion, forces, work, energy, and equilibrium in living systems
   - title: 4B · Fluids, circulation, gas exchange
     points:
-    - zh: 血液循环与气体交换中的流体
-      en: Fluids in blood circulation and gas exchange
+    - Fluids in blood circulation and gas exchange
   - title: 4C · Electrochemistry and circuits
     points:
-    - zh: 电化学与电路元件
-      en: Electrochemistry and circuit elements
+    - Electrochemistry and circuit elements
   - title: 4D · Light and sound with matter
     points:
-    - zh: 光、声与物质的相互作用
-      en: How light and sound interact with matter
+    - How light and sound interact with matter
   - title: 4E · Atoms and electronic structure
     points:
-    - zh: 原子、核衰变与电子结构
-      en: Atoms, nuclear decay, and electronic structure
+    - Atoms, nuclear decay, and electronic structure
 kind: shared

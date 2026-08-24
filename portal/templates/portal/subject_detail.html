@@ -1,5 +1,4 @@
 {% extends "portal/base.html" %}
-{% load i18n_extras %}
 
 {% block title %}{{ subject.name }} · Gabay{% endblock %}
 
@@ -7,9 +6,9 @@
 <div class="page-hero">
   <div class="page-hero-inner">
     {% include "portal/includes/nav.html" with solid=1 %}
-    <p class="section-kicker"><span class="only-zh">{{ subject.name_zh }} · 共用</span><span class="only-en">{{ subject.name }} · Shared</span></p>
+    <p class="section-kicker">{{ subject.name }} · Shared</p>
     <h1>{{ subject.name }}</h1>
-    <p class="lead"><span class="only-zh">{{ subject.summary }}</span><span class="only-en">{{ subject.summary_en }}</span></p>
+    <p class="lead">{{ subject.summary }}</p>
     <ul class="tags">
       {% for e in subject.exams %}<li>{{ e }}</li>{% endfor %}
     </ul>
@@ -21,23 +20,23 @@
     <div>
       {% include "portal/includes/chapters.html" with chapters=subject.chapters %}
       {% if subject.source_note %}
-      <p class="note-line"><span class="only-zh">来源：{{ subject.source_note }}</span><span class="only-en">Source: {{ subject.source_note_en }}</span></p>
+      <p class="note-line">Source: {{ subject.source_note }}</p>
       {% endif %}
       {% include "portal/includes/tutor.html" %}
     </div>
     <div class="aside-stack">
       {% include "portal/includes/study_rail.html" %}
       <article class="block aside-note">
-        <h2 data-i18n data-zh="在 NMAT" data-en="On NMAT">在 NMAT</h2>
-        <p><span class="only-zh">{{ subject.nmat_role }}</span><span class="only-en">{{ subject.nmat_role_en }}</span></p>
-        <p><span class="only-zh">{{ subject.exam_notes.NMAT }}</span><span class="only-en">{{ subject.exam_notes_en.NMAT }}</span></p>
-        <p><a href="{% url 'nmat_hub' %}" data-i18n data-zh="回 NMAT 地图" data-en="Back to NMAT map">回 NMAT 地图</a></p>
+        <h2>On NMAT</h2>
+        <p>{{ subject.nmat_role }}</p>
+        <p>{{ subject.exam_notes.NMAT }}</p>
+        <p><a href="{% url 'nmat_hub' %}">Back to NMAT map</a></p>
       </article>
       <article class="block aside-note">
-        <h2 data-i18n data-zh="在 MCAT" data-en="On MCAT">在 MCAT</h2>
-        <p><span class="only-zh">{{ subject.mcat_role }}</span><span class="only-en">{{ subject.mcat_role_en }}</span></p>
-        <p><span class="only-zh">{{ subject.exam_notes.MCAT }}</span><span class="only-en">{{ subject.exam_notes_en.MCAT }}</span></p>
-        <p><a href="{% url 'mcat_hub' %}" data-i18n data-zh="回 MCAT 地图" data-en="Back to MCAT map">回 MCAT 地图</a></p>
+        <h2>On MCAT</h2>
+        <p>{{ subject.mcat_role }}</p>
+        <p>{{ subject.exam_notes.MCAT }}</p>
+        <p><a href="{% url 'mcat_hub' %}">Back to MCAT map</a></p>
       </article>
     </div>
   </div>

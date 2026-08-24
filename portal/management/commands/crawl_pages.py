@@ -38,7 +38,7 @@ def urls() -> list[str]:
         "/materials/glossary/",
         "/materials/glossary/?q=acid",
         "/materials/glossary/?q=ATP",
-        "/materials/glossary/?q=%E6%AF%94%E4%BE%8B",  # 比例
+        "/materials/glossary/?q=homeostasis",
         "/materials/glossary/?subject=biology",
         "/materials/glossary/?q=acid&subject=biochemistry",
         "/materials/tips/",

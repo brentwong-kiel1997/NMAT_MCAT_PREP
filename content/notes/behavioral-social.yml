@@ -2,101 +2,58 @@ slug: behavioral-social
 chapters:
 - title: Psychology
   bullets:
-  - zh: 感觉 vs 知觉；自上而下/自下而上加工
-    en: Sensation vs perception; top-down/bottom-up processing
-  - zh: 学习：经典/操作条件反射；强化与惩罚
-    en: 'Learning: classical/operant conditioning; reinforcement vs punishment'
-  - zh: 记忆：编码、储存、提取；工作记忆限制
-    en: 'Memory: encoding, storage, retrieval; working-memory limits'
-  - zh: 情绪与应激：交感/副交感与应对
-    en: 'Emotion/stress: sympathetic/parasympathetic and coping'
-  - zh: 经典条件反射：刺激泛化与分化
-    en: 'Classical conditioning: stimulus generalization and discrimination'
-  - zh: 操作条件反射：强化计划塑造行为
-    en: 'Operant conditioning: reinforcement schedules shape behavior'
-  - zh: 工作记忆容量有限（约 4±1 组块）
-    en: Working memory capacity is limited (~4±1 chunks)
+  - Sensation vs perception; top-down/bottom-up processing
+  - 'Learning: classical/operant conditioning; reinforcement vs punishment'
+  - 'Memory: encoding, storage, retrieval; working-memory limits'
+  - 'Emotion/stress: sympathetic/parasympathetic and coping'
+  - 'Classical conditioning: stimulus generalization and discrimination'
+  - 'Operant conditioning: reinforcement schedules shape behavior'
+  - Working memory capacity is limited (~4±1 chunks)
 - title: Sociology and Anthropology
   bullets:
-  - zh: 社会化、规范、角色、地位
-    en: Socialization, norms, roles, status
-  - zh: 文化：物质/非物质；文化相对 vs 民族中心
-    en: 'Culture: material/nonmaterial; relativism vs ethnocentrism'
-  - zh: 分层、不平等与健康差异（导论）
-    en: Stratification, inequality, and health disparities (intro)
-  - zh: 人类学视角：比较文化与人类共性
-    en: 'Anthropological lens: compare cultures and human commonalities'
-  - zh: 社会建构：现实部分由集体定义
-    en: 'Social construction: reality partly defined collectively'
-  - zh: 民族志：参与观察理解文化意义
-    en: 'Ethnography: participant observation to grasp cultural meaning'
-  - zh: 功能主义 vs 冲突论：稳定 vs 权力斗争视角
-    en: 'Functionalism vs conflict theory: stability vs power-struggle lens'
+  - Socialization, norms, roles, status
+  - 'Culture: material/nonmaterial; relativism vs ethnocentrism'
+  - Stratification, inequality, and health disparities (intro)
+  - 'Anthropological lens: compare cultures and human commonalities'
+  - 'Social construction: reality partly defined collectively'
+  - 'Ethnography: participant observation to grasp cultural meaning'
+  - 'Functionalism vs conflict theory: stability vs power-struggle lens'
 - title: FC6 · Perceive, think, react
   bullets:
-  - zh: 阈值、信号检测、注意选择性
-    en: Thresholds, signal detection, selective attention
-  - zh: 认知偏差影响判断（启发式）
-    en: Biases and heuristics shape judgment
-  - zh: 韦伯定律：可觉差与刺激强度成比例
-    en: 'Weber’s law: detectable difference scales with stimulus intensity'
-  - zh: 双加工：系统1快启发 vs 系统2慢分析
-    en: 'Dual process: fast heuristic System 1 vs slow analytic System 2'
-  - zh: 感觉适应：持续刺激下感受器反应下降
-    en: 'Sensory adaptation: receptor response falls with sustained stimulus'
-  - zh: 工作记忆容量有限；组块可扩大有效容量
-    en: Working memory is limited; chunking expands effective capacity
-  - zh: 情绪与决策：边缘系统与前额叶互动
-    en: 'Emotion and decision-making: limbic–prefrontal interaction'
+  - Thresholds, signal detection, selective attention
+  - Biases and heuristics shape judgment
+  - 'Weber’s law: detectable difference scales with stimulus intensity'
+  - 'Dual process: fast heuristic System 1 vs slow analytic System 2'
+  - 'Sensory adaptation: receptor response falls with sustained stimulus'
+  - Working memory is limited; chunking expands effective capacity
+  - 'Emotion and decision-making: limbic–prefrontal interaction'
 - title: FC7 · Behavior and behavior change
   bullets:
-  - zh: 态度—行为差距；认知失调
-    en: Attitude–behavior gap; cognitive dissonance
-  - zh: 说服：中心路径 vs 外周路径
-    en: 'Persuasion: central vs peripheral routes'
-  - zh: 习惯化与敏感化
-    en: Habituation vs sensitization
-  - zh: 自我效能影响坚持与目标达成
-    en: Self-efficacy affects persistence and goal attainment
-  - zh: 计划行为理论：态度、主观规范、知觉控制
-    en: 'Theory of planned behavior: attitude, subjective norm, perceived control'
+  - Attitude–behavior gap; cognitive dissonance
+  - 'Persuasion: central vs peripheral routes'
+  - Habituation vs sensitization
+  - Self-efficacy affects persistence and goal attainment
+  - 'Theory of planned behavior: attitude, subjective norm, perceived control'
 - title: FC8 · Self, others, interactions
   bullets:
-  - zh: 自我概念、自尊、社会认同
-    en: Self-concept, self-esteem, social identity
-  - zh: 归因：内因/外因；基本归因错误
-    en: 'Attribution: internal/external; fundamental attribution error'
-  - zh: 从众、服从、群体极化
-    en: Conformity, obedience, group polarization
-  - zh: 旁观者效应：他人在场降低救助概率
-    en: 'Bystander effect: others’ presence lowers helping likelihood'
-  - zh: 自我服务偏差：成功归内因、失败归外因
-    en: 'Self-serving bias: credit success internally, blame failure externally'
+  - Self-concept, self-esteem, social identity
+  - 'Attribution: internal/external; fundamental attribution error'
+  - Conformity, obedience, group polarization
+  - 'Bystander effect: others’ presence lowers helping likelihood'
+  - 'Self-serving bias: credit success internally, blame failure externally'
 - title: FC9 · Cultural and social differences
   bullets:
-  - zh: 文化规范塑造行为期望
-    en: Cultural norms shape behavioral expectations
-  - zh: 偏见、刻板印象、歧视区分
-    en: Distinguish prejudice, stereotype, discrimination
-  - zh: 文化智力：跨文化适应与沟通
-    en: 'Cultural intelligence: cross-cultural adaptation and communication'
-  - zh: 少数群体地位与健康压力负荷相关
-    en: Minority status links to health via stress burden
-  - zh: 文化相对主义：按文化语境理解行为
-    en: 'Cultural relativism: interpret behavior in cultural context'
-  - zh: 同化 vs 多元文化：融入主流或保持多元认同
-    en: 'Assimilation vs multiculturalism: merge vs retain plural identities'
-  - zh: 健康信念模型：感知威胁与效能影响就医
-    en: 'Health belief model: perceived threat and efficacy shape care-seeking'
+  - Cultural norms shape behavioral expectations
+  - Distinguish prejudice, stereotype, discrimination
+  - 'Cultural intelligence: cross-cultural adaptation and communication'
+  - Minority status links to health via stress burden
+  - 'Cultural relativism: interpret behavior in cultural context'
+  - 'Assimilation vs multiculturalism: merge vs retain plural identities'
+  - 'Health belief model: perceived threat and efficacy shape care-seeking'
 - title: FC10 · Stratification and resources
   bullets:
-  - zh: SES 与健康结果相关
-    en: SES correlates with health outcomes
-  - zh: 文化资本与社会资本
-    en: Cultural and social capital
-  - zh: 医疗可及性受结构因素影响
-    en: Access to care is structurally constrained
-  - zh: 健康社会梯度：SES 越低风险越高
-    en: 'Health social gradient: lower SES, higher risk'
-  - zh: 结构性障碍限制医疗服务可及性
-    en: Structural barriers limit healthcare access
+  - SES correlates with health outcomes
+  - Cultural and social capital
+  - Access to care is structurally constrained
+  - 'Health social gradient: lower SES, higher risk'
+  - Structural barriers limit healthcare access

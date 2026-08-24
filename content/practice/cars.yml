@@ -1,200 +1,92 @@
 slug: cars
 items:
 - id: cars-1
-  q:
-    zh: CARS 中“说得对但文中未出现”的选项通常：
-    en: 'On CARS, an option that is true in the world but absent from the passage is usually:'
+  q: 'On CARS, an option that is true in the world but absent from the passage is usually:'
   choices:
-    A:
-      zh: 应优先选择
-      en: Preferred
-    B:
-      zh: 强干扰项，应排除
-      en: A strong distractor to eliminate
-    C:
-      zh: 等于主旨
-      en: Equal to the main idea
-    D:
-      zh: 证明作者偏见
-      en: Proof of author bias
+    A: Preferred
+    B: A strong distractor to eliminate
+    C: Equal to the main idea
+    D: Proof of author bias
   answer: B
-  explain:
-    zh: CARS 依据文本；外部正确事实若文中无支持就不能选。
-    en: CARS is passage-bound; externally true claims without textual support are traps.
+  explain: CARS is passage-bound; externally true claims without textual support are traps.
   chapter: Reasoning Within the Text
 - id: cars-2
-  q:
-    zh: Topic 与 Thesis 的关系是：
-    en: 'Topic relates to thesis as:'
+  q: 'Topic relates to thesis as:'
   choices:
-    A:
-      zh: 二者永远相同
-      en: Always identical
-    B:
-      zh: Topic 是题材，Thesis 是作者主张
-      en: Topic is the subject; thesis is the author’s claim
-    C:
-      zh: Thesis 只出现在最后一句
-      en: Thesis only appears in the last sentence
-    D:
-      zh: Topic 比 Thesis 更重要所以可不读主张
-      en: Topic matters more so claims can be ignored
+    A: Always identical
+    B: Topic is the subject; thesis is the author’s claim
+    C: Thesis only appears in the last sentence
+    D: Topic matters more so claims can be ignored
   answer: B
-  explain:
-    zh: 先分清写什么与主张什么。
-    en: Separate what it’s about from what it argues.
+  explain: Separate what it’s about from what it argues.
   chapter: Foundations of Comprehension
 - id: cars-3
-  q:
-    zh: Reasoning Beyond the Text 题通常要求：
-    en: 'Reasoning Beyond the Text items usually require you to:'
+  q: 'Reasoning Beyond the Text items usually require you to:'
   choices:
-    A:
-      zh: 引入文外事实并忽略作者原则
-      en: Import outside facts and ignore the author’s principle
-    B:
-      zh: 把文中原则一致地应用到新情境
-      en: Apply the passage principle consistently to a new scenario
-    C:
-      zh: 只计算词频
-      en: Only count word frequency
-    D:
-      zh: 改写作者结论为相反意思
-      en: Invert the author’s conclusion
+    A: Import outside facts and ignore the author’s principle
+    B: Apply the passage principle consistently to a new scenario
+    C: Only count word frequency
+    D: Invert the author’s conclusion
   answer: B
-  explain:
-    zh: 超文推理仍须保持与原文原则一致。
-    en: Beyond-text reasoning still has to keep the passage principle intact.
+  explain: Beyond-text reasoning still has to keep the passage principle intact.
   chapter: Reasoning Beyond the Text
 - id: cars-4
-  q:
-    zh: 遇到“极端/绝对”措辞（always, never, only）的 CARS 选项，通常应：
-    en: 'On CARS, options with extreme wording (always, never, only) should usually be:'
+  q: 'On CARS, options with extreme wording (always, never, only) should usually be:'
   choices:
-    A:
-      zh: 优先选择
-      en: Chosen first
-    B:
-      zh: 谨慎怀疑，常与文意不符
-      en: Treated skeptically—they often overstate the passage
-    C:
-      zh: 忽略题干
-      en: Chosen while ignoring the stem
-    D:
-      zh: 等于作者立场
-      en: Assumed to equal the author’s view
+    A: Chosen first
+    B: Treated skeptically—they often overstate the passage
+    C: Chosen while ignoring the stem
+    D: Assumed to equal the author’s view
   answer: B
-  explain:
-    zh: 学术论述常有限定；绝对化选项多为过度概括干扰项。
-    en: Academic prose is qualified; absolutist options are often overgeneralized distractors.
+  explain: Academic prose is qualified; absolutist options are often overgeneralized distractors.
   chapter: Reasoning Within the Text
 - id: cars-5
-  q:
-    zh: 判断段落功能时，应问：
-    en: 'When judging a paragraph’s function, ask:'
+  q: 'When judging a paragraph’s function, ask:'
   choices:
-    A:
-      zh: 该段在论证中扮演什么角色（定义、例证、反驳等）
-      en: What role it plays in the argument (define, exemplify, rebut, etc.)
-    B:
-      zh: 段落最长吗
-      en: Whether it is the longest paragraph
-    C:
-      zh: 是否包含数字
-      en: Whether it contains numbers
-    D:
-      zh: 作者国籍
-      en: The author’s nationality
+    A: What role it plays in the argument (define, exemplify, rebut, etc.)
+    B: Whether it is the longest paragraph
+    C: Whether it contains numbers
+    D: The author’s nationality
   answer: A
-  explain:
-    zh: 结构题考信息功能，而非孤立事实记忆。
-    en: Structure questions test informational role, not isolated fact recall.
+  explain: Structure questions test informational role, not isolated fact recall.
   chapter: Foundations of Comprehension
 - id: cars-6
-  q:
-    zh: 类比推理题（Beyond the Text）成立需满足：
-    en: 'An analogy item (Beyond the Text) works only if:'
+  q: 'An analogy item (Beyond the Text) works only if:'
   choices:
-    A:
-      zh: 对应关系与文中原则一致
-      en: The correspondence matches the passage principle
-    B:
-      zh: 新情境越陌生越好
-      en: The new scenario is as unfamiliar as possible
-    C:
-      zh: 可违背作者前提
-      en: It may violate the author’s premises
-    D:
-      zh: 只需字面相似
-      en: Surface wording similarity is enough
+    A: The correspondence matches the passage principle
+    B: The new scenario is as unfamiliar as possible
+    C: It may violate the author’s premises
+    D: Surface wording similarity is enough
   answer: A
-  explain:
-    zh: 类推须保持逻辑关系一致，而非表面相似。
-    en: Valid analogies preserve the logical relation, not mere surface similarity.
+  explain: Valid analogies preserve the logical relation, not mere surface similarity.
   chapter: Reasoning Beyond the Text
 - id: cars-7
-  q:
-    zh: 作者“语气”题应依据：
-    en: 'Tone questions should be answered using:'
+  q: 'Tone questions should be answered using:'
   choices:
-    A:
-      zh: 文中措辞与修辞的整体倾向
-      en: Overall diction and rhetorical stance in the text
-    B:
-      zh: 你对话题的个人喜好
-      en: Your personal opinion of the topic
-    C:
-      zh: 选项最短者
-      en: The shortest option
-    D:
-      zh: 文章发表年份 alone
-      en: Publication year alone
+    A: Overall diction and rhetorical stance in the text
+    B: Your personal opinion of the topic
+    C: The shortest option
+    D: Publication year alone
   answer: A
-  explain:
-    zh: 语气来自用词（谨慎、批判、赞赏等），须文内有据。
-    en: Tone comes from word choice (cautious, critical, approving, etc.) and must be text-supported.
+  explain: Tone comes from word choice (cautious, critical, approving, etc.) and must be text-supported.
   chapter: Foundations of Comprehension
 - id: cars-8
-  q:
-    zh: CARS “削弱论点”题应优先攻击：
-    en: 'CARS weaken questions should preferentially attack:'
+  q: 'CARS weaken questions should preferentially attack:'
   choices:
-    A:
-      zh: 作者家乡背景
-      en: The author’s hometown
-    B:
-      zh: 论证关键假设或证据链
-      en: A key assumption or evidence link
-    C:
-      zh: 字体大小
-      en: Font size
-    D:
-      zh: 段落数量
-      en: Paragraph count
+    A: The author’s hometown
+    B: A key assumption or evidence link
+    C: Font size
+    D: Paragraph count
   answer: B
-  explain:
-    zh: 削弱针对推理结构，而非无关作者信息。
-    en: Weaken targets the reasoning structure, not irrelevant author trivia.
+  explain: Weaken targets the reasoning structure, not irrelevant author trivia.
   chapter: Reasoning Beyond the Text
 - id: cars-9
-  q:
-    zh: 文内推理题的答案必须：
-    en: 'Within-the-text reasoning answers must:'
+  q: 'Within-the-text reasoning answers must:'
   choices:
-    A:
-      zh: 依赖课外专业知识
-      en: Rely on outside specialist knowledge
-    B:
-      zh: 被篇章证据支持
-      en: Be supported by passage evidence
-    C:
-      zh: 与作者相反才对
-      en: Always contradict the author
-    D:
-      zh: 越长越好
-      en: Be as long as possible
+    A: Rely on outside specialist knowledge
+    B: Be supported by passage evidence
+    C: Always contradict the author
+    D: Be as long as possible
   answer: B
-  explain:
-    zh: Within the Text 强调文本证据定位。
-    en: Within the Text emphasizes locating textual support.
+  explain: Within the Text emphasizes locating textual support.
   chapter: Reasoning Within the Text

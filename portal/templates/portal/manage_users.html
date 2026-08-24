@@ -6,9 +6,9 @@
 <div class="page-hero">
   <div class="page-hero-inner">
     {% include "portal/includes/nav.html" with solid=1 %}
-    <p class="section-kicker" data-i18n data-zh="管理" data-en="Admin">管理</p>
-    <h1 data-i18n data-zh="用户管理" data-en="User management">用户管理</h1>
-    <p class="lead" data-i18n data-zh="在用户库里创建、停用账号，重置密码。知识内容仍在独立 knowledge 库。" data-en="Create or disable accounts and reset passwords in the user DB. Curriculum stays in the knowledge DB.">在用户库里创建、停用账号，重置密码。知识内容仍在独立 knowledge 库。</p>
+    <p class="section-kicker">Admin</p>
+    <h1>User management</h1>
+    <p class="lead">Create or disable accounts and reset passwords in the user DB. Curriculum stays in the knowledge DB.</p>
   </div>
 </div>
 
@@ -22,61 +22,61 @@
   {% endif %}
 
   <article class="block" style="margin-bottom:2rem;">
-    <h2 data-i18n data-zh="新建用户" data-en="Create user">新建用户</h2>
+    <h2>Create user</h2>
     <form class="auth-form" method="post">
       {% csrf_token %}
       <input type="hidden" name="action" value="create">
       {% if create_error == "invalid" %}
-      <p class="form-error" data-i18n data-zh="需要用户名，密码至少 8 位。" data-en="Username required; password at least 8 characters.">需要用户名，密码至少 8 位。</p>
+      <p class="form-error">Username required; password at least 8 characters.</p>
       {% elif create_error == "exists" %}
-      <p class="form-error" data-i18n data-zh="用户名已存在。" data-en="Username already exists.">用户名已存在。</p>
+      <p class="form-error">Username already exists.</p>
       {% endif %}
       <label>
-        <span data-i18n data-zh="用户名" data-en="Username">用户名</span>
+        <span>Username</span>
         <input type="text" name="username" required autocomplete="off">
       </label>
       <label>
-        <span data-i18n data-zh="显示名" data-en="Display name">显示名</span>
+        <span>Display name</span>
         <input type="text" name="display_name" autocomplete="off">
       </label>
       <label>
-        <span data-i18n data-zh="初始密码" data-en="Initial password">初始密码</span>
+        <span>Initial password</span>
         <input type="password" name="password" required minlength="8" autocomplete="new-password">
       </label>
       <label class="check-row">
         <input type="checkbox" name="is_staff">
-        <span data-i18n data-zh="管理员（可管理用户）" data-en="Staff (can manage users)">管理员（可管理用户）</span>
+        <span>Staff (can manage users)</span>
       </label>
-      <button class="btn btn-primary" type="submit" data-i18n data-zh="创建" data-en="Create">创建</button>
+      <button class="btn btn-primary" type="submit">Create</button>
     </form>
   </article>
 
-  <h2 data-i18n data-zh="全部用户" data-en="All users">全部用户</h2>
+  <h2>All users</h2>
   <ul class="user-admin-list">
     {% for u in users %}
     <li>
       <div>
         <strong>{{ u.username }}</strong>
-        {% if not u.is_active %}<span class="badge-off" data-i18n data-zh="已停用" data-en="Disabled">已停用</span>{% endif %}
+        {% if not u.is_active %}<span class="badge-off">Disabled</span>{% endif %}
         {% if u.is_staff %}<span class="badge-staff">staff</span>{% endif %}
         <p class="muted-inline">id {{ u.id }} · joined {{ u.date_joined|date:"Y-m-d" }}</p>
       </div>
       <div class="user-actions">
         {% if u.is_active %}
-        <form method="post" action="{% url 'manage_user_action' u.id %}">{% csrf_token %}<input type="hidden" name="action" value="deactivate"><button type="submit" data-i18n data-zh="停用" data-en="Disable">停用</button></form>
+        <form method="post" action="{% url 'manage_user_action' u.id %}">{% csrf_token %}<input type="hidden" name="action" value="deactivate"><button type="submit">Disable</button></form>
         {% else %}
-        <form method="post" action="{% url 'manage_user_action' u.id %}">{% csrf_token %}<input type="hidden" name="action" value="activate"><button type="submit" data-i18n data-zh="启用" data-en="Enable">启用</button></form>
+        <form method="post" action="{% url 'manage_user_action' u.id %}">{% csrf_token %}<input type="hidden" name="action" value="activate"><button type="submit">Enable</button></form>
         {% endif %}
         {% if u.is_staff %}
-        <form method="post" action="{% url 'manage_user_action' u.id %}">{% csrf_token %}<input type="hidden" name="action" value="remove_staff"><button type="submit" data-i18n data-zh="取消管理员" data-en="Remove staff">取消管理员</button></form>
+        <form method="post" action="{% url 'manage_user_action' u.id %}">{% csrf_token %}<input type="hidden" name="action" value="remove_staff"><button type="submit">Remove staff</button></form>
         {% else %}
-        <form method="post" action="{% url 'manage_user_action' u.id %}">{% csrf_token %}<input type="hidden" name="action" value="make_staff"><button type="submit" data-i18n data-zh="设为管理员" data-en="Make staff">设为管理员</button></form>
+        <form method="post" action="{% url 'manage_user_action' u.id %}">{% csrf_token %}<input type="hidden" name="action" value="make_staff"><button type="submit">Make staff</button></form>
         {% endif %}
         <form class="reset-form" method="post" action="{% url 'manage_user_action' u.id %}">
           {% csrf_token %}
           <input type="hidden" name="action" value="reset_password">
           <input type="password" name="new_password" placeholder="new password" minlength="8" required>
-          <button type="submit" data-i18n data-zh="重置密码" data-en="Reset password">重置密码</button>
+          <button type="submit">Reset password</button>
         </form>
       </div>
     </li>

@@ -1,43 +1,28 @@
 slug: inductive-reasoning
 name: Inductive Reasoning
-name_zh: 归纳推理
 shared: null
 items: 30
-pacing: 约 35 minutes（BOI 建议）
+pacing: ~35 minutes (CEM BOI suggestion)
 item_types:
 - Figure Series
 - Figure Grouping
 - Number and Letter Series
-focus:
-  zh: 从有限信息归纳规则或关系。
-  en: Infer rules or relations from limited information.
-source_note:
-  zh: 章节按 CEM BOI Inductive Reasoning 题型划分。
-  en: Chapters follow CEM BOI Inductive Reasoning item types.
+focus: Infer rules or relations from limited information.
+source_note: Chapters follow CEM BOI Inductive Reasoning item types.
 chapters:
-- heading:
-    zh: 大知识点 / 章节
-    en: Major topics / chapters
+- heading: Major topics / chapters
   items:
-  - title: Figure Series（图形序列）
+  - title: Figure Series
     points:
-    - zh: 旋转/翻转/增减元素
-      en: Rotation/reflection/add-remove elements
-    - zh: 位置、阴影、叠加规则归纳
-      en: Infer rules of position, shading, and overlays
-  - title: Figure Grouping（图形归类）
+    - Rotation/reflection/add-remove elements
+    - Infer rules of position, shading, and overlays
+  - title: Figure Grouping
     points:
-    - zh: 共同属性归组
-      en: Group by shared attributes
-    - zh: 排除唯一例外
-      en: Exclude the odd one out
-  - title: Number and Letter Series（数字与字母序列）
+    - Group by shared attributes
+    - Exclude the odd one out
+  - title: Number and Letter Series
     points:
-    - zh: 等差/倍比/交替规则
-      en: Arithmetic/geometric/alternating rules
-    - zh: 字母位置与双序列穿插
-      en: Letter positions and interleaved dual series
-summary:
-  zh: 从有限信息归纳规则或关系。
-  en: Infer rules or relations from limited information.
+    - Arithmetic/geometric/alternating rules
+    - Letter positions and interleaved dual series
+summary: Infer rules or relations from limited information.
 kind: nmat

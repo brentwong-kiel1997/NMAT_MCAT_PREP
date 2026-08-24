@@ -1,36 +1,22 @@
 slug: inductive-reasoning
 chapters:
-- title: Figure Series（图形序列）
+- title: Figure Series
   bullets:
-  - zh: 分别跟踪位置、数量、填充、旋转四条线索
-    en: Track position, count, fill, and rotation as separate threads
-  - zh: 可能多规则叠加，先找最稳定的变化
-    en: Multiple rules may stack — find the steadiest change first
-  - zh: 奇偶项可能遵循不同子规则
-    en: Odd/even terms may follow different sub-rules
-  - zh: 旋转角度常是固定步长（90°、45°）
-    en: Rotation often uses fixed steps (90°, 45°)
-- title: Figure Grouping（图形归类）
+  - Track position, count, fill, and rotation as separate threads
+  - Multiple rules may stack — find the steadiest change first
+  - Odd/even terms may follow different sub-rules
+  - Rotation often uses fixed steps (90°, 45°)
+- title: Figure Grouping
   bullets:
-  - zh: 找共同点或唯一例外
-    en: Find the shared trait or the odd one out
-  - zh: 先忽略装饰，抓拓扑/数量结构
-    en: Ignore decoration; grab topology/count structure
-  - zh: 对称性（轴对称/中心对称）是常见分组键
-    en: Symmetry (line/point) is a common grouping key
-  - zh: 先找共同特征：边数、对称、填充、旋转
-    en: 'Seek shared features: sides, symmetry, fill, rotation'
-  - zh: 排除“几乎一样”的干扰项
-    en: Eliminate near-miss distractors that almost match
-  - zh: 分组常按规则一致性，而非主观好看
-    en: Group by rule consistency, not subjective preference
-- title: Number and Letter Series（数字与字母序列）
+  - Find the shared trait or the odd one out
+  - Ignore decoration; grab topology/count structure
+  - Symmetry (line/point) is a common grouping key
+  - 'Seek shared features: sides, symmetry, fill, rotation'
+  - Eliminate near-miss distractors that almost match
+  - Group by rule consistency, not subjective preference
+- title: Number and Letter Series
   bullets:
-  - zh: 检查等差、倍比、交替、位值
-    en: Check arithmetic, multiplicative, alternating, place-value rules
-  - zh: 字母常映射到位置序号
-    en: Letters often map to alphabet indices
-  - zh: 二级差分：差值本身再成等差
-    en: 'Second-order difference: deltas form an arithmetic series'
-  - zh: 质数/合数、平方/立方子序列
-    en: Prime/composite or square/cube subsequences
+  - Check arithmetic, multiplicative, alternating, place-value rules
+  - Letters often map to alphabet indices
+  - 'Second-order difference: deltas form an arithmetic series'
+  - Prime/composite or square/cube subsequences

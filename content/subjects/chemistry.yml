@@ -1,87 +1,55 @@
 slug: chemistry
 name: Chemistry
-name_zh: 化学
 exams:
 - NMAT
 - MCAT
-summary:
-  zh: 普化、分析、有机与生化基础；NMAT 独立成科，MCAT 拆进 Chem/Phys 与 Bio/Biochem。
-  en: Gen/analytical/organic/biochem basics; own NMAT subtest; split across Chem/Phys and Bio/Biochem
-    on MCAT.
-nmat_role:
-  zh: NMAT Part 2 · Chemistry（30 题）
-  en: NMAT Part 2 · Chemistry (30 items)
-mcat_role:
-  zh: MCAT Chem/Phys + Bio/Biochem 中的化学 / 生化内容
-  en: Chemistry/biochem content inside MCAT Chem/Phys and Bio/Biochem
-source_note:
-  zh: NMAT 四块标题取自 CEM BOI Chemistry；MCAT 侧对应 AAMC FC5 及生化交叉类别。
-  en: NMAT headings from CEM BOI Chemistry; MCAT side maps to AAMC FC5 and biochem overlaps.
+summary: Gen/analytical/organic/biochem basics; own NMAT subtest; split across Chem/Phys and Bio/Biochem
+  on MCAT.
+nmat_role: NMAT Part 2 · Chemistry (30 items)
+mcat_role: Chemistry/biochem content inside MCAT Chem/Phys and Bio/Biochem
+source_note: NMAT headings from CEM BOI Chemistry; MCAT side maps to AAMC FC5 and biochem overlaps.
 exam_notes:
-  NMAT:
-    zh: 导论课范围：普化、分析、有机、生化常见基本概念。
-    en: 'Intro scope: common gen/analytical/organic/biochem ideas.'
-  MCAT:
-    zh: Chem/Phys 侧重普化/有机/相互作用；Bio/Biochem 侧重生化分子与代谢。
-    en: Chem/Phys emphasizes gen/organic chem and interactions; Bio/Biochem emphasizes biomolecules and
-      metabolism.
+  NMAT: 'Intro scope: common gen/analytical/organic/biochem ideas.'
+  MCAT: Chem/Phys emphasizes gen/organic chem and interactions; Bio/Biochem emphasizes biomolecules and
+    metabolism.
 chapters:
-- heading:
-    zh: NMAT · CEM BOI 章节
-    en: NMAT · CEM BOI chapters
+- heading: NMAT · CEM BOI chapters
   items:
   - title: General Chemistry
     points:
-    - zh: 原子结构与周期性
-      en: Atomic structure and periodicity
-    - zh: 化学键与计量
-      en: Bonding and stoichiometry
-    - zh: 酸碱、氧化还原、平衡导论
-      en: Intro acids/bases, redox, and equilibrium
+    - Atomic structure and periodicity
+    - Bonding and stoichiometry
+    - Intro acids/bases, redox, and equilibrium
   - title: Analytical Chemistry
     points:
-    - zh: 定量分析基础
-      en: Basics of quantitative analysis
-    - zh: 常见分离/测定思路（导论级）
-      en: Common separation/assay ideas (intro level)
+    - Basics of quantitative analysis
+    - Common separation/assay ideas (intro level)
   - title: Organic Chemistry
     points:
-    - zh: 官能团与基本反应类型
-      en: Functional groups and basic reaction types
-    - zh: 与生物分子相关的有机基础
-      en: Organic foundations relevant to biomolecules
+    - Functional groups and basic reaction types
+    - Organic foundations relevant to biomolecules
   - title: Biochemistry
     points:
-    - zh: 生物大分子导论
-      en: Intro biological macromolecules
-    - zh: 与代谢相关的基本概念（详见 Biochemistry 专题页）
-      en: Basic metabolism ideas (see Biochemistry hub)
-- heading:
-    zh: MCAT · 相关 Content Categories（AAMC）
-    en: MCAT · related Content Categories (AAMC)
+    - Intro biological macromolecules
+    - Basic metabolism ideas (see Biochemistry hub)
+- heading: MCAT · related Content Categories (AAMC)
   items:
   - title: 5A · Water and its solutions
     points:
-    - zh: 水的独特性与溶液性质
-      en: Unique properties of water and solutions
+    - Unique properties of water and solutions
   - title: 5B · Molecules and intermolecular interactions
     points:
-    - zh: 分子本质与分子间作用
-      en: Nature of molecules and intermolecular forces
+    - Nature of molecules and intermolecular forces
   - title: 5C · Separation and purification methods
     points:
-    - zh: 分离纯化（含肽/蛋白相关方法）
-      en: Separations/purifications (including peptide/protein methods)
+    - Separations/purifications (including peptide/protein methods)
   - title: 5D · Biologically relevant molecules
     points:
-    - zh: 结构、功能与反应性
-      en: Structure, function, and reactivity
+    - Structure, function, and reactivity
   - title: 5E · Chemical thermodynamics and kinetics
     points:
-    - zh: 热力学与动力学原则
-      en: Principles of thermodynamics and kinetics
+    - Principles of thermodynamics and kinetics
   - title: 4E · Atoms, nuclear decay, electronic structure
     points:
-    - zh: 原子化学行为（Chem/Phys）
-      en: Atomic chemical behavior (Chem/Phys)
+    - Atomic chemical behavior (Chem/Phys)
 kind: shared

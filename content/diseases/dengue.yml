@@ -1,34 +1,36 @@
 slug: dengue
 name: Dengue Fever
-name_zh: 登革热
-short: 登革病毒经埃及伊蚊传播；菲律宾常见虫媒病，考点在血浆渗漏与抗体依赖性增强。
+short: Dengue virus transmitted by Aedes aegypti; a common arboviral disease in the Philippines. Exam-relevant
+  themes are plasma leakage and antibody-dependent enhancement.
 systems:
 - Infectious
 - Hematologic
 exams:
 - Enrichment
-exam_fit: 延伸阅读：服务生物学/病理生理直觉；NMAT 考纲是导论课不是临床诊疗；MCAT 可迁移机制，不考指南级用药方案。
-pathogen: Dengue virus（黄病毒科，+ssRNA）；血清型 DENV-1–4
-transmission: Aedes aegypti（白天叮咬）；人—蚊—人周期。
+exam_fit: Extension reading serving biology/pathophysiology intuition; the NMAT syllabus is introductory
+  coursework, not clinical management; MCAT transfers the mechanisms, not guideline-level drug regimens.
+pathogen: Dengue virus (Flavivirus, +ssRNA); serotypes DENV-1–4
+transmission: Aedes aegypti (daytime biting); human–mosquito–human cycle.
 pathophysiology:
-- 感染内皮与免疫细胞，引发细胞因子风暴样反应。
-- 二次感染异型血清型时，ADE（抗体依赖性增强）可加重。
-- 血管通透性↑ → 血浆渗漏 → 休克（DSS）与出血风险。
+- Infects endothelium and immune cells, triggering a cytokine-storm-like response.
+- Secondary infection with a heterologous serotype can worsen disease via ADE (antibody-dependent enhancement).
+- Vascular permeability increases → plasma leakage → shock (DSS) and bleeding risk.
 clinical:
-- 突发性高热、剧烈头痛、眶后痛、肌骨痛（breakbone fever）。
-- 皮疹、血小板↓、白细胞↓。
-- 危险期常在退热后：腹痛、持续呕吐、黏膜出血、血细胞比容↑。
+- Sudden high fever, severe headache, retro-orbital pain, myalgia/arthralgia ("breakbone fever").
+- Rash, thrombocytopenia, leukopenia.
+- 'The dangerous phase often follows defervescence: abdominal pain, persistent vomiting, mucosal bleeding,
+  rising hematocrit.'
 diagnosis:
-- NS1 抗原（早期）、IgM/IgG、PCR。
-- 监测：血小板、Hct、生命体征与出入量。
+- NS1 antigen (early), IgM/IgG serology, PCR.
+- 'Monitoring: platelets, hematocrit, vital signs, and fluid balance.'
 treatment:
-- 支持治疗为主：谨慎补液，避免 NSAIDs（出血风险）。
-- 识别血浆渗漏窗口，按严重登革热液体管理。
-- 无特异抗病毒一线药物作为常规考点。
+- 'Mainly supportive: cautious fluid replacement; avoid NSAIDs (bleeding risk).'
+- Recognize the plasma-leakage window and follow severe-dengue fluid management.
+- No specific first-line antiviral is a standard exam fact.
 high_yield:
-- 退热后反而要警惕重症——这是经典陷阱题。
-- ADE：非中和抗体促进病毒进入 Fc 受体细胞。
-- 与基孔肯雅/寨卡鉴别：血小板显著↓更支持登革。
-- 媒介控制 = 清除积水容器（菲律宾社区考点）。
-mcat_bridge: 病毒结构、媒介传播、体液免疫与 ADE 机制。
-nmat_bridge: 热带医学与公共卫生；实验室指标与危险征象识别。
+- Worry most AFTER the fever falls — the classic trap question.
+- 'ADE: non-neutralizing antibodies facilitate viral entry into Fc-receptor cells.'
+- 'Versus chikungunya/Zika: marked thrombocytopenia favors dengue.'
+- Vector control = eliminating standing-water containers (a Philippine community point).
+mcat_bridge: Viral structure, vector transmission, humoral immunity, and the ADE mechanism.
+nmat_bridge: Tropical medicine and public health; laboratory values and danger-sign recognition.

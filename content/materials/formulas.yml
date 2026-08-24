@@ -1,777 +1,351 @@
 sheets:
 - slug: biology
   entries:
-  - title:
-      zh: 哈迪–温伯格
-      en: Hardy–Weinberg
+  - title: Hardy–Weinberg
     formula: p² + 2pq + q² = 1
-    note:
-      zh: p、q 为等位基因频率；理想种群假设。
-      en: p and q are allele frequencies under ideal-population assumptions.
-  - title:
-      zh: 种群增长（指数）
-      en: Exponential population growth
+    note: p and q are allele frequencies under ideal-population assumptions.
+  - title: Exponential population growth
     formula: N(t) = N₀e^(rt)
-    note:
-      zh: r 为增长率；资源无限假设。
-      en: r is growth rate; assumes unlimited resources.
-  - title:
-      zh: 种群增长（逻辑）
-      en: Logistic growth
+    note: r is growth rate; assumes unlimited resources.
+  - title: Logistic growth
     formula: dN/dt = rN(1 − N/K)
-    note:
-      zh: K 为环境容纳量。
-      en: K is carrying capacity.
-  - title:
-      zh: 心输出量
-      en: Cardiac output
+    note: K is carrying capacity.
+  - title: Cardiac output
     formula: CO = HR × SV
-    note:
-      zh: 心率 × 每搏输出量。
-      en: Heart rate times stroke volume.
-  - title:
-      zh: 血压–流量–阻力
-      en: Pressure–flow–resistance
+    note: Heart rate times stroke volume.
+  - title: Pressure–flow–resistance
     formula: ΔP = Q × R
-    note:
-      zh: 类比欧姆定律的循环生理。
-      en: Circulatory analogy to Ohm’s law.
-  - title:
-      zh: 呼吸交换比
-      en: Respiratory exchange ratio
+    note: Circulatory analogy to Ohm’s law.
+  - title: Respiratory exchange ratio
     formula: RER = VCO₂/VO₂
-    note:
-      zh: 反映代谢底物（糖 vs 脂肪）。
-      en: Reflects metabolic substrate (carbohydrate vs fat).
-  - title:
-      zh: 膜电位（静息近似）
-      en: Resting membrane potential (approx.)
+    note: Reflects metabolic substrate (carbohydrate vs fat).
+  - title: Resting membrane potential (approx.)
     formula: E ≈ −60 to −70 mV
-    note:
-      zh: 因细胞而异；K⁺通透性主导。
-      en: Cell-specific; dominated by K⁺ permeability.
-  - title:
-      zh: 遗传距离（重组率）
-      en: Genetic distance (recombination)
+    note: Cell-specific; dominated by K⁺ permeability.
+  - title: Genetic distance (recombination)
     formula: RF = recombinants / total offspring
-    note:
-      zh: 重组率与基因距离相关。
-      en: Recombination frequency maps to gene distance.
-  - title:
-      zh: 稀释公式
-      en: Dilution
+    note: Recombination frequency maps to gene distance.
+  - title: Dilution
     formula: C₁V₁ = C₂V₂
-    note:
-      zh: 溶液稀释前后溶质摩尔数守恒。
-      en: Moles of solute conserved before/after dilution.
-  - title:
-      zh: 渗透压（范特尔）
-      en: Osmotic pressure (van’t Hoff)
+    note: Moles of solute conserved before/after dilution.
+  - title: Osmotic pressure (van’t Hoff)
     formula: π = iMRT
-    note:
-      zh: i 为粒子数因子；胶体渗透压生理重要。
-      en: i is ionization factor; colloid osmotic pressure matters physiologically.
-  - title:
-      zh: 光合量子产额
-      en: Photosynthetic quantum yield
+    note: i is ionization factor; colloid osmotic pressure matters physiologically.
+  - title: Photosynthetic quantum yield
     formula: O₂ evolved per photon absorbed
-    note:
-      zh: 光反应效率概念题常见。
-      en: Common concept item on light-reaction efficiency.
-  - title:
-      zh: 能量传递效率
-      en: Trophic energy transfer
+    note: Common concept item on light-reaction efficiency.
+  - title: Trophic energy transfer
     formula: ~10% to next level
-    note:
-      zh: 营养级间能量大量以热散失。
-      en: Most energy lost as heat between trophic levels.
+    note: Most energy lost as heat between trophic levels.
 - slug: chemistry
   entries:
-  - title:
-      zh: 理想气体
-      en: Ideal gas law
+  - title: Ideal gas law
     formula: PV = nRT
-    note:
-      zh: 注意 R 与 P、V 单位匹配。
-      en: Match R units to pressure and volume.
-  - title:
-      zh: 吉布斯自由能
-      en: Gibbs free energy
+    note: Match R units to pressure and volume.
+  - title: Gibbs free energy
     formula: ΔG = ΔH − TΔS
-    note:
-      zh: ΔG<0 自发（恒 T、P）。
-      en: ΔG<0 spontaneous at constant T and P.
-  - title:
-      zh: 平衡常数与 ΔG
-      en: ΔG and K
+    note: ΔG<0 spontaneous at constant T and P.
+  - title: ΔG and K
     formula: ΔG° = −RT ln K
-    note:
-      zh: 标准态下联系能量与平衡位置。
-      en: Links energy to equilibrium position at standard state.
+    note: Links energy to equilibrium position at standard state.
   - title: Henderson–Hasselbalch
     formula: pH = pKa + log([A⁻]/[HA])
-    note:
-      zh: 缓冲溶液 pH 估算。
-      en: Estimate buffer pH.
-  - title:
-      zh: 反应速率
-      en: Rate law
+    note: Estimate buffer pH.
+  - title: Rate law
     formula: rate = k[A]^m[B]^n
-    note:
-      zh: 级数由实验确定。
-      en: Orders determined experimentally.
-  - title:
-      zh: 阿伦尼乌斯
-      en: Arrhenius equation
+    note: Orders determined experimentally.
+  - title: Arrhenius equation
     formula: k = Ae^(−Ea/RT)
-    note:
-      zh: Ea 为活化能。
-      en: Ea is activation energy.
-  - title:
-      zh: 摩尔浓度
-      en: Molarity
+    note: Ea is activation energy.
+  - title: Molarity
     formula: M = n / V (L)
-    note:
-      zh: 溶质摩尔数除以溶液体积。
-      en: Moles of solute per liter of solution.
-  - title:
-      zh: 限量反应物产率
-      en: Percent yield
+    note: Moles of solute per liter of solution.
+  - title: Percent yield
     formula: yield% = (actual/theoretical) × 100%
-    note:
-      zh: 理论产率由化学计量计算。
-      en: Theoretical yield from stoichiometry.
-  - title:
-      zh: Beer 定律
-      en: Beer’s law
+    note: Theoretical yield from stoichiometry.
+  - title: Beer’s law
     formula: A = εlc
-    note:
-      zh: 吸光度与浓度线性（稀溶液）。
-      en: Absorbance linear with concentration (dilute).
-  - title:
-      zh: 能斯特方程
-      en: Nernst equation
+    note: Absorbance linear with concentration (dilute).
+  - title: Nernst equation
     formula: E = E° − (RT/nF) ln Q
-    note:
-      zh: 非标准态电池电压。
-      en: Cell voltage under nonstandard conditions.
-  - title:
-      zh: 沸点升高
-      en: Boiling-point elevation
+    note: Cell voltage under nonstandard conditions.
+  - title: Boiling-point elevation
     formula: ΔTb = iKbm
-    note:
-      zh: 依数性；m 为质量摩尔浓度。
-      en: Colligative; m is molality.
-  - title:
-      zh: 凝固点降低
-      en: Freezing-point depression
+    note: Colligative; m is molality.
+  - title: Freezing-point depression
     formula: ΔTf = iKfm
-    note:
-      zh: 溶质降低凝固点。
-      en: Solute lowers freezing point.
-  - title:
-      zh: pH 定义
-      en: pH definition
+    note: Solute lowers freezing point.
+  - title: pH definition
     formula: pH = −log[H⁺]
-    note:
-      zh: 氢离子活度的负对数。
-      en: Negative log of hydrogen-ion activity.
-  - title:
-      zh: 氧化数变化
-      en: Redox electron transfer
+    note: Negative log of hydrogen-ion activity.
+  - title: Redox electron transfer
     formula: n = Δoxidation number × atoms
-    note:
-      zh: 配平半反应求电子数。
-      en: Balance half-reactions to find electrons.
+    note: Balance half-reactions to find electrons.
 - slug: physics
   entries:
-  - title:
-      zh: 牛顿第二定律
-      en: Newton’s second law
+  - title: Newton’s second law
     formula: F = ma
-    note:
-      zh: 矢量方程；用分量求解。
-      en: Vector equation; solve in components.
-  - title:
-      zh: 动能
-      en: Kinetic energy
+    note: Vector equation; solve in components.
+  - title: Kinetic energy
     formula: KE = ½mv²
-    note:
-      zh: 与速度平方成正比。
-      en: Proportional to velocity squared.
-  - title:
-      zh: 重力势能
-      en: Gravitational PE
+    note: Proportional to velocity squared.
+  - title: Gravitational PE
     formula: PE = mgh
-    note:
-      zh: 近地表近似。
-      en: Near-surface approximation.
-  - title:
-      zh: 功
-      en: Work
+    note: Near-surface approximation.
+  - title: Work
     formula: W = Fd cosθ
-    note:
-      zh: 力与位移夹角 θ。
-      en: Angle θ between force and displacement.
-  - title:
-      zh: 功率
-      en: Power
+    note: Angle θ between force and displacement.
+  - title: Power
     formula: P = W/t = Fv
-    note:
-      zh: 恒力同向时 P=Fv。
-      en: P=Fv when force aligns with velocity.
-  - title:
-      zh: 动量
-      en: Momentum
+    note: P=Fv when force aligns with velocity.
+  - title: Momentum
     formula: p = mv
-    note:
-      zh: 孤立系统动量守恒。
-      en: Conserved in isolated systems.
-  - title:
-      zh: 冲量
-      en: Impulse
+    note: Conserved in isolated systems.
+  - title: Impulse
     formula: J = FΔt = Δp
-    note:
-      zh: 力–时间改变动量。
-      en: Force–time changes momentum.
-  - title:
-      zh: 简谐振动周期
-      en: SHM period (spring)
+    note: Force–time changes momentum.
+  - title: SHM period (spring)
     formula: T = 2π√(m/k)
-    note:
-      zh: 质量与劲度系数。
-      en: Depends on mass and spring constant.
-  - title:
-      zh: 波速
-      en: Wave speed
+    note: Depends on mass and spring constant.
+  - title: Wave speed
     formula: v = fλ
-    note:
-      zh: 频率 × 波长。
-      en: Frequency times wavelength.
-  - title:
-      zh: 库仑定律
-      en: Coulomb’s law
+    note: Frequency times wavelength.
+  - title: Coulomb’s law
     formula: F = kq₁q₂/r²
-    note:
-      zh: 点电荷静电力。
-      en: Electrostatic force between point charges.
-  - title:
-      zh: 欧姆定律
-      en: Ohm’s law
+    note: Electrostatic force between point charges.
+  - title: Ohm’s law
     formula: V = IR
-    note:
-      zh: 线性导体适用。
-      en: For ohmic conductors.
-  - title:
-      zh: 电功率
-      en: Electric power
+    note: For ohmic conductors.
+  - title: Electric power
     formula: P = IV = I²R = V²/R
-    note:
-      zh: 电路耗能速率。
-      en: Rate of energy use in circuits.
-  - title:
-      zh: 泊肃叶定律
-      en: Poiseuille’s law
+    note: Rate of energy use in circuits.
+  - title: Poiseuille’s law
     formula: Q = πr⁴ΔP/(8ηL)
-    note:
-      zh: 层流管状血流。
-      en: Laminar flow in tubes/blood vessels.
-  - title:
-      zh: 伯努利方程
-      en: Bernoulli equation
+    note: Laminar flow in tubes/blood vessels.
+  - title: Bernoulli equation
     formula: P + ½ρv² + ρgh = constant
-    note:
-      zh: 理想、定常、不可压缩流。
-      en: Ideal steady incompressible flow along streamline.
-  - title:
-      zh: 薄透镜
-      en: Thin lens
+    note: Ideal steady incompressible flow along streamline.
+  - title: Thin lens
     formula: 1/f = 1/do + 1/di
-    note:
-      zh: 统一符号约定。
-      en: Keep sign conventions consistent.
-  - title:
-      zh: 光子能量
-      en: Photon energy
+    note: Keep sign conventions consistent.
+  - title: Photon energy
     formula: E = hf = hc/λ
-    note:
-      zh: 量子与光电效应。
-      en: Quantum and photoelectric contexts.
+    note: Quantum and photoelectric contexts.
 - slug: biochemistry
   entries:
-  - title:
-      zh: 米氏方程
-      en: Michaelis–Menten
+  - title: Michaelis–Menten
     formula: v = Vmax[S]/(Km + [S])
-    note:
-      zh: 酶促初速率。
-      en: Initial enzyme-catalyzed rate.
+    note: Initial enzyme-catalyzed rate.
   - title: Lineweaver–Burk
     formula: 1/v = (Km/Vmax)(1/[S]) + 1/Vmax
-    note:
-      zh: 双倒数作图求 Km、Vmax。
-      en: Double-reciprocal plot for Km and Vmax.
-  - title:
-      zh: 糖酵解净 ATP
-      en: Glycolysis net ATP
+    note: Double-reciprocal plot for Km and Vmax.
+  - title: Glycolysis net ATP
     formula: 2 ATP per glucose
-    note:
-      zh: 胞质；另产 2 NADH。
-      en: Cytoplasmic; also 2 NADH.
-  - title:
-      zh: TCA 每乙酰 CoA
-      en: TCA per acetyl-CoA
+    note: Cytoplasmic; also 2 NADH.
+  - title: TCA per acetyl-CoA
     formula: 3 NADH + 1 FADH₂ + 1 GTP
-    note:
-      zh: 线粒体基质循环。
-      en: Mitochondrial matrix cycle.
-  - title:
-      zh: 氧化磷酸化 ATP
-      en: OxPhos ATP yield
+    note: Mitochondrial matrix cycle.
+  - title: OxPhos ATP yield
     formula: ~2.5 ATP/NADH; ~1.5 ATP/FADH₂
-    note:
-      zh: 近似值；因质子漏而异。
-      en: Approximate; varies with proton leak.
-  - title:
-      zh: 脂肪酸氧化
-      en: β-oxidation
+    note: Approximate; varies with proton leak.
+  - title: β-oxidation
     formula: n carbons → (n/2−1) FADH₂ + (n/2−1) NADH + n/2 acetyl-CoA
-    note:
-      zh: 偶数碳脂肪酸。
-      en: Even-chain fatty acids.
-  - title:
-      zh: 等电点
-      en: Isoelectric point
+    note: Even-chain fatty acids.
+  - title: Isoelectric point
     formula: pI ≈ (pKa₁ + pKa₂)/2
-    note:
-      zh: 两性离子氨基酸近似。
-      en: Approximation for dipolar amino acids.
-  - title:
-      zh: ATP 水解
-      en: ATP hydrolysis
+    note: Approximation for dipolar amino acids.
+  - title: ATP hydrolysis
     formula: ATP + H₂O → ADP + Pi; ΔG°′ ≈ −30 kJ/mol
-    note:
-      zh: 生物能货币。
-      en: Cellular energy currency.
-  - title:
-      zh: 血红蛋白氧合
-      en: Hb oxygen binding
+    note: Cellular energy currency.
+  - title: Hb oxygen binding
     formula: Sigmoid saturation curve
-    note:
-      zh: 协同结合；Bohr 效应。
-      en: Cooperative binding; Bohr effect.
-  - title:
-      zh: 糖原合成消耗
-      en: Glycogen synthesis cost
+    note: Cooperative binding; Bohr effect.
+  - title: Glycogen synthesis cost
     formula: 1 glucose → glycogen costs 1 ATP + 1 UTP
-    note:
-      zh: UDP-葡萄糖前体。
-      en: UDP-glucose precursor.
-  - title:
-      zh: Cori 循环
-      en: Cori cycle
+    note: UDP-glucose precursor.
+  - title: Cori cycle
     formula: Lactate (muscle) → glucose (liver)
-    note:
-      zh: 耗能再生葡萄糖。
-      en: Energy cost to regenerate glucose.
-  - title:
-      zh: 翻译能量
-      en: Translation energy
+    note: Energy cost to regenerate glucose.
+  - title: Translation energy
     formula: ~4 ATP per peptide bond (approx.)
-    note:
-      zh: 延伸步骤多步耗能。
-      en: Multiple steps per elongation cycle.
+    note: Multiple steps per elongation cycle.
 - slug: chem-phys
   entries:
-  - title:
-      zh: 理想气体
-      en: Ideal gas
+  - title: Ideal gas
     formula: PV = nRT
-    note:
-      zh: Chem/Phys 气体与呼吸计算。
-      en: Gas and respiration calculations in Chem/Phys.
+    note: Gas and respiration calculations in Chem/Phys.
   - title: Henderson–Hasselbalch
     formula: pH = pKa + log([A⁻]/[HA])
-    note:
-      zh: 血液与缓冲生理。
-      en: Blood and buffer physiology.
-  - title:
-      zh: 米氏动力学
-      en: Michaelis–Menten
+    note: Blood and buffer physiology.
+  - title: Michaelis–Menten
     formula: v = Vmax[S]/(Km + [S])
-    note:
-      zh: 生化交叉题常见。
-      en: Common biochemistry crossover item.
-  - title:
-      zh: 吉布斯自由能
-      en: Gibbs free energy
+    note: Common biochemistry crossover item.
+  - title: Gibbs free energy
     formula: ΔG = ΔH − TΔS
-    note:
-      zh: 反应自发与平衡。
-      en: Spontaneity and equilibrium.
-  - title:
-      zh: 欧姆定律
-      en: Ohm’s law
+    note: Spontaneity and equilibrium.
+  - title: Ohm’s law
     formula: V = IR
-    note:
-      zh: 神经膜与电路类比。
-      en: Neural membrane and circuit analogies.
-  - title:
-      zh: 泊肃叶
-      en: Poiseuille
+    note: Neural membrane and circuit analogies.
+  - title: Poiseuille
     formula: Q ∝ r⁴ΔP/(ηL)
-    note:
-      zh: 血管半径对流量极敏感。
-      en: Vessel radius dominates flow sensitivity.
-  - title:
-      zh: 伯努利
-      en: Bernoulli
+    note: Vessel radius dominates flow sensitivity.
+  - title: Bernoulli
     formula: P + ½ρv² + ρgh = const.
-    note:
-      zh: 血流与气道流体。
-      en: Blood flow and airway fluids.
-  - title:
-      zh: 能斯特
-      en: Nernst
+    note: Blood flow and airway fluids.
+  - title: Nernst
     formula: E = E° − (RT/nF) ln Q
-    note:
-      zh: 膜电位与电化学电池。
-      en: Membrane potentials and electrochemical cells.
-  - title:
-      zh: 斯涅尔定律
-      en: Snell’s law
+    note: Membrane potentials and electrochemical cells.
+  - title: Snell’s law
     formula: n₁sinθ₁ = n₂sinθ₂
-    note:
-      zh: 光学与内窥镜。
-      en: Optics and endoscopy contexts.
-  - title:
-      zh: 光子能量
-      en: Photon energy
+    note: Optics and endoscopy contexts.
+  - title: Photon energy
     formula: E = hf
-    note:
-      zh: 光谱与光电效应。
-      en: Spectroscopy and photoelectric effect.
-  - title:
-      zh: RC 时间常数
-      en: RC time constant
+    note: Spectroscopy and photoelectric effect.
+  - title: RC time constant
     formula: τ = RC
-    note:
-      zh: 膜电容充放电。
-      en: Membrane capacitance charge/discharge.
-  - title:
-      zh: 功–能定理
-      en: Work–energy theorem
+    note: Membrane capacitance charge/discharge.
+  - title: Work–energy theorem
     formula: W_net = ΔKE
-    note:
-      zh: 肌肉与骨骼力学。
-      en: Musculoskeletal mechanics.
-  - title:
-      zh: 半衰期
-      en: Half-life
+    note: Musculoskeletal mechanics.
+  - title: Half-life
     formula: N = N₀(½)^(t/t½)
-    note:
-      zh: 核医学同位素。
-      en: Nuclear medicine isotopes.
-  - title:
-      zh: Beer 定律
-      en: Beer’s law
+    note: Nuclear medicine isotopes.
+  - title: Beer’s law
     formula: A = εlc
-    note:
-      zh: 分光测定浓度。
-      en: Spectrophotometric concentration.
-  - title:
-      zh: 阿伦尼乌斯
-      en: Arrhenius
+    note: Spectrophotometric concentration.
+  - title: Arrhenius
     formula: k = Ae^(−Ea/RT)
-    note:
-      zh: 温度对速率常数。
-      en: Temperature effect on rate constant.
+    note: Temperature effect on rate constant.
 - slug: bio-biochem
   entries:
-  - title:
-      zh: 哈迪–温伯格
-      en: Hardy–Weinberg
+  - title: Hardy–Weinberg
     formula: p² + 2pq + q² = 1
-    note:
-      zh: 群体遗传 FC1C。
-      en: Population genetics in FC1C.
-  - title:
-      zh: 米氏方程
-      en: Michaelis–Menten
+    note: Population genetics in FC1C.
+  - title: Michaelis–Menten
     formula: v = Vmax[S]/(Km + [S])
-    note:
-      zh: FC1A 酶动力学。
-      en: FC1A enzyme kinetics.
-  - title:
-      zh: 糖酵解净 ATP
-      en: Glycolysis net
+    note: FC1A enzyme kinetics.
+  - title: Glycolysis net
     formula: 2 ATP + 2 NADH per glucose
-    note:
-      zh: FC1D 代谢。
-      en: FC1D metabolism.
-  - title:
-      zh: TCA 产出
-      en: TCA output
+    note: FC1D metabolism.
+  - title: TCA output
     formula: 3 NADH + 1 FADH₂ + 1 GTP / acetyl-CoA
-    note:
-      zh: 与氧化磷酸化偶联。
-      en: Coupled to oxidative phosphorylation.
-  - title:
-      zh: 心输出量
-      en: Cardiac output
+    note: Coupled to oxidative phosphorylation.
+  - title: Cardiac output
     formula: CO = HR × SV
-    note:
-      zh: FC3B 循环。
-      en: FC3B circulation.
-  - title:
-      zh: 膜电位
-      en: Membrane potential
+    note: FC3B circulation.
+  - title: Membrane potential
     formula: ΔV ∝ Δion flux / capacitance
-    note:
-      zh: FC3A 神经。
-      en: FC3A neural signaling.
-  - title:
-      zh: 稀释
-      en: Dilution
+    note: FC3A neural signaling.
+  - title: Dilution
     formula: C₁V₁ = C₂V₂
-    note:
-      zh: 实验设计稀释系列。
-      en: Experimental dilution series.
-  - title:
-      zh: 重组率
-      en: Recombination frequency
+    note: Experimental dilution series.
+  - title: Recombination frequency
     formula: RF = recombinants / total
-    note:
-      zh: FC1C 连锁。
-      en: FC1C linkage mapping.
-  - title:
-      zh: 渗透压
-      en: Osmotic pressure
+    note: FC1C linkage mapping.
+  - title: Osmotic pressure
     formula: π = iMRT
-    note:
-      zh: 细胞容积调节。
-      en: Cell volume regulation.
-  - title:
-      zh: ATP 水解
-      en: ATP hydrolysis
+    note: Cell volume regulation.
+  - title: ATP hydrolysis
     formula: ΔG°′ ≈ −30 kJ/mol
-    note:
-      zh: 生物能学核心。
-      en: Core bioenergetics.
-  - title:
-      zh: 氧合曲线
-      en: Oxygen saturation
+    note: Core bioenergetics.
+  - title: Oxygen saturation
     formula: Sigmoid PO₂–Sat curve
-    note:
-      zh: Hb 协同与 Bohr。
-      en: Hb cooperativity and Bohr.
-  - title:
-      zh: 细胞周期
-      en: Cell cycle duration
+    note: Hb cooperativity and Bohr.
+  - title: Cell cycle duration
     formula: T = G₁ + S + G₂ + M
-    note:
-      zh: FC2C 分裂调控。
-      en: FC2C division control.
-  - title:
-      zh: 翻译密码子
-      en: Genetic code
+    note: FC2C division control.
+  - title: Genetic code
     formula: 64 codons → 20 aa + stop
-    note:
-      zh: FC1B 简并。
-      en: FC1B degeneracy.
-  - title:
-      zh: 抗体多样性
-      en: Antibody diversity
+    note: FC1B degeneracy.
+  - title: Antibody diversity
     formula: V(D)J recombination combinatorics
-    note:
-      zh: FC3B 免疫。
-      en: FC3B immunity.
+    note: FC3B immunity.
 - slug: quantitative
   entries:
-  - title:
-      zh: 百分比变化
-      en: Percent change
+  - title: Percent change
     formula: '%Δ = (new − old) / old × 100%'
-    note:
-      zh: 区分百分点与百分比。
-      en: Distinct from percentage points.
-  - title:
-      zh: 比例
-      en: Proportion
+    note: Distinct from percentage points.
+  - title: Proportion
     formula: a/b = c/d → ad = bc
-    note:
-      zh: 交叉相乘前统一单位。
-      en: Cross-multiply after unit alignment.
-  - title:
-      zh: 平均速度
-      en: Average speed
+    note: Cross-multiply after unit alignment.
+  - title: Average speed
     formula: v_avg = total distance / total time
-    note:
-      zh: 不同于瞬时速度。
-      en: Distinct from instantaneous speed.
-  - title:
-      zh: 平均数
-      en: Mean
+    note: Distinct from instantaneous speed.
+  - title: Mean
     formula: x̄ = Σx / n
-    note:
-      zh: 受极端值影响。
-      en: Sensitive to outliers.
-  - title:
-      zh: 中位数
-      en: Median
+    note: Sensitive to outliers.
+  - title: Median
     formula: middle of ordered data
-    note:
-      zh: 偶数个取中间两数平均。
-      en: Average middle two if even count.
-  - title:
-      zh: 折扣价
-      en: Discount price
+    note: Average middle two if even count.
+  - title: Discount price
     formula: sale = original × (1 − discount%)
-    note:
-      zh: 连续折扣不可简单相加。
-      en: Sequential discounts don’t add simply.
-  - title:
-      zh: 复利
-      en: Compound interest
+    note: Sequential discounts don’t add simply.
+  - title: Compound interest
     formula: A = P(1 + r/n)^(nt)
-    note:
-      zh: 注意计息周期 n。
-      en: Watch compounding periods n.
-  - title:
-      zh: 利润率
-      en: Profit margin
+    note: Watch compounding periods n.
+  - title: Profit margin
     formula: margin = profit / revenue
-    note:
-      zh: 分母是收入非成本。
-      en: Denominator is revenue, not cost.
-  - title:
-      zh: 百分变化
-      en: Percent change
+    note: Denominator is revenue, not cost.
+  - title: Percent change
     formula: '%Δ = (new−old)/old × 100%'
-    note:
-      zh: 分清相对百分与百分点。
-      en: Distinguish relative percent from percentage points.
-  - title:
-      zh: 组合（不计序）
-      en: Combinations
+    note: Distinguish relative percent from percentage points.
+  - title: Combinations
     formula: C(n,k) = n! / (k!(n−k)!)
-    note:
-      zh: 选组不论顺序；排列用 P(n,k)。
-      en: Unordered selections; use P(n,k) when order matters.
+    note: Unordered selections; use P(n,k) when order matters.
 - slug: behavioral-social
   entries:
-  - title:
-      zh: 韦伯定律
-      en: Weber’s law
+  - title: Weber’s law
     formula: ΔI/I = k
-    note:
-      zh: 可觉差与刺激强度成比例。
-      en: Detectable difference scales with intensity.
-  - title:
-      zh: 费希纳定律
-      en: Fechner’s law
+    note: Detectable difference scales with intensity.
+  - title: Fechner’s law
     formula: S = k log I
-    note:
-      zh: 感知强度与刺激对数相关。
-      en: Perceived intensity logs stimulus strength.
-  - title:
-      zh: 相关系数
-      en: Correlation
+    note: Perceived intensity logs stimulus strength.
+  - title: Correlation
     formula: r ∈ [−1, 1]
-    note:
-      zh: 描述线性关系方向与强度。
-      en: Direction and strength of linear relation.
-  - title:
-      zh: z 分数
-      en: z-score
+    note: Direction and strength of linear relation.
+  - title: z-score
     formula: z = (x − μ) / σ
-    note:
-      zh: 标准化比较不同量纲。
-      en: Standardize across scales.
-  - title:
-      zh: 观察学习概率
-      en: Social learning
+    note: Standardize across scales.
+  - title: Social learning
     formula: P(behavior) ↑ after modeled reward
-    note:
-      zh: 班杜拉观察学习。
-      en: Bandura observational learning.
+    note: Bandura observational learning.
 - slug: psych-soc
   entries:
-  - title:
-      zh: 韦伯定律
-      en: Weber’s law
+  - title: Weber’s law
     formula: ΔI/I = constant
-    note:
-      zh: FC6A 感觉。
-      en: FC6A sensation.
-  - title:
-      zh: 信号检测
-      en: Signal detection
+    note: FC6A sensation.
+  - title: Signal detection
     formula: d′ = Z(hit) − Z(false alarm)
-    note:
-      zh: 区分灵敏度与反应偏向。
-      en: Separates sensitivity from response bias.
-  - title:
-      zh: 相关系数
-      en: Correlation
+    note: Separates sensitivity from response bias.
+  - title: Correlation
     formula: r ∈ [−1, 1]
-    note:
-      zh: 研究设计题。
-      en: Research-design items.
-  - title:
-      zh: z 分数
-      en: z-score
+    note: Research-design items.
+  - title: z-score
     formula: z = (x − μ) / σ
-    note:
-      zh: 标准化分数。
-      en: Standardized scores.
-  - title:
-      zh: 自我效能
-      en: Self-efficacy
+    note: Standardized scores.
+  - title: Self-efficacy
     formula: behavior ∝ perceived capability
-    note:
-      zh: FC7 行为改变。
-      en: FC7 behavior change.
-  - title:
-      zh: 从众比例
-      en: Conformity rate
+    note: FC7 behavior change.
+  - title: Conformity rate
     formula: compliance ↑ with unanimous majority
-    note:
-      zh: FC7B 社会过程。
-      en: FC7B social processes.
+    note: FC7B social processes.
 - slug: verbal
   entries:
-  - title:
-      zh: 类比模板
-      en: Analogy template
+  - title: Analogy template
     formula: 'A : B :: C : ?'
-    note:
-      zh: 先写清 A→B 关系，再映射到 C。
-      en: State A→B relation, then map onto C.
+    note: State A→B relation, then map onto C.
 - slug: cars
   entries:
-  - title:
-      zh: 篇章地图
-      en: Passage map
+  - title: Passage map
     formula: Claim → Support → Turn → Close
-    note:
-      zh: 标注主张、证据、转折与收束。
-      en: Mark claim, support, turn, and close.
+    note: Mark claim, support, turn, and close.
 - slug: inductive-reasoning
   entries:
-  - title:
-      zh: 归类检验
-      en: Grouping check
+  - title: Grouping check
     formula: Rule → Test all → Exclude near-miss
-    note:
-      zh: 规则必须覆盖组内全部成员。
-      en: The rule must cover every in-group member.
+    note: The rule must cover every in-group member.
 - slug: perceptual-acuity
   entries:
-  - title:
-      zh: 镜像轴
-      en: Mirror axis
+  - title: Mirror axis
     formula: vertical ↔ L/R · horizontal ↔ U/D
-    note:
-      zh: 竖直轴左右对调；水平轴上下对调。
-      en: Vertical axis swaps L/R; horizontal swaps U/D.
+    note: Vertical axis swaps L/R; horizontal swaps U/D.

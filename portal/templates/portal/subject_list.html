@@ -7,8 +7,8 @@
   <div class="page-hero-inner">
     {% include "portal/includes/nav.html" with solid=1 %}
     <p class="section-kicker">Shared subjects</p>
-    <h1 data-i18n data-zh="共用科目" data-en="Shared subjects">共用科目</h1>
-    <p class="lead" data-i18n data-zh="生物学、化学、物理学、行为与社会科学、生物化学：两边都会碰到，知识合并，考法分开标注。" data-en="Biology, Chemistry, Physics, Behavioral & Social Sciences, Biochemistry — shared knowledge, exam-specific notes.">生物学、化学、物理学、行为与社会科学、生物化学：两边都会碰到，知识合并，考法分开标注。</p>
+    <h1>Shared subjects</h1>
+    <p class="lead">Biology, Chemistry, Physics, Behavioral & Social Sciences, Biochemistry — shared knowledge, exam-specific notes.</p>
   </div>
 </div>
 
@@ -18,8 +18,8 @@
     <li>
       <a href="{% url 'subject_detail' s.slug %}">
         <div>
-          <h3>{{ s.name }} <span class="muted-inline only-zh">{{ s.name_zh }}</span></h3>
-          <p><span class="only-zh">{{ s.summary }}</span><span class="only-en">{{ s.summary_en }}</span></p>
+          <h3>{{ s.name }}</h3>
+          <p>{{ s.summary }}</p>
         </div>
         <span class="disease-meta">{{ s.exams|join:" · " }}</span>
       </a>

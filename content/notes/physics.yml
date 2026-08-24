@@ -2,157 +2,91 @@ slug: physics
 chapters:
 - title: Mechanics
   bullets:
-  - zh: 牛顿定律与自由体图
-    en: Newton’s laws and free-body diagrams
-  - zh: 功-能定理；机械能守恒条件
-    en: Work–energy theorem; when mechanical energy is conserved
-  - zh: 动量守恒：碰撞与冲量
-    en: 'Momentum conservation: collisions and impulse'
-  - zh: 牛顿第二定律：ΣF = ma（矢量）
-    en: 'Newton’s second law: ΣF = ma (vector form)'
-  - zh: 动能 Ek = ½mv²；重力势能 Ep = mgh
-    en: Kinetic energy Ek = ½mv²; gravitational Ep = mgh
-  - zh: 冲量 J = FΔt = Δp
-    en: Impulse J = FΔt = Δp
-  - zh: 转动：τ = Iα；角动量 L = Iω
-    en: 'Rotation: τ = Iα; angular momentum L = Iω'
+  - Newton’s laws and free-body diagrams
+  - Work–energy theorem; when mechanical energy is conserved
+  - 'Momentum conservation: collisions and impulse'
+  - 'Newton’s second law: ΣF = ma (vector form)'
+  - Kinetic energy Ek = ½mv²; gravitational Ep = mgh
+  - Impulse J = FΔt = Δp
+  - 'Rotation: τ = Iα; angular momentum L = Iω'
 - title: Thermodynamics
   bullets:
-  - zh: 温度、内能、热量区分
-    en: Distinguish temperature, internal energy, heat
-  - zh: 第一定律：ΔU = Q − W（注意符号约定）
-    en: 'First law: ΔU = Q − W (watch sign convention)'
-  - zh: 熵与不可逆过程直觉
-    en: Entropy intuition and irreversible processes
-  - zh: 热机效率受卡诺极限约束
-    en: Heat-engine efficiency bounded by Carnot limit
-  - zh: 等温 vs 绝热过程：Q 与 ΔU 关系不同
-    en: 'Isothermal vs adiabatic: different Q and ΔU relations'
-  - zh: 熵增：孤立系统自发过程 ΔS > 0
-    en: 'Entropy increase: spontaneous processes in isolated systems raise ΔS'
+  - Distinguish temperature, internal energy, heat
+  - 'First law: ΔU = Q − W (watch sign convention)'
+  - Entropy intuition and irreversible processes
+  - Heat-engine efficiency bounded by Carnot limit
+  - 'Isothermal vs adiabatic: different Q and ΔU relations'
+  - 'Entropy increase: spontaneous processes in isolated systems raise ΔS'
 - title: Vibrations, Waves, and Optics
   bullets:
-  - zh: 简谐运动：周期与能量交换
-    en: 'SHM: period and energy exchange'
-  - zh: 波速 v = fλ；干涉与衍射条件
-    en: Wave speed v = fλ; interference/diffraction conditions
-  - zh: 反射/折射；透镜成像符号约定要统一
-    en: Reflection/refraction; keep lens-sign conventions consistent
-  - zh: 简谐振子周期 T = 2π√(m/k)
-    en: SHM period T = 2π√(m/k)
-  - zh: 驻波：节点与腹点位置固定
-    en: 'Standing waves: fixed node and antinode positions'
-  - zh: 薄透镜 1/f = 1/do + 1/di
-    en: 'Thin lens: 1/f = 1/do + 1/di'
+  - 'SHM: period and energy exchange'
+  - Wave speed v = fλ; interference/diffraction conditions
+  - Reflection/refraction; keep lens-sign conventions consistent
+  - SHM period T = 2π√(m/k)
+  - 'Standing waves: fixed node and antinode positions'
+  - 'Thin lens: 1/f = 1/do + 1/di'
 - title: Electricity and Magnetism
   bullets:
-  - zh: 库仑力与电场；电势差与功
-    en: Coulomb force/fields; potential difference and work
-  - zh: 欧姆定律、串并联、电路功率
-    en: Ohm’s law, series/parallel, power in circuits
-  - zh: 磁场对运动电荷的力（洛伦兹力直觉）
-    en: Magnetic force on moving charges (Lorentz intuition)
-  - zh: 库仑 F = kq₁q₂/r²
-    en: Coulomb force F = kq₁q₂/r²
-  - zh: 并联电阻 1/R = Σ1/Ri；串联 R = ΣRi
-    en: Parallel 1/R = Σ1/Ri; series R = ΣRi
-  - zh: 楞次定律：感应电流反抗磁通变化
-    en: 'Lenz’s law: induced current opposes flux change'
+  - Coulomb force/fields; potential difference and work
+  - Ohm’s law, series/parallel, power in circuits
+  - Magnetic force on moving charges (Lorentz intuition)
+  - Coulomb force F = kq₁q₂/r²
+  - Parallel 1/R = Σ1/Ri; series R = ΣRi
+  - 'Lenz’s law: induced current opposes flux change'
 - title: Modern Physics
   bullets:
-  - zh: 光子能量 E = hf；光电效应要点
-    en: Photon energy E = hf; photoelectric highlights
-  - zh: 能级与光谱线
-    en: Energy levels and spectral lines
-  - zh: 核衰变：半衰期与守恒量
-    en: 'Nuclear decay: half-life and conserved quantities'
-  - zh: E = hf；光子动量 p = h/λ
-    en: E = hf; photon momentum p = h/λ
-  - zh: 德布罗意 λ = h/p
-    en: de Broglie λ = h/p
-  - zh: 半衰期 N = N₀(½)^(t/t½)
-    en: Half-life decay N = N₀(½)^(t/t½)
+  - Photon energy E = hf; photoelectric highlights
+  - Energy levels and spectral lines
+  - 'Nuclear decay: half-life and conserved quantities'
+  - E = hf; photon momentum p = h/λ
+  - de Broglie λ = h/p
+  - Half-life decay N = N₀(½)^(t/t½)
 - title: 4A · Motion, forces, work, energy, equilibrium
   bullets:
-  - zh: 把生理情境翻译成受力/能量问题
-    en: Translate physio scenarios into force/energy problems
-  - zh: 静力平衡：合力与合力矩为零
-    en: 'Static equilibrium: net force and torque zero'
-  - zh: 功与功率在肌肉/循环题中常见
-    en: Work and power show up in muscle/circulation items
-  - zh: 斜面分解：重力平行/垂直分量
-    en: 'Incline decomposition: parallel/perpendicular gravity components'
-  - zh: 功率 P = Fv（恒力同向时）
-    en: Power P = Fv when force aligns with velocity
-  - zh: 杠杆平衡：F₁d₁ = F₂d₂
-    en: 'Lever equilibrium: F₁d₁ = F₂d₂'
+  - Translate physio scenarios into force/energy problems
+  - 'Static equilibrium: net force and torque zero'
+  - Work and power show up in muscle/circulation items
+  - 'Incline decomposition: parallel/perpendicular gravity components'
+  - Power P = Fv when force aligns with velocity
+  - 'Lever equilibrium: F₁d₁ = F₂d₂'
 - title: 4B · Fluids, circulation, gas exchange
   bullets:
-  - zh: 连续性方程 A₁v₁ = A₂v₂
-    en: 'Continuity: A₁v₁ = A₂v₂'
-  - zh: 伯努利：速度↑ 压力↓（理想流体直觉）
-    en: 'Bernoulli: speed up → pressure down (ideal intuition)'
-  - zh: Poiseuille：流量对半径极度敏感
-    en: 'Poiseuille: flow extremely sensitive to radius'
-  - zh: 浮力 Fb = ρfluid Vdisplaced g
-    en: Buoyancy Fb = ρfluid Vdisplaced g
-  - zh: 血压 ≈ 流量 × 阻力（类比欧姆定律）
-    en: Blood pressure ≈ flow × resistance (Ohm-like analogy)
-  - zh: 表面张力与毛细现象：小管径液体上升
-    en: Surface tension and capillary rise in narrow tubes
+  - 'Continuity: A₁v₁ = A₂v₂'
+  - 'Bernoulli: speed up → pressure down (ideal intuition)'
+  - 'Poiseuille: flow extremely sensitive to radius'
+  - Buoyancy Fb = ρfluid Vdisplaced g
+  - Blood pressure ≈ flow × resistance (Ohm-like analogy)
+  - Surface tension and capillary rise in narrow tubes
 - title: 4C · Electrochemistry and circuits
   bullets:
-  - zh: 电池：氧化还原与电子流向
-    en: 'Cells: redox and electron flow'
-  - zh: 串并联电阻与等效电路
-    en: Series/parallel resistance and equivalents
-  - zh: 电容充放电与时间常数思想
-    en: Capacitor charge/discharge and time-constant idea
-  - zh: E°cell = E°red − E°ox（约定方向）
-    en: E°cell = E°red − E°ox (watch sign convention)
-  - zh: 电容 C = Q/V；并联 C 相加
-    en: Capacitance C = Q/V; parallel capacitors add
-  - zh: RC 时间常数 τ = RC
-    en: RC time constant τ = RC
+  - 'Cells: redox and electron flow'
+  - Series/parallel resistance and equivalents
+  - Capacitor charge/discharge and time-constant idea
+  - E°cell = E°red − E°ox (watch sign convention)
+  - Capacitance C = Q/V; parallel capacitors add
+  - RC time constant τ = RC
 - title: 4D · Light and sound with matter
   bullets:
-  - zh: 声波：强度、衰减、多普勒
-    en: 'Sound: intensity, attenuation, Doppler'
-  - zh: 光：折射指数、全反射、透镜成像
-    en: 'Light: index, TIR, lens imaging'
-  - zh: 超声/光学在诊断中的物理约束（导论）
-    en: Physical limits of ultrasound/optics in diagnosis (intro)
-  - zh: 折射 n = c/v；斯涅尔定律 n₁sinθ₁ = n₂sinθ₂
-    en: Index n = c/v; Snell’s law n₁sinθ₁ = n₂sinθ₂
-  - zh: 多普勒：源/观察者运动改变频率
-    en: 'Doppler: source/observer motion shifts frequency'
-  - zh: 共振：驱动频率匹配固有频率
-    en: Resonance when driving frequency matches natural frequency
+  - 'Sound: intensity, attenuation, Doppler'
+  - 'Light: index, TIR, lens imaging'
+  - Physical limits of ultrasound/optics in diagnosis (intro)
+  - Index n = c/v; Snell’s law n₁sinθ₁ = n₂sinθ₂
+  - 'Doppler: source/observer motion shifts frequency'
+  - Resonance when driving frequency matches natural frequency
 - title: 4E · Atoms and electronic structure
   bullets:
-  - zh: 能级跃迁与吸收/发射光谱
-    en: Level transitions and absorption/emission spectra
-  - zh: 光电效应：阈值阈值与动能
-    en: 'Photoelectric: frequency threshold and KE'
-  - zh: 吸收光谱：电子跃迁到高能级
-    en: 'Absorption spectra: electrons jump to higher levels'
-  - zh: 光电效应阈值频率与材料相关
-    en: Photoelectric threshold frequency is material-specific
+  - Level transitions and absorption/emission spectra
+  - 'Photoelectric: frequency threshold and KE'
+  - 'Absorption spectra: electrons jump to higher levels'
+  - Photoelectric threshold frequency is material-specific
 - title: 4E · Atoms, nuclear decay, electronic structure
   bullets:
-  - zh: 光子能量 E=hf=hc/λ；光电效应 KE_max=hf−φ
-    en: Photon energy E=hf=hc/λ; photoelectric KE_max=hf−φ
-  - zh: 玻尔模型：能级量子化；吸收/发射对应跃迁
-    en: 'Bohr model: quantized levels; absorption/emission from transitions'
-  - zh: 结合能缺陷：质量亏损转化为核能
-    en: 'Binding energy: mass defect converts to nuclear energy'
+  - Photon energy E=hf=hc/λ; photoelectric KE_max=hf−φ
+  - 'Bohr model: quantized levels; absorption/emission from transitions'
+  - 'Binding energy: mass defect converts to nuclear energy'
 - title: 4D · Light and sound interacting with matter
   bullets:
-  - zh: 反射：入射角=反射角；折射遵循斯涅尔定律
-    en: 'Reflection: i=r; refraction follows Snell’s law'
-  - zh: 干涉条件：光程差为 λ 整数倍（相长）
-    en: 'Interference: path difference of integer λ → constructive'
-  - zh: 声音强度级用分贝；对数压缩动态范围
-    en: Sound intensity level in dB compresses dynamic range logarithmically
-  - zh: 多普勒：靠近升高频率，远离降低
-    en: 'Doppler: approach raises frequency; recession lowers it'
+  - 'Reflection: i=r; refraction follows Snell’s law'
+  - 'Interference: path difference of integer λ → constructive'
+  - Sound intensity level in dB compresses dynamic range logarithmically
+  - 'Doppler: approach raises frequency; recession lowers it'

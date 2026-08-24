@@ -1,28 +1,27 @@
-{% load i18n_extras %}
 {% for group in chapters %}
 <article class="block chapter-block">
-  <h2><span class="only-zh">{{ group.heading }}</span><span class="only-en">{{ group.heading_en }}</span></h2>
+  <h2>{{ group.heading }}</h2>
   <ol class="chapter-list">
     {% for ch in group.items %}
     <li class="chapter-item" id="{{ ch.chapter_id }}" data-chapter-id="{{ ch.chapter_id }}">
       <div class="chapter-head">
         <label class="chapter-done">
           <input type="checkbox" class="progress-check" data-chapter-id="{{ ch.chapter_id }}" aria-label="Mark chapter done">
-          <span class="only-zh">已读</span><span class="only-en">Done</span>
+          Done
         </label>
         <h3>{{ ch.title }}</h3>
       </div>
       <ul>
-        {% for pair in ch.points|zip_en:ch.points_en %}
-        <li><span class="only-zh">{{ pair.zh }}</span><span class="only-en">{{ pair.en }}</span></li>
+        {% for p in ch.points %}
+        <li>{{ p }}</li>
         {% endfor %}
       </ul>
       {% if ch.study_notes %}
       <div class="study-notes">
-        <p class="study-notes-label" data-i18n data-zh="高收益要点" data-en="High-yield notes">高收益要点</p>
+        <p class="study-notes-label">High-yield notes</p>
         <ul>
           {% for n in ch.study_notes %}
-          <li><span class="only-zh">{{ n.zh }}</span><span class="only-en">{{ n.en }}</span></li>
+          <li>{{ n }}</li>
           {% endfor %}
         </ul>
       </div>

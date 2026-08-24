@@ -35,8 +35,7 @@
 }
 
 .tutor-controls select,
-.tutor-controls button,
-.lang-toggle button {
+.tutor-controls button {
   font: inherit;
   font-size: 0.9rem;
   min-height: 2.4rem;
@@ -48,8 +47,7 @@
   cursor: pointer;
 }
 
-.tutor-controls button.is-active,
-.lang-toggle button.is-active {
+.tutor-controls button.is-active {
   background: var(--brand);
   border-color: var(--brand);
   color: #f4ebe0;
@@ -120,14 +118,3 @@
   min-width: 5.5rem;
 }
 
-.lang-toggle {
-  display: inline-flex;
-  gap: 0.35rem;
-}
-
-[data-i18n] {
-  /* filled by JS */
-}
-
-html[lang="en"] .only-zh { display: none !important; }
-html[lang="zh-CN"] .only-en { display: none !important; }

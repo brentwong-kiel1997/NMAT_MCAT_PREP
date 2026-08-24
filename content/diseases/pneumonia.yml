@@ -1,35 +1,36 @@
 slug: pneumonia
 name: Community-Acquired Pneumonia
-name_zh: 社区获得性肺炎
-short: 肺泡感染导致渗出与气体交换障碍；病原谱与经验性治疗是高频考点。
+short: Alveolar infection causing exudate and impaired gas exchange; the pathogen spectrum and empirical
+  therapy are high-yield exam topics.
 systems:
 - Respiratory
 - Infectious
 exams:
 - Enrichment
-exam_fit: 延伸阅读：服务生物学/病理生理直觉；NMAT 考纲是导论课不是临床诊疗；MCAT 可迁移机制，不考指南级用药方案。
-pathogen: 常见：Streptococcus pneumoniae；非典型：Mycoplasma、Chlamydia、Legionella
-transmission: 吸入口咽定植菌或飞沫；宿主防御下降时发病。
+exam_fit: Extension reading serving biology/pathophysiology intuition; the NMAT syllabus is introductory
+  coursework, not clinical management; MCAT transfers the mechanisms, not guideline-level drug regimens.
+pathogen: 'Typical: Streptococcus pneumoniae; atypical: Mycoplasma, Chlamydia, Legionella'
+transmission: Aspiration of colonized oropharyngeal flora, or droplets; disease when host defenses fail.
 pathophysiology:
-- 病原到达远端气道 → 炎症渗出填充肺泡。
-- V/Q 失调与分流 → 低氧血症。
-- 大叶性 vs 支气管肺炎病理模式常考。
+- Pathogens reach distal airways → inflammatory exudate fills alveoli.
+- V/Q mismatch and shunt → hypoxemia.
+- Lobar vs bronchopneumonia patterns are classic exam contrasts.
 clinical:
-- 发热、咳痰、呼吸困难、胸痛；听诊湿啰音/实变征。
-- 肺炎链球菌：突发寒战、铁锈色痰（经典描述）。
-- 老年可表现不典型（意识改变、低热）。
+- Fever, productive cough, dyspnea, pleuritic pain; crackles/consolidation signs on exam.
+- 'Pneumococcus: abrupt rigors, rust-colored sputum (the classic description).'
+- Elderly patients may present atypically (confusion, low-grade fever).
 diagnosis:
-- 临床 + 胸片浸润影。
-- 必要时痰培养、血培养、尿抗原（肺炎链球菌/军团菌）。
-- CURB-65 等用于严重度分层（记忆框架即可）。
+- Clinical picture plus infiltrate on chest X-ray.
+- Sputum/blood cultures and urinary antigens (pneumococcus/Legionella) when needed.
+- CURB-65 and similar scores for severity stratification (as a memory framework).
 treatment:
-- 经验性覆盖典型 ± 非典型（地区指南导向）。
-- 氧疗、补液、退热支持。
-- 疫苗：肺炎链球菌、流感疫苗降低风险。
+- Empirical coverage of typical ± atypical organisms (per local guidelines).
+- Oxygen, fluids, antipyretic support.
+- 'Vaccines: pneumococcal and influenza vaccination reduce risk.'
 high_yield:
-- 肺炎链球菌 = 最常见细菌性 CAP。
-- Mycoplasma：年轻、干咳、肺外表现；无细胞壁→β-内酰胺无效。
-- Legionella：水系统暴露、低钠、消化道症状。
-- 实变 = 支气管音、触觉语颤增强。
-mcat_bridge: 气体交换、炎症与免疫系统应答。
-nmat_bridge: 呼吸病理与经验性抗微生物思路。
+- Streptococcus pneumoniae is the most common bacterial cause of CAP.
+- 'Mycoplasma: young patients, dry cough, extrapulmonary features; no cell wall → β-lactams ineffective.'
+- 'Legionella: water-system exposure, hyponatremia, GI symptoms.'
+- Consolidation = bronchial breath sounds and increased tactile fremitus.
+mcat_bridge: Gas exchange, inflammation, and immune system response.
+nmat_bridge: Respiratory pathology and the reasoning behind empirical antimicrobial choice.

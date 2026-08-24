@@ -81,4 +81,4 @@ def chat_completion(
         cleaned_r = _clean_content(str(reasoning))
         if cleaned_r:
             return cleaned_r
-    return "（模型未返回可见正文，请再试一次）"
+    return "(the model returned no visible text — please try again)"

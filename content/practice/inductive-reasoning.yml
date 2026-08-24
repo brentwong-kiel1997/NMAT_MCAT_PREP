@@ -1,112 +1,52 @@
 slug: inductive-reasoning
 items:
 - id: ind-1
-  q:
-    zh: 图形序列题优先做什么？
-    en: 'On figure-series items, prioritize:'
+  q: 'On figure-series items, prioritize:'
   choices:
-    A:
-      zh: 同时猜所有规则再放弃
-      en: Guessing every rule at once then quitting
-    B:
-      zh: 分开跟踪位置、数量、填充、旋转
-      en: Tracking position, count, fill, and rotation separately
-    C:
-      zh: 只看颜色忽略形状
-      en: Only color, ignore shape
-    D:
-      zh: 随机选中间项
-      en: Picking the middle option
+    A: Guessing every rule at once then quitting
+    B: Tracking position, count, fill, and rotation separately
+    C: Only color, ignore shape
+    D: Picking the middle option
   answer: B
-  explain:
-    zh: 多规则常叠加；分线索更稳。
-    en: Rules often stack — separate threads are safer.
-  chapter: Figure Series（图形序列）
+  explain: Rules often stack — separate threads are safer.
+  chapter: Figure Series
 - id: ind-2
-  q:
-    zh: 图形归类题第一步通常是：
-    en: 'On figure-grouping items, the first step is usually to:'
+  q: 'On figure-grouping items, the first step is usually to:'
   choices:
-    A:
-      zh: 找出多数图形共享的属性
-      en: Find the attribute shared by most figures
-    B:
-      zh: 随机选一组
-      en: Pick a group at random
-    C:
-      zh: 只数顶点忽略形状
-      en: Count vertices only, ignore shape
-    D:
-      zh: 假设无规则
-      en: Assume there is no rule
+    A: Find the attribute shared by most figures
+    B: Pick a group at random
+    C: Count vertices only, ignore shape
+    D: Assume there is no rule
   answer: A
-  explain:
-    zh: 归类考共同特征；例外项即答案或需排除项。
-    en: Grouping tests shared features; the odd figure is often the key.
-  chapter: Figure Grouping（图形归类）
+  explain: Grouping tests shared features; the odd figure is often the key.
+  chapter: Figure Grouping
 - id: ind-3
-  q:
-    zh: 数字序列 2, 6, 18, 54, … 下一项最可能是：
-    en: 'In the number series 2, 6, 18, 54, … the next term is most likely:'
+  q: 'In the number series 2, 6, 18, 54, … the next term is most likely:'
   choices:
-    A:
-      zh: '162'
-      en: '162'
-    B:
-      zh: '108'
-      en: '108'
-    C:
-      zh: '72'
-      en: '72'
-    D:
-      zh: '60'
-      en: '60'
+    A: '162'
+    B: '108'
+    C: '72'
+    D: '60'
   answer: A
-  explain:
-    zh: 公比为 3 的等比数列：54 × 3 = 162。
-    en: 'Geometric sequence with ratio 3: 54 × 3 = 162.'
-  chapter: Number and Letter Series（数字与字母序列）
+  explain: 'Geometric sequence with ratio 3: 54 × 3 = 162.'
+  chapter: Number and Letter Series
 - id: ind-4
-  q:
-    zh: 图形序列中“每隔一项”规则意味着：
-    en: 'An “every other term” rule in a figure series means:'
+  q: 'An “every other term” rule in a figure series means:'
   choices:
-    A:
-      zh: 奇偶项可能遵循不同子规则
-      en: Odd and even positions may follow different sub-rules
-    B:
-      zh: 序列只有两项
-      en: The series has only two terms
-    C:
-      zh: 必须忽略旋转
-      en: Rotation must be ignored
-    D:
-      zh: 答案恒为 A
-      en: The answer is always A
+    A: Odd and even positions may follow different sub-rules
+    B: The series has only two terms
+    C: Rotation must be ignored
+    D: The answer is always A
   answer: A
-  explain:
-    zh: 交替规则常见：如奇项旋转、偶项加元素。
-    en: Alternating rules are common—e.g., odd terms rotate, even terms add elements.
-  chapter: Figure Series（图形序列）
+  explain: Alternating rules are common—e.g., odd terms rotate, even terms add elements.
+  chapter: Figure Series
 - id: ind-5
-  q:
-    zh: 图形归类时，最可靠的策略是：
-    en: 'In figure grouping, the most reliable strategy is to:'
+  q: 'In figure grouping, the most reliable strategy is to:'
   choices:
-    A:
-      zh: 选自己觉得最美的一组
-      en: Pick the group that looks nicest
-    B:
-      zh: 找一致规则并检验所有选项
-      en: Find a consistent rule and test all options
-    C:
-      zh: 随机猜测
-      en: Guess randomly
-    D:
-      zh: 只看颜色忽略形状
-      en: Ignore shape and use color only
+    A: Pick the group that looks nicest
+    B: Find a consistent rule and test all options
+    C: Guess randomly
+    D: Ignore shape and use color only
   answer: B
-  explain:
-    zh: 归纳推理考规则一致性，不是审美偏好。
-    en: Inductive items test rule consistency, not aesthetic preference.
-  chapter: Figure Grouping（图形归类）
+  explain: Inductive items test rule consistency, not aesthetic preference.
+  chapter: Figure Grouping

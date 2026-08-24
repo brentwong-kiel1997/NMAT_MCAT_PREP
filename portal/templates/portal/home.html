@@ -9,59 +9,59 @@
   <div class="hero-visual" aria-hidden="true"></div>
   <div class="hero-content">
     <p class="hero-brand">Gabay</p>
-    <h1 data-i18n data-zh="打开就能学：笔记、闪卡、练习、教练" data-en="Ready to study: notes, cards, drills, coach">打开就能学：笔记、闪卡、练习、教练</h1>
-    <p class="hero-lead" data-i18n data-zh="按 CEM / AAMC 科目地图走。先读高收益要点，再刷题，不会就问 MiniMax-M3。" data-en="Follow the CEM / AAMC subject map. Read high-yield notes, drill MCQs, then ask MiniMax-M3.">按 CEM / AAMC 科目地图走。先读高收益要点，再刷题，不会就问 MiniMax-M3。</p>
+    <h1>Ready to study: notes, cards, drills, coach</h1>
+    <p class="hero-lead">Follow the CEM / AAMC subject map. Read high-yield notes, drill MCQs, then ask MiniMax-M3.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="{% url 'subject_detail' 'biology' %}" data-i18n data-zh="从生物学开始" data-en="Start with Biology">从生物学开始</a>
-      <a class="btn btn-ghost" href="{% url 'materials_hub' %}" data-i18n data-zh="教材资料" data-en="Materials">教材资料</a>
-      <a class="btn btn-ghost" href="{% url 'study_hub' %}" data-i18n data-zh="学习台" data-en="Study desk">学习台</a>
-      <a class="btn btn-ghost" href="{% url 'practice_hub' %}" data-i18n data-zh="做练习" data-en="Practice">做练习</a>
+      <a class="btn btn-primary" href="{% url 'subject_detail' 'biology' %}">Start with Biology</a>
+      <a class="btn btn-ghost" href="{% url 'materials_hub' %}">Materials</a>
+      <a class="btn btn-ghost" href="{% url 'study_hub' %}">Study desk</a>
+      <a class="btn btn-ghost" href="{% url 'practice_hub' %}">Practice</a>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <p class="section-kicker" data-i18n data-zh="学习环" data-en="Study loop">学习环</p>
-  <h2 data-i18n data-zh="四步就能开练" data-en="Four steps to start">四步就能开练</h2>
-  <p class="section-lead" data-i18n data-zh="不必先读完全部大纲。选一科，勾已读，翻闪卡，做几道题，再让教练讲透卡点。" data-en="You don’t need the whole syllabus first. Pick a subject, mark chapters, flip cards, drill a few items, then ask the coach.">不必先读完全部大纲。选一科，勾已读，翻闪卡，做几道题，再让教练讲透卡点。</p>
+  <p class="section-kicker">Study loop</p>
+  <h2>Four steps to start</h2>
+  <p class="section-lead">You don’t need the whole syllabus first. Pick a subject, mark chapters, flip cards, drill a few items, then ask the coach.</p>
   <ol class="path-steps">
     <li>
       <a href="{% url 'subject_detail' 'biology' %}">
-        <strong data-i18n data-zh="1 · 读要点" data-en="1 · Notes">1 · 读要点</strong>
-        <span data-i18n data-zh="打开 Biology，看章节下的高收益笔记" data-en="Open Biology and read the high-yield notes under each chapter">打开 Biology，看章节下的高收益笔记</span>
+        <strong>1 · Notes</strong>
+        <span>Open Biology and read the high-yield notes under each chapter</span>
       </a>
     </li>
     <li>
       <a href="{% url 'subject_detail' 'biology' %}#ch-1-unity-and-diversity-of-life">
-        <strong data-i18n data-zh="2 · 闪卡" data-en="2 · Cards">2 · 闪卡</strong>
-        <span data-i18n data-zh="右侧闪卡快速回忆，勾选已读进度" data-en="Use the side flashcards and mark chapters done">右侧闪卡快速回忆，勾选已读进度</span>
+        <strong>2 · Cards</strong>
+        <span>Use the side flashcards and mark chapters done</span>
       </a>
     </li>
     <li>
       <a href="{% url 'practice_detail' 'biology' %}">
-        <strong data-i18n data-zh="3 · 练习" data-en="3 · Practice">3 · 练习</strong>
-        <span data-i18n data-zh="做几道选择题，立刻看解析" data-en="Do a few MCQs and check explanations right away">做几道选择题，立刻看解析</span>
+        <strong>3 · Practice</strong>
+        <span>Do a few MCQs and check explanations right away</span>
       </a>
     </li>
     <li>
       <a href="{% url 'study_hub' %}">
-        <strong data-i18n data-zh="4 · 教练" data-en="4 · Coach">4 · 教练</strong>
-        <span data-i18n data-zh="卡住就让 MiniMax 讲解或出题" data-en="Stuck? Ask MiniMax to explain or quiz you">卡住就让 MiniMax 讲解或出题</span>
+        <strong>4 · Coach</strong>
+        <span>Stuck? Ask MiniMax to explain or quiz you</span>
       </a>
     </li>
   </ol>
 </section>
 
 <section class="section">
-  <p class="section-kicker" data-i18n data-zh="教材" data-en="Materials">教材</p>
-  <h2 data-i18n data-zh="路径 · 术语 · 公式 · 清单" data-en="Paths · glossary · formulas · checklists">路径 · 术语 · 公式 · 清单</h2>
-  <p class="section-lead" data-i18n data-zh="完整备考资料台：按目标选路径，考前刷术语与公式，用清单收口。" data-en="Full materials desk: pick a path, drill glossary and formulas, close with checklists.">完整备考资料台：按目标选路径，考前刷术语与公式，用清单收口。</p>
+  <p class="section-kicker">Materials</p>
+  <h2>Paths · glossary · formulas · checklists</h2>
+  <p class="section-lead">Full materials desk: pick a path, drill glossary and formulas, close with checklists.</p>
   <ul class="disease-list">
     <li>
       <a href="{% url 'materials_hub' %}">
         <div>
-          <h3 data-i18n data-zh="打开资料台" data-en="Open materials desk">打开资料台</h3>
-          <p data-i18n data-zh="学习路径、术语表、公式卡、策略与清单" data-en="Study paths, glossary, formulas, tips, and checklists">学习路径、术语表、公式卡、策略与清单</p>
+          <h3>Open materials desk</h3>
+          <p>Study paths, glossary, formulas, tips, and checklists</p>
         </div>
         <span class="disease-meta">Hub</span>
       </a>
@@ -69,8 +69,8 @@
     <li>
       <a href="{% url 'materials_glossary' %}">
         <div>
-          <h3 data-i18n data-zh="术语表" data-en="Glossary">术语表</h3>
-          <p data-i18n data-zh="高收益概念中英速查" data-en="High-yield bilingual concepts">高收益概念中英速查</p>
+          <h3>Glossary</h3>
+          <p>High-yield bilingual concepts</p>
         </div>
         <span class="disease-meta">Terms</span>
       </a>
@@ -78,8 +78,8 @@
     <li>
       <a href="{% url 'materials_checklists' %}">
         <div>
-          <h3 data-i18n data-zh="备考清单" data-en="Checklists">备考清单</h3>
-          <p data-i18n data-zh="考试日与每周复习动作" data-en="Exam-day and weekly review actions">考试日与每周复习动作</p>
+          <h3>Checklists</h3>
+          <p>Exam-day and weekly review actions</p>
         </div>
         <span class="disease-meta">List</span>
       </a>
@@ -89,15 +89,15 @@
 
 <section class="section">
   <p class="section-kicker">Merge map</p>
-  <h2 data-i18n data-zh="能合并的先合并" data-en="Shared subjects first">能合并的先合并</h2>
-  <p class="section-lead" data-i18n data-zh="Part 2 学业科与 MCAT 科学/行为科有交集，共用一个知识库，页内标明两边考法差异。" data-en="Part 2 academics overlap MCAT science/behavior — one knowledge base, with exam-specific notes.">Part 2 学业科与 MCAT 科学/行为科有交集，共用一个知识库，页内标明两边考法差异。</p>
+  <h2>Shared subjects first</h2>
+  <p class="section-lead">Part 2 academics overlap MCAT science/behavior — one knowledge base, with exam-specific notes.</p>
   <ul class="disease-list">
     {% for s in shared_subjects %}
     <li>
       <a href="{% url 'subject_detail' s.slug %}">
         <div>
-          <h3>{{ s.name }} <span class="muted-inline only-zh">{{ s.name_zh }}</span></h3>
-          <p><span class="only-zh">{{ s.summary }}</span><span class="only-en">{{ s.summary_en }}</span></p>
+          <h3>{{ s.name }}</h3>
+          <p>{{ s.summary }}</p>
         </div>
         <span class="disease-meta">{{ s.exams|join:" · " }}</span>
       </a>

@@ -1,179 +1,83 @@
 slug: bio-biochem
 items:
 - id: bb-1
-  q:
-    zh: 肽键形成时发生的是：
-    en: 'Peptide-bond formation involves:'
+  q: 'Peptide-bond formation involves:'
   choices:
-    A:
-      zh: 水解消耗水
-      en: Hydrolysis that consumes water
-    B:
-      zh: 缩合脱水连接氨基酸
-      en: Condensation linking amino acids with water loss
-    C:
-      zh: 打破所有氢键
-      en: Breaking all hydrogen bonds
-    D:
-      zh: 改变元素种类
-      en: Changing element identities
+    A: Hydrolysis that consumes water
+    B: Condensation linking amino acids with water loss
+    C: Breaking all hydrogen bonds
+    D: Changing element identities
   answer: B
-  explain:
-    zh: 羧基与氨基缩合脱水形成肽键；水解则相反。
-    en: Carboxyl + amino condense with water loss; hydrolysis reverses it.
+  explain: Carboxyl + amino condense with water loss; hydrolysis reverses it.
   chapter: 1A · Proteins and amino acids
 - id: bb-2
-  q:
-    zh: DNA 双螺旋中，碱基配对规则是：
-    en: 'In the DNA double helix, base pairing follows:'
+  q: 'In the DNA double helix, base pairing follows:'
   choices:
-    A:
-      zh: A–T（2 氢键）、G–C（3 氢键）
-      en: A–T (2 H-bonds), G–C (3 H-bonds)
-    B:
-      zh: A–G、T–C
-      en: A–G, T–C
-    C:
-      zh: 任意碱基随机配对
-      en: Random pairing of any bases
-    D:
-      zh: 只有 U 参与
-      en: Only U participates
+    A: A–T (2 H-bonds), G–C (3 H-bonds)
+    B: A–G, T–C
+    C: Random pairing of any bases
+    D: Only U participates
   answer: A
-  explain:
-    zh: Watson–Crick 配对保证互补链复制与转录模板功能。
-    en: Watson–Crick pairing enables complementary-strand replication and transcription templates.
+  explain: Watson–Crick pairing enables complementary-strand replication and transcription templates.
   chapter: 1C · Heritable information & diversity
 - id: bb-3
-  q:
-    zh: 核糖体在蛋白质合成中的直接作用是：
-    en: 'Ribosomes directly:'
+  q: 'Ribosomes directly:'
   choices:
-    A:
-      zh: 催化肽键形成（翻译）
-      en: Catalyze peptide-bond formation (translation)
-    B:
-      zh: 复制 DNA
-      en: Replicate DNA
-    C:
-      zh: 合成脂肪酸
-      en: Synthesize fatty acids
-    D:
-      zh: 泵送质子
-      en: Pump protons
+    A: Catalyze peptide-bond formation (translation)
+    B: Replicate DNA
+    C: Synthesize fatty acids
+    D: Pump protons
   answer: A
-  explain:
-    zh: 核糖体读取 mRNA，tRNA 携带氨基酸，rRNA/蛋白组分催化肽键延伸。
-    en: Ribosomes read mRNA; tRNAs deliver amino acids; rRNA/protein components catalyze peptide elongation.
+  explain: Ribosomes read mRNA; tRNAs deliver amino acids; rRNA/protein components catalyze peptide elongation.
   chapter: 1B · Gene to protein
 - id: bb-4
-  q:
-    zh: 细胞膜主要由下列哪类分子构成双分子层？
-    en: 'The plasma membrane bilayer is mainly built from:'
+  q: 'The plasma membrane bilayer is mainly built from:'
   choices:
-    A:
-      zh: 磷脂
-      en: Phospholipids
-    B:
-      zh: 游离葡萄糖
-      en: Free glucose
-    C:
-      zh: 核酸双链
-      en: Nucleic acid duplexes
-    D:
-      zh: 金属离子晶体
-      en: Metallic ion crystals
+    A: Phospholipids
+    B: Free glucose
+    C: Nucleic acid duplexes
+    D: Metallic ion crystals
   answer: A
-  explain:
-    zh: 磷脂两亲性形成脂质双层；膜蛋白、胆固醇等镶嵌其中。
-    en: Amphipathic phospholipids form the bilayer; proteins and cholesterol are embedded within.
+  explain: Amphipathic phospholipids form the bilayer; proteins and cholesterol are embedded within.
   chapter: 2A · Assemblies of molecules, cells, cell groups
 - id: bb-5
-  q:
-    zh: 有氧呼吸最终电子受体是：
-    en: 'The terminal electron acceptor in aerobic respiration is:'
+  q: 'The terminal electron acceptor in aerobic respiration is:'
   choices:
-    A:
-      zh: O₂
-      en: O₂
-    B:
-      zh: N₂
-      en: N₂
-    C:
-      zh: CO₂
-      en: CO₂
-    D:
-      zh: 葡萄糖
-      en: Glucose
+    A: O₂
+    B: N₂
+    C: CO₂
+    D: Glucose
   answer: A
-  explain:
-    zh: 复合体 IV 将电子传给 O₂ 形成 H₂O，完成 ETC。
-    en: Complex IV passes electrons to O₂ forming H₂O, completing the ETC.
+  explain: Complex IV passes electrons to O₂ forming H₂O, completing the ETC.
   chapter: 1D · Bioenergetics and fuel metabolism
 - id: bb-6
-  q:
-    zh: 干细胞的关键特征是：
-    en: 'A defining feature of stem cells is:'
+  q: 'A defining feature of stem cells is:'
   choices:
-    A:
-      zh: 自我更新并具分化潜能
-      en: Self-renewal plus differentiation potential
-    B:
-      zh: 不能分裂
-      en: Inability to divide
-    C:
-      zh: 已无细胞核
-      en: Loss of the nucleus
-    D:
-      zh: 只能产生一种终末细胞
-      en: Production of only one terminal cell type ever
+    A: Self-renewal plus differentiation potential
+    B: Inability to divide
+    C: Loss of the nucleus
+    D: Production of only one terminal cell type ever
   answer: A
-  explain:
-    zh: 干细胞维持未分化池并可在需要时分化；多能/单能程度因类型而异。
-    en: Stem cells replenish themselves and can differentiate; potency varies by stem-cell type.
+  explain: Stem cells replenish themselves and can differentiate; potency varies by stem-cell type.
   chapter: 2C · Division, differentiation, specialization
 - id: bb-7
-  q:
-    zh: 肾单位中，肾小球的主要功能是：
-    en: 'In the nephron, the glomerulus mainly:'
+  q: 'In the nephron, the glomerulus mainly:'
   choices:
-    A:
-      zh: 滤过血浆形成原尿
-      en: Filters plasma to form filtrate
-    B:
-      zh: 合成胰岛素
-      en: Synthesizes insulin
-    C:
-      zh: 产生动作电位传导
-      en: Generates action-potential conduction
-    D:
-      zh: 分泌胆汁
-      en: Secretes bile
+    A: Filters plasma to form filtrate
+    B: Synthesizes insulin
+    C: Generates action-potential conduction
+    D: Secretes bile
   answer: A
-  explain:
-    zh: 肾小球滤过屏障保留血细胞与大蛋白；肾小管重吸收/分泌精细调节尿液。
-    en: The glomerular barrier retains cells and large proteins; tubules reabsorb and secrete to refine
-      urine.
+  explain: The glomerular barrier retains cells and large proteins; tubules reabsorb and secrete to refine
+    urine.
   chapter: 3B · Main organ systems
 - id: bb-8
-  q:
-    zh: 氧化磷酸化直接依赖：
-    en: 'Oxidative phosphorylation directly depends on:'
+  q: 'Oxidative phosphorylation directly depends on:'
   choices:
-    A:
-      zh: 高尔基体囊泡运输
-      en: Golgi vesicle traffic
-    B:
-      zh: 线粒体内膜质子梯度驱动 ATP 合酶
-      en: Inner-membrane proton gradient driving ATP synthase
-    C:
-      zh: 细胞核转录
-      en: Nuclear transcription
-    D:
-      zh: 细胞骨架收缩
-      en: Cytoskeletal contraction
+    A: Golgi vesicle traffic
+    B: Inner-membrane proton gradient driving ATP synthase
+    C: Nuclear transcription
+    D: Cytoskeletal contraction
   answer: B
-  explain:
-    zh: ETC 泵出质子，ATP 合酶利用回流合成 ATP。
-    en: ETC pumps protons; ATP synthase uses the return flow to make ATP.
+  explain: ETC pumps protons; ATP synthase uses the return flow to make ATP.
   chapter: 1D · Bioenergetics and fuel metabolism

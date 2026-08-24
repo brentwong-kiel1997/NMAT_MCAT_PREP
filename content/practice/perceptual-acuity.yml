@@ -1,112 +1,52 @@
 slug: perceptual-acuity
 items:
 - id: perc-1
-  q:
-    zh: 镜像题中最关键的提醒是：
-    en: 'The key reminder on mirror-image items is:'
+  q: 'The key reminder on mirror-image items is:'
   choices:
-    A:
-      zh: 镜像等于旋转 180°
-      en: A mirror equals a 180° rotation
-    B:
-      zh: 左右镜像不等于旋转
-      en: Left–right mirroring is not the same as rotation
-    C:
-      zh: 可以忽略不对称点
-      en: Asymmetric features can be ignored
-    D:
-      zh: 只比较面积
-      en: Only compare area
+    A: A mirror equals a 180° rotation
+    B: Left–right mirroring is not the same as rotation
+    C: Asymmetric features can be ignored
+    D: Only compare area
   answer: B
-  explain:
-    zh: 镜像翻转左右关系；旋转保持手性方向不同。
-    en: Mirroring flips left–right; rotation is a different transform.
-  chapter: Mirror Image（镜像）
+  explain: Mirroring flips left–right; rotation is a different transform.
+  chapter: Mirror Image
 - id: perc-2
-  q:
-    zh: 隐藏图形题的有效策略是：
-    en: 'A useful strategy on hidden-figure items is to:'
+  q: 'A useful strategy on hidden-figure items is to:'
   choices:
-    A:
-      zh: 锁定目标外形轮廓，在复杂背景中逐段匹配
-      en: Lock onto the target outline and match segments in the clutter
-    B:
-      zh: 只看图形中心
-      en: Look only at the figure’s center
-    C:
-      zh: 忽略线条方向
-      en: Ignore line orientation
-    D:
-      zh: 闭一只眼一定更快
-      en: Closing one eye is always faster
+    A: Lock onto the target outline and match segments in the clutter
+    B: Look only at the figure’s center
+    C: Ignore line orientation
+    D: Closing one eye is always faster
   answer: A
-  explain:
-    zh: 局部轮廓匹配比整体扫视更抗干扰。
-    en: Piecewise outline matching beats unfocused whole-figure scanning.
-  chapter: Hidden Figure（隐藏图形）
+  explain: Piecewise outline matching beats unfocused whole-figure scanning.
+  chapter: Hidden Figure
 - id: perc-3
-  q:
-    zh: 判断两列信息是否“完全相同”时，应：
-    en: 'To decide whether two columns show identical information, you should:'
+  q: 'To decide whether two columns show identical information, you should:'
   choices:
-    A:
-      zh: 逐字符比对，注意易混字符（如 0/O）
-      en: Compare character by character, watching confusable glyphs (0/O)
-    B:
-      zh: 只看首尾字符
-      en: Check only first and last characters
-    C:
-      zh: 假设总相同
-      en: Assume they are always identical
-    D:
-      zh: 忽略标点
-      en: Ignore all punctuation
+    A: Compare character by character, watching confusable glyphs (0/O)
+    B: Check only first and last characters
+    C: Assume they are always identical
+    D: Ignore all punctuation
   answer: A
-  explain:
-    zh: 细微差异常藏在中间字符、标点或大小写。
-    en: Subtle differences often hide in middle characters, punctuation, or case.
-  chapter: Identical Information（相同信息）
+  explain: Subtle differences often hide in middle characters, punctuation, or case.
+  chapter: Identical Information
 - id: perc-4
-  q:
-    zh: 水平镜像与垂直镜像的区别是：
-    en: 'A horizontal mirror flip differs from a vertical flip because:'
+  q: 'A horizontal mirror flip differs from a vertical flip because:'
   choices:
-    A:
-      zh: 前者左右互换，后者上下互换
-      en: Horizontal swaps left–right; vertical swaps top–bottom
-    B:
-      zh: 二者完全相同
-      en: They are identical
-    C:
-      zh: 镜像等于平移
-      en: Mirroring equals translation
-    D:
-      zh: 只有颜色改变
-      en: Only color changes
+    A: Horizontal swaps left–right; vertical swaps top–bottom
+    B: They are identical
+    C: Mirroring equals translation
+    D: Only color changes
   answer: A
-  explain:
-    zh: 镜像轴方向决定翻转维度；均不同于旋转。
-    en: Mirror-axis orientation sets which axis flips; neither is the same as rotation.
-  chapter: Mirror Image（镜像）
+  explain: Mirror-axis orientation sets which axis flips; neither is the same as rotation.
+  chapter: Mirror Image
 - id: per-5
-  q:
-    zh: 镜像题中，竖直轴镜像主要改变：
-    en: 'In mirror items, a vertical-axis reflection mainly changes:'
+  q: 'In mirror items, a vertical-axis reflection mainly changes:'
   choices:
-    A:
-      zh: 上下位置
-      en: Up–down positions
-    B:
-      zh: 左右位置
-      en: Left–right positions
-    C:
-      zh: 颜色
-      en: Color
-    D:
-      zh: 边数
-      en: Number of sides
+    A: Up–down positions
+    B: Left–right positions
+    C: Color
+    D: Number of sides
   answer: B
-  explain:
-    zh: 竖直轴镜像左右对调；水平轴才上下对调。
-    en: Vertical-axis mirrors swap left–right; horizontal mirrors swap up–down.
-  chapter: Mirror Image（镜像）
+  explain: Vertical-axis mirrors swap left–right; horizontal mirrors swap up–down.
+  chapter: Mirror Image

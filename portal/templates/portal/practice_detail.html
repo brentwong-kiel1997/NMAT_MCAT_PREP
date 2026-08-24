@@ -1,16 +1,16 @@
 {% extends "portal/base.html" %}
 
-{% block title %}{{ label_en }} Practice · Gabay{% endblock %}
+{% block title %}{{ label }} Practice · Gabay{% endblock %}
 
 {% block body %}
 <div class="page-hero">
   <div class="page-hero-inner">
     {% include "portal/includes/nav.html" with solid=1 %}
-    <p class="section-kicker" data-i18n data-zh="练习" data-en="Practice">练习</p>
-    <h1><span class="only-zh">{{ label_zh }}</span><span class="only-en">{{ label_en }}</span></h1>
-    <p class="lead"><span class="only-zh">{{ items|length }} 题 · 选答后显示对错与解析。本地记录正确数。</span><span class="only-en">{{ items|length }} items · instant feedback. Correct counts stay on this device.</span></p>
+    <p class="section-kicker">Practice</p>
+    <h1>{{ label }}</h1>
+    <p class="lead">{{ items|length }} items · instant feedback. Correct counts stay on this device.</p>
     {% if back %}
-    <p><a href="{% url back.0 back.1 %}" data-i18n data-zh="← 回科目页" data-en="← Back to subject">← 回科目页</a></p>
+    <p><a href="{% url back.0 back.1 %}">← Back to subject</a></p>
     {% endif %}
   </div>
 </div>
@@ -18,31 +18,29 @@
 <section class="section">
   <div class="practice-shell" data-practice data-practice-key="gabay_practice_{{ slug }}" data-practice-subject="{{ slug }}">
     <div class="practice-status">
-      <span data-i18n data-zh="进度" data-en="Progress">进度</span>
+      <span>Progress</span>
       <strong class="practice-pos">1</strong> / <span class="practice-total">{{ items|length }}</span>
-      · <span class="only-zh">正确</span><span class="only-en">Correct</span>
+      · Correct
       <strong class="practice-score">0</strong>
     </div>
     <article class="practice-card">
       <p class="practice-chapter"></p>
-      <h2 class="practice-q only-zh"></h2>
-      <h2 class="practice-q only-en"></h2>
+      <h2 class="practice-q"></h2>
       <div class="practice-choices" role="group"></div>
       <div class="practice-feedback" hidden>
         <p class="practice-verdict"></p>
-        <p class="practice-explain only-zh"></p>
-        <p class="practice-explain only-en"></p>
+        <p class="practice-explain"></p>
       </div>
       <div class="practice-nav">
-        <button type="button" class="practice-prev" data-i18n data-zh="上一题" data-en="Previous">上一题</button>
-        <button type="button" class="practice-next btn btn-primary" data-i18n data-zh="下一题" data-en="Next">下一题</button>
+        <button type="button" class="practice-prev">Previous</button>
+        <button type="button" class="practice-next btn btn-primary">Next</button>
       </div>
     </article>
     <script type="application/json" class="practice-data">{{ items_json|safe }}</script>
   </div>
 
   <p class="note-line" style="margin-top:1.5rem;">
-    <span class="only-zh">其他练习：</span><span class="only-en">More sets: </span>
+    More sets: 
     {% for s in all_slugs %}
       <a href="{% url 'practice_detail' s %}">{{ s }}</a>{% if not forloop.last %} · {% endif %}
     {% endfor %}

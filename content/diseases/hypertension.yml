@@ -1,34 +1,35 @@
 slug: hypertension
 name: Essential Hypertension
-name_zh: 原发性高血压
-short: 多数高血压无单一病因；心脑血管事件的核心可改变危险因素。
+short: Most hypertension has no single cause; it is the leading modifiable risk factor for cardiovascular
+  and cerebrovascular events.
 systems:
 - Cardiovascular
 - Renal
 exams:
 - Enrichment
-exam_fit: 延伸阅读：服务生物学/病理生理直觉；NMAT 考纲是导论课不是临床诊疗；MCAT 可迁移机制，不考指南级用药方案。
-pathogen: 多因素：遗传、盐敏感、交感张力、RAAS、血管硬化
-transmission: 不适用。
+exam_fit: Extension reading serving biology/pathophysiology intuition; the NMAT syllabus is introductory
+  coursework, not clinical management; MCAT transfers the mechanisms, not guideline-level drug regimens.
+pathogen: 'Multifactorial: genetics, salt sensitivity, sympathetic tone, RAAS, vascular stiffening'
+transmission: Not applicable.
 pathophysiology:
-- 心输出量与外周阻力失衡；长期导致血管重构。
-- RAAS：肾素 → 血管紧张素 II → 醛固酮 → 保钠与血管收缩。
-- 靶器官：心（LVH）、脑、肾、视网膜、血管。
+- Imbalance between cardiac output and peripheral resistance; chronic elevation drives vascular remodeling.
+- 'RAAS: renin → angiotensin II → aldosterone → sodium retention and vasoconstriction.'
+- 'Target organs: heart (LVH), brain, kidney, retina, vasculature.'
 clinical:
-- 多数无症状（silent）；头痛并非可靠标志。
-- 急症：极高血压伴急性靶器官损害（脑病、ACS、肺水肿等）。
-- 长期：卒中、心衰、CKD、PAD。
+- Usually asymptomatic ("silent"); headache is not a reliable marker.
+- 'Emergency: markedly elevated BP with acute target-organ damage (encephalopathy, ACS, pulmonary edema).'
+- 'Long term: stroke, heart failure, CKD, PAD.'
 diagnosis:
-- 重复、规范测量；诊室与动态血压相互印证。
-- 继发性线索：年轻起病、低钾、腹部杂音、阵发三联征等。
+- Repeated, standardized measurement; office and ambulatory readings corroborate each other.
+- 'Secondary clues: young onset, hypokalemia, abdominal bruit, paroxysmal episodes.'
 treatment:
-- 限盐、减重、运动、限酒。
-- 一线药类：ACEI/ARB、CCB、噻嗪类利尿剂（个体化）。
-- 合并糖尿病/CKD 常优先 ACEI/ARB（考点）。
+- Salt restriction, weight loss, exercise, alcohol moderation.
+- 'First-line classes: ACEI/ARB, CCB, thiazide diuretic (individualized).'
+- With diabetes/CKD, ACEI/ARB are often preferred (exam favorite).
 high_yield:
-- BP = CO × TPR——公式级理解题。
-- ACEI：干咳、高钾、血管性水肿；妊娠禁忌。
-- 原发性占绝大多数；先想常见，再筛继发。
-- MCAT：稳态、负反馈与内分泌轴。
-mcat_bridge: 循环生理、激素调节与稳态。
-nmat_bridge: 心血管药理与靶器官损害路径。
+- BP = CO × TPR — formula-level understanding questions.
+- 'ACEI: dry cough, hyperkalemia, angioedema; contraindicated in pregnancy.'
+- Essential (primary) disease dominates — think common causes first, then screen for secondary.
+- 'MCAT angle: homeostasis, negative feedback, and endocrine axes.'
+mcat_bridge: Circulatory physiology, hormonal regulation, and homeostasis.
+nmat_bridge: Cardiovascular pharmacology and target-organ damage pathways.

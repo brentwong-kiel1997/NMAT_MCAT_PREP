@@ -1,101 +1,64 @@
 slug: biology
 name: Biology
-name_zh: 生物学
 exams:
 - NMAT
 - MCAT
-summary:
-  zh: 细胞、遗传、稳态、生态与生命过程；两边都会考，深度与题型不同。
-  en: Cells, genetics, homeostasis, ecology, life processes — both exams, different depth/item style.
-nmat_role:
-  zh: NMAT Part 2 · Biology（30 题）
-  en: NMAT Part 2 · Biology (30 items)
-mcat_role:
-  zh: MCAT Bio/Biochem 主体，并少量出现在 Chem/Phys
-  en: Core of MCAT Bio/Biochem; also appears lightly in Chem/Phys
-source_note:
-  zh: NMAT 章节标题直接取自 CEM BOI Part 2 Biology；MCAT 侧列出与生物重叠的 AAMC Content Categories。
-  en: NMAT chapter titles from CEM BOI Part 2 Biology; MCAT lists overlapping AAMC Content Categories.
+summary: Cells, genetics, homeostasis, ecology, life processes — both exams, different depth/item style.
+nmat_role: NMAT Part 2 · Biology (30 items)
+mcat_role: Core of MCAT Bio/Biochem; also appears lightly in Chem/Phys
+source_note: NMAT chapter titles from CEM BOI Part 2 Biology; MCAT lists overlapping AAMC Content Categories.
 exam_notes:
-  NMAT:
-    zh: 对标大学导论级生物学；偏概念与综合认知（理解、应用、分析）。
-    en: Aligned to intro biology; concepts plus understanding/applying/analyzing.
-  MCAT:
-    zh: 与生物化学交织；大量篇章题，强调实验设计与数据推理。
-    en: Interwoven with biochem; many passage items; research design and data reasoning.
+  NMAT: Aligned to intro biology; concepts plus understanding/applying/analyzing.
+  MCAT: Interwoven with biochem; many passage items; research design and data reasoning.
 chapters:
-- heading:
-    zh: NMAT · CEM BOI 章节
-    en: NMAT · CEM BOI chapters
+- heading: NMAT · CEM BOI chapters
   items:
   - title: Unity and Diversity of Life
     points:
-    - zh: 生命的统一性与多样性
-      en: Unity and diversity of life
-    - zh: 分类与演化导论概念
-      en: Intro ideas in classification and evolution
+    - Unity and diversity of life
+    - Intro ideas in classification and evolution
   - title: Cells and Cellular Processes
     points:
-    - zh: 细胞结构与功能
-      en: Cell structure and function
-    - zh: 细胞过程（代谢、膜转运等导论级）
-      en: Cellular processes (intro metabolism, membrane transport, etc.)
+    - Cell structure and function
+    - Cellular processes (intro metabolism, membrane transport, etc.)
   - title: Genetics
     points:
-    - zh: 遗传信息传递
-      en: Transmission of genetic information
-    - zh: 变异与遗传规律导论
-      en: Intro variation and inheritance patterns
+    - Transmission of genetic information
+    - Intro variation and inheritance patterns
   - title: The World of Plants and Animals
     points:
-    - zh: 植物与动物世界导论
-      en: Intro world of plants and animals
-    - zh: 比较结构/功能常见考点
-      en: Common structure/function comparison points
+    - Intro world of plants and animals
+    - Common structure/function comparison points
   - title: Development
     points:
-    - zh: 发育过程基本概念
-      en: Basic developmental concepts
+    - Basic developmental concepts
   - title: 'Life Processes: Regulation and Homeostasis'
     points:
-    - zh: 调节与稳态
-      en: Regulation and homeostasis
-    - zh: 内环境维持
-      en: Maintaining the internal environment
+    - Regulation and homeostasis
+    - Maintaining the internal environment
   - title: Organisms and Their Environment
     points:
-    - zh: 生物与环境
-      en: Organisms and their environment
-    - zh: 生态关系导论
-      en: Intro ecological relationships
-- heading:
-    zh: MCAT · 相关 Content Categories（AAMC）
-    en: MCAT · related Content Categories (AAMC)
+    - Organisms and their environment
+    - Intro ecological relationships
+- heading: MCAT · related Content Categories (AAMC)
   items:
   - title: 1C · Heritable information & genetic diversity
     points:
-    - zh: 跨代遗传
-      en: Transmission across generations
-    - zh: 增加遗传多样性的过程
-      en: Processes that increase genetic diversity
+    - Transmission across generations
+    - Processes that increase genetic diversity
   - title: 2A · Assemblies of molecules, cells, and cell groups
     points:
-    - zh: 单细胞与多细胞组装层次
-      en: Organization from single cells to multicellular assemblies
+    - Organization from single cells to multicellular assemblies
   - title: 2B · Prokaryotes and viruses
     points:
-    - zh: 结构、生长、生理与遗传
-      en: Structure, growth, physiology, and genetics
+    - Structure, growth, physiology, and genetics
   - title: 2C · Cell division, differentiation, specialization
     points:
-    - zh: 分裂、分化与特化
-      en: Division, differentiation, and specialization
+    - Division, differentiation, and specialization
   - title: 3A · Nervous & endocrine coordination
     points:
-    - zh: 神经/内分泌如何协调器官系统
-      en: How nervous/endocrine systems coordinate organs
+    - How nervous/endocrine systems coordinate organs
   - title: 3B · Main organ systems
     points:
-    - zh: 主要器官系统的结构与整合功能
-      en: Structure and integrative functions of major organ systems
+    - Structure and integrative functions of major organ systems
 kind: shared

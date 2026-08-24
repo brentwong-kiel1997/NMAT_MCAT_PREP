@@ -1,134 +1,62 @@
 slug: quantitative
 items:
 - id: quant-1
-  q:
-    zh: 资料判读第一步通常是：
-    en: 'Data-interpretation items usually start by:'
+  q: 'Data-interpretation items usually start by:'
   choices:
-    A:
-      zh: 先算再看题
-      en: Computing before reading the question
-    B:
-      zh: 读轴、图例与单位
-      en: Reading axes, legend, and units
-    C:
-      zh: 忽略标题
-      en: Ignoring the title
-    D:
-      zh: 只看最大数字
-      en: Looking only at the largest number
+    A: Computing before reading the question
+    B: Reading axes, legend, and units
+    C: Ignoring the title
+    D: Looking only at the largest number
   answer: B
-  explain:
-    zh: 轴与单位决定数字含义。
-    en: Axes and units define what numbers mean.
-  chapter: Data Interpretation（资料判读）
+  explain: Axes and units define what numbers mean.
+  chapter: Data Interpretation
 - id: quant-2
-  q:
-    zh: 算式 15% of 80 等于：
-    en: '15% of 80 equals:'
+  q: '15% of 80 equals:'
   choices:
-    A:
-      zh: '12'
-      en: '12'
-    B:
-      zh: '8'
-      en: '8'
-    C:
-      zh: '15'
-      en: '15'
-    D:
-      zh: '120'
-      en: '120'
+    A: '12'
+    B: '8'
+    C: '15'
+    D: '120'
   answer: A
-  explain:
-    zh: 0.15 × 80 = 12。
-    en: 0.15 × 80 = 12.
-  chapter: Fundamental Operations（基本运算）
+  explain: 0.15 × 80 = 12.
+  chapter: Fundamental Operations
 - id: quant-3
-  q:
-    zh: 火车以 60 km/h 行驶 2.5 小时，路程为：
-    en: 'A train at 60 km/h for 2.5 hours travels:'
+  q: 'A train at 60 km/h for 2.5 hours travels:'
   choices:
-    A:
-      zh: 150 km
-      en: 150 km
-    B:
-      zh: 120 km
-      en: 120 km
-    C:
-      zh: 62.5 km
-      en: 62.5 km
-    D:
-      zh: 240 km
-      en: 240 km
+    A: 150 km
+    B: 120 km
+    C: 62.5 km
+    D: 240 km
   answer: A
-  explain:
-    zh: 路程 = 速度 × 时间 = 60 × 2.5 = 150 km。
-    en: Distance = rate × time = 60 × 2.5 = 150 km.
-  chapter: Problem Solving（应用题）
+  explain: Distance = rate × time = 60 × 2.5 = 150 km.
+  chapter: Problem Solving
 - id: quant-4
-  q:
-    zh: 条形图显示三年销量上升，最稳妥结论是：
-    en: 'If a bar chart shows rising sales over three years, the safest conclusion is:'
+  q: 'If a bar chart shows rising sales over three years, the safest conclusion is:'
   choices:
-    A:
-      zh: 这三年销量呈上升趋势（在图表范围内）
-      en: Sales trend upward over those three years (within the chart’s scope)
-    B:
-      zh: 未来永远上升
-      en: Sales will rise forever
-    C:
-      zh: 利润必然翻倍
-      en: Profit must have doubled
-    D:
-      zh: 样本代表全球
-      en: The sample represents the whole world
+    A: Sales trend upward over those three years (within the chart’s scope)
+    B: Sales will rise forever
+    C: Profit must have doubled
+    D: The sample represents the whole world
   answer: A
-  explain:
-    zh: 资料题结论不能超出图表时间与变量；避免过度外推。
-    en: Data items cannot exceed the chart’s time frame and variables—avoid over-extrapolation.
-  chapter: Data Interpretation（资料判读）
+  explain: Data items cannot exceed the chart’s time frame and variables—avoid over-extrapolation.
+  chapter: Data Interpretation
 - id: quan-5
-  q:
-    zh: 一组数 2, 3, 3, 100 的中位数是：
-    en: 'For 2, 3, 3, 100 the median is:'
+  q: 'For 2, 3, 3, 100 the median is:'
   choices:
-    A:
-      zh: '2'
-      en: '2'
-    B:
-      zh: '3'
-      en: '3'
-    C:
-      zh: '27'
-      en: '27'
-    D:
-      zh: '100'
-      en: '100'
+    A: '2'
+    B: '3'
+    C: '27'
+    D: '100'
   answer: B
-  explain:
-    zh: 偶数个数据取中间两数平均：(3+3)/2=3。
-    en: 'Even count: average the two middle values (3+3)/2=3.'
+  explain: 'Even count: average the two middle values (3+3)/2=3.'
   chapter: Probability and Basic Statistics
 - id: quan-6
-  q:
-    zh: 若 x/3 = 12/9，则 x =
-    en: If x/3 = 12/9, then x =
+  q: If x/3 = 12/9, then x =
   choices:
-    A:
-      zh: '3'
-      en: '3'
-    B:
-      zh: '4'
-      en: '4'
-    C:
-      zh: '9'
-      en: '9'
-    D:
-      zh: '36'
-      en: '36'
+    A: '3'
+    B: '4'
+    C: '9'
+    D: '36'
   answer: B
-  explain:
-    zh: 交叉相乘：9x=36 → x=4。
-    en: 'Cross-multiply: 9x=36 → x=4.'
+  explain: 'Cross-multiply: 9x=36 → x=4.'
   chapter: Arithmetic and Number Sense

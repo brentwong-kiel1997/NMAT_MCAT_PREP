@@ -1,7 +1,6 @@
 slug: bio-biochem
 name: Biological and Biochemical Foundations of Living Systems
 short: Bio/Biochem
-name_zh: 生物与生化基础
 unique: false
 questions: 59
 time: 95 minutes
@@ -10,67 +9,46 @@ shared_links:
 - biochemistry
 - chemistry
 discipline_mix:
-- Introductory biology ~65%（备考分解）
-- First-semester biochemistry ~25%（备考分解）
-- General chemistry ~5%（备考分解）
-- Organic chemistry ~5%（备考分解）
-- AAMC FC1 ~55% / FC2 ~20% / FC3 ~25%（该科内）
-focus:
-  zh: 生命系统中的生物与生化，强调过程、实验与数据。
-  en: Biology/biochem in living systems — processes, experiments, and data.
-source_note:
-  zh: 章节 = AAMC Foundational Concepts 1–3 及全部 Content Categories。
-  en: Chapters = AAMC Foundational Concepts 1–3 and all Content Categories.
+- Introductory biology ~65% (study-prep breakdown)
+- First-semester biochemistry ~25% (study-prep breakdown)
+- General chemistry ~5% (study-prep breakdown)
+- Organic chemistry ~5% (study-prep breakdown)
+- AAMC FC1 ~55% / FC2 ~20% / FC3 ~25% (within this section)
+focus: Biology/biochem in living systems — processes, experiments, and data.
+source_note: Chapters = AAMC Foundational Concepts 1–3 and all Content Categories.
 chapters:
-- heading:
-    zh: Foundational Concept 1（约 55%）
-    en: Foundational Concept 1 (~55%)
+- heading: Foundational Concept 1 (~55%)
   items:
   - title: 1A · Proteins and amino acids
     points:
-    - zh: 蛋白质及其组成氨基酸的结构与功能
-      en: Structure and function of proteins and their amino acids
+    - Structure and function of proteins and their amino acids
   - title: 1B · Gene to protein
     points:
-    - zh: 遗传信息从基因到蛋白质的传递
-      en: Transmission of genetic information from gene to protein
+    - Transmission of genetic information from gene to protein
   - title: 1C · Heritable information & diversity
     points:
-    - zh: 跨代遗传与增加遗传多样性的过程
-      en: Heritable transmission and processes that increase diversity
+    - Heritable transmission and processes that increase diversity
   - title: 1D · Bioenergetics and fuel metabolism
     points:
-    - zh: 生物能学与燃料分子代谢
-      en: Bioenergetics and fuel molecule metabolism
-- heading:
-    zh: Foundational Concept 2（约 20%）
-    en: Foundational Concept 2 (~20%)
+    - Bioenergetics and fuel molecule metabolism
+- heading: Foundational Concept 2 (~20%)
   items:
   - title: 2A · Assemblies of molecules, cells, cell groups
     points:
-    - zh: 分子、细胞与细胞群的组装
-      en: Assemblies of molecules, cells, and cell groups
+    - Assemblies of molecules, cells, and cell groups
   - title: 2B · Prokaryotes and viruses
     points:
-    - zh: 原核生物与病毒的结构、生长、生理与遗传
-      en: Structure, growth, physiology, and genetics of prokaryotes and viruses
+    - Structure, growth, physiology, and genetics of prokaryotes and viruses
   - title: 2C · Division, differentiation, specialization
     points:
-    - zh: 细胞分裂、分化与特化
-      en: Cell division, differentiation, and specialization
-- heading:
-    zh: Foundational Concept 3（约 25%）
-    en: Foundational Concept 3 (~25%)
+    - Cell division, differentiation, and specialization
+- heading: Foundational Concept 3 (~25%)
   items:
   - title: 3A · Nervous and endocrine systems
     points:
-    - zh: 神经与内分泌系统如何协调器官系统
-      en: How nervous and endocrine systems coordinate organ systems
+    - How nervous and endocrine systems coordinate organ systems
   - title: 3B · Main organ systems
     points:
-    - zh: 主要器官系统的结构与整合功能
-      en: Structure and integrative functions of major organ systems
-summary:
-  zh: 生命系统中的生物与生化，强调过程、实验与数据。
-  en: Biology/biochem in living systems — processes, experiments, and data.
+    - Structure and integrative functions of major organ systems
+summary: Biology/biochem in living systems — processes, experiments, and data.
 kind: mcat

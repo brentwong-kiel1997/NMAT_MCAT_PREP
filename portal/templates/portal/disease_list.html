@@ -7,8 +7,8 @@
   <div class="page-hero-inner">
     {% include "portal/includes/nav.html" with solid=1 %}
     <p class="section-kicker">Disease library</p>
-    <h1 data-i18n data-zh="疾病库" data-en="Disease library">疾病库</h1>
-    <p class="lead" data-i18n data-zh="延伸阅读：机制与临床框架。不是 NMAT 官方分科考纲。" data-en="Enrichment reading: mechanisms and clinical frames — not an official NMAT subtest map.">延伸阅读：机制与临床框架。不是 NMAT 官方分科考纲。</p>
+    <h1>Disease library</h1>
+    <p class="lead">Enrichment reading: mechanisms and clinical frames — not an official NMAT subtest map.</p>
   </div>
 </div>
 
@@ -18,14 +18,14 @@
     <li>
       <a href="{% url 'disease_detail' d.slug %}">
         <div>
-          <h3>{{ d.name }} <span class="muted-inline only-zh">{{ d.name_zh }}</span></h3>
+          <h3>{{ d.name }}</h3>
           <p>{{ d.short }}</p>
         </div>
         <span class="disease-meta">{{ d.systems|join:" / " }}</span>
       </a>
     </li>
     {% empty %}
-    <li><p data-i18n data-zh="暂无疾病条目。" data-en="No disease entries yet.">暂无疾病条目。</p></li>
+    <li><p>No disease entries yet.</p></li>
     {% endfor %}
   </ul>
 </section>

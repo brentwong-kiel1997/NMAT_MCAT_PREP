@@ -1,56 +1,86 @@
-# Gabay — NMAT（菲律宾医学院入学）与 MCAT 备考个人助手
+# Gabay — personal NMAT & MCAT study companion
 
-## 本地结构
+A single-learner Django site for preparing for both the Philippine NMAT (CEM)
+and the US MCAT (AAMC): curriculum outlines, high-yield notes, practice MCQs,
+a materials desk (glossary / formulas / tips / paths / checklists), a disease
+library for mechanism reading, and a MiniMax-M3 study coach grounded in the
+current subject's outline. All content and UI are English.
 
-- 工作仓库：`/home/ubuntu/django-wsgi`
-- 裸仓库（自动部署）：`/home/ubuntu/repos/django-wsgi.git`
-- 线上检出：`/home/ubuntu/deploy/django-wsgi`
-- 站点：`https://<host>:8888/`（HTTPS + Basic Auth）
+## Layout
 
-## 当前内容
+- Working repository: `/home/ubuntu/django-wsgi`
+- Bare repo (deploy source): `/home/ubuntu/repos/django-wsgi.git`
+- Live checkout: `/home/ubuntu/deploy/django-wsgi`
+- Site: `https://<host>:8888/` (HTTPS + Basic Auth)
+- Curriculum content lives in `content/` as YAML — see `content/README.md`
+  (a standalone, deployment-agnostic description of the content pack)
 
-首页、科目大纲与高收益笔记、练习题、教材资料台（术语 / 公式 / 策略 / 清单）、疾病库、MiniMax-M3 学习教练。
+## Configuration (.env)
 
-## 配置（.env）
-
-密钥从 `.env` 文件读取，不再依赖导出环境变量。复制模板后填值：
+Secrets are read from a `.env` file, never from exported environment
+variables. Copy the template and fill it in:
 
 ```bash
 cp .env.example .env && chmod 600 .env
-python manage.py env_status   # 查看命中的文件与遮罩后的值
+python manage.py env_status   # shows which file supplies each key, masked
 ```
 
-查找顺序：`GABAY_ENV_FILE` → `<仓库>/.env` → `/home/ubuntu/runtime/.env` → `/home/ubuntu/runtime/secrets/minimax.env`。
-`.env` 已被 gitignore；改动即时生效，无需重启 Gunicorn。
+Lookup order: `GABAY_ENV_FILE` → `<repo>/.env` → `/home/ubuntu/runtime/.env` →
+`/home/ubuntu/runtime/secrets/minimax.env`. `.env` is gitignored; changes take
+effect on the next request without restarting Gunicorn.
 
-## 教材内容（content/）
+## Databases
 
-知识内容的唯一源是 `content/` 目录里的 YAML 文件（科目大纲、章节笔记、练习题、术语 / 公式 / 策略 / 清单、疾病库、考试结构），由 `portal/content.py` 按文件 mtime 缓存直接读取——改完文件，下一个请求即生效，无需重建数据库。双语统一写 `{zh: …, en: …}`（中英相同就写标量）。
+One SQLite file, `users.sqlite3` under `/home/ubuntu/runtime/django-wsgi/`:
+Django auth/sessions plus learner progress (`LearnerProfile`,
+`ChapterProgress`, `PracticeAttempt`). Curriculum knowledge is NOT in a
+database — it is read from `content/*.yml` at runtime by `portal/content.py`
+(mtime-cached, so edits apply on the next request).
 
-改教材的流程：
+## Curriculum content (content/)
+
+Edit the YAML, validate, commit, push:
 
 ```bash
-# 1. 改 content/**/*.yml（顺手可跑 python manage.py validate_content 自检）
+# edit content/**/*.yml
+python manage.py validate_content     # optional local self-check
+python manage.py refresh_manifest     # regenerate MANIFEST.json (commit it too)
 git add content/ && git commit -m "..."
-git push origin main     # 约 2 分钟自动部署；validate_content 会在部署时把关
+git push origin main
 ```
 
-目录速查：`content/subjects/`（科目+大纲）、`content/notes/`（章节笔记，规范桶，跨科共享由读取器复刻）、`content/practice/`（题目）、`content/materials/`（术语/公式/策略/路径/清单）、`content/diseases/`、`content/exams/`（NMAT/MCAT 结构）、`content/catalog.yml`（顺序与标签）。
+`validate_content` also runs as a deploy gate. Stability rules (subject slugs,
+question ids, chapter order/titles drive learner-progress keys) are documented
+in `content/README.md`.
 
-稳定性约束：`subject_slug`、题目 `id`、章节顺序（决定 `chapter_id`）不能随意改动——学习进度用它们做关联键。`manage.py validate_content` 会在部署时校验这些并对照 MANIFEST.json。
+## Pushing and auto-deploy
 
-## 推送与自动部署
-
-自动部署**优先本地库，其次远端仓库**：`scripts/poll_github.sh` 由 cron 每 2 分钟运行一次——若本地裸仓的 main 上有 GitHub 还没有的提交（`git push deploy main` 推上去的），优先部署它们；否则跟随 GitHub 的 `origin/main`（NMAT_MCAT_PREP）。
+Auto-deploy prefers the local bare repo, then the remote:
+`scripts/poll_github.sh` runs from cron every 2 minutes — if the local bare
+repo holds commits the remote does not have (pushed via `git push deploy
+main`), those win and are never rolled back; otherwise it follows
+`origin/main` (GitHub).
 
 ```bash
 cd /home/ubuntu/django-wsgi
 git add -A && git commit -m "..."
-git push deploy main    # 本地裸仓：立即触发 post-receive 部署（优先通道）
-git push origin main    # GitHub 备份；只推这里的话约 2 分钟内轮询自动部署
+git push deploy main    # local bare repo: immediate post-receive deploy (preferred channel)
+git push origin main    # GitHub backup; polling deploys it within ~2 min
 ```
 
-- 轮询永远不会把本地独有部署回滚到 GitHub 的旧 tip；GitHub 只在追上本地后接管
-- 等不及轮询时可手动触发：`scripts/poll_github.sh`
-- 轮询日志（标注每次部署来自 local/github）：`/home/ubuntu/runtime/django-wsgi/logs/poll_github.log`
-- 部署失败会在下一个轮询周期自动重试（状态只在部署成功后才前进）
+- The poller never rolls a local-only deployment back to an older remote tip;
+  the remote takes over once it has caught up
+- Impatient? Run `scripts/poll_github.sh` manually
+- Poll log (each deploy tagged local/github):
+  `/home/ubuntu/runtime/django-wsgi/logs/poll_github.log`
+- Failed deploys retry on the next tick (state advances only on success)
+
+## Handy commands
+
+```bash
+python manage.py validate_content    # content gate (also runs during deploy)
+python manage.py refresh_manifest    # after editing content files
+python manage.py crawl_pages --out DIR --login   # crawl all pages (normalized HTML)
+python manage.py db_status           # user DB path + tables
+python manage.py env_status          # .env lookup + masked values
+```

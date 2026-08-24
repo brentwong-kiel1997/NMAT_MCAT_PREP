@@ -6,24 +6,24 @@
 <div class="page-hero">
   <div class="page-hero-inner">
     {% include "portal/includes/nav.html" with solid=1 %}
-    <p class="section-kicker"><a href="{% url 'materials_hub' %}" data-i18n data-zh="教材" data-en="Materials">教材</a></p>
-    <h1 data-i18n data-zh="术语表" data-en="Glossary">术语表</h1>
-    <p class="lead" data-i18n data-zh="高收益概念速查。中英可切换；支持关键词与科目筛选。" data-en="High-yield concepts. Toggle ZH/EN; search and filter by subject.">高收益概念速查。中英可切换；支持关键词与科目筛选。</p>
+    <p class="section-kicker"><a href="{% url 'materials_hub' %}">Materials</a></p>
+    <h1>Glossary</h1>
+    <p class="lead">High-yield concepts. Toggle ZH/EN; search and filter by subject.</p>
   </div>
 </div>
 
 <section class="section">
   <form class="auth-form" method="get" action="{% url 'materials_glossary' %}" style="margin-bottom:1rem;">
     <label>
-      <span data-i18n data-zh="搜索" data-en="Search">搜索</span>
-      <input type="search" name="q" value="{{ q }}" placeholder="Km / 稳态 / Doppler…">
+      <span>Search</span>
+      <input type="search" name="q" value="{{ q }}" placeholder="Km / homeostasis / Doppler…">
     </label>
     {% if subject %}<input type="hidden" name="subject" value="{{ subject }}">{% endif %}
-    <button class="btn btn-primary" type="submit" data-i18n data-zh="查找" data-en="Find">查找</button>
+    <button class="btn btn-primary" type="submit">Find</button>
   </form>
 
   <nav class="materials-filters" aria-label="Subject filter">
-    <a href="{% url 'materials_glossary' %}{% if q %}?q={{ q|urlencode }}{% endif %}" class="{% if not subject %}is-active{% endif %}" data-i18n data-zh="全部" data-en="All">全部</a>
+    <a href="{% url 'materials_glossary' %}{% if q %}?q={{ q|urlencode }}{% endif %}" class="{% if not subject %}is-active{% endif %}">All</a>
     {% for s in subject_filters %}
     <a href="{% url 'materials_glossary' %}?subject={{ s }}{% if q %}&amp;q={{ q|urlencode }}{% endif %}" class="{% if subject == s %}is-active{% endif %}">{{ s }}</a>
     {% endfor %}
@@ -32,11 +32,11 @@
   <ul class="glossary-list">
     {% for t in terms %}
     <li>
-      <h3>{{ t.term }}{% if t.term_zh %} <span class="muted-inline only-zh">{{ t.term_zh }}</span>{% endif %}</h3>
-      <p><span class="only-zh">{{ t.def_zh }}</span><span class="only-en">{{ t.def_en }}</span></p>
+      <h3>{{ t.term }}</h3>
+      <p>{{ t.def }}</p>
     </li>
     {% empty %}
-    <li><p data-i18n data-zh="没有匹配词条。" data-en="No matching terms.">没有匹配词条。</p></li>
+    <li><p>No matching terms.</p></li>
     {% endfor %}
   </ul>
 </section>

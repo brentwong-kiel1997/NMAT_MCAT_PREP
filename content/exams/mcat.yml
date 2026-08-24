@@ -1,16 +1,11 @@
 slug: mcat
 name: MCAT
 full_name: Medical College Admission Test
-name_zh: 北美医学院入学考试
 admin: AAMC
-format:
-  zh: 四个官方科目；科学三科各 59 题 / 95 分钟，CARS 53 题 / 90 分钟。考试日顺序固定。
-  en: Four official sections; three science sections 59 Q / 95 min; CARS 53 Q / 90 min; fixed test-day
-    order.
-discipline_mix_note:
-  zh: 学科百分比为常见备考分解；Foundational Concept 占比取自 AAMC What’s on the MCAT（约到 5%，不同卷会浮动）。
-  en: Discipline % from common prep breakdowns; FC shares from AAMC What’s on the MCAT (~5%, form-to-form
-    variation).
+format: Four official sections; three science sections 59 Q / 95 min; CARS 53 Q / 90 min; fixed test-day
+  order.
+discipline_mix_note: Discipline % from common prep breakdowns; FC shares from AAMC What’s on the MCAT
+  (~5%, form-to-form variation).
 section_refs:
 - bio-biochem
 - cars

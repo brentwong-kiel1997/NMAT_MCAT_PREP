@@ -23,50 +23,51 @@ def build_curriculum_context(
     unique = exams.get_nmat_unique(subject_slug) if subject_slug else None
     section = exams.get_mcat_section(section_slug) if section_slug else None
 
+    def outline(entity: dict, header: str) -> None:
+        chunks.append(header)
+        for group in entity.get("chapters", []):
+            chunks.append(f"[{group['heading']}]")
+            for item in group["items"]:
+                mark = "  <- current chapter" if chapter_title and chapter_title == item["title"] else ""
+                points = "; ".join(item.get("points") or [])
+                chunks.append(f"- {item['title']}{mark}: {points}")
+
     if shared:
-        chunks.append(f"共用科目：{shared['name']}（{shared['name_zh']}）")
-        chunks.append(f"定位：{shared['summary']}")
-        for group in shared.get("chapters", []):
-            chunks.append(f"[{group['heading']}]")
-            for item in group["items"]:
-                mark = " ← 当前章节" if chapter_title and chapter_title == item["title"] else ""
-                points = "；".join(item.get("points") or [])
-                chunks.append(f"- {item['title']}{mark}: {points}")
-
+        outline(shared, f"Shared subject: {shared['name']}")
+        chunks.insert(1, f"Positioning: {shared.get('summary', '')}")
     if unique:
-        chunks.append(f"NMAT Part 1 独有科：{unique['name']}（{unique['name_zh']}）")
-        chunks.append(f"定位：{unique['focus']}")
-        for group in unique.get("chapters", []):
-            chunks.append(f"[{group['heading']}]")
-            for item in group["items"]:
-                mark = " ← 当前章节" if chapter_title and chapter_title == item["title"] else ""
-                points = "；".join(item.get("points") or [])
-                chunks.append(f"- {item['title']}{mark}: {points}")
-
+        outline(unique, f"NMAT Part 1 subject: {unique['name']}")
+        chunks.insert(1, f"Positioning: {unique.get('focus', '')}")
     if section:
-        chunks.append(f"MCAT 科目：{section['short']} — {section['name']}")
-        chunks.append(f"定位：{section['focus']}")
-        for group in section.get("chapters", []):
-            chunks.append(f"[{group['heading']}]")
-            for item in group["items"]:
-                mark = " ← 当前章节" if chapter_title and chapter_title == item["title"] else ""
-                points = "；".join(item.get("points") or [])
-                chunks.append(f"- {item['title']}{mark}: {points}")
+        outline(
+            section,
+            f"MCAT section: {section.get('short', section['name'])} — {section['name']}",
+        )
+        chunks.insert(1, f"Positioning: {section.get('focus', '')}")
 
     if not chunks:
-        chunks.append("通用 NMAT / MCAT 备考辅导。优先依据 Gabay 站点已列出的科目章节。")
+        chunks.append(
+            "General NMAT / MCAT coaching. Prefer the subjects and chapters "
+            "listed on the Gabay site."
+        )
 
     return "\n".join(chunks)
 
 
-SYSTEM_PROMPT = """你是 Gabay 备考教练，服务用户同时准备菲律宾 NMAT（CEM）与北美 MCAT（AAMC）。
-规则：
-1. 紧扣用户当前科目/章节大纲作答；超出大纲时明确说“超纲”，并把它映射回最近的官方章节。
-2. 区分考试：NMAT Part 2 是大学导论深度；MCAT 是篇章推理 + 基础科学；不要把临床指南级细节当成 NMAT 必考。
-3. 讲解先给直觉，再给机制，最后给易错点；默认用中文，专有名词保留英文。
-4. 出题时一次只出一题，等待用户作答；用户作答后再给解析。
-5. 不要编造 CEM/AAMC 不存在的“官方百分比”或假考点；不确定就说不确定。
-6. 回答简洁、可执行，适合刷题间隙阅读。"""
+SYSTEM_PROMPT = """You are the Gabay study coach. The user is preparing for both the
+Philippine NMAT (CEM) and the US MCAT (AAMC).
+Rules:
+1. Answer strictly within the user's current subject/chapter outline; if a question is
+   outside it, say so explicitly and map it back to the nearest official chapter.
+2. Distinguish the exams: NMAT Part 2 is introductory-college depth; the MCAT is
+   passage-based reasoning over foundational science. Do not treat guideline-level
+   clinical detail as NMAT testable material.
+3. Explain intuition first, then mechanism, then common pitfalls. Use standard
+   technical terms.
+4. When quizzing, ask exactly one question at a time and wait for the answer; grade
+   and explain only after the user responds.
+5. Never invent "official" CEM/AAMC percentages or fake topics; say when unsure.
+6. Keep answers concise and actionable, suitable for reading between drills."""
 
 
 def tutor_messages(
@@ -77,32 +78,38 @@ def tutor_messages(
     chapter_title: str = "",
 ) -> list[dict]:
     mode = (mode or "ask").lower()
-    chapter_line = f"当前章节：{chapter_title}" if chapter_title else "当前章节：未指定（按整科辅导）"
+    chapter_line = (
+        f"Current chapter: {chapter_title}"
+        if chapter_title
+        else "Current chapter: none specified (coach the whole subject)"
+    )
 
     if mode == "explain":
         task = (
-            "请讲解当前章节：先 3–5 条核心概念，再给一个迷你例子，最后给 2 个易错点。"
-            "不要出题。"
+            "Explain the current chapter: 3–5 core concepts first, then one mini "
+            "example, then 2 common pitfalls. Do not quiz."
         )
     elif mode == "quiz":
         task = (
-            "请出一道贴合当前章节的单选题（A–D）。"
-            "只输出：题干、四个选项、并在最后一行写“请选择 A/B/C/D”。"
-            "不要在同一条消息里公布答案。"
+            "Write one single-best-answer multiple-choice question (A–D) that fits "
+            "the current chapter. Output only the stem, the four options, and a "
+            "final line reading 'Choose A/B/C/D'. Do not reveal the answer in the "
+            "same message."
         )
     elif mode == "grade":
         task = (
-            "用户正在回答上一道练习题。请判断对错，给出正确选项与简短解析，"
-            "并指出对应到大纲中的哪个知识点。"
+            "The user is answering the previous practice question. Judge correct or "
+            "incorrect, give the right option with a short explanation, and point to "
+            "the outline concept it maps to."
         )
     else:
-        task = "回答用户关于当前科目/章节的问题，必要时用类比。"
+        task = "Answer the user's question about the current subject/chapter, with analogies where they help."
 
     user_payload = (
         f"{chapter_line}\n\n"
-        f"【Gabay 大纲】\n{curriculum}\n\n"
-        f"【任务】\n{task}\n\n"
-        f"【用户输入】\n{user_text.strip() or '（无额外输入）'}"
+        f"[Gabay outline]\n{curriculum}\n\n"
+        f"[Task]\n{task}\n\n"
+        f"[User input]\n{user_text.strip() or '(none)'}"
     )
     return [
         {"role": "system", "content": SYSTEM_PROMPT},

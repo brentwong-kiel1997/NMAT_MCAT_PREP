@@ -1,54 +1,36 @@
 slug: cars
 name: Critical Analysis and Reasoning Skills
 short: CARS
-name_zh: 批判分析与推理
 unique: true
 questions: 53
 time: 90 minutes
 shared_links: []
 discipline_mix:
-- Humanities ~50%（备考分解）
-- Social sciences ~50%（备考分解）
-focus:
-  zh: 全篇章题；不要求特定学科内容知识，考理解与推理。
-  en: All passage-based; no required content knowledge — comprehension and reasoning.
+- Humanities ~50% (study-prep breakdown)
+- Social sciences ~50% (study-prep breakdown)
+focus: All passage-based; no required content knowledge — comprehension and reasoning.
 skills:
 - Foundations of Comprehension
 - Reasoning Within the Text
 - Reasoning Beyond the Text
-source_note:
-  zh: 章节按 AAMC CARS 三大技能轴展开（无学科内容大纲）。
-  en: Chapters follow AAMC CARS three skill axes (no content syllabus).
+source_note: Chapters follow AAMC CARS three skill axes (no content syllabus).
 chapters:
-- heading:
-    zh: CARS 技能章节（AAMC）
-    en: CARS skill chapters (AAMC)
+- heading: CARS skill chapters (AAMC)
   items:
   - title: Foundations of Comprehension
     points:
-    - zh: 理解主旨与主要观点
-      en: Understand main idea and key claims
-    - zh: 识别信息的作用（例证、定义、转折）
-      en: Identify roles of information (example, definition, turn)
-    - zh: 把握作者态度与论证基调
-      en: Track author attitude and argumentative tone
+    - Understand main idea and key claims
+    - Identify roles of information (example, definition, turn)
+    - Track author attitude and argumentative tone
   - title: Reasoning Within the Text
     points:
-    - zh: 推断文内隐含但可支持的结论
-      en: Infer supported but unstated conclusions in-text
-    - zh: 评估论证强度与相关性
-      en: Evaluate argument strength and relevance
-    - zh: 识别假设与逻辑关系
-      en: Identify assumptions and logical links
+    - Infer supported but unstated conclusions in-text
+    - Evaluate argument strength and relevance
+    - Identify assumptions and logical links
   - title: Reasoning Beyond the Text
     points:
-    - zh: 把原则应用到新情境
-      en: Apply a principle to a new situation
-    - zh: 整合文外信息时仍忠于文本约束
-      en: Integrate outside info without violating the passage
-    - zh: 判断类推是否成立
-      en: Judge whether an analogy holds
-summary:
-  zh: 全篇章题；不要求特定学科内容知识，考理解与推理。
-  en: All passage-based; no required content knowledge — comprehension and reasoning.
+    - Apply a principle to a new situation
+    - Integrate outside info without violating the passage
+    - Judge whether an analogy holds
+summary: All passage-based; no required content knowledge — comprehension and reasoning.
 kind: mcat

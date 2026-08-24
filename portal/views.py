@@ -246,14 +246,12 @@ def materials_formulas(request, slug: str):
     items = formulas_for(slug)
     if not items:
         raise Http404("Formula sheet not found")
-    label = LABELS.get(slug, {"zh": slug, "en": slug})
     return render(
         request,
         "portal/materials_formulas.html",
         {
             "slug": slug,
-            "label_zh": label["zh"],
-            "label_en": label["en"],
+            "label": LABELS.get(slug, slug),
             "items": items,
             "catalog": formula_catalog(),
         },
@@ -297,7 +295,7 @@ def practice_detail(request, slug):
     if not items:
         raise Http404("Practice set not found")
 
-    label = LABELS.get(slug, {"zh": slug, "en": slug})
+    label = LABELS.get(slug, slug)
     back = None
     if exams.get_shared(slug):
         back = ("subject_detail", slug)
@@ -311,8 +309,7 @@ def practice_detail(request, slug):
         "portal/practice_detail.html",
         {
             "slug": slug,
-            "label_zh": label["zh"],
-            "label_en": label["en"],
+            "label": label,
             "items": items,
             "items_json": _json_for_script(items),
             "back": back,
@@ -413,9 +410,6 @@ def study_api(request):
     subject_slug = (payload.get("subject_slug") or "").strip()
     section_slug = (payload.get("section_slug") or "").strip()
     chapter_title = (payload.get("chapter") or "").strip()
-    lang = (payload.get("lang") or "zh").strip().lower()
-    if lang not in {"zh", "en"}:
-        lang = "zh"
 
     curriculum = build_curriculum_context(
         exam=exam,
@@ -429,14 +423,6 @@ def study_api(request):
         curriculum=curriculum,
         chapter_title=chapter_title,
     )
-    if lang == "en":
-        messages[0]["content"] += (
-            "\nRespond in clear English; keep technical terms standard."
-        )
-    else:
-        messages[0]["content"] += (
-            "\n默认中文作答；保留必要英文术语。"
-        )
 
     try:
         answer = chat_completion(messages, max_tokens=1400 if mode == "explain" else 900)
