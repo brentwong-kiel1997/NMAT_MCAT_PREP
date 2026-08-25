@@ -1,0 +1,195 @@
+subject: psych-soc
+chapter: 8B · Social thinking
+title: 8B · Social thinking
+overview: 8B is how we think ABOUT people — impression formation, stereotypes and automaticity, attribution
+  depth, judgment shortcuts. Prerequisites — 7B, 8A.
+sections:
+- heading: Impression formation
+  body:
+  - Asch's experiments found primacy effects — early traits (warm/cold) recolor everything after; central
+    traits outweigh peripheral. Implicit personality theory fills gaps (attractive → good — the halo effect).
+    Priming biases ambiguous-behavior interpretation automatically.
+  check:
+  - q: Hearing intelligent-cold-industrious versus intelligent-warm-industrious produces very different
+      impressions. This demonstrates…
+    options:
+      A: Central-trait effects
+      B: Mere exposure
+      C: Self-fulfilling prophecy
+      D: Recency effect
+    answer: A
+    explain: Warm-cold reconfigures all other information.
+    distractors:
+      A: Familiarity.
+      B: Expectation changing BEHAVIOR.
+      C: Late info dominating — reversed.
+- heading: Stereotypes — automatic and controlled
+  body:
+  - Stereotype (cognitive schema), prejudice (affective), discrimination (behavioral) — keep the three
+    levels separate. Dual-process — stereotypes activate automatically; controlled processing can override
+    at cognitive cost. The IAT — latency pairings index automatic associations; know its critiques.
+  check:
+  - q: An employer holds no explicit bias yet micro-hesitates with certain names. The automatic layer
+      is measured by…
+    options:
+      A: IAT-style latency tasks
+      B: Self-report survey
+      C: Reference checks
+      D: Intelligence testing
+    answer: A
+    explain: Reaction-time pairings index automatic associations.
+    distractors:
+      A: Explicit misses automatic.
+      B: History, not association.
+      C: Unrelated.
+- heading: Attribution in depth — covariation
+  body:
+  - Kelley's model — consensus (do others do it?), distinctiveness (only here?), consistency (every time?)
+    — high all three → situational; low consensus/distinctiveness with high consistency → dispositional.
+    The data table maps onto the verdict.
+  check:
+  - q: Everyone laughs at this comedian (consensus high), only at comedians (distinctive), every show
+      (consistent). The laughing is attributed…
+    options:
+      A: Dispositionally, to the laughers
+      B: Situationally — something about the stimulus
+      C: To unstable causes
+      D: To coincidence
+    answer: B
+    explain: High-high-High → external/stimulus attribution.
+    distractors:
+      A: Low consensus would support that.
+      B: Consistency rules out instability.
+      C: Not a model term.
+- heading: Judgment shortcuts
+  body:
+  - Availability drives stereotype-consistent frequency estimates; representativeness drives base-rate
+    neglect (librarian/farmer); anchoring taints judgments. Illusory correlation — over-pairing two rarities
+    — mints stereotypes from thin air.
+  check:
+  - q: An observer notices misbehavior clustering in a small group because both are distinctive. This
+      is…
+    options:
+      A: Illusory correlation
+      B: Valid correlation
+      C: Self-fulfilling prophecy
+      D: In-group favoritism
+    answer: A
+    explain: Two salient rarities pair in memory beyond their true rate.
+    distractors:
+      A: No real covariation established.
+      B: Expectancy altering behavior.
+      C: Allocation bias.
+examples:
+- prompt: The librarian/farmer problem — Tom is withdrawn, meticulous; the pool is 70% farmers. Most judge
+    librarian. Diagnose and answer rationally.
+  solution:
+  - Representativeness — the description matches the stereotype.
+  - Base-rate neglect — the 70% prior is ignored.
+  - The Bayesian answer usually still favors farmer — the prior dominates weak evidence.
+  answer: Representativeness + base-rate neglect; the base-rate-dominated estimate favors farmer.
+  distractors:
+    A: Endorsing librarian — the heuristic answer itself.
+    B: Availability — no recall-frequency shortcut.
+    C: Anchoring — no initial value.
+key_points:
+- Primacy and central traits; halo effect fills gaps.
+- Stereotype/prejudice/discrimination — cognition/affect/behavior.
+- IAT — latency measure with known critiques.
+- Kelley — CDC; high all three → situational.
+- Illusory correlation mints stereotypes; base rates beat vivid descriptions.
+mnemonics:
+- phrase: CDC — Consensus, Distinctiveness, Consistency
+  means: Kelley's three covariation cues.
+maps:
+- title: Kelley decision
+  steps:
+  - consensus + distinctiveness + consistency all high → SITUATIONAL
+  - consensus low + distinctiveness low + consistency high → DISPOSITIONAL
+passage:
+  text: Participants view an ambiguous shove after subliminal Black or White face primes (Exp 1), or the
+    same act described as shoving versus bumping (Exp 2). Black-face primes raise hostility ratings; the
+    shoving wording likewise raises them.
+  questions:
+  - q: Experiment 1 demonstrates…
+    options:
+      A: Priming's automatic influence on coding
+      B: Explicit prejudice
+      C: Discrimination in behavior
+      D: Base-rate reasoning
+    answer: A
+    explain: Subliminal activation biased interpretation.
+    distractors:
+      A: No self-report involved.
+      B: Ratings, not treatment.
+      C: No frequencies used.
+  - q: Experiment 2's wording effect shows…
+    options:
+      A: Framing changing perception of the same act
+      B: Sensory adaptation
+      C: Consistency failure
+      D: Overjustification
+    answer: A
+    explain: Identical kinematics, different verb — different hostility.
+    distractors:
+      A: Receptor-level.
+      B: Kelley term.
+      C: Motivation theory.
+pitfalls:
+- Treating IAT scores as proof of discrimination — contested reliability.
+- Fundamental attribution error where Kelley's verdict belongs.
+- Illusory correlation confused with self-fulfilling prophecy.
+- Forgetting base rates once a vivid description arrives.
+exam_map:
+  NMAT: Not a direct CEM syllabus item.
+  MCAT: Content Category 8B — priming and IAT designs, covariation tables, heuristic errors.
+sources:
+- ref: openstax-psychology-2e
+  used:
+  - Social Psychology chapter
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC8, CC 8B
+  relation: consulted
+further_reading:
+- title: OpenStax Psychology 2e — Prejudice and Discrimination
+  url: https://openstax.org/books/psychology-2e/pages/12-4-prejudice-and-discrimination
+  note: Stereotype layers.
+review_questions:
+- q: Prejudice is to discrimination as…
+  options:
+    A: Thought to feeling
+    B: Attitude to behavior
+    C: Behavior to attitude
+    D: Cognition to affect
+  answer: B
+  explain: Evaluation held vs. action taken.
+  distractors:
+    A: Backwards.
+    B: Reversed.
+    C: Stereotype-to-prejudice, missing behavior.
+- q: Ignoring the 70% base rate because a description sounds like a rare category is…
+  options:
+    A: Availability
+    B: Representativeness with base-rate neglect
+    C: Anchoring
+    D: Confirmation bias
+  answer: B
+  explain: Similarity swamps the prior.
+  distractors:
+    A: Recall-ease.
+    B: Initial-value adjustment.
+    C: Selective search.
+- q: Low consensus + low distinctiveness + high consistency yields a dispositional attribution because…
+  options:
+    A: Few others do it and the person does it everywhere
+    B: Everyone does it here only
+    C: The act is inconsistent
+    D: The stimulus is novel
+  answer: A
+  explain: The person, not the situation, covaries with the behavior.
+  distractors:
+    A: That is situational.
+    B: Consistency is high.
+    C: Not a covariation verdict.

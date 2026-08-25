@@ -1,0 +1,176 @@
+subject: psych-soc
+chapter: 8A · Self-identity
+title: 8A · Self-identity
+overview: 8A builds the self — identity development, self-concept machinery, and how group membership
+  becomes identity. Expect Erikson, Marcia, self-serving biases, social identity. Prerequisite — 7A.
+sections:
+- heading: Identity development — Erikson's ladder
+  body:
+  - Erikson frames life as eight psychosocial stages, each a crisis — trust vs. mistrust (infancy) through
+    identity vs. role confusion (adolescence) to integrity. The MCAT tests the stage-crisis match.
+  - Marcia's statuses on two axes (explored? committed?) — achievement, moratorium, foreclosure (committed
+    without exploring), diffusion. Read the two bits, pick the label.
+  check:
+  - q: A teen accepts the family's career without considering alternatives. Marcia calls this…
+    options:
+      A: Identity achievement
+      B: Foreclosure
+      C: Moratorium
+      D: Diffusion
+    answer: B
+    explain: Commitment without exploration.
+    distractors:
+      A: Requires exploration first.
+      B: Exploring, no commitment.
+      C: Neither.
+- heading: Self-concept, esteem, efficacy
+  body:
+  - Self-esteem is the evaluation; self-efficacy (Bandura) is task-specific confidence — the confusion
+    is a planted trap. The self defends — self-serving bias (success = me, failure = situation), better-than-average,
+    self-handicapping.
+  check:
+  - q: A student believes she can master statistics through effort. This is…
+    options:
+      A: Self-esteem
+      B: Self-efficacy
+      C: Self-handicapping
+      D: Ideal self
+    answer: B
+    explain: Domain-specific capability belief.
+    distractors:
+      A: Global self-worth.
+      B: Pre-emptive excuse.
+      C: Self-discrepancy term.
+- heading: Social identity — the group in the self
+  body:
+  - Tajfel — categorize, identify, compare. Minimal-group experiments (random label assignment alone produces
+    in-group favoritism). Out-group homogeneity; stereotype threat — performance decrements under negative
+    group stereotypes.
+  check:
+  - q: Random assignment to Team Blue produces in-group favoritism. This supports…
+    options:
+      A: Social identity theory's minimal-group effect
+      B: Social loafing
+      C: Deindividuation
+      D: Mere exposure
+    answer: A
+    explain: Categorization alone suffices for bias.
+    distractors:
+      A: Effort drop.
+      B: Anonymity disinhibition.
+      C: Familiarity, not allocation.
+examples:
+- prompt: A stereotype-threat experiment — math test framed as diagnostic of ability vs. problem-solving
+    exercise, stereotyped vs. non-stereotyped group. Predict the 2×2.
+  solution:
+  - Threat activates under diagnostic framing for the stereotyped group only.
+  - Working memory consumed by monitoring — performance drops.
+  - The interaction (group × framing) is the signature.
+  answer: Stereotyped group underperforms only in the diagnostic condition — an interaction effect.
+  distractors:
+    A: Main effects of group alone — the design lives in the interaction.
+    B: Framing main effect — controls are flat.
+    C: Preparation differences — random assignment holds ability constant.
+key_points:
+- Erikson — eight crises; adolescence = identity vs. role confusion.
+- Marcia — achievement, moratorium, foreclosure, diffusion.
+- Self-esteem (worth) vs. self-efficacy (task confidence) — never swap.
+- Self-serving family — credit internal, blame external.
+- Social identity — minimal groups suffice; stereotype threat consumes working memory.
+mnemonics:
+- phrase: Achieved after Exploring; Foreclosed before Exploring
+  means: Marcia keyed to the exploration axis.
+maps:
+- title: Social identity steps
+  steps:
+  - categorize the self into a group
+  - identify — membership matters to self-worth
+  - compare favorably → bias, out-group homogeneity
+passage:
+  text: Two matched samples of women take a difficult math test. Sample A is told it has shown gender
+    differences; B, none. A underperforms by roughly a standard deviation; men unaffected. A follow-up
+    shows Sample A lists fewer format features.
+  questions:
+  - q: Sample A's underperformance is best explained by…
+    options:
+      A: Stereotype threat consuming working memory
+      B: Lower preparation
+      C: Social loafing
+      D: Learned helplessness
+    answer: A
+    explain: The framing activates the stereotype; monitoring taxes cognition.
+    distractors:
+      A: Samples matched.
+      B: No group task.
+      C: Not framing-specific.
+  - q: The sparse format-recall functions as…
+    options:
+      A: Evidence for a cognitive-load mechanism
+      B: A manipulation check failure
+      C: Proof of lower motivation
+      D: An artifact
+    answer: A
+    explain: Attention consumed by threat leaves less encoding of surface detail.
+    distractors:
+      A: The manipulation worked.
+      B: Effort not measured as low.
+      C: Dismissive.
+pitfalls:
+- Confusing self-esteem with self-efficacy.
+- Foreclosure where achievement belongs — check exploration.
+- Minimal-group bias as requiring conflict — random labels suffice.
+- Reading stereotype threat as ability difference — matched designs rule it out.
+exam_map:
+  NMAT: Not a direct CEM syllabus item.
+  MCAT: Content Category 8A — stage matching, bias identification, minimal-group and stereotype-threat
+    designs.
+sources:
+- ref: openstax-psychology-2e
+  used:
+  - Lifespan Development; Social Psychology chapters
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC8, CC 8A
+  relation: consulted
+further_reading:
+- title: OpenStax Psychology 2e — Lifespan Development
+  url: https://openstax.org/books/psychology-2e/pages/9-introduction
+  note: Erikson and identity.
+review_questions:
+- q: Marcia's moratorium features…
+  options:
+    A: Exploration without commitment
+    B: Commitment without exploration
+    C: Neither
+    D: Both completed
+  answer: A
+  explain: Active exploration, decision deferred.
+  distractors:
+    A: Foreclosure.
+    B: Diffusion.
+    C: Achievement.
+- q: I aced it because I am good; I failed because the test was unfair illustrates…
+  options:
+    A: Actor-observer bias
+    B: Self-serving bias
+    C: Fundamental attribution error
+    D: Just-world belief
+  answer: B
+  explain: Credit internal, blame external.
+  distractors:
+    A: Self/other asymmetry.
+    B: Other-judging error.
+    C: Deservingness.
+- q: Out-group homogeneity means…
+  options:
+    A: Out-group seems more varied
+    B: Out-group seems all alike
+    C: In-groups are homogeneous
+    D: Groups share genes
+  answer: B
+  explain: Limited contact yields coarse representations.
+  distractors:
+    A: Reversed.
+    B: Own group looks differentiated.
+    C: Irrelevant.

@@ -1,0 +1,193 @@
+subject: psych-soc
+chapter: 6A · Sensing the environment
+title: 6A · Sensing the environment
+overview: Everything psychology studies begins here — how raw physical energy becomes neural signal, and
+  how the brain turns signal into experience. The MCAT tests two bottlenecks — sensation (transduction)
+  and perception (interpretation) — and loves thresholds and adaptation. Prerequisite — 3A (action potentials).
+sections:
+- heading: Sensation versus perception — the two-stage pipeline
+  body:
+  - Draw the line once and keep it. Sensation is transduction — receptors convert physical energy into
+    neural signals. Perception is the brain's interpretation into objects and meaning. Stimulus → receptor
+    → transduction → neural signal = sensation; cortex makes sense of it = perception. A passage about
+    a damaged retina is sensation; one about mistaking a coat for an intruder is perception.
+  - Each sense has its absolute threshold — the minimum intensity detected 50% of the time — and a difference
+    threshold (just noticeable difference, JND) governed by Weber's law — the JND is a constant FRACTION
+    of the original stimulus. A coin added to a pile of two is noticed; the same coin added to fifty is
+    not.
+  check:
+  - q: Weber's law implies that noticing a change in a loud tone requires a bigger increment than in a
+      soft tone because…
+    options:
+      A: Loud tones damage receptors
+      B: The JND is a constant proportion of the starting intensity
+      C: Perception skips loud sounds
+      D: Absolute thresholds rise with volume
+    answer: B
+    explain: The just-noticeable difference scales with baseline intensity — proportional, not fixed.
+    distractors:
+      A: Damage is not the mechanism at normal volumes.
+      B: Nothing is skipped; the fraction grows with the base.
+      C: Absolute threshold is about detecting presence, not change.
+- heading: The senses — receptors and pathways
+  body:
+  - Know each sense by receptor and stimulus — vision (rods for dim light and motion, cones for color
+    and detail), hearing (hair cells on the basilar membrane — place coding for pitch), touch (pressure,
+    temperature, pain receptors), taste and smell (chemical; smell skips the thalamus). Rods converge
+    for sensitivity; cones stay one-to-one for acuity — the fovea-versus-periphery trade-off.
+  - Two exam details — place theory (high frequencies peak near the oval window) complements frequency
+    theory (low frequencies fire in sync); and sensory adaptation — reduced response to a constant stimulus
+    — tunes the system to detect CHANGE, not steady states.
+  check:
+  - q: You stop noticing the pressure of your wristwatch after minutes. This is…
+    options:
+      A: Sensory adaptation
+      B: Difference threshold failure
+      C: Absolute blindness
+      D: Selective inattention
+    answer: A
+    explain: Constant stimulus, declining response — the definition of sensory adaptation.
+    distractors:
+      A: Thresholds govern detection of new stimuli, not fading of constant ones.
+      B: No receptor loss occurs.
+      C: Attention is top-down; this happens pre-attentively.
+- heading: Perception — building the world from signals
+  body:
+  - Perception runs bottom-up (feature-driven — edges, colors combine into objects) and top-down (knowledge-driven
+    — context and expectation resolve ambiguity). Gestalt principles name the shortcuts — proximity, similarity,
+    continuity, closure — the brain groups and completes rather than passively records.
+  - Depth perception uses binocular cues (retinal disparity, convergence) and monocular cues (relative
+    size, interposition, linear perspective, texture gradient). Perceptual constancy keeps objects stable
+    as retinal images change; perceptual set explains why the same ambiguous figure reads differently
+    to different observers.
+  check:
+  - q: Distant railroad tracks appear to converge. This monocular depth cue is…
+    options:
+      A: Retinal disparity
+      B: Linear perspective
+      C: Closure
+      D: Convergence
+    answer: B
+    explain: Parallel lines seeming to meet is the textbook linear perspective cue.
+    distractors:
+      A: Binocular cue — needs two eyes.
+      B: A Gestalt grouping principle, not depth.
+      C: Binocular cue — eyes angling inward.
+examples:
+- prompt: In signal detection terms, a radiologist flags a shadow that turns out normal. Name the outcome
+    and one perceptual factor that raises its rate.
+  solution:
+  - A positive call without a true signal = a false positive (false alarm).
+  - A liberal response criterion (set by expectation or cost of missing cancer) shifts calls toward yes.
+  - Top-down expectation for pathology biases interpretation of ambiguous noise.
+  answer: False alarm; a low criterion and strong expectation for rare-but-costly signals raise its rate.
+  distractors:
+    A: Calling it a hit — no true signal existed.
+    B: A miss — nothing was missed; the call was wrong, not absent.
+    C: Blaming receptor sensitivity — detection theory separates sensitivity from criterion; expectation
+      moves the criterion.
+key_points:
+- Sensation = transduction; perception = interpretation — label the stage before answering.
+- Absolute threshold (50% detection) versus JND (Weber's fraction).
+- Rods — sensitivity and convergence; cones — acuity and color.
+- Place theory (high pitch) + frequency theory (low pitch).
+- Sensory adaptation tunes the system to change, not constancy.
+- Gestalt grouping and depth cues build perception.
+mnemonics:
+- phrase: Rods aRound the fovea, Cones at the Center
+  means: Rods dominate the periphery for dim light; cones pack the fovea for detail and color.
+maps:
+- title: From photon to perception
+  steps:
+  - light → cornea/lens → retina (rods/cones transduce)
+  - bipolar → ganglion cells → optic nerve
+  - thalamus (LGN) → primary visual cortex
+  - association cortex — recognition and meaning (perception)
+passage:
+  text: An ophthalmology study compares dim-light detection in two groups — one with normal periphery,
+    one with mild peripheral rod loss. Threshold tests show the rod-loss group needs about twice the light
+    to detect a small off-center flash, while foveal letter acuity is identical in both groups.
+  questions:
+  - q: The intact foveal acuity is expected because…
+    options:
+      A: Foveal vision relies on cones, which are unaffected
+      B: Cones adapt faster
+      C: Rods handle detail at the fovea
+      D: The thalamus compensates
+    answer: A
+    explain: Acuity is cone work at the fovea; rod loss hits the periphery and dim-light detection.
+    distractors:
+      A: Adaptation speed is not acuity.
+      B: Reversed — cones handle foveal detail.
+      C: No compensatory rerouting is described.
+  - q: The raised flash threshold reflects impaired…
+    options:
+      A: Perception of edges
+      B: Sensation — rod transduction capacity
+      C: Weber fraction
+      D: Gestalt closure
+    answer: B
+    explain: Detecting a dim flash is a sensory threshold question, not interpretation.
+    distractors:
+      A: Interpretation is intact once signal arrives.
+      B: Weber concerns difference detection between two stimuli.
+      C: Grouping principle, unrelated.
+pitfalls:
+- Calling everything perception — transduction questions are sensation, always.
+- Confusing absolute threshold (detect presence) with JND (detect change).
+- Assigning foveal detail to rods — convergence kills acuity; cones keep it.
+- Treating adaptation as fatigue — it is tuned change-detection.
+exam_map:
+  NMAT: Not a direct CEM syllabus item.
+  MCAT: Content Category 6A — threshold calculations, signal detection outcomes, adaptation experiments,
+    sensory-lesion questions from data.
+sources:
+- ref: openstax-psychology-2e
+  used:
+  - Sensation versus Perception; Hearing chapters
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC6, CC 6A
+  relation: consulted
+further_reading:
+- title: OpenStax Psychology 2e — Sensation versus Perception
+  url: https://openstax.org/books/psychology-2e/pages/5-1-sensation-versus-perception
+  note: Thresholds, adaptation, and the two-stage framing.
+review_questions:
+- q: The minimum stimulus detected 50% of the time is the…
+  options:
+    A: Difference threshold
+    B: Absolute threshold
+    C: JND
+    D: Adaptation point
+  answer: B
+  explain: By definition.
+  distractors:
+    A: That is change detection.
+    B: Same as difference threshold.
+    C: Not a threshold construct.
+- q: Which pairing is correct?
+  options:
+    A: Rods — color detail
+    B: Cones — dim-light periphery
+    C: Rods — dim light, high convergence
+    D: Cones — no foveal presence
+  answer: C
+  explain: Rods sum signals for sensitivity at the cost of acuity.
+  distractors:
+    A: Cones carry color.
+    B: Rods own dim periphery.
+    C: Cones dominate the fovea.
+- q: Not feeling your clothes after dressing is best explained by…
+  options:
+    A: Weber's law
+    B: Sensory adaptation to a constant stimulus
+    C: Signal detection criterion shift
+    D: Rod saturation
+  answer: B
+  explain: Constant pressure, receptor firing declines.
+  distractors:
+    A: Weber is about increments.
+    B: Criterion is decision-level, not receptor-level.
+    C: Touch, not vision.

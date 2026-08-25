@@ -1,0 +1,210 @@
+subject: psych-soc
+chapter: 6B · Making sense of the environment
+title: 6B · Making sense of the environment
+overview: Once signals arrive, the brain must organize and interpret them — attention selects, working
+  memory holds, executive processes filter. The MCAT centers consciousness, attention, memory systems,
+  and change/inattentional blindness. Prerequisite — 6A.
+sections:
+- heading: Attention — the selective gateway
+  body:
+  - Attention is the bottleneck that turns parallel sensory abundance into serial thought. Selective attention
+    favors one channel — the cocktail-party effect shows selection by meaning. Divided attention splits
+    processing with real costs — divided attention degrades encoding, which is why studying while texting
+    produces familiar-but-unrecalled pages.
+  - The evidence comes from failure — inattentional blindness (the invisible gorilla) and change blindness
+    prove perception requires attention, not just open eyes.
+  check:
+  - q: A participant counting basketball passes misses a person in a gorilla suit. This demonstrates…
+    options:
+      A: Sensory adaptation
+      B: Inattentional blindness
+      C: Change blindness
+      D: Divided attention success
+    answer: B
+    explain: An unexpected, unattended stimulus is wholly missed.
+    distractors:
+      A: Adaptation needs constant stimulation.
+      B: Change blindness compares scene versions.
+      C: The counting task consumed attention — the failure mode.
+- heading: Memory systems — the three-box model
+  body:
+  - Memory is a pipeline — sensory memory (iconic/echoic, under 2 seconds), working memory (~7 items,
+    20-30 s without rehearsal), and long-term memory (unlimited, meaning-organized). Encoding → storage
+    → retrieval; most exam failures are encoding failures in disguise.
+  - Long-term splits into explicit (declarative — episodic and semantic, hippocampus-dependent for new
+    formation) and implicit (procedural, priming — striatum and cerebellum). Patient H.M. — new explicit
+    memories gone, procedural learning intact — is the dissociation the MCAT keeps re-testing.
+  check:
+  - q: After hippocampal damage, a patient learns a mirror-tracing skill daily but cannot recall practicing.
+      This shows…
+    options:
+      A: Complete amnesia of all systems
+      B: Intact procedural memory with impaired explicit formation
+      C: Working memory loss
+      D: Sensory memory impairment
+    answer: B
+    explain: The H.M. pattern — implicit/procedural spared, explicit consolidation broken.
+    distractors:
+      A: Procedural learning persisted.
+      B: Working memory is cortical and largely spared.
+      C: Sensory registers are unaffected.
+- heading: Encoding, retrieval, and their failures
+  body:
+  - Depth of processing governs encoding — shallow (structural) loses to deep (semantic). Retrieval is
+    cue-dependent — encoding specificity and context-dependent memory mean memory is state-sensitive;
+    the testing effect (retrieval practice) beats rereading.
+  - Forgetting has named mechanisms — decay, interference (proactive — old blocks new; retroactive — new
+    blocks old), and retrieval failure. Interference questions are pure labeling — which direction the
+    blocking flows names the type.
+  check:
+  - q: You struggle to remember your NEW locker code because your OLD one keeps coming to mind. This is…
+    options:
+      A: Retroactive interference
+      B: Proactive interference
+      C: Encoding failure
+      D: Decay
+    answer: B
+    explain: OLD interferes with NEW — proactive.
+    distractors:
+      A: Retroactive runs backward — new blocks old.
+      B: The code was learned; retrieval is contaminated.
+      C: Time-based fading is not described.
+- heading: Consciousness and its states
+  body:
+  - Consciousness ranges along a continuum — alertness through sleep stages (N1-N3 and REM) to altered
+    states. Sleep questions test stage physiology — N3 deep sleep with growth hormone, REM with skeletal-muscle
+    atonia and vivid dreams.
+  - The exam framing is functional — consciousness as global workspace binding attention and working memory;
+    sleep and drugs as manipulations that degrade the binding.
+  check:
+  - q: REM sleep is characterized by…
+    options:
+      A: Skeletal-muscle atonia with vivid dreams
+      B: Deep slow waves and sleepwalking
+      C: Light stage-1 theta only
+      D: Growth-hormone peak
+    answer: A
+    explain: REM pairs cortical activation with motor inhibition.
+    distractors:
+      A: N3 hosts slow waves and sleepwalking.
+      B: That is N1.
+      C: N3 again.
+examples:
+- prompt: A student reads a chapter while texting and later recalls almost nothing, yet feels the material
+    is familiar. Explain the memory-system stages.
+  solution:
+  - Divided attention at encoding shallow-processed the text (structural, not semantic).
+  - Weak encoding left a fragile trace; familiarity reflects fluency, not retrieval.
+  - Recognition-without-recall follows — the cue is too weak to access semantic content.
+  answer: Divided attention caused shallow encoding; fluency-based familiarity without semantic retrieval.
+  distractors:
+    A: Blaming decay — the failure predates storage time.
+    B: Blaming retrieval effort alone — nothing strong was stored.
+    C: Calling it proactive interference — no competing material is described.
+key_points:
+- Selective attention filters by meaning; divided attention taxes encoding.
+- Inattentional blindness and change blindness — perception needs attention.
+- Three-box memory — sensory, working (~7 items), long-term; deep encoding wins.
+- Explicit (hippocampus) versus implicit (procedural) — the H.M. dissociation.
+- Interference — proactive old→new, retroactive new→old.
+- REM = atonia + dreams; N3 = deep sleep, growth hormone.
+mnemonics:
+- phrase: Pro = Previous blocks Present; Retro = Recent blocks Recall of older
+  means: Interference direction named by which memory does the blocking.
+maps:
+- title: The memory pipeline
+  steps:
+  - sensory registers (iconic/echoic, <2 s)
+  - working memory (~7 items, rehearsal-dependent)
+  - deep encoding (semantic) → long-term storage
+  - retrieval via matching context cues
+passage:
+  text: Participants learn word pairs either full-attentive or while tone-counting. 24 hours later both
+    groups take recognition and free-recall tests. Recognition differs modestly; free recall differs sharply,
+    with the distractor group recalling about half as many.
+  questions:
+  - q: The pattern (small recognition gap, large recall gap) is best explained by…
+    options:
+      A: The distractor group lost stored traces overnight
+      B: Divided attention weakened encoding — cues adequate for recognition, too sparse for free recall
+      C: The distractor group forgot instructions
+      D: Recognition measures implicit memory
+    answer: B
+    explain: Weak semantic encoding supports familiarity-based recognition but few retrieval routes for
+      recall.
+    distractors:
+      A: Storage was weak from the start, not lost overnight.
+      B: Instructions not at issue.
+      C: Recognition is explicit.
+  - q: Which would most likely CLOSE the recall gap?
+    options:
+      A: Testing recall after one week
+      B: Providing the first word of each pair as a cue
+      C: Increasing list length
+      D: Testing in a different room
+    answer: B
+    explain: Retrieval cues restore access to weakly encoded traces.
+    distractors:
+      A: Delay widens it.
+      B: Length worsens interference.
+      C: Context change hurts.
+pitfalls:
+- Treating memory failure as storage loss by default — encoding and retrieval failures dominate.
+- Swapping proactive and retroactive interference.
+- Assigning sleepwalking or growth hormone to REM — both are N3.
+- Confusing recognition (with cues) with recall (without).
+exam_map:
+  NMAT: Not a direct CEM syllabus item.
+  MCAT: Content Category 6B — attention manipulations, memory-lesion logic, interference designs, sleep-stage
+    physiology.
+sources:
+- ref: openstax-psychology-2e
+  used:
+  - Memory and Cognition chapters
+  - States of Consciousness chapter
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC6, CC 6B
+  relation: consulted
+further_reading:
+- title: OpenStax Psychology 2e — Memory and Cognition
+  url: https://openstax.org/books/psychology-2e/pages/8-introduction
+  note: The three-box model and forgetting.
+review_questions:
+- q: Working memory's approximate capacity is…
+  options:
+    A: 3 ± 1 items
+    B: 7 ± 2 items
+    C: Unlimited
+    D: One chunk only
+  answer: B
+  explain: Miller's classic span.
+  distractors:
+    A: Too small.
+    B: That is long-term.
+    C: Chunking expands effective span.
+- q: The hippocampus is critical for…
+  options:
+    A: Storing all old memories permanently
+    B: Consolidating NEW explicit memories
+    C: Procedural skill learning
+    D: Sensory registration
+  answer: B
+  explain: Formation of new declarative memories.
+  distractors:
+    A: Remote memories survive hippocampal loss.
+    B: Striatum territory.
+    C: Peripheral registers handle that.
+- q: Nightmares and vivid dreams most likely occur in…
+  options:
+    A: N1
+    B: N3
+    C: REM
+    D: Sleep onset only
+  answer: C
+  explain: REM dreams are narrative and vivid.
+  distractors:
+    A: Hypnagogic imagery.
+    B: Night terrors live in N3.
+    C: REM is the answer.

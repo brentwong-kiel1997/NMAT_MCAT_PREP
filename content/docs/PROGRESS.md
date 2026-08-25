@@ -1,11 +1,9 @@
 # Tutorial Fill Progress (content/tutorials)
 
-> 71 unique chapters (unified library, grouped by discipline) · **13 published tutorials**.
+> 71 unique chapters grouped by discipline · **25 published tutorials**.
    Update this file **together with** every chapter you publish.
 
 Legend: **✅ Published** · ⬜ Not started · Exams column shows each chapter's annotation.
-
-## Chapter library by discipline
 
 ### Biology (biology) · 13 chapters
 
@@ -29,18 +27,18 @@ Legend: **✅ Published** · ⬜ Not started · Exams column shows each chapter'
 
 | # | Chapter | Exams | Status | Tutorial |
 |---|---|---|---|---|
-| 1 | 10A · Social inequality | MCAT | ⬜ Not started | — |
-| 2 | 6A · Sensing the environment | MCAT | ⬜ Not started | — |
-| 3 | 6B · Making sense of the environment | MCAT | ⬜ Not started | — |
-| 4 | 6C · Responding to the world | MCAT | ⬜ Not started | — |
-| 5 | 7A · Individual influences on behavior | MCAT | ⬜ Not started | — |
-| 6 | 7B · Social processes that influence behavior | MCAT | ⬜ Not started | — |
-| 7 | 7C · Attitude and behavior change | MCAT | ⬜ Not started | — |
-| 8 | 8A · Self-identity | MCAT | ⬜ Not started | — |
-| 9 | 8B · Social thinking | MCAT | ⬜ Not started | — |
-| 10 | 8C · Social interactions | MCAT | ⬜ Not started | — |
-| 11 | 9A · Understanding social structure | MCAT | ⬜ Not started | — |
-| 12 | 9B · Demographic characteristics and processes | MCAT | ⬜ Not started | — |
+| 1 | 10A · Social inequality | MCAT | ✅ Published | [tutorial](tutorials/psych-soc/10a-social-inequality.yml) |
+| 2 | 6A · Sensing the environment | MCAT | ✅ Published | [tutorial](tutorials/psych-soc/6a-sensing-the-environment.yml) |
+| 3 | 6B · Making sense of the environment | MCAT | ✅ Published | [tutorial](tutorials/psych-soc/6b-making-sense-of-the-environment.yml) |
+| 4 | 6C · Responding to the world | MCAT | ✅ Published | [tutorial](tutorials/psych-soc/6c-responding-to-the-world.yml) |
+| 5 | 7A · Individual influences on behavior | MCAT | ✅ Published | [tutorial](tutorials/psych-soc/7a-individual-influences-on-behavior.yml) |
+| 6 | 7B · Social processes that influence behavior | MCAT | ✅ Published | [tutorial](tutorials/psych-soc/7b-social-processes-that-influence-behavior.yml) |
+| 7 | 7C · Attitude and behavior change | MCAT | ✅ Published | [tutorial](tutorials/psych-soc/7c-attitude-and-behavior-change.yml) |
+| 8 | 8A · Self-identity | MCAT | ✅ Published | [tutorial](tutorials/psych-soc/8a-self-identity.yml) |
+| 9 | 8B · Social thinking | MCAT | ✅ Published | [tutorial](tutorials/psych-soc/8b-social-thinking.yml) |
+| 10 | 8C · Social interactions | MCAT | ✅ Published | [tutorial](tutorials/psych-soc/8c-social-interactions.yml) |
+| 11 | 9A · Understanding social structure | MCAT | ✅ Published | [tutorial](tutorials/psych-soc/9a-understanding-social-structure.yml) |
+| 12 | 9B · Demographic characteristics and processes | MCAT | ✅ Published | [tutorial](tutorials/psych-soc/9b-demographic-characteristics-and-processes.yml) |
 
 ### Chemistry (chemistry) · 11 chapters
 
@@ -147,7 +145,7 @@ Legend: **✅ Published** · ⬜ Not started · Exams column shows each chapter'
 | Quantitative | 3 | 0 |
 | Verbal | 2 | 0 |
 
-**NMAT total — 56 chapters.**
+**NMAT total — 56.**
 
 ## What MCAT has
 
@@ -161,12 +159,11 @@ Legend: **✅ Published** · ⬜ Not started · Exams column shows each chapter'
 | Physics | 9 | 9 |
 | Psychology & Sociology | 12 | 0 |
 
-**MCAT total — 60 chapters.**
-Shared (both exams) — 45 chapters.
+**MCAT total — 60.** Shared (both exams) — 45.
 
 ## How to update
 
-1. Write the chapter from `docs/TUTORIAL_TEMPLATE.md` (videos parked; `subject` = discipline).
+1. Write the chapter from `docs/TUTORIAL_TEMPLATE.md` (`subject` = discipline).
 2. `python manage.py validate_content` + `refresh_manifest`.
 3. Flip the status to ✅ and link the file.
 4. Commit the tutorial + manifest + this file together.

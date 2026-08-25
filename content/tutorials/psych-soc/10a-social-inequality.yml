@@ -1,0 +1,215 @@
+subject: psych-soc
+chapter: 10A · Social inequality
+title: 10A · Social inequality
+overview: 10A closes — stratification's axes and theories, health disparities as the MCAT's favorite application,
+  mobility. Expect gradient data reading. Prerequisite — 9A.
+sections:
+- heading: Stratification — class, status, gradient
+  body:
+  - Societies layer by wealth, power, prestige. Wealth is stock, income is flow — the exam's distinction.
+    Class permits mobility; caste does not. Functionalist (rewards fill positions) versus conflict (reproduction)
+    readings — match the question.
+  check:
+  - q: A physician's child becomes a physician via paid training and networks. A conflict theorist reads
+      this as…
+    options:
+      A: Meritocratic reward
+      B: Structural reproduction of advantage
+      C: Status inconsistency
+      D: Horizontal mobility
+    answer: B
+    explain: Institutions transmit position across generations.
+    distractors:
+      A: That is functionalist.
+      B: Misaligned ranks.
+      C: Lateral move.
+- heading: Axes — race, gender, intersectionality
+  body:
+  - Race is socially constructed yet structurally consequential; minority group means disadvantaged position,
+    not numerical minority. Intersectionality — overlapping identities produce non-additive patterns (race
+    × gender × class).
+  check:
+  - q: Hiring penalties largest for women of a racialized minority, exceeding either main effect alone,
+      illustrate…
+    options:
+      A: Intersectionality
+      B: Matching hypothesis
+      C: In-group favoritism
+      D: Institutional reform
+    answer: A
+    explain: Intersecting identities compounding.
+    distractors:
+      A: Attraction pairing.
+      B: Could contribute — the interaction is the pattern.
+      C: Not a disparity mechanism.
+- heading: Health disparities
+  body:
+  - The social gradient in health — each SES step up predicts longer life. Driven by access, exposure,
+    behavior-context, healthcare quality. Upstream social determinants outrank downstream clinical care.
+  check:
+  - q: Life expectancy rises monotonically with each income quintile. This demonstrates…
+    options:
+      A: The social gradient in health
+      B: Natural selection
+      C: Reverse causation only
+      D: Random variation
+    answer: A
+    explain: Stepwise SES-mortality across the distribution.
+    distractors:
+      A: Not the frame.
+      B: Gradients persist prospectively.
+      C: Monotonicity is the opposite.
+- heading: Mobility and policy
+  body:
+  - Structural mobility (occupation mix shifts) vs. exchange (people swap positions). Education is the
+    mobility escalator — and its unequal quality is the reproduction engine. Policy reads differently
+    through each lens.
+  check:
+  - q: A millennial works a job type that barely existed in the parent generation. This illustrates…
+    options:
+      A: Structural mobility
+      B: Exchange mobility only
+      C: Caste closure
+      D: Status inconsistency
+    answer: A
+    explain: The occupational structure itself changed.
+    distractors:
+      A: People swapping fixed positions.
+      B: Closed systems block movement.
+      C: Misaligned ranks.
+examples:
+- prompt: Infant mortality by income quartile shows a two-fold gap stable across a decade despite a new
+    regional hospital serving all quartiles. Interpret.
+  solution:
+  - The stable gradient is social, not an access threshold.
+  - A hospital is downstream care — cannot erase upstream drivers.
+  - Predict area-based interventions.
+  answer: Social gradient persisting despite equalized downstream care — upstream determinants dominate.
+  distractors:
+    A: No disparity exists — the two-fold gap IS the disparity.
+    B: Blaming genetics — quartiles divide socially.
+    C: Hospital a failure — it treats; it does not rebuild neighborhoods.
+key_points:
+- Wealth is stock, income is flow; class permits mobility.
+- Functionalist vs. conflict readings of stratification.
+- Minority = disadvantaged position; intersectionality names non-additive patterns.
+- Social gradient — every step counts; upstream outranks clinical.
+- Structural vs. exchange mobility.
+mnemonics:
+- phrase: Wealth is a stock, income is a flow
+  means: The SES distinction anchoring gap questions.
+maps:
+- title: Inequality to biology
+  steps:
+  - SES (income, wealth, education, occupation)
+  - upstream — housing, food, stress, environment
+  - behavior and exposure → risk
+  - downstream — morbidity and mortality by SES band
+passage:
+  text: A county tracks diabetes incidence by census-tract income over twenty years. Rates fall 15% in
+    the top quintile, stay flat in the middle, rise 10% in the bottom. A clinic chain opened in bottom
+    tracts at year ten; no inflection appears. Grocery mapping shows bottom tracts average one supermarket
+    per 25,000 vs. one per 8,000.
+  questions:
+  - q: The diverging trends demonstrate…
+    options:
+      A: Widening health disparities along the gradient
+      B: Genetic drift
+      C: Clinic success
+      D: Random fluctuation
+    answer: A
+    explain: Opposite-signed trends by income band.
+    distractors:
+      A: Tracts divide socially.
+      B: No inflection followed.
+      C: Two decades of divergence is not noise.
+  - q: The clinic non-effect is best explained by…
+    options:
+      A: Downstream care not addressing upstream determinants like food access
+      B: Clinics unnecessary
+      C: Patient noncompliance
+      D: Error
+    answer: A
+    explain: The supermarket gap marks an upstream driver.
+    distractors:
+      A: Care matters — it is insufficient.
+      B: Blaming patients ignores mapped structure.
+      C: No indicator.
+  - q: Which intervention follows most directly from the mapping?
+    options:
+      A: Attracting food retail into bottom tracts
+      B: More clinics of the same type
+      C: Billboards on symptoms
+      D: Higher copays
+    answer: A
+    explain: The mapped deficiency is food access.
+    distractors:
+      A: Supply proved insufficient.
+      B: Information alone does not build access.
+      C: Would raise barriers.
+pitfalls:
+- Income and wealth interchangeably — flows vs. stocks.
+- Minority as numerical — it means disadvantaged position.
+- Clinical expansion erasing gradients — upstream dominates.
+- Single-axis answers to intersectional data.
+exam_map:
+  NMAT: Not a direct CEM syllabus item.
+  MCAT: Content Category 10A — stratification matching, disparity figures, social determinants, mobility
+    vocabulary.
+sources:
+- ref: openstax-sociology-3e
+  used:
+  - Social Stratification; Race and Ethnicity; Health and Medicine
+  relation: consulted
+- ref: openstax-psychology-2e
+  used:
+  - (supporting)
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC1, CC 10A
+  relation: consulted
+further_reading:
+- title: OpenStax Sociology 3e — Social Stratification
+  url: https://openstax.org/books/introduction-sociology-3e/pages/8-introduction
+  note: Class systems and mobility.
+- title: OpenStax Sociology 3e — Health and Medicine
+  url: https://openstax.org/books/introduction-sociology-3e/pages/19-introduction
+  note: Disparities and the institution.
+review_questions:
+- q: Davis-Moore's functionalist account explains stratification as…
+  options:
+    A: Rewarding functionally important, scarce positions
+    B: Class warfare
+    C: Mere tradition
+    D: Genetic hierarchy
+  answer: A
+  explain: Unequal rewards induce effort into demanding roles.
+  distractors:
+    A: Conflict theory.
+    B: No content.
+    C: Biological determinism — rejected.
+- q: The glass ceiling refers to…
+  options:
+    A: Invisible barriers blocking ascent to top positions
+    B: Entry-level exclusion only
+    C: Overtime demands
+    D: Union rules
+  answer: A
+  explain: Present at the top, blocked above.
+  distractors:
+    A: A different barrier.
+    B: Workload factor.
+    C: Irrelevant.
+- q: Upstream social determinants of health include…
+  options:
+    A: Housing, education, income, environment
+    B: Prescription formularies
+    C: OR scheduling
+    D: Staffing ratios only
+  answer: A
+  explain: Structural conditions shaping exposure and risk.
+  distractors:
+    A: Downstream clinical.
+    B: Logistics.
+    C: Still downstream.

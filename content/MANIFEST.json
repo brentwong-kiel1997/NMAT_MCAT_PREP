@@ -1,5 +1,5 @@
 {
-  "source_rev": "f9c17e9",
+  "source_rev": "95c52e3",
   "counts": {
     "chapters": 71,
     "note_bullets": 454,
@@ -12,7 +12,7 @@
     "diseases": 8
   },
   "files": {
-    "SOURCES.yml": "8ef1155897318aaeca16c665cd0cb1f94a7a10962fc36cb6ea4316b2844f935f",
+    "SOURCES.yml": "3304e3bdfcdc30a547c29907a1984b3c51fc032ee72392fdaa5a24928cbfa7ac",
     "catalog.yml": "06fdd53e70a617098e5eb8c2b071c989c7498193c1fcd72afd175bddc5e8f6e0",
     "chapters/10a-social-inequality.yml": "1d79655388e7a1694108d431552afdab959687e33de46cd55c92291cb9943370",
     "chapters/1a-proteins-and-amino-acids.yml": "158223673eea72b8aef3e74ef97793b2fb11a8469b658fdc8536be3d2cb20444",
@@ -126,6 +126,18 @@
     "tutorials/biology/organisms-and-their-environment.yml": "fe881965a4475eb4cd1d638a4a81b915efe76eea8518890d21c29ac45c4c3bdf",
     "tutorials/biology/the-world-of-plants-and-animals.yml": "83866f80d88262be281e66d8e9078d209f8a165ea4ef5c2422424b508a08d03d",
     "tutorials/biology/unity-and-diversity-of-life.yml": "9c8b0a160b192978e2a9e8910a2bf8f8aa7ef85b36ca0efb7ae8493360c34411",
+    "tutorials/psych-soc/10a-social-inequality.yml": "52f22fa994ff168169db65e95cd92d49a128e285745b89bfe9bdb4f6094a01a7",
+    "tutorials/psych-soc/6a-sensing-the-environment.yml": "6b9363bc20e3f5f7d7514264f5fb8edda1dd42e348ba429981208b71080ba80e",
+    "tutorials/psych-soc/6b-making-sense-of-the-environment.yml": "75413c489a2e26a8fd0e2e9e00795f939ae3732886229c5580111b0c00fccaa0",
+    "tutorials/psych-soc/6c-responding-to-the-world.yml": "2b7538383ed59dcc1633504e505b0e70c282826d5bcef649e7e6fd64d228ab48",
+    "tutorials/psych-soc/7a-individual-influences-on-behavior.yml": "c5fee9bdc75669887b616f458cc4c6e40790d613b04bfbd8327502883d8fe5a1",
+    "tutorials/psych-soc/7b-social-processes-that-influence-behavior.yml": "344a6328abba0ad92bf92f9e6482311e80a7be424385ef0114413594f4df9b18",
+    "tutorials/psych-soc/7c-attitude-and-behavior-change.yml": "d6dacffd067ba8f6205f580e722c3fad66f0f66c2138543bd0ab566beae501b6",
+    "tutorials/psych-soc/8a-self-identity.yml": "c88ad0dc93c5d6d4ba4961efc4285e47a96cac138c7c2c74324dd40282d944d0",
+    "tutorials/psych-soc/8b-social-thinking.yml": "2b8767e291825915b8b1473939e931dd088094f230b2c5115f8c8ace39c6bc70",
+    "tutorials/psych-soc/8c-social-interactions.yml": "769ec3a3390f9abea5f31c078fc8091b431759f21aefd0f1a4e396b51a7046bd",
+    "tutorials/psych-soc/9a-understanding-social-structure.yml": "a6067740b853c093b26447fbd3b2b6467a7960e16d966d298c21ef1fd5aba532",
+    "tutorials/psych-soc/9b-demographic-characteristics-and-processes.yml": "ee60bb4ad153fb28c74ebae7009bcbc1e1b4af1cedb1894044afa13fab5b3866",
     "units.yml": "8f325c358eead2f8ba0f6534ace934fd1b938ddc4b5ec90c83537a12455d6ece"
   }
 }

@@ -1,0 +1,198 @@
+subject: psych-soc
+chapter: 9A · Understanding social structure
+title: 9A · Understanding social structure
+overview: 9A moves from interaction to structure — institutions, groups, culture organizing life. Sociological
+  theory families, components, bureaucracies, culture. Prerequisites — 8A-C.
+sections:
+- heading: Three lenses on society
+  body:
+  - Match theory to question — functionalism (what it DOES for society), conflict theory (WHO BENEFITS),
+    symbolic interactionism (what it MEANS in interaction). A hospital's function is functionalist; who
+    profits from its hierarchy is conflict; how a white coat changes conversation is interactionist.
+  check:
+  - q: A researcher asks how licensing boards protect quality but also raise barriers. This combines…
+    options:
+      A: Functionalism and conflict theory
+      B: Symbolic interactionism alone
+      C: Social exchange alone
+      D: Evolutionary psychology alone
+    answer: A
+    explain: Functions served + distributional consequences — the two lenses.
+    distractors:
+      A: Micro-meaning.
+      B: Interpersonal.
+      C: Not sociological three.
+- heading: Status, role, groups
+  body:
+  - Status is a position; role is its expectations — ascribed vs. achieved. Role strain (tension within
+    ONE role) versus role conflict (between roles — parent vs. resident on call). Primary groups (family)
+    vs. secondary (department); reference groups set adopted standards.
+  check:
+  - q: A resident must choose between family emergency and on-call duty. This is…
+    options:
+      A: Role conflict
+      B: Role strain
+      C: Status inconsistency
+      D: Groupthink
+    answer: A
+    explain: Two roles' demands collide.
+    distractors:
+      A: Within a single role.
+      B: Misaligned ranks.
+      C: Group defect.
+- heading: Bureaucracy and organizations
+  body:
+  - Weber's ideal type — hierarchy, written rules, division of labor, impersonality. Predictability as
+    function; red tape and goal displacement as pathology (metrics becoming ends). The hidden curriculum
+    and institutional discrimination extend to disparities.
+  check:
+  - q: Dashboard targets drive staff to game wait-time statistics rather than improve care. This is…
+    options:
+      A: Goal displacement
+      B: Role exit
+      C: Ascribed status
+      D: Diffusion of responsibility
+    answer: A
+    explain: Means become ends.
+    distractors:
+      A: Leaving a role.
+      B: Birth-assigned.
+      C: Bystander mechanism.
+- heading: Culture and institutions
+  body:
+  - Norms ladder — folkways (etiquette), mores (morality), laws (codified). Culture lag — norms trailing
+    technology (genetics outpacing consent). Ethnocentrism vs. cultural relativism; institutions reproduce
+    structure across generations.
+  check:
+  - q: Genetic screening outpaces social norms on privacy. This mismatch is…
+    options:
+      A: Culture lag
+      B: Cultural diffusion
+      C: Assimilation
+      D: Innovation diffusion
+    answer: A
+    explain: Material culture changes faster than guiding norms.
+    distractors:
+      A: Trait spread.
+      B: Minority absorption.
+      C: Adoption curve.
+examples:
+- prompt: Analyze a medical school's grading system through all three lenses.
+  solution:
+  - Functionalist — grading enforces competence standards society needs.
+  - Conflict — grading sorts students; class resources navigate the sorting differently.
+  - Interactionist — grades become identity markers negotiated in everyday talk.
+  answer: Three lenses — standards served, sorting by power, meaning made.
+  distractors:
+    A: One lens only — the prompt asks for three.
+    B: Moralizing instead of analyzing.
+    C: Lenses as mutually exclusive.
+key_points:
+- Three lenses — function, conflict, interactionist.
+- Role strain (within) vs. role conflict (between).
+- Weber — bureaucracy's strengths and pathologies.
+- Culture lag; institutional discrimination through routine.
+- Norms ladder — folkways, mores, laws.
+mnemonics:
+- phrase: Function, Fight, Meaning
+  means: The three lenses in one word each.
+maps:
+- title: Choosing the lens
+  steps:
+  - what it DOES → functionalism
+  - WHO BENEFITS → conflict theory
+  - what it MEANS → interactionism
+passage:
+  text: A hospital institutes a 15-minute triage target. Times fall 40%. Observation shows staff registering
+    patients as triaged at the door before assessment on busy days. An audit shows no change in actual
+    time-to-assessment.
+  questions:
+  - q: The timestamp practice is best described as…
+    options:
+      A: Goal displacement — metric satisfied, function unchanged
+      B: Improved care
+      C: Role conflict
+      D: Cultural diffusion
+    answer: A
+    explain: The measure became the target and was gamed.
+    distractors:
+      A: Audit shows no change.
+      B: No competing roles.
+      C: Unrelated.
+  - q: A conflict reading would ask…
+    options:
+      A: Which groups bear the compliance burden and which gain from reported numbers
+      B: What function triage serves
+      C: What the timestamp means to nurses
+      D: Whether folkways changed
+    answer: A
+    explain: Distribution of costs and benefits.
+    distractors:
+      A: Functionalist.
+      B: Interactionist.
+      C: Cultural question.
+pitfalls:
+- One-lens answers to multi-lens prompts.
+- Swapping role strain and conflict — count the roles.
+- Requiring intent for institutional discrimination — routine suffices.
+- Confusing diffusion with culture lag.
+exam_map:
+  NMAT: Not a direct CEM syllabus item.
+  MCAT: Content Category 9A — lens matching, role labels, bureaucratic pathologies, institution analysis.
+sources:
+- ref: openstax-sociology-3e
+  used:
+  - Theoretical Perspectives; Groups and Organizations
+  relation: consulted
+- ref: openstax-psychology-2e
+  used:
+  - Social Psychology (groups)
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC9, CC 9A
+  relation: consulted
+further_reading:
+- title: OpenStax Sociology 3e — Theoretical Perspectives
+  url: https://openstax.org/books/introduction-sociology-3e/pages/1-introduction
+  note: The three lenses.
+- title: OpenStax Sociology 3e — Groups and Organizations
+  url: https://openstax.org/books/introduction-sociology-3e/pages/6-introduction
+  note: Weber's bureaucracy.
+review_questions:
+- q: Tension between grading and mentoring duties within one job is…
+  options:
+    A: Role strain
+    B: Role conflict
+    C: Status set
+    D: Bureaucratization
+  answer: A
+  explain: Single role, incompatible expectations.
+  distractors:
+    A: Two roles.
+    B: Collection of statuses.
+    C: Organizational form.
+- q: Who benefits from this arrangement? is the question of…
+  options:
+    A: Functionalism
+    B: Conflict theory
+    C: Symbolic interactionism
+    D: Exchange theory
+  answer: B
+  explain: Power and distribution.
+  distractors:
+    A: What it does.
+    B: What it means.
+    C: Interpersonal cost-benefit.
+- q: Norms carrying strong moral weight are…
+  options:
+    A: Folkways
+    B: Mores
+    C: Laws
+    D: Fashions
+  answer: B
+  explain: Mores — moral; laws are codified.
+  distractors:
+    A: Etiquette-level.
+    B: Formally codified.
+    C: Fleeting.

@@ -1,0 +1,183 @@
+subject: psych-soc
+chapter: 7B · Social processes that influence behavior
+title: 7B · Social processes that influence behavior
+overview: 7B is social psychology's core — conformity, obedience, group processes, attitude formation.
+  The MCAT's most famous experiments and scenario-friendly questions. Prerequisite — 7A.
+sections:
+- heading: Conformity — yielding to the group
+  body:
+  - Conformity is changing behavior to match the group. Asch's line experiments — a unanimous majority
+    pulls ~75% to err at least once — and moderators are currency — one dissenting ally slashes conformity,
+    unanimity and group size (to ~5) drive it. Normative (fit in) versus informational (be right) names
+    why.
+  - Related — deindividuation (anonymity loosens restraint), group polarization (discussion shifts members
+    FURTHER in their initial direction), groupthink (cohesive groups suppress dissent — preventable by
+    devil's advocates).
+  check:
+  - q: A jury leaning mildly toward conviction deliberates and emerges strongly pro-conviction. This is…
+    options:
+      A: Group polarization
+      B: Social loafing
+      C: Conformity to a confederate
+      D: Deindividuation
+    answer: A
+    explain: Discussion amplified the initial lean.
+    distractors:
+      A: Effort drop — not this.
+      B: No planted majority.
+      C: Anonymity effects, absent.
+- heading: Obedience — authority's pull
+  body:
+  - Milgram — ~65% administered maximum shock when an experimenter insisted. Levers — proximity of authority
+    (up), proximity of victim (down), institutional setting (up), dissenting peers (sharply down).
+  - Distinguish the triad — conformity (peer, implicit), compliance (explicit request — foot-in-door,
+    door-in-face), obedience (authority command). The source of influence names the term.
+  check:
+  - q: A nurse follows a physician's inappropriate verbal order, deferring to rank. This is…
+    options:
+      A: Conformity
+      B: Obedience to authority
+      C: Social facilitation
+      D: Groupthink
+    answer: B
+    explain: A direct command from authority.
+    distractors:
+      A: No group norm — a hierarchy.
+      B: Performance in mere presence.
+      C: Group decision defect.
+- heading: Attribution, attitudes, persuasion
+  body:
+  - Attribution — dispositional versus situational — with the fundamental attribution error (overweighting
+    disposition judging OTHERS) and actor-observer bias (we excuse ourselves situationally). Culture modulates
+    it.
+  - Attitudes via central route (arguments, durable) versus peripheral (cues, transient). Cognitive dissonance
+    (Festinger — thin justification maximizes attitude change).
+  check:
+  - q: A driver cuts you off — reckless jerk! — yet when YOU cut someone off it was a blind spot. This
+      illustrates…
+    options:
+      A: Self-serving bias only
+      B: The actor-observer bias
+      C: Groupthink
+      D: Central-route persuasion
+    answer: B
+    explain: Situational excuses for self, dispositional blame for others.
+    distractors:
+      A: Related but the two-sided pattern is the signature.
+      B: Group process.
+      C: Persuasion model.
+examples:
+- prompt: Festinger's design — participants paid $1 or $20 to tell a peer a boring task was fun. Predict
+    the attitude change.
+  solution:
+  - All said the task was fun; behavior contradicts the private belief.
+  - $20 is sufficient justification — no dissonance to resolve.
+  - $1 is insufficient — dissonance resolved by shifting the private attitude.
+  answer: The $1 group shows GREATER attitude change — insufficient justification maximizes dissonance.
+  distractors:
+    A: More pay → more change — reverses the logic.
+    B: Both equal — ignores justification size.
+    C: Obedience — no authority commanded belief.
+key_points:
+- Asch — unanimity and size drive conformity; one ally breaks it.
+- Milgram — ~65% full obedience; authority proximity raises, peer dissent drops it.
+- Triad — conformity (peers), compliance (request), obedience (command).
+- Group processes — polarization, groupthink, deindividuation.
+- Attribution — fundamental error (others = disposition), actor-observer.
+- Dissonance — thin justification drives attitude change.
+mnemonics:
+- phrase: One ally breaks Asch
+  means: A single dissenter collapses conformity pressure.
+maps:
+- title: Naming the social influence
+  steps:
+  - implicit group norm → CONFORMITY
+  - explicit request → COMPLIANCE
+  - explicit authority command → OBEDIENCE
+passage:
+  text: A company's product team, proud and cohesive, meets to evaluate a launch. Early doubts are met
+    with silence and not raised again; the leader champions it. Post-launch reviews find the doubts well-founded.
+    A later re-run adds a rotating devil's-advocate role and anonymous concerns; more flaws surface pre-launch.
+  questions:
+  - q: The original meeting's failure pattern is…
+    options:
+      A: Groupthink
+      B: Social loafing
+      C: Deindividuation
+      D: Bystander effect
+    answer: A
+    explain: Cohesion + suppressed dissent + leader preference.
+    distractors:
+      A: Effort reduction.
+      B: Anonymity disinhibition.
+      C: Diffusion in emergencies.
+  - q: The improved process works by…
+    options:
+      A: Inserting structured dissent — breaking unanimity pressure
+      B: Increasing group size
+      C: Raising incentives
+      D: Adding authority command
+    answer: A
+    explain: Devil's advocacy reinstates the dissent groupthink suppresses.
+    distractors:
+      A: Larger groups can worsen it.
+      B: Incentives don't restore dissent.
+      C: More obedience is the opposite.
+pitfalls:
+- Conflating obedience (authority) with conformity (peers).
+- Social loafing where groupthink belongs.
+- Dissonance needing LARGE incentives — thin justification drives change.
+- Forgetting one dissenter's power.
+exam_map:
+  NMAT: Not a direct CEM syllabus item.
+  MCAT: Content Category 7B — experiment identification, moderation variables, applied group-process scenarios.
+sources:
+- ref: openstax-psychology-2e
+  used:
+  - Social Psychology chapter
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC7, CC 7B
+  relation: consulted
+further_reading:
+- title: OpenStax Psychology 2e — Social Psychology
+  url: https://openstax.org/books/psychology-2e/pages/12-introduction
+  note: The classic studies and moderators.
+review_questions:
+- q: Milgram's participants most often continued when…
+  options:
+    A: The learner was in the same room
+    B: The authority was remote
+    C: The authority was present and the setting institutional
+    D: Peers refused
+  answer: C
+  explain: Proximate authority + institutional context maximize obedience.
+  distractors:
+    A: Victim proximity REDUCES it.
+    B: Remote reduces it.
+    C: Peer defiance collapses it.
+- q: Telling a small lie for $1 shifts attitudes more than $20 because of…
+  options:
+    A: Insufficient justification → dissonance
+    B: Overjustification
+    C: Peripheral processing
+    D: Self-serving bias
+  answer: A
+  explain: Thin justification leaves dissonance resolved from within.
+  distractors:
+    A: Reward crowd-out — different.
+    B: A persuasion route.
+    C: Credit-self bias.
+- q: Judging a stranger's lateness as laziness while excusing your own as traffic demonstrates…
+  options:
+    A: Fundamental attribution error only
+    B: Actor-observer bias
+    C: Just-world hypothesis
+    D: In-group bias
+  answer: B
+  explain: The self/other asymmetry.
+  distractors:
+    A: Half the pattern.
+    B: Believing outcomes are deserved.
+    C: Favoring one's own group.

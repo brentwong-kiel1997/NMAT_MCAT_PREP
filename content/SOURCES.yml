@@ -1,58 +1,61 @@
-# Source registry for the curriculum content pack.
-#
-# Every tutorial chapter cites one or more entries here via `sources[].ref`.
-# Each entry records the exact edition/version used, the date it was
-# accessed, its license, and HOW it was used — the relation field matters
-# legally: "consulted" means facts/structure only (prose in this pack is
-# original writing), "adapted" means derivative text (would require this
-# pack to carry the same license).
-#
-# Update `accessed` (and version fields) whenever a source is re-fetched.
-
 sources:
-  - id: openstax-biology-2e
-    kind: textbook
-    title: "Biology 2e"
-    publisher: OpenStax, Rice University
-    authors: Mary Ann Clark, Matthew Douglas, Jung Choi
-    url: https://openstax.org/details/books/biology-2e
-    edition: 2e
-    publish_date: "2018-03-28"
-    pdf_last_updated: "2025-07-31"
-    isbn_digital_pdf: 978-1-947172-52-4
-    license: CC BY-NC-SA 4.0
-    accessed: "2026-08-24"
-    relation: consulted
-    note: >-
-      Facts and chapter structure used as reference; all prose in this pack
-      is original writing, so the NonCommercial-ShareAlike terms do not
-      propagate to the tutorial text. Do NOT paste or lightly rewrite
-      OpenStax sentences into chapters.
-
-  - id: aamc-whatson-mcat
-    kind: exam-outline
-    title: "What's on the MCAT Exam"
-    publisher: AAMC (Association of American Medical Colleges)
-    url: https://students-residents.aamc.org/mcat-exam/whats-mcat-exam
-    edition: current web edition
-    license: all rights reserved (public outline)
-    accessed: "2026-08-24"
-    relation: consulted
-    note: >-
-      Foundational concepts and content categories used to map chapter
-      coverage. Outline labels and percentages are paraphrased; no AAMC
-      text or questions are reproduced.
-
-  - id: cem-nmat-test-description
-    kind: exam-outline
-    title: "NMAT Test description / Board of Interior (BOI) guidance"
-    publisher: CEM (Center for Educational Measurement, Inc., Philippines)
-    url: https://www.cem-inc.org.ph/nmat/
-    edition: current web edition
-    license: all rights reserved (public description)
-    accessed: "2026-08-24"
-    relation: consulted
-    note: >-
-      Section structure, item counts, and timing used for NMAT mapping.
-      Percentages marked in content are study-prep approximations unless
-      stated otherwise.
+- id: openstax-biology-2e
+  kind: textbook
+  title: Biology 2e
+  publisher: OpenStax, Rice University
+  authors: Mary Ann Clark, Matthew Douglas, Jung Choi
+  url: https://openstax.org/details/books/biology-2e
+  edition: 2e
+  publish_date: '2018-03-28'
+  pdf_last_updated: '2025-07-31'
+  isbn_digital_pdf: 978-1-947172-52-4
+  license: CC BY-NC-SA 4.0
+  accessed: '2026-08-24'
+  relation: consulted
+  note: Facts and chapter structure used as reference; all prose in this pack is original writing, so
+    the NonCommercial-ShareAlike terms do not propagate to the tutorial text. Do NOT paste or lightly
+    rewrite OpenStax sentences into chapters.
+- id: aamc-whatson-mcat
+  kind: exam-outline
+  title: What's on the MCAT Exam
+  publisher: AAMC (Association of American Medical Colleges)
+  url: https://students-residents.aamc.org/mcat-exam/whats-mcat-exam
+  edition: current web edition
+  license: all rights reserved (public outline)
+  accessed: '2026-08-24'
+  relation: consulted
+  note: Foundational concepts and content categories used to map chapter coverage. Outline labels and
+    percentages are paraphrased; no AAMC text or questions are reproduced.
+- id: cem-nmat-test-description
+  kind: exam-outline
+  title: NMAT Test description / Board of Interior (BOI) guidance
+  publisher: CEM (Center for Educational Measurement, Inc., Philippines)
+  url: https://www.cem-inc.org.ph/nmat/
+  edition: current web edition
+  license: all rights reserved (public description)
+  accessed: '2026-08-24'
+  relation: consulted
+  note: Section structure, item counts, and timing used for NMAT mapping. Percentages marked in content
+    are study-prep approximations unless stated otherwise.
+- id: openstax-psychology-2e
+  kind: textbook
+  title: Psychology 2e
+  publisher: OpenStax, Rice University
+  authors: Rose M. Spielman, William J. Jenkins, Marilyn D. Lovett
+  url: https://openstax.org/details/books/psychology-2e
+  edition: 2e (web edition)
+  license: CC BY-NC-SA 4.0
+  accessed: '2026-08-24'
+  relation: consulted
+  note: Facts and structure consulted; all tutorial prose original.
+- id: openstax-sociology-3e
+  kind: textbook
+  title: Introduction to Sociology 3e
+  publisher: OpenStax, Rice University
+  authors: Tonja R. Conerly, Kathleen Holmes, Asha Lal Tamang
+  url: https://openstax.org/details/books/introduction-sociology-3e
+  edition: 3e (web edition)
+  license: CC BY-NC-SA 4.0
+  accessed: '2026-08-24'
+  relation: consulted
+  note: Facts and structure consulted; all tutorial prose original.

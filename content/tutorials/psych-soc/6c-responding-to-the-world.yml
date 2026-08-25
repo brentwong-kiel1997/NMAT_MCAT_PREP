@@ -1,0 +1,206 @@
+subject: psych-soc
+chapter: 6C · Responding to the world
+title: 6C · Responding to the world
+overview: This chapter is behavior's motor side — classical and operant conditioning, observational learning,
+  and cognitive limits on responding. The MCAT tests learning curves, reinforcement schedules, and heuristic
+  identification. Prerequisite — 6A/B.
+sections:
+- heading: Classical conditioning — learning by association
+  body:
+  - Pavlov's architecture — a neutral stimulus (bell) pairs with an unconditioned stimulus (food) until
+    the bell alone elicits a conditioned response. US→UR before learning; CS→CR after. Extinction (CS
+    alone fades), spontaneous recovery, generalization, and discrimination modify it.
+  - Biological preparedness bounds the paradigm — taste aversion forms in one trial with hours-long delay
+    (Garcia), showing evolution pre-wires which associations are learnable.
+  check:
+  - q: After conditioning, the bell is presented repeatedly without food and salivation fades. Later,
+      one ring again produces salivation. The return is…
+    options:
+      A: Generalization
+      B: Spontaneous recovery
+      C: Shaping
+      D: Second-order conditioning
+    answer: B
+    explain: Faded response reappearing after rest.
+    distractors:
+      A: Similar-stimulus spread.
+      B: Operant procedure.
+      C: New neutral stimulus paired with the CS.
+- heading: Operant conditioning — learning by consequence
+  body:
+  - Consequences shape voluntary behavior — reinforcement increases (positive adds good; negative removes
+    bad — negative reinforcement is NOT punishment), punishment decreases. Shaping builds complex behavior
+    by reinforcing approximations.
+  - Schedules rule the curve — fixed ratio (steady, post-reinforcement pause), variable ratio (highest,
+    most extinction-resistant — gambling), fixed interval (scalloped), variable interval (slow-steady).
+    Match the response pattern to the schedule name.
+  check:
+  - q: Slot machines pay out unpredictably after a varying number of plays. This schedule is…
+    options:
+      A: Variable ratio
+      B: Fixed ratio
+      C: Variable interval
+      D: Fixed interval
+    answer: A
+    explain: Reinforcement after a varying NUMBER of responses — most resistant to extinction.
+    distractors:
+      A: Fixed counts are predictable.
+      B: Interval schedules time the FIRST response.
+      C: Same objection.
+- heading: Observational learning and cognition in learning
+  body:
+  - Bandura's Bobo-doll studies — children who watched an adult rewarded for aggression imitated more
+    — established observational learning with vicarious reinforcement. Four steps — attention, retention,
+    reproduction, motivation.
+  - Latent learning (Tolman's cognitive maps — rats learn mazes without reward) proves learning can occur
+    without performance, separating knowledge from expression.
+  check:
+  - q: Rats explore a maze daily without reward, then after food is introduced perform nearly as well
+      as always-rewarded rats. This demonstrates…
+    options:
+      A: Latent learning
+      B: Shaping
+      C: Classical conditioning
+      D: Punishment effects
+    answer: A
+    explain: Learning without reinforcement or performance — revealed when motivation arrived.
+    distractors:
+      A: No approximations were reinforced.
+      B: No stimulus-stimulus pairing.
+      C: No consequence decreased behavior.
+- heading: Responding under uncertainty — heuristics
+  body:
+  - Cognition's shortcuts cut errors too — representativeness (judging by similarity to prototype), availability
+    (judging frequency by ease of recall), anchoring (insufficient adjustment from an initial value).
+    These produce systematic, predictable bias.
+  - Executive control modulates responding — prefrontal cortex supports inhibition (delay of gratification,
+    go/no-go) and goal-switching.
+  check:
+  - q: After news covers a rare shark attack, beachgoers overestimate its likelihood. The bias is…
+    options:
+      A: Representativeness
+      B: Availability
+      C: Anchoring
+      D: Functional fixedness
+    answer: B
+    explain: Vivid, easily recalled instances inflate frequency estimates.
+    distractors:
+      A: Similarity-to-prototype.
+      B: Initial-value adjustment failure.
+      C: Problem-solving rigidity.
+examples:
+- prompt: A child receives a candy each time she puts toys away. Later, candy is given only after several
+    cleanups, unpredictably. Describe the shift and predict extinction resistance.
+  solution:
+  - Candy per response = continuous reinforcement.
+  - Unpredictable candy after several responses = variable ratio.
+  - Variable ratio yields high, steady responding and greatest extinction resistance.
+  answer: Continuous → variable ratio shift; resistance rises.
+  distractors:
+    A: Fixed interval — no time gate described.
+    B: Predicting faster extinction — data run opposite.
+    C: Negative reinforcement — nothing aversive is removed.
+key_points:
+- Classical = stimulus-stimulus; operant = consequence-behavior.
+- Negative reinforcement strengthens; punishment weakens — never conflate.
+- Schedule signatures — FR pause, VR high and stubborn, FI scallop, VI slow-steady.
+- Observational learning needs attention, retention, reproduction, motivation.
+- Latent learning separates learning from performance.
+- Heuristics — representativeness, availability, anchoring — predictable bias.
+mnemonics:
+- phrase: VR = Very Resistant; FI = Flat-then-Flurry (scallop)
+  means: Variable-ratio resists extinction; fixed-interval scallops.
+maps:
+- title: Operant consequence matrix
+  steps:
+  - ADD pleasant → positive reinforcement (behavior ↑)
+  - REMOVE unpleasant → negative reinforcement (behavior ↑)
+  - ADD unpleasant or REMOVE pleasant → punishment (behavior ↓)
+passage:
+  text: A clinic tests bedmaking by psychiatric patients. Phase 1 — coffee vouchers for each bed (sharp
+    rise). Phase 2 — vouchers withdrawn (fall). Phase 3 — vouchers on an unpredictable several-bed basis
+    (rise again; later withdrawal probe declines far more slowly).
+  questions:
+  - q: The Phase 2 decline demonstrates…
+    options:
+      A: Punishment
+      B: Extinction of an operant response
+      C: Discrimination failure
+      D: Spontaneous recovery
+    answer: B
+    explain: Removing reinforcement drops the behavior.
+    distractors:
+      A: Nothing aversive was added.
+      B: Classical vocabulary.
+      C: Recovery comes after rest.
+  - q: The slower decline after Phase 3 follows from…
+    options:
+      A: The variable-ratio schedule's extinction resistance
+      B: Tastier coffee
+      C: Patients forgetting
+      D: Punishment thinning
+    answer: A
+    explain: Partial reinforcement makes behavior persist when reinforcement stops.
+    distractors:
+      A: No change described.
+      B: Forgetting predicts faster loss.
+      C: No punishment exists.
+pitfalls:
+- Equating negative reinforcement with punishment.
+- Fixed-interval data given the fixed-ratio label — look for the time gate.
+- Treating heuristic biases as random — they are systematic.
+- Calling every social learning imitation without checking vicarious consequence.
+exam_map:
+  NMAT: Not a direct CEM syllabus item.
+  MCAT: Content Category 6C — learning-curve interpretation, schedule identification, cognitive-bias scenarios.
+sources:
+- ref: openstax-psychology-2e
+  used:
+  - Learning chapter
+  - Thinking and Intelligence chapter (heuristics)
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC6, CC 6C
+  relation: consulted
+further_reading:
+- title: OpenStax Psychology 2e — Learning
+  url: https://openstax.org/books/psychology-2e/pages/7-introduction
+  note: All three paradigms with classic studies.
+review_questions:
+- q: Removal of an unpleasant stimulus that INCREASES behavior is…
+  options:
+    A: Positive punishment
+    B: Negative reinforcement
+    C: Positive reinforcement
+    D: Extinction
+  answer: B
+  explain: Removal + increase = negative reinforcement.
+  distractors:
+    A: Punishment decreases.
+    B: Nothing pleasant was added.
+    C: Extinction removes reinforcement.
+- q: A pigeon pecks fastest and quits last on a…
+  options:
+    A: Fixed interval
+    B: Variable ratio
+    C: Fixed ratio
+    D: Continuous schedule
+  answer: B
+  explain: Variable ratio — highest, most resistant.
+  distractors:
+    A: Scalloped, moderate.
+    B: Steady with pauses.
+    C: Fast to acquire, fast to extinguish.
+- q: The Bobo-doll experiments demonstrated…
+  options:
+    A: Classical conditioning of fear
+    B: Observational learning with vicarious consequences
+    C: Latent learning in mazes
+    D: Sensitization
+  answer: B
+  explain: Children imitated a rewarded model more.
+  distractors:
+    A: No stimulus pairing — a social model.
+    B: Tolman, different paradigm.
+    C: Different non-associative process.

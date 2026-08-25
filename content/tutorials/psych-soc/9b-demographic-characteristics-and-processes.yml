@@ -1,0 +1,179 @@
+subject: psych-soc
+chapter: 9B · Demographic characteristics and processes
+title: 9B · Demographic characteristics and processes
+overview: 9B is population structure — demographic transition, pyramids, migration, urbanization. Data-reading
+  and graph questions. Prerequisite — 9A.
+sections:
+- heading: Demography's variables
+  body:
+  - Populations change through crude birth rate, crude death rate, and net migration. Population momentum
+    — young age structures keep growing after fertility falls to replacement — explains why populations
+    don't pivot on a dime.
+  check:
+  - q: A country drops to replacement fertility but keeps growing for decades because its population is
+      young. This is…
+    options:
+      A: Population momentum
+      B: Transition reversal
+      C: Malthusian collapse
+      D: Zero population growth
+    answer: A
+    explain: Age-structure inertia.
+    distractors:
+      A: Not a stage reversal.
+      B: Catastrophe prediction.
+      C: Growth is positive — not ZPG.
+- heading: The demographic transition — four stages
+  body:
+  - Stage 1 — high birth and death, flat. Stage 2 — death falls, growth explodes. Stage 3 — birth falls
+    with urbanization and women's education, growth slows. Stage 4 — both low, flat or negative. The pyramid
+    shape IS the answer — wide base (Stage 2-3) vs. top-heavy (Stage 4).
+  check:
+  - q: A pyramid with narrow base and bulging middle-aged cohorts indicates…
+    options:
+      A: An aging, late-transition population
+      B: Explosive growth
+      C: High fertility
+      D: Heavy out-migration only
+    answer: A
+    explain: Constricted base = below-replacement fertility.
+    distractors:
+      A: That is a wide base.
+      B: Wide base marks high fertility.
+      C: Cannot be read from shape alone.
+- heading: Migration and urbanization
+  body:
+  - Push (conflict, decline) vs. pull (jobs, safety); chain migration via settled kin; remittances flow
+    back. Urbanization — sprawl and gentrification as applied edges.
+  check:
+  - q: New arrivals settle where relatives live, sending earnings home. These are…
+    options:
+      A: Chain migration and remittances
+      B: Brain drain and remittances
+      C: Push factors
+      D: Counterurbanization
+    answer: A
+    explain: Kin networks channel flows; money flows back.
+    distractors:
+      A: Skilled-emigration loss — different.
+      B: Motivating conditions.
+      C: Movement away from cities.
+examples:
+- prompt: Match three pyramids — wide-based triangle, constricting-base diamond, inverted top-heavy —
+    to stages and trajectories.
+  solution:
+  - Wide base — Stage 2, explosive growth.
+  - Constricting base — Stage 3, decelerating.
+  - Top-heavy — Stage 4, flat-to-negative with elder-support pressure.
+  answer: Stage 2/3/4 with explosive → decelerating → flat-to-negative.
+  distractors:
+    A: All Stage 1 — shapes differ.
+    B: Swapping middle and late — the base distinguishes.
+    C: Migration as driver — stages are birth/death-driven.
+key_points:
+- Three movers — birth, death, migration; momentum delays.
+- Transition stages 1-4 and the pyramid each implies.
+- Stage-3 fertility fall is structural — education, cost, access.
+- Push/pull, chain migration, remittances.
+- Stage 2 explodes, Stage 3 cools, Stage 4 shrinks.
+mnemonics:
+- phrase: Stage 2 explodes, Stage 3 cools, Stage 4 shrinks
+  means: The transition arc in growth terms.
+maps:
+- title: Transition stages
+  steps:
+  - Stage 1 — CBR and CDR high → flat
+  - Stage 2 — CDR falls → population explodes
+  - Stage 3 — CBR falls → growth decelerates
+  - Stage 4 — both low → flat or declining
+passage:
+  text: A nation's census shows CBR falling from 38 to 16 per thousand over forty years; CDR fell from
+    20 to 8 in the first decade then plateaued. Median age rises from 18 to 29; urban share from 25% to
+    58%.
+  questions:
+  - q: The country is best placed in…
+    options:
+      A: Stage 2
+      B: Stage 3, moving toward Stage 4
+      C: Stage 1
+      D: Post-collapse
+    answer: B
+    explain: Mortality fell decades ago; fertility is now falling.
+    distractors:
+      A: CDR plateaued long since.
+      B: Neither rate is high.
+      C: No collapse indicators.
+  - q: The rising median age argues for prioritizing…
+    options:
+      A: Elder-care infrastructure
+      B: Maternity wards only
+      C: Migration restrictions
+      D: Nothing — static
+    answer: A
+    explain: Age structure sets service demand.
+    distractors:
+      A: Fertility declining — trend is elderward.
+      B: Not responsive to age structure.
+      C: Growth continued.
+pitfalls:
+- Treating transition as instantaneous — momentum lags decades.
+- Reading pyramid shape as migration — it encodes births and deaths.
+- Refugee (forced, protected) confused with immigrant (voluntary).
+- Calling Stage 4 growth zero always — several are negative.
+exam_map:
+  NMAT: Not a direct CEM syllabus item.
+  MCAT: Content Category 9B — pyramid interpretation, stage placement from rate data, migration reading.
+sources:
+- ref: openstax-sociology-3e
+  used:
+  - Population and Demographics; Urbanization
+  relation: consulted
+- ref: openstax-psychology-2e
+  used:
+  - (supporting)
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC9, CC 9B
+  relation: consulted
+further_reading:
+- title: OpenStax Sociology 3e — Population and Demographics
+  url: https://openstax.org/books/introduction-sociology-3e/pages/20-introduction
+  note: Transition stages and pyramids.
+review_questions:
+- q: Stage 2 is driven primarily by…
+  options:
+    A: Falling death rate with sustained high birth rate
+    B: Falling birth rate alone
+    C: Out-migration
+    D: Rising death rate
+  answer: A
+  explain: Sanitation cut CDR first — the gap explodes.
+  distractors:
+    A: That is Stage 3.
+    B: Not the stage driver.
+    C: Contradicts the model.
+- q: Remittances are…
+  options:
+    A: Earnings sent by migrants to origin households
+    B: Taxes on migration
+    C: Forced displacement payments
+    D: Return migration
+  answer: A
+  explain: Money moving opposite the migrant.
+  distractors:
+    A: Not fiscal.
+    B: Not the term.
+    C: People, not money.
+- q: A below-replacement country with large elderly cohorts faces…
+  options:
+    A: Elder-dependency pressure and labor shortage
+    B: Explosive growth
+    C: Stage 2 dynamics
+    D: No challenges
+  answer: A
+  explain: Dependency ratios invert.
+  distractors:
+    A: Flat-to-negative.
+    B: High-fertility.
+    C: Clearly it does.

@@ -1,0 +1,201 @@
+subject: psych-soc
+chapter: 7C · Attitude and behavior change
+title: 7C · Attitude and behavior change
+overview: 7C narrows onto change itself — attitude structure, dissonance/self-perception, therapeutic
+  behavior change, and barriers to change. Prerequisite — 7B.
+sections:
+- heading: Attitude structure and the behavior link
+  body:
+  - An attitude has three components — affect, behavior, cognition — the ABC model. Attitudes predict
+    behavior best when specific, formed from direct experience, and when matched to the measured behavior
+    — the theory of planned behavior adds subjective norms and perceived control.
+  - LaPiere's inconsistency (service refused in person was given by phone) frames the attitude-behavior
+    gap — situational pressures decide whether expressed attitudes translate.
+  check:
+  - q: I fear smoking (feeling), think it causes cancer (belief), and avoid it (action). Together these
+      are…
+    options:
+      A: The ABC model of attitudes
+      B: Cognitive dissonance
+      C: The elaboration likelihood model
+      D: Mere exposure
+    answer: A
+    explain: Affect, Behavior, Cognition.
+    distractors:
+      A: Tension between inconsistent cognitions.
+      B: Persuasion routes.
+      C: Familiarity effect.
+- heading: Dissonance and self-perception — behavior leads
+  body:
+  - Beyond induced compliance — effort justification (we value what we suffer for) and hypocrisy induction
+    (publicly advocating, then facing lapses). Bem's self-perception theory — we infer attitudes by observing
+    our own behavior. The overjustification effect — large external rewards for enjoyed activities undercut
+    intrinsic motivation.
+  check:
+  - q: Children rewarded heavily for markers they already enjoyed later play less once rewards stop. This
+      is…
+    options:
+      A: Overjustification effect
+      B: Foot-in-the-door
+      C: Effort justification
+      D: Reactance
+    answer: A
+    explain: External reward reframes play as work.
+    distractors:
+      A: Compliance escalation.
+      B: Valuing suffering — reverse.
+      C: Resistance to threatened freedom.
+- heading: Engineering behavior change — therapy techniques
+  body:
+  - The clinical toolkit maps onto learning — systematic desensitization (hierarchy + relaxation — classical),
+    aversive conditioning, token economies (operant), flooding, modeling. Cognitive approaches — Beck
+    and Ellis — aim at cognition; CBT integrates both. The transtheoretical model — precontemplation →
+    contemplation → preparation → action → maintenance.
+  check:
+  - q: A therapist pairs graded exposure to spiders with trained relaxation, ascending a fear hierarchy.
+      This is…
+    options:
+      A: Systematic desensitization
+      B: Flooding
+      C: Aversive conditioning
+      D: Token economy
+    answer: A
+    explain: Hierarchy + incompatible response.
+    distractors:
+      A: Immediate full exposure.
+      B: Pairing with aversive stimulus.
+      C: Reinforcement tokens.
+- heading: Barriers to change — reactance and relapse
+  body:
+  - Change meets resistance — psychological reactance (threatened freedom produces opposition), boomerang
+    effects, and relapse. The abstinence violation effect (one lapse read as total failure) is the cognitive
+    error relapse programs target.
+  check:
+  - q: After one cigarette at a party, an ex-smoker concludes all is lost and abandons quitting. This
+      is the…
+    options:
+      A: Abstinence violation effect
+      B: Overjustification effect
+      C: Fundamental attribution error
+      D: Availability heuristic
+    answer: A
+    explain: A single lapse reframed as total failure.
+    distractors:
+      A: Reward undermining.
+      B: Disposition over situation.
+      C: Frequency by recall.
+examples:
+- prompt: Design a behavior-change plan for home glucose monitoring using implementation intentions, stages,
+    relapse framing.
+  solution:
+  - Stage-match — precontemplators get motivational engagement, not action tools.
+  - Action-stage patients write implementation intentions — after breakfast, before dishes, I will test.
+  - Missed tests framed as data — what interfered? — preventing collapse.
+  answer: Stage-matched messaging + if-then plans + lapse-as-data framing.
+  distractors:
+    A: All patients at action tools — ignores stage.
+    B: Fear messages — invites reactance.
+    C: Punishing misses — undermines autonomy.
+key_points:
+- ABC attitudes; strongest prediction from specific, direct experience.
+- Dissonance applications — thin justification, effort justification, hypocrisy.
+- Self-perception; overjustification erodes intrinsic motivation.
+- Therapy by mechanism — desensitization (classical), tokens (operant), CBT (cognitive).
+- Stages of change; relapse is data, abstinence-violation is the trap.
+mnemonics:
+- phrase: ABC — Affect, Behavior, Cognition
+  means: The three components of an attitude.
+maps:
+- title: Behavior-change loop
+  steps:
+  - stage-match the message
+  - implementation intentions — when X, I do Y
+  - track + reinforce small wins
+  - relapse → diagnose barriers, re-enter
+passage:
+  text: A university tracks gym use. Participants who signed a written plan specifying exact days, times,
+    and locations attend twice as often over eight weeks as peers who merely stated strong intentions,
+    controlling for baseline fitness.
+  questions:
+  - q: The advantage is best explained by…
+    options:
+      A: Implementation intentions automating cue-response links
+      B: Higher intrinsic motivation
+      C: Overjustification from signing
+      D: Social facilitation
+    answer: A
+    explain: When-where plans delegate initiation to environmental cues.
+    distractors:
+      A: Stated motivation was controlled.
+      B: No tangible reward.
+      C: Unrelated.
+  - q: A planner misses a week to exams. The best-supported reframe is…
+    options:
+      A: The plan failed — abandon it
+      B: A lapse — identify barriers and resume
+      C: Punish the lapse
+      D: Escalate immediately
+    answer: B
+    explain: Lapse-as-data prevents collapse.
+    distractors:
+      A: The abstinence trap.
+      B: Counterproductive.
+      C: Untailored escalation invites dropout.
+pitfalls:
+- Confusing overjustification with effort justification.
+- Giving flooding the desensitization label.
+- Treating relapse as treatment failure.
+- Ignoring reactance — more pressure can reverse persuasion.
+exam_map:
+  NMAT: Not a direct CEM syllabus item.
+  MCAT: Content Category 7C — persuasion-route design, dissonance studies, therapy matching, stages-of-change.
+sources:
+- ref: openstax-psychology-2e
+  used:
+  - Social Psychology; Therapy and Treatment chapters
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC7, CC 7C
+  relation: consulted
+further_reading:
+- title: OpenStax Psychology 2e — Therapy and Treatment
+  url: https://openstax.org/books/psychology-2e/pages/16-introduction
+  note: Technique-by-mechanism.
+review_questions:
+- q: Overjustification occurs when…
+  options:
+    A: Effort raises valuation
+    B: Tangible rewards undermine intrinsic enjoyment
+    C: Thin justification maximizes dissonance
+    D: Authority commands belief
+  answer: B
+  explain: Reward reframes play as work.
+  distractors:
+    A: Effort justification.
+    B: Induced compliance.
+    C: Obedience.
+- q: The stages-of-change model's correct order begins…
+  options:
+    A: Action → precontemplation → maintenance
+    B: Precontemplation → contemplation → preparation → action
+    C: Maintenance → relapse → action
+    D: Contemplation → action → precontemplation
+  answer: B
+  explain: The canonical forward sequence.
+  distractors:
+    A: Reordered.
+    B: Relapse is a return.
+    C: Reordered.
+- q: Pairing alcohol with a nausea-inducing drug is…
+  options:
+    A: Systematic desensitization
+    B: Aversive conditioning
+    C: Token economy
+    D: Modeling
+  answer: B
+  explain: Unwanted behavior paired with aversive consequence.
+  distractors:
+    A: Hierarchy + relaxation.
+    B: Operant system.
+    C: Observational.

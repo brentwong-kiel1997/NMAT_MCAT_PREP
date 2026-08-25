@@ -1,0 +1,192 @@
+subject: psych-soc
+chapter: 8C · Social interactions
+title: 8C · Social interactions
+overview: 8C covers the mechanics of interaction — exchange, cooperation, aggression, altruism and bystander
+  logic, attraction. Expect game scenarios and helping experiments. Prerequisite — 7B, 8A.
+sections:
+- heading: Interaction as exchange
+  body:
+  - Social exchange — costs and benefits, with equity's fairness rider. Prisoner's dilemma and tragedy
+    of the commons — mutual cooperation maximizes joint payoff, yet incentive defects; repeated play with
+    reciprocity rescues it.
+  check:
+  - q: Herders overgraze a shared pasture despite knowing it ruins everyone, because…
+    options:
+      A: Individual gains accrue privately while costs are shared
+      B: Herders dislike each other
+      C: The pasture is privately owned
+      D: Cooperation is impossible
+    answer: A
+    explain: Misaligned incentives — private benefit, socialized cost.
+    distractors:
+      A: Animosity unnecessary.
+      B: Commons are shared.
+      C: Institutions can sustain cooperation.
+- heading: Aggression — biology meets learning
+  body:
+  - Biological channels — amygdala activation, prefrontal regulation (frontal damage → dysregulation),
+    serotonin and testosterone as modulators. Environment fires — frustration-aggression, heat, weapons
+    effects. Multi-factor answers.
+  check:
+  - q: Frontal-lobe damage most directly affects aggression by…
+    options:
+      A: Reducing inhibitory control over impulses
+      B: Increasing amygdala size
+      C: Raising testosterone
+      D: Eliminating frustration
+    answer: A
+    explain: Prefrontal normally brakes limbic drive.
+    distractors:
+      A: No such claim.
+      B: Endocrine route.
+      C: Frustration still occurs.
+- heading: Helping — the bystander calculus
+  body:
+  - The bystander effect — more bystanders, less helping each — via diffusion of responsibility and pluralistic
+    ignorance. Latané and Darley's tree — notice → interpret → assume responsibility → implement — fails
+    at any node. Batson — empathic helping survives easy escape; egoistic doesn't.
+  check:
+  - q: Smoke fills a room; five strangers glance at the calm others and stay put. This illustrates…
+    options:
+      A: Pluralistic ignorance
+      B: Social facilitation
+      C: Deindividuation
+      D: In-group bias
+    answer: A
+    explain: Each reads others' inaction as evidence of safety.
+    distractors:
+      A: Performance under observation.
+      B: Anonymity.
+      C: Group favoritism.
+- heading: Attraction
+  body:
+  - Determinants stack — proximity and mere exposure, similarity (strongest single predictor), attractiveness
+    (matching), reciprocity. Sternberg's triangle — intimacy, passion, commitment — types love by which
+    corners are present.
+  check:
+  - q: Liking grows for a face seen repeatedly, even without interaction. This is…
+    options:
+      A: Mere exposure effect
+      B: Matching hypothesis
+      C: Passion in Sternberg's triangle
+      D: Social exchange
+    answer: A
+    explain: Repeated passive exposure alone raises affect.
+    distractors:
+      A: Pairing with similar partners.
+      B: Arousal component.
+      C: Cost-benefit framing.
+examples:
+- prompt: Batson's design — easy vs. hard escape crossed with empathy level. Predict the finding.
+  solution:
+  - Low-empathy helping mostly under difficult escape (distress relief).
+  - High-empathy helping at high rates under BOTH escapes.
+  - The interaction supports empathic altruism.
+  answer: High-empathy helping regardless of escape — evidence for empathy-altruism.
+  distractors:
+    A: Main effects only — the design lives in the interaction.
+    B: Nobody helps under easy escape — some do.
+    C: Reversed — egoists help when trapped.
+key_points:
+- Exchange framing; commons need repetition or identity to sustain cooperation.
+- Aggression — amygdala drive, prefrontal brake, frustration fires.
+- Bystander tree — diffusion and pluralistic ignorance make crowds slower.
+- Batson — empathic helping survives easy escape.
+- Attraction — exposure, similarity (strongest), attractiveness, reciprocity.
+mnemonics:
+- phrase: Notice, Interpret, Act
+  means: Latané and Darley's helping sequence.
+maps:
+- title: Bystander tree
+  steps:
+  - notice — distraction blocks it
+  - interpret — pluralistic ignorance blocks it
+  - assume responsibility — diffusion blocks it
+  - implement — competence blocks it
+passage:
+  text: A staged fall tested alone, with two passive confederates, or with two genuine strangers. Alone
+    85% help; with confederates 30%; with strangers 60% — mostly after one stranger moves first.
+  questions:
+  - q: The 85→30 drop demonstrates…
+    options:
+      A: The bystander effect via informational influence
+      B: Helping fatigue
+      C: Learned helplessness
+      D: Deindividuation
+    answer: A
+    explain: Confederates' passivity signals not-an-emergency.
+    distractors:
+      A: Not a fatigue design.
+      B: Not modeled.
+      C: Anonymity absent.
+  - q: The 60% conditional-on-first-mover suggests the strongest lever is…
+    options:
+      A: One salient helper modeling action
+      B: Larger groups
+      C: Anonymity
+      D: Harsher stakes
+    answer: A
+    explain: A first mover redefines the situation.
+    distractors:
+      A: Crowds dilute.
+      B: Removes accountability.
+      C: Irrelevant.
+pitfalls:
+- Calling every crowd effect diffusion — interpretation failure precedes it.
+- Batson as proving pure altruism universally — specific to high empathy.
+- Single-cause aggression answers.
+- Mere exposure confused with similarity.
+exam_map:
+  NMAT: Not a direct CEM syllabus item.
+  MCAT: Content Category 8C — game payoffs, bystander applications, Batson interpretation, attraction
+    matching.
+sources:
+- ref: openstax-psychology-2e
+  used:
+  - Social Psychology chapter
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC8, CC 8C
+  relation: consulted
+further_reading:
+- title: OpenStax Psychology 2e — Social Psychology
+  url: https://openstax.org/books/psychology-2e/pages/12-introduction
+  note: Bystander and aggression research.
+review_questions:
+- q: Diffusion of responsibility operates at which node?
+  options:
+    A: Noticing
+    B: Assuming responsibility
+    C: Interpreting
+    D: Implementing
+  answer: B
+  explain: Others' presence divides the should-act weight.
+  distractors:
+    A: Blocked by distraction.
+    B: Blocked by pluralistic ignorance.
+    C: Blocked by skill deficits.
+- q: Repeated prisoner's dilemma sustains cooperation best through…
+  options:
+    A: One-shot defection
+    B: Reciprocal strategies like tit-for-tat
+    C: Larger defection payoffs
+    D: Anonymity
+  answer: B
+  explain: The shadow of the future disciplines defection.
+  distractors:
+    A: Destroys trust.
+    B: Worsens incentive.
+    C: Removes reputation.
+- q: Sternberg's consummate love contains…
+  options:
+    A: Intimacy only
+    B: Passion and commitment only
+    C: Intimacy, passion, and commitment
+    D: Commitment only
+  answer: C
+  explain: All three corners.
+  distractors:
+    A: Liking.
+    B: Fatuous love.
+    C: Empty love.

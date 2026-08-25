@@ -1,0 +1,208 @@
+subject: psych-soc
+chapter: 7A · Individual influences on behavior
+title: 7A · Individual influences on behavior
+overview: 7A turns inward — biological roots (genes, hormones), motivation and emotion, personality theories,
+  and stress physiology. The MCAT tests twin-study logic, stress axes, and personality matching. Prerequisites
+  — 3A (HPA axis), 6C.
+sections:
+- heading: Behavioral biology — genes, twins, heritability
+  body:
+  - Behavior runs on the same biology as everything else — genes set ranges, environment sculpts. The
+    twin study is the tool — MZ twins share ~100% of genes, DZ ~50% — so if MZ twins resemble each other
+    twice as much as DZ on a trait, genes matter. Adoption designs separate nature from nurture.
+  - Heritability is a POPULATION statistic, not personal — it estimates trait variance attributable to
+    genetic variance within a group. Gene-environment interaction — the same genotype yields different
+    outcomes in different environments.
+  check:
+  - q: MZ twins reared apart show IQ correlations similar to MZ twins together, both above DZ. This supports…
+    options:
+      A: Substantial genetic influence on IQ variation
+      B: IQ being purely environmental
+      C: Zero heritability
+      D: Adoption improving IQ
+    answer: A
+    explain: Genetic similarity tracks phenotypic similarity even when environment differs.
+    distractors:
+      A: Contradicts the shared-environment control.
+      B: The MZ-DZ gap is the signal.
+      C: No such comparison implied.
+- heading: Motivation and emotion — drives and displays
+  body:
+  - Motivation theories stack — drive reduction (homeostatic pushes), arousal theory (Yerkes-Dodson curve),
+    incentive, Maslow's hierarchy. The MCAT asks you to MATCH the theory to a scenario.
+  - Emotion offers three accounts — James-Lange (body first — we feel afraid BECAUSE we tremble), Cannon-Bard
+    (simultaneous), Schachter-Singer (two-factor — arousal PLUS cognitive label). Same arousal, different
+    labels, different emotions — the epinephrine experiment.
+  check:
+  - q: A person interprets racing heart as joy at a concert and terror before an exam. This supports…
+    options:
+      A: James-Lange theory
+      B: Cannon-Bard theory
+      C: Two-factor (Schachter-Singer) theory
+      D: Drive-reduction theory
+    answer: C
+    explain: Identical arousal plus situational labeling yields distinct emotions.
+    distractors:
+      A: James-Lange ties emotion to specific bodily patterns.
+      B: Simultaneity without labeling is not the point.
+      C: Motivation, not emotion theory.
+- heading: Personality — four theoretical families
+  body:
+  - Match the family to its fingerprint — psychoanalytic (Freud — id/ego/superego, defense mechanisms),
+    humanistic (Rogers, Maslow — growth), trait (Big Five OCEAN — stable measurable dimensions), and social-cognitive
+    (Bandura — reciprocal determinism).
+  - Defense mechanisms dominate question counts — repression (bury), projection (attribute outward), displacement
+    (retarget), rationalization (excuse), sublimation (channel productively), reaction formation (express
+    the opposite).
+  check:
+  - q: A student angry at a teacher returns home and yells at a sibling. The defense mechanism is…
+    options:
+      A: Projection
+      B: Displacement
+      C: Sublimation
+      D: Reaction formation
+    answer: B
+    explain: Impulse redirected to a safer target.
+    distractors:
+      A: Attributing one's own feelings TO others.
+      B: Channeling into valued activity.
+      C: Behaving opposite to the impulse.
+- heading: Stress — physiology, appraisal, health
+  body:
+  - The stress response is 3A's axis — sympathetic surge (epinephrine seconds) and HPA cascade (cortisol
+    minutes-hours). Selye's general adaptation syndrome — alarm → resistance → exhaustion — predicts chronic-cost
+    patterns.
+  - Lazarus adds the psychology — stress = appraisal — primary (threat?) and secondary (can I cope?).
+    Perceived control, social support buffer the same stressor.
+  check:
+  - q: According to Selye, prolonged unavoidable stress eventually shows depleted reserves and illness.
+      This is…
+    options:
+      A: Alarm
+      B: Resistance
+      C: Exhaustion
+      D: Appraisal
+    answer: C
+    explain: The third GAS stage — resources spent.
+    distractors:
+      A: Initial mobilization.
+      B: Sustained coping before collapse.
+      C: Lazarus, not Selye.
+examples:
+- prompt: Two employees face the same layoff. One develops insomnia and illness; the other enrolls in
+    retraining. Explain via Lazarus and Selye.
+  solution:
+  - Lazarus — primary appraisals differ (threat vs challenge); secondary appraisals of coping resources
+    differ.
+  - The threatened employee mounts a chronic response — sustained cortisol.
+  - Prolonged HPA activation reaches exhaustion — sleep disruption and immune suppression.
+  answer: Different appraisals → different HPA timelines — challenge vs chronic stress to exhaustion.
+  distractors:
+    A: Objective stressor severity — the stimulus was identical.
+    B: Genetics decides all — appraisal mediates here.
+    C: Both adaptive equally — outcomes diverge.
+key_points:
+- MZ ~100% / DZ ~50% shared genes; heritability is population-level.
+- Motivation stack — drive, arousal (Yerkes-Dodson), incentive, Maslow.
+- Emotion triad — James-Lange, Cannon-Bard, Schachter-Singer (arousal + label).
+- Personality families — psychoanalytic, humanistic, trait (OCEAN), social-cognitive.
+- Defense mechanisms by function — bury, project, displace, rationalize, sublimate, reverse.
+- Stress = Selye's GAS + Lazarus appraisal; chronic cortisol damages immunity and memory.
+mnemonics:
+- phrase: OCEAN
+  means: Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism.
+maps:
+- title: Stress physiology timeline
+  steps:
+  - stressor → appraisal (Lazarus)
+  - sympathetic — epinephrine within seconds
+  - HPA — cortisol over minutes-to-hours
+  - chronic activation → exhaustion
+passage:
+  text: Caregivers of chronically ill relatives and matched controls are followed for a year. Caregivers
+    show higher cortisol, slower wound healing, weaker vaccine responses. Within caregivers, those with
+    high social support show values near control levels.
+  questions:
+  - q: The healing and vaccine findings indicate…
+    options:
+      A: Chronic stress suppressing immune function
+      B: Caregivers having stronger immunity
+      C: Cortisol protecting
+      D: A genetic difference
+    answer: A
+    explain: The chronic-stress immune signature.
+    distractors:
+      A: Data run opposite.
+      B: Acute cortisol is adaptive; chronic is not.
+      C: Design matches groups.
+  - q: The within-group difference (supported ≈ controls) is best explained by…
+    options:
+      A: Appraisal and coping buffering the response
+      B: Lower pathogen exposure
+      C: Smaller families
+      D: Error
+    answer: A
+    explain: Perceived support alters appraisal with physiological readouts.
+    distractors:
+      A: Not the measured pathway.
+      B: Not analyzed.
+      C: Dismissive.
+pitfalls:
+- Reading heritability as individual genetic determinism.
+- Mixing up the three emotion theories.
+- Confusing displacement with projection.
+- Treating stress as objective — the MCAT always asks appraisal.
+exam_map:
+  NMAT: Not a direct CEM syllabus item.
+  MCAT: Content Category 7A — twin logic, emotion scenarios, defense matching, GAS stages, stress-immune
+    data.
+sources:
+- ref: openstax-psychology-2e
+  used:
+  - Emotion and Motivation; Personality; Stress chapters
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC7, CC 7A
+  relation: consulted
+further_reading:
+- title: OpenStax Psychology 2e — Personality
+  url: https://openstax.org/books/psychology-2e/pages/11-introduction
+  note: The four families.
+review_questions:
+- q: The Big Five do NOT include…
+  options:
+    A: Openness
+    B: Intelligence
+    C: Agreeableness
+    D: Neuroticism
+  answer: B
+  explain: OCEAN — intelligence is not a factor.
+  distractors:
+    A: Part of OCEAN.
+    B: Part of OCEAN.
+    C: Part of OCEAN.
+- q: I tremble, therefore I am afraid — this states the…
+  options:
+    A: Cannon-Bard theory
+    B: James-Lange theory
+    C: Two-factor theory
+    D: Yerkes-Dodson law
+  answer: B
+  explain: Bodily reaction precedes the felt emotion.
+  distractors:
+    A: Simultaneous.
+    B: Requires a cognitive label.
+    C: Arousal-performance curve.
+- q: Attributing one's own unacceptable anger to a colleague is…
+  options:
+    A: Displacement
+    B: Projection
+    C: Sublimation
+    D: Repression
+  answer: B
+  explain: One's own feeling ascribed to another.
+  distractors:
+    A: Redirecting the ACT.
+    B: Channeling into output.
+    C: Burying it.
