@@ -92,3 +92,14 @@ sources:
   accessed: '2026-08-25'
   relation: consulted
   note: Used for 4A/4B figure pages (projectiles, fluid statics).
+- id: openstax-anatomy-physiology-2e
+  kind: textbook
+  title: Anatomy and Physiology 2e
+  publisher: OpenStax, Rice University
+  authors: J. Gordon Betts, Kelly A. Young, et al.
+  url: https://openstax.org/details/books/anatomy-and-physiology-2e
+  edition: 2e (web edition)
+  license: CC BY-NC-SA 4.0
+  accessed: '2026-08-25'
+  relation: consulted
+  note: Facts and structure consulted; all tutorial prose original.

@@ -1,6 +1,6 @@
 # Tutorial Fill Progress (content/tutorials)
 
-> 70 unique chapters grouped by discipline · **51 published tutorials**.
+> 70 unique chapters grouped by discipline · **56 published tutorials**.
    Update this file **together with** every chapter you publish.
 
 Legend: **✅ Published** · ⬜ Not started · Exams column shows each chapter's annotation.
@@ -85,11 +85,12 @@ Legend: **✅ Published** · ⬜ Not started · Exams column shows each chapter'
 
 | # | Chapter | Exams | Status | Tutorial |
 |---|---|---|---|---|
-| 1 | 1A · Proteins and amino acids | NMAT · MCAT | ⬜ Not started | — |
-| 2 | 1B · Gene to protein | NMAT · MCAT | ⬜ Not started | — |
-| 3 | 1C · Heritable information & diversity | NMAT · MCAT | ⬜ Not started | — |
-| 4 | 1D · Bioenergetics and fuel metabolism | NMAT · MCAT | ⬜ Not started | — |
-| 5 | Chemistry of Biochemistry (CEM) | NMAT · MCAT | ⬜ Not started | — |
+| 1 | 1A · Proteins and amino acids | MCAT | ✅ Published | [tutorial](tutorials/biochemistry/1a-proteins-and-amino-acids.yml) |
+| 2 | 1B · Gene to protein | MCAT | ✅ Published | [tutorial](tutorials/biochemistry/1b-gene-to-protein.yml) |
+| 3 | 1C · Heritable information & diversity | MCAT | ✅ Published | [tutorial](tutorials/biochemistry/1c-heritable-information-diversity.yml) |
+| 4 | 1D · Bioenergetics and fuel metabolism | MCAT | ✅ Published | [tutorial](tutorials/biochemistry/1d-bioenergetics-and-fuel-metabolism.yml) |
+| 5 | Chemistry of Biochemistry (CEM) | NMAT | ✅ Published | [tutorial](tutorials/biochemistry/chemistry-of-biochemistry-cem.yml) |
+
 
 ### CARS (cars) · 3 chapters
 

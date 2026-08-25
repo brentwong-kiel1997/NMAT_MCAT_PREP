@@ -1,0 +1,286 @@
+subject: biochemistry
+chapter: Chemistry of Biochemistry (CEM)
+title: Chemistry of Biochemistry (CEM)
+overview: 'The NMAT''s own biochemistry pass under the Chemistry subtest — biomolecule chemistry from
+  a CEM syllabus lens: macromolecule classification, enzyme basics, and bioenergetics at introductory
+  depth. Connect everything to the 5D and 1D charts.'
+sections:
+- heading: Macromolecules — the big four
+  body:
+  - ==Carbohydrates — monosaccharides (glucose), disaccharides (sucrose, lactose, maltose), polysaccharides
+    (starch, glycogen, cellulose); glycosidic bonds link them==. ==Lipids — fatty acids, triacylglycerols,
+    phospholipids (membranes), steroids (cholesterol) — hydrophobic==.
+  - ==Proteins — amino acids -> peptide bonds -> structure levels; enzymes are proteins that lower activation
+    energy==. ==Nucleic acids — nucleotides, DNA double helix (A-T, G-C), RNA; store and transmit information==.
+  check:
+  - q: Cellulose differs from starch because…
+    options:
+      A: Its glucose units link by beta-1,4 bonds
+      B: It is made of fructose
+      C: It is digested by humans
+      D: It is a protein
+    answer: A
+    explain: Beta linkage — humans lack cellulase to break it.
+    distractors:
+      A: Correct.
+      B: Glucose only.
+      C: Humans cannot digest it.
+      D: Not a biomolecule type.
+  figures:
+  - src: chemistry-of-biochemistry-cem/fig-35fa1423.webp
+    caption: Amylose (linear) versus amylopectin (branched) — glucose polymers differing in glycosidic
+      linkage.
+    credit: Fig 3.4 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+  - src: chemistry-of-biochemistry-cem/fig-04941f60.webp
+    caption: Sucrose formation — a glycosidic bond condenses glucose and fructose, eliminating water.
+    credit: Fig 3.6 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+- heading: Enzymes — the NMAT essentials
+  body:
+  - ==Enzymes are catalytic proteins — lower Ea, unaltered at the end, highly specific (active sites,
+    induced fit)==. ==Factors — temperature (optimum, then denature), pH (optimum), substrate concentration
+    (saturates), enzyme concentration (linear)==.
+  - ==Inhibitors — competitive (same site, overcome by substrate) vs noncompetitive (elsewhere, lowers
+    Vmax) — the NMAT favorite comparison. ==Enzyme denaturation vs inhibition — inhibition reversible,
+    denaturation destroys shape==; coenzymes (vitamins) assist catalysis.
+  check:
+  - q: Increasing substrate concentration overcomes…
+    options:
+      A: Competitive inhibition
+      B: Noncompetitive inhibition
+      C: Denaturation
+      D: pH effects
+    answer: A
+    explain: More substrate outcompetes the inhibitor at the same site.
+    distractors:
+      A: Correct.
+      B: Saturates elsewhere.
+      C: Shape destruction is irreversible.
+      D: pH optimum stands.
+- heading: Bioenergetics — energy flow in cells
+  body:
+  - ==ATP is the universal currency (hydrolysis releases ~30 kJ/mol); ADP + P -> ATP requires input (respiration/photosynthesis)==.
+    ==Cellular respiration — glycolysis (cytosol, net 2 ATP), TCA (matrix), electron transport (membrane)
+    — the aerobic yield drives most cells==.
+  - ==Catabolic vs anabolic — breakdown releases (exergonic); synthesis requires input (endergonic); coupled
+    reactions transfer energy==. ==Photosynthesis — light reactions make ATP/NADPH, Calvin cycle fixes
+    CO2==.
+  check:
+  - q: The main role of the electron transport chain is…
+    options:
+      A: Building ATP from the proton gradient
+      B: Digesting food
+      C: Storing glucose
+      D: Fixing CO2
+    answer: A
+    explain: Protons pumped by the chain drive ATP synthase — chemiosmosis.
+    distractors:
+      A: Correct.
+      B: That is digestion.
+      C: Glycogenesis.
+      D: That is the Calvin cycle.
+- heading: Vitamins, minerals, and clinical chemistry
+  body:
+  - ==Water-soluble vitamins (B complex, C) — coenzymes or their precursors (NAD from niacin, FAD from
+    riboflavin, PLP from B6, CoA from pantothenate); fat-soluble (A, D, E, K) — absorption needs fat;
+    deficiency syndromes==. ==Minerals — calcium (bone, muscle), iron (hemoglobin), iodine (thyroid hormones),
+    sodium/potassium (membrane potential)==.
+  - ==Clinical chemistry — glucose, lipids (cholesterol profile), uric acid (gout), blood gases==. ==Reference
+    ranges are context — fasting vs postprandial; liver enzymes (ALT, AST) mark damage==.
+  check:
+  - q: Which vitamin is a precursor of NAD+?
+    options:
+      A: Vitamin C
+      B: Niacin (B3)
+      C: Vitamin D
+      D: Folate
+    answer: B
+    explain: Niacin builds the NAD coenzyme structure.
+    distractors:
+      A: A coenzyme for collagen? No.
+      B: Correct.
+      C: Calcium metabolism.
+      D: One-carbon transfers.
+- heading: Practical biochemistry — food label and medical test literacy
+  body:
+  - ==Calorie math — 4-4-9 rule (carb/protein/fat kcal per gram); % daily values are per-2000-kcal references==.
+    ==Enzyme tests — cardiac troponin (heart muscle damage), ALT/AST (liver), amylase/lipase (pancreas),
+    HbA1c (3-month glucose average)==.
+  - '==Normal lab literacy — the units and the trend matter: rising creatinine = renal function; rising
+    BNP = heart failure; D-dimer as rule-out for thromboembolism==.'
+  check:
+  - q: HbA1c reflects…
+    options:
+      A: Blood glucose over about 3 months
+      B: Today's glucose
+      C: Pancreatic inflammation
+      D: Kidney filtration
+    answer: A
+    explain: Glycated hemoglobin accumulates with long-term average glucose.
+    distractors:
+      A: Correct.
+      B: Fingertip glucose does that.
+      C: Amylase/lipase.
+      D: Creatinine does.
+examples:
+- prompt: A patient presents with lactose intolerance after a gastric infection. Explain the enzyme and
+    the biochemical basis.
+  solution:
+  - Lactase — brush-border enzyme hydrolyzing lactose -> glucose + galactose.
+  - Reduced lactase -> undigested disaccharide reaches the colon.
+  - Colonic bacteria ferment it — gas, osmotic water, cramps.
+  - Management — lactase supplements or lactose-free diet.
+  answer: Lactase deficiency — undigested lactose feeds colonic fermentation.
+  distractors:
+    A: Sucrase deficiency — wrong disaccharide.
+    B: Insulin — wrong axis entirely.
+    C: Milk allergy — immune, not enzymatic.
+key_points:
+- Big four — carbs (glycosidic), lipids (ester), proteins (peptide), nucleic acids (phosphodiester).
+- 'Enzymes lower Ea — factor effects: T, pH, [S], [E].'
+- Competitive — same site, substrate overcomes; noncompetitive — Vmax drop.
+- ATP currency; respiration stages and 2 net ATP in glycolysis.
+- Vitamins — B-complex coenzymes; fat-soluble ADEK.
+- 4-4-9 rule; troponin heart, ALT/AST liver.
+mnemonics:
+- phrase: ADEK go into fat
+  means: The fat-soluble vitamins.
+- phrase: 4-4-9 rule
+  means: 'kcal per gram: carb, protein, fat.'
+maps:
+- title: Biomolecule to bond
+  steps:
+  - amino acids — peptide bond — proteins
+  - sugars — glycosidic — polysaccharides
+  - nucleotides — phosphodiester — nucleic acids
+  - fatty acids + glycerol — ester — fats
+- title: Enzyme test → organ
+  steps:
+  - troponin — cardiac muscle
+  - ALT/AST — liver
+  - amylase/lipase — pancreas
+  - creatinine — kidney
+passage:
+  text: 'A man''s lipid panel: total cholesterol 260 mg/dL, LDL 170, HDL 35, triglycerides 300. Fasting
+    glucose 110. He exercises twice a week and has a family history of early heart disease.'
+  questions:
+  - q: The most concerning ratios for cardiovascular risk are…
+    options:
+      A: High LDL + low HDL
+      B: High HDL only
+      C: Low triglycerides
+      D: Normal glucose
+    answer: A
+    explain: LDL is the atherogenic cargo; HDL the protective reverse transport.
+    distractors:
+      A: Correct.
+      B: That would be protective.
+      C: His TG is high, not low.
+      D: Glucose at 110 is pre-diabetic but secondary.
+  - q: His triglycerides are best lowered by…
+    options:
+      A: Reducing refined carbs and alcohol
+      B: Vitamin C
+      C: Increasing saturated fat
+      D: Stopping exercise
+    answer: A
+    explain: TG tracks carbohydrate/ethanol intake more than dietary fat.
+    distractors:
+      A: Correct.
+      B: Not the driver.
+      C: Saturated fat raises LDL, not TG.
+      D: Exercise helps.
+  - q: The family history raises the value of…
+    options:
+      A: Early lipid screening
+      B: Avoiding all fat
+      C: Supplementing omega-3
+      D: IGF-1 therapy
+    answer: A
+    explain: Genetic load — earlier cholesterol surveillance and intervention.
+    distractors:
+      A: Correct.
+      B: Fat-free is not evidence-based.
+      C: Secondary adjunct.
+      D: Not indicated.
+pitfalls:
+- Starch vs cellulose linkage direction.
+- Competitive vs noncompetitive inhibition.
+- Water vs fat-soluble vitamins.
+- HbA1c vs fasting glucose — time window.
+- kcal per gram 4-4-9.
+exam_map:
+  NMAT: 'CEM Chemistry: Biochemistry — the exact syllabus set.'
+  MCAT: Overlaps FC1 — reinforcement for the 1A-1D content.
+sources:
+- ref: openstax-chemistry-2e
+  used:
+  - 'Ch 20-21: Organic and bio-organic'
+  relation: consulted
+- ref: openstax-biology-2e
+  used:
+  - Ch 3, 6-7 — macromolecules, enzymes, respiration
+  relation: consulted
+- ref: cem-nmat-test-description
+  used:
+  - Part 2 Chemistry syllabus
+  relation: consulted
+further_reading:
+- title: OpenStax Anatomy and Physiology 2e — Nutrition
+  url: https://openstax.org/books/anatomy-and-physiology-2e/pages/24-introduction
+  note: Daily energy math.
+- title: OpenStax Biology 2e — Metabolism
+  url: https://openstax.org/books/biology-2e/pages/6-introduction
+  note: Enzymes and free energy.
+review_questions:
+- q: Which bond holds two nucleotides together in DNA?
+  options:
+    A: Peptide
+    B: Phosphodiester
+    C: Glycosidic
+    D: Ester
+  answer: B
+  explain: 3'-5' phosphodiester between nucleotides.
+  distractors:
+    A: Amino acid bond.
+    B: Correct.
+    C: Sugar bond.
+    D: Lipid bond.
+- q: The optimum pH for pepsin (stomach) is…
+  options:
+    A: pH 2
+    B: pH 7
+    C: pH 9
+    D: pH 5
+  answer: A
+  explain: Stomach acidity — pepsin works best around pH 2.
+  distractors:
+    A: Correct.
+    B: That is blood enzymes.
+    C: Alkaline.
+    D: Close, but gastric is lower.
+- q: Riboflavin (B2) is a precursor of…
+  options:
+    A: NAD
+    B: FAD
+    C: CoA
+    D: PLP
+  answer: B
+  explain: FAD built from riboflavin.
+  distractors:
+    A: From niacin.
+    B: Correct.
+    C: From pantothenate.
+    D: From B6.
+- q: Which lab best reflects kidney function?
+  options:
+    A: Creatinine
+    B: Troponin
+    C: Amylase
+    D: Albumin only
+  answer: A
+  explain: Rising creatinine tracks declining GFR.
+  distractors:
+    A: Correct.
+    B: Heart.
+    C: Pancreas.
+    D: Nutritional, not renal.

@@ -1,0 +1,285 @@
+subject: biochemistry
+chapter: 1B · Gene to protein
+title: 1B · Gene to Protein
+overview: DNA structure and replication, transcription, translation, and the regulation of gene expression.
+  The central dogma category — followed by a heavy experimental-methods layer on the MCAT (blotting, sequencing,
+  editing).
+sections:
+- heading: DNA structure and the central dogma
+  body:
+  - '==DNA — antiparallel double helix: sugar-phosphate backbone outside, A-T (2 H-bonds) and G-C (3 H-bonds)
+    inside; 3'' to 5'' on one strand, 5'' to 3'' on the other==. DNA uses deoxyribose (no 2''-OH), A/G/C/T;
+    RNA replaces T with U and uses ribose.'
+  - '==Central dogma: DNA -> RNA -> protein. ==Chromatin — DNA wrapped around histones (nucleosomes);
+    heterochromatin (condensed, silenced) vs euchromatin (open, active)==. Genes — promoters upstream,
+    exons/interons, terminators.'
+  check:
+  - q: A DNA double helix is antiparallel because…
+    options:
+      A: One strand is left-handed
+      B: The two strands run 5' to 3' in opposite directions
+      C: One strand is RNA
+      D: Chargaff broke a rule
+    answer: B
+    explain: Backbone polarity opposes — that is what enables base pairing in the groove.
+    distractors:
+      A: Both are right-handed.
+      B: Correct.
+      C: Both DNA.
+      D: Base composition is complementary.
+  figures:
+  - src: 1b-gene-to-protein/fig-5eb113a0.webp
+    caption: DNA-protein interaction, alpha-helices, and the folded protein — the hierarchy from information
+      molecule to function.
+    credit: Ch 15 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+- heading: DNA replication — semiconservative machinery
+  body:
+  - ==Semiconservative (Meselson-Stahl) — each daughter has one old and one new strand==. Replication
+    fork — helicase unwinds; SSB stabilizes; primase lays RNA primers; ==DNA polymerase III extends 5'
+    to 3', needing a primer; the lagging strand makes Okazaki fragments==; ligase seals.
+  - ==Leading vs lagging — leading is continuous toward the fork; lagging is discontinuous (Okazaki fragments)
+    away from the fork==. ==Proofreading — 3' to 5' exonuclease fixes errors, error rate ~1 in 10^9 with
+    mismatch repair==. Telomerase extends chromosome ends in germline/STEM cells.
+  check:
+  - q: DNA polymerase cannot…
+    options:
+      A: Add nucleotides 5' to 3'
+      B: Initiate synthesis without a primer
+      C: Read the template
+      D: Pair A with T
+    answer: B
+    explain: It extends pre-existing 3'-OH ends — primase provides the starter.
+    distractors:
+      A: It always adds to the 3' end.
+      B: Correct.
+      C: It reads the template.
+      D: It pairs faithful bases.
+- heading: Transcription — DNA to RNA
+  body:
+  - ==RNA polymerase reads the template strand 3' to 5', synthesizing RNA 5' to 3'; the coding strand
+    matches the RNA sequence (T->U)==. Prokaryotes — single polymerase, polycistronic messages, no splicing.
+    ==Eukaryotes — RNA Pol II for mRNA; 5' cap, poly-A tail, splicing removed introns==.
+  - ==Regulation — promoters and enhancers; transcription factors (activators, repressors); histone acetylation
+    opens chromatin (genes ON), deacetylation silences. ==Alternative splicing — one gene, many proteins==.
+  check:
+  - q: The mRNA sequence resembles…
+    options:
+      A: The template strand exactly
+      B: The coding strand (U for T)
+      C: Neither strand
+      D: Both strands
+    answer: B
+    explain: RNA is synthesized complementary to template — identical (with U) to coding.
+    distractors:
+      A: It is complementary.
+      B: Correct.
+      C: It always matches one.
+      D: Only the complementary one.
+- heading: Translation — RNA to protein
+  body:
+  - ==mRNA triplets (codons) decode via the genetic code; wobble lets one tRNA read multiple codons; start
+    AUG, stop UAA/UAG/UGA==. Ribosome — small 40S + large 60S (eukaryotes); ==A (aminoacyl), P (peptidyl),
+    E (exit) sites; aminoacyl-tRNA synthetases charge tRNAs (ATP!).
+  - ==Peptide chain grows N to C; energy from GTP (EF-Tu in bacteria, eEF1 in eukaryotes)==. Antibiotics
+    exploit the machinery — tetracycline blocks A-site binding, puromycin premature termination. ==Post-translational
+    — folding, glycosylation, cleavage, targeting signal sequences==.
+  check:
+  - q: Aminoacyl-tRNA synthetase…
+    options:
+      A: Matches each amino acid to its tRNA using ATP
+      B: Ribosome assembly
+      C: Folds proteins
+      D: Cleaves mRNA
+    answer: A
+    explain: The charging step — ATP-dependent, the code's executioner.
+    distractors:
+      A: Correct.
+      B: That is the ribosome.
+      C: Chaperones do.
+      D: Nucleases do.
+- heading: 'Methods: blots, sequencing, and editing'
+  body:
+  - ==Southern blot = DNA, Northern = RNA, Western = protein — probe on membrane (labeled nucleic acid
+    or antibody)==. PCR — denature 95, anneal 50-65, extend 72; ===amplification 2^n— requires primers
+    and a heat-stable polymerase (Taq)==.
+  - ==Sanger sequencing — dideoxynucleotides terminate chains; read bands by length==. NGS — massively
+    parallel short reads. ==CRISPR-Cas9 — guide RNA targets Cas9 to cut; homology-directed repair or NHEJ
+    edits the locus==. Restriction enzymes cut at palindromic sites; vectors (plasmids) carry inserts.
+  check:
+  - q: PCR amplifies DNA exponentially because…
+    options:
+      A: Each cycle doubles every template
+      B: The polymerase never stops
+      C: Primers mutate
+      D: dNTPs replicate
+    answer: A
+    explain: Products become templates next cycle — 2^n amplification.
+    distractors:
+      A: Correct.
+      B: It stops at product completion.
+      C: Primers are constants.
+      D: dNTPs are monomers.
+  figures:
+  - src: 1b-gene-to-protein/gel-electrophoresis.webp
+    caption: Gel electrophoresis — fragments separate by size; the smallest run farthest.
+    credit: Fig 14.9 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+examples:
+- prompt: A gene with 3 exons (40, 60, 50 nt coding) and 2 introns (95 nt each) is transcribed, capped,
+    spliced, and polyadenylated. Estimate the mature mRNA length.
+  solution:
+  - 'Before splicing: primary transcript = 40 + 60 + 50 + 95 + 95 = 340 nt.'
+  - Splicing removes the introns — 190 nt gone.
+  - Mature mRNA = 40 + 60 + 50 = 150 nt coding region.
+  - Plus 5' cap and ~200 nt poly-A tail — total around 360-380 nt.
+  answer: ~150 nt of coding sequence plus cap and poly-A — introns never reach the ribosome.
+  distractors:
+    A: 340 nt — that is pre-mRNA, before splicing.
+    B: 150 nt without cap/tail — incomplete.
+    C: Counting introns as translated — never happens.
+key_points:
+- Antiparallel; A-T 2 bonds, G-C 3 — Tm scales with GC.
+- Semiconservative; lagging strand made in Okazaki fragments.
+- Pol III needs a primer; proofreading via 3' exonuclease.
+- mRNA matches coding strand with U; AUG starts, stops end.
+- Ribosome A-P-E sites; N-to-C synthesis consumes GTP.
+- Southern DNA, Northern RNA, Western protein; PCR 2^n.
+mnemonics:
+- phrase: Southern DNA, Northern RNA, Western protein
+  means: The blot types by molecule.
+- phrase: 'A-P-E sequence: aminoacyl, peptidyl, exit'
+  means: Ribosome site order along the mRNA.
+maps:
+- title: Replication fork
+  steps:
+  - helicase unwinds
+  - SSB proteins stabilize
+  - primase lays RNA primer
+  - pol III extends 5'->3' (leading continuous, lagging fragmented)
+  - ligase seals nicks
+- title: Central dogma map
+  steps:
+  - DNA — replication (semi-conservative)
+  - -> transcription -> pre-mRNA (cap, splice, tail)
+  - -> mRNA -> translation (ribosome, tRNA)
+  - -> protein (fold, modify, target)
+passage:
+  text: A researcher designs a PCR to amplify a 1.0 kb exon. She sets annealing at 60C. The region is
+    GC-rich (72%) — melting analysis shows the amplicon melts at 88C. After 35 cycles she loads the product
+    on a gel.
+  questions:
+  - q: The GC-richness raises the melting temperature because…
+    options:
+      A: GC pairs form 3 H-bonds
+      B: GC pairs form 2 H-bonds
+      C: Primers are GC-poor
+      D: Salt lowers Tm
+    answer: A
+    explain: Three H-bonds per pair outnumber AT's two.
+    distractors:
+      A: Correct.
+      B: Opposite.
+      C: Primers are designed to match the target.
+      D: Salt raises Tm.
+  - q: After 35 cycles, the number of amplicon copies per starting template is approximately…
+    options:
+      A: 35x
+      B: 2^35 (about 3.4e10)
+      C: 70x
+      D: 35^2
+    answer: B
+    explain: Each cycle doubles — 2^n growth.
+    distractors:
+      A: Linear count.
+      B: Correct — exponential.
+      C: Doubling each direction.
+      D: Squared arithmetic.
+  - q: If the polymerase lacked proofreading, the main risk is…
+    options:
+      A: Mutations accumulating in copies
+      B: Primers melting
+      C: Excess product
+      D: Gel overloading
+    answer: A
+    explain: Taq with low fidelity — errors per amplified copy.
+    distractors:
+      A: Correct.
+      B: That is annealing temperature.
+      C: Excess is expected.
+      D: Handling issue.
+pitfalls:
+- Leading vs lagging strand continuity.
+- Template vs coding strand — the RNA matches coding.
+- PCR cycles vs copies — 2^n not 2n.
+- Southern/Northern/Western swap.
+- Polimerase needing a primer — primase's role.
+exam_map:
+  NMAT: Central dogma vocabulary, replication basics.
+  MCAT: Content Category 1B — regulation logic and experimental method passages.
+sources:
+- ref: openstax-biology-2e
+  used:
+  - 'Ch 14: DNA Structure; 15: Genes and Proteins; 16-17: Expression and Biotech'
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC1, CC 1B
+  relation: consulted
+further_reading:
+- title: OpenStax Biology 2e — Genes and Proteins
+  url: https://openstax.org/books/biology-2e/pages/15-introduction
+  note: Transcription and translation.
+- title: OpenStax Biology 2e — Biotechnology and Genomics
+  url: https://openstax.org/books/biology-2e/pages/17-introduction
+  note: PCR, cloning, CRISPR.
+review_questions:
+- q: Okazaki fragments appear on…
+  options:
+    A: The leading strand
+    B: The lagging strand
+    C: Both
+    D: RNA only
+  answer: B
+  explain: Discontinuous synthesis away from the fork — primed repeatedly.
+  distractors:
+    A: It is continuous.
+    B: Correct.
+    C: Neither is fully continuous.
+    D: DNA, not RNA.
+- q: The genetic wobble means…
+  options:
+    A: One tRNA can pair with several codons
+    B: Codons are ambiguous forever
+    C: Stop codons read as Met
+    D: Frameshifts are tolerated
+  answer: A
+  explain: Third-base flexibility — fewer tRNAs than codons.
+  distractors:
+    A: Correct.
+    B: Codons are unambiguous.
+    C: Stops stay stops.
+    D: Frameshifts destroy meaning.
+- q: Western blot detects…
+  options:
+    A: DNA
+    B: RNA
+    C: Proteins
+    D: Lipids
+  answer: C
+  explain: Antibody binding to transferred proteins.
+  distractors:
+    A: Southern does.
+    B: Northern does.
+    C: Correct.
+- q: Histone acetylation…
+  options:
+    A: Opens chromatin for transcription
+    B: Compacts and silences
+    C: Damages DNA
+    D: Stops splicing
+  answer: A
+  explain: Neutralizing lysines loosens the nucleosome — expression ON.
+  distractors:
+    A: Correct.
+    B: Deacetylation does that.
+    C: No DNA damage.
+    D: Splicing is separate.

@@ -1,0 +1,284 @@
+subject: biochemistry
+chapter: 1C · Heritable information & diversity
+title: 1C · Heritable Information and Diversity
+overview: 'How genetic information is transmitted, mutated, and recombined — the biochemistry view of
+  heredity and variation. Complements the biology 1C (genetic diversity processes) with the molecular
+  mechanisms: repair, recombination, and mutation signatures.'
+sections:
+- heading: Mutations and their repair
+  body:
+  - ==Mutation types — point (silent, missense, nonsense), frameshift (insertion/deletion not multiple
+    of 3), and larger rearrangements==. Causes — replication errors, oxidative damage, UV dimers, chemical
+    mutagens. ==Repair — mismatch (after replication), base excision (BER for damaged bases), nucleotide
+    excision (NER for bulky lesions like thymine dimers), double-strand break (homologous recombination/NHEJ)==.
+  - ==Mutation rates are low because proofreading (3'-5' exonuclease), mismatch repair, and DNA damage
+    checkpoints police every division==. ==Exposure pattern — frameshift = function severely compromised;
+    nonsense = truncation; silent = no change==.
+  check:
+  - q: UV-induced thymine dimers are repaired by…
+    options:
+      A: Mismatch repair
+      B: Nucleotide excision repair
+      C: Base excision repair
+      D: Telomerase
+    answer: B
+    explain: Bulky helix-distorting lesions — the NER pathway cuts a patch.
+    distractors:
+      A: Post-replication errors, not lesions.
+      B: Correct.
+      C: Small damaged bases only.
+      D: Ends replication.
+  figures:
+  - src: 1c-heritable-information-diversity/dna-double-helix.webp
+    caption: Antiparallel strands, A-T (2 H-bonds) and G-C (3 H-bonds) pairing — the template logic of
+      replication.
+    credit: Fig 14.7 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+  - src: 1c-heritable-information-diversity/chromosome-packing.webp
+    caption: Chromosome packing — DNA wrapped around histones into nucleosomes, then coiled into chromosomes.
+    credit: Fig 14.6 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+- heading: Recombination — diversifying the genome
+  body:
+  - ==Homologous recombination — exchanging DNA between similar sequences; in meiosis, crossing over in
+    prophase I creates chiasmata and new allele combinations==. ==Site-specific — V(D)J recombination
+    builds antibody diversity from gene segments==.
+  - ==Recombination vs mutation — recombination shuffles existing variation; mutation creates new alleles.
+    ==Gene conversion and unequal crossing over produce tandem duplications — the engines of gene family
+    expansion==.
+  check:
+  - q: V(D)J recombination generates antibody diversity by…
+    options:
+      A: Random point mutation
+      B: Assembling gene segments combinatorially
+      C: Frameshifts
+      D: Gene duplication
+    answer: B
+    explain: Different V, D, J segments join in combinations — the combinatorial explosion.
+    distractors:
+      A: Somatic hypermutation adds later.
+      B: Correct.
+      C: No frameshifts involved.
+      D: Duplication is a different process.
+- heading: Chromosomal variation — from alleles to syndromes
+  body:
+  - '==Ploidy — polyploidy (whole-genome duplication: plants common, animals fatal), aneuploidy (single
+    chromosome gains/losses via nondisjunction — trisomy 21)==. ==Structural — deletions, duplications,
+    inversions, translocations (Philadelphia translocation in CML)==.'
+  - ==Genotype-phenotype caveats — incomplete penetrance, variable expressivity, X-inactivation mosaicism,
+    imprinting (parental origin effects)==. ==Mendelian patterns — autosomal dominant/recessive, X-linked;
+    pedigree logic resolves most exam items==.
+  check:
+  - q: Trisomy 21 arises most often from…
+    options:
+      A: Nondisjunction in meiosis
+      B: Crossing over
+      C: Translocation
+      D: Point mutation
+    answer: A
+    explain: Homologous chromosomes fail to separate — an extra copy in a gamete.
+    distractors:
+      A: That recombines, not duplicates whole chromosomes.
+      B: Philadelphia is the classic but rare.
+      C: One base cannot make a whole chromosome.
+- heading: Epigenetics — heritable but not sequence-based
+  body:
+  - '==Epigenetics = heritable changes in expression with DNA sequence unchanged — DNA methylation (CpG
+    islands, silences), histone modifications (acetylation opens, methylation can silence), chromatin
+    remodeling==. ==Imprinted genes — one parental allele silenced (Prader-Willi vs Angelman: same region,
+    different parent!)==.'
+  - '==X-inactivation — females are mosaics: one X silenced per cell; traits like color-blindness show
+    patchy expression in carriers==. ==Epigenetic marks are environmentally responsive — early-life stress
+    shapes methylation profiles==.'
+  check:
+  - q: A woman heterozygous for a X-linked trait can show patchy expression because…
+    options:
+      A: X-inactivation silences one X per cell
+      B: Genes mutate quickly
+      C: Hormones erase traits
+      D: DNA is lost
+    answer: A
+    explain: Random inactivation freezes a mosaic of active maternal/paternal X cells.
+    distractors:
+      A: Mutations are rare.
+      B: Hormones modulate, don't erase.
+      C: Chromosomes persist.
+- heading: Population genetics — the source of diversity
+  body:
+  - ==Hardy-Weinberg — p + q = 1, p2 + 2pq + q2 = 1; equilibrium requires no mutation, no selection, no
+    migration, no drift, random mating==. Deviations reveal forces — selection changes allele frequencies,
+    drift in small populations, founder/bottleneck effects.
+  - ==Applying HWE — carrier frequency 2pq approximated as 2q when q is small; disease frequency q2. ==Mutation-selection
+    balance and heterozygote advantage (sickle cell) explain why harmful alleles persist==.
+  check:
+  - q: In a population with q = 0.01 for a recessive disease, the carrier frequency is about…
+    options:
+      A: 1%
+      B: 2%
+      C: 0.01%
+      D: 10%
+    answer: B
+    explain: 2pq ~ 2q = 0.02 — near 2%.
+    distractors:
+      A: q alone.
+      B: Correct.
+      C: q2 is the disease rate.
+      D: 10x overestimate.
+examples:
+- prompt: CFTR has a deletion of 3 bases removing phenylalanine at position 508 (delta-F508). Classify
+    the mutation and explain why most heterozygotes are healthy.
+  solution:
+  - Three bases = one codon removed — an in-frame deletion of Phe.
+  - Not a frameshift — the reading frame survives downstream.
+  - The altered protein misfolds and is degraded — loss of function.
+  - Heterozygotes retain one working allele — haplo-sufficiency → carrier phenotype mild.
+  answer: In-frame codon deletion — recessive loss-of-function, carriers unaffected.
+  distractors:
+    A: Frameshift — that would need non-multiple-of-3 bases.
+    B: Nonsense — that stops translation early.
+    C: Silent — the amino acid clearly changed.
+key_points:
+- Point vs frameshift — reading frame is the hinge.
+- NER for dimers; mismatch for post-replication errors.
+- Crossing over in prophase I — new combinations.
+- V(D)J recombination — combinatorial antibody diversity.
+- Aneuploidy from nondisjunction; imprinting — parental origin.
+- HWE — no force list; 2pq ~ 2q when q small.
+mnemonics:
+- phrase: Excision repairs the bad base, mismatch fixes the wrong pair
+  means: BER/NER vs mismatch-repair lanes.
+- phrase: p squared, 2pq, q squared
+  means: Genotype frequencies when HWE holds.
+maps:
+- title: Mutation repair lanes
+  steps:
+  - mismatch (G-T after replication) — mismatch repair
+  - small damaged base — BER
+  - bulky lesion (thymine dimer) — NER
+  - double-strand break — HR or NHEJ
+- title: Chromosomal categories
+  steps:
+  - copy number — aneuploidy, polyploidy
+  - structure — deletion, duplication, inversion, translocation
+  - expression — imprinting, X-inactivation
+  - sequence — point, frameshift
+passage:
+  text: A population study finds a recessive allele at frequency 4%. Sequencing shows the allele arose
+    in a founder individual 300 years ago, and carriers show no detectable phenotype. Another region near
+    the allele shows unusually low diversity.
+  questions:
+  - q: The disease frequency in the population is approximately…
+    options:
+      A: 4%
+      B: 0.16%
+      C: 8%
+      D: 1.6%
+    answer: B
+    explain: q2 = (0.04)2 = 0.0016 — 0.16%.
+    distractors:
+      A: That is q.
+      B: Correct.
+      C: 2q mistake.
+      D: Half of q2 — wrong math.
+  - q: Low diversity near the allele suggests…
+    options:
+      A: A selective sweep or hitchhiking with a favorable variant
+      B: Random sampling
+      C: Hardy-Weinberg equilibrium
+      D: No relation
+    answer: A
+    explain: Linked neutral sites ride along as selection acts.
+    distractors:
+      A: Correct.
+      B: Selection-free conditions remove sweeps.
+      C: HWE implies no sweep.
+      D: Haplotype structure reveals history.
+  - q: The founder origin 300 years ago best explains…
+    options:
+      A: Elevated allele frequency through drift in a small founding population
+      B: Mutation reoccurring
+      C: Migration waves
+      D: Random segregation
+    answer: A
+    explain: A few founders carry rare alleles at high frequency by chance.
+    distractors:
+      A: Correct.
+      B: One origin, not recurrence.
+      C: One origin, not waves.
+      D: Segregation is normal.
+pitfalls:
+- Nonsense vs missense vs silent — read the codon outcome.
+- BER vs NER — lesion size decides.
+- HWE arithmetic — q vs q2.
+- Imprinting vs X-inactivation — mechanism differs.
+- Carrier = heterozygote, not affected.
+exam_map:
+  NMAT: Mutation types, Mendelian basics.
+  MCAT: Content Category 1C — pedigree, mutation passages, Epi- and population logic.
+sources:
+- ref: openstax-biology-2e
+  used:
+  - 'Ch 11-13: Meiosis, Mendel; Ch 15-16: Expression, Cancer genes; Ch 19-20: Evolution genetics'
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC1, CC 1C
+  relation: consulted
+further_reading:
+- title: OpenStax Biology 2e — DNA Structure and Function
+  url: https://openstax.org/books/biology-2e/pages/14-introduction
+  note: Mutations and repair.
+- title: OpenStax Biology 2e — Evolution and Population Genetics
+  url: https://openstax.org/books/biology-2e/pages/19-introduction
+  note: HWE and forces.
+review_questions:
+- q: A point mutation changing an amino acid is…
+  options:
+    A: Silent
+    B: Missense
+    C: Nonsense
+    D: Frameshift
+  answer: B
+  explain: Codon changed to a different amino acid.
+  distractors:
+    A: No change.
+    B: Correct.
+    C: Stop codon.
+    D: Reading-frame shift.
+- q: Founder effect describes…
+  options:
+    A: Allele frequencies set by a small colonizing group
+    B: Random mutation
+    C: Selection against a trait
+    D: Gene flow balancing
+  answer: A
+  explain: Bottleneck of origin — drift amplifies random allele sampling.
+  distractors:
+    A: Correct.
+    B: Mutation adds variation.
+    C: Selection shapes fitness.
+    D: Migration homogenizes.
+- q: Imprinting silences…
+  options:
+    A: An allele based on its parental origin
+    B: Both alleles
+    C: X chromosomes randomly
+    D: Mitochondrial DNA
+  answer: A
+  explain: Prader-Willi and Angelman flip with the parent of origin.
+  distractors:
+    A: Correct.
+    B: Imprinting is mono-allelic.
+    C: X-inactivation is random.
+    D: Mitochondria are maternal.
+- q: Heterozygote advantage explains…
+  options:
+    A: Sickle cell persistence despite recessive disease
+    B: Genetic drift
+    C: Imprinting
+    D: Polyploidy
+  answer: A
+  explain: Carriers resist malaria — selection keeps the allele.
+  distractors:
+    A: Correct.
+    B: Drift is random.
+    C: Imprinting is parental.
+    D: Ploidy is karyotype.

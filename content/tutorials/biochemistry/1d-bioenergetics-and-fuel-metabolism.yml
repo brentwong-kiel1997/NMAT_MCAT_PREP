@@ -1,0 +1,286 @@
+subject: biochemistry
+chapter: 1D · Bioenergetics and fuel metabolism
+title: 1D · Bioenergetics and Fuel Metabolism
+overview: ATP as the energy currency, the pathways that make and spend it, and their hormonal integration.
+  Enzymes and regulation from 5E and the molecule chemistry from 5D apply here. The highest-frequency
+  MCAT biochem content in metabolism passages.
+sections:
+- heading: ATP and energy currencies
+  body:
+  - ==ATP hydrolysis (delta-G about -30 kJ/mol = -7.3 kcal/mol) drives unfavorable reactions through coupled
+    phosphate transfer==. ==Phosphoryl transfer is the currency — kinases transfer phosphate; ATP regenerates
+    from ADP via oxidative phosphorylation, from creatine phosphate, and from substrate-level phosphorylation==.
+  - ==NADH/NAD+ (catabolic), NADPH/NADP+ (anabolic, reductive biosynthesis — pentose phosphate pathway
+    makes it), FADH2 (ETC) are electron currencies. ==Fats yield ~9 kcal/g vs carbs ~4 kcal/g — the energy
+    density argument==.
+  check:
+  - q: NADPH's primary role is…
+    options:
+      A: Reductive biosynthesis
+      B: ATP synthesis
+      C: Signal transduction
+      D: Waste disposal
+    answer: A
+    explain: Anabolic reductions — fatty acid synthesis, detoxification.
+    distractors:
+      A: NADH fuels the ETC.
+      B: ATP is the currency.
+      C: Not its lane.
+- heading: Glycolysis and its regulation
+  body:
+  - '==Glycolysis (cytosol): glucose -> 2 pyruvate; investment 2 ATP, payoff 4 ATP, net 2 ATP + 2 NADH==.
+    ==Key steps — hexokinase (1), PFK-1 (3, the committed step), pyruvate kinase (10). Regulation — PFK-1
+    inhibited by ATP and citrate, activated by AMP and fructose-2,6-bisphosphate==.'
+  - '==Fates of pyruvate: aerobic -> acetyl-CoA (pyruvate dehydrogenase); anaerobic -> lactate (regenerates
+    NAD+); yeast -> ethanol + CO2. ==Sugars funnel via fructose-6-phosphate; galactose and fructose feed
+    glycolysis at distinct points==.'
+  check:
+  - q: The committed step of glycolysis is…
+    options:
+      A: Hexokinase
+      B: Phosphofructokinase-1
+      C: Pyruvate kinase
+      D: Glyceraldehyde oxidation
+    answer: B
+    explain: PFK-1 commits glucose derivatives to the glycolytic path — the main control point.
+    distractors:
+      A: First step but reversible hexose trap.
+      B: Correct.
+      C: Payoff step after commitment.
+      D: An intermediate conversion.
+- heading: The TCA cycle and oxidative phosphorylation
+  body:
+  - '==TCA (mitochondrial matrix): pyruvate -> acetyl-CoA -> citrate (6C) -> 4C cycle; per acetyl-CoA:
+    3 NADH, 1 FADH2, 1 GTP; two CO2 ==. ==Key enzymes: citrate synthase, isocitrate dehydrogenase (regulated),
+    alpha-ketoglutarate dehydrogenase==.'
+  - ==Oxidative phosphorylation — ETC (Complexes I-IV) pumps protons, ATP synthase (Complex V) makes ATP;
+    NADH ~2.5 ATP, FADH2 ~1.5 ATP, total aerobic yield ~30-32 ATP/glucose==. ==Uncouplers (thermogenin
+    in brown fat) generate heat instead of ATP==.
+  check:
+  - q: Per acetyl-CoA, the TCA cycle yields…
+    options:
+      A: 2 NADH, 1 FADH2, 1 GTP
+      B: 3 NADH, 1 FADH2, 1 GTP
+      C: 3 NADH, 2 FADH2, 2 GTP
+      D: 1 NADH, 1 FADH2, 1 GTP
+    answer: B
+    explain: Three redox steps (2 boxes) — 3 NADH; plus FADH2 and GTP.
+    distractors:
+      A: Correct.
+      B: FADH2 count off.
+      C: Double count.
+      D: Every turn generates more.
+  figures:
+  - src: 1d-bioenergetics-and-fuel-metabolism/fig-30c947dd.webp
+    caption: Mitochondrion architecture — electron transport chain and ATP synthase embedded in the inner
+      membrane.
+    credit: Fig 7.4 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+  - src: 1d-bioenergetics-and-fuel-metabolism/fig-372c7a31.webp
+    caption: Substrate-level phosphorylation — an enzyme transfers a phosphate group to ADP, making ATP.
+    credit: Fig 7.5 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+- heading: Fat and amino acid metabolism
+  body:
+  - '==Fatty acid oxidation (beta-oxidation, mitochondrial matrix) — each cycle: 1 FADH2, 1 NADH, 1 acetyl-CoA;
+    palmitate (C16) yields 7 cycles -> 8 acetyl-CoA -> about 106 ATP==. Ketogenesis — liver converts excess
+    acetyl-CoA to ketone bodies (acetoacetate, beta-hydroxybutyrate) during fasting; the brain adapts
+    to use them.'
+  - ==Amino acid catabolism — transamination (aminotransferases, PLP), oxidative deamination, the urea
+    cycle (liver, ornithine-citrulline) for ammonia. ==Glucogenic vs ketogenic — most glucogenic; leucine
+    and lysine ketogenic only==.
+  check:
+  - q: The urea cycle exists to…
+    options:
+      A: Build proteins
+      B: Detoxify ammonia
+      C: Make ATP
+      D: Store lipids
+    answer: B
+    explain: Ammonia from amino acid deamination is toxic — the liver converts it to urea.
+    distractors:
+      A: Protein synthesis uses amino acids directly.
+      B: Correct.
+      C: ATP comes from the ETC.
+      D: Lipids store energy.
+- heading: Integration — fed, fasting, and hormones
+  body:
+  - ==Fed state (insulin high) — glucose uptake, glycolysis, glycogen synthesis, lipogenesis==. ==Fasting
+    (glucagon, epinephrine) — glycogenolysis, gluconeogenesis (liver, Cori cycle), lipolysis, ketogenesis==.
+    ==Insulin lowers glucose; glucagon raises it; cortisol and epinephrine mobilize during stress==.
+  - '==Gluconeogenesis — essentially glycolysis in reverse (3 bypasses: pyruvate carboxylase + PEPCK,
+    fructose-1,6-bisphosphatase, glucose-6-phosphatase), costing 4 ATP + 2 GTP + 2 NADH per glucose; the
+    Cori cycle recycles lactate to glucose==.'
+  check:
+  - q: During a 24-hour fast, blood glucose is maintained by…
+    options:
+      A: Glycogenolysis and gluconeogenesis in the liver
+      B: Muscle glucose uptake
+      C: Lipogenesis
+      D: Ketone reabsorption
+    answer: A
+    explain: Liver releases stored and freshly made glucose.
+    distractors:
+      A: Muscle stores glycogen locally.
+      B: That is the fed flow.
+      C: Ketones spare glucose, not make it.
+examples:
+- prompt: 'Calculate the net ATP from one glucose under aerobic conditions using the two-citrus accounting
+    (modern yields: NADH 2.5, FADH2 1.5).'
+  solution:
+  - 'Glycolysis net: 2 ATP + 2 NADH (cytosolic NADH ~2.5 each — malate shuttle) = 2 + 5 = 7.'
+  - 'Pyruvate PDH: 2 NADH = 5.'
+  - 'TCA (2 turns): 3 NADH + 1 FADH2 + 1 GTP each = (3x2.5 + 1.5 + 1) x 2 = 10 x 2 = 20.'
+  - Total = 7 + 5 + 20 = 32 ATP per glucose (range 30-32 by shuttle).
+  answer: About 30-32 ATP per glucose using P/O ratios of 2.5 and 1.5.
+  distractors:
+    A: 36-38 — the old 3/2 ratio era.
+    B: 2 — that is glycolysis alone.
+    C: 4 — that mixes gross and net.
+key_points:
+- ATP -30 kJ/mol; NADH catabolic, NADPH anabolic.
+- 'Glycolysis: net 2 ATP + 2 NADH; PFK-1 is the valve; F-2,6-BP activates.'
+- 'TCA per acetyl-CoA: 3 NADH, 1 FADH2, 1 GTP.'
+- 'ETC: NADH ~2.5, FADH2 ~1.5; aerobic total ~30-32.'
+- Beta-oxidation yields about 106 ATP per palmitate; ketones feed the brain fasting.
+- Insulin = storage; glucagon = mobilization; Cori recycles lactate.
+mnemonics:
+- phrase: '2-2-2: net ATP, NADH, and the 2 CO2 per pyruvate'
+  means: Glycolysis payoff arithmetic.
+- phrase: Fed insulin, fasted glucagon
+  means: The hormone switch.
+maps:
+- title: Glucose fate
+  steps:
+  - 'glycolysis: pyruvate'
+  - 'aerobic: PDH -> acetyl-CoA -> TCA -> ETC'
+  - 'anaerobic: lactate (NAD+ regenerated)'
+  - 'glycogen storage: UDP-glucose -> glycogen'
+- title: FASTING priority
+  steps:
+  - glycogenolysis first (liver gifts glucose)
+  - 'gluconeogenesis: lactate, glycerol, alanine'
+  - lipolysis -> fatty acids -> ketones
+  - 'protein sparing: muscles shift to fat'
+passage:
+  text: A patient on a 48-hour fast exercises at moderate intensity. Blood glucose stays at 4.5 mM. Plasma
+    beta-hydroxybutyrate rises 3-fold. Insulin is low; glucagon is high.
+  questions:
+  - q: The stable blood glucose reflects…
+    options:
+      A: Hepatic glycogenolysis plus gluconeogenesis
+      B: Muscle glycogen release into blood
+      C: Insulin-driven uptake
+      D: Renal reabsorption
+    answer: A
+    explain: Liver is the only source of circulating glucose.
+    distractors:
+      A: Correct.
+      B: Muscle glycogen is muscle-bound.
+      C: Insulin would lower glucose.
+      D: Kidneys return, not make.
+  - q: The ketone rise indicates…
+    options:
+      A: Liver excess acetyl-CoA from fatty acids
+      B: Kidney failure
+      C: Aerobic insufficiency
+      D: Excess protein
+    answer: A
+    explain: Fasting — beta-oxidation floods the liver with acetyl-CoA, which converts to ketones.
+    distractors:
+      A: Correct.
+      B: No renal clue.
+      C: Exercise uses glucose/fat normally.
+      D: Gluconeogenesis uses amino acids.
+  - q: If the fast extended for two weeks, the brain's primary fuel adapts to…
+    options:
+      A: Ketones
+      B: Glucose exclusively
+      C: Amino acids
+      D: Lactate
+    answer: A
+    explain: The brain upregulates ketone transport as glucose-sparing deepens.
+    distractors:
+      A: Correct — the adaptive switch.
+      B: Glucose remains but demand shrinks.
+      C: Proteins are spared.
+      D: Lactate is recycled.
+pitfalls:
+- Gross vs net ATP in glycolysis (2 spent, 4 made).
+- NADH vs NADPH roles.
+- FADH2 yield — 1.5, not 2.5.
+- PFK vs hexokinase control — PFK-1 is the committed valve.
+- Cori cycle direction — muscle lactate to liver glucose.
+exam_map:
+  NMAT: Pathway order and ATP yields (Chemistry block).
+  MCAT: Content Category 1D — metabolism passages in fed/fasting context.
+sources:
+- ref: openstax-biology-2e
+  used:
+  - 'Ch 7: Cellular Respiration; Ch 8: Photosynthesis (context)'
+  relation: consulted
+- ref: openstax-anatomy-physiology-2e
+  used:
+  - 'Ch 24: Metabolism and Nutrition'
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC1, CC 1D
+  relation: consulted
+further_reading:
+- title: OpenStax Biology 2e — Cellular Respiration
+  url: https://openstax.org/books/biology-2e/pages/7-introduction
+  note: Complete pathway accounting.
+- title: OpenStax Anatomy and Physiology 2e — Metabolism and Nutrition
+  url: https://openstax.org/books/anatomy-and-physiology-2e/pages/24-introduction
+  note: Fed-fasting integration.
+review_questions:
+- q: Which enzyme is an allosteric activator of PFK-1?
+  options:
+    A: ATP
+    B: Citrate
+    C: Fructose-2,6-bisphosphate
+    D: Glucose-6-phosphate
+  answer: C
+  explain: F-2,6-BP is the potent feedforward activator of glycolysis.
+  distractors:
+    A: Inhibitor.
+    B: Inhibitor.
+    C: Correct.
+    D: Product trap, not activator.
+- q: The Cori cycle…
+  options:
+    A: Moves lactate from muscle to liver for gluconeogenesis
+    B: Synthesizes ketones
+    C: Stores glycogen
+    D: Recycles NADPH
+  answer: A
+  explain: Muscle anaerobic lactate -> liver makes glucose again.
+  distractors:
+    A: Correct.
+    B: That's ketogenesis.
+    C: Glycogenesis.
+    D: Not the shuttle.
+- q: Beta-oxidation of palmitate (16C) produces how many acetyl-CoA?
+  options:
+    A: '4'
+    B: '8'
+    C: '16'
+    D: '7'
+  answer: B
+  explain: Each cycle removes 2 carbons — 8 acetyl-CoA from C16.
+  distractors:
+    A: Sub cycles.
+    B: Correct.
+    C: One per carbon.
+    D: One less than cycles.
+- q: Thermogenesis in brown fat uses a proton uncoupler that…
+  options:
+    A: Dissipates the proton gradient as heat
+    B: Blocks the ETC
+    C: Stops ATP synthesis permanently
+    D: Inhibits beta-oxidation
+  answer: A
+  explain: UCP1 lets protons re-enter bypassing ATP synthase — heat, not ATP.
+  distractors:
+    A: The ETC keeps pumping.
+    B: ATP synthesis is bypassed, not destroyed.
+    C: Fat still oxidizes.

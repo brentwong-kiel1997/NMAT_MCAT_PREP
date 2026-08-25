@@ -1,0 +1,286 @@
+subject: biochemistry
+chapter: 1A · Proteins and amino acids
+title: 1A · Proteins and Amino Acids
+overview: Amino acid chemistry, peptide bonds, protein structure, and folding — the single highest-yield
+  biochemistry topic on the MCAT. Enzyme structure and function connect directly (pKa, charge, chirality).
+sections:
+- heading: Amino acid structure and chemistry
+  body:
+  - '==Amino acids share an amino group, carboxyl group, H, and variable R group on the alpha carbon —
+    only glycine''s R is H, so glycine is not chiral==. At physiological pH, amino acids exist as zwitterions
+    (NH3+, COO-). ==pKa determines charge: below pKa protonated, above deprotonated==; the isoelectric
+    point pI = (pKa1 + pKa2)/2 for neutral residues.'
+  - '==Side chains sort: nonpolar (Gly, Ala, Val, Leu, Ile, Phe, Met, Pro), polar uncharged (Ser, Thr,
+    Cys, Tyr, Asn, Gln), acidic (Asp, Glu — negative at pH 7), basic (Lys, Arg, His)==. ==Cysteine forms
+    disulfide bonds; Proline kinks helices due to its rigid ring==.'
+  check:
+  - q: Which amino acid is NOT chiral?
+    options:
+      A: Alanine
+      B: Glycine
+      C: Serine
+      D: Valine
+    answer: B
+    explain: Glycine's R group is H — the alpha carbon carries two hydrogens.
+    distractors:
+      A: Ala has CH3 R.
+      B: Correct.
+      C: Ser has CH2OH R.
+      D: Val has branched R.
+  figures:
+  - src: 1a-proteins-and-amino-acids/fig-2865acde.webp
+    caption: The amino acid template — amino group, carboxyl group, H, and the variable R group on the
+      alpha carbon.
+    credit: Fig 3.27 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+- heading: Peptide bonds and protein primary structure
+  body:
+  - ==Peptide bonds are amide linkages formed by condensation (water lost) between the carboxyl of one
+    residue and the amino of the next — written N-terminus to C-terminus==. The bond is planar because
+    the C-N bond has partial double-bond character — no rotation around it.
+  - '==Primary structure = the sequence; it fully determines the fold (Anfinsen — ribonuclease refolds
+    if only primary structure is intact). ==Common exam id: count peptide bonds = residues - 1 in a linear
+    peptide; disulfides join cysteines (oxidation)==.'
+  check:
+  - q: A decapeptide has how many peptide bonds?
+    options:
+      A: '10'
+      B: '9'
+      C: '11'
+      D: '8'
+    answer: B
+    explain: Peptide bonds = n-1 for a linear chain of n residues.
+    distractors:
+      A: That is residues.
+      B: Correct — 9.
+      C: N to C confusion.
+      D: Circular counting.
+- heading: Secondary structure — local folds
+  body:
+  - ==Alpha-helix — backbone C=O H-bonds to the N-H four residues ahead (i, i+4); 3.6 residues/turn; proline
+    and glycine disrupt it==. ==Beta-sheet — extended strands H-bonded side by side; parallel (same direction,
+    weaker) or antiparallel (opposite, stronger)==.
+  - ==Secondary structure is stabilized by backbone H-bonds, NOT side chains — that is the tertiary level's
+    job==. Beta-turns connect strands; many proteins mix helix and sheet (e.g., the fibrous keratin helix,
+    silk beta-sheet).
+  check:
+  - q: Alpha-helices are stabilized mainly by…
+    options:
+      A: Hydrophobic interactions
+      B: Backbone hydrogen bonds
+      C: Disulfide bonds
+      D: Salt bridges
+    answer: B
+    explain: i to i+4 backbone C=O to N-H bonds.
+    distractors:
+      A: Side-chain effect is tertiary.
+      B: Correct.
+      C: Cysteine oxidation.
+      D: Ionic side chain pairs.
+- heading: Tertiary and quaternary structure
+  body:
+  - ==Tertiary structure = the full 3D fold from side-chain interactions — hydrophobic effect (dominant),
+    H-bonds, ion pairs, disulfide covalent links==. ==Quaternary structure = assembly of multiple polypeptide
+    chains (hemoglobin = alpha2 beta2)==.
+  - ==Denaturation — heat, pH, detergents, urea, reducing agents unfold structure WITHOUT breaking peptide
+    bonds; some proteins refold spontaneously, others need chaperones==. SDS denatures with uniform charge;
+    beta-mercaptoethanol cuts disulfides.
+  check:
+  - q: Hemoglobin's alpha2 beta2 arrangement is…
+    options:
+      A: Primary structure
+      B: Quaternary structure
+      C: Secondary structure
+      D: Just a peptide
+    answer: B
+    explain: Multiple folded chains assembling — the fourth level.
+    distractors:
+      A: Sequence.
+      B: Correct.
+      C: Local folding.
+      D: One chain.
+  figures:
+  - src: 1a-proteins-and-amino-acids/fig-0971e65c.webp
+    caption: Tertiary structure stabilizers — ionic bonds, hydrogen bonds, disulfide linkages, and hydrophobic
+      interactions.
+    credit: Fig 3.26 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+- heading: Protein function — binding and enzymes
+  body:
+  - ==Enzymes bind substrates at active sites (induced fit); the structure determines specificity — with
+    a few side-chain contacts deciding affinity==. ==Antibodies (immunoglobulins) — Y-shaped, variable
+    regions bind antigens, constant regions recruit effectors==.
+  - '==Structure-function classics the MCAT reuses: collagen''s Gly-X-Y triple helix (fibrous strength),
+    hemoglobin''s cooperative O2 binding (sigmoid curve), intrinsically disordered regions in signaling==.'
+  check:
+  - q: Antibody specificity comes from…
+    options:
+      A: The constant region
+      B: The variable regions of light and heavy chains
+      C: The hinge
+      D: The Fc sugar
+    answer: B
+    explain: Variable domains make the antigen-binding pocket.
+    distractors:
+      A: Constant mediates effector function.
+      B: Correct.
+      C: Hinge allows flexibility.
+      D: Fc is effector-side.
+examples:
+- prompt: 'A protein segment is analyzed: sequence Gly-Pro-Leu forms a left-handed structure with a period
+    of about 3.0 A per residue. Identify the structure and name the residue that makes it unique.'
+  solution:
+  - Triplet Gly-X-Y repeating period — that is collagen's left-handed helix.
+  - Glycine is the only residue with room in the tight center.
+  - Proline's ring locks phi/psi and forces the helix geometry.
+  - Three strands then wrap into the right-handed superhelix of collagen fibers.
+  answer: Collagen triple-helix building block — Gly at every third position makes it possible.
+  distractors:
+    A: Alpha-helix — 3.6 residues/turn, not a Gly-X-Y pattern.
+    B: Beta-sheet — extended, no 3.0 A rule.
+    C: Random coil — repetition is structural, not random.
+key_points:
+- Zwitterion at pH 7; pI = (pKa1 + pKa2)/2 for neutral residues.
+- Glycine achiral; cysteine disulfides; proline kinks.
+- Peptide bonds — planar, condensation, n-1 in a chain.
+- 'Helix: backbone H-bonds i+4; sheet: extended strands.'
+- Tertiary — hydrophobic core; quaternary — subunit assembly.
+- Denaturation spares primary structure — SDS, heat, pH.
+mnemonics:
+- phrase: 'Amino acids of the nonpolar lot: GAVLIMP'
+  means: Gly, Ala, Val, Leu, Ile, Met, Pro — the hydrophobic set.
+- phrase: N to C, water out
+  means: Peptide bond direction and the condensation chemistry.
+maps:
+- title: Structure ladder
+  steps:
+  - 'primary — sequence (Anfinsen: encodes the fold)'
+  - secondary — helix/sheet via backbone H-bonds
+  - tertiary — side-chain packing, hydrophobic core
+  - quaternary — subunit assembly (hemoglobin)
+- title: Denaturation toolkit
+  steps:
+  - heat/pH — breaks H-bonds and ionic
+  - urea/detergent — hydrophobic disruption
+  - SDS — uniform charge, kills all shape
+  - reducing agent — opens disulfides
+passage:
+  text: A researcher mutates residue 90 of a helix-forming protein from Leu to Asp. The protein now fails
+    to fold under physiological pH but refolds when pH drops to 5. CD spectroscopy shows no helix in the
+    misfolded state.
+  questions:
+  - q: The Leu-to-Asp mutation disrupts folding by…
+    options:
+      A: Introducing a charged group into a hydrophobic core
+      B: Removing a disulfide
+      C: Truncating the chain
+      D: Breaking a peptide bond
+    answer: A
+    explain: Asp is negative at pH 7 and drawn to the aqueous surface — the hydrophobic core cannot bury
+      it.
+    distractors:
+      A: Correct.
+      B: No Cys involved.
+      C: Same length.
+      D: No hydrolysis.
+  - q: Lowering the pH to 5 restores folding because…
+    options:
+      A: Asp becomes protonated and neutral
+      B: The helix stretches
+      C: Proline is removed
+      D: Disulfides form
+    answer: A
+    explain: Below Asp's side-chain pKa (~4), the group picks up H+ and turns neutral — buryable again.
+    distractors:
+      A: Correct — pKa logic.
+      B: No geometry change.
+      C: Proline untouched.
+      D: No cysteine oxidation.
+  - q: The secondary-structure failure at pH 7 indicates…
+    options:
+      A: The mutation destabilizes helix via charge repulsion and burial penalty
+      B: The primary sequence changed
+      C: Chaperones were absent
+      D: The protein is denatured
+    answer: A
+    explain: A helix-stabilizing hydrophobic residue became a repulsive charged one.
+    distractors:
+      A: Sequence change is true but is the cause, not mechanism.
+      B: Controls used proper folding conditions.
+      C: Denaturation is a description, not the mechanism.
+pitfalls:
+- Counting peptide bonds as residues.
+- Calling alpha-helix stabilization hydrophobic.
+- Forgetting glycine is achiral and collagen-specific.
+- SDS breaks disulfides — no, reducing agents do.
+- pI arithmetic on charged residues uses pKa of side chains too.
+exam_map:
+  NMAT: Amino acid classification and peptide basics (under Chemistry).
+  MCAT: Content Category 1A — nearly guaranteed structure-function passage.
+sources:
+- ref: openstax-biology-2e
+  used:
+  - 'Ch 3: Biological Macromolecules; Ch 6: Metabolism (enzymes)'
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC1, CC 1A
+  relation: consulted
+further_reading:
+- title: OpenStax Biology 2e — Biological Macromolecules
+  url: https://openstax.org/books/biology-2e/pages/3-introduction
+  note: Proteins from monomers to folding.
+- title: OpenStax Anatomy and Physiology 2e — Protein Types and Functions
+  url: https://openstax.org/books/anatomy-and-physiology-2e/pages/3-4-protein-synthesis
+  note: Functional classification.
+review_questions:
+- q: At pH 7, lysine's side chain is…
+  options:
+    A: Uncharged
+    B: Positively charged
+    C: Negatively charged
+    D: Covalent
+  answer: B
+  explain: pKa ~10.5 — protonated at pH 7.
+  distractors:
+    A: Deprotonated only above 10.5.
+    B: Correct.
+    C: Asp/Glu are negative.
+    D: Charge state is ionic.
+- q: Disulfide bonds form between…
+  options:
+    A: Two methionines
+    B: Two cysteines (oxidation)
+    C: Serine and threonine
+    D: Any two sulfurs
+  answer: B
+  explain: Cys thiols oxidize to -S-S-.
+  distractors:
+    A: Met has thioether — no bond.
+    B: Correct.
+    C: No SH on those.
+    D: Only Cys has the SH that oxidizes.
+- q: An antiparallel beta-sheet is…
+  options:
+    A: Stronger than parallel
+    B: Weaker than parallel
+    C: Identical
+    D: Circular
+  answer: A
+  explain: Backbone H-bonds align more linearly in antiparallel.
+  distractors:
+    A: Correct.
+    B: Opposite.
+    C: Geometry differs.
+    D: Sheets are straight, not circular.
+- q: A chaperone's job is…
+  options:
+    A: Breaking peptide bonds
+    B: Assisting proper folding
+    C: Cutting DNA
+    D: Synthesizing amino acids
+  answer: B
+  explain: Helping chains reach the native fold without aggregation.
+  distractors:
+    A: Proteases do that.
+    B: Correct.
+    C: Nucleases do.
+    D: Metabolism does.

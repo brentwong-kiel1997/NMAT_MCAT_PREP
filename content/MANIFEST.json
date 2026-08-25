@@ -1,5 +1,5 @@
 {
-  "source_rev": "b60c507",
+  "source_rev": "34a54a5",
   "counts": {
     "chapters": 70,
     "note_bullets": 449,
@@ -12,7 +12,7 @@
     "diseases": 8
   },
   "files": {
-    "SOURCES.yml": "bfa9ead0170519829651d49e94b3699a7915d9ad86e2fa5ab0726b6424a4dbce",
+    "SOURCES.yml": "e8c37335da395e1e1fd8c3f6fcf194a060fe2691d6882d83c2e857762ff5974d",
     "catalog.yml": "06fdd53e70a617098e5eb8c2b071c989c7498193c1fcd72afd175bddc5e8f6e0",
     "chapters/10a-social-inequality.yml": "1d79655388e7a1694108d431552afdab959687e33de46cd55c92291cb9943370",
     "chapters/1a-proteins-and-amino-acids.yml": "158223673eea72b8aef3e74ef97793b2fb11a8469b658fdc8536be3d2cb20444",
@@ -119,6 +119,11 @@
     "tutorials/behavioral-social/fc9-cultural-and-social-differences.yml": "2f411d6fb2f07ac0340ff4abfaa7797a14f96ff44c82f97b7a48694ce9f0bc28",
     "tutorials/behavioral-social/psychology.yml": "6fdd55b15607229294f060cd76c177b4db493f34dc79129a8b4fe5f49ad322a4",
     "tutorials/behavioral-social/sociology-and-anthropology.yml": "0ccf69d0eca6844d3e1296b011f41d785e102daa2c33a35532a64d6dbb4c1672",
+    "tutorials/biochemistry/1a-proteins-and-amino-acids.yml": "c63e1b99a023ea114f4159e763fa00643a043cc6280c5ad0dce89bc24f968098",
+    "tutorials/biochemistry/1b-gene-to-protein.yml": "e631dc9b527a032707120fcad9997a0d85b5701784cdaaa7f27c7e4646af584a",
+    "tutorials/biochemistry/1c-heritable-information-diversity.yml": "eb0800c3824f6621f2148e8efd1a1c695c8631c103825719fa889d0031a7cf46",
+    "tutorials/biochemistry/1d-bioenergetics-and-fuel-metabolism.yml": "8670b0704f218e62d297b38d5e9426af03eed172a8f53deb0308048473ce36cc",
+    "tutorials/biochemistry/chemistry-of-biochemistry-cem.yml": "2a580a60bd9625c57f3ca1365a75cd9bfecbf97b23a2f4b7dadd4ec548c7173a",
     "tutorials/biology/1c-heritable-information-genetic-diversity.yml": "a751d8baca467eeb3e4f378e854955d4622dc58604db01af72ec6019deb94d34",
     "tutorials/biology/2a-assemblies-of-molecules-cells-and-cell-groups.yml": "a7df2dfec0eb3caae438721201bfe0981389dabd6b123f5ee5a0006ba2d2ff78",
     "tutorials/biology/2b-prokaryotes-and-viruses.yml": "1368fa60990a8164d141ad25162b4b5c7fc19e10c861bba1a22a56e535788761",
