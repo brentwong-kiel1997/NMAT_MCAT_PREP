@@ -1,0 +1,281 @@
+subject: physics
+chapter: 4B · Fluids for circulation and gas exchange
+title: 4B · Fluids for Circulation and Gas Exchange
+overview: Fluid statics and dynamics applied to the circulation and respiration — pressure, buoyancy,
+  continuity, Bernoulli, and gas laws of exchange. The most physiology-anchored physics category on the
+  MCAT.
+sections:
+- heading: Fluid statics — pressure and buoyancy
+  body:
+  - '==Pressure = F/A; gauge pressure = P - P-atm; hydrostatic: P = P0 + rho g h==. Pressure in a fluid
+    is isotropic — the same in all directions at a depth. ==Pascal''s principle: pressure applied to an
+    enclosed fluid transmits undiminished (hydraulic lifts)==.'
+  - '==Buoyancy: F_b = rho-fluid V-displaced g — the weight of the displaced fluid==. Objects with density
+    below the fluid float; above sink. ==Fully submerged objects: apparent weight = object weight minus
+    buoyancy==.'
+  check:
+  - q: A 40 kg object (volume 0.05 m3) fully submerged in water (rho = 1000 kg/m3) has buoyancy about…
+    options:
+      A: 400 N
+      B: 392 N
+      C: 490 N
+      D: 800 N
+    answer: C
+    explain: F_b = 1000 x 0.05 x 9.8 = 490 N — the weight of the displaced fluid.
+    distractors:
+      A: That is roughly the object weight.
+      B: That is exactly the object weight — object floats.
+      C: Correct — 490 N.
+      D: Double the weight.
+  figures:
+  - src: 4b-fluids-for-circulation-and-gas-exchange/fig-1a74f230.webp
+    caption: Pressure in a fluid column — volume V = Ah and weight mg set the pressure at the base.
+    credit: Ch 11 · OpenStax College Physics 2e — CC BY-NC-SA 4.0
+  - src: 4b-fluids-for-circulation-and-gas-exchange/fig-59efe58d.webp
+    caption: Atmospheric pressure — the weight of a 1 m2 column of air is about 1.01 x 10^5 N.
+    credit: Ch 11 · OpenStax College Physics 2e — CC BY-NC-SA 4.0
+- heading: Fluid dynamics — continuity and Bernoulli
+  body:
+  - '==Continuity: A1 v1 = A2 v2 — narrower channel, faster flow.== Volume flow rate Q = A v is conserved
+    along a pipe (incompressible flow). Bernoulli: P + (1/2)rho v2 + rho g h = constant.'
+  - '==In a horizontal tube with faster flow, pressure is LOWER (venturi) — the mechanism of flowmeters
+    and aircraft lift==. Applied to circulation: narrowed stenosis → higher velocity → lower lateral pressure.'
+  check:
+  - q: Blood moves from the aorta (A = 3 cm2) into arterioles (total A = 20 cm2). The velocity…
+    options:
+      A: Triples
+      B: Rises 7x
+      C: Stays constant
+      D: Drops about 7x
+    answer: D
+    explain: 'Continuity: v scales inversely with total area — 3/20 ≈ 0.15 — about 7-fold slower.'
+    distractors:
+      A: Wrong relation.
+      B: Wrong direction.
+      C: A v is constant, so v cannot stay.
+      D: Correct.
+- heading: Viscosity and resistance to flow
+  body:
+  - '==Poiseuille: Q = (pi delta-P r4)/(8 eta L) — the radius to the FOURTH power decides flow==. Doubling
+    radius increases flow 16x — why vasodilation is so potent. ==Resistance R ~ 1/r4; series adds, parallel
+    fractions==.'
+  - Turbulence — ==Reynolds number Re = rho v d / eta; above ~2000 the flow turns turbulent== (heart murmurs,
+    bruits). Viscosity of blood rises with hematocrit and falls with temperature.
+  check:
+  - q: A vessel doubles its radius while pressure drop is constant. The flow rate…
+    options:
+      A: Doubles
+      B: Quadruples
+      C: Increases 16x
+      D: Increases 8x
+    answer: C
+    explain: 'Poiseuille — r^4: (2r)^4 = 16.'
+    distractors:
+      A: Linear — wrong.
+      B: r^2 — Bernoulli slip.
+      C: Correct — 16x.
+      D: r^3 — misuse.
+- heading: Gas exchange — partial pressures and diffusion
+  body:
+  - '==Dalton: total pressure = sum of partial pressures; partial pressure = mole fraction x total. Henry:
+    dissolved gas concentration = k P-gas==. Alveolar gas O2 at ~100 mmHg drives diffusion into blood;
+    CO2 the reverse.'
+  - ==Diffusion flux J = D A (delta-P)/d — the Fick law — thickness (pulmonary edema), area (emphysema),
+    and gradient drive exchange==. ==Air is ~78% N2 and 21% O2; at 1 atm (760 mmHg) that gives PO2 = 160
+    mmHg ambient, 100 in alveoli==.
+  check:
+  - q: A mountain climber at high altitude has lower driving pressure for O2 diffusion because…
+    options:
+      A: Hemoglobin is bigger
+      B: The partial pressure gradient falls with total pressure
+      C: The alveoli shrink
+      D: Blood is thicker
+    answer: B
+    explain: Dalton — PO2 scales with total barometric pressure; altitude lowers it.
+    distractors:
+      A: Hemoglobin is unchanged.
+      B: Correct — gradient falls.
+      C: Alveoli adapt, not shrink.
+      D: Viscosity is secondary.
+- heading: Fluids in the body — circulation mechanics
+  body:
+  - '==Mean arterial pressure = cardiac output x total peripheral resistance (P = Q R)==. Starling forces
+    — hydrostatic vs oncotic across capillaries — decide filtration: arterial end filters, venous end
+    reabsorbs.'
+  - '==Hydrostatics added to respiration: intrapleural pressure ~ -4 mmHg maintains lung inflation==;
+    pneumothorax equalizes it and the lung collapses. Breathing work and airway resistance set the energy
+    cost of ventilation.'
+  check:
+  - q: Capillary filtration at the arterial end exceeds reabsorption at the venous end because…
+    options:
+      A: Oncotic pressure is higher
+      B: Hydrostatic driving force exceeds oncotic pull at the arterial end
+      C: Arterial blood is thicker
+      D: The capillaries leak
+    answer: B
+    explain: Net filtration pressure is positive at the arterial end — hydrostatic minus oncotic.
+    distractors:
+      A: Oncotic pulls IN.
+      B: Correct.
+      C: Blood viscosity is not the driver.
+      D: Normal physiology lets small proteins across.
+examples:
+- prompt: A vessel with radius 1.0 mm carries 5 mL/s. A branch with radius 2.0 mm and the same pressure
+    drop carries how much?
+  solution:
+  - Poiseuille — Q ~ r4.
+  - r ratio = 2.0/1.0 = 2.
+  - Q-ratio = 2^4 = 16.
+  - New flow = 5 x 16 = 80 mL/s.
+  answer: 80 mL/s — the fourth power amplifies radius changes dramatically.
+  distractors:
+    A: 10 mL/s — linear scaling.
+    B: 20 mL/s — squared scaling.
+    C: 40 mL/s — cubed scaling.
+key_points:
+- P = P0 + rho g h; buoyancy = displaced fluid weight.
+- Continuity A v constant; Bernoulli pressure falls where flow speeds.
+- 'Poiseuille: r^4 governs; doubling radius → 16x flow.'
+- Dalton and Henry set gas driving gradients.
+- 'Starling: hydrostatic out vs oncotic in across capillaries.'
+- Intrapleural negative pressure holds lungs open.
+mnemonics:
+- phrase: Fourth power rules the tube
+  means: Poiseuille — radius to the 4th, the key flow fact.
+- phrase: Faster flow, lower pressure
+  means: Bernoulli in a horizontal tube.
+maps:
+- title: Circulation flow logic
+  steps:
+  - heart sets Q (CO)
+  - arteriolar radius sets R (r^4)
+  - MAP = CO x R
+  - capillary Starling forces exchange fluid
+- title: O2 from air to blood
+  steps:
+  - ambient 160 mmHg
+  - humidified tracheal air ~150
+  - alveolar ~100
+  - venous ~40 — gradient 60 drives diffusion
+passage:
+  text: A stenosis narrows a 5 mm renal artery to 2 mm across a 1 cm segment. Flow upstream is 400 mL/min.
+    With constant pressure drop, the segment resistance rises by r^4 scaling.
+  questions:
+  - q: The resistance of the narrowed segment rises by…
+    options:
+      A: 6.25x
+      B: 2.5x
+      C: 16x
+      D: 39x
+    answer: D
+    explain: (5/2)^4 = 2.5^4 ≈ 39.
+    distractors:
+      A: Squared mistake.
+      B: Linear ratio.
+      C: Cubed mistake.
+      D: Correct — about 39x.
+  - q: To restore flow to 400 mL/min, the driving pressure would need…
+    options:
+      A: Doubling
+      B: Roughly 39x
+      C: 16x
+      D: Unchanged
+    answer: B
+    explain: Q = delta-P/R — compensate for a 39x R with a 39x pressure increase.
+    distractors:
+      A: Not enough.
+      B: Correct.
+      C: r^4 ratio is not the pressure ratio.
+      D: Resistance changed.
+  - q: The velocity of blood inside the 2 mm segment relative to the 5 mm segment is…
+    options:
+      A: 2.5x faster
+      B: 6.25x faster
+      C: Same
+      D: Slower
+    answer: B
+    explain: Continuity — v ~ 1/A ~ 1/r2 — (5/2)2 = 6.25.
+    distractors:
+      A: Correct.
+      B: Linear confusion.
+      C: A v must be conserved.
+      D: Wrong direction.
+pitfalls:
+- Buoyancy = displaced FLUID weight, not object weight.
+- Bernoulli sign — high speed is LOW pressure, not high.
+- Poiseuille exponents — r4, sometimes confused with r2.
+- Dalton's partial vs Henry's dissolved — two different laws.
+- Starling compartment mix-ups.
+exam_map:
+  NMAT: Pressure depth, buoyancy, continuity, Bernoulli basics.
+  MCAT: Content Category 4B — cardiovascular and respiratory physiology applied.
+sources:
+- ref: openstax-college-physics-2e
+  used:
+  - Ch 11 — fluid statics, pressure
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC4, CC 4B
+  relation: consulted
+further_reading:
+- title: OpenStax Anatomy and Physiology 2e — The Cardiovascular System
+  url: https://openstax.org/books/anatomy-and-physiology-2e/pages/19-introduction
+  note: Hemodynamics context.
+- title: OpenStax Physics (HS) — Fluid Dynamics
+  url: https://openstax.org/books/physics/pages/12-introduction
+  note: Bernoulli and Poiseuille.
+review_questions:
+- q: A 60 kg person's lungs have a density below water. In a pool…
+  options:
+    A: They sink
+    B: They float
+    C: They hover
+    D: Depends on breath
+  answer: D
+  explain: Lung density changes with air — the body floats when fully expired? Actually the full body
+    floats when air-filled, sinks on full exhalation.
+  distractors:
+    A: Air-filled floats.
+    B: Air-filled floats.
+    C: Only at neutral buoyancy.
+    D: Correct — depth of breath decides.
+- q: An IV drip hangs higher than the vein to…
+  options:
+    A: Increase g
+    B: Increase the hydrostatic pressure head
+    C: Lower viscosity
+    D: Reduce flow
+  answer: B
+  explain: P = rho g h — height adds pressure.
+  distractors:
+    A: g is fixed.
+    B: Correct.
+    C: Viscosity is a fluid property.
+    D: The opposite.
+- q: Total peripheral resistance rises most when arterioles…
+  options:
+    A: Constrict
+    B: Dilate
+    C: Stay constant
+    D: Thicken walls
+  answer: A
+  explain: Constriction — r falls, R ~ 1/r4.
+  distractors:
+    A: Correct.
+    B: Dilation lowers R.
+    C: Fixed.
+    D: Thickening is chronic but not the acute control.
+- q: A person breathing pure oxygen at 1 atm has alveolar PO2 nearest…
+  options:
+    A: 160 mmHg
+    B: 670 mmHg
+    C: 760 mmHg
+    D: 100 mmHg
+  answer: B
+  explain: Inspired PO2 = 760 mmHg; subtract water vapor (47) and alveolar CO2 (~40) leaves ~670 mmHg
+    in the alveolar gas.
+  distractors:
+    A: Room-air ambient value.
+    C: Total atmospheric ml — includes water vapor and CO2.
+    D: Normal alveolar PO2 on room air.

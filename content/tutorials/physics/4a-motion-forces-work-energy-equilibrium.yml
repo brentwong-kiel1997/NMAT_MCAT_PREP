@@ -1,0 +1,280 @@
+subject: physics
+chapter: 4A · Motion, forces, work, energy, equilibrium
+title: 4A · Motion, Forces, Work, Energy, Equilibrium
+overview: The MCAT's mechanics core — kinematics, Newton's laws, work-energy, momentum, and equilibrium,
+  all at the level of clinical application (joint forces, projectile motion, stress-strain). NMAT overlaps
+  heavily with this content.
+sections:
+- heading: Kinematics — motion in one and two dimensions
+  body:
+  - 'Uniformly accelerated motion — ==x = v0t + (1/2)at2, v = v0 + at, v2 = v02 + 2ax==. Vertical motion:
+    a = g down. In 2D, decompose vectors — the horizontal and vertical motions evolve independently (projectile:
+    constant horizontal speed, free-fall vertical).'
+  - Projectile patterns — ==time of flight depends only on vertical motion (and g); range = vx times flight
+    time==. A launch at 45 degrees maximizes range (level ground, no air resistance).
+  check:
+  - q: 'A ball thrown horizontally off a cliff: which changes as it falls?'
+    options:
+      A: Horizontal velocity
+      B: Vertical velocity
+      C: Total speed stays constant
+      D: Horizontal acceleration
+    answer: B
+    explain: Only vertical motion accelerates — horizontal velocity stays vx.
+    distractors:
+      A: No horizontal force.
+      B: KE grows — speed rises.
+      C: No horizontal force → no acceleration.
+  figures:
+  - src: 4a-motion-forces-work-energy-equilibrium/fig-072de49c.webp
+    caption: Projectile trajectories — initial speed and launch angle shape the range.
+    credit: Ch 3 · OpenStax College Physics 2e — CC BY-NC-SA 4.0
+  - src: 4a-motion-forces-work-energy-equilibrium/fig-1d994a14.webp
+    caption: Projectile motion from a tower — the launch speed that becomes an orbital path.
+    credit: Ch 3 · OpenStax College Physics 2e — CC BY-NC-SA 4.0
+- heading: Newtonian mechanics — forces and F = ma
+  body:
+  - '==F_net = ma — the sum of all forces==; weight mg; normal perpendicular to surface; friction opposes
+    relative motion. Action-reaction pairs act on different bodies — a book on a table: its weight and
+    the table''s push are NOT an action-reaction pair (both act on the book).'
+  - 'Inclined planes — ==decompose weight into components mg sin(theta) (parallel) and mg cos(theta) (perpendicular)
+    — the normal balances the perpendicular one==. Atwood machines and elevators: T - mg = ma when accelerating
+    upward, T = m(g + a).'
+  check:
+  - q: A skier accelerates down a 30-degree frictionless slope at…
+    options:
+      A: g
+      B: g sin(30) = 4.9 m/s2
+      C: 2g
+      D: Zero
+    answer: B
+    explain: Only the slope component mg sin(theta) drives motion; normal balances the rest.
+    distractors:
+      A: Full g would need a straight drop.
+      B: Correct.
+      C: g > g sin(theta).
+      D: Gravity acts.
+- heading: Work, energy, and power
+  body:
+  - '==W = F d cos(theta); KE = (1/2)mv2; PE-g = mgh; PE-s = (1/2)kx2; mechanical energy conserved with
+    conservative forces only==. Work-energy theorem: W-net = delta-KE.'
+  - ==Power = W/t = F v==. Efficiency = useful output / input. In MCAT passages watch for which forces
+    do work — the normal force and centripetal force NEVER do work (perpendicular to motion).
+  check:
+  - q: Centripetal force on a rolling ball does…
+    options:
+      A: Positive work
+      B: Zero work
+      C: Negative work — it braks
+      D: Depends on speed
+    answer: B
+    explain: Always perpendicular to velocity — the work dot product is zero.
+    distractors:
+      A: Perpendicular forces do no work.
+      B: Correct.
+      C: Speed stays constant — no braking.
+      D: Direction, not magnitude, changes.
+- heading: Linear and angular momentum
+  body:
+  - ==Momentum p = mv conserved with no external impulse; impulse = F delta-t = delta-p==. Elastic collision
+    (KE conserved, relative speed reverses); inelastic (KE lost); perfectly inelastic (stick together).
+  - 'Rotational — ==torque tau = r F sin(theta), moment of inertia I = sum mr2, angular momentum L = I
+    omega conserved without external torque==. Static equilibrium: sum F = 0 AND sum tau = 0 — the two
+    conditions tested in lever problems.'
+  check:
+  - q: A diver tucks her body mid-air — she…
+    options:
+      A: Spins slower because I rises
+      B: Spins faster, L conserved
+      C: Loses angular momentum
+      D: Cannot change spin rate
+    answer: B
+    explain: Tucking lowers I → omega rises to keep L = I omega constant.
+    distractors:
+      A: Tucking LOWERS I.
+      B: Correct — no external torque.
+      C: Conserved means no loss.
+      D: She clearly can.
+- heading: Equilibrium and elasticity in biology
+  body:
+  - ==Bones and tendons experience stress (F/A) and strain (delta-L/L); the elastic modulus E = stress/strain
+    — the slope of the stress-strain curve==. Beyond the elastic limit, materials yield; bones are viscoelastic
+    — rate-dependent.
+  - ==Static equilibrium of the forearm — the elbow joint force can exceed the load several-fold (lever
+    short arm)==. This lever logic — how much muscle force is required to hold a weight — is a standing
+    MCAT favorite.
+  check:
+  - q: The flexor muscle of the forearm acts 5 cm from the elbow while the load is at 30 cm. Holding a
+      4 kg weight requires muscle force…
+    options:
+      A: 96 N
+      B: 235 N
+      C: 400 N
+      D: 39 N
+    answer: B
+    explain: 'Torque balance: F x 0.05 = mg x 0.30, so F = (39.2)(0.30)/(0.05) = 235 N.'
+    distractors:
+      A: 96 N — inverted lever ratio.
+      C: 400 N — the load mass, not the force.
+      D: 39 N — the weight, before lever amplification.
+examples:
+- prompt: A 70 kg person stands on a scale in an elevator accelerating upward at 2.0 m/s2. What does the
+    scale read?
+  solution:
+  - The scale reads the NORMAL force, not weight.
+  - 'Forces: N up, mg down; net = N - mg = ma (a = +2.0).'
+  - N = m(g + a) = 70(9.8 + 2.0) = 826 N.
+  - The scale displays N/g ≈ 84 kg — 'apparent weight'.
+  answer: ≈ 830 N, equivalent to ~84 kg — up to 20% heavier than true weight.
+  distractors:
+    A: 686 N — forgetting acceleration changes the reading.
+    B: 546 N — subtracting instead of adding.
+    C: 70 N — mixing mass with force units.
+key_points:
+- 'Kinematics: three constant-a equations; vertical and horizontal independent.'
+- F = ma sums forces; action-reaction on different bodies.
+- Work = F d cos(theta); normal and centripetal do no work.
+- Momentum conserved without external impulse; L = I omega.
+- Static equilibrium — both force and torque sums zero.
+- 'Bone mechanics: stress/strain; forearm lever amplifies force.'
+mnemonics:
+- phrase: Weight w = mg, apparent weight m(g + a)
+  means: Scale reading depends on acceleration.
+- phrase: Normal and centripetal never work
+  means: Perpendicular forces — zero work in every situation.
+maps:
+- title: Elevator scale reading
+  steps:
+  - accelerating up — N = m(g + a)
+  - constant speed — N = mg
+  - accelerating down — N = m(g - a)
+  - free fall — N = 0
+- title: Collision outcomes
+  steps:
+  - elastic — KE conserved
+  - inelastic — KE lost
+  - perfectly inelastic — stick, max loss
+  - explosive — one body splits, p conserved
+passage:
+  text: A 60 kg patient holds a 5 kg weight with the forearm horizontal, elbow as pivot. The biceps inserts
+    4 cm from the elbow joint; the hand (load) is 32 cm away. The forearm itself weighs 2 kg with its
+    center 15 cm from the elbow.
+  questions:
+  - q: The torque contributed by the forearm's own weight is…
+    options:
+      A: 2 x 9.8 x 0.15 N-m about the elbow
+      B: 5 x 9.8 x 0.32
+      C: 4 x 9.8 x 0.04
+      D: Zero
+    answer: A
+    explain: Torque = force x lever arm about the pivot — m g x distance.
+    distractors:
+      A: Correct — forearm weight at 15 cm.
+      B: That is the hand load torque.
+      C: That is the biceps torque.
+      D: Every weight contributes.
+  - q: Ignoring the forearm itself, the biceps force needed is…
+    options:
+      A: 39 N
+      B: 392 N
+      C: 49 N
+      D: 156 N
+    answer: B
+    explain: F x 0.04 = 5 x 9.8 x 0.32 → F = 15.7/0.04 = 392 N.
+    distractors:
+      A: That is the load torque.
+      B: Correct.
+      C: The load weight.
+      D: Missing lever-arm ratio.
+  - q: The elbow joint experiences a compression roughly…
+    options:
+      A: Less than the biceps force
+      B: Equal to the load weight
+      C: Zero
+      D: Equal to the biceps force
+    answer: A
+    explain: Joint force plus load balances biceps — joint ≈ biceps minus load components — compressive,
+      below the biceps value.
+    distractors:
+      A: Correct — biceps > joint > load.
+      B: Joint carries more than the load.
+      C: Equilibrium demands a reaction.
+      D: That is the tendon tension.
+pitfalls:
+- Scale reading = normal force, not weight.
+- Action-reaction pairs mislabeled on the same object.
+- Centripetal force written as a separate force.
+- Forgetting the moment arm for inclined forces.
+- Torque sum only, without the force sum.
+exam_map:
+  NMAT: Same core — direct concept items.
+  MCAT: Content Category 4A — lever systems, bone stress-strain, elevator and projectile passages.
+sources:
+- ref: openstax-college-physics-2e
+  used:
+  - Ch 3 — projectiles
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC4, CC 4A
+  relation: consulted
+further_reading:
+- title: OpenStax Physics (HS) — Force
+  url: https://openstax.org/books/physics/pages/4-introduction
+  note: Newton's laws applied.
+- title: OpenStax Physics (HS) — Angular Momentum
+  url: https://openstax.org/books/physics/pages/10-introduction
+  note: Rotation and equilibrium.
+review_questions:
+- q: A car moving at constant speed around a circular track has…
+  options:
+    A: Zero acceleration
+    B: Centripetal acceleration
+    C: Constant velocity
+    D: No net force
+  answer: B
+  explain: Direction changes — acceleration points inward.
+  distractors:
+    A: There IS acceleration.
+    B: Correct.
+    C: Velocity direction changes.
+    D: Net force creates the acceleration.
+- q: Work done by a conservative force is…
+  options:
+    A: Path-dependent
+    B: Path-independent
+    C: Always positive
+    D: Always zero
+  answer: B
+  explain: Only the endpoints matter — PE is defined by position.
+  distractors:
+    A: Friction is the nonconservative.
+    B: Correct.
+    C: Sign depends on direction.
+    D: Depends.
+- q: A 1000 kg car moving 20 m/s has momentum…
+  options:
+    A: 20 kg-m/s
+    B: 2000 kg-m/s
+    C: 20000 kg-m/s
+    D: 40000 kg-m/s
+  answer: C
+  explain: p = mv = 1000 x 20.
+  distractors:
+    A: Mass/velocity slip.
+    B: Missing a zero.
+    C: Correct.
+    D: Energy formula.
+- q: For static equilibrium of a lever…
+  options:
+    A: Sum F = 0 only
+    B: Sum tau = 0 only
+    C: Both sums are zero
+    D: Angular momentum maximal
+  answer: C
+  explain: Both translational and rotational balance required.
+  distractors:
+    A: Need torque too.
+    B: Need force too.
+    C: Correct.
+    D: Wrong concept.

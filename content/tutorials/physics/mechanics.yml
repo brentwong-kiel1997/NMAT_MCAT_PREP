@@ -1,0 +1,270 @@
+subject: physics
+chapter: Mechanics
+title: Mechanics
+overview: Motion, forces, energy, and momentum — the backbone of the physics section. NMAT asks direct
+  concept and calculation items; the MCAT embeds mechanics in clinical passages (blood flow, joint forces,
+  diagnostic imaging angles).
+sections:
+- heading: Kinematics — describing motion
+  body:
+  - Kinematics ignores causes. ==Constant acceleration ties displacement, velocity, and time through x
+    = v0t + (1/2)at2, v = v0 + at, and v2 = v02 + 2ax==. Choose the equation that matches your knowns;
+    the unknown is usually time or final velocity.
+  - Free fall is the classic case — a = g = 9.8 m/s2 downward, independent of mass (neglect air). ==At
+    the peak of projectile motion, vertical velocity is zero but acceleration is still g== — a favorite
+    trap.
+  check:
+  - q: A ball thrown straight up. At its highest point…
+    options:
+      A: Velocity zero, acceleration zero
+      B: Velocity zero, acceleration g downward
+      C: Velocity g, acceleration zero
+      D: Velocity and acceleration both g
+    answer: B
+    explain: Instantaneous rest at the peak, but gravity never turns off.
+    distractors:
+      A: Gravity is constant.
+      B: Velocity at peak is zero.
+      C: Same error.
+- heading: Newton's laws and forces
+  body:
+  - ==F = ma sums ALL forces; equilibrium means a = 0, not v = 0==. Every force has a paired equal-and-opposite
+    reaction on a DIFFERENT body. Weight is mg; normal force is perpendicular to the surface; friction
+    opposes relative motion (static up to mu_s N, kinetic = mu_k N).
+  - 'Free-body diagrams settle most force questions — draw once, resolve along axes. ==Inclined planes:
+    decompose weight into mg sin(theta) (down the slope) and mg cos(theta) (into the surface)==; friction
+    then scales with the normal mg cos theta.'
+  check:
+  - q: A crate slides at constant velocity down an incline. The component mg sin(theta) equals…
+    options:
+      A: The normal force
+      B: The kinetic friction force
+      C: Weight
+      D: Net force upward
+    answer: B
+    explain: Constant velocity means zero net force down the slope.
+    distractors:
+      A: Normal has a different direction.
+      B: mg is not the slope component.
+      C: Net force is zero.
+  figures:
+  - src: mechanics/fig-61192c4a.webp
+    caption: The same force acting on a basketball and a car — smaller mass accelerates faster (F = ma).
+    credit: Ch 4 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
+  - src: mechanics/fig-4fbd8e0f.webp
+    caption: Forces on a train — thrust, friction, normal, and weight — with the resulting free-body diagram.
+    credit: Ch 4 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
+- heading: Work, energy, and power
+  body:
+  - '==Work = F d cos(theta) where theta is the angle between force and displacement== — perpendicular
+    forces (normal force on a level walk, centripetal) do zero work. Energy is conserved in its total:
+    KE + PE + work by nonconservative forces.'
+  - 'Gravitational PE = mgh, spring PE = (1/2)kx2, KE = (1/2)mv2. ==Power = work/time = F v== — a car''s
+    engine power equals thrust times speed. Efficient exam shortcut: compare energies, not force time
+    histories.'
+  check:
+  - q: Which does NO work while the object moves along a level floor?
+    options:
+      A: Friction
+      B: Applied horizontal force
+      C: The normal force
+      D: Gravity on a ramp
+    answer: C
+    explain: Perpendicular to displacement — cos 90 = 0.
+    distractors:
+      A: Friction opposes motion.
+      B: Parallel force.
+      C: Gravity acts along the ramp component.
+- heading: Momentum and collisions
+  body:
+  - ==Momentum p = mv is conserved in any collision with no external impulse==. Impulse = F avg * delta-t
+    = change in momentum — same change delivered over longer time is gentler (airbags, catching balls).
+  - Collisions — perfectly inelastic (stick together, KE lost), elastic (KE conserved; relative speed
+    reverses). ==In equal-mass head-on elastic collisions the objects swap velocities==. Center of mass
+    moves at constant velocity with no external force.
+  check:
+  - q: In a perfectly inelastic collision…
+    options:
+      A: KE is conserved
+      B: The objects stick together
+      C: Momentum is not conserved
+      D: Both reverse direction
+    answer: B
+    explain: Maximum energy loss; momentum still conserved.
+    distractors:
+      A: KE is NOT conserved.
+      B: Momentum always conserved in collisions.
+      C: Only elastic head-on.
+- heading: Rotational mechanics
+  body:
+  - Rotational analogues — torque tau = r F sin(theta) replaces force; moment of inertia I replaces mass
+    (distribution matters!); angular momentum L = I omega. ==Angular momentum is conserved when net external
+    torque is zero== — figure skaters pulling in arms spin faster.
+  - Static equilibrium requires BOTH sum F = 0 and sum tau = 0 — choose a pivot to eliminate unknowns.
+    ==The lever arm is the perpendicular distance from pivot to the force line== — take moments about
+    the contact point to cancel support forces.
+  check:
+  - q: A figure skater pulls her arms in while spinning — she…
+    options:
+      A: Slows down
+      B: Speeds up, angular momentum conserved
+      C: Loses angular momentum
+      D: Stops rotating
+    answer: B
+    explain: I drops, omega rises to keep L = I omega constant.
+    distractors:
+      A: Wrong direction.
+      B: Conserved under zero net torque.
+      C: No braking torque.
+examples:
+- prompt: A 2.0 kg block slides off a 1.0 m high table with initial speed 3.0 m/s horizontally. Find its
+    speed just before hitting the floor.
+  solution:
+  - 'Energy: total energy = KE + PE-vertical.'
+  - 'Initial: (1/2)(2)(3.0)2 + (2)(9.8)(1.0) = 9 + 19.6 = 28.6 J.'
+  - 'Just before impact: (1/2)(2)v2 = 28.6 — horizontal KE unaffected by drop.'
+  - v2 = 28.6, v = 5.35 m/s.
+  answer: About 5.3 m/s — the drop adds speed to the existing horizontal motion.
+  distractors:
+    A: 3.0 m/s — ignoring gravitational gain.
+    B: 4.6 m/s — using sqrt(2gh) alone and adding wrong.
+    C: 9.9 m/s — adding energies linearly instead of under the root.
+key_points:
+- 'Kinematics: pick v0, v, a, x, t equation to match knowns.'
+- 'At projectile peak: v=0, a=g.'
+- Equilibrium is zero acceleration, not zero motion.
+- Work = Fd cos(theta); perpendicular forces do no work.
+- 'Perfectly inelastic: stick, lose KE, keep p.'
+- Angular momentum L = I omega conserved without net torque.
+mnemonics:
+- phrase: Work is force along the way
+  means: Only the displacement-parallel force component contributes to work.
+- phrase: Stuck together, energy out, momentum kept
+  means: Perfectly inelastic collision signature.
+maps:
+- title: Solving mechanics problems
+  steps:
+  - draw free-body diagram / choose axis
+  - write F = ma (or L/energy conservation)
+  - match knowns to kinematics equations
+  - check signs and directions
+- title: Energy accounting
+  steps:
+  - KE + PE-g + PE-s + work-nonconservative = total
+  - if no friction — use conservation
+  - if friction — subtract work done by friction
+passage:
+  text: An elevator car (mass 800 kg) accelerates upward from rest at 1.2 m/s2 for 2.5 s, then cruises
+    at constant speed for 6 s, then decelerates at 1.2 m/s2 to rest.
+  questions:
+  - q: During the upward acceleration, the cable tension is…
+    options:
+      A: Less than mg
+      B: Equal to mg
+      C: Greater than mg
+      D: Zero
+    answer: C
+    explain: 'Net force up: T - mg = ma, so T = m(g + a) > mg.'
+    distractors:
+      A: Net force must be upward.
+      B: Net force would be zero.
+      C: Cable supports the weight at least.
+  - q: During the cruise phase, the tension is…
+    options:
+      A: Greater than mg
+      B: Equal to mg
+      C: Less than mg
+      D: Zero
+    answer: B
+    explain: Constant velocity = zero acceleration = T = mg.
+    distractors:
+      A: Only accelerating upward exceeds mg.
+      B: Deceleration would undershoot.
+      C: Cable still supports.
+  - q: The total distance traveled during the constant-speed phase is…
+    options:
+      A: 9 m
+      B: 18 m
+      C: 21.75 m
+      D: 30 m
+    answer: B
+    explain: 'Speed after acceleration: v = at = (1.2)(2.5) = 3.0 m/s; cruise distance = 3.0 x 6 = 18
+      m.'
+    distractors:
+      A: Using wrong speed.
+      B: Correct — 18 m.
+      C: Adding acceleration distance wrongly.
+pitfalls:
+- 'Projectile peak: velocity zero, acceleration NOT.'
+- Friction direction reversed.
+- Using cos where sin is needed on inclines.
+- Perpendicular forces counted as doing work.
+- Structural equilibrium needs BOTH force and torque balance.
+exam_map:
+  NMAT: Direct concept items — free fall, F=ma, energy, momentum, torque.
+  MCAT: Embedded in passages — joint loads, blood flow, projectile analyses.
+sources:
+- ref: openstax-physics
+  used:
+  - Ch 2-6, 9, 10 — kinematics, Newton, energy, momentum, rotation
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC4
+  relation: consulted
+further_reading:
+- title: OpenStax Physics (HS) — Motion
+  url: https://openstax.org/books/physics/pages/2-introduction
+  note: Kinematics and Newton's laws.
+- title: OpenStax Physics (HS) — Energy
+  url: https://openstax.org/books/physics/pages/9-introduction
+  note: Work, energy, momentum.
+review_questions:
+- q: A car rounds a curve at constant speed. Its acceleration is…
+  options:
+    A: Zero
+    B: Directed toward the center
+    C: Directed outward
+    D: Along the tangent
+  answer: B
+  explain: Constant speed does not mean constant velocity — centripetal acceleration points to the center.
+  distractors:
+    A: Velocity direction changes.
+    B: That is the centrifugal fiction.
+    C: Velocity direction changes continuously.
+- q: Doubling an object's speed quadruples its…
+  options:
+    A: Momentum
+    B: Kinetic energy
+    C: Weight
+    D: Acceleration at rest
+  answer: B
+  explain: KE = (1/2)mv2 — quadratic in speed.
+  distractors:
+    A: Momentum doubles.
+    B: Weight unchanged.
+    C: No.
+- q: A ball rolling friction-free up a ramp at 4 m/s reaches a height proportional to…
+  options:
+    A: Speed
+    B: Speed squared
+    C: Speed cubed
+    D: Mass
+  answer: B
+  explain: PE = mgh = KE = (1/2)mv2, so h scales with v2.
+  distractors:
+    A: The energy law is quadratic.
+    B: Cube has no basis.
+    C: Mass cancels.
+- q: Torque is greatest when the applied force is…
+  options:
+    A: Parallel to the lever arm
+    B: Perpendicular to the lever arm
+    C: Antiparallel
+    D: At the pivot
+  answer: B
+  explain: sin(theta) = 1 at 90 degrees.
+  distractors:
+    A: sin(0) = 0.
+    B: sin(180) = 0.
+    C: Zero lever arm.

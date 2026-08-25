@@ -1,0 +1,273 @@
+subject: physics
+chapter: Modern Physics
+title: Modern Physics
+overview: Relativity, quantum phenomena, nuclear physics, and the atom-level physics NMAT and MCAT both
+  sample. Short on math, long on qualitative prediction — photoelectric, half-life, nuclear notation,
+  relativistic time dilation.
+sections:
+- heading: Special relativity
+  body:
+  - '==Two postulates: (1) the speed of light is the same in every inertial frame; (2) laws of physics
+    identical in all inertial frames==. Consequences — time dilation (moving clock runs slow), length
+    contraction (moving objects shorten along motion), mass-energy E = mc2.'
+  - ==Moving clocks run slow — a passing spaceship's clock ticks slower per YOUR frame==; the traveler,
+    however, sees your clock run slow. Time dilation formula delta-t = gamma delta-t0. Only objects approaching
+    c show measurable effects.
+  check:
+  - q: An astronaut's wristwatch ticks slow when viewed from Earth because…
+    options:
+      A: The watch is defective
+      B: Time dilation — the astronaut is moving relative to Earth
+      C: Gravity is weaker in space
+      D: The Earth rotates
+    answer: B
+    explain: Relative motion dilates time — the moving frame's time is dilated by gamma.
+    distractors:
+      A: Physics, not hardware.
+      B: Weak gravity — general relativity is separate.
+      C: Rotation is not the mechanism.
+- heading: Photoelectric effect and photons
+  body:
+  - '==Light arrives in energy quanta E = h f = hc/lambda — intensity raises the NUMBER of photons, not
+    their energy==. The photoelectric threshold: if f < f0, no electrons eject no matter the intensity.
+    ==Kinetic energy of emitted electrons: KE_max = hf - work function==.'
+  - 'Photons double as momentum: p = h/lambda. ==Higher frequency = more energetic = deeper penetration
+    of quantum effects== — the photoelectric experiment is the classic proof of quantization.'
+  check:
+  - q: Shining brighter (higher intensity) light at a fixed frequency above threshold…
+    options:
+      A: Increases electron speed
+      B: Increases the number of electrons
+      C: Lowers the work function
+      D: Ejects electrons with more KE
+    answer: B
+    explain: Intensity = more photons = more electrons at the SAME energy.
+    distractors:
+      A: Frequency sets energy.
+      B: The work function is a material constant.
+      C: KE fixed by f.
+- heading: Nuclear structure and binding energy
+  body:
+  - ==Nuclei carry Z protons and N neutrons; mass number A = Z + N==. Isotopes share Z, differ N. Mass
+    defect — a nucleus weighs less than its parts; that missing mass is binding energy by E = mc2.
+  - '==Binding energy per nucleon peaks at iron (Fe-56) — fusion of light, fission of heavy, BOTH release
+    energy==. Nuclear stability: proton-rich nuclei decay by positron emission or electron capture; neutron-rich
+    by beta-minus — always toward the belt of stability.'
+  check:
+  - q: Iron-56 has the highest binding energy per nucleon, so…
+    options:
+      A: It is the easiest to split
+      B: Fusion of light and fission of heavy both release energy
+      C: It decays readily
+      D: It emits alpha particles
+    answer: B
+    explain: Iron sits at the energy minimum — anything moving toward it releases energy.
+    distractors:
+      A: The peak means it will not split easily.
+      B: Peak stability = stable nucleus.
+      C: It is stable.
+  figures:
+  - src: modern-physics/fig-12db370a.webp
+    caption: Atomic scale — atom about 10^-10 m, nucleus about 10^-15 m — most of the atom is empty space.
+    credit: Ch 22 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
+  - src: modern-physics/fig-03defa78.webp
+    caption: An electron transition between quantized energy levels — emission photon energy equals the
+      gap.
+    credit: Ch 22 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
+- heading: Radioactive decay modes and half-life
+  body:
+  - '==Alpha (He-4 nucleus, stops in paper), beta-minus (neutron→proton + e- + antineutrino, thin metal),
+    beta-plus (positron), electron capture, gamma (high-energy photon, thick lead/bone==). Decay shifts
+    Z: alpha -2, beta-minus +1, beta-plus -1.'
+  - '==Half-life: after n half-lives, fraction remains = (1/2)^n==. Activity A = lambda N. Carbon-14 dating
+    (t1/2 = 5730 yr), K-40, and PET tracers (F-18, ~110 min) all ride on half-life kinetics.'
+  check:
+  - q: A 24-day half-life isotope is reduced to 1/8 its original after…
+    options:
+      A: 8 days
+      B: 72 days
+      C: 24 days
+      D: 96 days
+    answer: B
+    explain: 1/8 = 3 half-lives — 3 x 24 = 72 days.
+    distractors:
+      A: 1/3 of 24 is wrong.
+      B: Correct.
+      C: One half-life gives 1/2.
+      D: Four half-lives.
+- heading: Quantum numbers and atomic spectra
+  body:
+  - '==Electron configuration: n (shell), l (subshell 0..n-1), ml, ms — Pauli excludes identical quadruples==.
+    Orbitals fill lowest energy first (Aufbau), one-by-one before pairing (Hund).'
+  - ==Spectral lines come from electron transitions — emission = drop (h f = energy gap); absorption =
+    climb==. Hydrogen Balmer series transitions give the visible lines; ionization energy is the n=infinity
+    climb.
+  check:
+  - q: Which electron transition emits the MOST energetic photon?
+    options:
+      A: n=3 to n=2
+      B: n=4 to n=1
+      C: n=2 to n=3
+      D: n=3 to n=4
+    answer: B
+    explain: Largest energy drop emits the largest photon — deepest fall wins.
+    distractors:
+      A: Smaller gap.
+      B: Absorption, not emission.
+      C: Absorption.
+examples:
+- prompt: A light source gives photons with wavelength 400 nm. Find the photon energy in eV and the max
+    KE of electrons expelled from cesium (work function 2.1 eV).
+  solution:
+  - E = hc/lambda = (6.626e-34)(3e8)/(400e-9) = 4.97e-19 J.
+  - 'Convert: 4.97e-19 / 1.6e-19 = 3.1 eV.'
+  - KE_max = E - phi = 3.1 - 2.1 = 1.0 eV.
+  - Cesium is famously photoelectric — electrons fly off with 1 eV.
+  answer: Photon 3.1 eV; electrons leave with up to 1.0 eV.
+  distractors:
+    A: Using cm instead of nm in lambda — off by 10^.
+    B: Adding the work function instead of subtracting.
+    C: Calling all emitted electrons 3.1 eV — that is the photon energy, minus work.
+key_points:
+- c same in all frames; moving clocks run slow; E = mc2.
+- 'Photoelectric: f sets energy, intensity sets count.'
+- Binding energy peaks at Fe-56 — fusion/fission both release.
+- 'Half-life: (1/2)^n remains after n half-lives.'
+- Alpha -2Z, beta-minus +1Z, beta-plus -1Z.
+- Emission energy = final gap; shorter lambda = higher energy.
+mnemonics:
+- phrase: Frequency fixes energy, intensity fixes count
+  means: Photoelectric effect in four words.
+- phrase: Alpha paper, beta metal, gamma lead
+  means: Rough shielding ladder.
+maps:
+- title: Decay mode by stability
+  steps:
+  - Z too high (above belt) — alpha / positron / EC
+  - N too high — beta-minus
+  - even-even stability — near Fe peak
+  - excited nucleus — gamma
+- title: Quantum ladder
+  steps:
+  - n — shell (main energy)
+  - l — subshell (0..n-1)
+  - ml — orbital orientation
+  - ms — spin up/down; Pauli caps at 2 per orbital
+passage:
+  text: A PET scanner uses F-18 (half-life 110 min). The cyclotron produces 400 MBq at 08:00. The scan
+    is scheduled for 11:40. A patient having a 10-minute imaging run receives measurable exposure only
+    if activity exceeds 50 MBq.
+  questions:
+  - q: The decayed activity by 11:40 is…
+    options:
+      A: 400 MBq
+      B: 200 MBq
+      C: 100 MBq
+      D: 50 MBq
+    answer: C
+    explain: From 08:00 to 11:40 = 220 min = 2 half-lives; 400/4 = 100 MBq.
+    distractors:
+      A: No decay — wrong.
+      B: One half-life.
+      C: Correct — 100 MBq.
+      D: Three half-lives.
+  - q: In which decay does a positron, rather than an electron, get emitted when a proton converts?
+    options:
+      A: Beta-minus
+      B: Beta-plus
+      C: Alpha emission
+      D: Electron capture
+    answer: B
+    explain: Beta-plus decay converts a proton to a neutron, emitting e+ and a neutrino.
+    distractors:
+      A: e- is beta-minus.
+      B: Alpha is a bound pair.
+      C: EC eats an electron.
+  - q: Nuclides with TOO MANY neutrons relative to stability typically…
+    options:
+      A: Undergo beta-minus decay
+      B: Emit alpha
+      C: Capture electrons
+      D: Stay stable
+    answer: A
+    explain: Converting a neutron to a proton lowers the N/Z ratio — beta-minus.
+    distractors:
+      A: That lowers Z further.
+      B: EC converts a proton.
+      C: Unstable by definition.
+pitfalls:
+- Photon energy vs intensity mix-up.
+- Half-life arithmetic using 3n instead of 2^n.
+- Time dilation direction confusion.
+- Writing beta-minus as mass-1 charge-1 (it is mass-0).
+- Emission vs absorption transition states.
+exam_map:
+  NMAT: Photoelectric facts, half-life math, nuclear symbols, quantum numbers.
+  MCAT: PET decay physics, radiation shielding, binding-energy essays in clinical passages.
+sources:
+- ref: openstax-physics
+  used:
+  - Ch 24-30 — relativity, quantum, nuclear
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC4
+  relation: consulted
+further_reading:
+- title: OpenStax Physics (HS) — Atomic Physics
+  url: https://openstax.org/books/physics/pages/32-introduction
+  note: Bohr model and spectra.
+- title: OpenStax Physics (HS) — Nuclear Physics
+  url: https://openstax.org/books/physics/pages/33-introduction
+  note: Decay, half-life, binding energy.
+review_questions:
+- q: The photoelectric work function is…
+  options:
+    A: The minimum photon energy to eject
+    B: A measure of nuclear binding
+    C: Always zero for metals
+    D: The electron mass energy
+  answer: A
+  explain: Threshold energy required to free an electron from the surface.
+  distractors:
+    A: Binding energy is nuclear.
+    B: Real metals have nonzero values.
+    C: mc2 is rest energy.
+- q: Which tracer would be most suitable for a 90-minute PET protocol?
+  options:
+    A: 6 hours
+    B: 110 minutes
+    C: 3 days
+    D: 20 minutes
+  answer: B
+  explain: Half-life roughly matches the protocol length — signal strength vs dose.
+  distractors:
+    A: Too long — lingering dose.
+    B: Correct — F-18.
+    C: Too long.
+    D: Too short — activity collapses.
+- q: Alpha emission reduces both A and Z by…
+  options:
+    A: 4 and 2
+    B: 2 and 2
+    C: 4 and 4
+    D: 1 and 1
+  answer: A
+  explain: Alpha = He-4 — mass decreases by 4, charge by 2.
+  distractors:
+    A: Correct.
+    B: Only two helium-4s would be 8.
+    C: Gamma does that.
+    D: Beta does that.
+- q: Two photons — red (700 nm) and violet (400 nm). The violet photon…
+  options:
+    A: Has lower energy
+    B: Has higher energy
+    C: Has equal energy
+    D: Moves faster in vacuum
+  answer: B
+  explain: E = hc/lambda — shorter wavelength means higher energy.
+  distractors:
+    A: Correct — higher energy.
+    B: Equal only if same intensity.
+    C: c is constant — both are c.

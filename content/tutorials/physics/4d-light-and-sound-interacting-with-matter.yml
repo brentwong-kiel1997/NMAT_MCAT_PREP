@@ -1,0 +1,279 @@
+subject: physics
+chapter: 4D · Light and sound interacting with matter
+title: 4D · Light and Sound Interacting with Matter
+overview: Electromagnetic waves, geometric optics, and sound — how light and sound interact with tissues
+  is the MCAT's imaging and hearing category. Lenses of the eye, ultrasound reflection, and wave behavior
+  all live here.
+sections:
+- heading: Electromagnetic waves and the spectrum
+  body:
+  - '==EM waves: transverse, travel at c = 3e8 m/s in vacuum; E and B fields perpendicular to propagation==.
+    Frequency and wavelength relate by c = f lambda — higher frequency, shorter wavelength, more energy
+    per photon.'
+  - 'Spectrum order — ==radio, microwave, infrared, visible, ultraviolet, X-ray, gamma (increasing frequency)==.
+    Imaging energy ladder: microwave ovens (2.45 GHz water absorption), infrared (thermal cameras), visible
+    (ophthalmoscopy), X-ray (bones), gamma (PET).'
+  check:
+  - q: Which has the LONGEST wavelength?
+    options:
+      A: X-rays
+      B: Microwaves
+      C: Ultraviolet
+      D: Infrared
+    answer: B
+    explain: Microwaves sit below infrared in frequency — longer wavelengths.
+    distractors:
+      A: X-rays are shortest.
+      B: Correct — longest of the four.
+      C: Shorter than visible.
+      D: Shorter than microwave.
+- heading: Reflection, refraction, and total internal reflection
+  body:
+  - '==Reflection: angle of incidence = angle of reflection; specular (mirror) vs diffuse (rough)==. Refraction:
+    Snell''s law n1 sin(theta1) = n2 sin(theta2); light bends toward the normal entering a denser medium.'
+  - ==Total internal reflection requires light traveling from a DENSER to a RARER medium at an angle above
+    the critical angle — sin(theta-c) = n2/n1==. This is the physics of fibre optics, endoscopy, and light
+    guiding.
+  check:
+  - q: Light passes from glass (n = 1.5) into water (n = 1.33). It…
+    options:
+      A: Bends toward the normal
+      B: Bends away from the normal
+      C: Reflects totally
+      D: Continues straight
+    answer: B
+    explain: Denser to rarer — speed increases, the ray bends away from the normal.
+    distractors:
+      A: That is into a denser medium.
+      B: Correct.
+      C: Only above the critical angle.
+      D: n difference matters.
+- heading: Lenses and the eye as an optical instrument
+  body:
+  - ==The eye is a converging-lens system — cornea does most refraction, the lens fine-tunes via accommodation==.
+    Emmetropia focuses on the retina; myopia (nearsighted) focuses in front — diverging lens corrects;
+    hyperopia (farsighted) behind — converging lens corrects.
+  - ==Lens equation 1/f = 1/do + 1/di; power in diopters = 1/f(meters)==. Near point ~25 cm; presbyopia
+    — age-related loss of accommodation. ==Retinal images are real and inverted; the brain flips them==.
+  check:
+  - q: A myopic person needs…
+    options:
+      A: Converging lenses
+      B: Diverging lenses
+      C: No correction
+      D: Prisms
+    answer: B
+    explain: 'Myopia: image forms before the retina — diverging lens spreads rays back onto it.'
+    distractors:
+      A: That fixes hyperopia.
+      B: Correct.
+      C: They clearly need correction.
+      D: Prisms steer, not focus.
+- heading: Sound waves and biological media
+  body:
+  - ==Sound is longitudinal; speed in tissue ~1540 m/s (soft tissue average)==. Echo reflection at tissue
+    boundaries — ultrasound imaging; Doppler shift measures blood flow velocity (v = f delta-lambda).
+  - '==Intensity falls as 1/r2; logarithmic dB scale: dB = 10 log(I/I0)==. Beats |f1 - f2|; resonance
+    couples tuning forks and the basilar membrane''s tonotopic map.'
+  check:
+  - q: Ultrasound can see soft-tissue boundaries because…
+    options:
+      A: Tissues emit sound
+      B: Acoustic impedance mismatch causes echoes
+      C: Sound passes through bone
+      D: Water absorbs all sound
+    answer: B
+    explain: Different acoustic impedances reflect part of the wave at interfaces.
+    distractors:
+      A: Tissues reflect, not emit (except Doppler sources echo).
+      B: Correct.
+      C: Bone attenuates heavily.
+      D: Tissue is mostly water.
+  figures:
+  - src: 4d-light-and-sound-interacting-with-matter/fig-4f7a2c07.webp
+    caption: A sound wave's compressions and rarefactions pressing on the eardrum — F = PA at work in
+      hearing.
+    credit: Ch 14 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
+  - src: 4d-light-and-sound-interacting-with-matter/fig-625432c8.webp
+    caption: Echolocation — emitting and reading reflected sound, the same physics ultrasound imaging
+      uses.
+    credit: Ch 14 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
+- heading: Attenuation and medical imaging physics
+  body:
+  - ==Attenuation — intensity decays exponentially with depth (I = I0 e^-mu x); higher frequency attenuates
+    MORE (shallow imaging), lower penetrates deeper==. X-ray and CT measure differential attenuation across
+    tissues — bone's higher mu gives contrast.
+  - '==The 1960s-imaging trick: gamma cameras count photons; PET scans detect annihilation pairs (two
+    511 keV photons at 180 degrees)==. MRI uses nuclear magnetism — hydrogen spins for soft-tissue contrast.'
+  check:
+  - q: Higher ultrasound frequencies are used for…
+    options:
+      A: Deeper structures
+      B: Shallow high-resolution imaging
+      C: Bone imaging
+      D: Long-range
+    answer: B
+    explain: Higher f gives better resolution but attenuates fast — shallow use.
+    distractors:
+      A: Lower f penetrates.
+      B: Correct.
+      C: Bone blocks ultrasound almost entirely.
+      D: Resolution vs depth tradeoff.
+examples:
+- prompt: A person with near point at 40 cm needs glasses to read at 25 cm. What lens power is required?
+  solution:
+  - The lens must make a 25 cm object appear as if at 40 cm — virtual image at the near point.
+  - 1/f = 1/do - 1/di = 1/0.25 - 1/0.40 (virtual, negative di convention).
+  - 1/f = 4 - 2.5 = 1.5 diopters (converging).
+  - Presbyopia reading glasses are exactly this — positive power.
+  answer: +1.5 D converging lens.
+  distractors:
+    A: -1.5 D — sign flip, that would be myopia.
+    B: +2.5 D — using only 1/0.40.
+    C: +6.5 D — wrong focus distance.
+key_points:
+- 'c = f lambda; EM: radio → gamma order.'
+- 'Snell: toward normal in denser; TIR only dense → rare.'
+- Eye = converging lens; myopia → diverging correction.
+- Echo at impedance boundaries = ultrasound physics.
+- Attenuation exponential; higher f = less depth.
+- Diopters = 1/f (m); virtual image negative di.
+mnemonics:
+- phrase: Radio, Microwave, Infrared, Visible, UV, X, Gamma
+  means: EM spectrum by rising frequency.
+- phrase: Dense to rare, angle steep, light stays in
+  means: Total internal reflection conditions.
+maps:
+- title: Imaging modality by physics
+  steps:
+  - ultrasound — sound echoes, soft tissue
+  - X-ray/CT — attenuation contrast, bone
+  - MRI — hydrogen magnetism, soft-tissue detail
+  - PET — annihilation photons, metabolic activity
+- title: Refraction choices
+  steps:
+  - into denser — toward normal
+  - into rarer — away from normal
+  - above critical (dense→rare) — TIR
+  - at normal incidence — undeviated
+passage:
+  text: An ultrasound system at 5 MHz images a superficial artery, while a 2 MHz probe images the liver.
+    Both use the same transducer pattern; the tissue attenuation coefficient rises roughly with frequency.
+  questions:
+  - q: The 2 MHz probe penetrates deeper because…
+    options:
+      A: Lower frequency attenuates less
+      B: It emits louder
+      C: The liver scatters
+      D: Its beam is wider
+    answer: A
+    explain: Attenuation coefficient rises with frequency — lower f transmits further.
+    distractors:
+      A: Correct.
+      B: Loudness is separate.
+      C: Scatter is direction, not depth.
+      D: Beam geometry unrelated.
+  - q: Sound speed in soft tissue leads to a typical two-way round-trip time for a 5 cm deep target of
+      about…
+    options:
+      A: 33 us
+      B: 65 us
+      C: 130 us
+      D: 3 ms
+    answer: B
+    explain: Round trip 10 cm = 0.1 m / 1540 m/s = 65 us.
+    distractors:
+      A: One-way only.
+      B: Correct — round trip.
+      C: Double counting.
+      D: Wrong exponent.
+  - q: The Doppler shift of reflected blood echoes is used to measure…
+    options:
+      A: Blood flow velocity
+      B: Blood pressure only
+      C: Oxygen saturation
+      D: Tissue density
+    answer: A
+    explain: The frequency shift scales with the reflector's velocity component along the beam.
+    distractors:
+      A: Correct.
+      B: Pressure is measured mechanically.
+      C: Pulse oximetry is optics.
+      D: Density needs impedance, not Doppler.
+pitfalls:
+- EM spectrum direction errors.
+- TIR in the wrong index direction (rarer → denser fails).
+- Sign convention in the lens equation.
+- Ultrasound frequency-depth tradeoff forgotten.
+- dB linear-logarithm confusion.
+exam_map:
+  NMAT: Spectrum, Snell, lens basics, sound properties.
+  MCAT: Content Category 4D — eye optics, ultrasound, imaging physics in clinical passages.
+sources:
+- ref: openstax-physics
+  used:
+  - Ch 14-17, 21 — waves, sound, optics
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC4, CC 4D
+  relation: consulted
+further_reading:
+- title: OpenStax Physics (HS) — Electromagnetic Waves
+  url: https://openstax.org/books/physics/pages/23-introduction
+  note: Spectrum and energy.
+- title: OpenStax Physics (HS) — Vision
+  url: https://openstax.org/books/physics/pages/26-introduction
+  note: The eye as an optical instrument.
+review_questions:
+- q: The cornea does most refraction because…
+  options:
+    A: It is the strongest curved glass
+    B: The cornea-air index step is the largest change
+    C: It is thickest
+    D: The pupil controls it
+  answer: B
+  explain: n = 1.0 air to n = 1.38 cornea — the biggest index jump in the optical path.
+  distractors:
+    A: Lens glass is denser.
+    B: Correct.
+    C: Thickness is secondary.
+    D: Pupil regulates light, not power.
+- q: Prism dispersion separates colors because…
+  options:
+    A: Different wavelengths refract differently
+    B: Red moves fastest in glass
+    C: The prism heats the light
+    D: Interference fringes form
+  answer: A
+  explain: n(lambda) varies — violet bends most.
+  distractors:
+    A: Violet is slowest in glass.
+    B: No heating separates colors.
+    C: Interference is a different effect.
+- q: A +5 D lens has focal length…
+  options:
+    A: 0.2 m
+    B: 5 m
+    C: 2 m
+    D: 0.5 m
+  answer: A
+  explain: Diopters = 1/f — f = 0.2 m = 20 cm.
+  distractors:
+    A: Correct.
+    B: Confusing f with power.
+    C: Half power.
+    D: Inverse sign.
+- q: Clicking your tongue creates an echo from a cliff 68 m away. The round-trip time is about…
+  options:
+    A: 0.2 s
+    B: 0.4 s
+    C: 2 s
+    D: 68 s
+  answer: B
+  explain: Round trip 136 m / 343 m/s = 0.40 s.
+  distractors:
+    A: One-way.
+    B: Correct.
+    C: Wrong speed use.
+    D: Massive slip.

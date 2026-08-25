@@ -1,0 +1,274 @@
+subject: physics
+chapter: Thermodynamics
+title: Thermodynamics
+overview: Heat, temperature, the laws of thermodynamics, and engines — with the classic sign conventions.
+  NMAT tests definitions and heat math; the MCAT links thermodynamics to physiology (thermoregulation,
+  work of breathing, metabolic efficiency).
+sections:
+- heading: Temperature, heat, and thermal expansion
+  body:
+  - 'Temperature measures average KE per molecule; heat is energy TRANSFER. ==Heat in: Q = mc delta-T
+    (no phase change) and Q = mL (at a phase change)==. Water''s specific heat is the highest common material
+    — the reason bodies stay ~37C.'
+  - 'Thermal expansion — ==delta-L = alpha L0 delta-T==; alpha is the linear coefficient, and liquids/gases
+    expand more than solids. Temperature scales: Kelvin is absolute (KE zero at 0K); conversions matter
+    whenever a ratio or gas law is used.'
+  check:
+  - q: Melting 10 g of ice at 0C absorbs about…
+    options:
+      A: 4.18 kJ
+      B: 3.34 kJ
+      C: 33.4 kJ
+      D: 0.418 kJ
+    answer: B
+    explain: Q = mL = 0.010 kg x 334 kJ/kg = 3.34 kJ.
+    distractors:
+      A: That is warming liquid water by 100K.
+      B: Correct for latent heat of fusion.
+      C: Too small.
+- heading: Kinetic theory and the gas laws
+  body:
+  - '==Ideal gas: PV = nRT==. Doubling temperature at constant volume doubles pressure; halving volume
+    at constant temperature doubles pressure. ==Kinetic theory: average KE per molecule = (3/2)kT — depends
+    ONLY on temperature==, not on gas type.'
+  - 'Processes — isothermal (T constant: PV constant), isobaric (P constant: V/T constant), isochoric
+    (V constant: P/T constant), adiabatic (no heat exchange: P V^gamma constant). ==The first law keeps
+    score: delta-U = Q - W==.'
+  check:
+  - q: Two gases, helium and oxygen, at the same temperature…
+    options:
+      A: Have equal average KE per molecule
+      B: Oxygen has more
+      C: Helium has more
+      D: Depends on pressure
+    answer: A
+    explain: Average KE = (3/2)kT — temperature alone decides.
+    distractors:
+      A: Same T gives same KE.
+      B: Same T gives same KE.
+      C: Pressure changes density, not average KE.
+- heading: The laws of thermodynamics
+  body:
+  - Zero — thermal equilibrium transitivity. First — energy conservation with heat and work; delta-U =
+    Q - W. ==Second — heat never spontaneously flows from cold to hot; entropy of an isolated system never
+    decreases==. Third — absolute zero is unattainable.
+  - Entropy is about disorder of arrangements — ==gases spreading, ice melting, mixing all increase entropy==.
+    Biological systems are NOT isolated — they export entropy to stay ordered, consistent with the second
+    law.
+  check:
+  - q: Which process increases the entropy of a system?
+    options:
+      A: Compressing adiabatically
+      B: Freezing water at 0C
+      C: A gas expanding into a vacuum
+      D: All are neutral
+    answer: C
+    explain: Free expansion spreads molecules among more microstates.
+    distractors:
+      A: Adiabatic compression decreases entropy.
+      B: Freezing releases latent heat.
+      C: Never happens.
+  figures:
+  - src: thermodynamics/fig-51526c87.webp
+    caption: Three irreversible processes — heat flowing from hot to cold, kinetic energy dissipating
+      as heat, and a gas expanding into a vacuum.
+    credit: Ch 12 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
+  - src: thermodynamics/fig-6f3cdba7.webp
+    caption: An iced drink warming to room temperature — spontaneous heat flow from the environment into
+      the colder drink.
+    credit: Ch 12 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
+- heading: Heat engines, refrigerators, and efficiency
+  body:
+  - ==Efficiency e = W/Qh = 1 - Qc/Qh== for any engine; the Carnot engine gives the MAXIMUM possible e
+    = 1 - Tc/Th (Kelvin). Refrigerators and heat pumps move heat against its natural direction at a cost
+    in work — COP = Qc/W.
+  - 'Real engines fall short of Carnot because friction and temperature gaps cost irreversibility. ==The
+    exam question is usually: given Th and Tc, compute the Carnot bound and compare==.'
+  check:
+  - q: A Carnot engine runs between 400 K and 300 K. Its maximum efficiency is…
+    options:
+      A: 75%
+      B: 25%
+      C: 33%
+      D: 50%
+    answer: B
+    explain: e = 1 - 300/400 = 0.25.
+    distractors:
+      A: That is Qc/Qh, not the complement.
+      B: Correct — 25%.
+      C: That would need Tc = 200 K.
+- heading: Heat transfer and physiology
+  body:
+  - Three mechanisms — ==conduction (contact, proportional to delta-T and area, inverse to thickness),
+    convection (fluid movement carrying heat), radiation (electromagnetic, proportional to T^4)==. Evaporation
+    carries away latent heat — the body's main cooling channel.
+  - Clinical applications — ==sweating cools by evaporative latent heat==; wet cloths cool by conduction
+    plus evaporation; a fever-raised skin vessel dilation radiates more; hypothermia risk rises in wind
+    (convection).
+  check:
+  - q: A fever patient feels cold despite high core temperature because…
+    options:
+      A: Skin vessels constrict in cold
+      B: Radiation peaks at T^4 outward
+      C: The heat is trapped inside
+      D: Convection stops
+    answer: B
+    explain: The body loses heat to surroundings by radiation proportional to the fourth power of skin
+      temperature.
+    distractors:
+      A: Fever often dilates vessels.
+      B: Core heat does escape.
+      C: Convection still acts.
+examples:
+- prompt: 0.20 kg of steam at 100C is bubbled into 0.80 kg of water at 20C in an insulated cup. Find the
+    final temperature.
+  solution:
+  - 'Steam condenses: Q = mLv = 0.20 x 2260 kJ/kg = 452 kJ released.'
+  - 'Water warms: Q = mc delta-T — 452,000 = (0.80)(4186)(T - 20).'
+  - T - 20 = 135 K — above 100C, physically impossible!
+  - 'Therefore the steam cannot fully condense: final state is boiling water at 100C with steam mass reduced.'
+  answer: Final temperature 100C — the latent heat dominates; leftover steam condenses only while water
+    is at 100C.
+  distractors:
+    A: Assuming full condensation to give 135C.
+    B: Forgetting the latent heat term — gives only ~35C.
+    C: Mixing masses linearly.
+key_points:
+- Q = mc delta-T; Q = mL at phase changes.
+- Average KE = (3/2)kT — temperature alone.
+- PV = nRT; isothermal P~1/V; adiabatic with heat isolation.
+- 'First law: delta-U = Q - W.'
+- Carnot max e = 1 - Tc/Th.
+- Evaporation is the body's main cooling route.
+mnemonics:
+- phrase: Q in, W out
+  means: First law sign convention delta-U = Q - W.
+- phrase: 'Carnot: one minus cold over hot (Kelvin)'
+  means: Maximum engine efficiency.
+maps:
+- title: Thermodynamic processes
+  steps:
+  - isothermal — P V constant, T fixed
+  - isobaric — V/T constant, P fixed
+  - isochoric — P/T constant, V fixed
+  - adiabatic — Q = 0, P V^gamma
+- title: Bodily heat loss routes
+  steps:
+  - radiation — T^4, skin surface
+  - convection — moving air/water
+  - conduction — direct contact
+  - evaporation — sweating, latent heat
+passage:
+  text: A marathon runner in 30C weather drinks cold water. Her skin stays at 33C while core is 38C. Wind
+    speed rises from 2 to 8 m/s.
+  questions:
+  - q: The dominant cooling mechanism for active sweating is…
+    options:
+      A: Conduction
+      B: Evaporation
+      C: Convection
+      D: Radiation
+    answer: B
+    explain: Large latent heat of vaporization dominates when enthalpy is available.
+    distractors:
+      A: Contact is minor in dry air.
+      B: Secondary.
+      C: Skin at 33C radiates to 30C air.
+  - q: Wind increases heat loss by…
+    options:
+      A: Radiation
+      B: Convection
+      C: Conduction through the air
+      D: Latent heat
+    answer: B
+    explain: Moving air removes the warmed boundary layer — convective loss climbs.
+    distractors:
+      A: Wind does not change T^4.
+      B: Air is a poor conductor regardless.
+      C: Evaporation needs water.
+  - q: If she shivers, the body is generating heat through…
+    options:
+      A: Brown fat only
+      B: Muscle contractions and increased metabolism
+      C: Mental focus
+      D: Reduced blood flow only
+    answer: B
+    explain: Shivering is involuntary muscle work converting chemical energy to heat.
+    distractors:
+      A: Brown fat is one channel, not alone.
+      B: Not physiological.
+      C: Vasoconstriction conserves heat, does not make it.
+pitfalls:
+- Sign conventions in the first law — Q in positive, W out positive.
+- Using Celsius in Kelvin-only gas law and Carnot ratios.
+- Forgetting latent heat exists at phase changes.
+- Calling a refrigerator a heat engine.
+- Temperature vs heat interchange.
+exam_map:
+  NMAT: Heat math, gas laws, engine efficiency, definitions.
+  MCAT: Joined to physiology — thermoregulation, respiratory work, metabolic efficiency.
+sources:
+- ref: openstax-physics
+  used:
+  - Ch 11-14 — heat, gas laws, thermodynamics
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC4
+  relation: consulted
+further_reading:
+- title: OpenStax Physics (HS) — Heat and Temperature
+  url: https://openstax.org/books/physics/pages/11-introduction
+  note: Heat transfer and thermal expansion.
+- title: OpenStax Physics (HS) — Laws of Thermodynamics
+  url: https://openstax.org/books/physics/pages/15-introduction
+  note: Engines and entropy.
+review_questions:
+- q: Entropy of an isolated system…
+  options:
+    A: Always decreases
+    B: Never decreases
+    C: Stays constant
+    D: Is undefined
+  answer: B
+  explain: Cannot decrease — second law of thermodynamics.
+  distractors:
+    A: Violation.
+    B: Only for reversible processes.
+    C: Defined.
+- q: Sweating works because…
+  options:
+    A: Sweat is cold
+    B: Evaporation absorbs latent heat
+    C: Skin is thin
+    D: Air is always dry
+  answer: B
+  explain: Each gram of vaporized sweat carries away ~2400 J.
+  distractors:
+    A: Sweat starts at body temp.
+    B: Thickness is not the mechanism.
+    C: Humidity limits it.
+- q: An isothermal expansion of an ideal gas…
+  options:
+    A: Cools the gas
+    B: Keeps T constant, absorbs Q = W
+    C: Heats the gas
+    D: Traps heat
+  answer: B
+  explain: T fixed by contact with a reservoir; the work pulled out is replaced by inflowing heat.
+  distractors:
+    A: T does not change.
+    B: T constant.
+    C: Not trapped.
+- q: Kelvin is used in gas laws because…
+  options:
+    A: It has no negative values
+    B: Ratios of T are physically meaningful
+    C: Fahrenheit is complicated
+    D: It is international
+  answer: B
+  explain: PV = nRT and Carnot ratios need absolute temperature.
+  distractors:
+    A: Zero temperature = zero KE.
+    B: Also true but secondary.
+    C: True but not the reason.

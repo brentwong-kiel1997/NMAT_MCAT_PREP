@@ -1,5 +1,5 @@
 {
-  "source_rev": "24dce2c",
+  "source_rev": "01adb6b",
   "counts": {
     "chapters": 70,
     "note_bullets": 449,
@@ -12,7 +12,7 @@
     "diseases": 8
   },
   "files": {
-    "SOURCES.yml": "b444bf87fa7d85c6863b594c1be38628480c17cb3328bbc897ed0447c63a07e9",
+    "SOURCES.yml": "bfa9ead0170519829651d49e94b3699a7915d9ad86e2fa5ab0726b6424a4dbce",
     "catalog.yml": "06fdd53e70a617098e5eb8c2b071c989c7498193c1fcd72afd175bddc5e8f6e0",
     "chapters/10a-social-inequality.yml": "1d79655388e7a1694108d431552afdab959687e33de46cd55c92291cb9943370",
     "chapters/1a-proteins-and-amino-acids.yml": "158223673eea72b8aef3e74ef97793b2fb11a8469b658fdc8536be3d2cb20444",
@@ -135,6 +135,15 @@
     "tutorials/chemistry/biochemistry.yml": "7f15e2225c23fbb543e4f859c9729449199b24aca3fd2e99498c65544b005803",
     "tutorials/chemistry/general-chemistry.yml": "8b04bc15d0c41b44436c794c62efb0f0d2d4c2be66fad5931d257f5710ff60f3",
     "tutorials/chemistry/organic-chemistry.yml": "e0fe3148d1e9cd59fbcfeb5e170cf04a5f21431c472673152ef013218f7977f4",
+    "tutorials/physics/4a-motion-forces-work-energy-equilibrium.yml": "d2c48f66027036668a4201b6579d6b8e7ddf0ed35fd1d7ed69fd60026cf35aea",
+    "tutorials/physics/4b-fluids-for-circulation-and-gas-exchange.yml": "717ce451def617322c718a9234bfb85cf2c4d926958f8c9d7b44f9dc1075ddb1",
+    "tutorials/physics/4c-electrochemistry-and-electrical-circuits.yml": "c9119520a117c3c28c754c9c6f82d53c85044d0b77b94ba46a6f16f15f2e263c",
+    "tutorials/physics/4d-light-and-sound-interacting-with-matter.yml": "dee8a9e545d818ac2f643bada2095579955f835116c65720ca941946e6236465",
+    "tutorials/physics/electricity-and-magnetism.yml": "3b22918241dbd2edb1d014175c57d490bd4f5d9627fd0cdbfb49da1606f496f3",
+    "tutorials/physics/mechanics.yml": "4b913114a667e8bfdd022269b267a5f3030007a64f733e54e67b4353cebe9869",
+    "tutorials/physics/modern-physics.yml": "2a03d0eea8566830d5df1f4831b0f0e48b31afa1c044671a6c7874b497fdb5aa",
+    "tutorials/physics/thermodynamics.yml": "0bc5abb8292d8aa6a9c663cc5a1b151b87ad40adf058229591b382fef76e91b3",
+    "tutorials/physics/vibrations-waves-and-optics.yml": "a3faab5e80a5084912ec1735c5ae74a8d59eda0df246b7356161d6a14b644954",
     "tutorials/psych-soc/10a-social-inequality.yml": "9a4ad20cd9e4fd35e7bce14dec5b312a4945ea93c5cd6acc4dcc81e73841a25c",
     "tutorials/psych-soc/6a-sensing-the-environment.yml": "5d68e3f7e1a416f5cd68387533a9ce497fd5ddad06000578c8f9aa45bf8f7cce",
     "tutorials/psych-soc/6b-making-sense-of-the-environment.yml": "beadfe7656b1471a3ec17440ad68ecc71ebf56d597277fe9c54d88d25011c179",

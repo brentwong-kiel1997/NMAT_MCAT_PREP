@@ -1,0 +1,274 @@
+subject: physics
+chapter: Electricity and Magnetism
+title: Electricity and Magnetism
+overview: Charges, fields, circuits, and magnetism. The circuit half (resistors, capacitors, Ohm's law)
+  props up the bio labs; magnetism binds to biological imaging (MRI). NMAT expects direct calculations;
+  MCAT leans conceptual with simple math.
+sections:
+- heading: Coulomb's law and electric fields
+  body:
+  - ==F = k q1 q2 / r2 — same sign repels, opposite attracts; direction along the joining line==. Charge
+    is quantized in e = 1.6e-19 C and conserved. The field E = F/q = k Q/r2 points away from positive,
+    toward negative (field lines show direction).
+  - ==Potential energy U = k q1 q2 / r and electric potential V = k Q / r== — V is energy per charge;
+    the unit volt = J/C. Work moving charge along an equipotential is zero; field does work when charge
+    moves along the field.
+  check:
+  - q: Two charges, +2q and -2q, separated by distance d. Halving the distance…
+    options:
+      A: Quadruples the force
+      B: Doubles the force
+      C: Halves the force
+      D: Flips the force
+    answer: A
+    explain: F ~ 1/r2 — d/2 gives 4x the force (still attractive).
+    distractors:
+      A: Inverse square.
+      B: Inverse-square gives 4, not 2.
+      C: No.
+  figures:
+  - src: electricity-and-magnetism/fig-74e73828.webp
+    caption: Electric force — attraction between opposite charges, repulsion between like charges.
+    credit: Ch 18 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
+  - src: electricity-and-magnetism/fig-bde94422.webp
+    caption: A torsion balance — the instrument Coulomb used to measure the force between charges.
+    credit: Ch 18 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
+- heading: Circuits — current, resistance, and power
+  body:
+  - ==I = V/R (Ohm's law); series resistors add (R = R1 + R2); parallel obeys 1/R = 1/R1 + 1/R2 — total
+    LESS than either==. Current splits at junctions (Kirchhoff's node) and voltages sum around a loop
+    (Kirchhoff's loop).
+  - Power = IV = I2R = V2/R. ==In series, same current — the big resistor gets the most power==; in parallel,
+    equal voltage — the small resistor draws more current and more power. Emf minus internal resistance
+    drop sets the terminal voltage.
+  check:
+  - q: Two resistors, 2 ohm and 8 ohm, in series with a 12 V battery. The current is…
+    options:
+      A: 1.2 A
+      B: 6 A
+      C: 1.5 A
+      D: 0.12 A
+    answer: A
+    explain: R-total = 10 ohm; I = 12/10 = 1.2 A.
+    distractors:
+      A: Parallel math.
+      B: 10 ohm, not 2.
+      C: Decimal slip.
+- heading: Capacitors and RC circuits
+  body:
+  - ==Capacitance C = Q/V; parallel plates C = epsilon A/d==. Energy stored = (1/2)CV2. In series, 1/C
+    = sum of reciprocals (LESS); in parallel, C adds (MORE) — opposite of resistors.
+  - '==RC time constant tau = RC — after one tau the capacitor charges to 63% (1 - e^-1)==. Charging curve:
+    V(t) = V0(1 - e^-t/tau); discharging V(t) = V0 e^-t/tau. Defibrillators and pacemakers are RC physics.'
+  check:
+  - q: In an RC circuit after one time constant the charging capacitor reaches…
+    options:
+      A: 37%
+      B: 50%
+      C: 63%
+      D: 90%
+    answer: C
+    explain: 1 - e^-1 ≈ 0.632 of the final voltage.
+    distractors:
+      A: 37% is the discharge remaining.
+      B: e^-1 vs 1-e^-1 mix-up.
+      C: Wrong exponent.
+- heading: Magnetism — fields, forces, and induction
+  body:
+  - ==Moving charges feel magnetic force F = q v B sin(theta) — perpendicular to BOTH velocity and field.
+    ==Charged particles in a uniform B spiral in circles (centripetal). Current-carrying wires feel F
+    = I L B sin(theta).
+  - '==Induction: a CHANGING flux produces EMF — Faraday: EMF = -d(flux)/dt; Lenz says the induced current
+    opposes the change==. MRI uses hydrogen spins; transformers step voltage via turns ratio V1/V2 = N1/N2.'
+  check:
+  - q: A charge moving PARALLEL to a magnetic field experiences…
+    options:
+      A: Maximum force
+      B: Zero magnetic force
+      C: Force perpendicular only
+      D: It speeds up
+    answer: B
+    explain: sin(0) = 0 — force is zero when v is parallel to B.
+    distractors:
+      A: That needs v perpendicular.
+      B: That IS the case when perpendicular.
+      C: No force means no acceleration.
+- heading: Electrochemistry and biological fields
+  body:
+  - Nernst equation V = (RT/zF) ln([out]/[in]) ties concentration gradients to membrane potentials; ==resting
+    potential ~ -70 mV arises from selective ion permeability==. Electrocardiograms and electroencephalograms
+    measure body-generated fields.
+  - Electrochemistry — ==oxidation (LEO) at the anode; reduction (GER) at the cathode==; galvanic cells
+    convert chemical to electrical spontaneously; electrolytic cells need external voltage. Standard cell
+    potential E = E-cathode - E-anode.
+  check:
+  - q: In an electrolytic cell, electrons flow…
+    options:
+      A: Spontaneously to the cathode
+      B: Pushed by an external power source
+      C: Toward the anode internally
+      D: Only in solutions
+    answer: B
+    explain: An electrolytic cell is driven against the spontaneous direction.
+    distractors:
+      A: Galvanic do that.
+      B: Anode is oxidation (electrons leave), but the driving source matters.
+      C: Wires conduct too.
+examples:
+- prompt: A cell membrane (0.10 um thick, area 1e-5 m2) has dielectric constant 5 and a potential difference
+    of 70 mV. Estimate its capacitance and stored charge.
+  solution:
+  - C = k epsilon0 A/d = (5)(8.85e-12)(1e-5)/(0.10e-6).
+  - C = 4.4e-9 / 1e-7 = 4.4e-9 F ≈ 4.4 nF.
+  - Q = CV = (4.4e-9)(0.070) = 3.1e-10 C.
+  - That is ~2e9 elementary charges — a plausible membrane charge.
+  answer: About 4.4 nF carrying ~3e-10 C.
+  distractors:
+    A: Forgetting epsilon0 — gives 8.8e-10 F.
+    B: Using d in meters wrong (0.10 um → 1e-7 m, not 1e-6).
+    C: Neglecting the thickness conversion — 44 nF.
+key_points:
+- 'Coulomb: F ~ q1q2/r2, signs attract/repel.'
+- Series resistance adds; parallel drops below smallest.
+- 'Power: series — biggest R gets most; parallel — smallest R.'
+- 'RC: tau = RC; 63% at one time constant.'
+- Magnetic force needs v perpendicular to B.
+- 'Lenz: induced current opposes the change.'
+mnemonics:
+- phrase: LEO says GER
+  means: Loss of Electrons is Oxidation; Gain of Electrons is Reduction.
+- phrase: Series resistors sum up; parallel resistors sink
+  means: Total resistance in each configuration.
+maps:
+- title: Circuit solving
+  steps:
+  - reduce parallel blocks to one R
+  - add series R
+  - I = V/R total → back-substitute voltages
+  - compute power per element
+- title: Cell charge flow
+  steps:
+  - oxidation at anode — electrons out
+  - external wire delivers to cathode
+  - reduction at cathode — electron gain
+  - salt bridge completes the loop
+passage:
+  text: A pacemaker circuit drives a 5.0 k-ohm load. The battery provides 9.0 V with 100 ohm internal
+    resistance. The lead wires have negligible resistance.
+  questions:
+  - q: The current through the load is…
+    options:
+      A: 1.8 mA
+      B: 0.9 mA
+      C: 18 mA
+      D: 90 mA
+    answer: A
+    explain: I = 9 / (100 + 5000) = 1.76e-3 A ≈ 1.8 mA.
+    distractors:
+      A: Correct — includes internal R.
+      B: Omits internal resistance.
+      C: Wrong division.
+      D: Wrong division.
+  - q: The power dissipated in the load is…
+    options:
+      A: 16 mW
+      B: 8 mW
+      C: 32 mW
+      D: 160 mW
+    answer: A
+    explain: P = I2R = (1.76e-3)2(5000) = 15.5e-3 W ≈ 16 mW.
+    distractors:
+      A: Correct.
+      B: Half.
+      C: Double.
+      D: Tenfold error.
+  - q: If the battery voltage doubled, the load current would…
+    options:
+      A: Double
+      B: Quadruple
+      C: Halve
+      D: Stay
+    answer: A
+    explain: Ohm's law — I = V/R scales linearly when R constant.
+    distractors:
+      A: Correct.
+      B: Needs resistive power.
+      C: Wrong direction.
+      D: R constant.
+pitfalls:
+- Series/parallel rules flipped for capacitors vs resistors.
+- Magnetic force zero when v parallel to B.
+- Kirchhoff junction confusing current with charge.
+- Nernst sign — [out]/[in] with cation convention.
+- Lenz direction — oppose the CHANGE, not the field.
+exam_map:
+  NMAT: Coulomb, Ohm's law, series/parallel, power, magnetism basics.
+  MCAT: Membrane capacitance, electrocardiogram physics, RC defibrillator, MRI magnetic principles.
+sources:
+- ref: openstax-physics
+  used:
+  - Ch 18-23 — circuits, fields, magnetism
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC4
+  relation: consulted
+further_reading:
+- title: OpenStax Physics (HS) — Circuits
+  url: https://openstax.org/books/physics/pages/20-introduction
+  note: Ohm, series/parallel, power.
+- title: OpenStax Physics (HS) — Magnetism
+  url: https://openstax.org/books/physics/pages/22-introduction
+  note: Fields, forces, induction.
+review_questions:
+- q: Two equal resistors in parallel give a total resistance of 4 ohm. Each is…
+  options:
+    A: 2 ohm
+    B: 4 ohm
+    C: 8 ohm
+    D: 16 ohm
+  answer: C
+  explain: R-total = R/2 = 4 → R = 8 ohm.
+  distractors:
+    A: That is half each.
+    B: Series would be 8.
+    C: Parallel math.
+- q: Which statement about magnetic force is TRUE?
+  options:
+    A: It does work on a moving charge
+    B: It is perpendicular to velocity
+    C: It is parallel to the field
+    D: It accelerates charges along the field
+  answer: B
+  explain: F = q v B sin(theta) is always perpendicular to v — it changes direction, never speed.
+  distractors:
+    A: Perpendicular force does zero work.
+    B: Correct.
+    C: Perpendicular, not parallel.
+    D: Changes direction only.
+- q: Increasing the area of a capacitor's plates…
+  options:
+    A: Raises capacitance
+    B: Lowers capacitance
+    C: No effect
+    D: Depends on charge
+  answer: A
+  explain: C = epsilon A/d — area in the numerator.
+  distractors:
+    A: Correct.
+    B: Opposite.
+    C: Plate area matters.
+    D: C is geometric.
+- q: A step-up transformer with N2 = 10 N1 gives…
+  options:
+    A: Lower voltage
+    B: 10x voltage, 1/10 current
+    C: 10x current
+    D: Same power — voltage squared
+  answer: B
+  explain: V2/V1 = N2/N1 = 10; power conserved so current drops 10x.
+  distractors:
+    A: That is step-down.
+    B: Correct.
+    C: Opposite.
+    D: Power is conserved, not squared.

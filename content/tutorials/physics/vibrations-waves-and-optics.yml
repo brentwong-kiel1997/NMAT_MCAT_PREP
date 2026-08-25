@@ -1,0 +1,273 @@
+subject: physics
+chapter: Vibrations, Waves, and Optics
+title: Vibrations, Waves, and Optics
+overview: SHM, wave properties, sound, light, lenses and mirrors. Optics pairs with 4D on light-sound
+  interaction; sound and hearing link to physiology. Expect graph-reading (waves) and lens-ray questions.
+sections:
+- heading: Simple harmonic motion
+  body:
+  - '==SHM: restoring force proportional to displacement — F = -kx==. The period T = 2 pi sqrt(m/k) for
+    a mass-spring; T = 2 pi sqrt(L/g) for a pendulum (mass-independent!). Frequency f = 1/T; amplitude
+    does not change the period.'
+  - Energy sloshes between KE and elastic PE — total stays constant (no damping). ==At the extremes velocity
+    is zero, acceleration maximal; through equilibrium velocity is maximal, acceleration zero==. This
+    phase logic is the most-tested SHM idea.
+  check:
+  - q: A pendulum's period doubles if…
+    options:
+      A: The mass doubles
+      B: The length quadruples
+      C: The amplitude doubles
+      D: Gravity doubles
+    answer: B
+    explain: T ~ sqrt(L) — quadrupling L doubles T.
+    distractors:
+      A: Mass cancels.
+      B: Amplitude does not enter.
+      C: T ~ 1/sqrt(g) — would halve.
+- heading: Wave properties
+  body:
+  - Waves carry energy, not matter. ==v = f lambda== — speed is a medium property; changing frequency
+    changes wavelength, not speed. Transverse (light, rope) versus longitudinal (sound, compression).
+  - '==Superposition — waves add when they meet; interference (constructive/destructive) results. Standing
+    waves — fixed ends create nodes; only certain wavelengths fit== (harmonics). Doppler: moving source/pitch
+    shifts — approaching raises frequency.'
+  check:
+  - q: Sound travels at 343 m/s in air. Doubling the frequency…
+    options:
+      A: Doubles the wavelength
+      B: Halves the wavelength
+      C: Slows the wave
+      D: Raises the speed
+    answer: B
+    explain: v fixed, f up means lambda down — v = f lambda.
+    distractors:
+      A: Inverse relation.
+      B: Medium sets speed.
+      C: Not so.
+- heading: Sound, hearing, and beats
+  body:
+  - Sound intensity level dB = 10 log(I/I0) — ==+10 dB = 10x intensity; doubling intensity adds ~3 dB==.
+    Loudness is logarithmic perception. Intensity falls as 1/r2 from a point source.
+  - '==Beats: two close frequencies f1 and f2 create a beat of |f1 - f2|==. Resonance amplifies matching
+    frequencies — the physics of the cochlea and the blood-pressure cuff (Korotkoff).'
+  check:
+  - q: A sound at 440 Hz and another at 444 Hz produce…
+    options:
+      A: A 442 Hz tone
+      B: Beats of 4 Hz
+      C: Silence
+      D: A 884 Hz overtone
+    answer: B
+    explain: Beat frequency is the difference.
+    distractors:
+      A: That is wrong math.
+      B: Interference does not cancel steady tones.
+      C: Sum is not heard as a single tone.
+  figures:
+  - src: vibrations-waves-and-optics/fig-4f7a2c07.webp
+    caption: A sound wave's compressions and rarefactions pressing on the eardrum — F = PA at work in
+      hearing.
+    credit: Ch 14 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
+  - src: vibrations-waves-and-optics/fig-625432c8.webp
+    caption: Echolocation — a bat emitting sound waves and reading their reflection to locate prey.
+    credit: Ch 14 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
+- heading: Geometric optics — lenses and mirrors
+  body:
+  - ==1/f = 1/do + 1/di (thin-lens equation); magnification m = -di/do==. Converging (convex) lenses can
+    form real or virtual images; diverging form virtual, upright, reduced — clear for nearsighted correction.
+  - 'Sign conventions haunt everyone — ==object distance positive, image distance positive when the image
+    is on the REFLECTED/TRANSMITTED side ==. Lens-maker: concave mirror converges (f positive); convex
+    lens converges.'
+  check:
+  - q: A diverging lens always produces an image that is…
+    options:
+      A: Real and inverted
+      B: Virtual and upright
+      C: Real and upright
+      D: Magnified
+    answer: B
+    explain: A diverging lens bends rays apart — never a real image.
+    distractors:
+      A: Only converging lenses focus to real images.
+      B: Reference to magnification.
+      C: Never magnified.
+- heading: Mirror and prism applications
+  body:
+  - '==Flat mirrors: virtual image, same size, distance behind mirror equals object distance in front==.
+    Concave mirrors (shaving, dental) magnify when the object sits inside the focal length — virtual,
+    upright.'
+  - Prisms and raindrops disperse white light — ==red bends least, violet most== (dispersion = refractive
+    index varies with wavelength). Total internal reflection needs light moving INTO a denser-to-rarer
+    interface at an angle above the critical angle — fibre optics.
+  check:
+  - q: Dispersion through a prism spreads colors because…
+    options:
+      A: Refraction index depends on wavelength
+      B: Violet travels faster
+      C: The prism absorbs red
+      D: Each color interferes
+    answer: A
+    explain: n varies with wavelength — violet bends most.
+    distractors:
+      A: Violet is slower in glass.
+      B: No absorption.
+      C: No interference at work.
+examples:
+- prompt: A 50 g mass on a spring (k = 200 N/m) is pulled 3 cm from equilibrium and released. Find the
+    period and max speed.
+  solution:
+  - T = 2 pi sqrt(m/k) = 2 pi sqrt(0.050/200) ≈ 0.099 s.
+  - 'Max speed at equilibrium: v_max = omega A = (2 pi/T)(0.03).'
+  - omega = 63.2 rad/s, so v_max = 63.2 x 0.03 = 1.9 m/s.
+  - 'Alternatively energy: (1/2)kA2 = (1/2)mv_max2.'
+  answer: T ≈ 0.10 s, v_max ≈ 1.9 m/s.
+  distractors:
+    A: Forgetting to convert 50 g to kg — gives 3.1 s.
+    B: Using amplitude as displacement in energy equation.
+    C: Multiplying instead of sqrt in the period.
+key_points:
+- 'SHM: T = 2pi sqrt(m/k); pendulum period mass-independent.'
+- v = f lambda; medium sets speed; frequency does not.
+- 'dB: +10 = 10x intensity; beats are frequency difference.'
+- 'Thin lens: 1/f = 1/do + 1/di; diverging = virtual upright.'
+- 'Dispersion: violet bends most; red least.'
+- Total internal reflection above the critical angle.
+mnemonics:
+- phrase: Fast frequency, short wavelength
+  means: v = f lambda — inverse relation at fixed speed.
+- phrase: +10 dB is 10 times the loudness
+  means: Logarithmic dB scale; small numbers hide big intensity changes.
+maps:
+- title: Imaging by mirror/lens type
+  steps:
+  - converging lens + object beyond f — real inverted
+  - converging + inside f — virtual upright enlarged
+  - diverging lens — always virtual upright reduced
+  - flat mirror — virtual, same size
+- title: Wave problem path
+  steps:
+  - find v from medium (343 m/s air)
+  - use f lambda = v
+  - apply Doppler/beats/superposition
+  - check direction signs
+passage:
+  text: A tuning fork (512 Hz) is struck and placed near a tube open at both ends. A student varies the
+    effective tube length by sliding a piston and records strong resonance at lengths 0.335 m, 0.670 m,
+    and 1.005 m.
+  questions:
+  - q: The wavelength of the standing wave is…
+    options:
+      A: 0.335 m
+      B: 0.670 m
+      C: 1.005 m
+      D: 1.340 m
+    answer: B
+    explain: Successive resonances differ by half a wavelength — 0.670 - 0.335 = 0.335 = lambda/2 → lambda
+      = 0.670 m.
+    distractors:
+      A: That is half the wavelength.
+      B: Correct — 0.670 m.
+      C: That is 3/2 wavelength.
+      D: Overshoot.
+  - q: The speed of sound predicted by this experiment is…
+    options:
+      A: 343 m/s
+      B: 172 m/s
+      C: 512 m/s
+      D: 1024 m/s
+    answer: A
+    explain: v = f lambda = 512 x 0.670 ≈ 343 m/s.
+    distractors:
+      A: Correct — matches standard air speed.
+      B: Half — using lambda/2.
+      C: lambda x f confusion.
+      D: Double counting.
+  - q: If the fork were 1024 Hz instead, adjacent resonance lengths would…
+    options:
+      A: Double
+      B: Halve
+      C: Stay the same
+      D: Quadruple
+    answer: B
+    explain: Doubling f halves lambda, so the half-wavelength spacing halves.
+    distractors:
+      A: Inverse relation.
+      B: Correct.
+      C: T unchanged.
+      D: Inverse square.
+pitfalls:
+- Period dependence on amplitude (it does not).
+- Conflating source speed with wave speed.
+- Sign errors in the lens equation.
+- Calling everything in the mirror smaller.
+- Ignoring beats direction.
+exam_map:
+  NMAT: SHM periods, wave math, sound levels, lens equations.
+  MCAT: Optic diagnosis (retina image formation), hearing mechanics, Doppler in medicine (ultrasound).
+sources:
+- ref: openstax-physics
+  used:
+  - Ch 16-19, 21 — waves, sound, optics
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC4
+  relation: consulted
+further_reading:
+- title: OpenStax Physics (HS) — Waves and Sound
+  url: https://openstax.org/books/physics/pages/17-introduction
+  note: Wave math and sound.
+- title: OpenStax Physics (HS) — Optics
+  url: https://openstax.org/books/physics/pages/21-introduction
+  note: Lenses, mirrors, and image formation.
+review_questions:
+- q: An object inside the focal length of a convex lens forms…
+  options:
+    A: Real inverted
+    B: Virtual upright enlarged
+    C: No image
+    D: Virtual inverted
+  answer: B
+  explain: Rays never meet; the eye extrapolates them back to a virtual image.
+  distractors:
+    A: That is beyond f.
+    B: Always forms.
+    C: Virtual images are upright for this case.
+- q: The Doppler effect shifts detected frequency because…
+  options:
+    A: The source and observer move relative to each other
+    B: The wave speed changes
+    C: Sound becomes louder
+    D: Wavelength shortens permanently
+  answer: A
+  explain: Relative motion compresses or stretches the arriving wavefronts.
+  distractors:
+    A: Medium speed stays.
+    B: Loudness is separate.
+    C: Approach is the signature.
+- q: Sound intensity 100x a reference is how many dB?
+  options:
+    A: '10'
+    B: '20'
+    C: '30'
+    D: '100'
+  answer: B
+  explain: 10 log(100) = 20 dB.
+  distractors:
+    A: 10 dB is 10x.
+    B: Correct — log scale.
+    C: 100 dB is 10^10x.
+    D: Linear confusion.
+- q: A convex mirror produces images that are…
+  options:
+    A: Real and inverted
+    B: Virtual, upright, reduced
+    C: Virtual and enlarged
+    D: Real and upright
+  answer: B
+  explain: Widely bent rays diverge — virtual upright reduced — the car side-mirror.
+  distractors:
+    A: Only concave can do real.
+    B: Concave inside f only.
+    C: Concave inside f.

@@ -1,6 +1,6 @@
 # Tutorial Fill Progress (content/tutorials)
 
-> 70 unique chapters grouped by discipline · **35 published tutorials**.
+> 70 unique chapters grouped by discipline · **44 published tutorials**.
    Update this file **together with** every chapter you publish.
 
 Legend: **✅ Published** · ⬜ Not started · Exams column shows each chapter's annotation.
@@ -59,15 +59,15 @@ Legend: **✅ Published** · ⬜ Not started · Exams column shows each chapter'
 
 | # | Chapter | Exams | Status | Tutorial |
 |---|---|---|---|---|
-| 1 | 4A · Motion, forces, work, energy, equilibrium | NMAT · MCAT | ⬜ Not started | — |
-| 2 | 4B · Fluids for circulation and gas exchange | NMAT · MCAT | ⬜ Not started | — |
-| 3 | 4C · Electrochemistry and electrical circuits | NMAT · MCAT | ⬜ Not started | — |
-| 4 | 4D · Light and sound interacting with matter | NMAT · MCAT | ⬜ Not started | — |
-| 5 | Electricity and Magnetism | NMAT · MCAT | ⬜ Not started | — |
-| 6 | Mechanics | NMAT · MCAT | ⬜ Not started | — |
-| 7 | Modern Physics | NMAT · MCAT | ⬜ Not started | — |
-| 8 | Thermodynamics | NMAT · MCAT | ⬜ Not started | — |
-| 9 | Vibrations, Waves, and Optics | NMAT · MCAT | ⬜ Not started | — |
+| 1 | 4A · Motion, forces, work, energy, equilibrium | NMAT · MCAT | ✅ Published | [tutorial](tutorials/physics/4a-motion-forces-work-energy-equilibrium.yml) |
+| 2 | 4B · Fluids for circulation and gas exchange | NMAT · MCAT | ✅ Published | [tutorial](tutorials/physics/4b-fluids-for-circulation-and-gas-exchange.yml) |
+| 3 | 4C · Electrochemistry and electrical circuits | NMAT · MCAT | ✅ Published | [tutorial](tutorials/physics/4c-electrochemistry-and-electrical-circuits.yml) |
+| 4 | 4D · Light and sound interacting with matter | NMAT · MCAT | ✅ Published | [tutorial](tutorials/physics/4d-light-and-sound-interacting-with-matter.yml) |
+| 5 | Electricity and Magnetism | NMAT · MCAT | ✅ Published | [tutorial](tutorials/physics/electricity-and-magnetism.yml) |
+| 6 | Mechanics | NMAT · MCAT | ✅ Published | [tutorial](tutorials/physics/mechanics.yml) |
+| 7 | Modern Physics | NMAT · MCAT | ✅ Published | [tutorial](tutorials/physics/modern-physics.yml) |
+| 8 | Thermodynamics | NMAT · MCAT | ✅ Published | [tutorial](tutorials/physics/thermodynamics.yml) |
+| 9 | Vibrations, Waves, and Optics | NMAT · MCAT | ✅ Published | [tutorial](tutorials/physics/vibrations-waves-and-optics.yml) |
 
 ### Behavioral & Social (behavioral-social) · 7 chapters
 

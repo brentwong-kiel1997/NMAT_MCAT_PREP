@@ -70,3 +70,25 @@ sources:
   accessed: '2026-08-25'
   relation: consulted
   note: Facts and structure consulted; all tutorial prose original.
+- id: openstax-physics
+  kind: textbook
+  title: Physics (High School)
+  publisher: OpenStax, Rice University
+  authors: OpenStax Physics team (Paul Peter Urone, Roger Hinrichs, et al.)
+  url: https://openstax.org/details/books/physics
+  edition: high-school web edition
+  license: CC BY-NC-SA 4.0
+  accessed: '2026-08-25'
+  relation: consulted
+  note: Facts and structure consulted; all tutorial prose original.
+- id: openstax-college-physics-2e
+  kind: textbook
+  title: College Physics 2e
+  publisher: OpenStax, Rice University
+  authors: Paul Peter Urone, Roger Hinrichs
+  url: https://openstax.org/details/books/college-physics-2e
+  edition: 2e (web edition)
+  license: CC BY-NC-SA 4.0
+  accessed: '2026-08-25'
+  relation: consulted
+  note: Used for 4A/4B figure pages (projectiles, fluid statics).

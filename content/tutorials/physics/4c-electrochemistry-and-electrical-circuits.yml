@@ -1,0 +1,281 @@
+subject: physics
+chapter: 4C · Electrochemistry and electrical circuits
+title: 4C · Electrochemistry and Electrical Circuits
+overview: Circuit elements, Ohm's law, capacitance, and electrochemistry — redox reactions, cells, and
+  the Nernst equation. The category fuses circuit physics with the redox chemistry underlying biological
+  energy and nerve signaling.
+sections:
+- heading: Redox chemistry and electrochemical cells
+  body:
+  - ==Oxidation loses electrons (LEO); reduction gains (GER)==. Oxidation numbers track electron movement
+    — assign and balance by half-reactions. ==Galvanic (voltaic) cells run spontaneously (positive E-cell);
+    electrolytic cells need an external voltage==.
+  - Anode = oxidation, cathode = reduction; ==electrons flow anode to cathode through the external wire;
+    anions migrate to anode in solution==. Standard cell potential E-cell = E-cathode - E-anode. In biological
+    reactions the same rules apply to cellular respiration chains.
+  check:
+  - q: In any electrochemical cell, reduction occurs at the…
+    options:
+      A: Anode
+      B: Cathode
+      C: Salt bridge
+      D: Electrolyte
+    answer: B
+    explain: Cathode is always the reduction site — 'Red Cat.'
+    distractors:
+      A: Oxidation site.
+      B: Correct.
+      C: Ionic conductor.
+      D: Medium, not a site.
+- heading: Circuit elements — EMF, current, resistance
+  body:
+  - '==EMF is the ideal cell voltage; terminal voltage = EMF - I r (internal resistance drop)==. Ohm''s
+    law I = V/R. Series: same current, voltages add; parallel: same voltage, currents add.'
+  - ==Series resistors R = R1 + R2; parallel 1/R = 1/R1 + 1/R2 (total less than each)==. Short circuits
+    bypass resistance — huge current — the fuse/circuit breaker job.
+  check:
+  - q: A battery with EMF 9 V and internal resistance 1 ohm drives a 5 ohm load. The terminal voltage
+      is…
+    options:
+      A: 9 V
+      B: 7.5 V
+      C: 1.5 V
+      D: 10.8 V
+    answer: B
+    explain: I = 9/(1 + 5) = 1.5 A; terminal = 9 - (1.5)(1) = 7.5 V.
+    distractors:
+      A: Ignoring internal drop.
+      B: Correct — 7.5 V.
+      C: That is the internal drop.
+      D: Terminal can't exceed EMF.
+  figures:
+  - src: 4c-electrochemistry-and-electrical-circuits/fig-494753ca.webp
+    caption: A simple circuit — conventional current from positive to negative; electrons flow the reverse
+      way.
+    credit: Ch 19 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
+  - src: 4c-electrochemistry-and-electrical-circuits/fig-12ee6e38.webp
+    caption: Alternating current — the sinusoidal current and the back-and-forth motion of charge carriers.
+    credit: Ch 19 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
+- heading: Capacitance and RC behavior
+  body:
+  - ==C = Q/V; parallel plate C = epsilon A/d; series capacitors 1/C totals, parallel add — opposite of
+    resistors==. Energy U = (1/2)CV2.
+  - '==RC transient: tau = RC; charging to 63% in one tau, discharging to 37%.== Formula V(t) = V0(1 -
+    e^-t/tau) and V0 e^-t/tau. In defibrillation and neuroscience time-constant logic, tau sets how fast
+    a membrane charges.'
+  check:
+  - q: Two 3 uF capacitors in series give…
+    options:
+      A: 6 uF
+      B: 1.5 uF
+      C: 3 uF
+      D: 0.5 uF
+    answer: B
+    explain: 1/C = 1/3 + 1/3 → C = 1.5 uF — series capacitors ADD reciprocals.
+    distractors:
+      A: That's parallel.
+      B: Correct.
+      C: One only.
+      D: Half again of wrong.
+- heading: Power, heating, and circuit safety
+  body:
+  - ==P = IV = I2R = V2/R==. In series, the biggest resistor burns the most power (same current). In parallel,
+    the SMALLEST resistor draws the most current and most power (same voltage).
+  - '==Fuses and breakers trip on excess CURRENT — I2R heating melts the element==. Practical ratchets:
+    wire gauge limits current; extension cords overloading = fire hazard; the exam likes P vs R behavior
+    under fixed V.'
+  check:
+  - q: Two bulbs, 60 W and 100 W (designed for 120 V), placed in SERIES across 240 V. The brighter is…
+    options:
+      A: The 60 W bulb
+      B: The 100 W bulb
+      C: Equally bright
+      D: Both burn out instantly
+    answer: A
+    explain: 'Series: same current; the 60 W has the higher resistance (R = V2/P), so uses more power.'
+    distractors:
+      A: Correct — higher R wins in series.
+      B: Lower R.
+      C: R differs.
+      D: They glow, not instantly pop.
+- heading: Nernst equation and membrane potentials
+  body:
+  - '==Nernst: E-ion = (RT/zF) ln([out]/[in]) — at 37C, E = (61 mV/z) log10([out]/[in])==. The resting
+    potential (-70 mV) is dominated by K+ since the membrane at rest is ~50x more permeable to K+ than
+    Na+.'
+  - ==The Goldman equation weights the Nernst terms by permeability==. Action potential — voltage-gated
+    Na+ opens first (depolarize), K+ later (repolarize). ==The membrane capacitance sets how many ions
+    shift per mV — RC thinking again==.
+  check:
+  - q: Raising the EXTERNAL K+ concentration (keeping internal fixed) makes the resting potential…
+    options:
+      A: More negative
+      B: Less negative (depolarized)
+      C: Unchanged
+      D: Infinite
+    answer: B
+    explain: The K+ gradient shrinks — the Nernst term approaches zero — E moves toward zero.
+    distractors:
+      A: Correct — gradient weakening depolarizes.
+      B: Opposite direction.
+      C: Gradient changed.
+      D: Bounded math.
+examples:
+- prompt: Compute the resting potential contribution of K+ with [K+]out = 4 mM, [K+]in = 140 mM at 37C.
+  solution:
+  - E-K = (61 mV) log10([out]/[in]) = 61 log10(4/140).
+  - 4/140 = 0.0286, log10 = -1.54.
+  - E-K = 61 x (-1.54) = -94 mV.
+  - K+ equilibrium alone is about -94 mV — the cell sits above that due to Na+ leak and Na-K pump.
+  answer: About -94 mV — close to the resting potential, which is why K+ dominates at rest.
+  distractors:
+    A: +94 mV — inverting the gradient.
+    B: -61 mV — confusing z with the constant.
+    C: 0 mV — using [in]/[out].
+key_points:
+- Red Cat; An Ox. Electrons flow anode → cathode outside.
+- Terminal voltage = EMF - I r.
+- Series R adds; parallel R halves; capacitors opposite.
+- P = IV = I2R = V2/R; series favors high R, parallel favors low R.
+- 'RC tau: 63% charge, 37% remaining.'
+- 'Nernst at 37C: 61/z log10(out/in); K+ rules rest.'
+mnemonics:
+- phrase: Red Cat, An Ox
+  means: Reduction at cathode; oxidation at anode.
+- phrase: OIL RIG
+  means: Oxidation Is Loss, Reduction Is Gain (of electrons).
+maps:
+- title: Cell traffic
+  steps:
+  - anode — oxidation, anions flow toward solution
+  - external wire — electrons anode→cathode
+  - cathode — reduction
+  - salt bridge — ions complete the circuit
+- title: Action potential phases
+  steps:
+  - rest — K+ dominance, -70 mV
+  - depolarize — Na+ channels open fast
+  - repolarize — K+ efflux, Na+ inactivated
+  - hyperpolarize-late — K+ overshoot
+passage:
+  text: A researcher measures a cell's membrane potential in normal Ringer's, then triples external K+
+    from 4 to 12 mM while keeping Na+ and Cl- constant. The recorded potential moves from -70 mV to about
+    -50 mV.
+  questions:
+  - q: The depolarization is best explained by…
+    options:
+      A: Na+ channel opening
+      B: K+ gradient shrinking per Nernst
+      C: Cl- influx
+      D: Na-K pump halt
+    answer: B
+    explain: Tripling external K+ shrinks the K+ equilibrium gradient — the Goldman sum moves toward zero.
+    distractors:
+      A: Na+ was held constant.
+      B: Correct.
+      C: Cl- held constant.
+      D: The pump still runs.
+  - q: If instead external Na+ were tripled, the effect would be…
+    options:
+      A: Much larger
+      B: Much smaller
+      C: Identical
+      D: Zero
+    answer: B
+    explain: Resting permeability to Na+ is ~1/50 of K+ — its Nernst influence is weighted tiny.
+    distractors:
+      A: Opposite — Na+ is damped at rest.
+      B: Correct.
+      C: Permeabilities differ.
+      D: Na+ contributes slightly.
+  - q: The membrane time constant tau determines…
+    options:
+      A: The speed of channel opening
+      B: How fast voltage settles to a new value
+      C: The threshold voltage
+      D: The action potential amplitude
+    answer: B
+    explain: tau = RC — the membrane charges and decays with this time constant.
+    distractors:
+      A: Gating is molecular, not RC.
+      B: Correct.
+      C: Threshold is set by channels.
+      D: Amplitude is set by Nernst gains.
+pitfalls:
+- Redox direction — lose electrons is oxidation even for negative ions.
+- Terminal voltage vs EMF confusion.
+- Capacitor-resistor series/parallel flip.
+- Nernst denominator — [out]/[in] for cations.
+- Goldman permeability weighting ignored.
+exam_map:
+  NMAT: Ohm's law, series/parallel, power, cell basics.
+  MCAT: Content Category 4C — membrane potentials, electrochemistry of redox, RC physiology.
+sources:
+- ref: openstax-physics
+  used:
+  - Ch 18-20 — circuits, capacitance
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC4, CC 4C
+  relation: consulted
+further_reading:
+- title: OpenStax Physics (HS) — Electric Circuits
+  url: https://openstax.org/books/physics/pages/20-introduction
+  note: Circuit elements and power.
+- title: OpenStax Anatomy and Physiology 2e — The Nervous System
+  url: https://openstax.org/books/anatomy-and-physiology-2e/pages/12-introduction
+  note: Membrane potential physics.
+review_questions:
+- q: A galvanic cell's E-cell is +1.1 V. The reaction…
+  options:
+    A: Requires external voltage
+    B: Is spontaneous
+    C: Is at equilibrium
+    D: Releases only heat
+  answer: B
+  explain: Positive E-cell → negative delta-G → spontaneous.
+  distractors:
+    A: That is electrolytic.
+    B: Correct.
+    C: E = 0 at equilibrium.
+    D: It does electric work.
+- q: Doubling the voltage across a resistor doubles the…
+  options:
+    A: Resistance
+    B: Current and power quadruples
+    C: Only current
+    D: Nothing
+  answer: B
+  explain: I = V/R doubles; P = V2/R quadruples.
+  distractors:
+    A: R fixed.
+    B: Correct.
+    C: Power also jumps.
+    D: Ohm applies.
+- q: A 5 ohm and 20 ohm resistor in parallel give…
+  options:
+    A: 25 ohm
+    B: 4 ohm
+    C: 15 ohm
+    D: 100 ohm
+  answer: B
+  explain: 1/R = 1/5 + 1/20 = 0.25 → R = 4 ohm.
+  distractors:
+    A: Series math.
+    B: Correct.
+    C: Average wrong.
+    D: Product over sum is 100/25 = 4 — same.
+- q: Which cell has the highest resistance millivolt shift per ion?
+  options:
+    A: A giant capacitance cell
+    B: A tiny capacitance cell
+    C: They are equal
+    D: Depends on ion size
+  answer: B
+  explain: V = Q/C — small C means large mV change per charge moved.
+  distractors:
+    A: Large C damps voltage.
+    B: Correct.
+    C: C enters directly.
+    D: Size is not the mechanism.
