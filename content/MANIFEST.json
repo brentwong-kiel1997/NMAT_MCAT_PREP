@@ -1,5 +1,5 @@
 {
-  "source_rev": "d8a3d24",
+  "source_rev": "8276f5a",
   "counts": {
     "chapters": 71,
     "note_bullets": 454,
@@ -126,18 +126,18 @@
     "tutorials/biology/organisms-and-their-environment.yml": "fe881965a4475eb4cd1d638a4a81b915efe76eea8518890d21c29ac45c4c3bdf",
     "tutorials/biology/the-world-of-plants-and-animals.yml": "7d18e97dc94705af0c4e251052f5320ca5431eeff3056a4dbc14dcada3c915f0",
     "tutorials/biology/unity-and-diversity-of-life.yml": "da80407ab1597fc6d1605c063a9c0ec3c7bba246ab70b8a3ae410af3e88483f0",
-    "tutorials/psych-soc/10a-social-inequality.yml": "e47607a3b0049932d7e97e0bd4e94a57a94470739a52110944a408a9dd8641af",
+    "tutorials/psych-soc/10a-social-inequality.yml": "9a4ad20cd9e4fd35e7bce14dec5b312a4945ea93c5cd6acc4dcc81e73841a25c",
     "tutorials/psych-soc/6a-sensing-the-environment.yml": "5d68e3f7e1a416f5cd68387533a9ce497fd5ddad06000578c8f9aa45bf8f7cce",
     "tutorials/psych-soc/6b-making-sense-of-the-environment.yml": "beadfe7656b1471a3ec17440ad68ecc71ebf56d597277fe9c54d88d25011c179",
     "tutorials/psych-soc/6c-responding-to-the-world.yml": "86146ea709fe30850e0e051f3ac6428bdb3ed447caf756e5e313b4051644770b",
     "tutorials/psych-soc/7a-individual-influences-on-behavior.yml": "4101bd9d6976117cd775e6fc5b50014f7fbffac7b1c4e7275436b1f5d2b7bff8",
     "tutorials/psych-soc/7b-social-processes-that-influence-behavior.yml": "624437029f4bf8021e6caf8d1d29212677054095e2eb0a647a5bf81ca980ccb5",
-    "tutorials/psych-soc/7c-attitude-and-behavior-change.yml": "f388de7b67a85f2f3ce8978fdcd25424e48fa98af203a593437e34d0a9fcaada",
-    "tutorials/psych-soc/8a-self-identity.yml": "106efeeb9bdb2196aea7de9e789a52ba786d027eeddaab7e5f253fd4f032f2e3",
-    "tutorials/psych-soc/8b-social-thinking.yml": "fe341b28bd7beef3618d138966dc9f5532c238adf837597f8fe9eefcc7f2dab1",
-    "tutorials/psych-soc/8c-social-interactions.yml": "f516d790728c89b778a2f35e8548f2b9df1afce348ae7bcbb3c70be9830703e0",
-    "tutorials/psych-soc/9a-understanding-social-structure.yml": "a2a7f63e3a53d94d06a64a91f14884fbd3ec5e273b8bbbcaf49483afa8be069a",
-    "tutorials/psych-soc/9b-demographic-characteristics-and-processes.yml": "8c8975fda69a1dc4e2dfd460f08d286a41d1ba9b3a9314354246c8283bad7976",
+    "tutorials/psych-soc/7c-attitude-and-behavior-change.yml": "78d153c860f38f166a539990d842aa76f36dc899d6796569c061fe0d1da5da0f",
+    "tutorials/psych-soc/8a-self-identity.yml": "b8efe3cb049e1ad4ef89158d0806871905f56e2db16f9eb09f67f5bd11830a07",
+    "tutorials/psych-soc/8b-social-thinking.yml": "2b010da70cf64e6e7714fd6ee9402089720220bfeac4d0e47b53613084e7afdf",
+    "tutorials/psych-soc/8c-social-interactions.yml": "1b9646bf717f2290c765cf9f606d361f164b1abd27e1d983dcb471a07a1a83b0",
+    "tutorials/psych-soc/9a-understanding-social-structure.yml": "66a34bd0e338ea0365bffcd0f628650371b4560d3483dacfbf658f2468da1051",
+    "tutorials/psych-soc/9b-demographic-characteristics-and-processes.yml": "ff702f8c2c8e8e3c13995db4fe36496d7d02867090810535c59e30ed79b9c79e",
     "units.yml": "8f325c358eead2f8ba0f6534ace934fd1b938ddc4b5ec90c83537a12455d6ece"
   }
 }

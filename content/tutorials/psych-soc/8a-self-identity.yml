@@ -23,6 +23,13 @@ sections:
       A: Requires exploration first.
       B: Exploring, no commitment.
       C: Neither.
+  figures:
+  - src: 8a-self-identity/fig-1752bba5.webp
+    caption: Stages of development — Erikson's psychosocial crises across the lifespan.
+    credit: Fig 9.10 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
+  - src: 8a-self-identity/fig-0b823efd.webp
+    caption: Identity development — transitions through childhood and adolescence.
+    credit: Fig 9.11 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Self-concept, esteem, efficacy
   body:
   - Self-esteem is the evaluation; self-efficacy (Bandura) is task-specific confidence — the confusion

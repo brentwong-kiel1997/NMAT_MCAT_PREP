@@ -41,6 +41,13 @@ sections:
       A: That is a wide base.
       B: Wide base marks high fertility.
       C: Cannot be read from shape alone.
+  figures:
+  - src: 9b-demographic-characteristics-and-processes/fig-bf16bc2f.webp
+    caption: Population pyramid — age-sex structure by country and demographic stage.
+    credit: Fig 20.2 · OpenStax Introduction to Sociology 3e — CC BY-NC-SA 4.0
+  - src: 9b-demographic-characteristics-and-processes/fig-390188ba.webp
+    caption: Demographic transition — the shift from high to low birth and death rates.
+    credit: Fig 20.3 · OpenStax Introduction to Sociology 3e — CC BY-NC-SA 4.0
 - heading: Migration and urbanization
   body:
   - Push (conflict, decline) vs. pull (jobs, safety); chain migration via settled kin; remittances flow

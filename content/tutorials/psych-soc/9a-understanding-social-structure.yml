@@ -22,6 +22,11 @@ sections:
       A: Micro-meaning.
       B: Interpersonal.
       C: Not sociological three.
+  figures:
+  - src: 9a-understanding-social-structure/fig-962529d0.webp
+    caption: Sociological theoretical perspectives — functionalism, conflict, and symbolic interactionism
+      applied.
+    credit: Fig 1.4 · OpenStax Introduction to Sociology 3e — CC BY-NC-SA 4.0
 - heading: Status, role, groups
   body:
   - Status is a position; role is its expectations — ascribed vs. achieved. Role strain (tension within
@@ -58,6 +63,10 @@ sections:
       A: Leaving a role.
       B: Birth-assigned.
       C: Bystander mechanism.
+  figures:
+  - src: 9a-understanding-social-structure/fig-af42b92c.webp
+    caption: Formal organizations and bureaucracy — Weber's ideal type and its variations.
+    credit: Fig 6.2 · OpenStax Introduction to Sociology 3e — CC BY-NC-SA 4.0
 - heading: Culture and institutions
   body:
   - Norms ladder — folkways (etiquette), mores (morality), laws (codified). Culture lag — norms trailing

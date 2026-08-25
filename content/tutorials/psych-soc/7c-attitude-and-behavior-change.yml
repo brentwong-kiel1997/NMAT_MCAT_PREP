@@ -65,6 +65,13 @@ sections:
       A: Immediate full exposure.
       B: Pairing with aversive stimulus.
       C: Reinforcement tokens.
+  figures:
+  - src: 7c-attitude-and-behavior-change/fig-71aa092a.webp
+    caption: Types of psychological treatment — therapy approaches organized by mechanism.
+    credit: Fig 16.2 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
+  - src: 7c-attitude-and-behavior-change/fig-a5cfb9da.webp
+    caption: Behavior therapy applies learning principles to modify target behaviors.
+    credit: Fig 16.3 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Barriers to change — reactance and relapse
   body:
   - Change meets resistance — psychological reactance (threatened freedom produces opposition), boomerang

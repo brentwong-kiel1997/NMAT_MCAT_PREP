@@ -23,6 +23,10 @@ sections:
       A: That is functionalist.
       B: Misaligned ranks.
       C: Lateral move.
+  figures:
+  - src: 10a-social-inequality/fig-4e6565f8.webp
+    caption: Stratification layers — class, status, and power differentials.
+    credit: Fig 8.1 · OpenStax Introduction to Sociology 3e — CC BY-NC-SA 4.0
 - heading: Axes — race, gender, intersectionality
   body:
   - Race is socially constructed yet structurally consequential; minority group means disadvantaged position,
@@ -59,6 +63,10 @@ sections:
       A: Not the frame.
       B: Gradients persist prospectively.
       C: Monotonicity is the opposite.
+  figures:
+  - src: 10a-social-inequality/fig-bd0d76eb.webp
+    caption: The social construction of health — SES disparities in outcomes.
+    credit: Fig 19.1 · OpenStax Introduction to Sociology 3e — CC BY-NC-SA 4.0
 - heading: Mobility and policy
   body:
   - Structural mobility (occupation mix shifts) vs. exchange (people swap positions). Education is the

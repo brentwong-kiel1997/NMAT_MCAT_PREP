@@ -23,6 +23,10 @@ sections:
       A: Familiarity.
       B: Expectation changing BEHAVIOR.
       C: Late info dominating — reversed.
+  figures:
+  - src: 8b-social-thinking/fig-195a9b26.webp
+    caption: Personality assessment — trait models and individual differences in social cognition.
+    credit: Fig 11.2 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Stereotypes — automatic and controlled
   body:
   - Stereotype (cognitive schema), prejudice (affective), discrimination (behavioral) — keep the three
@@ -42,6 +46,10 @@ sections:
       A: Explicit misses automatic.
       B: History, not association.
       C: Unrelated.
+  figures:
+  - src: 8b-social-thinking/fig-a14732df.webp
+    caption: Personality assessment — trait models and individual differences in social cognition.
+    credit: Fig 11.2 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Attribution in depth — covariation
   body:
   - Kelley's model — consensus (do others do it?), distinctiveness (only here?), consistency (every time?)

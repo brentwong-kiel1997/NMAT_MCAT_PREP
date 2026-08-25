@@ -58,6 +58,13 @@ sections:
       A: Performance under observation.
       B: Anonymity.
       C: Group favoritism.
+  figures:
+  - src: 8c-social-interactions/fig-c5959bf5.webp
+    caption: Prosocial behavior — helping, altruism, and the bystander calculus.
+    credit: Fig 12.16 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
+  - src: 8c-social-interactions/fig-efa1074c.webp
+    caption: Aggression and its situational triggers — the interaction of biology and context.
+    credit: Fig 12.17 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Attraction
   body:
   - Determinants stack — proximity and mere exposure, similarity (strongest single predictor), attractiveness
