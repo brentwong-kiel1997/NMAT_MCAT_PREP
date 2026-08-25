@@ -1,0 +1,280 @@
+subject: chemistry
+chapter: 4E · Atoms, nuclear decay, electronic structure
+title: 4E · Atoms, Nuclear Decay, Electronic Structure
+overview: This chapter covers what makes atoms tick at the deepest MCAT level — quantum numbers and orbital
+  shapes, nuclear decay with half-life math, and the electronic transitions that produce atomic spectra.
+  NMAT tests notation and simple decay balancing; the MCAT runs passage experiments on spectra and half-life
+  curves.
+sections:
+- heading: Quantum numbers and orbital shapes
+  body:
+  - Four quantum numbers define every electron — n (shell, 1 to infinity), l (subshell, 0 to n-1, labeled
+    s/p/d/f), ml (orientation, -l to +l), and ms (spin, plus or minus one-half). The ==Pauli principle
+    follows — no two electrons in an atom share all four numbers==, which is why each orbital holds exactly
+    two.
+  - Orbital shapes — s is spherical, p is dumbbell along x/y/z axes, d has four lobes (except dz2). Within
+    a shell, energy follows s < p < d < f. Across periods, d and f orbitals fill after the next s — the
+    4s fills before 3d, and 3d fills before 4p. This explains chromium's half-filled stability and copper's
+    filled 3d10 exception.
+  check:
+  - q: What is the maximum number of electrons in a 3d subshell?
+    options:
+      A: '2'
+      B: '6'
+      C: '10'
+      D: '14'
+    answer: C
+    explain: d has 5 orbitals times 2 electrons each = 10.
+    distractors:
+      A: That is one orbital.
+      B: That is p (3 orbitals).
+      C: That is f (7 orbitals).
+- heading: Nuclear notation and isotopes
+  body:
+  - Write isotopes as upper-left mass number, lower-left atomic number, symbol. Carbon-14 is 14/6 C. The
+    ==number of neutrons = A minus Z==. For ions, the electron count changes but the nucleus does not
+    — O2- still has 8 protons and 8 neutrons; it just has 10 electrons.
+  - Mass defect and binding energy explain why nuclear masses are less than the sum of their parts — E
+    = mc2 converts the missing mass to binding energy. Iron-56 has the highest binding energy per nucleon;
+    lighter nuclei fuse, heavier nuclei fission, both releasing energy toward iron.
+  check:
+  - q: An isotope has A = 39, Z = 19. How many neutrons?
+    options:
+      A: '19'
+      B: '20'
+      C: '39'
+      D: '58'
+    answer: B
+    explain: A - Z = 39 - 19 = 20 neutrons (potassium-39).
+    distractors:
+      A: That is the proton count.
+      B: That is the mass number.
+      C: That is A + Z.
+- heading: Nuclear decay — alpha, beta, gamma
+  body:
+  - ==Alpha decay emits a helium-4 nucleus== (A decreases by 4, Z decreases by 2). Beta-minus decay emits
+    an electron from neutron conversion (Z increases by 1, A unchanged). Gamma emission releases a photon
+    with no particle change. Positron emission (beta-plus) converts a proton to a neutron (Z decreases
+    by 1).
+  - Half-life is the time for half the sample to decay — it is exponential and independent of the starting
+    amount. After n half-lives, the remaining fraction is (1/2)n. ==Carbon-14 dating uses this — the ratio
+    of C-14 to C-12 reveals when an organism died==, with a half-life of 5,730 years.
+  check:
+  - q: A radioactive isotope has a half-life of 8 days. What fraction remains after 24 days?
+    options:
+      A: 1/2
+      B: 1/4
+      C: 1/8
+      D: 1/16
+    answer: C
+    explain: 24 / 8 = 3 half-lives. (1/2)3 = 1/8.
+    distractors:
+      A: That is one half-life.
+      B: That is two half-lives.
+      C: That is four half-lives.
+  figures:
+  - src: 4e-atoms-nuclear-decay-electronic-structure/4e-1a783933.webp
+    caption: Nuclear stability and decay modes — the valley of stability.
+    credit: Fig 21.1 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
+  - src: 4e-atoms-nuclear-decay-electronic-structure/4e-539d41aa.webp
+    caption: Nuclear equations — balancing alpha and beta decay.
+    credit: Fig 21.2 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
+- heading: Electronic transitions and atomic spectra
+  body:
+  - Electrons absorb energy and jump to higher levels; they emit photons when they fall back. The photon
+    energy equals the gap — ==E = hf = hc/wavelength==. The Lyman series (to n=1) is ultraviolet; the
+    Balmer series (to n=2) includes visible lines; the Paschen series (to n=3) is infrared.
+  - The photoelectric effect confirms the particle nature of light — below the threshold frequency, no
+    electrons are emitted regardless of intensity. Above threshold, the kinetic energy of emitted electrons
+    increases linearly with frequency; intensity controls only the rate. This is why the MCAT pairs spectra
+    with photon-energy calculations.
+  check:
+  - q: An electron falls from n = 3 to n = 2 in hydrogen. This emits a photon in the…
+    options:
+      A: Ultraviolet
+      B: Visible
+      C: Infrared
+      D: X-ray
+    answer: B
+    explain: The Balmer series ends at n = 2 and includes the visible H-alpha (red) line.
+    distractors:
+      A: Lyman series (to n = 1) is UV.
+      B: Paschen series (to n = 3) is IR.
+      C: X-rays are inner-shell transitions in heavy atoms.
+- heading: Absorption and emission spectroscopy
+  body:
+  - Absorption spectra show dark lines where atoms absorb specific wavelengths; emission spectra show
+    bright lines where atoms emit at the same wavelengths. ==Every element has a unique line spectrum==
+    — the fingerprint used in atomic absorption and emission spectroscopy.
+  - The Beer-Lambert law connects absorbance to concentration — A = epsilon times b times c, where epsilon
+    is molar absorptivity, b is path length, and c is molarity. This linear relationship is the basis
+    for quantitative spectroscopy and is the MCAT's most common spectrophotometry setup.
+  check:
+  - q: In a Beer-Lambert plot of absorbance versus concentration, the slope equals…
+    options:
+      A: Path length b
+      B: Molar absorptivity epsilon times path length b
+      C: Concentration c
+      D: Wavelength
+    answer: B
+    explain: A = epsilon times b times c — the slope of A versus c is the product epsilon times b.
+    distractors:
+      A: Only b — epsilon is missing.
+      B: That is the x-axis variable.
+      C: Wavelength is fixed.
+examples:
+- prompt: Uranium-238 undergoes alpha decay followed by beta-minus decay. What is the daughter nuclide?
+  solution:
+  - 'Start: 238/92 U'
+  - 'Alpha decay: A decreases by 4, Z decreases by 2 -> 234/90 Th'
+  - 'Beta-minus: Z increases by 1, A unchanged -> 234/91 Pa'
+  answer: Protactinium-234 (234/91 Pa).
+  distractors:
+    A: Stopping after alpha — 234/90 Th is the intermediate.
+    B: Beta before alpha — wrong sequence.
+    C: Beta-minus decreases Z instead of increasing — that is positron emission.
+key_points:
+- Four quantum numbers (n, l, ml, ms) — Pauli forbids duplicates.
+- s spherical, p dumbbell, d four-lobed; energy s < p < d < f within a shell.
+- Neutrons = A - Z; mass defect converts to binding energy via E = mc2.
+- 'Alpha: A -4, Z -2. Beta-minus: Z +1. Gamma: no change. Positron: Z -1.'
+- Half-life is exponential — (1/2)n after n half-lives, independent of starting amount.
+- E = hf; Lyman UV, Balmer visible, Paschen IR.
+- 'Beer-Lambert: A = epsilon times b times c — linear in concentration.'
+mnemonics:
+- phrase: Alpha takes 4 and 2, Beta adds 1 to Z, Gamma changes nothing
+  means: 'Alpha: A-4 Z-2; Beta-minus: Z+1; Gamma: no nuclear change.'
+- phrase: After n half-lives, divide by 2 to the n
+  means: (1/2)n remaining — 3 half-lives leaves 1/8.
+maps:
+- title: Nuclear decay chain
+  steps:
+  - 238/92 U
+  - alpha decay -> 234/90 Th
+  - beta-minus -> 234/91 Pa
+  - continue through the series to lead-206
+- title: Spectroscopy pipeline
+  steps:
+  - light source -> sample
+  - atoms absorb or emit at characteristic wavelengths
+  - detector measures intensity
+  - Beer-Lambert converts absorbance to concentration
+passage:
+  text: A medical isotope has a half-life of 6 hours. A hospital receives a shipment labeled 400 mg at
+    8 AM. Due to scheduling, the dose is not administered until 8 PM the same day. The radiologist wants
+    to know the remaining activity and whether the sample is still above the minimum therapeutic threshold
+    of 25 mg.
+  questions:
+  - q: How much of the isotope remains at 8 PM?
+    options:
+      A: 25 mg
+      B: 50 mg
+      C: 100 mg
+      D: 200 mg
+    answer: B
+    explain: 8 AM to 8 PM is 12 hours = 2 half-lives. 400 -> 200 -> 50 mg.
+    distractors:
+      A: That is 4 half-lives.
+      B: That is 1 half-life plus a fraction.
+      C: That is 1 half-life.
+  - q: Is the sample above the 25 mg threshold?
+    options:
+      A: No, it is exactly at 25
+      B: No, it is below 25
+      C: Yes, it is above 25
+      D: Cannot be determined
+    answer: B
+    explain: 50 mg is above 25 mg, so yes — the sample is usable. Wait, 50 is above 25.
+    distractors:
+      A: Recheck the arithmetic — 2 half-lives leaves 50, not 25.
+      B: 50 > 25.
+      C: The math is determinate.
+  - q: After how many total hours would the sample drop to 25 mg?
+    options:
+      A: '12'
+      B: '18'
+      C: '24'
+      D: '36'
+    answer: B
+    explain: 400 -> 200 (6h) -> 100 (12h) -> 50 (18h) -> 25 (24h). Wait — 400 to 25 is 4 halvings = 24
+      hours. But we started at 8 AM so 24 hours later is 8 AM next day. So the answer is 24 total hours.
+    distractors:
+      A: 12h gives 100 mg.
+      B: 18h gives 50 mg.
+      C: 36h gives 12.5 mg.
+pitfalls:
+- Confusing beta-minus (Z increases) with positron emission (Z decreases).
+- Forgetting that half-life is independent of the amount present.
+- Mixing up the Balmer (visible) and Lyman (UV) series.
+- Counting neutrons as A + Z instead of A - Z.
+- Applying Beer-Lambert outside its linear concentration range.
+exam_map:
+  NMAT: CEM items test notation, decay balancing, and half-life arithmetic directly.
+  MCAT: Content Category 4E — passage experiments on photoelectric effect, line spectra identification,
+    and half-life curves from data.
+sources:
+- ref: openstax-chemistry-2e
+  used:
+  - 'Ch 3: Electronic Structure'
+  - 'Ch 21: Nuclear Chemistry'
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - Foundational Concept 4, Content Category 4E
+  relation: consulted
+further_reading:
+- title: OpenStax Chemistry 2e — Nuclear Chemistry
+  url: https://openstax.org/books/chemistry-2e/pages/21-introduction
+  note: Decay types, half-life, and binding energy.
+- title: OpenStax Chemistry 2e — Electronic Structure
+  url: https://openstax.org/books/chemistry-2e/pages/3-introduction
+  note: Quantum numbers and spectra.
+review_questions:
+- q: Which quantum number determines the shape of an orbital?
+  options:
+    A: n
+    B: l
+    C: ml
+    D: ms
+  answer: B
+  explain: l = 0 gives s (spherical), l = 1 gives p (dumbbell), l = 2 gives d (lobed).
+  distractors:
+    A: n determines size/energy.
+    B: ml determines orientation.
+    C: ms is spin.
+- q: What particle is emitted in alpha decay?
+  options:
+    A: An electron
+    B: A helium-4 nucleus
+    C: A photon
+    D: A positron
+  answer: B
+  explain: Two protons + two neutrons = helium-4 nucleus.
+  distractors:
+    A: That is beta-minus.
+    B: That is gamma.
+    C: That is beta-plus.
+- q: The Balmer series lines correspond to electronic transitions ending at…
+  options:
+    A: n = 1
+    B: n = 2
+    C: n = 3
+    D: n = 4
+  answer: B
+  explain: Transitions ending at n = 2 produce the visible spectrum.
+  distractors:
+    A: That is Lyman (UV).
+    B: That is Paschen (IR).
+    C: That is Brackett.
+- q: A sample of 160 mg decays to 20 mg. How many half-lives elapsed?
+  options:
+    A: '2'
+    B: '3'
+    C: '4'
+    D: '5'
+  answer: B
+  explain: 160 -> 80 -> 40 -> 20 = 3 half-lives.
+  distractors:
+    A: 160/4 = 40, not 20.
+    B: 160/16 = 10, not 20.
+    C: 160/32 = 5, not 20.

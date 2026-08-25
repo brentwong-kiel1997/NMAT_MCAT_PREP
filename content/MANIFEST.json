@@ -1,5 +1,5 @@
 {
-  "source_rev": "941baed",
+  "source_rev": "b781696",
   "counts": {
     "chapters": 70,
     "note_bullets": 449,
@@ -125,6 +125,7 @@
     "tutorials/biology/organisms-and-their-environment.yml": "fe881965a4475eb4cd1d638a4a81b915efe76eea8518890d21c29ac45c4c3bdf",
     "tutorials/biology/the-world-of-plants-and-animals.yml": "7d18e97dc94705af0c4e251052f5320ca5431eeff3056a4dbc14dcada3c915f0",
     "tutorials/biology/unity-and-diversity-of-life.yml": "da80407ab1597fc6d1605c063a9c0ec3c7bba246ab70b8a3ae410af3e88483f0",
+    "tutorials/chemistry/4e-atoms-nuclear-decay-electronic-structure.yml": "69b093dcc0596ea23d2321acf766c1af26dd059f108be6881c4e08c03fcdd284",
     "tutorials/chemistry/general-chemistry.yml": "8b04bc15d0c41b44436c794c62efb0f0d2d4c2be66fad5931d257f5710ff60f3",
     "tutorials/psych-soc/10a-social-inequality.yml": "9a4ad20cd9e4fd35e7bce14dec5b312a4945ea93c5cd6acc4dcc81e73841a25c",
     "tutorials/psych-soc/6a-sensing-the-environment.yml": "5d68e3f7e1a416f5cd68387533a9ce497fd5ddad06000578c8f9aa45bf8f7cce",
