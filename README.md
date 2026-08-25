@@ -11,7 +11,7 @@
 ![Python](https://img.shields.io/badge/python-3.12%2B-3776AB?logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-5.x-0C4B33?logo=django&logoColor=white)
 ![Subjects](https://img.shields.io/badge/subjects-13-purple)
-![Chapters](https://img.shields.io/badge/outline%20chapters-90-teal)
+![Chapters](https://img.shields.io/badge/tutorials-70%20%2F%2070-green)
 ![Questions](https://img.shields.io/badge/practice%20MCQs-116-red)
 
 [Features](#-features) · [Curriculum](#-the-curriculum-at-a-glance) · [Quickstart](#-quickstart) · [How it works](#-how-it-works) · [Built with AI](#-built-with-ai-agents) · [License](#%EF%B8%8F-sources--license)
@@ -26,7 +26,7 @@
 | --- | --- |
 | 🗺️ **Dual-exam curriculum map** | 13 subjects covering NMAT Part 1 & 2 and all four MCAT sections, with shared science subjects merged — no duplicated pages, no fake chapters beyond the official blueprints |
 | 📖 **Teaching chapters** | Full-textbook tutorials, written one chapter at a time: overview → teaching sections → worked examples → key points → pitfalls → per-exam mapping, every chapter citing its sources |
-| 📝 **High-yield notes** | 790 one-line bullets across 90 outline chapters, plus 116 explained practice MCQs |
+| 📝 **High-yield notes** | 449 one-line bullets across 70 outline chapters, plus 116 explained practice MCQs |
 | 🔎 **Materials desk** | 105-term searchable glossary, 108 formulas in per-subject sheets, exam tips, study paths, and checklists |
 | 🩺 **Disease library** | 8 mechanism-first articles (TB, dengue, MI, …) bridging basic science to clinical intuition — enrichment reading, honestly labeled as such |
 | ✅ **Progress tracking** | Per-chapter completion and practice attempts, stored per learner account |
@@ -38,13 +38,13 @@
 | Collection | Count |
 | --- | --- |
 | Subjects (5 shared · 4 NMAT-only · 4 MCAT sections) | **13** |
-| Outline chapters mapped to CEM / AAMC blueprints | **90** |
-| High-yield note bullets | **790** |
+| Outline chapters mapped to CEM / AAMC blueprints | **70** |
+| High-yield note bullets | **449** |
 | Practice MCQs with explanations | **116** |
 | Glossary terms / formula entries | **105 / 108** |
 | Exam tips / study paths / checklists | **21 / 7 / 3** |
 | Disease articles | **8** |
-| Full textbook tutorials *(growing weekly)* | **1 → 90** |
+| Full textbook tutorials | **70 / 70 — complete** |
 
 Everything lives in [`content/`](content/) as plain YAML and is documented
 standalone in [`content/README.md`](content/README.md). Per-chapter tutorial

@@ -142,14 +142,14 @@ Legend: **✅ Published** · ⬜ Not started · Exams column shows each chapter'
 | Behavioral & Social | 7 | 7 |
 | Biochemistry | 5 | 5 |
 | Biology | 13 | 13 |
-| Chemistry | 11 | 11 |
+| Chemistry | 10 | 10 |
 | Inductive Reasoning | 3 | 0 |
 | Perceptual Acuity | 3 | 0 |
 | Physics | 9 | 9 |
 | Quantitative | 3 | 0 |
 | Verbal | 2 | 0 |
 
-**NMAT total — 56.**
+**NMAT total — 55.***
 
 ## What MCAT has
 
@@ -159,11 +159,11 @@ Legend: **✅ Published** · ⬜ Not started · Exams column shows each chapter'
 | Biochemistry | 5 | 5 |
 | Biology | 13 | 13 |
 | CARS | 3 | 0 |
-| Chemistry | 11 | 11 |
+| Chemistry | 10 | 10 |
 | Physics | 9 | 9 |
 | Psychology & Sociology | 12 | 0 |
 
-**MCAT total — 60.** Shared (both exams) — 45.
+**MCAT total — 59.** Shared (both exams) — 44.
 
 ## How to update
 
