@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 410" font-family="system-ui, sans-serif">
+  <rect width="500" height="410" fill="#fffdf8"/>
+  <text x="250" y="32" font-size="18" font-weight="700" fill="#0d3d3a" text-anchor="middle">Maslow's Hierarchy</text>
+  <text x="250" y="52" font-size="12" fill="#666" text-anchor="middle">needs from base to apex</text>
+
+  <rect x="40" y="70" width="420" height="52" rx="8" fill="#105652" opacity="0.08" stroke="#105652" stroke-width="1.5"/>
+  <text x="60" y="92" font-size="15" font-weight="600" fill="#0d3d3a">Physiological</text>
+  <text x="60" y="110" font-size="12" fill="#44423a">food, water, sleep</text>
+  <text x="250" y="133" font-size="16" fill="#105652" text-anchor="middle">↓</text>
+  <rect x="40" y="136" width="420" height="52" rx="8" fill="#0e7490" opacity="0.08" stroke="#0e7490" stroke-width="1.5"/>
+  <text x="60" y="158" font-size="15" font-weight="600" fill="#0d3d3a">Safety</text>
+  <text x="60" y="176" font-size="12" fill="#44423a">shelter, security</text>
+  <text x="250" y="199" font-size="16" fill="#105652" text-anchor="middle">↓</text>
+  <rect x="40" y="202" width="420" height="52" rx="8" fill="#105652" opacity="0.08" stroke="#105652" stroke-width="1.5"/>
+  <text x="60" y="224" font-size="15" font-weight="600" fill="#0d3d3a">Belonging</text>
+  <text x="60" y="242" font-size="12" fill="#44423a">love, connection</text>
+  <text x="250" y="265" font-size="16" fill="#105652" text-anchor="middle">↓</text>
+  <rect x="40" y="268" width="420" height="52" rx="8" fill="#0e7490" opacity="0.08" stroke="#0e7490" stroke-width="1.5"/>
+  <text x="60" y="290" font-size="15" font-weight="600" fill="#0d3d3a">Esteem</text>
+  <text x="60" y="308" font-size="12" fill="#44423a">respect, achievement</text>
+  <text x="250" y="331" font-size="16" fill="#105652" text-anchor="middle">↓</text>
+  <rect x="40" y="334" width="420" height="52" rx="8" fill="#105652" opacity="0.08" stroke="#105652" stroke-width="1.5"/>
+  <text x="60" y="356" font-size="15" font-weight="600" fill="#0d3d3a">Self-Actualization</text>
+  <text x="60" y="374" font-size="12" fill="#44423a">fulfillment of potential</text>
+</svg>

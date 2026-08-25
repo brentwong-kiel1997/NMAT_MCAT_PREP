@@ -215,6 +215,31 @@ further_reading:
     url: "https://openstax.org/books/biology-2e/pages/1-introduction"
     note: "What the reader will find there (free textbook chapters)."
 
+## Per-chapter quality benchmarks (quantitative checklist)
+
+Audit each published chapter against the Biology reference set. A chapter
+is NOT done until every row clears the minimum. Run the audit script:
+
+    python3 scripts/audit_tutorials.py <discipline>
+
+| Element | YAML | Minimum per chapter | Biology reference |
+|---|---|---|---|
+| Sections | sections[] | 4 (5 preferred) | 5.0 |
+| Figures | sections[].figures[] | 2 (with credit) | 2.3 |
+| Check yourself | sections[].check[] | 1 per section (all) | 1.0 per section |
+| Tables | sections[].table | 1 (where comparison exists) | 0.2 |
+| Worked example | examples[] | 1 with distractors | 1.1 (all w/ distractors) |
+| Mnemonics | mnemonics[] | 2 | 2.0 |
+| Concept maps | maps[] | 2 | 2.0 |
+| Passage questions | passage.questions[] | 3 | 3.0 |
+| Review questions | review_questions[] | 4 (all w/ distractors) | 4.0 |
+| Further reading | further_reading[] | 2 | 2.6 |
+| Sources | sources[] | 2 (textbook + AAMC/CEM) | 2.0 |
+| Exam map | exam_map | both NMAT + MCAT | always |
+| Key points | key_points[] | 6+ | 6-8 |
+
+Rule — a chapter ships only when the audit prints PASS.
+
 ## File naming
 
 Place the file at `content/tutorials/<subject>/<title-slug>.yml` where

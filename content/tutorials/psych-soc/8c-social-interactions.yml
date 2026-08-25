@@ -58,6 +58,10 @@ sections:
       A: Performance under observation.
       B: Anonymity.
       C: Group favoritism.
+  figures:
+  - src: 8c-social-interactions/bystander-tree.svg
+    caption: Latané and Darley's helping decision tree with crowd failure at each node.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Attraction
   body:
   - Determinants stack — proximity and mere exposure, similarity (strongest single predictor), attractiveness
@@ -76,6 +80,10 @@ sections:
       A: Pairing with similar partners.
       B: Arousal component.
       C: Cost-benefit framing.
+  figures:
+  - src: 8c-social-interactions/sternberg-triangle.svg
+    caption: Sternberg's triangular model of love — intimacy, passion, commitment.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 examples:
 - prompt: Batson's design — easy vs. hard escape crossed with empathy level. Predict the finding.
   solution:
@@ -93,9 +101,12 @@ key_points:
 - Bystander tree — diffusion and pluralistic ignorance make crowds slower.
 - Batson — empathic helping survives easy escape.
 - Attraction — exposure, similarity (strongest), attractiveness, reciprocity.
+- Bystander tree — every node has a crowd-based failure mode.
 mnemonics:
 - phrase: Notice, Interpret, Act
   means: Latané and Darley's helping sequence.
+- phrase: Notice, Interpret, Decide
+  means: The bystander tree fails at any node — crowd blocks each.
 maps:
 - title: Bystander tree
   steps:
@@ -103,6 +114,12 @@ maps:
   - interpret — pluralistic ignorance blocks it
   - assume responsibility — diffusion blocks it
   - implement — competence blocks it
+- title: Bystander intervention
+  steps:
+  - notice — distraction blocks
+  - interpret — pluralistic ignorance blocks
+  - assume responsibility — diffusion blocks
+  - implement — competence blocks
 passage:
   text: A staged fall tested alone, with two passive confederates, or with two genuine strangers. Alone
     85% help; with confederates 30%; with strangers 60% — mostly after one stranger moves first.
@@ -131,6 +148,18 @@ passage:
       A: Crowds dilute.
       B: Removes accountability.
       C: Irrelevant.
+  - q: Which finding would most directly challenge the study's internal validity?
+    options:
+      A: A large sample size
+      B: A confederate accidentally hinting at the expected answer
+      C: High statistical significance
+      D: A replication in a different country
+    answer: B
+    explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
+    distractors:
+      A: Power, not validity.
+      B: Significance is downstream of validity.
+      C: That tests external validity.
 pitfalls:
 - Calling every crowd effect diffusion — interpretation failure precedes it.
 - Batson as proving pure altruism universally — specific to high empathy.
@@ -153,6 +182,9 @@ further_reading:
 - title: OpenStax Psychology 2e — Social Psychology
   url: https://openstax.org/books/psychology-2e/pages/12-introduction
   note: Bystander and aggression research.
+- title: OpenStax Psychology 2e — Helping and Prosocial Behavior
+  url: https://openstax.org/books/psychology-2e/pages/12-5-aggression
+  note: Aggression's layers.
 review_questions:
 - q: Diffusion of responsibility operates at which node?
   options:
@@ -190,3 +222,15 @@ review_questions:
     A: Liking.
     B: Fatuous love.
     C: Empty love.
+- q: The study's design best exemplifies which research approach?
+  options:
+    A: Correlational with random sampling
+    B: Experimental with a manipulated independent variable
+    C: Case study with thick description
+    D: Meta-analysis of prior studies
+  answer: B
+  explain: Conditions are assigned; the IV is the manipulated framing or prime.
+  distractors:
+    A: No manipulation described.
+    B: Single subject.
+    C: No pooled analysis.

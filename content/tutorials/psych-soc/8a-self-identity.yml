@@ -23,6 +23,10 @@ sections:
       A: Requires exploration first.
       B: Exploring, no commitment.
       C: Neither.
+  figures:
+  - src: 8a-self-identity/erikson-stages.svg
+    caption: Erikson's eight psychosocial crises across the lifespan.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Self-concept, esteem, efficacy
   body:
   - Self-esteem is the evaluation; self-efficacy (Bandura) is task-specific confidence — the confusion
@@ -59,6 +63,34 @@ sections:
       A: Effort drop.
       B: Anonymity disinhibition.
       C: Familiarity, not allocation.
+  figures:
+  - src: 8a-self-identity/identity-statuses.svg
+    caption: Marcia's 2×2 — exploration × commitment yielding the four statuses.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
+- heading: Self-concept across cultures
+  body:
+  - Culture shapes the default self — **individualist** cultures build an independent self (traits, autonomy,
+    consistency across situations); **collectivist** cultures build an interdependent self (roles, relationships,
+    context-sensitivity). The exam asks you to predict how each frames self-description, self-enhancement,
+    and attribution.
+  - Markus and Kitayama's work supplies the evidence — self-descriptions in individualist settings lead
+    with traits; in collectivist settings with relationships and contexts. The better-than-average effect
+    is stronger in individualist samples; self-criticism can serve self-improvement in collectivist settings
+    without indicating low global esteem.
+  check:
+  - q: A respondent describes themselves primarily through relationships and social roles. This pattern
+      is more common in…
+    options:
+      A: Individualist cultures
+      B: Collectivist cultures
+      C: Both equally
+      D: Neither — it reflects personality only
+    answer: B
+    explain: Interdependent selves foreground relationship and context over traits.
+    distractors:
+      A: Independent selves lead with traits.
+      B: Culture shifts the default.
+      C: Culture is a systematic shaper.
 examples:
 - prompt: A stereotype-threat experiment — math test framed as diagnostic of ability vs. problem-solving
     exercise, stereotyped vs. non-stereotyped group. Predict the 2×2.
@@ -77,15 +109,24 @@ key_points:
 - Self-esteem (worth) vs. self-efficacy (task confidence) — never swap.
 - Self-serving family — credit internal, blame external.
 - Social identity — minimal groups suffice; stereotype threat consumes working memory.
+- Self-esteem is global; self-efficacy is domain-specific.
 mnemonics:
 - phrase: Achieved after Exploring; Foreclosed before Exploring
   means: Marcia keyed to the exploration axis.
+- phrase: Explore before you Commit
+  means: Achievement requires both; foreclosure skips exploration.
 maps:
 - title: Social identity steps
   steps:
   - categorize the self into a group
   - identify — membership matters to self-worth
   - compare favorably → bias, out-group homogeneity
+- title: Identity formation
+  steps:
+  - categorize — I am X
+  - identify — X matters
+  - compare — favorably for X
+  - threat → stereotype activation
 passage:
   text: Two matched samples of women take a difficult math test. Sample A is told it has shown gender
     differences; B, none. A underperforms by roughly a standard deviation; men unaffected. A follow-up
@@ -115,6 +156,18 @@ passage:
       A: The manipulation worked.
       B: Effort not measured as low.
       C: Dismissive.
+  - q: Which finding would most directly challenge the study's internal validity?
+    options:
+      A: A large sample size
+      B: A confederate accidentally hinting at the expected answer
+      C: High statistical significance
+      D: A replication in a different country
+    answer: B
+    explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
+    distractors:
+      A: Power, not validity.
+      B: Significance is downstream of validity.
+      C: That tests external validity.
 pitfalls:
 - Confusing self-esteem with self-efficacy.
 - Foreclosure where achievement belongs — check exploration.
@@ -137,6 +190,9 @@ further_reading:
 - title: OpenStax Psychology 2e — Lifespan Development
   url: https://openstax.org/books/psychology-2e/pages/9-introduction
   note: Erikson and identity.
+- title: OpenStax Psychology 2e — Self-concept
+  url: https://openstax.org/books/psychology-2e/pages/12-1-social-cognition
+  note: Self and identity.
 review_questions:
 - q: Marcia's moratorium features…
   options:
@@ -174,3 +230,15 @@ review_questions:
     A: Reversed.
     B: Own group looks differentiated.
     C: Irrelevant.
+- q: The study's design best exemplifies which research approach?
+  options:
+    A: Correlational with random sampling
+    B: Experimental with a manipulated independent variable
+    C: Case study with thick description
+    D: Meta-analysis of prior studies
+  answer: B
+  explain: Conditions are assigned; the IV is the manipulated framing or prime.
+  distractors:
+    A: No manipulation described.
+    B: Single subject.
+    C: No pooled analysis.

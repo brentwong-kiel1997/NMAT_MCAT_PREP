@@ -65,6 +65,13 @@ sections:
       A: Immediate full exposure.
       B: Pairing with aversive stimulus.
       C: Reinforcement tokens.
+  figures:
+  - src: 7c-attitude-and-behavior-change/stages-of-change.svg
+    caption: The transtheoretical model — precontemplation through maintenance with relapse arrows.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
+  - src: 7c-attitude-and-behavior-change/cbt-triangle.svg
+    caption: The cognitive triangle — thoughts, feelings, behaviors in CBT.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Barriers to change — reactance and relapse
   body:
   - Change meets resistance — psychological reactance (threatened freedom produces opposition), boomerang
@@ -102,9 +109,12 @@ key_points:
 - Self-perception; overjustification erodes intrinsic motivation.
 - Therapy by mechanism — desensitization (classical), tokens (operant), CBT (cognitive).
 - Stages of change; relapse is data, abstinence-violation is the trap.
+- Thin justification drives attitude change; thick rewards erode intrinsic motivation.
 mnemonics:
 - phrase: ABC — Affect, Behavior, Cognition
   means: The three components of an attitude.
+- phrase: Small pay, big change
+  means: Thin justification maximizes dissonance-driven attitude shift.
 maps:
 - title: Behavior-change loop
   steps:
@@ -112,6 +122,12 @@ maps:
   - implementation intentions — when X, I do Y
   - track + reinforce small wins
   - relapse → diagnose barriers, re-enter
+- title: From attitude to action
+  steps:
+  - ABC formed
+  - dissonance or self-perception updates
+  - implementation intentions — when X, do Y
+  - relapse → data, re-enter
 passage:
   text: A university tracks gym use. Participants who signed a written plan specifying exact days, times,
     and locations attend twice as often over eight weeks as peers who merely stated strong intentions,
@@ -141,6 +157,18 @@ passage:
       A: The abstinence trap.
       B: Counterproductive.
       C: Untailored escalation invites dropout.
+  - q: Which finding would most directly challenge the study's internal validity?
+    options:
+      A: A large sample size
+      B: A confederate accidentally hinting at the expected answer
+      C: High statistical significance
+      D: A replication in a different country
+    answer: B
+    explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
+    distractors:
+      A: Power, not validity.
+      B: Significance is downstream of validity.
+      C: That tests external validity.
 pitfalls:
 - Confusing overjustification with effort justification.
 - Giving flooding the desensitization label.
@@ -162,6 +190,9 @@ further_reading:
 - title: OpenStax Psychology 2e — Therapy and Treatment
   url: https://openstax.org/books/psychology-2e/pages/16-introduction
   note: Technique-by-mechanism.
+- title: OpenStax Psychology 2e — Types of Treatment
+  url: https://openstax.org/books/psychology-2e/pages/16-2-types-of-treatment
+  note: CBT and behavior therapy.
 review_questions:
 - q: Overjustification occurs when…
   options:
@@ -199,3 +230,15 @@ review_questions:
     A: Hierarchy + relaxation.
     B: Operant system.
     C: Observational.
+- q: The study's design best exemplifies which research approach?
+  options:
+    A: Correlational with random sampling
+    B: Experimental with a manipulated independent variable
+    C: Case study with thick description
+    D: Meta-analysis of prior studies
+  answer: B
+  explain: Conditions are assigned; the IV is the manipulated framing or prime.
+  distractors:
+    A: No manipulation described.
+    B: Single subject.
+    C: No pooled analysis.

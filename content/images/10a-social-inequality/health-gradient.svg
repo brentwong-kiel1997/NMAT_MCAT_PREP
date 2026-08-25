@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 344" font-family="system-ui, sans-serif">
+  <rect width="500" height="344" fill="#fffdf8"/>
+  <text x="250" y="32" font-size="18" font-weight="700" fill="#0d3d3a" text-anchor="middle">The Social Gradient in Health</text>
+  <text x="250" y="52" font-size="12" fill="#666" text-anchor="middle">each SES step predicts longer life</text>
+
+  <rect x="40" y="70" width="420" height="52" rx="8" fill="#105652" opacity="0.08" stroke="#105652" stroke-width="1.5"/>
+  <text x="60" y="92" font-size="15" font-weight="600" fill="#0d3d3a">Lowest quintile</text>
+  <text x="60" y="110" font-size="12" fill="#44423a">shortest life expectancy</text>
+  <text x="250" y="133" font-size="16" fill="#105652" text-anchor="middle">↓</text>
+  <rect x="40" y="136" width="420" height="52" rx="8" fill="#0e7490" opacity="0.08" stroke="#0e7490" stroke-width="1.5"/>
+  <text x="60" y="158" font-size="15" font-weight="600" fill="#0d3d3a">Middle quintiles</text>
+  <text x="60" y="176" font-size="12" fill="#44423a">stepwise improvement</text>
+  <text x="250" y="199" font-size="16" fill="#105652" text-anchor="middle">↓</text>
+  <rect x="40" y="202" width="420" height="52" rx="8" fill="#105652" opacity="0.08" stroke="#105652" stroke-width="1.5"/>
+  <text x="60" y="224" font-size="15" font-weight="600" fill="#0d3d3a">Highest quintile</text>
+  <text x="60" y="242" font-size="12" fill="#44423a">longest, healthiest lives</text>
+  <text x="250" y="265" font-size="16" fill="#105652" text-anchor="middle">↓</text>
+  <rect x="40" y="268" width="420" height="52" rx="8" fill="#0e7490" opacity="0.08" stroke="#0e7490" stroke-width="1.5"/>
+  <text x="60" y="290" font-size="15" font-weight="600" fill="#0d3d3a">Key</text>
+  <text x="60" y="308" font-size="12" fill="#44423a">gradient, not threshold — every step counts</text>
+</svg>

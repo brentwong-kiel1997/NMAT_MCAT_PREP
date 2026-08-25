@@ -42,6 +42,10 @@ sections:
       A: Explicit misses automatic.
       B: History, not association.
       C: Unrelated.
+  figures:
+  - src: 8b-social-thinking/iat-screenshot.svg
+    caption: The Implicit Association Test — category pairing and latency measurement.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Attribution in depth — covariation
   body:
   - Kelley's model — consensus (do others do it?), distinctiveness (only here?), consistency (every time?)
@@ -61,6 +65,10 @@ sections:
       A: Low consensus would support that.
       B: Consistency rules out instability.
       C: Not a model term.
+  figures:
+  - src: 8b-social-thinking/kelley-covariation.svg
+    caption: Kelley's covariation cube — consensus, distinctiveness, consistency.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Judgment shortcuts
   body:
   - Availability drives stereotype-consistent frequency estimates; representativeness drives base-rate
@@ -98,14 +106,23 @@ key_points:
 - IAT — latency measure with known critiques.
 - Kelley — CDC; high all three → situational.
 - Illusory correlation mints stereotypes; base rates beat vivid descriptions.
+- Automatic activation, controlled override — the IAT measures the gap.
 mnemonics:
 - phrase: CDC — Consensus, Distinctiveness, Consistency
   means: Kelley's three covariation cues.
+- phrase: CDC before you judge
+  means: Consensus, Distinctiveness, Consistency — Kelley's covariation.
 maps:
 - title: Kelley decision
   steps:
   - consensus + distinctiveness + consistency all high → SITUATIONAL
   - consensus low + distinctiveness low + consistency high → DISPOSITIONAL
+- title: From schema to judgment
+  steps:
+  - category activates automatically
+  - ambiguous input fits the schema
+  - controlled override costs cognition
+  - IAT latency reveals the residue
 passage:
   text: Participants view an ambiguous shove after subliminal Black or White face primes (Exp 1), or the
     same act described as shoving versus bumping (Exp 2). Black-face primes raise hostility ratings; the
@@ -135,6 +152,18 @@ passage:
       A: Receptor-level.
       B: Kelley term.
       C: Motivation theory.
+  - q: Which finding would most directly challenge the study's internal validity?
+    options:
+      A: A large sample size
+      B: A confederate accidentally hinting at the expected answer
+      C: High statistical significance
+      D: A replication in a different country
+    answer: B
+    explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
+    distractors:
+      A: Power, not validity.
+      B: Significance is downstream of validity.
+      C: That tests external validity.
 pitfalls:
 - Treating IAT scores as proof of discrimination — contested reliability.
 - Fundamental attribution error where Kelley's verdict belongs.
@@ -156,6 +185,9 @@ further_reading:
 - title: OpenStax Psychology 2e — Prejudice and Discrimination
   url: https://openstax.org/books/psychology-2e/pages/12-4-prejudice-and-discrimination
   note: Stereotype layers.
+- title: OpenStax Psychology 2e — Prejudice
+  url: https://openstax.org/books/psychology-2e/pages/12-4-prejudice-and-discrimination
+  note: Reduction strategies.
 review_questions:
 - q: Prejudice is to discrimination as…
   options:
@@ -193,3 +225,15 @@ review_questions:
     A: That is situational.
     B: Consistency is high.
     C: Not a covariation verdict.
+- q: The study's design best exemplifies which research approach?
+  options:
+    A: Correlational with random sampling
+    B: Experimental with a manipulated independent variable
+    C: Case study with thick description
+    D: Meta-analysis of prior studies
+  answer: B
+  explain: Conditions are assigned; the IV is the manipulated framing or prime.
+  distractors:
+    A: No manipulation described.
+    B: Single subject.
+    C: No pooled analysis.

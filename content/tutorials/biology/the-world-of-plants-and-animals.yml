@@ -82,6 +82,11 @@ sections:
       A: Pseudocoels and acoels are cavities too — the lining decides.
       C: The gut is endoderm-derived and open to the outside.
       D: The blastocoel is an early embryo space, not an adult cavity.
+  figures:
+  - src: the-world-of-plants-and-animals/body-plan-decisions.svg
+    caption: The body-plan decision tree — each fork narrows the phylum until deuterostomy separates echinoderms
+      and chordates.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: The invertebrate hallmarks
   body:
   - Do not memorize thirty phyla — anchor six. **Porifera** (sponges — no true tissues, filter feeding).

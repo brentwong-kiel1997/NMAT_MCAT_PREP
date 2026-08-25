@@ -41,6 +41,13 @@ sections:
       A: That is a wide base.
       B: Wide base marks high fertility.
       C: Cannot be read from shape alone.
+  figures:
+  - src: 9b-demographic-characteristics-and-processes/transition-stages.svg
+    caption: The demographic transition — CBR/CDR curves across four stages.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
+  - src: 9b-demographic-characteristics-and-processes/pyramid-shapes.svg
+    caption: Population pyramids by stage — wide base (Stage 2) to top-heavy (Stage 4).
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Migration and urbanization
   body:
   - Push (conflict, decline) vs. pull (jobs, safety); chain migration via settled kin; remittances flow
@@ -58,6 +65,30 @@ sections:
       A: Skilled-emigration loss — different.
       B: Motivating conditions.
       C: Movement away from cities.
+- heading: Demographic data sources and measurement
+  body:
+  - Demographic measures come from specific instruments — a **census** counts everyone at a point in time
+    (complete but expensive); **vital statistics** register births and deaths continuously; **surveys**
+    sample populations for estimates. Each has characteristic biases — census undercounts marginalized
+    groups; surveys depend on sampling frames and response rates.
+  - Rates are always per a defined population and time — crude rates use the total population; age-specific
+    rates stratify by age band, which matters because populations with different age structures cannot
+    be compared on crude rates alone — the age-standardization principle the MCAT expects you to apply
+    when reading mortality tables.
+  check:
+  - q: Country A has a higher crude death rate than Country B, but B's population is much older. Before
+      concluding A is less healthy, you should…
+    options:
+      A: Accept the crude comparison
+      B: Age-standardize the rates
+      C: Use birth rates instead
+      D: Compare land areas
+    answer: B
+    explain: Age structure confounds crude mortality — standardization removes the composition effect.
+    distractors:
+      A: Crude rates are confounded here.
+      B: Birth rate is a different variable.
+      C: Irrelevant.
 examples:
 - prompt: Match three pyramids — wide-based triangle, constricting-base diamond, inverted top-heavy —
     to stages and trajectories.
@@ -76,9 +107,12 @@ key_points:
 - Stage-3 fertility fall is structural — education, cost, access.
 - Push/pull, chain migration, remittances.
 - Stage 2 explodes, Stage 3 cools, Stage 4 shrinks.
+- Population momentum delays fertility-fall effects by decades.
 mnemonics:
 - phrase: Stage 2 explodes, Stage 3 cools, Stage 4 shrinks
   means: The transition arc in growth terms.
+- phrase: Stage 2 explodes, 3 cools, 4 shrinks
+  means: Demographic transition arc.
 maps:
 - title: Transition stages
   steps:
@@ -86,6 +120,12 @@ maps:
   - Stage 2 — CDR falls → population explodes
   - Stage 3 — CBR falls → growth decelerates
   - Stage 4 — both low → flat or declining
+- title: Transition stages
+  steps:
+  - Stage 1 — both high, flat
+  - Stage 2 — CDR falls, explodes
+  - Stage 3 — CBR falls, decelerates
+  - Stage 4 — both low, flat/negative
 passage:
   text: A nation's census shows CBR falling from 38 to 16 per thousand over forty years; CDR fell from
     20 to 8 in the first decade then plateaued. Median age rises from 18 to 29; urban share from 25% to
@@ -115,6 +155,18 @@ passage:
       A: Fertility declining — trend is elderward.
       B: Not responsive to age structure.
       C: Growth continued.
+  - q: Which finding would most directly challenge the study's internal validity?
+    options:
+      A: A large sample size
+      B: A confederate accidentally hinting at the expected answer
+      C: High statistical significance
+      D: A replication in a different country
+    answer: B
+    explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
+    distractors:
+      A: Power, not validity.
+      B: Significance is downstream of validity.
+      C: That tests external validity.
 pitfalls:
 - Treating transition as instantaneous — momentum lags decades.
 - Reading pyramid shape as migration — it encodes births and deaths.
@@ -140,6 +192,9 @@ further_reading:
 - title: OpenStax Sociology 3e — Population and Demographics
   url: https://openstax.org/books/introduction-sociology-3e/pages/20-introduction
   note: Transition stages and pyramids.
+- title: OpenStax Sociology 3e — Population and Demographics
+  url: https://openstax.org/books/introduction-sociology-3e/pages/20-1-demography-and-population-growth
+  note: Transition math.
 review_questions:
 - q: Stage 2 is driven primarily by…
   options:
@@ -177,3 +232,15 @@ review_questions:
     A: Flat-to-negative.
     B: High-fertility.
     C: Clearly it does.
+- q: The study's design best exemplifies which research approach?
+  options:
+    A: Correlational with random sampling
+    B: Experimental with a manipulated independent variable
+    C: Case study with thick description
+    D: Meta-analysis of prior studies
+  answer: B
+  explain: Conditions are assigned; the IV is the manipulated framing or prime.
+  distractors:
+    A: No manipulation described.
+    B: Single subject.
+    C: No pooled analysis.

@@ -22,6 +22,10 @@ sections:
       A: Micro-meaning.
       B: Interpersonal.
       C: Not sociological three.
+  figures:
+  - src: 9a-understanding-social-structure/three-lenses.svg
+    caption: The three sociological lenses applied to one institution.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Status, role, groups
   body:
   - Status is a position; role is its expectations — ascribed vs. achieved. Role strain (tension within
@@ -58,6 +62,10 @@ sections:
       A: Leaving a role.
       B: Birth-assigned.
       C: Bystander mechanism.
+  figures:
+  - src: 9a-understanding-social-structure/weber-bureaucracy.svg
+    caption: Weber's ideal-type bureaucracy — hierarchy chart with written rules.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Culture and institutions
   body:
   - Norms ladder — folkways (etiquette), mores (morality), laws (codified). Culture lag — norms trailing
@@ -93,14 +101,22 @@ key_points:
 - Weber — bureaucracy's strengths and pathologies.
 - Culture lag; institutional discrimination through routine.
 - Norms ladder — folkways, mores, laws.
+- Culture lag — material change outruns norm change.
 mnemonics:
 - phrase: Function, Fight, Meaning
   means: The three lenses in one word each.
+- phrase: What it does, who wins, what it means
+  means: Function, conflict, interaction — the three lenses.
 maps:
 - title: Choosing the lens
   steps:
   - what it DOES → functionalism
   - WHO BENEFITS → conflict theory
+  - what it MEANS → interactionism
+- title: Choosing the lens
+  steps:
+  - what it DOES → functionalism
+  - WHO BENEFITS → conflict
   - what it MEANS → interactionism
 passage:
   text: A hospital institutes a 15-minute triage target. Times fall 40%. Observation shows staff registering
@@ -131,6 +147,18 @@ passage:
       A: Functionalist.
       B: Interactionist.
       C: Cultural question.
+  - q: Which finding would most directly challenge the study's internal validity?
+    options:
+      A: A large sample size
+      B: A confederate accidentally hinting at the expected answer
+      C: High statistical significance
+      D: A replication in a different country
+    answer: B
+    explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
+    distractors:
+      A: Power, not validity.
+      B: Significance is downstream of validity.
+      C: That tests external validity.
 pitfalls:
 - One-lens answers to multi-lens prompts.
 - Swapping role strain and conflict — count the roles.
@@ -196,3 +224,15 @@ review_questions:
     A: Etiquette-level.
     B: Formally codified.
     C: Fleeting.
+- q: The study's design best exemplifies which research approach?
+  options:
+    A: Correlational with random sampling
+    B: Experimental with a manipulated independent variable
+    C: Case study with thick description
+    D: Meta-analysis of prior studies
+  answer: B
+  explain: Conditions are assigned; the IV is the manipulated framing or prime.
+  distractors:
+    A: No manipulation described.
+    B: Single subject.
+    C: No pooled analysis.

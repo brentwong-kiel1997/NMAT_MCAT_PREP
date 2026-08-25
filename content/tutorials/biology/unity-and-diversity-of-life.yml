@@ -222,6 +222,25 @@ examples:
     recent eukaryotic common ancestor than either shares with a prokaryote.
   - Answer — the mushroom and the palm. The trap is picking organisms that look alike (palm and any 'plant-like'
     thing) or live alike — ==relatedness is about recency of common ancestry, nothing else==.
+  distractors:
+    A: Picking the palm and any plant-like organism — resemblance is not relatedness; the mushroom is
+      the closer relative of the palm.
+    B: Picking the archaeon with E. coli — both are prokaryotes, but prokaryotic appearance is a trait
+      collection, not a branch.
+    C: Picking the thermophile by habitat — shared extreme environment is convergent, not ancestral.
+- prompt: Which pair of structures is homologous, and which is analogous? — (i) a whale flipper and a
+    bat wing, (ii) a bat wing and an insect wing.
+  solution:
+  - (i) Whale flipper and bat wing share the tetrapod forelimb bone plan (humerus, radius, ulna, carpals)
+    inherited from a common ancestor — homologous.
+  - (ii) Bat wing (bone framework) and insect wing (chitin membrane) have entirely different developmental
+    origins and evolved independently — analogous.
+  - The exam trap — both pairs fly, but only one shares ancestry.
+  answer: (i) Homologous (shared ancestry); (ii) Analogous (convergent function).
+  distractors:
+    A: Calling both homologous — flight alone does not make homology; the PARTS must share origin.
+    B: Calling both analogous — the tetrapod forelimb IS shared ancestry.
+    C: Swapping the labels — the parts, not the function, decide.
 key_points:
 - Life's checklist — order, energy processing, cellular organization, response to stimuli, reproduction
   with inheritance, homeostasis/growth, and evolution; viruses fail most items outside a host cell.

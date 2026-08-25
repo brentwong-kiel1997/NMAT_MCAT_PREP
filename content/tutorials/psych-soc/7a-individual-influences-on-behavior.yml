@@ -46,6 +46,10 @@ sections:
       A: James-Lange ties emotion to specific bodily patterns.
       B: Simultaneity without labeling is not the point.
       C: Motivation, not emotion theory.
+  figures:
+  - src: 7a-individual-influences-on-behavior/maslow-pyramid.svg
+    caption: Maslow's hierarchy — physiological through self-actualization.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Personality — four theoretical families
   body:
   - Match the family to its fingerprint — psychoanalytic (Freud — id/ego/superego, defense mechanisms),
@@ -88,6 +92,10 @@ sections:
       A: Initial mobilization.
       B: Sustained coping before collapse.
       C: Lazarus, not Selye.
+  figures:
+  - src: 7a-individual-influences-on-behavior/gas-stages.svg
+    caption: Selye's general adaptation syndrome — alarm, resistance, exhaustion with cortisol curve.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 examples:
 - prompt: Two employees face the same layoff. One develops insomnia and illness; the other enrolls in
     retraining. Explain via Lazarus and Selye.
@@ -111,6 +119,8 @@ key_points:
 mnemonics:
 - phrase: OCEAN
   means: Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism.
+- phrase: Appraise first, axis second
+  means: Lazarus appraisal determines whether the HPA cascade fires.
 maps:
 - title: Stress physiology timeline
   steps:
@@ -118,6 +128,12 @@ maps:
   - sympathetic — epinephrine within seconds
   - HPA — cortisol over minutes-to-hours
   - chronic activation → exhaustion
+- title: Stress cascade
+  steps:
+  - stressor → primary appraisal (threat?)
+  - secondary appraisal (can I cope?)
+  - sympathetic seconds / HPA hours
+  - chronic → exhaustion
 passage:
   text: Caregivers of chronically ill relatives and matched controls are followed for a year. Caregivers
     show higher cortisol, slower wound healing, weaker vaccine responses. Within caregivers, those with
@@ -147,6 +163,18 @@ passage:
       A: Not the measured pathway.
       B: Not analyzed.
       C: Dismissive.
+  - q: Which finding would most directly challenge the study's internal validity?
+    options:
+      A: A large sample size
+      B: A confederate accidentally hinting at the expected answer
+      C: High statistical significance
+      D: A replication in a different country
+    answer: B
+    explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
+    distractors:
+      A: Power, not validity.
+      B: Significance is downstream of validity.
+      C: That tests external validity.
 pitfalls:
 - Reading heritability as individual genetic determinism.
 - Mixing up the three emotion theories.
@@ -169,6 +197,9 @@ further_reading:
 - title: OpenStax Psychology 2e — Personality
   url: https://openstax.org/books/psychology-2e/pages/11-introduction
   note: The four families.
+- title: OpenStax Psychology 2e — Stress and Health
+  url: https://openstax.org/books/psychology-2e/pages/14-2-stress-and-coping
+  note: Coping strategies.
 review_questions:
 - q: The Big Five do NOT include…
   options:
@@ -206,3 +237,15 @@ review_questions:
     A: Redirecting the ACT.
     B: Channeling into output.
     C: Burying it.
+- q: The study's design best exemplifies which research approach?
+  options:
+    A: Correlational with random sampling
+    B: Experimental with a manipulated independent variable
+    C: Case study with thick description
+    D: Meta-analysis of prior studies
+  answer: B
+  explain: Conditions are assigned; the IV is the manipulated framing or prime.
+  distractors:
+    A: No manipulation described.
+    B: Single subject.
+    C: No pooled analysis.

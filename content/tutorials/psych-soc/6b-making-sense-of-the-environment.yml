@@ -26,6 +26,10 @@ sections:
       A: Adaptation needs constant stimulation.
       B: Change blindness compares scene versions.
       C: The counting task consumed attention — the failure mode.
+  figures:
+  - src: 6b-making-sense-of-the-environment/invisible-gorilla.svg
+    caption: Selective attention — counting passes, the unexpected goes unseen.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Memory systems — the three-box model
   body:
   - Memory is a pipeline — sensory memory (iconic/echoic, under 2 seconds), working memory (~7 items,
@@ -48,6 +52,10 @@ sections:
       A: Procedural learning persisted.
       B: Working memory is cortical and largely spared.
       C: Sensory registers are unaffected.
+  figures:
+  - src: 6b-making-sense-of-the-environment/memory-models.svg
+    caption: The three-box model — sensory, working, long-term with encoding and retrieval arrows.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Encoding, retrieval, and their failures
   body:
   - Depth of processing governs encoding — shallow (structural) loses to deep (semantic). Retrieval is
@@ -111,6 +119,8 @@ key_points:
 mnemonics:
 - phrase: Pro = Previous blocks Present; Retro = Recent blocks Recall of older
   means: Interference direction named by which memory does the blocking.
+- phrase: 7±2 is the shelf, rehearsal is the restocker
+  means: Working memory holds ~7 items only with active rehearsal.
 maps:
 - title: The memory pipeline
   steps:
@@ -118,6 +128,12 @@ maps:
   - working memory (~7 items, rehearsal-dependent)
   - deep encoding (semantic) → long-term storage
   - retrieval via matching context cues
+- title: Forgetting mechanisms
+  steps:
+  - decay — trace fades with time
+  - proactive — OLD blocks NEW
+  - retroactive — NEW blocks OLD
+  - retrieval failure — TOT
 passage:
   text: Participants learn word pairs either full-attentive or while tone-counting. 24 hours later both
     groups take recognition and free-recall tests. Recognition differs modestly; free recall differs sharply,
@@ -148,6 +164,18 @@ passage:
       A: Delay widens it.
       B: Length worsens interference.
       C: Context change hurts.
+  - q: Which finding would most directly challenge the study's internal validity?
+    options:
+      A: A large sample size
+      B: A confederate accidentally hinting at the expected answer
+      C: High statistical significance
+      D: A replication in a different country
+    answer: B
+    explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
+    distractors:
+      A: Power, not validity.
+      B: Significance is downstream of validity.
+      C: That tests external validity.
 pitfalls:
 - Treating memory failure as storage loss by default — encoding and retrieval failures dominate.
 - Swapping proactive and retroactive interference.
@@ -171,6 +199,9 @@ further_reading:
 - title: OpenStax Psychology 2e — Memory and Cognition
   url: https://openstax.org/books/psychology-2e/pages/8-introduction
   note: The three-box model and forgetting.
+- title: OpenStax Psychology 2e — Forgetting
+  url: https://openstax.org/books/psychology-2e/pages/8-3-forgetting-and-memory-distortion
+  note: Interference and decay.
 review_questions:
 - q: Working memory's approximate capacity is…
   options:
@@ -208,3 +239,15 @@ review_questions:
     A: Hypnagogic imagery.
     B: Night terrors live in N3.
     C: REM is the answer.
+- q: The study's design best exemplifies which research approach?
+  options:
+    A: Correlational with random sampling
+    B: Experimental with a manipulated independent variable
+    C: Case study with thick description
+    D: Meta-analysis of prior studies
+  answer: B
+  explain: Conditions are assigned; the IV is the manipulated framing or prime.
+  distractors:
+    A: No manipulation described.
+    B: Single subject.
+    C: No pooled analysis.

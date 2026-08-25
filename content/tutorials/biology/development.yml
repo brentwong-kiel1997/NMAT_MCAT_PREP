@@ -52,6 +52,10 @@ sections:
       A: Ectoderm is skin and nervous system.
       B: Mesoderm is muscle, bone, kidney, heart.
       D: The blastocoel is a cavity, not a layer.
+  figures:
+  - src: development/gastrulation.svg
+    caption: Gastrulation — sheet movements form the three germ layers whose fates organize every organ.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Pattern formation — position becomes identity
   body:
   - Cells discover their identity from neighbors and gradients. **Induction** — one tissue changes another's

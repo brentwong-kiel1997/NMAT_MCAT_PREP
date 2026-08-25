@@ -26,6 +26,10 @@ sections:
       A: Similar-stimulus spread.
       B: Operant procedure.
       C: New neutral stimulus paired with the CS.
+  figures:
+  - src: 6c-responding-to-the-world/pavlov-dog.svg
+    caption: Pavlov's apparatus — the conditioned stimulus pathway from bell to salivation.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Operant conditioning — learning by consequence
   body:
   - Consequences shape voluntary behavior — reinforcement increases (positive adds good; negative removes
@@ -47,6 +51,10 @@ sections:
       A: Fixed counts are predictable.
       B: Interval schedules time the FIRST response.
       C: Same objection.
+  figures:
+  - src: 6c-responding-to-the-world/skinner-box.svg
+    caption: Operant chamber — lever press, food dispenser, the consequence loop.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Observational learning and cognition in learning
   body:
   - Bandura's Bobo-doll studies — children who watched an adult rewarded for aggression imitated more
@@ -110,12 +118,19 @@ key_points:
 mnemonics:
 - phrase: VR = Very Resistant; FI = Flat-then-Flurry (scallop)
   means: Variable-ratio resists extinction; fixed-interval scallops.
+- phrase: Bell before food is classical; lever before pellet is operant
+  means: CS-US pairing versus response-consequence.
 maps:
 - title: Operant consequence matrix
   steps:
   - ADD pleasant → positive reinforcement (behavior ↑)
   - REMOVE unpleasant → negative reinforcement (behavior ↑)
   - ADD unpleasant or REMOVE pleasant → punishment (behavior ↓)
+- title: Choosing the paradigm
+  steps:
+  - stimulus-stimulus pairing → CLASSICAL
+  - response-consequence → OPERANT
+  - watching a model → OBSERVATIONAL
 passage:
   text: A clinic tests bedmaking by psychiatric patients. Phase 1 — coffee vouchers for each bed (sharp
     rise). Phase 2 — vouchers withdrawn (fall). Phase 3 — vouchers on an unpredictable several-bed basis
@@ -145,6 +160,18 @@ passage:
       A: No change described.
       B: Forgetting predicts faster loss.
       C: No punishment exists.
+  - q: Which finding would most directly challenge the study's internal validity?
+    options:
+      A: A large sample size
+      B: A confederate accidentally hinting at the expected answer
+      C: High statistical significance
+      D: A replication in a different country
+    answer: B
+    explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
+    distractors:
+      A: Power, not validity.
+      B: Significance is downstream of validity.
+      C: That tests external validity.
 pitfalls:
 - Equating negative reinforcement with punishment.
 - Fixed-interval data given the fixed-ratio label — look for the time gate.
@@ -167,6 +194,9 @@ further_reading:
 - title: OpenStax Psychology 2e — Learning
   url: https://openstax.org/books/psychology-2e/pages/7-introduction
   note: All three paradigms with classic studies.
+- title: OpenStax Psychology 2e — Learning
+  url: https://openstax.org/books/psychology-2e/pages/7-2-changing-behavior-through-reinforcement-and-punishment
+  note: Schedules in depth.
 review_questions:
 - q: Removal of an unpleasant stimulus that INCREASES behavior is…
   options:
@@ -204,3 +234,15 @@ review_questions:
     A: No stimulus pairing — a social model.
     B: Tolman, different paradigm.
     C: Different non-associative process.
+- q: The study's design best exemplifies which research approach?
+  options:
+    A: Correlational with random sampling
+    B: Experimental with a manipulated independent variable
+    C: Case study with thick description
+    D: Meta-analysis of prior studies
+  answer: B
+  explain: Conditions are assigned; the IV is the manipulated framing or prime.
+  distractors:
+    A: No manipulation described.
+    B: Single subject.
+    C: No pooled analysis.

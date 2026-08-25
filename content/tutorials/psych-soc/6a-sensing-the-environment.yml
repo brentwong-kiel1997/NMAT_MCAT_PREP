@@ -29,6 +29,10 @@ sections:
       A: Damage is not the mechanism at normal volumes.
       B: Nothing is skipped; the fraction grows with the base.
       C: Absolute threshold is about detecting presence, not change.
+  figures:
+  - src: 6a-sensing-the-environment/eye-anatomy.svg
+    caption: The eye — cornea, lens, retina with rods and cones at the fovea.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: The senses — receptors and pathways
   body:
   - Know each sense by receptor and stimulus — vision (rods for dim light and motion, cones for color
@@ -73,6 +77,32 @@ sections:
       A: Binocular cue — needs two eyes.
       B: A Gestalt grouping principle, not depth.
       C: Binocular cue — eyes angling inward.
+  figures:
+  - src: 6a-sensing-the-environment/gestalt-grouping.svg
+    caption: Gestalt grouping principles — proximity, similarity, closure organize ambiguous arrays.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
+- heading: Disorders of sensation and perception
+  body:
+  - When the pipeline breaks, the exam wants you to name WHERE. Damage to receptors (retinal degeneration,
+    cochlear hair-cell loss) removes sensation — no signal reaches the brain. Damage to cortical interpretation
+    areas leaves sensation intact but scrambles perception — prosopagnosia (cannot recognize faces), achromatopsia
+    (cannot perceive color despite intact cones). The distinction maps straight onto the two-stage model.
+  - Illusions and hallucinations complete the picture — an illusion is a misinterpretation of a REAL stimulus
+    (the Müller-Lyer lines); a hallucination is perception with NO external stimulus (as in certain neuropathologies).
+    Both are perception-level phenomena; the sensory input differs.
+  check:
+  - q: A patient cannot recognize faces despite intact visual acuity. The deficit is at the level of…
+    options:
+      A: Sensation — receptor damage
+      B: Perception — cortical interpretation
+      C: Transduction
+      D: Absolute threshold
+    answer: B
+    explain: Intact acuity = intact sensation; the interpretive cortex is the broken link.
+    distractors:
+      A: Signal arrives normally.
+      B: Already established as intact.
+      C: Threshold is detection, not recognition.
 examples:
 - prompt: In signal detection terms, a radiologist flags a shadow that turns out normal. Name the outcome
     and one perceptual factor that raises its rate.
@@ -96,6 +126,8 @@ key_points:
 mnemonics:
 - phrase: Rods aRound the fovea, Cones at the Center
   means: Rods dominate the periphery for dim light; cones pack the fovea for detail and color.
+- phrase: Sense then Sort
+  means: Sensation transduces; perception sorts and labels.
 maps:
 - title: From photon to perception
   steps:
@@ -103,6 +135,11 @@ maps:
   - bipolar → ganglion cells → optic nerve
   - thalamus (LGN) → primary visual cortex
   - association cortex — recognition and meaning (perception)
+- title: Sensation to perception pipeline
+  steps:
+  - physical energy → receptor transduction
+  - neural signal → thalamus relay
+  - cortex interprets — objects, meaning, context
 passage:
   text: An ophthalmology study compares dim-light detection in two groups — one with normal periphery,
     one with mild peripheral rod loss. Threshold tests show the rod-loss group needs about twice the light
@@ -132,6 +169,18 @@ passage:
       A: Interpretation is intact once signal arrives.
       B: Weber concerns difference detection between two stimuli.
       C: Grouping principle, unrelated.
+  - q: Which finding would most directly challenge the study's internal validity?
+    options:
+      A: A large sample size
+      B: A confederate accidentally hinting at the expected answer
+      C: High statistical significance
+      D: A replication in a different country
+    answer: B
+    explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
+    distractors:
+      A: Power, not validity.
+      B: Significance is downstream of validity.
+      C: That tests external validity.
 pitfalls:
 - Calling everything perception — transduction questions are sensation, always.
 - Confusing absolute threshold (detect presence) with JND (detect change).
@@ -154,6 +203,9 @@ further_reading:
 - title: OpenStax Psychology 2e — Sensation versus Perception
   url: https://openstax.org/books/psychology-2e/pages/5-1-sensation-versus-perception
   note: Thresholds, adaptation, and the two-stage framing.
+- title: OpenStax Psychology 2e — Hearing
+  url: https://openstax.org/books/psychology-2e/pages/5-4-hearing
+  note: Place and frequency theory.
 review_questions:
 - q: The minimum stimulus detected 50% of the time is the…
   options:
@@ -191,3 +243,15 @@ review_questions:
     A: Weber is about increments.
     B: Criterion is decision-level, not receptor-level.
     C: Touch, not vision.
+- q: The study's design best exemplifies which research approach?
+  options:
+    A: Correlational with random sampling
+    B: Experimental with a manipulated independent variable
+    C: Case study with thick description
+    D: Meta-analysis of prior studies
+  answer: B
+  explain: Conditions are assigned; the IV is the manipulated framing or prime.
+  distractors:
+    A: No manipulation described.
+    B: Single subject.
+    C: No pooled analysis.

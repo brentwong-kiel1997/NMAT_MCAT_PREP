@@ -26,6 +26,10 @@ sections:
       A: Effort drop — not this.
       B: No planted majority.
       C: Anonymity effects, absent.
+  figures:
+  - src: 7b-social-processes-that-influence-behavior/asch-lines.svg
+    caption: Asch's line judgment — the standard line vs. comparison lines and the confederate majority.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Obedience — authority's pull
   body:
   - Milgram — ~65% administered maximum shock when an experimenter insisted. Levers — proximity of authority
@@ -45,6 +49,10 @@ sections:
       A: No group norm — a hierarchy.
       B: Performance in mere presence.
       C: Group decision defect.
+  figures:
+  - src: 7b-social-processes-that-influence-behavior/milgram-shock.svg
+    caption: Milgram's shock generator and the experimenter-participant setup.
+    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Attribution, attitudes, persuasion
   body:
   - Attribution — dispositional versus situational — with the fundamental attribution error (overweighting
@@ -66,6 +74,30 @@ sections:
       A: Related but the two-sided pattern is the signature.
       B: Group process.
       C: Persuasion model.
+- heading: Social facilitation and social loafing — audience effects
+  body:
+  - The mere presence of others changes performance — **social facilitation** (better on simple or well-learned
+    tasks, worse on complex or novel ones — Zajonc's arousal account) and **social loafing** (LESS effort
+    on group tasks when individual contribution is unidentifiable — pulling a rope in a group). The pair
+    looks contradictory but is not — facilitation is about arousal on individual performance; loafing
+    is about accountability in collective output.
+  - The application matters for medical teams — a well-rehearsed surgical checklist benefits from an audience;
+    a novel complex decision degrades. Loafing is why group notes are thinner than individual ones — identifiability
+    is the fix.
+  check:
+  - q: A runner sprints faster with spectators; a brainstorming group produces fewer ideas per person
+      than working alone. These are respectively…
+    options:
+      A: Social facilitation and social loafing
+      B: Social loafing and facilitation
+      C: Both facilitation
+      D: Both loafing
+    answer: A
+    explain: Arousal on individual performance vs. effort-drop in unidentifiable groups.
+    distractors:
+      A: Reversed.
+      B: The group task shows loafing.
+      C: The sprint shows facilitation.
 examples:
 - prompt: Festinger's design — participants paid $1 or $20 to tell a peer a boring task was fun. Predict
     the attitude change.
@@ -88,12 +120,19 @@ key_points:
 mnemonics:
 - phrase: One ally breaks Asch
   means: A single dissenter collapses conformity pressure.
+- phrase: Peers pressure, authorities command
+  means: Conformity from peers; obedience from authority — source names it.
 maps:
 - title: Naming the social influence
   steps:
   - implicit group norm → CONFORMITY
   - explicit request → COMPLIANCE
   - explicit authority command → OBEDIENCE
+- title: Social influence triad
+  steps:
+  - peers + implicit norm → CONFORMITY
+  - explicit request → COMPLIANCE
+  - authority command → OBEDIENCE
 passage:
   text: A company's product team, proud and cohesive, meets to evaluate a launch. Early doubts are met
     with silence and not raised again; the leader champions it. Post-launch reviews find the doubts well-founded.
@@ -123,6 +162,18 @@ passage:
       A: Larger groups can worsen it.
       B: Incentives don't restore dissent.
       C: More obedience is the opposite.
+  - q: Which finding would most directly challenge the study's internal validity?
+    options:
+      A: A large sample size
+      B: A confederate accidentally hinting at the expected answer
+      C: High statistical significance
+      D: A replication in a different country
+    answer: B
+    explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
+    distractors:
+      A: Power, not validity.
+      B: Significance is downstream of validity.
+      C: That tests external validity.
 pitfalls:
 - Conflating obedience (authority) with conformity (peers).
 - Social loafing where groupthink belongs.
@@ -144,6 +195,9 @@ further_reading:
 - title: OpenStax Psychology 2e — Social Psychology
   url: https://openstax.org/books/psychology-2e/pages/12-introduction
   note: The classic studies and moderators.
+- title: OpenStax Psychology 2e — Conformity and Obedience
+  url: https://openstax.org/books/psychology-2e/pages/12-3-conformity-compliance-and-obedience
+  note: The classics with moderators.
 review_questions:
 - q: Milgram's participants most often continued when…
   options:
@@ -181,3 +235,15 @@ review_questions:
     A: Half the pattern.
     B: Believing outcomes are deserved.
     C: Favoring one's own group.
+- q: The study's design best exemplifies which research approach?
+  options:
+    A: Correlational with random sampling
+    B: Experimental with a manipulated independent variable
+    C: Case study with thick description
+    D: Meta-analysis of prior studies
+  answer: B
+  explain: Conditions are assigned; the IV is the manipulated framing or prime.
+  distractors:
+    A: No manipulation described.
+    B: Single subject.
+    C: No pooled analysis.
