@@ -1,5 +1,5 @@
 {
-  "source_rev": "01adb6b",
+  "source_rev": "5dbfb6e",
   "counts": {
     "chapters": 70,
     "note_bullets": 449,
@@ -119,11 +119,11 @@
     "tutorials/biology/3a-nervous-and-endocrine-systems.yml": "cb43acc6d23b276324476503a528fb5a106dd9078cbc7a5f1e5e0eef7e57fac3",
     "tutorials/biology/3b-main-organ-systems.yml": "e4261ee670c41959418245f17416209c956b175602021945b4a23bf1fc586ed7",
     "tutorials/biology/cells-and-cellular-processes.yml": "c8d9b3f994329a4f426d5afbb85d1d0946fca52ca78a4ac6962f6dc6f697bb25",
-    "tutorials/biology/development.yml": "3275cf9c25ac2738309f60e51124f420c99465343f597bc1c4d6e15d3d722fe7",
+    "tutorials/biology/development.yml": "9c5dd1329685c805a7c22f33b7932c6eae168b42bc1da3813d786a5b6e2b1506",
     "tutorials/biology/genetics.yml": "4314610565f68db3023bababb7fd045b4df1ccd06a800e2cf6a3d6d3529e8f33",
     "tutorials/biology/life-processes-regulation-and-homeostasis.yml": "c39c02af4c50c6d621b96f162a4d93c204153879a47b47575234ab02f51cf5fa",
     "tutorials/biology/organisms-and-their-environment.yml": "fe881965a4475eb4cd1d638a4a81b915efe76eea8518890d21c29ac45c4c3bdf",
-    "tutorials/biology/the-world-of-plants-and-animals.yml": "7d18e97dc94705af0c4e251052f5320ca5431eeff3056a4dbc14dcada3c915f0",
+    "tutorials/biology/the-world-of-plants-and-animals.yml": "5ddb0292c25dd8c973f7e861964dc5272478e37bed41fc5e63c409e0065149fd",
     "tutorials/biology/unity-and-diversity-of-life.yml": "da80407ab1597fc6d1605c063a9c0ec3c7bba246ab70b8a3ae410af3e88483f0",
     "tutorials/chemistry/4e-atoms-nuclear-decay-electronic-structure.yml": "69b093dcc0596ea23d2321acf766c1af26dd059f108be6881c4e08c03fcdd284",
     "tutorials/chemistry/5a-unique-nature-of-water-and-its-solutions.yml": "b200d409572a42a166446823bcf9b4a9f7a063a65e49d8e3a4fd9b0ce3a99b0e",
