@@ -1,0 +1,279 @@
+subject: chemistry
+chapter: General Chemistry
+title: General Chemistry
+overview: This is the NMAT-wide survey chapter — atomic structure and periodic trends, bonding and molecular
+  geometry, the mole and stoichiometry, solution chemistry and acid-base. The MCAT assumes all of this;
+  NMAT tests it directly. Every other chemistry chapter builds on these fundamentals.
+sections:
+- heading: Atomic structure — the nuclear atom
+  body:
+  - The atom is a dense positive nucleus (protons + neutrons) orbited by electrons. The atomic number
+    Z equals the number of protons and defines the element's identity; the mass number A equals protons
+    plus neutrons. Isotopes differ only in neutron count — same chemistry, different mass.
+  - Electrons occupy shells and subshells with discrete energies. The Aufbau principle fills lowest energy
+    first, Hund's rule maximizes parallel spins in degenerate orbitals, and the Pauli exclusion principle
+    caps each orbital at two electrons of opposite spin.
+  check:
+  - q: An atom has Z = 17, A = 35. Its electron configuration is…
+    options:
+      A: 1s2 2s2 2p6 3s2 3p5
+      B: 1s2 2s2 2p6 3s2 3p6 4s1
+      C: 1s2 2s2 2p6 3s2 3p4
+      D: 1s2 2s2 2p6 3s2 3p6
+    answer: A
+    explain: 17 electrons — fill to 3p5 (chlorine).
+    distractors:
+      A: That is 18 electrons — argon.
+      B: That is 16 electrons — sulfur.
+      C: That is the noble gas after chlorine.
+  figures:
+  - src: general-chemistry/chem-fig-1.webp
+    caption: The periodic table — trends in atomic radius, ionization energy, and electronegativity.
+    credit: OpenStax Chemistry 2e — CC BY-NC-SA 4.0
+- heading: The periodic table — trends as the master map
+  body:
+  - Periodic trends are the highest-yield chemistry facts. Atomic radius decreases across a period (more
+    protons pull electrons tighter) and increases down a group (more shells). Ionization energy follows
+    the inverse — increases across, decreases down. Electronegativity tracks ionization energy — fluorine
+    is highest.
+  - Metals lose electrons to form cations; nonmetals gain to form anions. The noble gases are chemically
+    inert because their valence shells are full.
+  check:
+  - q: Which element has the highest first ionization energy?
+    options:
+      A: Na
+      B: Mg
+      C: Al
+      D: Cl
+    answer: D
+    explain: Ionization energy increases across a period — Cl is furthest right of these four.
+    distractors:
+      A: Na is furthest left — lowest IE.
+      B: Mg is second from left.
+      C: Al is third from left.
+- heading: Bonding — ionic, covalent, metallic
+  body:
+  - Bond type follows electronegativity difference. Large difference (greater than 1.7) gives ionic (electron
+    transfer, lattice of ions); small difference gives covalent (sharing); zero gives metallic (electron
+    sea). Polar covalent sits in between.
+  - Lewis structures are the tool — count valence electrons, connect atoms, complete octets, check formal
+    charge. VSEPR predicts geometry from electron-domain count — 2 linear, 3 trigonal planar, 4 tetrahedral.
+  check:
+  - q: A molecule of NH3 has how many electron domains around N?
+    options:
+      A: '2'
+      B: '3'
+      C: '4'
+      D: '5'
+    answer: C
+    explain: Three bonding pairs + one lone pair = four domains — tetrahedral electron geometry, trigonal
+      pyramidal shape.
+    distractors:
+      A: That is CO2.
+      B: Three bonds only would miss the lone pair.
+      C: That is PCl5.
+- heading: The mole, formulas, and stoichiometry
+  body:
+  - The mole is Avogadro's number (6.022 times 10 to the 23rd) of particles. Molar mass in grams per mole
+    equals the formula mass in amu. Every stoichiometry problem is a three-step bridge — grams to moles,
+    moles to moles, moles to grams.
+  - Limiting reagent problems compare available moles to stoichiometric demand. Theoretical yield comes
+    from the limiting reagent; percent yield = actual divided by theoretical times 100.
+  check:
+  - q: How many moles are in 11.2 L of gas at STP?
+    options:
+      A: '0.25'
+      B: '0.5'
+      C: '1.0'
+      D: '2.0'
+    answer: B
+    explain: At STP, 1 mole = 22.4 L. So 11.2 / 22.4 = 0.5 mol.
+    distractors:
+      A: 11.2 / 44.8 — wrong molar volume.
+      B: 11.2 / 11.2 — coincidence trap.
+      C: 11.2 / 5.6 — inverted.
+- heading: Solutions and acid-base chemistry
+  body:
+  - Molarity M equals moles solute per liter solution. Dilution follows M1V1 = M2V2. Most nitrate, sodium,
+    potassium, and ammonium salts dissolve; most carbonate, phosphate, and sulfide salts precipitate.
+  - Acids donate protons; bases accept them. Strong acids (HCl, HNO3, H2SO4, HClO4) dissociate completely
+    — their hydrogen ion concentration equals their molarity. pH = -log of hydrogen ion concentration;
+    pH + pOH = 14.
+  check:
+  - q: What is the pH of a 0.01 M HCl solution?
+    options:
+      A: '1'
+      B: '2'
+      C: '12'
+      D: '14'
+    answer: B
+    explain: HCl is a strong acid — hydrogen ion concentration = 0.01 M. pH = -log(0.01) = 2.
+    distractors:
+      A: That is pH of 0.1 M.
+      B: That is pOH, not pH.
+      C: That is maximum basicity.
+  figures:
+  - src: general-chemistry/acidbase-b523238d.webp
+    caption: Acid-base indicators — color changes across the pH scale.
+    credit: Fig 14.3 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
+examples:
+- prompt: How many grams of CO2 form from 5.0 g of CH4 burned in excess O2?
+  solution:
+  - 'Balance: CH4 + 2O2 -> CO2 + 2H2O'
+  - Moles CH4 = 5.0 g / 16.0 g/mol = 0.3125 mol
+  - 'Stoichiometry: 1 mol CH4 -> 1 mol CO2'
+  - Mass CO2 = 0.3125 mol times 44.0 g/mol = 13.75 g
+  answer: 13.75 g of CO2.
+  distractors:
+    A: Using grams directly without converting to moles — 5.0 g.
+    B: Using the wrong molar mass for CH4 — 18.3 g.
+    C: Dividing instead of multiplying — 0.089 g.
+key_points:
+- Z = protons = identity; A = protons + neutrons; isotopes differ in neutrons only.
+- Periodic trends — radius decreases across and increases down; IE and EN increase across, decrease down.
+- Bonding — ionic (large EN difference), covalent (sharing), metallic (electron sea).
+- VSEPR — 2 linear, 3 trigonal planar, 4 tetrahedral.
+- Mole = 6.022 times 10 to the 23rd; stoichiometry = grams to moles to moles to grams.
+- Molarity = mol/L; M1V1 = M2V2.
+- pH = -log of H+; strong acids dissociate completely; pH + pOH = 14.
+mnemonics:
+- phrase: Atomic radius fattens down, shrinks across
+  means: Increases down a group (more shells), decreases across a period (more protons).
+- phrase: M1V1 = M2V2 — the dilution seesaw
+  means: Concentration and volume trade off; adding solvent lowers M proportionally.
+maps:
+- title: Stoichiometry bridge
+  steps:
+  - grams of A
+  - divide by molar mass of A to get moles of A
+  - multiply by mole ratio (coeff B / coeff A) to get moles of B
+  - multiply by molar mass of B to get grams of B
+- title: Acid-base scale
+  steps:
+  - H+ high means pH low means acidic
+  - pH 7 = neutral
+  - OH- high means pH high means basic
+  - pH + pOH = 14 always at 25C
+passage:
+  text: A student prepares 500 mL of 0.1 M NaOH from solid NaOH (molar mass 40.0 g/mol). The student then
+    titrates 25.0 mL of an unknown HCl solution with this NaOH, finding that 18.5 mL of NaOH reaches the
+    phenolphthalein endpoint.
+  questions:
+  - q: How many grams of NaOH did the student weigh out?
+    options:
+      A: 0.5 g
+      B: 1.0 g
+      C: 2.0 g
+      D: 4.0 g
+    answer: C
+    explain: 0.1 mol/L times 0.500 L = 0.050 mol times 40.0 g/mol = 2.0 g.
+    distractors:
+      A: 0.1 times 0.5 times 40 = 2.0, not 0.5.
+      B: Wrong volume calculation.
+      C: Double the correct amount.
+  - q: What is the concentration of the HCl solution?
+    options:
+      A: 0.037 M
+      B: 0.074 M
+      C: 0.100 M
+      D: 0.185 M
+    answer: B
+    explain: Moles NaOH = 0.1 M times 0.0185 L = 0.00185 mol. Since NaOH to HCl is 1:1, moles HCl = 0.00185.
+      M = 0.00185 / 0.0250 L = 0.074 M.
+    distractors:
+      A: Used wrong volume.
+      B: Assumes equal concentrations.
+      C: Division error.
+  - q: The endpoint is reached when…
+    options:
+      A: All HCl has been consumed
+      B: Excess NaOH turns the indicator pink
+      C: pH reaches exactly 7.0
+      D: Precipitate forms
+    answer: B
+    explain: Phenolphthalein is colorless in acid and pink in base — the first permanent pink means a
+      slight excess of NaOH.
+    distractors:
+      A: True but the indicator responds to the excess.
+      B: At equivalence pH is 7 only for strong-strong.
+      C: No precipitation here.
+pitfalls:
+- Confusing atomic number with mass number.
+- Reversing periodic trends.
+- Forgetting to convert grams to moles before using mole ratios.
+- Using the wrong molar mass.
+- Assuming all acids are strong.
+exam_map:
+  NMAT: CEM items hit definitions and one-step calculations directly — atomic structure, periodic trends,
+    formula mass, basic stoichiometry.
+  MCAT: Content Categories 5A through 5D assume fluency with these fundamentals — passages build on them
+    without testing them in isolation.
+sources:
+- ref: openstax-chemistry-2e
+  used:
+  - 'Ch 2: Atoms, Isotopes, Ions, and Molecules'
+  - 'Ch 3: Electronic Structure and Periodic Properties'
+  - 'Ch 6: Composition of Substances and Solutions'
+  - 'Ch 7: Stoichiometry'
+  - 'Ch 14: Acid-Base Equilibria'
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - Foundational Concept 5, Content Categories 5A-5D
+  relation: consulted
+further_reading:
+- title: OpenStax Chemistry 2e — Electronic Structure and Periodic Properties
+  url: https://openstax.org/books/chemistry-2e/pages/3-introduction
+  note: Periodic trends from first principles.
+- title: OpenStax Chemistry 2e — Stoichiometry
+  url: https://openstax.org/books/chemistry-2e/pages/7-introduction
+  note: The mole bridge with worked examples.
+review_questions:
+- q: Which pair is isoelectronic (same electron count)?
+  options:
+    A: Na+ and K+
+    B: Na+ and Ne
+    C: Na+ and Mg
+    D: Cl- and Na
+  answer: B
+  explain: Na+ lost one electron from 11 to 10 electrons; Ne has 10.
+  distractors:
+    A: Na+ has 10 electrons, K+ has 18.
+    B: Mg has 12 electrons.
+    C: Cl- has 18 electrons.
+- q: What is the molecular geometry of CO2?
+  options:
+    A: Linear
+    B: Bent
+    C: Trigonal planar
+    D: Tetrahedral
+  answer: A
+  explain: Two electron domains, no lone pairs — 180 degrees linear.
+  distractors:
+    A: Bent requires lone pairs — that is H2O.
+    B: Trigonal planar requires three domains.
+    C: Tetrahedral requires four domains.
+- q: How many grams of NaCl for 250 mL of 0.5 M solution?
+  options:
+    A: 7.3 g
+    B: 14.6 g
+    C: 29.2 g
+    D: 58.5 g
+  answer: A
+  explain: 0.5 mol/L times 0.250 L = 0.125 mol times 58.5 g/mol = 7.3 g.
+  distractors:
+    A: That is 250 mL of 1.0 M.
+    B: That is 500 mL of 1.0 M.
+    C: That is one full mole.
+- q: Which is a strong acid?
+  options:
+    A: CH3COOH
+    B: HF
+    C: HNO3
+    D: NH3
+  answer: C
+  explain: HNO3 dissociates completely.
+  distractors:
+    A: Acetic acid — weak.
+    B: Hydrofluoric acid — weak.
+    C: Ammonia is a weak base.

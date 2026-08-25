@@ -59,3 +59,14 @@ sources:
   accessed: '2026-08-24'
   relation: consulted
   note: Facts and structure consulted; all tutorial prose original.
+- id: openstax-chemistry-2e
+  kind: textbook
+  title: Chemistry 2e
+  publisher: OpenStax, Rice University
+  authors: Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson
+  url: https://openstax.org/details/books/chemistry-2e
+  edition: 2e (web edition)
+  license: CC BY-NC-SA 4.0
+  accessed: '2026-08-25'
+  relation: consulted
+  note: Facts and structure consulted; all tutorial prose original.

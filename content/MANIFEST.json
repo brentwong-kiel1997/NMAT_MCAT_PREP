@@ -1,8 +1,8 @@
 {
-  "source_rev": "8276f5a",
+  "source_rev": "941baed",
   "counts": {
-    "chapters": 71,
-    "note_bullets": 454,
+    "chapters": 70,
+    "note_bullets": 449,
     "practice": 116,
     "glossary": 105,
     "formulas": 108,
@@ -12,7 +12,7 @@
     "diseases": 8
   },
   "files": {
-    "SOURCES.yml": "3304e3bdfcdc30a547c29907a1984b3c51fc032ee72392fdaa5a24928cbfa7ac",
+    "SOURCES.yml": "b444bf87fa7d85c6863b594c1be38628480c17cb3328bbc897ed0447c63a07e9",
     "catalog.yml": "06fdd53e70a617098e5eb8c2b071c989c7498193c1fcd72afd175bddc5e8f6e0",
     "chapters/10a-social-inequality.yml": "1d79655388e7a1694108d431552afdab959687e33de46cd55c92291cb9943370",
     "chapters/1a-proteins-and-amino-acids.yml": "158223673eea72b8aef3e74ef97793b2fb11a8469b658fdc8536be3d2cb20444",
@@ -29,8 +29,7 @@
     "chapters/4b-fluids-for-circulation-and-gas-exchange.yml": "a4f2a193fb2482e656db32c36a9f40c2ce0ce00c525f716b3161b38bd0780137",
     "chapters/4c-electrochemistry-and-electrical-circuits.yml": "e1ac0fc1d579ebd76ac1f69b479b5dbe9306da47c7fe815e2551a0325e5792d2",
     "chapters/4d-light-and-sound-interacting-with-matter.yml": "ffff4aae7c97f113f2e00540b3929aca1f33c58f68cbed218084bfb05762779f",
-    "chapters/4e-atoms-nuclear-decay-electronic-structure-2.yml": "04a805b19d4e8c39f5d39e7f8f4fbb392894ae90cd991788f577ae8245a9def3",
-    "chapters/4e-atoms-nuclear-decay-electronic-structure.yml": "69bb0ad43c555744fdac623bcac6934c26c63c04f1226cf10d0c15ad4369c399",
+    "chapters/4e-atoms-nuclear-decay-electronic-structure.yml": "2335b131f2edabe597316eef80aff0de6b76561ef5b7f96d0bf168bb1a74b1d5",
     "chapters/5a-unique-nature-of-water-and-its-solutions.yml": "93d05cf2f8edcb86a1ddd677bef4fea48087202667e86cc92be4887176c8474f",
     "chapters/5b-molecules-and-intermolecular-interactions.yml": "e013f67d36f7c7986e2e2fed80ff95223c705d2eb09a88dcee84083eca2df865",
     "chapters/5c-separation-and-purification-methods.yml": "28ae078eb6927d22fdc16d00bc947e4c55fec1c3b193bcf299d84a56a9e2a660",
@@ -126,6 +125,7 @@
     "tutorials/biology/organisms-and-their-environment.yml": "fe881965a4475eb4cd1d638a4a81b915efe76eea8518890d21c29ac45c4c3bdf",
     "tutorials/biology/the-world-of-plants-and-animals.yml": "7d18e97dc94705af0c4e251052f5320ca5431eeff3056a4dbc14dcada3c915f0",
     "tutorials/biology/unity-and-diversity-of-life.yml": "da80407ab1597fc6d1605c063a9c0ec3c7bba246ab70b8a3ae410af3e88483f0",
+    "tutorials/chemistry/general-chemistry.yml": "8b04bc15d0c41b44436c794c62efb0f0d2d4c2be66fad5931d257f5710ff60f3",
     "tutorials/psych-soc/10a-social-inequality.yml": "9a4ad20cd9e4fd35e7bce14dec5b312a4945ea93c5cd6acc4dcc81e73841a25c",
     "tutorials/psych-soc/6a-sensing-the-environment.yml": "5d68e3f7e1a416f5cd68387533a9ce497fd5ddad06000578c8f9aa45bf8f7cce",
     "tutorials/psych-soc/6b-making-sense-of-the-environment.yml": "beadfe7656b1471a3ec17440ad68ecc71ebf56d597277fe9c54d88d25011c179",

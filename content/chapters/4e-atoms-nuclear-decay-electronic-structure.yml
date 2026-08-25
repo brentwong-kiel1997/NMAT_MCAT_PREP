@@ -7,6 +7,7 @@ exams:
 points:
 - Atoms, nuclear decay, and electronic structure
 - Atoms, nuclear decay, electronic structure, and atomic chemical behavior
+- Atomic chemical behavior (Chem/Phys)
 notes:
 - Level transitions and absorption/emission spectra
 - 'Photoelectric: frequency threshold and KE'
@@ -17,4 +18,24 @@ notes:
 - MCAT often pairs nuclear decay with half-life graphs
 - Electronic energy gaps map to absorption/emission lines
 - Mass number A = protons + neutrons; isotopes share Z, differ in A
-practice: []
+practice:
+- id: cp-7
+  q: 'Half-life is:'
+  choices:
+    A: Time for activity of a radionuclide to fall by half
+    B: Time for any reaction to reach 50% completion (general kinetics)
+    C: Electron orbital radius
+    D: Half the speed of light
+  answer: A
+  explain: Radioactive decay is exponential; half-life is the characteristic time for first-order decay.
+  chapter: 4E · Atoms, nuclear decay, electronic structure
+- id: cp-8
+  q: 'In the photoelectric effect, raising intensity (above threshold frequency) mainly increases:'
+  choices:
+    A: Max KE per electron
+    B: Number of electrons emitted per time
+    C: Work function
+    D: Threshold frequency
+  answer: B
+  explain: Intensity sets photon count → photocurrent; frequency sets max KE.
+  chapter: 4E · Atoms, nuclear decay, electronic structure
