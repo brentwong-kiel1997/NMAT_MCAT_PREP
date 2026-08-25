@@ -1,0 +1,276 @@
+subject: chemistry
+chapter: Organic Chemistry
+title: Organic Chemistry
+overview: Carbon's chemistry — nomenclature, stereochemistry, and the major reaction families (substitution,
+  elimination, addition, and carbonyl chemistry). NMAT tests recognition; the MCAT tests mechanism logic
+  and prediction.
+sections:
+- heading: Structure, nomenclature, and isomers
+  body:
+  - Hydrocarbons — alkanes (single bonds, tetrahedral, 109.5), alkenes (double, trigonal planar, 120),
+    alkynes (triple, linear, 180). ==Constitutional isomers differ in connectivity; stereoisomers differ
+    in spatial arrangement== with the same connectivity.
+  - Name from the longest chain, number for lowest locants, order substituents alphabetically. ==Cis-trans
+    (or E/Z) describes alkene geometry; R/S describes tetrahedral stereocenters== — priorities by atomic
+    number, trace 1 to 2 to 3 with 4 pointing away.
+  check:
+  - q: Which pair are stereoisomers?
+    options:
+      A: Butane and isobutane
+      B: cis-2-butene and trans-2-butene
+      C: Ethanol and dimethyl ether
+      D: CH4 and CH3Cl
+    answer: B
+    explain: Same connectivity, different spatial arrangement about the double bond.
+    distractors:
+      A: Different connectivity — constitutional.
+      B: Different functional groups.
+      C: Different formulas.
+  figures:
+  - src: organic-chemistry/fig-05dc78c5.webp
+    caption: Isomers sharing a formula but differing in carbon skeleton — cyclic versus linear arrangements.
+    credit: Ch 20 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
+  - src: organic-chemistry/fig-0056d089.webp
+    caption: Resonance structures of benzene — delocalized pi electrons across the ring.
+    credit: Ch 20 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
+- heading: Chirality and optical activity
+  body:
+  - ==A chiral center has four different groups== and exists as enantiomers — non-superimposable mirror
+    images. Enantiomers share every physical property except optical rotation direction and interactions
+    with other chiral things (receptors, enzymes).
+  - Diastereomers are stereoisomers that are NOT mirror images — different properties. ==A racemic mixture
+    (50/50 enantiomers) is optically inactive== because rotations cancel. Mesocompounds have stereocenters
+    but an internal plane of symmetry — achiral.
+  check:
+  - q: Enantiomers differ in…
+    options:
+      A: Boiling point
+      B: Optical rotation direction
+      C: Connectivity
+      D: Molecular formula
+    answer: B
+    explain: Mirror images rotate plane-polarized light oppositely; all scalar properties match.
+    distractors:
+      A: Identical BP.
+      B: Same connectivity by definition.
+      C: Same formula.
+- heading: Substitution and elimination
+  body:
+  - ==SN2 — one step, backside attack, inversion of configuration, favored by strong nucleophile, good
+    leaving group, unhindered substrate (methyl > 1 > 2)==. SN1 — two steps via carbocation, racemization,
+    favored by tertiary substrate and polar protic solvent.
+  - E2 — one step, concerted, anti-periplanar H and leaving group, strong base. E1 — via carbocation,
+    weak base, rearrangements possible. ==Tertiary substrates with strong base go E2; with weak nucleophile
+    and polar protic solvent go SN1/E1==.
+  check:
+  - q: Secondary alkyl bromide + NaOH in acetone (polar aprotic) at low temperature gives mainly…
+    options:
+      A: SN1
+      B: SN2
+      C: E1
+      D: E2
+    answer: B
+    explain: Strong nucleophile, aprotic solvent, secondary substrate, low temperature — substitution
+      via backside attack.
+    distractors:
+      A: Needs polar protic and weak nucleophile.
+      B: Weak base would be needed.
+      C: Heat and bulky base favor elimination.
+- heading: Addition reactions of alkenes
+  body:
+  - 'Electrophiles add across the double bond — ==Markovnikov: H goes to the carbon with more hydrogens,
+    X to the more substituted carbon== (through the more stable carbocation). Hydrohalogenation and hydration
+    follow it; anti-Markovnikov needs peroxides (HBr only) or hydroboration-oxidation.'
+  - Other staples — hydrogenation (H2 plus catalyst, syn addition, gives alkane), halogenation (X2, anti
+    addition via halonium), and oxidation (KMnO4 or ozonolysis, cleavage to carbonyls). ==The regiochemistry
+    and stereochemistry of each reagent is the exam question==.
+  check:
+  - q: HCl adds to propene. The major product is…
+    options:
+      A: 1-chloropropane
+      B: 2-chloropropane
+      C: 1,2-dichloropropane
+      D: Propyl chloride peroxide
+    answer: B
+    explain: Markovnikov — H adds to CH2, Cl to the secondary carbocation center.
+    distractors:
+      A: Anti-Markovnikov needs peroxides (and HBr only).
+      B: One Cl adds.
+      C: Nonsense option.
+- heading: Aldehydes, ketones, and carboxylic acid derivatives
+  body:
+  - Nucleophilic addition to aldehydes and ketones — hydride (LiAlH4, NaBH4) gives alcohols; organometallics
+    (Grignard) give alcohols with new C-C bonds; water in acid gives gem-diols; alcohols give hemiacetals
+    then acetals.
+  - Carboxylic acid derivatives interconvert by ==nucleophilic acyl substitution, reactivity anhydride
+    > ester ~ acid > amide==. Aldol condensation couples enols with carbonyls — the classic C-C bond-forming
+    reaction the MCAT expects you to recognize in biosynthesis analogues.
+  check:
+  - q: Which reagent reduces an ester to a primary alcohol?
+    options:
+      A: NaBH4
+      B: LiAlH4
+      C: KMnO4
+      D: H2/Pd
+    answer: B
+    explain: LiAlH4 is strong enough for esters; NaBH4 stops at aldehydes and ketones.
+    distractors:
+      A: Too weak for esters.
+      B: Oxidizer.
+      C: Reduces alkenes and aldehydes/ketones, not typically esters.
+examples:
+- prompt: (R)-2-bromobutane reacts with HO- in acetone via SN2. What is the configuration of 2-butanol
+    product?
+  solution:
+  - SN2 is backside attack — one concerted step through a transition state.
+  - Backside attack forces inversion of the stereocenter (umbrella flip).
+  - (R)-2-bromobutane inverts to (S)-2-butanol (given no priority re-ranking surprises).
+  answer: (S)-2-butanol — Walden inversion.
+  distractors:
+    A: Retention — that is SN1 with a full return, not SN2.
+    B: Racemization — SN1 ionizes first; SN2 does not.
+    C: No stereochemistry — the center is not destroyed.
+key_points:
+- Constitutional vs stereoisomers; E/Z and R/S assignments.
+- Enantiomers differ only in rotation and chiral interactions.
+- SN2 inverts, needs strong nucleophile and low hindrance.
+- SN1/E1 share a carbocation — tertiary, racemization.
+- Markovnikov adds H to the H-rich carbon.
+- 'Acyl reactivity: anhydride > ester > amide.'
+mnemonics:
+- phrase: The rich get richer
+  means: Markovnikov — the more substituted carbon gets the electrophile's partner (X/OH).
+- phrase: SN2 = 2 molecules in one step; SN1 = 1 species in the rate step
+  means: Molecularity and mechanism in one line.
+maps:
+- title: Choosing SN1/SN2/E1/E2
+  steps:
+  - strong base + heat — E2
+  - strong nucleophile, aprotic, unhindered — SN2
+  - tertiary, weak nucleophile, protic — SN1/E1
+  - 3 deg substrate + strong base — E2 wins
+- title: Alkene addition reagent map
+  steps:
+  - HBr + peroxides — anti-Markovnikov
+  - H2O + acid — Markovnikov hydration
+  - BH3 then H2O2 — anti-Markovnikov hydration
+  - X2 — anti dihalide
+  - O3 or KMnO4 — cleavage to carbonyls
+passage:
+  text: An optically active secondary alcohol is converted to a tosylate, then displaced with acetate,
+    then hydrolyzed back to the alcohol. The final product shows zero optical rotation, while a parallel
+    run stopping at the tosylate retains rotation.
+  questions:
+  - q: The tosylation step…
+    options:
+      A: Inverts the stereocenter
+      B: Retains configuration at carbon
+      C: Racemizes
+      D: Destroys chirality
+    answer: B
+    explain: OTs replaces the OH at oxygen — the stereocenter carbon is untouched.
+    distractors:
+      A: C-O bond at carbon is not broken.
+      B: No ionization occurs.
+      C: Center still has four different groups.
+  - q: The zero rotation after displacement plus hydrolysis indicates…
+    options:
+      A: SN2 inversion twice
+      B: Racemization via SN1
+      C: No reaction
+      D: Dehydration
+    answer: A
+    explain: Displacement inverts; hydrolysis of the acetate occurs at oxygen, not the stereocenter —
+      so net one inversion gives the enantiomer; the observed zero rotation suggests racemic input or
+      enantiomeric pairing.
+    distractors:
+      A: SN1 would racemize at the displacement step.
+      B: Reaction clearly occurred.
+      C: No elimination conditions.
+  - q: If the displacement had used a polar protic solvent with a weak nucleophile, the likely mechanism
+      would be…
+    options:
+      A: SN2
+      B: SN1 with racemization
+      C: E2 only
+      D: No reaction
+    answer: B
+    explain: Ionization to a planar carbocation — attack from either face gives both configurations.
+    distractors:
+      A: Protic solvent and weak nucleucleophile disfavor SN2.
+      B: E1 competes but substitution dominates here.
+      C: Reaction is slow, not absent.
+pitfalls:
+- Pulling rate-law or mechanism facts from stoichiometry.
+- Confusing SN1 racemization with pure inversion.
+- Markovnikov regiochemistry mixed up with stereochemistry (they are independent).
+- Forgetting peroxides work only with HBr.
+- Treating NaBH4 as strong enough for esters and acids.
+exam_map:
+  NMAT: Isomer identification, functional group recognition, reaction type matching.
+  MCAT: Mechanism logic in passages — predict product, stereochemical outcome, reagent choice.
+sources:
+- ref: openstax-chemistry-2e
+  used:
+  - 'Ch 20-21: Organic Chemistry'
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC5
+  relation: consulted
+further_reading:
+- title: OpenStax Chemistry 2e — Organic Chemistry
+  url: https://openstax.org/books/chemistry-2e/pages/20-introduction
+  note: Hydrocarbons and functional groups.
+- title: OpenStax Organic Chemistry (open access)
+  url: https://openstax.org/subjects/science
+  note: Full organic text for deeper mechanism work.
+review_questions:
+- q: A molecule with an internal mirror plane but two stereocenters is…
+  options:
+    A: Chiral
+    B: A meso compound
+    C: A racemate
+    D: A diastereomer pair
+  answer: B
+  explain: Internal symmetry cancels optical activity despite the centers.
+  distractors:
+    A: Chiral requires no symmetry plane.
+    B: Racemate is a mixture.
+    C: That is a relationship, not a single compound.
+- q: E2 requires the leaving group and beta-H to be…
+  options:
+    A: Syn-periplanar
+    B: Anti-periplanar
+    C: Gauche
+    D: Orthogonal
+  answer: B
+  explain: Anti alignment lets the base abstract as the bond breaks in one concerted step.
+  distractors:
+    A: Syn works poorly.
+    B: Gauche is off-axis.
+    C: Orthogonal has no overlap.
+- q: Which carbocation is most stable?
+  options:
+    A: Methyl
+    B: Primary
+    C: Secondary
+    D: Tertiary
+  answer: D
+  explain: Alkyl groups donate electron density and stabilize the positive charge.
+  distractors:
+    A: No donors.
+    B: Fewest donors.
+    C: Intermediate donors.
+- q: A Grignard reagent adds to formaldehyde to give…
+  options:
+    A: A primary alcohol
+    B: A secondary alcohol
+    C: A tertiary alcohol
+    D: A carboxylic acid
+  answer: A
+  explain: One carbon added to formaldehyde — after workup, a primary alcohol.
+  distractors:
+    A: Needs an aldehyde other than formaldehyde.
+    B: Needs a ketone.
+    C: CO2 gives the acid.

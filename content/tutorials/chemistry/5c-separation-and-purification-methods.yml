@@ -1,0 +1,276 @@
+subject: chemistry
+chapter: 5C · Separation and purification methods
+title: 5C · Separation and Purification Methods
+overview: Every biochemistry experiment begins with separation — this chapter covers chromatography, electrophoresis,
+  distillation, and extraction. The MCAT tests the principle behind each technique (what property is being
+  separated) and reads chromatograms and gels from data.
+sections:
+- heading: Chromatography — separation by differential affinity
+  body:
+  - All chromatography separates compounds by their relative attraction to a stationary phase versus a
+    mobile phase. ==The compound that spends more time in the mobile phase elutes first== (moves faster).
+    The retention factor Rf equals distance traveled by compound divided by distance traveled by solvent
+    front.
+  - Types — thin-layer (TLC, quick qualitative), column (preparative), gas (GC, volatile compounds), high-performance
+    liquid (HPLC, high resolution). In all cases, ==more similar to the mobile phase = faster elution==;
+    more similar to the stationary phase = slower.
+  check:
+  - q: In column chromatography with a polar stationary phase and nonpolar solvent, which compound elutes
+      first?
+    options:
+      A: The most polar compound
+      B: The least polar compound
+      C: The largest molecule
+      D: The smallest molecule
+    answer: B
+    explain: Least polar compound dissolves best in the nonpolar mobile phase — moves fastest.
+    distractors:
+      A: Polar compounds bind to the polar stationary phase and lag.
+      B: Size is secondary to polarity here.
+      C: Size is secondary.
+- heading: Electrophoresis — separation by charge and size
+  body:
+  - Electrophoresis separates charged molecules by migration through a gel under an electric field. ==Small,
+    highly charged molecules move fastest== toward the oppositely charged electrode. DNA is uniformly
+    negative (phosphate backbone), so fragment size alone determines speed — small fragments run fastest.
+  - SDS-PAGE denatures proteins with a uniform negative charge-to-mass ratio, so molecular weight alone
+    determines position. Native PAGE preserves folding — both charge and size matter. Isoelectric focusing
+    separates by pI — proteins stop moving at the pH where their net charge is zero.
+  check:
+  - q: In agarose gel electrophoresis of DNA fragments, which band is closest to the well?
+    options:
+      A: The largest fragment
+      B: The smallest fragment
+      C: The most charged fragment
+      D: The middle-sized fragment
+    answer: A
+    explain: Larger DNA fragments encounter more gel resistance and move slowest — closest to the well.
+    distractors:
+      A: Smallest fragments run furthest.
+      B: All DNA has the same charge density.
+      C: Intermediate position.
+  figures:
+  - src: 5c-separation-and-purification-methods/fig-10cd10e1.webp
+    caption: Southern blotting — DNA fragments separated by size via gel electrophoresis, then detected
+      with a probe.
+    credit: Ch 17 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+- heading: Distillation and extraction
+  body:
+  - Distillation separates liquids by boiling point — the lower-BP component vaporizes first and is condensed.
+    ==Simple distillation works when BPs differ by more than 25C==; fractional distillation uses a column
+    for smaller differences. Azeotropes are constant-boiling mixtures that cannot be separated by distillation.
+  - Liquid-liquid extraction partitions a solute between two immiscible solvents based on the partition
+    coefficient. Multiple small extractions are more efficient than one large one — the total extracted
+    equals 1 minus the fraction remaining after each round.
+  check:
+  - q: Why is a mixture of ethanol and water difficult to separate by distillation?
+    options:
+      A: Their boiling points are identical
+      B: They form an azeotrope
+      C: They react
+      D: Ethanol is too volatile
+    answer: B
+    explain: 95.6% ethanol forms an azeotrope that boils at a constant temperature — distillation cannot
+      enrich beyond this.
+    distractors:
+      A: BP difference exists (78C vs 100C).
+      B: They do not react.
+      C: Ethanol BP is moderate.
+  figures:
+  - src: 5c-separation-and-purification-methods/fig-5ac75f50.webp
+    caption: Boiling and condensation — the vaporization-condensation cycle that underlies distillation.
+    credit: Ch 1 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
+- heading: Centrifugation and filtration
+  body:
+  - Centrifugation separates by density and size — denser particles sediment faster at higher centrifugal
+    force. ==Differential centrifugation spins at increasing speeds to isolate cell fractions== — nuclei
+    first (low speed), then mitochondria, then ribosomes (high speed). Density-gradient centrifugation
+    separates particles by buoyant density.
+  - Filtration separates by particle size — the filtrate passes through, the retentate stays. Ultrafiltration
+    uses molecular-weight-cutoff membranes for protein concentration and buffer exchange.
+  check:
+  - q: At low-speed centrifugation, which sediments first?
+    options:
+      A: Ribosomes
+      B: Nuclei
+      C: Proteins
+      D: DNA fragments
+    answer: B
+    explain: Nuclei are the largest, densest organelle — pellet at 600g.
+    distractors:
+      A: Ribosomes need ultracentrifugation.
+      B: Proteins remain soluble.
+      C: DNA fragments stay in solution.
+- heading: Reading separation data
+  body:
+  - The MCAT expects you to interpret chromatograms (peaks and retention times), gels (bands and molecular-weight
+    ladders), and fractionation profiles. ==Peak area is proportional to amount; retention time identifies
+    the compound==. On gels, band intensity correlates with quantity and position indicates size or pI.
+  check:
+  - q: In an HPLC chromatogram, peak identity is determined by…
+    options:
+      A: Peak height
+      B: Retention time
+      C: Peak width
+      D: Solvent composition
+    answer: B
+    explain: Each compound has a characteristic retention time under fixed conditions.
+    distractors:
+      A: Height varies with concentration.
+      B: Width varies with efficiency.
+      C: Solvent is the same for all peaks.
+examples:
+- prompt: A mixture of amino acids is separated by paper chromatography with a polar stationary phase
+    and a moderately polar solvent. Predict the elution order for glycine, phenylalanine, and lysine.
+  solution:
+  - Phenylalanine (hydrophobic side chain) has least affinity for the polar stationary phase — elutes
+    first.
+  - Glycine (small, neutral) has intermediate affinity — elutes second.
+  - Lysine (positively charged, polar) binds strongly to the polar paper — elutes last.
+  answer: Phenylalanine > glycine > lysine.
+  distractors:
+    A: Reversing the order — lysine does NOT elute first with a polar stationary phase.
+    B: Putting glycine last — lysine is more polar than glycine.
+    C: Size-based ordering is wrong — affinity matters, not just size.
+key_points:
+- Chromatography separates by relative affinity for stationary vs mobile phase.
+- Rf = distance of compound / distance of solvent front.
+- 'Electrophoresis: small and highly charged moves fastest.'
+- SDS-PAGE denatures so MW alone determines position.
+- Distillation separates by BP; azeotropes cannot be separated.
+- Centrifugation separates by density; filtration by size.
+- Peak area = amount; retention time = identity.
+mnemonics:
+- phrase: Like the mobile phase, moves fast
+  means: Compounds resembling the mobile phase elute first in chromatography.
+- phrase: Small charge runs fast in gels
+  means: 'Electrophoresis: small size plus high charge equals fastest migration.'
+maps:
+- title: Separation techniques by property
+  steps:
+  - polarity — chromatography (TLC, column, HPLC)
+  - charge and size — electrophoresis
+  - boiling point — distillation
+  - density — centrifugation
+  - size — filtration and dialysis
+- title: Differential centrifugation
+  steps:
+  - 600g — nuclei pellet
+  - 10,000g — mitochondria pellet
+  - 100,000g — ribosomes and membranes pellet
+  - supernatant — soluble proteins
+passage:
+  text: A biochemist runs SDS-PAGE on a protein extract and obtains four bands. The molecular-weight standards
+    show bands at 180, 120, 85, and 50 kDa. The sample bands align at the 120 kDa and 50 kDa standards,
+    plus two additional bands between 85 and 50 kDa.
+  questions:
+  - q: SDS-PAGE separates proteins by…
+    options:
+      A: Native charge
+      B: Molecular weight only
+      C: Shape
+      D: pH optimum
+    answer: B
+    explain: SDS coats all proteins with uniform negative charge — size alone determines migration.
+    distractors:
+      A: SDS denatures and charges uniformly.
+      B: Shape is disrupted by SDS.
+      C: pI is irrelevant after SDS.
+  - q: The band at 120 kDa indicates…
+    options:
+      A: A protein subunit of 120 kDa
+      B: A protein of exactly 120 amino acids
+      C: 120 proteins
+      D: A dimer
+    answer: A
+    explain: SDS-PAGE reports molecular weight of the denatured polypeptide chain.
+    distractors:
+      A: kDa is mass, not residue count.
+      B: Not a count.
+      C: A dimer would run as monomers after SDS.
+  - q: If the sample was run on native PAGE instead, the bands would…
+    options:
+      A: Be identical to SDS-PAGE
+      B: Shift based on native charge and shape
+      C: All run at the same position
+      D: Not separate
+    answer: B
+    explain: Native PAGE preserves folding — both charge and size determine migration.
+    distractors:
+      A: SDS changes the basis of separation.
+      B: They would differ in position but still separate.
+      C: Separation still occurs.
+pitfalls:
+- Confusing mobile and stationary phase effects.
+- Forgetting that SDS-PAGE denatures — subunits separate, not intact complexes.
+- Assuming TLC is quantitative — it is qualitative.
+- Mixing up Rf (retardation factor) with retention time.
+- Forgetting that azeotropes limit distillation.
+exam_map:
+  NMAT: Technique definitions and matching.
+  MCAT: Content Category 5C — reading chromatograms and gels, choosing the right separation technique.
+sources:
+- ref: openstax-chemistry-2e
+  used:
+  - 'Ch 11: Solutions and Solubility'
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC5, CC 5C
+  relation: consulted
+further_reading:
+- title: OpenStax Chemistry 2e — Solubility and Extraction
+  url: https://openstax.org/books/chemistry-2e/pages/11-introduction
+  note: Separation techniques.
+- title: OpenStax Chemistry 2e — The Dissolution Process
+  url: https://openstax.org/books/chemistry-2e/pages/11-1-the-dissolution-process
+  note: Solution formation and separation context.
+review_questions:
+- q: In chromatography, the stationary phase is…
+  options:
+    A: The moving phase
+    B: The fixed phase
+    C: The detector
+    D: The sample
+  answer: B
+  explain: Stationary stays fixed; mobile phase moves through.
+  distractors:
+    A: That is the mobile phase.
+    B: Detector measures output.
+    C: Sample is what is separated.
+- q: Which DNA fragment runs furthest in agarose gel?
+  options:
+    A: 1 kb
+    B: 5 kb
+    C: 10 kb
+    D: 23 kb
+  answer: A
+  explain: Smallest fragment meets least gel resistance.
+  distractors:
+    A: Larger fragments are slower.
+    B: Larger still.
+    C: Largest and slowest.
+- q: An azeotrope is…
+  options:
+    A: A compound with two chiral centers
+    B: A constant-boiling mixture
+    C: A type of chromatography
+    D: A buffer system
+  answer: B
+  explain: Boils at constant temperature — cannot be separated by distillation.
+  distractors:
+    A: Stereochemistry unrelated.
+    B: Not a separation method.
+    C: Not a buffer.
+- q: During differential centrifugation at LOW speed, the pellet contains…
+  options:
+    A: Ribosomes
+    B: Nuclei
+    C: Soluble proteins
+    D: DNA
+  answer: B
+  explain: Nuclei are the largest organelles — pellet at lowest speed.
+  distractors:
+    A: Ribosomes need high speed.
+    B: Proteins stay in supernatant.
+    C: DNA stays soluble.

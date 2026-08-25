@@ -1,5 +1,5 @@
 {
-  "source_rev": "b781696",
+  "source_rev": "24dce2c",
   "counts": {
     "chapters": 70,
     "note_bullets": 449,
@@ -126,7 +126,15 @@
     "tutorials/biology/the-world-of-plants-and-animals.yml": "7d18e97dc94705af0c4e251052f5320ca5431eeff3056a4dbc14dcada3c915f0",
     "tutorials/biology/unity-and-diversity-of-life.yml": "da80407ab1597fc6d1605c063a9c0ec3c7bba246ab70b8a3ae410af3e88483f0",
     "tutorials/chemistry/4e-atoms-nuclear-decay-electronic-structure.yml": "69b093dcc0596ea23d2321acf766c1af26dd059f108be6881c4e08c03fcdd284",
+    "tutorials/chemistry/5a-unique-nature-of-water-and-its-solutions.yml": "b200d409572a42a166446823bcf9b4a9f7a063a65e49d8e3a4fd9b0ce3a99b0e",
+    "tutorials/chemistry/5b-molecules-and-intermolecular-interactions.yml": "5651839e2b2764f94faaf8ca1dba76d7a0220ad236d47d55b29badb4cc7f21d4",
+    "tutorials/chemistry/5c-separation-and-purification-methods.yml": "71a33ff13059ac0f8dc163d52aa5dd063d0a7533203c02ebc9ae35c2729787ff",
+    "tutorials/chemistry/5d-biologically-relevant-molecules.yml": "4aac8b648c23a295bb0b37b807bbe84e3ec5800c24578d130931ac5ac02d54f2",
+    "tutorials/chemistry/5e-chemical-thermodynamics-and-kinetics.yml": "cabcc89ad6518414cbe7a7f849828cfda8a4d74eb07674a3f5e3b44cebfdc895",
+    "tutorials/chemistry/analytical-chemistry.yml": "2990d120385cd273418d5b54c94029bc1e2860f03c977639a5cad7fd6faa902a",
+    "tutorials/chemistry/biochemistry.yml": "7f15e2225c23fbb543e4f859c9729449199b24aca3fd2e99498c65544b005803",
     "tutorials/chemistry/general-chemistry.yml": "8b04bc15d0c41b44436c794c62efb0f0d2d4c2be66fad5931d257f5710ff60f3",
+    "tutorials/chemistry/organic-chemistry.yml": "e0fe3148d1e9cd59fbcfeb5e170cf04a5f21431c472673152ef013218f7977f4",
     "tutorials/psych-soc/10a-social-inequality.yml": "9a4ad20cd9e4fd35e7bce14dec5b312a4945ea93c5cd6acc4dcc81e73841a25c",
     "tutorials/psych-soc/6a-sensing-the-environment.yml": "5d68e3f7e1a416f5cd68387533a9ce497fd5ddad06000578c8f9aa45bf8f7cce",
     "tutorials/psych-soc/6b-making-sense-of-the-environment.yml": "beadfe7656b1471a3ec17440ad68ecc71ebf56d597277fe9c54d88d25011c179",

@@ -1,0 +1,277 @@
+subject: chemistry
+chapter: 5D · Biologically relevant molecules
+title: 5D · Biologically Relevant Molecules
+overview: This chapter connects general chemistry to biochemistry — functional group reactivity, the chemistry
+  of biomolecules, and how structure determines biological function. The MCAT tests functional group identification
+  and reaction mechanisms.
+sections:
+- heading: Functional groups — the reactive parts
+  body:
+  - Every biomolecule's chemistry flows from its functional groups. ==Alcohols (OH) form esters and ethers;
+    carboxylic acids (COOH) form amides and esters; amines (NH2) form amides and salts; thiols (SH) form
+    disulfides and thioesters==. Identify the group and you predict the reaction.
+  - Carbonyl chemistry dominates — aldehydes are more reactive than ketones (less steric hindrance). Nucleophiles
+    attack the electrophilic carbonyl carbon. Carboxylic acid derivatives (esters, amides, anhydrides)
+    all react by nucleophilic acyl substitution — the leaving group departs as the nucleophile adds.
+  check:
+  - q: Which functional group is most reactive toward nucleophilic attack?
+    options:
+      A: Amide
+      B: Ester
+      C: Anhydride
+      D: Carboxylate
+    answer: C
+    explain: Anhydrides have the best leaving group (carboxylate) — fastest acyl substitution.
+    distractors:
+      A: Amides have the worst leaving group.
+      B: Esters are intermediate.
+      C: Carboxylates are the leaving group, not the reactant.
+- heading: Carbohydrates — polyhydroxy aldehydes and ketones
+  body:
+  - Sugars contain multiple hydroxyl groups plus one aldehyde (aldose) or ketone (ketose). ==Monosaccharides
+    cyclize in water== — glucose forms a six-membered pyranose ring via intramolecular hemiacetal. The
+    anomeric carbon (the former carbonyl carbon) creates a new stereocenter — alpha (OH down) or beta
+    (OH up).
+  - Glycosidic bonds link sugars — formed by condensation (water eliminated) between the anomeric OH of
+    one sugar and any OH of another. ==Disaccharides (sucrose, lactose, maltose) and polysaccharides (glycogen,
+    starch, cellulose) are all glycoside polymers== with different linkages.
+  check:
+  - q: The glycosidic bond in sucrose links…
+    options:
+      A: Glucose alpha-1 to glucose alpha-4
+      B: Glucose alpha-1 to fructose beta-2
+      C: Glucose beta-1 to glucose beta-4
+      D: Two fructose molecules
+    answer: B
+    explain: Sucrose is glucose(alpha-1) linked to fructose(beta-2) — a nonreducing disaccharide.
+    distractors:
+      A: That is maltose.
+      B: That is cellulose.
+      C: Sucrose contains glucose and fructose.
+  figures:
+  - src: 5d-biologically-relevant-molecules/fig-35fa1423.webp
+    caption: Amylose (linear) versus amylopectin (branched) — glucose polymers differing in glycosidic
+      linkage.
+    credit: Ch 3 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+  - src: 5d-biologically-relevant-molecules/fig-04941f60.webp
+    caption: Sucrose formation — a glycosidic bond condenses glucose and fructose with loss of water.
+    credit: Ch 3 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+- heading: Amino acids and peptide bonds
+  body:
+  - Amino acids carry an amino group, a carboxyl group, an H, and a variable R group on the same alpha
+    carbon. At physiological pH, they exist as zwitterions — NH3+ and COO-. ==The peptide bond is an amide
+    linkage between the carboxyl of one amino acid and the amino of the next==, with water eliminated.
+  - Twenty standard amino acids sort by R group — nonpolar (Gly, Ala, Val, Leu, Ile, Phe, Met, Pro), polar
+    uncharged (Ser, Thr, Cys, Tyr, Asn, Gln), acidic (Asp, Glu), and basic (Lys, Arg, His). The pKa of
+    ionizable side chains determines charge at any pH.
+  check:
+  - q: At pH 7, which amino acid side chain is positively charged?
+    options:
+      A: Glutamate
+      B: Lysine
+      C: Serine
+      D: Alanine
+    answer: B
+    explain: Lysine's epsilon-amino group has pKa ~10.5 — protonated (positive) at pH 7.
+    distractors:
+      A: Glutamate is negative.
+      B: Serine is neutral.
+      C: Alanine is nonpolar.
+- heading: Nucleic acids — phosphate esters of nucleosides
+  body:
+  - DNA and RNA are polymers of nucleotides — sugar + base + phosphate. ==The 3-5 phosphodiester bond
+    links nucleotides== via a phosphate ester on both sides. DNA uses deoxyribose (no 2-OH) and A, T,
+    G, C; RNA uses ribose and A, U, G, C.
+  - Base pairing — A pairs with T (or U) via two hydrogen bonds; G pairs with C via three hydrogen bonds.
+    ==GC-rich DNA has a higher melting temperature== because three bonds are harder to break than two.
+    The double helix is antiparallel — one strand 5 to 3, the other 3 to 5.
+  check:
+  - q: Why does GC-rich DNA have a higher melting temperature?
+    options:
+      A: GC base pairs are covalent
+      B: GC pairs form three hydrogen bonds vs two for AT
+      C: Guanine is heavier
+      D: GC pairs stack differently
+    answer: B
+    explain: Three hydrogen bonds require more thermal energy to disrupt.
+    distractors:
+      A: No covalent bonds between bases.
+      B: Mass is irrelevant.
+      C: Stacking matters but is secondary.
+- heading: Lipids — hydrophobic and amphipathic
+  body:
+  - Lipids are defined by insolubility in water, not by a shared structure. Fatty acids are long hydrocarbon
+    chains with a terminal carboxyl — saturated (no double bonds, straight chains, tight packing, solid)
+    versus unsaturated (cis double bonds, kinked, liquid at room temperature).
+  - Triacylglycerols (three fatty acids + glycerol) store energy. ==Phospholipids (two fatty acids + phosphate
+    head) form membranes== because they are amphipathic. Steroids share a four-ring fused skeleton — cholesterol
+    is the precursor for all steroid hormones.
+  check:
+  - q: Which lipid forms biological membranes?
+    options:
+      A: Triacylglycerol
+      B: Phospholipid
+      C: Cholesterol ester
+      D: Wax
+    answer: B
+    explain: Amphipathic — hydrophilic phosphate head, hydrophobic tails — forms bilayers.
+    distractors:
+      A: Energy storage only.
+      B: Transport form.
+      C: Protective coating.
+examples:
+- prompt: 'A biochemist treats a tetrapeptide with chymotrypsin (cleaves after aromatic amino acids Phe,
+    Tyr, Trp). Sequence: Ala-Phe-Gly-Trp-Lys. Predict the fragments.'
+  solution:
+  - Chymotrypsin cleaves the peptide bond AFTER each aromatic residue.
+  - 'Fragment 1: Ala-Phe (cleaved after Phe).'
+  - 'Fragment 2: Gly-Trp (cleaved after Trp).'
+  - 'Fragment 3: Lys (remains as single residue).'
+  answer: Ala-Phe, Gly-Trp, Lys.
+  distractors:
+    A: Cleaving BEFORE aromatics — wrong direction.
+    B: Treating as trypsin (cleaves after Lys/Arg).
+    C: Random hydrolysis at every bond.
+key_points:
+- Functional groups predict reactivity — carbonyl > ester > amide.
+- Sugars cyclize; anomeric carbon creates alpha/beta; glycosidic bonds link.
+- Peptide bonds are amides; 20 amino acids sort by R group.
+- 'DNA: phosphodiester 3-5; A-T (2 H-bonds), G-C (3 H-bonds, higher Tm).'
+- Phospholipids are amphipathic and form bilayers.
+- Saturated fats pack tightly (solid); unsaturated are kinked (liquid).
+mnemonics:
+- phrase: Nucleophile attacks carbonyl carbon
+  means: All carbonyl chemistry — the electrophilic C is the target.
+- phrase: GC three, AT two
+  means: Hydrogen bonds per base pair — more GC means higher melting temperature.
+maps:
+- title: Biomolecule hierarchy
+  steps:
+  - amino acids -> peptide bond -> peptides -> proteins
+  - monosaccharides -> glycosidic bond -> polysaccharides
+  - nucleotides -> phosphodiester bond -> DNA/RNA
+  - fatty acids + glycerol -> ester bond -> triacylglycerols
+- title: Functional group reactivity ranking
+  steps:
+  - anhydride (most reactive acyl substitution)
+  - ester
+  - amide (least reactive)
+passage:
+  text: A researcher isolates an unknown disaccharide. Benedict's reagent (tests for a free anomeric carbon)
+    is positive. Acid hydrolysis yields glucose and galactose in equal amounts.
+  questions:
+  - q: The positive Benedict's test indicates…
+    options:
+      A: The disaccharide has a free anomeric carbon
+      B: Both sugars are glucose
+      C: The glycosidic bond is alpha
+      D: The disaccharide is sucrose
+    answer: A
+    explain: A free (unlinked) anomeric carbon can open to the aldehyde form and reduce Cu2+.
+    distractors:
+      A: Composition is given as glucose and galactose.
+      B: Benedict's does not reveal linkage type.
+      C: Sucrose has NO free anomeric carbon — it would be negative.
+  - q: The disaccharide is most likely…
+    options:
+      A: Sucrose
+      B: Lactose
+      C: Maltose
+      D: Cellobiose
+    answer: B
+    explain: Glucose + galactose + positive Benedict's = lactose (reducing sugar).
+    distractors:
+      A: Sucrose is glucose + fructose and nonreducing.
+      B: Maltose is glucose + glucose.
+      C: Cellobiose is glucose + glucose.
+  - q: If the disaccharide is treated with beta-galactosidase, the products would be…
+    options:
+      A: Two glucose molecules
+      B: Glucose and galactose
+      C: Galactose only
+      D: No reaction
+    answer: B
+    explain: Lactose has a beta-1,4-galactosidic bond — beta-galactosidase cleaves it to free glucose
+      and galactose.
+    distractors:
+      A: That would be maltose hydrolysis.
+      B: Correct — enzyme and substrate match.
+      C: Would not yield other products.
+pitfalls:
+- Confusing ester and amide reactivity — amides are MORE stable.
+- Forgetting sucrose is nonreducing (both anomeric carbons linked).
+- Mixing up alpha and beta anomers.
+- Assuming all lipids have the same structure.
+- Confusing glycosidic linkage positions (1,4 vs 1,6).
+exam_map:
+  NMAT: Functional group identification and biomolecule basics.
+  MCAT: Content Category 5D — enzyme cleavage specificity, functional group reactivity, biomolecule structure.
+sources:
+- ref: openstax-chemistry-2e
+  used:
+  - 'Ch 20: Organic Chemistry overview'
+  relation: consulted
+- ref: openstax-biology-2e
+  used:
+  - 'Ch 3: Biological Macromolecules'
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC5, CC 5D
+  relation: consulted
+further_reading:
+- title: OpenStax Biology 2e — Biological Macromolecules
+  url: https://openstax.org/books/biology-2e/pages/3-introduction
+  note: Biomolecule structures from the biology side.
+- title: OpenStax Chemistry 2e — Hydrocarbons and Functional Groups
+  url: https://openstax.org/books/chemistry-2e/pages/20-4-functional-groups
+  note: Functional group reference table.
+review_questions:
+- q: Which is the LEAST reactive carboxylic acid derivative?
+  options:
+    A: Anhydride
+    B: Ester
+    C: Amide
+    D: Acyl chloride
+  answer: C
+  explain: Amide has the worst leaving group (NH2-) — most stable.
+  distractors:
+    A: More reactive than amide.
+    B: More reactive.
+    C: Most reactive.
+- q: The peptide bond is a type of…
+  options:
+    A: Ester
+    B: Amide
+    C: Ether
+    D: Anhydride
+  answer: B
+  explain: Carboxyl + amine condensation forms an amide linkage.
+  distractors:
+    A: Carboxyl + alcohol gives ester.
+    B: Not relevant.
+    C: Two carboxyls give anhydride.
+- q: Which base pair has three hydrogen bonds?
+  options:
+    A: A-T
+    B: A-U
+    C: G-C
+    D: T-C
+  answer: C
+  explain: Guanine-cytosine share three H-bonds.
+  distractors:
+    A: Two bonds.
+    B: Two bonds.
+    C: Not a valid pair.
+- q: Phospholipids form bilayers because they are…
+  options:
+    A: Fully hydrophobic
+    B: Fully hydrophilic
+    C: Amphipathic
+    D: Charged only
+  answer: C
+  explain: Polar head + nonpolar tails = amphipathic — spontaneously form bilayers.
+  distractors:
+    A: Would aggregate into oil droplets.
+    B: Would dissolve.
+    C: Charge alone is insufficient.

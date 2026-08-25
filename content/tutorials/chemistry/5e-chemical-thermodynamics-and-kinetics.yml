@@ -1,0 +1,271 @@
+subject: chemistry
+chapter: 5E · Chemical thermodynamics and kinetics
+title: 5E · Principles of Chemical Thermodynamics and Kinetics
+overview: Why reactions happen (thermodynamics) and how fast (kinetics) — the single most tested conceptual
+  pairing on the exam. Gibbs free energy, equilibrium, rate laws, and catalysis anchor bioenergetics.
+sections:
+- heading: Enthalpy, entropy, and Gibbs free energy
+  body:
+  - Spontaneity is decided by delta-G = delta-H - T delta-S. ==Negative delta-G means spontaneous (product-favored)==,
+    but says nothing about rate. Enthalpy (H) is heat at constant pressure; entropy (S) is dispersal of
+    energy and matter.
+  - Temperature couples the terms — when delta-H and delta-S share a sign, ==temperature decides spontaneity==.
+    Exothermic with positive entropy is spontaneous at all temperatures; endothermic with negative entropy
+    at none. Memorize the four-sign table.
+  check:
+  - q: A reaction with delta-H < 0 and delta-S < 0 is…
+    options:
+      A: Spontaneous at all temperatures
+      B: Spontaneous only at low temperature
+      C: Spontaneous only at high temperature
+      D: Never spontaneous
+    answer: B
+    explain: At low T the favorable enthalpy term dominates — T delta-S is small.
+    distractors:
+      A: Not all temperatures — high T makes -T delta-S positive.
+      B: That is delta-H>0, delta-S>0.
+      C: Not never.
+- heading: Equilibrium — the balance point
+  body:
+  - Every reversible reaction reaches equilibrium where forward and reverse rates equal. ==K = products
+    over reactants, each raised to its stoichiometric coefficient== — only gases and aqueous species appear;
+    pure solids and liquids drop out.
+  - Le Chatelier — stress shifts equilibrium to relieve it. ==Adding reactant, removing product, increasing
+    pressure (fewer moles gas side), and heating an endothermic reaction all shift right==. K changes
+    ONLY with temperature — concentration and pressure changes shift position, not K.
+  check:
+  - q: For N2 + 3H2 <-> 2NH3 (delta-H < 0), increasing temperature will…
+    options:
+      A: Shift right and increase K
+      B: Shift left and decrease K
+      C: Shift right and decrease K
+      D: No change
+    answer: B
+    explain: Exothermic — heat is a product, so added heat shifts left AND lowers K.
+    distractors:
+      A: Direction wrong.
+      B: Direction inconsistent with exothermic.
+      C: Temperature always matters.
+- heading: Kinetics — rates and rate laws
+  body:
+  - Rate measures concentration change per time — ==rate = k[A]^m[B]^n== where m and n come ONLY from
+    experiment, never from stoichiometry (except elementary steps). Zero order is constant rate; first
+    order depends on one reactant with exponential decay; second order accelerates with concentration
+    squared.
+  - Temperature dependence — the Arrhenius equation k = A exp(-Ea/RT). ==Higher temperature or lower activation
+    energy means faster rate==. Catalysts lower Ea for BOTH directions equally — they speed equilibrium
+    attainment without shifting its position.
+  check:
+  - q: A catalyst changes…
+    options:
+      A: The equilibrium constant
+      B: The activation energy
+      C: Delta-G of the reaction
+      D: The final concentrations at equilibrium
+    answer: B
+    explain: Catalysts lower Ea — equilibrium is reached faster, same position.
+    distractors:
+      A: K is temperature-only.
+      B: Delta-G is a state function — unchanged.
+      C: Same final concentrations.
+  figures:
+  - src: 5e-principles-of-chemical-thermodynamics-and-kinetics/fig-29762773.webp
+    caption: Reaction rate from a concentration-time curve — initial and instantaneous rates as slopes.
+    credit: Ch 12 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
+  - src: 5e-principles-of-chemical-thermodynamics-and-kinetics/fig-671ebc3a.webp
+    caption: Approach to equilibrium — reactant and product concentrations leveling as forward and reverse
+      rates equalize.
+    credit: Ch 13 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
+- heading: Coupled reactions and bioenergetics
+  body:
+  - Thermodynamically unfavorable reactions proceed when coupled to favorable ones. ==ATP hydrolysis (delta-G
+    about -30 kJ/mol) drives biosynthesis== by coupling through shared intermediates. The cell spends
+    ATP like currency — unfavorable uptake coupled to favorable hydrolysis.
+  - The delta-G of a reaction under actual conditions is delta-G = delta-G standard + RT ln Q — when Q
+    < K, delta-G is negative and the reaction runs forward. ==Only the actual delta-G, not the standard
+    one, decides direction in the cell==, where concentrations keep Q far from standard.
+  check:
+  - q: A reaction with delta-G standard > 0 can proceed forward when…
+    options:
+      A: Q > K
+      B: Q < K
+      C: Temperature is zero
+      D: A catalyst is added
+    answer: B
+    explain: With Q < K, the RT ln Q term makes actual delta-G negative.
+    distractors:
+      A: Q > K makes it reverse.
+      B: Unphysical.
+      C: Catalyst changes rate, not direction.
+- heading: Reaction mechanisms
+  body:
+  - Mechanisms are stepwise elementary reactions that sum to the overall equation. ==The slowest step
+    is the rate-determining step== — it fixes the rate law. Intermediates are produced then consumed;
+    they never appear in the overall equation.
+  - Read mechanism data the way the MCAT presents it — a proposed mechanism must reproduce the observed
+    rate law, sum to the overall reaction, and account for every intermediate. ==A mechanism consistent
+    with the rate law is supported, never proven==.
+  check:
+  - q: The rate-determining step is…
+    options:
+      A: The first step always
+      B: The slowest elementary step
+      C: The fastest step
+      D: The step with the catalyst
+    answer: B
+    explain: The slow step bottlenecks the whole sequence.
+    distractors:
+      A: Not necessarily first.
+      B: The fast step is not limiting.
+      C: Catalyst location is separate.
+examples:
+- prompt: For a reaction, delta-H = +75 kJ/mol and delta-S = +150 J/mol-K. Above what temperature does
+    it become spontaneous?
+  solution:
+  - 'Set delta-G = 0 — the crossover: 0 = delta-H - T delta-S.'
+  - T = delta-H / delta-S = 75,000 J/mol / 150 J/mol-K.
+  - T = 500 K — above this, the -T delta-S term outweighs the unfavorable enthalpy.
+  answer: Spontaneous above 500 K.
+  distractors:
+    A: Forgetting to convert kJ to J — gives 0.5 K.
+    B: Dividing delta-S by delta-H inverts the answer.
+    C: Sign error — below 500 K the reaction is nonspontaneous.
+key_points:
+- delta-G = delta-H - T delta-S; negative means spontaneous.
+- K changes only with temperature; stresses shift position.
+- Rate law exponents come from experiment, not stoichiometry.
+- Catalysts lower Ea — same equilibrium, faster attainment.
+- Coupled reactions let ATP hydrolysis drive unfavorable steps.
+- Slowest step is rate-determining; intermediates cancel.
+mnemonics:
+- phrase: Products over reactants, coefficients become powers
+  means: How to write any K expression.
+- phrase: Catalysts get you there faster, not somewhere else
+  means: Ea drops, equilibrium position unchanged.
+maps:
+- title: Thermodynamic decision tree
+  steps:
+  - delta-H < 0, delta-S > 0 — spontaneous at all T
+  - delta-H > 0, delta-S > 0 — spontaneous at high T
+  - delta-H < 0, delta-S < 0 — spontaneous at low T
+  - delta-H > 0, delta-S < 0 — never spontaneous
+- title: Order of a reaction from data
+  steps:
+  - double [A], rate unchanged — zero order in A
+  - double [A], rate doubles — first order
+  - double [A], rate quadruples — second order
+passage:
+  text: An enzyme-catalyzed hydrolysis was studied at 25C. Without enzyme, k = 1e-6/s; with enzyme, k
+    = 1e2/s. The reaction's delta-G standard is -14 kJ/mol. Adding enzyme did not change the final ratio
+    of product to reactant.
+  questions:
+  - q: The enzyme accelerates the reaction by…
+    options:
+      A: Lowering activation energy
+      B: Making delta-G more negative
+      C: Shifting K
+      D: Increasing temperature
+    answer: A
+    explain: Only Ea changes — the thermodynamics are untouched.
+    distractors:
+      A: Delta-G standard is a state function.
+      B: K is unchanged as stated.
+      C: Enzymes are not heat sources.
+  - q: The unchanged product-to-reactant ratio confirms…
+    options:
+      A: Zero-order kinetics
+      B: Equilibrium position depends on delta-G, not catalysis
+      C: The enzyme is denatured
+      D: Irreversibility
+    answer: B
+    explain: Same K, same final concentrations — catalysts affect rate only.
+    distractors:
+      A: Kinetics order is unrelated.
+      B: It is active — rate rose 10^8 fold.
+      C: Hydrolysis is reversible.
+  - q: If delta-G standard is -14 kJ/mol, the ratio K at 25C is approximately…
+    options:
+      A: e^-5.6 (about 0.004)
+      B: e^+5.6 (about 270)
+      C: '1'
+      D: '14'
+    answer: B
+    explain: K = exp(-delta-G standard / RT) = exp(14,000 / (8.314 x 298)) about e^5.6.
+    distractors:
+      A: Sign flipped — that is the reciprocal.
+      B: Only at delta-G = 0.
+      C: Units mismatch.
+pitfalls:
+- Confusing spontaneity with speed — delta-G says nothing about rate.
+- Getting rate-law exponents from coefficients of the overall equation.
+- Thinking catalysts shift equilibrium.
+- Forgetting K is temperature-only.
+- Mixing up delta-G standard with actual delta-G.
+exam_map:
+  NMAT: Le Chatelier, sign tables, rate-order definitions.
+  MCAT: Content Category 5E — passage data on rates, coupled bioenergetics, Arrhenius reasoning.
+sources:
+- ref: openstax-chemistry-2e
+  used:
+  - 'Ch 12, 13, 16-18: Thermochemistry, Kinetics, Free Energy'
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC5, CC 5E
+  relation: consulted
+further_reading:
+- title: OpenStax Chemistry 2e — Thermodynamics
+  url: https://openstax.org/books/chemistry-2e/pages/16-introduction
+  note: Free energy foundations.
+- title: OpenStax Chemistry 2e — Chemical Kinetics
+  url: https://openstax.org/books/chemistry-2e/pages/12-introduction
+  note: Rate laws and mechanisms.
+review_questions:
+- q: A system at equilibrium…
+  options:
+    A: Has stopped reacting
+    B: Has equal forward and reverse rates
+    C: Has equal product and reactant concentrations
+    D: Has K = 1
+  answer: B
+  explain: Dynamic balance — reactions continue at matched rates.
+  distractors:
+    A: Still reacting.
+    B: Concentrations need not be equal.
+    C: K can be any value.
+- q: For a first-order reaction, doubling [A]…
+  options:
+    A: Doubles the rate
+    B: Quadruples the rate
+    C: Leaves rate unchanged
+    D: Halves the rate
+  answer: A
+  explain: Rate = k[A]^1 — linear dependence.
+  distractors:
+    A: That is second order.
+    B: That is zero order.
+    C: Inverse is not first order.
+- q: An intermediate in a mechanism…
+  options:
+    A: Appears in the overall equation
+    B: Is consumed in later steps
+    C: Is a catalyst
+    D: Is always the transition state
+  answer: B
+  explain: Formed in one step, used in a later one — cancels from the net equation.
+  distractors:
+    A: It cancels out.
+    B: Catalysts are consumed then regenerated.
+    C: Transition states are not intermediates.
+- q: ATP hydrolysis drives unfavorable biosynthesis because…
+  options:
+    A: It lowers Ea
+    B: The coupled overall delta-G is negative
+    C: It raises K
+    D: It is irreversible
+  answer: B
+  explain: Coupling sums the free energies — favorable hydrolysis outweighs unfavorable biosynthesis.
+  distractors:
+    A: That is catalysis.
+    B: K of the coupled reaction emerges from delta-G.
+    C: It is reversible in principle.

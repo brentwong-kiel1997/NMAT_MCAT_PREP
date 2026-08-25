@@ -1,0 +1,277 @@
+subject: chemistry
+chapter: 5A · Unique nature of water and its solutions
+title: 5A · Unique Nature of Water and Its Solutions
+overview: Water is the MCAT's favorite molecule — its polarity and hydrogen bonding drive everything from
+  protein folding to acid-base chemistry. This chapter covers water's anomalous properties, solutions
+  and molarity, and the pH scale with buffer chemistry.
+sections:
+- heading: Water's polarity and hydrogen bonding
+  body:
+  - Water is bent (104.5 degrees) with a strong dipole — oxygen pulls electrons from the two hydrogens.
+    This makes water a ==polar solvent that dissolves ionic and polar molecules== while excluding nonpolar
+    ones (hydrophobic effect).
+  - Hydrogen bonding between water molecules gives water its anomalously high boiling point, surface tension,
+    and specific heat. ==Each water molecule can form up to four hydrogen bonds== — this network is why
+    ice floats (hydrogen bonds hold molecules farther apart than in liquid).
+  check:
+  - q: Why does ice float on liquid water?
+    options:
+      A: Ice is less dense — hydrogen bonds hold molecules in an open lattice
+      B: Ice is warmer
+      C: Air bubbles in ice
+      D: Liquid water contracts when heated
+    answer: A
+    explain: The crystalline structure of ice spaces molecules farther apart, lowering density.
+    distractors:
+      A: Temperature is irrelevant to density here.
+      B: Air bubbles are incidental.
+      C: Water is densest at 4C, not when heated.
+- heading: Solutions, electrolytes, and solubility
+  body:
+  - 'A solution is a homogeneous mixture — solute dissolved in solvent. ==Electrolytes dissociate into
+    ions in water== (strong: NaCl, HCl; weak: acetic acid; nonelectrolyte: glucose). Colligative properties
+    — vapor pressure lowering, boiling point elevation, freezing point depression — depend on the NUMBER
+    of dissolved particles, not their identity.'
+  - Solubility rules — all Na+, K+, NH4+, and NO3- salts dissolve; most CO3 2-, PO4 3-, and S2- salts
+    precipitate. Molar solubility (mol/L) quantifies how much dissolves at equilibrium; Ksp is the solubility
+    product constant.
+  check:
+  - q: Which is a strong electrolyte?
+    options:
+      A: CH3COOH
+      B: C6H12O6
+      C: NaCl
+      D: NH3
+    answer: C
+    explain: NaCl dissociates completely in water.
+    distractors:
+      A: Acetic acid is a weak electrolyte.
+      B: Glucose is a nonelectrolyte.
+      C: Ammonia is a weak base.
+  figures:
+  - src: 5a-unique-nature-of-water-and-its-solutions/fig-9f65aae0.webp
+    caption: Dissolution — a solute dispersing into solvent to form a homogeneous solution.
+    credit: Ch 11 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
+  - src: 5a-unique-nature-of-water-and-its-solutions/fig-a7bd86a8.webp
+    caption: Diffusion of helium and argon after a valve opens — spontaneous mixing driven by entropy.
+    credit: Ch 11 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
+- heading: Acids, bases, and the pH scale
+  body:
+  - 'Arrhenius: acids produce H+, bases produce OH-. Bronsted-Lowry: acids donate protons, bases accept
+    them. Lewis: acids accept electron pairs, bases donate them. ==Strong acids (HCl, HNO3, H2SO4, HClO4)
+    dissociate completely==; weak acids reach equilibrium described by Ka.'
+  - pH = -log[H+]; pOH = -log[OH-]; pH + pOH = 14.00 at 25C. Each pH unit is a tenfold change in hydrogen
+    ion concentration. A solution of pH 3 has [H+] = 10^-3 M.
+  check:
+  - q: What is the [OH-] in a solution with pH = 5?
+    options:
+      A: 10^-5 M
+      B: 10^-9 M
+      C: 10^-14 M
+      D: 5 M
+    answer: B
+    explain: pOH = 14 - 5 = 9, so [OH-] = 10^-9 M.
+    distractors:
+      A: That is [H+].
+      B: That is the product [H+][OH-].
+      C: That is just the pH value as molarity.
+- heading: Buffers and the Henderson-Hasselbalch equation
+  body:
+  - A buffer is a weak acid plus its conjugate base (or weak base plus conjugate acid) that resists pH
+    change. ==The Henderson-Hasselbalch equation — pH = pKa + log([A-]/[HA])== — predicts the buffer pH
+    from the ratio of conjugate base to acid. Maximum buffering occurs when pH = pKa (equal amounts of
+    acid and base).
+  - Physiological buffers — the bicarbonate system (H2CO3/HCO3-, pKa 6.1) in blood, phosphate intracellularly,
+    proteins as flexible buffers. The bicarbonate system works because CO2 is exhaled by lungs, pulling
+    the equilibrium.
+  check:
+  - q: A buffer has equal concentrations of HA and A-. The pH equals…
+    options:
+      A: '7.0'
+      B: pKa + 1
+      C: pKa
+      D: 14 - pKa
+    answer: C
+    explain: log(1) = 0, so pH = pKa + 0 = pKa.
+    distractors:
+      A: That is neutral pH, unrelated to the buffer.
+      B: That is when [A-] = 10 times [HA].
+      C: That is pOH.
+- heading: Titrations and equivalence points
+  body:
+  - Titration curves plot pH versus volume of titrant added. The ==equivalence point is where moles of
+    titrant equal moles of analyte==. Strong acid plus strong base gives an equivalence point at pH 7;
+    weak acid plus strong base gives equivalence above 7; weak base plus strong acid gives equivalence
+    below 7.
+  - The half-equivalence point (where half the acid has been neutralized) is where pH = pKa — the MCAT
+    uses this to extract Ka from a titration curve. Indicators are chosen so their color-change range
+    brackets the equivalence point.
+  check:
+  - q: At the half-equivalence point of a weak acid titration…
+    options:
+      A: pH = 7
+      B: pH = pKa
+      C: pH = pKb
+      D: All acid is consumed
+    answer: B
+    explain: Half the acid is neutralized; [HA] = [A-]; pH = pKa + log(1) = pKa.
+    distractors:
+      A: That is strong-strong only.
+      B: That relates to the base, not the acid.
+      C: That is the equivalence point.
+examples:
+- prompt: Calculate the pH of a buffer containing 0.10 M acetic acid (pKa = 4.76) and 0.15 M sodium acetate.
+  solution:
+  - pH = pKa + log([A-]/[HA])
+  - pH = 4.76 + log(0.15/0.10)
+  - pH = 4.76 + log(1.5)
+  - pH = 4.76 + 0.18 = 4.94
+  answer: pH = 4.94.
+  distractors:
+    A: Forgetting the log — pH = 4.76 + 1.5 = 6.26.
+    B: Inverting the ratio — pH = 4.76 + log(0.67) = 4.58.
+    C: Using pKa of water (7) instead of the acid.
+key_points:
+- Water is bent, polar, and hydrogen-bonded — this drives its solvent power and anomalies.
+- Electrolytes dissociate; colligative properties depend on particle count.
+- pH = -log[H+]; pH + pOH = 14 at 25C; each unit is tenfold.
+- 'Henderson-Hasselbalch: pH = pKa + log([A-]/[HA]).'
+- Maximum buffering at pH = pKa; half-equivalence point extracts pKa.
+- Bicarbonate buffer in blood (pKa 6.1) is the physiological example.
+mnemonics:
+- phrase: pH = pKa + log (base over acid)
+  means: Henderson-Hasselbalch — conjugate base divided by conjugate acid.
+- phrase: Strong at seven, weak wanders
+  means: Strong-strong equivalence is pH 7; weak acid equivalence is above 7, weak base below 7.
+maps:
+- title: Titration of weak acid with strong base
+  steps:
+  - 'initial: pH determined by weak acid alone'
+  - 'buffer region: pH = pKa + log ratio'
+  - 'half-equivalence: pH = pKa exactly'
+  - 'equivalence: pH above 7 (conjugate base dominates)'
+  - 'excess base: pH rises steeply'
+- title: Dissolution decision path
+  steps:
+  - ionic or polar solute + water — dissolves (ion-dipole)
+  - nonpolar solute + water — insoluble (hydrophobic)
+  - nonpolar solute + nonpolar solvent — dissolves (like dissolves like)
+  - slightly soluble — partial, equilibrium established
+passage:
+  text: A researcher prepares a phosphate buffer by mixing 100 mL of 0.1 M KH2PO4 (monobasic) with 100
+    mL of 0.2 M K2HPO4 (dibasic). The pKa of the H2PO4-/HPO4 2- pair is 7.20.
+  questions:
+  - q: What is the pH of this buffer?
+    options:
+      A: '7.00'
+      B: '7.20'
+      C: '7.50'
+      D: '6.90'
+    answer: C
+    explain: pH = 7.20 + log(0.1/0.05) = 7.20 + log(2) = 7.20 + 0.30 = 7.50.
+    distractors:
+      A: That is neutral.
+      B: That is pKa — requires equal concentrations.
+      C: Below pKa requires more acid than base.
+  - q: If 10 mL of 0.1 M NaOH is added, the pH will…
+    options:
+      A: Stay exactly the same
+      B: Increase slightly
+      C: Increase dramatically
+      D: Decrease
+    answer: B
+    explain: The buffer absorbs the added OH- by converting HA to A-. The ratio shifts, so pH rises slightly,
+      not dramatically.
+    distractors:
+      A: Buffers resist but do not perfectly cancel pH change.
+      B: Without buffering capacity, this would be dramatic.
+      C: Adding base increases pH.
+  - q: What makes this an effective physiological buffer?
+    options:
+      A: It is at pH 7.4 near the pKa of 7.20
+      B: It cannot be overwhelmed
+      C: It works only outside cells
+      D: It is a strong acid
+    answer: A
+    explain: The buffer works best near its pKa, and physiological pH 7.4 is close to 7.20.
+    distractors:
+      A: All buffers can be overwhelmed.
+      B: It works intracellularly too.
+      C: It is a weak acid system.
+pitfalls:
+- Confusing pH with [H+] directly — pH is logarithmic.
+- Using the wrong ratio in Henderson-Hasselbalch — base over acid, not acid over base.
+- Assuming buffers prevent all pH change — they only resist it.
+- Forgetting that water is densest at 4C, not 0C.
+- Mixing up equivalence point (stoichiometric) with endpoint (indicator color change).
+exam_map:
+  NMAT: Definitions and one-step pH calculations.
+  MCAT: Content Category 5A — buffer design questions, titration curve interpretation, and physiological
+    buffer scenarios.
+sources:
+- ref: openstax-chemistry-2e
+  used:
+  - 'Ch 11: Liquids and Intermolecular Forces'
+  - 'Ch 6: Composition of Substances'
+  - 'Ch 14: Acid-Base Equilibria'
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC5, CC 5A
+  relation: consulted
+further_reading:
+- title: OpenStax Chemistry 2e — Acid-Base Equilibria
+  url: https://openstax.org/books/chemistry-2e/pages/14-introduction
+  note: pH, buffers, and titrations.
+- title: OpenStax Chemistry 2e — Solubility
+  url: https://openstax.org/books/chemistry-2e/pages/11-3-solubility
+  note: Solubility rules and electrolyte strength.
+review_questions:
+- q: Water's high boiling point is primarily due to…
+  options:
+    A: Ionic bonding
+    B: Hydrogen bonding
+    C: London dispersion
+    D: Covalent bonding
+  answer: B
+  explain: Extensive hydrogen-bond networks require extra energy to break.
+  distractors:
+    A: No ions in pure water.
+    B: Too weak for the magnitude.
+    C: Covalent bonds are within each molecule.
+- q: What is the pH of a 1 x 10^-4 M NaOH solution?
+  options:
+    A: '4'
+    B: '7'
+    C: '10'
+    D: '14'
+  answer: C
+  explain: pOH = -log(10^-4) = 4; pH = 14 - 4 = 10.
+  distractors:
+    A: That is the pH of 10^-4 M HCl.
+    B: NaOH is a base, not neutral.
+    C: That requires 1 M NaOH.
+- q: A buffer is most effective when…
+  options:
+    A: pH is far from pKa
+    B: pH equals pKa
+    C: Only acid is present
+    D: Only base is present
+  answer: B
+  explain: Equal amounts of HA and A- maximize resistance to both added acid and base.
+  distractors:
+    A: Far from pKa means one form dominates.
+    B: Need both components.
+    C: Need both components.
+- q: Which is NOT a colligative property?
+  options:
+    A: Boiling point elevation
+    B: Freezing point depression
+    C: Color intensity
+    D: Osmotic pressure
+  answer: C
+  explain: Colligative properties depend on particle count, not identity or color.
+  distractors:
+    A: Depends on particle count.
+    B: Depends on particle count.
+    C: Depends on particle count.

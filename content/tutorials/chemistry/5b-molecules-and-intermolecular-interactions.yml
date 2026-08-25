@@ -1,0 +1,258 @@
+subject: chemistry
+chapter: 5B · Molecules and intermolecular interactions
+title: 5B · Molecules and Intermolecular Interactions
+overview: Intermolecular forces determine physical properties from boiling point to protein folding. The
+  MCAT tests IMF ranking, polarity, and the hydrophobic effect.
+sections:
+- heading: The intermolecular force hierarchy
+  body:
+  - From strongest to weakest — ion-ion > ion-dipole > hydrogen bonding > dipole-dipole > London dispersion.
+    London dispersion exists in ALL molecules (temporary dipoles from electron fluctuation) and is the
+    only IMF in nonpolar substances.
+  - Hydrogen bonding requires H bonded to N, O, or F, attracting a lone pair on another electronegative
+    atom.
+  check:
+  - q: Which has the strongest intermolecular forces?
+    options:
+      A: CH4
+      B: HCl
+      C: H2O
+      D: NaCl
+    answer: D
+    explain: Ion-ion forces far exceed any dipole or dispersion force.
+    distractors:
+      A: Dispersion only.
+      B: Dipole-dipole.
+      C: Hydrogen bonding but less than ionic.
+  figures:
+  - src: 5b-molecules-and-intermolecular-interactions/fig-031c6194.webp
+    caption: Intramolecular forces (covalent bonds within a molecule) versus intermolecular forces (attractions
+      between molecules).
+    credit: Ch 10 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
+  - src: 5b-molecules-and-intermolecular-interactions/fig-16c35aaa.webp
+    caption: Dipole-dipole attractions between polar molecules via partial charges.
+    credit: Ch 10 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
+- heading: Polarity and dipole moments
+  body:
+  - Molecular polarity depends on bond polarity AND geometry. CO2 is linear and nonpolar (dipoles cancel).
+    H2O is bent and polar. CCl4 is tetrahedral nonpolar; CHCl3 is tetrahedral polar. Like dissolves like
+    — polar solvents dissolve polar and ionic solutes.
+  - Amphipathic molecules with both polar and nonpolar regions form micelles and membranes — the basis
+    of biological structure.
+  check:
+  - q: Which molecule is nonpolar despite having polar bonds?
+    options:
+      A: H2O
+      B: NH3
+      C: CO2
+      D: HF
+    answer: C
+    explain: CO2 is linear — the two bond dipoles cancel.
+    distractors:
+      A: Bent and polar.
+      B: Trigonal pyramidal and polar.
+      C: Diatomic with large EN difference.
+- heading: Physical properties from IMFs
+  body:
+  - Stronger IMFs mean higher boiling point, higher melting point, higher viscosity, and higher surface
+    tension. Water boils at 100C (vs methane at -162C) due to hydrogen bonding. Longer hydrocarbon chains
+    mean stronger dispersion and higher BP.
+  - Vapor pressure is inverse — stronger IMFs mean lower vapor pressure.
+  check:
+  - q: Which liquid has the highest surface tension?
+    options:
+      A: Hexane
+      B: Ethanol
+      C: Water
+      D: Mercury
+    answer: D
+    explain: Metallic bonding in mercury exceeds hydrogen bonding in water.
+    distractors:
+      A: Dispersion only.
+      B: Some H-bonding.
+      C: Strong H-bonding but not metallic.
+- heading: The hydrophobic effect and biology
+  body:
+  - The hydrophobic effect is entropy-driven exclusion of nonpolar molecules from water. Water forms ordered
+    cages around nonpolar surfaces; burying those surfaces releases water, increasing entropy. This is
+    why proteins fold, membranes form, and oil separates from water.
+  - In biology, hydrogen bonds stabilize protein secondary structure, ionic interactions form salt bridges,
+    hydrophobic packing buries nonpolar side chains in cores.
+  check:
+  - q: The hydrophobic effect is primarily driven by…
+    options:
+      A: Strong attraction between nonpolar molecules
+      B: Entropy gain when water is released
+      C: Covalent bonding
+      D: Ionic interactions
+    answer: B
+    explain: Releasing ordered water increases entropy — the driving force.
+    distractors:
+      A: Nonpolar molecules attract weakly.
+      B: No new bonds.
+      C: No ions involved.
+- heading: Partition and gas solubility
+  body:
+  - 'Partition coefficient P equals concentration in organic phase divided by concentration in aqueous
+    phase. High P means lipophilic — crosses membranes readily. Henrys law: gas solubility is proportional
+    to partial pressure above the liquid.'
+  check:
+  - q: A drug has log P = 3. This means it…
+    options:
+      A: Is highly water-soluble
+      B: Is moderately lipophilic
+      C: Cannot cross membranes
+      D: Is ionic
+    answer: B
+    explain: P = 1000-fold organic preference — crosses membranes well.
+    distractors:
+      A: log P < 0 is water-soluble.
+      B: Lipophilic drugs cross membranes well.
+      C: log P does not indicate charge.
+examples:
+- prompt: 'Rank by boiling point: CH4, CH3Cl, CH3OH, LiF.'
+  solution:
+  - LiF (ionic, ~1700C) > CH3OH (H-bonding, 65C) > CH3Cl (dipole-dipole, -24C) > CH4 (dispersion, -162C).
+  answer: LiF > CH3OH > CH3Cl > CH4.
+  distractors:
+    A: Putting CH4 above CH3Cl — dispersion is weaker.
+    B: Putting CH3Cl above CH3OH — H-bonding wins.
+    C: Putting molecular above ionic LiF.
+key_points:
+- IMF hierarchy — ionic > H-bond > dipole-dipole > dispersion.
+- Dispersion exists everywhere; scales with electron count.
+- Geometry determines polarity — linear/symmetric cancel, bent/asymmetric reinforce.
+- Stronger IMFs = higher BP/MP/viscosity, lower vapor pressure.
+- Hydrophobic effect is entropy-driven water release.
+- Partition coefficient P predicts membrane crossing.
+mnemonics:
+- phrase: Ion before H-bond, H-bond before dipole, dipole before dispersion
+  means: IMF ranking.
+- phrase: Like dissolves like
+  means: Polar dissolves polar; nonpolar dissolves nonpolar.
+maps:
+- title: IMF to physical property
+  steps:
+  - stronger IMFs
+  - higher BP and MP
+  - lower vapor pressure
+  - higher viscosity and surface tension
+- title: Hydrophobic effect
+  steps:
+  - nonpolar surface in water
+  - water forms ordered cage — entropy cost
+  - surface is buried
+  - water is released — entropy gain
+passage:
+  text: Four liquids are tested. A boils at 100C, is viscous, dissolves NaCl. B boils at 80C, dissolves
+    NaCl poorly. C boils at -162C, does not dissolve NaCl. D boils at 1465C, solid at room temperature.
+  questions:
+  - q: Liquid A is most likely…
+    options:
+      A: Water
+      B: Methane
+      C: Argon
+      D: NaCl
+    answer: A
+    explain: 100C BP, viscous, dissolves ionic NaCl.
+    distractors:
+      A: Gas at room temperature.
+      B: Noble gas.
+      C: NaCl is liquid D.
+  - q: Liquid C is nonpolar because…
+    options:
+      A: Very low BP and no NaCl dissolution
+      B: It is a solid
+      C: It is viscous
+      D: Conducts electricity
+    answer: A
+    explain: Extremely low BP implies dispersion-only IMFs.
+    distractors:
+      A: It is a gas.
+      B: Not mentioned.
+      C: Not tested.
+  - q: Liquid D being solid suggests…
+    options:
+      A: Ionic or metallic bonding
+      B: Dispersion only
+      C: No IMFs
+      D: It is a gas
+    answer: A
+    explain: Very high BP and solid state imply ionic lattice.
+    distractors:
+      A: Dispersion alone would not do this.
+      B: All have IMFs.
+      C: It is solid.
+pitfalls:
+- Calling H-bonds covalent — they are attractions.
+- Assuming more polar always means higher BP — mass matters for dispersion.
+- Treating hydrophobic effect as enthalpic — it is entropic.
+exam_map:
+  NMAT: Definitions and ranking.
+  MCAT: Content Category 5B — IMF ranking, partition, hydrophobic-effect passages.
+sources:
+- ref: openstax-chemistry-2e
+  used:
+  - 'Ch 10: Liquids and Solids'
+  - 'Ch 11: Intermolecular Forces'
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC5, CC 5B
+  relation: consulted
+further_reading:
+- title: OpenStax Chemistry 2e — Intermolecular Forces
+  url: https://openstax.org/books/chemistry-2e/pages/10-1-intermolecular-forces
+  note: All four IMF types.
+- title: OpenStax Chemistry 2e — Liquids and Intermolecular Forces
+  url: https://openstax.org/books/chemistry-2e/pages/10-introduction
+  note: IMF hierarchy with worked comparisons.
+review_questions:
+- q: Which IMF exists in ALL molecules?
+  options:
+    A: Ionic
+    B: Hydrogen bonding
+    C: London dispersion
+    D: Dipole-dipole
+  answer: C
+  explain: Temporary dipoles arise in any molecule.
+  distractors:
+    A: Ionic compounds only.
+    B: Requires H on N/O/F.
+    C: Polar molecules only.
+- q: CO2 is nonpolar because…
+  options:
+    A: Bonds are nonpolar
+    B: Linear geometry cancels dipoles
+    C: It is a gas
+    D: Carbon has no EN
+  answer: B
+  explain: Two equal dipoles point opposite — net zero.
+  distractors:
+    A: C=O is quite polar.
+    B: Phase irrelevant.
+    C: Carbon is moderately EN.
+- q: Highest vapor pressure at 25C?
+  options:
+    A: Water
+    B: Methanol
+    C: Diethyl ether
+    D: Mercury
+  answer: C
+  explain: Weakest IMFs — no H-bond donors.
+  distractors:
+    A: Strong H-bonding.
+    B: Some H-bonding.
+    C: Metallic — lowest VP.
+- q: The hydrophobic effect increases…
+  options:
+    A: Enthalpy
+    B: Entropy of water
+    C: Bond energy
+    D: pH
+  answer: B
+  explain: Releasing ordered water increases entropy.
+  distractors:
+    A: Not primarily enthalpic.
+    B: No new bonds.
+    C: Unrelated.

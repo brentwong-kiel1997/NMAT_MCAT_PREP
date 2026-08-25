@@ -1,0 +1,273 @@
+subject: chemistry
+chapter: Analytical Chemistry
+title: Analytical Chemistry
+overview: Measurement science — titrations, buffers, spectroscopy, and error analysis. NMAT loves acid-base
+  calculations; the MCAT folds these tools into experimental passages. Prerequisites — general chemistry
+  and 5A solution chemistry.
+sections:
+- heading: Solution concentration and stoichiometry
+  body:
+  - Molarity M = moles solute per liter solution; molality m = moles per kilogram solvent (temperature-independent,
+    used for colligative properties). ==Dilution follows M1V1 = M2V2== — moles are conserved, concentration
+    falls with volume.
+  - Solution stoichiometry converts between reagents through mole ratios exactly as mass stoichiometry
+    does — ==the limiting reagent is whichever produces less product==. Titration math is just stoichiometry
+    at the equivalence point.
+  check:
+  - q: 45 mL of 0.20 M NaCl is diluted to 150 mL. The new molarity is…
+    options:
+      A: 0.060 M
+      B: 0.15 M
+      C: 0.20 M
+      D: 0.67 M
+    answer: A
+    explain: M2 = M1V1/V2 = 0.20 x 45 / 150 = 0.060 M.
+    distractors:
+      A: Correct arithmetic.
+      B: That is closer to undiluted.
+      C: Unchanged only if volume unchanged.
+      D: That is concentration going up.
+- heading: Acid-base titrations
+  body:
+  - At the equivalence point, moles of acid equal moles of base. ==Strong acid + strong base gives pH
+    7 at equivalence==; weak acid + strong base ends basic (conjugate base dominates); weak base + strong
+    acid ends acidic.
+  - The half-equivalence point is special — ==pH there equals pKa==, because [HA] = [A-]. Indicators are
+    weak acids whose color change spans about pKa +/- 1 — pick one whose range brackets the expected equivalence
+    pH.
+  check:
+  - q: Titrating acetic acid (pKa 4.76) with NaOH, the pH at half-equivalence is…
+    options:
+      A: '2.38'
+      B: '4.76'
+      C: '7.00'
+      D: '9.24'
+    answer: B
+    explain: At half-equivalence [HA] = [A-] and pH = pKa.
+    distractors:
+      A: Half of pKa is not the rule.
+      B: True only for strong-strong.
+      C: Equivalence for weak acid is basic, but half-equivalence is pKa.
+      D: That is beyond equivalence.
+  figures:
+  - src: analytical-chemistry/fig-457d4944.webp
+    caption: Titration curves for weak versus strong acid with 0.100 M NaOH — equivalence pH 8.72 vs 7.00,
+      with indicator ranges overlaid.
+    credit: Ch 14 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
+- heading: Buffers
+  body:
+  - 'A buffer resists pH change — a weak acid plus its conjugate base. ==Henderson-Hasselbalch: pH = pKa
+    + log([A-]/[HA])==. Buffers are most effective when pH is within pKa +/- 1, where both species are
+    substantial.'
+  - Capacity comes from absolute amounts — more moles absorb more added acid or base. ==Adding a small
+    amount of strong acid converts A- to HA==; the ratio shifts one notch rather than the pH jumping,
+    which is the whole point.
+  check:
+  - q: A buffer has equal moles of HA and A-. Adding a small amount of HCl will…
+    options:
+      A: Drop pH by several units
+      B: Convert some A- to HA with small pH change
+      C: Have no effect at all
+      D: Neutralize all the acid only
+    answer: B
+    explain: Added H+ consumes A-; ratio shifts modestly — that is buffering.
+    distractors:
+      A: Unbuffered behavior.
+      B: pH does change slightly.
+      C: The buffer does resist but not infinitely.
+  figures:
+  - src: analytical-chemistry/fig-620c6acf.webp
+    caption: pH color-change ranges of common indicators — choose one that brackets the equivalence point.
+    credit: Ch 14 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
+- heading: Spectroscopy and Beer-Lambert law
+  body:
+  - ==A = epsilon x l x c== — absorbance scales with molar absorptivity, path length, concentration. Calibration
+    curves (A versus c) turn absorbance into concentration. Color intensity tracks concentration — the
+    basis of colorimetric assays.
+  - Structural spectroscopy — IR identifies bonds (stretching frequencies), NMR identifies hydrogen environments
+    (chemical shift, splitting), mass spectrometry gives molecular mass and fragmentation. ==The MCAT
+    mostly tests what each method measures, not detailed spectra reading==.
+  check:
+  - q: Doubling the concentration of an absorbing species…
+    options:
+      A: Doubles absorbance
+      B: Halves absorbance
+      C: Doubles transmittance
+      D: Leaves A unchanged
+    answer: A
+    explain: Beer-Lambert is linear in concentration at fixed path length.
+    distractors:
+      A: Wrong direction.
+      B: Transmittance falls.
+      C: A depends on c.
+- heading: Error, precision, and accuracy
+  body:
+  - Accuracy is closeness to truth; precision is reproducibility. ==Systematic errors bias all measurements
+    the same way (calibration); random errors scatter (averaging helps)==. Significant figures carry uncertainty
+    honestly — calculated results never gain precision.
+  - Percent error = |experimental - true| / true x 100. When a passage reports replicate measurements,
+    read the scatter as precision and the mean's distance from a reference as accuracy — the MCAT loves
+    distinguishing the two in data interpretation.
+  check:
+  - q: Five measurements cluster tightly but all sit above the true value. This is…
+    options:
+      A: Precise but inaccurate
+      B: Accurate but imprecise
+      C: Both
+      D: Neither
+    answer: A
+    explain: Low scatter (precise) with a consistent bias (inaccurate) — systematic error.
+    distractors:
+      A: Scatter is low.
+      B: Scatter would be high.
+      C: Close to true value would make it both.
+examples:
+- prompt: 25.0 mL of 0.100 M HCl is titrated with 0.050 M NaOH. What volume of base reaches equivalence?
+  solution:
+  - Moles acid = 0.100 x 0.0250 L = 2.50e-3 mol.
+  - Equivalence — moles base = moles acid = 2.50e-3 mol.
+  - Volume base = 2.50e-3 mol / 0.050 M = 0.050 L = 50.0 mL.
+  answer: 50.0 mL of NaOH.
+  distractors:
+    A: 25.0 mL — forgetting the base is half as concentrated.
+    B: 12.5 mL — inverting the ratio.
+    C: 100 mL — doubling the wrong way.
+key_points:
+- M1V1 = M2V2 for dilutions.
+- Half-equivalence pH = pKa.
+- Buffers work within pKa +/- 1; capacity scales with total moles.
+- A = epsilon l c — linear calibration.
+- Precision = reproducibility; accuracy = truth; systematic vs random error.
+- Strong-strong equivalence pH 7; weak acid equivalence is basic.
+mnemonics:
+- phrase: Halfway there, pH equals pKa
+  means: The half-equivalence point of any weak titration.
+- phrase: 'HH: pKa plus the log of base over acid'
+  means: Henderson-Hasselbalch ratio direction — never invert it.
+maps:
+- title: Titration curve landmarks (weak acid by strong base)
+  steps:
+  - initial pH set by weak acid alone
+  - half-equivalence — pH = pKa
+  - equivalence — pH > 7 (conjugate base)
+  - beyond — pH set by excess strong base
+- title: Choosing the measurement tool
+  steps:
+  - concentration of a colored solute — Beer-Lambert
+  - identity of functional groups — IR
+  - hydrogen environments — NMR
+  - molecular mass — mass spectrometry
+passage:
+  text: A student prepares a buffer by mixing 100 mL of 0.50 M acetic acid (pKa 4.76) with 100 mL of 0.50
+    M sodium acetate, then adds 10 mL of 0.10 M HCl. Assume volumes are additive.
+  questions:
+  - q: The initial pH of the buffer is…
+    options:
+      A: '4.76'
+      B: '2.38'
+      C: '7.00'
+      D: '9.24'
+    answer: A
+    explain: Equal moles of acid and conjugate base — log(1) = 0, pH = pKa.
+    distractors:
+      A: Not half of pKa.
+      B: Neutral only for strong-strong.
+      C: Basic side is wrong for equal acid/base.
+  - q: The added HCl converts…
+    options:
+      A: HA to A-
+      B: A- to HA
+      C: Both unchanged
+      D: HCl to acetate directly
+    answer: B
+    explain: Added strong acid protonates the conjugate base.
+    distractors:
+      A: That is what added base would do.
+      B: The ratio must shift.
+      C: Net effect is the same as protonating A-.
+  - q: After the addition, the pH…
+    options:
+      A: Rises sharply
+      B: Falls slightly
+      C: Is unchanged
+      D: Falls to 2
+    answer: B
+    explain: The A- to HA ratio drops from 1 to about 0.82 — pH falls by log(0.82) about 0.09 units.
+    distractors:
+      A: Acid was added, not base.
+      B: Small change, not zero — the ratio moved.
+      C: Unbuffered behavior.
+pitfalls:
+- Confusing molarity and molality.
+- Reading pH = 7 at equivalence of a weak acid titration.
+- Inverting the Henderson-Hasselbalch ratio.
+- Treating precision as accuracy.
+- Forgetting solids drop out of K but not of concentrations.
+exam_map:
+  NMAT: Core quantitative — dilution, titration, pH calculations, buffers.
+  MCAT: Folded into experimental passages — buffer design, calibration curves, error analysis.
+sources:
+- ref: openstax-chemistry-2e
+  used:
+  - 'Ch 14: Acid-Base Equilibria; Ch 4: Stoichiometry'
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC5
+  relation: consulted
+further_reading:
+- title: OpenStax Chemistry 2e — Acid-Base Equilibria
+  url: https://openstax.org/books/chemistry-2e/pages/14-introduction
+  note: Titrations and buffers.
+- title: OpenStax Chemistry 2e — Stoichiometry of Chemical Reactions
+  url: https://openstax.org/books/chemistry-2e/pages/4-introduction
+  note: Solution stoichiometry.
+review_questions:
+- q: Molality is defined as…
+  options:
+    A: Moles per liter of solution
+    B: Moles per kilogram of solvent
+    C: Grams per liter
+    D: Moles per mole
+  answer: B
+  explain: Mass-based — independent of temperature.
+  distractors:
+    A: That is molarity.
+    B: Not a standard unit.
+    C: That is a mole fraction flavor.
+- q: A good indicator for a weak acid-strong base titration has…
+  options:
+    A: pKa near 7
+    B: pKa near the equivalence pH (basic)
+    C: pKa near the acid's pKa
+    D: Any pKa
+  answer: B
+  explain: The color change must bracket the equivalence point pH.
+  distractors:
+    A: That fits strong-strong.
+    B: Half-equivalence is not where the jump is.
+    C: Choice matters.
+- q: Beer-Lambert absorbance is linear in…
+  options:
+    A: Path length only
+    B: Concentration and path length
+    C: Wavelength
+    D: Transmittance
+  answer: B
+  explain: A = epsilon l c — both scale it directly.
+  distractors:
+    A: Concentration also.
+    B: Wavelength sets epsilon.
+    C: A = -log T — logarithmic, not linear.
+- q: A systematic error is best reduced by…
+  options:
+    A: More trials
+    B: Recalibration or correction
+    C: Larger samples
+    D: Better randomization
+  answer: B
+  explain: Bias does not average out — fix the instrument or method.
+  distractors:
+    A: Random error averages; bias persists.
+    B: Helps sampling, not bias.
+    C: Helps sampling.

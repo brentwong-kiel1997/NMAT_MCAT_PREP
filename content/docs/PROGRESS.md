@@ -1,6 +1,6 @@
 # Tutorial Fill Progress (content/tutorials)
 
-> 71 unique chapters grouped by discipline · **25 published tutorials**.
+> 70 unique chapters grouped by discipline · **35 published tutorials**.
    Update this file **together with** every chapter you publish.
 
 Legend: **✅ Published** · ⬜ Not started · Exams column shows each chapter's annotation.
@@ -40,21 +40,20 @@ Legend: **✅ Published** · ⬜ Not started · Exams column shows each chapter'
 | 11 | 9A · Understanding social structure | MCAT | ✅ Published | [tutorial](tutorials/psych-soc/9a-understanding-social-structure.yml) |
 | 12 | 9B · Demographic characteristics and processes | MCAT | ✅ Published | [tutorial](tutorials/psych-soc/9b-demographic-characteristics-and-processes.yml) |
 
-### Chemistry (chemistry) · 11 chapters
+### Chemistry (chemistry) · 10 chapters
 
 | # | Chapter | Exams | Status | Tutorial |
 |---|---|---|---|---|
-| 1 | 4E · Atoms, nuclear decay, electronic structure | NMAT · MCAT | ⬜ Not started | — |
-| 2 | 4E · Atoms, nuclear decay, electronic structure | NMAT · MCAT | ⬜ Not started | — |
-| 3 | 5A · Unique nature of water and its solutions | NMAT · MCAT | ⬜ Not started | — |
-| 4 | 5B · Molecules and intermolecular interactions | NMAT · MCAT | ⬜ Not started | — |
-| 5 | 5C · Separation and purification methods | NMAT · MCAT | ⬜ Not started | — |
-| 6 | 5D · Biologically relevant molecules | NMAT · MCAT | ⬜ Not started | — |
-| 7 | 5E · Chemical thermodynamics and kinetics | NMAT · MCAT | ⬜ Not started | — |
-| 8 | Analytical Chemistry | NMAT · MCAT | ⬜ Not started | — |
-| 9 | Biochemistry | NMAT · MCAT | ⬜ Not started | — |
-| 10 | General Chemistry | NMAT · MCAT | ⬜ Not started | — |
-| 11 | Organic Chemistry | NMAT · MCAT | ⬜ Not started | — |
+| 1 | 4E · Atoms, nuclear decay, electronic structure | NMAT · MCAT | ✅ Published | [tutorial](tutorials/chemistry/4e-atoms-nuclear-decay-electronic-structure.yml) |
+| 2 | 5A · Unique nature of water and its solutions | NMAT · MCAT | ✅ Published | [tutorial](tutorials/chemistry/5a-unique-nature-of-water-and-its-solutions.yml) |
+| 3 | 5B · Molecules and intermolecular interactions | NMAT · MCAT | ✅ Published | [tutorial](tutorials/chemistry/5b-molecules-and-intermolecular-interactions.yml) |
+| 4 | 5C · Separation and purification methods | NMAT · MCAT | ✅ Published | [tutorial](tutorials/chemistry/5c-separation-and-purification-methods.yml) |
+| 5 | 5D · Biologically relevant molecules | NMAT · MCAT | ✅ Published | [tutorial](tutorials/chemistry/5d-biologically-relevant-molecules.yml) |
+| 6 | 5E · Chemical thermodynamics and kinetics | NMAT · MCAT | ✅ Published | [tutorial](tutorials/chemistry/5e-chemical-thermodynamics-and-kinetics.yml) |
+| 7 | Analytical Chemistry | NMAT · MCAT | ✅ Published | [tutorial](tutorials/chemistry/analytical-chemistry.yml) |
+| 8 | Biochemistry | NMAT · MCAT | ✅ Published | [tutorial](tutorials/chemistry/biochemistry.yml) |
+| 9 | General Chemistry | NMAT · MCAT | ✅ Published | [tutorial](tutorials/chemistry/general-chemistry.yml) |
+| 10 | Organic Chemistry | NMAT · MCAT | ✅ Published | [tutorial](tutorials/chemistry/organic-chemistry.yml) |
 
 ### Physics (physics) · 9 chapters
 

@@ -1,0 +1,275 @@
+subject: chemistry
+chapter: Biochemistry
+title: Biochemistry
+overview: Chemistry inside living systems — protein structure, enzymes, metabolism, and regulation. The
+  MCAT's biochem passasges live here. Prerequisites — 5D biomolecules and 5E thermodynamics/kinetics.
+sections:
+- heading: Protein structure — four levels
+  body:
+  - ==Primary is sequence; secondary is local folding (alpha-helix, beta-sheet, held by backbone H-bonds);
+    tertiary is the full 3D fold (hydrophobic effect, H-bonds, ion pairs, disulfides); quaternary is multi-subunit
+    assembly==.
+  - Denaturation unfolds structure without breaking peptide bonds — heat, pH extremes, detergents, reducing
+    agents for disulfides. ==The Anfinsen experiment (ribonuclease refolding) established that primary
+    sequence encodes the native fold== — the central dogma of protein folding.
+  check:
+  - q: Alpha-helices are stabilized primarily by…
+    options:
+      A: Hydrophobic interactions
+      B: Backbone hydrogen bonds
+      C: Disulfide bridges
+      D: Peptide bond hydrolysis
+    answer: B
+    explain: C=O of one residue H-bonds to N-H four residues along the helix.
+    distractors:
+      A: That drives tertiary fold.
+      B: Tertiary stabilizer.
+      C: Destroys structure.
+- heading: Enzymes — catalysis and kinetics
+  body:
+  - Enzymes lower activation energy by stabilizing the transition state — ==they raise kcat, never shift
+    delta-G or K==. Michaelis-Menten — v = Vmax[S]/(Km + [S]). ==Km is the substrate concentration at
+    half-Vmax== — low Km means high affinity.
+  - Inhibition — competitive raises apparent Km (Vmax unchanged, overcome by more substrate); noncompetitive
+    lowers Vmax (Km unchanged); uncompetitive lowers both. ==Lineweaver-Burk plots expose the pattern
+    — competitive lines cross on the y-axis==.
+  check:
+  - q: A competitive inhibitor…
+    options:
+      A: Lowers Vmax
+      B: Raises apparent Km
+      C: Lowers Km
+      D: Cannot be overcome
+    answer: B
+    explain: Substrate competes for the active site — more substrate restores Vmax but the Km shift persists.
+    distractors:
+      A: Vmax is unchanged.
+      B: Wrong direction.
+      C: It can be overcome by substrate.
+- heading: Regulation — allostery and covalent modification
+  body:
+  - Allosteric enzymes show sigmoid kinetics — cooperativity (binding at one site shifts others). ==Allosteric
+    effectors shift the curve — activators left, inhibitors right== without being overcome by substrate.
+    Feedback inhibition — the pathway end product inhibits an early committed step.
+  - Covalent modification — phosphorylation by kinases, dephosphorylation by phosphatases — flips activity
+    in seconds. ==Zymogens are inactive enzyme precitors activated by proteolysis (trypsinogen to trypsin)==
+    — irreversible but amplifying.
+  check:
+  - q: Sigmoid (rather than hyperbolic) kinetics indicates…
+    options:
+      A: Competitive inhibition
+      B: Cooperative binding
+      C: Zero-order
+      D: Denaturation
+    answer: B
+    explain: Multiple sites communicate — binding at one raises affinity at the rest.
+    distractors:
+      A: Competitive keeps hyperbolic shape.
+      B: Order is unrelated.
+      C: Denaturation kills activity.
+- heading: Metabolism overview — the energy map
+  body:
+  - Glycolysis — glucose to 2 pyruvate, cytosol, ==net 2 ATP + 2 NADH==; investment phase spends 2 ATP,
+    payoff makes 4. Pyruvate enters mitochondria — acetyl-CoA, then the TCA cycle (2 ATP/GTP, 6 NADH,
+    2 FADH2 per glucose's two turns), then oxidative phosphorylation.
+  - ==Total aerobic yield about 30-32 ATP per glucose==. NADH feeds about 2.5 ATP, FADH2 about 1.5 through
+    the electron transport chain. Fermentation regenerates NAD+ when oxygen is absent — lactate (muscle)
+    or ethanol plus CO2 (yeast).
+  check:
+  - q: The net ATP from glycolysis alone per glucose is…
+    options:
+      A: '2'
+      B: '4'
+      C: 30-32
+      D: 36-38
+    answer: A
+    explain: 4 made minus 2 invested in the priming phase.
+    distractors:
+      A: Gross, not net.
+      B: Full aerobic total.
+      C: Older textbook total.
+  figures:
+  - src: biochemistry/fig-30c947dd.webp
+    caption: Mitochondrion architecture — electron transport chain and ATP synthase embedded in the inner
+      membrane.
+    credit: Ch 7 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+  - src: biochemistry/fig-372c7a31.webp
+    caption: Substrate-level phosphorylation — an enzyme transfers a phosphate group to ADP, making ATP.
+    credit: Ch 7 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+- heading: Metabolic regulation and integration
+  body:
+  - Key control points match committed steps — ==phosphofructokinase (glycolysis, inhibited by ATP and
+    citrate, activated by AMP), pyruvate dehydrogenase (acetyl-CoA entry), isocitrate dehydrogenase (TCA)==.
+    Hormones overlay the local control — insulin (fed, promote storage) versus glucagon and epinephrine
+    (fasting, mobilize).
+  - Fed versus fasting states re-route traffic — liver buffers blood glucose, adipose stores or releases
+    fatty acids, muscle takes glucose or burns fat. ==The Cori cycle and the glucose-alanine cycle move
+    muscle intermediates back to the liver for gluconeogenesis==.
+  check:
+  - q: PFK-1 is inhibited by…
+    options:
+      A: AMP
+      B: ATP and citrate
+      C: Fructose-2,6-bisphosphate
+      D: Insulin
+    answer: B
+    explain: High energy charge and abundant citrate signal that glycolysis should slow.
+    distractors:
+      A: AMP activates — low energy.
+      B: F2,6BP activates PFK-1 strongly.
+      C: Insulin works upstream.
+examples:
+- prompt: An enzyme has Km = 2 mM and Vmax = 100 umol/min. At [S] = 6 mM, what fraction of Vmax is observed?
+  solution:
+  - Michaelis-Menten — v = Vmax[S]/(Km + [S]).
+  - v/Vmax = 6 / (2 + 6) = 6/8 = 0.75.
+  - When [S] = 3Km, the rate is always 75% of Vmax.
+  answer: 75 umol/min — 0.75 Vmax.
+  distractors:
+    A: Assuming saturation — that needs [S] >> Km.
+    B: 50% only holds at [S] = Km.
+    C: Computing 6/(6-2) or similar ratio errors.
+key_points:
+- Four structure levels; denaturation spares peptide bonds.
+- Enzymes lower Ea — Vmax and Km diagnostics of inhibition type.
+- Allosteric enzymes are sigmoid; covalent modification flips activity fast.
+- Glycolysis nets 2 ATP + 2 NADH; full aerobic yield 30-32 ATP.
+- PFK-1 is the glycolytic control point — ATP/citrate inhibit, AMP activates.
+- Fed state stores (insulin); fasting mobilizes (glucagon).
+mnemonics:
+- phrase: Competitive crosses the y-axis, noncompetitive shares the x-axis
+  means: Lineweaver-Burk signature of each inhibition type.
+- phrase: Km low, affinity high
+  means: Less substrate needed to reach half-Vmax.
+maps:
+- title: Glucose fate with oxygen
+  steps:
+  - glycolysis (cytosol) — 2 ATP, 2 NADH
+  - pyruvate dehydrogenase — acetyl-CoA
+  - TCA cycle (2 turns) — 2 GTP, 6 NADH, 2 FADH2
+  - oxidative phosphorylation — ~26-28 ATP
+- title: Inhibition fingerprints
+  steps:
+  - competitive — Km up, Vmax same
+  - noncompetitive — Vmax down, Km same
+  - uncompetitive — both down, parallel Lineweaver-Burk
+passage:
+  text: A researcher measures an enzyme's rate versus substrate concentration with and without inhibitor
+    X. Without inhibitor, Km = 1 mM, Vmax = 40. With X, the apparent Km = 3 mM and Vmax = 40. Double-reciprocal
+    plots with and without X intersect on the y-axis.
+  questions:
+  - q: X is a…
+    options:
+      A: Competitive inhibitor
+      B: Noncompetitive inhibitor
+      C: Uncompetitive inhibitor
+      D: Allosteric activator
+    answer: A
+    explain: Km rises, Vmax unchanged, y-axis intersection — the competitive signature.
+    distractors:
+      A: Noncompetitive cuts Vmax.
+      B: Uncompetitive lowers both.
+      C: An activator would do the opposite.
+  - q: The inhibitor most likely binds…
+    options:
+      A: The active site
+      B: An allosteric site only
+      C: The substrate
+      D: The product
+    answer: A
+    explain: Competitive inhibitors are active-site look-alikes competing with substrate.
+    distractors:
+      A: Allosteric binding gives noncompetitive patterns.
+      B: Substrate does not inhibit itself here.
+      C: Product inhibition can be competitive but the data says active site.
+  - q: Raising [S] to 100 mM in the presence of X would…
+    options:
+      A: Restore Vmax
+      B: Lower Vmax further
+      C: Not change rate
+      D: Denature the enzyme
+    answer: A
+    explain: Excess substrate outcompetes the inhibitor — Vmax is reachable.
+    distractors:
+      A: Vmax was never reduced.
+      B: Rate keeps climbing with [S].
+      C: Concentration is not denaturing.
+pitfalls:
+- Saying enzymes change delta-G or equilibrium — they do not.
+- Gross (4) instead of net (2) glycolysis ATP.
+- Confusing noncompetitive with uncompetitive.
+- Forgetting that Km reflects affinity only when kcat is similar.
+- Attributing sigmoid kinetics to Michaelis-Menten enzymes.
+exam_map:
+  NMAT: Enzyme basics, metabolic pathway order, ATP yields.
+  MCAT: Passage core — kinetics interpretation, regulation logic, pathway integration under fed/fasted
+    states.
+sources:
+- ref: openstax-biology-2e
+  used:
+  - 'Ch 6-8: Metabolism, Cell Communication, Cellular Respiration'
+  relation: consulted
+- ref: openstax-chemistry-2e
+  used:
+  - Ch 18-21 support
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC1, FC5
+  relation: consulted
+further_reading:
+- title: OpenStax Biology 2e — Cellular Respiration
+  url: https://openstax.org/books/biology-2e/pages/7-introduction
+  note: Metabolism end to end.
+- title: OpenStax Biology 2e — Metabolism
+  url: https://openstax.org/books/biology-2e/pages/6-introduction
+  note: Enzymes and free energy.
+review_questions:
+- q: Enzymes accelerate reactions by…
+  options:
+    A: Lowering delta-G
+    B: Lowering Ea
+    C: Raising K
+    D: Heating the cell
+  answer: B
+  explain: Transition-state stabilization — thermodynamic quantities untouched.
+  distractors:
+    A: Delta-G is a state function.
+    B: K is temperature-only.
+    C: Not thermal.
+- q: NADH yields about how many ATP via oxidative phosphorylation?
+  options:
+    A: '1'
+    B: '1.5'
+    C: '2.5'
+    D: '5'
+  answer: C
+  explain: Complex I entry — enough proton pumping for ~2.5 ATP.
+  distractors:
+    A: That is FADH2.
+    B: FADH2 again.
+    C: Overcount.
+- q: Which is a zymogen?
+  options:
+    A: Trypsin
+    B: Trypsinogen
+    C: Amylase
+    D: Pepsin
+  answer: B
+  explain: Inactive precursor — cleaved to active trypsin in the gut.
+  distractors:
+    A: Already active.
+    B: Secreted active.
+    C: Activated counterpart.
+- q: During fasting, the liver primarily…
+  options:
+    A: Stores glucose as glycogen
+    B: Performs gluconeogenesis
+    C: Synthesizes fat from glucose
+    D: Uptakes fatty acids
+  answer: B
+  explain: Glucagon drives glucose output to protect blood glucose for the brain.
+  distractors:
+    A: That is the fed state.
+    B: Fed state.
+    C: Adipose releases fat to the liver.
