@@ -25,7 +25,7 @@ the single source of truth — there is no generated artifact to keep in sync.
 | `materials/tips.yml` | Exam strategy tips (NMAT / MCAT / BOTH) | 21 tips |
 | `materials/paths.yml` | Suggested study paths with step links | 7 paths |
 | `materials/checklists.yml` | Exam-day and study checklists | 3 lists |
-| `tutorials/<subject>/<chapter>.yml` | Full textbook chapters: overview, teaching sections, tables, worked examples, key points, pitfalls, exam map, sources | 1 → 90 (growing) |
+| `tutorials/<subject>/<chapter>.yml` | Full textbook chapters: overview, teaching sections, tables, worked examples, key points, pitfalls, exam map, sources | 70 (complete) |
 | `docs/TUTORIAL_TEMPLATE.md` | Authoring template + field reference for new chapters | — |
 | `docs/PROGRESS.md` | Per-chapter fill progress tracker (90 chapters) | 1 / 90 |
 | `docs/CHAPTER_LOG.md` | Per-chapter development log — what was actually done, decisions, landmines | 001 / 90 |
