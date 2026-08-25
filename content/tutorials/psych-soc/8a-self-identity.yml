@@ -23,10 +23,6 @@ sections:
       A: Requires exploration first.
       B: Exploring, no commitment.
       C: Neither.
-  figures:
-  - src: 8a-self-identity/erikson-stages.svg
-    caption: Erikson's eight psychosocial crises across the lifespan.
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Self-concept, esteem, efficacy
   body:
   - Self-esteem is the evaluation; self-efficacy (Bandura) is task-specific confidence — the confusion
@@ -63,10 +59,6 @@ sections:
       A: Effort drop.
       B: Anonymity disinhibition.
       C: Familiarity, not allocation.
-  figures:
-  - src: 8a-self-identity/identity-statuses.svg
-    caption: Marcia's 2×2 — exploration × commitment yielding the four statuses.
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Self-concept across cultures
   body:
   - Culture shapes the default self — **individualist** cultures build an independent self (traits, autonomy,

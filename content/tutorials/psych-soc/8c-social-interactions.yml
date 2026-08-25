@@ -58,10 +58,6 @@ sections:
       A: Performance under observation.
       B: Anonymity.
       C: Group favoritism.
-  figures:
-  - src: 8c-social-interactions/bystander-tree.svg
-    caption: Latané and Darley's helping decision tree with crowd failure at each node.
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Attraction
   body:
   - Determinants stack — proximity and mere exposure, similarity (strongest single predictor), attractiveness
@@ -80,10 +76,6 @@ sections:
       A: Pairing with similar partners.
       B: Arousal component.
       C: Cost-benefit framing.
-  figures:
-  - src: 8c-social-interactions/sternberg-triangle.svg
-    caption: Sternberg's triangular model of love — intimacy, passion, commitment.
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 examples:
 - prompt: Batson's design — easy vs. hard escape crossed with empathy level. Predict the finding.
   solution:

@@ -26,10 +26,6 @@ sections:
       A: Effort drop — not this.
       B: No planted majority.
       C: Anonymity effects, absent.
-  figures:
-  - src: 7b-social-processes-that-influence-behavior/asch-lines.svg
-    caption: Asch's line judgment — the standard line vs. comparison lines and the confederate majority.
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Obedience — authority's pull
   body:
   - Milgram — ~65% administered maximum shock when an experimenter insisted. Levers — proximity of authority
@@ -49,10 +45,6 @@ sections:
       A: No group norm — a hierarchy.
       B: Performance in mere presence.
       C: Group decision defect.
-  figures:
-  - src: 7b-social-processes-that-influence-behavior/milgram-shock.svg
-    caption: Milgram's shock generator and the experimenter-participant setup.
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Attribution, attitudes, persuasion
   body:
   - Attribution — dispositional versus situational — with the fundamental attribution error (overweighting

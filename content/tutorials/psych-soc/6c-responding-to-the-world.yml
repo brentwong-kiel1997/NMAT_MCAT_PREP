@@ -27,9 +27,9 @@ sections:
       B: Operant procedure.
       C: New neutral stimulus paired with the CS.
   figures:
-  - src: 6c-responding-to-the-world/pavlov-dog.svg
-    caption: Pavlov's apparatus — the conditioned stimulus pathway from bell to salivation.
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
+  - src: 6c-responding-to-the-world/skinner-box.webp
+    caption: B.F. Skinner and the operant chamber — lever press, food dispenser, consequence loop.
+    credit: Fig 6.10 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Operant conditioning — learning by consequence
   body:
   - Consequences shape voluntary behavior — reinforcement increases (positive adds good; negative removes
@@ -52,9 +52,10 @@ sections:
       B: Interval schedules time the FIRST response.
       C: Same objection.
   figures:
-  - src: 6c-responding-to-the-world/skinner-box.svg
-    caption: Operant chamber — lever press, food dispenser, the consequence loop.
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
+  - src: 6c-responding-to-the-world/reinforcement-schedules.webp
+    caption: The four reinforcement schedules yield distinct response patterns — variable ratio is steepest
+      and most extinction-resistant.
+    credit: Fig 6.13 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Observational learning and cognition in learning
   body:
   - Bandura's Bobo-doll studies — children who watched an adult rewarded for aggression imitated more
@@ -76,6 +77,10 @@ sections:
       A: No approximations were reinforced.
       B: No stimulus-stimulus pairing.
       C: No consequence decreased behavior.
+  figures:
+  - src: 6c-responding-to-the-world/cognitive-map.webp
+    caption: Tolman's cognitive map — latent learning in maze-running rats without reinforcement.
+    credit: Fig 6.15 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Responding under uncertainty — heuristics
   body:
   - Cognition's shortcuts cut errors too — representativeness (judging by similarity to prototype), availability

@@ -35,7 +35,8 @@ def audit(disc):
         kp = len(d.get("key_points") or [])
         fails = []
         if secs < BENCH["secs"]: fails.append(f"secs{secs}<{BENCH['secs']}")
-        if figs < BENCH["figs"]: fails.append(f"figs{figs}<{BENCH['figs']}")
+        figs_on_disk = sum(1 for s in d.get("sections") or [] for fig in s.get("figures") or [] if (REPO / "content" / "images" / fig.get("src", "")).exists())
+        if figs < BENCH["figs"] or figs_on_disk < BENCH["figs"]: fails.append(f"figs{figs_on_disk}disk/{figs}ref<{BENCH['figs']}")
         if checks < secs: fails.append(f"checks{checks}<{secs}")
         if mnem < BENCH["mnem"]: fails.append(f"mnem{mnem}<{BENCH['mnem']}")
         if maps < BENCH["maps"]: fails.append(f"maps{maps}<{BENCH['maps']}")

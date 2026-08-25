@@ -27,9 +27,9 @@ sections:
       B: Change blindness compares scene versions.
       C: The counting task consumed attention — the failure mode.
   figures:
-  - src: 6b-making-sense-of-the-environment/invisible-gorilla.svg
-    caption: Selective attention — counting passes, the unexpected goes unseen.
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
+  - src: 6b-making-sense-of-the-environment/memory-stages.webp
+    caption: Atkinson-Shiffrin model — sensory memory → short-term → long-term with rehearsal loop.
+    credit: Fig 8.4 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Memory systems — the three-box model
   body:
   - Memory is a pipeline — sensory memory (iconic/echoic, under 2 seconds), working memory (~7 items,
@@ -53,9 +53,10 @@ sections:
       B: Working memory is cortical and largely spared.
       C: Sensory registers are unaffected.
   figures:
-  - src: 6b-making-sense-of-the-environment/memory-models.svg
-    caption: The three-box model — sensory, working, long-term with encoding and retrieval arrows.
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
+  - src: 6b-making-sense-of-the-environment/ltm-types.webp
+    caption: Long-term memory taxonomy — explicit (episodic, semantic) versus implicit (procedural, priming,
+      conditioning).
+    credit: Fig 8.6 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Encoding, retrieval, and their failures
   body:
   - Depth of processing governs encoding — shallow (structural) loses to deep (semantic). Retrieval is

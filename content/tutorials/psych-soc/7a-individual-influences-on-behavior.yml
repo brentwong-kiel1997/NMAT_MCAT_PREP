@@ -46,10 +46,6 @@ sections:
       A: James-Lange ties emotion to specific bodily patterns.
       B: Simultaneity without labeling is not the point.
       C: Motivation, not emotion theory.
-  figures:
-  - src: 7a-individual-influences-on-behavior/maslow-pyramid.svg
-    caption: Maslow's hierarchy — physiological through self-actualization.
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Personality — four theoretical families
   body:
   - Match the family to its fingerprint — psychoanalytic (Freud — id/ego/superego, defense mechanisms),
@@ -92,10 +88,6 @@ sections:
       A: Initial mobilization.
       B: Sustained coping before collapse.
       C: Lazarus, not Selye.
-  figures:
-  - src: 7a-individual-influences-on-behavior/gas-stages.svg
-    caption: Selye's general adaptation syndrome — alarm, resistance, exhaustion with cortisol curve.
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 examples:
 - prompt: Two employees face the same layoff. One develops insomnia and illness; the other enrolls in
     retraining. Explain via Lazarus and Selye.

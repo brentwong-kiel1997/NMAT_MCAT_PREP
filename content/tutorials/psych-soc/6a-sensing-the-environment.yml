@@ -30,9 +30,9 @@ sections:
       B: Nothing is skipped; the fraction grows with the base.
       C: Absolute threshold is about detecting presence, not change.
   figures:
-  - src: 6a-sensing-the-environment/eye-anatomy.svg
-    caption: The eye — cornea, lens, retina with rods and cones at the fovea.
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
+  - src: 6a-sensing-the-environment/top-down-bottom-up.webp
+    caption: Top-down versus bottom-up processing — expectation-driven versus stimulus-driven perception.
+    credit: Fig 5.2 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: The senses — receptors and pathways
   body:
   - Know each sense by receptor and stimulus — vision (rods for dim light and motion, cones for color
@@ -55,6 +55,10 @@ sections:
       A: Thresholds govern detection of new stimuli, not fading of constant ones.
       B: No receptor loss occurs.
       C: Attention is top-down; this happens pre-attentively.
+  figures:
+  - src: 6a-sensing-the-environment/muller-lyer.webp
+    caption: The Müller-Lyer illusion — identical lines appear different; culture modulates susceptibility.
+    credit: Fig 5.4 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Perception — building the world from signals
   body:
   - Perception runs bottom-up (feature-driven — edges, colors combine into objects) and top-down (knowledge-driven
@@ -78,9 +82,10 @@ sections:
       B: A Gestalt grouping principle, not depth.
       C: Binocular cue — eyes angling inward.
   figures:
-  - src: 6a-sensing-the-environment/gestalt-grouping.svg
-    caption: Gestalt grouping principles — proximity, similarity, closure organize ambiguous arrays.
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
+  - src: 6a-sensing-the-environment/inattentional-blindness.webp
+    caption: Inattentional blindness — one third miss the red cross while attending to black or white
+      objects.
+    credit: Fig 5.3 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Disorders of sensation and perception
   body:
   - When the pipeline breaks, the exam wants you to name WHERE. Damage to receptors (retinal degeneration,

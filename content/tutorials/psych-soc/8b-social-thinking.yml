@@ -42,10 +42,6 @@ sections:
       A: Explicit misses automatic.
       B: History, not association.
       C: Unrelated.
-  figures:
-  - src: 8b-social-thinking/iat-screenshot.svg
-    caption: The Implicit Association Test — category pairing and latency measurement.
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Attribution in depth — covariation
   body:
   - Kelley's model — consensus (do others do it?), distinctiveness (only here?), consistency (every time?)
@@ -65,10 +61,6 @@ sections:
       A: Low consensus would support that.
       B: Consistency rules out instability.
       C: Not a model term.
-  figures:
-  - src: 8b-social-thinking/kelley-covariation.svg
-    caption: Kelley's covariation cube — consensus, distinctiveness, consistency.
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Judgment shortcuts
   body:
   - Availability drives stereotype-consistent frequency estimates; representativeness drives base-rate

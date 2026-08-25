@@ -65,13 +65,6 @@ sections:
       A: Immediate full exposure.
       B: Pairing with aversive stimulus.
       C: Reinforcement tokens.
-  figures:
-  - src: 7c-attitude-and-behavior-change/stages-of-change.svg
-    caption: The transtheoretical model — precontemplation through maintenance with relapse arrows.
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
-  - src: 7c-attitude-and-behavior-change/cbt-triangle.svg
-    caption: The cognitive triangle — thoughts, feelings, behaviors in CBT.
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Barriers to change — reactance and relapse
   body:
   - Change meets resistance — psychological reactance (threatened freedom produces opposition), boomerang

@@ -41,13 +41,6 @@ sections:
       A: That is a wide base.
       B: Wide base marks high fertility.
       C: Cannot be read from shape alone.
-  figures:
-  - src: 9b-demographic-characteristics-and-processes/transition-stages.svg
-    caption: The demographic transition — CBR/CDR curves across four stages.
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
-  - src: 9b-demographic-characteristics-and-processes/pyramid-shapes.svg
-    caption: Population pyramids by stage — wide base (Stage 2) to top-heavy (Stage 4).
-    credit: Original diagram for this pack — CC BY-NC-SA 4.0
 - heading: Migration and urbanization
   body:
   - Push (conflict, decline) vs. pull (jobs, safety); chain migration via settled kin; remittances flow
