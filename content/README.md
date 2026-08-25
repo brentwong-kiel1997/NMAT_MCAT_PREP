@@ -27,8 +27,8 @@ the single source of truth — there is no generated artifact to keep in sync.
 | `materials/checklists.yml` | Exam-day and study checklists | 3 lists |
 | `tutorials/<subject>/<chapter>.yml` | Full textbook chapters: overview, teaching sections, tables, worked examples, key points, pitfalls, exam map, sources | 70 (complete) |
 | `docs/TUTORIAL_TEMPLATE.md` | Authoring template + field reference for new chapters | — |
-| `docs/PROGRESS.md` | Per-chapter fill progress tracker (90 chapters) | 1 / 90 |
-| `docs/CHAPTER_LOG.md` | Per-chapter development log — what was actually done, decisions, landmines | 001 / 90 |
+| `docs/PROGRESS.md` | Per-chapter fill progress tracker (70 chapters) | 70 / 70 |
+| `docs/CHAPTER_LOG.md` | Per-chapter development log — what was actually done, decisions, landmines | 001 / 70 |
 | `MANIFEST.json` | Counts and SHA-256 hashes of every file, for integrity checks | — |
 
 ## Editing rules
