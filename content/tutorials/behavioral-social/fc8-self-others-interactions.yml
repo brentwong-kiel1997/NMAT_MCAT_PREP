@@ -1,0 +1,277 @@
+subject: behavioral-social
+chapter: FC8 · Self, others, interactions
+title: FC8 · Self, Others, Interactions
+overview: The self-concept, social cognition, and the mechanics of interaction — attribution, attitudes,
+  conformity, aggression, helping, and group processes. Overlaps heavily with psych-soc chapters 8A-8C.
+sections:
+- heading: The self and identity
+  body:
+  - '==Self-concept — how we see ourselves; self-schema (stable, self-relevant beliefs); self-esteem evaluation;
+    self-efficacy (Bandura — belief in capability)==. ==Identity — personal vs social; Erikson: identity
+    vs role confusion in adolescence==.'
+  - ==Social cognitive theory — reciprocal determinism between person, behavior, environment==. Self-presentation
+    — impression management; spotlight effect overestimates how noticed we are; the self-serving bias
+    inflates success credit.
+  check:
+  - q: A student believes she can master organic chemistry and persists through failures. This belief
+      is…
+    options:
+      A: Self-esteem
+      B: Self-efficacy
+      C: Self-schema
+      D: Self-serving bias
+    answer: B
+    explain: Domain-specific capability belief — Bandura's construct.
+    distractors:
+      A: Global evaluation.
+      B: Stable self-belief.
+      C: Attribution of success.
+- heading: Social cognition — how we judge others
+  body:
+  - ==Attribution — internal (dispositional) vs external (situational); fundamental attribution error
+    — over-credit disposition; actor-observer asymmetry==. ==Self-serving bias — success internal, failure
+    external==; just-world belief blames victims.
+  - ==Attitudes — ABC (affect, behavior, cognition); cognitive dissonance (effort justification, insufficient
+    justification effect); foot-in-the-door and door-in-the-face strategies==. Persuasion — central vs
+    peripheral routes (Elaboration Likelihood).
+  check:
+  - q: Explaining someone else's rudeness as 'a rude person' rather than 'a bad day' is…
+    options:
+      A: The fundamental attribution error
+      B: The self-serving bias
+      C: The actor-observer asymmetry
+      D: Cognitive dissonance
+    answer: A
+    explain: Dispositional over attribution for OTHERS' behavior.
+    distractors:
+      A: That is a self-serving success effect.
+      B: Related but centered on self-other difference.
+      C: Post-decision discomfort.
+- heading: Conformity, obedience, and group influence
+  body:
+  - ==Asch — conformity with unambiguous stimuli under group pressure; informational (accurate belief)
+    vs normative (fit in) influence==. Milgram — obedience to authority escalates with proximity of the
+    experimenter and distance from the learner.
+  - ==Group effects — deindividuation (anonymity), group polarization (discussion intensifies), groupthink
+    (premature consensus suppressing dissent), social loafing (effort drops in groups)==. Social facilitation
+    — arousal boosts dominant responses — easy tasks improve, hard tasks worsen.
+  check:
+  - q: Social loafing is least likely when…
+    options:
+      A: The group is large and anonymous
+      B: Individual contributions are identifiable
+      C: The task is dull
+      D: Members are strangers
+    answer: B
+    explain: Identifiability restores accountability — effort returns.
+    distractors:
+      A: Anonymity enables loafing.
+      B: Correct — monitoring kills it.
+      C: Dull tasks loaf more.
+      D: Strangers loaf more.
+- heading: Aggression, altruism, and attraction
+  body:
+  - ==Aggression — biological (amygdala drive, prefrontal brake, testosterone/serotonin) × situational
+    (frustration-aggression, heat, weapons effect)==. Bystander effect — more witnesses → less helping
+    (diffusion of responsibility, pluralistic ignorance); ==Latané-Darley five steps==.
+  - '==Altruism vs egoism — Batson: empathy-altruism; some helping is distress relief==. Attraction —
+    proximity, mere exposure, similarity (strongest), reciprocity, physical attractiveness matching; Sternberg''s
+    triangle (intimacy, passion, commitment).'
+  check:
+  - q: Five strangers see smoke in a waiting room and each waits for another to react. This is…
+    options:
+      A: Pluralistic ignorance
+      B: Social loafing
+      C: Groupthink
+      D: Deindividuation
+    answer: A
+    explain: Everyone interprets others' inaction as evidence nothing is wrong.
+    distractors:
+      A: Effort loss, not interpretation.
+      B: Consensus in decisions.
+      C: Loss of self-awareness.
+  figures:
+  - src: behavioral-social/fc8-self-others-interactions/fig-9fdf2315.webp
+    caption: Non-human primate social behavior — displays and interaction in natural context.
+    credit: Ch 12 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
+  - src: behavioral-social/fc8-self-others-interactions/fig-c5959bf5.webp
+    caption: Prosocial behavior — helping, altruism, and the bystander calculus.
+    credit: Ch 12 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
+- heading: Group identity, social identity, and discrimination
+  body:
+  - ==Social identity theory (Tajfel) — we favor in-groups to elevate self-esteem; minimal groups already
+    show bias. ==Stereotypes (beliefs), prejudice (attitudes), discrimination (behavior); implicit bias
+    via IAT==. ==Stereotype threat — anxiety confirming negative expectation depresses performance==.
+  - ==Reducing bias — contact hypothesis (equal-status contact), superordinate goals, jigsaw classrooms==.
+    Blaming the victim and the just-world hypothesis sustain discrimination.
+  check:
+  - q: A Black student underperforms on a math test after being reminded that the test measures racial
+      math gaps. This exemplifies…
+    options:
+      A: Stereotype threat
+      B: Fundamental attribution error
+      C: Group polarization
+      D: Social loafing
+    answer: A
+    explain: Anxiety about confirming a negative stereotype consumes working memory.
+    distractors:
+      A: That is attribution of others.
+      B: Group discussion effect.
+      C: Effort in groups.
+examples:
+- prompt: Design a field experiment showing the bystander effect while controlling for pluralistic ignorance
+    as the mechanism.
+  solution:
+  - Manipulate perceived group size while holding real help-availability constant.
+  - Actor collapses loudly; measure time to help alone versus with one confederate.
+  - 'Variant: confederate gives visible ''non-alarm'' cues (looks away) — dissociation test.'
+  - 'Predict: more passive models → slower, less help — informational influence confirmed.'
+  answer: Passive-confederate design isolates informational social influence.
+  distractors:
+    A: Correlational CCTV — can't separate causes.
+    B: Case study of one event — no control.
+    C: Survey of intentions — stated helping ≠ real helping.
+key_points:
+- Self-efficacy is domain-specific; self-esteem is global.
+- Fundamental attribution error — others' dispositions, our situations.
+- Asch conformity; Milgram obedience — situation dominates person.
+- 'Bystander tree: notice → interpret → assume responsibility → implement.'
+- Social identity — in-group favoritism from minimal cues.
+- Stereotype threat consumes working memory under evaluative conditions.
+mnemonics:
+- phrase: Notice, Interpret, Decide, Act
+  means: Latané-Darley helping sequence — fails at any node.
+- phrase: Similarity beats proximity
+  means: The strongest single attraction predictor.
+maps:
+- title: Attribution route
+  steps:
+  - observe behavior
+  - internal (disposition/ability) vs external (situation/luck)
+  - FAE — default to internal for others
+  - correction — effortful, rarely applied
+- title: Reducing prejudice
+  steps:
+  - contact with equal status
+  - cooperative superordinate goals
+  - institutional support
+  - sustained acquaintance
+passage:
+  text: 'A staged study: participants hear a crash and see smoke. Alone — 75% report within 2 minutes.
+    With two passive confederates — 30%. When the confederates are replaced by two blindfolded students
+    prepped to ignore — 60%.'
+  questions:
+  - q: The 75→30 drop demonstrates…
+    options:
+      A: Diffusion of responsibility
+      B: Informational influence
+      C: Obedience to authority
+      D: Mere exposure
+    answer: B
+    explain: Passive models signal not-an-emergency — the interpretation step fails.
+    distractors:
+      A: Both operate, but the blindfolded control isolates interpretation.
+      B: No authority present.
+      C: No prior exposure tracked.
+  - q: The 60% in the blindfolded condition shows…
+    options:
+      A: People still help when cues do not contradict
+      B: Blindfolded participants helped
+      C: The effect is purely obedience
+      D: Helping is impossible in groups
+    answer: A
+    explain: Removing the misinformation restores most helping — interpretation was the hinge.
+    distractors:
+      A: Correct.
+      B: Confederates were passive by design.
+      C: No authority.
+      D: Groups still act when the signal is clear.
+  - q: The strongest test of the mechanism is…
+    options:
+      A: The blindfolded-control contrast
+      B: The alone baseline
+      C: Report timing
+      D: Sample demographics
+    answer: A
+    explain: It varies the interpretation cue while holding group size rough.
+    distractors:
+      A: Baseline alone sets the standard.
+      B: Secondary measure.
+      C: Not manipulated.
+pitfalls:
+- FAE applied to one's own behavior — that is self-serving.
+- Conformity vs obedience — peers vs authority.
+- Bystander = diffusion vs interpretation — name the step.
+- Groupthink needs a decision context, not any group.
+- Altruism evidence — Batson's escape design.
+exam_map:
+  NMAT: Attribution, conformity, groups, helping — scenario matching.
+  MCAT: Content Category 8A-8C — identical material, passage application.
+sources:
+- ref: openstax-psychology-2e
+  used:
+  - Ch 12 — Social Psychology
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC8
+  relation: consulted
+further_reading:
+- title: OpenStax Psychology 2e — Social Psychology
+  url: https://openstax.org/books/psychology-2e/pages/12-introduction
+  note: Conformity, obedience, helping.
+- title: OpenStax Psychology 2e — Social Cognition
+  url: https://openstax.org/books/psychology-2e/pages/12-2-self-presentation
+  note: Attribution and the self.
+review_questions:
+- q: Milgram's obedience dropped most when…
+  options:
+    A: The learner was in another room
+    B: The experimenter left the room
+    C: The teacher heard the learner
+    D: The shocks were visible
+  answer: B
+  explain: Authority's physical presence sustains compliance — closeness matters.
+  distractors:
+    A: That kept obedience high.
+    B: Correct.
+    C: That is standard and obedience stayed high.
+    D: Weather/absence cues.
+- q: Aronson's jigsaw classroom reduces prejudice by…
+  options:
+    A: Forcing students to depend on each other's unique knowledge
+    B: Separating groups
+    C: Rewarding competition
+    D: Lecturing on bias
+  answer: A
+  explain: Interdependence + equal status undermines stereotypes.
+  distractors:
+    A: Correct.
+    B: Segregation entrenches.
+    C: Competition inflames.
+    D: Knowledge alone rarely suffices.
+- q: The actor-observer asymmetry means…
+  options:
+    A: We see our own actions situationally and others' dispositionally
+    B: Observers see both internally
+    C: Actors over-credit disposition
+    D: No asymmetry exists
+  answer: A
+  explain: Perspective drives the attribution split.
+  distractors:
+    A: That is the FAE, not the split.
+    B: Opposite.
+    C: The asymmetry is robust.
+- q: Sternberg's consummate love includes…
+  options:
+    A: Intimacy only
+    B: Intimacy, passion, commitment
+    C: Passion only
+    D: Commitment only
+  answer: B
+  explain: All three corners of the triangle.
+  distractors:
+    A: That is liking.
+    B: Correct.
+    C: That is infatuation.
+    D: That is empty love.

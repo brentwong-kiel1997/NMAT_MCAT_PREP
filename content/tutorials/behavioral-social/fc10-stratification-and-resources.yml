@@ -1,0 +1,277 @@
+subject: behavioral-social
+chapter: FC10 · Stratification and resources
+title: FC10 · Stratification and Resources
+overview: The distribution of resources — class, race, gender, age — and how systems of advantage shape
+  health, opportunity, and interaction. The closest MCAT category to public-health determinants; pairs
+  with FC9 on structure.
+sections:
+- heading: Theoretical views on stratification
+  body:
+  - ==Functionalism (Davis-Moore) — stratification motivates talent by rewarding positions==; conflict
+    theory (Marx, Weber) — power and exploitation structure the distribution; ==symbolic interactionism
+    examines how class is performed and perceived==. Meritocracy as an ideal vs empirical churn.
+  - '==Weber''s three dimensions — class (economic), status (prestige), party (power) can diverge: wealthy
+    without status==. Application to health — status inconsistency (high income, low status) predicts
+    stress and morbidity.'
+  check:
+  - q: A surgeon with high income but low community status shows…
+    options:
+      A: Status inconsistency
+      B: Class consciousness
+      C: Social closure
+      D: Relative deprivation
+    answer: A
+    explain: Weber's dimensions misaligned — a stress risk pattern.
+    distractors:
+      A: Consistency is the absence.
+      B: Marx's framework.
+      C: Exclusion mechanism.
+      D: Comparison to a reference group.
+- heading: Class, poverty, and mobility
+  body:
+  - '==Class measures — occupation, income, wealth (assets matter most), education; poverty — absolute
+    vs relative; the poverty line threshold==. ==Cycle of poverty — the intergenerational transmission:
+    schooling gaps, neighborhood effects, wealth transfer==.'
+  - ==Mobility in practice — upward and downward; rates lower in low-mobility societies; the American
+    ideal vs measured stickiness==. Meritocracy checks — same test scores, different zip codes, different
+    outcomes.
+  check:
+  - q: Relative poverty means…
+    options:
+      A: Falling below a fixed threshold
+      B: Being poor relative to societal standards
+      C: Being the poorest person
+      D: Wealth inequality only
+    answer: B
+    explain: Standards move with the society — the bottom decile even in rich nations.
+    distractors:
+      A: That is absolute poverty.
+      B: Correct.
+      C: Not just the extreme.
+      D: Incomes too.
+  figures:
+  - src: behavioral-social/fc10-stratification-and-resources/fig-c4a4fedf.webp
+    caption: An estate viewed from above — wealth made visible at the top of the class hierarchy.
+    credit: Ch 9 · OpenStax Introduction to Sociology 3e — CC BY-NC-SA 4.0
+- heading: Race, ethnicity, and health disparities
+  body:
+  - ==Race is a social category with biological effects through exposure, not biology as fixed essence
+    — racism frames illness (slavery to hypertension '<->' weathering)==. ==Minority stress — chronic
+    discrimination activates stress physiology==.
+  - ==Health disparity drivers — access (insurance, geography), care quality (implicit bias, stereotyping
+    in physicians), environmental (exposure burdens), and stress allostatic load==. ==Weathering (Geronimus)
+    — cumulative disadvantage accelerates biological aging==.
+  check:
+  - q: The weathering hypothesis attributes elevated hypertension in minority populations to…
+    options:
+      A: Cumulative stress from discrimination
+      B: Genetic determinism
+      C: Diet alone
+      D: Random variation
+    answer: A
+    explain: Allostatic load from chronic devaluation ages bodies faster.
+    distractors:
+      A: No genetic claim.
+      B: Diet is one channel among many.
+      C: Systematic, not random.
+- heading: Gender, age, and other axes
+  body:
+  - ==Gender stratification — occupational segregation, wage gaps, double burden; sex vs gender (biologic
+    vs social)==. Age — ageism, cohort effects vs aging effects (health differences of generations vs
+    of growing old).
+  - ==Intersectionality (Crenshaw) — axes compound (race x gender x class); health profiles differ at
+    the intersections==. Disability — medical vs social model; accessible design reframes limits as barriers.
+  check:
+  - q: Comparing today's 70-year-olds with today's 40-year-olds on smoking rates measures…
+    options:
+      A: Aging effects
+      B: Cohort effects
+      C: Period effects
+      D: Disability
+    answer: B
+    explain: Different birth cohorts carry different lifetime exposures.
+    distractors:
+      A: Same people growing old need longitudinal data.
+      B: A time-point event affects everyone.
+      C: Not that.
+- heading: Health systems and access
+  body:
+  - ==Health system models — fee-for-service vs insurance pools; universal vs market; waitlists vs access
+    barriers==. ==Access components — availability, affordability, acceptability; underinsurance as hidden
+    barrier==. ==Preventive vs curative balance; the inverse care law (care least where need is greatest)==.
+  - ==Comparative effectiveness and the social gradient of care quality — the same disease, different
+    workup by class==. Cultural competence vs structural competence — fixing systems, not just attitudes.
+  check:
+  - q: The inverse care law states…
+    options:
+      A: Care is least available where need is greatest
+      B: More care always equals better health
+      C: Prevention is useless
+      D: Doctors are always available
+    answer: A
+    explain: Markets route supply away from high-need, low-pay areas (Tudor Hart).
+    distractors:
+      A: Marginal care plateaus.
+      B: Prevention is key.
+      C: Availability is uneven.
+  figures:
+  - src: behavioral-social/fc10-stratification-and-resources/fig-226fa5f7.webp
+    caption: Commuting through a snowstorm — transportation access as a daily resource.
+    credit: Ch 9 · OpenStax Introduction to Sociology 3e — CC BY-NC-SA 4.0
+examples:
+- prompt: 'Two neighborhoods — one 90th-percentile income with a primary care clinic per 5,000 people,
+    one 10th percentile with one clinic per 40,000. Waiting time for the same procedure: 2 weeks vs 14
+    weeks. Interpret through the inverse care law and propose a structural fix.'
+  solution:
+  - Care supply tracks demand, not need — the inverse care pattern.
+  - 'Long waits compound: late diagnosis, worse outcomes, higher cost.'
+  - Supply-side fix — need-based clinics, better transit, evening hours.
+  - Payment fix — capitation and outreach rebalance the economics.
+  answer: Need-based deployment, not market following — the structural response.
+  distractors:
+    A: Only advocacy — changes attitudes, not supply.
+    B: Blame individuals for delay — victim-blaming.
+    C: Uniform redistribution — ignores need-based logic.
+key_points:
+- Functionalism rewards; conflict theory exploits; Weber splits power from class from status.
+- Absolute vs relative poverty; wealth transmits across generations.
+- Race — social category with real exposures; racism as stressor.
+- Cohort vs aging effects confound cross-sectional comparisons.
+- Intersectionality — axes compound.
+- Inverse care law — supply follows demand, not need.
+mnemonics:
+- phrase: Class, status, power — Weber's three
+  means: They can diverge — status inconsistency.
+- phrase: Cohort is birth year, aging is life course
+  means: Separate generation from age in any comparison.
+maps:
+- title: Transmission of advantage
+  steps:
+  - family wealth and networks
+  - neighborhood schools and safety
+  - credentials and hiring
+  - health → earnings cycle
+- title: Disparity pathway
+  steps:
+  - structural exposure (housing, jobs, policing)
+  - chronic stress physiology (allostatic load)
+  - care access and quality gaps
+  - accumulated health divergence
+passage:
+  text: A city compares two 40-year-old male cohorts by census tract. Tract A (median income 85k) and
+    Tract B (median income 32k). Both were screened and started equal on blood pressure. At 5 years, Tract
+    B shows higher blood pressure and more stroke events, controlling for smoking and baseline BP.
+  questions:
+  - q: The finding after controls implicates…
+    options:
+      A: Biological race
+      B: Neighborhood-level exposures and stress
+      C: Chance
+      D: Screening failure
+    answer: B
+    explain: Covariate models leave place-based mechanisms standing.
+    distractors:
+      A: No genetic claim.
+      B: Correct.
+      C: Controls make chance unlikely.
+      D: Both were screened.
+  - q: Treating Tract B as 'lifestyle deficit' rather than structural exposure invokes…
+    options:
+      A: Victim-blaming frames
+      B: The contact hypothesis
+      C: Cultural relativism
+      D: Social closure
+    answer: A
+    explain: It locates the cause in choices rather than opportunity structure.
+    distractors:
+      A: That reduces intergroup bias via contact.
+      B: Judging within context.
+      C: Exclusion mechanism.
+  - q: Allostatic load is greatest in which pattern?
+    options:
+      A: Chronic recurring stress without recovery
+      B: One-time acute event
+      C: No stressors
+      D: Short-lived mild stress
+    answer: A
+    explain: Cumulative wear — the biological toll of repeated activation.
+    distractors:
+      A: Acute events heal.
+      B: No wear.
+      C: Within recovery range.
+pitfalls:
+- Status inconsistency confused with social mobility.
+- Absolute vs relative poverty.
+- Cohort vs age effects.
+- Race essentialism vs social-construction-with-biological-effect.
+- Health care = health — structure matters beyond care.
+exam_map:
+  NMAT: Stratification vocabulary and matching.
+  MCAT: Content Category 10A-10B — disparities and access passages.
+sources:
+- ref: openstax-sociology-3e
+  used:
+  - Ch 9, 11, 12, 13, 19 — stratification, race, gender, aging, health
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC10
+  relation: consulted
+further_reading:
+- title: OpenStax Sociology 3e — Social Stratification and Inequality
+  url: https://openstax.org/books/introduction-sociology-3e/pages/9-introduction
+  note: Theories and measures.
+- title: OpenStax Sociology 3e — Health and Medicine
+  url: https://openstax.org/books/introduction-sociology-3e/pages/19-introduction
+  note: Disparities and the care system.
+review_questions:
+- q: Absolute poverty is…
+  options:
+    A: A threshold of minimal living standards
+    B: Relative to national medians
+    C: Always worse than relative
+    D: About inequality alone
+  answer: A
+  explain: A fixed material floor — calories, shelter, basics.
+  distractors:
+    A: Correct.
+    B: That is relative.
+    C: Both are severe in different ways.
+    D: Absolute is about floors, not spread.
+- q: Occupational segregation by gender refers to…
+  options:
+    A: Different jobs available by sex systematically
+    B: Random job patterns
+    C: Physical strength differences
+    D: Legal quotas only
+  answer: A
+  explain: Structured channeling into different labor markets.
+  distractors:
+    A: Correct.
+    B: Systematic, not random.
+    C: Strength explains little of the channeling.
+    D: Norms and penalties, not quotas.
+- q: A 60-year-old's hypertension could be aging OR cohort…
+  options:
+    A: Longitudinal data disambiguates
+    B: Cross-sectional data answers it
+    C: No design can
+    D: Genetics decides
+  answer: A
+  explain: Following the same people over time separates age from birth-year.
+  distractors:
+    A: Cross-sections conflate them.
+    B: Longitudinal does.
+    C: Cohort confounds persist.
+- q: Medicaid expansion reduced uninsured rates. This is an…
+  options:
+    A: Access improvement
+    B: Quality improvement
+    C: Genomic intervention
+    D: Cultural intervention
+  answer: A
+  explain: Insurance coverage is an access mechanism.
+  distractors:
+    A: Quality is separate.
+    B: No genetics.
+    C: Not cultural.

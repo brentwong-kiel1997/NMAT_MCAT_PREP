@@ -1,0 +1,278 @@
+subject: behavioral-social
+chapter: Sociology and Anthropology
+title: Sociology and Anthropology
+overview: The NMAT social science pass over society, culture, and human variation — culture, socialization,
+  social structure, inequality, institutions, deviance, and anthropology's subfields and methods. Overlaps
+  with MCAT FC8-9.
+sections:
+- heading: Culture — the shared template
+  body:
+  - '==Culture = shared beliefs, values, norms, and material artifacts transmitted across generations==.
+    Components — symbols, language (Sapir-Whorf: language shapes thought), values, beliefs, norms (folkways,
+    mores, laws). ==Ethnocentrism judges others by one''s own culture; cultural relativism evaluates within
+    its own context==.'
+  - Culture change — innovation, diffusion, acculturation, and culture lag (material change outpacing
+    norms). Subcultures and countercultures nest within the larger culture.
+  check:
+  - q: Judging another society's marriage practices by your own standards is…
+    options:
+      A: Cultural relativism
+      B: Ethnocentrism
+      C: Culture shock
+      D: Assimilation
+    answer: B
+    explain: Using your own culture as the measuring stick.
+    distractors:
+      A: That judges within context.
+      B: Adjustment to a new culture.
+      C: Minority adoption of majority norms.
+  figures:
+  - src: behavioral-social/sociology-and-anthropology/fig-2cba6a31.webp
+    caption: Judo as cultural practice — sport encodes values, rules, and ritual.
+    credit: Ch 3 · OpenStax Introduction to Sociology 3e — CC BY-NC-SA 4.0
+- heading: Socialization and the self
+  body:
+  - '==Socialization = learning norms, roles, and identities through life. Key agents — family (primary),
+    schools (hidden curriculum), peers, media==. Mead — the self develops through role-taking: the I (impulsive)
+    and Me (socialized); ==the generalized other internalizes society''s expectations==.'
+  - ==Cooley's looking-glass self — we form identity from how we imagine others see us==. Goffman's dramaturgy
+    — front stage (performance) vs back stage (private). Total institutions (prisons, boot camps) resocialize.
+  check:
+  - q: A child who imagines how her teacher sees her and adjusts her self-image is experiencing…
+    options:
+      A: The looking-glass self
+      B: Labeling
+      C: Role strain
+      D: Resocialization
+    answer: A
+    explain: Imagined appraisals reflected back form the sense of self.
+    distractors:
+      A: Labels from others.
+      B: One role's conflict.
+      C: Forced relearning.
+- heading: Social structure and groups
+  body:
+  - ==Status (ascribed by birth vs achieved by effort) and roles — role strain within one role; role conflict
+    between roles==. Groups — primary (intimate) vs secondary (instrumental); in-groups/out-groups; reference
+    groups set standards.
+  - ==Bureaucracy (Weber) — hierarchy, rules, impersonality; pathologies — goal displacement, red tape==.
+    Formal organizations range from voluntary to coercive (total institutions).
+  check:
+  - q: A resident torn between emergency duty and family obligations faces…
+    options:
+      A: Role strain
+      B: Role conflict
+      C: Status inconsistency
+      D: Anomie
+    answer: B
+    explain: Two different roles' demands collide.
+    distractors:
+      A: One role's tension.
+      B: Mismatched statuses.
+      C: Normative breakdown.
+- heading: Inequality, stratification, and mobility
+  body:
+  - '==Stratification = systematic ranking by class, status, power (Weber) or by relationship to the means
+    of production (Marx: bourgeoisie vs proletariat)==. Slavery, caste (closed), estate, and class (open)
+    systems; functionalism says stratification motivates; conflict theory says it preserves privilege.'
+  - ==Social mobility — horizontal/vertical; intergenerational vs intragenerational==. Poverty — absolute
+    vs relative; the culture of poverty debate; structural explanations (opportunity blocked) beat the
+    individual-blame framing.
+  check:
+  - q: Which system is the most closed?
+    options:
+      A: Class
+      B: Caste
+      C: Estate
+      D: Meritocracy
+    answer: B
+    explain: Caste ranks are fixed at birth — no legitimate mobility.
+    distractors:
+      A: Class allows movement.
+      B: Estates are less rigid than caste.
+      C: Meritocracy is open.
+  figures:
+  - src: behavioral-social/sociology-and-anthropology/fig-c4a4fedf.webp
+    caption: An estate viewed from above — wealth made visible at the top of the class hierarchy.
+    credit: Ch 9 · OpenStax Introduction to Sociology 3e — CC BY-NC-SA 4.0
+- heading: Deviance, institutions, and anthropology
+  body:
+  - '==Deviance — labeling theory (deviance is a label others apply), strain theory (Merton — anomie between
+    goals and means), control theory, differential association==. Crime — Durkheim: deviance is functional,
+    clarifying boundaries and driving change.'
+  - ==Anthropology subfields — cultural, physical/biological (evolution, primatology, forensic), linguistic,
+    archaeological==. Field methods — participant observation, ethnography, emic (insider) vs etic (outsider)
+    perspectives. Kinship systems — descent, marriage forms, residence rules.
+  check:
+  - q: Merton's strain theory explains deviance as…
+    options:
+      A: Inherited traits
+      B: A gap between cultural goals and legitimate means
+      C: Labeling by authorities
+      D: Poor parenting
+    answer: B
+    explain: Anomie — goals accepted, means blocked — pushes toward innovation/deviance.
+    distractors:
+      A: Biological determinism.
+      B: Correct.
+      C: That is labeling theory.
+      D: Not the theory's frame.
+examples:
+- prompt: A researcher moves into a farming village for 14 months, lives with families, and writes a detailed
+    account of local harvest rituals. Identify the method, its key features, and its characteristic strengths/limits.
+  solution:
+  - Participant observation — the hallmark of cultural anthropology field work.
+  - Produces an ethnography — thick description from the insider's flow of life.
+  - Strengths — emic depth, context, unexpected discovery.
+  - Limits — small n, researcher reactivity, reproducibility low.
+  answer: Ethnographic participant observation — rich emic data at cost of generality.
+  distractors:
+    A: Survey — would use questionnaires, not embedded living.
+    B: Experiment — no manipulation, no control group.
+    C: Secondary analysis — no first-hand accounts.
+key_points:
+- Culture = symbols, language, values, norms; relativism not ethnocentrism.
+- Socialization agents — family first; looking-glass self; dramaturgy.
+- Role strain (within) vs conflict (between).
+- 'Stratification systems — open to closed: class, estate, caste.'
+- Labeling and strain theories of deviance; Durkheim's functionality.
+- Anthropology — cultural, physical, linguistic, archaeological; emic/etic.
+mnemonics:
+- phrase: Folkways, Mores, Laws
+  means: Norms ladder — etiquette, morality, codification.
+- phrase: Emic inside, etic outside
+  means: Insider vs outsider perspective in field work.
+maps:
+- title: Types of society
+  steps:
+  - hunter-gatherer — small, egalitarian
+  - pastoral/agrarian — surplus, roles
+  - industrial — urban, formal institutions
+  - postindustrial — services, information
+- title: Anthropology subfields
+  steps:
+  - cultural — beliefs and practices
+  - physical — human evolution and variation
+  - linguistic — language and society
+  - archaeological — material remains
+passage:
+  text: In a longitudinal study, children from low-income families who moved to higher-income neighborhoods
+    before age 13 showed higher college attendance than peers who stayed; analyses controlled for family
+    income at baseline.
+  questions:
+  - q: This finding best supports which explanation of mobility?
+    options:
+      A: Structural opportunity — neighborhoods channel resources
+      B: Individual effort alone
+      C: Biological determinism
+      D: Culture-of-poverty fatalism
+    answer: A
+    explain: Controlled baseline, changed environment — opportunity structure moved outcomes.
+    distractors:
+      A: Correct.
+      B: Controls argued against it.
+      C: No genetics data.
+      D: The mover's families were similar at baseline.
+  - q: A skeptic argues the movers' parents were unusually motivated. This challenges…
+    options:
+      A: External validity
+      B: Internal validity
+      C: Inter-rater reliability
+      D: Falsifiability
+    answer: B
+    explain: An unmeasured confounder could drive both the move and the outcome.
+    distractors:
+      A: That concerns generalization.
+      B: Correct — the causal inference.
+      C: Not a measurement issue.
+      D: Not an empirical criterion here.
+  - q: Which anthropological concept best frames the neighborhood effect?
+    options:
+      A: Kinship
+      B: Acculturation
+      C: Socialization within a new opportunity structure
+      D: Cultural lag
+    answer: C
+    explain: Learning and adaptation proceed within the new environment's norms and channels.
+    distractors:
+      A: Family structure is not the mechanism.
+      B: Minority adoption of majority norms is narrower.
+      C: Technology-outpaces-norms mismatch.
+pitfalls:
+- Ethnocentrism vs relativism — judging within vs by one's own standard.
+- Role strain vs conflict — count the roles.
+- Cast vs class — openness.
+- Labeling vs strain theory of deviance.
+- Emic/etic flipped.
+exam_map:
+  NMAT: Social science bulk — culture, stratification, deviance, anthropology methods.
+  MCAT: Overlaps FC8-9 — socialization, groups, stratification, health disparities.
+sources:
+- ref: openstax-sociology-3e
+  used:
+  - Ch 1-9, 15 — culture through stratification
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC8-9
+  relation: consulted
+further_reading:
+- title: OpenStax Sociology 3e — Culture
+  url: https://openstax.org/books/introduction-sociology-3e/pages/3-introduction
+  note: Culture's components.
+- title: OpenStax Sociology 3e — Social Stratification
+  url: https://openstax.org/books/introduction-sociology-3e/pages/9-introduction
+  note: Class, caste, mobility.
+review_questions:
+- q: The Sapir-Whorf hypothesis claims…
+  options:
+    A: Language shapes perception and thought
+    B: Culture is universal
+    C: Language is genetically fixed
+    D: All languages have one grammar
+  answer: A
+  explain: Words carve the perceptual world — linguistic relativity.
+  distractors:
+    A: Correct.
+    B: That is cultural universals.
+    C: Language is learned.
+    D: Grammars differ structurally.
+- q: A passport's birth-country classification is an…
+  options:
+    A: Achieved status
+    B: Ascribed status
+    C: Role
+    D: Reference group
+  answer: B
+  explain: Assigned at birth without effort.
+  distractors:
+    A: No achievement involved.
+    B: Correct.
+    C: A set of expectations.
+    D: A comparison standard.
+- q: Which is a primary group?
+  options:
+    A: Department coworkers
+    B: Family
+    C: Political party
+    D: Online forum
+  answer: B
+  explain: Intimate, enduring, identity-shaping.
+  distractors:
+    A: Secondary — instrumental.
+    B: Correct.
+    C: Secondary.
+    D: Secondary.
+- q: Durkheim called deviance functional because it…
+  options:
+    A: Clarifies moral boundaries and unites the group
+    B: Reduces inequality
+    C: Raises productivity
+    D: Eliminates anomie
+  answer: A
+  explain: Punishing deviance strengthens shared norms — society's boundary work.
+  distractors:
+    A: Correct.
+    B: Not his claim.
+    C: Not his claim.
+    D: Anomie is the condition, not the cure.

@@ -1,0 +1,278 @@
+subject: behavioral-social
+chapter: FC7 · Behavior and behavior change
+title: FC7 · Behavior and Behavior Change
+overview: Individual differences, learning, memory, and attitude change — the person-level machinery behind
+  behavior. Includes emotion, motivation, personality, and psychological disorders. Overlaps the psychology
+  survey chapter and MCAT 7A-7B.
+sections:
+- heading: Learning and memory mechanics
+  body:
+  - '==Classical — CS-US pairing; extinction; generalization==. Operant — contingencies: ==positive/negative
+    reinforcement (add/remove to increase), positive/negative punishment (add/remove to decrease); schedules
+    drive rate patterns==. Observational (Bandura) — modeling with vicarious reinforcement.'
+  - ==Memory — encoding, storage, retrieval; working memory about 7 +/- 2; explicit (episodic, semantic)
+    vs implicit (procedural, priming)==. Forgetting — decay, interference (proactive vs retroactive),
+    retrieval failure; memory errors — misinformation effect, source confusion.
+  check:
+  - q: Removing a curfew to increase a teen's coming-home behavior is…
+    options:
+      A: Positive punishment
+      B: Negative reinforcement
+      C: Positive reinforcement
+      D: Extinction
+    answer: B
+    explain: An aversive is REMOVED to INCREASE behavior.
+    distractors:
+      A: Adding aversive.
+      B: Adding reward.
+      C: Withholding reinforcement.
+  figures:
+  - src: behavioral-social/fc7-behavior-and-behavior-change/fig-0a68ead5.webp
+    caption: Classical conditioning's classic case — bell-food pairing producing the conditioned response.
+    credit: Ch 6 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
+- heading: Cognition — thinking and decision
+  body:
+  - '==Heuristics: availability (ease of recall), representativeness (prototype match), anchoring (initial
+    values); biases — confirmation, hindsight, overconfidence, framing effects==. Language — Broca production,
+    Wernicke comprehension; bilingualism and executive control.'
+  - ==Problem solving — algorithms vs heuristics; functional fixedness; mental set; insight==. Intelligence
+    — g factor, multiple intelligences, triarchic; reliability vs validity of tests; stereotype threat
+    suppressing performance.
+  check:
+  - q: Anchoring biases judgment toward…
+    options:
+      A: The first value encountered
+      B: Easily recalled examples
+      C: Prototype similarity
+      D: Group consensus
+    answer: A
+    explain: The initial anchor drags subsequent estimates toward itself.
+    distractors:
+      A: That is availability.
+      B: That is representativeness.
+      C: That is conformity theory.
+- heading: Motivation and emotion
+  body:
+  - ==Drive-reduction (homeostasis), incentive (external goals), arousal (Yerkes-Dodson — inverted U),
+    Maslow's hierarchy==. Emotion theories — James-Lange (arousal then label), Cannon-Bard (parallel),
+    Schachter-Singer two-factor (arousal plus attribution), facial feedback.
+  - '==Temperament (biologically linked early style), attachment (secure, avoidant, anxious), personality
+    — trait (Big Five: OCEAN), psychodynamic (id/ego/superego, defense mechanisms), humanistic, social-cognitive==.'
+  check:
+  - q: The Yerkes-Dodson law states performance peaks at…
+    options:
+      A: Zero arousal
+      B: Moderate arousal
+      C: Maximum arousal
+      D: Any arousal
+    answer: B
+    explain: Inverted-U — too little or too much arousal degrades performance.
+    distractors:
+      A: Task switching helps.
+      B: Correct.
+      C: High arousal narrows attention.
+      D: Tasks differ but the peak is moderate.
+- heading: Attitude and behavior change
+  body:
+  - ==Attitude = affect + behavior + cognition (ABC); formed by classical conditioning, operant, observational
+    learning==. Persuasion — central route (careful argument) vs peripheral route (cues, credibility,
+    attractiveness). Elaboration likelihood model frames the choice.
+  - ==Cognitive dissonance (Festinger) — inconsistency motivates change; effort justification deepens
+    commitment==. The foot-in-the-door phenomenon — small agreement escalates. Self-perception theory
+    — we infer attitudes from behavior.
+  check:
+  - q: A politician's charisma persuading an inattentive audience uses…
+    options:
+      A: The central route
+      B: The peripheral route
+      C: Dissonance
+      D: Self-perception
+    answer: B
+    explain: Surface cues (attractiveness, credibility) carry persuasion when elaboration is low.
+    distractors:
+      A: Central requires careful argument.
+      B: Correct.
+      C: Dissonance is post-decision.
+      D: Attitudes inferred from action.
+- heading: Psychological disorders and treatments
+  body:
+  - ==Anxiety — GAD, panic, phobias (classical conditioning + avoidance); OCD (obsessions, compulsions);
+    PTSD==. Mood — major depressive disorder (low serotonin/norepinephrine, learned helplessness, cognitive
+    distortions), bipolar (mania cycles). Schizophrenia — positive (hallucinations, delusions) vs negative
+    (flat affect) symptoms; dopamine hypothesis.
+  - ==Treatments — psychotherapy (CBT reframes thoughts, exposure for phobias), pharmacotherapy (SSRIs,
+    benzodiazepines, antipsychotics, lithium for bipolar), biomedical (ECT severe depression)==. Diagnosis
+    via DSM-5 criteria.
+  check:
+  - q: Cognitive behavioral therapy for phobias primarily…
+    options:
+      A: Reframes catastrophic beliefs and uses exposure
+      B: Rewires synapses by drugs
+      C: Analyzes the unconscious
+      D: Changes brain chemistry alone
+    answer: A
+    explain: CBT attacks the fearful interpretation and the avoidance behavior together.
+    distractors:
+      A: That is pharmacology.
+      B: That is psychodynamic.
+      C: Drug-only is incomplete.
+  figures:
+  - src: behavioral-social/fc7-behavior-and-behavior-change/fig-35b14c98.webp
+    caption: Individuals introduced as case studies in the psychological disorders chapter.
+    credit: Ch 15 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
+examples:
+- prompt: A smoking cessation program pays participants for each abstinent week, then withdraws the payment.
+    Relapse spikes after withdrawal. Change the schedule to improve maintenance, and explain why.
+  solution:
+  - Continuous or dense reward creates rapid extinction once removed.
+  - Shift to a VARIABLE ratio schedule — unpredictable rewards resist extinction longest.
+  - Spreading thinning plus booster payments stretches the habit across the gap.
+  - Pair with CBT for internal coping — extrinsic + intrinsic maintenance.
+  answer: Variable-ratio reinforcement in place of fixed payment — the slot-machine resilience law.
+  distractors:
+    A: Fixed interval — builds predictable scallops, still extinction-prone.
+    B: Punishment — suppresses, does not build the habit.
+    C: Keeping continuous cash — financial sustainability fails and relapse remains.
+key_points:
+- Reinforcement adds/removes to increase; punishment to decrease.
+- Availability = ease of recall; representativeness = prototype.
+- Attitudes ABC — affect, behavior, cognition.
+- Central vs peripheral persuasion routes.
+- Dissonance — inconsistency motivates attitude change.
+- CBT — thoughts + exposure; SSRIs for mood.
+mnemonics:
+- phrase: Big Five — OCEAN
+  means: Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism.
+- phrase: Affect, Behavior, Cognition — ABC
+  means: The three attitude components.
+maps:
+- title: Operant quadrant
+  steps:
+  - positive reinforcement — add reward, behavior up
+  - negative reinforcement — remove aversive, behavior up
+  - positive punishment — add aversive, behavior down
+  - negative punishment — remove reward, behavior down
+- title: Mood disorder factors
+  steps:
+  - genetics and temperament
+  - neurotransmitter dysregulation
+  - learned helplessness and rumination
+  - stress and life events
+passage:
+  text: Two interventions for test anxiety are compared. Group A practices relaxation while repeatedly
+    approaching mock exams (imaginal then live). Group B reads a study-skills booklet. After eight weeks,
+    Group A's anxiety self-reports drop sharply; Group B's do not.
+  questions:
+  - q: Group A's procedure is best described as…
+    options:
+      A: Systematic desensitization with exposure hierarchy
+      B: Psychoanalysis
+      C: Aversive conditioning
+      D: Token economy
+    answer: A
+    explain: Relaxation paired with graduated approach — the classic fear-reduction package.
+    distractors:
+      A: No unconscious work.
+      B: No punishment used.
+      C: No tokens exchanged.
+  - q: The anxiety reduction most directly depends on…
+    options:
+      A: Classical conditioning reversal — new CS-US pairing
+      B: Insight into childhood conflicts
+      C: Diet
+      D: Medication compliance
+    answer: A
+    explain: The exam situation (CS) no longer predicts panic — relaxation dominates.
+    distractors:
+      A: Not the mechanism here.
+      B: Irrelevant.
+      C: None given.
+  - q: A confound threatening internal validity would be…
+    options:
+      A: Participants in Group A also practicing exam skills
+      B: Large sample size
+      C: Low significance threshold
+      D: Using a validated anxiety scale
+    answer: A
+    explain: A second active ingredient blurs which part worked.
+    distractors:
+      A: Power, not validity.
+      B: Not a confound.
+      C: A strength, not a threat.
+pitfalls:
+- 'Reinforcement vs punishment — read the arrow: what happened to behavior?'
+- Central vs peripheral route of persuasion.
+- Classical response vs operant contingency.
+- Extinction (withholding) vs forgetting.
+- OCD labeled purely as 'anxiety' vs the obsessive cycle.
+exam_map:
+  NMAT: Learning, memory, motivation, personality, disorders — heavy recall.
+  MCAT: Content Categories 7A-7B — individual differences, behavioral change.
+sources:
+- ref: openstax-psychology-2e
+  used:
+  - Ch 6-15
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC7
+  relation: consulted
+further_reading:
+- title: OpenStax Psychology 2e — What Is Psychology
+  url: https://openstax.org/books/psychology-2e/pages/11-introduction
+  note: Personality theories.
+- title: OpenStax Psychology 2e — Psychological Disorders
+  url: https://openstax.org/books/psychology-2e/pages/15-introduction
+  note: Disorder families.
+review_questions:
+- q: A rat receives food every 5th lever press. This is…
+  options:
+    A: Fixed interval
+    B: Fixed ratio
+    C: Variable interval
+    D: Continuous
+  answer: B
+  explain: Reinforcement after a fixed COUNT of responses.
+  distractors:
+    A: That is time-based.
+    B: Correct.
+    C: Time-based and irregular.
+    D: Every response.
+- q: The misinformation effect means…
+  options:
+    A: Later suggestions distort memory
+    B: Sensory memory corrupts perception
+    C: Information is never stored
+    D: Only traumatic memories persist
+  answer: A
+  explain: Post-event information fuses into the original memory — Loftus.
+  distractors:
+    A: Correct.
+    B: Perception is separate.
+    C: Memories are stored.
+    D: Not a persistence claim.
+- q: Effort justification after initiation ceremonies maintains commitment via…
+  options:
+    A: Dissonance reduction
+    B: Classical conditioning
+    C: Operant shaping
+    D: Observational modeling
+  answer: A
+  explain: Suffering with no external payoff needs internal justification — value inflates.
+  distractors:
+    A: CS-US pairing absent.
+    B: No contingency.
+    C: No model observed.
+- q: Schizophrenia's negative symptoms include…
+  options:
+    A: Hallucinations
+    B: Flat affect and social withdrawal
+    C: Delusions
+    D: Racing speech
+  answer: B
+  explain: Loss of normal function — the negative pole.
+  distractors:
+    A: Positive symptom.
+    B: Correct.
+    C: Positive.
+    D: Manic sign.

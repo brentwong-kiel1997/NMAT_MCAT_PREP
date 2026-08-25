@@ -1,0 +1,280 @@
+subject: behavioral-social
+chapter: FC9 · Cultural and social differences
+title: FC9 · Cultural and Social Differences
+overview: Social structure, culture, institutions, and demographics — how society shapes individuals and
+  groups differ. Overlaps psych-soc 9A-9B and the sociology survey. The MCAT tests structure-culture-outcome
+  linkages in health passages.
+sections:
+- heading: Social structure and institutions
+  body:
+  - ==Social structure = statuses, roles, groups, institutions organizing life==. Institutions — family,
+    education, religion, economy, government, health care; each reproduces norms and distributes resources
+    with characteristic patterns.
+  - ==Education — hidden curriculum, credentialing, tracking and its reproduction of inequality; the self-fulfilling
+    prophecy (Rosenthal) inside schools==. Health care as institution — access divides by class, insurance
+    status, geography.
+  check:
+  - q: The hidden curriculum refers to…
+    options:
+      A: Unofficial norms and values taught alongside academics
+      B: The official syllabus
+      C: Parent-teacher meetings
+      D: State standards
+    answer: A
+    explain: Schools transmit punctuality, obedience, hierarchy implicitly.
+    distractors:
+      A: That is the formal transcript.
+      B: Not an academic channel.
+      C: Regulatory layer.
+- heading: Culture — shared meaning in groups
+  body:
+  - ==Culture = symbols, language, values, norms, artifacts; ethnocentrism vs cultural relativism==. Subculture
+    vs counterculture; ==culture lag (materials outpace norms), cultural imperialism, assimilation vs
+    pluralism==.
+  - ==Cultural capital (Bourdieu) — knowledge and tastes that convert into advantage; code-switching —
+    performing the right register per context; socialization transmits it across generations==.
+  check:
+  - q: A first-generation college student learns the unspoken etiquette of faculty meetings to navigate
+      them. This is…
+    options:
+      A: Cultural capital acquisition
+      B: Culture lag
+      C: Assimilation pressure
+      D: Anomie
+    answer: A
+    explain: Learning high-status knowledge and practice that pays off.
+    distractors:
+      A: A norm-technology gap.
+      B: Full identity replacement.
+      C: Normative confusion.
+  figures:
+  - src: behavioral-social/fc9-cultural-and-social-differences/fig-4e6565f8.webp
+    caption: The ribbon as a shared symbol — meaning carried by the health-awareness campaign.
+    credit: Ch 19 · OpenStax Introduction to Sociology 3e — CC BY-NC-SA 4.0
+  - src: behavioral-social/fc9-cultural-and-social-differences/fig-2cba6a31.webp
+    caption: Judo as cultural practice — sport encodes values, rules, and ritual.
+    credit: Ch 3 · OpenStax Introduction to Sociology 3e — CC BY-NC-SA 4.0
+- heading: Deviance and social control
+  body:
+  - ==Strain theory (Merton) — gaps between goals and means push adaptation (conformity, innovation, ritualism,
+    retreatism, rebellion)==. Labeling (Becker) — deviance is a label with career effects. ==Control theory
+    — bonds constrain; social disorganization explains neighborhood-level crime==.
+  - ==Social control — formal (laws, police) vs informal (gossip, shunning); medicalization of deviance
+    — addiction, obesity reframed as illness==. Stigma (Goffman) — spoiled identity attached and its effects
+    on access and health.
+  check:
+  - q: A poor student sells drugs to fund college since legitimate means fail. Merton would classify this
+      as…
+    options:
+      A: Conformity
+      B: Innovation
+      C: Ritualism
+      D: Retreatism
+    answer: B
+    explain: Accepting goals, substituting illegitimate means.
+    distractors:
+      A: Same goals and means.
+      B: Correct.
+      C: Dropping goals, keeping routine.
+      D: Rejecting both.
+- heading: Social stratification and mobility
+  body:
+  - ==Stratification dimensions — class, status, power (Weber); Marx — ownership of production.== Closed
+    (caste) vs open (class) systems; ==reproduction of inequality — credentialing, social closure, intergenerational
+    transmission of wealth==.
+  - ==Mobility — absolute vs relative; intragenerational vs intergenerational; meritocracy myth vs opportunity
+    structure==. Health disparities track stratification directly — status syndrome (Marmot).
+  check:
+  - q: Two children with identical test scores but different family wealth end up in different income
+      brackets. This illustrates…
+    options:
+      A: Meritocracy working perfectly
+      B: Reproduction of inequality via non-merit channels
+      C: Genetic determinism
+      D: Absolute mobility
+    answer: B
+    explain: Outcomes track origin beyond ability — structural channels.
+    distractors:
+      A: No.
+      B: Correct.
+      C: No genetic claim.
+      D: That is growth across generations, not inequity.
+- heading: Demographic and health population patterns
+  body:
+  - ==Demographic transition — stage 1 (both high), 2 (deaths fall, boom), 3 (fertility falls), 4 (both
+    low)==. Pyramids encode history. Migration — push/pull, chain, remittances.
+  - ==Epidemiological transition — infectious dominance to chronic disease dominance; base rates, incidence
+    vs prevalence; SES gradients in mortality; screening effects (lead-time, length time)==.
+  check:
+  - q: A disease's prevalence is high while incidence is low. This combination suggests…
+    options:
+      A: A rapidly spreading new outbreak
+      B: A long-duration condition
+      C: A short acute illness
+      D: Data error
+    answer: B
+    explain: Prevalence = incidence x duration — long duration keeps numbers high despite few new cases.
+    distractors:
+      A: That raises incidence.
+      B: Correct.
+      C: Short duration lowers prevalence.
+      D: Consistent with chronic disease.
+examples:
+- prompt: A hospital's discharge planning assumes single-family caregivers. Multicultural families send
+    children abroad and rely on community elders. Explain the institutional mismatch and a culturally
+    humble fix.
+  solution:
+  - The assumption encodes one cultural template of caregiving.
+  - Mismatch — compliance metrics punish families who 'deviate'.
+  - '=> conflict/structural reading: norms favor majority family forms.'
+  - Fix — family-defined care plans, cultural navigators, flexible discharge criteria.
+  answer: Institutional culture clashes with plural family realities — responsive design fixes it.
+  distractors:
+    A: Blame-the-family — repeats the bias.
+    B: Universal protocols without localization — enacts the problem.
+    C: Cultural relativism doesn't excuse clinical standards — this is about access design.
+key_points:
+- Institutions reproduce norms AND distribute resources.
+- Culture lag — materials outrun norms; heritage conversions via cultural capital.
+- Merton's adaptations from goal-means gaps.
+- Stratification reproduces inequality across generations.
+- Demographic transition stages 1-4; pyramidal signature.
+- Prevalence = incidence x duration.
+mnemonics:
+- phrase: Goals kept, means swapped — innovation
+  means: Merton's adaptation map in one line.
+- phrase: Chronic = long duration, prevalence high
+  means: The prevalence-incidence link.
+maps:
+- title: Merton's adaptations
+  steps:
+  - conformity — goals + means
+  - innovation — goals, new means
+  - ritualism — means, dropped goals
+  - retreatism — reject both; rebellion — replace both
+- title: Demographic transition
+  steps:
+  - stage 1 — CBR, CDR high, flat
+  - stage 2 — CDR falls, boom
+  - stage 3 — CBR falls, cool
+  - stage 4 — both low, stable
+passage:
+  text: In a cohort study, adults living in neighborhoods with high walkability and green space had lower
+    all-cause mortality over 15 years, net of individual income, education, and baseline health. A second
+    analysis shows neighborhoods retain obesity gradients even after controlling for household SES.
+  questions:
+  - q: The walkability finding suggests…
+    options:
+      A: Neighborhood structure shapes health independent of individual SES
+      B: Genes cause walkability
+      C: Hospitals cause mortality
+      D: Access has no effect
+    answer: A
+    explain: Controlled individual factors — place effects remain.
+    distractors:
+      A: Correct.
+      B: No genetic data.
+      C: Hospitals not the exposure.
+      D: The analysis says otherwise.
+  - q: The persistence of obesity gradients after SES controls supports…
+    options:
+      A: Life-course and built-environment mechanisms
+      B: Pure genetics
+      C: Random chance
+      D: Measurement failure
+    answer: A
+    explain: Repeated exposure to structure accumulates advantage or disadvantage.
+    distractors:
+      A: No heritability estimate.
+      B: Controlled designs argue against.
+      C: Consistent across analyses.
+  - q: Which design test would most directly support a causal neighborhood effect?
+    options:
+      A: Moving-to-opportunity style assignment
+      B: Cross-sectional survey
+      C: Opinion poll
+      D: Case report
+    answer: A
+    explain: Randomized relocation varies the exposure cleanly.
+    distractors:
+      A: Correlational only.
+      B: No exposure variation.
+      C: Single case, no control.
+pitfalls:
+- Ethnocentrism vs relativism — again.
+- Merton's adaptation names swapped.
+- Prevalence vs incidence arithmetic.
+- Relative vs absolute mobility — same ladder, different steps.
+- Culture lag vs diffusion.
+exam_map:
+  NMAT: Institutions, culture, stratification, demography — recall level.
+  MCAT: Content Category 9A-9B — social determinants passages.
+sources:
+- ref: openstax-sociology-3e
+  used:
+  - Ch 3, 5, 7, 9, 20 — culture through demographics
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC9
+  relation: consulted
+further_reading:
+- title: OpenStax Sociology 3e — Social Stratification
+  url: https://openstax.org/books/introduction-sociology-3e/pages/9-introduction
+  note: Mobility and reproduction.
+- title: OpenStax Sociology 3e — Demography
+  url: https://openstax.org/books/introduction-sociology-3e/pages/20-introduction
+  note: Transition and pyramids.
+review_questions:
+- q: Bourdieu's cultural capital refers to…
+  options:
+    A: Money that buys education
+    B: Nonmaterial resources converted into advantage
+    C: Genetic inheritance
+    D: Physical assets
+  answer: B
+  explain: Tastes, credentials, and knowledge with exchange value.
+  distractors:
+    A: That is economic capital.
+    B: Correct.
+    C: Not hereditary in the genetic sense.
+    D: Social networks overlap, but capital is cultural.
+- q: Medicalization of deviance means…
+  options:
+    A: Crime is always genetic
+    B: Behaviors are reclassified as medical conditions
+    C: Doctors commit deviance
+    D: Illness is a myth
+  answer: B
+  explain: Addiction, obesity, even shyness — reframed as treatable syndromes.
+  distractors:
+    A: Not genetic framing.
+    B: Correct.
+    C: Error.
+    D: Not the claim.
+- q: Chain migration refers to…
+  options:
+    A: Migrants following pioneer kin networks
+    B: Forced relocation chains
+    C: Trade routes
+    D: Undocumented only
+  answer: A
+  explain: Social capital channels later movers through established communities.
+  distractors:
+    A: Correct.
+    B: Not forced.
+    C: Not trade.
+    D: Applies to all statuses.
+- q: The epidemiological transition is…
+  options:
+    A: Infectious → chronic disease dominance
+    B: Rural → urban shift
+    C: Fertility decline
+    D: Migration growth
+  answer: A
+  explain: Mortality causes shift with development.
+  distractors:
+    A: Correct.
+    B: That is the demographic move.
+    C: That is stage 3.
+    D: Separate process.

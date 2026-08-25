@@ -1,0 +1,283 @@
+subject: behavioral-social
+chapter: FC6 · Perceive, think, react
+title: FC6 · Perceive, Think, React
+overview: Biological bases of behavior — neurotransmitters, brain organization, sensation and perception,
+  cognition-consciousness, and the physiology of response. The 'react' side covers the stress response
+  and emotion. Deep overlap with psychology chapters 3A and 6A-6C.
+sections:
+- heading: Neurotransmitters and synaptic transmission
+  body:
+  - 'Transmission — action potential arrives at the terminal, vesicles fuse, neurotransmitter crosses
+    the cleft, binds receptors on the postsynaptic cell. ==Lifecycle: synthesis, storage, release, binding,
+    reuptake or enzymatic degradation== — every drug acts at one of these steps.'
+  - '==Key transmitters: acetylcholine (muscle, memory — Alzheimer''s losses), dopamine (reward, movement
+    — Parkinson''s losses; psychosis excess), serotonin (mood, sleep), GABA (main inhibition — benzodiazepines
+    boost it), glutamate (main excitation), norepinephrine (alertness)==. Endorphins — pain modulation.'
+  check:
+  - q: Benzodiazepines reduce anxiety by…
+    options:
+      A: Blocking dopamine receptors
+      B: Enhancing GABA-mediated inhibition
+      C: Increasing glutamate
+      D: Blocking reuptake of serotonin
+    answer: B
+    explain: They bind the GABA-A receptor and increase chloride influx — inhibition down.
+    distractors:
+      A: That is antipsychotics.
+      B: Opposite direction.
+      C: SSRIs do that.
+- heading: Sensation and perception — getting the world in
+  body:
+  - ==Sensation = transduction — receptors convert stimuli into neural signals; perception = interpretation==.
+    Vision — rods (dim light) vs cones (color, three types); dark adaptation; the trichromatic and opponent-process
+    theories; blind spot; ==V1 in occipital cortex==.
+  - ==Gestalt principles — proximity, similarity, closure, continuity, figure-ground==. Audition — basilar
+    membrane tonotopy; place vs frequency theories; olfaction/gustation are chemical; ==somatosensation
+    — gate control of pain==. Perceptual constancies and depth cues (monocular/binocular).
+  check:
+  - q: Seeing a circle where three dashed arcs nearly meet is…
+    options:
+      A: Closure
+      B: Similarity
+      C: Proximity
+      D: Figure-ground
+    answer: A
+    explain: The mind completes the missing piece — Gestalt closure.
+    distractors:
+      A: Grouping by appearance.
+      B: Grouping by nearness.
+      C: Separating object from background.
+  figures:
+  - src: behavioral-social/fc6-perceive-think-react/muller-lyer.webp
+    caption: The Müller-Lyer illusion — the mind's depth cues override equal line lengths.
+    credit: Ch 5 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
+- heading: Consciousness and its states
+  body:
+  - ==Sleep stages — NREM 1, 2, 3 (slow wave) and REM (dreaming, atonia, rapid eye movement); the cycle
+    repeats ~90 minutes==. Sleep deprivation impairs cognition and immune function; melatonin drives the
+    circadian rhythm via the SCN.
+  - ==Dream theories — activation-synthesis (random bursts, the cortex weaves a story), Freud's wish fulfillment,
+    cognitive processing==. Consciousness-altering drugs — stimulants (agonists), depressants (GABA agonists,
+    alcohol), hallucinogens (serotonergic), opiates (endorphin receptor agonists).
+  check:
+  - q: REM sleep is characterized by…
+    options:
+      A: Slow-wave EEG
+      B: Rapid eye movement and skeletal muscle atonia
+      C: Deep non-dreaming rest
+      D: No brain activity
+    answer: B
+    explain: Dreaming accompanies REM; muscles are actively paralyzed.
+    distractors:
+      A: Stage 3 has slow waves.
+      B: Correct.
+      C: REM is not NREM 3.
+      D: Brain is very active.
+- heading: Cognition and emotion — thinking makes feeling
+  body:
+  - '==Heuristics and biases again — availability, representativeness, anchoring, confirmation, framing==.
+    Emotional appraisal — Lazarus: how we appraise an event determines the emotion and stress. ==Epigenesis
+    — environmental experience alters gene expression through attachment and stress history==.'
+  - ==Drive states — hunger (lateral/ventromedial hypothalamus, leptin, ghrelin), thirst, sleep; sex hormones
+    organize vs activate behavior==. Emotion-physiology loops — amygdala central, prefrontal regulation,
+    HPA axis stress response.
+  check:
+  - q: Leptin primarily…
+    options:
+      A: Stimulates hunger
+      B: Signals fat stores to reduce hunger
+      C: Triggers thirst
+      D: Promotes sleep
+    answer: B
+    explain: Adipose-derived — high levels suppress appetite via the hypothalamus.
+    distractors:
+      A: Ghrelin does that.
+      B: Correct.
+      C: Thirst is separate.
+      D: Not its signal.
+- heading: Stress and the biology of reaction
+  body:
+  - ==HPA axis — hypothalamus releases CRH, pituitary ACTH, adrenal cortex cortisol; SNS gives the quick
+    adrenaline response==. Chronic stress — cortisol drives immune suppression, hippocampal atrophy risk,
+    cardiovascular strain.
+  - ==Coping — problem-focused vs emotion-focused; social support buffers; appraisal again moderates every
+    link==. Learned helplessness (Seligman) — uncontrollable events teach passivity — the clinical model
+    for depression.
+  check:
+  - q: The FAST initial reaction to a threat is…
+    options:
+      A: Cortisol release
+      B: Epinephrine via the sympathetic system
+      C: ACTH from the pituitary
+      D: Serotonin reuptake
+    answer: B
+    explain: Sympathetic-adrenal-medullary axis — seconds; cortisol takes minutes.
+    distractors:
+      A: The slow HPA path.
+      B: HPA step.
+      C: Not a stress channel.
+  figures:
+  - src: behavioral-social/fc6-perceive-think-react/fig-b561c8c9.webp
+    caption: The autonomic nervous system — sympathetic emergency mobilization versus parasympathetic
+      rest-and-digest.
+    credit: Ch 3 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
+examples:
+- prompt: A patient with a tumor compressing his left optic nerve loses vision in the LEFT eye only. In
+    which region does the crossover explain why right-eye vision is spared?
+  solution:
+  - Optic nerves from both eyes join at the optic chiasm.
+  - Some fibers cross — temporal fibers stay ipsilateral, nasal fibers cross.
+  - A pre-chiasm left optic nerve lesion blocks all signals from the left eye — right eye unaffected.
+  - Post-chiasm lesions cause hemifield loss in BOTH eyes — not seen here.
+  answer: The lesion must be PRE-chiasm (left optic nerve) — fibers from the right eye still reach the
+    brain.
+  distractors:
+    A: Post-chiasm — would cut both eyes' visual fields.
+    B: Optic tract — same bilateral loss pattern.
+    C: Occipital cortex — bilateral half-fields, not one eye.
+key_points:
+- Neurotransmitter lifecycle — drugs act at synthesis, release, binding, reuptake, degradation.
+- GABA-inhibits / glutamate-excites; dopamine reward-movement.
+- Sensation transduces; perception interprets; Gestalt rules.
+- 'REM: dreaming with muscle atonia; ~90 min cycles.'
+- HPA (slow cortisol) vs SNS (fast epinephrine) stress channels.
+- Appraisal mediates emotion and stress severity.
+mnemonics:
+- phrase: Slow cortisol, fast adrenaline
+  means: HPA axis vs sympathetic emergency channels.
+- phrase: Rods for night, cones for color
+  means: Photoreceptor division of labor.
+maps:
+- title: Visual pathway
+  steps:
+  - retina — rods/cones transduce
+  - optic nerve exits eye
+  - chiasm — nasal fibers cross
+  - LGN then V1 occipital
+- title: HPA axis
+  steps:
+  - hypothalamus — CRH
+  - pituitary — ACTH
+  - adrenal cortex — cortisol
+  - targets — metabolism, immune, brain
+passage:
+  text: A study divides participants into a stress group (public-speaking task) and a control group. Salivary
+    cortisol peaks ~20 minutes after task onset in the stress group. A second group receives oxytocin
+    nasal spray before the task; their cortisol peak is blunted and self-reported anxiety drops.
+  questions:
+  - q: Cortisol peaking 20 minutes after onset, not seconds, is consistent with…
+    options:
+      A: The HPA axis pathway
+      B: The sympathetic-adrenal pathway
+      C: Direct neural transmission
+      D: Reflex arc activity
+    answer: A
+    explain: Cortisol is the slow hormonal cascade — CRH, ACTH, then adrenal cortex.
+    distractors:
+      A: That is epinephrine, seconds.
+      B: Neurotransmission is millisecond.
+      C: No spinal reflex here.
+  - q: Oxytocin blunting the cortisol response suggests it modulates…
+    options:
+      A: The stress response via social affiliation mechanisms
+      B: Basal metabolic rate
+      C: Sensory thresholds
+      D: Motor planning
+    answer: A
+    explain: Oxytocin is the social-bonding peptide and dampens HPA reactivity.
+    distractors:
+      A: Correct.
+      B: Thyroid hormones do.
+      C: Not its target.
+      D: Not its role.
+  - q: Which finding would most challenge the study's internal validity?
+    options:
+      A: A large sample size
+      B: The stress group knowing whether they received oxytocin or placebo
+      C: High statistical significance
+      D: Replication with a longer task
+    answer: B
+    explain: Expectation effects contaminate the manipulation — demand characteristics.
+    distractors:
+      A: Power, not validity.
+      B: Correct.
+      C: Significance is downstream.
+      D: That tests external validity.
+pitfalls:
+- HPA vs SNS timing — seconds vs minutes.
+- Confusing rods and cones roles.
+- Gestalt principles swapped.
+- REM as 'light' sleep — it is an active state.
+- Drug class by receptor (GABA-agonist vs blocker).
+exam_map:
+  NMAT: Biological psychology bulk — transmitters, brain, sensation, sleep.
+  MCAT: Content Categories 6A-6C — nervous system, sensing, stress.
+sources:
+- ref: openstax-psychology-2e
+  used:
+  - Ch 2-4, 9, 12 — biopsych through consciousness
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC6
+  relation: consulted
+further_reading:
+- title: OpenStax Psychology 2e — Biopsychology
+  url: https://openstax.org/books/psychology-2e/pages/3-introduction
+  note: Neurons, brain, transmitters.
+- title: OpenStax Psychology 2e — Sensation and Perception
+  url: https://openstax.org/books/psychology-2e/pages/5-introduction
+  note: Sensory systems and Gestalt.
+review_questions:
+- q: Parkinson's disease primarily involves…
+  options:
+    A: Serotonin loss
+    B: Dopamine loss in the basal ganglia
+    C: GABA excess
+    D: Acetylcholine excess
+  answer: B
+  explain: Substantia nigra dopamine neurons die — movement initiation fails.
+  distractors:
+    A: That is depression angle.
+    B: Correct.
+    C: That is benzodiazepine-like.
+    D: That is a contrast target.
+- q: The opponent-process theory explains…
+  options:
+    A: Why we see negative afterimages
+    B: How rods work at night
+    C: Depth cues
+    D: Sound localization
+  answer: A
+  explain: Color pairs (red-green, blue-yellow) — adapting one member leaves the afterimage.
+  distractors:
+    A: Correct.
+    B: Trichromatic covers cones.
+    C: Not its domain.
+    D: Auditory, not visual.
+- q: Freud's dream theory is called…
+  options:
+    A: Activation-synthesis
+    B: Wish fulfillment
+    C: Cognitive processing
+    D: REM rebound
+  answer: B
+  explain: Dreams satisfy disguised unconscious wishes.
+  distractors:
+    A: That is Hobson's.
+    B: Correct.
+    C: That is a cognitive account.
+    D: A rebound phenomenon.
+- q: Learned helplessness is best modeled by…
+  options:
+    A: Reinforced behaviors
+    B: Uncontrollable shocks teaching passivity
+    C: Punishment schedules
+    D: Classical conditioning of taste
+  answer: B
+  explain: Seligman — control loss generalizes into hopelessness.
+  distractors:
+    A: Operant shaping.
+    B: Correct.
+    C: Punishment suppresses, does not silence initiative.
+    D: Taste aversion is different.

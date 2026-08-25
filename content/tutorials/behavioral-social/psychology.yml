@@ -1,0 +1,281 @@
+subject: behavioral-social
+chapter: Psychology
+title: Psychology
+overview: The full NMAT psychology pass — brain-behavior, learning, memory, cognition, motivation, emotion,
+  development, personality, abnormal and social psychology at introductory depth. Overlaps with every
+  MCAT psych/soc category.
+sections:
+- heading: Biological bases of behavior
+  body:
+  - '==Neurons fire via action potentials — resting -70 mV, threshold -55 mV, sodium sodium-sodium exchange==.
+    Synaptic transmission: neurotransmitter released into the cleft binds receptors; drugs and toxins
+    exploit reuptake and degradation. ==Neurotransmitters map to behavior — dopamine (reward/movement),
+    serotonin (mood), acetylcholine (muscle/memory), GABA (inhibition)==.'
+  - 'Brain geography — ==frontal (executive function, personality), temporal (auditory, memory), parietal
+    (somatosensory, spatial), occipital (vision)==; limbic system (amygdala fear, hippocampus memory);
+    cerebellum (coordination); brainstem (vital reflexes). Hemispheres — left language in most, right
+    spatial. ==Plasticity: brain rewires after damage; young brains recover best==.'
+  check:
+  - q: Damage to the amygdala most directly impairs…
+    options:
+      A: Language production
+      B: Fear conditioning and emotional responses
+      C: Coordination
+      D: Object recognition
+    answer: B
+    explain: Amygdala is the fear/emotion hub — encoding emotional significance.
+    distractors:
+      A: Broca area does that.
+      B: Cerebellum.
+      C: Temporal/occipital junction.
+- heading: Learning and conditioning
+  body:
+  - '==Classical conditioning (Pavlov) — neutral stimulus paired with an unconditioned one acquires the
+    response; extinction and spontaneous recovery shape it; generalization and discrimination set the
+    boundaries==. Operant (Skinner) — behavior shaped by consequences: ==reinforcement increases behavior
+    (positive: add reward; negative: remove aversive); punishment decreases it==.'
+  - ==Schedules — fixed ratio (high rate, pause), variable ratio (slot machines — highest rate), fixed
+    interval (scalloped), variable interval (slow steady)==. Observational learning (Bandura's Bobo) —
+    learn by watching models; vicarious reinforcement updates expectations.
+  check:
+  - q: A slot machine pays on a…
+    options:
+      A: Fixed ratio schedule
+      B: Variable ratio schedule
+      C: Fixed interval schedule
+      D: Variable interval schedule
+    answer: B
+    explain: Unpredictable reinforcement after variable trials — maximal resistance to extinction.
+    distractors:
+      A: Predictable payouts.
+      B: Time-based.
+      C: Time-based.
+  figures:
+  - src: behavioral-social/psychology/fig-0a68ead5.webp
+    caption: Classical conditioning — the dog salivating to the bell after repeated bell-food pairings.
+    credit: Ch 6 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
+  - src: behavioral-social/psychology/fig-2909f5e9.webp
+    caption: A founding figure of learning research — the conditioning chapter's portrait.
+    credit: Ch 6 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
+- heading: Memory systems
+  body:
+  - '==Three-store model: sensory (<1 s) → short-term/working (about 7 +/- 2 items, ~20 s) → long-term
+    (potentially permanent)==. Encoding, storage, retrieval; forgetting via decay, interference (proactive
+    old blocks new; retroactive new blocks old).'
+  - ==Long-term types — explicit (episodic events, semantic facts) vs implicit (procedural skills, priming,
+    classical conditioning)==. Memory errors — the misinformation effect, source confusion, flashbulb
+    inaccuracies. Retrieval cues and context dependence (state-dependent learning).
+  check:
+  - q: Riding a bicycle uses…
+    options:
+      A: Episodic memory
+      B: Procedural memory
+      C: Semantic memory
+      D: Working memory only
+    answer: B
+    explain: Skills are procedural — implicit, learned by practice.
+    distractors:
+      A: Event recall.
+      B: Fact recall.
+      C: Not storing the skill.
+- heading: Cognition, language, and intelligence
+  body:
+  - '==Heuristics — availability (judge by ease of recall), representativeness (match prototypes), anchoring;
+    biases — confirmation, hindsight, overconfidence==. Problem solving: algorithms (guaranteed), heuristics
+    (fast), insight; functional fixedness and mental sets block solutions.'
+  - '==Language: phonemes -> morphemes -> syntax; Broca (production) vs Wernicke (comprehension); critical
+    period hypothesis (Lenneberg)==. Intelligence — Spearman g, Gardner''s multiple, Sternberg triarchic;
+    ==IQ tests must show reliability (consistency) and validity (measuring what they claim)==.'
+  check:
+  - q: Judging the likelihood of events by how easily examples come to mind is…
+    options:
+      A: The representativeness heuristic
+      B: The availability heuristic
+      C: Anchoring
+      D: Framing
+    answer: B
+    explain: Easily recalled = judged probable — the availability shortcut.
+    distractors:
+      A: Prototype matching.
+      B: Initial value bias.
+      C: How options are worded.
+- heading: Motivation, emotion, and stress
+  body:
+  - ==Motivation theories — drive-reduction (hunger, hunger), incentive, arousal (Yerkes-Dodson — moderate
+    arousal = peak performance), Maslow's hierarchy==. Emotion — James-Lange (body first, then label),
+    Cannon-Bard (simultaneous), Schachter two-factor (arousal + attribution); facial feedback hypothesis.
+  - '==Stress — Selye''s GAS: alarm, resistance, exhaustion; appraisal of coping resources decides severity
+    (Lazarus)==. Type A personality and stress-related illness. Coping — problem-focused vs emotion-focused.'
+  check:
+  - q: The theory that we label our emotion from bodily arousal plus situational cues is…
+    options:
+      A: James-Lange
+      B: Cannon-Bard
+      C: Schachter's two-factor
+      D: Facial feedback
+    answer: C
+    explain: Arousal is generic; the situation supplies the label.
+    distractors:
+      A: Body alone.
+      B: Simultaneous.
+      C: Expressions shape feeling.
+examples:
+- prompt: A rat is trained to press a lever for food — then the food stops. The pressing rate falls but
+    periodically clusters right before what used to be feeding times. What schedule was used?
+  solution:
+  - Pressing continued after reinforcement stopped — extinction resistance.
+  - The time-clustered bursts, not count-clustered, point to time-based reinforcement.
+  - Scheduled food at fixed times = fixed interval — scalloped responding before each.
+  - Variable schedules would give steady rates, not pauses before expected times.
+  answer: Fixed interval schedule — the scallop pattern gives it away.
+  distractors:
+    A: Variable ratio — would keep a high steady rate without pauses.
+    B: Fixed ratio — pauses come after reinforcement, not before it.
+    C: Continuous reinforcement — extinguishes fastest.
+key_points:
+- Action potential — all-or-none; reset by Na-K pump.
+- Classical = stimulus pairing; operant = consequence-shaped.
+- Reinforcement adds or removes; schedules shape rates.
+- Sensory -> working (7+/-2) -> long-term; explicit vs implicit.
+- Availability and representativeness heuristics.
+- 'GAS: alarm, resistance, exhaustion; appraisal moderates.'
+mnemonics:
+- phrase: FRAP FIVR
+  means: Fixed ratio — pause AFTER, variable ratio — no pause; fixed interval — scallop, variable interval
+    — steady.
+- phrase: Amydala FEAR, hippocaMPUS memory
+  means: Two limbic landmarks in one line.
+maps:
+- title: Memory pipeline
+  steps:
+  - sensory register < 1 s
+  - short-term/working ~20 s, 7 ± 2 items
+  - encoding to long-term
+  - retrieval — interference and cues
+- title: Stress response
+  steps:
+  - stressor appraised
+  - alarm — fight or flight mobilizes
+  - resistance — adaptation taxed
+  - exhaustion — resources depleted
+passage:
+  text: A patient with bilateral hippocampal damage can learn a mirror-drawing task — accuracy improves
+    across sessions — yet cannot recall doing it. On word-pair tests, performance matches chance.
+  questions:
+  - q: The mirror-drawing learning is…
+    options:
+      A: Episodic — explicit
+      B: Procedural — implicit
+      C: Semantic — explicit
+      D: Working memory
+    answer: B
+    explain: Skill acquisition survives — procedural memory is hippocampus-independent.
+    distractors:
+      A: Events are lost.
+      B: Correct.
+      C: Facts would also fail.
+      D: It is stored, not held transient.
+  - q: The word-pair failure reflects…
+    options:
+      A: Motivation
+      B: Explicit memory loss via the hippocampus
+      C: Sensory gating
+      D: Attention deficit
+    answer: B
+    explain: Hippocampus consolidates explicit episodes and associations.
+    distractors:
+      A: He tries normally.
+      B: Correct.
+      C: Senses work.
+      D: Attention is preserved.
+  - q: Which study design best separates explicit from implicit memory?
+    options:
+      A: Free recall of a word list
+      B: Priming — word-stem completion after brief exposure
+      C: Serial position curve measurement
+      D: Retroactive interference lists
+    answer: B
+    explain: Priming alters performance without conscious recollection — implicit.
+    distractors:
+      A: Explicit recall.
+      B: Correct.
+      C: Curve reflects stores, not the dichotomy cleanly.
+      D: Tests interference, not implicit.
+pitfalls:
+- Classical vs operant — respond to what (stimulus vs consequence) controls behavior.
+- Negative reinforcement is NOT punishment — sign of the operation differs.
+- Episodic vs semantic confusion.
+- Availability vs representativeness.
+- Maslow's hierarchy treated as rigid order in every case.
+exam_map:
+  NMAT: Core of the Social Science section — definitions, matching, short scenarios.
+  MCAT: Feeds FC6-10 — most topics recur inside psych/soc passages.
+sources:
+- ref: openstax-psychology-2e
+  used:
+  - Ch 1-15 — whole survey
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - FC6-10
+  relation: consulted
+further_reading:
+- title: OpenStax Psychology 2e — Learning
+  url: https://openstax.org/books/psychology-2e/pages/6-introduction
+  note: Conditioning and schedules.
+- title: OpenStax Psychology 2e — Memory
+  url: https://openstax.org/books/psychology-2e/pages/8-introduction
+  note: Three-store model and errors.
+review_questions:
+- q: The myelin sheath…
+  options:
+    A: Stores memories
+    B: Speeds conduction by insulating the axon
+    C: Releases dopamine
+    D: Detects pain
+  answer: B
+  explain: Saltatory conduction — signal jumps between nodes of Ranvier.
+  distractors:
+    A: Hippocampus does.
+    B: Correct.
+    C: Axon terminals do.
+    D: Nociceptors do.
+- q: Extinction in classical conditioning is…
+  options:
+    A: Forgetting the CR entirely
+    B: Presenting the CS without the US
+    C: Presenting the US alone
+    D: Reinforcement of the CR
+  answer: B
+  explain: The learned response fades when the CS stops predicting the US.
+  distractors:
+    A: Spontaneous recovery shows residue.
+    B: Correct.
+    C: That is sensitization.
+    D: That is operant maintenance.
+- q: Which is a working-memory task?
+  options:
+    A: Reciting a 20-year-old poem
+    B: Holding digits while reversing them
+    C: Recognizing a face
+    D: Riding a bike
+  answer: B
+  explain: Active manipulation of current information — the dual task signature.
+  distractors:
+    A: Long-term retrieval.
+    B: Correct.
+    C: Recognition memory.
+    D: Procedural skill.
+- q: Broca's aphasia spares…
+  options:
+    A: Fluent production
+    B: Comprehension mostly intact
+    C: Reading aloud
+    D: Writing
+  answer: B
+  explain: Nonfluent, effortful speech with relatively preserved understanding.
+  distractors:
+    A: Speech is nonfluent.
+    B: Correct.
+    C: Reading aloud fails with production.
+    D: Writing is typically affected too.

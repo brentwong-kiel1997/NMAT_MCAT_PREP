@@ -1,6 +1,6 @@
 # Tutorial Fill Progress (content/tutorials)
 
-> 70 unique chapters grouped by discipline · **44 published tutorials**.
+> 70 unique chapters grouped by discipline · **51 published tutorials**.
    Update this file **together with** every chapter you publish.
 
 Legend: **✅ Published** · ⬜ Not started · Exams column shows each chapter's annotation.
@@ -73,13 +73,13 @@ Legend: **✅ Published** · ⬜ Not started · Exams column shows each chapter'
 
 | # | Chapter | Exams | Status | Tutorial |
 |---|---|---|---|---|
-| 1 | FC10 · Stratification and resources | NMAT · MCAT | ⬜ Not started | — |
-| 2 | FC6 · Perceive, think, react | NMAT · MCAT | ⬜ Not started | — |
-| 3 | FC7 · Behavior and behavior change | NMAT · MCAT | ⬜ Not started | — |
-| 4 | FC8 · Self, others, interactions | NMAT · MCAT | ⬜ Not started | — |
-| 5 | FC9 · Cultural and social differences | NMAT · MCAT | ⬜ Not started | — |
-| 6 | Psychology | NMAT · MCAT | ⬜ Not started | — |
-| 7 | Sociology and Anthropology | NMAT · MCAT | ⬜ Not started | — |
+| 1 | FC6 · Perceive, think, react | NMAT · MCAT | ✅ Published | [tutorial](tutorials/behavioral-social/fc6-perceive-think-react.yml) |
+| 2 | FC7 · Behavior and behavior change | NMAT · MCAT | ✅ Published | [tutorial](tutorials/behavioral-social/fc7-behavior-and-behavior-change.yml) |
+| 3 | FC8 · Self, others, interactions | NMAT · MCAT | ✅ Published | [tutorial](tutorials/behavioral-social/fc8-self-others-interactions.yml) |
+| 4 | FC9 · Cultural and social differences | NMAT · MCAT | ✅ Published | [tutorial](tutorials/behavioral-social/fc9-cultural-and-social-differences.yml) |
+| 5 | FC10 · Stratification and resources | NMAT · MCAT | ✅ Published | [tutorial](tutorials/behavioral-social/fc10-stratification-and-resources.yml) |
+| 6 | Psychology | NMAT · MCAT | ✅ Published | [tutorial](tutorials/behavioral-social/psychology.yml) |
+| 7 | Sociology and Anthropology | NMAT · MCAT | ✅ Published | [tutorial](tutorials/behavioral-social/sociology-and-anthropology.yml) |
 
 ### Biochemistry (biochemistry) · 5 chapters
 
