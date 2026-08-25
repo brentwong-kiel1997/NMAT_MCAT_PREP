@@ -26,6 +26,13 @@ sections:
       A: Effort drop — not this.
       B: No planted majority.
       C: Anonymity effects, absent.
+  figures:
+  - src: 7b-social-processes-that-influence-behavior/social-roles.webp
+    caption: Social roles — the student role dictates studious behavior in the classroom.
+    credit: Fig 12.8 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
+  - src: 7b-social-processes-that-influence-behavior/social-norms.webp
+    caption: Social norms — young people dress alike to fit in with peer groups.
+    credit: Fig 12.9 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Obedience — authority's pull
   body:
   - Milgram — ~65% administered maximum shock when an experimenter insisted. Levers — proximity of authority

@@ -1,5 +1,5 @@
 {
-  "source_rev": "00c0119",
+  "source_rev": "d8a3d24",
   "counts": {
     "chapters": 71,
     "note_bullets": 454,
@@ -130,8 +130,8 @@
     "tutorials/psych-soc/6a-sensing-the-environment.yml": "5d68e3f7e1a416f5cd68387533a9ce497fd5ddad06000578c8f9aa45bf8f7cce",
     "tutorials/psych-soc/6b-making-sense-of-the-environment.yml": "beadfe7656b1471a3ec17440ad68ecc71ebf56d597277fe9c54d88d25011c179",
     "tutorials/psych-soc/6c-responding-to-the-world.yml": "86146ea709fe30850e0e051f3ac6428bdb3ed447caf756e5e313b4051644770b",
-    "tutorials/psych-soc/7a-individual-influences-on-behavior.yml": "27cc49f4469d8b6e596b625aa9e45458bcffd0ea7ef98aff112ad43fea62e7e5",
-    "tutorials/psych-soc/7b-social-processes-that-influence-behavior.yml": "7587eb7f010a20f4c75f4074d14a51050c83049c5af7a43911d5802ff2e0cb3f",
+    "tutorials/psych-soc/7a-individual-influences-on-behavior.yml": "4101bd9d6976117cd775e6fc5b50014f7fbffac7b1c4e7275436b1f5d2b7bff8",
+    "tutorials/psych-soc/7b-social-processes-that-influence-behavior.yml": "624437029f4bf8021e6caf8d1d29212677054095e2eb0a647a5bf81ca980ccb5",
     "tutorials/psych-soc/7c-attitude-and-behavior-change.yml": "f388de7b67a85f2f3ce8978fdcd25424e48fa98af203a593437e34d0a9fcaada",
     "tutorials/psych-soc/8a-self-identity.yml": "106efeeb9bdb2196aea7de9e789a52ba786d027eeddaab7e5f253fd4f032f2e3",
     "tutorials/psych-soc/8b-social-thinking.yml": "fe341b28bd7beef3618d138966dc9f5532c238adf837597f8fe9eefcc7f2dab1",

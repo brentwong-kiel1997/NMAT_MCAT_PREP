@@ -46,6 +46,13 @@ sections:
       A: James-Lange ties emotion to specific bodily patterns.
       B: Simultaneity without labeling is not the point.
       C: Motivation, not emotion theory.
+  figures:
+  - src: 7a-individual-influences-on-behavior/maslow-pyramid.webp
+    caption: Maslow's hierarchy of needs — physiological through self-actualization.
+    credit: Fig 10.8 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
+  - src: 7a-individual-influences-on-behavior/yerkes-dodson.webp
+    caption: Yerkes-Dodson law — optimal arousal differs for simple versus difficult tasks.
+    credit: Fig 10.7 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Personality — four theoretical families
   body:
   - Match the family to its fingerprint — psychoanalytic (Freud — id/ego/superego, defense mechanisms),
