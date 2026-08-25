@@ -1,0 +1,265 @@
+subject: quantitative
+chapter: Data Interpretation
+title: Data Interpretation
+overview: Reading tables, graphs, and charts the way the NMAT asks — trend extraction, comparison, and
+  quick percentage math on real data. The data layer is where most lost points happen, not the arithmetic.
+sections:
+- heading: Tables — read the structure first
+  body:
+  - ==Table anatomy — margins are labels, not numbers; the body is the data; check units in the header
+    row and column==. ==Always note the TIME axis and the SCALE — 'in thousands' or 'per 100,000' changes
+    every conclusion==.
+  - ==Order of attack — determine what the question asks, locate the relevant row/column pair, then compute.
+    ==Reading between rows — differences, ratios, rates of change — needs clean subtraction and division==.
+  check:
+  - q: A table columns are 'Year, Population (in thousands), GDP (in millions)'. A cell shows 120. That
+      population means…
+    options:
+      A: 120 people
+      B: 120,000 people
+      C: 120,000,000 people
+      D: 120 thousand pesos
+    answer: B
+    explain: The header says thousands — 120 x 1000 = 120,000.
+    distractors:
+      A: Reading the raw cell.
+      B: Correct.
+      C: Adding zeroes.
+      D: Unit confusion.
+- heading: Bar and line graphs — trends and magnitudes
+  body:
+  - ==Line graphs tell trends — direction, steepness (rate), and turning points==. ==Bar graphs compare
+    magnitudes across categories — read the exact value where the bar ends, and compare heights for rough
+    ratios==.
+  - ==Reading pitfalls — axes that don't start at zero exaggerate differences; log scales change ratio
+    reading; ==trend questions ask about SLOPE, not absolute value==.
+  check:
+  - q: A line rises steeply from 2019 to 2020 then flatlines. The best summary is…
+    options:
+      A: Fast growth then stagnation
+      B: Constant decline
+      C: Slow steady rise
+      D: No change
+    answer: A
+    explain: Steep upslope = rapid increase; flat = no further change.
+    distractors:
+      A: Opposite direction.
+      B: Rate is wrong.
+      C: Contradicts the slope.
+- heading: Pie charts and parts-of-a-whole
+  body:
+  - ==Pie slices — each percent is a fraction of the total; the WHOLE must sum to 100%==. ==Computing
+    a missing slice — 100 minus the given slices; computing a count — percent x total / 100==.
+  - ==Comparison traps — equal-looking slices differ slightly; angle vs percent (the full circle is 360
+    degrees; a 90-degree slice is 25%)==.
+  check:
+  - q: A pie chart shows 40% transport, 25% food, 20% housing, 15% other. A 30-degree slice corresponds
+      to…
+    options:
+      A: 8.3%
+      B: 10%
+      C: 12%
+      D: 15%
+    answer: A
+    explain: 30/360 = 8.33% of the whole.
+    distractors:
+      A: Correct.
+      B: 30/300.
+      C: 30/250.
+      D: The 'other' slice.
+- heading: Ratios, rates, and percent change from data
+  body:
+  - ==Percent change = (new - old)/old x 100% — the BASE is always the earlier value==. ==Rates — per
+    capita = total / population; density = count/area; per-100,000 rates matter in health tables==.
+  - ==Index numbers — a base year set to 100; ratios multiply; index change reflects percent change since
+    the base. ==Weighted averages from grouped data — weight by group size, not by group count==.
+  check:
+  - q: GDP rose from 40,000 to 44,000. The percent change is…
+    options:
+      A: 10%
+      B: 9.1%
+      C: 11%
+      D: 4%
+    answer: A
+    explain: (44000 - 40000)/40000 = 10%.
+    distractors:
+      A: Correct.
+      B: New base % change.
+      C: Rounding.
+      D: Four percent.
+- heading: Reading experimental graphs in other sections
+  body:
+  - ==Scatter plots — direction, strength, clusters; correlation is not causation==. ==Grouped bar/multiple
+    series — the legend is the key; comparison questions need matching series across categories==.
+  - ==Trend extrapolation — the exam asks 'if the trend continued' — extend the last segment, don't invent
+    new shape. ==Outliers — identify and exclude from 'overall trend' answers==.
+  check:
+  - q: A scatter of height vs weight shows a tight upward cluster. The strongest claim supported is…
+    options:
+      A: Weight causes height
+      B: There is a positive association
+      C: They are independent
+      D: The plot is invalid
+    answer: B
+    explain: Direction and strength — never causation from correlation alone.
+    distractors:
+      A: Causality overreach.
+      B: Correct.
+      C: Contradicts the cluster.
+      D: No basis.
+examples:
+- prompt: 'Year 2017: Science 12,000; Math 8,000. Year 2019: Science 15,000; Math 9,000. Which subject
+    grew faster in percent terms, and by how much?'
+  solution:
+  - 'Science: (15000-12000)/12000 = 25%.'
+  - 'Math: (9000-8000)/8000 = 12.5%.'
+  - Science grew twice as fast in percent terms.
+  - Absolute growth is larger for science too (3000 vs 1000) — but the item asked percent.
+  answer: Science — 25% vs 12.5%.
+  distractors:
+    A: Math — comparing absolute growth only.
+    B: Science by 15% — mixing bases.
+    C: Equal — using absolute differences.
+key_points:
+- Scale headers — thousands/millions change meaning.
+- Percent change bases on the EARLIER value.
+- Line slope = trend; bars = magnitudes.
+- Pie slices — fraction of a circle or percent of a whole.
+- Rates — per-capita and per-100,000 denominators.
+- Correlation ≠ causation — scatter claims stay descriptive.
+mnemonics:
+- phrase: New minus old over old
+  means: Percent change formula with the right base.
+- phrase: Slope for trends, height for amounts
+  means: What to read in line vs bar graphs.
+maps:
+- title: Graph reading sequence
+  steps:
+  - title and axes/legend
+  - units and scale
+  - trend/shape in one sentence
+  - answer specific question with located values
+  - percent math — right base
+- title: Rate conversion
+  steps:
+  - per capita — divide by population
+  - per 100,000 — multiply the rate
+  - index — base = 100
+  - density — count over area
+passage:
+  text: 'Region A: Population 500,000; 8,000 positive cases; Region B: 1,500,000 population; 18,000 positive
+    cases. Column headers: ''Region, Population, Cases, Cases per 100,000''.'
+  questions:
+  - q: The cases per 100,000 in Region A is…
+    options:
+      A: 1,600
+      B: '16'
+      C: '160'
+      D: '1.6'
+    answer: A
+    explain: 8000/500000 x 100000 = 1600.
+    distractors:
+      A: Correct.
+      B: Raw ratio.
+      C: Wrong decimal.
+      D: Percent.
+  - q: Which region has the higher per-capita case rate?
+    options:
+      A: Region A
+      B: Region B
+      C: Equal
+      D: Cannot tell from the table
+    answer: A
+    explain: 'A: 1600/100k vs B: 1200/100k — A higher.'
+    distractors:
+      A: Correct.
+      B: Larger absolute counts mislead.
+      C: Rates differ.
+      D: The data is complete.
+  - q: A 60% increase in A's cases would add…
+    options:
+      A: 4,800
+      B: '480'
+      C: 12,800
+      D: '800'
+    answer: C
+    explain: 0.6 x 8000 = 4800 new; total 12,800.
+    distractors:
+      A: New cases only.
+      B: Wrong decimal.
+      C: Correct — new total.
+      D: Percent alone.
+pitfalls:
+- Base of percent change — the OLD value.
+- Per-100,000 vs percent confusion.
+- Axes not at zero — visual exaggeration.
+- Correlation claims.
+- Reading 'nearest' vs 'exact' — the question wording decides.
+exam_map:
+  NMAT: Part 1 Quantitative — tables and graphs items.
+  MCAT: Same skill inside every passage with a figure or table.
+sources:
+- ref: cem-nmat-test-description
+  used:
+  - Part 1 Quantitative syllabus
+  relation: consulted
+further_reading:
+- title: CEM NMAT Official Website
+  url: https://www.cem-inc.org.ph
+  note: Part 1 Quantitative sample items.
+- title: Khan Academy — Data and Statistics
+  url: https://www.khanacademy.org/math/statistics-probability
+  note: Graphs, tables, and rates practice.
+review_questions:
+- q: A table lists 'Revenue (in millions)'. Reading 45 means…
+  options:
+    A: '45'
+    B: 45,000
+    C: 45,000,000
+    D: 450 million
+  answer: C
+  explain: 45 x 1,000,000 = 45 million.
+  distractors:
+    A: Raw.
+    B: Thousands.
+    C: Correct.
+    D: Scale slip.
+- q: From 80 to 100, the percent increase is…
+  options:
+    A: 20%
+    B: 25%
+    C: 10%
+    D: 22%
+  answer: B
+  explain: (100-80)/80 = 25%.
+  distractors:
+    A: Absolute.
+    B: Correct.
+    C: Half.
+    D: Rounding.
+- q: A bar chart with 3 categories summing to 100% is effectively…
+  options:
+    A: A pie chart in bars
+    B: A scatter plot
+    C: A line graph
+    D: A histogram of rates
+  answer: A
+  explain: Part-to-whole structure — same reading as pie slices.
+  distractors:
+    A: Correct.
+    B: XY pairs.
+    C: Trend over time.
+    D: Distribution widths.
+- q: Steep line slope means…
+  options:
+    A: Fast rate of change
+    B: High absolute value
+    C: No change
+    D: Negative only
+  answer: A
+  explain: Slope = rate — steep, fast.
+  distractors:
+    A: Correct.
+    B: Value needs the level.
+    C: Flat = none.
+    D: Downward = negative.

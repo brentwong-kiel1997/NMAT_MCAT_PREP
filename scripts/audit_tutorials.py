@@ -13,6 +13,11 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 BENCH = {"secs": 4, "figs": 2, "mnem": 2, "maps": 2, "pq": 3, "rq": 4, "fr": 2, "kp": 6}
+# Skill-practice disciplines teach test mechanics, not science content. There is
+# no real OpenStax figure for a number-series or mirror-image drill, and the
+# extract-only rule forbids self-drawn ones — so the figures benchmark is
+# waived for them (still counted and reported).
+FIGURE_FREE = {"quantitative", "inductive-reasoning", "perceptual-acuity", "cars", "verbal"}
 
 def audit(disc):
     tut_dir = REPO / "content" / "tutorials" / disc
@@ -36,7 +41,8 @@ def audit(disc):
         fails = []
         if secs < BENCH["secs"]: fails.append(f"secs{secs}<{BENCH['secs']}")
         figs_on_disk = sum(1 for s in d.get("sections") or [] for fig in s.get("figures") or [] if (REPO / "content" / "images" / fig.get("src", "")).exists())
-        if figs < BENCH["figs"] or figs_on_disk < BENCH["figs"]: fails.append(f"figs{figs_on_disk}disk/{figs}ref<{BENCH['figs']}")
+        fig_bench = 0 if disc in FIGURE_FREE else BENCH["figs"]
+        if figs < fig_bench or figs_on_disk < fig_bench: fails.append(f"figs{figs_on_disk}disk/{figs}ref<{fig_bench}")
         if checks < secs: fails.append(f"checks{checks}<{secs}")
         if mnem < BENCH["mnem"]: fails.append(f"mnem{mnem}<{BENCH['mnem']}")
         if maps < BENCH["maps"]: fails.append(f"maps{maps}<{BENCH['maps']}")

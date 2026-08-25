@@ -1,0 +1,263 @@
+subject: quantitative
+chapter: Fundamental Operations
+title: Fundamental Operations
+overview: Fluency with arithmetic and algebra primitives — order of operations, fractions, percents, ratios,
+  exponents, and estimation. Every NMAT math item ultimately reduces to these; speed comes from being
+  mechanical about them.
+sections:
+- heading: Order of operations and signed arithmetic
+  body:
+  - '==PEMDAS — parentheses, exponents, multiplication/division (left to right), addition/subtraction
+    (left to right)==. ==Negative arithmetic — the signs matter: minus times minus is plus; subtracting
+    a negative adds==.'
+  - '==Trap: unwrapped minus sign — -3^2 = -9, not 9; (-3)^2 = 9. ==Parentheses are the authority — resolve
+    inside first, then exponents, then multiply/divide in order.'
+  check:
+  - q: 'Simplify: 12 - 3 x (4 - 1)^2 + 6 / 2'
+    options:
+      A: '-12'
+      B: '9'
+      C: '-3'
+      D: '18'
+    answer: A
+    explain: 12 - 3 x 9 + 3 = 12 - 27 + 3 = -12.
+    distractors:
+      A: Correct.
+      B: Left-to-right without PEMDAS.
+      C: Partial order slip.
+      D: Wrong precedence on exponents.
+- heading: Fractions, decimals, and percents
+  body:
+  - ==Fraction fraction rules — add/subtract require common denominators; multiply straight across; divide
+    by inverting the divisor==. ==Percent = per hundred — 25% = 0.25 = 1/4; convert fluently both directions==.
+  - ==Percent over base — 'what is 15% of 200?' = 0.15 x 200 = 30. ==Reverse problems — '40 is what percent
+    of 250?' = 40/250 = 16% — always identify the base denominator from the 'of'==.
+  check:
+  - q: Convert 3/8 to a percent.
+    options:
+      A: 37.5%
+      B: 38%
+      C: 26.7%
+      D: 42.9%
+    answer: A
+    explain: 3/8 = 0.375 = 37.5%.
+    distractors:
+      A: Correct.
+      B: Rounding 3/8 up.
+      C: That is 4/15.
+      D: That is 3/7.
+- heading: Ratios, proportions, and unit alignment
+  body:
+  - ==A ratio compares parts (3:2); a proportion states equality of two ratios — cross-multiply only after
+    aligning units==. ==Unit alignment — convert everything to one system before any ratio step; wrong
+    units are the classic wrong answer==.
+  - ==Work-rate problems — 1/(combined rate) = 1/a + 1/b for partners; ==distance = rate x time; fast
+    estimation — check magnitude before exactness==.
+  check:
+  - q: A pump fills a tank in 6 hours; another fills it in 4. Together, how long?
+    options:
+      A: 2.4 hours
+      B: 5 hours
+      C: 10 hours
+      D: 3 hours
+    answer: A
+    explain: 1/t = 1/6 + 1/4 = 5/12, so t = 12/5 = 2.4 h.
+    distractors:
+      A: Correct.
+      B: Average of times.
+      C: Sum of times.
+      D: Half the sum.
+- heading: Exponents and roots
+  body:
+  - '==Multiplication adds exponents (x^a x^b = x^(a+b)); division subtracts (x^a/x^b = x^(a-b)); power
+    of a power multiplies ((x^a)^b = x^(ab))==. ==Zero power = 1; negative power inverts: x^-2 = 1/x^2==.'
+  - ==Fractional exponents — x^(1/2) = sqrt(x); scientific notation — 4.5e3 = 4500; multiply/divide by
+    handling exponents separately==.
+  check:
+  - q: 'Simplify: (2^3 x 2^4) / 2^5'
+    options:
+      A: '4'
+      B: '8'
+      C: '16'
+      D: '2'
+    answer: A
+    explain: 2^(3+4-5) = 2^2 = 4.
+    distractors:
+      A: Correct.
+      B: Adding exponents only.
+      C: Multiplying exponents.
+      D: Subtracting wrong.
+- heading: Estimation and answer-sanity checks
+  body:
+  - ==Kill absurd options first — magnitude, sign, and unit filters remove 2-3 options before any computation==.
+    ==Round-then-compute — 19.7 x 3.1 ≈ 20 x 3 = 60; distractor traps hide behind 5-10% errors==.
+  - ==Sanity checks — percents must be between 0 and 100 (except gains/losses problems), ratios must preserve
+    order, work rates must be slower than the fastest member alone==.
+  check:
+  - q: 'Estimate: 27.9% of 1,198'
+    options:
+      A: About 240
+      B: About 335
+      C: About 480
+      D: About 119
+    answer: B
+    explain: 28% of 1,200 = 0.28 x 1200 = 336.
+    distractors:
+      A: Underestimate.
+      B: Correct.
+      C: Overestimate.
+      D: That is 10%.
+examples:
+- prompt: A shirt costs 1,200 pesos after a 20% discount. What was the original price?
+  solution:
+  - The current price is 80% of the original — 0.8P = 1200.
+  - P = 1200/0.8 = 1500.
+  - Never subtract 20% from the final price — that error gives 960.
+  answer: 1,500 pesos.
+  distractors:
+    A: 960 — applying 20% off the wrong base.
+    B: 1,440 — subtracting 1200 x 0.2 from 1200 (double discount).
+    C: 1,000 — rounding the base down.
+key_points:
+- PEMDAS — left to right within tiers; -3^2 = -9.
+- Percents rebase on the 'of' quantity.
+- Cross-multiply only after unit alignment.
+- Exponent laws — add on multiply, subtract on divide.
+- 'Work rates: 1/t = 1/a + 1/b.'
+- Estimate first — kill magnitude-wrong options.
+mnemonics:
+- phrase: Please Excuse My Dear Aunt Sally
+  means: PEMDAS order of operations.
+- phrase: Same base — add on top, subtract on bottom
+  means: Exponent multiply/divide rules.
+maps:
+- title: Solving any math item
+  steps:
+  - read the question — identify the base and units
+  - estimate magnitude and sign
+  - compute with clean arithmetic
+  - map to options — kill absurd ones
+  - verify with a reverse check
+- title: Percent problems
+  steps:
+  - identify base (the 'of' quantity)
+  - find the part x rate relation
+  - convert to decimal — move 2 places
+  - 'reverse: base = part / rate'
+passage:
+  text: A person spends 30% of monthly income on rent, 25% of the remainder on food, and saves the rest.
+    Monthly income is 40,000 pesos.
+  questions:
+  - q: The amount spent on food is…
+    options:
+      A: 12,000
+      B: 10,000
+      C: 7,000
+      D: 15,000
+    answer: C
+    explain: Rent = 0.3 x 40000 = 12000; remainder = 28000; food = 0.25 x 28000 = 7000.
+    distractors:
+      A: 30% of income.
+      B: 25% of income (wrong base).
+      C: Correct.
+      D: Skipping the remainder step.
+  - q: The savings amount is…
+    options:
+      A: 21,000
+      B: 24,000
+      C: 18,000
+      D: 14,000
+    answer: A
+    explain: Savings = 40000 - 12000 - 7000 = 21000.
+    distractors:
+      A: Correct.
+      B: 25% saved only.
+      C: 40% saved only.
+      D: Break-even math.
+  - q: Saving 21,000 per month, how many months to reach 105,000?
+    options:
+      A: '5'
+      B: '4'
+      C: '6'
+      D: '8'
+    answer: A
+    explain: 105000/21000 = 5 months.
+    distractors:
+      A: Correct.
+      B: Four — he saves 26,250.
+      C: Half-year.
+      D: Overkill.
+pitfalls:
+- Discount from the wrong base — off the original, not the sale price.
+- Percent of remainder vs of total.
+- Exponent precedence with negatives.
+- Dividing by zero in cross-multiplies — check for zero.
+- Rate units — hours vs minutes.
+exam_map:
+  NMAT: Part 1 Quantitative — the arithmetic layer behind every item.
+  MCAT: Not a content category — but the skill shows up in Chem/Phys math.
+sources:
+- ref: cem-nmat-test-description
+  used:
+  - Part 1 Quantitative syllabus
+  relation: consulted
+further_reading:
+- title: CEM NMAT Official Website
+  url: https://www.cem-inc.org.ph
+  note: Part 1 Quantitative syllabus.
+- title: Khan Academy — Arithmetic
+  url: https://www.khanacademy.org/math/arithmetic
+  note: Order of operations, fractions, percents drills.
+review_questions:
+- q: 12% of 250 equals…
+  options:
+    A: '30'
+    B: '25'
+    C: '12'
+    D: '35'
+  answer: A
+  explain: 0.12 x 250 = 30.
+  distractors:
+    A: Correct.
+    B: 10% base.
+    C: 12 itself.
+    D: Overshoot.
+- q: (x^3)^2 = …
+  options:
+    A: x^5
+    B: x^6
+    C: x^9
+    D: x
+  answer: B
+  explain: 'Power of a power multiplies: x^6.'
+  distractors:
+    A: Adds — base times exponent.
+    B: Correct.
+    C: Cubes the exponent.
+    D: Drops the power.
+- q: Two workers take 3 h and 6 h alone. Together they take…
+  options:
+    A: 4.5 h
+    B: 2 h
+    C: 9 h
+    D: 1.5 h
+  answer: B
+  explain: 1/t = 1/3 + 1/6 = 1/2 → t = 2 h.
+  distractors:
+    A: Average.
+    B: Correct.
+    C: Sum.
+    D: Half of the mean.
+- q: A 15% tip on a 480-peso meal is…
+  options:
+    A: '62'
+    B: '72'
+    C: '48'
+    D: '96'
+  answer: B
+  explain: 0.15 x 480 = 72.
+  distractors:
+    A: Near miss.
+    B: Correct.
+    C: 10% tip.
+    D: 20% tip.

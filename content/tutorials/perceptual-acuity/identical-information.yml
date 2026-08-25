@@ -1,0 +1,265 @@
+subject: perceptual-acuity
+chapter: Identical Information
+title: Identical Information
+overview: Rapid same/different comparison of strings, codes, and records — the NMAT attention-to-detail
+  item. Precision beats speed; systematic scanning beats holistic guessing.
+sections:
+- heading: The comparison mindset
+  body:
+  - '==Identical-information items give two (or four) strings and ask: same or different? Every character
+    counts — letters, digits, spaces, punctuation, case==. ==Read the whole string; the difference hides
+    anywhere, often in the middle=='
+  - ==Positional discipline — compare LEFT to RIGHT, one character at a time; skipping a position creates
+    phantom matches==. ==Fixation order — scan, then verify with a second pass in the opposite direction==
+  check:
+  - q: AB-1234 vs AB-1234 — are they the same?
+    options:
+      A: Same
+      B: Different
+      C: Cannot tell
+      D: Depends on context
+    answer: A
+    explain: Every character matches, including the hyphen.
+    distractors:
+      A: Correct.
+      B: No variance.
+      C: They are written out.
+      D: No context needed.
+- heading: The classic traps
+  body:
+  - ==Case traps — 'aBc' vs 'Abc' differ at position 2==. ==Zero-letter traps — 0 vs O vs the letter O;
+    1 vs l vs I — glyph confusions across fonts==. ==Space and punctuation — 'AB 12' vs 'AB12' differ;
+    comma vs period vs apostrophe matters==
+  - ==Transposition — '7123' vs '7132' — digits swapped in the middle==. ==Repetition — '1122' vs '1222'
+    — the doubled digit differs==
+  check:
+  - q: Which pair is DIFFERENT? (All strings shown literally)
+    options:
+      A: A-101 vs A-101
+      B: A-011 vs A-101
+      C: CODE-A vs CODE-A
+      D: X/Y 3 vs X/Y 3
+    answer: B
+    explain: A-011 vs A-101 — transposition of 0 and 1.
+    distractors:
+      A: Identical.
+      B: Correct — middle swap.
+      C: Identical.
+      D: Identical.
+- heading: Systematic scanning strategies
+  body:
+  - ==Chunk — break long strings into 3-4 character groups ('AB12-34CD' → AB12, 34CD) and compare chunk
+    by chunk==. ==Anchor the extremes — different strings almost always differ in the interior; verify
+    first, middle, last==
+  - ==Subvocalize — reading aloud forces per-character attention. ==Cross-examine — compare A against
+    B, then B against A; asymmetry usually finds the suspect==
+  check:
+  - q: The most reliable quick scan reads…
+    options:
+      A: First, middle, last segments
+      B: Only the first character
+      C: Only the last character
+      D: The overall length
+    answer: A
+    explain: Interior differences are the norm — verify both ends and the middle.
+    distractors:
+      A: Correct.
+      B: Misses the interior.
+      C: Misses everything else.
+      D: Length rarely differs alone.
+- heading: Speed and accuracy balance
+  body:
+  - ==Accuracy first — the items are individually fast; one careless miss costs as much as several guesses==.
+    ==Pacing — 15-25 seconds per pair; two passes at moderate pace beat one rushed pass==
+  - ==When a difference is spotted, STOP — mark and move on; re-reviewing identical-looking tails wastes
+    the clock==. ==Elimination — in multi-option formats, excluding identical pairs narrows the answer
+    without full reads==
+  check:
+  - q: You find a difference at position 6 of a 15-character pair. Next…
+    options:
+      A: Mark 'different' and move on
+      B: Re-read all 15 slowly
+      C: Re-read the first 5
+      D: Ask for a second look
+    answer: A
+    explain: One confirmed difference decides the item — tail checks are waste.
+    distractors:
+      A: Correct.
+      B: Over-verification.
+      C: The difference is at 6.
+      D: No such option.
+- heading: Applied formats — codes, IDs, records
+  body:
+  - ==Codes and IDs — alphanumeric with fixed structure (e.g., PHL-2026-0925); verify each segment independently==.
+    ==Transcripts — names, numbers, and dates align column-wise==. ==Dates — 04/05 vs 05/04 swap months
+    and days==
+  - ==Long numbers — every digit is load-bearing; group by threes like a phone number==. ==Separators
+    — dash vs space vs dot are testable==
+  check:
+  - q: 'Record A: REF 2026-Q3-PH. Record B: REF 2026-03-PH. They differ…'
+    options:
+      A: Q3 vs 03
+      B: At the first two letters
+      C: In the dash style
+      D: Not at all
+    answer: A
+    explain: 'Positions 8-9: Q3 vs 03 — the middle varies.'
+    distractors:
+      A: Correct.
+      B: REF matches.
+      C: Dashes match.
+      D: They differ.
+examples:
+- prompt: 'Compare: 09F4-88K2-L7P vs 09F4-88K2-L7P — same or different?'
+  solution:
+  - Line up positions — 0,9,F,4,-,8,8,K,2,-,L,7,P on both sides.
+  - Every character including both hyphens matches — SAME.
+  - Anchor the ends — 09F4 matches, L7P matches — then the interior 88K2 confirms.
+  - 'Answer: same.'
+  answer: Identical — all 13 characters match.
+  distractors:
+    A: Calling it different — the tail spells L7P, not L8P.
+    B: Hyphen counted twice — separators match.
+    C: Focusing only on digits — the letters also match.
+key_points:
+- Every character counts — letters, digits, case, punctuation, spaces.
+- Differences hide in the interior — anchor ends, scan the middle.
+- Case and glyph traps — 0/O, 1/l, 5/S.
+- Chunk by 3-4 characters for long strings.
+- One confirmed difference ends the item.
+- Codes — verify each structure segment independently.
+mnemonics:
+- phrase: First, middle, last — then done
+  means: The anchor-scan order.
+- phrase: One difference is the answer
+  means: Stop at the first confirmed mismatch.
+maps:
+- title: Pair comparison loop
+  steps:
+  - line up the starts
+  - anchor ends — first and last chunk
+  - scan interior chunk by chunk
+  - note the first mismatch
+  - decide same/different
+- title: Trap glyphs
+  steps:
+  - 0 vs O
+  - 1 vs l vs I
+  - 5 vs S, 8 vs B
+  - hyphen vs space vs dot
+passage:
+  text: 'The inventory sheet lists: Lot #84-7102-AX23; the record shows 84-7102-AX23. Another line: PO-99120
+    vs PO-99120. A third line: 12:45 vs 12:54.'
+  questions:
+  - q: The Lot record differs by…
+    options:
+      A: The '#' symbol — presence vs absence
+      B: The digits
+      C: The letters
+      D: Nothing
+    answer: A
+    explain: Sheet has '#', record lacks it — a punctuation difference.
+    distractors:
+      A: Correct.
+      B: 84-7102-AX23 matches.
+      C: AX23 matches.
+      D: They differ once.
+  - q: PO-99120 vs PO-99120 are…
+    options:
+      A: Identical
+      B: Different in the interior
+      C: Different at the end
+      D: Impossible to compare
+    answer: A
+    explain: Character-for-character match.
+    distractors:
+      A: Correct.
+      B: Same digits.
+      C: Same digits.
+      D: They are printed.
+  - q: 12:45 vs 12:54 differ…
+    options:
+      A: At digits 4-5 (45 vs 54)
+      B: At the colon
+      C: At the first digit
+      D: Nowhere
+    answer: A
+    explain: Middle transposition — 45 swapped to 54.
+    distractors:
+      A: Correct.
+      B: Colon matches.
+      C: 12 matches.
+      D: They differ.
+pitfalls:
+- Holistic shape matching instead of character reading.
+- Case blindness — aB vs Ab.
+- Zero/O and 1/l glyph confusions.
+- Stopping early — verifying only the ends.
+- Second-guessing after the first confirmed difference.
+exam_map:
+  NMAT: Part 2 Perceptual Acuity — identical information items.
+sources:
+- ref: cem-nmat-test-description
+  used:
+  - Part 2 Perceptual Acuity syllabus
+  relation: consulted
+further_reading:
+- title: CEM NMAT Official Website
+  url: https://www.cem-inc.org.ph
+  note: Perceptual Acuity sample items.
+- title: CEM — NMAT Test Description
+  url: https://www.cem-inc.org.ph/recruitment/nmat
+  note: Official syllabus and sample-test pointers.
+review_questions:
+- q: Kw-12 vs Kw-12 — same?
+  options:
+    A: 'Yes'
+    B: 'No'
+    C: Almost
+    D: Unknown
+  answer: A
+  explain: All characters match.
+  distractors:
+    A: Correct.
+    B: No variance.
+    C: Variance is decisive.
+    D: They are shown.
+- q: MN-009 vs MN-090 — differs…
+  options:
+    A: In the trailing digits
+    B: Nowhere
+    C: In the letters
+    D: In the dash
+  answer: A
+  explain: 009 vs 090 — transposition of the last two digits.
+  distractors:
+    A: Correct.
+    B: They differ.
+    C: MN matches.
+    D: Dash matches.
+- q: String pairs most likely to hide a difference are…
+  options:
+    A: Interior-similar long ones
+    B: Short obvious ones
+    C: Symbol-free ones
+    D: Identical-looking ones
+  answer: A
+  explain: Long, similar strings reward systematic scanning.
+  distractors:
+    A: Correct.
+    B: Short ones reveal fast.
+    C: Symbols hurt legibility, not matching.
+    D: All need verification.
+- q: A good verification pass runs…
+  options:
+    A: Character by character
+    B: By overall shape
+    C: By length only
+    D: By memory
+  answer: A
+  explain: The only reliable comparison unit is the character.
+  distractors:
+    A: Correct.
+    B: Shape misses transpositions.
+    C: Length rarely differs.
+    D: Memory ruins precision.

@@ -1,0 +1,265 @@
+subject: perceptual-acuity
+chapter: Mirror Image
+title: Mirror Image
+overview: 'Judging whether a figure is the mirror image of another — the classic left-right flip. The
+  core skills: know your mirror axis, separate flip from rotation, and check asymmetric features fast.'
+sections:
+- heading: Flip vs rotation — the core distinction
+  body:
+  - ==A mirror image REVERSES left-right (vertical axis) or top-bottom (horizontal axis) — it is a reflection,
+    never a rotation==. ==Rotation preserves left-right order and the winding of interior crosses; reflection
+    reverses it==
+  - ==Test — the letter 'b' mirrors to 'd' (left-right), while rotating 'b' 180 gives 'q' — rotation and
+    reflection are DIFFERENT transformations==
+  check:
+  - q: The mirror image of 'b' in a vertical mirror is…
+    options:
+      A: d
+      B: q
+      C: p
+      D: b
+    answer: A
+    explain: Left-right reflection — the bowl flips to the right side.
+    distractors:
+      A: That is 180-degree rotation.
+      B: That is a horizontal flip.
+      C: Unchanged — impossible.
+- heading: Vertical vs horizontal mirror axes
+  body:
+  - '==Vertical mirror (left-right) — the most common NMAT axis: reverses left and right, keeps top and
+    bottom=='
+  - '==Horizontal mirror (top-bottom) — reverses up and down: ''b'' becomes ''p''==. ==The axis is stated
+    in the stem or visible in the figure — never guess==. ==Symmetric figures stay the same in a mirror;
+    items test where the asymmetry breaks=='
+  check:
+  - q: With a horizontal mirror, 'b' becomes…
+    options:
+      A: p
+      B: d
+      C: q
+      D: b
+    answer: A
+    explain: Top-bottom flip — the stem flips down.
+    distractors:
+      A: Correct.
+      B: Vertical mirror.
+      C: Rotation.
+      D: No change.
+- heading: Asymmetric-feature checking
+  body:
+  - '==Scan the asymmetric details — the notch, the protruding line, the loop — then decide its mirrored
+    position: left-right then up-down==. ==The b/d and p/q loop pairs are the favorite confusers=='
+  - ==Direction arrows — an arrow mirrored in a vertical mirror points the opposite horizontal direction;
+    vertical reverses under a horizontal axis. ==Compare silhouettes first; a good body with the wrong
+    ornament fails==
+  check:
+  - q: An arrow pointing right, mirrored in a vertical mirror, points…
+    options:
+      A: Left
+      B: Right
+      C: Down
+      D: Up
+    answer: A
+    explain: Left-right reflection reverses the heading.
+    distractors:
+      A: Correct.
+      B: Only rotation keeps heading.
+      C: Horizontal axis needed.
+      D: No.
+- heading: Mirror confusion with digits and letters
+  body:
+  - ==Digit mirror traps — 6 and 9 flip under a horizontal axis; 2 and 5 under vertical; symmetric digits
+    — 0, 8 survive both==. ==Letter traps — b/d/p/q family; symmetric letters (A, H, I, M, O, T, U, V,
+    W, X, Y) pass any vertical mirror==
+  - '==Whole words — mirror reverses letter order: read the mirrored word from the mirror side. ==Case
+    matters — capital vs lowercase flips differ, so check the stem''s exact form=='
+  check:
+  - q: Which stays the same in a vertical mirror?
+    options:
+      A: A
+      B: b
+      C: F
+      D: R
+    answer: A
+    explain: Capitals A, H, I, M, O, T, U, V, W, X, Y are vertical-mirror symmetric.
+    distractors:
+      A: Correct.
+      B: d is its image.
+      C: F reverses.
+      D: R reverses.
+- heading: Speed tactics for mirror items
+  body:
+  - ==Fix the axis mentally — decide left/right and up/down mapping before scanning options==. ==Eliminate
+    options that kept the wrong feature — half die on one asymmetric mark==
+  - ==When the stem asks for X's mirror image, reflect X ONCE and match — do not generate all four options'
+    images. ==Timebox — 30-45 seconds; prolonged symmetric confusion wastes minutes==
+  check:
+  - q: The fastest mirror-item attack is…
+    options:
+      A: Reflect the stem once, then match
+      B: Generate all four images
+      C: Guess by symmetry
+      D: Skip
+    answer: A
+    explain: One reflection, one comparison — others multiply work.
+    distractors:
+      A: Correct.
+      B: Four-way waste.
+      C: Symmetry only helps symmetric figures.
+      D: Every item is winnable.
+examples:
+- prompt: 'Given figure: an ''L'' rotated 90 degrees clockwise with a dot above the long end. Which option
+    is its vertical mirror image?'
+  solution:
+  - Decide the axis — vertical mirror (left-right).
+  - The L's long end currently points down; in a left-right mirror the corner structure flips — the long
+    end stays down but the short foot switches sides.
+  - The dot above the long end — 'above' stays above (vertical mirror keeps up/down).
+  - 'Match: option showing the same L with the dot still above and the foot on the opposite side.'
+  answer: The option with the foot switched and the dot still above.
+  distractors:
+    A: Rotated L with dot below — that is rotation + flip error.
+    B: Same-L as stem — the mirror erased nothing.
+    C: Foot same side, dot above — that is the stem itself.
+key_points:
+- Mirror = reflection; rotation is NOT reflection.
+- b-d vertical, b-p horizontal.
+- Axis first — read the stem or figure.
+- Symmetric letters/digits survive vertical mirrors.
+- Reflect the stem once, then match.
+- Arrow headings reverse across, not along, the axis.
+mnemonics:
+- phrase: b-d vertical, b-p horizontal
+  means: The two flip mappings in one line.
+- phrase: Across reverses, along stays
+  means: Directions perpendicular to the axis flip; parallel hold.
+maps:
+- title: Mirror decision tree
+  steps:
+  - axis — vertical or horizontal?
+  - flip left-right (or up-down) coordinates
+  - check asymmetric marks
+  - compare with every option
+  - reject rotated look-alikes
+- title: Letter families
+  steps:
+  - vertical-symmetric — AHIMOTUVWXY
+  - horizontal-symmetric — BCDEHIKOX (approximate)
+  - both — H, I, O, X
+  - neither — F, G, J, L, N, P, Q, R, S, Z
+passage:
+  text: 'Five transformations of the letter ''F'' are shown in the item art: F itself, a reversed-F silhouette,
+    a rotated-F, a stroke-shifted F variant, and a doubled-F.'
+  questions:
+  - q: Which transformation could be the vertical mirror image of F?
+    options:
+      A: The reversed-F silhouette
+      B: The rotated-F silhouette
+      C: The F itself
+      D: The doubled-F
+    answer: A
+    explain: Left-right reversal — the mirror of F.
+    distractors:
+      A: Correct.
+      B: Rotation — not a reflection.
+      C: F is not symmetric.
+      D: No doubling.
+  - q: The image of 'F' under a horizontal mirror would…
+    options:
+      A: Flip the two bars vertically
+      B: Stay identical
+      C: Become an S-shape
+      D: Rotate 90
+    answer: A
+    explain: Top-bottom reversal — the top bar moves to the bottom.
+    distractors:
+      A: Correct.
+      B: Only symmetric letters pass.
+      C: That is a rotation.
+      D: Reflection ≠ rotation.
+  - q: A vertical mirror followed by a horizontal mirror equals…
+    options:
+      A: A 180-degree rotation
+      B: Another reflection with no rotation
+      C: Identity
+      D: A 90-degree rotation
+    answer: A
+    explain: Two perpendicular reflections compose a half-turn.
+    distractors:
+      A: Correct.
+      B: Two parallel reflections give translation.
+      C: One flip only.
+      D: Wrong composition.
+pitfalls:
+- Rotation mistaken for mirroring.
+- Wrong axis — vertical vs horizontal.
+- b/d and p/q pairs swapped.
+- Overlooking ornament position in option matching.
+- Words — reading from the wrong side after mirroring.
+exam_map:
+  NMAT: Part 2 Perceptual Acuity — mirror-image items.
+sources:
+- ref: cem-nmat-test-description
+  used:
+  - Part 2 Perceptual Acuity syllabus
+  relation: consulted
+further_reading:
+- title: CEM NMAT Official Website
+  url: https://www.cem-inc.org.ph
+  note: Perceptual Acuity sample items.
+- title: CEM — NMAT Test Description
+  url: https://www.cem-inc.org.ph/recruitment/nmat
+  note: Official syllabus and sample-test pointers.
+review_questions:
+- q: The vertical mirror of 'q' is…
+  options:
+    A: b
+    B: p
+    C: d
+    D: q
+  answer: A
+  explain: Left-right flip turns q into b.
+  distractors:
+    A: Correct — bowl left, stem right.
+    B: Horizontal flip.
+    C: d is its rotation.
+    D: Not symmetric.
+- q: Which digit is vertically symmetric?
+  options:
+    A: '8'
+    B: '2'
+    C: '5'
+    D: '3'
+  answer: A
+  explain: 8 is symmetric under a vertical mirror.
+  distractors:
+    A: Correct.
+    B: 2 reverses.
+    C: 5 reverses.
+    D: 3 reverses.
+- q: An upward arrow mirrored across a HORIZONTAL axis points…
+  options:
+    A: Down
+    B: Up
+    C: Left
+    D: Right
+  answer: A
+  explain: The perpendicular direction reverses.
+  distractors:
+    A: Correct.
+    B: Parallel directions hold only under the parallel axis.
+    C: No horizontal shift.
+    D: No.
+- q: Two reflections across the same vertical line applied twice produce…
+  options:
+    A: Identity
+    B: A translation
+    C: A rotation
+    D: A new mirror
+  answer: A
+  explain: Applying the same reflection twice returns the original.
+  distractors:
+    A: Correct.
+    B: Needs two different axes.
+    C: Reflections have no pivot.
+    D: Same line — no new image.

@@ -1,0 +1,269 @@
+subject: cars
+chapter: Reasoning Beyond the Text
+title: Reasoning Beyond the Text
+overview: The application layer of CARS — applying the passage's principles to new scenarios, evaluating
+  arguments with the passage's logic, and reasoning in terms of viewpoints. No outside knowledge needed;
+  the passage is the lens.
+sections:
+- heading: New-scenario application items
+  body:
+  - ==Application items hand you a NEW case and ask which principle from the passage governs it==. ==Extract
+    the principle in abstract form first — 'the author holds that X is justified when Y' — then test the
+    new case against Y==
+  - ==The trap — options matching tangential details of the passage instead of its operative principle==
+  check:
+  - q: A passage argues that informed consent strengthens research ethics. A new scenario asks which action
+      the author would endorse. The operative principle is…
+    options:
+      A: Consent when participants are adequately informed
+      B: Any consent form
+      C: No research
+      D: Payment for participation
+    answer: A
+    explain: The principle is the informed condition, applied to the new case.
+    distractors:
+      A: Correct.
+      B: Quality of information is central.
+      C: The author does not ban research.
+      D: Not the ethical core.
+- heading: Argument evaluation — strengthen, weaken, evidence
+  body:
+  - ==Beyond-the-text strengthen/weaken — the new evidence connects to the passage's mechanism==. ==Weakening
+    favorites — alternative explanations, confounds, and reversed causality==
+  - ==Evidence added outside the passage is FAIR — the passage provides the standard, the option provides
+    the new information==
+  check:
+  - q: A study passage finds X correlates with Y. The best new evidence against a causal reading…
+    options:
+      A: A third factor driving both X and Y
+      B: Larger correlations elsewhere
+      C: Random sampling
+      D: More data points
+    answer: A
+    explain: A confound erodes the causal claim.
+    distractors:
+      A: Correct.
+      B: Strength is not direction.
+      C: Sampling helps, does not refute.
+      D: Volume does not refute.
+- heading: Viewpoint reasoning — identifying with an author
+  body:
+  - ==Viewpoint items ask what the author would think/say/do in a new context — character and reasoning,
+    not facts==. ==The position must be singled out from the passage; options that fit OTHER passages'
+    authors fail==
+  - ==Construct the view — 'the author would agree that...' — from the passage's own commitments, not
+    from your agreement==
+  check:
+  - q: The author of an egalitarian passage would most likely object to…
+    options:
+      A: Unequal access rationalized as efficiency
+      B: Equal access
+      C: Subsidized education
+      D: Progressive taxation
+    answer: A
+    explain: The commitment is equality — efficiency justifications of inequality clash with it.
+    distractors:
+      A: Correct.
+      B: It endorses this.
+      C: Likely favored.
+      D: Likely favored.
+- heading: Analogy and principle transfer
+  body:
+  - '==Analogy items — find the structural match: entities, relations, and direction must parallel the
+    passage''s argument==. ==The failure mode — matching surface features (birds vs airplanes) instead
+    of logical relations=='
+  - ==Principle transfer — the passage's reasoning pattern applied; reverse or scrambled relations fail==
+  check:
+  - q: 'Passage: expert committees overreach when duties outpace data. The best analogy is…'
+    options:
+      A: A judge ruling without the precedents
+      B: A pilot flying with full instruments
+      C: A librarian shelving by catalog
+      D: A driver at a green light
+    answer: A
+    explain: Deciding beyond one's informational basis — the structural match.
+    distractors:
+      A: Correct.
+      B: Data are sufficient.
+      C: Tools support the task.
+      D: Rule-following, not overreach.
+- heading: Answer hygiene for beyond items
+  body:
+  - ==The passage supplies the standard; the option supplies the case — both halves must be used==. ==Reject
+    bars — options about the passage's facts (too literal), options needing unprovided facts, and options
+    stated by neither author==
+  - ==When two options both fit — choose the one matching the STRONGEST commitment, not the merely possible
+    one. ==Process of elimination works best paired with a stated principle, not bare instincts==
+  check:
+  - q: Two options both marginally fit the author's view. The better answer…
+    options:
+      A: Matches the author's strongest, most specific commitment
+      B: Is the longer one
+      C: Is the shorter one
+      D: Uses the most vocabulary
+    answer: A
+    explain: Strength and specificity decide between plausible fits.
+    distractors:
+      A: Correct.
+      B: Length is noise.
+      C: Length is noise.
+      D: No word-count bias.
+examples:
+- prompt: 'Passage: ''Graffiti is evidence of a neighborhood''s self-expression and should be channeled,
+    not erased.'' New scenario: a city proposes a legal mural program. What would the author say?'
+  solution:
+  - Extract the principle — channeling expression beats erasing it.
+  - The mural program channels expression into legal walls.
+  - Therefore the author would endorse the program, with nuance — legal spaces still permit self-expression.
+  - Answers claiming the author would ban graffiti misread the position.
+  answer: The author would support a legal venue that preserves self-expression.
+  distractors:
+    A: The author would ban graffiti — negation of the passage.
+    B: The author is indifferent to municipal art policy — the passage cares.
+    C: Murals are vandalism — conflating the author with opponents.
+key_points:
+- Extract the principle, then apply to the new case.
+- Outside evidence is fair in strengthen/weaken — passage is the standard.
+- Viewpoint items — the passage's commitments decide.
+- Analogy — match structure, not surface.
+- Use the strongest commitment when options tie.
+- The passage is the lens; the option is the object.
+mnemonics:
+- phrase: Principle first, case second
+  means: The application order for beyond-the-text items.
+- phrase: Structure over surface
+  means: What makes an analogy work.
+maps:
+- title: Application pipeline
+  steps:
+  - state the author's principle abstractly
+  - list the new scenario's facts
+  - map fact to principle condition
+  - predict the author's judgment
+  - find the option matching it
+- title: Weakener hunting
+  steps:
+  - alternative cause
+  - confound
+  - reverse causation
+  - broken mechanism
+  - generalization failure
+passage:
+  text: A year-long policy experiment expanded need-based transit passes. Ridership among low-income riders
+    rose sharply, and job interview attendance improved. The author concludes the policy reduces structural
+    unemployment barriers. A commentator later notes that rent-control changes and public-jobs spending
+    occurred in the same period.
+  questions:
+  - q: The commentator's note most likely functions as…
+    options:
+      A: A threat to the internal validity of the policy attribution
+      B: Proof the policy failed
+      C: A definition
+      D: Irrelevant noise
+    answer: A
+    explain: Concurrent interventions confound the causal reading.
+    distractors:
+      A: Correct.
+      B: No failure is shown.
+      C: No terms defined.
+      D: It bears on the claim.
+  - q: Which new study most strengthens the author's conclusion?
+    options:
+      A: A comparison district without transit passes showed no interview gains
+      B: A nationwide survey of transit costs
+      C: A historical essay on urban planning
+      D: An opinion poll about fare prices
+    answer: A
+    explain: A control district isolates the policy's effect.
+    distractors:
+      A: Correct.
+      B: Cost data do not test the barrier mechanism.
+      C: No control.
+      D: Preferences do not test outcomes.
+  - q: The author would most likely respond to the commentator by…
+    options:
+      A: Conceding the confound but citing the magnitude and mechanisms
+      B: Retracting the conclusion entirely
+      C: Ignoring all evidence
+      D: Reversing to oppose transit policy
+    answer: A
+    explain: Measured revision — the expected scholarly move.
+    distractors:
+      A: Correct.
+      B: No basis for total retraction.
+      C: The author engages evidence.
+      D: No reversal implied.
+pitfalls:
+- Using outside knowledge instead of the passage principle.
+- Applying the principle to the wrong case feature.
+- Surface-analogy matching.
+- Failing to distinguish author's strongest commitment.
+- Picking evidence that only extends, not tests.
+exam_map:
+  NMAT: Reasoning questions after reading passages — the same application logic.
+  MCAT: CARS skill 3 — reasoning beyond the text.
+sources:
+- ref: aamc-whatson-mcat
+  used:
+  - CARS skill 3
+  relation: consulted
+further_reading:
+- title: AAMC Official MCAT — What's on the MCAT
+  url: https://www.aamc.org/what-is-on-the-mcat
+  note: CARS section skill definitions.
+- title: AAMC — CARS Diagnostic Tool
+  url: https://www.aamc.org/services/mcat/cars-diagnostic-tool
+  note: Official CARS practice passages.
+review_questions:
+- q: Applying a passage's principle to a new case requires…
+  options:
+    A: Extracting the general rule first
+    B: Memorizing examples
+    C: Counting paragraphs
+    D: Outside facts
+  answer: A
+  explain: Abstract the rule, then map the new facts.
+  distractors:
+    A: Correct.
+    B: Examples are raw material.
+    C: Structure aids, but the rule matters.
+    D: Unprovided facts fail.
+- q: New evidence that creates an alternative explanation…
+  options:
+    A: Weakens the passage's causal claim
+    B: Strengthens it
+    C: Is neutral
+    D: Changes the conclusion
+  answer: A
+  explain: Rivals for the same outcome erode the attribution.
+  distractors:
+    A: Correct.
+    B: It competes, not confirms.
+    C: It bears directly.
+    D: It weakens, not switches.
+- q: A viewpoint item asks what the author would…
+  options:
+    A: Think, say, or do in a new case
+    B: Remember
+    C: Define
+    D: Arrange
+  answer: A
+  explain: Dispositions follow commitments.
+  distractors:
+    A: Correct.
+    B: No recall.
+    C: No definitions.
+    D: No ordering.
+- q: Analogies pass when…
+  options:
+    A: The logical relations match
+    B: The subjects match
+    C: The words rhyme
+    D: The lengths match
+  answer: A
+  explain: Structure is the criterion.
+  distractors:
+    A: Correct.
+    B: Surface similarity misleads.
+    C: Irrelevant.
+    D: Irrelevant.

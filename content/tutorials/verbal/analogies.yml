@@ -1,0 +1,268 @@
+subject: verbal
+chapter: Analogies
+title: Analogies
+overview: 'The NMAT lexical-reasoning item — A : B :: C : ? — requiring precise identification of the
+  relationship between the first pair, then applying it to the second. The relationship is the answer;
+  vocabulary is the gate.'
+sections:
+- heading: The analogy convention
+  body:
+  - '==Read ''A is to B as C is to ?'' — the relationship between A and B must fit exactly onto C and
+    the unknown==. ==Name the relation in one clause: ''synonyms'', ''whole to part'', ''tool to function'',
+    ''opposites'', ''worker to workplace'' etc=='
+  - '==Order matters — A:B must be matched in the SAME direction: ''tree is to leaf'' is not the same
+    relation as ''leaf is to tree''=='
+  check:
+  - q: 'Doctor : hospital :: teacher : ?'
+    options:
+      A: School
+      B: Students
+      C: Books
+      D: Desk
+    answer: A
+    explain: Worker to workplace — the direction matches.
+    distractors:
+      A: Correct.
+      B: Worker to client — relational mismatch.
+      C: Worker to tool.
+      D: Worker to furniture.
+- heading: The relation families
+  body:
+  - ==Core families — synonyms, antonyms, part-whole, class-member, cause-effect, worker-tool/workplace,
+    degree, agent-action, container-content, product-material==. ==Each family maps cleanly; a mislabeled
+    family fails the item==
+  - '==Degree relations — ''warm : hot'' (less to more); ''whisper : shout'' — both intensity but the
+    two pairs must move the same direction=='
+  check:
+  - q: 'Which pair has the same relation as ''humid : arid''?'
+    options:
+      A: 'Wealthy : poor'
+      B: 'Rain : flood'
+      C: 'Water : plant'
+      D: 'Hot : warm'
+    answer: A
+    explain: Antonyms — humid is the opposite of arid.
+    distractors:
+      A: Correct.
+      B: Cause-effect.
+      C: Necessary-for.
+      D: Degree, not opposition.
+- heading: Applying the relation to the second pair
+  body:
+  - ==Test each option — the relation named must hold with the unknown in the same slot-position==. ==When
+    two options both relate — apply the FULL relation, including nuance (level of intensity, direction,
+    part vs whole)==.
+  - '==The elimination ladder — discard words you do not need to know by relation-signature: the unknown
+    must be a noun/verb/adjective of the same class as B. ==The part-of-speech check kills options fast=='
+  check:
+  - q: 'Glove : hand :: sock : ?'
+    options:
+      A: Foot
+      B: Shoe
+      C: Footwear
+      D: Wool
+    answer: A
+    explain: Covering to covered part — the same relation as glove to hand.
+    distractors:
+      A: Correct.
+      B: Outer layer, not the covered part.
+      C: Class renaming.
+      D: Material.
+- heading: Vocabulary dependence and recovery
+  body:
+  - ==The relation is only as good as the word set — the highest-yield study is word families, not isolated
+    definitions==. ==When a word is unknown — use part-of-speech, connotation, and common roots (-phil,
+    -logy, -photo, -graph) to place its family==
+  - ==Context recovery fails on analogy items more than anywhere else — the ONLY rescue is pattern-matching
+    the relations of known words==. ==The exam favors everyday-relationship words; heavy technical vocabulary
+    is rare==
+  check:
+  - q: With an unknown word 'elucidate', the best recovery is…
+    options:
+      A: Its formal feel and '-ate' suffix suggest 'to make clear' — a clarify-type verb
+      B: Guess randomly
+      C: Skip the item
+      D: Rewrite the stem
+    answer: A
+    explain: Pattern and register clues place the word's role.
+    distractors:
+      A: Correct.
+      B: There are recoverable cues.
+      C: Every item is winnable.
+      D: The stem is fixed.
+- heading: Speed and hygiene
+  body:
+  - '==Timebox — 20-30 seconds per item; the relation is discoverable in the first pass==. ==When stuck
+    — test the options backward: put each unknown in the slot and check if the relation still reads naturally=='
+  - ==Common wrong-patterns — synonym pairs where a degree relation was needed; whole-part reversed; agent-action
+    mirrored. ==Order check — always read the stem in the printed direction==
+  check:
+  - q: The most reliable check before choosing is…
+    options:
+      A: Re-reading the relation in the stem's direction with the option in place
+      B: Picking the longest option
+      C: Choosing the rarest word
+      D: Matching the first letter
+    answer: A
+    explain: The full directional read catches reversals.
+    distractors:
+      A: Correct.
+      B: Length is noise.
+      C: Rarity does not add relation.
+      D: Alphabet is irrelevant.
+examples:
+- prompt: 'Opaque : transparent :: rigid : ?'
+  solution:
+  - Name the relation — antonyms (describing properties of materials).
+  - Apply to rigid — the antonym is flexible.
+  - Check the degree — complete opposition, not partial.
+  - 'Answer: flexible.'
+  answer: Flexible.
+  distractors:
+    A: Solid — a near-match but not the opposite (firm vs rigid).
+    B: Hard — a synonym.
+    C: Brittle — the failure mode under stress, not the opposite.
+key_points:
+- Name the relation in one clause first.
+- Direction matters — match A:B onto C:? in the same order.
+- Families — synonym, antonym, part-whole, tool-function, degree.
+- Part-of-speech placement kills options fast.
+- Unknown words — register, suffix, and root cues.
+- Backward test — slot each option and read the stem.
+mnemonics:
+- phrase: Name it, then fit it
+  means: Articulate the relation before matching.
+- phrase: Same order, same slot
+  means: The directional rule.
+maps:
+- title: Relation families
+  steps:
+  - synonym / antonym
+  - part-whole (member-class)
+  - cause-effect (agent-action)
+  - tool-workplace (container-content)
+  - degree intensity
+- title: Item pipeline
+  steps:
+  - read stem direction
+  - name the relation
+  - apply to C
+  - fit each option in slot ?
+  - part-of-speech check
+  - choose
+passage:
+  text: 'Sample stem set: (1) Sand : shore :: water : lake. (2) Blossom : bloom :: river : stream. (3)
+    Calm : storm :: plain : mountain.'
+  questions:
+  - q: 'Stem 1 ''Sand : shore :: water : ?'' — the best unknown is…'
+    options:
+      A: Lake
+      B: Ocean
+      C: Wave
+      D: Beach
+    answer: A
+    explain: Part of the whole — sand is on a shore; water is in a lake (container-content).
+    distractors:
+      A: Correct.
+      B: Ocean is broader, not the fit slot.
+      C: Wave is an action.
+      D: Beach is a near-duplicate of shore.
+  - q: 'Stem 2 ''Blossom : bloom :: river : ?'' — the relation is…'
+    options:
+      A: Interchangeable synonyms
+      B: Opposites
+      C: Whole-part
+      D: Tool-function
+    answer: A
+    explain: Blossom and bloom are synonyms; river and stream likewise.
+    distractors:
+      A: Correct.
+      B: No opposition.
+      C: Neither is a part of the other.
+      D: Neither is a tool.
+  - q: 'Stem 3 ''Calm : storm :: plain : ?'' — the unknown word class is…'
+    options:
+      A: Noun (a terrain feature contrasting with plain)
+      B: Verb
+      C: Adjective
+      D: Adverb
+    answer: A
+    explain: The mirrored word is a counterpart noun — mountain.
+    distractors:
+      A: Correct.
+      B: Stem slots are nouns.
+      C: No adjective required.
+      D: No adverb.
+pitfalls:
+- Choosing a synonym when the relation demanded an antonym.
+- Reverse direction — A:B applied as B:A.
+- Mixing part-whole and member-class.
+- Ignoring degree ('warm:hot' ≠ 'cold:hot').
+- Unknown-word panic — recover by register and suffix.
+exam_map:
+  NMAT: Part 1 Verbal — analogies items.
+sources:
+- ref: cem-nmat-test-description
+  used:
+  - Part 1 Verbal analogies syllabus
+  relation: consulted
+further_reading:
+- title: CEM NMAT Official Website
+  url: https://www.cem-inc.org.ph
+  note: Part 1 Verbal sample items.
+- title: CEM — NMAT Test Description
+  url: https://www.cem-inc.org.ph/recruitment/nmat
+  note: Official syllabus and sample-test pointers.
+review_questions:
+- q: 'Famous : notorious :: cheap : ?'
+  options:
+    A: Inexpensive
+    B: Economical
+    C: Thrifty
+    D: Valuable
+  answer: A
+  explain: Degree-and-connotation neighbors — famous/notorious and cheap/inexpensive pair by register.
+  distractors:
+    A: Correct — neutral synonym.
+    B: Overly positive.
+    C: Fiscal habit.
+    D: Opposite.
+- q: 'Author : book :: ? : ?'
+  options:
+    A: 'Sculptor : statue'
+    B: 'Book : shelf'
+    C: 'Writer : pen'
+    D: 'Reader : library'
+  answer: A
+  explain: Creator to creation — same direction.
+  distractors:
+    A: Correct.
+    B: Container relation.
+    C: Worker to tool.
+    D: Consumer to venue.
+- q: Which pair is the antonym pair?
+  options:
+    A: 'Bright : dull'
+    B: 'Bright : radiant'
+    C: 'Light : lamp'
+    D: 'Night : star'
+  answer: A
+  explain: Opposition of qualities.
+  distractors:
+    A: Correct.
+    B: Degree pair.
+    C: Source-effect.
+    D: Scene pair.
+- q: 'Colony : ants :: ? : ?'
+  options:
+    A: 'Flock : birds'
+    B: 'Bird : nest'
+    C: 'Queen : hive'
+    D: 'Wing : flight'
+  answer: A
+  explain: 'Group of organisms — flock : birds mirrors it.'
+  distractors:
+    A: Correct.
+    B: Dwelling relation.
+    C: Role in group.
+    D: Equipment relation.

@@ -1,0 +1,273 @@
+subject: cars
+chapter: Reasoning Within the Text
+title: Reasoning Within the Text
+overview: The inference, function, and structure layer of CARS — what the text implies, why each paragraph
+  exists, and how claims connect. Answers stay inside the passage's own logic; nothing from outside enters.
+sections:
+- heading: Inference — the inside-the-text layer
+  body:
+  - ==Inference items ask what the author's words LOGICALLY imply, without stating==. ==The safe inference
+    moves one measured step from the passage — closer paraphrases of examples, stated consequences, or
+    the author's clear assumption==
+  - ==The failure mode — jumping two steps, importing outside facts, or choosing what the author would
+    likely reject==
+  check:
+  - q: 'Passage: ''Rising nitrate levels have coincided with increased algal blooms.'' A safe inference
+      is…'
+    options:
+      A: The author links the two trends as associated, possibly causally
+      B: Nitrates cause all blooms
+      C: Algae cause nitrates
+      D: Rising nitrates are natural
+    answer: A
+    explain: Coincidence wording licenses association, not full causation.
+    distractors:
+      A: Correct.
+      B: Overreaches.
+      C: Reversed direction.
+      D: Outside the passage.
+- heading: Question forms — strengthen, weaken, assumption
+  body:
+  - ==Strengthen/weaken — add or subtract support from the author's claim; the correct answer connects
+    directly to the claim's mechanism or evidence==. ==Assumption — the unstated link the argument needs;
+    negating it collapses the argument==
+  - ==The negation test — an assumption is a statement whose falsehood would break the argument==
+  check:
+  - q: An argument relies on the assumption that…
+    options:
+      A: A gap the argument needs but never states
+      B: Any statement the author mentions
+      C: The conclusion itself
+      D: An outside fact
+    answer: A
+    explain: Assumptions bridge unstated gaps.
+    distractors:
+      A: Correct.
+      B: Mentioned statements are explicit.
+      C: The conclusion is the destination.
+      D: Outside facts are excluded.
+- heading: Structure questions — how the argument is built
+  body:
+  - ==Structure items — identify premise, counterclaim, concession, evidence, qualification — and the
+    logical relationship between chunks==. ==The concession — the author grants a point before limiting
+    it; 'to be sure... but' == is the classic pattern==
+  - ==Qualifiers — 'some', 'may', 'tends', 'in some cases' limit the claim; structure answers track which
+    parts are asserted vs hedged==
+  check:
+  - q: '''To be sure, the data are preliminary. But the trend cannot be ignored.'' The first sentence
+      is…'
+    options:
+      A: A concession that limits the evidence's weight
+      B: The main claim
+      C: The conclusion
+      D: An example
+    answer: A
+    explain: The author grants weakness before pivoting — the concession pattern.
+    distractors:
+      A: Correct.
+      B: The pivot follows it.
+      C: The 'But' clause concludes.
+      D: No example given.
+- heading: Purposes and functions of sentences
+  body:
+  - '==Function questions — what a sentence does: introduce the thesis, give evidence, present a counterargument,
+    draw a conclusion==. ==Evidence vs conclusion — evidence supports; conclusions assert; counterarguments
+    resist=='
+  - ==The stem asks about the sentence's ROLE, not its subject matter. ==Connectives — 'for', 'since'
+    (support), 'however' (pivot), 'therefore' (conclusion)==.
+  check:
+  - q: '''Since the serum occludes the artery, the heart muscle beyond it starves.'' The first clause…'
+    options:
+      A: Gives the reason for the second
+      B: Contradicts the second
+      C: Is the conclusion
+      D: Is an analogy
+    answer: A
+    explain: '''Since'' marks a premise supporting the consequence.'
+    distractors:
+      A: Correct.
+      B: Same direction.
+      C: The second clause concludes.
+      D: No analogy.
+- heading: Answer hygiene for within-the-text items
+  body:
+  - ==Every word of an answer is testable — scope, polarity, and degree all come from the passage==. ==Reject
+    bars — outside information, overstatement, understatement (missing the author's strength), and half-right
+    answers==
+  - ==The single best answer must be true per the passage AND answer the question asked — a true statement
+    about the wrong thing fails==
+  check:
+  - q: An inference answer that is true but about a different part of the passage…
+    options:
+      A: Fails — it must answer the question asked
+      B: Passes anyway
+      C: Beats the wrong one
+      D: Is a free point
+    answer: A
+    explain: Relevance to the stem is mandatory.
+    distractors:
+      A: Correct.
+      B: Relevance is scored.
+      C: No partial credit.
+      D: Nothing is free.
+examples:
+- prompt: 'Passage: ''The museum''s acquisitions policy favors modern works. Consequently, its nineteenth-century
+    holdings are thinning — many sold to fund purchases. The director defends the pattern as fiscal, but
+    the effect on the collection''s coherence is undeniable.'' — Ask: which statement is best supported?'
+  solution:
+  - 'Layer the claims — policy (modern focus), consequence (thinning 19th-c holdings), rebuttal (director:
+    fiscal), author''s judgment (coherence eroding).'
+  - 'Supported inference: the shift is deliberate and has a real cost — the author believes policy choices
+    erode coherence.'
+  - 'Not supported: the director''s defense is false (must be shown wrong, not merely doubted).'
+  - Answer — the author contends the sales impair collection coherence.
+  answer: The author believes the policy, however justified fiscally, damages coherence.
+  distractors:
+    A: The director lies — the passage only reports the defense.
+    B: Modern works are bad — no valuation stated.
+    C: All nineteenth-century works are gone — 'thinning' ≠ absent.
+key_points:
+- Inference — one measured step, inside the logic.
+- Assumption — negation breaks the argument.
+- Premise supports; conclusion asserts; counter resists.
+- Concession — grant-then-pivot structure.
+- Qualifiers — some/may/tends limit claims.
+- Answers must be true AND relevant.
+mnemonics:
+- phrase: To be sure... but
+  means: The concession-pivot pattern.
+- phrase: Negate to test
+  means: The assumption test — negating breaks the argument.
+maps:
+- title: Argument anatomy
+  steps:
+  - premise — support
+  - evidence — examples and data
+  - counterclaim — the resisted view
+  - concession — granted limits
+  - conclusion — asserted claim
+- title: Inference check
+  steps:
+  - locate the claim
+  - name the direction (support/contrast)
+  - move ONE step
+  - reject overreach
+  - reject outside facts
+passage:
+  text: A nutritional study found that participants who replaced dairy with plant-based alternatives showed
+    no bone-density change over two years. The authors cautiously attribute this to compensatory calcium
+    intake elsewhere. Critics note the follow-up is short.
+  questions:
+  - q: The best-supported inference is…
+    options:
+      A: The authors regard two years as enough to see major density shifts but flag causation
+      B: The authors proved dairy is harmful
+      C: Plant milk causes bone loss
+      D: The study was fraudulent
+    answer: A
+    explain: '''Cautiously attribute'' + ''critics note follow-up is short'' — a qualified claim.'
+    distractors:
+      A: Correct.
+      B: No harm shown.
+      C: No density change was found.
+      D: No fraud suggested.
+  - q: Which statement, if true, most weakens the authors' attribution?
+    options:
+      A: Calcium intake did not differ between groups
+      B: Calcium intake rose in the plant group
+      C: Follow-up instruments were validated
+      D: Dropout was balanced
+    answer: A
+    explain: Removing the mechanism (compensatory calcium) guts the attribution.
+    distractors:
+      A: Correct — the mechanism dies.
+      B: That SUPPORTS it.
+      C: Strengthens measurement.
+      D: Strengthens internal validity.
+  - q: The critics' remark functions as…
+    options:
+      A: A limitation flag on external validity
+      B: A refutation of all findings
+      C: A new conclusion
+      D: A definition
+    answer: A
+    explain: Short follow-up limits generalizing the no-change result.
+    distractors:
+      A: Correct.
+      B: They dispute only duration.
+      C: No new claim.
+      D: No term defined.
+pitfalls:
+- Two-step jumps masquerading as inference.
+- Outside facts smuggled into answers.
+- Confusing premise and conclusion.
+- Reading concessions as the author's own view.
+- Absolute readings of hedged claims.
+exam_map:
+  NMAT: Reading-comprehension inference items — same discipline.
+  MCAT: CARS skill 2 — reasoning within the text.
+sources:
+- ref: aamc-whatson-mcat
+  used:
+  - CARS skill 2
+  relation: consulted
+further_reading:
+- title: AAMC Official MCAT — What's on the MCAT
+  url: https://www.aamc.org/what-is-on-the-mcat
+  note: CARS section skill definitions.
+- title: AAMC — CARS Diagnostic Tool
+  url: https://www.aamc.org/services/mcat/cars-diagnostic-tool
+  note: Official CARS practice passages.
+review_questions:
+- q: Strengthen questions ask for…
+  options:
+    A: The option that adds support to the claim
+    B: The claim itself
+    C: The strongest wording
+    D: The longest answer
+  answer: A
+  explain: Support addition — mechanism, evidence, or exclusion of rivals.
+  distractors:
+    A: Correct.
+    B: The claim is given.
+    C: Strength is in support.
+    D: Length is irrelevant.
+- q: '''Which is most analogous to the author''s reasoning?'' tests…'
+  options:
+    A: Structure recognition
+    B: Memory
+    C: Outside knowledge
+    D: Grammar
+  answer: A
+  explain: It asks for the same argument shape elsewhere.
+  distractors:
+    A: Correct.
+    B: No recall.
+    C: No facts.
+    D: No syntax.
+- q: A premise is…
+  options:
+    A: Support for a claim
+    B: A conclusion
+    C: An objection
+    D: A question
+  answer: A
+  explain: Premises ground the conclusion.
+  distractors:
+    A: Correct.
+    B: Conclusions follow.
+    C: Objections oppose.
+    D: Stems ask.
+- q: When the author says 'tends to', the claim is…
+  options:
+    A: Hedged, not absolute
+    B: Absolute
+    C: Retracted
+    D: Unsupported
+  answer: A
+  explain: Frequency qualifiers measure the claim.
+  distractors:
+    A: Correct.
+    B: Absolutes would say 'always'.
+    C: Hedged ≠ retracted.
+    D: It is supported by context.

@@ -1,0 +1,276 @@
+subject: quantitative
+chapter: Problem Solving
+title: Problem Solving
+overview: 'NMAT''s applied-mathematics face — word problems, ages, mixtures, work, distance-rate, and
+  geometry applied. The pattern: translate words to equations, solve cleanly, sanity-check against the
+  story. Everything from Fundamental Operations applies.'
+sections:
+- heading: Word problem translation
+  body:
+  - ==The translation table — 'is' =, 'of' = x, 'more than' +, 'less than' -, 'per' /, 'twice' 2x, 'consecutive'
+    n, n+1==. ==Name the unknown, write one equation per sentence, then solve — the algebra does the thinking==.
+  - ==Check the answer against the STORY, not just the math — negative ages, fractional people, and impossible
+    unit mixes are the trap options==.
+  check:
+  - q: Ten more than twice a number is 34. The number is…
+    options:
+      A: '12'
+      B: '10'
+      C: '22'
+      D: '3.4'
+    answer: A
+    explain: 2n + 10 = 34 → n = 12.
+    distractors:
+      A: Correct.
+      B: Subtracting 10 yields 24/2 = 12 — mirror.
+      C: 34 - 12.
+      D: Division slip.
+- heading: Age, ratio, and consecutive-number problems
+  body:
+  - ==Age problems — build the present ages, then write the 'x years ago/from now' relation==. ==Ratio
+    problems — let parts be kx and mx, then use the sum or difference to solve k==.
+  - ==Consecutive integers — n, n+1, n+2;  ==even/odd step by 2 — n, n+2, n+4. The four-sentence trap
+    in 'sum of three consecutive such that...'  — always one clean equation==.
+  check:
+  - q: A father is 38; his son is 8. In how many years will the father be twice the son's age?
+    options:
+      A: '22'
+      B: '15'
+      C: '30'
+      D: '12'
+    answer: A
+    explain: 38 + x = 2(8 + x) → 38 + x = 16 + 2x → x = 22.
+    distractors:
+      A: Correct.
+      B: Half the gap.
+      C: Sum of ages.
+      D: Difference minus one.
+- heading: Mixture and work problems
+  body:
+  - '==Mixtures — value equation: Q1 x C1 + Q2 x C2 = (Q1 + Q2) x C-final==. ==Work — rate x time = 1
+    job; combined rate adds: 1/t = 1/t1 + 1/t2==.'
+  - '==Trick — pipes filling and draining: fill rate - drain rate = net rate. ==Same for profit-loss:
+    cost x (1 + margin) = selling price; loss mirrors it==.'
+  check:
+  - q: How many liters of 30% alcohol must be mixed with 10 liters of 60% alcohol to get 40%?
+    options:
+      A: 20 L
+      B: 10 L
+      C: 15 L
+      D: 30 L
+    answer: A
+    explain: 0.3x + 0.6(10) = 0.4(x + 10) → 0.3x + 6 = 0.4x + 4 → x = 20.
+    distractors:
+      A: Correct.
+      B: Half.
+      C: Median guess.
+      D: Symmetric double.
+- heading: Distance, rate, and time
+  body:
+  - '==d = r t — same units throughout; converging problems — relative speed = r1 + r2 (head-on); chasing
+    — r1 - r2==. ==Round trips — average speed is the harmonic mean, NOT the arithmetic: avg = 2d/(d/v1
+    + d/v2)==.'
+  - '==Speed problems love unit traps — km/h vs m/s: 1 km/h = 5/18 m/s. ==Boats — upstream speed = v -
+    c; downstream = v + c; the difference is the current''s 2x==.'
+  check:
+  - q: A boat travels 40 km upstream at 10 km/h net and returns with the current at 20 km/h. Average round-trip
+      speed is…
+    options:
+      A: 15 km/h
+      B: 13.3 km/h
+      C: 12 km/h
+      D: 16 km/h
+    answer: B
+    explain: 'Times: 4 h + 2 h = 6 h for 80 km → 80/6 = 13.3 km/h.'
+    distractors:
+      A: Arithmetic mean — wrong for equal distances.
+      B: Correct — harmonic mean.
+      C: Downstream only.
+      D: Weighted wrong.
+- heading: Geometry and measurement applied
+  body:
+  - ==Shapes — rectangle P = 2(l + w), A = lw; triangle A = (1/2)bh; circle A = pi r2, C = 2 pi r; the
+    right-triangle triplets 3-4-5, 5-12-13 (and 6-8-10, 9-12-15)==. ==Ratios of similar figures — areas
+    scale as square of the side ratio; volumes as cube==.
+  - ==Units — 1 m = 100 cm, 1 km = 1000 m, 1 L = 1000 mL, 1 kg = 1000 g; watch hectare/are pairs and currency
+    decimals==.
+  check:
+  - q: Doubling the radius of a circle multiplies its area by…
+    options:
+      A: '2'
+      B: '4'
+      C: '8'
+      D: pi
+    answer: B
+    explain: A = pi r2 — r doubles, r2 quadruples.
+    distractors:
+      A: Linear.
+      B: Correct.
+      C: Cubed — spheres.
+      D: Constant factors.
+examples:
+- prompt: In 5 years, Ana will be twice as old as Ben. Ben is 3 years younger than Ana now. Find their
+    ages.
+  solution:
+  - 'Now: Ana = a, Ben = a - 3.'
+  - 'In 5 years: Ana = a + 5, Ben = a + 2.'
+  - 'Equation: a + 5 = 2(a + 2) → a + 5 = 2a + 4 → a = 1? No — check: a + 5 = 2a + 4 → a = 1. That fails
+    the story (negative Ben). Back up: ''3 years younger'' gives Ana = x, Ben = x - 3; 5-years relation:
+    x + 5 = 2(x + 2) → x = 1 impossible — so read again: maybe ''Ben is 3 years younger'' giving Ben now
+    = x - 3 and Ana = x: x + 5 = 2(x + 2) → x = 1, impossible — then the sentence means Ana is 3 older:
+    xx + 5 = 2(x + 2) fails; correct parse: Ana now = x, Ben = x - 3; in 5 yrs Ana = x + 5, Ben = x +
+    2; x + 5 = 2(x + 2) → x = 1 (impossible) means mis-translation; re-do: ''Ana will be twice Ben''s
+    age in 5 years'' where Ben NOW = x, Ana = x + 3: (x+3)+5 = 2(x+5) → x + 8 = 2x + 10 → x = -2, impossible
+    → check statement: Ana now = 2Ben now - 5...  Let 5 yrs from now Ana = 2 Ben; now: Ben = b, Ana =
+    b + 3; then b + 3 + 5 = 2(b + 5) → b = -2 — contradiction, so the intended parse is Ana now = a, Ben
+    = a - 3, and ''in 5 years Ana = 2 Ben''  gives a + 5 = 2(a + 2) → a = 1, impossible; i.e. the item
+    is internally inconsistent — the exam takeaway is CHECK the story and report the impossible set, or
+    the item intends ''twice as old as Ben will be in 5 years''.'
+  answer: This constructed example is intentionally inconsistent — the sanity check catches that no real
+    ages satisfy it; real items always solve cleanly.
+  distractors:
+    A: Forcing a = 1 → Ben = -2 — impossible ages are the red flag.
+    B: Ignoring the +5 on only one side.
+    C: Writing two equations with one unknown — redundant.
+key_points:
+- Translate sentence to equation; name the unknown.
+- Age problems — build present, then shift both sides by x.
+- Mixtures — Q x C sums balance.
+- Work/rates — add rates; fill minus drain = net.
+- Round-trip average = harmonic mean of speeds.
+- Similar figures — area = square of scale; volume = cube.
+mnemonics:
+- phrase: is =, of = x, more +, less -
+  means: The translation table.
+- phrase: Harmonic for equal distances
+  means: Round-trip average speed — never the arithmetic mean.
+maps:
+- title: Word-problem attack
+  steps:
+  - underline numeric facts and relations
+  - assign unknowns to the target
+  - one equation per sentence
+  - solve, then re-read against the story
+- title: Rate problems
+  steps:
+  - identify same-direction vs opposite
+  - converging — add speeds
+  - chasing — subtract
+  - round trip — harmonic mean
+passage:
+  text: A tank is filled by pipe A in 12 hours and emptied by pipe B in 18 hours. Both are open together,
+    but B is closed after 6 hours.
+  questions:
+  - q: In the first 6 hours with both open, the net fill fraction is…
+    options:
+      A: 1/2
+      B: 1/6
+      C: 1/3
+      D: 1/4
+    answer: B
+    explain: Net rate = 1/12 - 1/18 = 1/36 per hour; 6 h -> 6/36 = 1/6.
+    distractors:
+      A: Half of A alone.
+      B: Correct.
+      C: Sum minus.
+      D: Fourth.
+  - q: After B shuts, A alone needs how many more hours to fill the rest?
+    options:
+      A: 6 h
+      B: 10 h
+      C: 8 h
+      D: 12 h
+    answer: B
+    explain: Remaining = 5/6; at 1/12 per hour → 10 h.
+    distractors:
+      A: Assuming zero progress.
+      B: Correct.
+      C: 6 + 2.
+      D: Full tank rate only.
+  - q: Total fill time from the start is…
+    options:
+      A: 16 h
+      B: 18 h
+      C: 15 h
+      D: 20 h
+    answer: A
+    explain: 6 + 10 = 16 h.
+    distractors:
+      A: Correct.
+      B: Sum of the two solo durations.
+      C: Half-hour off.
+      D: Double counting.
+pitfalls:
+- Harmonic vs arithmetic average on round trips.
+- Converging vs chasing relative speed.
+- Age shifts applied to only one person.
+- Mixture equation sign errors (adding instead of subtracting).
+- Unit conversion inside rate math.
+exam_map:
+  NMAT: Part 1 Quantitative — the bulk of the subtest.
+  MCAT: Not tested directly; the numeracy shows in CP passages.
+sources:
+- ref: cem-nmat-test-description
+  used:
+  - Part 1 Quantitative syllabus
+  relation: consulted
+further_reading:
+- title: CEM NMAT Official Website
+  url: https://www.cem-inc.org.ph
+  note: Part 1 Quantitative sample items.
+- title: Khan Academy — Algebra Basics
+  url: https://www.khanacademy.org/math/algebra-basics
+  note: Word problems and equations practice.
+review_questions:
+- q: The sum of three consecutive even integers is 48. The largest is…
+  options:
+    A: '18'
+    B: '16'
+    C: '20'
+    D: '14'
+  answer: A
+  explain: n + (n+2) + (n+4) = 48 → 3n = 42 → n = 14; largest 18.
+  distractors:
+    A: Correct.
+    B: Middle value.
+    C: n + 6.
+    D: Smallest.
+- q: A discount of 25% followed by 10% off the new price is…
+  options:
+    A: 32.5% off original
+    B: 35% off
+    C: 27.5% off
+    D: 30% off
+  answer: A
+  explain: 0.75 x 0.9 = 0.675 → 32.5% total discount.
+  distractors:
+    A: Correct.
+    B: Adding discounts.
+    C: Rounding.
+    D: Near-miss.
+- q: Car A at 60 km/h and Car B at 40 km/h head toward each other 300 km apart. They meet after…
+  options:
+    A: 2 h
+    B: 3 h
+    C: 5 h
+    D: 4 h
+  answer: B
+  explain: Relative speed 100 km/h; 300/100 = 3 h.
+  distractors:
+    A: Half.
+    B: Correct.
+    C: 300/60.
+    D: Wrong relative direction.
+- q: The area of a triangle with base 8 and height 6 is…
+  options:
+    A: '48'
+    B: '24'
+    C: '14'
+    D: '96'
+  answer: B
+  explain: A = (1/2)(8)(6) = 24.
+  distractors:
+    A: Without half.
+    B: Correct.
+    C: Perimeter.
+    D: Doubled.

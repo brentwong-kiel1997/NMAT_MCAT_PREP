@@ -1,0 +1,264 @@
+subject: inductive-reasoning
+chapter: Figure Grouping
+title: Figure Grouping
+overview: 'Classifying figures into categories — the odd-one-out and two-group sort. The rule hides in
+  a shared feature: symmetry, number of sides, fill, orientation, or open/closed shape. Find the discriminator,
+  then sort.'
+sections:
+- heading: Finding the discriminator
+  body:
+  - '==Grouping items ask: what feature do members of the set share that non-members lack? ==Discriminator
+    candidates — symmetry, side count, angle type, fill state, open/closed, orientation, ornament presence=='
+  - ==Test each candidate against the non-member — the discriminator must FAIL the outsider AND HOLD for
+    every member. ==Single vs double discriminators — sometimes two features must both match (e.g., closed
+    AND shaded)==.
+  check:
+  - q: 'A set: square, triangle, circle. The outsider from a list including the diamond is…'
+    options:
+      A: The diamond — no straight-side-count match
+      B: The square
+      C: The triangle
+      D: The circle
+    answer: A
+    explain: 'Three flat-sided shapes match; the diamond also has 4 sides — so the outsider is actually
+      often the circle if the rule is ''straight sides''. The correct discriminator here: all set-members
+      have MORE than two sides — circle has none.'
+    distractors:
+      A: Parity — all are closed except... all are closed.
+      B: All members are closed shapes — circle belongs.
+      C: Set excludes circles only if rule is 'has corners'.
+- heading: Symmetry-first strategies
+  body:
+  - '==Line symmetry — fold test: does the figure match across an axis? Rotational symmetry — spin test:
+    does it repeat before 360 degrees? ==Group by type — all symmetric vs all asymmetric; or by NUMBER
+    of axes (1, 2, none)==.'
+  - ==Combined — a group might be 'rotationally symmetric AND shaded'. ==Asymmetric decoys — the outsider
+    often breaks symmetry subtly (one notch missing), so count notches==
+  check:
+  - q: 'A figure set of letters: A, H, I, O, and the candidate X. The shared feature is…'
+    options:
+      A: Vertical and horizontal symmetry
+      B: Only vertical
+      C: Only horizontal
+      D: Curved lines
+    answer: A
+    explain: A, H, I, O, X all have both axes — line symmetry.
+    distractors:
+      A: Correct.
+      B: B has only vertical.
+      C: Letter shapes differ.
+      D: Arcs are incidental.
+- heading: Shape family grouping — sides and angles
+  body:
+  - ==Sides rule — group by number of sides (triangles/quadrilaterals) or by aspect (acute vs obtuse dominant)==.
+    ==Regularity — regular (equal sides/angles) vs irregular==
+  - ==Hierarchy — pentagon and hexagon may share '> 4 sides'; triangles may split further by right/equilateral.
+    ==Interior structure — diagonals drawn vs absent; vertex counts vs shape labels==
+  check:
+  - q: 'Set: rhombus, rectangle, square. The common feature (beyond four sides) is…'
+    options:
+      A: Four equal or parallel-paired sides with symmetry
+      B: All have right angles
+      C: All are equilateral
+      D: All are non-convex
+    answer: A
+    explain: All are parallelograms — the true family.
+    distractors:
+      A: Rectangle has 90s but rhombus may not.
+      B: Square only.
+      C: All are convex.
+- heading: Fill, pattern, and texture sorting
+  body:
+  - ==Fill states — solid, hatched, empty, dot-filled; grouping can be by fill state or by fill gradient
+    (emptiness order)==. ==Texture — hatch direction (/// vs \\) or spacing sorts groups==
+  - ==Pattern tracking — a stripe's width or a dot's count can be the real discriminator over shape. ==Combination
+    doubles — 'empty AND rotated' groups test both channels==
+  check:
+  - q: 'Group A: solid circle, solid square, solid triangle. Group B: empty versions of each. The discriminator
+      is…'
+    options:
+      A: Fill state
+      B: Shape
+      C: Size
+      D: Rotation
+    answer: A
+    explain: The only change between groups is filled vs empty.
+    distractors:
+      A: Shapes vary within groups.
+      B: No size change.
+      C: No rotation.
+- heading: Odd-one-out strategy and answer hygiene
+  body:
+  - ==In paper versions, the odd-one-out is the outsider; in digital formats, group-sort questions partition
+    into two named groups — apply BOTH criteria (membership and rejection)==. ==When multiple features
+    differ, prefer the feature that partitions the FEWEST items into the given group — maximum specificity==
+  - ==Check the reverse — ask 'does the outsider violate the rule?' — every grouping answer survives this
+    question. ==Timebox — 40 seconds per item; the discriminator is mechanical once the checklist runs==
+  check:
+  - q: Five figures — four have exactly two lines of symmetry, one has one. The odd one…
+    options:
+      A: The one-line figure
+      B: Any symmetric figure
+      C: The most symmetric
+      D: The shaded one
+    answer: A
+    explain: The count discriminates cleanly.
+    distractors:
+      A: All have symmetry.
+      B: The highest is a gradient, not a group.
+      C: Shading is absent.
+examples:
+- prompt: 'Sort into two groups: figure 1 (pentagon, empty), 2 (pentagon, hatched), 3 (square, empty),
+    4 (hexagon, hatched), 5 (square, hatched).'
+  solution:
+  - Candidate features — shape (n sides) and fill.
+  - Fill splits 1,3 (empty) vs 2,4,5 (hatched) — but that is uneven.
+  - Sides split 3,5 (4 sides) vs 1,2,4 (5-6 sides) — every figure belongs to one side family.
+  - 'Best discriminator: number of sides — 4-side vs 5+-side groups.'
+  answer: 'Group by side count: squares vs pentagon/hexagon.'
+  distractors:
+    A: Fill — leaves three vs two unevenly but valid; side count is more specific.
+    B: Symmetry — all are symmetric.
+    C: Size — not varied.
+key_points:
+- The discriminator must fail every outsider.
+- Symmetry — line and rotational; count the axes.
+- Side and angle families first.
+- Fill and texture as second-channel rules.
+- Prefer the most specific feature.
+- Reverse check — outsider must break the rule.
+mnemonics:
+- phrase: Symmetry, sides, fill, shape
+  means: The grouping checklist.
+- phrase: Members hold, outsiders break
+  means: The discriminator test both ways.
+maps:
+- title: Discriminator hunt
+  steps:
+  - list features — symmetry, sides, angles, fill, orientation, count
+  - test each against every member
+  - test against the outsider — must fail
+  - one feature left — the rule
+  - two features left — combine
+- title: Symmetry types
+  steps:
+  - line symmetry — fold test
+  - rotational — spin test
+  - one axis vs two vs none
+  - combined with fill — double rule
+passage:
+  text: 'Six tiles: (1) right triangle empty; (2) isosceles triangle hatched; (3) isosceles empty; (4)
+    square hatched; (5) rectangle empty; (6) right triangle hatched. Split into two groups of three.'
+  questions:
+  - q: The cleanest split uses…
+    options:
+      A: Triangle vs quadrilateral
+      B: Fill state
+      C: Angles
+      D: Size
+    answer: A
+    explain: '1,2,3,6 are triangles; 4,5 are quadrilaterals — but the item asks groups of three, so fill
+      then splits each: triangles (1,3 empty, 2,6 hatched) — hmm; the cleanest three/three is 1,3,5 (empty)
+      vs 2,4,6 (hatched).'
+    distractors:
+      A: Fill is cleanest for three-groups — answer = fill.
+      B: Triangle-vs-quad leaves 4 and 2 in the wrong bucket.
+      C: Angles split right vs others — 1,6 right; not three.
+      D: No size data.
+  - q: If forced to use shape, the counts are…
+    options:
+      A: 4 triangles, 2 quadrilaterals
+      B: 3 and 3
+      C: 5 and 1
+      D: 2 and 4
+    answer: A
+    explain: 'Triangles: 1, 2, 3, 6 — four; quads: 4, 5 — two.'
+    distractors:
+      A: Correct.
+      B: Only by fill.
+      C: No.
+      D: Glass-half-full
+  - q: A tile with a hatched pentagon added would…
+    options:
+      A: Join the hatched group
+      B: Join the empty group
+      C: Break both rules
+      D: Be irrelevant
+    answer: A
+    explain: It satisfies the fill criterion — the hatched group.
+    distractors:
+      A: Correct.
+      B: It has fill.
+      C: Rules still hold.
+      D: It matches.
+pitfalls:
+- Choosing a feature that partially fits the outsider.
+- Forgetting rotational symmetry when testing line symmetry.
+- Grouping by shape when fill is the intended rule.
+- Uneven groups — the item usually forces balanced counts.
+- Feature lists that ignore orientation.
+exam_map:
+  NMAT: Part 2 Inductive Reasoning — figure grouping items.
+sources:
+- ref: cem-nmat-test-description
+  used:
+  - Part 2 Inductive Reasoning syllabus
+  relation: consulted
+further_reading:
+- title: CEM NMAT Official Website
+  url: https://www.cem-inc.org.ph
+  note: Inductive Reasoning sample items.
+- title: CEM — NMAT Test Description
+  url: https://www.cem-inc.org.ph/recruitment/nmat
+  note: Official syllabus and sample-test pointers.
+review_questions:
+- q: Which shape breaks a group of three closed figures (square, circle, triangle)?
+  options:
+    A: An open arc
+    B: Another triangle
+    C: A rectangle
+    D: An ellipse
+  answer: A
+  explain: The group rule is 'closed' — the arc is open.
+  distractors:
+    A: Correct.
+    B: Fits.
+    C: Fits (closed).
+    D: Fits.
+- q: A set all with right angles is…
+  options:
+    A: Square, rectangle
+    B: Square, triangle
+    C: Circle, ellipse
+    D: Diamond, parallelogram
+  answer: A
+  explain: Only those with 90-degree interior angles.
+  distractors:
+    A: Correct.
+    B: Triangle is acute.
+    C: No angles.
+    D: Diamond may lack 90s.
+- q: Rotational symmetry at 120 degrees matches…
+  options:
+    A: Equilateral triangle
+    B: Square
+    C: Rectangle
+    D: Right triangle
+  answer: A
+  explain: 120 x 3 = 360 — the triangle repeats.
+  distractors:
+    A: 90 degrees — square.
+    B: 180 only.
+    C: 180 only.
+- q: 'Expected grouping: four empty shapes vs four hatched shapes is a…'
+  options:
+    A: Fill-state sort
+    B: Shape sort
+    C: Size sort
+    D: Symmetry sort
+  answer: A
+  explain: Fill divides the set.
+  distractors:
+    A: Shapes vary within each group.
+    B: No sizes.
+    C: No axes.

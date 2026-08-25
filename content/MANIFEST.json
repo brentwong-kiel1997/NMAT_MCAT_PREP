@@ -1,5 +1,5 @@
 {
-  "source_rev": "34a54a5",
+  "source_rev": "9aa17fe",
   "counts": {
     "chapters": 70,
     "note_bullets": 449,
@@ -137,6 +137,9 @@
     "tutorials/biology/organisms-and-their-environment.yml": "fe881965a4475eb4cd1d638a4a81b915efe76eea8518890d21c29ac45c4c3bdf",
     "tutorials/biology/the-world-of-plants-and-animals.yml": "5ddb0292c25dd8c973f7e861964dc5272478e37bed41fc5e63c409e0065149fd",
     "tutorials/biology/unity-and-diversity-of-life.yml": "da80407ab1597fc6d1605c063a9c0ec3c7bba246ab70b8a3ae410af3e88483f0",
+    "tutorials/cars/foundations-of-comprehension.yml": "d6681b4ff95708954e5b20ca7a35af128f63fe94fbe9c3940c6ef372f0733bf4",
+    "tutorials/cars/reasoning-beyond-the-text.yml": "3aa1ed8b02a75244aa7dd72239c201c82a02b6fe40f4295649fe17d519da1662",
+    "tutorials/cars/reasoning-within-the-text.yml": "80411482e260313171c80c33bc4dae9d3a2d781c922447b880844c5f1771a933",
     "tutorials/chemistry/4e-atoms-nuclear-decay-electronic-structure.yml": "69b093dcc0596ea23d2321acf766c1af26dd059f108be6881c4e08c03fcdd284",
     "tutorials/chemistry/5a-unique-nature-of-water-and-its-solutions.yml": "b200d409572a42a166446823bcf9b4a9f7a063a65e49d8e3a4fd9b0ce3a99b0e",
     "tutorials/chemistry/5b-molecules-and-intermolecular-interactions.yml": "5651839e2b2764f94faaf8ca1dba76d7a0220ad236d47d55b29badb4cc7f21d4",
@@ -147,6 +150,12 @@
     "tutorials/chemistry/biochemistry.yml": "7f15e2225c23fbb543e4f859c9729449199b24aca3fd2e99498c65544b005803",
     "tutorials/chemistry/general-chemistry.yml": "8b04bc15d0c41b44436c794c62efb0f0d2d4c2be66fad5931d257f5710ff60f3",
     "tutorials/chemistry/organic-chemistry.yml": "e0fe3148d1e9cd59fbcfeb5e170cf04a5f21431c472673152ef013218f7977f4",
+    "tutorials/inductive-reasoning/figure-grouping.yml": "14d08fc5a18a53d6e1e315474fe496450a6809fc1bc703c4042f011046ec55be",
+    "tutorials/inductive-reasoning/figure-series.yml": "176cc4c10e6c460d663c57089622d6278c581573a03b331199803f609842ef50",
+    "tutorials/inductive-reasoning/number-and-letter-series.yml": "40931c3f758035ade87c82e25b72c9ac5f9e2c8b7c35ca7ac28338a4052a8a2a",
+    "tutorials/perceptual-acuity/hidden-figure.yml": "42c6c7e4d4b6a34663e5c15becdfd854d1c72c19530756cac69a243a867b25b0",
+    "tutorials/perceptual-acuity/identical-information.yml": "0f15a0d815b18d9ba42341136244dff74ee79acf51e8b23dd8277e37c2b9c92b",
+    "tutorials/perceptual-acuity/mirror-image.yml": "898f09c6d85eff73b6bb67b2aecc17fae69da98ab6a7707fd8aad81d86b51a35",
     "tutorials/physics/4a-motion-forces-work-energy-equilibrium.yml": "d2c48f66027036668a4201b6579d6b8e7ddf0ed35fd1d7ed69fd60026cf35aea",
     "tutorials/physics/4b-fluids-for-circulation-and-gas-exchange.yml": "717ce451def617322c718a9234bfb85cf2c4d926958f8c9d7b44f9dc1075ddb1",
     "tutorials/physics/4c-electrochemistry-and-electrical-circuits.yml": "c9119520a117c3c28c754c9c6f82d53c85044d0b77b94ba46a6f16f15f2e263c",
@@ -168,6 +177,11 @@
     "tutorials/psych-soc/8c-social-interactions.yml": "1b9646bf717f2290c765cf9f606d361f164b1abd27e1d983dcb471a07a1a83b0",
     "tutorials/psych-soc/9a-understanding-social-structure.yml": "66a34bd0e338ea0365bffcd0f628650371b4560d3483dacfbf658f2468da1051",
     "tutorials/psych-soc/9b-demographic-characteristics-and-processes.yml": "ff702f8c2c8e8e3c13995db4fe36496d7d02867090810535c59e30ed79b9c79e",
+    "tutorials/quantitative/data-interpretation.yml": "35553343500dcf0b05077ac06c048cf204efe63a3ca57deb0c808fae0c2c16fb",
+    "tutorials/quantitative/fundamental-operations.yml": "b3c086b6d0f07c8722312a2e20effbc6cf01a8b5a84490779e3acbd340790265",
+    "tutorials/quantitative/problem-solving.yml": "6eec170761bdf5968ecad933dc54db0ccbc2b20551d5908079488c0840dce1bc",
+    "tutorials/verbal/analogies.yml": "50322f868af338df6128a6caeb5fc111df95ef5c3be3f45b8a332cac71ea433f",
+    "tutorials/verbal/reading-comprehension.yml": "36998f441b04a3e0700877d2c1f282040de6efa89e775083ee6a084225adf18f",
     "units.yml": "8f325c358eead2f8ba0f6534ace934fd1b938ddc4b5ec90c83537a12455d6ece"
   }
 }

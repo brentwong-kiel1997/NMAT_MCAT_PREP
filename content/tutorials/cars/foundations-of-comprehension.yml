@@ -1,0 +1,267 @@
+subject: cars
+chapter: Foundations of Comprehension
+title: Foundations of Comprehension
+overview: The literal layer of CARS — main idea, paragraph function, detail location, and tone. CARS tests
+  how precisely you read, not what you knew before. All answers must come from the passage.
+sections:
+- heading: The CARS game — what is actually asked
+  body:
+  - ==CARS passages are argumentative; every question rewards EXACT reading of the passage, never outside
+    knowledge==. ==Question families — main idea, detail, inference (within), function, tone, and reasoning-beyond
+    == — this chapter builds the literal floor for all of them==
+  - ==The passage is the sole authority — the author's claim, not your opinion, decides the answer==
+  check:
+  - q: Which is the best answer source for a CARS main-idea item?
+    options:
+      A: The passage's own assertions
+      B: Your background knowledge
+      C: The other examinees' notes
+      D: The answer key pattern
+    answer: A
+    explain: CARS is a reading test — the passage is the text.
+    distractors:
+      A: Correct.
+      B: Outside knowledge is excluded.
+      C: Not available.
+      D: No such pattern is reliable.
+- heading: Main idea — thesis hunting
+  body:
+  - ==Thesis signals — the first paragraph's last sentence, the closing paragraph, contrast markers (however,
+    yet, but) that pivot the argument==. ==The main idea = the author's central claim — usually one paragraph's
+    sentence, not a summary of every detail==
+  - ==Wrong-answer shapes — too narrow (one detail), too broad (a generalization beyond scope), outside
+    the passage, or the opposite of the claim==
+  check:
+  - q: Where do authors most often state the main claim?
+    options:
+      A: First paragraph, often its final sentence
+      B: Randomly mid-passage
+      C: In the footnotes
+      D: Never explicitly
+    answer: A
+    explain: Thesis-first is the dominant organization.
+    distractors:
+      A: Correct.
+      B: Not typical.
+      C: Footnotes hold citations.
+      D: Usually explicit.
+- heading: Paragraph function — the roadmap layer
+  body:
+  - ==Every paragraph does a job — introduce, define, exemplify, contrast, refute, qualify, transition,
+    conclude==. ==Function items ask what the paragraph DOES for the argument, not what it says==
+  - ==Read the first and last sentences of each paragraph as a skeleton — the functions chain into the
+    passage's structure==
+  check:
+  - q: A paragraph opens by defining a term, then gives two examples. Its function is…
+    options:
+      A: Define and illustrate
+      B: Refute a claim
+      C: Compare two positions
+      D: Conclude the passage
+    answer: A
+    explain: Definition plus exemplification is the paragraph's role.
+    distractors:
+      A: Correct.
+      B: No opponent is attacked.
+      C: No second position shown.
+      D: Not the close.
+- heading: Detail location and accuracy
+  body:
+  - ==Detail items point at specific claims — relocate the exact sentence, then paraphrase precisely==.
+    ==The trap — answer choices that change ONE word (scope, degree, or polarity) of the passage's claim==
+  - ==Scope-check words — all, always, never, only (absolute) vs some, most, usually (measured) — passage
+    wording dictates which is correct==
+  check:
+  - q: A passage states 'most historians agree'. A detail answer claiming 'all historians agree'…
+    options:
+      A: Overstates the passage
+      B: Matches the passage
+      C: Is milder
+      D: Is unrelated
+    answer: A
+    explain: Most → all is a scope change — the classic trap.
+    distractors:
+      A: Correct.
+      B: All exceeds most.
+      C: It is stronger, not milder.
+      D: It is the same topic.
+- heading: Tone and attitude
+  body:
+  - '==Tone items — map adjectives and adverbs: approving, skeptical, neutral, critical, ambivalent==.
+    ==The acid test — the author''s attitude must be evidenced in the PASSAGE, not your feelings about
+    the topic=='
+  - ==Distractor tones — too strong (outrage vs mild concern), too weak (neutral vs qualified support),
+    or reversed polarity. ==Neutral answers are rarely right when evaluative language appears==
+  check:
+  - q: An author calls the proposal 'bold but impractical'. The tone is…
+    options:
+      A: Mixed — admiring yet skeptical
+      B: Entirely approving
+      C: Entirely hostile
+      D: Neutral
+    answer: A
+    explain: '''Bold'' credits it; ''impractical'' withholds support — ambivalence.'
+    distractors:
+      A: Correct.
+      B: Impractical blocks approval.
+      C: Bold blocks hostility.
+      D: Judgment appears.
+examples:
+- prompt: 'Passage opening: ''Urban beekeeping is usually presented as a purely environmental success.
+    But the hives also concentrate pesticide exposure in densely planted neighborhoods, and city ordinances
+    rarely account for it.'' Ask: the main idea of these two sentences.'
+  solution:
+  - The pivot is 'But' — the claim shifts after it.
+  - First sentence gives the common framing (environmental success).
+  - Second sentence is the author's counter — the concentration risk.
+  - 'Main idea: the environmental framing obscures a real pesticide concentration problem.'
+  answer: The author argues that urban beekeeping's known benefits hide a less-considered pesticide risk.
+  distractors:
+    A: Beekeeping is harmless — opposite of the passage.
+    B: Ordinances must ban beekeeping — too strong, no ban proposed.
+    C: Beekeeping is good for cities — only the first sentence.
+key_points:
+- The passage is the sole authority.
+- Main idea — thesis-first, contrast-marked, closing-restated.
+- Paragraph function — what it does, not what it says.
+- Detail accuracy — one changed scope word is a trap.
+- Tone must be evidenced in the passage.
+- Absolute wording needs absolute passage support.
+mnemonics:
+- phrase: Who, what, why, but
+  means: Find the actor, claim, support, and the pivot.
+- phrase: One-word scope changes kill answers
+  means: Most vs all; sometimes vs always.
+maps:
+- title: Passage skeleton
+  steps:
+  - opening — hook and thesis
+  - support paragraphs — example, contrast, qualifier
+  - contrast markers — pivot points
+  - closing — restate or extend the thesis
+- title: Answer filter
+  steps:
+  - supported by the passage? (match wording)
+  - scope matches (no absolutes added)
+  - tone matches author's
+  - not outside knowledge
+  - not a reversed claim
+passage:
+  text: Historians once described the medieval guild as a simple monopoly protecting masters. More recent
+    scholarship notes the guilds' genuine apprenticeship function — transferring real skills to outsiders
+    — and their civic role in urban governance. Still, monopoly pressures never vanished; guilds restricted
+    entry wherever demand ran high. The revision is therefore partial, not total.
+  questions:
+  - q: The main idea of the passage is…
+    options:
+      A: The guilds' civic and training functions were real, but monopoly behavior persisted
+      B: Guilds were simple monopolies
+      C: Guilds were civic utopias
+      D: Guilds had no economic role
+    answer: A
+    explain: The 'therefore partial' close updates the thesis — both sides kept.
+    distractors:
+      A: Correct.
+      B: That is the older account.
+      C: Ignores the monopoly caveat.
+      D: Contradicts the passage.
+  - q: The final sentence functions as…
+    options:
+      A: A qualification of the revision
+      B: A list of examples
+      C: An attack on the author
+      D: A definition
+    answer: A
+    explain: '''Partial, not total'' qualifies how far the revision displaces the old view.'
+    distractors:
+      A: Correct.
+      B: No list appears.
+      C: No attack.
+      D: No term defined.
+  - q: A tone not evidenced in the passage is…
+    options:
+      A: Outrage at the guilds
+      B: Measured scholarly assessment
+      C: Qualified sympathy for the revision
+      D: Analytical distance
+    answer: A
+    explain: No intense emotion appears — the register is scholarly.
+    distractors:
+      A: Correct.
+      B: '''Partial'' is measured.'
+      C: '''Not total'' qualifies.'
+      D: Neutral vocabulary dominates.
+pitfalls:
+- Answering from personal knowledge.
+- Sweeping one-paragraph claims across the whole passage.
+- Adding absolutes to measured claims.
+- Reading tone from the topic rather than the language.
+- Summarizing all details instead of the argument.
+exam_map:
+  NMAT: Reading comprehension analog — same literal layer.
+  MCAT: CARS skill 1 — foundations of comprehension.
+sources:
+- ref: aamc-whatson-mcat
+  used:
+  - CARS skill 1 and 2
+  relation: consulted
+further_reading:
+- title: AAMC Official MCAT — What's on the MCAT
+  url: https://www.aamc.org/what-is-on-the-mcat
+  note: CARS section skill definitions.
+- title: AAMC — CARS Diagnostic Tool
+  url: https://www.aamc.org/services/mcat/cars-diagnostic-tool
+  note: Official CARS practice passages.
+review_questions:
+- q: A detail item asks about a passage sentence. The strongest answer…
+  options:
+    A: Paraphrases that sentence without adding scope
+    B: Adds a generality
+    C: Uses common knowledge
+    D: Agrees with the author
+  answer: A
+  explain: Accurate paraphrase, unchanged scope.
+  distractors:
+    A: Correct.
+    B: Scope additions fail.
+    C: Outside knowledge fails.
+    D: Agreement is irrelevant to accuracy.
+- q: '''The author is mainly concerned with…'' is which family?'
+  options:
+    A: Main idea
+    B: Function
+    C: Tone
+    D: Reasoning beyond
+  answer: A
+  explain: Concern = central claim.
+  distractors:
+    A: Correct.
+    B: Function asks the paragraph's role.
+    C: Tone asks attitude.
+    D: Beyond asks the next step.
+- q: A paragraph that starts 'Critics argue...' then details their objections is…
+  options:
+    A: Presenting a position the author will engage
+    B: The author's own view
+    C: A definition
+    D: A conclusion
+  answer: A
+  explain: '''Critics argue'' flags a presented view, usually to refute or qualify.'
+  distractors:
+    A: Correct.
+    B: Third-person attribution disowns it.
+    C: No term defined.
+    D: Not the close.
+- q: An answer saying the author is 'ambivalent' when the passage is clearly approving…
+  options:
+    A: Reverses the tone
+    B: Is safe
+    C: Is the best answer
+    D: Is ungraded
+  answer: A
+  explain: Approval evidence contradicts ambivalence.
+  distractors:
+    A: Correct.
+    B: Evidence mismatch.
+    C: No.
+    D: All are graded.

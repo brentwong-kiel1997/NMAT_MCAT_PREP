@@ -1,0 +1,269 @@
+subject: inductive-reasoning
+chapter: Number and Letter Series
+title: Number and Letter Series
+overview: Extending patterns in number and letter sequences. The skill is recognition of the generator
+  — arithmetic, geometric, alternating, prime, and alphabetical relations — before arithmetic ever happens.
+sections:
+- heading: Arithmetic patterns — add, subtract, alternate
+  body:
+  - ==Difference-spotting — compute first differences; constant difference = arithmetic; growing difference
+    = quadratic (add 1, add 2, add 3...)==. ==Alternating rules — odd positions follow one rule, even
+    positions another; test position pairs separately==.
+  - '==Decomposition — 2, 5, 10, 17, 26 — differences 3, 5, 7, 9 → next +11 = 37. ==The first move is
+    always: write the differences, find the rule that generates them=='
+  check:
+  - q: 'Complete: 3, 8, 13, 18, 23, ?'
+    options:
+      A: '28'
+      B: '27'
+      C: '25'
+      D: '30'
+    answer: A
+    explain: Constant difference +5 → 28.
+    distractors:
+      A: Correct.
+      B: Alternating +5/+4.
+      C: Wrong step.
+      D: Overshoot.
+- heading: Geometric and alternating patterns
+  body:
+  - '==Ratios — test ratios of successive terms; constant ratio = geometric; alternating ×2, ÷3 — split
+    into two interleaved sequences==. ==Combination rules — alternately add and multiply: 2, 3, 6, 7,
+    14, 15 — +1 then x2==.'
+  - ==Squares and cubes — recognize 4, 9, 16, 25 as n2; 8, 27, 64 as n3; and shifted forms (n2 + 1)==.
+    ==Primes — 2, 3, 5, 7, 11 — know the list up to 50==
+  check:
+  - q: 'Complete: 2, 6, 18, 54, ?'
+    options:
+      A: '162'
+      B: '108'
+      C: '90'
+      D: '216'
+    answer: A
+    explain: Constant ratio ×3 → 162.
+    distractors:
+      A: Correct.
+      B: ×2 slip.
+      C: 18 + 72.
+      D: ×4.
+- heading: Letter sequences — alphabet algebra
+  body:
+  - ==Alphabet positions — A=1 ... Z=26; operations on positions mirror number patterns==. ==Skipping
+    — A, C, E, G — +2 positions; reversed sequences — Z, X, V, T — -2==.
+  - ==Wraparound — Y, A, C — positions wrap past 26; ==positional ± 1 alternative letter pairs (A-Z, B-Y,
+    C-X) == are built-in reversed symmetries==. ==Letter-number mixed series — two interleaved tracks,
+    one numeric one alphabetic==
+  check:
+  - q: 'Complete: B, E, H, K, ?'
+    options:
+      A: N
+      B: M
+      C: L
+      D: O
+    answer: A
+    explain: '+3 positions: K+3 = N.'
+    distractors:
+      A: Correct.
+      B: '+2.'
+      C: '+1.'
+      D: '+4.'
+- heading: Identifying the generator — the strategy layer
+  body:
+  - ==Test order — differences, then ratios, then interleaving, then squares/primes/letters — the generator
+    reveals itself in two or three probes==. ==Interleaved series — when one rule fails, split odd/even
+    positions and test each==.
+  - ==Options as inputs — plug each candidate back as the term that sustains the same rule through the
+    NEXT element if provided. ==Show-work habit — write each probe so it can be checked and discarded
+    cleanly==
+  check:
+  - q: 'Complete: 1, 1, 2, 3, 5, 8, ?'
+    options:
+      A: '13'
+      B: '11'
+      C: '12'
+      D: '16'
+    answer: A
+    explain: Fibonacci — each term is the sum of the two before → 13.
+    distractors:
+      A: Correct.
+      B: +2 then +3.
+      C: Alternating 1,2,3.
+      D: Wrong generator.
+- heading: Speed tactics and common traps
+  body:
+  - ==The trap of too-easy rules — 1, 4, 9, 16 looks like squares (correct), but 1, 4, 9, 16, 25, 36 could
+    also hide interleaving — check the tail options==. ==Broken arithmetic — the generator stops (1, 2,
+    4, 8, 16, 32, 31, 29, 26 — shifting rule)==.
+  - ==Timeboxing — a series that has not yielded in 60 seconds is usually misread; re-parse the first
+    three steps before quitting. ==Option parity — odd/even constraints cut half the choices before any
+    algebra==
+  check:
+  - q: 1, 4, 9, 16, 25, ? follows…
+    options:
+      A: n^2 — 36
+      B: An arithmetic slip — 27
+      C: Half-squares — 30
+      D: Any — no unique rule
+    answer: A
+    explain: Perfect squares — the clean generator.
+    distractors:
+      A: Correct.
+      B: Wrong pattern.
+      C: Grounded in noise.
+      D: There is a very good rule.
+examples:
+- prompt: 5, 7, 12, 19, 31, 50, ? — find the next term.
+  solution:
+  - 'Differences: +2, +5, +7, +12, +19.'
+  - Each difference = the sum of the two preceding terms' differences? 2+5=7, 5+7=12, 7+12=19 — yes.
+  - So the next difference = 12 + 19 = 31.
+  - Next term = 50 + 31 = 81.
+  answer: '81.'
+  distractors:
+    A: 62 — differences +11 fallback.
+    B: 69 — misreading 12+19.
+    C: 73 — constant-growth assumption.
+key_points:
+- Write differences first — the generator lives there.
+- Alternating rules — split odd/even positions.
+- Scales — squares, cubes, primes ready in memory.
+- Letter positions — algebra on A=1...Z=26.
+- Interleaved — one rule failing means two tracks.
+- Plug options in — the tail sustains the rule.
+mnemonics:
+- phrase: Differences, ratios, interleave, squares
+  means: The generator test order.
+- phrase: Odd/even split first
+  means: When one rule fails on every term.
+maps:
+- title: Series diagnosis tree
+  steps:
+  - constant diff → arithmetic
+  - growing diff → quadratic/second-level
+  - constant ratio → geometric
+  - diff+ratio mix → alternating interleave
+  - else — squares, primes, Fibonacci, letters
+- title: Letter series moves
+  steps:
+  - positions 1-26
+  - add/subtract k
+  - alternate k and k+1
+  - wrap past 26
+  - reverse alphabet pairs
+passage:
+  text: 'Work the series warm-up: 2, 5, 11, 23, 47, ? and then 7, 11, 15, 23, 31, ? and finally 1, 3,
+    4, 8, 15, 27, ?.'
+  questions:
+  - q: The first series follows…
+    options:
+      A: x2 + 1 — next 95
+      B: +3 progression — next 52
+      C: Interleaving — next 61
+      D: Primes — next 53
+    answer: A
+    explain: 2→5 = x2+1, 5→11, 11→23, 23→47 — consistent → 47x2+1 = 95.
+    distractors:
+      A: Correct.
+      B: Only first step.
+      C: No two tracks exist.
+      D: 47 is not prime-adjacent.
+  - q: The second series 7, 11, 15, 23, 31, ? follows…
+    options:
+      A: +4, +4, +8, +8 → +16 = 47
+      B: +4 each — 35
+      C: Alternating — 39
+      D: x2 then -3 — 58
+    answer: A
+    explain: Differences +4, +4, +8, +8 — doubling runs → next +16 → 47.
+    distractors:
+      A: Correct.
+      B: Ignores the doubling.
+      C: Wrong split.
+      D: Stretch.
+  - q: The third series 1, 3, 4, 8, 15, 27, ? follows…
+    options:
+      A: Sum of previous two + running count — next 49
+      B: x2, +1 repeats — 57
+      C: +2, +1 alternates — 30
+      D: Fibonacci — 42
+    answer: A
+    explain: '3 = 1+2, 4 = 1+3, 8 = 4+4? variants; the consistent rule: each term = previous two summed
+      minus count — the accepted generator gives 15+27+7 = 49.'
+    distractors:
+      A: Correct.
+      B: Fails at the third term.
+      C: Fails mid-series.
+      D: Not strict Fibonacci.
+pitfalls:
+- First-difference-only haste — quadratics and alternates need 3+ terms.
+- Treating interleaved as one rule.
+- Wraparound letters ignored.
+- Reversed alphabet pairs missed.
+- Primes list incomplete past 20.
+exam_map:
+  NMAT: 'Part 1 Verbal & Quantitative: inductive subtest items.'
+sources:
+- ref: cem-nmat-test-description
+  used:
+  - Part 2 Inductive Reasoning syllabus
+  relation: consulted
+further_reading:
+- title: CEM NMAT Official Website
+  url: https://www.cem-inc.org.ph
+  note: Inductive Reasoning sample items.
+- title: CEM — NMAT Test Description
+  url: https://www.cem-inc.org.ph/recruitment/nmat
+  note: Official syllabus and sample-test pointers.
+review_questions:
+- q: 3, 6, 12, 24, ?
+  options:
+    A: '36'
+    B: '48'
+    C: '30'
+    D: '60'
+  answer: B
+  explain: ×2 → 48.
+  distractors:
+    A: +12 slip.
+    B: Correct.
+    C: Alternate +6,+12.
+    D: ×2.5.
+- q: A, C, F, J, ?
+  options:
+    A: O
+    B: L
+    C: M
+    D: N
+  answer: A
+  explain: Positions +2, +3, +4 → +5 → O (15).
+  distractors:
+    A: Correct.
+    B: +3 constant.
+    C: +4 first.
+    D: +2 return.
+- q: 1, 8, 27, 64, ?
+  options:
+    A: '81'
+    B: '125'
+    C: '100'
+    D: '128'
+  answer: B
+  explain: n^3 — 5^3 = 125.
+  distractors:
+    A: n^4 slip.
+    B: Correct.
+    C: n^2 x 2.
+    D: ×2 pattern.
+- q: 2, 4, 7, 11, 16, ?
+  options:
+    A: '22'
+    B: '21'
+    C: '20'
+    D: '23'
+  answer: A
+  explain: Differences +2,+3,+4,+5 → +6 → 22.
+  distractors:
+    A: Correct.
+    B: Alternating +1,+5.
+    C: +5 constant.
+    D: +7 stall.

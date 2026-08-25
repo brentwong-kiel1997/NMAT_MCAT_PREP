@@ -1,6 +1,6 @@
 # Tutorial Fill Progress (content/tutorials)
 
-> 70 unique chapters grouped by discipline · **56 published tutorials**.
+> 70 unique chapters grouped by discipline · **70 published tutorials**.
    Update this file **together with** every chapter you publish.
 
 Legend: **✅ Published** · ⬜ Not started · Exams column shows each chapter's annotation.
@@ -96,40 +96,44 @@ Legend: **✅ Published** · ⬜ Not started · Exams column shows each chapter'
 
 | # | Chapter | Exams | Status | Tutorial |
 |---|---|---|---|---|
-| 1 | Foundations of Comprehension | MCAT | ⬜ Not started | — |
-| 2 | Reasoning Beyond the Text | MCAT | ⬜ Not started | — |
-| 3 | Reasoning Within the Text | MCAT | ⬜ Not started | — |
+| 1 | Foundations of Comprehension | MCAT | ✅ Published | [tutorial](tutorials/cars/foundations-of-comprehension.yml) |
+| 2 | Reasoning Beyond the Text | MCAT | ✅ Published | [tutorial](tutorials/cars/reasoning-beyond-the-text.yml) |
+| 3 | Reasoning Within the Text | MCAT | ✅ Published | [tutorial](tutorials/cars/reasoning-within-the-text.yml) |
 
 ### Inductive Reasoning (inductive-reasoning) · 3 chapters
 
 | # | Chapter | Exams | Status | Tutorial |
 |---|---|---|---|---|
-| 1 | Figure Grouping | NMAT | ⬜ Not started | — |
-| 2 | Figure Series | NMAT | ⬜ Not started | — |
-| 3 | Number and Letter Series | NMAT | ⬜ Not started | — |
+| 1 | Figure Grouping | NMAT | ✅ Published | [tutorial](tutorials/inductive-reasoning/figure-grouping.yml) |
+| 2 | Figure Series | NMAT | ✅ Published | [tutorial](tutorials/inductive-reasoning/figure-series.yml) |
+| 3 | Number and Letter Series | NMAT | ✅ Published | [tutorial](tutorials/inductive-reasoning/number-and-letter-series.yml) |
+
 
 ### Perceptual Acuity (perceptual-acuity) · 3 chapters
 
 | # | Chapter | Exams | Status | Tutorial |
 |---|---|---|---|---|
-| 1 | Hidden Figure | NMAT | ⬜ Not started | — |
-| 2 | Identical Information | NMAT | ⬜ Not started | — |
-| 3 | Mirror Image | NMAT | ⬜ Not started | — |
+| 1 | Hidden Figure | NMAT | ✅ Published | [tutorial](tutorials/perceptual-acuity/hidden-figure.yml) |
+| 2 | Identical Information | NMAT | ✅ Published | [tutorial](tutorials/perceptual-acuity/identical-information.yml) |
+| 3 | Mirror Image | NMAT | ✅ Published | [tutorial](tutorials/perceptual-acuity/mirror-image.yml) |
+
 
 ### Quantitative (quantitative) · 3 chapters
 
 | # | Chapter | Exams | Status | Tutorial |
 |---|---|---|---|---|
-| 1 | Data Interpretation | NMAT | ⬜ Not started | — |
-| 2 | Fundamental Operations | NMAT | ⬜ Not started | — |
-| 3 | Problem Solving | NMAT | ⬜ Not started | — |
+| 1 | Data Interpretation | NMAT | ✅ Published | [tutorial](tutorials/quantitative/data-interpretation.yml) |
+| 2 | Fundamental Operations | NMAT | ✅ Published | [tutorial](tutorials/quantitative/fundamental-operations.yml) |
+| 3 | Problem Solving | NMAT | ✅ Published | [tutorial](tutorials/quantitative/problem-solving.yml) |
+
 
 ### Verbal (verbal) · 2 chapters
 
 | # | Chapter | Exams | Status | Tutorial |
 |---|---|---|---|---|
-| 1 | Analogies | NMAT | ⬜ Not started | — |
-| 2 | Reading Comprehension | NMAT | ⬜ Not started | — |
+| 1 | Analogies | NMAT | ✅ Published | [tutorial](tutorials/verbal/analogies.yml) |
+| 2 | Reading Comprehension | NMAT | ✅ Published | [tutorial](tutorials/verbal/reading-comprehension.yml) |
+
 
 ## What NMAT has
 

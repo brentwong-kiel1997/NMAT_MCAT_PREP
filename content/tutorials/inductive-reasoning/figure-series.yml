@@ -1,0 +1,261 @@
+subject: inductive-reasoning
+chapter: Figure Series
+title: Figure Series
+overview: Visual patterns — shape, rotation, shading, position, count, and size changes across a sequence
+  of figures. Pattern literacy — describe the change in words before scanning options.
+sections:
+- heading: The pattern vocabulary
+  body:
+  - '==Every figure change reduces to one of: shape, rotation, reflection, position, count, shading, size,
+    or combination==. ==Name the change FIRST — ''the square rotates 90 degrees clockwise each step''
+    — then the option that continues it is obvious==.'
+  - ==Single vs double changes — one element may move while another changes shading; read the whole display,
+    not just the loudest part==
+  check:
+  - q: A figure shows a triangle rotating clockwise each frame. Frame 5 should show it…
+    options:
+      A: 90 degrees further clockwise
+      B: Upside down
+      C: Shaded
+      D: Bigger
+    answer: A
+    explain: Rotation continues a fixed angular step.
+    distractors:
+      A: That is one step of half-turn.
+      B: No shading rule shown.
+      C: Size unchanged.
+- heading: Rotation and reflection reads
+  body:
+  - ==Rotation direction — clockwise vs counterclockwise; fixed step (90, 45, 180) vs acceleration (30,
+    60, 90...)==. ==Reflection — mirror reversal across a fixed axis; the option arm bends the other way==.
+  - ==Mixed — a shape rotates while its inner mirror-image element stays — split the observation. ==Cyclic
+    rotation of position — three objects cycling through three slots (hole, triangle, dot) is position
+    logic, not shape logic==
+  check:
+  - q: An arrow is at 12 o'clock, then 3, then 6. Next should be…
+    options:
+      A: 9 o'clock
+      B: '12'
+      C: '6'
+      D: '3:30'
+    answer: B
+    explain: +90 clockwise each step — 9 o'clock is a 90-degree step.
+    distractors:
+      A: Wait — correct = 9 o'clock.
+      B: Same.
+      C: One step short.
+      D: Half step.
+- heading: Shading, hatching, and color coding
+  body:
+  - ==Shading patterns — solid → hatched → empty → repeat; or increasing fill proportion==. ==Two-channel
+    sequences — fill changes on the outer shape while the inner shape rotates — track both channels separately==
+  check:
+  - q: 'Cycle: solid, dashed, empty, solid, dashed, ?'
+    options:
+      A: Empty
+      B: Solid
+      C: Dashed
+      D: Half
+    answer: A
+    explain: Three-state cycle repeats — empty.
+    distractors:
+      A: Correct.
+      B: Back to start early.
+      C: Two cycles straight.
+      D: Outside the cycle.
+- heading: Counting and size rules
+  body:
+  - ==Count-track — number of elements increments (1, 2, 3, 4) or decrements==. ==Size-track — dimensions
+    grow by a fixed multiplier or shrink to a limit !==
+  - ==Scaffolding — new small elements appear AND existing ones grow; frame-by-frame addition beats holistic
+    guesses. ==Convergence — elements approach a center or recede to edges — position-with-meaning rules==
+  check:
+  - q: 'Elements per frame: 2, 4, 6, 8, next…'
+    options:
+      A: '10'
+      B: '9'
+      C: '12'
+      D: '6'
+    answer: A
+    explain: +2 each frame → 10.
+    distractors:
+      A: Correct.
+      B: Prime stop.
+      C: '+4.'
+      D: Down trend.
+- heading: 'Strategy: describe, then match'
+  body:
+  - ==Describe the rule in words — if you cannot say it, you cannot pick it==. ==Eliminate — options violating
+    any single channel die; often only one option survives three channel checks==.
+  - ==Timebox — 45-60 seconds max; re-read the FIRST two transitions when stuck (the generator shows up
+    early). ==Unknown rules — when stuck, test rotation, then count, then shading — the diagnostic order==
+  check:
+  - q: The best first move when facing an unfamiliar figure series is…
+    options:
+      A: Describe the change between frames 1 and 2
+      B: Look at options first
+      C: Guess the answer
+      D: Skip it
+    answer: A
+    explain: The first transition usually reveals the generator.
+    distractors:
+      A: Correct.
+      B: Options come after the rule.
+      C: Too early.
+      D: It is only a minute.
+examples:
+- prompt: 'Frames: (1) open square; (2) closed square with a dot in the center; (3) open square with dot;
+    (4) closed square no dot. Predict frame 5.'
+  solution:
+  - 'Separate the channels: open/closed cycles O,C,O,C → next O.'
+  - 'Dot channel: no, yes, yes, no → this is ''where the dot is'' logic — dot appears opposite to openness?
+    O no-dot, C dot, O dot, C no-dot — so dot toggles with a 2-frame offset.'
+  - Frame 5 = open square with a dot (matches frame 3 pattern offset).
+  - 'Rule: dot follows the ''closed'' state by one frame.'
+  answer: Open square with a centered dot.
+  distractors:
+    A: Closed with dot — one frame off.
+    B: Open without dot — follows only the O/C channel.
+    C: Closed without dot — that is frame 4 itself.
+key_points:
+- Name the change in words before options.
+- Rotations — step and direction; reflections mirror.
+- Shading cycles — track each channel separately.
+- Counts — increments/decrements; sizes — multipliers.
+- Split odd/even positions for alternating rules.
+- First transition reveals the generator.
+mnemonics:
+- phrase: Shape, rotate, shade, count, size
+  means: The five-channel checklist.
+- phrase: Describe first, options second
+  means: The figure-series order of attack.
+maps:
+- title: Channel checklist
+  steps:
+  - shape — type and symmetry
+  - rotation/reflection — steps and axis
+  - position — slots and centers
+  - shading — solid/hatch/empty
+  - count and size — arithmetic on elements
+- title: Stuck series rescue
+  steps:
+  - re-state frames 1→2 change
+  - check rotation direction reversal
+  - split into two channels
+  - count elements per frame
+  - if still stuck — options elimination by single-channel kills
+passage:
+  text: 'A 5-frame series with frames given as descriptions: F1 large empty circle; F2 medium empty circle;
+    F3 small empty circle; F4 small hatched circle; F5 ?'
+  questions:
+  - q: The size rule is…
+    options:
+      A: Shrinking to a floor
+      B: Growing to the ceiling
+      C: Constant
+      D: Alternating big-small
+    answer: A
+    explain: Large, medium, small — fixed decrement.
+    distractors:
+      A: Correct.
+      B: Opposite.
+      C: Sizes changed.
+      D: No alternation.
+  - q: The shading rule (empty → hatched at F4) most likely continues as…
+    options:
+      A: Densest fill next
+      B: Return to empty
+      C: No shading change
+      D: Split fill
+    answer: A
+    explain: The sequence moved one level — the natural continuation is deeper fill.
+    distractors:
+      A: Correct per the implied gradient.
+      B: Opposite direction.
+      C: Change already happened.
+      D: No basis.
+  - q: 'If the series instead goes F1-F5: circle, square, circle, square, ? the rule is…'
+    options:
+      A: Alternating shape — circle
+      B: Random
+      C: Rotation of the circle
+      D: Growing square
+    answer: A
+    explain: Two-state shape alternation, most parsimonious.
+    distractors:
+      A: There is a clear rule.
+      B: Rotation contradicts alternation.
+      C: No size data.
+pitfalls:
+- Reading shading as rotation — channels separate.
+- Assuming acceleration when the step is constant.
+- Mirror and rotation conflated.
+- Position cycles mistaken for shape changes.
+- Choosing an option that matches only one of two channels.
+exam_map:
+  NMAT: Part 2 Inductive Reasoning — figure-series items.
+sources:
+- ref: cem-nmat-test-description
+  used:
+  - Part 2 Inductive Reasoning syllabus
+  relation: consulted
+further_reading:
+- title: CEM NMAT Official Website
+  url: https://www.cem-inc.org.ph
+  note: Inductive Reasoning sample items.
+- title: CEM — NMAT Test Description
+  url: https://www.cem-inc.org.ph/recruitment/nmat
+  note: Official syllabus and sample-test pointers.
+review_questions:
+- q: A dot moves top, center, bottom, top, center, ?
+  options:
+    A: Bottom
+    B: Top
+    C: Center
+    D: Nowhere
+  answer: A
+  explain: Three-position cycle — bottom.
+  distractors:
+    A: Correct.
+    B: Restart.
+    C: Stall.
+    D: No position.
+- q: Frames show triangles with 0, 1, 2, 3 lines. Next has…
+  options:
+    A: '4'
+    B: '0'
+    C: '1'
+    D: '5'
+  answer: A
+  explain: +1 per frame.
+  distractors:
+    A: Correct.
+    B: Restart.
+    C: Slow start.
+    D: '+2.'
+- q: Arrow rotates 45 then 90 then 135. The angular step is…
+  options:
+    A: +45 each
+    B: Doubling
+    C: Halving
+    D: Constant 45
+  answer: A
+  explain: 45, 90, 135 — adding 45 each time.
+  distractors:
+    A: Correct.
+    B: 45x2=90 but 90x2!=135.
+    C: No.
+    D: Step grows.
+- q: 'Circles: 1 big + 1 small, then 2 big + 2 small. Next…'
+  options:
+    A: 3 big + 3 small
+    B: 3 big only
+    C: 1 big + 2 small
+    D: 2 big + 1 small
+  answer: A
+  explain: Counts both increment by one.
+  distractors:
+    A: Correct.
+    B: Count channel cut.
+    C: Small-only growth.
+    D: Big-only growth.

@@ -1,0 +1,269 @@
+subject: perceptual-acuity
+chapter: Hidden Figure
+title: Hidden Figure
+overview: Finding a target outline within a complex, cluttered figure — the NMAT embedded-figure item.
+  The trick is contour-tracking, not whole-figure matching; rotation and mirroring of the target are allowed
+  within the clutter.
+sections:
+- heading: What the item asks
+  body:
+  - ==A target shape (usually simple — triangle, square, arrow, letter) is hidden inside a busy background
+    figure==. ==The target may be rotated, mirrored, scaled, or partially overlapped — but its OUTLINE
+    survives==
+  - ==The basic attack — track the outline segment by segment, ignoring fill, texture, and background
+    lines that are not part of the target's contour==
+  check:
+  - q: A target triangle is hidden inside a hatched rectangle with diagonal lines. What do you follow?
+    options:
+      A: The target's outline edges
+      B: The hatching direction
+      C: The rectangle's corners
+      D: The overall color
+    answer: A
+    explain: Only the contour identifies the shape — clutter is noise.
+    distractors:
+      A: Correct.
+      B: Texture is noise.
+      C: The frame is background.
+      D: Color is irrelevant.
+- heading: Contour tracking, not whole-figure matching
+  body:
+  - ==Whole-figure matching fails under rotation — the target must be TRACED, not just recognized==. ==Segment
+    tracking — pick the longest straight edge of the target and slide it along the clutter until a corner
+    matches, then walk the rest of the perimeter==
+  - ==The 'L-test' — if you can spot an L-shape (two perpendicular connected segments) of the right proportions,
+    you have a foothold — extend from it==
+  check:
+  - q: The recommended first foothold in a hidden shape is…
+    options:
+      A: Its longest distinctive edge or an L-corner
+      B: Its centroid
+      C: The largest enclosed area
+      D: Its color
+    answer: A
+    explain: A distinctive edge anchors the trace.
+    distractors:
+      A: Correct.
+      B: Centroid says nothing about edges.
+      C: Area is ambiguous.
+      D: Color is noise.
+- heading: Rotation and mirror tolerance
+  body:
+  - ==The target often appears rotated 90 or 180 degrees — rotate the target mentally and re-trace==.
+    ==Mirroring — a mirrored target flips; b/d-type confusion applies to shapes with direction (arrows,
+    hooks, F-shapes)==
+  - ==Practical check — if a candidate outline matches in shape but the interior crossing lines contradict,
+    the candidate is background, not target==
+  check:
+  - q: An F-shaped target appears with its bars facing left instead of right (mirrored). It is…
+    options:
+      A: Still the target — mirroring is allowed
+      B: Definitely the wrong shape
+      C: Impossible in these items
+      D: A different question
+    answer: A
+    explain: Mirrored copies are valid placements.
+    distractors:
+      A: Correct.
+      B: The shape matches.
+      C: It happens.
+      D: Same item type.
+- heading: Dealing with clutter
+  body:
+  - ==Cut through clutter — ignore hatching, dots, and secondary lines; they are distractors==. ==Crossing
+    lines — where background lines cross the shape, the outline continues straight through the crossing
+    — do not follow the crossing line==
+  - ==Partial occlusion — edges of the target may be shared with adjacent shapes; the shared edge belongs
+    to both — verify the corners around it==
+  check:
+  - q: A background ruled line crosses the target's edge at a right angle. The edge…
+    options:
+      A: Continues straight through the crossing
+      B: Turns and follows the crossing line
+      C: Stops there
+      D: Becomes dashed
+    answer: A
+    explain: The target's contour is unbroken — the crossing is background.
+    distractors:
+      A: Correct.
+      B: That would trace the clutter.
+      C: Edges do not stop at crossings.
+      D: No such transformation.
+- heading: Speed tactics and item hygiene
+  body:
+  - ==Scan order — hibernate the target image mentally, then sweep the clutter region by region (quadrants)==.
+    ==Timebox — 45 seconds; a region-switch clears fixation==. ==Eyestrain guard — hold the page at a
+    distance; peripheral view finds contours fast==
+  - ==Answer choice discipline — some options are similar shapes; only the one whose outline matches EVERY
+    segment, in sequence, wins==
+  check:
+  - q: After 45 seconds on a hidden-figure item, the best move is…
+    options:
+      A: Switch regions or re-anchor edges
+      B: Guess immediately
+      C: Stare harder
+      D: Skip it entirely
+    answer: A
+    explain: Fresh region scan breaks fixation.
+    distractors:
+      A: Correct.
+      B: Too early.
+      C: Fixation worsens.
+      D: It is still winnable.
+examples:
+- prompt: 'Target: an arrow (shaft with two symmetric fletches). In the clutter, the shaft could be the
+    2 cm vertical rule crossing the grid, the fletches the two short diagonals to its right.'
+  solution:
+  - Fix the largest distinctive feature — the long straight shaft.
+  - Find a matching-length rule in the clutter running without crossing.
+  - Check both ends — fletches must attach at the same end, symmetric.
+  - Confirm the whole perimeter — then mark.
+  answer: The arrow whose shaft and symmetric tail both trace clean segments.
+  distractors:
+    A: A similar shape missing one fletch — partial match.
+    B: The mirror variant — valid but check which option shows it.
+    C: The shape formed by three background lines — they cross openly.
+key_points:
+- Track the outline; ignore fill and texture.
+- Anchor the longest distinctive edge or L-corner.
+- Rotated and mirrored copies count.
+- Background crossings do not break the contour.
+- Shared edges belong to both shapes — check corners.
+- Region-scan to escape fixation.
+mnemonics:
+- phrase: Edge first, corner next, walk the rest
+  means: The tracing order.
+- phrase: Crossings aren't corners
+  means: Background lines crossing do not turn the target.
+maps:
+- title: Hidden-figure routine
+  steps:
+  - memorize the target outline
+  - find the longest edge in clutter
+  - match a corner
+  - walk the perimeter
+  - verify interior relations
+  - mark the option
+- title: Transform tolerance
+  steps:
+  - rotation 90/180 — allowed
+  - mirror — allowed
+  - scaled — allowed
+  - only outline must match
+passage:
+  text: 'Target: the letter T. The clutter: a ruled grid, a hatched band diagonally crossing, and several
+    T-like junctions where rules meet. Item options include a T formed by two grid lines, one inside the
+    hatched band, and one perpendicular junction.'
+  questions:
+  - q: A T made of two grid rules that CROSS (not butt) is…
+    options:
+      A: Not the target — the contour does not close
+      B: The target
+      C: A mirrored T
+      D: Impossible to distinguish
+    answer: A
+    explain: A crossing makes an X junction, not a T cap — the contour fails.
+    distractors:
+      A: Correct.
+      B: The stem continues through.
+      C: No mirror involved.
+      D: The junction angle differs.
+  - q: The target inside the hatched band…
+    options:
+      A: Is valid — hatching is clutter
+      B: Is invalid — hatching erases it
+      C: Is mirrored
+      D: Does not exist
+    answer: A
+    explain: Texture does not destroy an outline.
+    distractors:
+      A: Correct.
+      B: The outline survives.
+      C: No flip.
+      D: It can be there.
+  - q: If the target T appears with its cap on the bottom, it is…
+    options:
+      A: A valid rotated placement
+      B: A different letter
+      C: An error in the item
+      D: A mirrored F
+    answer: A
+    explain: 180-degree rotation keeps the T a T.
+    distractors:
+      A: Correct.
+      B: Still a T.
+      C: No error.
+      D: The bars differ.
+pitfalls:
+- Following a clutter line through a junction.
+- Requiring exact orientation — rotation is allowed.
+- Treating shared edges as exclusive.
+- Whole-shape matching under rotation.
+- Abandoning after one region scan.
+exam_map:
+  NMAT: Part 2 Perceptual Acuity — hidden-figure items.
+sources:
+- ref: cem-nmat-test-description
+  used:
+  - Part 2 Perceptual Acuity syllabus
+  relation: consulted
+further_reading:
+- title: CEM NMAT Official Website
+  url: https://www.cem-inc.org.ph
+  note: Perceptual Acuity sample items.
+- title: CEM — NMAT Test Description
+  url: https://www.cem-inc.org.ph/recruitment/nmat
+  note: Official syllabus and sample-test pointers.
+review_questions:
+- q: A target square appears rotated 45 degrees (diamond). It is…
+  options:
+    A: Still the target
+    B: Invalid
+    C: A pentagon
+    D: Mirrored only
+  answer: A
+  explain: Rotation is tolerated.
+  distractors:
+    A: Correct.
+    B: Rotation is fine.
+    C: Same sides.
+    D: Rotation only.
+- q: Hatching inside the target area…
+  options:
+    A: Does not affect the outline
+    B: Erases the shape
+    C: Nulls the item
+    D: Makes it a mirror
+  answer: A
+  explain: Texture is clutter, not contour.
+  distractors:
+    A: Correct.
+    B: Outlines endure.
+    C: No such rule.
+    D: No.
+- q: Two shapes share one full edge. The shared edge…
+  options:
+    A: Belongs to both — verify the corners of each
+    B: Belongs to neither
+    C: Ends the item
+    D: is always the target
+  answer: A
+  explain: Shared edges are common; each shape still closes.
+  distractors:
+    A: Correct.
+    B: Every edge belongs to something.
+    C: No.
+    D: Only if it matches.
+- q: Region-region scanning helps most when…
+  options:
+    A: You are stuck fixating one area
+    B: The target is tiny
+    C: The clutter is light
+    D: Time is short
+  answer: A
+  explain: Switching regions breaks fixation.
+  distractors:
+    A: Correct — the classic binder.
+    B: Any region works.
+    C: Light clutter is easy anyway.
+    D: It still helps.

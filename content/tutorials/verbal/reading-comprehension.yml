@@ -1,0 +1,271 @@
+subject: verbal
+chapter: Reading Comprehension
+title: Reading Comprehension
+overview: The NMAT prose-reading items — main idea, detail, inference, function, and tone over short passages.
+  The CARS skills from the MCAT side transfer directly; the differences are passage length and question
+  density.
+sections:
+- heading: Passage reading strategy
+  body:
+  - ==Read actively — mark the thesis, one-line paragraph summaries, and transition words (however, therefore,
+    for example)==. ==The reading pass should take 2-3 minutes for a 500-word passage — no more; the questions
+    will revisit specifics==
+  - ==Reading to the questions — you read ONCE, thoroughly, then answer from structure memory plus targeted
+    re-reading==
+  check:
+  - q: During the initial read, the strongest habit is…
+    options:
+      A: Marking the thesis and paragraph functions
+      B: Reading slowly twice
+      C: Reading only the first paragraph
+      D: Skipping to the questions first
+    answer: A
+    explain: A structural annotation serves every question family.
+    distractors:
+      A: Correct.
+      B: One pass with marking beats two passive ones.
+      C: Thesis alone is not enough.
+      D: Questions assume the whole passage.
+- heading: Main idea and title items
+  body:
+  - ==Main idea items reward the claim, not the topic — 'about X' answers fail; 'argues that X' answers
+    win==. ==Title items paraphrase the same claim compactly==
+  - ==Wrong shapes — too narrow, too broad, off-topic, or reversed==. ==The thesis usually sits at the
+    opening's end or after a 'but' — and returns at the close==
+  check:
+  - q: '''This passage is primarily concerned with…'' wants…'
+    options:
+      A: The author's central claim, not a subject label
+      B: A list of examples
+      C: The first paragraph's noun
+      D: The title of the source
+    answer: A
+    explain: Concern = claim; topic words alone are traps.
+    distractors:
+      A: Correct.
+      B: Examples support, not constitute, the claim.
+      C: A noun is a topic, not the claim.
+      D: Titles come from claims.
+- heading: Detail and evidence items
+  body:
+  - ==Detail items point at a specific claim — relocate the sentence and paraphrase precisely, keeping
+    scope (most vs all, some vs only)==. ==Evidence items ask which fact the passage cites for a claim
+    — look at the claim's support, not its restatement==
+  - ==The one-word-changed trap — choices that swap a qualifier or polarity of the original==
+  check:
+  - q: The passage says 'many patients benefit'. An option says 'all patients benefit'. That option…
+    options:
+      A: Overstates the scope — wrong
+      B: Is a fair paraphrase
+      C: Is stronger than the passage — correct
+      D: Is unrelated
+    answer: A
+    explain: '''Many'' limits; ''all'' exceeds the passage''s claim.'
+    distractors:
+      A: Correct.
+      B: Scope changed.
+      C: Stronger is not accurate.
+      D: Same topic, but the claim differs.
+- heading: Inference and application items
+  body:
+  - ==Inference stays inside the passage's logic — one measured step, never outside facts==. ==Application
+    transfers the passage's principle to a new case==. ==Both reject any answer needing unprovided information==
+  - ==The negation check cuts wrong inferences — if the passage does not rule out the opposite, the assertion
+    is unsupported==
+  check:
+  - q: A safe inference from 'The study's sample was small and urban' is that…
+    options:
+      A: Generalizing to rural populations is not licensed
+      B: The study is fraudulent
+      C: The urban setting is irrelevant
+      D: The sample was perfect
+    answer: A
+    explain: The limitation limits generalization — one careful step.
+    distractors:
+      A: Correct.
+      B: Small is not invalid.
+      C: Urbanity mattered to the design.
+      D: Limits were stated.
+- heading: Tone, function, and speed hygiene
+  body:
+  - ==Tone items — the emotional register from language, evidenced in the passage==. ==Function items
+    — what a sentence or paragraph does (define, exemplify, concede, conclude)==
+  - ==Pacing — about 1 minute per question; mark and return to hard items, never break flow==. ==Order
+    of attack — main idea and function first, then details (relocate), then inferences (reason carefully)==
+  check:
+  - q: A passage full of 'as we have seen', 'it is clear that' suggests a tone of…
+    options:
+      A: Measured confidence
+      B: Panic
+      C: Sarcasm
+      D: Indifference
+    answer: A
+    explain: The register asserts steadily without excess.
+    distractors:
+      A: Correct.
+      B: No alarm.
+      C: No irony markers.
+      D: Assertions show engagement.
+examples:
+- prompt: 'Passage: ''The jeepney''s persistence is usually explained by economics alone. But its cultural
+    load — the decorated body, the community of drivers, the route folklore — is what preserves it as
+    the fares shift.'' — Ask: the main idea.'
+  solution:
+  - Pivot marker 'But' redirects from the economic explanation.
+  - Second sentence carries the claim — cultural load explains persistence.
+  - The first sentence is the presented view, not the author's.
+  - 'Main idea: cultural significance, not economics, best explains the jeepney''s endurance.'
+  answer: The jeepney endures mainly because of its cultural meaning, not just fares.
+  distractors:
+    A: The jeepney will disappear with rising fares — unsupported.
+    B: Jeepneys are purely economic — the first sentence, not the author's view.
+    C: All public transport carries cultural load — a generalization beyond scope.
+key_points:
+- Read once, mark structures, then answer.
+- Main idea = claim, not topic.
+- Detail accuracy — scope words are load-bearing.
+- Inference — one step, inside the logic.
+- Application — principle to new case.
+- Tone evidenced in language; functions named.
+mnemonics:
+- phrase: Claim, not topic
+  means: What main-idea items actually want.
+- phrase: Mark, map, re-read
+  means: The three-part reading routine.
+maps:
+- title: Passage annotation
+  steps:
+  - bracket the thesis
+  - one-line label per paragraph
+  - circle transitions
+  - underline numeric or detail anchors
+  - star the close
+- title: Question order
+  steps:
+  - main idea first
+  - function questions second
+  - details — relocate third
+  - inference and application last
+passage:
+  text: Rice terraces in northern Luzon have been farmed for centuries without industrial fertilizer.
+    The terraces' stone walls trap silt; the flooded paddies recycle nutrients continuously. External
+    observers have called the system sustainable — and it has endured. Yet younger farmers increasingly
+    migrate to cities, and terraces on upper slopes are being abandoned for less labor-intensive crops.
+  questions:
+  - q: The main idea is…
+    options:
+      A: A sustainable traditional system is now threatened by labor migration
+      B: Rice terraces are antique curiosities
+      C: Industrial farming is superior
+      D: Nutrients are wasted
+    answer: A
+    explain: The 'yet' pivot closes with the abandonment threat.
+    distractors:
+      A: Correct.
+      B: No museum framing — the system works.
+      C: No industrial comparison.
+      D: The opposite of nutrient waste.
+  - q: Which claim is a DETAIL the passage supports?
+    options:
+      A: Stone walls trap silt, recycling nutrients
+      B: The terraces produce all Philippine rice
+      C: Fertilizers caused migration
+      D: Rivers feed every terrace
+    answer: A
+    explain: The sentence is stated directly.
+    distractors:
+      A: Correct.
+      B: Scope blasts beyond the text.
+      C: No causal claim.
+      D: No hydrology data.
+  - q: A safe inference is…
+    options:
+      A: Abandoning upper terraces may erode part of the system
+      B: The system will collapse by next year
+      C: The farmers reject tradition
+      D: Cities are better places to farm
+    answer: A
+    explain: Abandonment plausibly degrades a silt-retention network — one careful step.
+    distractors:
+      A: Correct.
+      B: Timing is unknown.
+      C: Migration is economic, not ideological.
+      D: The passage makes no urban comparison.
+pitfalls:
+- Answering from personal knowledge about the topic.
+- Trading 'most' for 'all' scope.
+- Tone read from the topic instead of the words.
+- Main-idea picks that name the subject only.
+- Unsupported absolutes in inference items.
+exam_map:
+  NMAT: Part 1 Verbal — reading comprehension items.
+  MCAT: CARS foundations + reasoning-within — same discipline.
+sources:
+- ref: cem-nmat-test-description
+  used:
+  - Part 1 Verbal reading comprehension syllabus
+  relation: consulted
+- ref: aamc-whatson-mcat
+  used:
+  - CARS skill crosswalk
+  relation: consulted
+further_reading:
+- title: CEM NMAT Official Website
+  url: https://www.cem-inc.org.ph
+  note: Part 1 Verbal sample items.
+- title: CEM — NMAT Test Description
+  url: https://www.cem-inc.org.ph/recruitment/nmat
+  note: Official syllabus and sample-test pointers.
+review_questions:
+- q: '''The author''s tone is best described as…'' — the evidence comes from…'
+  options:
+    A: The passage's language
+    B: The topic's fame
+    C: The answer choices' look
+    D: Your opinion
+  answer: A
+  explain: Register is in the words.
+  distractors:
+    A: Correct.
+    B: Topic is not tone.
+    C: Choices are data, not evidence.
+    D: Opinion is excluded.
+- q: A paragraph starting 'For instance…' functions as…
+  options:
+    A: Evidence for the preceding claim
+    B: A new thesis
+    C: A conclusion
+    D: A counterargument
+  answer: A
+  explain: '''For instance'' signals exemplification.'
+  distractors:
+    A: Correct.
+    B: No new claim.
+    C: Concluding markers differ.
+    D: It supports, not resists.
+- q: '''The passage states that…'' items are…'
+  options:
+    A: Detail questions
+    B: Tone questions
+    C: Main-idea questions
+    D: Application questions
+  answer: A
+  explain: Explicit claims are details.
+  distractors:
+    A: Correct.
+    B: Tone is attitude.
+    C: Main idea is the claim set.
+    D: Application is new cases.
+- q: Reading once with annotation beats re-reading because…
+  options:
+    A: Annotation builds a map the questions query
+    B: Re-reading doubles speed
+    C: Annotation is always faster
+    D: The exam rewards notes
+  answer: A
+  explain: The map is the interface to every question.
+  distractors:
+    A: Correct.
+    B: Re-reading doubles TIME.
+    C: Not inherently.
+    D: Notes are personal tools.
