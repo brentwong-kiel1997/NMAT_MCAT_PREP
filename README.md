@@ -26,10 +26,10 @@
 | --- | --- |
 | 🗺️ **Dual-exam curriculum map** | 13 subjects covering NMAT Part 1 & 2 and all four MCAT sections, with shared science subjects merged — no duplicated pages, no fake chapters beyond the official blueprints |
 | 📖 **Teaching chapters** | Full-textbook tutorials, written one chapter at a time: overview → teaching sections → worked examples → key points → pitfalls → per-exam mapping, every chapter citing its sources |
-| 📝 **High-yield notes** | 449 one-line bullets across 70 outline chapters, plus 116 explained practice MCQs |
+| 📝 **High-yield notes** | 449 one-line bullets across 70 outline chapters, plus 116 practice MCQs and a 470-question full-length mock-exam bank (NMAT 240 + MCAT 230, 30 passages) |
 | 🔎 **Materials desk** | 105-term searchable glossary, 108 formulas in per-subject sheets, exam tips, study paths, and checklists |
 | 🩺 **Disease library** | 8 mechanism-first articles (TB, dengue, MI, …) bridging basic science to clinical intuition — enrichment reading, honestly labeled as such |
-| ✅ **Progress tracking** | Per-chapter completion and practice attempts, stored per learner account |
+| ✅ **Progress tracking & mock exams** | Real-mode full-length simulations (server clocks, autosave, per-question review), wrong-answer notebook, study-plan generator, per-chapter progress — one account |
 | 🤖 **AI study coach, model-agnostic** | Explain / quiz / grade modes, grounded in whichever chapter you are reading. Any OpenAI-compatible endpoint or Anthropic API — admins add, delete, and switch models at runtime |
 | 📁 **File-based content** | The entire curriculum is version-controlled YAML: edit, validate, push — no database migration, no build step |
 
@@ -45,6 +45,7 @@
 | Exam tips / study paths / checklists | **21 / 7 / 3** |
 | Disease articles | **8** |
 | Full textbook tutorials | **70 / 70 — complete** |
+| Mock-exam questions (NMAT + MCAT full length) | **470** + 30 passages |
 
 Everything lives in [`content/`](content/) as plain YAML and is documented
 standalone in [`content/README.md`](content/README.md). Per-chapter tutorial

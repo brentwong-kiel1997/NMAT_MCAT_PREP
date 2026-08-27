@@ -1,5 +1,5 @@
 {
-  "source_rev": "b30d8f2",
+  "source_rev": "333d792",
   "counts": {
     "chapters": 70,
     "note_bullets": 449,
@@ -10,7 +10,7 @@
     "paths": 7,
     "checklists": 3,
     "diseases": 8,
-    "exam_items": 480,
+    "exam_items": 470,
     "exam_passages": 30
   },
   "files": {
@@ -94,7 +94,6 @@
     "diseases/pneumonia.yml": "55e29fc8e07d3ecd72915f5aeca1826d4164f7baad2b4ee783157758f00263f3",
     "diseases/tuberculosis.yml": "2d995e7841d879cc59ea2702a083e497d46c064ba9691161344b1e6fe3955322",
     "diseases/type-2-diabetes.yml": "f43e169842dfb86f7c2f332893aa95c919892b2cb8898bcab7ac223954d011ce",
-    "exam-bank/demo/engine-check.yml": "0bb9c83b11fe68bcf430fbc21e2d8413aaf53a70fe925abd49cc9f98d849ffe2",
     "exam-bank/mcat/bio-biochem.yml": "91990e4c99caba9edf05dee09f3dfa4ad804696ab719a0385934d2dc4ab26629",
     "exam-bank/mcat/cars.yml": "262443843b5a014f80a04f9b7caef671f6648fe11450446099f00cfec7acbfe4",
     "exam-bank/mcat/chem-phys.yml": "95b00741da980931be62dba05027634e3744d40dbfdb980fb9b190825f9616c3",
@@ -107,7 +106,6 @@
     "exam-bank/nmat/part2-chemistry.yml": "1721c96e661a2bc6eb24b242abed728659400424906f8b4a4422436d09e4e82b",
     "exam-bank/nmat/part2-physics.yml": "151fe2bcf9ad44a57182f2903ecbfbe2132af14c53afe3dcbdb5714176ed71d1",
     "exam-bank/nmat/part2-social-science.yml": "7ea50066e9a32398e579f42ac7f3e8df2ece782b5ad9a103e312c08c440aa4eb",
-    "exams/demo.yml": "798c94651581694504d137730ab6fb909a5fa5b392b7f97687004948665ac1a1",
     "exams/mcat.yml": "058f37ee1fdc3b5bafc812650858fcd2bbe1e553a4d32fdbbcde1bc60f2fbca1",
     "exams/nmat.yml": "60350dd9dd8d797b148eb2c012448a754da93bcbc8b86d4a26945600ae2635c5",
     "materials/checklists.yml": "59357dcdfdd0070de5c8be2d2bc15c818a6fcaf479994b8500d4a8cd8ff2662d",

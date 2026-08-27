@@ -28,6 +28,7 @@ the single source of truth — there is no generated artifact to keep in sync.
 | `tutorials/<subject>/<chapter>.yml` | Full textbook chapters: overview, teaching sections, tables, worked examples, key points, pitfalls, exam map, sources | 70 (complete) |
 | `docs/TUTORIAL_TEMPLATE.md` | Authoring template + field reference for new chapters | — |
 | `docs/PROGRESS.md` | Per-chapter fill progress tracker (70 chapters) | 70 / 70 |
+| `exam-bank/<exam>/<section>.yml` | Full-length mock-exam items: choices, keyed answer, explain, distractors, chapter back-link; MCAT science/CARS in passage groups. Timing/structure live in `exams/*.yml` `blueprint:` | 470 + 30 passages |
 | `docs/CHAPTER_LOG.md` | Per-chapter development log — what was actually done, decisions, landmines | 001 / 70 |
 | `MANIFEST.json` | Counts and SHA-256 hashes of every file, for integrity checks | — |
 
