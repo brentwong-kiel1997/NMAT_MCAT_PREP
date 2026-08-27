@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 class LearnerProfile(models.Model):
@@ -88,3 +89,88 @@ class AIProvider(models.Model):
 
     def __str__(self) -> str:
         return f"{self.name} ({self.model_id})"
+
+
+class ExamAttempt(models.Model):
+    """One full-length mock-exam sitting.
+
+    `plan` freezes the exam blueprint (block → ordered item ids) at start so
+    later bank edits can't shift a running exam. `sections` carries per-block
+    clocks as epoch ints (started_ts/finished_ts) — display datetimes live in
+    real columns. `answers` stores captured state only ({item_id: {c, f}});
+    correctness is derived once at finalize, never stored twice.
+    """
+
+    STATUS = [("active", "active"), ("submitted", "submitted"), ("expired", "expired")]
+
+    profile = models.ForeignKey(
+        LearnerProfile, on_delete=models.CASCADE, related_name="exam_attempts"
+    )
+    exam = models.SlugField(max_length=20)  # nmat | mcat | demo
+    mode = models.CharField(max_length=12, default="real")
+    status = models.CharField(max_length=12, choices=STATUS, default="active")
+    started_at = models.DateTimeField(default=timezone.now)
+    finished_at = models.DateTimeField(null=True, blank=True)
+    plan = models.JSONField(default=dict)
+    sections = models.JSONField(default=list)
+    answers = models.JSONField(default=dict)
+    num_correct = models.IntegerField(null=True)
+    num_items = models.IntegerField(null=True)
+    score = models.JSONField(null=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        indexes = [
+            models.Index(fields=["profile", "exam"]),
+            models.Index(fields=["profile", "status"]),
+        ]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["profile", "exam"],
+                condition=models.Q(status="active"),
+                name="uniq_active_attempt_per_exam",
+            )
+        ]
+
+    def __str__(self) -> str:
+        return f"{self.profile_id}:{self.exam}:{self.status}"
+
+
+class ExamResponse(models.Model):
+    """Immutable per-item graded record, written once at finalize."""
+
+    attempt = models.ForeignKey(
+        ExamAttempt, on_delete=models.CASCADE, related_name="responses"
+    )
+    item_id = models.CharField(max_length=64)
+    block_id = models.CharField(max_length=40)
+    chapter_id = models.CharField(max_length=120, blank=True)
+    position = models.IntegerField()
+    chosen = models.CharField(max_length=1, blank=True)  # "" = unanswered
+    correct = models.BooleanField(default=False)
+    flagged = models.BooleanField(default=False)
+
+    class Meta:
+        unique_together = [("attempt", "position")]
+        indexes = [
+            models.Index(fields=["attempt", "correct"]),
+            models.Index(fields=["chapter_id"]),
+        ]
+
+    def __str__(self) -> str:
+        return f"{self.attempt_id}:{self.position}:{self.chosen or '-'}"
+
+
+class StudyPlan(models.Model):
+    """Exam-date + hours config; the day-by-day plan itself is derived."""
+
+    profile = models.OneToOneField(
+        LearnerProfile, on_delete=models.CASCADE, related_name="study_plan"
+    )
+    exam = models.SlugField(max_length=20)
+    exam_date = models.DateField()
+    weekly_hours = models.PositiveIntegerField(default=10)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self) -> str:
+        return f"{self.profile_id}:{self.exam}:{self.exam_date}"
