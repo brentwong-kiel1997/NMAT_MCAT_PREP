@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 
-from portal import accounts, coach_admin, views
+from portal import accounts, coach_admin, exam_views, views
 
 urlpatterns = [
     path("", views.home, name="home"),
@@ -48,5 +48,19 @@ urlpatterns = [
     path("mcat/<slug:slug>/", views.mcat_section, name="mcat_section"),
     path("diseases/", views.disease_list, name="disease_list"),
     path("diseases/<slug:slug>/", views.disease_detail, name="disease_detail"),
+    # ---- mock-exam engine ----
+    path("exams/", exam_views.exam_list, name="exam_list"),
+    path("exams/<slug:exam_id>/", exam_views.exam_detail, name="exam_detail"),
+    path("exams/<slug:exam_id>/start/", exam_views.exam_start, name="exam_start"),
+    path("exams/<slug:exam_id>/take/<int:attempt_id>/", exam_views.exam_take, name="exam_take"),
+    path("exams/<slug:exam_id>/take/<int:attempt_id>/<slug:block_id>/<int:pos>/",
+         exam_views.exam_question, name="exam_question"),
+    path("exams/<slug:exam_id>/break/<int:attempt_id>/<slug:block_id>/",
+         exam_views.exam_break, name="exam_break"),
+    path("exams/<slug:exam_id>/begin/<int:attempt_id>/<slug:block_id>/",
+         exam_views.exam_begin, name="exam_begin"),
+    path("exams/api/answer/", exam_views.exam_answer_api, name="exam_answer_api"),
+    path("exams/api/submit/", exam_views.exam_submit_api, name="exam_submit_api"),
+    path("exams/result/<int:attempt_id>/", exam_views.exam_result, name="exam_result"),
     path("admin/", admin.site.urls),
 ]

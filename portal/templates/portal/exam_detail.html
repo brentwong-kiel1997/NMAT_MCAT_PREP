@@ -1,0 +1,69 @@
+{% extends "portal/base.html" %}
+
+{% block title %}{{ exam.name }} · Mock exam · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">Mock exam</p>
+    <h1>{{ exam.name }} — full-length simulation</h1>
+    <p class="lead">{{ exam.admin }} · {{ exam.format }}</p>
+  </div>
+</div>
+
+<section class="section">
+  <article class="practice-card">
+    <h2>Structure &amp; rules</h2>
+    <table class="mini-table">
+      <thead><tr><th>#</th><th>Block</th><th>Items</th><th>Clock</th><th>Break before</th></tr></thead>
+      <tbody>
+        {% for b in blocks %}
+        <tr>
+          <td>{{ forloop.counter }}</td>
+          <td>{{ b.label }}</td>
+          <td>{{ b.items }}</td>
+          <td>{{ b.seconds }} s</td>
+          <td>{% if b.break_before %}{{ b.break_before.label|default:"short break" }}{% else %}—{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <ul class="note-line">
+      <li>One question per screen. The clock is server-side — refreshing or closing the tab never pauses it.</li>
+      <li>You may move freely inside a block and change answers until the block ends; earlier blocks lock once the next begins.</li>
+      <li>When the clock hits zero the server submits for you automatically.</li>
+      <li>Results give per-section scores, full per-question review, and weak-chapter links back into the tutorials.</li>
+    </ul>
+
+    {% if active %}
+    <p><a class="btn btn-primary" href="{% url 'exam_take' exam.id active.id %}">Resume attempt (started {{ active.started_at|date:"M d H:i" }})</a></p>
+    {% elif user.is_authenticated %}
+    <form method="post" action="{% url 'exam_start' exam.id %}">{% csrf_token %}
+      <button type="submit" class="btn btn-primary">Start the {{ exam.name }}</button>
+    </form>
+    {% else %}
+    <p><a class="btn btn-primary" href="{% url 'login' %}">Sign in to start</a></p>
+    {% endif %}
+  </article>
+
+  {% if history %}
+  <article class="practice-card">
+    <h2>Past attempts</h2>
+    <table class="mini-table">
+      <thead><tr><th>Date</th><th>Status</th><th>Score</th><th></th></tr></thead>
+      <tbody>
+        {% for a in history %}
+        <tr>
+          <td>{{ a.started_at|date:"M d, H:i" }}</td>
+          <td>{{ a.status }}</td>
+          <td>{{ a.num_correct }}/{{ a.num_items }}{% if a.score %} ({{ a.score.pct }}%){% endif %}</td>
+          <td><a href="{% url 'exam_result' a.id %}">report</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </article>
+  {% endif %}
+</section>
+{% endblock %}

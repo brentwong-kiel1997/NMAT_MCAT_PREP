@@ -1,0 +1,86 @@
+{% extends "portal/base.html" %}
+{% load static %}
+
+{% block head_extra %}
+<link rel="stylesheet" href="{% static 'portal/css/exam.css' %}?v=20260827a">
+{% endblock %}
+
+{% block title %}{{ exam.id }} · {{ blk.label }} Q{{ pos }} · Gabay{% endblock %}
+
+{% block body %}
+<div class="exam-shell" data-exam
+     data-attempt="{{ attempt.id }}"
+     data-exam-id="{{ exam.id }}"
+     data-block="{{ blk.id }}"
+     data-pos="{{ pos }}"
+     data-total="{{ total }}"
+     data-remaining="{{ remaining }}">
+  <header class="exam-bar">
+    <span class="exam-brand">{{ exam.id|upper }} · {{ blk.label }}</span>
+    <span class="exam-progress">Q {{ pos }} / {{ total }} · block {{ block_idx|add:1 }}/{{ num_blocks }}</span>
+    <span class="exam-clock" id="exam-clock" aria-live="polite">--:--</span>
+  </header>
+
+  <div class="exam-body">
+    <aside class="exam-grid-wrap">
+      <div class="exam-grid" id="exam-grid" role="navigation" aria-label="Question navigator">
+        {% for n in nav %}
+        <a class="exam-cell {% if n.pos == pos %}is-current{% endif %}{% if n.answered %}is-answered{% endif %}{% if n.flagged %}is-flagged{% endif %}"
+           href="{% url 'exam_question' exam.id attempt.id blk.id n.pos %}">{{ n.pos }}</a>
+        {% endfor %}
+      </div>
+      <p class="note-line">Green = answered · orange = flagged</p>
+      {% if not is_last_block and is_last %}
+      <form method="post" action="{% url 'exam_begin' exam.id attempt.id next_block.id %}" class="exam-finish">
+        {% csrf_token %}
+        <button type="submit" class="btn">Finish block →</button>
+      </form>
+      {% elif is_last_block and is_last %}
+      <form method="post" action="{% url 'exam_submit_api' %}" class="exam-finish" id="exam-submit-form">
+        {% csrf_token %}
+        <input type="hidden" name="attempt_id" value="{{ attempt.id }}">
+        <button type="submit" class="btn btn-primary">Submit exam</button>
+      </form>
+      {% endif %}
+    </aside>
+
+    <main class="exam-main">
+      {% if item.passage_text %}
+      <details class="exam-passage" open>
+        <summary>Passage</summary>
+        <div class="exam-passage-text">{% for para in item.passage_text.splitlines %}{% if para %}<p>{{ para }}</p>{% endif %}{% endfor %}</div>
+      </details>
+      {% endif %}
+
+      <h2 class="exam-stem">{{ item.q }}</h2>
+
+      <div class="exam-choices" role="group" aria-label="Answer choices">
+        {% for letter, text in item.choices.items %}
+        <button type="button"
+                class="exam-choice{% if letter == chosen %}is-selected{% endif %}"
+                data-letter="{{ letter }}">
+          <strong>{{ letter }}</strong> {{ text }}
+        </button>
+        {% endfor %}
+      </div>
+
+      <div class="exam-nav">
+        {% if not is_first %}
+        <a class="btn" href="{% url 'exam_question' exam.id attempt.id blk.id pos|add:'-1' %}">← Previous</a>
+        {% endif %}
+        <button type="button" class="btn {% if flagged %}is-flag-on{% endif %}" id="exam-flag">
+          {% if flagged %}★ Flagged{% else %}☆ Flag for review{% endif %}
+        </button>
+        {% if not is_last %}
+        <a class="btn btn-primary" href="{% url 'exam_question' exam.id attempt.id blk.id pos|add:'1' %}">Next →</a>
+        {% endif %}
+      </div>
+      <p class="exam-saved" id="exam-saved" aria-live="polite"></p>
+    </main>
+  </div>
+</div>
+{% endblock %}
+
+{% block page_js %}
+<script src="{% static 'portal/js/exam.js' %}?v=20260827a" defer></script>
+{% endblock %}

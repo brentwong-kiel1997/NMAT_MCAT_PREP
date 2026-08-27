@@ -611,6 +611,11 @@ def units_of(subject_slug: str) -> list:
 
 # ---- mock-exam engine accessors -------------------------------------------
 
+def chapters_store() -> dict:
+    """id → chapter doc (from the unified library)."""
+    return deepcopy(store()["chapters"])
+
+
 def exam_defs() -> dict:
     """Every content/exams/*.yml keyed by file stem (nmat, mcat, demo, ...)."""
     return deepcopy(store().get("exam_defs") or {})

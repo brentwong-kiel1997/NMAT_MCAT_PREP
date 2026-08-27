@@ -1,0 +1,46 @@
+{% extends "portal/base.html" %}
+
+{% block title %}Mock Exams · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">Mock exams</p>
+    <h1>Full-length simulations</h1>
+    <p class="lead">Real structure, real clocks. One active attempt per exam; results and per-question review afterwards.</p>
+  </div>
+</div>
+
+<section class="section">
+  {% if bank_errors %}
+  <div class="note-line" style="color:#b00;">
+    Bank problems detected (content gate will block deploy):
+    <ul>{% for e in bank_errors %}<li>{{ e }}</li>{% endfor %}</ul>
+  </div>
+  {% endif %}
+
+  {% for e in exams %}
+  <article class="practice-card" style="margin-bottom:1.25rem;">
+    <h2><a href="{% url 'exam_detail' e.id %}">{{ e.doc.name }} — {{ e.doc.full_name }}</a></h2>
+    <p class="practice-chapter">{{ e.doc.admin }} · {{ e.doc.format }}</p>
+    <table class="mini-table">
+      <thead><tr><th>Block</th><th>Items</th><th>Clock</th></tr></thead>
+      <tbody>
+        {% for b in e.blocks %}
+        <tr><td>{{ b.label }}</td><td>{{ b.items }}</td><td>{{ b.seconds }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% if e.attempts %}
+    <p class="note-line">Recent:
+      {% for a in e.attempts %}
+        <a href="{% url 'exam_result' a.id %}">{{ a.started_at|date:"M d" }} · {{ a.num_correct }}/{{ a.num_items }}</a>{% if not forloop.last %} · {% endif %}
+      {% endfor %}
+    </p>
+    {% endif %}
+    <p><a class="btn btn-primary" href="{% url 'exam_detail' e.id %}">Open {{ e.doc.name }}</a></p>
+  </article>
+  {% endfor %}
+</section>
+{% endblock %}

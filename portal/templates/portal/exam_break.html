@@ -1,0 +1,25 @@
+{% extends "portal/base.html" %}
+
+{% block title %}Break · {{ exam.id }} · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">Section finished</p>
+    <h1>{{ blk.label }}</h1>
+    <p class="lead">Take a breather. The next clock starts only when you press Begin — breaks are untimed.</p>
+  </div>
+</div>
+
+<section class="section">
+  <article class="practice-card">
+    <h2>Next: {{ blk.label }}</h2>
+    <p>{{ blk.items|length }} items · {{ blk.seconds }} seconds on the clock.</p>
+    <form method="post" action="{% url 'exam_begin' exam.id attempt.id blk.id %}">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-primary">Begin {{ blk.label }}</button>
+    </form>
+  </article>
+</section>
+{% endblock %}

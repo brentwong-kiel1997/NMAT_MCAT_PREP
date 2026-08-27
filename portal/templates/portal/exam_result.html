@@ -1,0 +1,77 @@
+{% extends "portal/base.html" %}
+
+{% block title %}{{ exam_name }} result · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">{{ attempt.status }}</p>
+    <h1>{{ exam_name }} — {{ score.correct }}/{{ score.items }} ({{ score.pct }}%)</h1>
+    <p class="lead">Answered {{ score.answered }} of {{ score.items }} · started {{ attempt.started_at|date:"M d, H:i" }}</p>
+  </div>
+</div>
+
+<section class="section">
+  <article class="practice-card">
+    <h2>Section scores</h2>
+    <table class="mini-table">
+      <thead><tr><th>Block</th><th>Correct</th><th>Items</th><th>%</th><th>Time used</th></tr></thead>
+      <tbody>
+        {% for b in score.blocks %}
+        <tr>
+          <td>{{ b.label }}</td>
+          <td>{{ b.correct }}/{{ b.items }}</td>
+          <td>{{ b.items }}</td>
+          <td>{{ b.pct }}%</td>
+          <td>{{ b.seconds_used }} s</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% if score.weak_chapters %}
+    <h2>Weak chapters</h2>
+    <p class="note-line">
+      {% for w in score.weak_chapters %}
+      <a href="{% url 'tutorial_detail' w.discipline w.chapter_id %}">{{ w.chapter_id }} ({{ w.correct }}/{{ w.items }})</a>{% if not forloop.last %} · {% endif %}
+      {% endfor %}
+    </p>
+    {% endif %}
+  </article>
+
+  <article class="practice-card">
+    <h2>Per-question review</h2>
+    {% for r in review %}
+    <details class="tut-question {% if r.correct %}is-ok{% else %}is-bad{% endif %}">
+      <summary>
+        <span class="exam-verdict">{% if r.correct %}✓{% else %}✗{% endif %}</span>
+        Q{{ r.pos_global }} · {{ r.q|truncatechars:90 }}
+        {% if r.flagged %}<span title="flagged">★</span>{% endif %}
+      </summary>
+      <div class="exam-review-body">
+        {% if r.passage_text %}<p class="note-line"><em>Passage item.</em></p>{% endif %}
+        <ul class="tut-q-options">
+          {% for letter, text in r.choices.items %}
+          <li class="{% if letter == r.answer %}is-correct{% endif %}{% if letter == r.chosen and letter != r.answer %}is-wrong{% endif %}">
+            <strong>{{ letter }}</strong> {{ text }}
+            {% if letter == r.chosen %}<em>← your pick</em>{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        <p><strong>Answer: {{ r.answer }}</strong> — {{ r.explain }}</p>
+        {% if r.distractors %}
+        <ul class="tut-q-distractors">
+          {% for letter, why in r.distractors.items %}
+          <li><strong>{{ letter }}</strong>: {{ why }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% if r.chapter %}
+        <p class="note-line">Review: <a href="{% url 'tutorial_detail' r.discipline r.chapter %}">{{ r.chapter_title|default:r.chapter }}</a></p>
+        {% endif %}
+      </div>
+    </details>
+    {% endfor %}
+  </article>
+</section>
+{% endblock %}
