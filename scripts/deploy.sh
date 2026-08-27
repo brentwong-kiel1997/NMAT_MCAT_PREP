@@ -8,7 +8,6 @@ RUNTIME="/home/ubuntu/runtime/${APP_NAME}"
 BARE="/home/ubuntu/repos/${APP_NAME}.git"
 VENV="${RUNTIME}/venv"
 LOGS="${RUNTIME}/logs"
-PIDFILE="${RUNTIME}/gunicorn.pid"
 SOCK="127.0.0.1:8000"
 
 mkdir -p "$LOGS" "$DEPLOY"
@@ -46,26 +45,10 @@ fi
 "${VENV}/bin/python" manage.py env_status
 "${VENV}/bin/python" manage.py collectstatic --noinput
 
-if [[ -f "$PIDFILE" ]]; then
-  OLD_PID="$(cat "$PIDFILE" || true)"
-  if [[ -n "${OLD_PID}" ]] && kill -0 "$OLD_PID" 2>/dev/null; then
-    kill "$OLD_PID" || true
-    for _ in $(seq 1 20); do
-      kill -0 "$OLD_PID" 2>/dev/null || break
-      sleep 0.2
-    done
-    kill -9 "$OLD_PID" 2>/dev/null || true
-  fi
-  rm -f "$PIDFILE"
-fi
-
-"${VENV}/bin/gunicorn" config.wsgi:application \
-  --bind "$SOCK" \
-  --workers 2 \
-  --pid "$PIDFILE" \
-  --access-logfile "${LOGS}/gunicorn.access.log" \
-  --error-logfile "${LOGS}/gunicorn.error.log" \
-  --daemon
+# Gunicorn runs as a systemd unit (gunicorn.service) — enabled at boot,
+# restarted on failure. deploy.sh only restarts it after a content update.
+sudo systemctl restart gunicorn
+systemctl is-active --quiet gunicorn
 
 REV="$(git --git-dir="$BARE" rev-parse --short HEAD 2>/dev/null || echo unknown)"
 echo "Deployed ${REV} → gunicorn ${SOCK}"
