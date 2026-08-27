@@ -210,7 +210,37 @@ def _build() -> dict:
         "source_registry": sources,
         "nmat": _read("exams/nmat.yml"),
         "mcat": _read("exams/mcat.yml"),
+        "exam_defs": {
+            f.stem: _read(f"exams/{f.name}")
+            for f in sorted((CONTENT_DIR / "exams").glob("*.yml"))
+        },
+        "exam_bank": _load_exam_bank(),
     }
+
+
+def _load_exam_bank() -> dict:
+    """Load content/exam-bank/** defensively.
+
+    A malformed bank file must never take the whole site down (the deploy
+    poller refreshes the checkout before validation runs), so parse errors
+    are collected under "errors" instead of raising.
+    """
+    bank_dir = CONTENT_DIR / "exam-bank"
+    if not bank_dir.is_dir():
+        return {}
+    bank: dict[str, dict[str, dict]] = {}
+    errors: list[str] = []
+    for file in sorted(bank_dir.rglob("*.yml")):
+        try:
+            doc = _read(str(file.relative_to(CONTENT_DIR)))
+        except ContentError as exc:
+            errors.append(str(exc))
+            continue
+        bank.setdefault(doc.get("exam", ""), {})[doc.get("section", file.stem)] = doc
+    out: dict[str, object] = {"exams": bank}
+    if errors:
+        out["errors"] = errors
+    return out
 
 
 # --------------------------------------------------------------------------
@@ -577,3 +607,94 @@ def units_of(subject_slug: str) -> list:
         if u["source"] == subject_slug or subject_slug in u.get("cross", []):
             out.append({"key": u["key"], "project": u["project"], "label": u["label"]})
     return out
+
+
+# ---- mock-exam engine accessors -------------------------------------------
+
+def exam_defs() -> dict:
+    """Every content/exams/*.yml keyed by file stem (nmat, mcat, demo, ...)."""
+    return deepcopy(store().get("exam_defs") or {})
+
+
+def exam_blueprint(exam_id: str) -> dict | None:
+    doc = store().get("exam_defs", {}).get(exam_id)
+    if not doc:
+        return None
+    bp = doc.get("blueprint") or {}
+    return deepcopy(bp) if bp else None
+
+
+def exam_bank_errors() -> list[str]:
+    return list((store().get("exam_bank") or {}).get("errors") or [])
+
+
+def _bank_docs(exam_id: str) -> dict[str, dict]:
+    return dict((store().get("exam_bank") or {}).get("exams", {}).get(exam_id) or {})
+
+
+def exam_bank_section(exam_id: str, section_id: str) -> dict | None:
+    doc = _bank_docs(exam_id).get(section_id)
+    return deepcopy(doc) if doc else None
+
+
+def _normalize_item(raw: dict, *, exam_id: str, section_id: str, block_id: str,
+                    passage: dict | None) -> dict:
+    return {
+        "id": raw.get("id", ""),
+        "exam": exam_id,
+        "section_id": section_id,
+        "block_id": block_id,
+        "q": raw.get("q", ""),
+        "choices": dict(raw.get("choices") or {}),
+        "answer": raw.get("answer", ""),
+        "explain": raw.get("explain", ""),
+        "distractors": dict(raw.get("distractors") or {}),
+        "chapter": raw.get("chapter", ""),
+        "passage_id": (passage or {}).get("id", ""),
+        "passage_text": (passage or {}).get("text", ""),
+    }
+
+
+def exam_items(exam_id: str, *, with_key: bool = False) -> list[dict]:
+    """Flatten the bank into blueprint block order, normalized items."""
+    bp = exam_blueprint(exam_id)
+    if not bp:
+        return []
+    docs = _bank_docs(exam_id)
+    out: list[dict] = []
+    for block in bp.get("blocks") or []:
+        for section_id in block.get("bank") or []:
+            doc = docs.get(section_id) or {}
+            for raw in doc.get("items") or []:
+                item = _normalize_item(raw, exam_id=exam_id, section_id=section_id,
+                                       block_id=block["id"], passage=None)
+                out.append(item if with_key else _strip_key(item))
+            for passage in doc.get("passages") or []:
+                for raw in passage.get("items") or []:
+                    item = _normalize_item(raw, exam_id=exam_id, section_id=section_id,
+                                           block_id=block["id"], passage=passage)
+                    out.append(item if with_key else _strip_key(item))
+    return out
+
+
+def _strip_key(item: dict) -> dict:
+    return {k: v for k, v in item.items()
+            if k not in ("answer", "explain", "distractors")}
+
+
+def exam_item_index(exam_id: str) -> dict[str, dict]:
+    """id → item WITH answer/explain. Server-side only — never ship to a
+    pre-submit page."""
+    return {i["id"]: i for i in exam_items(exam_id, with_key=True)}
+
+
+def all_bank_items() -> dict[str, dict]:
+    """Cross-exam item index (with keys) for the attempt/redo APIs."""
+    out: dict[str, dict] = {}
+    for exam_id in (store().get("exam_bank") or {}).get("exams", {}):
+        out.update(exam_item_index(exam_id))
+    return out
+
+
+def render_item(item: dict, *, with_key: bool) -> dict:
+    return dict(item) if with_key else _strip_key(dict(item))

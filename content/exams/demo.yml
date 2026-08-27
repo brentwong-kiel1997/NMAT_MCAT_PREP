@@ -1,0 +1,13 @@
+slug: demo
+name: Engine Check
+full_name: Exam engine self-check
+admin: Gabay
+format: "10 items / 5 minutes \u2014 internal pilot for the exam engine."
+blueprint:
+  blocks:
+  - id: check
+    label: Check
+    seconds: 300
+    items: 10
+    bank:
+    - engine-check

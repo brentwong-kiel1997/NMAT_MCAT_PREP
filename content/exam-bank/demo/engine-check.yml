@@ -1,0 +1,149 @@
+exam: demo
+section: engine-check
+label: Engine check
+subject: biology
+block: check
+items_expected: 10
+items:
+- id: nmat-demo-001
+  q: A ball is thrown straight up. At its highest point…
+  choices:
+    D: Velocity is zero; acceleration is g downward
+    A: Velocity and acceleration are both zero
+    B: Velocity is g upward; acceleration zero
+    C: Both remain constant
+  answer: D
+  explain: Instantaneously at rest at the peak, but gravity never switches off — a = 9.8 m/s² downward
+    throughout.
+  distractors:
+    A: Gravity acts at every instant.
+    B: The ball is not moving upward at the peak.
+    C: Velocity is zero at the peak.
+  chapter: mechanics
+- id: nmat-demo-002
+  q: Which base pair in DNA involves three hydrogen bonds?
+  choices:
+    A: A-T
+    B: A-U
+    C: G-C
+    D: T-T
+  answer: C
+  explain: Guanine-cytosine pairs share three hydrogen bonds; A-T (and A-U in RNA) share two.
+  distractors:
+    A: Two hydrogen bonds.
+    B: Two hydrogen bonds.
+    D: Not a standard base pair.
+  chapter: 5d-biologically-relevant-molecules
+- id: nmat-demo-003
+  q: The pH of a solution with [H+] = 1.0 x 10^-3 M is…
+  choices:
+    A: '3'
+    B: '-3'
+    C: '11'
+    D: '1'
+  answer: A
+  explain: pH = -log[H+] = -log(1e-3) = 3.
+  distractors:
+    B: That is the exponent's sign flipped.
+    C: 14 - 3 = 11 is pOH.
+    D: Not the logarithmic definition.
+  chapter: 5a-unique-nature-of-water-and-its-solutions
+- id: nmat-demo-004
+  q: In an operant conditioning framework, negative reinforcement…
+  choices:
+    C: Removes an aversive stimulus to increase behavior
+    A: Adds an aversive stimulus
+    B: Decreases behavior
+    D: Is another name for punishment
+  answer: C
+  explain: Reinforcement increases behavior; the 'negative' marks the REMOVAL of something aversive.
+  distractors:
+    A: That is positive punishment.
+    B: Reinforcement strengthens behavior.
+    D: Punishment decreases behavior.
+  chapter: fc7-behavior-and-behavior-change
+- id: nmat-demo-005
+  q: A series circuit has a 12 V battery and resistors of 2 Ω and 8 Ω. The current is…
+  choices:
+    A: 1.2 A
+    B: 6.0 A
+    C: 1.5 A
+    D: 96 A
+  answer: A
+  explain: R = 2 + 8 = 10 Ω; I = V/R = 12/10 = 1.2 A.
+  distractors:
+    B: That treats the resistors as parallel.
+    C: That omits the 8 Ω.
+    D: I = V/R, not VR.
+  chapter: electricity-and-magnetism
+- id: nmat-demo-006
+  q: Which structure is the site of lipid synthesis in the cell?
+  choices:
+    D: Smooth endoplasmic reticulum
+    A: Rough endoplasmic reticulum
+    B: Golgi apparatus
+    C: Lysosome
+  answer: D
+  explain: Smooth ER hosts lipid and steroid synthesis and detox reactions.
+  distractors:
+    A: Ribosome-studded; protein synthesis.
+    B: Packaging and shipping.
+    C: Digestion of waste.
+  chapter: cells-and-cellular-processes
+- id: nmat-demo-007
+  q: Analogous structures share…
+  choices:
+    A: Common ancestry
+    B: Function but not ancestry
+    C: Both ancestry and function
+    D: Neither
+  answer: B
+  explain: Analogy = similar function via convergent evolution, without shared structural origin.
+  distractors:
+    A: That is homology.
+    C: Shared ancestry defines homology.
+    D: Analogies share function.
+  chapter: unity-and-diversity-of-life
+- id: nmat-demo-008
+  q: In a Carnot engine between 400 K and 300 K, maximum efficiency is…
+  choices:
+    A: 75%
+    B: 33%
+    C: 25%
+    D: 50%
+  answer: C
+  explain: e = 1 - Tc/Th = 1 - 300/400 = 0.25.
+  distractors:
+    A: That is Tc/Th itself.
+    B: Requires Tc = 200 K.
+    D: Halving is not the formula.
+  chapter: thermodynamics
+- id: nmat-demo-009
+  q: A 5,7,12,19,31 series continues with…
+  choices:
+    A: '50'
+    B: '48'
+    C: '43'
+    D: '55'
+  answer: A
+  explain: 'Each term is the sum of the two before it: 19 + 31 = 50.'
+  distractors:
+    B: That adds only the last two of the first three.
+    C: That is 12 + 31.
+    D: Overshoot.
+  chapter: number-and-letter-series
+- id: nmat-demo-010
+  q: Which is a zymogen (inactive enzyme precursor)?
+  choices:
+    A: Trypsin
+    B: Trypsinogen
+    C: Amylase
+    D: Lipase
+  answer: B
+  explain: Trypsinogen is secreted inactive and cleaved to active trypsin in the gut.
+  distractors:
+    A: Already active.
+    C: Secreted in active form.
+    D: Secreted in active form.
+  chapter: 1a-proteins-and-amino-acids
+passages: []

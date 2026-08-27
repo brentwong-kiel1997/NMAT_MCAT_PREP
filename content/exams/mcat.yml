@@ -11,3 +11,25 @@ section_refs:
 - cars
 - chem-phys
 - psych-soc
+blueprint:
+  blocks:
+  - id: chem-phys
+    label: Chemical and Physical Foundations
+    seconds: 5700
+    items: 59
+    bank: [chem-phys]
+  - id: cars
+    label: Critical Analysis and Reasoning Skills
+    seconds: 5400
+    items: 53
+    bank: [cars]
+  - id: bio-biochem
+    label: Biological and Biochemical Foundations
+    seconds: 5700
+    items: 59
+    bank: [bio-biochem]
+  - id: psych-soc
+    label: Psychological, Social, and Biological Foundations
+    seconds: 5700
+    items: 59
+    bank: [psych-soc]

@@ -45,3 +45,18 @@ parts:
     items: 30
     item_types: []
     focus: Intro gen/analytical/organic/biochem. See shared subject page.
+blueprint:
+  blocks:
+  - id: part1
+    label: Part 1 · Mental Ability
+    seconds: 8100
+    items: 120
+    bank: [part1-verbal, part1-inductive, part1-quantitative, part1-perceptual]
+  - id: part2
+    label: Part 2 · Academic Proficiency
+    seconds: 5400
+    items: 120
+    bank: [part2-biology, part2-physics, part2-social-science, part2-chemistry]
+    break_before:
+      seconds: 600
+      label: 10-minute break (Part 1 → Part 2)

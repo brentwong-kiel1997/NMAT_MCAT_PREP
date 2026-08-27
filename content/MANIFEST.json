@@ -1,5 +1,5 @@
 {
-  "source_rev": "1709f27",
+  "source_rev": "171d5f8",
   "counts": {
     "chapters": 70,
     "note_bullets": 449,
@@ -9,7 +9,9 @@
     "tips": 21,
     "paths": 7,
     "checklists": 3,
-    "diseases": 8
+    "diseases": 8,
+    "exam_items": 10,
+    "exam_passages": 0
   },
   "files": {
     "SOURCES.yml": "e8c37335da395e1e1fd8c3f6fcf194a060fe2691d6882d83c2e857762ff5974d",
@@ -92,8 +94,10 @@
     "diseases/pneumonia.yml": "55e29fc8e07d3ecd72915f5aeca1826d4164f7baad2b4ee783157758f00263f3",
     "diseases/tuberculosis.yml": "2d995e7841d879cc59ea2702a083e497d46c064ba9691161344b1e6fe3955322",
     "diseases/type-2-diabetes.yml": "f43e169842dfb86f7c2f332893aa95c919892b2cb8898bcab7ac223954d011ce",
-    "exams/mcat.yml": "a0200b5460958e2d2ca6643bf87a982e15f5a314390d59ed601428c791485028",
-    "exams/nmat.yml": "87eac8eeaa284f6ac144ef211230e5afbb69474c1b9019767532d416e82f4838",
+    "exam-bank/demo/engine-check.yml": "0bb9c83b11fe68bcf430fbc21e2d8413aaf53a70fe925abd49cc9f98d849ffe2",
+    "exams/demo.yml": "798c94651581694504d137730ab6fb909a5fa5b392b7f97687004948665ac1a1",
+    "exams/mcat.yml": "058f37ee1fdc3b5bafc812650858fcd2bbe1e553a4d32fdbbcde1bc60f2fbca1",
+    "exams/nmat.yml": "60350dd9dd8d797b148eb2c012448a754da93bcbc8b86d4a26945600ae2635c5",
     "materials/checklists.yml": "59357dcdfdd0070de5c8be2d2bc15c818a6fcaf479994b8500d4a8cd8ff2662d",
     "materials/formulas.yml": "3d43208292ba3269c0bfe89559a5509c21487dc9d63648567e92e492e7dd694c",
     "materials/glossary.yml": "5b5c71f6964523401468536f924f2b58375fff397769f81078aaade3d92b4c0e",

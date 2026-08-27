@@ -24,7 +24,8 @@ from portal import content
 CONTENT = content.CONTENT_DIR
 
 COLLECTION_COUNTS = ("chapters", "note_bullets", "practice", "glossary",
-                     "formulas", "tips", "paths", "checklists", "diseases")
+                     "formulas", "tips", "paths", "checklists", "diseases",
+                     "exam_items", "exam_passages")
 
 
 def current_counts(store: dict) -> dict:
@@ -39,6 +40,13 @@ def current_counts(store: dict) -> dict:
         "paths": len(store["paths"]),
         "checklists": len(store["checklists"]),
         "diseases": len(store["diseases"]),
+        "exam_items": sum(len(b.get("items") or []) + sum(len(p.get("items") or [])
+                          for p in (b.get("passages") or []))
+                          for exam in (store.get("exam_bank") or {}).get("exams", {}).values()
+                          for b in exam.values()),
+        "exam_passages": sum(len(b.get("passages") or [])
+                             for exam in (store.get("exam_bank") or {}).get("exams", {}).values()
+                             for b in exam.values()),
     }
 
 
@@ -117,6 +125,10 @@ class Command(BaseCommand):
                     problems.append(
                         f"count drift {key}: manifest={manifest['counts'][key]} actual={counts[key]}"
                     )
+
+        # ---- exam bank -----------------------------------------------------------
+        exam_problems = _validate_exam_bank(store, seen_qids)
+        problems.extend(exam_problems)
 
         # ---- tutorials -----------------------------------------------------------
         sources_path = CONTENT / "SOURCES.yml"
@@ -212,3 +224,134 @@ class Command(BaseCommand):
                 "content OK — " + " ".join(f"{k}={v}" for k, v in counts.items())
             )
         )
+
+
+def _parse_duration_minutes(text: str) -> int | None:
+    """Parse '2 hours 15 minutes' / '95 minutes' / '~35 minutes (...)' -> minutes."""
+    import re
+    if not text:
+        return None
+    total = 0
+    for value, unit in re.findall(r"(\d+)\s*(hours?|hrs?|h|minutes?|mins?|m)\b", text.lower()):
+        n = int(value)
+        total += n * 60 if unit.startswith(("hour", "hr", "h")) else n
+    return total or None
+
+
+def _validate_exam_bank(store: dict, seen_qids: set[str]) -> list[str]:
+    problems: list[str] = []
+    bank = (store.get("exam_bank") or {}).get("exams") or {}
+    for err in (store.get("exam_bank") or {}).get("errors") or []:
+        problems.append(f"exam-bank parse error: {err}")
+    exam_defs = store.get("exam_defs") or {}
+    chapters = store.get("chapters") or {}
+
+    for exam_id, sections in sorted(bank.items()):
+        bp = ((exam_defs.get(exam_id) or {}).get("blueprint") or {})
+        blocks = bp.get("blocks") or []
+        declared_banks = [sid for b in blocks for sid in (b.get("bank") or [])]
+        seen_section_items: dict[str, int] = {}
+
+        for section_id, doc in sorted(sections.items()):
+            # identity
+            if doc.get("exam") != exam_id:
+                problems.append(f"exam-bank {section_id}: exam {doc.get('exam')!r} != directory exam {exam_id!r}")
+            if doc.get("section") != section_id:
+                problems.append(f"exam-bank {section_id}: section key mismatch")
+            if section_id not in declared_banks:
+                problems.append(f"exam-bank {section_id}: not listed in any {exam_id} blueprint block")
+
+            raw_items = list(doc.get("items") or [])
+            for passage in doc.get("passages") or []:
+                if not (passage.get("text") or "").strip():
+                    problems.append(f"exam-bank {section_id} passage {passage.get('id')}: empty text")
+                raw_items.extend(passage.get("items") or [])
+
+            expected = doc.get("items_expected")
+            if expected is not None and len(raw_items) != expected:
+                problems.append(f"exam-bank {section_id}: {len(raw_items)} items, expected {expected}")
+            seen_section_items[section_id] = len(raw_items)
+
+            letters_count = {"A": 0, "B": 0, "C": 0, "D": 0}
+            stems: dict[str, str] = {}
+            for item in raw_items:
+                iid = item.get("id")
+                if not iid:
+                    problems.append(f"exam-bank {section_id}: item without id")
+                elif iid in seen_qids:
+                    problems.append(f"exam-bank duplicate item id {iid}")
+                else:
+                    seen_qids.add(iid)
+                choices = item.get("choices") or {}
+                if set(choices.keys()) != {"A", "B", "C", "D"}:
+                    problems.append(f"exam-bank {iid}: choices keys {sorted(choices)} != A-D")
+                if item.get("answer") not in choices:
+                    problems.append(f"exam-bank {iid}: answer {item.get('answer')!r} not in choices")
+                elif isinstance(item.get("answer"), str):
+                    letters_count[item["answer"]] = letters_count.get(item["answer"], 0) + 1
+                if not (item.get("q") or "").strip():
+                    problems.append(f"exam-bank {iid}: empty stem")
+                if not (item.get("explain") or "").strip():
+                    problems.append(f"exam-bank {iid}: missing explain")
+                distractors = item.get("distractors") or {}
+                bad_keys = set(distractors) - set(choices)
+                if bad_keys:
+                    problems.append(f"exam-bank {iid}: distractor keys {sorted(bad_keys)} not option letters")
+                if item.get("answer") and item["answer"] in distractors:
+                    problems.append(f"exam-bank {iid}: distractor entry on the answer letter "
+                                    f"(misalignment guard)")
+                chapter_id = item.get("chapter")
+                if not chapter_id:
+                    problems.append(f"exam-bank {iid}: missing chapter back-link")
+                elif chapter_id not in chapters:
+                    problems.append(f"exam-bank {iid}: unknown chapter {chapter_id!r}")
+                else:
+                    tut = content.tutorial_for(chapters[chapter_id].get("discipline", ""),
+                                               chapters[chapter_id].get("title", ""))
+                    if not tut:
+                        problems.append(f"exam-bank {iid}: chapter {chapter_id} has no tutorial to link")
+                stem = (item.get("q") or "").strip()
+                if stem and stems.get(stem) and stems[stem] != iid:
+                    problems.append(f"exam-bank: duplicate stem {stem[:40]!r} ({stems[stem]} / {iid})")
+                stems[stem] = iid
+
+            # soft warning: answer-letter balance
+            total_letters = sum(letters_count.values())
+            if total_letters >= 8:
+                for letter, n in letters_count.items():
+                    if n / total_letters > 0.4:
+                        problems.append(f"exam-bank {section_id}: WARNING answer '{letter}' on "
+                                        f"{n}/{total_letters} items (unbalanced key)")
+
+        # blueprint coverage: block item totals
+        for b in blocks:
+            got = sum(seen_section_items.get(sid, 0) for sid in (b.get("bank") or []))
+            want = b.get("items")
+            if want and got != want:
+                problems.append(f"exam-bank {exam_id} block {b.get('id')}: {got} items banked, "
+                                f"blueprint expects {want}")
+
+    # blueprint seconds vs prose time (NMAT parts / MCAT subjects)
+    def _check_seconds(exam_id: str, prose_minutes: int | None, block_seconds: int | None, label: str):
+        if prose_minutes and block_seconds and prose_minutes * 60 != block_seconds:
+            problems.append(f"exam {exam_id} {label}: blueprint {block_seconds}s vs prose "
+                            f"{prose_minutes}min mismatch")
+
+    nmat = exam_defs.get("nmat") or {}
+    bp = (nmat.get("blueprint") or {}).get("blocks") or []
+    prose = {}
+    for part in nmat.get("parts") or []:
+        prose[part.get("id")] = _parse_duration_minutes(part.get("time") or "")
+    for b in bp:
+        _check_seconds("nmat", prose.get(b.get("id")), b.get("seconds"), b.get("id"))
+
+    mcat = exam_defs.get("mcat") or {}
+    subj = store.get("subjects") or {}
+    for b in (mcat.get("blueprint") or {}).get("blocks") or []:
+        s = subj.get(b.get("id")) or {}
+        _check_seconds("mcat", _parse_duration_minutes(s.get("time") or ""),
+                       b.get("seconds"), b.get("id"))
+        if s.get("questions") and b.get("items") and s["questions"] != b["items"]:
+            problems.append(f"exam mcat {b.get('id')}: blueprint items {b['items']} vs subject "
+                            f"questions {s['questions']}")
+    return problems
