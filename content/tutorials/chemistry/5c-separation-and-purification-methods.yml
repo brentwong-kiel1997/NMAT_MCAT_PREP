@@ -26,8 +26,8 @@ sections:
     explain: Least polar compound dissolves best in the nonpolar mobile phase — moves fastest.
     distractors:
       A: Polar compounds bind to the polar stationary phase and lag.
-      B: Size is secondary to polarity here.
-      C: Size is secondary.
+      C: Size is secondary to polarity here.
+      D: Size is secondary.
 - heading: Electrophoresis — separation by charge and size
   body:
   - Electrophoresis separates charged molecules by migration through a gel under an electric field. ==Small,
@@ -46,9 +46,9 @@ sections:
     answer: A
     explain: Larger DNA fragments encounter more gel resistance and move slowest — closest to the well.
     distractors:
-      A: Smallest fragments run furthest.
-      B: All DNA has the same charge density.
-      C: Intermediate position.
+      B: Smallest fragments run furthest.
+      C: All DNA has the same charge density.
+      D: Intermediate position.
   figures:
   - src: 5c-separation-and-purification-methods/fig-10cd10e1.webp
     caption: Southern blotting — DNA fragments separated by size via gel electrophoresis, then detected
@@ -74,8 +74,8 @@ sections:
       enrich beyond this.
     distractors:
       A: BP difference exists (78C vs 100C).
-      B: They do not react.
-      C: Ethanol BP is moderate.
+      C: They do not react.
+      D: Ethanol BP is moderate.
   figures:
   - src: 5c-separation-and-purification-methods/fig-5ac75f50.webp
     caption: Boiling and condensation — the vaporization-condensation cycle that underlies distillation.
@@ -99,8 +99,8 @@ sections:
     explain: Nuclei are the largest, densest organelle — pellet at 600g.
     distractors:
       A: Ribosomes need ultracentrifugation.
-      B: Proteins remain soluble.
-      C: DNA fragments stay in solution.
+      C: Proteins remain soluble.
+      D: DNA fragments stay in solution.
 - heading: Reading separation data
   body:
   - The MCAT expects you to interpret chromatograms (peaks and retention times), gels (bands and molecular-weight
@@ -117,8 +117,8 @@ sections:
     explain: Each compound has a characteristic retention time under fixed conditions.
     distractors:
       A: Height varies with concentration.
-      B: Width varies with efficiency.
-      C: Solvent is the same for all peaks.
+      C: Width varies with efficiency.
+      D: Solvent is the same for all peaks.
 examples:
 - prompt: A mixture of amino acids is separated by paper chromatography with a polar stationary phase
     and a moderately polar solvent. Predict the elution order for glycine, phenylalanine, and lysine.
@@ -174,8 +174,8 @@ passage:
     explain: SDS coats all proteins with uniform negative charge — size alone determines migration.
     distractors:
       A: SDS denatures and charges uniformly.
-      B: Shape is disrupted by SDS.
-      C: pI is irrelevant after SDS.
+      C: Shape is disrupted by SDS.
+      D: pI is irrelevant after SDS.
   - q: The band at 120 kDa indicates…
     options:
       A: A protein subunit of 120 kDa
@@ -185,9 +185,9 @@ passage:
     answer: A
     explain: SDS-PAGE reports molecular weight of the denatured polypeptide chain.
     distractors:
-      A: kDa is mass, not residue count.
-      B: Not a count.
-      C: A dimer would run as monomers after SDS.
+      B: kDa is mass, not residue count.
+      C: Not a count.
+      D: A dimer would run as monomers after SDS.
   - q: If the sample was run on native PAGE instead, the bands would…
     options:
       A: Be identical to SDS-PAGE
@@ -198,8 +198,8 @@ passage:
     explain: Native PAGE preserves folding — both charge and size determine migration.
     distractors:
       A: SDS changes the basis of separation.
-      B: They would differ in position but still separate.
-      C: Separation still occurs.
+      C: They would differ in position but still separate.
+      D: Separation still occurs.
 pitfalls:
 - Confusing mobile and stationary phase effects.
 - Forgetting that SDS-PAGE denatures — subunits separate, not intact complexes.
@@ -236,8 +236,8 @@ review_questions:
   explain: Stationary stays fixed; mobile phase moves through.
   distractors:
     A: That is the mobile phase.
-    B: Detector measures output.
-    C: Sample is what is separated.
+    C: Detector measures output.
+    D: Sample is what is separated.
 - q: Which DNA fragment runs furthest in agarose gel?
   options:
     A: 1 kb
@@ -247,9 +247,9 @@ review_questions:
   answer: A
   explain: Smallest fragment meets least gel resistance.
   distractors:
-    A: Larger fragments are slower.
-    B: Larger still.
-    C: Largest and slowest.
+    B: Larger fragments are slower.
+    C: Larger still.
+    D: Largest and slowest.
 - q: An azeotrope is…
   options:
     A: A compound with two chiral centers
@@ -260,8 +260,8 @@ review_questions:
   explain: Boils at constant temperature — cannot be separated by distillation.
   distractors:
     A: Stereochemistry unrelated.
-    B: Not a separation method.
-    C: Not a buffer.
+    C: Not a separation method.
+    D: Not a buffer.
 - q: During differential centrifugation at LOW speed, the pellet contains…
   options:
     A: Ribosomes
@@ -272,5 +272,5 @@ review_questions:
   explain: Nuclei are the largest organelles — pellet at lowest speed.
   distractors:
     A: Ribosomes need high speed.
-    B: Proteins stay in supernatant.
-    C: DNA stays soluble.
+    C: Proteins stay in supernatant.
+    D: DNA stays soluble.

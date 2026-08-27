@@ -24,8 +24,8 @@ sections:
     explain: Domain-specific capability belief — Bandura's construct.
     distractors:
       A: Global evaluation.
-      B: Stable self-belief.
-      C: Attribution of success.
+      C: Stable self-belief.
+      D: Attribution of success.
 - heading: Social cognition — how we judge others
   body:
   - ==Attribution — internal (dispositional) vs external (situational); fundamental attribution error
@@ -44,9 +44,9 @@ sections:
     answer: A
     explain: Dispositional over attribution for OTHERS' behavior.
     distractors:
-      A: That is a self-serving success effect.
-      B: Related but centered on self-other difference.
-      C: Post-decision discomfort.
+      B: That is a self-serving success effect.
+      C: Related but centered on self-other difference.
+      D: Post-decision discomfort.
 - heading: Conformity, obedience, and group influence
   body:
   - ==Asch — conformity with unambiguous stimuli under group pressure; informational (accurate belief)
@@ -87,9 +87,9 @@ sections:
     answer: A
     explain: Everyone interprets others' inaction as evidence nothing is wrong.
     distractors:
-      A: Effort loss, not interpretation.
-      B: Consensus in decisions.
-      C: Loss of self-awareness.
+      B: Effort loss, not interpretation.
+      C: Consensus in decisions.
+      D: Loss of self-awareness.
   figures:
   - src: behavioral-social/fc8-self-others-interactions/fig-9fdf2315.webp
     caption: Non-human primate social behavior — displays and interaction in natural context.
@@ -115,9 +115,9 @@ sections:
     answer: A
     explain: Anxiety about confirming a negative stereotype consumes working memory.
     distractors:
-      A: That is attribution of others.
-      B: Group discussion effect.
-      C: Effort in groups.
+      B: That is attribution of others.
+      C: Group discussion effect.
+      D: Effort in groups.
 examples:
 - prompt: Design a field experiment showing the bystander effect while controlling for pluralistic ignorance
     as the mechanism.
@@ -171,8 +171,8 @@ passage:
     explain: Passive models signal not-an-emergency — the interpretation step fails.
     distractors:
       A: Both operate, but the blindfolded control isolates interpretation.
-      B: No authority present.
-      C: No prior exposure tracked.
+      C: No authority present.
+      D: No prior exposure tracked.
   - q: The 60% in the blindfolded condition shows…
     options:
       A: People still help when cues do not contradict
@@ -195,9 +195,9 @@ passage:
     answer: A
     explain: It varies the interpretation cue while holding group size rough.
     distractors:
-      A: Baseline alone sets the standard.
-      B: Secondary measure.
-      C: Not manipulated.
+      B: Baseline alone sets the standard.
+      C: Secondary measure.
+      D: Not manipulated.
 pitfalls:
 - FAE applied to one's own behavior — that is self-serving.
 - Conformity vs obedience — peers vs authority.
@@ -233,10 +233,9 @@ review_questions:
   answer: B
   explain: Authority's physical presence sustains compliance — closeness matters.
   distractors:
-    A: That kept obedience high.
-    B: Correct.
-    C: That is standard and obedience stayed high.
-    D: Weather/absence cues.
+    A: Distance from the learner actually kept obedience high.
+    C: Hearing the learner kept obedience high.
+    D: Seeing the shocks also kept obedience high.
 - q: Aronson's jigsaw classroom reduces prejudice by…
   options:
     A: Forcing students to depend on each other's unique knowledge
@@ -259,9 +258,9 @@ review_questions:
   answer: A
   explain: Perspective drives the attribution split.
   distractors:
-    A: That is the FAE, not the split.
-    B: Opposite.
-    C: The asymmetry is robust.
+    B: That is the FAE, not the split.
+    C: Opposite.
+    D: The asymmetry is robust.
 - q: Sternberg's consummate love includes…
   options:
     A: Intimacy only

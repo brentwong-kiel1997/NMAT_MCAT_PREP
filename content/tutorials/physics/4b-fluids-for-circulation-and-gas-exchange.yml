@@ -196,8 +196,8 @@ passage:
     answer: B
     explain: Continuity — v ~ 1/A ~ 1/r2 — (5/2)2 = 6.25.
     distractors:
-      A: Correct.
-      B: Linear confusion.
+      A: Linear ratio — continuity scales with 1/r2.
+      B: Correct — (5/2)2 = 6.25.
       C: A v must be conserved.
       D: Wrong direction.
 pitfalls:

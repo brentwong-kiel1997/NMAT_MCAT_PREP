@@ -24,8 +24,8 @@ sections:
     explain: Relative motion dilates time — the moving frame's time is dilated by gamma.
     distractors:
       A: Physics, not hardware.
-      B: Weak gravity — general relativity is separate.
-      C: Rotation is not the mechanism.
+      C: Weak gravity — general relativity is separate.
+      D: Rotation is not the mechanism.
 - heading: Photoelectric effect and photons
   body:
   - '==Light arrives in energy quanta E = h f = hc/lambda — intensity raises the NUMBER of photons, not
@@ -44,8 +44,8 @@ sections:
     explain: Intensity = more photons = more electrons at the SAME energy.
     distractors:
       A: Frequency sets energy.
-      B: The work function is a material constant.
-      C: KE fixed by f.
+      C: The work function is a material constant.
+      D: KE fixed by f.
 - heading: Nuclear structure and binding energy
   body:
   - ==Nuclei carry Z protons and N neutrons; mass number A = Z + N==. Isotopes share Z, differ N. Mass
@@ -64,8 +64,8 @@ sections:
     explain: Iron sits at the energy minimum — anything moving toward it releases energy.
     distractors:
       A: The peak means it will not split easily.
-      B: Peak stability = stable nucleus.
-      C: It is stable.
+      C: Peak stability = stable nucleus.
+      D: It is stable.
   figures:
   - src: modern-physics/fig-12db370a.webp
     caption: Atomic scale — atom about 10^-10 m, nucleus about 10^-15 m — most of the atom is empty space.
@@ -113,8 +113,8 @@ sections:
     explain: Largest energy drop emits the largest photon — deepest fall wins.
     distractors:
       A: Smaller gap.
-      B: Absorption, not emission.
-      C: Absorption.
+      C: Absorption, not emission.
+      D: Absorption.
 examples:
 - prompt: A light source gives photons with wavelength 400 nm. Find the photon energy in eV and the max
     KE of electrons expelled from cesium (work function 2.1 eV).
@@ -181,8 +181,8 @@ passage:
     explain: Beta-plus decay converts a proton to a neutron, emitting e+ and a neutrino.
     distractors:
       A: e- is beta-minus.
-      B: Alpha is a bound pair.
-      C: EC eats an electron.
+      C: Alpha is a bound pair.
+      D: EC eats an electron.
   - q: Nuclides with TOO MANY neutrons relative to stability typically…
     options:
       A: Undergo beta-minus decay
@@ -192,9 +192,9 @@ passage:
     answer: A
     explain: Converting a neutron to a proton lowers the N/Z ratio — beta-minus.
     distractors:
-      A: That lowers Z further.
-      B: EC converts a proton.
-      C: Unstable by definition.
+      B: That lowers Z further.
+      C: EC converts a proton.
+      D: Unstable by definition.
 pitfalls:
 - Photon energy vs intensity mix-up.
 - Half-life arithmetic using 3n instead of 2^n.
@@ -230,9 +230,9 @@ review_questions:
   answer: A
   explain: Threshold energy required to free an electron from the surface.
   distractors:
-    A: Binding energy is nuclear.
-    B: Real metals have nonzero values.
-    C: mc2 is rest energy.
+    B: Binding energy is nuclear.
+    C: Real metals have nonzero values.
+    D: mc2 is rest energy.
 - q: Which tracer would be most suitable for a 90-minute PET protocol?
   options:
     A: 6 hours
@@ -269,5 +269,5 @@ review_questions:
   explain: E = hc/lambda — shorter wavelength means higher energy.
   distractors:
     A: Correct — higher energy.
-    B: Equal only if same intensity.
-    C: c is constant — both are c.
+    C: Equal only if same intensity.
+    D: c is constant — both are c.

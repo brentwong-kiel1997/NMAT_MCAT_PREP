@@ -23,9 +23,9 @@ sections:
     answer: A
     explain: The crystalline structure of ice spaces molecules farther apart, lowering density.
     distractors:
-      A: Temperature is irrelevant to density here.
-      B: Air bubbles are incidental.
-      C: Water is densest at 4C, not when heated.
+      B: Temperature is irrelevant to density here.
+      C: Air bubbles are incidental.
+      D: Water is densest at 4C, not when heated.
 - heading: Solutions, electrolytes, and solubility
   body:
   - 'A solution is a homogeneous mixture — solute dissolved in solvent. ==Electrolytes dissociate into
@@ -47,7 +47,7 @@ sections:
     distractors:
       A: Acetic acid is a weak electrolyte.
       B: Glucose is a nonelectrolyte.
-      C: Ammonia is a weak base.
+      D: Ammonia is a weak base.
   figures:
   - src: 5a-unique-nature-of-water-and-its-solutions/fig-9f65aae0.webp
     caption: Dissolution — a solute dispersing into solvent to form a homogeneous solution.
@@ -73,8 +73,8 @@ sections:
     explain: pOH = 14 - 5 = 9, so [OH-] = 10^-9 M.
     distractors:
       A: That is [H+].
-      B: That is the product [H+][OH-].
-      C: That is just the pH value as molarity.
+      C: That is the product [H+][OH-].
+      D: That is just the pH value as molarity.
 - heading: Buffers and the Henderson-Hasselbalch equation
   body:
   - A buffer is a weak acid plus its conjugate base (or weak base plus conjugate acid) that resists pH
@@ -96,7 +96,7 @@ sections:
     distractors:
       A: That is neutral pH, unrelated to the buffer.
       B: That is when [A-] = 10 times [HA].
-      C: That is pOH.
+      D: That is pOH.
 - heading: Titrations and equivalence points
   body:
   - Titration curves plot pH versus volume of titrant added. The ==equivalence point is where moles of
@@ -117,8 +117,8 @@ sections:
     explain: Half the acid is neutralized; [HA] = [A-]; pH = pKa + log(1) = pKa.
     distractors:
       A: That is strong-strong only.
-      B: That relates to the base, not the acid.
-      C: That is the equivalence point.
+      C: That relates to the base, not the acid.
+      D: That is the equivalence point.
 examples:
 - prompt: Calculate the pH of a buffer containing 0.10 M acetic acid (pKa = 4.76) and 0.15 M sodium acetate.
   solution:
@@ -172,7 +172,7 @@ passage:
     distractors:
       A: That is neutral.
       B: That is pKa — requires equal concentrations.
-      C: Below pKa requires more acid than base.
+      D: Below pKa requires more acid than base.
   - q: If 10 mL of 0.1 M NaOH is added, the pH will…
     options:
       A: Stay exactly the same
@@ -184,8 +184,8 @@ passage:
       not dramatically.
     distractors:
       A: Buffers resist but do not perfectly cancel pH change.
-      B: Without buffering capacity, this would be dramatic.
-      C: Adding base increases pH.
+      C: Without buffering capacity, this would be dramatic.
+      D: Adding base increases pH.
   - q: What makes this an effective physiological buffer?
     options:
       A: It is at pH 7.4 near the pKa of 7.20
@@ -195,9 +195,9 @@ passage:
     answer: A
     explain: The buffer works best near its pKa, and physiological pH 7.4 is close to 7.20.
     distractors:
-      A: All buffers can be overwhelmed.
-      B: It works intracellularly too.
-      C: It is a weak acid system.
+      B: All buffers can be overwhelmed.
+      C: It works intracellularly too.
+      D: It is a weak acid system.
 pitfalls:
 - Confusing pH with [H+] directly — pH is logarithmic.
 - Using the wrong ratio in Henderson-Hasselbalch — base over acid, not acid over base.
@@ -237,8 +237,8 @@ review_questions:
   explain: Extensive hydrogen-bond networks require extra energy to break.
   distractors:
     A: No ions in pure water.
-    B: Too weak for the magnitude.
-    C: Covalent bonds are within each molecule.
+    C: Too weak for the magnitude.
+    D: Covalent bonds are within each molecule.
 - q: What is the pH of a 1 x 10^-4 M NaOH solution?
   options:
     A: '4'
@@ -250,7 +250,7 @@ review_questions:
   distractors:
     A: That is the pH of 10^-4 M HCl.
     B: NaOH is a base, not neutral.
-    C: That requires 1 M NaOH.
+    D: That requires 1 M NaOH.
 - q: A buffer is most effective when…
   options:
     A: pH is far from pKa
@@ -261,8 +261,8 @@ review_questions:
   explain: Equal amounts of HA and A- maximize resistance to both added acid and base.
   distractors:
     A: Far from pKa means one form dominates.
-    B: Need both components.
     C: Need both components.
+    D: Need both components.
 - q: Which is NOT a colligative property?
   options:
     A: Boiling point elevation
@@ -274,4 +274,4 @@ review_questions:
   distractors:
     A: Depends on particle count.
     B: Depends on particle count.
-    C: Depends on particle count.
+    D: Depends on particle count.

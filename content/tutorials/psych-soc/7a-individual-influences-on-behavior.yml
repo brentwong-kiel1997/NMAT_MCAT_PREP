@@ -23,9 +23,9 @@ sections:
     answer: A
     explain: Genetic similarity tracks phenotypic similarity even when environment differs.
     distractors:
-      A: Contradicts the shared-environment control.
-      B: The MZ-DZ gap is the signal.
-      C: No such comparison implied.
+      B: Contradicts the shared-environment control.
+      C: The MZ-DZ gap is the signal.
+      D: No such comparison implied.
 - heading: Motivation and emotion — drives and displays
   body:
   - Motivation theories stack — drive reduction (homeostatic pushes), arousal theory (Yerkes-Dodson curve),
@@ -45,7 +45,7 @@ sections:
     distractors:
       A: James-Lange ties emotion to specific bodily patterns.
       B: Simultaneity without labeling is not the point.
-      C: Motivation, not emotion theory.
+      D: Motivation, not emotion theory.
   figures:
   - src: 7a-individual-influences-on-behavior/maslow-pyramid.webp
     caption: Maslow's hierarchy of needs — physiological through self-actualization.
@@ -72,8 +72,8 @@ sections:
     explain: Impulse redirected to a safer target.
     distractors:
       A: Attributing one's own feelings TO others.
-      B: Channeling into valued activity.
-      C: Behaving opposite to the impulse.
+      C: Channeling into valued activity.
+      D: Behaving opposite to the impulse.
 - heading: Stress — physiology, appraisal, health
   body:
   - The stress response is 3A's axis — sympathetic surge (epinephrine seconds) and HPA cascade (cortisol
@@ -94,7 +94,7 @@ sections:
     distractors:
       A: Initial mobilization.
       B: Sustained coping before collapse.
-      C: Lazarus, not Selye.
+      D: Lazarus, not Selye.
 examples:
 - prompt: Two employees face the same layoff. One develops insomnia and illness; the other enrolls in
     retraining. Explain via Lazarus and Selye.
@@ -147,9 +147,9 @@ passage:
     answer: A
     explain: The chronic-stress immune signature.
     distractors:
-      A: Data run opposite.
-      B: Acute cortisol is adaptive; chronic is not.
-      C: Design matches groups.
+      B: Data run opposite.
+      C: Acute cortisol is adaptive; chronic is not.
+      D: Design matches groups.
   - q: The within-group difference (supported ≈ controls) is best explained by…
     options:
       A: Appraisal and coping buffering the response
@@ -159,9 +159,9 @@ passage:
     answer: A
     explain: Perceived support alters appraisal with physiological readouts.
     distractors:
-      A: Not the measured pathway.
-      B: Not analyzed.
-      C: Dismissive.
+      B: Not the measured pathway.
+      C: Not analyzed.
+      D: Dismissive.
   - q: Which finding would most directly challenge the study's internal validity?
     options:
       A: A large sample size
@@ -172,8 +172,8 @@ passage:
     explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
     distractors:
       A: Power, not validity.
-      B: Significance is downstream of validity.
-      C: That tests external validity.
+      C: Significance is downstream of validity.
+      D: That tests external validity.
 pitfalls:
 - Reading heritability as individual genetic determinism.
 - Mixing up the three emotion theories.
@@ -210,8 +210,8 @@ review_questions:
   explain: OCEAN — intelligence is not a factor.
   distractors:
     A: Part of OCEAN.
-    B: Part of OCEAN.
     C: Part of OCEAN.
+    D: Part of OCEAN.
 - q: I tremble, therefore I am afraid — this states the…
   options:
     A: Cannon-Bard theory
@@ -222,8 +222,8 @@ review_questions:
   explain: Bodily reaction precedes the felt emotion.
   distractors:
     A: Simultaneous.
-    B: Requires a cognitive label.
-    C: Arousal-performance curve.
+    C: Requires a cognitive label.
+    D: Arousal-performance curve.
 - q: Attributing one's own unacceptable anger to a colleague is…
   options:
     A: Displacement
@@ -234,17 +234,17 @@ review_questions:
   explain: One's own feeling ascribed to another.
   distractors:
     A: Redirecting the ACT.
-    B: Channeling into output.
-    C: Burying it.
+    C: Channeling into output.
+    D: Burying it.
 - q: The study's design best exemplifies which research approach?
   options:
     A: Correlational with random sampling
     B: Experimental with a manipulated independent variable
     C: Case study with thick description
     D: Meta-analysis of prior studies
-  answer: B
-  explain: Conditions are assigned; the IV is the manipulated framing or prime.
+  answer: A
+  explain: Caregivers and matched controls are followed without intervention — correlational.
   distractors:
-    A: No manipulation described.
-    B: Single subject.
-    C: No pooled analysis.
+    B: No variable is assigned.
+    C: Many subjects, not one.
+    D: No pooled analysis.

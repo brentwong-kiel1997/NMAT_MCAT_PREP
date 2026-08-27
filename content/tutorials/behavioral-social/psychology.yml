@@ -7,10 +7,10 @@ overview: The full NMAT psychology pass — brain-behavior, learning, memory, co
 sections:
 - heading: Biological bases of behavior
   body:
-  - '==Neurons fire via action potentials — resting -70 mV, threshold -55 mV, sodium sodium-sodium exchange==.
-    Synaptic transmission: neurotransmitter released into the cleft binds receptors; drugs and toxins
-    exploit reuptake and degradation. ==Neurotransmitters map to behavior — dopamine (reward/movement),
-    serotonin (mood), acetylcholine (muscle/memory), GABA (inhibition)==.'
+  - '==Neurons fire via action potentials — resting -70 mV, threshold -55 mV, restored by the sodium-potassium
+    pump (3 Na+ out, 2 K+ in)==. Synaptic transmission: neurotransmitter released into the cleft binds
+    receptors; drugs and toxins exploit reuptake and degradation. ==Neurotransmitters map to behavior
+    — dopamine (reward/movement), serotonin (mood), acetylcholine (muscle/memory), GABA (inhibition)==.'
   - 'Brain geography — ==frontal (executive function, personality), temporal (auditory, memory), parietal
     (somatosensory, spatial), occipital (vision)==; limbic system (amygdala fear, hippocampus memory);
     cerebellum (coordination); brainstem (vital reflexes). Hemispheres — left language in most, right
@@ -26,8 +26,8 @@ sections:
     explain: Amygdala is the fear/emotion hub — encoding emotional significance.
     distractors:
       A: Broca area does that.
-      B: Cerebellum.
-      C: Temporal/occipital junction.
+      C: Cerebellum.
+      D: Temporal/occipital junction.
 - heading: Learning and conditioning
   body:
   - '==Classical conditioning (Pavlov) — neutral stimulus paired with an unconditioned one acquires the
@@ -48,8 +48,8 @@ sections:
     explain: Unpredictable reinforcement after variable trials — maximal resistance to extinction.
     distractors:
       A: Predictable payouts.
-      B: Time-based.
       C: Time-based.
+      D: Time-based.
   figures:
   - src: behavioral-social/psychology/fig-0a68ead5.webp
     caption: Classical conditioning — the dog salivating to the bell after repeated bell-food pairings.
@@ -76,8 +76,8 @@ sections:
     explain: Skills are procedural — implicit, learned by practice.
     distractors:
       A: Event recall.
-      B: Fact recall.
-      C: Not storing the skill.
+      C: Fact recall.
+      D: Not storing the skill.
 - heading: Cognition, language, and intelligence
   body:
   - '==Heuristics — availability (judge by ease of recall), representativeness (match prototypes), anchoring;
@@ -97,11 +97,11 @@ sections:
     explain: Easily recalled = judged probable — the availability shortcut.
     distractors:
       A: Prototype matching.
-      B: Initial value bias.
-      C: How options are worded.
+      C: Initial value bias.
+      D: How options are worded.
 - heading: Motivation, emotion, and stress
   body:
-  - ==Motivation theories — drive-reduction (hunger, hunger), incentive, arousal (Yerkes-Dodson — moderate
+  - ==Motivation theories — drive-reduction (hunger, thirst), incentive, arousal (Yerkes-Dodson — moderate
     arousal = peak performance), Maslow's hierarchy==. Emotion — James-Lange (body first, then label),
     Cannon-Bard (simultaneous), Schachter two-factor (arousal + attribution); facial feedback hypothesis.
   - '==Stress — Selye''s GAS: alarm, resistance, exhaustion; appraisal of coping resources decides severity
@@ -118,7 +118,7 @@ sections:
     distractors:
       A: Body alone.
       B: Simultaneous.
-      C: Expressions shape feeling.
+      D: Expressions shape feeling.
 examples:
 - prompt: A rat is trained to press a lever for food — then the food stops. The pressing rate falls but
     periodically clusters right before what used to be feeding times. What schedule was used?

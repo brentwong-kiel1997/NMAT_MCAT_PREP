@@ -57,7 +57,7 @@ sections:
     options:
       A: Overstates the scope — wrong
       B: Is a fair paraphrase
-      C: Is stronger than the passage — correct
+      C: Stronger than the passage claims
       D: Is unrelated
     answer: A
     explain: '''Many'' limits; ''all'' exceeds the passage''s claim.'

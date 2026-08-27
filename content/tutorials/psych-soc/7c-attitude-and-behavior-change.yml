@@ -9,8 +9,9 @@ sections:
   - An attitude has three components — affect, behavior, cognition — the ABC model. Attitudes predict
     behavior best when specific, formed from direct experience, and when matched to the measured behavior
     — the theory of planned behavior adds subjective norms and perceived control.
-  - LaPiere's inconsistency (service refused in person was given by phone) frames the attitude-behavior
-    gap — situational pressures decide whether expressed attitudes translate.
+  - LaPiere's inconsistency (the Chinese couple was served almost everywhere in person, yet about 90%
+    of those establishments later refused by mailed questionnaire) frames the attitude-behavior gap —
+    situational pressures decide whether expressed attitudes translate.
   check:
   - q: I fear smoking (feeling), think it causes cancer (belief), and avoid it (action). Together these
       are…
@@ -22,9 +23,9 @@ sections:
     answer: A
     explain: Affect, Behavior, Cognition.
     distractors:
-      A: Tension between inconsistent cognitions.
-      B: Persuasion routes.
-      C: Familiarity effect.
+      B: Tension between inconsistent cognitions.
+      C: Persuasion routes.
+      D: Familiarity effect.
 - heading: Dissonance and self-perception — behavior leads
   body:
   - Beyond induced compliance — effort justification (we value what we suffer for) and hypocrisy induction
@@ -42,9 +43,9 @@ sections:
     answer: A
     explain: External reward reframes play as work.
     distractors:
-      A: Compliance escalation.
-      B: Valuing suffering — reverse.
-      C: Resistance to threatened freedom.
+      B: Compliance escalation.
+      C: Valuing suffering — reverse.
+      D: Resistance to threatened freedom.
 - heading: Engineering behavior change — therapy techniques
   body:
   - The clinical toolkit maps onto learning — systematic desensitization (hierarchy + relaxation — classical),
@@ -62,13 +63,14 @@ sections:
     answer: A
     explain: Hierarchy + incompatible response.
     distractors:
-      A: Immediate full exposure.
-      B: Pairing with aversive stimulus.
-      C: Reinforcement tokens.
+      B: Immediate full exposure.
+      C: Pairing with aversive stimulus.
+      D: Reinforcement tokens.
   figures:
   - src: 7c-attitude-and-behavior-change/fig-71aa092a.webp
-    caption: Types of psychological treatment — therapy approaches organized by mechanism.
-    credit: Fig 16.2 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
+    caption: Sandplay therapy — arranging miniature scenes in a tray as a nonverbal route to expressing
+      and working through inner conflicts.
+    credit: OpenStax Psychology 2e (therapy chapter) — CC BY-NC-SA 4.0
   - src: 7c-attitude-and-behavior-change/fig-a5cfb9da.webp
     caption: Behavior therapy applies learning principles to modify target behaviors.
     credit: Fig 16.3 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
@@ -88,9 +90,9 @@ sections:
     answer: A
     explain: A single lapse reframed as total failure.
     distractors:
-      A: Reward undermining.
-      B: Disposition over situation.
-      C: Frequency by recall.
+      B: Reward undermining.
+      C: Disposition over situation.
+      D: Frequency by recall.
 examples:
 - prompt: Design a behavior-change plan for home glucose monitoring using implementation intentions, stages,
     relapse framing.
@@ -142,9 +144,9 @@ passage:
     answer: A
     explain: When-where plans delegate initiation to environmental cues.
     distractors:
-      A: Stated motivation was controlled.
-      B: No tangible reward.
-      C: Unrelated.
+      B: Stated motivation was controlled.
+      C: No tangible reward.
+      D: Unrelated.
   - q: A planner misses a week to exams. The best-supported reframe is…
     options:
       A: The plan failed — abandon it
@@ -155,8 +157,8 @@ passage:
     explain: Lapse-as-data prevents collapse.
     distractors:
       A: The abstinence trap.
-      B: Counterproductive.
-      C: Untailored escalation invites dropout.
+      C: Counterproductive.
+      D: Untailored escalation invites dropout.
   - q: Which finding would most directly challenge the study's internal validity?
     options:
       A: A large sample size
@@ -167,8 +169,8 @@ passage:
     explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
     distractors:
       A: Power, not validity.
-      B: Significance is downstream of validity.
-      C: That tests external validity.
+      C: Significance is downstream of validity.
+      D: That tests external validity.
 pitfalls:
 - Confusing overjustification with effort justification.
 - Giving flooding the desensitization label.
@@ -204,8 +206,8 @@ review_questions:
   explain: Reward reframes play as work.
   distractors:
     A: Effort justification.
-    B: Induced compliance.
-    C: Obedience.
+    C: Induced compliance.
+    D: Obedience.
 - q: The stages-of-change model's correct order begins…
   options:
     A: Action → precontemplation → maintenance
@@ -216,8 +218,8 @@ review_questions:
   explain: The canonical forward sequence.
   distractors:
     A: Reordered.
-    B: Relapse is a return.
-    C: Reordered.
+    C: Relapse is a return.
+    D: Reordered.
 - q: Pairing alcohol with a nausea-inducing drug is…
   options:
     A: Systematic desensitization
@@ -228,8 +230,8 @@ review_questions:
   explain: Unwanted behavior paired with aversive consequence.
   distractors:
     A: Hierarchy + relaxation.
-    B: Operant system.
-    C: Observational.
+    C: Operant system.
+    D: Observational.
 - q: The study's design best exemplifies which research approach?
   options:
     A: Correlational with random sampling
@@ -240,5 +242,5 @@ review_questions:
   explain: Conditions are assigned; the IV is the manipulated framing or prime.
   distractors:
     A: No manipulation described.
-    B: Single subject.
-    C: No pooled analysis.
+    C: Single subject.
+    D: No pooled analysis.

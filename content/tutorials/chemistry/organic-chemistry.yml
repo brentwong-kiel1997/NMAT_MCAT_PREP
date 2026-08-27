@@ -24,8 +24,8 @@ sections:
     explain: Same connectivity, different spatial arrangement about the double bond.
     distractors:
       A: Different connectivity — constitutional.
-      B: Different functional groups.
-      C: Different formulas.
+      C: Different functional groups.
+      D: Different formulas.
   figures:
   - src: organic-chemistry/fig-05dc78c5.webp
     caption: Isomers sharing a formula but differing in carbon skeleton — cyclic versus linear arrangements.
@@ -52,8 +52,8 @@ sections:
     explain: Mirror images rotate plane-polarized light oppositely; all scalar properties match.
     distractors:
       A: Identical BP.
-      B: Same connectivity by definition.
-      C: Same formula.
+      C: Same connectivity by definition.
+      D: Same formula.
 - heading: Substitution and elimination
   body:
   - ==SN2 — one step, backside attack, inversion of configuration, favored by strong nucleophile, good
@@ -74,8 +74,8 @@ sections:
       via backside attack.
     distractors:
       A: Needs polar protic and weak nucleophile.
-      B: Weak base would be needed.
-      C: Heat and bulky base favor elimination.
+      C: Weak base would be needed.
+      D: Heat and bulky base favor elimination.
 - heading: Addition reactions of alkenes
   body:
   - 'Electrophiles add across the double bond — ==Markovnikov: H goes to the carbon with more hydrogens,
@@ -95,8 +95,8 @@ sections:
     explain: Markovnikov — H adds to CH2, Cl to the secondary carbocation center.
     distractors:
       A: Anti-Markovnikov needs peroxides (and HBr only).
-      B: One Cl adds.
-      C: Nonsense option.
+      C: One Cl adds.
+      D: Nonsense option.
 - heading: Aldehydes, ketones, and carboxylic acid derivatives
   body:
   - Nucleophilic addition to aldehydes and ketones — hydride (LiAlH4, NaBH4) gives alcohols; organometallics
@@ -116,8 +116,8 @@ sections:
     explain: LiAlH4 is strong enough for esters; NaBH4 stops at aldehydes and ketones.
     distractors:
       A: Too weak for esters.
-      B: Oxidizer.
-      C: Reduces alkenes and aldehydes/ketones, not typically esters.
+      C: Oxidizer.
+      D: Reduces alkenes and aldehydes/ketones, not typically esters.
 examples:
 - prompt: (R)-2-bromobutane reacts with HO- in acetone via SN2. What is the configuration of 2-butanol
     product?
@@ -158,8 +158,8 @@ maps:
   - O3 or KMnO4 — cleavage to carbonyls
 passage:
   text: An optically active secondary alcohol is converted to a tosylate, then displaced with acetate,
-    then hydrolyzed back to the alcohol. The final product shows zero optical rotation, while a parallel
-    run stopping at the tosylate retains rotation.
+    then hydrolyzed back to the alcohol. The final product rotates plane-polarized light with equal magnitude
+    and opposite sign to the starting material.
   questions:
   - q: The tosylation step…
     options:
@@ -171,22 +171,22 @@ passage:
     explain: OTs replaces the OH at oxygen — the stereocenter carbon is untouched.
     distractors:
       A: C-O bond at carbon is not broken.
-      B: No ionization occurs.
-      C: Center still has four different groups.
-  - q: The zero rotation after displacement plus hydrolysis indicates…
+      C: No ionization occurs.
+      D: Center still has four different groups.
+  - q: The opposite-sign rotation after displacement plus hydrolysis indicates…
     options:
       A: SN2 inversion twice
       B: Racemization via SN1
       C: No reaction
       D: Dehydration
     answer: A
-    explain: Displacement inverts; hydrolysis of the acetate occurs at oxygen, not the stereocenter —
-      so net one inversion gives the enantiomer; the observed zero rotation suggests racemic input or
-      enantiomeric pairing.
+    explain: Tosylation retains configuration; the acetate displacement inverts the stereocenter once
+      (SN2); hydrolysis cleaves the acyl-O bond without touching the stereocenter — net one inversion
+      gives the enantiomer.
     distractors:
-      A: SN1 would racemize at the displacement step.
-      B: Reaction clearly occurred.
-      C: No elimination conditions.
+      B: SN1 would racemize (rotation toward zero), not cleanly invert.
+      C: The product rotates — just in the opposite direction.
+      D: No elimination conditions are present.
   - q: If the displacement had used a polar protic solvent with a weak nucleophile, the likely mechanism
       would be…
     options:
@@ -197,9 +197,9 @@ passage:
     answer: B
     explain: Ionization to a planar carbocation — attack from either face gives both configurations.
     distractors:
-      A: Protic solvent and weak nucleucleophile disfavor SN2.
-      B: E1 competes but substitution dominates here.
-      C: Reaction is slow, not absent.
+      A: Protic solvent and weak nucleophile disfavor SN2.
+      C: E1 competes but substitution dominates here.
+      D: Reaction is slow, not absent.
 pitfalls:
 - Pulling rate-law or mechanism facts from stoichiometry.
 - Confusing SN1 racemization with pure inversion.
@@ -236,8 +236,8 @@ review_questions:
   explain: Internal symmetry cancels optical activity despite the centers.
   distractors:
     A: Chiral requires no symmetry plane.
-    B: Racemate is a mixture.
-    C: That is a relationship, not a single compound.
+    C: Racemate is a mixture.
+    D: That is a relationship, not a single compound.
 - q: E2 requires the leaving group and beta-H to be…
   options:
     A: Syn-periplanar
@@ -248,8 +248,8 @@ review_questions:
   explain: Anti alignment lets the base abstract as the bond breaks in one concerted step.
   distractors:
     A: Syn works poorly.
-    B: Gauche is off-axis.
-    C: Orthogonal has no overlap.
+    C: Gauche is off-axis.
+    D: Orthogonal has no overlap.
 - q: Which carbocation is most stable?
   options:
     A: Methyl
@@ -271,6 +271,6 @@ review_questions:
   answer: A
   explain: One carbon added to formaldehyde — after workup, a primary alcohol.
   distractors:
-    A: Needs an aldehyde other than formaldehyde.
-    B: Needs a ketone.
-    C: CO2 gives the acid.
+    B: Needs an aldehyde other than formaldehyde.
+    C: Needs a ketone.
+    D: CO2 gives the acid.

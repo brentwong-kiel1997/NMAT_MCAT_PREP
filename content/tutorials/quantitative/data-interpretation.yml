@@ -43,9 +43,9 @@ sections:
     answer: A
     explain: Steep upslope = rapid increase; flat = no further change.
     distractors:
-      A: Opposite direction.
-      B: Rate is wrong.
-      C: Contradicts the slope.
+      B: Opposite direction.
+      C: Rate is wrong.
+      D: Contradicts the slope.
 - heading: Pie charts and parts-of-a-whole
   body:
   - ==Pie slices — each percent is a fraction of the total; the WHOLE must sum to 100%==. ==Computing
@@ -182,12 +182,11 @@ passage:
       B: '480'
       C: 12,800
       D: '800'
-    answer: C
-    explain: 0.6 x 8000 = 4800 new; total 12,800.
+    answer: A
+    explain: 0.6 x 8000 = 4,800 new cases added.
     distractors:
-      A: New cases only.
       B: Wrong decimal.
-      C: Correct — new total.
+      C: That is the NEW TOTAL, not the increase.
       D: Percent alone.
 pitfalls:
 - Base of percent change — the OLD value.

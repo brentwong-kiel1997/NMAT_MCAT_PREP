@@ -255,7 +255,7 @@ key_points:
 - Phylogenetic trees — relatedness = most recent common ancestor; tip order is meaningless; a clade is
   an ancestor plus ALL its descendants.
 mnemonics:
-- phrase: AAA — Archaea Are Ancestral to Eukarya
+- phrase: ACE — Archaea Are Closest to Eukarya
   means: The three-domain tree places Archaea closest to Eukarya; the two 'A' word pairing is a memory
     hook the exam loves to test.
 - phrase: Homology = History, Analogy = Adaptation
@@ -374,19 +374,19 @@ review_questions:
     D: All viruses carry nucleic acid; that IS their heritable information.
 - q: Which pair of structures is homologous?
   options:
-    A: A bat wing and a bird wing
+    A: A bird wing and a butterfly wing
     B: A human arm and a whale flipper
     C: A shark fin and a dolphin flipper
     D: A butterfly wing and a bat wing
   answer: B
-  explain: The human arm and whale flipper share bony forelimb parts derived from a common ancestor —
-    homology. Bat and bird wings are also homologous at the tetrapod level, but among the listed pairs
-    the arm and flipper is the canonical textbook case.
+  explain: 'Bird and human arms share the tetrapod forelimb skeleton — same structure, different function:
+    homology. Bird and butterfly wings serve flight but have no common structural origin: analogy.'
   distractors:
-    A: Tempting — but bat and bird wings share the tetrapod forelimb plan too, and the question wants
-      the clearest ANY structure pair; the arm/flipper pair is the standard answer.
-    C: Shark and dolphin flippers are classic ANALOGOUS structures (cartilage vs bone, separate origins).
-    D: Butterfly and bat wings are analogous — insect chitin vs tetrapod bone, fully independent origins.
+    A: 'Tempting — both fly — but insect and bird wings share no structural plan: that is analogy, not
+      homology.'
+    C: Same function AND shared ancestry is the homology definition, but insect wings are not tetrapod
+      limbs.
+    D: That would be analogy by definition.
 - q: In a phylogenetic tree, species X and Z share a node closer to the tips than the node where species
     Y joins. Which statement must be true?
   options:

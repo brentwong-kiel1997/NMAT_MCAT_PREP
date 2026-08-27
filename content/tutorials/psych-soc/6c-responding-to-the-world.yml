@@ -24,8 +24,8 @@ sections:
     explain: Faded response reappearing after rest.
     distractors:
       A: Similar-stimulus spread.
-      B: Operant procedure.
-      C: New neutral stimulus paired with the CS.
+      C: Operant procedure.
+      D: New neutral stimulus paired with the CS.
   figures:
   - src: 6c-responding-to-the-world/skinner-box.webp
     caption: B.F. Skinner and the operant chamber — lever press, food dispenser, consequence loop.
@@ -48,9 +48,9 @@ sections:
     answer: A
     explain: Reinforcement after a varying NUMBER of responses — most resistant to extinction.
     distractors:
-      A: Fixed counts are predictable.
-      B: Interval schedules time the FIRST response.
-      C: Same objection.
+      B: Fixed counts are predictable.
+      C: Interval schedules time the FIRST response.
+      D: Same objection.
   figures:
   - src: 6c-responding-to-the-world/reinforcement-schedules.webp
     caption: The four reinforcement schedules yield distinct response patterns — variable ratio is steepest
@@ -74,9 +74,9 @@ sections:
     answer: A
     explain: Learning without reinforcement or performance — revealed when motivation arrived.
     distractors:
-      A: No approximations were reinforced.
-      B: No stimulus-stimulus pairing.
-      C: No consequence decreased behavior.
+      B: No approximations were reinforced.
+      C: No stimulus-stimulus pairing.
+      D: No consequence decreased behavior.
   figures:
   - src: 6c-responding-to-the-world/cognitive-map.webp
     caption: Tolman's cognitive map — latent learning in maze-running rats without reinforcement.
@@ -99,8 +99,8 @@ sections:
     explain: Vivid, easily recalled instances inflate frequency estimates.
     distractors:
       A: Similarity-to-prototype.
-      B: Initial-value adjustment failure.
-      C: Problem-solving rigidity.
+      C: Initial-value adjustment failure.
+      D: Problem-solving rigidity.
 examples:
 - prompt: A child receives a candy each time she puts toys away. Later, candy is given only after several
     cleanups, unpredictably. Describe the shift and predict extinction resistance.
@@ -151,8 +151,8 @@ passage:
     explain: Removing reinforcement drops the behavior.
     distractors:
       A: Nothing aversive was added.
-      B: Classical vocabulary.
-      C: Recovery comes after rest.
+      C: Classical vocabulary.
+      D: Recovery comes after rest.
   - q: The slower decline after Phase 3 follows from…
     options:
       A: The variable-ratio schedule's extinction resistance
@@ -162,9 +162,9 @@ passage:
     answer: A
     explain: Partial reinforcement makes behavior persist when reinforcement stops.
     distractors:
-      A: No change described.
-      B: Forgetting predicts faster loss.
-      C: No punishment exists.
+      B: No change described.
+      C: Forgetting predicts faster loss.
+      D: No punishment exists.
   - q: Which finding would most directly challenge the study's internal validity?
     options:
       A: A large sample size
@@ -175,8 +175,8 @@ passage:
     explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
     distractors:
       A: Power, not validity.
-      B: Significance is downstream of validity.
-      C: That tests external validity.
+      C: Significance is downstream of validity.
+      D: That tests external validity.
 pitfalls:
 - Equating negative reinforcement with punishment.
 - Fixed-interval data given the fixed-ratio label — look for the time gate.
@@ -213,8 +213,8 @@ review_questions:
   explain: Removal + increase = negative reinforcement.
   distractors:
     A: Punishment decreases.
-    B: Nothing pleasant was added.
-    C: Extinction removes reinforcement.
+    C: Nothing pleasant was added.
+    D: Extinction removes reinforcement.
 - q: A pigeon pecks fastest and quits last on a…
   options:
     A: Fixed interval
@@ -225,8 +225,8 @@ review_questions:
   explain: Variable ratio — highest, most resistant.
   distractors:
     A: Scalloped, moderate.
-    B: Steady with pauses.
-    C: Fast to acquire, fast to extinguish.
+    C: Steady with pauses.
+    D: Fast to acquire, fast to extinguish.
 - q: The Bobo-doll experiments demonstrated…
   options:
     A: Classical conditioning of fear
@@ -237,8 +237,8 @@ review_questions:
   explain: Children imitated a rewarded model more.
   distractors:
     A: No stimulus pairing — a social model.
-    B: Tolman, different paradigm.
-    C: Different non-associative process.
+    C: Tolman, different paradigm.
+    D: Different non-associative process.
 - q: The study's design best exemplifies which research approach?
   options:
     A: Correlational with random sampling
@@ -249,5 +249,5 @@ review_questions:
   explain: Conditions are assigned; the IV is the manipulated framing or prime.
   distractors:
     A: No manipulation described.
-    B: Single subject.
-    C: No pooled analysis.
+    C: Single subject.
+    D: No pooled analysis.

@@ -20,9 +20,9 @@ sections:
     answer: A
     explain: Age-structure inertia.
     distractors:
-      A: Not a stage reversal.
-      B: Catastrophe prediction.
-      C: Growth is positive — not ZPG.
+      B: Not a stage reversal.
+      C: Catastrophe prediction.
+      D: Growth is positive — not ZPG.
 - heading: The demographic transition — four stages
   body:
   - Stage 1 — high birth and death, flat. Stage 2 — death falls, growth explodes. Stage 3 — birth falls
@@ -38,9 +38,9 @@ sections:
     answer: A
     explain: Constricted base = below-replacement fertility.
     distractors:
-      A: That is a wide base.
-      B: Wide base marks high fertility.
-      C: Cannot be read from shape alone.
+      B: That is a wide base.
+      C: Wide base marks high fertility.
+      D: Cannot be read from shape alone.
   figures:
   - src: 9b-demographic-characteristics-and-processes/fig-bf16bc2f.webp
     caption: Population pyramid — age-sex structure by country and demographic stage.
@@ -62,9 +62,9 @@ sections:
     answer: A
     explain: Kin networks channel flows; money flows back.
     distractors:
-      A: Skilled-emigration loss — different.
-      B: Motivating conditions.
-      C: Movement away from cities.
+      B: Skilled-emigration loss — different.
+      C: Motivating conditions.
+      D: Movement away from cities.
 - heading: Demographic data sources and measurement
   body:
   - Demographic measures come from specific instruments — a **census** counts everyone at a point in time
@@ -87,8 +87,8 @@ sections:
     explain: Age structure confounds crude mortality — standardization removes the composition effect.
     distractors:
       A: Crude rates are confounded here.
-      B: Birth rate is a different variable.
-      C: Irrelevant.
+      C: Birth rate is a different variable.
+      D: Irrelevant.
 examples:
 - prompt: Match three pyramids — wide-based triangle, constricting-base diamond, inverted top-heavy —
     to stages and trajectories.
@@ -141,8 +141,8 @@ passage:
     explain: Mortality fell decades ago; fertility is now falling.
     distractors:
       A: CDR plateaued long since.
-      B: Neither rate is high.
-      C: No collapse indicators.
+      C: Neither rate is high.
+      D: No collapse indicators.
   - q: The rising median age argues for prioritizing…
     options:
       A: Elder-care infrastructure
@@ -152,9 +152,9 @@ passage:
     answer: A
     explain: Age structure sets service demand.
     distractors:
-      A: Fertility declining — trend is elderward.
-      B: Not responsive to age structure.
-      C: Growth continued.
+      B: Fertility declining — trend is elderward.
+      C: Not responsive to age structure.
+      D: Growth continued.
   - q: Which finding would most directly challenge the study's internal validity?
     options:
       A: A large sample size
@@ -165,8 +165,8 @@ passage:
     explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
     distractors:
       A: Power, not validity.
-      B: Significance is downstream of validity.
-      C: That tests external validity.
+      C: Significance is downstream of validity.
+      D: That tests external validity.
 pitfalls:
 - Treating transition as instantaneous — momentum lags decades.
 - Reading pyramid shape as migration — it encodes births and deaths.
@@ -205,9 +205,9 @@ review_questions:
   answer: A
   explain: Sanitation cut CDR first — the gap explodes.
   distractors:
-    A: That is Stage 3.
-    B: Not the stage driver.
-    C: Contradicts the model.
+    B: That is Stage 3.
+    C: Not the stage driver.
+    D: Contradicts the model.
 - q: Remittances are…
   options:
     A: Earnings sent by migrants to origin households
@@ -217,9 +217,9 @@ review_questions:
   answer: A
   explain: Money moving opposite the migrant.
   distractors:
-    A: Not fiscal.
-    B: Not the term.
-    C: People, not money.
+    B: Not fiscal.
+    C: Not the term.
+    D: People, not money.
 - q: A below-replacement country with large elderly cohorts faces…
   options:
     A: Elder-dependency pressure and labor shortage
@@ -229,18 +229,18 @@ review_questions:
   answer: A
   explain: Dependency ratios invert.
   distractors:
-    A: Flat-to-negative.
-    B: High-fertility.
-    C: Clearly it does.
+    B: Flat-to-negative.
+    C: High-fertility.
+    D: Clearly it does.
 - q: The study's design best exemplifies which research approach?
   options:
     A: Correlational with random sampling
     B: Experimental with a manipulated independent variable
     C: Case study with thick description
     D: Meta-analysis of prior studies
-  answer: B
-  explain: Conditions are assigned; the IV is the manipulated framing or prime.
+  answer: A
+  explain: Census and vital-statistics records analyzed without intervention.
   distractors:
-    A: No manipulation described.
-    B: Single subject.
-    C: No pooled analysis.
+    B: Nothing manipulated.
+    C: Population data, not one subject.
+    D: No pooled analysis.

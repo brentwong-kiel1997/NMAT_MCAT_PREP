@@ -203,9 +203,9 @@ passage:
     answer: A
     explain: A helix-stabilizing hydrophobic residue became a repulsive charged one.
     distractors:
-      A: Sequence change is true but is the cause, not mechanism.
-      B: Controls used proper folding conditions.
-      C: Denaturation is a description, not the mechanism.
+      B: Sequence change is true but is the cause, not mechanism.
+      C: Controls used proper folding conditions.
+      D: Denaturation is a description, not the mechanism.
 pitfalls:
 - Counting peptide bonds as residues.
 - Calling alpha-helix stabilization hydrophobic.

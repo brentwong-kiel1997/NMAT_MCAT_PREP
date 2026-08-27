@@ -24,8 +24,8 @@ sections:
     explain: They bind the GABA-A receptor and increase chloride influx — inhibition down.
     distractors:
       A: That is antipsychotics.
-      B: Opposite direction.
-      C: SSRIs do that.
+      C: Opposite direction.
+      D: SSRIs do that.
 - heading: Sensation and perception — getting the world in
   body:
   - ==Sensation = transduction — receptors convert stimuli into neural signals; perception = interpretation==.
@@ -44,9 +44,9 @@ sections:
     answer: A
     explain: The mind completes the missing piece — Gestalt closure.
     distractors:
-      A: Grouping by appearance.
-      B: Grouping by nearness.
-      C: Separating object from background.
+      B: Grouping by appearance.
+      C: Grouping by nearness.
+      D: Separating object from background.
   figures:
   - src: behavioral-social/fc6-perceive-think-react/muller-lyer.webp
     caption: The Müller-Lyer illusion — the mind's depth cues override equal line lengths.
@@ -114,8 +114,8 @@ sections:
     explain: Sympathetic-adrenal-medullary axis — seconds; cortisol takes minutes.
     distractors:
       A: The slow HPA path.
-      B: HPA step.
-      C: Not a stress channel.
+      C: HPA step.
+      D: Not a stress channel.
   figures:
   - src: behavioral-social/fc6-perceive-think-react/fig-b561c8c9.webp
     caption: The autonomic nervous system — sympathetic emergency mobilization versus parasympathetic
@@ -174,9 +174,9 @@ passage:
     answer: A
     explain: Cortisol is the slow hormonal cascade — CRH, ACTH, then adrenal cortex.
     distractors:
-      A: That is epinephrine, seconds.
-      B: Neurotransmission is millisecond.
-      C: No spinal reflex here.
+      B: That is epinephrine, seconds.
+      C: Neurotransmission is millisecond.
+      D: No spinal reflex here.
   - q: Oxytocin blunting the cortisol response suggests it modulates…
     options:
       A: The stress response via social affiliation mechanisms
@@ -238,10 +238,9 @@ review_questions:
   answer: B
   explain: Substantia nigra dopamine neurons die — movement initiation fails.
   distractors:
-    A: That is depression angle.
-    B: Correct.
-    C: That is benzodiazepine-like.
-    D: That is a contrast target.
+    A: Serotonin loss links to mood, not movement.
+    C: GABA excess would sedate, not cause tremor.
+    D: Acetylcholine excess is not the Parkinson signature.
 - q: The opponent-process theory explains…
   options:
     A: Why we see negative afterimages

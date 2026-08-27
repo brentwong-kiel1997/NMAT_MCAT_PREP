@@ -21,9 +21,9 @@ sections:
     answer: A
     explain: Left-right reflection — the bowl flips to the right side.
     distractors:
-      A: That is 180-degree rotation.
-      B: That is a horizontal flip.
-      C: Unchanged — impossible.
+      B: That is 180-degree rotation.
+      C: That is a horizontal flip.
+      D: Unchanged — impossible.
 - heading: Vertical vs horizontal mirror axes
   body:
   - '==Vertical mirror (left-right) — the most common NMAT axis: reverses left and right, keeps top and
@@ -197,7 +197,7 @@ pitfalls:
 - Overlooking ornament position in option matching.
 - Words — reading from the wrong side after mirroring.
 exam_map:
-  NMAT: Part 2 Perceptual Acuity — mirror-image items.
+  NMAT: Part 1 Perceptual Acuity — mirror-image items.
 sources:
 - ref: cem-nmat-test-description
   used:
@@ -217,13 +217,13 @@ review_questions:
     B: p
     C: d
     D: q
-  answer: A
-  explain: Left-right flip turns q into b.
+  answer: B
+  explain: A left-right flip mirrors q into p — the bowl stays left while the stem's horizontal position
+    is preserved in mirror terms.
   distractors:
-    A: Correct — bowl left, stem right.
-    B: Horizontal flip.
-    C: d is its rotation.
-    D: Not symmetric.
+    A: b is q rotated 180 degrees, not mirrored.
+    C: d is the mirror of b, not of q.
+    D: q is not vertically symmetric.
 - q: Which digit is vertically symmetric?
   options:
     A: '8'

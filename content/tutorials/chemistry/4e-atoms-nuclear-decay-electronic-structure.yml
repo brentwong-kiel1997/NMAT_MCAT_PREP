@@ -28,7 +28,7 @@ sections:
     distractors:
       A: That is one orbital.
       B: That is p (3 orbitals).
-      C: That is f (7 orbitals).
+      D: That is f (7 orbitals).
 - heading: Nuclear notation and isotopes
   body:
   - Write isotopes as upper-left mass number, lower-left atomic number, symbol. Carbon-14 is 14/6 C. The
@@ -48,8 +48,8 @@ sections:
     explain: A - Z = 39 - 19 = 20 neutrons (potassium-39).
     distractors:
       A: That is the proton count.
-      B: That is the mass number.
-      C: That is A + Z.
+      C: That is the mass number.
+      D: That is A + Z.
 - heading: Nuclear decay — alpha, beta, gamma
   body:
   - ==Alpha decay emits a helium-4 nucleus== (A decreases by 4, Z decreases by 2). Beta-minus decay emits
@@ -71,7 +71,7 @@ sections:
     distractors:
       A: That is one half-life.
       B: That is two half-lives.
-      C: That is four half-lives.
+      D: That is four half-lives.
   figures:
   - src: 4e-atoms-nuclear-decay-electronic-structure/4e-1a783933.webp
     caption: Nuclear stability and decay modes — the valley of stability.
@@ -99,8 +99,8 @@ sections:
     explain: The Balmer series ends at n = 2 and includes the visible H-alpha (red) line.
     distractors:
       A: Lyman series (to n = 1) is UV.
-      B: Paschen series (to n = 3) is IR.
-      C: X-rays are inner-shell transitions in heavy atoms.
+      C: Paschen series (to n = 3) is IR.
+      D: X-rays are inner-shell transitions in heavy atoms.
 - heading: Absorption and emission spectroscopy
   body:
   - Absorption spectra show dark lines where atoms absorb specific wavelengths; emission spectra show
@@ -120,8 +120,8 @@ sections:
     explain: A = epsilon times b times c — the slope of A versus c is the product epsilon times b.
     distractors:
       A: Only b — epsilon is missing.
-      B: That is the x-axis variable.
-      C: Wavelength is fixed.
+      C: That is the x-axis variable.
+      D: Wavelength is fixed.
 examples:
 - prompt: Uranium-238 undergoes alpha decay followed by beta-minus decay. What is the daughter nuclide?
   solution:
@@ -171,37 +171,36 @@ passage:
       B: 50 mg
       C: 100 mg
       D: 200 mg
-    answer: B
-    explain: 8 AM to 8 PM is 12 hours = 2 half-lives. 400 -> 200 -> 50 mg.
+    answer: C
+    explain: '8 AM to 8 PM is 12 h = 2 half-lives: 400 -> 200 -> 100 mg.'
     distractors:
-      A: That is 4 half-lives.
-      B: That is 1 half-life plus a fraction.
-      C: That is 1 half-life.
+      A: No decay applied.
+      B: That skips the 100 mg step — 2 halvings, not 3.
+      D: Overshoot.
   - q: Is the sample above the 25 mg threshold?
     options:
       A: No, it is exactly at 25
       B: No, it is below 25
       C: Yes, it is above 25
       D: Cannot be determined
-    answer: B
-    explain: 50 mg is above 25 mg, so yes — the sample is usable. Wait, 50 is above 25.
+    answer: C
+    explain: 100 mg at 8 PM is well above the 25 mg threshold — yes.
     distractors:
-      A: Recheck the arithmetic — 2 half-lives leaves 50, not 25.
-      B: 50 > 25.
-      C: The math is determinate.
+      A: Indefinite — the decay law is exact here.
+      B: Below 25 is false at either reading.
+      D: The threshold comparison is direct.
   - q: After how many total hours would the sample drop to 25 mg?
     options:
       A: '12'
       B: '18'
       C: '24'
       D: '36'
-    answer: B
-    explain: 400 -> 200 (6h) -> 100 (12h) -> 50 (18h) -> 25 (24h). Wait — 400 to 25 is 4 halvings = 24
-      hours. But we started at 8 AM so 24 hours later is 8 AM next day. So the answer is 24 total hours.
+    answer: C
+    explain: '400 -> 25 mg is 4 halvings: 4 x 6 h = 24 h.'
     distractors:
-      A: 12h gives 100 mg.
-      B: 18h gives 50 mg.
-      C: 36h gives 12.5 mg.
+      A: One halving only.
+      B: That is 3 halvings = 50 mg remaining.
+      D: Five halvings.
 pitfalls:
 - Confusing beta-minus (Z increases) with positron emission (Z decreases).
 - Forgetting that half-life is independent of the amount present.
@@ -240,8 +239,8 @@ review_questions:
   explain: l = 0 gives s (spherical), l = 1 gives p (dumbbell), l = 2 gives d (lobed).
   distractors:
     A: n determines size/energy.
-    B: ml determines orientation.
-    C: ms is spin.
+    C: ml determines orientation.
+    D: ms is spin.
 - q: What particle is emitted in alpha decay?
   options:
     A: An electron
@@ -252,8 +251,8 @@ review_questions:
   explain: Two protons + two neutrons = helium-4 nucleus.
   distractors:
     A: That is beta-minus.
-    B: That is gamma.
-    C: That is beta-plus.
+    C: That is gamma.
+    D: That is beta-plus.
 - q: The Balmer series lines correspond to electronic transitions ending at…
   options:
     A: n = 1
@@ -264,8 +263,8 @@ review_questions:
   explain: Transitions ending at n = 2 produce the visible spectrum.
   distractors:
     A: That is Lyman (UV).
-    B: That is Paschen (IR).
-    C: That is Brackett.
+    C: That is Paschen (IR).
+    D: That is Brackett.
 - q: A sample of 160 mg decays to 20 mg. How many half-lives elapsed?
   options:
     A: '2'
@@ -276,5 +275,5 @@ review_questions:
   explain: 160 -> 80 -> 40 -> 20 = 3 half-lives.
   distractors:
     A: 160/4 = 40, not 20.
-    B: 160/16 = 10, not 20.
-    C: 160/32 = 5, not 20.
+    C: 160/16 = 10, not 20.
+    D: 160/32 = 5, not 20.

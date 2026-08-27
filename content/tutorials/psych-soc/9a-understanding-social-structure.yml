@@ -19,14 +19,14 @@ sections:
     answer: A
     explain: Functions served + distributional consequences — the two lenses.
     distractors:
-      A: Micro-meaning.
-      B: Interpersonal.
-      C: Not sociological three.
+      B: Micro-meaning.
+      C: Interpersonal.
+      D: Not sociological three.
   figures:
   - src: 9a-understanding-social-structure/fig-962529d0.webp
-    caption: Sociological theoretical perspectives — functionalism, conflict, and symbolic interactionism
-      applied.
-    credit: Fig 1.4 · OpenStax Introduction to Sociology 3e — CC BY-NC-SA 4.0
+    caption: Religious community life moving onto video calls — institutions adapting their routines to
+      new technology (a culture-lag moment in real time).
+    credit: OpenStax Introduction to Sociology 3e (religion chapter) — CC BY-NC-SA 4.0
 - heading: Status, role, groups
   body:
   - Status is a position; role is its expectations — ascribed vs. achieved. Role strain (tension within
@@ -42,9 +42,9 @@ sections:
     answer: A
     explain: Two roles' demands collide.
     distractors:
-      A: Within a single role.
-      B: Misaligned ranks.
-      C: Group defect.
+      B: Within a single role.
+      C: Misaligned ranks.
+      D: Group defect.
 - heading: Bureaucracy and organizations
   body:
   - Weber's ideal type — hierarchy, written rules, division of labor, impersonality. Predictability as
@@ -60,9 +60,9 @@ sections:
     answer: A
     explain: Means become ends.
     distractors:
-      A: Leaving a role.
-      B: Birth-assigned.
-      C: Bystander mechanism.
+      B: Leaving a role.
+      C: Birth-assigned.
+      D: Bystander mechanism.
   figures:
   - src: 9a-understanding-social-structure/fig-af42b92c.webp
     caption: Formal organizations and bureaucracy — Weber's ideal type and its variations.
@@ -82,9 +82,9 @@ sections:
     answer: A
     explain: Material culture changes faster than guiding norms.
     distractors:
-      A: Trait spread.
-      B: Minority absorption.
-      C: Adoption curve.
+      B: Trait spread.
+      C: Minority absorption.
+      D: Adoption curve.
 examples:
 - prompt: Analyze a medical school's grading system through all three lenses.
   solution:
@@ -133,9 +133,9 @@ passage:
     answer: A
     explain: The measure became the target and was gamed.
     distractors:
-      A: Audit shows no change.
-      B: No competing roles.
-      C: Unrelated.
+      B: Audit shows no change.
+      C: No competing roles.
+      D: Unrelated.
   - q: A conflict reading would ask…
     options:
       A: Which groups bear the compliance burden and which gain from reported numbers
@@ -145,9 +145,9 @@ passage:
     answer: A
     explain: Distribution of costs and benefits.
     distractors:
-      A: Functionalist.
-      B: Interactionist.
-      C: Cultural question.
+      B: Functionalist.
+      C: Interactionist.
+      D: Cultural question.
   - q: Which finding would most directly challenge the study's internal validity?
     options:
       A: A large sample size
@@ -158,8 +158,8 @@ passage:
     explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
     distractors:
       A: Power, not validity.
-      B: Significance is downstream of validity.
-      C: That tests external validity.
+      C: Significance is downstream of validity.
+      D: That tests external validity.
 pitfalls:
 - One-lens answers to multi-lens prompts.
 - Swapping role strain and conflict — count the roles.
@@ -198,9 +198,9 @@ review_questions:
   answer: A
   explain: Single role, incompatible expectations.
   distractors:
-    A: Two roles.
-    B: Collection of statuses.
-    C: Organizational form.
+    B: Two roles.
+    C: Collection of statuses.
+    D: Organizational form.
 - q: Who benefits from this arrangement? is the question of…
   options:
     A: Functionalism
@@ -211,8 +211,8 @@ review_questions:
   explain: Power and distribution.
   distractors:
     A: What it does.
-    B: What it means.
-    C: Interpersonal cost-benefit.
+    C: What it means.
+    D: Interpersonal cost-benefit.
 - q: Norms carrying strong moral weight are…
   options:
     A: Folkways
@@ -223,17 +223,17 @@ review_questions:
   explain: Mores — moral; laws are codified.
   distractors:
     A: Etiquette-level.
-    B: Formally codified.
-    C: Fleeting.
+    C: Formally codified.
+    D: Fleeting.
 - q: The study's design best exemplifies which research approach?
   options:
     A: Correlational with random sampling
     B: Experimental with a manipulated independent variable
     C: Case study with thick description
     D: Meta-analysis of prior studies
-  answer: B
-  explain: Conditions are assigned; the IV is the manipulated framing or prime.
+  answer: C
+  explain: One hospital's single-site observational audit — case study.
   distractors:
-    A: No manipulation described.
-    B: Single subject.
-    C: No pooled analysis.
+    A: No random sampling.
+    B: Nothing assigned.
+    D: No pooled studies.

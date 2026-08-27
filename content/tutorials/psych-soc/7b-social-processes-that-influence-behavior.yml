@@ -23,9 +23,9 @@ sections:
     answer: A
     explain: Discussion amplified the initial lean.
     distractors:
-      A: Effort drop — not this.
-      B: No planted majority.
-      C: Anonymity effects, absent.
+      B: Effort drop — not this.
+      C: No planted majority.
+      D: Anonymity effects, absent.
   figures:
   - src: 7b-social-processes-that-influence-behavior/social-roles.webp
     caption: Social roles — the student role dictates studious behavior in the classroom.
@@ -50,8 +50,8 @@ sections:
     explain: A direct command from authority.
     distractors:
       A: No group norm — a hierarchy.
-      B: Performance in mere presence.
-      C: Group decision defect.
+      C: Performance in mere presence.
+      D: Group decision defect.
 - heading: Attribution, attitudes, persuasion
   body:
   - Attribution — dispositional versus situational — with the fundamental attribution error (overweighting
@@ -71,8 +71,8 @@ sections:
     explain: Situational excuses for self, dispositional blame for others.
     distractors:
       A: Related but the two-sided pattern is the signature.
-      B: Group process.
-      C: Persuasion model.
+      C: Group process.
+      D: Persuasion model.
 - heading: Social facilitation and social loafing — audience effects
   body:
   - The mere presence of others changes performance — **social facilitation** (better on simple or well-learned
@@ -94,9 +94,9 @@ sections:
     answer: A
     explain: Arousal on individual performance vs. effort-drop in unidentifiable groups.
     distractors:
-      A: Reversed.
-      B: The group task shows loafing.
-      C: The sprint shows facilitation.
+      B: Reversed.
+      C: The group task shows loafing.
+      D: The sprint shows facilitation.
 examples:
 - prompt: Festinger's design — participants paid $1 or $20 to tell a peer a boring task was fun. Predict
     the attitude change.
@@ -146,9 +146,9 @@ passage:
     answer: A
     explain: Cohesion + suppressed dissent + leader preference.
     distractors:
-      A: Effort reduction.
-      B: Anonymity disinhibition.
-      C: Diffusion in emergencies.
+      B: Effort reduction.
+      C: Anonymity disinhibition.
+      D: Diffusion in emergencies.
   - q: The improved process works by…
     options:
       A: Inserting structured dissent — breaking unanimity pressure
@@ -158,9 +158,9 @@ passage:
     answer: A
     explain: Devil's advocacy reinstates the dissent groupthink suppresses.
     distractors:
-      A: Larger groups can worsen it.
-      B: Incentives don't restore dissent.
-      C: More obedience is the opposite.
+      B: Larger groups can worsen it.
+      C: Incentives don't restore dissent.
+      D: More obedience is the opposite.
   - q: Which finding would most directly challenge the study's internal validity?
     options:
       A: A large sample size
@@ -171,8 +171,8 @@ passage:
     explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
     distractors:
       A: Power, not validity.
-      B: Significance is downstream of validity.
-      C: That tests external validity.
+      C: Significance is downstream of validity.
+      D: That tests external validity.
 pitfalls:
 - Conflating obedience (authority) with conformity (peers).
 - Social loafing where groupthink belongs.
@@ -209,7 +209,7 @@ review_questions:
   distractors:
     A: Victim proximity REDUCES it.
     B: Remote reduces it.
-    C: Peer defiance collapses it.
+    D: Peer defiance collapses it.
 - q: Telling a small lie for $1 shifts attitudes more than $20 because of…
   options:
     A: Insufficient justification → dissonance
@@ -219,9 +219,9 @@ review_questions:
   answer: A
   explain: Thin justification leaves dissonance resolved from within.
   distractors:
-    A: Reward crowd-out — different.
-    B: A persuasion route.
-    C: Credit-self bias.
+    B: Reward crowd-out — different.
+    C: A persuasion route.
+    D: Credit-self bias.
 - q: Judging a stranger's lateness as laziness while excusing your own as traffic demonstrates…
   options:
     A: Fundamental attribution error only
@@ -232,17 +232,17 @@ review_questions:
   explain: The self/other asymmetry.
   distractors:
     A: Half the pattern.
-    B: Believing outcomes are deserved.
-    C: Favoring one's own group.
+    C: Believing outcomes are deserved.
+    D: Favoring one's own group.
 - q: The study's design best exemplifies which research approach?
   options:
     A: Correlational with random sampling
     B: Experimental with a manipulated independent variable
     C: Case study with thick description
     D: Meta-analysis of prior studies
-  answer: B
-  explain: Conditions are assigned; the IV is the manipulated framing or prime.
+  answer: C
+  explain: A single company's groupthink episode examined in depth — case study.
   distractors:
-    A: No manipulation described.
-    B: Single subject.
-    C: No pooled analysis.
+    A: No sampling frame or correlation matrix.
+    B: Nothing manipulated.
+    D: No prior studies pooled.

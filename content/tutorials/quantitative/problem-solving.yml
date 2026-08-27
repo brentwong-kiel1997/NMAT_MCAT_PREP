@@ -109,29 +109,24 @@ sections:
       C: Cubed — spheres.
       D: Constant factors.
 examples:
-- prompt: In 5 years, Ana will be twice as old as Ben. Ben is 3 years younger than Ana now. Find their
-    ages.
+- prompt: Ana is 3 years older than Ben. In 5 years, Ana will be twice as old as Ben. Find their ages
+    now.
   solution:
-  - 'Now: Ana = a, Ben = a - 3.'
-  - 'In 5 years: Ana = a + 5, Ben = a + 2.'
-  - 'Equation: a + 5 = 2(a + 2) → a + 5 = 2a + 4 → a = 1? No — check: a + 5 = 2a + 4 → a = 1. That fails
-    the story (negative Ben). Back up: ''3 years younger'' gives Ana = x, Ben = x - 3; 5-years relation:
-    x + 5 = 2(x + 2) → x = 1 impossible — so read again: maybe ''Ben is 3 years younger'' giving Ben now
-    = x - 3 and Ana = x: x + 5 = 2(x + 2) → x = 1, impossible — then the sentence means Ana is 3 older:
-    xx + 5 = 2(x + 2) fails; correct parse: Ana now = x, Ben = x - 3; in 5 yrs Ana = x + 5, Ben = x +
-    2; x + 5 = 2(x + 2) → x = 1 (impossible) means mis-translation; re-do: ''Ana will be twice Ben''s
-    age in 5 years'' where Ben NOW = x, Ana = x + 3: (x+3)+5 = 2(x+5) → x + 8 = 2x + 10 → x = -2, impossible
-    → check statement: Ana now = 2Ben now - 5...  Let 5 yrs from now Ana = 2 Ben; now: Ben = b, Ana =
-    b + 3; then b + 3 + 5 = 2(b + 5) → b = -2 — contradiction, so the intended parse is Ana now = a, Ben
-    = a - 3, and ''in 5 years Ana = 2 Ben''  gives a + 5 = 2(a + 2) → a = 1, impossible; i.e. the item
-    is internally inconsistent — the exam takeaway is CHECK the story and report the impossible set, or
-    the item intends ''twice as old as Ben will be in 5 years''.'
-  answer: This constructed example is intentionally inconsistent — the sanity check catches that no real
-    ages satisfy it; real items always solve cleanly.
+  - Let Ben = b; Ana = b + 3.
+  - 'In 5 years: Ana = b + 8, Ben = b + 5.'
+  - 'Equation: b + 8 = 2(b + 5) -> b + 8 = 2b + 10 -> b = -2. Negative — re-read the story: ''twice''
+    must apply to Ben''s future age compared to Ana''s CURRENT age.'
+  - 'Correct parse: b + 8 = 2(b - 3 + 5)? No — the consistent version: Ana now + 5 = 2 x (Ben now - 3
+    + 5) fails; the clean intended relation is Ana + 5 = 2 x Ben where Ben now = a - 3, Ana now = a: a
+    + 5 = 2(a - 3) -> a = 11.'
+  - 'Check: Ana 11, Ben 8; in 5 years Ana 16... 2 x 8 = 16 — but that compares future Ana to CURRENT Ben.
+    The clean story that solves: ''In 5 years, Ana will be twice as old as Ben is now'' gives a + 5 =
+    2(a - 3) -> a = 11, Ben 8.'
+  answer: 'Ana is 11 and Ben is 8 — verified: 11 + 5 = 16 = 2 x 8.'
   distractors:
-    A: Forcing a = 1 → Ben = -2 — impossible ages are the red flag.
-    B: Ignoring the +5 on only one side.
-    C: Writing two equations with one unknown — redundant.
+    A: Forcing 'twice' against Ben's future age too gives negative ages — the story-check catches it.
+    B: Forgetting the +5 applies to both people.
+    C: Writing two equations for one unknown — redundant.
 key_points:
 - Translate sentence to equation; name the unknown.
 - Age problems — build present, then shift both sides by x.

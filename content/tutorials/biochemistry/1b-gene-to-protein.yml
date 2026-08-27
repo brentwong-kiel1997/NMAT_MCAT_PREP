@@ -12,7 +12,7 @@ sections:
     RNA replaces T with U and uses ribose.'
   - '==Central dogma: DNA -> RNA -> protein. ==Chromatin — DNA wrapped around histones (nucleosomes);
     heterochromatin (condensed, silenced) vs euchromatin (open, active)==. Genes — promoters upstream,
-    exons/interons, terminators.'
+    exons/introns, terminators.'
   check:
   - q: A DNA double helix is antiparallel because…
     options:
@@ -79,7 +79,7 @@ sections:
   body:
   - ==mRNA triplets (codons) decode via the genetic code; wobble lets one tRNA read multiple codons; start
     AUG, stop UAA/UAG/UGA==. Ribosome — small 40S + large 60S (eukaryotes); ==A (aminoacyl), P (peptidyl),
-    E (exit) sites; aminoacyl-tRNA synthetases charge tRNAs (ATP!).
+    E (exit) sites; aminoacyl-tRNA synthetases charge tRNAs (ATP).==
   - ==Peptide chain grows N to C; energy from GTP (EF-Tu in bacteria, eEF1 in eukaryotes)==. Antibiotics
     exploit the machinery — tetracycline blocks A-site binding, puromycin premature termination. ==Post-translational
     — folding, glycosylation, cleavage, targeting signal sequences==.
@@ -100,7 +100,7 @@ sections:
 - heading: 'Methods: blots, sequencing, and editing'
   body:
   - ==Southern blot = DNA, Northern = RNA, Western = protein — probe on membrane (labeled nucleic acid
-    or antibody)==. PCR — denature 95, anneal 50-65, extend 72; ===amplification 2^n— requires primers
+    or antibody)==. PCR — denature 95, anneal 50-65, extend 72; ==amplification is 2^n==— requires primers
     and a heat-stable polymerase (Taq)==.
   - ==Sanger sequencing — dideoxynucleotides terminate chains; read bands by length==. NGS — massively
     parallel short reads. ==CRISPR-Cas9 — guide RNA targets Cas9 to cut; homology-directed repair or NHEJ
@@ -130,7 +130,7 @@ examples:
   - 'Before splicing: primary transcript = 40 + 60 + 50 + 95 + 95 = 340 nt.'
   - Splicing removes the introns — 190 nt gone.
   - Mature mRNA = 40 + 60 + 50 = 150 nt coding region.
-  - Plus 5' cap and ~200 nt poly-A tail — total around 360-380 nt.
+  - Plus 5' cap and ~200 nt poly-A tail — total around 350 nt.
   answer: ~150 nt of coding sequence plus cap and poly-A — introns never reach the ribosome.
   distractors:
     A: 340 nt — that is pre-mRNA, before splicing.
@@ -211,7 +211,7 @@ pitfalls:
 - Template vs coding strand — the RNA matches coding.
 - PCR cycles vs copies — 2^n not 2n.
 - Southern/Northern/Western swap.
-- Polimerase needing a primer — primase's role.
+- Polymerase needing a primer — primase's role.
 exam_map:
   NMAT: Central dogma vocabulary, replication basics.
   MCAT: Content Category 1B — regulation logic and experimental method passages.

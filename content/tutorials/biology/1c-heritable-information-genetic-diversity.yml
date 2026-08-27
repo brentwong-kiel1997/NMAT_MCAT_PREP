@@ -182,7 +182,7 @@ maps:
   - selection / drift / migration → change allele FREQUENCIES
 passage:
   text: Cystic fibrosis is autosomal recessive and affects 1 in 2,500 newborns in a population. A student
-    screens 1,000 unrelated adults with a sequencing panel and finds 40 carriers. The student then compares
+    screens 1,000 unrelated adults with a sequencing panel and finds 20 carriers. The student then compares
     a nearby STR marker and notices carriers share marker haplotypes far more often than expected by chance.
   questions:
   - q: From the disease incidence alone, the EXPECTED carrier rate is closest to…
@@ -191,21 +191,21 @@ passage:
       B: 1/25
       C: 1/2500
       D: 1/100
-    answer: A
-    explain: q² = 1/2500 → q = 1/50 → carriers 2pq ≈ 2(0.98)(0.02) ≈ 1/25·(0.98) ≈ 1/50.
+    answer: B
+    explain: q2 = 1/2500, so q = 0.02; 2pq = 2(0.98)(0.02) = 0.0392 — about 1 in 25 carriers.
     distractors:
-      B: 1/25 doubles the true value.
-      C: That is the AFFECTED rate.
-      D: Half the correct estimate.
-  - q: The observed 40/1000 differs from the expectation. The most likely statistical explanation is…
+      A: That is q, the allele frequency — carriers are 2pq.
+      C: Twenty-fold too low.
+      D: Two-fold too high.
+  - q: The observed 20/1000 differs from the expectation. The most likely statistical explanation is…
     options:
       A: The H-W model never applies
       B: Sampling variation around a small expected count
       C: Mutation hotspots raised the rate
       D: The trait is dominant
     answer: B
-    explain: Expected carriers ≈ 20; observing 40 needs a check of sample size and confidence intervals
-      before any biological claim.
+    explain: Expected carriers ≈ 40 (2pq ≈ 1/25 of 1,000); observing 20 sits within sampling variation
+      for a count this size — check confidence intervals before any biological claim.
     distractors:
       A: H-W is a null model — it applies as a baseline.
       C: Possible but not first-line.

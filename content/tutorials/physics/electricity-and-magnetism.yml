@@ -23,9 +23,9 @@ sections:
     answer: A
     explain: F ~ 1/r2 — d/2 gives 4x the force (still attractive).
     distractors:
-      A: Inverse square.
-      B: Inverse-square gives 4, not 2.
-      C: No.
+      B: Inverse square.
+      C: Inverse-square gives 4, not 2.
+      D: No.
   figures:
   - src: electricity-and-magnetism/fig-74e73828.webp
     caption: Electric force — attraction between opposite charges, repulsion between like charges.
@@ -51,9 +51,9 @@ sections:
     answer: A
     explain: R-total = 10 ohm; I = 12/10 = 1.2 A.
     distractors:
-      A: Parallel math.
-      B: 10 ohm, not 2.
-      C: Decimal slip.
+      B: Parallel math.
+      C: 10 ohm, not 2.
+      D: Decimal slip.
 - heading: Capacitors and RC circuits
   body:
   - ==Capacitance C = Q/V; parallel plates C = epsilon A/d==. Energy stored = (1/2)CV2. In series, 1/C
@@ -72,7 +72,7 @@ sections:
     distractors:
       A: 37% is the discharge remaining.
       B: e^-1 vs 1-e^-1 mix-up.
-      C: Wrong exponent.
+      D: Wrong exponent.
 - heading: Magnetism — fields, forces, and induction
   body:
   - ==Moving charges feel magnetic force F = q v B sin(theta) — perpendicular to BOTH velocity and field.
@@ -91,8 +91,8 @@ sections:
     explain: sin(0) = 0 — force is zero when v is parallel to B.
     distractors:
       A: That needs v perpendicular.
-      B: That IS the case when perpendicular.
-      C: No force means no acceleration.
+      C: That IS the case when perpendicular.
+      D: No force means no acceleration.
 - heading: Electrochemistry and biological fields
   body:
   - Nernst equation V = (RT/zF) ln([out]/[in]) ties concentration gradients to membrane potentials; ==resting
@@ -112,8 +112,8 @@ sections:
     explain: An electrolytic cell is driven against the spontaneous direction.
     distractors:
       A: Galvanic do that.
-      B: Anode is oxidation (electrons leave), but the driving source matters.
-      C: Wires conduct too.
+      C: Anode is oxidation (electrons leave), but the driving source matters.
+      D: Wires conduct too.
 examples:
 - prompt: A cell membrane (0.10 um thick, area 1e-5 m2) has dielectric constant 5 and a potential difference
     of 70 mV. Estimate its capacitance and stored charge.
@@ -232,7 +232,7 @@ review_questions:
   distractors:
     A: That is half each.
     B: Series would be 8.
-    C: Parallel math.
+    D: Parallel math.
 - q: Which statement about magnetic force is TRUE?
   options:
     A: It does work on a moving charge

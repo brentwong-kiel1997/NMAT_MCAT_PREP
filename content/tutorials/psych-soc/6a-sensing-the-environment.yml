@@ -27,8 +27,8 @@ sections:
     explain: The just-noticeable difference scales with baseline intensity — proportional, not fixed.
     distractors:
       A: Damage is not the mechanism at normal volumes.
-      B: Nothing is skipped; the fraction grows with the base.
-      C: Absolute threshold is about detecting presence, not change.
+      C: Nothing is skipped; the fraction grows with the base.
+      D: Absolute threshold is about detecting presence, not change.
   figures:
   - src: 6a-sensing-the-environment/top-down-bottom-up.webp
     caption: Top-down versus bottom-up processing — expectation-driven versus stimulus-driven perception.
@@ -52,9 +52,9 @@ sections:
     answer: A
     explain: Constant stimulus, declining response — the definition of sensory adaptation.
     distractors:
-      A: Thresholds govern detection of new stimuli, not fading of constant ones.
-      B: No receptor loss occurs.
-      C: Attention is top-down; this happens pre-attentively.
+      B: Thresholds govern detection of new stimuli, not fading of constant ones.
+      C: No receptor loss occurs.
+      D: Attention is top-down; this happens pre-attentively.
   figures:
   - src: 6a-sensing-the-environment/muller-lyer.webp
     caption: The Müller-Lyer illusion — identical lines appear different; culture modulates susceptibility.
@@ -79,8 +79,8 @@ sections:
     explain: Parallel lines seeming to meet is the textbook linear perspective cue.
     distractors:
       A: Binocular cue — needs two eyes.
-      B: A Gestalt grouping principle, not depth.
-      C: Binocular cue — eyes angling inward.
+      C: A Gestalt grouping principle, not depth.
+      D: Binocular cue — eyes angling inward.
   figures:
   - src: 6a-sensing-the-environment/inattentional-blindness.webp
     caption: Inattentional blindness — one third miss the red cross while attending to black or white
@@ -106,8 +106,8 @@ sections:
     explain: Intact acuity = intact sensation; the interpretive cortex is the broken link.
     distractors:
       A: Signal arrives normally.
-      B: Already established as intact.
-      C: Threshold is detection, not recognition.
+      C: Already established as intact.
+      D: Threshold is detection, not recognition.
 examples:
 - prompt: In signal detection terms, a radiologist flags a shadow that turns out normal. Name the outcome
     and one perceptual factor that raises its rate.
@@ -159,9 +159,9 @@ passage:
     answer: A
     explain: Acuity is cone work at the fovea; rod loss hits the periphery and dim-light detection.
     distractors:
-      A: Adaptation speed is not acuity.
-      B: Reversed — cones handle foveal detail.
-      C: No compensatory rerouting is described.
+      B: Adaptation speed is not acuity.
+      C: Reversed — cones handle foveal detail.
+      D: No compensatory rerouting is described.
   - q: The raised flash threshold reflects impaired…
     options:
       A: Perception of edges
@@ -172,8 +172,8 @@ passage:
     explain: Detecting a dim flash is a sensory threshold question, not interpretation.
     distractors:
       A: Interpretation is intact once signal arrives.
-      B: Weber concerns difference detection between two stimuli.
-      C: Grouping principle, unrelated.
+      C: Weber concerns difference detection between two stimuli.
+      D: Grouping principle, unrelated.
   - q: Which finding would most directly challenge the study's internal validity?
     options:
       A: A large sample size
@@ -184,8 +184,8 @@ passage:
     explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
     distractors:
       A: Power, not validity.
-      B: Significance is downstream of validity.
-      C: That tests external validity.
+      C: Significance is downstream of validity.
+      D: That tests external validity.
 pitfalls:
 - Calling everything perception — transduction questions are sensation, always.
 - Confusing absolute threshold (detect presence) with JND (detect change).
@@ -222,8 +222,8 @@ review_questions:
   explain: By definition.
   distractors:
     A: That is change detection.
-    B: Same as difference threshold.
-    C: Not a threshold construct.
+    C: Same as difference threshold.
+    D: Not a threshold construct.
 - q: Which pairing is correct?
   options:
     A: Rods — color detail
@@ -235,7 +235,7 @@ review_questions:
   distractors:
     A: Cones carry color.
     B: Rods own dim periphery.
-    C: Cones dominate the fovea.
+    D: Cones dominate the fovea.
 - q: Not feeling your clothes after dressing is best explained by…
   options:
     A: Weber's law
@@ -246,17 +246,17 @@ review_questions:
   explain: Constant pressure, receptor firing declines.
   distractors:
     A: Weber is about increments.
-    B: Criterion is decision-level, not receptor-level.
-    C: Touch, not vision.
+    C: Criterion is decision-level, not receptor-level.
+    D: Touch, not vision.
 - q: The study's design best exemplifies which research approach?
   options:
     A: Correlational with random sampling
     B: Experimental with a manipulated independent variable
     C: Case study with thick description
     D: Meta-analysis of prior studies
-  answer: B
-  explain: Conditions are assigned; the IV is the manipulated framing or prime.
+  answer: A
+  explain: Pre-existing rod-loss and normal groups are compared — no manipulation, so correlational.
   distractors:
-    A: No manipulation described.
-    B: Single subject.
-    C: No pooled analysis.
+    B: Nothing was assigned or manipulated.
+    C: Not a single-subject account.
+    D: No pooled analysis.

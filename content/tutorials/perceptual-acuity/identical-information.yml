@@ -103,7 +103,7 @@ sections:
       C: In the dash style
       D: Not at all
     answer: A
-    explain: 'Positions 8-9: Q3 vs 03 — the middle varies.'
+    explain: 'Positions 10-11: Q3 vs 03 — the middle segment varies.'
     distractors:
       A: Correct.
       B: REF matches.
@@ -197,7 +197,7 @@ pitfalls:
 - Stopping early — verifying only the ends.
 - Second-guessing after the first confirmed difference.
 exam_map:
-  NMAT: Part 2 Perceptual Acuity — identical information items.
+  NMAT: Part 1 Perceptual Acuity — identical information items.
 sources:
 - ref: cem-nmat-test-description
   used:

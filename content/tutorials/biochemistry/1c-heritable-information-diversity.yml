@@ -76,9 +76,9 @@ sections:
     answer: A
     explain: Homologous chromosomes fail to separate — an extra copy in a gamete.
     distractors:
-      A: That recombines, not duplicates whole chromosomes.
-      B: Philadelphia is the classic but rare.
-      C: One base cannot make a whole chromosome.
+      B: That recombines, not duplicates whole chromosomes.
+      C: Philadelphia is the classic but rare.
+      D: One base cannot make a whole chromosome.
 - heading: Epigenetics — heritable but not sequence-based
   body:
   - '==Epigenetics = heritable changes in expression with DNA sequence unchanged — DNA methylation (CpG
@@ -98,9 +98,9 @@ sections:
     answer: A
     explain: Random inactivation freezes a mosaic of active maternal/paternal X cells.
     distractors:
-      A: Mutations are rare.
-      B: Hormones modulate, don't erase.
-      C: Chromosomes persist.
+      B: Mutations are rare.
+      C: Hormones modulate, don't erase.
+      D: Chromosomes persist.
 - heading: Population genetics — the source of diversity
   body:
   - ==Hardy-Weinberg — p + q = 1, p2 + 2pq + q2 = 1; equilibrium requires no mutation, no selection, no

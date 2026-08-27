@@ -21,8 +21,8 @@ sections:
     explain: Commitment without exploration.
     distractors:
       A: Requires exploration first.
-      B: Exploring, no commitment.
-      C: Neither.
+      C: Exploring, no commitment.
+      D: Neither.
   figures:
   - src: 8a-self-identity/fig-1752bba5.webp
     caption: Stages of development — Erikson's psychosocial crises across the lifespan.
@@ -46,8 +46,8 @@ sections:
     explain: Domain-specific capability belief.
     distractors:
       A: Global self-worth.
-      B: Pre-emptive excuse.
-      C: Self-discrepancy term.
+      C: Pre-emptive excuse.
+      D: Self-discrepancy term.
 - heading: Social identity — the group in the self
   body:
   - Tajfel — categorize, identify, compare. Minimal-group experiments (random label assignment alone produces
@@ -63,9 +63,9 @@ sections:
     answer: A
     explain: Categorization alone suffices for bias.
     distractors:
-      A: Effort drop.
-      B: Anonymity disinhibition.
-      C: Familiarity, not allocation.
+      B: Effort drop.
+      C: Anonymity disinhibition.
+      D: Familiarity, not allocation.
 - heading: Self-concept across cultures
   body:
   - Culture shapes the default self — **individualist** cultures build an independent self (traits, autonomy,
@@ -88,8 +88,8 @@ sections:
     explain: Interdependent selves foreground relationship and context over traits.
     distractors:
       A: Independent selves lead with traits.
-      B: Culture shifts the default.
-      C: Culture is a systematic shaper.
+      C: Culture shifts the default.
+      D: Culture is a systematic shaper.
 examples:
 - prompt: A stereotype-threat experiment — math test framed as diagnostic of ability vs. problem-solving
     exercise, stereotyped vs. non-stereotyped group. Predict the 2×2.
@@ -140,9 +140,9 @@ passage:
     answer: A
     explain: The framing activates the stereotype; monitoring taxes cognition.
     distractors:
-      A: Samples matched.
-      B: No group task.
-      C: Not framing-specific.
+      B: Samples matched.
+      C: No group task.
+      D: Not framing-specific.
   - q: The sparse format-recall functions as…
     options:
       A: Evidence for a cognitive-load mechanism
@@ -152,9 +152,9 @@ passage:
     answer: A
     explain: Attention consumed by threat leaves less encoding of surface detail.
     distractors:
-      A: The manipulation worked.
-      B: Effort not measured as low.
-      C: Dismissive.
+      B: The manipulation worked.
+      C: Effort not measured as low.
+      D: Dismissive.
   - q: Which finding would most directly challenge the study's internal validity?
     options:
       A: A large sample size
@@ -165,8 +165,8 @@ passage:
     explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
     distractors:
       A: Power, not validity.
-      B: Significance is downstream of validity.
-      C: That tests external validity.
+      C: Significance is downstream of validity.
+      D: That tests external validity.
 pitfalls:
 - Confusing self-esteem with self-efficacy.
 - Foreclosure where achievement belongs — check exploration.
@@ -202,9 +202,9 @@ review_questions:
   answer: A
   explain: Active exploration, decision deferred.
   distractors:
-    A: Foreclosure.
-    B: Diffusion.
-    C: Achievement.
+    B: Foreclosure.
+    C: Diffusion.
+    D: Achievement.
 - q: I aced it because I am good; I failed because the test was unfair illustrates…
   options:
     A: Actor-observer bias
@@ -215,8 +215,8 @@ review_questions:
   explain: Credit internal, blame external.
   distractors:
     A: Self/other asymmetry.
-    B: Other-judging error.
-    C: Deservingness.
+    C: Other-judging error.
+    D: Deservingness.
 - q: Out-group homogeneity means…
   options:
     A: Out-group seems more varied
@@ -227,8 +227,8 @@ review_questions:
   explain: Limited contact yields coarse representations.
   distractors:
     A: Reversed.
-    B: Own group looks differentiated.
-    C: Irrelevant.
+    C: Own group looks differentiated.
+    D: Irrelevant.
 - q: The study's design best exemplifies which research approach?
   options:
     A: Correlational with random sampling
@@ -239,5 +239,5 @@ review_questions:
   explain: Conditions are assigned; the IV is the manipulated framing or prime.
   distractors:
     A: No manipulation described.
-    B: Single subject.
-    C: No pooled analysis.
+    C: Single subject.
+    D: No pooled analysis.

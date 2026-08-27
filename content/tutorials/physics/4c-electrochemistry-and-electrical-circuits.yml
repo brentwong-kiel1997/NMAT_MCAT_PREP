@@ -116,10 +116,10 @@ sections:
     answer: B
     explain: The K+ gradient shrinks — the Nernst term approaches zero — E moves toward zero.
     distractors:
-      A: Correct — gradient weakening depolarizes.
-      B: Opposite direction.
-      C: Gradient changed.
-      D: Bounded math.
+      A: Opposite direction.
+      B: Correct — gradient weakening depolarizes.
+      C: Cl- held constant.
+      D: The pump still runs.
 examples:
 - prompt: Compute the resting potential contribution of K+ with [K+]out = 4 mM, [K+]in = 140 mM at 37C.
   solution:

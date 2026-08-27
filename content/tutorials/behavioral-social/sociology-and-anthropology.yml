@@ -24,8 +24,8 @@ sections:
     explain: Using your own culture as the measuring stick.
     distractors:
       A: That judges within context.
-      B: Adjustment to a new culture.
-      C: Minority adoption of majority norms.
+      C: Adjustment to a new culture.
+      D: Minority adoption of majority norms.
   figures:
   - src: behavioral-social/sociology-and-anthropology/fig-2cba6a31.webp
     caption: Judo as cultural practice — sport encodes values, rules, and ritual.
@@ -47,9 +47,9 @@ sections:
     answer: A
     explain: Imagined appraisals reflected back form the sense of self.
     distractors:
-      A: Labels from others.
-      B: One role's conflict.
-      C: Forced relearning.
+      B: Labels from others.
+      C: One role's conflict.
+      D: Forced relearning.
 - heading: Social structure and groups
   body:
   - ==Status (ascribed by birth vs achieved by effort) and roles — role strain within one role; role conflict
@@ -68,8 +68,8 @@ sections:
     explain: Two different roles' demands collide.
     distractors:
       A: One role's tension.
-      B: Mismatched statuses.
-      C: Normative breakdown.
+      C: Mismatched statuses.
+      D: Normative breakdown.
 - heading: Inequality, stratification, and mobility
   body:
   - '==Stratification = systematic ranking by class, status, power (Weber) or by relationship to the means
@@ -89,8 +89,8 @@ sections:
     explain: Caste ranks are fixed at birth — no legitimate mobility.
     distractors:
       A: Class allows movement.
-      B: Estates are less rigid than caste.
-      C: Meritocracy is open.
+      C: Estates are less rigid than caste.
+      D: Meritocracy is open.
   figures:
   - src: behavioral-social/sociology-and-anthropology/fig-c4a4fedf.webp
     caption: An estate viewed from above — wealth made visible at the top of the class hierarchy.
@@ -197,11 +197,11 @@ passage:
     distractors:
       A: Family structure is not the mechanism.
       B: Minority adoption of majority norms is narrower.
-      C: Technology-outpaces-norms mismatch.
+      D: Technology-outpaces-norms mismatch.
 pitfalls:
 - Ethnocentrism vs relativism — judging within vs by one's own standard.
 - Role strain vs conflict — count the roles.
-- Cast vs class — openness.
+- Caste vs class — openness.
 - Labeling vs strain theory of deviance.
 - Emic/etic flipped.
 exam_map:

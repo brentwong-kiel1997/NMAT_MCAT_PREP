@@ -23,8 +23,8 @@ sections:
     explain: Only vertical motion accelerates — horizontal velocity stays vx.
     distractors:
       A: No horizontal force.
-      B: KE grows — speed rises.
-      C: No horizontal force → no acceleration.
+      C: KE grows — speed rises.
+      D: No horizontal force → no acceleration.
   figures:
   - src: 4a-motion-forces-work-energy-equilibrium/fig-072de49c.webp
     caption: Projectile trajectories — initial speed and launch angle shape the range.

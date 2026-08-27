@@ -21,9 +21,9 @@ sections:
     answer: A
     explain: Rotation continues a fixed angular step.
     distractors:
-      A: That is one step of half-turn.
-      B: No shading rule shown.
-      C: Size unchanged.
+      B: That is one step of half-turn.
+      C: No shading rule shown.
+      D: Size unchanged.
 - heading: Rotation and reflection reads
   body:
   - ==Rotation direction — clockwise vs counterclockwise; fixed step (90, 45, 180) vs acceleration (30,
@@ -38,11 +38,10 @@ sections:
       B: '12'
       C: '6'
       D: '3:30'
-    answer: B
-    explain: +90 clockwise each step — 9 o'clock is a 90-degree step.
+    answer: A
+    explain: Continuing +90 degrees clockwise from 6 o'clock lands at 9 o'clock.
     distractors:
-      A: Wait — correct = 9 o'clock.
-      B: Same.
+      B: That is the starting position, not the next step.
       C: One step short.
       D: Half step.
 - heading: Shading, hatching, and color coding
@@ -183,9 +182,9 @@ passage:
     answer: A
     explain: Two-state shape alternation, most parsimonious.
     distractors:
-      A: There is a clear rule.
-      B: Rotation contradicts alternation.
-      C: No size data.
+      B: There is a clear rule.
+      C: Rotation contradicts alternation.
+      D: No size data.
 pitfalls:
 - Reading shading as rotation — channels separate.
 - Assuming acceleration when the step is constant.
@@ -193,7 +192,7 @@ pitfalls:
 - Position cycles mistaken for shape changes.
 - Choosing an option that matches only one of two channels.
 exam_map:
-  NMAT: Part 2 Inductive Reasoning — figure-series items.
+  NMAT: Part 1 Inductive Reasoning — figure-series items.
 sources:
 - ref: cem-nmat-test-description
   used:

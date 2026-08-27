@@ -23,9 +23,9 @@ sections:
     answer: A
     explain: Anabolic reductions — fatty acid synthesis, detoxification.
     distractors:
-      A: NADH fuels the ETC.
-      B: ATP is the currency.
-      C: Not its lane.
+      B: NADH fuels the ETC.
+      C: ATP is the currency.
+      D: Not its lane.
 - heading: Glycolysis and its regulation
   body:
   - '==Glycolysis (cytosol): glucose -> 2 pyruvate; investment 2 ATP, payoff 4 ATP, net 2 ATP + 2 NADH==.
@@ -66,8 +66,8 @@ sections:
     answer: B
     explain: Three redox steps (2 boxes) — 3 NADH; plus FADH2 and GTP.
     distractors:
-      A: Correct.
-      B: FADH2 count off.
+      A: One NADH short.
+      B: Correct — 3 NADH, 1 FADH2, 1 GTP.
       C: Double count.
       D: Every turn generates more.
   figures:
@@ -119,9 +119,9 @@ sections:
     answer: A
     explain: Liver releases stored and freshly made glucose.
     distractors:
-      A: Muscle stores glycogen locally.
-      B: That is the fed flow.
-      C: Ketones spare glucose, not make it.
+      B: Muscle stores glycogen locally.
+      C: That is the fed flow.
+      D: Ketones spare glucose, not make it.
 examples:
 - prompt: 'Calculate the net ATP from one glucose under aerobic conditions using the two-citrus accounting
     (modern yields: NADH 2.5, FADH2 1.5).'
@@ -143,7 +143,7 @@ key_points:
 - Beta-oxidation yields about 106 ATP per palmitate; ketones feed the brain fasting.
 - Insulin = storage; glucagon = mobilization; Cori recycles lactate.
 mnemonics:
-- phrase: '2-2-2: net ATP, NADH, and the 2 CO2 per pyruvate'
+- phrase: '2-2: net ATP and NADH from glycolysis; the TCA then releases 2 CO2 per acetyl-CoA'
   means: Glycolysis payoff arithmetic.
 - phrase: Fed insulin, fasted glucagon
   means: The hormone switch.
@@ -281,6 +281,6 @@ review_questions:
   answer: A
   explain: UCP1 lets protons re-enter bypassing ATP synthase — heat, not ATP.
   distractors:
-    A: The ETC keeps pumping.
-    B: ATP synthesis is bypassed, not destroyed.
-    C: Fat still oxidizes.
+    B: The ETC keeps pumping.
+    C: ATP synthesis is bypassed, not destroyed.
+    D: Fat still oxidizes.

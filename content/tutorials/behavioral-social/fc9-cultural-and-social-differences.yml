@@ -23,9 +23,9 @@ sections:
     answer: A
     explain: Schools transmit punctuality, obedience, hierarchy implicitly.
     distractors:
-      A: That is the formal transcript.
-      B: Not an academic channel.
-      C: Regulatory layer.
+      B: That is the formal transcript.
+      C: Not an academic channel.
+      D: Regulatory layer.
 - heading: Culture — shared meaning in groups
   body:
   - ==Culture = symbols, language, values, norms, artifacts; ethnocentrism vs cultural relativism==. Subculture
@@ -44,9 +44,9 @@ sections:
     answer: A
     explain: Learning high-status knowledge and practice that pays off.
     distractors:
-      A: A norm-technology gap.
-      B: Full identity replacement.
-      C: Normative confusion.
+      B: A norm-technology gap.
+      C: Full identity replacement.
+      D: Normative confusion.
   figures:
   - src: behavioral-social/fc9-cultural-and-social-differences/fig-4e6565f8.webp
     caption: The ribbon as a shared symbol — meaning carried by the health-awareness campaign.
@@ -135,7 +135,7 @@ examples:
     C: Cultural relativism doesn't excuse clinical standards — this is about access design.
 key_points:
 - Institutions reproduce norms AND distribute resources.
-- Culture lag — materials outrun norms; heritage conversions via cultural capital.
+- Culture lag — materials outrun norms; cultural capital converts heritage into advantage.
 - Merton's adaptations from goal-means gaps.
 - Stratification reproduces inequality across generations.
 - Demographic transition stages 1-4; pyramidal signature.
@@ -185,9 +185,9 @@ passage:
     answer: A
     explain: Repeated exposure to structure accumulates advantage or disadvantage.
     distractors:
-      A: No heritability estimate.
-      B: Controlled designs argue against.
-      C: Consistent across analyses.
+      B: No heritability estimate.
+      C: Controlled designs argue against.
+      D: Consistent across analyses.
   - q: Which design test would most directly support a causal neighborhood effect?
     options:
       A: Moving-to-opportunity style assignment
@@ -197,9 +197,9 @@ passage:
     answer: A
     explain: Randomized relocation varies the exposure cleanly.
     distractors:
-      A: Correlational only.
-      B: No exposure variation.
-      C: Single case, no control.
+      B: Correlational only.
+      C: No exposure variation.
+      D: Single case, no control.
 pitfalls:
 - Ethnocentrism vs relativism — again.
 - Merton's adaptation names swapped.

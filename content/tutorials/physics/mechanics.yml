@@ -24,8 +24,8 @@ sections:
     explain: Instantaneous rest at the peak, but gravity never turns off.
     distractors:
       A: Gravity is constant.
-      B: Velocity at peak is zero.
-      C: Same error.
+      C: Velocity at peak is zero.
+      D: Same error.
 - heading: Newton's laws and forces
   body:
   - ==F = ma sums ALL forces; equilibrium means a = 0, not v = 0==. Every force has a paired equal-and-opposite
@@ -45,8 +45,8 @@ sections:
     explain: Constant velocity means zero net force down the slope.
     distractors:
       A: Normal has a different direction.
-      B: mg is not the slope component.
-      C: Net force is zero.
+      C: mg is not the slope component.
+      D: Net force is zero.
   figures:
   - src: mechanics/fig-61192c4a.webp
     caption: The same force acting on a basketball and a car — smaller mass accelerates faster (F = ma).
@@ -74,7 +74,7 @@ sections:
     distractors:
       A: Friction opposes motion.
       B: Parallel force.
-      C: Gravity acts along the ramp component.
+      D: Gravity acts along the ramp component.
 - heading: Momentum and collisions
   body:
   - ==Momentum p = mv is conserved in any collision with no external impulse==. Impulse = F avg * delta-t
@@ -93,8 +93,8 @@ sections:
     explain: Maximum energy loss; momentum still conserved.
     distractors:
       A: KE is NOT conserved.
-      B: Momentum always conserved in collisions.
-      C: Only elastic head-on.
+      C: Momentum always conserved in collisions.
+      D: Only elastic head-on.
 - heading: Rotational mechanics
   body:
   - Rotational analogues — torque tau = r F sin(theta) replaces force; moment of inertia I replaces mass
@@ -114,8 +114,8 @@ sections:
     explain: I drops, omega rises to keep L = I omega constant.
     distractors:
       A: Wrong direction.
-      B: Conserved under zero net torque.
-      C: No braking torque.
+      C: Conserved under zero net torque.
+      D: No braking torque.
 examples:
 - prompt: A 2.0 kg block slides off a 1.0 m high table with initial speed 3.0 m/s horizontally. Find its
     speed just before hitting the floor.
@@ -168,7 +168,7 @@ passage:
     distractors:
       A: Net force must be upward.
       B: Net force would be zero.
-      C: Cable supports the weight at least.
+      D: Cable supports the weight at least.
   - q: During the cruise phase, the tension is…
     options:
       A: Greater than mg
@@ -179,8 +179,8 @@ passage:
     explain: Constant velocity = zero acceleration = T = mg.
     distractors:
       A: Only accelerating upward exceeds mg.
-      B: Deceleration would undershoot.
-      C: Cable still supports.
+      C: Deceleration would undershoot.
+      D: Cable still supports.
   - q: The total distance traveled during the constant-speed phase is…
     options:
       A: 9 m
@@ -230,8 +230,8 @@ review_questions:
   explain: Constant speed does not mean constant velocity — centripetal acceleration points to the center.
   distractors:
     A: Velocity direction changes.
-    B: That is the centrifugal fiction.
-    C: Velocity direction changes continuously.
+    C: That is the centrifugal fiction.
+    D: Velocity direction changes continuously.
 - q: Doubling an object's speed quadruples its…
   options:
     A: Momentum
@@ -242,8 +242,8 @@ review_questions:
   explain: KE = (1/2)mv2 — quadratic in speed.
   distractors:
     A: Momentum doubles.
-    B: Weight unchanged.
-    C: No.
+    C: Weight unchanged.
+    D: No.
 - q: A ball rolling friction-free up a ramp at 4 m/s reaches a height proportional to…
   options:
     A: Speed
@@ -254,8 +254,8 @@ review_questions:
   explain: PE = mgh = KE = (1/2)mv2, so h scales with v2.
   distractors:
     A: The energy law is quadratic.
-    B: Cube has no basis.
-    C: Mass cancels.
+    C: Cube has no basis.
+    D: Mass cancels.
 - q: Torque is greatest when the applied force is…
   options:
     A: Parallel to the lever arm
@@ -266,5 +266,5 @@ review_questions:
   explain: sin(theta) = 1 at 90 degrees.
   distractors:
     A: sin(0) = 0.
-    B: sin(180) = 0.
-    C: Zero lever arm.
+    C: sin(180) = 0.
+    D: Zero lever arm.

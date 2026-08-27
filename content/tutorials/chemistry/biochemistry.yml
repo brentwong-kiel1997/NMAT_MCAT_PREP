@@ -2,7 +2,7 @@ subject: chemistry
 chapter: Biochemistry
 title: Biochemistry
 overview: Chemistry inside living systems — protein structure, enzymes, metabolism, and regulation. The
-  MCAT's biochem passasges live here. Prerequisites — 5D biomolecules and 5E thermodynamics/kinetics.
+  MCAT's biochem passages live here. Prerequisites — 5D biomolecules and 5E thermodynamics/kinetics.
 sections:
 - heading: Protein structure — four levels
   body:
@@ -23,8 +23,8 @@ sections:
     explain: C=O of one residue H-bonds to N-H four residues along the helix.
     distractors:
       A: That drives tertiary fold.
-      B: Tertiary stabilizer.
-      C: Destroys structure.
+      C: Tertiary stabilizer.
+      D: Destroys structure.
 - heading: Enzymes — catalysis and kinetics
   body:
   - Enzymes lower activation energy by stabilizing the transition state — ==they raise kcat, never shift
@@ -44,15 +44,15 @@ sections:
     explain: Substrate competes for the active site — more substrate restores Vmax but the Km shift persists.
     distractors:
       A: Vmax is unchanged.
-      B: Wrong direction.
-      C: It can be overcome by substrate.
+      C: Wrong direction.
+      D: It can be overcome by substrate.
 - heading: Regulation — allostery and covalent modification
   body:
   - Allosteric enzymes show sigmoid kinetics — cooperativity (binding at one site shifts others). ==Allosteric
     effectors shift the curve — activators left, inhibitors right== without being overcome by substrate.
     Feedback inhibition — the pathway end product inhibits an early committed step.
   - Covalent modification — phosphorylation by kinases, dephosphorylation by phosphatases — flips activity
-    in seconds. ==Zymogens are inactive enzyme precitors activated by proteolysis (trypsinogen to trypsin)==
+    in seconds. ==Zymogens are inactive enzyme precursors activated by proteolysis (trypsinogen to trypsin)==
     — irreversible but amplifying.
   check:
   - q: Sigmoid (rather than hyperbolic) kinetics indicates…
@@ -65,8 +65,8 @@ sections:
     explain: Multiple sites communicate — binding at one raises affinity at the rest.
     distractors:
       A: Competitive keeps hyperbolic shape.
-      B: Order is unrelated.
-      C: Denaturation kills activity.
+      C: Order is unrelated.
+      D: Denaturation kills activity.
 - heading: Metabolism overview — the energy map
   body:
   - Glycolysis — glucose to 2 pyruvate, cytosol, ==net 2 ATP + 2 NADH==; investment phase spends 2 ATP,
@@ -85,9 +85,9 @@ sections:
     answer: A
     explain: 4 made minus 2 invested in the priming phase.
     distractors:
-      A: Gross, not net.
-      B: Full aerobic total.
-      C: Older textbook total.
+      B: Gross, not net.
+      C: Full aerobic total.
+      D: Older textbook total.
   figures:
   - src: biochemistry/fig-30c947dd.webp
     caption: Mitochondrion architecture — electron transport chain and ATP synthase embedded in the inner
@@ -116,8 +116,8 @@ sections:
     explain: High energy charge and abundant citrate signal that glycolysis should slow.
     distractors:
       A: AMP activates — low energy.
-      B: F2,6BP activates PFK-1 strongly.
-      C: Insulin works upstream.
+      C: F2,6BP activates PFK-1 strongly.
+      D: Insulin works upstream.
 examples:
 - prompt: An enzyme has Km = 2 mM and Vmax = 100 umol/min. At [S] = 6 mM, what fraction of Vmax is observed?
   solution:
@@ -167,9 +167,9 @@ passage:
     answer: A
     explain: Km rises, Vmax unchanged, y-axis intersection — the competitive signature.
     distractors:
-      A: Noncompetitive cuts Vmax.
-      B: Uncompetitive lowers both.
-      C: An activator would do the opposite.
+      B: Noncompetitive cuts Vmax.
+      C: Uncompetitive lowers both.
+      D: An activator would do the opposite.
   - q: The inhibitor most likely binds…
     options:
       A: The active site
@@ -179,9 +179,9 @@ passage:
     answer: A
     explain: Competitive inhibitors are active-site look-alikes competing with substrate.
     distractors:
-      A: Allosteric binding gives noncompetitive patterns.
-      B: Substrate does not inhibit itself here.
-      C: Product inhibition can be competitive but the data says active site.
+      B: Allosteric binding gives noncompetitive patterns.
+      C: Substrate does not inhibit itself here.
+      D: Product inhibition can be competitive but the data says active site.
   - q: Raising [S] to 100 mM in the presence of X would…
     options:
       A: Restore Vmax
@@ -191,9 +191,9 @@ passage:
     answer: A
     explain: Excess substrate outcompetes the inhibitor — Vmax is reachable.
     distractors:
-      A: Vmax was never reduced.
-      B: Rate keeps climbing with [S].
-      C: Concentration is not denaturing.
+      B: Vmax was never reduced.
+      C: Rate keeps climbing with [S].
+      D: Concentration is not denaturing.
 pitfalls:
 - Saying enzymes change delta-G or equilibrium — they do not.
 - Gross (4) instead of net (2) glycolysis ATP.
@@ -235,8 +235,8 @@ review_questions:
   explain: Transition-state stabilization — thermodynamic quantities untouched.
   distractors:
     A: Delta-G is a state function.
-    B: K is temperature-only.
-    C: Not thermal.
+    C: K is temperature-only.
+    D: Not thermal.
 - q: NADH yields about how many ATP via oxidative phosphorylation?
   options:
     A: '1'
@@ -248,7 +248,7 @@ review_questions:
   distractors:
     A: That is FADH2.
     B: FADH2 again.
-    C: Overcount.
+    D: Overcount.
 - q: Which is a zymogen?
   options:
     A: Trypsin
@@ -259,8 +259,8 @@ review_questions:
   explain: Inactive precursor — cleaved to active trypsin in the gut.
   distractors:
     A: Already active.
-    B: Secreted active.
-    C: Activated counterpart.
+    C: Secreted active.
+    D: Activated counterpart.
 - q: During fasting, the liver primarily…
   options:
     A: Stores glucose as glycogen
@@ -271,5 +271,5 @@ review_questions:
   explain: Glucagon drives glucose output to protect blood glucose for the brain.
   distractors:
     A: That is the fed state.
-    B: Fed state.
-    C: Adipose releases fat to the liver.
+    C: Fed state.
+    D: Adipose releases fat to the liver.

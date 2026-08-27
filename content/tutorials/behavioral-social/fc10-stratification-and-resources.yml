@@ -23,10 +23,10 @@ sections:
     answer: A
     explain: Weber's dimensions misaligned — a stress risk pattern.
     distractors:
-      A: Consistency is the absence.
-      B: Marx's framework.
-      C: Exclusion mechanism.
-      D: Comparison to a reference group.
+      A: Correct — Weber's dimensions misaligned.
+      B: Marx's framework, not Weber's dimensions.
+      C: An exclusion mechanism — different concept.
+      D: Comparing to a reference group — not misalignment.
 - heading: Class, poverty, and mobility
   body:
   - '==Class measures — occupation, income, wealth (assets matter most), education; poverty — absolute
@@ -56,8 +56,8 @@ sections:
 - heading: Race, ethnicity, and health disparities
   body:
   - ==Race is a social category with biological effects through exposure, not biology as fixed essence
-    — racism frames illness (slavery to hypertension '<->' weathering)==. ==Minority stress — chronic
-    discrimination activates stress physiology==.
+    — racism frames illness (slavery to hypertension and weathering)==. ==Minority stress — chronic discrimination
+    activates stress physiology==.
   - ==Health disparity drivers — access (insurance, geography), care quality (implicit bias, stereotyping
     in physicians), environmental (exposure burdens), and stress allostatic load==. ==Weathering (Geronimus)
     — cumulative disadvantage accelerates biological aging==.
@@ -71,9 +71,9 @@ sections:
     answer: A
     explain: Allostatic load from chronic devaluation ages bodies faster.
     distractors:
-      A: No genetic claim.
-      B: Diet is one channel among many.
-      C: Systematic, not random.
+      B: No genetic claim.
+      C: Diet is one channel among many.
+      D: Systematic, not random.
 - heading: Gender, age, and other axes
   body:
   - ==Gender stratification — occupational segregation, wage gaps, double burden; sex vs gender (biologic
@@ -92,8 +92,8 @@ sections:
     explain: Different birth cohorts carry different lifetime exposures.
     distractors:
       A: Same people growing old need longitudinal data.
-      B: A time-point event affects everyone.
-      C: Not that.
+      C: A time-point event affects everyone.
+      D: Not that.
 - heading: Health systems and access
   body:
   - ==Health system models — fee-for-service vs insurance pools; universal vs market; waitlists vs access
@@ -111,9 +111,9 @@ sections:
     answer: A
     explain: Markets route supply away from high-need, low-pay areas (Tudor Hart).
     distractors:
-      A: Marginal care plateaus.
-      B: Prevention is key.
-      C: Availability is uneven.
+      B: Marginal care plateaus.
+      C: Prevention is key.
+      D: Availability is uneven.
   figures:
   - src: behavioral-social/fc10-stratification-and-resources/fig-226fa5f7.webp
     caption: Commuting through a snowstorm — transportation access as a daily resource.
@@ -184,9 +184,9 @@ passage:
     answer: A
     explain: It locates the cause in choices rather than opportunity structure.
     distractors:
-      A: That reduces intergroup bias via contact.
-      B: Judging within context.
-      C: Exclusion mechanism.
+      B: That reduces intergroup bias via contact.
+      C: Judging within context.
+      D: Exclusion mechanism.
   - q: Allostatic load is greatest in which pattern?
     options:
       A: Chronic recurring stress without recovery
@@ -196,9 +196,9 @@ passage:
     answer: A
     explain: Cumulative wear — the biological toll of repeated activation.
     distractors:
-      A: Acute events heal.
-      B: No wear.
-      C: Within recovery range.
+      B: Acute events heal.
+      C: No wear.
+      D: Within recovery range.
 pitfalls:
 - Status inconsistency confused with social mobility.
 - Absolute vs relative poverty.
@@ -260,9 +260,9 @@ review_questions:
   answer: A
   explain: Following the same people over time separates age from birth-year.
   distractors:
-    A: Cross-sections conflate them.
-    B: Longitudinal does.
-    C: Cohort confounds persist.
+    B: Cross-sections conflate them.
+    C: Longitudinal does.
+    D: Cohort confounds persist.
 - q: Medicaid expansion reduced uninsured rates. This is an…
   options:
     A: Access improvement
@@ -272,6 +272,6 @@ review_questions:
   answer: A
   explain: Insurance coverage is an access mechanism.
   distractors:
-    A: Quality is separate.
-    B: No genetics.
-    C: Not cultural.
+    B: Quality is separate.
+    C: No genetics.
+    D: Not cultural.

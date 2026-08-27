@@ -25,7 +25,7 @@ sections:
     distractors:
       A: Amides have the worst leaving group.
       B: Esters are intermediate.
-      C: Carboxylates are the leaving group, not the reactant.
+      D: Carboxylates are the leaving group, not the reactant.
 - heading: Carbohydrates — polyhydroxy aldehydes and ketones
   body:
   - Sugars contain multiple hydroxyl groups plus one aldehyde (aldose) or ketone (ketose). ==Monosaccharides
@@ -46,8 +46,8 @@ sections:
     explain: Sucrose is glucose(alpha-1) linked to fructose(beta-2) — a nonreducing disaccharide.
     distractors:
       A: That is maltose.
-      B: That is cellulose.
-      C: Sucrose contains glucose and fructose.
+      C: That beta linkage is cellobiose — the repeating unit of cellulose.
+      D: Sucrose contains glucose and fructose.
   figures:
   - src: 5d-biologically-relevant-molecules/fig-35fa1423.webp
     caption: Amylose (linear) versus amylopectin (branched) — glucose polymers differing in glycosidic
@@ -75,8 +75,8 @@ sections:
     explain: Lysine's epsilon-amino group has pKa ~10.5 — protonated (positive) at pH 7.
     distractors:
       A: Glutamate is negative.
-      B: Serine is neutral.
-      C: Alanine is nonpolar.
+      C: Serine is neutral.
+      D: Alanine is nonpolar.
 - heading: Nucleic acids — phosphate esters of nucleosides
   body:
   - DNA and RNA are polymers of nucleotides — sugar + base + phosphate. ==The 3-5 phosphodiester bond
@@ -96,8 +96,8 @@ sections:
     explain: Three hydrogen bonds require more thermal energy to disrupt.
     distractors:
       A: No covalent bonds between bases.
-      B: Mass is irrelevant.
-      C: Stacking matters but is secondary.
+      C: Mass is irrelevant.
+      D: Stacking matters but is secondary.
 - heading: Lipids — hydrophobic and amphipathic
   body:
   - Lipids are defined by insolubility in water, not by a shared structure. Fatty acids are long hydrocarbon
@@ -117,8 +117,8 @@ sections:
     explain: Amphipathic — hydrophilic phosphate head, hydrophobic tails — forms bilayers.
     distractors:
       A: Energy storage only.
-      B: Transport form.
-      C: Protective coating.
+      C: Transport form.
+      D: Protective coating.
 examples:
 - prompt: 'A biochemist treats a tetrapeptide with chymotrypsin (cleaves after aromatic amino acids Phe,
     Tyr, Trp). Sequence: Ala-Phe-Gly-Trp-Lys. Predict the fragments.'
@@ -169,9 +169,9 @@ passage:
     answer: A
     explain: A free (unlinked) anomeric carbon can open to the aldehyde form and reduce Cu2+.
     distractors:
-      A: Composition is given as glucose and galactose.
-      B: Benedict's does not reveal linkage type.
-      C: Sucrose has NO free anomeric carbon — it would be negative.
+      B: Composition is given as glucose and galactose.
+      C: Benedict's does not reveal linkage type.
+      D: Sucrose has NO free anomeric carbon — it would be negative.
   - q: The disaccharide is most likely…
     options:
       A: Sucrose
@@ -182,8 +182,8 @@ passage:
     explain: Glucose + galactose + positive Benedict's = lactose (reducing sugar).
     distractors:
       A: Sucrose is glucose + fructose and nonreducing.
-      B: Maltose is glucose + glucose.
-      C: Cellobiose is glucose + glucose.
+      C: Maltose is glucose + glucose.
+      D: Cellobiose is glucose + glucose.
   - q: If the disaccharide is treated with beta-galactosidase, the products would be…
     options:
       A: Two glucose molecules
@@ -238,7 +238,7 @@ review_questions:
   distractors:
     A: More reactive than amide.
     B: More reactive.
-    C: Most reactive.
+    D: Most reactive.
 - q: The peptide bond is a type of…
   options:
     A: Ester
@@ -249,8 +249,8 @@ review_questions:
   explain: Carboxyl + amine condensation forms an amide linkage.
   distractors:
     A: Carboxyl + alcohol gives ester.
-    B: Not relevant.
-    C: Two carboxyls give anhydride.
+    C: Not relevant.
+    D: Two carboxyls give anhydride.
 - q: Which base pair has three hydrogen bonds?
   options:
     A: A-T
@@ -262,7 +262,7 @@ review_questions:
   distractors:
     A: Two bonds.
     B: Two bonds.
-    C: Not a valid pair.
+    D: Not a valid pair.
 - q: Phospholipids form bilayers because they are…
   options:
     A: Fully hydrophobic
@@ -274,4 +274,4 @@ review_questions:
   distractors:
     A: Would aggregate into oil droplets.
     B: Would dissolve.
-    C: Charge alone is insufficient.
+    D: Charge alone is insufficient.

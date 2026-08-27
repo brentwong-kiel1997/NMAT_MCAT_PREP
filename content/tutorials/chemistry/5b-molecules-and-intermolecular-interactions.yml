@@ -51,7 +51,7 @@ sections:
     distractors:
       A: Bent and polar.
       B: Trigonal pyramidal and polar.
-      C: Diatomic with large EN difference.
+      D: Diatomic with large EN difference.
 - heading: Physical properties from IMFs
   body:
   - Stronger IMFs mean higher boiling point, higher melting point, higher viscosity, and higher surface
@@ -89,8 +89,8 @@ sections:
     explain: Releasing ordered water increases entropy — the driving force.
     distractors:
       A: Nonpolar molecules attract weakly.
-      B: No new bonds.
-      C: No ions involved.
+      C: No new bonds.
+      D: No ions involved.
 - heading: Partition and gas solubility
   body:
   - 'Partition coefficient P equals concentration in organic phase divided by concentration in aqueous
@@ -107,8 +107,8 @@ sections:
     explain: P = 1000-fold organic preference — crosses membranes well.
     distractors:
       A: log P < 0 is water-soluble.
-      B: Lipophilic drugs cross membranes well.
-      C: log P does not indicate charge.
+      C: Lipophilic drugs cross membranes well.
+      D: log P does not indicate charge.
 examples:
 - prompt: 'Rank by boiling point: CH4, CH3Cl, CH3OH, LiF.'
   solution:
@@ -156,9 +156,9 @@ passage:
     answer: A
     explain: 100C BP, viscous, dissolves ionic NaCl.
     distractors:
-      A: Gas at room temperature.
-      B: Noble gas.
-      C: NaCl is liquid D.
+      B: Gas at room temperature.
+      C: Noble gas.
+      D: NaCl is liquid D.
   - q: Liquid C is nonpolar because…
     options:
       A: Very low BP and no NaCl dissolution
@@ -168,9 +168,9 @@ passage:
     answer: A
     explain: Extremely low BP implies dispersion-only IMFs.
     distractors:
-      A: It is a gas.
-      B: Not mentioned.
-      C: Not tested.
+      B: It is a gas.
+      C: Not mentioned.
+      D: Not tested.
   - q: Liquid D being solid suggests…
     options:
       A: Ionic or metallic bonding
@@ -180,9 +180,9 @@ passage:
     answer: A
     explain: Very high BP and solid state imply ionic lattice.
     distractors:
-      A: Dispersion alone would not do this.
-      B: All have IMFs.
-      C: It is solid.
+      B: Dispersion alone would not do this.
+      C: All have IMFs.
+      D: It is solid.
 pitfalls:
 - Calling H-bonds covalent — they are attractions.
 - Assuming more polar always means higher BP — mass matters for dispersion.
@@ -219,7 +219,7 @@ review_questions:
   distractors:
     A: Ionic compounds only.
     B: Requires H on N/O/F.
-    C: Polar molecules only.
+    D: Polar molecules only.
 - q: CO2 is nonpolar because…
   options:
     A: Bonds are nonpolar
@@ -230,8 +230,8 @@ review_questions:
   explain: Two equal dipoles point opposite — net zero.
   distractors:
     A: C=O is quite polar.
-    B: Phase irrelevant.
-    C: Carbon is moderately EN.
+    C: Phase irrelevant.
+    D: Carbon is moderately EN.
 - q: Highest vapor pressure at 25C?
   options:
     A: Water
@@ -243,7 +243,7 @@ review_questions:
   distractors:
     A: Strong H-bonding.
     B: Some H-bonding.
-    C: Metallic — lowest VP.
+    D: Metallic — lowest VP.
 - q: The hydrophobic effect increases…
   options:
     A: Enthalpy
@@ -254,5 +254,5 @@ review_questions:
   explain: Releasing ordered water increases entropy.
   distractors:
     A: Not primarily enthalpic.
-    B: No new bonds.
-    C: Unrelated.
+    C: No new bonds.
+    D: Unrelated.

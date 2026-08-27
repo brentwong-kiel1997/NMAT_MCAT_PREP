@@ -46,8 +46,8 @@ sections:
     explain: At half-equivalence [HA] = [A-] and pH = pKa.
     distractors:
       A: Half of pKa is not the rule.
-      B: True only for strong-strong.
-      C: Equivalence for weak acid is basic, but half-equivalence is pKa.
+      B: Correct — equal HA and A- gives pH = pKa.
+      C: Equivalence for weak acid is basic (~8.7); half-equivalence is pKa.
       D: That is beyond equivalence.
   figures:
   - src: analytical-chemistry/fig-457d4944.webp
@@ -73,8 +73,8 @@ sections:
     explain: Added H+ consumes A-; ratio shifts modestly — that is buffering.
     distractors:
       A: Unbuffered behavior.
-      B: pH does change slightly.
-      C: The buffer does resist but not infinitely.
+      C: pH does change slightly.
+      D: The buffer does resist but not infinitely.
   figures:
   - src: analytical-chemistry/fig-620c6acf.webp
     caption: pH color-change ranges of common indicators — choose one that brackets the equivalence point.
@@ -97,9 +97,9 @@ sections:
     answer: A
     explain: Beer-Lambert is linear in concentration at fixed path length.
     distractors:
-      A: Wrong direction.
-      B: Transmittance falls.
-      C: A depends on c.
+      B: Wrong direction.
+      C: Transmittance falls.
+      D: A depends on c.
 - heading: Error, precision, and accuracy
   body:
   - Accuracy is closeness to truth; precision is reproducibility. ==Systematic errors bias all measurements
@@ -118,9 +118,9 @@ sections:
     answer: A
     explain: Low scatter (precise) with a consistent bias (inaccurate) — systematic error.
     distractors:
-      A: Scatter is low.
-      B: Scatter would be high.
-      C: Close to true value would make it both.
+      B: Scatter is low.
+      C: Scatter would be high.
+      D: Close to true value would make it both.
 examples:
 - prompt: 25.0 mL of 0.100 M HCl is titrated with 0.050 M NaOH. What volume of base reaches equivalence?
   solution:
@@ -170,9 +170,9 @@ passage:
     answer: A
     explain: Equal moles of acid and conjugate base — log(1) = 0, pH = pKa.
     distractors:
-      A: Not half of pKa.
-      B: Neutral only for strong-strong.
-      C: Basic side is wrong for equal acid/base.
+      B: Not half of pKa.
+      C: Neutral only for strong-strong.
+      D: Basic side is wrong for equal acid/base.
   - q: The added HCl converts…
     options:
       A: HA to A-
@@ -183,8 +183,8 @@ passage:
     explain: Added strong acid protonates the conjugate base.
     distractors:
       A: That is what added base would do.
-      B: The ratio must shift.
-      C: Net effect is the same as protonating A-.
+      C: The ratio must shift.
+      D: Net effect is the same as protonating A-.
   - q: After the addition, the pH…
     options:
       A: Rises sharply
@@ -192,11 +192,12 @@ passage:
       C: Is unchanged
       D: Falls to 2
     answer: B
-    explain: The A- to HA ratio drops from 1 to about 0.82 — pH falls by log(0.82) about 0.09 units.
+    explain: 'HCl converts A- to HA: 0.050 -> 0.049 A-, 0.050 -> 0.051 HA; the ratio falls 1 -> 0.96,
+      so pH drops log(0.96) about 0.02 units — small, as buffering promises.'
     distractors:
       A: Acid was added, not base.
-      B: Small change, not zero — the ratio moved.
-      C: Unbuffered behavior.
+      C: Small change, not zero — the ratio moved.
+      D: Unbuffered behavior.
 pitfalls:
 - Confusing molarity and molality.
 - Reading pH = 7 at equivalence of a weak acid titration.
@@ -233,8 +234,8 @@ review_questions:
   explain: Mass-based — independent of temperature.
   distractors:
     A: That is molarity.
-    B: Not a standard unit.
-    C: That is a mole fraction flavor.
+    C: Not a standard unit.
+    D: That is a mole fraction flavor.
 - q: A good indicator for a weak acid-strong base titration has…
   options:
     A: pKa near 7
@@ -245,8 +246,8 @@ review_questions:
   explain: The color change must bracket the equivalence point pH.
   distractors:
     A: That fits strong-strong.
-    B: Half-equivalence is not where the jump is.
-    C: Choice matters.
+    C: Half-equivalence is not where the jump is.
+    D: Choice matters.
 - q: Beer-Lambert absorbance is linear in…
   options:
     A: Path length only
@@ -257,8 +258,8 @@ review_questions:
   explain: A = epsilon l c — both scale it directly.
   distractors:
     A: Concentration also.
-    B: Wavelength sets epsilon.
-    C: A = -log T — logarithmic, not linear.
+    C: Wavelength sets epsilon.
+    D: A = -log T — logarithmic, not linear.
 - q: A systematic error is best reduced by…
   options:
     A: More trials
@@ -269,5 +270,5 @@ review_questions:
   explain: Bias does not average out — fix the instrument or method.
   distractors:
     A: Random error averages; bias persists.
-    B: Helps sampling, not bias.
-    C: Helps sampling.
+    C: Helps sampling, not bias.
+    D: Helps sampling.

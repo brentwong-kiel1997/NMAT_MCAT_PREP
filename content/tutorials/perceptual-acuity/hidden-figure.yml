@@ -201,7 +201,7 @@ pitfalls:
 - Whole-shape matching under rotation.
 - Abandoning after one region scan.
 exam_map:
-  NMAT: Part 2 Perceptual Acuity — hidden-figure items.
+  NMAT: Part 1 Perceptual Acuity — hidden-figure items.
 sources:
 - ref: cem-nmat-test-description
   used:

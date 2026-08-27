@@ -23,8 +23,8 @@ sections:
     explain: T ~ sqrt(L) — quadrupling L doubles T.
     distractors:
       A: Mass cancels.
-      B: Amplitude does not enter.
-      C: T ~ 1/sqrt(g) — would halve.
+      C: Amplitude does not enter.
+      D: T ~ 1/sqrt(g) — would halve.
 - heading: Wave properties
   body:
   - Waves carry energy, not matter. ==v = f lambda== — speed is a medium property; changing frequency
@@ -43,8 +43,8 @@ sections:
     explain: v fixed, f up means lambda down — v = f lambda.
     distractors:
       A: Inverse relation.
-      B: Medium sets speed.
-      C: Not so.
+      C: Medium sets speed.
+      D: Not so.
 - heading: Sound, hearing, and beats
   body:
   - Sound intensity level dB = 10 log(I/I0) — ==+10 dB = 10x intensity; doubling intensity adds ~3 dB==.
@@ -62,8 +62,8 @@ sections:
     explain: Beat frequency is the difference.
     distractors:
       A: That is wrong math.
-      B: Interference does not cancel steady tones.
-      C: Sum is not heard as a single tone.
+      C: Interference does not cancel steady tones.
+      D: Sum is not heard as a single tone.
   figures:
   - src: vibrations-waves-and-optics/fig-4f7a2c07.webp
     caption: A sound wave's compressions and rarefactions pressing on the eardrum — F = PA at work in
@@ -90,8 +90,8 @@ sections:
     explain: A diverging lens bends rays apart — never a real image.
     distractors:
       A: Only converging lenses focus to real images.
-      B: Reference to magnification.
-      C: Never magnified.
+      C: Reference to magnification.
+      D: Never magnified.
 - heading: Mirror and prism applications
   body:
   - '==Flat mirrors: virtual image, same size, distance behind mirror equals object distance in front==.
@@ -110,9 +110,9 @@ sections:
     answer: A
     explain: n varies with wavelength — violet bends most.
     distractors:
-      A: Violet is slower in glass.
-      B: No absorption.
-      C: No interference at work.
+      B: Violet is slower in glass.
+      C: No absorption.
+      D: No interference at work.
 examples:
 - prompt: A 50 g mass on a spring (k = 200 N/m) is pulled 3 cm from equilibrium and released. Find the
     period and max speed.
@@ -232,8 +232,8 @@ review_questions:
   explain: Rays never meet; the eye extrapolates them back to a virtual image.
   distractors:
     A: That is beyond f.
-    B: Always forms.
-    C: Virtual images are upright for this case.
+    C: Always forms.
+    D: Virtual images are upright for this case.
 - q: The Doppler effect shifts detected frequency because…
   options:
     A: The source and observer move relative to each other
@@ -243,9 +243,9 @@ review_questions:
   answer: A
   explain: Relative motion compresses or stretches the arriving wavefronts.
   distractors:
-    A: Medium speed stays.
-    B: Loudness is separate.
-    C: Approach is the signature.
+    B: Medium speed stays.
+    C: Loudness is separate.
+    D: Approach is the signature.
 - q: Sound intensity 100x a reference is how many dB?
   options:
     A: '10'
@@ -269,5 +269,5 @@ review_questions:
   explain: Widely bent rays diverge — virtual upright reduced — the car side-mirror.
   distractors:
     A: Only concave can do real.
-    B: Concave inside f only.
-    C: Concave inside f.
+    C: Concave inside f only.
+    D: Concave inside f.

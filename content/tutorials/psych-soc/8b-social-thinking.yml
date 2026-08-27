@@ -20,9 +20,9 @@ sections:
     answer: A
     explain: Warm-cold reconfigures all other information.
     distractors:
-      A: Familiarity.
-      B: Expectation changing BEHAVIOR.
-      C: Late info dominating — reversed.
+      B: Familiarity.
+      C: Expectation changing BEHAVIOR.
+      D: Late info dominating — reversed.
   figures:
   - src: 8b-social-thinking/fig-195a9b26.webp
     caption: Personality assessment — trait models and individual differences in social cognition.
@@ -43,13 +43,14 @@ sections:
     answer: A
     explain: Reaction-time pairings index automatic associations.
     distractors:
-      A: Explicit misses automatic.
-      B: History, not association.
-      C: Unrelated.
+      B: Explicit misses automatic.
+      C: History, not association.
+      D: Unrelated.
   figures:
   - src: 8b-social-thinking/fig-a14732df.webp
-    caption: Personality assessment — trait models and individual differences in social cognition.
-    credit: Fig 11.2 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
+    caption: Phrenology — the discredited practice of reading personality from skull shape; an early lesson
+      in how easily trait inferences outpace evidence.
+    credit: OpenStax Psychology 2e (history of personality assessment) — CC BY-NC-SA 4.0
 - heading: Attribution in depth — covariation
   body:
   - Kelley's model — consensus (do others do it?), distinctiveness (only here?), consistency (every time?)
@@ -67,8 +68,8 @@ sections:
     explain: High-high-High → external/stimulus attribution.
     distractors:
       A: Low consensus would support that.
-      B: Consistency rules out instability.
-      C: Not a model term.
+      C: Consistency rules out instability.
+      D: Not a model term.
 - heading: Judgment shortcuts
   body:
   - Availability drives stereotype-consistent frequency estimates; representativeness drives base-rate
@@ -85,9 +86,9 @@ sections:
     answer: A
     explain: Two salient rarities pair in memory beyond their true rate.
     distractors:
-      A: No real covariation established.
-      B: Expectancy altering behavior.
-      C: Allocation bias.
+      B: No real covariation established.
+      C: Expectancy altering behavior.
+      D: Allocation bias.
 examples:
 - prompt: The librarian/farmer problem — Tom is withdrawn, meticulous; the pool is 70% farmers. Most judge
     librarian. Diagnose and answer rationally.
@@ -137,9 +138,9 @@ passage:
     answer: A
     explain: Subliminal activation biased interpretation.
     distractors:
-      A: No self-report involved.
-      B: Ratings, not treatment.
-      C: No frequencies used.
+      B: No self-report involved.
+      C: Ratings, not treatment.
+      D: No frequencies used.
   - q: Experiment 2's wording effect shows…
     options:
       A: Framing changing perception of the same act
@@ -149,9 +150,9 @@ passage:
     answer: A
     explain: Identical kinematics, different verb — different hostility.
     distractors:
-      A: Receptor-level.
-      B: Kelley term.
-      C: Motivation theory.
+      B: Receptor-level.
+      C: Kelley term.
+      D: Motivation theory.
   - q: Which finding would most directly challenge the study's internal validity?
     options:
       A: A large sample size
@@ -162,8 +163,8 @@ passage:
     explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
     distractors:
       A: Power, not validity.
-      B: Significance is downstream of validity.
-      C: That tests external validity.
+      C: Significance is downstream of validity.
+      D: That tests external validity.
 pitfalls:
 - Treating IAT scores as proof of discrimination — contested reliability.
 - Fundamental attribution error where Kelley's verdict belongs.
@@ -199,8 +200,8 @@ review_questions:
   explain: Evaluation held vs. action taken.
   distractors:
     A: Backwards.
-    B: Reversed.
-    C: Stereotype-to-prejudice, missing behavior.
+    C: Reversed.
+    D: Stereotype-to-prejudice, missing behavior.
 - q: Ignoring the 70% base rate because a description sounds like a rare category is…
   options:
     A: Availability
@@ -211,8 +212,8 @@ review_questions:
   explain: Similarity swamps the prior.
   distractors:
     A: Recall-ease.
-    B: Initial-value adjustment.
-    C: Selective search.
+    C: Initial-value adjustment.
+    D: Selective search.
 - q: Low consensus + low distinctiveness + high consistency yields a dispositional attribution because…
   options:
     A: Few others do it and the person does it everywhere
@@ -222,9 +223,9 @@ review_questions:
   answer: A
   explain: The person, not the situation, covaries with the behavior.
   distractors:
-    A: That is situational.
-    B: Consistency is high.
-    C: Not a covariation verdict.
+    B: That is situational.
+    C: Consistency is high.
+    D: Not a covariation verdict.
 - q: The study's design best exemplifies which research approach?
   options:
     A: Correlational with random sampling
@@ -235,5 +236,5 @@ review_questions:
   explain: Conditions are assigned; the IV is the manipulated framing or prime.
   distractors:
     A: No manipulation described.
-    B: Single subject.
-    C: No pooled analysis.
+    C: Single subject.
+    D: No pooled analysis.

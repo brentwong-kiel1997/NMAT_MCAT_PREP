@@ -214,9 +214,9 @@ passage:
     answer: B
     explain: Tight junctions are the paracellular seal — unaffected by the gap blocker.
     distractors:
-      A: Blocker removed their coupling.
-      B: Desmosomes add strength, not sealing.
-      D: Plant-specific.
+      B: Correct — tight junctions seal the paracellular route.
+      C: Desmosomes add strength, not sealing.
+      D: Hemidesmosomes anchor to the basal lamina.
 pitfalls:
 - Assigning fluidity backwards — unsaturated = fluid; saturated = rigid.
 - Confusing junction jobs under time pressure — seal/rivet/wire, one each.

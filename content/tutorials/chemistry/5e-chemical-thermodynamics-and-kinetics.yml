@@ -23,8 +23,8 @@ sections:
     explain: At low T the favorable enthalpy term dominates — T delta-S is small.
     distractors:
       A: Not all temperatures — high T makes -T delta-S positive.
-      B: That is delta-H>0, delta-S>0.
-      C: Not never.
+      C: That is delta-H>0, delta-S>0.
+      D: Not never.
 - heading: Equilibrium — the balance point
   body:
   - Every reversible reaction reaches equilibrium where forward and reverse rates equal. ==K = products
@@ -44,8 +44,8 @@ sections:
     explain: Exothermic — heat is a product, so added heat shifts left AND lowers K.
     distractors:
       A: Direction wrong.
-      B: Direction inconsistent with exothermic.
-      C: Temperature always matters.
+      C: Direction inconsistent with exothermic.
+      D: Temperature always matters.
 - heading: Kinetics — rates and rate laws
   body:
   - Rate measures concentration change per time — ==rate = k[A]^m[B]^n== where m and n come ONLY from
@@ -66,8 +66,8 @@ sections:
     explain: Catalysts lower Ea — equilibrium is reached faster, same position.
     distractors:
       A: K is temperature-only.
-      B: Delta-G is a state function — unchanged.
-      C: Same final concentrations.
+      C: Delta-G is a state function — unchanged.
+      D: Same final concentrations.
   figures:
   - src: 5e-principles-of-chemical-thermodynamics-and-kinetics/fig-29762773.webp
     caption: Reaction rate from a concentration-time curve — initial and instantaneous rates as slopes.
@@ -95,8 +95,8 @@ sections:
     explain: With Q < K, the RT ln Q term makes actual delta-G negative.
     distractors:
       A: Q > K makes it reverse.
-      B: Unphysical.
-      C: Catalyst changes rate, not direction.
+      C: Unphysical.
+      D: Catalyst changes rate, not direction.
 - heading: Reaction mechanisms
   body:
   - Mechanisms are stepwise elementary reactions that sum to the overall equation. ==The slowest step
@@ -116,8 +116,8 @@ sections:
     explain: The slow step bottlenecks the whole sequence.
     distractors:
       A: Not necessarily first.
-      B: The fast step is not limiting.
-      C: Catalyst location is separate.
+      C: The fast step is not limiting.
+      D: Catalyst location is separate.
 examples:
 - prompt: For a reaction, delta-H = +75 kJ/mol and delta-S = +150 J/mol-K. Above what temperature does
     it become spontaneous?
@@ -168,9 +168,9 @@ passage:
     answer: A
     explain: Only Ea changes — the thermodynamics are untouched.
     distractors:
-      A: Delta-G standard is a state function.
-      B: K is unchanged as stated.
-      C: Enzymes are not heat sources.
+      B: Delta-G standard is a state function.
+      C: K is unchanged as stated.
+      D: Enzymes are not heat sources.
   - q: The unchanged product-to-reactant ratio confirms…
     options:
       A: Zero-order kinetics
@@ -181,8 +181,8 @@ passage:
     explain: Same K, same final concentrations — catalysts affect rate only.
     distractors:
       A: Kinetics order is unrelated.
-      B: It is active — rate rose 10^8 fold.
-      C: Hydrolysis is reversible.
+      C: It is active — rate rose 10^8 fold.
+      D: Hydrolysis is reversible.
   - q: If delta-G standard is -14 kJ/mol, the ratio K at 25C is approximately…
     options:
       A: e^-5.6 (about 0.004)
@@ -193,8 +193,8 @@ passage:
     explain: K = exp(-delta-G standard / RT) = exp(14,000 / (8.314 x 298)) about e^5.6.
     distractors:
       A: Sign flipped — that is the reciprocal.
-      B: Only at delta-G = 0.
-      C: Units mismatch.
+      C: Only at delta-G = 0.
+      D: Units mismatch.
 pitfalls:
 - Confusing spontaneity with speed — delta-G says nothing about rate.
 - Getting rate-law exponents from coefficients of the overall equation.
@@ -231,8 +231,8 @@ review_questions:
   explain: Dynamic balance — reactions continue at matched rates.
   distractors:
     A: Still reacting.
-    B: Concentrations need not be equal.
-    C: K can be any value.
+    C: Concentrations need not be equal.
+    D: K can be any value.
 - q: For a first-order reaction, doubling [A]…
   options:
     A: Doubles the rate
@@ -242,9 +242,9 @@ review_questions:
   answer: A
   explain: Rate = k[A]^1 — linear dependence.
   distractors:
-    A: That is second order.
-    B: That is zero order.
-    C: Inverse is not first order.
+    B: That is second order.
+    C: That is zero order.
+    D: Inverse is not first order.
 - q: An intermediate in a mechanism…
   options:
     A: Appears in the overall equation
@@ -255,8 +255,8 @@ review_questions:
   explain: Formed in one step, used in a later one — cancels from the net equation.
   distractors:
     A: It cancels out.
-    B: Catalysts are consumed then regenerated.
-    C: Transition states are not intermediates.
+    C: Catalysts are consumed then regenerated.
+    D: Transition states are not intermediates.
 - q: ATP hydrolysis drives unfavorable biosynthesis because…
   options:
     A: It lowers Ea
@@ -267,5 +267,5 @@ review_questions:
   explain: Coupling sums the free energies — favorable hydrolysis outweighs unfavorable biosynthesis.
   distractors:
     A: That is catalysis.
-    B: K of the coupled reaction emerges from delta-G.
-    C: It is reversible in principle.
+    C: K of the coupled reaction emerges from delta-G.
+    D: It is reversible in principle.

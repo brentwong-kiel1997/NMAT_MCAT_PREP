@@ -23,9 +23,10 @@ sections:
     answer: B
     explain: Q = mL = 0.010 kg x 334 kJ/kg = 3.34 kJ.
     distractors:
-      A: That is warming liquid water by 100K.
-      B: Correct for latent heat of fusion.
-      C: Too small.
+      A: That warms liquid water by 100 K.
+      B: Correct — Q = mL for fusion.
+      C: Ten times too large — that melts 100 g.
+      D: Too small.
 - heading: Kinetic theory and the gas laws
   body:
   - '==Ideal gas: PV = nRT==. Doubling temperature at constant volume doubles pressure; halving volume
@@ -44,9 +45,9 @@ sections:
     answer: A
     explain: Average KE = (3/2)kT — temperature alone decides.
     distractors:
-      A: Same T gives same KE.
       B: Same T gives same KE.
-      C: Pressure changes density, not average KE.
+      C: Same T gives same KE.
+      D: Pressure changes density, not average KE.
 - heading: The laws of thermodynamics
   body:
   - Zero — thermal equilibrium transitivity. First — energy conservation with heat and work; delta-U =
@@ -67,7 +68,7 @@ sections:
     distractors:
       A: Adiabatic compression decreases entropy.
       B: Freezing releases latent heat.
-      C: Never happens.
+      D: Never happens.
   figures:
   - src: thermodynamics/fig-51526c87.webp
     caption: Three irreversible processes — heat flowing from hot to cold, kinetic energy dissipating
@@ -117,8 +118,8 @@ sections:
       temperature.
     distractors:
       A: Fever often dilates vessels.
-      B: Core heat does escape.
-      C: Convection still acts.
+      C: Core heat does escape.
+      D: Convection still acts.
 examples:
 - prompt: 0.20 kg of steam at 100C is bubbled into 0.80 kg of water at 20C in an insulated cup. Find the
     final temperature.
@@ -130,7 +131,7 @@ examples:
   answer: Final temperature 100C — the latent heat dominates; leftover steam condenses only while water
     is at 100C.
   distractors:
-    A: Assuming full condensation to give 135C.
+    A: Assuming full condensation would overshoot to about 155C.
     B: Forgetting the latent heat term — gives only ~35C.
     C: Mixing masses linearly.
 key_points:
@@ -172,8 +173,8 @@ passage:
     explain: Large latent heat of vaporization dominates when enthalpy is available.
     distractors:
       A: Contact is minor in dry air.
-      B: Secondary.
-      C: Skin at 33C radiates to 30C air.
+      C: Secondary.
+      D: Skin at 33C radiates to 30C air.
   - q: Wind increases heat loss by…
     options:
       A: Radiation
@@ -184,8 +185,8 @@ passage:
     explain: Moving air removes the warmed boundary layer — convective loss climbs.
     distractors:
       A: Wind does not change T^4.
-      B: Air is a poor conductor regardless.
-      C: Evaporation needs water.
+      C: Air is a poor conductor regardless.
+      D: Evaporation needs water.
   - q: If she shivers, the body is generating heat through…
     options:
       A: Brown fat only
@@ -196,8 +197,8 @@ passage:
     explain: Shivering is involuntary muscle work converting chemical energy to heat.
     distractors:
       A: Brown fat is one channel, not alone.
-      B: Not physiological.
-      C: Vasoconstriction conserves heat, does not make it.
+      C: Not physiological.
+      D: Vasoconstriction conserves heat, does not make it.
 pitfalls:
 - Sign conventions in the first law — Q in positive, W out positive.
 - Using Celsius in Kelvin-only gas law and Carnot ratios.
@@ -234,8 +235,8 @@ review_questions:
   explain: Cannot decrease — second law of thermodynamics.
   distractors:
     A: Violation.
-    B: Only for reversible processes.
-    C: Defined.
+    C: Only for reversible processes.
+    D: Defined.
 - q: Sweating works because…
   options:
     A: Sweat is cold
@@ -246,8 +247,8 @@ review_questions:
   explain: Each gram of vaporized sweat carries away ~2400 J.
   distractors:
     A: Sweat starts at body temp.
-    B: Thickness is not the mechanism.
-    C: Humidity limits it.
+    C: Thickness is not the mechanism.
+    D: Humidity limits it.
 - q: An isothermal expansion of an ideal gas…
   options:
     A: Cools the gas
@@ -258,8 +259,8 @@ review_questions:
   explain: T fixed by contact with a reservoir; the work pulled out is replaced by inflowing heat.
   distractors:
     A: T does not change.
-    B: T constant.
-    C: Not trapped.
+    C: T constant.
+    D: Not trapped.
 - q: Kelvin is used in gas laws because…
   options:
     A: It has no negative values
@@ -270,5 +271,5 @@ review_questions:
   explain: PV = nRT and Carnot ratios need absolute temperature.
   distractors:
     A: Zero temperature = zero KE.
-    B: Also true but secondary.
-    C: True but not the reason.
+    C: Also true but secondary.
+    D: True but not the reason.

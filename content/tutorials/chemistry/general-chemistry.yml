@@ -23,9 +23,9 @@ sections:
     answer: A
     explain: 17 electrons — fill to 3p5 (chlorine).
     distractors:
-      A: That is 18 electrons — argon.
-      B: That is 16 electrons — sulfur.
-      C: That is the noble gas after chlorine.
+      B: That is 18 electrons — argon.
+      C: That is 16 electrons — sulfur.
+      D: That is the noble gas after chlorine.
   figures:
   - src: general-chemistry/chem-fig-1.webp
     caption: The periodic table — trends in atomic radius, ionization energy, and electronegativity.
@@ -54,8 +54,9 @@ sections:
 - heading: Bonding — ionic, covalent, metallic
   body:
   - Bond type follows electronegativity difference. Large difference (greater than 1.7) gives ionic (electron
-    transfer, lattice of ions); small difference gives covalent (sharing); zero gives metallic (electron
-    sea). Polar covalent sits in between.
+    transfer, lattice of ions); small difference gives covalent (sharing); zero (two nonmetals) gives
+    pure nonpolar covalent (H2, diamond) — metallic bonding is instead metal atoms with delocalized electrons
+    (electron sea). Polar covalent sits in between.
   - Lewis structures are the tool — count valence electrons, connect atoms, complete octets, check formal
     charge. VSEPR predicts geometry from electron-domain count — 2 linear, 3 trigonal planar, 4 tetrahedral.
   check:
@@ -71,7 +72,7 @@ sections:
     distractors:
       A: That is CO2.
       B: Three bonds only would miss the lone pair.
-      C: That is PCl5.
+      D: That is PCl5.
 - heading: The mole, formulas, and stoichiometry
   body:
   - The mole is Avogadro's number (6.022 times 10 to the 23rd) of particles. Molar mass in grams per mole
@@ -90,8 +91,8 @@ sections:
     explain: At STP, 1 mole = 22.4 L. So 11.2 / 22.4 = 0.5 mol.
     distractors:
       A: 11.2 / 44.8 — wrong molar volume.
-      B: 11.2 / 11.2 — coincidence trap.
-      C: 11.2 / 5.6 — inverted.
+      C: 11.2 / 11.2 — coincidence trap.
+      D: 11.2 / 5.6 — inverted.
 - heading: Solutions and acid-base chemistry
   body:
   - Molarity M equals moles solute per liter solution. Dilution follows M1V1 = M2V2. Most nitrate, sodium,
@@ -110,8 +111,8 @@ sections:
     explain: HCl is a strong acid — hydrogen ion concentration = 0.01 M. pH = -log(0.01) = 2.
     distractors:
       A: That is pH of 0.1 M.
-      B: That is pOH, not pH.
-      C: That is maximum basicity.
+      C: That is pOH, not pH.
+      D: That is maximum basicity.
   figures:
   - src: general-chemistry/acidbase-b523238d.webp
     caption: Acid-base indicators — color changes across the pH scale.
@@ -182,8 +183,8 @@ passage:
       M = 0.00185 / 0.0250 L = 0.074 M.
     distractors:
       A: Used wrong volume.
-      B: Assumes equal concentrations.
-      C: Division error.
+      C: Assumes equal concentrations.
+      D: Division error.
   - q: The endpoint is reached when…
     options:
       A: All HCl has been consumed
@@ -195,8 +196,8 @@ passage:
       slight excess of NaOH.
     distractors:
       A: True but the indicator responds to the excess.
-      B: At equivalence pH is 7 only for strong-strong.
-      C: No precipitation here.
+      C: At equivalence pH is 7 only for strong-strong.
+      D: No precipitation here.
 pitfalls:
 - Confusing atomic number with mass number.
 - Reversing periodic trends.
@@ -239,8 +240,8 @@ review_questions:
   explain: Na+ lost one electron from 11 to 10 electrons; Ne has 10.
   distractors:
     A: Na+ has 10 electrons, K+ has 18.
-    B: Mg has 12 electrons.
-    C: Cl- has 18 electrons.
+    C: Mg has 12 electrons.
+    D: Cl- has 18 electrons.
 - q: What is the molecular geometry of CO2?
   options:
     A: Linear
@@ -250,9 +251,9 @@ review_questions:
   answer: A
   explain: Two electron domains, no lone pairs — 180 degrees linear.
   distractors:
-    A: Bent requires lone pairs — that is H2O.
-    B: Trigonal planar requires three domains.
-    C: Tetrahedral requires four domains.
+    B: Bent requires lone pairs — that is H2O.
+    C: Trigonal planar requires three domains.
+    D: Tetrahedral requires four domains.
 - q: How many grams of NaCl for 250 mL of 0.5 M solution?
   options:
     A: 7.3 g
@@ -262,9 +263,9 @@ review_questions:
   answer: A
   explain: 0.5 mol/L times 0.250 L = 0.125 mol times 58.5 g/mol = 7.3 g.
   distractors:
-    A: That is 250 mL of 1.0 M.
-    B: That is 500 mL of 1.0 M.
-    C: That is one full mole.
+    B: That is 250 mL of 1.0 M.
+    C: That is 500 mL of 1.0 M.
+    D: That is one full mole.
 - q: Which is a strong acid?
   options:
     A: CH3COOH
@@ -276,4 +277,4 @@ review_questions:
   distractors:
     A: Acetic acid — weak.
     B: Hydrofluoric acid — weak.
-    C: Ammonia is a weak base.
+    D: Ammonia is a weak base.

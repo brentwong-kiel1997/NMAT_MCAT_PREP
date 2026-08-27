@@ -24,8 +24,8 @@ sections:
     explain: An aversive is REMOVED to INCREASE behavior.
     distractors:
       A: Adding aversive.
-      B: Adding reward.
-      C: Withholding reinforcement.
+      C: Adding reward.
+      D: Withholding reinforcement.
   figures:
   - src: behavioral-social/fc7-behavior-and-behavior-change/fig-0a68ead5.webp
     caption: Classical conditioning's classic case — bell-food pairing producing the conditioned response.
@@ -48,9 +48,9 @@ sections:
     answer: A
     explain: The initial anchor drags subsequent estimates toward itself.
     distractors:
-      A: That is availability.
-      B: That is representativeness.
-      C: That is conformity theory.
+      B: That is availability.
+      C: That is representativeness.
+      D: That is conformity theory.
 - heading: Motivation and emotion
   body:
   - ==Drive-reduction (homeostasis), incentive (external goals), arousal (Yerkes-Dodson — inverted U),
@@ -113,9 +113,9 @@ sections:
     answer: A
     explain: CBT attacks the fearful interpretation and the avoidance behavior together.
     distractors:
-      A: That is pharmacology.
-      B: That is psychodynamic.
-      C: Drug-only is incomplete.
+      B: That is pharmacology.
+      C: That is psychodynamic.
+      D: Drug-only is incomplete.
   figures:
   - src: behavioral-social/fc7-behavior-and-behavior-change/fig-35b14c98.webp
     caption: Individuals introduced as case studies in the psychological disorders chapter.
@@ -172,9 +172,9 @@ passage:
     answer: A
     explain: Relaxation paired with graduated approach — the classic fear-reduction package.
     distractors:
-      A: No unconscious work.
-      B: No punishment used.
-      C: No tokens exchanged.
+      B: No unconscious work.
+      C: No punishment used.
+      D: No tokens exchanged.
   - q: The anxiety reduction most directly depends on…
     options:
       A: Classical conditioning reversal — new CS-US pairing
@@ -184,9 +184,9 @@ passage:
     answer: A
     explain: The exam situation (CS) no longer predicts panic — relaxation dominates.
     distractors:
-      A: Not the mechanism here.
-      B: Irrelevant.
-      C: None given.
+      B: Not the mechanism here.
+      C: Irrelevant.
+      D: None given.
   - q: A confound threatening internal validity would be…
     options:
       A: Participants in Group A also practicing exam skills
@@ -196,9 +196,9 @@ passage:
     answer: A
     explain: A second active ingredient blurs which part worked.
     distractors:
-      A: Power, not validity.
-      B: Not a confound.
-      C: A strength, not a threat.
+      B: Power, not validity.
+      C: Not a confound.
+      D: A strength, not a threat.
 pitfalls:
 - 'Reinforcement vs punishment — read the arrow: what happened to behavior?'
 - Central vs peripheral route of persuasion.
@@ -260,9 +260,9 @@ review_questions:
   answer: A
   explain: Suffering with no external payoff needs internal justification — value inflates.
   distractors:
-    A: CS-US pairing absent.
-    B: No contingency.
-    C: No model observed.
+    B: CS-US pairing absent.
+    C: No contingency.
+    D: No model observed.
 - q: Schizophrenia's negative symptoms include…
   options:
     A: Hallucinations

@@ -15,18 +15,17 @@ sections:
   check:
   - q: 'A set: square, triangle, circle. The outsider from a list including the diamond is…'
     options:
-      A: The diamond — no straight-side-count match
+      A: The diamond
       B: The square
       C: The triangle
       D: The circle
-    answer: A
-    explain: 'Three flat-sided shapes match; the diamond also has 4 sides — so the outsider is actually
-      often the circle if the rule is ''straight sides''. The correct discriminator here: all set-members
-      have MORE than two sides — circle has none.'
+    answer: D
+    explain: Square and triangle are straight-sided polygons; the circle has no sides or corners — it
+      is the outsider.
     distractors:
-      A: Parity — all are closed except... all are closed.
-      B: All members are closed shapes — circle belongs.
-      C: Set excludes circles only if rule is 'has corners'.
+      A: The diamond is not in the set at all — a distractor label, not a member.
+      B: The square fits the straight-sided rule.
+      C: The triangle fits the straight-sided rule.
 - heading: Symmetry-first strategies
   body:
   - '==Line symmetry — fold test: does the figure match across an axis? Rotational symmetry — spin test:
@@ -35,19 +34,19 @@ sections:
   - ==Combined — a group might be 'rotationally symmetric AND shaded'. ==Asymmetric decoys — the outsider
     often breaks symmetry subtly (one notch missing), so count notches==
   check:
-  - q: 'A figure set of letters: A, H, I, O, and the candidate X. The shared feature is…'
+  - q: 'A figure set of letters: H, I, O, X, and the candidate A. The shared feature is…'
     options:
       A: Vertical and horizontal symmetry
       B: Only vertical
       C: Only horizontal
       D: Curved lines
     answer: A
-    explain: A, H, I, O, X all have both axes — line symmetry.
+    explain: H, I, O, X all have both a vertical and a horizontal mirror axis; A has only vertical, so
+      it is the outsider.
     distractors:
-      A: Correct.
-      B: B has only vertical.
-      C: Letter shapes differ.
-      D: Arcs are incidental.
+      B: True of A alone — the shared feature must cover all four set letters.
+      C: None of the set letters is horizontal-only.
+      D: Letter strokes here are straight lines.
 - heading: Shape family grouping — sides and angles
   body:
   - ==Sides rule — group by number of sides (triangles/quadrilaterals) or by aspect (acute vs obtuse dominant)==.
@@ -64,9 +63,9 @@ sections:
     answer: A
     explain: All are parallelograms — the true family.
     distractors:
-      A: Rectangle has 90s but rhombus may not.
-      B: Square only.
-      C: All are convex.
+      B: Rectangle has 90s but rhombus may not.
+      C: Square only.
+      D: All are convex.
 - heading: Fill, pattern, and texture sorting
   body:
   - ==Fill states — solid, hatched, empty, dot-filled; grouping can be by fill state or by fill gradient
@@ -84,9 +83,9 @@ sections:
     answer: A
     explain: The only change between groups is filled vs empty.
     distractors:
-      A: Shapes vary within groups.
-      B: No size change.
-      C: No rotation.
+      B: Shapes vary within groups.
+      C: No size change.
+      D: No rotation.
 - heading: Odd-one-out strategy and answer hygiene
   body:
   - ==In paper versions, the odd-one-out is the outsider; in digital formats, group-sort questions partition
@@ -104,9 +103,9 @@ sections:
     answer: A
     explain: The count discriminates cleanly.
     distractors:
-      A: All have symmetry.
-      B: The highest is a gradient, not a group.
-      C: Shading is absent.
+      B: All have symmetry.
+      C: The highest is a gradient, not a group.
+      D: Shading is absent.
 examples:
 - prompt: 'Sort into two groups: figure 1 (pentagon, empty), 2 (pentagon, hatched), 3 (square, empty),
     4 (hexagon, hatched), 5 (square, hatched).'
@@ -156,14 +155,11 @@ passage:
       B: Fill state
       C: Angles
       D: Size
-    answer: A
-    explain: '1,2,3,6 are triangles; 4,5 are quadrilaterals — but the item asks groups of three, so fill
-      then splits each: triangles (1,3 empty, 2,6 hatched) — hmm; the cleanest three/three is 1,3,5 (empty)
-      vs 2,4,6 (hatched).'
+    answer: B
+    explain: Fill splits 1,3,5 (empty) vs 2,4,6 (hatched) — three and three.
     distractors:
-      A: Fill is cleanest for three-groups — answer = fill.
-      B: Triangle-vs-quad leaves 4 and 2 in the wrong bucket.
-      C: Angles split right vs others — 1,6 right; not three.
+      A: Shape splits 4 triangles vs 2 quadrilaterals — uneven.
+      C: Angles split right vs others — not three.
       D: No size data.
   - q: If forced to use shape, the counts are…
     options:
@@ -198,7 +194,7 @@ pitfalls:
 - Uneven groups — the item usually forces balanced counts.
 - Feature lists that ignore orientation.
 exam_map:
-  NMAT: Part 2 Inductive Reasoning — figure grouping items.
+  NMAT: Part 1 Inductive Reasoning — figure grouping items.
 sources:
 - ref: cem-nmat-test-description
   used:
@@ -247,9 +243,9 @@ review_questions:
   answer: A
   explain: 120 x 3 = 360 — the triangle repeats.
   distractors:
-    A: 90 degrees — square.
-    B: 180 only.
+    B: 90 degrees — square.
     C: 180 only.
+    D: 180 only.
 - q: 'Expected grouping: four empty shapes vs four hatched shapes is a…'
   options:
     A: Fill-state sort
@@ -259,6 +255,6 @@ review_questions:
   answer: A
   explain: Fill divides the set.
   distractors:
-    A: Shapes vary within each group.
-    B: No sizes.
-    C: No axes.
+    B: Shapes vary within each group.
+    C: No sizes.
+    D: No axes.

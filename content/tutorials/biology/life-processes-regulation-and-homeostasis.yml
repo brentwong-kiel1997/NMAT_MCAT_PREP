@@ -61,8 +61,8 @@ sections:
     sets the problem; the epithelium implements the answer== — the same transport logic as the cell chapter,
     scaled to organs.
   - Nitrogen disposal is the chemical companion — ammonia (toxic, water-cheap, aquatic), urea (liver-made,
-    moderate cost, mammals), uric acid (water-expensive paste, birds and reptiles). Passages predict habitat
-    from nitrogen product and vice versa.
+    moderate cost, mammals), uric acid (near-solid paste — water-cheap but energetically costly; birds
+    and reptiles). Passages predict habitat from nitrogen product and vice versa.
   check:
   - q: A freshwater fish's problem and response are…
     options:

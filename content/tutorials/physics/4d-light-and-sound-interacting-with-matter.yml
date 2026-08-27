@@ -248,9 +248,9 @@ review_questions:
   answer: A
   explain: n(lambda) varies — violet bends most.
   distractors:
-    A: Violet is slowest in glass.
-    B: No heating separates colors.
-    C: Interference is a different effect.
+    B: Violet is slowest in glass.
+    C: No heating separates colors.
+    D: Interference is a different effect.
 - q: A +5 D lens has focal length…
   options:
     A: 0.2 m
