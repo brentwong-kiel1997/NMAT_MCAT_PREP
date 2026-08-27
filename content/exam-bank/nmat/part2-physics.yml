@@ -1,0 +1,452 @@
+exam: nmat
+section: part2-physics
+label: Physics
+subject: physics
+block: part2
+items_expected: 30
+items:
+- id: nmat-p2p-001
+  q: A stone is dropped from rest from a bridge and strikes the water 3.0 s later. Ignoring air resistance
+    (g = 9.8 m/s^2), how high is the bridge?
+  choices:
+    A: 44 m
+    B: 29 m
+    C: 88 m
+    D: 15 m
+  answer: A
+  explain: h = 1/2 g t^2 = 0.5 x 9.8 x (3.0)^2 = 44 m.
+  distractors:
+    B: used the final speed v = gt as if it applied to the whole fall (v x t)
+    C: dropped the factor of 1/2 (gt^2 instead of 1/2 gt^2)
+    D: used t instead of t^2 (1/2 g t)
+  chapter: 4a-motion-forces-work-energy-equilibrium
+- id: nmat-p2p-002
+  q: A marble rolls horizontally off a 20-m-high bench at 15 m/s. Taking g = 10 m/s^2, how long is it
+    in the air?
+  choices:
+    A: 1.5 s
+    B: 2.0 s
+    C: 1.4 s
+    D: 4.0 s
+  answer: B
+  explain: 'Only h sets the fall time: t = sqrt(2h/g) = sqrt(2 x 20/10) = sqrt 4 = 2.0 s.'
+  distractors:
+    A: treated the 15 m/s launch speed as a vertical speed (t = v/g)
+    C: dropped the factor of 2 under the root (sqrt(h/g) = sqrt 2)
+    D: used t = 2h/g = 4 s, omitting the square root
+  chapter: 4a-motion-forces-work-energy-equilibrium
+- id: nmat-p2p-003
+  q: A 1200-kg car accelerates from rest to 24 m/s in 8.0 s. What net force acts on it?
+  choices:
+    A: 9600 N
+    B: 28,800 N
+    C: 3600 N
+    D: 450 N
+  answer: C
+  explain: a = delta v / t = 24/8.0 = 3.0 m/s^2; F = ma = 1200 x 3.0 = 3600 N.
+  distractors:
+    A: read the 8.0 s as the acceleration (a = 8.0 m/s^2)
+    B: computed the momentum mv instead of the force ma
+    D: divided by t twice (a = v/t^2 = 24/64)
+  chapter: 4a-motion-forces-work-energy-equilibrium
+- id: nmat-p2p-004
+  q: A 40-kg crate is dragged at constant velocity across a level floor. If the coefficient of kinetic
+    friction is 0.25 and g = 9.8 m/s^2, what horizontal force is needed?
+  choices:
+    A: 392 N
+    B: 9.8 N
+    C: 10 N
+    D: 98 N
+  answer: D
+  explain: Constant velocity means F = friction = mu m g = 0.25 x 40 x 9.8 = 98 N.
+  distractors:
+    A: used the full weight, taking the coefficient as 1
+    B: slipped a decimal in the coefficient (0.025)
+    C: multiplied the coefficient by the mass only, omitting g
+  chapter: 4a-motion-forces-work-energy-equilibrium
+- id: nmat-p2p-005
+  q: A 10-kg block is released on a frictionless incline angled 30 degrees above the horizontal. Taking
+    g = 10 m/s^2, what is its acceleration down the slope?
+  choices:
+    A: 10 m/s^2
+    B: 8.7 m/s^2
+    C: 2.5 m/s^2
+    D: 5.0 m/s^2
+  answer: D
+  explain: a = g sin 30 = 10 x 0.50 = 5.0 m/s^2 (the mass cancels).
+  distractors:
+    A: used the full g, ignoring the incline angle
+    B: used cos 30 degrees instead of sin 30 degrees
+    C: squared the sine (sin^2 30 = 0.25) instead of using sin 30
+  chapter: 4a-motion-forces-work-energy-equilibrium
+- id: nmat-p2p-006
+  q: A rope pulls a sled 4.0 m with a steady 50-N force directed 60 degrees above the horizontal. How
+    much work does the rope do on the sled?
+  choices:
+    A: 100 J
+    B: 200 J
+    C: 173 J
+    D: 400 J
+  answer: A
+  explain: W = F s cos theta = 50 x 4.0 x cos 60 = 200 x 0.50 = 100 J.
+  distractors:
+    B: ignored the angle and assumed the force is parallel to the motion
+    C: used sin 60 degrees in place of cos 60 degrees
+    D: divided by cos 60 degrees instead of multiplying by it
+  chapter: 4a-motion-forces-work-energy-equilibrium
+- id: nmat-p2p-007
+  q: A 50-kg athlete runs up a 4.0-m flight of stairs in 10 s. Taking g = 10 m/s^2, what is her average
+    power output?
+  choices:
+    A: 20 W
+    B: 200 W
+    C: 400 W
+    D: 2000 W
+  answer: B
+  explain: P = mgh/t = (50 x 10 x 4.0)/10 = 2000 J / 10 s = 200 W.
+  distractors:
+    A: omitted g (used mh/t)
+    C: used t = 5.0 s, halving the time
+    D: reported the energy mgh in watts, never dividing by the time
+  chapter: 4a-motion-forces-work-energy-equilibrium
+- id: nmat-p2p-008
+  q: A 1200-kg car travelling at 20 m/s rear-ends a stationary 800-kg car and the two lock together. How
+    fast do they move just after impact?
+  choices:
+    A: 20 m/s
+    B: 10 m/s
+    C: 12 m/s
+    D: 30 m/s
+  answer: C
+  explain: 'Momentum is conserved: v = m1 v1/(m1+m2) = (1200 x 20)/2000 = 12 m/s.'
+  distractors:
+    A: assumed the striking car keeps its speed, ignoring momentum sharing
+    B: averaged the speeds as if the two masses were equal
+    D: divided by the struck car's mass alone (m1 v1 / m2)
+  chapter: mechanics
+- id: nmat-p2p-009
+  q: A 0.50-kg ball strikes a wall at 20 m/s and rebounds along its original line at 10 m/s, staying in
+    contact for 0.020 s. What is the magnitude of the average force on the ball?
+  choices:
+    A: 250 N
+    B: 500 N
+    C: 0.30 N
+    D: 750 N
+  answer: D
+  explain: delta p = m(v_f - v_i) = 0.50 x (+10 - (-20)) = 15 N.s; F = 15/0.020 = 750 N.
+  distractors:
+    A: used the speed difference 20 - 10 = 10 m/s, ignoring the reversal
+    B: counted only the incoming momentum (0.50 x 20)
+    C: multiplied by the contact time instead of dividing by it
+  chapter: mechanics
+- id: nmat-p2p-010
+  q: A wheel is acted on by a 20-N force at 0.30 m from the axle (counterclockwise) and a 15-N force at
+    0.50 m (clockwise). What is the magnitude of the net torque?
+  choices:
+    A: 13.5 N.m
+    B: 1.5 N.m
+    C: 6.0 N.m
+    D: 4.5 N.m
+  answer: B
+  explain: tau = 20 x 0.30 - 15 x 0.50 = 6.0 - 7.5 = 1.5 N.m, in the clockwise sense.
+  distractors:
+    A: added the two torques, ignoring that they oppose each other
+    C: kept only the 20-N force's torque
+    D: paired the 15-N force with the 0.30-m radius
+  chapter: mechanics
+- id: nmat-p2p-011
+  q: What is the gauge pressure 10 m below the surface of a freshwater lake? (rho = 1000 kg/m^3, g = 10
+    m/s^2)
+  choices:
+    A: 1.0 x 10^5 Pa
+    B: 1.0 x 10^4 Pa
+    C: 2.0 x 10^5 Pa
+    D: 1.0 x 10^6 Pa
+  answer: A
+  explain: P_gauge = rho g h = 1000 x 10 x 10 = 1.0 x 10^5 Pa.
+  distractors:
+    B: slipped a decimal in the density (100 kg/m^3)
+    C: added atmospheric pressure, but the question asks for gauge
+    D: an extra factor of 10 (used a depth of 100 m)
+  chapter: 4b-fluids-for-circulation-and-gas-exchange
+- id: nmat-p2p-012
+  q: A 2.0-kg object of density 800 kg/m^3 hangs fully submerged in water (rho = 1000 kg/m^3, g = 10 m/s^2).
+    What buoyant force acts on it?
+  choices:
+    A: 20 N
+    B: 2.5 N
+    C: 25 N
+    D: 250 N
+  answer: C
+  explain: V = m/rho = 2.0/800 = 2.5 x 10^-3 m^3; F = rho_w g V = 1000 x 10 x 0.0025 = 25 N.
+  distractors:
+    A: quoted the object's own weight, not the weight of displaced water
+    B: slipped a decimal in the volume (2.5 x 10^-4 m^3)
+    D: slipped the other way (2.5 x 10^-2 m^3)
+  chapter: 4b-fluids-for-circulation-and-gas-exchange
+- id: nmat-p2p-013
+  q: Blood flows at 0.20 m/s through an artery of radius 3.0 mm that narrows to 1.0 mm. What is the speed
+    in the narrowed region?
+  choices:
+    A: 0.60 m/s
+    B: 0.022 m/s
+    C: 0.20 m/s
+    D: 1.8 m/s
+  answer: D
+  explain: A1 v1 = A2 v2, so v2 = v1 (r1/r2)^2 = 0.20 x (3.0/1.0)^2 = 1.8 m/s.
+  distractors:
+    A: scaled the speed with the radius linearly instead of with r^2
+    B: inverted the radius ratio (r2/r1 instead of r1/r2)
+    C: assumed the speed is conserved rather than the flow rate
+  chapter: 4b-fluids-for-circulation-and-gas-exchange
+- id: nmat-p2p-014
+  q: Water flows through a horizontal pipe and speeds up from 2.0 m/s to 6.0 m/s at a constriction. How
+    much does the pressure fall? (rho = 1000 kg/m^3)
+  choices:
+    A: 1.6 x 10^4 Pa
+    B: 3.2 x 10^4 Pa
+    C: 8.0 x 10^3 Pa
+    D: 1.8 x 10^4 Pa
+  answer: A
+  explain: delta P = 1/2 rho (v2^2 - v1^2) = 500 x (36 - 4) = 1.6 x 10^4 Pa.
+  distractors:
+    B: dropped the factor of 1/2
+    C: subtracted the speeds before squaring
+    D: took the inlet speed as zero
+  chapter: 4b-fluids-for-circulation-and-gas-exchange
+- id: nmat-p2p-015
+  q: An artery's radius falls to half its original value while the pressure difference along it stays
+    the same. The flow rate becomes what fraction of the original? (Poiseuille flow)
+  choices:
+    A: 1/2
+    B: 1/16
+    C: 1/4
+    D: 1/8
+  answer: B
+  explain: 'Poiseuille: Q is proportional to r^4, so (1/2)^4 = 1/16 of the original flow.'
+  distractors:
+    A: scaled the flow linearly with the radius
+    C: used the area scaling, r^2, instead of r^4
+    D: used an r^3 dependence
+  chapter: 4b-fluids-for-circulation-and-gas-exchange
+- id: nmat-p2p-016
+  q: How much heat is needed to raise 2.0 kg of water from 20 degrees C to 70 degrees C? (c = 4200 J/kg.degC)
+  choices:
+    A: 1.7 x 10^5 J
+    B: 8.4 x 10^5 J
+    C: 4.2 x 10^5 J
+    D: 4.2 x 10^2 J
+  answer: C
+  explain: Q = m c delta T = 2.0 x 4200 x 50 = 4.2 x 10^5 J.
+  distractors:
+    A: used the initial 20 degrees C as the rise instead of 50 degrees C
+    B: doubled the mass
+    D: dropped three decimal places, confusing joules with kilojoules
+  chapter: thermodynamics
+- id: nmat-p2p-017
+  q: A sealed rigid tank holds a gas at 1.0 atm and 300 K. It is warmed to 450 K. What is the new pressure?
+  choices:
+    A: 0.67 atm
+    B: 1.0 atm
+    C: 4.5 atm
+    D: 1.5 atm
+  answer: D
+  explain: 'Constant V: P2/P1 = T2/T1, so P2 = 1.0 x 450/300 = 1.5 atm.'
+  distractors:
+    A: inverted the temperature ratio (T1/T2)
+    B: assumed the pressure is unchanged even though the volume is fixed
+    C: divided T2 by 100 instead of by T1 = 300 K
+  chapter: thermodynamics
+- id: nmat-p2p-018
+  q: A heat engine runs between a hot reservoir at 500 K and a cold reservoir at 300 K. What is its maximum
+    possible efficiency?
+  choices:
+    A: 40%
+    B: 60%
+    C: 67%
+    D: 25%
+  answer: A
+  explain: e_max = 1 - Tc/Th = 1 - 300/500 = 0.40 = 40%.
+  distractors:
+    B: quoted Tc/Th, the fraction rejected, as the efficiency
+    C: divided the temperature difference by the cold temperature
+    D: used a 400-K hot reservoir
+  chapter: thermodynamics
+- id: nmat-p2p-019
+  q: A sound wave has a frequency of 440 Hz and a wavelength of 0.75 m. What is its speed?
+  choices:
+    A: 587 m/s
+    B: 330 m/s
+    C: 0.0017 m/s
+    D: 3.3 x 10^4 m/s
+  answer: B
+  explain: v = f lambda = 440 x 0.75 = 330 m/s.
+  distractors:
+    A: divided the frequency by the wavelength instead of multiplying
+    C: inverted the ratio (wavelength / frequency)
+    D: took the wavelength in centimetres as metres (75)
+  chapter: vibrations-waves-and-optics
+- id: nmat-p2p-020
+  q: A 750-Hz siren approaches a stationary listener at 40 m/s. Taking the speed of sound as 340 m/s,
+    what frequency does the listener hear?
+  choices:
+    A: 671 Hz
+    B: 662 Hz
+    C: 850 Hz
+    D: 838 Hz
+  answer: C
+  explain: f' = f v/(v - vs) = 750 x 340/(340 - 40) = 255,000/300 = 850 Hz.
+  distractors:
+    A: used the receding-source denominator (v + vs)
+    B: inverted the fraction, putting (v - vs) in the numerator
+    D: added vs to the numerator instead of subtracting it from v
+  chapter: vibrations-waves-and-optics
+- id: nmat-p2p-021
+  q: Light passes from air into a transparent medium of refractive index 1.50. What is its speed in that
+    medium? (c = 3.0 x 10^8 m/s)
+  choices:
+    A: 4.5 x 10^8 m/s
+    B: 3.0 x 10^8 m/s
+    C: 1.5 x 10^8 m/s
+    D: 2.0 x 10^8 m/s
+  answer: D
+  explain: v = c/n = (3.0 x 10^8)/1.50 = 2.0 x 10^8 m/s.
+  distractors:
+    A: multiplied c by n instead of dividing
+    B: assumed the speed is unchanged on entering the medium
+    C: divided by 2 rather than by n = 1.50
+  chapter: 4d-light-and-sound-interacting-with-matter
+- id: nmat-p2p-022
+  q: An object sits 15 cm from a converging lens of focal length 10 cm. How far from the lens is the image
+    formed?
+  choices:
+    A: 6.0 cm
+    B: 30 cm on the far side of the lens
+    C: 25 cm
+    D: 10 cm
+  answer: B
+  explain: 1/di = 1/f - 1/do = 1/10 - 1/15 = 1/30, so di = 30 cm (real, inverted).
+  distractors:
+    A: added the reciprocals (1/do + 1/f) instead of subtracting
+    C: added the object distance and the focal length
+    D: assumed the image forms at the focal point
+  chapter: 4d-light-and-sound-interacting-with-matter
+- id: nmat-p2p-023
+  q: What is the critical angle for total internal reflection at a boundary between a transparent solid
+    of refractive index 2.0 and air?
+  choices:
+    A: 30 degrees
+    B: 60 degrees
+    C: 27 degrees
+    D: 15 degrees
+  answer: A
+  explain: sin theta_c = n_air/n_solid = 1/2.0 = 0.50, so theta_c = arcsin 0.50 = 30 degrees.
+  distractors:
+    B: took arccos instead of arcsin
+    C: used tan instead of sin
+    D: treated the index as a factor on the angle (30 / 2)
+  chapter: 4d-light-and-sound-interacting-with-matter
+- id: nmat-p2p-024
+  q: Point charges of +2.0 microC and +3.0 microC sit 0.30 m apart in air. What is the magnitude of the
+    force between them? (k = 9.0 x 10^9 N.m^2/C^2)
+  choices:
+    A: 60 N
+    B: 0.18 N
+    C: 1.2 N
+    D: 0.60 N
+  answer: D
+  explain: F = k q1 q2/r^2 = (9.0 x 10^9 x 6.0 x 10^-12)/(0.30)^2 = 0.054/0.09 = 0.60 N.
+  distractors:
+    A: used a separation of 3.0 cm instead of 0.30 m
+    B: divided by r instead of r^2
+    C: counted the single interacting pair twice
+  chapter: electricity-and-magnetism
+- id: nmat-p2p-025
+  q: A 6.0-ohm and a 3.0-ohm resistor are connected in parallel, and that pair is in series with a 3.0-ohm
+    resistor across a 12-V battery. What current does the battery supply?
+  choices:
+    A: 0.80 A
+    B: 10 A
+    C: 2.4 A
+    D: 6.0 A
+  answer: C
+  explain: R_par = (6.0 x 3.0)/9.0 = 2.0 ohm; R = 2.0 + 3.0 = 5.0 ohm; I = 12/5.0 = 2.4 A.
+  distractors:
+    A: treated all three resistors as a series chain (12/15)
+    B: put all three resistors in parallel (R = 1.2 ohm)
+    D: dropped the series 3.0-ohm resistor from the total
+  chapter: 4c-electrochemistry-and-electrical-circuits
+- id: nmat-p2p-026
+  q: A 4.0-ohm resistor is connected across a 12-V battery. What power does it dissipate?
+  choices:
+    A: 3.0 W
+    B: 36 W
+    C: 48 W
+    D: 576 W
+  answer: B
+  explain: P = V^2/R = (12)^2/4.0 = 144/4.0 = 36 W.
+  distractors:
+    A: used V/R, leaving the voltage unsquared
+    C: multiplied V by R instead of using V^2/R
+    D: multiplied by R instead of dividing by R
+  chapter: electricity-and-magnetism
+- id: nmat-p2p-027
+  q: A 0.20-m straight wire carries 5.0 A at 30 degrees to a 0.40-T magnetic field. What is the magnitude
+    of the force on the wire?
+  choices:
+    A: 0.20 N
+    B: 0.40 N
+    C: 2.0 N
+    D: 5.0 N
+  answer: A
+  explain: F = B I L sin theta = 0.40 x 5.0 x 0.20 x sin 30 = 0.40 x 0.20 = 0.20 N.
+  distractors:
+    B: omitted the sin 30 factor and treated the wire as perpendicular to B
+    C: slipped a decimal in the length (2.0 m)
+    D: divided by the length instead of multiplying by it
+  chapter: electricity-and-magnetism
+- id: nmat-p2p-028
+  q: A 50-turn coil of area 0.010 m^2 lies perpendicular to a magnetic field that rises uniformly from
+    0 to 0.40 T in 0.20 s. What emf is induced?
+  choices:
+    A: 0.020 V
+    B: 10 V
+    C: 0.040 V
+    D: 1.0 V
+  answer: D
+  explain: emf = N A (delta B/delta t) = 50 x 0.010 x (0.40/0.20) = 50 x 0.010 x 2.0 = 1.0 V.
+  distractors:
+    A: used a single turn, dropping the factor of 50
+    B: used the 0.10-m side length as the area
+    C: multiplied by the time interval instead of dividing by it
+  chapter: electricity-and-magnetism
+- id: nmat-p2p-029
+  q: Photons of energy 3.0 eV strike a metal whose work function is 2.0 eV. What is the maximum kinetic
+    energy of the ejected photoelectrons?
+  choices:
+    A: 5.0 eV
+    B: 6.0 eV
+    C: 1.0 eV
+    D: 2.0 eV
+  answer: C
+  explain: KE_max = E_photon - phi = 3.0 - 2.0 = 1.0 eV.
+  distractors:
+    A: added the photon energy to the work function instead of subtracting
+    B: multiplied the two energies
+    D: quoted the work function itself
+  chapter: modern-physics
+- id: nmat-p2p-030
+  q: A sample contains 80 g of a nuclide whose half-life is 5.0 days. How much remains after 15 days?
+  choices:
+    A: 10 g
+    B: 40 g
+    C: 5.0 g
+    D: 32 g
+  answer: A
+  explain: 15 d / 5.0 d = 3 half-lives; 80 x (1/2)^3 = 80/8 = 10 g.
+  distractors:
+    B: applied only one half-life instead of three
+    C: took four half-lives (80/16) instead of three
+    D: subtracted a fixed 16 g per half-life instead of halving
+  chapter: modern-physics
+passages: []

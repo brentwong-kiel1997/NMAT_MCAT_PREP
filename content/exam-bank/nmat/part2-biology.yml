@@ -1,0 +1,473 @@
+exam: nmat
+section: part2-biology
+label: Biology
+subject: biology
+block: part2
+items_expected: 30
+items:
+- id: nmat-p2b-001
+  q: A red blood cell is placed in a 5% NaCl solution, which is more concentrated than the cell's cytoplasm.
+    What happens?
+  choices:
+    A: Water moves out of the cell and it shrinks
+    B: Water moves into the cell and it swells and bursts
+    C: There is no net movement of water
+    D: NaCl is pumped into the cell until it bursts
+  answer: A
+  explain: The salt solution is hypertonic to the cell, so water leaves by osmosis and the cell shrivels
+    (crenation).
+  distractors:
+    B: Swelling and bursting occur in a hypotonic solution, where the outside is more dilute.
+    C: Net osmosis occurs whenever the two solutions differ in solute concentration.
+    D: Osmosis moves water passively; it does not pump salt into the cell.
+  chapter: cells-and-cellular-processes
+- id: nmat-p2b-002
+  q: The sodium-potassium pump moves 3 Na+ out of a cell and 2 K+ into the cell, both against their concentration
+    gradients. This transport is best described as
+  choices:
+    A: simple diffusion
+    B: facilitated diffusion
+    C: active transport driven by ATP hydrolysis
+    D: osmosis through aquaporins
+  answer: C
+  explain: Moving ions up their electrochemical gradients requires energy, which the pump obtains by hydrolyzing
+    ATP.
+  distractors:
+    A: Simple diffusion carries substances down a gradient and needs no energy.
+    B: Facilitated diffusion uses a carrier protein but is still passive and down-gradient.
+    D: Osmosis is the passive movement of water across a selectively permeable membrane.
+  chapter: cells-and-cellular-processes
+- id: nmat-p2b-003
+  q: Muscle tissue from a patient shows a severely reduced rate of aerobic respiration and an abnormally
+    low output of ATP. Which organelle is most likely defective?
+  choices:
+    A: Ribosomes
+    B: Golgi apparatus
+    C: Lysosomes
+    D: Mitochondria
+  answer: D
+  explain: Mitochondria carry out the Krebs cycle and oxidative phosphorylation, which supply most of
+    a cell's ATP.
+  distractors:
+    A: Ribosomes synthesize proteins and do not generate ATP.
+    B: The Golgi apparatus modifies, sorts, and packages proteins for secretion.
+    C: Lysosomes digest worn-out organelles and ingested material.
+  chapter: 2a-assemblies-of-molecules-cells-and-cell-groups
+- id: nmat-p2b-004
+  q: Which structure is present in a typical plant cell but absent from an animal cell?
+  choices:
+    A: Mitochondrion
+    B: Plasma membrane
+    C: Nucleus
+    D: Chloroplast
+  answer: D
+  explain: Chloroplasts, together with a cellulose cell wall and a central vacuole, are plant-cell features
+    that animal cells lack.
+  distractors:
+    A: Both plant and animal cells contain mitochondria for aerobic respiration.
+    B: Every cell is bounded by a plasma membrane.
+    C: Both cell types are eukaryotic and therefore have a membrane-bound nucleus.
+  chapter: 2a-assemblies-of-molecules-cells-and-cell-groups
+- id: nmat-p2b-005
+  q: During which stage of mitosis do sister chromatids separate and move toward opposite poles of the
+    cell?
+  choices:
+    A: Prophase
+    B: Metaphase
+    C: Telophase
+    D: Anaphase
+  answer: D
+  explain: Anaphase begins when the centromeres split and spindle fibers pull the sister chromatids to
+    opposite poles.
+  distractors:
+    A: Prophase is when chromosomes condense and the spindle begins to form.
+    B: In metaphase the chromatids are still attached and aligned on the equatorial plate.
+    C: Telophase follows separation, as nuclear membranes re-form around the two chromosome sets.
+  chapter: 2c-cell-division-differentiation-specialization
+- id: nmat-p2b-006
+  q: A human diploid body cell contains 46 chromosomes. How many chromosomes are present in each gamete
+    formed by meiosis, and why?
+  choices:
+    A: 46, because meiosis copies the chromosomes without reducing them
+    B: 23, because meiosis halves the diploid number
+    C: 92, because the DNA doubles before division
+    D: 23 pairs, because homologous chromosomes remain together
+  answer: B
+  explain: Meiosis includes two successive divisions that reduce a diploid cell (2n = 46) to four haploid
+    gametes (n = 23).
+  distractors:
+    A: 46 is the diploid number preserved by mitosis, not meiosis.
+    C: Doubling of DNA before division is replication, not chromosome reduction.
+    D: Gametes carry 23 single chromosomes; homologous pairs separate in meiosis I.
+  chapter: 2c-cell-division-differentiation-specialization
+- id: nmat-p2b-007
+  q: Which feature is found in bacterial cells but not in eukaryotic animal cells?
+  choices:
+    A: A cell wall made of peptidoglycan
+    B: Ribosomes for protein synthesis
+    C: A plasma membrane
+    D: DNA as the genetic material
+  answer: A
+  explain: Bacterial cells are enclosed by a peptidoglycan wall and lack membrane-bound organelles; the
+    other three features are shared with animal cells.
+  distractors:
+    B: Animal cells do have ribosomes, although theirs are 80S rather than bacterial 70S.
+    C: Every cell, prokaryotic or eukaryotic, is bounded by a plasma membrane.
+    D: Both bacteria and animal cells store hereditary information in DNA.
+  chapter: 2b-prokaryotes-and-viruses
+- id: nmat-p2b-008
+  q: A virus can reproduce only inside a living host cell because it
+  choices:
+    A: lacks the machinery to synthesize proteins or generate ATP on its own
+    B: is too small to contain its own genes
+    C: is destroyed by antibiotics when outside a cell
+    D: can divide by binary fission only inside a host
+  answer: A
+  explain: A virion carries only a nucleic acid genome and a protein coat, so it must use host ribosomes,
+    enzymes, and energy to build new particles.
+  distractors:
+    B: Size is not the issue; a virion does carry its own DNA or RNA genome.
+    C: Antibiotics act on bacterial targets and explain nothing about a virus's dependence on a host.
+    D: Viruses never divide by binary fission; new particles are assembled inside the host.
+  chapter: 2b-prokaryotes-and-viruses
+- id: nmat-p2b-009
+  q: Two heterozygous tall pea plants (Tt x Tt) are crossed. What percentage of the offspring is expected
+    to be short?
+  choices:
+    A: 0%
+    B: 25%
+    C: 50%
+    D: 75%
+  answer: B
+  explain: 'The cross yields 1 TT : 2 Tt : 1 tt, so only the one quarter that are homozygous recessive
+    are short.'
+  distractors:
+    A: The tt genotype is expected one time in four, so short offspring do occur.
+    C: 50% is the expected proportion of heterozygous Tt offspring.
+    D: 75% is the proportion expected to be tall.
+  chapter: genetics
+- id: nmat-p2b-010
+  q: Red-green color blindness is an X-linked recessive trait. A carrier mother (X^C X^c) and a father
+    with normal vision (X^C Y) have children. What fraction of their SONS is expected to be color-blind?
+  choices:
+    A: 0%
+    B: 25%
+    C: 50%
+    D: 100%
+  answer: C
+  explain: Each son receives his single X chromosome from the mother, so half the sons receive X^c and
+    are color-blind.
+  distractors:
+    A: A carrier mother can pass the recessive allele to a son.
+    B: 25% is the fraction of all children who are color-blind; sons alone are affected half the time.
+    D: Only sons who inherit the Xc allele are affected; the rest have normal vision.
+  chapter: genetics
+- id: nmat-p2b-011
+  q: In a pedigree, unaffected parents in several families have affected children, including an affected
+    daughter whose father is unaffected. The most likely mode of inheritance is
+  choices:
+    A: autosomal recessive
+    B: autosomal dominant
+    C: X-linked dominant
+    D: mitochondrial (maternal)
+  answer: A
+  explain: Affected children of unaffected parents indicate a recessive trait, and an affected daughter
+    with an unaffected father rules out X-linkage.
+  distractors:
+    B: A dominant trait cannot appear in a child of two unaffected parents.
+    C: An X-linked dominant trait is transmitted by an affected parent to about half of each sex and requires
+      an affected parent.
+    D: Mitochondrial traits pass from an affected mother to essentially all of her children.
+  chapter: genetics
+- id: nmat-p2b-012
+  q: After one round of DNA replication, each new double helix consists of
+  choices:
+    A: two newly synthesized strands
+    B: two parental strands
+    C: one parental strand paired with one newly synthesized strand
+    D: an RNA strand paired with a DNA strand
+  answer: C
+  explain: 'Replication is semiconservative: each parental strand serves as a template for one new complementary
+    strand.'
+  distractors:
+    A: The original strands are conserved, not discarded.
+    B: The two parental strands separate into different daughter helices.
+    D: RNA primers are used only to start synthesis and are later replaced with DNA.
+  chapter: 1c-heritable-information-genetic-diversity
+- id: nmat-p2b-013
+  q: In a eukaryotic cell, transcription takes place in the ______ and translation takes place in the
+    ______.
+  choices:
+    A: nucleus; cytoplasm on ribosomes
+    B: cytoplasm; nucleus
+    C: nucleus; nucleolus
+    D: ribosome; Golgi apparatus
+  answer: A
+  explain: mRNA is transcribed from DNA in the nucleus and is then translated by ribosomes in the cytoplasm
+    or on the rough ER.
+  distractors:
+    B: These locations are reversed; DNA remains in the nucleus.
+    C: Translation does not occur in the nucleus because ribosomes reside outside it.
+    D: The Golgi apparatus modifies and ships proteins after translation is already complete.
+  chapter: 1c-heritable-information-genetic-diversity
+- id: nmat-p2b-014
+  q: Which primary germ layer gives rise to the nervous system and the epidermis?
+  choices:
+    A: Endoderm
+    B: Mesoderm
+    C: Ectoderm
+    D: Archenteron
+  answer: C
+  explain: Ectoderm forms the outer skin layer and the entire nervous system, including the neural tube.
+  distractors:
+    A: Endoderm lines the gut and forms organs such as the liver and pancreas.
+    B: Mesoderm produces muscle, bone, blood, and the circulatory system.
+    D: The archenteron is the primitive gut cavity formed during gastrulation, not a germ layer.
+  chapter: development
+- id: nmat-p2b-015
+  q: Which of these taxonomic categories is the most inclusive, containing all of the others?
+  choices:
+    A: Family
+    B: Order
+    C: Class
+    D: Phylum
+  answer: D
+  explain: The hierarchy runs domain, kingdom, phylum, class, order, family, genus, species, so phylum
+    is the broadest option listed.
+  distractors:
+    A: Family is narrower than order, class, and phylum.
+    B: Order is nested inside class and phylum.
+    C: Class is nested inside phylum.
+  chapter: unity-and-diversity-of-life
+- id: nmat-p2b-016
+  q: After years of antibiotic use, most bacteria in a hospital population are resistant to the drug.
+    This is best explained by
+  choices:
+    A: individual bacteria mutating in direct response to contact with the drug
+    B: bacteria learning during their lifetime to avoid the antibiotic
+    C: the bacteria developing resistance because they needed it to survive
+    D: pre-existing resistant cells surviving and reproducing more than susceptible cells
+  answer: D
+  explain: The antibiotic selects for cells that already carry resistance alleles, so those individuals
+    leave more descendants and the allele frequency rises.
+  distractors:
+    A: Mutations arise randomly before exposure; the drug does not direct them.
+    B: Bacteria do not learn or change their individual behavior in response to a drug.
+    C: A perceived need or use by an individual does not cause a heritable trait to appear.
+  chapter: unity-and-diversity-of-life
+- id: nmat-p2b-017
+  q: Producers in an ecosystem fix 100,000 kJ of energy. If roughly 10% of the energy at one level reaches
+    the next, how much would be expected at the tertiary consumer level?
+  choices:
+    A: 10,000 kJ
+    B: 1,000 kJ
+    C: 100 kJ
+    D: 10 kJ
+  answer: C
+  explain: 'About 10% passes to each successive level: 10,000 kJ to herbivores, 1,000 kJ to secondary
+    consumers, and 100 kJ to tertiary consumers.'
+  distractors:
+    A: 10,000 kJ is the primary consumer level, one transfer up.
+    B: 1,000 kJ is the secondary consumer level, two transfers up.
+    D: 10 kJ would represent a fourth transfer beyond the tertiary level.
+  chapter: organisms-and-their-environment
+- id: nmat-p2b-018
+  q: A population grows quickly and then levels off and remains fairly steady. The plateau marks
+  choices:
+    A: the attainment of exponential growth
+    B: its biotic potential
+    C: a crash caused by predation
+    D: the carrying capacity of the environment
+  answer: D
+  explain: Logistic growth levels off at the carrying capacity (K), the population size the available
+    resources can sustain.
+  distractors:
+    A: Exponential growth is J-shaped and has no plateau.
+    B: Biotic potential is the maximum growth rate possible under ideal, unrestricted conditions.
+    C: A crash is a sharp decline in numbers, not a stable plateau.
+  chapter: organisms-and-their-environment
+- id: nmat-p2b-019
+  q: A biome that is treeless, has permafrost, very low precipitation, and is covered by mosses, lichens,
+    and low shrubs is the
+  choices:
+    A: taiga
+    B: tundra
+    C: temperate deciduous forest
+    D: tropical rain forest
+  answer: B
+  explain: Permafrost under a very short growing season is the defining feature of arctic tundra.
+  distractors:
+    A: The taiga is a coniferous forest with cold winters but is not treeless.
+    C: Temperate deciduous forest has moderate rainfall and broadleaf trees that shed their leaves.
+    D: Tropical rain forest is warm and wet year-round and is the most species-rich biome.
+  chapter: organisms-and-their-environment
+- id: nmat-p2b-020
+  q: The oxygen gas released during photosynthesis comes directly from the
+  choices:
+    A: carbon dioxide taken in through stomata
+    B: glucose molecule assembled in the Calvin cycle
+    C: splitting of water in the light reactions
+    D: ATP generated by the electron transport chain
+  answer: C
+  explain: Photolysis of water in photosystem II releases O2, while the CO2 supplies the carbon atoms
+    of the sugars.
+  distractors:
+    A: Carbon dioxide contributes carbon to carbohydrate, not the O2 that is released.
+    B: Glucose is a later product of the Calvin cycle, not the source of the oxygen gas.
+    D: ATP is an energy carrier made by the light reactions and contains no oxygen released as gas.
+  chapter: the-world-of-plants-and-animals
+- id: nmat-p2b-021
+  q: Water rises from the roots to the leaves of a tall tree mainly through the ______, driven primarily
+    by ______.
+  choices:
+    A: phloem; root pressure
+    B: xylem; the transpiration pull of evaporating leaf water
+    C: xylem; active pumping by leaf mesophyll cells
+    D: phloem; osmosis from the soil
+  answer: B
+  explain: By the cohesion-tension theory, evaporation from the leaves pulls the cohesive water column
+    up through the xylem.
+  distractors:
+    A: Phloem carries sugars, and root pressure is far too weak to raise water in tall plants.
+    C: Water movement in xylem is passive and depends on evaporation, not on active pumping.
+    D: Phloem transports food from leaves to other parts of the plant, not water from the soil.
+  chapter: the-world-of-plants-and-animals
+- id: nmat-p2b-022
+  q: In flowering plants, double fertilization produces
+  choices:
+    A: one diploid zygote and one triploid endosperm cell
+    B: two diploid zygotes
+    C: a diploid zygote and a haploid endosperm cell
+    D: a zygote inside the ovary wall and a seed coat from the pollen tube
+  answer: A
+  explain: One sperm fertilizes the egg to form the 2n zygote while the other fuses with two polar nuclei
+    to form the 3n endosperm.
+  distractors:
+    B: Only one sperm forms a zygote; the other forms endosperm.
+    C: The endosperm is triploid (3n) because it receives two polar nuclei and one sperm.
+    D: Fertilization occurs within the ovule; the ovary wall develops into the fruit.
+  chapter: the-world-of-plants-and-animals
+- id: nmat-p2b-023
+  q: Which statement best describes negative feedback control?
+  choices:
+    A: The response intensifies the original change in the variable
+    B: The response reverses the change and returns the variable toward its set point
+    C: The variable is held at a fixed value that never varies under any condition
+    D: The mechanism acts only once, during embryonic development
+  answer: B
+  explain: Negative feedback counteracts a departure from the set point, as when insulin lowers blood
+    glucose that has risen too high.
+  distractors:
+    A: Amplifying a change is positive feedback, as in labor contractions or blood clotting.
+    C: Set points are maintained within a normal range and can shift, for example across the day.
+    D: Negative feedback operates continuously throughout life.
+  chapter: life-processes-regulation-and-homeostasis
+- id: nmat-p2b-024
+  q: When body temperature rises above its set point, the hypothalamus triggers dilation of skin blood
+    vessels and sweating. These responses lower body temperature mainly by
+  choices:
+    A: increasing metabolic heat production
+    B: triggering shivering in skeletal muscle
+    C: constricting blood vessels in the skin
+    D: promoting heat loss through radiation and evaporation
+  answer: D
+  explain: Vasodilation carries warm blood to the skin surface for radiation, and evaporating sweat removes
+    additional heat.
+  distractors:
+    A: Metabolic heat production increases when the body is cold.
+    B: Shivering generates heat and is a response to a falling body temperature.
+    C: Vasoconstriction, not dilation, conserves heat by reducing blood flow to the skin.
+  chapter: life-processes-regulation-and-homeostasis
+- id: nmat-p2b-025
+  q: The resting membrane potential of a neuron is established mainly by
+  choices:
+    A: equal concentrations of Na+ and K+ on the two sides of the membrane
+    B: the outward leak of K+ through open channels plus the Na+/K+ pump
+    C: a rapid influx of Na+ through voltage-gated channels
+    D: active transport of Cl- out of the axon
+  answer: B
+  explain: K+ diffusing out through leak channels, with gradients maintained by the Na+/K+ pump, leaves
+    the inside near -70 mV relative to the outside.
+  distractors:
+    A: 'The distributions are unequal: Na+ is concentrated outside and K+ inside.'
+    C: Voltage-gated Na+ influx generates the action potential, not the resting state.
+    D: Chloride movement is not the main determinant of the resting potential.
+  chapter: 3a-nervous-and-endocrine-systems
+- id: nmat-p2b-026
+  q: After strenuous exercise a person's blood glucose falls below its set point. Which hormonal response
+    corrects this?
+  choices:
+    A: Increased insulin secretion by pancreatic beta cells
+    B: Increased ADH release, raising water reabsorption in the kidney
+    C: Glucagon stimulating glycogen breakdown in the liver
+    D: A decrease in thyroxine secretion
+  answer: C
+  explain: Pancreatic alpha cells release glucagon, which promotes glycogenolysis in the liver and raises
+    blood glucose.
+  distractors:
+    A: Insulin is secreted when glucose is high and would lower it further.
+    B: ADH regulates water balance, not blood glucose concentration.
+    D: Thyroxine sets the overall metabolic rate and is not the acute correction for low blood glucose.
+  chapter: 3a-nervous-and-endocrine-systems
+- id: nmat-p2b-027
+  q: Which sequence correctly traces a drop of blood through the heart and lungs?
+  choices:
+    A: left ventricle, pulmonary artery, lungs, right atrium
+    B: right atrium, aorta, lungs, left ventricle
+    C: right ventricle, pulmonary artery, lungs, left atrium
+    D: right ventricle, aorta, lungs, left atrium
+  answer: C
+  explain: Deoxygenated blood leaves the right ventricle by the pulmonary artery, is oxygenated in the
+    lungs, and returns to the left atrium through pulmonary veins.
+  distractors:
+    A: The left ventricle pumps blood into the aorta to the body, not to the lungs.
+    B: The right atrium receives blood from the venae cavae and empties into the right ventricle, not
+      the aorta.
+    D: The right ventricle opens into the pulmonary artery, never the aorta.
+  chapter: 3b-main-organ-systems
+- id: nmat-p2b-028
+  q: Oxygen moves from the alveoli into the pulmonary capillaries because
+  choices:
+    A: the partial pressure of O2 is higher in the alveoli than in the incoming blood
+    B: red blood cells use ATP to pump O2 across the membrane
+    C: O2 is more concentrated in the capillary blood than in alveolar air
+    D: CO2 and O2 are transported in the same direction across the membrane
+  answer: A
+  explain: Oxygen diffuses passively down its partial-pressure gradient, from alveolar air at roughly
+    104 mm Hg into blood arriving at about 40 mm Hg.
+  distractors:
+    B: Gas exchange across the alveolus is simple diffusion and requires no ATP.
+    C: Blood arriving at the lungs is oxygen-poor, so the gradient runs toward the blood.
+    D: Carbon dioxide diffuses in the opposite direction, from the blood into the alveoli.
+  chapter: 3b-main-organ-systems
+- id: nmat-p2b-029
+  q: In humans, the chemical digestion of proteins begins in the
+  choices:
+    A: mouth
+    B: stomach
+    C: small intestine
+    D: large intestine
+  answer: B
+  explain: Pepsin, activated in the acidic stomach, begins hydrolyzing proteins into shorter polypeptides.
+  distractors:
+    A: The mouth digests starch with salivary amylase but no protein.
+    C: Trypsin and peptidases continue protein digestion in the small intestine, but it starts in the
+      stomach.
+    D: The large intestine absorbs water and minerals and secretes no protein-digesting enzymes.
+  chapter: 3b-main-organ-systems
+- id: nmat-p2b-030
+  q: Which cells directly secrete antibodies during an immune response?
+  choices:
+    A: Cytotoxic T lymphocytes
+    B: Macrophages
+    C: Platelets
+    D: Plasma cells derived from B lymphocytes
+  answer: D
+  explain: Activated B lymphocytes differentiate into plasma cells, whose function is the mass secretion
+    of specific antibodies.
+  distractors:
+    A: Cytotoxic T cells kill infected body cells; they do not secrete antibodies.
+    B: Macrophages engulf pathogens and present antigen fragments to helper T cells.
+    C: Platelets take part in blood clotting, not in antibody production.
+  chapter: 3b-main-organ-systems
+passages: []

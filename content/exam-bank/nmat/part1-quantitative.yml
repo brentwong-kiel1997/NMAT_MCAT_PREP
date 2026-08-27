@@ -1,0 +1,555 @@
+exam: nmat
+section: part1-quantitative
+label: Quantitative
+subject: quantitative
+block: part1
+items_expected: 30
+items:
+- id: nmat-p1q-001
+  q: 'Evaluate: 12 + 3 x 4 - 10 / 2'
+  choices:
+    A: '25'
+    B: '13'
+    C: '19'
+    D: '7'
+  answer: C
+  explain: 'Multiply and divide first: 12 + 12 - 5 = 19.'
+  distractors:
+    A: 'Evaluated strictly left to right: 12 + 3 = 15, x 4 = 60, - 10 = 50, / 2 = 25 - precedence ignored.'
+    B: 'Grouped the middle terms first: 12 + (12 - 10) / 2 = 13 - the division must precede the subtraction.'
+    D: 'Subtracted before dividing: (12 + 12 - 10) / 2 = 7.'
+  chapter: fundamental-operations
+- id: nmat-p1q-002
+  q: 3/4 + 5/6 = ?
+  choices:
+    A: 4/5
+    B: 1 7/12
+    C: 5/8
+    D: 1 5/12
+  answer: B
+  explain: 'LCD 12: 9/12 + 10/12 = 19/12 = 1 7/12.'
+  distractors:
+    A: 'Added numerators and denominators straight across: (3 + 5)/(4 + 6) = 8/10.'
+    C: Multiplied the fractions, (3 x 5)/(4 x 6) = 15/24, instead of adding.
+    D: Used LCD 12 but wrote 5/6 as 8/12 instead of 10/12, giving 9/12 + 8/12 = 17/12.
+  chapter: fundamental-operations
+- id: nmat-p1q-003
+  q: What is 15% of 240?
+  choices:
+    A: '36'
+    B: '3.6'
+    C: '24'
+    D: '360'
+  answer: A
+  explain: 0.15 x 240 = 36.
+  distractors:
+    B: Shifted the decimal two places instead of one (0.015 x 240).
+    C: Stopped at 10% of 240 and never added the extra 5%.
+    D: Treated 15% as 1.5, i.e. 150% of 240.
+  chapter: fundamental-operations
+- id: nmat-p1q-004
+  q: 45 is what percent of 180?
+  choices:
+    A: 4%
+    B: 25%
+    C: 400%
+    D: 2.5%
+  answer: B
+  explain: 45/180 = 0.25 = 25%.
+  distractors:
+    A: Inverted the division (180 / 45 = 4) and then also dropped the x100.
+    C: 'Inverted the ratio: 180/45 = 4 = 400% instead of 45/180.'
+    D: Divided correctly (0.25) but moved the decimal point the wrong way.
+  chapter: fundamental-operations
+- id: nmat-p1q-005
+  q: The ratio of men to women in a club is 3:5. If the club has 96 members, how many are women?
+  choices:
+    A: '36'
+    B: '40'
+    C: '56'
+    D: '60'
+  answer: D
+  explain: 3 + 5 = 8 parts; 96 / 8 = 12 per part; 5 x 12 = 60 women.
+  distractors:
+    A: That is the number of men (3 x 12), not the women.
+    B: Treated the whole as 12 parts (96 x 5/12 = 40) instead of 8 parts.
+    C: Subtracted the erroneous 40 from 96 instead of applying the ratio.
+  chapter: fundamental-operations
+- id: nmat-p1q-006
+  q: 'Simplify: (2^3)^2 x 2'
+  choices:
+    A: '512'
+    B: '64'
+    C: '4096'
+    D: '128'
+  answer: D
+  explain: '(2^3)^2 = 2^6; multiplying by 2 adds one to the exponent: 2^7 = 128.'
+  distractors:
+    A: Applied the outer power as 3^2 = 9 (2^9 = 512) instead of 3 x 2 = 6.
+    B: Stopped at (2^3)^2 = 2^6 = 64 and dropped the final x 2.
+    C: Multiplied every exponent, 3 x 2 x 2 = 12 (2^12 = 4096), instead of adding 1 for the last factor.
+  chapter: fundamental-operations
+- id: nmat-p1q-007
+  q: Which is the best estimate of 0.48 x 24.7?
+  choices:
+    A: '12.5'
+    B: '1.25'
+    C: '125'
+    D: '6.25'
+  answer: A
+  explain: 'Round 0.48 to 0.5 and 24.7 to 25: 0.5 x 25 = 12.5 (exact value 11.856).'
+  distractors:
+    B: 'Read 0.48 as 0.048: 0.05 x 25 = 1.25 - one decimal place off.'
+    C: 'Read 0.48 as 5: 5 x 25 = 125 - two decimal places off.'
+    D: 'Used 0.25 instead of 0.5: 0.25 x 25 = 6.25.'
+  chapter: fundamental-operations
+- id: nmat-p1q-008
+  q: 7.5 / 0.25 = ?
+  choices:
+    A: '0.3'
+    B: '3'
+    C: '30'
+    D: '300'
+  answer: C
+  explain: 7.5 / 0.25 = 750 / 25 = 30.
+  distractors:
+    A: Divided by 25 instead of 0.25 and kept the shifted result.
+    B: Misplaced one decimal place (7.5 / 2.5 = 3).
+    D: Misplaced two decimal places the other way (7.5 / 0.025).
+  chapter: fundamental-operations
+- id: nmat-p1q-009
+  q: Express 3/8 as a percent.
+  choices:
+    A: 3.8%
+    B: 37.5%
+    C: 0.375%
+    D: 266.7%
+  answer: B
+  explain: 3 / 8 = 0.375 = 37.5%.
+  distractors:
+    A: 'Moved the decimal one place too far: 0.375 read as 0.0375.'
+    C: Wrote the decimal 0.375 and attached a percent sign without multiplying by 100.
+    D: Inverted the fraction (8 / 3 = 2.667).
+  chapter: fundamental-operations
+- id: nmat-p1q-010
+  q: Which value is closest to the square root of 50?
+  choices:
+    A: '7.1'
+    B: '25'
+    C: '8'
+    D: '5'
+  answer: A
+  explain: 7^2 = 49 and 7.1^2 = 50.41, so the square root of 50 is about 7.07, i.e. 7.1.
+  distractors:
+    B: Divided 50 by 2 instead of taking the square root.
+    C: Rounded up to the next perfect square root, 64, whose root is 8.
+    D: Divided 50 by 10 instead of taking the square root.
+  chapter: fundamental-operations
+- id: nmat-p1q-011
+  q: Ana is 4 years older than Ben. In 6 years, Ana will be twice as old as Ben is now. How old is Ben
+    now?
+  choices:
+    A: '10'
+    B: '14'
+    C: '20'
+    D: '16'
+  answer: A
+  explain: 'Ben = b, so (b + 4) + 6 = 2b, giving b = 10. Check: Ana is 14 now and 20 in 6 years = 2 x
+    10.'
+  distractors:
+    B: That is Ana's present age (10 + 4).
+    C: That is Ana's age in 6 years (14 + 6), not Ben's now.
+    D: That is Ben's age in 6 years (10 + 6).
+  chapter: problem-solving
+- id: nmat-p1q-012
+  q: Pipe A fills a tank in 6 hours and pipe B fills the same tank in 3 hours. Working together, how long
+    will they take?
+  choices:
+    A: '4.5'
+    B: '9'
+    C: '2'
+    D: '4'
+  answer: C
+  explain: 1/6 + 1/3 = 1/2 tank per hour, so the time is 1 / (1/2) = 2 hours.
+  distractors:
+    A: Averaged the two completion times, (6 + 3)/2.
+    B: Added the completion times instead of the rates.
+    D: Used the harmonic mean of the two TIMES, 2(6)(3)/(6 + 3) = 4, instead of adding the rates.
+  chapter: problem-solving
+- id: nmat-p1q-013
+  q: Mark can paint a room in 4 hours and his assistant can paint the same room in 12 hours. Working together,
+    how long will they take?
+  choices:
+    A: '8'
+    B: '3'
+    C: '6'
+    D: '16'
+  answer: B
+  explain: 1/4 + 1/12 = 3/12 + 1/12 = 1/3 room per hour, so the time is 3 hours.
+  distractors:
+    A: Averaged the two completion times, (4 + 12)/2.
+    C: Used the harmonic mean of the two TIMES, 2(4)(12)/(4 + 12) = 6, instead of adding the rates.
+    D: Added the completion times instead of the rates.
+  chapter: problem-solving
+- id: nmat-p1q-014
+  q: How many liters of a 20% acid solution must be added to 10 L of a 50% acid solution to produce a
+    30% acid solution?
+  choices:
+    A: '5'
+    B: '10'
+    C: '30'
+    D: '20'
+  answer: D
+  explain: 0.20x + 0.50(10) = 0.30(x + 10), so 0.2x + 5 = 0.3x + 3 and x = 20 L.
+  distractors:
+    A: 'Inverted the alligation ratio: the 20% solution must be TWICE the 50% solution (20:10), not half
+      it.'
+    B: Assumed equal volumes of the two solutions would average to 30%.
+    C: Confused the target concentration (30%) with a volume in liters.
+  chapter: problem-solving
+- id: nmat-p1q-015
+  q: A courier drives 40 km to a client at 60 km/h and returns along the same road at 40 km/h. What is
+    his average speed for the whole trip?
+  choices:
+    A: '50'
+    B: '48'
+    C: '40'
+    D: '60'
+  answer: B
+  explain: 'Times: 40/60 = 2/3 h out and 40/40 = 1 h back. 80 km in 5/3 h = 48 km/h. Equal distances mean
+    the harmonic mean of the speeds, not the average of 60 and 40.'
+  distractors:
+    A: Took the arithmetic mean of the two speeds, (60 + 40)/2 - wrong because more time is spent at 40
+      km/h.
+    C: Reported the return speed only.
+    D: Reported the outbound speed only.
+  chapter: problem-solving
+- id: nmat-p1q-016
+  q: The sum of three consecutive even integers is 78. What is the largest?
+  choices:
+    A: '26'
+    B: '24'
+    C: '28'
+    D: '30'
+  answer: C
+  explain: x + (x + 2) + (x + 4) = 78, so 3x + 6 = 78, x = 24, and the largest is 24 + 4 = 28.
+  distractors:
+    A: That is the middle integer (78 / 3 = 26).
+    B: That is the smallest of the three integers.
+    D: Spaced the integers 4 apart (x, x + 4, x + 8 = 22, 26, 30) instead of 2 apart.
+  chapter: problem-solving
+- id: nmat-p1q-017
+  q: A rectangular lot is 3 m longer than it is wide and its area is 130 square meters. What is its perimeter?
+  choices:
+    A: '46'
+    B: '23'
+    C: '26'
+    D: '36'
+  answer: A
+  explain: w(w + 3) = 130 gives w = 10 and l = 13, so P = 2(13 + 10) = 46 m.
+  distractors:
+    B: That is one length plus one width - only half the perimeter.
+    C: Doubled the length only (2 x 13).
+    D: Doubled the length but added the width once (26 + 10).
+  chapter: problem-solving
+- id: nmat-p1q-018
+  q: A stock rises from P80 to P100, then falls 20% of its new price. The final price is what percent
+    of the original P80?
+  choices:
+    A: 125%
+    B: 105%
+    C: 80%
+    D: 100%
+  answer: D
+  explain: 100 x 0.80 = P80, and 80/80 = 100%. A 25% gain followed by a 20% loss returns to the start.
+  distractors:
+    A: 'Stopped after the rise: 100/80 = 125%, ignoring the 20% drop.'
+    B: Netted +25% and -20% into a +5% gain and applied it to P80.
+    C: Reported the final peso value as if it were already a percent.
+  chapter: problem-solving
+- id: nmat-p1q-019
+  q: The price of a phone fell 25% to P4,500. By what percent must it now rise to return to its original
+    price?
+  choices:
+    A: 25%
+    B: 133.3%
+    C: 33.3%
+    D: '1500'
+  answer: C
+  explain: Original = 4500/0.75 = P6,000; the needed rise is 1500/4500 = 33.3% (base = current price).
+  distractors:
+    A: Used the ORIGINAL P6,000 as the base (1500/6000 = 25%) instead of the current P4,500.
+    B: Reported the ratio of prices, 6000/4500 = 133.3%, rather than the increase over 4500.
+    D: Gave the peso increase, not a percent.
+  chapter: problem-solving
+- id: nmat-p1q-020
+  q: A bus leaves a terminal at 8:00 AM averaging 50 km/h. A car leaves the same terminal at 9:00 AM along
+    the same road averaging 70 km/h. At what time does the car overtake the bus?
+  choices:
+    A: 10:00 AM
+    B: 11:30 AM
+    C: 9:43 AM
+    D: 12:30 PM
+  answer: B
+  explain: At 9:00 the bus is 50 km ahead. Closing speed = 70 - 50 = 20 km/h; 50/20 = 2.5 h, so 9:00 AM
+    + 2.5 h = 11:30 AM.
+  distractors:
+    A: Assumed the car closes the 50 km gap at the bus's own 50 km/h (1 h after 9:00).
+    C: Divided the 50 km gap by the car's own 70 km/h (0.71 h = about 43 min).
+    D: Divided the car's 70 km by the 20 km/h closing speed (3.5 h after 9:00).
+  chapter: problem-solving
+- id: nmat-p1q-021
+  q: 'A clinic recorded the following for the first quarter:
+
+
+    Month | Patients | Revenue
+
+    January | 400 | P120,000
+
+    February | 500 | P140,000
+
+    March | 600 | P210,000
+
+
+    What was the revenue per patient in March?'
+  choices:
+    A: '313'
+    B: '420'
+    C: '280'
+    D: '350'
+  answer: D
+  explain: 210,000 / 600 = P350 per patient.
+  distractors:
+    A: 'Used the pooled quarter rate: 470,000 / 1,500 = P313.'
+    B: Divided by February's 500 patients instead of March's 600.
+    C: Gave February's rate (140,000 / 500 = P280).
+  chapter: data-interpretation
+- id: nmat-p1q-022
+  q: 'A clinic recorded the following for the first quarter:
+
+
+    Month | Patients | Revenue
+
+    January | 400 | P120,000
+
+    February | 500 | P140,000
+
+    March | 600 | P210,000
+
+
+    By what percent did revenue increase from January to March?'
+  choices:
+    A: 75%
+    B: 43%
+    C: 175%
+    D: 50%
+  answer: A
+  explain: (210,000 - 120,000) / 120,000 = 90,000 / 120,000 = 75%.
+  distractors:
+    B: 'Used March as the base: 90,000 / 210,000 = 43%.'
+    C: Reported March as a percent of January (210/120 = 175%) instead of the increase.
+    D: Used the patient counts (400 to 600) instead of the revenue.
+  chapter: data-interpretation
+- id: nmat-p1q-023
+  q: 'A clinic recorded the following for the first quarter:
+
+
+    Month | Patients | Revenue
+
+    January | 400 | P120,000
+
+    February | 500 | P140,000
+
+    March | 600 | P210,000
+
+
+    Which month had the LOWEST revenue per patient?'
+  choices:
+    A: January
+    B: March
+    C: February
+    D: January and March are tied
+  answer: C
+  explain: Jan 120,000/400 = P300; Feb 140,000/500 = P280; Mar 210,000/600 = P350. February is lowest.
+  distractors:
+    A: January is P300, still P20 per patient above February.
+    B: Assumed the largest total revenue must mean the smallest per-patient figure.
+    D: January and March are P300 and P350, neither equal nor the lowest.
+  chapter: data-interpretation
+- id: nmat-p1q-024
+  q: 'A clinic recorded the following for the first quarter:
+
+
+    Month | Patients | Revenue
+
+    January | 400 | P120,000
+
+    February | 500 | P140,000
+
+    March | 600 | P210,000
+
+
+    What was the average monthly revenue for the quarter?'
+  choices:
+    A: 470,000
+    B: 156,667
+    C: 140,000
+    D: 165,000
+  answer: B
+  explain: (120,000 + 140,000 + 210,000) / 3 = 470,000 / 3 = about P156,667.
+  distractors:
+    A: Gave the quarterly total, not the monthly average.
+    C: Gave the median month's revenue instead of the mean.
+    D: Averaged only January and March (120,000 + 210,000)/2, skipping February.
+  chapter: data-interpretation
+- id: nmat-p1q-025
+  q: 'A clinic recorded the following for the first quarter:
+
+
+    Month | Patients | Revenue
+
+    January | 400 | P120,000
+
+    February | 500 | P140,000
+
+    March | 600 | P210,000
+
+
+    From February to March, by what percent did the revenue PER PATIENT change?'
+  choices:
+    A: 20%
+    B: 50%
+    C: 30%
+    D: 25%
+  answer: D
+  explain: Feb 140,000/500 = P280 and Mar 210,000/600 = P350; (350 - 280)/280 = 25%.
+  distractors:
+    A: 'Used the wrong base: 70/350 = 20% instead of 70/280.'
+    B: Used the raw revenue growth, 70,000/140,000 = 50%, ignoring the extra 100 patients.
+    C: Subtracted the 20% rise in patients from the 50% rise in revenue.
+  chapter: data-interpretation
+- id: nmat-p1q-026
+  q: 'Two branches of a bookstore reported annual sales:
+
+
+    Branch | 2023 Sales | 2024 Sales
+
+    North | P200,000 | P260,000
+
+    South | P150,000 | P180,000
+
+
+    What was North branch''s percent increase in sales?'
+  choices:
+    A: 30%
+    B: 23%
+    C: 130%
+    D: 76.9%
+  answer: A
+  explain: (260,000 - 200,000) / 200,000 = 60,000 / 200,000 = 30%.
+  distractors:
+    B: 'Used 2024 as the base: 60,000/260,000 = 23%.'
+    C: Reported the new-to-old ratio (260/200 = 130%) as the increase.
+    D: Inverted the ratio (200/260 = 76.9%).
+  chapter: data-interpretation
+- id: nmat-p1q-027
+  q: 'Two branches of a bookstore reported annual sales:
+
+
+    Branch | 2023 Sales | 2024 Sales
+
+    North | P200,000 | P260,000
+
+    South | P150,000 | P180,000
+
+
+    What was the percent increase in the TOTAL sales of the two branches combined?'
+  choices:
+    A: 30%
+    B: 20.5%
+    C: 25%
+    D: 25.7%
+  answer: D
+  explain: 2023 total = P350,000 and 2024 total = P440,000; 90,000/350,000 = 25.7%.
+  distractors:
+    A: Applied North's own 30% increase to the whole company.
+    B: 'Used the 2024 total as the base: 90,000/440,000 = 20.5%.'
+    C: Averaged the two branch percents, (30% + 20%)/2, without weighting by sales.
+  chapter: data-interpretation
+- id: nmat-p1q-028
+  q: 'Two branches of a bookstore reported annual sales:
+
+
+    Branch | 2023 Sales | 2024 Sales
+
+    North | P200,000 | P260,000
+
+    South | P150,000 | P180,000
+
+
+    In 2024, what percent of the combined sales came from the South branch?'
+  choices:
+    A: 45.5%
+    B: 34.1%
+    C: 40.9%
+    D: 20%
+  answer: C
+  explain: 180,000 / 440,000 = 40.9%.
+  distractors:
+    A: That is North's share, 200,000/440,000.
+    B: Divided South's 2023 sales by the 2024 total (150,000/440,000).
+    D: Gave South's own growth rate (30,000/150,000) instead of its share.
+  chapter: data-interpretation
+- id: nmat-p1q-029
+  q: 'A canteen logged three days of sales:
+
+
+    Day | Customers | Sales
+
+    Monday | 80 | P4,000
+
+    Tuesday | 100 | P6,000
+
+    Wednesday | 150 | P6,000
+
+
+    On which day was the average sale per customer highest?'
+  choices:
+    A: Monday
+    B: Tuesday
+    C: Wednesday
+    D: All three, at about P48.5 each
+  answer: B
+  explain: Mon 4,000/80 = P50; Tue 6,000/100 = P60; Wed 6,000/150 = P40. Tuesday is highest.
+  distractors:
+    A: Assumed the fewest customers automatically means the highest per-customer average.
+    C: Equated the busiest day with the highest per-customer average.
+    D: Pooled all three days (16,000/330 = P48.5) instead of ranking the daily rates.
+  chapter: data-interpretation
+- id: nmat-p1q-030
+  q: 'A canteen logged three days of sales:
+
+
+    Day | Customers | Sales
+
+    Monday | 80 | P4,000
+
+    Tuesday | 100 | P6,000
+
+    Wednesday | 150 | P6,000
+
+
+    By what percent did the average sale per customer change from Monday to Wednesday?'
+  choices:
+    A: 20% increase
+    B: 25% decrease
+    C: 20% decrease
+    D: No change - total sales rose
+  answer: C
+  explain: Mon 4,000/80 = P50 and Wed 6,000/150 = P40; (40 - 50)/50 = -20%, a 20% decrease.
+  distractors:
+    A: Dropped the direction of the change; the per-customer average fell.
+    B: 'Used Wednesday as the base: 10/40 = 25% instead of 10/50.'
+    D: Compared total sales, which rose from P4,000 to P6,000, without dividing by customers.
+  chapter: data-interpretation
+passages: []

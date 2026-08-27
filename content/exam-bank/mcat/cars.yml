@@ -1,0 +1,1406 @@
+exam: mcat
+section: cars
+label: Critical Analysis and Reasoning Skills
+subject: cars
+block: cars
+items_expected: 53
+items: []
+passages:
+- id: mcat-cars-p01
+  text: 'Every schoolchild once learned that Elias Howe invented the sewing machine. The story has
+    the shape cultural memory prefers: a solitary mechanic, poor and unpaid, dreams of a spear with
+    a hole in its point, wakes, and builds the machine that remade the garment trade. It is a satisfying
+    story. It is also, as historians of technology have spent several decades demonstrating, almost
+    exactly the wrong way to understand what happened between 1830 and 1860.
+
+
+    The sewing machine did not arrive; it accumulated. At least a dozen workers produced partial machines
+    in those years. Thimonnier''s French machine, stitching with a barbed needle, was in commercial
+    use in a Paris garment workshop eight years before Howe''s famous patent. Howe''s genuine contribution,
+    an eye at the point of the needle paired with a shuttle, was indispensable, but it solved only
+    one of the problems a practical machine had to solve: feeding cloth evenly, holding tension constant,
+    and surviving sustained use without a skilled operator. Singer''s contribution was not a stitch
+    at all but a business model. He aggregated other men''s patents, added a treadle, and sold the
+    machine on installment to households that had never imagined buying one.
+
+
+    The patent litigation of the 1850s is usually told as a morality tale about greed, but the litigation
+    is itself evidence for the cumulative account. Only when a technology is genuinely many people''s
+    work does ownership become contestable; a machine with one clear author generates no patent pool.
+    When the leading litigants finally pooled their patents in 1856, the agreement rested on the fact
+    that each party held pieces the others could not dispense with. The pool is the historical argument
+    against the hero story, stated in the idiom of contracts.
+
+
+    To be sure, recovering collective invention should not slide into the opposite fiction, in which
+    individuals are mere conduits for a technological spirit passing through them. Howe did not simply
+    happen to be the man through whom the eye-pointed needle traveled. He worked the problem for years,
+    abandoned it, returned to it, and defended his claim with a tenacity the record fully documents.
+    Individuals choose, persist, and take risks; the point is not that they are interchangeable but
+    that their choices are intelligible only against a background of shared problems, circulating
+    designs, and competing partial solutions. Genius is a real variable. It is simply not a sufficient
+    one.
+
+
+    What the case finally exposes is the economics of memory. The lone-inventor story is not a naive
+    error that better scholarship will quietly correct; it is a story with patrons. Patent law requires
+    a named inventor. Textbooks require a named hero. Marketing requires a name that can be painted
+    on the machine itself, and Singer did not put a committee on the decal. The narrative is an artifact
+    of the institutions that needed it. Historians who complain that the public still believes in
+    lone inventors are, in that sense, complaining that institutions still need them. The correction
+    is not mainly a matter of distributing credit more generously, though that is a pleasant consequence.
+    It is a matter of seeing that the question "who invented it?" is itself part of the phenomenon
+    requiring explanation.'
+  chapter: foundations-of-comprehension
+  items:
+  - id: mcat-cars-001
+    q: The author's central argument about the sewing machine is that
+    choices:
+      B: Singer deserves more of the credit than Howe, since the business model did the decisive work.
+      C: patent pools are the clearest available evidence of individual genius in the history of technology.
+      D: nineteenth-century technical progress depended more on marketing than on mechanical invention.
+      A: the lone-inventor story persists not because it is accurate but because institutions require
+        a name to carry the credit.
+    answer: A
+    explain: The passage argues that the machine accumulated through many partial contributions and
+      then explains the hero story's persistence by the needs of patent law, textbooks, and branding,
+      which all require a single name.
+    distractors:
+      B: The author declines to rank the contributions; the argument is about narrative, not merit.
+      C: This reverses the passage, which uses the pool as evidence of many-handed work.
+      D: 'An overreach: the passage says marketing needed a name, not that marketing drove progress.'
+    chapter: foundations-of-comprehension
+    passage_id: mcat-cars-p01
+  - id: mcat-cars-002
+    q: The author mentions Thimonnier's machine primarily in order to
+    choices:
+      A: argue that French workshops adopted machinery more readily than American ones did.
+      C: claim that chain-stitch machines were mechanically superior to lockstitch machines.
+      D: explain why Howe temporarily abandoned his work on the eye-pointed needle.
+      B: show that a working, commercially used sewing machine existed well before the date the standard
+        story implies.
+    answer: B
+    explain: The machine was 'in commercial use in a Paris garment workshop eight years before Howe's
+      famous patent,' which supports the claim that the technology accumulated rather than arriving
+      with one inventor.
+    distractors:
+      A: No comparison of national adoption rates is offered or implied.
+      C: The passage makes no judgment about the two stitch mechanisms' relative merits.
+      D: Howe's abandoning and resuming work is mentioned later and is unrelated to Thimonnier.
+    chapter: foundations-of-comprehension
+    passage_id: mcat-cars-p01
+  - id: mcat-cars-003
+    q: The author takes the 1856 patent pool as demonstrating that
+    choices:
+      A: the litigation of the 1850s was essentially theatrical rather than substantive.
+      B: the courts had by then decided in favor of Howe's priority over the others.
+      D: only pooling the patents made the machine affordable to ordinary households.
+      C: disputes over ownership arise precisely because no single contributor's claim was complete
+        on its own.
+    answer: C
+    explain: The passage states that contestable ownership is a sign of genuinely many-handed work
+      and that each party held pieces the others could not do without.
+    distractors:
+      A: The author calls the morality-tale telling a mistake, not the litigation itself insincere.
+      B: No court ruling between the parties is described.
+      D: The installment plan, not the pool, is tied to household purchase, and no causal claim of
+        necessity is made.
+    chapter: foundations-of-comprehension
+    passage_id: mcat-cars-p01
+  - id: mcat-cars-004
+    q: The sentence "Genius is a real variable. It is simply not a sufficient one." primarily serves
+      to
+    choices:
+      A: concede that the traditional account is, on balance, the correct one.
+      B: introduce documentary evidence about how Howe actually spent his working years.
+      C: dismiss Howe's persistence as irrelevant to the machine's development.
+      D: mark the boundary of the concession, so that rejecting the hero story is not confused with
+        denying individual agency.
+    answer: D
+    explain: The passage has just granted that Howe chose, persisted, and risked; the sentence then
+      limits that grant, keeping agency in the account while denying that it explains the machine
+      by itself.
+    distractors:
+      A: It concedes only that individuals matter, not that the story taught in schools is right.
+      B: The evidence about Howe's persistence has already been given; nothing new is introduced.
+      C: It affirms that persistence is real, not that it is unimportant.
+    chapter: foundations-of-comprehension
+    passage_id: mcat-cars-p01
+  - id: mcat-cars-005
+    q: It can be inferred from the final paragraph that the author regards historians' complaints
+      about public belief in lone inventors as
+    choices:
+      B: justified, because scholarly findings have simply failed to reach general readers.
+      C: premature, given that the documentary record on Howe remains incomplete.
+      D: unfounded, because the public no longer accepts the heroic account.
+      A: misdirected, since that belief is continuously renewed by institutions that still depend
+        on it.
+    answer: A
+    explain: The passage says such complaints are really complaints that institutions still need the
+      story, which relocates the problem from public ignorance to institutional demand.
+    distractors:
+      B: The passage denies that the problem is one of communication or access to scholarship.
+      C: Nothing in the passage suggests the record on Howe is incomplete.
+      D: The passage explicitly says the public still believes the story.
+    chapter: foundations-of-comprehension
+    passage_id: mcat-cars-p01
+- id: mcat-cars-p02
+  text: 'The trouble with the debate over hostile architecture is that it is conducted as though the
+    benches were the point. A city installs armrests down the middle of a public bench, or replaces
+    a broad ledge with a sloped strip of polished granite, and critics photograph the result under
+    the heading of defensive design. The photographs are not inaccurate. They are simply misdirecting,
+    because they keep the argument at the level of objects, and objects do not have to be defended
+    the way decisions do. The armrest is a judgment about who may sleep downtown, rendered in concrete
+    precisely so that no one has to state it in words.
+
+
+    What is being displaced is a political question. When a city cannot pass an ordinance governing
+    who may rest in a plaza, it can still order furniture. Hardware requires no hearing, admits no
+    public comment, and is harder to reverse than a statute, since undoing a bench means spending
+    money again. A council that would hesitate to vote on excluding a population from a square can
+    achieve the exclusion by specifying a bench, and the specification appears in a procurement document
+    that almost no resident will read. This is not a conspiracy; it is a convenience, which is why
+    it spreads.
+
+
+    Defenders of the practice answer that design merely responds to behavior: that bars deter skateboards,
+    that armrests prevent overnight occupation, that the plaza must remain passable for everyone else.
+    To be sure, cities have real obligations. Sidewalks must be usable, liability is a genuine constraint,
+    and a barrier that stops a vehicle from entering a crowd is not an insult to anyone. But the appeal
+    to behavior carries less weight than it appears to, because behavior is not evenly distributed
+    across a population. A design that responds to behavior responds to someone''s behavior, and the
+    someone is not chosen at random. The industry vocabulary makes the sleight visible: the same object
+    is called defensive by its designers and hostile by its critics, and neither word has to say whom
+    the object defends or from whom.
+
+
+    Consider the transit hub that removed its benches and later installed lean bars at hip height.
+    Officials cited maintenance costs and durability. Both claims were probably true, and both were
+    beside the point, since the budget that could not sustain a bench could sustain the study that
+    justified removing it. The relevant question was never whether the bars were cheaper. It was which
+    travelers the arrangement served, and the answer, disclosed by who now had nowhere to wait, was
+    not one the officials had been asked to defend.
+
+
+    The useful test, then, is not intent. Intent is difficult to establish, easy to deny, and mostly
+    irrelevant, since a feature can exclude without anyone designing it to. The test is incidence:
+    name the population a given feature excludes, and ask whether the exclusion could survive being
+    spoken aloud in a public meeting. A city that could not defend the sentence should not be permitted
+    to build the bench. This standard would not end disagreement, and it would not settle the hard
+    cases where safety and access genuinely collide. It would, however, force the choice back into
+    the register where a public can contest it, which is the only register in which a decision about
+    shared space deserves to be made.'
+  chapter: reasoning-within-the-text
+  items:
+  - id: mcat-cars-006
+    q: Which of the following best expresses the passage's main point?
+    choices:
+      A: Municipal governments deliberately conspire to remove poor people from downtown areas.
+      C: Cities should keep more benches, since maintaining seating costs less than the studies used
+        to justify removing it.
+      D: The term "hostile architecture" is accurate, and "defensive design" is a misleading industry
+        euphemism.
+      B: Design of public space routinely settles questions about who belongs without those questions
+        ever being argued in public.
+    answer: B
+    explain: The author's thesis is that hardware displaces a political decision about exclusion into
+      an unargued procurement choice; the closing standard is meant to force such choices back into
+      public contest.
+    distractors:
+      A: The passage calls the practice a convenience that spreads, not a conspiracy, and does not
+        name a target population.
+      C: The author says the cost comparison was beside the point and never argues for more spending.
+      D: The author treats the naming contest as evidence of what is being avoided, not as the argument
+        itself.
+    chapter: reasoning-within-the-text
+    passage_id: mcat-cars-p02
+  - id: mcat-cars-007
+    q: The author objects to the photographs of sloped ledges and armrests chiefly because they
+    choices:
+      A: are usually staged or altered to make ordinary benches look hostile.
+      B: reveal design details that should remain confidential for security reasons.
+      D: focus too much on poor residents and not enough on skateboarding youths.
+      C: keep attention on objects, allowing the decision the objects embody to go unargued.
+    answer: C
+    explain: The second and third sentences state that the photographs are not inaccurate but misdirecting,
+      because they hold the argument at the level of objects, which need not be defended as decisions
+      do.
+    distractors:
+      A: The passage explicitly grants that the photographs are not inaccurate.
+      B: Nothing about confidentiality or security appears in the passage.
+      D: The passage does not weigh which excluded group deserves more attention.
+    chapter: reasoning-within-the-text
+    passage_id: mcat-cars-p02
+  - id: mcat-cars-008
+    q: According to the passage, hardware has an advantage over statute for a government that wants
+      to restrict use of a public space because hardware
+    choices:
+      A: is less expensive to install and maintain than any enforceable ordinance.
+      B: produces measurable effects on behavior, whereas ordinances rarely do.
+      C: is exempt from the procurement rules that constrain municipal contracting.
+      D: can be adopted without the hearings and votes that a law would require and is costlier to
+        undo.
+    answer: D
+    explain: The passage says hardware 'requires no hearing, admits no public comment,' and is harder
+      to reverse than a statute because undoing it means spending money again.
+    distractors:
+      A: The passage denies that cost is the relevant comparison in the bench example.
+      B: Behavioral effects are the defenders' argument, not the author's ground here.
+      C: The passage locates the decision in procurement documents but never claims an exemption from
+        them.
+    chapter: reasoning-within-the-text
+    passage_id: mcat-cars-p02
+  - id: mcat-cars-009
+    q: It can be inferred that the author would reject a municipal policy of auditing only those features
+      that designers intended to exclude people, because the author holds that
+    choices:
+      B: designers' intentions in such cases are invariably deceptive.
+      C: no public feature can be shown to exclude anyone at all.
+      D: incidence and intent coincide in every case that matters.
+      A: a feature can exclude a population even when no one designed it for that purpose.
+    answer: A
+    explain: The passage calls intent difficult to establish, easy to deny, and mostly irrelevant,
+      and states that a feature can exclude without anyone designing it to, which is why the proposed
+      test is incidence.
+    distractors:
+      B: The author says intent is easy to deny, not that it is always dishonest.
+      C: The author's own test asks which population a feature excludes, so exclusion can be identified.
+      D: This contradicts the author's reason for preferring incidence over intent.
+    chapter: reasoning-within-the-text
+    passage_id: mcat-cars-p02
+  - id: mcat-cars-010
+    q: The function of the concession beginning "To be sure, cities have real obligations" is to
+    choices:
+      A: concede that the defenders of defensive design have won the argument in most cities.
+      B: introduce a set of exceptions that will later overturn the passage's central claim.
+      D: suggest that liability concerns are invented by officials to disguise their motives.
+      C: acknowledge genuine constraints before arguing that those constraints do not justify particular
+        design choices.
+    answer: C
+    explain: The author grants passability and liability as real, then argues that the appeal to behavior
+      'carries less weight than it appears to,' limiting the concession without surrendering the thesis.
+    distractors:
+      A: The concession is followed immediately by a rebuttal, not a defeat.
+      B: The passage allows that some cases genuinely collide; it does not derive an overturning of
+        the thesis.
+      D: The author calls liability a genuine constraint, not a pretext.
+    chapter: reasoning-within-the-text
+    passage_id: mcat-cars-p02
+  - id: mcat-cars-011
+    q: A city installs hip-height lean bars at a transit stop, citing a seating budget shortfall and
+      a maintenance study. Based on the passage, the author's most likely response is to ask
+    choices:
+      A: whether the maintenance study was funded by the contractors who would build the bars.
+      B: whether other cities that installed lean bars later restored their benches.
+      C: whether the bars are durable enough to justify the expenditure over a decade.
+      D: whether the exclusion the bars produce could be stated and defended in a public meeting.
+    answer: D
+    explain: 'The author''s proposed standard is incidence plus public defensibility: name whom the
+      feature excludes and ask whether that exclusion could survive being spoken aloud.'
+    distractors:
+      A: The passage mentions no funding source for the study and makes no such allegation.
+      B: The passage describes a city that later installed lean bars but draws no lesson about reversal.
+      C: Durability is one of the officials' claims, which the author says is beside the point.
+    chapter: reasoning-within-the-text
+    passage_id: mcat-cars-p02
+- id: mcat-cars-p03
+  text: 'Arguments over museum repatriation are usually framed as a collision between two kinds of
+    property: the legal title a holding institution can produce and the cultural claim a source community
+    can make. That framing is not false, but it is shallow, and it leads both sides to argue about
+    ownership when the interesting question is about position. The question worth asking of any object
+    is not who owns it but who is able to ask questions of it, and under what conditions.
+
+
+    Consider the standard defense of the encyclopedic museum, which holds that universal collections
+    permit comparison across cultures and that comparison is a form of knowledge no single-tradition
+    institution can produce. To be sure, the promise is real. A scholar who can set a Benin brass
+    beside a Korean celadon learns something that neither case file alone supplies, and it would be
+    perverse to deny that juxtaposition has produced genuine scholarship. The difficulty is that the
+    promise is honored in the brochure far more often than in the reading room. In most encyclopedic
+    institutions the great majority of holdings are in storage. Access is granted by application,
+    on the museum''s schedule, under the museum''s terms, and frequently to researchers who already
+    carry the institution''s credentials. A comparative promise that is fulfilled for two hundred
+    visitors a year is not nothing, but it is not the argument''s strength either.
+
+
+    The accessibility argument, taken seriously, is therefore double-edged, and it is worth noticing
+    which edge cuts which way. If proximity and access are what justify retention, then the objects
+    a museum cannot or does not make accessible are precisely the objects it has the weakest claim
+    to keep. Holding institutions have generally preferred not to run this argument to its conclusion,
+    which is understandable, since it would require publishing the numbers.
+
+
+    There is a further difficulty with framing the matter as property at all. Legal title is frequently
+    clear, particularly for objects acquired under the commercial conventions of the nineteenth century,
+    and clarity of title is not nothing. But the conditions under which an object was acquired determine
+    more than ownership; they determine what the object can be used to say. A collection assembled
+    under military occupation was sorted according to the occupier''s categories, catalogued in the
+    occupier''s language, and interpreted through the occupier''s questions, and those facts do not
+    expire when the deed is examined and found to be in order. The archive around the object is thus
+    itself an artifact of the taking, which is why returning the object without returning any authority
+    over its interpretation transfers less than it appears to.
+
+
+    This suggests that the strongest argument for return is not restorative sentiment but epistemic:
+    repatriation relocates the site at which questions are formulated. It does not end the study of
+    an object. Study continues, often in partnership, sometimes through loan, and increasingly through
+    jointly produced catalogs, and the scholarship that results is not obviously worse for being conducted
+    where the object''s community can set some of the terms. What it does change is who counts as
+    the audience and who gets to decide what the object is evidence of.
+
+
+    None of this licenses a blanket rule. Some claims are vexed: objects made for export, objects
+    with several plausible claimants, objects whose communities do not want them back. But the burden
+    of demonstration should rest where the objects rest. An institution that wishes to retain must
+    show, case by case, that its access is real, and a retention case that cannot be made in public
+    should not be made in a storeroom.'
+  chapter: foundations-of-comprehension
+  items:
+  - id: mcat-cars-012
+    q: The passage's central claim about repatriation is that
+    choices:
+      B: objects acquired under nineteenth-century commercial conventions should be exempt from repatriation
+        claims.
+      C: encyclopedic museums produce no genuine scholarship and should be dissolved.
+      D: source communities are generally uninterested in having their objects returned.
+      A: the strongest case for return concerns who is positioned to formulate questions about an
+        object rather than who holds title to it.
+    answer: A
+    explain: The passage reframes the debate from property to position, arguing that return relocates
+      the site where questions are formulated and that acquisition conditions shape what an object
+      can be evidence of.
+    distractors:
+      B: The passage says clear title is not nothing, and never proposes an exemption.
+      C: It explicitly grants that juxtaposition has produced genuine scholarship.
+      D: It acknowledges communities that do not want objects back, but does not generalize that.
+    chapter: foundations-of-comprehension
+    passage_id: mcat-cars-p03
+  - id: mcat-cars-013
+    q: The author's assessment of the encyclopedic museum's comparative argument is that it
+    choices:
+      A: was never taken seriously by the scholars who first advanced it.
+      C: would be decisive if holding institutions published their storage figures.
+      D: applies only to objects that were acquired by military occupation.
+      B: rests on a genuine benefit whose actual fulfillment is far narrower than the argument assumes.
+    answer: B
+    explain: The author concedes the comparative promise is real, then argues it is 'honored in the
+      brochure far more often than in the reading room,' citing storage, restricted access, and credential
+      barriers.
+    distractors:
+      A: The passage treats the argument as real and does not dispute its pedigree.
+      C: Publishing numbers is the author's challenge to institutions, not a condition of the argument's
+        validity.
+      D: Occupation is raised later as a separate point about categories and interpretation.
+    chapter: foundations-of-comprehension
+    passage_id: mcat-cars-p03
+  - id: mcat-cars-014
+    q: The author's observation that most holdings in encyclopedic museums are in storage functions
+      in the argument chiefly to
+    choices:
+      A: prove that museums cannot afford the conservation their collections require.
+      B: suggest that scholars prefer working from published catalogs rather than objects.
+      C: explain why museums are unable to satisfy the volume of research applications they receive.
+      D: show that the accessibility rationale, applied consistently, weakens the case for retaining
+        exactly those objects.
+    answer: D
+    explain: The passage reasons that if access justifies retention, then inaccessible objects are
+      the ones with the weakest retention claim, and notes institutions avoid drawing that conclusion.
+    distractors:
+      A: Conservation funding is never discussed.
+      B: Scholarly preference between catalogs and objects is not raised.
+      C: No claim about application volume or institutional capacity appears.
+    chapter: foundations-of-comprehension
+    passage_id: mcat-cars-p03
+  - id: mcat-cars-015
+    q: The passage indicates that the conditions under which a collection was assembled matter beyond
+      ownership because they
+    choices:
+      A: determine whether an institution's legal title will withstand a court challenge.
+      B: explain why such collections are usually better documented than those formed by purchase.
+      D: reveal that the objects themselves were frequently altered during acquisition.
+      C: shape the categories, language, and questions through which the objects were interpreted,
+        and so constrain what they can be evidence of.
+    answer: C
+    explain: The passage argues that sorting, cataloguing, and interpreting under an occupier's terms
+      'do not expire' when the deed proves valid, making the surrounding archive itself an artifact
+      of the taking.
+    distractors:
+      A: The passage sets aside title as legally clear in order to make a different point.
+      B: No comparison of documentation quality between acquisitions is made.
+      D: Physical alteration of objects is never mentioned.
+    chapter: foundations-of-comprehension
+    passage_id: mcat-cars-p03
+  - id: mcat-cars-016
+    q: It can be inferred that the author would disagree most strongly with a museum that justified
+      retention by arguing that
+    choices:
+      A: some objects have several plausible claimants and cannot be assigned to any one of them.
+      C: objects made for export may not carry the same significance for a source community.
+      D: loan arrangements and joint catalogs can accompany a physical return.
+      B: retention should be the default and that claimants must prove why an object should leave.
+    answer: B
+    explain: The passage states that the burden of demonstration should rest where the objects rest,
+      which places the obligation on the retaining institution rather than on claimants.
+    distractors:
+      A: The author cites exactly this difficulty as a reason against a blanket rule.
+      C: Export objects are likewise the author's own example of a vexed case.
+      D: The author endorses these arrangements as part of how study continues after return.
+    chapter: foundations-of-comprehension
+    passage_id: mcat-cars-p03
+  - id: mcat-cars-017
+    q: According to the passage, the effect of repatriation on scholarship is that it
+    choices:
+      A: ends productive study of an object, since source communities restrict access to it.
+      B: improves the quality of scholarship by removing institutional credential requirements entirely.
+      C: has no effect on interpretation, since catalogues are already jointly produced.
+      D: continues the study of an object while changing who sets some of the terms under which it
+        is interpreted.
+    answer: D
+    explain: The passage says repatriation 'does not end the study of an object,' describes study
+      continuing through partnership, loan, and joint catalogs, and identifies the change as one of
+      audience and interpretive authority.
+    distractors:
+      A: This contradicts the passage's account of study continuing after return.
+      B: The passage makes no claim that credentials are abolished or that scholarship improves overall.
+      C: The passage presents joint catalogs as a consequence of return, not as a pre-existing condition.
+    chapter: foundations-of-comprehension
+    passage_id: mcat-cars-p03
+- id: mcat-cars-p04
+  text: 'The word placebo entered medicine as an insult before it became an instrument. In the thirteenth
+    century it named the vespers for the dead, sung for hire by professional mourners, and by the
+    fourteenth it was applied to a flatterer, someone who pleases by agreeing. When physicians in
+    the eighteenth century described giving a placebo, they meant giving a patient something inert
+    in order to satisfy him. The dishonesty was the point, and the term carried it.
+
+
+    That inheritance makes what happened next worth noticing. When the randomized controlled trial
+    was formalized in the middle of the twentieth century, the placebo was promoted from an act of
+    condescension to the foundation of experimental rigor. The move was a genuine triumph. To be sure,
+    the trial rescued therapeutics from an enormous volume of treatment that seemed to work and did
+    not, and the placebo control remains the single most consequential methodological device of modern
+    medicine. But the triumph was achieved by a change of role that is easy to miss. The placebo ceased
+    to be a phenomenon and became a correction. It was no longer something to be explained but something
+    to be subtracted from an estimate, a nuisance term in the arithmetic of proof.
+
+
+    The subtraction has a cost, and it is visible in the experiments that were run once the question
+    was allowed back in. In trials where a drug is administered openly to one group and surreptitiously,
+    through an infusion pump the patient cannot see, to another, the hidden administration produces
+    a smaller effect. The pharmacological agent is identical in both arms. What differs is the ritual:
+    the attention, the expectation, the sense that something is being done. Whatever that ritual does,
+    it is not nothing, and the trial design that had spent forty years removing it had also spent
+    forty years declining to name it.
+
+
+    A second embarrassment lies in the numbers. If the placebo were inert, its arm of a trial would
+    be stable, and it is not. Placebo response rates vary widely across conditions and, more troublingly,
+    across decades of the same literature, rising in some periods and falling in others for treatments
+    that did not change. An inert comparison group cannot explain its own variability. What the term
+    placebo response actually names, then, is the residue our designs cannot account for: the sum
+    of every uncontrolled feature of being treated, from the confidence of the person holding the
+    syringe to the patient''s belief about what hospitals are for.
+
+
+    None of this argues for returning to prescribing sugar for satisfaction. The point is narrower
+    and more uncomfortable. By converting a therapeutic observation into a methodological inconvenience,
+    the trial''s designers did not merely solve a problem; they reclassified a question. Whether the
+    ritual of treatment is itself a part of treatment, and whether it is something medicine owes patients
+    or something it owes them protection from, is a question about what medicine is for. It was answered
+    by default, in the course of answering a different and more tractable question about how to tell
+    whether a drug works. The genius of the randomized trial was to make that reclassification look
+    like housekeeping.'
+  chapter: reasoning-beyond-the-text
+  items:
+  - id: mcat-cars-018
+    q: The passage is primarily concerned with
+    choices:
+      A: demonstrating that eighteenth-century physicians acted unethically in prescribing inert substances.
+      B: arguing that the randomized controlled trial should be abandoned in favor of hidden-infusion
+        designs.
+      D: proving that the placebo effect is strong enough to replace most drug treatments.
+      C: showing that the randomized trial's success rested on reclassifying a therapeutic phenomenon
+        as a methodological correction to be removed.
+    answer: C
+    explain: The author grants the trial's triumph and then argues that its genius was to convert
+      a question about treatment into housekeeping, a change of role rather than a refuted finding.
+    distractors:
+      A: The opening anecdote is background for a methodological argument, not the argument itself.
+      B: The author endorses the trial as the most consequential device in modern medicine.
+      D: The passage never compares placebo response to drug efficacy as a therapeutic alternative.
+    chapter: reasoning-beyond-the-text
+    passage_id: mcat-cars-p04
+  - id: mcat-cars-019
+    q: According to the passage, the promotion of the placebo from condescension to instrument had
+      the consequence that
+    choices:
+      B: physicians were finally required to disclose inert treatment to their patients.
+      C: the variation in placebo response rates across decades began to decline steadily.
+      D: the term placebo lost its original association with flattery and insincerity.
+      A: the placebo stopped being treated as something requiring explanation and became a quantity
+        to be subtracted.
+    answer: A
+    explain: The passage states that the placebo 'ceased to be a phenomenon and became a correction,'
+      a nuisance term in the arithmetic of proof.
+    distractors:
+      B: Disclosure is not mentioned; the dishonesty discussed belongs to an earlier era.
+      C: The passage says response rates vary across decades, not that variation declined.
+      D: The etymological history is presented as background, and no loss of association is claimed.
+    chapter: reasoning-beyond-the-text
+    passage_id: mcat-cars-p04
+  - id: mcat-cars-020
+    q: The hidden-infusion experiment is introduced in order to
+    choices:
+      A: establish that the drug in the two arms of the trial was administered at different doses.
+      C: confirm that patients who cannot see an infusion pump recover more quickly than those who
+        can.
+      D: show that expectation effects are confined to treatments involving hospital equipment.
+      B: isolate a non-pharmacological component of treatment that the standard design had been removing
+        without naming it.
+    answer: B
+    explain: Because the pharmacological agent is identical and only the ritual differs, the smaller
+      effect under hidden administration demonstrates an unnamed, active non-drug component.
+    distractors:
+      A: The passage states the agent is identical; the difference is visibility, not dose.
+      C: The passage makes no claim about speed of recovery, only about the size of effect.
+      D: The passage does not restrict the effect to equipment-dependent settings.
+    chapter: reasoning-beyond-the-text
+    passage_id: mcat-cars-p04
+  - id: mcat-cars-021
+    q: The author takes the variability of placebo response rates across decades to indicate that
+    choices:
+      A: older trials were conducted with greater care than more recent ones.
+      B: the drugs being tested in different eras differed in strength.
+      C: placebo response is too small to affect the interpretation of most trials.
+      D: the comparison arm is not inert, since it absorbs whatever the design fails to control.
+    answer: D
+    explain: The passage argues that an inert group cannot explain its own variability and that the
+      term names the residue of uncontrolled features of being treated.
+    distractors:
+      A: No claim about the relative care of trials across eras is made.
+      B: The passage attributes the variability to uncontrolled non-drug features, not to the drugs.
+      C: The passage treats the residue as consequential enough to have reclassified a question, not
+        as negligible.
+    chapter: reasoning-beyond-the-text
+    passage_id: mcat-cars-p04
+  - id: mcat-cars-022
+    q: The concession "To be sure, the trial rescued therapeutics..." primarily serves to
+    choices:
+      B: acknowledge that the trial's designers were unaware of expectation effects.
+      C: concede that earlier methods of assessment had been more honest in practice.
+      D: qualify a claim about the ethics of prescribing inert substances to satisfy patients.
+      A: secure the trial's standing so that the subsequent criticism cannot be read as a rejection
+        of controlled experimentation.
+    answer: A
+    explain: The author calls the placebo control the most consequential methodological device of
+      modern medicine before turning to its cost, which localizes the criticism precisely.
+    distractors:
+      B: The passage does not attribute ignorance to the designers but describes what their design
+        accomplished.
+      C: No comparison to earlier methods' honesty appears.
+      D: The ethics of satisfying patients belongs to the opening history, not to this concession.
+    chapter: reasoning-beyond-the-text
+    passage_id: mcat-cars-p04
+  - id: mcat-cars-023
+    q: A regulatory agency proposes accepting a new antidepressant on the grounds that its trial showed
+      a large response in the placebo arm, which the agency reads as evidence that the drug adds little.
+      The author would most likely respond that
+    choices:
+      A: the trial should be repeated with a hidden-infusion design before any conclusion is drawn
+        about the drug.
+      B: the drug has probably failed, since antidepressants act mainly through patient expectation.
+      D: placebo response rates in psychiatry have fallen over recent decades and so should be discounted.
+      C: a large placebo response shows that a substantial portion of the observed improvement is
+        unexplained ritual effect, not that the drug's contribution has been measured.
+    answer: C
+    explain: For the author, the placebo arm is a residue of uncontrolled features of being treated;
+      reading it as a measure against which a drug is simply 'little' repeats the reclassification
+      the passage criticizes.
+    distractors:
+      A: The hidden-infusion design is cited as evidence about ritual, not as the author's recommended
+        regulatory test.
+      B: The passage never asserts that any drug class works mainly through expectation.
+      D: The passage notes variability across decades without giving a direction or endorsing discounting.
+    chapter: reasoning-beyond-the-text
+    passage_id: mcat-cars-p04
+- id: mcat-cars-p05
+  text: 'When the colonial forestry services took inventory of the forests they governed, they produced
+    a category error so durable that its descendants are still with us. The error was not that the
+    foresters lacked data. They were obsessive measurers, and within two generations they had more
+    measurements of growth, yield, and standing volume than any agency had ever assembled for any
+    landscape. The error was in what they were prepared to count as knowledge. The people who had
+    managed those forests for centuries held what they knew in a form the foresters could not read:
+    in seasonal practice rather than in documents, in obligations to particular places rather than
+    in principles, in a vocabulary of fires set at particular times for particular purposes. Encountering
+    practice without paperwork, the foresters concluded that there was nothing there to know.
+
+
+    The consequences followed quickly. Fire, the central instrument of that unwritten management,
+    was recast as the enemy, and suppression became a duty. To be sure, the foresters were not simply
+    obstinate. Fire does destroy standing timber, and the commercial calculus of a plantation genuinely
+    differs from that of a managed mosaic of young growth, browse, and fuel. Their error was empirical
+    rather than moral, and it was compounded by a fact they did not possess: that regular, low-intensity
+    burning prevents the accumulation that makes later fires catastrophic. Within a few decades the
+    suppressed landscapes were burning more violently than the ones they had replaced, which the record
+    eventually conceded, though the concession took long enough to be measured in careers.
+
+
+    It is tempting to describe what happened as science displacing superstition, and the phrase is
+    exactly backwards. The foresters had a theory, and it was quantitative, and it was wrong about
+    the system it was applied to. The people they overrode had a practice, and it was unrecorded,
+    and it was not wrong. What separated them was not evidence but the form in which evidence is admitted.
+    A discipline that recognizes only what can be tabled in its own formats will read an oral corpus
+    as an absence, and the reading will be self-confirming, since the absence is then used to justify
+    not consulting anyone.
+
+
+    This history matters now because the error has a contemporary form. Agencies have begun to incorporate
+    Indigenous ecological knowledge, and the language is of integration: traditional observations
+    are solicited, entered into databases, and used as inputs to models. The observations are often
+    excellent. What is quietly dropped is the institution that produced them, the schedule of obligations
+    and the local accountability that made the knowledge worth having in the first place. Knowledge
+    extracted as data points and managed by people with no obligation to the place is not integrated;
+    it is collected, and collection is the activity the earlier foresters were best at.
+
+
+    The corrective is not to declare traditional practice automatically right. Practices were also
+    shaped by scarcity, by constraint, and sometimes by error, and landscapes have changed in ways
+    no inherited schedule anticipates. It is to insist on the harder requirement: that the form of
+    knowledge be recognized as knowledge before anyone decides what to do with it. Foresters in the
+    last century did not lack information for long. They lacked a way of seeing it when it arrived
+    wearing the wrong clothes.'
+  chapter: reasoning-within-the-text
+  items:
+  - id: mcat-cars-024
+    q: Which statement best captures the author's main argument?
+    choices:
+      A: Indigenous fire management was always superior to scientific forestry and should be restored
+        unchanged.
+      C: Colonial foresters deliberately ignored Indigenous knowledge in order to increase timber
+        yields.
+      D: Quantitative modeling cannot be reconciled with place-based management of forest landscapes.
+      B: Colonial forestry failed not from want of data but from an inability to recognize knowledge
+        presented in a form other than its own.
+    answer: B
+    explain: The passage repeatedly states the foresters had abundant data but could not count unwritten
+      practice as knowledge, and the closing lines return to that lack of recognition.
+    distractors:
+      A: The author explicitly rejects declaring traditional practice automatically right.
+      C: The author calls the foresters' error empirical rather than moral and never alleges deliberate
+        intent.
+      D: The author treats quantitative models as indispensable and does not claim irreconcilability.
+    chapter: reasoning-within-the-text
+    passage_id: mcat-cars-p05
+  - id: mcat-cars-025
+    q: The passage describes the foresters' error as a "category error" chiefly because they
+    choices:
+      A: classified forests by volume of standing timber rather than by ecological type.
+      B: confused the causes of low-intensity fires with those of catastrophic ones.
+      C: recorded their observations in a language the local population could not read.
+      D: took the absence of documents to be evidence of the absence of knowledge.
+    answer: D
+    explain: The passage says they encountered 'practice without paperwork' and concluded there was
+      nothing there to know, which is a mistake about what kind of thing knowledge is.
+    distractors:
+      A: Timber classification is mentioned as part of their measuring, not as the category error.
+      B: The fuel-accumulation fact is something the foresters did not possess, not a confusion they
+        made.
+      C: Language barriers are never raised; the issue is documentation versus practice.
+    chapter: reasoning-within-the-text
+    passage_id: mcat-cars-p05
+  - id: mcat-cars-026
+    q: The author points out that the foresters were "obsessive measurers" primarily to
+    choices:
+      A: concede that the foresters' forest management was in most respects a success.
+      B: suggest that the foresters falsified the measurements they collected.
+      D: explain why the foresters' surveys were accepted by their superiors.
+      C: rule out lack of information as the explanation for the failure being analyzed.
+    answer: C
+    explain: 'The passage sets up the contrast explicitly: the error ''was not that the foresters
+      lacked data,'' and the measurements are cited to establish that.'
+    distractors:
+      A: The passage treats suppression as a substantial failure, not a success.
+      B: There is no suggestion of falsification anywhere in the passage.
+      D: The reception of the surveys by superiors is not discussed.
+    chapter: reasoning-within-the-text
+    passage_id: mcat-cars-p05
+  - id: mcat-cars-027
+    q: It can be inferred that the author regards the later, more violent fires as evidence that
+    choices:
+      B: Indigenous practitioners had knowingly withheld the rationale for regular burning.
+      C: fire suppression was never adopted as an official duty of the forestry services.
+      D: commercial plantations are inherently more fire-prone than unmanaged forest.
+      A: the suppression policy's failure was not remedied by the foresters' eventual accumulation
+        of additional measurements.
+    answer: A
+    explain: The passage's argument is that the problem was the form in which knowledge was admitted,
+      not its quantity, so more measurement could not and did not fix it.
+    distractors:
+      B: The passage attributes the mismatch to the foresters' categories, not to withholding by practitioners.
+      C: The passage says suppression became a duty, contradicting this.
+      D: The passage contrasts the commercial calculus of plantations but does not make this general
+        claim.
+    chapter: reasoning-within-the-text
+    passage_id: mcat-cars-p05
+  - id: mcat-cars-028
+    q: The concession "To be sure, the foresters were not simply obstinate" functions to
+    choices:
+      A: argue that the foresters' successors eventually admitted the policy had failed.
+      C: explain why the foresters were unable to publish their findings in a timely way.
+      D: concede that Indigenous burning sometimes caused the catastrophic fires it was blamed for.
+      B: grant that the suppression policy was reasonable on the information and aims the foresters
+        actually had.
+    answer: B
+    explain: The author grants that fire destroys timber and that a plantation's calculus differs,
+      locating the fault in an empirical mistake rather than in bad faith.
+    distractors:
+      A: That later concession is mentioned separately and is not the function of this sentence.
+      C: Publication delays are never discussed.
+      D: The passage attributes catastrophic fire to fuel accumulation under suppression, not to Indigenous
+        burning.
+    chapter: reasoning-within-the-text
+    passage_id: mcat-cars-p05
+  - id: mcat-cars-029
+    q: An agency hires consultants to interview Elders, converts their observations into database
+      entries, and feeds them into a fire-risk model managed from a distant office. Based on the passage,
+      the author would most likely describe this as
+    choices:
+      A: a necessary compromise, since only quantitative models can justify management decisions publicly.
+      B: an improvement on past practice, because the knowledge is now written down.
+      C: a vindication of the Elders, whose observations will finally be tested empirically.
+      D: a form of collection that leaves out the obligations that made the knowledge reliable.
+    answer: D
+    explain: The passage argues that extracting observations as data while discarding the local institutions
+      and accountability that produced them is collection, not integration.
+    distractors:
+      A: The author does not defend the practice as necessary; the model is the author's example of
+        the repeated error.
+      B: Documentation alone is precisely what the colonial foresters already had, so writing it down
+        is not the advance claimed.
+      C: The passage's concern is the form and institution of knowledge, not whether the data get
+        tested.
+    chapter: reasoning-within-the-text
+    passage_id: mcat-cars-p05
+- id: mcat-cars-p06
+  text: '"But surely the machines will do the work." That sentence, spoken in the 1810s and spoken
+    again last week, is the strongest evidence for the argument I want to make, which is that the
+    Luddite rising was never about machines. The framework knitters who smashed stocking frames in
+    Nottinghamshire between 1811 and 1813 were not enemies of technology. They were skilled workers
+    in a trade that had long set its own terms, and they attacked selectively. Frames in the hands
+    of employers who honored the customary wage were left standing. Frames belonging to men who undercut
+    the trade with unapprenticed labor were destroyed. Some districts licensed and tolerated machinery
+    for years without incident. A mob with a general grievance against machinery does not walk past
+    a working loom.
+
+
+    That selectivity is the whole historiographical problem. To be sure, the machines were new, and
+    the men who broke them said so in their threatening letters, which is why the machine reading
+    is not absurd. But the letters were theatrical, addressed to magistrates and to newspapers, and
+    the targeting on the ground tells a more prosaic story: this was a labor dispute conducted by
+    other means, over wages, apprenticeship, and who had the right to set the price of a stocking.
+    The rising was a negotiation with the machinery of bargaining removed.
+
+
+    Treating it as a war against technology was, then, a political accomplishment. It recast a quarrel
+    over terms as a quarrel over progress, and a quarrel over progress cannot be won by workers, since
+    progress is not a position anyone can hold. Once the frame was fixed, the men of Nottinghamshire
+    could be condemned for opposing the future, and condemnation was cheaper than addressing the price
+    of stockings. The frame has never been very difficult to repair.
+
+
+    Its modern descendant is the discourse of reskilling. When automation arrives, the announced problem
+    is the worker''s attributes: obsolete skills, insufficient adaptability, a shortfall of training.
+    Retraining programs follow, some of them genuinely useful, and the conversation rarely reaches
+    the question the Nottinghamshire men were asking, which is who sets the terms under which the
+    new machine operates. This is not nostalgia. There is no serious argument that the frames should
+    have been left unbroken forever, and no serious argument that automation can be stopped. But notice
+    what the reskilling frame does. It locates the difficulty inside the person, in a deficit that
+    can be remedied by individual effort, and thereby makes a question about the distribution of gains
+    look like a question about the adequacy of workers.
+
+
+    The distinction matters for policy. A society that thinks it is facing a skills problem will buy
+    training, and training is worth buying; a society that thinks it is facing a terms problem will
+    have to bargain, and bargaining is not a purchase. The record of 1811 does not tell us what to
+    do about automation. It tells us what the argument is about, which is a different and more useful
+    piece of information, and it warns us that the framing of a technological dispute is never a neutral
+    description of it. Someone always benefits from calling it a war against machines, and it is worth
+    asking who.'
+  chapter: foundations-of-comprehension
+  items:
+  - id: mcat-cars-030
+    q: The author's main purpose is to
+    choices:
+      A: defend machine-breaking as a strategy that workers facing automation should revive today.
+      B: show that the stocking trade's apprenticeship rules were already obsolete by 1811.
+      D: prove that retraining programs have failed to improve outcomes for displaced workers.
+      C: argue that the Luddite rising was a dispute over labor terms whose reframing as anti-technology
+        continues to shape discussion of automation.
+    answer: C
+    explain: The passage argues the rising was 'a negotiation with the machinery of bargaining removed,'
+      traces the political work done by the anti-machine framing, and applies that lesson to reskilling
+      discourse.
+    distractors:
+      A: The author denies advocating that machines be left unbroken and does not recommend the tactic.
+      B: The passage never evaluates whether apprenticeship rules were outdated.
+      D: The author says some retraining programs are genuinely useful and makes no effectiveness
+        claim.
+    chapter: foundations-of-comprehension
+    passage_id: mcat-cars-p06
+  - id: mcat-cars-031
+    q: The author regards the selectivity of the machine-breaking as significant because it
+    choices:
+      B: demonstrates that the magistrates had secretly licensed the machines in some districts.
+      C: explains why the threatening letters were addressed to newspapers rather than to employers.
+      D: shows that the customary wage had already disappeared from the stocking trade.
+      A: undermines the claim that the attackers were motivated by opposition to machinery as such.
+    answer: A
+    explain: The passage argues that a mob with a general grievance against machinery would not walk
+      past a working loom, and that targeting points to a labor dispute over wages and apprenticeship.
+    distractors:
+      B: The passage mentions tolerated machinery but attributes nothing to magistrates' secrecy.
+      C: The theatrical address of the letters is discussed separately from the targeting.
+      D: The passage says customary terms were being undercut in some places, not that they had vanished.
+    chapter: foundations-of-comprehension
+    passage_id: mcat-cars-p06
+  - id: mcat-cars-032
+    q: The author calls the machine interpretation of the rising a "political accomplishment" because
+      it
+    choices:
+      A: united the magistrates and the employers behind a single, previously contested policy.
+      C: enabled the workers to publicize their grievances in the national press.
+      D: made the destruction of frames a legally defensible act in the eyes of juries.
+      B: changed the kind of question being debated, so that workers could be criticized for opposing
+        progress rather than answered on wages.
+    answer: B
+    explain: The passage says the recasting made a question about distribution look like a question
+      about progress, which workers cannot win, and made condemnation cheaper than addressing prices.
+    distractors:
+      A: No coalition of magistrates and employers is described.
+      C: The publicity via letters is discussed as theater, not as the accomplishment in question.
+      D: Nothing about legal defensibility or juries appears.
+    chapter: foundations-of-comprehension
+    passage_id: mcat-cars-p06
+  - id: mcat-cars-033
+    q: The concession "To be sure, the machines were new..." serves primarily to
+    choices:
+      A: concede that the threatening letters were the most reliable evidence of the men's motives.
+      B: explain why historians before the author's generation had no access to the letters.
+      C: grant that machine-breaking caused more economic damage than the wage cuts did.
+      D: acknowledge the evidentiary basis of the rival interpretation before showing why that evidence
+        is not decisive.
+    answer: D
+    explain: The author allows that the letters say so and that the machine reading is therefore not
+      absurd, then argues that the letters were theatrical and the targeting tells a more prosaic
+      story.
+    distractors:
+      A: The author calls the letters theatrical and treats them as weak evidence of motive.
+      B: The passage does not discuss the letters' availability to earlier historians.
+      C: No comparison of economic damage between machine-breaking and wage cuts is offered.
+    chapter: foundations-of-comprehension
+    passage_id: mcat-cars-p06
+  - id: mcat-cars-034
+    q: The author criticizes the discourse of reskilling primarily because it
+    choices:
+      A: relies on training programs that are rarely funded at adequate levels.
+      B: assumes that automation will eliminate more jobs than it ultimately creates.
+      D: is promoted by the same employers who once refused to pay the customary wage.
+      C: places the problem in the worker's attributes and so makes a question about the distribution
+        of gains look like one about individual adequacy.
+    answer: C
+    explain: The passage states that the reskilling frame locates the difficulty inside the person
+      and thereby displaces the question of who sets the terms under which the machine operates.
+    distractors:
+      A: Funding levels for training are never discussed; the author says training is worth buying.
+      B: The passage makes no claim about net job creation or loss.
+      D: No continuity between the historical employers and modern promoters is asserted.
+    chapter: foundations-of-comprehension
+    passage_id: mcat-cars-p06
+  - id: mcat-cars-035
+    q: A firm announces that it will automate its warehouse and offers affected workers a retraining
+      course. Based on the passage, the author would most likely say that the announcement
+    choices:
+      B: confirms that the firm regards automation as inevitable and has planned accordingly.
+      C: demonstrates that the firm has learned the historical lesson of the Nottinghamshire rising.
+      D: shows that the workers' skills, rather than the firm's decisions, are the real constraint.
+      A: answers a question about the distribution of the automation's gains with a remedy aimed at
+        the workers' qualifications.
+    answer: A
+    explain: For the author, the reskilling frame converts a terms question into a skills question,
+      which is exactly what this announcement does.
+    distractors:
+      B: The passage does not dispute that automation proceeds; inevitability is not the point at
+        issue.
+      C: 'The author''s view is the opposite: the frame is the descendant of the misreading the passage
+        attacks.'
+      D: This restates the framing the passage is arguing against, not a conclusion the author draws.
+    chapter: foundations-of-comprehension
+    passage_id: mcat-cars-p06
+- id: mcat-cars-p07
+  text: 'The standard way of talking about language death borrows its authority from ecology. Languages,
+    we say, are going extinct; the world''s linguistic diversity is collapsing at a rate comparable
+    to the loss of species; each language lost is a library burned. The rhetoric is effective, and
+    it is not dishonest, but it is worth examining what it borrows. Species do not occupy niches because
+    they have something to say about them. A language is not a population of organisms but a set of
+    practices for describing a world, and the value of preserving it does not rest on counting it.
+
+
+    This matters because the ecological framing produces an ecological remedy. If languages are like
+    species, then the appropriate response is to document them before they vanish, exactly as a biologist
+    collects specimens ahead of a habitat''s destruction. Documentation is not to be sneered at. To
+    be sure, the grammars, dictionaries, and recorded texts produced over the past century have preserved
+    an extraordinary amount that would otherwise have left no trace, and revival movements have produced
+    fluent speakers in communities where the language was said to have none. But a recorded corpus
+    is an archive, not a speech community, and the two are not early and late stages of the same thing.
+    An archive is consulted. A speech community talks, and the talking is where a language exists.
+
+
+    What is lost when a language stops being spoken is therefore not well described as information.
+    Information can be transcribed; the transcription survives the last speaker without difficulty.
+    What does not survive is a set of habits of attention, the learned dispositions to notice certain
+    things, to classify them in certain ways, to say what happened in a certain order, and to be obliged
+    to mark certain distinctions whether or not the speaker is interested in them at the moment. A
+    person who acquires the language as a second language in a university acquires the vocabulary
+    of those distinctions without acquiring the pressure to make them, and the pressure is most of
+    the meaning.
+
+
+    Documentation, meanwhile, has its own incentives, and they are not the incentives of conversation.
+    The discipline that produced our records was organized around the grammar, the dictionary, and
+    the text collection, and it rewarded analysis: a completed reference grammar is a career, while
+    a decade of unremarkable conversation in a kitchen is not a publication. The result is archives
+    strong on structure and thin on use, which would be an odd outcome if the point were to preserve
+    a way of talking. No one chose this emphasis deliberately, and no one is to blame for it, but
+    it is a fact about what gets saved.
+
+
+    If the measure of success is structural completeness, we are doing well, and the obituaries for
+    the field are premature. If the measure is whether children use the language with their grandparents,
+    the record is poor, and the honest response is to shift effort toward the conditions of use, which
+    are economic and demographic rather than scholarly. Documents do not raise children. The relevant
+    question for the next century is not how much can be recorded, which is now very nearly all of
+    it, but what sort of a thing we are preserving, and whether the answer we give is the one our
+    methods are built to deliver.'
+  chapter: reasoning-beyond-the-text
+  items:
+  - id: mcat-cars-036
+    q: The passage's main point is that
+    choices:
+      A: documentation efforts have failed and should be abandoned in favor of economic development.
+      C: languages are best understood as species competing for niches in a shared environment.
+      D: second-language learners cannot acquire a language's vocabulary of distinctions.
+      B: framing language loss as extinction leads to a documentation strategy that preserves structure
+        while missing what a language actually is.
+    answer: B
+    explain: The author questions the ecological analogy, argues that an archive is not a speech community,
+      and ends by asking whether current methods preserve the thing at issue.
+    distractors:
+      A: The author says documentation is not to be sneered at and does not advocate abandoning it.
+      C: This is the analogy the passage argues against.
+      D: The passage says such learners acquire the vocabulary but not the pressure to use it.
+    chapter: reasoning-beyond-the-text
+    passage_id: mcat-cars-p07
+  - id: mcat-cars-037
+    q: The author's principal objection to the ecological framing of language loss is that it
+    choices:
+      A: exaggerates the number of languages that are currently falling out of use.
+      B: has made linguists unwilling to cooperate with biologists on conservation.
+      C: implies that communities are blameless for the loss of their languages.
+      D: transfers an analogy's persuasive force to a remedy suited to a different kind of object.
+    answer: D
+    explain: The passage argues that the species analogy yields collection of specimens as the model
+      response, which fits an archive but not a speech community.
+    distractors:
+      A: The author grants the rhetoric is not dishonest and makes no claim about the statistics.
+      B: No claim about interdisciplinary cooperation appears.
+      C: Questions of blame are never raised in the passage.
+    chapter: reasoning-beyond-the-text
+    passage_id: mcat-cars-p07
+  - id: mcat-cars-038
+    q: According to the passage, what does not survive the death of a language?
+    choices:
+      A: The transcription of texts and grammatical structures into an accessible archive.
+      B: The ability of communities to describe the world in a shared vocabulary.
+      D: The descriptive apparatus that reference grammars make available to analysts.
+      C: The learned pressure to notice and mark certain distinctions whether or not a speaker happens
+        to be interested in them.
+    answer: C
+    explain: The passage distinguishes transcribable information from habits of attention, and identifies
+      the obligatory marking of distinctions as the part that lapses.
+    distractors:
+      A: The passage says transcription survives the last speaker without difficulty.
+      B: Communities retain the ability to describe the world; what changes is the language of habit.
+      D: Reference grammars are cited as the strongest part of the record.
+    chapter: reasoning-beyond-the-text
+    passage_id: mcat-cars-p07
+  - id: mcat-cars-039
+    q: It can be inferred that the author attributes the imbalance between structural and conversational
+      material in the archives to
+    choices:
+      B: communities' reluctance to record conversations in domestic settings.
+      C: the difficulty of obtaining recording equipment in remote locations.
+      D: a deliberate policy of prioritizing grammars over texts in the field's founding generation.
+      A: professional reward structures that make analysis publishable and ordinary conversation unusable.
+    answer: A
+    explain: The passage states that the discipline rewarded analysis, since a reference grammar is
+      a career while a decade of kitchen conversation is not a publication.
+    distractors:
+      B: Community reluctance is not mentioned as a cause of the imbalance.
+      C: Equipment is never discussed.
+      D: The passage says no one chose the emphasis deliberately.
+    chapter: reasoning-beyond-the-text
+    passage_id: mcat-cars-p07
+  - id: mcat-cars-040
+    q: The concession "To be sure, the grammars, dictionaries, and recorded texts..." functions to
+    choices:
+      A: suggest that earlier generations of fieldworkers overstated what they had accomplished.
+      C: introduce the revival movements that the passage will later treat as its model.
+      D: concede that archives are consulted more often than speech communities talk.
+      B: grant the real achievements of documentation before arguing that those achievements do not
+        constitute preservation of a speech community.
+    answer: B
+    explain: The author credits the record with preserving what would otherwise have vanished and
+      with revival successes, then draws the archive-versus-community distinction that carries the
+      argument.
+    distractors:
+      A: The passage does not accuse earlier fieldworkers of overstatement.
+      C: Revival is acknowledged, not adopted as a model; the passage turns to conditions of use.
+      D: The concession is about documentation's value, not about relative frequency of consultation.
+    chapter: reasoning-beyond-the-text
+    passage_id: mcat-cars-p07
+  - id: mcat-cars-041
+    q: A foundation must choose between funding a comprehensive documentation project for a moribund
+      language and funding an immersion school in the community where it is still occasionally spoken.
+      Based on the passage, the author would favor
+    choices:
+      A: the documentation project, because a recorded corpus is the precondition for any later revival.
+      B: the documentation project, since archives outlast the economic conditions that schools depend
+        on.
+      C: the immersion school, because comprehensive documentation is now technically impossible.
+      D: the immersion school, because the passage identifies intergenerational use rather than archival
+        completeness as the appropriate measure of success.
+    answer: D
+    explain: The passage says that if the measure is whether children use the language with grandparents,
+      effort should shift toward conditions of use, and that documents do not raise children.
+    distractors:
+      A: The author does not treat documentation as the priority, and explicitly resists that measure
+        of success.
+      B: Durability of archives is precisely the consideration the passage argues is misdirected.
+      C: The passage says recording nearly everything is now possible, not impossible.
+    chapter: reasoning-beyond-the-text
+    passage_id: mcat-cars-p07
+- id: mcat-cars-p08
+  text: 'The story epidemiology tells about its own founding is a story about data beating dogma.
+    A physician named John Snow, so the account runs, mapped the cholera deaths around the Broad Street
+    pump in 1854, showed the clustered cases, removed the pump handle, and defeated a medical establishment
+    committed to the false doctrine that bad air caused disease. It is a good story. Nearly every
+    part of it is misleading.
+
+
+    Begin with the dogma. Miasma theory was not superstition, and its holders were not fools. It explained
+    what observers could actually see: fever and cholera clustered in low-lying, damp, crowded districts,
+    and the smells of those districts were exactly what the theory required. The correlation between
+    foul air and fever was real and reproducible. What the theory lacked was not observational support
+    but a means of distinguishing correlation from cause, and that is a methodological lack, not an
+    intellectual failing. Treating it as the former is a way for a later discipline to flatter itself.
+
+
+    Snow''s advantage was not that he had more data than his opponents. He had a better design, and
+    the design was the water companies. In Southwark and Lambeth, two companies served overlapping
+    neighborhoods drawn from the same population, with the same poverty, the same crowding, and the
+    same smells; what differed was the source of the water. Here the confounders that made the miasma
+    correlation so persuasive were held constant, and the exposure was allowed to vary. The result
+    was decisive in a way that no accumulation of mapped deaths could be, because it separated water
+    from neighborhood. The famous map, meanwhile, established a local and reversible association.
+    It was rhetorically magnificent and, on its own, evidentially modest, since a clustering of cases
+    is compatible with several theories at once.
+
+
+    The establishment''s resistance, then, was not mere stubbornness, and the passage of time does
+    not make it look more stupid. Without a candidate mechanism, an anomalous correlation can always
+    be accommodated: the water, it could be said, might carry the poisons the air carried more efficiently.
+    When the responsible organism was eventually identified, and not by Snow, acceptance came quickly,
+    which is what one expects when a mechanism arrives to carry evidence that had been waiting for
+    one. To be sure, the dismissal of Snow''s work was also institutional self-protection, and careers
+    and reputations were invested in the prevailing account. But the lesson of the episode is not
+    the one usually drawn, that data should be trusted against theory. It is that data persuade when
+    a mechanism exists to carry them, and that in the absence of one, even good evidence can be absorbed
+    by a competent theory.
+
+
+    What the founding story gets wrong is therefore the location of the achievement. Snow''s contribution
+    was not volume, and it was not the map. It was the recognition that a comparison could be arranged
+    in which everything except the exposure stayed still. That is a lesson about design, and it is
+    the part of the episode that a modern practitioner can still use, since the temptation to gather
+    more of the kind of evidence one already has has not diminished since 1854. The pump handle makes
+    a better monument than a water bill, but the water bill is what did the work.'
+  chapter: reasoning-within-the-text
+  items:
+  - id: mcat-cars-042
+    q: The author's central argument in the passage is that
+    choices:
+      A: miasma theory was correct about cholera, and Snow's opponents have been treated unfairly
+        by historians.
+      B: the removal of the Broad Street pump handle had no effect on the course of the epidemic.
+      D: epidemiology progressed only after the cholera organism was identified in the laboratory.
+      C: Snow's decisive contribution was a comparison that held confounding conditions constant,
+        and the standard narrative mistakes this for a triumph of data over dogma.
+    answer: C
+    explain: The passage repeatedly locates the achievement in the Southwark and Lambeth design and
+      argues that the founding story misplaces it in the map and in data versus dogma.
+    distractors:
+      A: The passage calls miasma theory's causation wrong while insisting it was not foolish.
+      B: The passage never evaluates the handle's effect on the epidemic.
+      D: The passage says acceptance came quickly once the organism was found, not that progress began
+        then.
+    chapter: reasoning-within-the-text
+    passage_id: mcat-cars-p08
+  - id: mcat-cars-043
+    q: According to the passage, miasma theory commanded respect because it
+    choices:
+      B: had been confirmed by experiments that varied air quality while holding water sources constant.
+      C: was defended by physicians who stood to gain professionally from its continuation.
+      D: offered a specific causal agent whose existence could be tested directly.
+      A: accounted for observable and reproducible correlations between fever and the conditions of
+        crowded, low-lying districts.
+    answer: A
+    explain: The passage says the correlation between foul air and fever was real and reproducible,
+      and that the theory lacked a way to distinguish correlation from cause.
+    distractors:
+      B: The water-source variation was Snow's design, not anything the miasma camp conducted.
+      C: Institutional self-protection is attributed to the dismissal of Snow, not to the theory's
+        support.
+      D: The passage says the theory lacked a candidate mechanism.
+    chapter: reasoning-within-the-text
+    passage_id: mcat-cars-p08
+  - id: mcat-cars-044
+    q: The water company comparison in Southwark and Lambeth was evidentially strong because it
+    choices:
+      A: provided a larger number of recorded deaths than the Broad Street mapping had.
+      C: produced a local association that officials could act on immediately.
+      D: identified the specific organism responsible for transmitting the disease.
+      B: allowed exposure to vary across neighborhoods drawn from the same population and living conditions.
+    answer: B
+    explain: The passage emphasizes that poverty, crowding, and smells were held constant while only
+      the water source differed, separating water from neighborhood.
+    distractors:
+      A: The author explicitly denies that data volume was the advantage.
+      C: Immediate action on the finding is not claimed; contemporaries were not persuaded.
+      D: The organism was identified later and by someone else.
+    chapter: reasoning-within-the-text
+    passage_id: mcat-cars-p08
+  - id: mcat-cars-045
+    q: The author's statement that the Broad Street map was "evidentially modest" is best supported
+      by the observation that
+    choices:
+      A: the map was drawn after the epidemic had already begun to decline.
+      B: the deaths recorded on it were not independently verified by physicians.
+      C: Snow himself regarded the map as a rhetorical device rather than evidence.
+      D: a clustering of cases can be accommodated by more than one theory of transmission.
+    answer: D
+    explain: The passage says the map established a local, reversible association that was compatible
+      with several theories, whereas the water comparison separated exposure from neighborhood.
+    distractors:
+      A: The timing of the map relative to the epidemic's decline is not discussed.
+      B: Verification of the recorded deaths is never raised.
+      C: The passage credits the map as rhetorically magnificent but attributes no such view to Snow.
+    chapter: reasoning-within-the-text
+    passage_id: mcat-cars-p08
+  - id: mcat-cars-046
+    q: The author explains the medical establishment's initial resistance to Snow's findings as primarily
+      a consequence of
+    choices:
+      A: the inadequacy of the statistical methods available in the middle of the nineteenth century.
+      B: the financial cost that would have followed from reforming the water supply.
+      D: the personal obscurity of Snow's position relative to that of his critics.
+      C: the absence of a mechanism that could carry the correlational evidence the findings supplied.
+    answer: C
+    explain: The passage argues that without a candidate mechanism an anomalous correlation can always
+      be accommodated, and that acceptance arrived once the organism supplied the carrier.
+    distractors:
+      A: The passage does not attribute the resistance to statistical technique.
+      B: Cost of reform is never mentioned.
+      D: Snow's professional standing is not offered as the explanation.
+    chapter: reasoning-within-the-text
+    passage_id: mcat-cars-p08
+  - id: mcat-cars-047
+    q: A modern researcher reports a strong association between a diet pattern and a disease, notes
+      that no biological mechanism is known, and predicts that the finding will be absorbed by existing
+      explanations. Based on the passage, the author would most likely regard that prediction as
+    choices:
+      B: pessimistic, since the passage shows that large data sets eventually overcome theoretical
+        resistance.
+      C: mistaken, because the passage argues that correlational evidence is never admissible without
+        a mechanism.
+      D: irrelevant, since the passage's lesson concerns nineteenth-century design rather than modern
+        practice.
+      A: well grounded, since the passage holds that even good evidence can be absorbed by a competent
+        theory when no mechanism is available to carry it.
+    answer: A
+    explain: 'The passage draws exactly this lesson: data persuade when a mechanism exists to carry
+      them, and in its absence even good evidence can be accommodated.'
+    distractors:
+      B: This reverses the passage, which treats the data-volume reading of the episode as the error.
+      C: The passage treats the water-company correlation as decisive evidence; it objects only to
+        uncontrolled correlation.
+      D: The passage presents design as a live modern lesson and names the standing temptation explicitly.
+    chapter: reasoning-within-the-text
+    passage_id: mcat-cars-p08
+- id: mcat-cars-p09
+  text: '"The algorithm is flattening taste." The sentence is everywhere, and it is usually accompanied
+    by a story about filter bubbles: the recommendation system feeds each of us more of what we already
+    like, so our cultural consumption narrows, and everything converges on the middle. The story has
+    the great advantage of being legible. It is also, on the evidence, mostly wrong as an empirical
+    matter, and the attachment to it has prevented people from noticing a change that is real and
+    more interesting.
+
+
+    Take the empirical claim first. Studies of recommendation and consumption have repeatedly failed
+    to find the homogenization the story predicts, and several have found the opposite: an algorithmic
+    feed exposes a user to a wider range of material than that user''s own social network does, because
+    a friend group is a far more effective filter than any collaborative system. To be sure, the finding
+    is not flattering to the older arrangement either, and it is worth stating plainly: the taste
+    that the algorithm allegedly destroyed was already substantially curated by the people one happened
+    to know. But the point stands. The variety story, in either direction, does not describe what
+    recommendation systems have actually done to what people encounter.
+
+
+    What they have done is change who answers for a recommendation. When a friend insists that you
+    hear a record, the friend is answerable. If it is bad, there is a conversation, and the conversation
+    has consequences: the friend''s authority in that domain is revised, and both of you learn something
+    about where your tastes diverge. When a system makes the same suggestion, no one is answerable.
+    The suggestion is issued from a statistical summary of everyone, addressed to you as a member
+    of no particular group, and there is nothing to argue with. This is not a small change in etiquette.
+    Curation was previously an opinionated, contestable act, performed by critics, broadcasters, and
+    shopkeepers whose authority had to be earned and could be challenged, and the challenge was part
+    of how taste was transmitted. A ranking is not contestable in that way. It has no reasons to give,
+    and its authority is exactly as good as its performance, which is to say that it is not authority
+    at all but accuracy.
+
+
+    To be sure, the old arrangement had much to answer for. Gatekeeping excluded; the clerk in the
+    record shop was also the person who decided you did not belong there, and for a great many listeners,
+    particularly those far from the cultural capitals, personalized discovery arrived as a genuine
+    expansion rather than a loss. Nothing in what follows should be read as nostalgia for the shop.
+
+
+    The loss is of a specific thing: a public in which preferences have to be defended. Taste was
+    never mainly a private possession, and it was never formed in silence. It was formed in the argument,
+    which required someone on the other side of it who could be pressed. Replacing that counterpart
+    with an optimizer does not make taste worse, and it may make discovery better. It removes the
+    interlocutor, and the interlocutor was the mechanism. The interesting question about recommendation
+    systems is therefore not whether they homogenize us, since they mostly do not, but what happens
+    to a practice of judgment when the counterpart it depends on stops being a person who can be argued
+    with.'
+  chapter: reasoning-beyond-the-text
+  items:
+  - id: mcat-cars-048
+    q: Which of the following best expresses the passage's central claim?
+    choices:
+      A: Algorithmic recommendation has destroyed taste by narrowing cultural consumption to a homogeneous
+        middle.
+      C: Personalized discovery has harmed listeners who previously lacked access to cultural capitals.
+      D: The authority of recommendation systems exceeds that of critics because their accuracy is
+        measurable.
+      B: Recommendation systems have not so much narrowed what people encounter as removed the answerable
+        human counterpart through which taste was formed.
+    answer: B
+    explain: 'The passage rejects the homogenization claim on empirical grounds and argues the real
+      change is accountability: a ranking cannot be argued with, and the argument was the mechanism.'
+    distractors:
+      A: This is the received view the passage sets out to contest.
+      C: The passage says personalized discovery was a genuine expansion for such listeners.
+      D: The author denies that accuracy constitutes authority at all.
+    chapter: reasoning-beyond-the-text
+    passage_id: mcat-cars-p09
+  - id: mcat-cars-049
+    q: The author treats the filter-bubble account as flawed chiefly because
+    choices:
+      A: it was developed by the platforms to deflect attention from their own practices.
+      B: it cannot explain why friends' recommendations are more varied than algorithmic ones.
+      C: it depends on a definition of taste that no critic would accept.
+      D: the empirical studies have not borne out the predicted narrowing, and in some cases show
+        the reverse.
+    answer: D
+    explain: The passage says studies have repeatedly failed to find homogenization and several found
+      the opposite, since a friend group filters more effectively than a collaborative system.
+    distractors:
+      A: No claim about the account's origins in the platforms appears.
+      B: The passage does use exactly that contrast, but as support for its own point rather than
+        as a flaw in the bubble account's logic.
+      C: The passage does not dispute the account on definitional grounds.
+    chapter: reasoning-beyond-the-text
+    passage_id: mcat-cars-p09
+  - id: mcat-cars-050
+    q: The author contrasts a friend's recommendation with a system's recommendation in order to establish
+      that
+    choices:
+      A: friends are more accurate than algorithms at predicting what a person will enjoy.
+      B: algorithmic suggestions arrive more slowly than advice from a social network.
+      D: social recommendations expose listeners to a narrower range of music than algorithms do.
+      C: only the former creates the possibility of an argument in which the recommendation's authority
+        is tested.
+    answer: C
+    explain: The passage argues the friend is answerable, that the conversation revises the friend's
+      authority, and that a ranking has no reasons and cannot be contested.
+    distractors:
+      A: The passage never compares accuracy between the two, and denies accuracy is authority.
+      B: Speed of delivery is never mentioned.
+      D: The passage does say this, but as a separate empirical point rather than the purpose of the
+        contrast.
+    chapter: reasoning-beyond-the-text
+    passage_id: mcat-cars-p09
+  - id: mcat-cars-051
+    q: It can be inferred that the author believes the development of individual taste depends on
+    choices:
+      B: access to a range of material that is as wide as technically possible.
+      C: institutions that rank cultural works according to measurable performance.
+      D: the preservation of older gatekeeping arrangements in bookshops and broadcasting.
+      A: encounters with someone whose judgments can be challenged and whose standing changes as a
+        result.
+    answer: A
+    explain: The passage states that taste was formed in the argument, which required someone on the
+      other side who could be pressed, and calls the interlocutor the mechanism.
+    distractors:
+      B: The passage treats variety as an open empirical question, not as the engine of taste formation.
+      C: The author explicitly rejects ranking's claim to authority.
+      D: The author disavows nostalgia for the shop and notes that gatekeeping excluded.
+    chapter: reasoning-beyond-the-text
+    passage_id: mcat-cars-p09
+  - id: mcat-cars-052
+    q: The concession "To be sure, the old arrangement had much to answer for" is included primarily
+      to
+    choices:
+      A: admit that the author's own musical education depended on recommendation systems.
+      C: explain why the empirical studies of homogenization reached conflicting results.
+      D: acknowledge that most listeners today prefer algorithmic to human curation.
+      B: forestall the reading that the argument is a defense of the gatekeepers the systems displaced.
+    answer: B
+    explain: The author grants that gatekeeping excluded and that many listeners gained access, and
+      then explicitly disavows nostalgia for the shop.
+    distractors:
+      A: Nothing about the author's own education is mentioned.
+      C: The conflicting results of studies are addressed earlier on empirical grounds.
+      D: Listener preference is not discussed in the passage.
+    chapter: reasoning-beyond-the-text
+    passage_id: mcat-cars-p09
+  - id: mcat-cars-053
+    q: A streaming service announces that it will replace part of its algorithmic feed with editorial
+      playlists assembled by named curators who write notes explaining their selections. Based on
+      the passage, the author would most likely view this as
+    choices:
+      A: a marketing gesture, since editorial notes do not change what the system actually recommends.
+      B: a return to gatekeeping, and therefore a loss for listeners far from cultural capitals.
+      C: a confirmation that the homogenization problem was real and has now been addressed.
+      D: a partial restoration of the contestable counterpart, since named curators can be pressed
+        and can be wrong.
+    answer: D
+    explain: 'The passage''s criterion is answerability: authority that must be earned and can be
+      challenged is what the optimizer lacks, and named curators with stated reasons supply it.'
+    distractors:
+      A: The passage does not treat the algorithmic feed as the only thing that matters, and says
+        nothing about such notes being inert.
+      B: The author disavows nostalgia and identifies access gains, but does not conclude that any
+        human involvement is a loss.
+      C: The author argues homogenization was never established as the problem.
+    chapter: reasoning-beyond-the-text
+    passage_id: mcat-cars-p09

@@ -1,0 +1,1076 @@
+exam: mcat
+section: bio-biochem
+label: Biological and Biochemical Foundations
+subject: bio-biochem
+block: bio-biochem
+items_expected: 59
+items:
+- id: mcat-bb-033
+  q: In eukaryotic cells, the electron transport chain complexes and ATP synthase are located in the...
+  choices:
+    A: inner mitochondrial membrane (cristae)
+    B: mitochondrial matrix
+    C: outer mitochondrial membrane
+    D: cytosol
+  answer: A
+  explain: Complexes I through IV and F1Fo ATP synthase are embedded in the inner membrane, whose folds
+    (cristae) increase the surface area available for the proton-motive force.
+  distractors:
+    B: The matrix houses the citric acid cycle, the pyruvate dehydrogenase complex, and beta-oxidation.
+    C: The outer membrane is porous (porins) and carries no respiratory complexes.
+    D: Only glycolysis occurs in the cytosol; oxidative phosphorylation is mitochondrial.
+  chapter: cells-and-cellular-processes
+  passage_id: ''
+- id: mcat-bb-034
+  q: Proteins destined for secretion are sorted and packaged into vesicles targeted to the plasma membrane
+    by the...
+  choices:
+    A: rough endoplasmic reticulum
+    B: Golgi apparatus
+    C: lysosome
+    D: nucleolus
+  answer: B
+  explain: The trans-Golgi network sorts modified proteins and packages them into vesicles bound for the
+    plasma membrane, endosomes, or secretion.
+  distractors:
+    A: The rough ER is where secreted proteins are translated and first glycosylated, not where they are
+      finally sorted.
+    C: Lysosomes are degradative compartments containing acid hydrolases.
+    D: The nucleolus assembles ribosomal subunits.
+  chapter: cells-and-cellular-processes
+  passage_id: ''
+- id: mcat-bb-035
+  q: Which organelle contains catalase and oxidases that both generate and decompose hydrogen peroxide?
+  choices:
+    A: Lysosome
+    B: Smooth endoplasmic reticulum
+    C: Peroxisome
+    D: Mitochondrion
+  answer: C
+  explain: Peroxisomes oxidize very long chain and branched fatty acids and use catalase to convert the
+    resulting H2O2 to water and O2.
+  distractors:
+    A: Lysosomes hold acid hydrolases, not catalase-based oxidation reactions.
+    B: The smooth ER carries out lipid and steroid synthesis and drug detoxification.
+    D: Mitochondria generate ATP and are a source of reactive oxygen species but do not contain catalase.
+  chapter: 2a-assemblies-of-molecules-cells-and-cell-groups
+  passage_id: ''
+- id: mcat-bb-036
+  q: A diploid cell with 2n = 24 has completed meiosis I but not meiosis II. What does each daughter cell
+    contain?
+  choices:
+    A: 24 chromosomes, each with one chromatid
+    B: 24 chromosomes, each with two chromatids
+    C: 12 chromosomes, each with one chromatid
+    D: 12 chromosomes, each with two sister chromatids
+  answer: D
+  explain: 'Meiosis I is the reductional division: homologous chromosomes separate, halving the number
+    to n = 12. Centromeres have not yet split, so each chromosome still consists of two sister chromatids.'
+  distractors:
+    A: 24 chromosomes is still the diploid number; homologs have already segregated.
+    B: 24 chromosomes with two chromatids each describes the cell before meiosis I.
+    C: Single-chromatid chromosomes appear only after meiosis II, when centromeres separate.
+  chapter: 2c-cell-division-differentiation-specialization
+  passage_id: ''
+- id: mcat-bb-037
+  q: Crossing over between homologous chromosomes occurs during which stage?
+  choices:
+    A: Prophase I of meiosis I
+    B: Metaphase II of meiosis II
+    C: Anaphase of mitosis
+    D: Telophase I of meiosis I
+  answer: A
+  explain: Homologs pair as tetrads in the synaptonemal complex during prophase I (chiefly pachytene),
+    where recombination exchanges homologous segments.
+  distractors:
+    B: Metaphase II aligns individual chromosomes at the equator; recombination is long finished.
+    C: Mitotic anaphase separates sister chromatids, and mitosis has no homologous pairing.
+    D: Telophase I reform nuclear envelopes and completes the reductional division.
+  chapter: 2c-cell-division-differentiation-specialization
+  passage_id: ''
+- id: mcat-bb-038
+  q: Two individuals heterozygous at two unlinked loci are crossed (AaBb x AaBb). Assuming complete dominance
+    at both loci, what phenotypic ratio is expected?
+  choices:
+    A: '1:2:1'
+    B: '3:1'
+    C: '9:7'
+    D: '9:3:3:1'
+  answer: D
+  explain: 'A dihybrid self-cross yields 16 equally likely allele combinations: 9 A_B_, 3 A_bb, 3 aaB_,
+    and 1 aabb, which under complete dominance is the 9:3:3:1 phenotypic ratio.'
+  distractors:
+    A: 1:2:1 is the genotypic ratio of a single-locus monohybrid cross.
+    B: 3:1 is the phenotypic ratio of a single-locus monohybrid cross.
+    C: 9:7 is a modified epistatic ratio requiring two genes for one phenotype, which is not assumed here.
+  chapter: genetics
+  passage_id: ''
+- id: mcat-bb-039
+  q: Two parents heterozygous for an autosomal recessive allele (Aa x Aa) have a phenotypically unaffected
+    child. What is the probability that this child is homozygous dominant (AA)?
+  choices:
+    A: 1/4
+    B: 1/3
+    C: 1/2
+    D: 2/3
+  answer: B
+  explain: 'The cross gives 1 AA : 2 Aa : 1 aa. Conditioning on the child being unaffected removes the
+    aa class, so AA is 1 out of 3 remaining possibilities.'
+  distractors:
+    A: 1/4 is the probability of an affected (aa) child.
+    C: 1/2 is the unconditional probability of Aa before conditioning on the unaffected status.
+    D: 2/3 is the probability that an unaffected child is a carrier, not homozygous dominant.
+  chapter: genetics
+  passage_id: ''
+- id: mcat-bb-040
+  q: A color-blind man (XrY) marries a woman who is a carrier (XRXr). What fraction of their children,
+    counting sons and daughters equally, will be color-blind?
+  choices:
+    A: All of them
+    B: None of them
+    C: 1/2
+    D: 1/4
+  answer: C
+  explain: Daughters are XRXr (carrier) or XrXr (affected); sons are XRY (normal) or XrY (affected). Two
+    of the four genotypes are affected, so 1/2 of all children are color-blind.
+  distractors:
+    A: One daughter (XRXr) and one son (XRY) are unaffected, so not every child is affected.
+    B: The XrXr daughter and the XrY son are both affected.
+    D: 1/4 would apply if only one sex could be affected; here both sons and daughters are at risk.
+  chapter: genetics
+  passage_id: ''
+- id: mcat-bb-041
+  q: The coding (non-template) strand of a DNA segment is 5'-ATG GCT TAC-3'. What mRNA is transcribed
+    from it?
+  choices:
+    A: 5'-AUG GCU UAC-3'
+    B: 5'-GUA AGC CAU-3'
+    C: 5'-ATG GCT TAC-3'
+    D: 5'-TAC CGA ATG-3'
+  answer: A
+  explain: 'The mRNA has the same 5''-to-3'' sequence as the coding strand, with uracil replacing thymine:
+    5''-AUG GCU UAC-3''.'
+  distractors:
+    B: That is the template strand read 5'-to-3'; it would translate as Val-Ser-His rather than Met-Ala-Tyr.
+    C: That is still DNA; thymine must be replaced by uracil in the transcript.
+    D: That is the template strand written antiparallel, not the RNA product.
+  chapter: 1b-gene-to-protein
+  passage_id: ''
+- id: mcat-bb-042
+  q: Which peptide is produced by translating 5'-AUG UUU UCA UAA-3'?
+  choices:
+    A: Met-Lys-Ser
+    B: Phe-Ser-Met
+    C: Met-Tyr-Ser
+    D: Met-Phe-Ser
+  answer: D
+  explain: AUG codes methionine, UUU phenylalanine, UCA serine, and UAA is a stop codon, so the product
+    is Met-Phe-Ser (a tripeptide).
+  distractors:
+    A: UUU is phenylalanine; AAA is lysine.
+    B: Translation begins at the AUG start codon, so the first residue is methionine and the stop codon
+      ends the chain.
+    C: UUU is phenylalanine; UAU is tyrosine.
+  chapter: 1b-gene-to-protein
+  passage_id: ''
+- id: mcat-bb-043
+  q: Before a 100-amino-acid polypeptide is made, each amino acid must be charged onto its tRNA by an
+    aminoacyl-tRNA synthetase. If charging costs 2 ATP equivalents per amino acid, how many ATP equivalents
+    are consumed in activating all 100 residues?
+  choices:
+    A: '50'
+    B: '200'
+    C: '100'
+    D: '400'
+  answer: B
+  explain: 100 residues x 2 ATP equivalents per residue = 200 ATP equivalents.
+  distractors:
+    A: 50 divides instead of multiplying the two quantities.
+    C: 100 counts only one ATP equivalent per residue.
+    D: 400 charges each tRNA twice; each residue is activated once.
+  chapter: 1b-gene-to-protein
+  passage_id: ''
+- id: mcat-bb-044
+  q: Which amino acid, when oxidized, forms the disulfide bridge that stabilizes extracellular protein
+    structure?
+  choices:
+    A: Glycine
+    B: Methionine
+    C: Cysteine
+    D: Proline
+  answer: C
+  explain: Two cysteine side-chain thiols are oxidized to a cystine disulfide (S-S), a covalent cross-link
+    that stabilizes tertiary structure.
+  distractors:
+    A: Glycine carries only a hydrogen side chain and cannot form a disulfide.
+    B: Methionine contains a thioether, not a free thiol, so it cannot be oxidized to a disulfide.
+    D: Proline is a cyclic imino acid that constrains the backbone; it has no thiol.
+  chapter: 1a-proteins-and-amino-acids
+  passage_id: ''
+- id: mcat-bb-045
+  q: An amino acid has pKa1 = 2.3 (alpha-carboxyl) and pKa2 = 9.6 (alpha-amino) with no ionizable side
+    chain. What is its isoelectric point?
+  choices:
+    A: '2.3'
+    B: '11.9'
+    C: '7.3'
+    D: '5.95'
+  answer: D
+  explain: 'For an amino acid with only two ionizable groups, pI is the average of the two flanking pKa
+    values: (2.3 + 9.6)/2 = 11.9/2 = 5.95.'
+  distractors:
+    A: 2.3 is the pKa of the carboxyl group, at which the molecule is still net positively charged.
+    B: 11.9 is the sum of the two pKa values rather than their average.
+    C: 7.3 is close to physiological pH and has no relation to the pKa average.
+  chapter: 1a-proteins-and-amino-acids
+  passage_id: ''
+- id: mcat-bb-046
+  q: Which amino acid most strongly disrupts an alpha-helix when placed in its middle?
+  choices:
+    A: Proline
+    B: Alanine
+    C: Leucine
+    D: Glutamate
+  answer: A
+  explain: Proline's cyclic ring fixes its backbone phi angle and its nitrogen carries no amide hydrogen,
+    so it can neither adopt the helix geometry nor donate a stabilizing hydrogen bond.
+  distractors:
+    B: Alanine is the residue most frequently found in alpha-helices.
+    C: Leucine is hydrophobic and helix-promoting.
+    D: Glutamate is helix-favoring; charged side chains are compatible with helices.
+  chapter: 1a-proteins-and-amino-acids
+  passage_id: ''
+- id: mcat-bb-047
+  q: During gastrulation, which embryonic germ layer gives rise to the nervous system?
+  choices:
+    A: Endoderm
+    B: Mesoderm
+    C: Ectoderm
+    D: Extraembryonic trophoblast
+  answer: C
+  explain: The neural tube and neural crest arise by neurulation from ectoderm, which also forms the epidermis.
+    Inducing signals from the underlying notochord (mesoderm) specify the neural fate.
+  distractors:
+    A: Endoderm forms the gut lining and respiratory epithelium.
+    B: Mesoderm forms muscle, bone, the cardiovascular system, and the kidneys.
+    D: Trophoblast contributes to placental tissues, not to embryonic organs.
+  chapter: development
+  passage_id: ''
+- id: mcat-bb-048
+  q: On a Lineweaver-Burk plot, what pattern does a competitive inhibitor produce?
+  choices:
+    A: An unchanged x-intercept with an increased y-intercept
+    B: An unchanged y-intercept with the x-intercept moving closer to zero
+    C: A line parallel to the uninhibited plot
+    D: A decreased y-intercept with an unchanged x-intercept
+  answer: B
+  explain: A competitive inhibitor raises apparent Km without changing Vmax, so 1/Vmax (the y-intercept)
+    is unchanged while -1/Km,app moves toward zero; the slope Km/Vmax therefore increases.
+  distractors:
+    A: That pattern describes pure noncompetitive inhibition, where Vmax falls and Km is unchanged.
+    C: Parallel lines are the signature of uncompetitive inhibition, which lowers both Km and Vmax.
+    D: Inhibition never increases Vmax, so the y-intercept cannot decrease.
+  chapter: 1a-proteins-and-amino-acids
+  passage_id: ''
+- id: mcat-bb-049
+  q: What are the net products of glycolysis from one molecule of glucose?
+  choices:
+    A: 2 pyruvate, 4 ATP, and 2 NADH
+    B: 2 pyruvate and no ATP
+    C: 1 pyruvate, 2 ATP, and 2 NADH
+    D: 2 pyruvate, 2 net ATP, and 2 NADH
+  answer: D
+  explain: Four ATP are generated and two are consumed, for a net of 2 ATP, plus 2 cytosolic NADH; the
+    six-carbon glucose splits into two three-carbon pyruvates.
+  distractors:
+    A: 4 ATP is the gross yield before subtracting the 2 ATP invested in the priming phase.
+    B: Substrate-level phosphorylation clearly produces net ATP.
+    C: One glucose yields two pyruvates, not one.
+  chapter: 1d-bioenergetics-and-fuel-metabolism
+  passage_id: ''
+- id: mcat-bb-050
+  q: Complete beta-oxidation of palmitoyl-CoA (C16:0) requires how many rounds of the pathway, and how
+    many acetyl-CoA does it yield?
+  choices:
+    A: 7 rounds; 8 acetyl-CoA
+    B: 8 rounds; 8 acetyl-CoA
+    C: 16 rounds; 16 acetyl-CoA
+    D: 7 rounds; 7 acetyl-CoA
+  answer: A
+  explain: Each round removes a two-carbon unit. A 16-carbon chain yields 16/2 = 8 acetyl-CoA and therefore
+    requires 8 - 1 = 7 rounds, producing 7 FADH2 and 7 NADH along the way.
+  distractors:
+    B: 8 is the number of acetyl-CoA produced, not the number of rounds.
+    C: One round removes two carbons, so the counts are not one per carbon.
+    D: 7 acetyl-CoA omits the final two-carbon fragment released as the eighth acetyl-CoA.
+  chapter: 1d-bioenergetics-and-fuel-metabolism
+  passage_id: ''
+- id: mcat-bb-051
+  q: Why does the oxidation of FADH2 yield about 1.5 ATP while the oxidation of NADH yields about 2.5
+    ATP?
+  choices:
+    A: FADH2 carries only one electron instead of two.
+    B: FADH2 is oxidized in the matrix, where proton pumping cannot occur.
+    C: FADH2 donates its electrons to Complex II, bypassing Complex I, so fewer protons are pumped.
+    D: FADH2 cannot be reoxidized by the electron transport chain.
+  answer: C
+  explain: NADH feeds electrons into Complex I, which pumps 4 H+ across the inner membrane. FADH2 enters
+    at Complex II (succinate dehydrogenase), downstream of Complex I, so the proton yield and hence the
+    ATP yield are lower.
+  distractors:
+    A: Both carriers donate two electrons; they differ only in entry point and redox potential.
+    B: Complex I, III, and IV pump protons from the matrix side, so matrix-facing oxidation is normal.
+    D: FADH2 is readily reoxidized at Complex II, which is part of the transport chain.
+  chapter: 1d-bioenergetics-and-fuel-metabolism
+  passage_id: ''
+- id: mcat-bb-052
+  q: Addition of 2,4-dinitrophenol, a protonophore, to actively respiring mitochondria causes which change?
+  choices:
+    A: Both O2 consumption and ATP synthesis stop.
+    B: O2 consumption increases while ATP synthesis falls.
+    C: ATP synthesis increases while O2 consumption falls.
+    D: Neither O2 consumption nor ATP synthesis changes appreciably.
+  answer: B
+  explain: An uncoupler dissipates the proton gradient. Electron transport accelerates because the gradient
+    no longer resists proton pumping, but ATP synthase loses its driving force, and the energy is released
+    as heat.
+  distractors:
+    A: Stopping both is what an electron transport inhibitor such as cyanide does, not an uncoupler.
+    C: ATP synthesis cannot exceed the gradient available; uncoupling reduces it.
+    D: Both parameters change markedly, in opposite directions.
+  chapter: 1d-bioenergetics-and-fuel-metabolism
+  passage_id: ''
+- id: mcat-bb-053
+  q: Which structural feature is characteristic of Gram-negative but not Gram-positive bacteria?
+  choices:
+    A: An outer membrane containing lipopolysaccharide (endotoxin)
+    B: A thick peptidoglycan cell wall
+    C: Teichoic acids within the cell wall
+    D: A single circular chromosome
+  answer: A
+  explain: Gram-negative envelopes have an outer membrane with lipopolysaccharide and only a thin peptidoglycan
+    layer in the periplasm.
+  distractors:
+    B: A thick peptidoglycan layer is the defining feature of Gram-positive cells.
+    C: Teichoic and lipoteichoic acids are Gram-positive wall components.
+    D: Both groups typically carry a single circular chromosome.
+  chapter: 2b-prokaryotes-and-viruses
+  passage_id: ''
+- id: mcat-bb-054
+  q: A virus with an RNA genome copies it into DNA that then integrates into the host chromosome. Which
+    enzymatic requirement does this define?
+  choices:
+    A: An RNA-dependent RNA polymerase only
+    B: DNA polymerase III together with DNA ligase
+    C: Direct transcription of the RNA genome by host RNA polymerase II
+    D: Reverse transcriptase, producing an integrated provirus
+  answer: D
+  explain: Retroviruses carry reverse transcriptase, an RNA-dependent DNA polymerase that makes double-stranded
+    DNA from the RNA genome; integrase then inserts it as a provirus.
+  distractors:
+    A: An RNA-dependent RNA polymerase replicates RNA genomes directly and never produces DNA.
+    B: That machinery replicates host chromosomal DNA from a DNA template.
+    C: RNA polymerase II requires a DNA template, so the RNA genome must first be reverse-transcribed.
+  chapter: 2b-prokaryotes-and-viruses
+  passage_id: ''
+- id: mcat-bb-055
+  q: The rapid rising phase of a neuronal action potential is caused by which event?
+  choices:
+    A: Opening of voltage-gated K+ channels
+    B: Opening of voltage-gated Na+ channels
+    C: Opening of ligand-gated Cl- channels
+    D: Active extrusion of Na+ by the Na+/K+-ATPase
+  answer: B
+  explain: Depolarization to threshold opens voltage-gated Na+ channels; Na+ influx down its electrochemical
+    gradient depolarizes the membrane further in a positive-feedback regenerative cycle.
+  distractors:
+    A: Delayed opening of these channels underlies repolarization and hyperpolarization.
+    C: Cl- influx would hyperpolarize or stabilize the membrane and inhibit firing.
+    D: The pump maintains long-term ion gradients but is far too slow to shape the millisecond upstroke.
+  chapter: 3a-nervous-and-endocrine-systems
+  passage_id: ''
+- id: mcat-bb-056
+  q: Which cells secrete insulin?
+  choices:
+    A: Alpha cells of the pancreatic islets
+    B: Acinar cells of the exocrine pancreas
+    C: Beta cells of the pancreatic islets
+    D: Delta cells of the pancreatic islets
+  answer: C
+  explain: Beta cells of the islets of Langerhans release insulin when blood glucose rises, promoting
+    glucose uptake and storage.
+  distractors:
+    A: Alpha cells secrete glucagon, which raises blood glucose.
+    B: Acinar cells secrete digestive enzymes and bicarbonate-rich fluid into the duodenum.
+    D: Delta cells secrete somatostatin, which inhibits both insulin and glucagon release.
+  chapter: 3b-main-organ-systems
+  passage_id: ''
+- id: mcat-bb-057
+  q: During vigorous exercise the oxygen-hemoglobin dissociation curve shifts to the right. What does
+    that shift accomplish?
+  choices:
+    A: Hemoglobin binds O2 more tightly in metabolically active tissues.
+    B: Less O2 is delivered to working muscle.
+    C: The shift is driven by falling CO2 and rising pH in the tissue.
+    D: Hemoglobin's affinity for O2 decreases, unloading more O2 where pH is low and CO2 is high.
+  answer: D
+  explain: 'The Bohr effect: H+ and CO2 bind hemoglobin allosterically and lower its O2 affinity, raising
+    P50 and favoring O2 release precisely where metabolism is highest.'
+  distractors:
+    A: A right shift reflects decreased affinity, not tighter binding.
+    B: The shift increases O2 delivery to working tissue.
+    C: Exercise raises CO2 and lowers pH, the opposite of the stated conditions.
+  chapter: 3b-main-organ-systems
+  passage_id: ''
+- id: mcat-bb-058
+  q: How does antidiuretic hormone (ADH, vasopressin) increase water reabsorption?
+  choices:
+    A: By inserting aquaporin-2 channels into the apical membrane of collecting duct cells
+    B: By increasing Na+ reabsorption in the proximal tubule
+    C: By opening Na+ channels in the thick ascending limb of the loop of Henle
+    D: By raising the osmolarity of the fluid in the descending limb
+  answer: A
+  explain: ADH binds V2 receptors on collecting duct cells, raising cAMP and trafficking aquaporin-2 to
+    the apical membrane so water can follow the medullary osmotic gradient.
+  distractors:
+    B: Proximal Na+ reabsorption is driven by the Na+/H+ exchanger and angiotensin II, not ADH.
+    C: The thick ascending limb is water-impermeable and moves ions via the Na+/K+/2Cl- cotransporter.
+    D: The medullary gradient is generated by the countercurrent multiplier in the loop of Henle, not
+      by ADH directly.
+  chapter: life-processes-regulation-and-homeostasis
+  passage_id: ''
+- id: mcat-bb-059
+  q: A plant closes its stomata during a hot, dry afternoon. Which consequence follows?
+  choices:
+    A: CO2 uptake increases and photorespiration ceases.
+    B: CO2 entry falls, so carbon fixation slows while water loss is reduced.
+    C: Water loss increases because the leaf-to-air gradient steepens.
+    D: Absorption of light by the photosystems stops.
+  answer: B
+  explain: Closed stomata conserve water but cut off the CO2 supply, so the Calvin cycle slows. In C3
+    plants the internal O2-to-CO2 ratio then rises, which favors photorespiration.
+  distractors:
+    A: 'The opposite occurs: CO2 falls and photorespiration increases in C3 plants.'
+    C: Closing stomata is precisely how the plant reduces transpirational water loss.
+    D: Light absorption by chlorophyll depends on illumination, not on stomatal opening.
+  chapter: the-world-of-plants-and-animals
+  passage_id: ''
+passages:
+- id: mcat-bb-p01
+  text: 'Geneticists traced a rare form of retinal degeneration through a pedigree. In generation I, an
+    unaffected man (I-1) and an unaffected woman (I-2) have five children: II-1 (affected male), II-2
+    (unaffected female), II-3 (unaffected male), II-4 (affected female), and II-5 (unaffected male). Both
+    sexes are affected, no affected individual has an affected parent, and the disorder skips generations.
+    II-2 marries an unaffected, unrelated man (II-6) drawn from the general population, in which the carrier
+    frequency for this condition is about 1/25. Disease prevalence is 1/2,500 and the population is in
+    Hardy-Weinberg equilibrium.'
+  chapter: genetics
+  items:
+  - id: mcat-bb-001
+    q: Based on the pedigree, what is the most likely mode of inheritance?
+    choices:
+      A: Autosomal recessive
+      B: Autosomal dominant
+      C: X-linked recessive
+      D: Mitochondrial (maternal)
+    answer: A
+    explain: Unaffected parents (I-1 x I-2) have affected children of both sexes, which indicates a recessive
+      trait carried on an autosome. An affected daughter (II-4) with an unaffected father rules out X-linked
+      recessive, and skipping generations rules out dominant.
+    distractors:
+      B: A dominant allele requires an affected parent in every generation with no skipping.
+      C: An affected female (II-4) must have an affected father under X-linked recessive inheritance.
+      D: Maternal inheritance passes the trait to all offspring of an affected mother, not to offspring
+        of unaffected parents.
+    chapter: genetics
+    passage_id: mcat-bb-p01
+  - id: mcat-bb-002
+    q: What are the genotypes of I-1 and I-2?
+    choices:
+      A: Both homozygous dominant (AA)
+      B: Both heterozygous carriers (Aa)
+      C: I-1 is Aa and I-2 is AA
+      D: Both homozygous affected (aa)
+    answer: B
+    explain: Each parent is unaffected, so neither can be aa. Because they produced aa children (II-1,
+      II-4), each must have contributed a recessive allele; both are therefore Aa.
+    distractors:
+      A: AA x AA offspring could never be aa, yet II-1 and II-4 are affected.
+      C: An AA parent could not contribute the recessive allele needed for affected children.
+      D: Both parents are described as unaffected, so neither can be aa.
+    chapter: genetics
+    passage_id: mcat-bb-p01
+  - id: mcat-bb-003
+    q: What is the probability that the unaffected son II-3 is a heterozygous carrier?
+    choices:
+      A: 1/4
+      B: 1/2
+      C: 2/3
+      D: 3/4
+    answer: C
+    explain: 'The Aa x Aa cross gives 1 AA : 2 Aa : 1 aa. Conditioning on II-3 being unaffected removes
+      the aa class, leaving 2 carrier outcomes out of 3 = 2/3.'
+    distractors:
+      A: 1/4 is the probability that a child is affected (aa), not the chance a healthy sibling carries.
+      B: 1/2 is the unconditional probability of Aa before conditioning on being unaffected.
+      D: 3/4 is the probability of being unaffected (1 - 1/4), not the carrier probability.
+    chapter: genetics
+    passage_id: mcat-bb-p01
+  - id: mcat-bb-004
+    q: II-2 marries the unrelated, unaffected man II-6. Using the carrier frequencies given, what is the
+      probability that their first child will be affected?
+    choices:
+      A: 1/150
+      B: 1/100
+      C: 1/300
+      D: 1/600
+    answer: A
+    explain: 'P(II-2 is a carrier) = 2/3, P(II-6 is a carrier) = 1/25, and P(aa child | both carriers)
+      = 1/4. Multiplying: (2/3)(1/25)(1/4) = 2/300 = 1/150.'
+    distractors:
+      B: 1/100 treats II-2 as a certain carrier, i.e., (1)(1/25)(1/4), and drops the 2/3 conditioning.
+      C: 1/300 comes from using 1/3 instead of 2/3 for the chance that a healthy sibling is a carrier.
+      D: 1/600 applies the 1/4 mendelian risk twice.
+    chapter: genetics
+    passage_id: mcat-bb-p01
+  - id: mcat-bb-005
+    q: Given a disease prevalence of 1/2,500, the carrier frequency in the population is closest to which
+      value?
+    choices:
+      A: 1/2,500
+      B: 1/50
+      C: 1/10
+      D: 1/25 (about 4%)
+    answer: D
+    explain: q^2 = 1/2,500, so q = 1/50 = 0.02 and p = 0.98. Carrier frequency = 2pq = 2(0.98)(0.02) =
+      0.0392, about 4%, i.e., roughly 1/25.
+    distractors:
+      A: 1/2,500 is q^2, the frequency of affected individuals, not of carriers.
+      B: 1/50 is q alone; carriers are 2pq, about twice that.
+      C: 1/10 would require q near 0.053, giving a prevalence of about 1/360, far above 1/2,500.
+    chapter: genetics
+    passage_id: mcat-bb-p01
+- id: mcat-bb-p02
+  text: 'A hydrolase was purified and assayed at 25 degrees C and pH 7.5. With no inhibitor present, Km
+    = 0.5 mM and Vmax = 100 umol min^-1 mg^-1. The enzyme was then assayed at the same concentration of
+    enzyme with a fixed concentration of each of two candidate inhibitors, and parameters were obtained
+    by fitting the full saturation curve. Kinetic parameters observed: no inhibitor: Km 0.5 mM, Vmax 100;
+    Compound X: Km 2.0 mM, Vmax 100; Compound Y: Km 0.5 mM, Vmax 50. Both inhibitors are fully reversible
+    on dialysis.'
+  chapter: 1a-proteins-and-amino-acids
+  items:
+  - id: mcat-bb-006
+    q: What does the data for Compound X indicate about its mechanism?
+    choices:
+      A: It is a noncompetitive inhibitor.
+      B: It is a competitive inhibitor.
+      C: It is an uncompetitive inhibitor.
+      D: It is an irreversible, covalent inhibitor.
+    answer: B
+    explain: X raises the apparent Km fourfold (0.5 to 2.0 mM) while leaving Vmax unchanged, the signature
+      of competitive inhibition at the active site. Saturating substrate displaces it.
+    distractors:
+      A: Noncompetitive inhibition lowers Vmax and leaves Km unchanged; X leaves Vmax unchanged.
+      C: Uncompetitive inhibition lowers both Km and Vmax.
+      D: X's effects are reversible on dialysis, so it is not covalently bound.
+    chapter: 1a-proteins-and-amino-acids
+    passage_id: mcat-bb-p02
+  - id: mcat-bb-007
+    q: What does the data for Compound Y indicate about its mechanism?
+    choices:
+      A: It is a competitive inhibitor.
+      B: It is an uncompetitive inhibitor.
+      C: It is a noncompetitive inhibitor.
+      D: It raises the enzyme's Km by binding the active site.
+    answer: C
+    explain: Y halves Vmax (100 to 50) while Km stays at 0.5 mM. It binds a site other than the active
+      site on both E and ES equally, so substrate binding is unaffected but catalysis is slowed.
+    distractors:
+      A: A competitive inhibitor would raise Km; Y leaves Km at 0.5 mM.
+      B: Uncompetitive inhibition lowers both Km and Vmax.
+      D: Y does not change Km at all, so it does not interfere with substrate binding.
+    chapter: 1a-proteins-and-amino-acids
+    passage_id: mcat-bb-p02
+  - id: mcat-bb-008
+    q: In the absence of inhibitor, what is the reaction velocity at [S] = 0.5 mM?
+    choices:
+      A: 50 umol min^-1 mg^-1
+      B: 100 umol min^-1 mg^-1
+      C: 25 umol min^-1 mg^-1
+      D: 33 umol min^-1 mg^-1
+    answer: A
+    explain: At [S] = Km, v = Vmax[S]/(Km + [S]) = Vmax/2 = 100/2 = 50 umol min^-1 mg^-1.
+    distractors:
+      B: 100 is Vmax, reached only at saturating substrate.
+      C: 25 would follow from treating 0.5 mM as one-quarter of a saturating level rather than as Km.
+      D: 33 would follow from dividing Vmax by 3; at [S] = Km the ratio is 1:1 and v = Vmax/2.
+    chapter: 1a-proteins-and-amino-acids
+    passage_id: mcat-bb-p02
+  - id: mcat-bb-009
+    q: In the presence of Compound X, what is the velocity at [S] = 6.0 mM?
+    choices:
+      A: 100 umol min^-1 mg^-1
+      B: 92 umol min^-1 mg^-1
+      C: 50 umol min^-1 mg^-1
+      D: 75 umol min^-1 mg^-1
+    answer: D
+    explain: With X present, Km,app = 2.0 mM and Vmax = 100. v = 100(6.0)/(2.0 + 6.0) = 600/8.0 = 75 umol
+      min^-1 mg^-1.
+    distractors:
+      A: Vmax is approached asymptotically; 6.0 mM is only 3x Km,app, so v is three-quarters of Vmax.
+      B: '92 comes from using the uninhibited Km of 0.5 mM: 100(6.0)/(0.5 + 6.0) = 92.'
+      C: 50 is the velocity at [S] = Km,app (2.0 mM), not at 6.0 mM.
+    chapter: 1a-proteins-and-amino-acids
+    passage_id: mcat-bb-p02
+  - id: mcat-bb-010
+    q: What happens to the reaction velocity as [S] is raised to a very high level with each inhibitor
+      present?
+    choices:
+      A: Both rates approach 100 umol min^-1 mg^-1.
+      B: X's effect is overcome and the rate approaches 100, while Y plateaus at 50.
+      C: Both rates plateau at 50.
+      D: X's rate falls to 50 while Y's rate approaches 100.
+    answer: B
+    explain: A competitive inhibitor can be outcompeted by substrate, so Vmax is unchanged at 100. A noncompetitive
+      inhibitor lowers Vmax regardless of substrate level, so Y plateaus at 50.
+    distractors:
+      A: Y binds outside the active site, so no amount of substrate restores the full rate.
+      C: X is displaced at high substrate concentration, so its curve still reaches 100.
+      D: The two profiles are reversed; substrate competition relieves X's inhibition but not Y's.
+    chapter: 1a-proteins-and-amino-acids
+    passage_id: mcat-bb-p02
+- id: mcat-bb-p03
+  text: 'Uptake of solute S into cultured epithelial cells was measured at 37 degrees C. Uptake versus
+    extracellular [S] rose steeply and then saturated, with Vmax = 100 (arbitrary units) and a half-maximal
+    rate at [S] = 0.2 mM. Manipulations gave the following uptake values: replacing extracellular Na+
+    with the nontransported cation choline+, 10; adding ouabain, an inhibitor of the Na+/K+-ATPase, 15;
+    adding a 100-fold excess of an unlabeled structural analog of S, 5; adding a 100-fold excess of the
+    unrelated solute T, no change from 100. Lowering the incubation temperature to 4 degrees C reduced
+    uptake to 8.'
+  chapter: 2a-assemblies-of-molecules-cells-and-cell-groups
+  items:
+  - id: mcat-bb-011
+    q: Which observation best supports the claim that a specific transporter mediates uptake of S?
+    choices:
+      A: Uptake increases linearly with [S] across the range tested.
+      B: Uptake falls sharply when extracellular Na+ is replaced by choline+.
+      C: A 100-fold excess of the S analog blocks uptake, while an equal excess of unrelated solute T
+        does not.
+      D: Uptake falls when the temperature is lowered to 4 degrees C.
+    answer: C
+    explain: 'Only a structurally related molecule competes for the binding site. Specificity is what
+      distinguishes a transporter from a nonspecific leak: the analog competes, T does not.'
+    distractors:
+      A: The data show saturation, not linearity; a linear uptake would argue for simple diffusion.
+      B: Na+ dependence indicates the coupling and energy source, but by itself does not establish structural
+        specificity.
+      D: Temperature sensitivity indicates a protein-mediated process but not which molecules it can carry.
+    chapter: 2a-assemblies-of-molecules-cells-and-cell-groups
+    passage_id: mcat-bb-p03
+  - id: mcat-bb-012
+    q: Which conclusion follows from the Na+ replacement and ouabain results?
+    choices:
+      A: S is carried by Na+-driven secondary active transport (symport) powered by the Na+ gradient maintained
+        by the Na+/K+-ATPase.
+      B: S crosses by facilitated diffusion down its own concentration gradient.
+      C: The S transporter hydrolyzes ATP directly, so uptake is primary active transport.
+      D: S diffuses through the lipid bilayer, and Na+ simply increases membrane fluidity.
+    answer: A
+    explain: Removing extracellular Na+ abolishes the Na+ electrochemical gradient, and ouabain collapses
+      that gradient secondarily by inhibiting the pump that maintains it. The transporter itself does
+      not split ATP; it rides the gradient, which is secondary active transport, here as a Na+/S symporter.
+    distractors:
+      B: Facilitated diffusion cannot concentrate S against its gradient and would not depend on extracellular
+        Na+.
+      C: A pump that hydrolyzes ATP directly would be inhibited by ouabain only if ouabain targeted it;
+        ouabain is specific for the Na+/K+-ATPase.
+      D: Bilayer diffusion would be Na+-independent and insensitive to ouabain.
+    chapter: 2a-assemblies-of-molecules-cells-and-cell-groups
+    passage_id: mcat-bb-p03
+  - id: mcat-bb-013
+    q: What is the uptake rate when [S] = 0.6 mM under control conditions?
+    choices:
+      A: 100 units
+      B: 75 units
+      C: 50 units
+      D: 25 units
+    answer: B
+    explain: v = Vmax[S]/(Km + [S]) = 100(0.6)/(0.2 + 0.6) = 60/0.8 = 75 units. Because 0.6 mM is 3x Km,
+      the rate is three-quarters of Vmax.
+    distractors:
+      A: Vmax is reached only as [S] becomes very large relative to Km; 3x Km is not saturating.
+      C: 50 units corresponds to [S] = Km = 0.2 mM, where v = Vmax/2.
+      D: 25 units would be one-quarter of Vmax, but 3x Km gives three-quarters of Vmax.
+    chapter: 2a-assemblies-of-molecules-cells-and-cell-groups
+    passage_id: mcat-bb-p03
+  - id: mcat-bb-014
+    q: The 12-fold drop in uptake at 4 degrees C is best explained by which of the following?
+    choices:
+      A: Diffusion of S directly through the lipid bilayer.
+      B: Movement of S through a permanently open, ungated channel.
+      C: Uptake of S driven only by its molecular size.
+      D: Carrier-mediated transport that requires conformational changes of a membrane protein.
+    answer: D
+    explain: Conformational cycling of a carrier is strongly temperature-dependent, as are the metabolic
+      processes that maintain the Na+ gradient. Diffusion through a bilayer or an always-open pore has
+      a much smaller temperature coefficient.
+    distractors:
+      A: Simple diffusion depends weakly on temperature and would not show saturation or competition.
+      B: An ungated channel would keep conducting at 4 degrees C and would not saturate with [S].
+      C: Molecular size determines permeability but is unchanged by temperature; it cannot explain a 12-fold
+        fall.
+    chapter: 2a-assemblies-of-molecules-cells-and-cell-groups
+    passage_id: mcat-bb-p03
+  - id: mcat-bb-015
+    q: Why does ouabain reduce uptake of S?
+    choices:
+      A: The S transporter hydrolyzes ATP itself, and ouabain blocks its ATPase site.
+      B: Ouabain competes with S for the substrate-binding site on the S transporter.
+      C: By inhibiting the Na+/K+-ATPase, ouabain dissipates the Na+ gradient that the S transporter uses
+        as its driving force.
+      D: Ouabain raises intracellular Na+, which increases the driving force, so the fall must be nonspecific
+        toxicity.
+    answer: C
+    explain: Ouabain inhibits the Na+/K+-ATPase, so intracellular Na+ rises and the Na+ electrochemical
+      gradient that powers Na+/S cotransport dissipates. Uptake falls to 15 rather than to zero because
+      residual gradient and other pathways remain.
+    distractors:
+      A: That would be primary active transport; ouabain acts on the Na+/K+-ATPase, not on the S transporter,
+        which does not split ATP.
+      B: Competition at the substrate site was tested with the S analog; ouabain's target is the pump,
+        and T failed to compete.
+      D: Raising intracellular Na+ lowers, not raises, the inward Na+ driving force available to the cotransporter.
+    chapter: cells-and-cellular-processes
+    passage_id: mcat-bb-p03
+- id: mcat-bb-p04
+  text: Fibroblasts were incubated with either [3,4-14C]glucose, whose label ends up on the carboxyl carbon
+    (C1) of pyruvate, or [1-14C]glucose, whose label ends up on the methyl carbon (C3) of pyruvate. 14CO2
+    was collected continuously. Cells given [3,4-14C]glucose released 14CO2 within minutes, while cells
+    given [1-14C]glucose released no 14CO2 during the first turn of the citric acid cycle; their label
+    appeared in cycle intermediates and only in later turns. For ATP accounting use 2.5 ATP per NADH and
+    1.5 ATP per FADH2 oxidized.
+  chapter: 1d-bioenergetics-and-fuel-metabolism
+  items:
+  - id: mcat-bb-016
+    q: Which reaction releases the carboxyl carbon of pyruvate as CO2?
+    choices:
+      A: The pyruvate dehydrogenase complex
+      B: Alpha-ketoglutarate dehydrogenase
+      C: Citrate synthase
+      D: Succinate dehydrogenase
+    answer: A
+    explain: The pyruvate dehydrogenase complex oxidatively decarboxylates pyruvate, releasing its C1
+      as CO2 and yielding acetyl-CoA and NADH. That is why the [3,4-14C]glucose label appears as 14CO2
+      within minutes.
+    distractors:
+      B: That step releases CO2 from alpha-ketoglutarate, a cycle intermediate, not from pyruvate.
+      C: Citrate synthase condenses acetyl-CoA with oxaloacetate and releases no CO2.
+      D: Succinate dehydrogenase oxidizes succinate to fumarate without any decarboxylation.
+    chapter: 1d-bioenergetics-and-fuel-metabolism
+    passage_id: mcat-bb-p04
+  - id: mcat-bb-017
+    q: Why does [1-14C]glucose fail to yield 14CO2 during the first turn of the citric acid cycle?
+    choices:
+      A: Glucose C1 is lost as CO2 during the aldolase cleavage step of glycolysis.
+      B: The label is lost when pyruvate is reduced to lactate under anaerobic conditions.
+      C: The methyl carbon of acetyl-CoA is decarboxylated by citrate synthase on the first turn.
+      D: The two CO2 released in a turn come from oxaloacetate carbons, so the entering labeled acetyl
+        carbon is retained in cycle intermediates.
+    answer: D
+    explain: Pyruvate C3 becomes the methyl carbon of acetyl-CoA. In the first turn, the CO2 released
+      at the isocitrate and alpha-ketoglutarate dehydrogenase steps derive from oxaloacetate carbons,
+      so the label survives into succinate and is released only on subsequent turns.
+    distractors:
+      A: Aldolase cleaves fructose 1,6-bisphosphate into two trioses without releasing CO2; no carbon
+        is lost in glycolysis.
+      B: Reduction to lactate conserves all three carbons of pyruvate; the passage describes aerobic cells.
+      C: Citrate synthase makes a C-C bond and releases no CO2 at all.
+    chapter: 1d-bioenergetics-and-fuel-metabolism
+    passage_id: mcat-bb-p04
+  - id: mcat-bb-018
+    q: Excluding glycolysis, how many ATP equivalents does one glucose generate through the pyruvate dehydrogenase
+      complex and the citric acid cycle?
+    choices:
+      A: '20'
+      B: '25'
+      C: '15'
+      D: '32'
+    answer: B
+    explain: Each acetyl-CoA yields 3 NADH (7.5), 1 FADH2 (1.5), and 1 GTP (1) = 10 ATP; two acetyl-CoA
+      give 20. The PDH step adds 2 NADH = 5, for a total of 25.
+    distractors:
+      A: 20 omits the 2 NADH (5 ATP) generated by the pyruvate dehydrogenase complex.
+      C: 15 runs only one acetyl-CoA through the cycle and stops; a second acetyl-CoA plus the PDH NADH
+        brings the total to 25.
+      D: 32 adds the full glycolytic yield, but the question asks only for PDH plus the cycle.
+    chapter: 1d-bioenergetics-and-fuel-metabolism
+    passage_id: mcat-bb-p04
+  - id: mcat-bb-019
+    q: What is the net ATP yield from glycolysis alone by substrate-level phosphorylation?
+    choices:
+      A: '4'
+      B: '0'
+      C: '2'
+      D: '8'
+    answer: C
+    explain: Four ATP are produced at phosphoglycerate kinase and pyruvate kinase, but two are consumed
+      in the priming phase (hexokinase and phosphofructokinase-1), leaving a net of 2. The 2 NADH are
+      a separate yield.
+    distractors:
+      A: 4 is the gross ATP produced before subtracting the 2 invested in the priming steps.
+      B: Glycolysis does produce net ATP; only the investment phase consumes ATP.
+      D: 8 double-counts the NADH as 4 additional substrate-level ATP; substrate-level phosphorylation
+        here yields only 4 gross.
+    chapter: 1d-bioenergetics-and-fuel-metabolism
+    passage_id: mcat-bb-p04
+  - id: mcat-bb-020
+    q: If cyanide is added to the [3,4-14C]glucose cultures, what happens to 14CO2 production?
+    choices:
+      A: It falls sharply, because NADH can no longer be reoxidized, NAD+ becomes limiting, and the cycle
+        stalls.
+      B: It is unchanged, because the citric acid cycle does not require NAD+.
+      C: It rises, because the inhibitor accelerates decarboxylation reactions.
+      D: It rises, because pyruvate carboxylation to oxaloacetate increases, releasing more labeled CO2.
+    answer: A
+    explain: Cyanide inhibits cytochrome c oxidase (Complex IV). NADH accumulates, the NAD+/NADH ratio
+      falls, and the NAD+-dependent dehydrogenases stop, so CO2 production collapses.
+    distractors:
+      B: Three of the cycle's four oxidation steps require NAD+ as electron acceptor, so the cycle is
+        NAD+-dependent.
+      C: Nothing in cyanide inhibition speeds decarboxylation; it blocks the electron transport chain.
+      D: Pyruvate carboxylation does not release CO2, and it would be limited by the same lack of oxidized
+        cofactors.
+    chapter: 1d-bioenergetics-and-fuel-metabolism
+    passage_id: mcat-bb-p04
+- id: mcat-bb-p05
+  text: 'A diagnostic laboratory sequenced a 600-bp coding region of gene X from four patients. Patient
+    1: codon 45 changed from 5''-CAG-3'' (glutamine) to 5''-TAG-3''. Patient 2: the same codon changed
+    from 5''-CAG-3'' to 5''-CAC-3'', which also encodes glutamine. Patient 3: the codon changed from 5''-CAG-3''
+    to 5''-CGG-3'', which encodes arginine. Patient 4 carries a loss-of-function mutation in the mismatch-repair
+    gene MSH2; his lymphoblasts were cultured and several microsatellite loci were measured across passages.
+    No insertion or deletion was found in any patient''s coding region.'
+  chapter: 1b-gene-to-protein
+  items:
+  - id: mcat-bb-021
+    q: What is the nature and consequence of patient 1's mutation?
+    choices:
+      A: A missense mutation that replaces one amino acid with another at position 45.
+      B: A silent mutation that leaves the protein sequence unchanged.
+      C: A frameshift that alters every codon downstream of position 45.
+      D: A nonsense mutation; translation terminates at codon 45, leaving a 44-residue peptide.
+    answer: D
+    explain: TAG is a stop codon. Translation proceeds through codons 1-44 and stops at codon 45, so the
+      product is a peptide of 44 amino acids, usually degraded or nonfunctional.
+    distractors:
+      A: Missense requires a codon specifying an amino acid; TAG specifies no amino acid.
+      B: A silent mutation would preserve the amino acid, but TAG is a stop signal.
+      C: A frameshift requires an insertion or deletion, and the passage reports none.
+    chapter: 1b-gene-to-protein
+    passage_id: mcat-bb-p05
+  - id: mcat-bb-022
+    q: What type of mutation does patient 2 carry?
+    choices:
+      A: Nonsense
+      B: Silent (synonymous)
+      C: Missense
+      D: Frameshift
+    answer: B
+    explain: CAG and CAC both specify glutamine. The change is confined to the third, wobble position,
+      so the protein sequence is unchanged.
+    distractors:
+      A: CAC encodes glutamine, not a stop signal.
+      C: No amino acid substitution occurs, so it is not missense.
+      D: No nucleotides were inserted or deleted, so the reading frame is intact.
+    chapter: 1b-gene-to-protein
+    passage_id: mcat-bb-p05
+  - id: mcat-bb-023
+    q: How should patient 3's mutation be classified?
+    choices:
+      A: Silent, because the protein length is unchanged.
+      B: Nonsense, because a stop codon is introduced.
+      C: Missense, with glutamine replaced by arginine.
+      D: Frameshift, because the reading frame shifts after codon 45.
+    answer: C
+    explain: CGG specifies arginine while CAG specifies glutamine, so a single amino acid substitution
+      occurs. This is a missense mutation, and it is nonconservative because arginine is positively charged
+      whereas glutamine is polar and uncharged.
+    distractors:
+      A: The encoded amino acid changes, so the mutation is not silent even though length is preserved.
+      B: CGG codes for arginine; the stop codons are TAA, TAG, and TGA.
+      D: A one-base substitution cannot shift the reading frame; only indels can.
+    chapter: 1b-gene-to-protein
+    passage_id: mcat-bb-p05
+  - id: mcat-bb-024
+    q: What is the most likely phenotype of patient 4's cells in culture?
+    choices:
+      A: A marked increase in the spontaneous mutation rate, with microsatellite lengths unstable across
+        passages.
+      B: An inability to remove UV-induced thymine dimers from the genome.
+      C: An inability to remove the RNA primers laid down during replication.
+      D: Loss of the 5'-to-3' proofreading exonuclease of DNA polymerase.
+    answer: A
+    explain: MSH2 recognizes base-base mismatches and small insertion-depletion loops after the replication
+      fork. Losing it produces replication errors that go uncorrected, seen as point-mutation accumulation
+      and microsatellite instability.
+    distractors:
+      B: Thymine dimers are handled by nucleotide excision repair, not mismatch repair.
+      C: Primer removal is carried out by RNase H and flap endonuclease, not by the mismatch-repair system.
+      D: Polymerase proofreading is a 3'-to-5' exonuclease activity intrinsic to the polymerase, separate
+        from post-replicative mismatch repair.
+    chapter: 1b-gene-to-protein
+    passage_id: mcat-bb-p05
+- id: mcat-bb-p06
+  text: 'A 34-year-old woman reports fatigue, cold intolerance, constipation, dry skin, and a 6-kg weight
+    gain over 8 months. Her pulse is 52/min. Laboratory results: TSH 48 mIU/L (reference 0.4-4.0), free
+    T4 0.3 ng/dL (reference 0.8-1.8), and anti-thyroid peroxidase antibodies are positive. A second patient
+    evaluated for the same symptoms has TSH 0.05 mIU/L and free T4 0.2 ng/dL. Both patients are begun
+    on daily oral levothyroxine (T4), which is converted peripherally to T3 by 5''-deiodinase.'
+  chapter: 3a-nervous-and-endocrine-systems
+  items:
+  - id: mcat-bb-025
+    q: Which diagnosis best fits the first patient's laboratory pattern?
+    choices:
+      A: Primary hyperthyroidism due to thyroid-stimulating immunoglobulins
+      B: Primary hypothyroidism due to thyroid gland failure (Hashimoto thyroiditis)
+      C: Secondary (pituitary) hypothyroidism
+      D: Subclinical thyroid disease
+    answer: B
+    explain: 'A high TSH with a low free T4 indicates that the thyroid itself is failing: the pituitary
+      drives hard (TSH 48) but the gland cannot respond. Positive anti-TPO antibodies support autoimmune
+      (Hashimoto) thyroiditis.'
+    distractors:
+      A: Hyperthyroidism would raise free T4 and suppress TSH, the opposite of this pattern.
+      C: With a pituitary cause, TSH would be low or inappropriately normal, not 48 mIU/L.
+      D: Subclinical disease leaves free T4 within the reference range; here it is 0.3 ng/dL.
+    chapter: 3a-nervous-and-endocrine-systems
+    passage_id: mcat-bb-p06
+  - id: mcat-bb-026
+    q: What mechanism accounts for the first patient's elevated TSH?
+    choices:
+      A: The thyroid gland is overproducing TSH in response to a high circulating T4 level.
+      B: Hypothalamic TRH secretion has been suppressed by low thyroid hormone.
+      C: The thyroid gland itself has begun secreting TSH along with thyroglobulin.
+      D: Low circulating T4 and T3 remove negative feedback at the hypothalamus and thyrotrophs, so TRH
+        and TSH secretion rise.
+    answer: D
+    explain: T4 and T3 normally feed back on both the hypothalamus and anterior pituitary to inhibit TRH
+      and TSH release. When the gland fails, hormone levels fall, the brake is released, and TSH climbs.
+    distractors:
+      A: TSH is synthesized by thyrotrophs of the anterior pituitary, and this patient's T4 is low, not
+        high.
+      B: Suppressing TRH would lower, not raise, TSH secretion.
+      C: The thyroid secretes T4 and T3 (and calcitonin from C cells), never TSH.
+    chapter: 3a-nervous-and-endocrine-systems
+    passage_id: mcat-bb-p06
+  - id: mcat-bb-027
+    q: How should the second patient, with TSH 0.05 and free T4 0.2, be interpreted?
+    choices:
+      A: Primary thyroid failure, as in Hashimoto thyroiditis.
+      B: Iodine deficiency with compensatory TSH elevation.
+      C: A central (pituitary or hypothalamic) cause; the thyroid is under-stimulated because TSH is low.
+      D: Thyroid hormone resistance, which raises both TSH and free T4.
+    answer: C
+    explain: Low TSH with low T4 means the drive to the gland is inadequate. The defect lies upstream
+      of the thyroid, in the pituitary or hypothalamus, so the gland is structurally capable but not being
+      stimulated.
+    distractors:
+      A: Primary failure produces a high TSH as the pituitary compensates.
+      B: Iodine deficiency raises TSH and typically produces a goiter, not a TSH of 0.05.
+      D: Resistance leaves thyroid hormone elevated with nonsuppressed TSH; this patient has low T4.
+    chapter: 3a-nervous-and-endocrine-systems
+    passage_id: mcat-bb-p06
+  - id: mcat-bb-028
+    q: After several weeks of levothyroxine therapy, what change is expected in the first patient's TSH?
+    choices:
+      A: It falls toward the reference range as restored T4 and T3 re-establish negative feedback.
+      B: It rises further, because exogenous T4 suppresses the patient's own thyroid.
+      C: It stays at 48 mIU/L because the gland is permanently destroyed.
+      D: It falls only if T3 rather than T4 is administered.
+    answer: A
+    explain: TSH is secreted by the pituitary, not the thyroid, so it responds to circulating hormone
+      even when the gland is damaged. Restoring T4, converted peripherally to T3, re-engages negative
+      feedback and lowers TSH.
+    distractors:
+      B: Exogenous thyroid hormone provides the same negative feedback as endogenous hormone and lowers
+        TSH.
+      C: TSH output depends on pituitary exposure to T4/T3, not on the integrity of the thyroid gland
+        itself.
+      D: Peripheral 5'-deiodination converts the administered T4 to T3, so T4 is effective.
+    chapter: 3a-nervous-and-endocrine-systems
+    passage_id: mcat-bb-p06
+- id: mcat-bb-p07
+  text: 'A single-pass membrane receptor contains a 36-residue alpha-helix that spans the lipid bilayer.
+    Substituting aspartate for leucine 20, a residue near the middle of the helix, abolishes folding:
+    the protein is retained in the endoplasmic reticulum, polyubiquitinated, and degraded by the proteasome,
+    and no receptor reaches the cell surface. Substituting alanine at the same position leaves folding
+    and trafficking intact. For calculations, assume a rise of 1.5 angstrom per residue, 3.6 residues
+    per turn, and an average contribution of 110 Da per amino acid residue.'
+  chapter: 1a-proteins-and-amino-acids
+  items:
+  - id: mcat-bb-029
+    q: Why is the Asp substitution catastrophic while the Ala substitution is tolerated?
+    choices:
+      A: Aspartate is bulkier than leucine and sterically blocks the helix.
+      B: Alanine cannot appear in alpha-helices, so the comparison is not informative.
+      C: Aspartate places a negative charge inside the hydrophobic bilayer, whereas alanine is small and
+        nonpolar and packs much like leucine.
+      D: The Asp substitution creates an intrahelical disulfide bond that locks the protein shut.
+    answer: C
+    explain: Burying an unneutralized charge in the membrane interior is thermodynamically very unfavorable,
+      so the misfolded chain is retained and degraded. Alanine is hydrophobic and helix-favoring, so it
+      substitutes acceptably for leucine.
+    distractors:
+      A: Aspartate is not larger than leucine; the problem is its charge, not its size.
+      B: Alanine is one of the strongest alpha-helix formers.
+      D: Disulfide bonds form between cysteine thiols, and no cysteine was introduced.
+    chapter: 2a-assemblies-of-molecules-cells-and-cell-groups
+    passage_id: mcat-bb-p07
+  - id: mcat-bb-030
+    q: How long is the intact 36-residue transmembrane helix?
+    choices:
+      A: 54 angstrom
+      B: 5.4 angstrom
+      C: 36 angstrom
+      D: 130 angstrom
+    answer: A
+    explain: Length = 36 residues x 1.5 angstrom per residue = 54 angstrom, which comfortably spans a
+      bilayer core of about 30 angstrom.
+    distractors:
+      B: 5.4 angstrom is the rise of a single turn (3.6 x 1.5), not the whole helix.
+      C: 36 angstrom assumes 1.0 angstrom per residue.
+      D: 130 angstrom comes from multiplying 36 residues by 3.6, confusing residues per turn with angstrom
+        per residue.
+    chapter: 1a-proteins-and-amino-acids
+    passage_id: mcat-bb-p07
+  - id: mcat-bb-031
+    q: Which residues form the hydrogen bonds that stabilize this alpha-helix?
+    choices:
+      A: The C=O of residue i and the N-H of residue i+1
+      B: The side chains of residues i and i+4
+      C: Residues on adjacent strands joined by covalent cross-links
+      D: The C=O of residue i and the N-H of residue i+4
+    answer: D
+    explain: Alpha-helices are stabilized by backbone hydrogen bonds between the carbonyl oxygen of each
+      residue and the amide N-H of the residue four positions away, which is why the geometry repeats
+      every 3.6 residues.
+    distractors:
+      A: i to i+1 hydrogen bonds describe a different geometry and do not produce the alpha-helical repeat.
+      B: The helix is stabilized by backbone hydrogen bonds; side chains point outward and are not required.
+      C: No covalent cross-links stabilize a helix; hydrogen bonding is noncovalent.
+    chapter: 1a-proteins-and-amino-acids
+    passage_id: mcat-bb-p07
+  - id: mcat-bb-032
+    q: A soluble relative of this receptor has 200 residues. What is its estimated mass?
+    choices:
+      A: 2,200 Da
+      B: 22,000 Da (22 kDa)
+      C: 220,000 Da
+      D: 20,000 Da
+    answer: B
+    explain: 200 residues x 110 Da per residue = 22,000 Da, or 22 kDa.
+    distractors:
+      A: 2,200 Da is too small by a factor of 10.
+      C: 220,000 Da is too large by a factor of 10.
+      D: 20,000 Da uses 100 Da per residue rather than the 110 Da given in the passage.
+    chapter: 1a-proteins-and-amino-acids
+    passage_id: mcat-bb-p07

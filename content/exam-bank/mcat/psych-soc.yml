@@ -1,0 +1,1347 @@
+# MCAT Psychological, Social, and Biological Foundations section bank
+# 59 items: 7 passage groups (33 items) + 26 standalone.
+# Distractor keys are always the three letters that are not the answer.
+exam: mcat
+section: psych-soc
+label: Psychological, Social, and Biological Foundations
+subject: psych-soc
+block: psych-soc
+items_expected: 59
+items:
+- id: mcat-ps-001
+  q: A researcher measures “academic stress” as each participant's total score on a validated
+    20-item self-report scale. This measurement decision is best described as
+  choices:
+    B: An operational definition of the dependent variable.
+    C: A theoretical construct that cannot be studied scientifically.
+    D: A confounding variable that distorts the stress-performance relationship.
+    A: A random sample drawn from the population of stressed students.
+  answer: B
+  explain: An operational definition states the specific procedure used to measure an abstract
+    construct; here, stress = score on the 20-item scale.
+  distractors:
+    C: Stress is an unobservable construct, but it can be studied once it is operationalized,
+      which is exactly what the scale does.
+    D: A confounder is a third variable related to both the predictor and the outcome; the scale
+      is simply how stress is measured.
+    A: Sampling concerns who is studied, not how a variable is measured.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-ps-002
+  q: A decision-making study runs participants one at a time in a sound-attenuated laboratory,
+    uses a highly standardized task, and finds a large effect. The participants are all 18-to-22-year-old
+    undergraduates and the task bears little resemblance to real-world decisions. The study most
+    clearly shows
+  choices:
+    D: High internal validity with limited external validity.
+    A: High external validity with limited internal validity.
+    B: Good test-retest reliability but poor construct validity.
+    C: A true experiment that is free of any generalizability concerns.
+  answer: D
+  explain: Control over extraneous variables strengthens internal validity; an artificial task
+    with a homogeneous undergraduate sample weakens generalizability to other settings and populations
+    (external validity).
+  distractors:
+    A: Random assignment and tight control raise internal validity; the artificial task and narrow
+      sample are what limit generalizability.
+    B: Reliability and construct validity are not the issue raised by an artificial task and a
+      narrow sample; control versus realism is.
+    C: Even a well-controlled experiment can generalize poorly when the setting and sample are
+      unrepresentative.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-ps-003
+  q: A public-health analyst finds that neighborhoods with higher ice-cream sales also have higher
+    drowning rates (r = 0.72). The strongest interpretation is that
+  choices:
+    A: A third variable, hot summer weather, plausibly increases both swimming and ice-cream purchases.
+    B: Ice-cream consumption causes people to swim unsafely.
+    C: Near-drowning experiences later drive ice-cream purchases in the neighborhood.
+    D: The correlation is meaningless because r = 0.72 is below statistical significance.
+  answer: A
+  explain: Correlation does not establish causation; a plausible confounder (seasonal heat) can
+    produce both variables, so the finding supports association only.
+  distractors:
+    B: A cross-sectional correlation cannot establish causal direction, and no mechanism links
+      ice cream to drowning.
+    C: Reverse causation is equally unsupported by a single correlation.
+    D: Nothing in the stem indicates non-significance; the issue is interpretation, not the size
+      or significance of r.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-ps-004
+  q: A participant can just detect that a 100 g weight differs from a 104 g weight. According
+    to Weber's law, if the standard weight is increased to 400 g the participant will need a difference
+    of about
+  choices:
+    A: 16 g, because the just-noticeable difference is a constant fraction of the stimulus.
+    B: 4 g, because the absolute threshold is unchanged by the size of the standard.
+    C: 2 g, because sensitivity improves as the standard gets heavier.
+    D: 100 g, because detection requires doubling the original stimulus.
+  answer: A
+  explain: 'Weber fractions are constant: 4/100 = 0.04, and 0.04 × 400 g = 16 g.'
+  distractors:
+    B: The 4 g figure is this participant's difference threshold at 100 g; it is not an absolute
+      threshold and it scales with stimulus intensity.
+    C: Absolute sensitivity does not improve with stimulus intensity; the ratio stays constant,
+      so the increment grows.
+    D: Weber's law concerns a constant proportion (here 4%), not a doubling rule.
+  chapter: 6a-sensing-the-environment
+  passage_id: ''
+- id: mcat-ps-005
+  q: Radiologists at one hospital are told that the clinic faces litigation whenever a tumor is
+    missed. Compared with colleagues who receive no such message, these radiologists will most
+    likely show
+  choices:
+    C: A more liberal response criterion, producing more hits and more false alarms.
+    D: Higher sensitivity (d′), because motivation sharpens perception of the stimulus.
+    A: A more conservative criterion, producing fewer false alarms and more misses.
+    B: No change in criterion, because the images themselves are unchanged.
+  answer: C
+  explain: In signal detection theory, payoffs and expectations move the response criterion; fear
+    of misses pushes observers toward saying “tumor,” raising both hits and false alarms while
+    d′ stays put.
+  distractors:
+    D: The instruction changes the payoff structure, which shifts the criterion; it does not improve
+      the observer's ability to discriminate tumor from healthy tissue.
+    A: A conservative criterion reduces false alarms at the cost of misses — the opposite of what
+      the threat of litigation encourages.
+    B: Signal detection theory holds that criteria shift with expectations and payoffs even when
+      the stimulus is identical.
+  chapter: 6a-sensing-the-environment
+  passage_id: ''
+- id: mcat-ps-006
+  q: After studying a 30-word list, participants recall the first few and the last few words best.
+    The advantage for the words at the START of the list is best explained by
+  choices:
+    A: Greater rehearsal, which transferred those items into long-term memory (the primacy effect).
+    B: The words still being held in short-term store at the moment of recall.
+    C: Proactive interference from the items that preceded them in the list.
+    D: Sensory memory retaining the first items for several seconds.
+  answer: A
+  explain: 'The serial position curve reflects two systems: primacy comes from extra rehearsal
+    and long-term storage of early items, recency from items still in working memory.'
+  distractors:
+    B: That is the recency explanation; it applies to the last items, which are vulnerable to
+      a filled delay.
+    C: Interference in this list comes from within, and it works against the middle items rather
+      than explaining the first-position advantage.
+    D: Sensory memory lasts under a few seconds and cannot explain recall after the whole list
+      has been presented.
+  chapter: 6b-making-sense-of-the-environment
+  passage_id: ''
+- id: mcat-ps-007
+  q: Patient H.M., after bilateral removal of much of the medial temporal lobe, steadily improved
+    at mirror tracing across three days yet insisted each day that he had never performed the
+    task. The best interpretation is that
+  choices:
+    C: Encoding of new explicit (declarative) memories was impaired while procedural memory was
+      spared.
+    D: Procedural memory depends on an intact hippocampus, which H.M. lacked.
+    A: Rehearsal allowed the tracing skill to be stored consciously.
+    B: Implicit memory requires deliberate recall of prior practice sessions.
+  answer: C
+  explain: H.M. formed no new declarative memories (hippocampal damage) but retained motor-skill
+    learning, dissociating explicit from procedural memory.
+  distractors:
+    D: 'His improving mirror tracing shows the opposite: skill learning survived the hippocampal
+      damage.'
+    A: He could not consciously recall practicing at all, so conscious rehearsal of the episodes
+      is ruled out.
+    B: Implicit memory is defined by the absence of deliberate recall; that is precisely what
+      his performance shows.
+  chapter: 6b-making-sense-of-the-environment
+  passage_id: ''
+- id: mcat-ps-008
+  q: A trainer rewards a pigeon first for facing a lever, then for approaching it, then for touching
+    it, and finally for pressing it. This procedure is best described as
+  choices:
+    D: Shaping, in which successive approximations to the target behavior are reinforced.
+    A: Classical conditioning, in which the lever is paired with an unconditioned stimulus.
+    B: Generalization, in which responses spread to similar stimuli.
+    C: Negative reinforcement, because errors are progressively removed.
+  answer: D
+  explain: Shaping (Skinner) reinforces progressively closer approximations to the final behavior
+    until only the target response earns reinforcement.
+  distractors:
+    A: No stimulus is being paired with a reflex; reinforcement follows the animal's own emitted
+      behavior, which makes this operant.
+    B: Generalization concerns responding to stimuli that resemble the trained cue, not gradually
+      building a new response.
+    C: Nothing aversive is removed; a desirable consequence (food) is added, which is positive
+      reinforcement.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-ps-009
+  q: Rats allowed to wander a maze with no food reward later navigated it efficiently as soon
+    as food was introduced, performing as well as rats that had been rewarded throughout. This
+    result is best taken as evidence for
+  choices:
+    D: 'Latent learning: learning occurred without reinforcement and only became visible in performance.'
+    A: Insight learning, in which the solution appears suddenly after mental recombination.
+    B: Observational learning, in which behavior is acquired by watching a model.
+    C: Preparedness, in which species-typical associations are learned especially easily.
+  answer: D
+  explain: Tolman's latent-learning studies showed that reinforcement affects performance, not
+    whether learning takes place; the rats built cognitive maps without reward.
+  distractors:
+    A: Insight is Köhler's account of chimpanzees stacking boxes; the rats showed no sudden solution,
+      only previously hidden learning.
+    B: No model was present; the rats learned from their own exploration.
+    C: Preparedness explains why some associations (taste-illness) form readily, not why unreinforced
+      learning stays hidden.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-ps-010
+  q: While hiking you see a snake, your heart pounds and your muscles tense, and only then do
+    you experience fear. This sequence best illustrates
+  choices:
+    B: The James-Lange theory, in which bodily arousal produces the emotional experience.
+    C: The Cannon-Bard theory, in which arousal and feeling occur simultaneously.
+    D: The Schachter-Singer two-factor theory, in which arousal is labeled using situational cues.
+    A: The facial feedback hypothesis, in which facial expression drives the emotion.
+  answer: B
+  explain: James-Lange theory holds that the perception of the stimulus triggers autonomic and
+    motor responses, and the emotion is the perception of those bodily changes.
+  distractors:
+    C: Simultaneity is Cannon-Bard's claim; the stem describes a felt emotion that follows the
+      body's response.
+    D: Two-factor theory requires a cognitive label for undifferentiated arousal; here the emotion
+      follows directly from the body's response.
+    A: The facial feedback account runs through facial musculature, not through autonomic arousal
+      such as a pounding heart.
+  chapter: 6c-responding-to-the-world
+  passage_id: ''
+- id: mcat-ps-011
+  q: Cannon objected to the James-Lange view partly by noting that patients with spinal cord injuries
+    that cut off most bodily feedback still reported feeling emotion. This evidence is most consistent
+    with which claim?
+  choices:
+    A: Physiological arousal and subjective emotion are independent outputs triggered together.
+    B: Emotional intensity depends entirely on the amount of bodily feedback available.
+    C: Each distinct emotion is produced by a unique pattern of autonomic activity.
+    D: Emotion arises only after cortical interpretation of autonomic feedback.
+  answer: A
+  explain: Cannon-Bard theory holds that the thalamus sends signals simultaneously to the cortex
+    (felt emotion) and to the body (arousal), so emotion survives lost feedback.
+  distractors:
+    B: That is the James-Lange prediction, which the spinal-injury observation undermines, since
+      patients still report emotion.
+    C: Distinct autonomic signatures are a James-Lange assumption, not a Cannon-Bard one; Cannon
+      argued arousal is too undifferentiated for that.
+    D: Interpreting feedback is the James-Lange sequence; Cannon-Bard locates the experience in
+      the brain alongside arousal, not downstream of it.
+  chapter: 6c-responding-to-the-world
+  passage_id: ''
+- id: mcat-ps-012
+  q: In Schachter and Singer's study, participants injected with epinephrine but not told of its
+    effects reported the emotion displayed by a confederate in the room, while informed participants
+    reported little emotion. This best supports the idea that
+  choices:
+    D: Emotional experience requires both undifferentiated physiological arousal and a cognitive
+      label drawn from the situation.
+    A: Arousal alone is sufficient to produce a specific, recognizable emotion.
+    B: Arousal and emotional experience are produced simultaneously and independently.
+    C: Emotions are innate programs triggered by evolutionary prepared stimuli.
+  answer: D
+  explain: The two-factor theory (Schachter-Singer, 1962) treats arousal as generic and the emotion
+    label as a cognitive interpretation of context, so mislabeling is possible.
+  distractors:
+    A: Aroused but uninformed participants borrowed the label from the confederate, showing that
+      arousal by itself does not specify which emotion is felt.
+    B: That is Cannon-Bard; the study instead manipulated how participants interpreted their arousal.
+    C: Evolutionary accounts make the label automatic rather than socially supplied, which contradicts
+      the confederate's influence.
+  chapter: 6c-responding-to-the-world
+  passage_id: ''
+- id: mcat-ps-013
+  q: A student who has not eaten in 12 hours and who has just been threatened by a roommate declines
+    an invitation to give a speech that would earn praise. Maslow's hierarchy of needs best explains
+    this by noting that
+  choices:
+    B: Physiological and safety needs generally must be addressed before esteem needs become motivating.
+    C: Esteem needs are the foundation on which all other needs rest.
+    D: Self-actualization is the strongest need and is pursued first.
+    A: The needs operate independently, so no ordering can be predicted.
+  answer: B
+  explain: Maslow orders needs from physiological and safety upward through belonging, esteem,
+    and self-actualization; unmet lower needs typically take priority.
+  distractors:
+    C: In Maslow's model esteem sits above physiological, safety, and belonging needs, not beneath
+      them.
+    D: Self-actualization sits at the top of the hierarchy and is pursued once lower needs are
+      reasonably satisfied.
+    A: The whole point of the hierarchy is a prepotency ordering, in which lower needs dominate
+      until they are met.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-ps-014
+  q: A novice surgeon performing a complicated unfamiliar procedure does best under relatively
+    low arousal, whereas an experienced surgeon doing a routine procedure performs best under
+    higher arousal. This pattern follows from
+  choices:
+    D: The Yerkes-Dodson law, which sets an optimal arousal level that is lower for difficult
+      tasks.
+    A: Drive reduction theory, in which performance rises steadily as drives are reduced.
+    B: Intrinsic motivation, which predicts that interest, not arousal, determines quality.
+    C: Social facilitation, which predicts that arousal improves well-learned responses.
+  answer: D
+  explain: The Yerkes-Dodson law describes an inverted U between arousal and performance; the
+    optimum shifts lower as tasks become more complex or unfamiliar.
+  distractors:
+    A: Drive reduction predicts monotonic improvement toward calm, not an inverted-U relationship
+      that differs by task difficulty.
+    B: Interest is a motivational direction, whereas the data vary arousal level and show an inverted-U
+      pattern.
+    C: That is the correct pattern for the expert, but it does not explain why the novice does
+      best when arousal is low.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-ps-015
+  q: A colleague is always prepared, keeps a detailed calendar, double-checks her work, and has
+    never missed a deadline. In the five-factor model her most salient trait is
+  choices:
+    D: High conscientiousness.
+    A: High openness to experience.
+    B: High agreeableness.
+    C: Low neuroticism.
+  answer: D
+  explain: Conscientiousness (the C in OCEAN) is defined by organization, self-discipline, dependability,
+    and goal-directed persistence.
+  distractors:
+    A: Openness reflects imagination, curiosity, and preference for novelty rather than organization
+      and dependability.
+    B: Agreeableness covers warmth, trust, and cooperation; none of the described behaviors concern
+      getting along with others.
+    C: Low neuroticism describes emotional stability, which is not what punctuality and checking
+      behavior indicate.
+  chapter: 7a-individual-influences-on-behavior
+  passage_id: ''
+- id: mcat-ps-016
+  q: Before a difficult procedure, a resident says, “I have practiced this 40 times and I can
+    get the line in even if the patient moves.” Bandura would describe this belief as
+  choices:
+    A: Self-efficacy, an expectancy about one's own capability that predicts persistence.
+    B: Self-esteem, a global evaluation of personal worth.
+    C: Self-serving bias, an attributional tendency to claim credit for success.
+    D: Self-actualization, the drive to realize one's full potential.
+  answer: A
+  explain: Bandura's self-efficacy is a domain-specific belief in one's capacity to execute the
+    behavior required, and it predicts effort, persistence, and resilience.
+  distractors:
+    B: Self-esteem is an overall judgment of value, not a task-specific belief about being able
+      to execute the behavior.
+    C: Attributing past successes to oneself is a bias in explaining outcomes, not a belief about
+      future capability.
+    D: Self-actualization is a motivational end state in humanistic theory, not an expectancy
+      about performing a specific task.
+  chapter: 8a-self-identity
+  passage_id: ''
+- id: mcat-ps-017
+  q: Fluoxetine raises synaptic serotonin availability by
+  choices:
+    B: Blocking the presynaptic transporter that reabsorbs serotonin, leaving more of it in the
+      synaptic cleft.
+    C: Increasing the presynaptic synthesis of serotonin from tryptophan.
+    D: Directly stimulating postsynaptic serotonin receptors like an agonist.
+    A: Blocking the reuptake of dopamine, raising dopamine levels throughout the cortex.
+  answer: B
+  explain: Selective serotonin reuptake inhibitors block SERT on the presynaptic terminal, so
+    serotonin lingers in the cleft and continues to stimulate postsynaptic receptors.
+  distractors:
+    C: SSRIs act on reuptake transporters rather than on the synthetic enzymes that convert tryptophan
+      to serotonin.
+    D: Fluoxetine does not mimic serotonin at the receptor; it prevents its removal from the cleft,
+      indirectly raising receptor stimulation.
+    A: Dopamine reuptake is the target of different drugs; SSRIs are selective for the serotonin
+      transporter.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-ps-018
+  q: A hospitalized patient with schizophrenia shows poverty of speech, flat affect, and avolition
+    but no hallucinations. These features are classified as
+  choices:
+    C: Negative symptoms, because they reflect an absence or diminution of normal functions.
+    D: Positive symptoms, because they are clearly present and observable to staff.
+    A: Catatonic symptoms, because the patient is socially withdrawn.
+    B: Disorganized symptoms, because emotional expression is inappropriate.
+  answer: C
+  explain: Negative symptoms (flat affect, alogia, avolition, anhedonia) are losses of typical
+    functioning; positive symptoms are excesses such as hallucinations and delusions.
+  distractors:
+    D: “Positive” refers to behaviors added beyond normal functioning, such as hallucinations
+      and delusions, not to how visible a symptom is.
+    A: Catatonia involves motor abnormalities such as waxy flexibility or excitement, not diminished
+      speech or expressivity.
+    B: Disorganization refers to incoherent speech and bizarre behavior; blunted expression is
+      a deficit, not disorganization.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-ps-019
+  q: A therapist has a client with panic disorder keep a thought record, examine the evidence
+    for the belief that “my racing heart means I am dying,” and practice interoceptive exposure
+    exercises between sessions. This approach is best characterized as
+  choices:
+    A: Cognitive behavioral therapy, which restructures maladaptive beliefs and uses behavioral
+      homework.
+    B: Psychoanalytic therapy, which interprets unconscious conflict from free association.
+    C: Humanistic therapy, which offers unconditional positive regard in a client-led process.
+    D: Systematic desensitization, which pairs relaxation with a graded fear hierarchy.
+  answer: A
+  explain: CBT combines cognitive restructuring (testing catastrophic interpretations) with behavioral
+    techniques such as exposure and between-session homework.
+  distractors:
+    B: No free association, dream analysis, or interpretation of transference appears; the work
+      targets current thoughts and behavior.
+    C: Client-centered therapy is nondirective and avoids assigning exercises, whereas this protocol
+      is structured and directive.
+    D: Desensitization is a classical-conditioning treatment for phobias; the work here also tests
+      and restructures specific beliefs.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-ps-020
+  q: In a study, Black participants performed worse on a difficult verbal test only when it was
+    described as diagnostic of intellectual ability; performance matched that of white participants
+    when the same test was framed as a puzzle-solving exercise. This finding demonstrates
+  choices:
+    C: Stereotype threat, in which anxiety about confirming a negative stereotype impairs performance.
+    D: Prejudice, a negative attitude held by the test administrators.
+    A: Institutional discrimination built into the test's scoring procedures.
+    B: In-group favoritism among the white participants in the puzzle condition.
+  answer: C
+  explain: Steele and Aronson (1995) showed that making a negative stereotype relevant to the
+    task disrupts performance, an effect that disappears when the framing is removed.
+  distractors:
+    D: The manipulation was the test's description, not the attitudes or behavior of the examiners,
+      and no group was treated differently.
+    A: The same items and scoring were used in both conditions, so scoring cannot explain the
+      condition difference.
+    B: Performance was equivalent across groups when the test was not framed as diagnostic, which
+      is inconsistent with favoritism effects.
+  chapter: 8b-social-thinking
+  passage_id: ''
+- id: mcat-ps-021
+  q: Two rival groups at a summer camp stop fighting only after camp staff arrange a broken water
+    system that both groups must repair together to restore supply. Prejudice between them declines
+    most because of
+  choices:
+    B: A superordinate goal that required cooperation and could not be achieved by either group
+      alone.
+    C: Mere repeated exposure, which breeds liking over time.
+    D: Social loafing, which lowers effort when individual contributions are hidden.
+    A: Scapegoating, in which frustration is displaced onto a weaker out-group.
+  answer: B
+  explain: Sherif's Robbers Cave experiment showed that shared goals attainable only through joint
+    effort reduce intergroup hostility more than contact or appeal alone.
+  distractors:
+    C: Exposure alone was available during the earlier competitive activities and did not reduce
+      hostility; the coordinated task is what worked.
+    D: Loafing concerns reduced individual effort in groups and would not reduce intergroup hostility.
+    A: Scapegoating increases out-group hostility, the opposite of the observed decline.
+  chapter: 8c-social-interactions
+  passage_id: ''
+- id: mcat-ps-022
+  q: At a dinner, a guest eats rice with his hands; the host is mildly amused. A different guest
+    defaces a memorial plaque and the community reacts with outrage and formal sanctions. The
+    contrast illustrates
+  choices:
+    A: The difference between folkways, lightly sanctioned customs, and mores, norms with moral
+      force.
+    B: The difference between material and nonmaterial culture.
+    C: Cultural relativism, in which practices are judged by their own culture's standards.
+    D: Cultural diffusion, in which traits spread between societies.
+  answer: A
+  explain: Folkways are everyday conventions whose violation draws mild disapproval; mores carry
+    moral weight and provoke strong, often formal, sanctions.
+  distractors:
+    B: Both acts involve nonmaterial expectations about behavior; the distinction at issue is
+      the severity of the sanction, not objects versus ideas.
+    C: Relativism concerns how outside observers judge a practice, not how strongly a society
+      reacts to two different violations.
+    D: Neither episode involves the spread of a cultural trait; both are about norm violations
+      and their consequences.
+  chapter: sociology-and-anthropology
+  passage_id: ''
+- id: mcat-ps-023
+  q: The daughter of a plumber completes medical school and becomes a surgeon. Her change of position
+    in the stratification system is best described as
+  choices:
+    A: Upward intergenerational mobility through an achieved status.
+    B: Upward intragenerational mobility, since her career advanced over time.
+    C: A change in ascribed status, because family background determined her start.
+    D: Horizontal mobility, because both occupations carry similar prestige.
+  answer: A
+  explain: Intergenerational mobility compares a person's position with that of their parents;
+    an occupation earned through effort and training is an achieved status.
+  distractors:
+    B: Intragenerational mobility tracks changes within one person's own working life; the comparison
+      here is between her position and her father's.
+    C: Family background gave her an ascribed starting point, but the occupation she now holds
+      was earned, not assigned at birth.
+    D: A plumber's daughter becoming a surgeon moves up a prestige hierarchy rather than sideways
+      between positions of equal standing.
+  chapter: 10a-social-inequality
+  passage_id: ''
+- id: mcat-ps-024
+  q: A sociologist notes that public schools in one district provide supervised childcare, which
+    lets parents work full-time, although no law or policy says that is a school's purpose. In
+    Merton's terms this benefit is a
+  choices:
+    B: Latent function of the institution.
+    C: Manifest function, because it is an acknowledged purpose of schooling.
+    D: Dysfunction, because it produces harmful consequences for the system.
+    A: Conflict-theory outcome, in which schooling reproduces class advantage.
+  answer: B
+  explain: Merton distinguished manifest (intended, recognized) from latent (unintended, often
+    unrecognized) functions; childcare provision is a classic latent function of schools.
+  distractors:
+    C: Manifest functions are intended and recognized; childcare here is an unplanned by-product
+      that no policy declares as a goal.
+    D: A dysfunction undermines the system; enabling parental employment stabilizes households
+      rather than disrupting them.
+    A: That is a conflict argument about stratified outcomes, not Merton's distinction between
+      intended and unintended functions.
+  chapter: 9a-understanding-social-structure
+  passage_id: ''
+- id: mcat-ps-025
+  q: A country's total fertility rate is 1.7. Which statement about this figure is correct?
+  choices:
+    C: It is the average number of children a woman would bear at prevailing age-specific rates,
+      and it lies below the replacement level of about 2.1.
+    D: It is the number of births per 1,000 people in the population each year.
+    A: It is the average number of children per household in the country.
+    B: It means the population must begin shrinking immediately.
+  answer: C
+  explain: The total fertility rate projects lifetime births per woman at current age-specific
+    fertility rates; roughly 2.1 is needed to replace a population with low mortality.
+  distractors:
+    D: Births per 1,000 population is the crude birth rate, a different measure that is not age-adjusted.
+    A: Children per household is distorted by household size and structure; TFR is a per-woman,
+      age-standardized measure.
+    B: Growth can continue for decades despite sub-replacement fertility because of population
+      momentum.
+  chapter: 9b-demographic-characteristics-and-processes
+  passage_id: ''
+- id: mcat-ps-026
+  q: A young entrepreneur accepts her society's goal of becoming wealthy but pursues it through
+    fraudulent investment schemes. In Merton's strain theory her adaptation is
+  choices:
+    C: Innovation, which accepts cultural goals while rejecting legitimate means.
+    D: Ritualism, which abandons the goals while rigidly following the rules.
+    A: Retreatism, which rejects both the goals and the institutionalized means.
+    B: Rebellion, which replaces both the existing goals and the means.
+  answer: C
+  explain: Merton's innovation typifies those who internalize success goals but lack or reject
+    approved means, as in theft and fraud.
+  distractors:
+    D: She clearly retains the wealth goal; ritualists abandon ambition but keep conforming behavior.
+    A: Retreatists drop out of the pursuit of wealth entirely, as with vagrants or substance-dependent
+      persons, rather than pursuing it illegitimately.
+    B: Rebels try to substitute a new social order; she is chasing the conventional goal of wealth
+      by unconventional means.
+  chapter: sociology-and-anthropology
+  passage_id: ''
+passages:
+- id: mcat-ps-p01
+  text: A researcher advertised a study on “memory and learning” and recruited 40 adult men, each
+    paid $4.50 for participating. On arrival, the participant drew lots with an agreeable middle-aged
+    stranger — in fact a confederate — to determine who would be the “teacher” and who the “learner.”
+    The draw was always rigged so the participant taught. Seated before a shock generator with
+    switches labeled from 15 V to 450 V, the teacher read word pairs and administered a shock
+    for each error, the switches increasing in 15-V steps, while the experimenter — in a gray
+    lab coat — stood nearby and gave scripted prompts such as “The experiment requires that you
+    continue.” The learner, in an adjacent room, protested, then pounded the wall at 300 V and
+    fell silent afterward. Unknown to the participants, no shocks were delivered. In the baseline
+    condition at a prestigious university, 65% of participants (26 of 40) continued to the maximum
+    450 V, and every participant continued at least to 300 V. Milgram then ran systematic variations.
+    When the study was relocated to a run-down office building in a downtown commercial district,
+    48% went to the maximum. When the experimenter left the room and issued his prompts by telephone,
+    obedience fell to roughly 20%. When two additional participants — again confederates — refused
+    to continue and the real participant was left to decide alone, only 10% went to the maximum.
+    Women recruited in a later replication obeyed at the same rate as the men. In post-experimental
+    interviews, most participants said they believed the learner had been genuinely harmed, and
+    several reported trembling, sweating, and seizures of laughter they could not control.
+  chapter: 7b-social-processes-that-influence-behavior
+  items:
+  - id: mcat-ps-027
+    q: Which variable was manipulated in the Bridgeport variation of the study, and what does
+      the 65%-to-48% change indicate?
+    choices:
+      C: The institutional setting of the experiment; prestige of the location is one factor supporting
+        obedience.
+      D: The voltage of the shocks delivered; higher voltages produced more refusals.
+      A: The payment offered to participants, which was reduced in Bridgeport.
+      B: The learner's complaints, which were louder in the less prestigious setting.
+    answer: C
+    explain: Milgram moved the study from Yale's halls to a run-down office building in Bridgeport,
+      holding everything else constant; obedience fell from 65% to 48%, implicating the setting's
+      institutional prestige.
+    distractors:
+      D: Voltage was set by the participant and identical across settings; the manipulated variable
+        was where the study was run.
+      A: The fee stayed at $4.50; only the venue changed.
+      B: The scripted protests were the same tape in every condition, so they cannot explain the
+        difference.
+    chapter: 7b-social-processes-that-influence-behavior
+    passage_id: mcat-ps-p01
+  - id: mcat-ps-028
+    q: Which result most strongly supports the claim that the visible behavior of peers, not the
+      demands of the task alone, controls obedience?
+    choices:
+      D: When two additional participants (confederates) refused to continue, only 10% of real
+        participants went to the maximum voltage.
+      A: All 40 participants continued at least to 300 V in the baseline condition.
+      B: Participants paid $4.50 for participating obeyed about as often as unpaid volunteers.
+      C: Participants in the Bridgeport office still obeyed about half the time.
+    answer: D
+    explain: Introducing defiant confederates dropped full obedience from 65% to 10%, showing
+      that an observed act of dissent breaks the unanimity of the authority's demands.
+    distractors:
+      A: That figure shows obedience in the standard condition, but it cannot separate authority's
+        pull from the absence of any disobedient model.
+      B: Payment was constant across conditions and so cannot explain the variation in compliance.
+      C: The Bridgeport result concerns the setting's prestige, not the behavior of peers.
+    chapter: 7b-social-processes-that-influence-behavior
+    passage_id: mcat-ps-p01
+  - id: mcat-ps-029
+    q: A participant begins the study but the experimenter takes a phone call and gives instructions
+      to continue from another room; obedience drops sharply. The best explanation for this drop
+      is
+    choices:
+      C: Reduced proximity and surveillance weaken the experimenter's standing as a legitimate
+        authority figure.
+      D: The participant can no longer hear the learner's protests through the wall.
+      A: The participant suddenly reinterprets the shocks as harmless.
+      B: Diffusion of responsibility spreads blame across the absent experimenter.
+    answer: C
+    explain: Milgram's variation in which orders came by telephone or from an absent experimenter
+      cut full obedience to roughly 20%, implicating the physical presence and watchfulness of
+      the authority.
+    distractors:
+      D: The learner's protests were heard in both conditions; what changed was the source of
+        the orders, not the feedback from the victim.
+      A: Nothing about the learner's condition changes; the participant's reluctance is about
+        the authority issuing the commands.
+      B: Diffusion of responsibility requires others to share the act; here the participant acts
+        alone and the authority is merely less present.
+    chapter: 7b-social-processes-that-influence-behavior
+    passage_id: mcat-ps-p01
+  - id: mcat-ps-030
+    q: Which ethical concern is most directly raised by the design described in the passage?
+    choices:
+      B: Participants were deceived about the study's true purpose and could not give fully informed
+        consent, and many experienced significant distress.
+      C: Participants were coerced into taking part by the threat of losing payment.
+      D: The learners were exposed to real physical injury without medical oversight.
+      A: The results were never published, so participants received no benefit from the risk.
+    answer: B
+    explain: Milgram's participants were misled about the shocks and the study's aim, and many
+      showed signs of severe stress — the classic problems of deception, incomplete informed consent,
+      and distress in a study with no meaningful right to withdraw.
+    distractors:
+      C: Participants were paid but free to decline; the ethical problem is deception and distress,
+        not coercion to enroll.
+      D: The learner was a confederate and no shocks were delivered; the harm at issue was psychological.
+      A: Publication is not the ethical issue raised by an experiment that misleads participants
+        about its purpose.
+    chapter: psychology
+    passage_id: mcat-ps-p01
+  - id: mcat-ps-031
+    q: A television commentator, seeing the results, says that ordinary Americans must be secretly
+      cruel and that the volunteers were simply sadists. The commentator's reasoning illustrates
+    choices:
+      A: The fundamental attribution error, overweighting disposition and underweighting the situation.
+      B: The just-world hypothesis, in which victims are blamed for their outcomes.
+      C: Cognitive dissonance, in which behavior is rationalized to protect self-image.
+      D: The availability heuristic, in which vivid cases inflate perceived frequency.
+    answer: A
+    explain: The fundamental attribution error (Ross) is the tendency to explain behavior dispositionally
+      while neglecting powerful situational forces — exactly what ignoring the authority context
+      would do.
+    distractors:
+      B: The commentator is explaining the perpetrators' behavior, not assigning blame to a victim
+        for what happened to them.
+      C: Dissonance reduction occurs inside the person who acted; the commentator is an outside
+        observer forming an attribution.
+      D: Vividness drives frequency estimates; the commentator is explaining a behavior's cause,
+        not how common it is.
+    chapter: 8b-social-thinking
+    passage_id: mcat-ps-p01
+- id: mcat-ps-p02
+  text: Participants in a study on “personal problems under group discussion” sat alone in small
+    cubicles and took part in a conversation over intercoms, taking turns speaking. Each participant
+    believed that either one, two, or four other discussants were taking part; in reality the
+    other voices were recordings. During the discussion, one of the voices — supposedly a fellow
+    participant in the next room — began to sound strained, asked whether anyone could hear him,
+    then choked, called for help, and finally lapsed into the noises of a seizure and then silence.
+    Because the intercoms were one-way, participants could not ask the others what was happening
+    or what they intended to do. The dependent measures were whether the participant left the
+    cubicle to report the emergency and how long that took. Among participants who believed they
+    were the only other person present, 85% intervened, with a mean latency of 52 seconds. When
+    participants believed one other bystander was present, helping fell to 62%; when they believed
+    four others were present, 31% helped and latency lengthened markedly. In post-experimental
+    interviews, non-helpers rarely reported indifference. Most said they had been genuinely alarmed
+    but had concluded from the intercom's silence that the others did not consider it an emergency,
+    or that someone else was surely already dealing with it.
+  chapter: 8c-social-interactions
+  items:
+  - id: mcat-ps-032
+    q: In the seizure study, what were the independent and dependent variables?
+    choices:
+      B: 'IV: the number of other discussants the participant believed were present; DV: whether
+        the participant left the cubicle to help, and how quickly.'
+      C: 'IV: severity of the seizure; DV: the number of words spoken during the discussion.'
+      D: 'IV: whether participants were paid; DV: ratings of the victim''s condition.'
+      A: 'IV: the participant''s gender; DV: latency to report the emergency to staff.'
+    answer: B
+    explain: Participants were randomly assigned to believe 1, 2, or 4 others were simultaneously
+      hearing the seizure; the measured outcome was helping and its latency.
+    distractors:
+      C: The seizure script and the discussion content were held constant; only the apparent number
+        of bystanders varied.
+      D: No payment manipulation is described, and helping behavior was measured by response,
+        not by ratings.
+      A: Gender was not manipulated; participants were randomly assigned to believe one, two,
+        or four others were present.
+    chapter: 7b-social-processes-that-influence-behavior
+    passage_id: mcat-ps-p02
+  - id: mcat-ps-033
+    q: A participant hears the seizure, notices the intercom is silent, and remains seated, later
+      explaining that he assumed no one else thought it was an emergency. This reasoning illustrates
+    choices:
+      B: Pluralistic ignorance, in which each person reads others' inaction as evidence that nothing
+        is wrong.
+      C: Social loafing, in which effort declines when individual contributions are unidentifiable.
+      D: Deindividuation, in which anonymity in a crowd reduces self-awareness and restraint.
+      A: The foot-in-the-door effect, in which small prior compliance enables larger compliance.
+    answer: B
+    explain: In ambiguous situations people look to others for cues; because every bystander is
+      doing the same, each concludes that the calm of the rest means the event is benign.
+    distractors:
+      C: Loafing concerns reduced effort on a group task; the participant here is interpreting
+        an ambiguous situation, not shirking work.
+      D: Participants sat alone in cubicles, so anonymity within a crowd cannot explain their
+        interpretation of the event.
+      A: No prior request was made; the question is why the participant failed to define the situation
+        as an emergency at all.
+    chapter: 7b-social-processes-that-influence-behavior
+    passage_id: mcat-ps-p02
+  - id: mcat-ps-034
+    q: Comparing the condition with no other bystanders to the condition with four others, helping
+      fell from 85% to 31% and latency lengthened. The mechanism most directly responsible for
+      this drop is
+    choices:
+      C: Diffusion of responsibility, in which the perceived obligation to act is divided among
+        those present.
+      D: Social facilitation, in which the presence of others improves well-learned responses.
+      A: Reciprocity, in which help is returned to those who have helped us.
+      B: Bystander apathy, an inborn indifference to the suffering of strangers.
+    answer: C
+    explain: When several witnesses are believed present, each feels less personally responsible;
+      Latané and Darley's participants helped most when they alone could act.
+    distractors:
+      D: Facilitation predicts better performance on simple tasks, whereas helping declined as
+        apparent audience size grew.
+      A: The victim had done nothing for the participant, so a norm of exchange cannot explain
+        the decline.
+      B: Helping was high when participants believed they were the only witness, which rules out
+        a general indifference to victims.
+    chapter: 8c-social-interactions
+    passage_id: mcat-ps-p02
+  - id: mcat-ps-035
+    q: One participant who did not help reported, “I wanted to do something, but I had no idea
+      what to do or whether I could even reach the room.” In Latané and Darley's five-step model
+      of helping, which step failed for this participant?
+    choices:
+      B: Deciding how to help, the competence step between taking responsibility and acting.
+      C: Noticing that something was happening.
+      D: Interpreting the event as an emergency.
+      A: Taking personal responsibility for providing help.
+    answer: B
+    explain: The model runs notice the event → interpret as emergency → take responsibility →
+      know how to help → implement; a bystander without the relevant skill or knowledge fails
+      at the fourth step.
+    distractors:
+      C: He heard the seizure clearly, so the perceptual first step was completed.
+      D: He said he wanted to help, which implies he did define the event as requiring help.
+      A: He felt the obligation to do something; what stalled him was not knowing how.
+    chapter: 8c-social-interactions
+    passage_id: mcat-ps-p02
+  - id: mcat-ps-036
+    q: Which intervention, drawn directly from these findings, would most increase the chance
+      that a victim receives help in a crowded public place?
+    choices:
+      A: Singling out one person with a direct request, such as “You in the blue jacket — call
+        an ambulance.”
+      B: Waiting quietly so that bystanders can assess the situation without pressure.
+      C: Broadcasting a general plea to the whole crowd for anyone's assistance.
+      D: Increasing the number of witnesses so that at least one will act.
+    answer: A
+    explain: A direct, individualized request removes ambiguity, designates a single responsible
+      person, and specifies what to do — addressing three of the five decision points.
+    distractors:
+      B: Waiting prolongs the ambiguity and the diffusion of responsibility that produce nonintervention.
+      C: A general plea leaves responsibility spread across everyone, which is precisely the condition
+        that suppresses helping.
+      D: 'The data show the opposite: helping falls as the number of apparent witnesses rises.'
+    chapter: 8c-social-interactions
+    passage_id: mcat-ps-p02
+- id: mcat-ps-p03
+  text: 'Eight researchers with no psychiatric history gained secret admission to hospitals by
+    reporting that they had heard voices saying the words “empty,” “hollow,” and “thud.” Apart
+    from this symptom and a false name and occupation, each gave an accurate biographical account
+    and behaved normally after admission. All were diagnosed with schizophrenia (one with manic-depressive
+    disorder) and hospitalized for 7 to 52 days, with a mean stay of 19 days, before release with
+    a diagnosis of “schizophrenia in remission.” Hospital staff never detected a single pseudopatient.
+    Once the diagnosis was on the chart, ordinary behavior was recorded clinically: one researcher
+    who took notes in public had it logged as “engages in writing behavior,” and waiting early
+    for lunch was charted as an “oral-acquisitive” symptom. In a second phase, staff at a comparable
+    hospital were warned that one or more pseudopatients might attempt admission during the following
+    three months; of 193 genuine patients admitted in that window, staff judged 41 to be pseudopatients.
+    No pseudopatient presented. Genuine patients on the wards, however, frequently saw through
+    the ruse, remarking, “You''re not crazy. You''re a journalist checking up on the hospital.”'
+  chapter: sociology-and-anthropology
+  items:
+  - id: mcat-ps-037
+    q: The discharge diagnosis of “schizophrenia in remission” assigned to every pseudopatient
+      is most consistent with which sociological account?
+    choices:
+      D: 'Labeling theory: the institutional label persists and reorganizes how subsequent behavior
+        is interpreted.'
+      A: Differential association, in which deviance is learned through interaction with others.
+      B: Strain theory, in which blocked legitimate means produce illegitimate adaptations.
+      C: Functionalist theory, in which deviance clarifies norms and promotes solidarity.
+    answer: D
+    explain: Once admitted as schizophrenic, the pseudopatients' ordinary conduct was read through
+      the label and discharge required the qualifying phrase “in remission,” the signature prediction
+      of labeling theory.
+    distractors:
+      A: The pseudopatients learned nothing deviant from staff or patients; the finding is about
+        how an assigned label outlives its evidence.
+      B: No goal-means gap is involved; the issue is the meaning attached to a psychiatric label.
+      C: That account explains the social usefulness of deviance, not why a label survived normal
+        behavior.
+    chapter: sociology-and-anthropology
+    passage_id: mcat-ps-p03
+  - id: mcat-ps-038
+    q: Staff recorded the pseudopatients' routine note-taking in their charts as “engages in writing
+      behavior.” This observation best illustrates
+    choices:
+      D: Schema-driven interpretation, in which prior expectations bias how ambiguous behavior
+        is categorized.
+      A: Sensory adaptation, in which responsiveness to a constant stimulus declines.
+      B: The primacy effect, in which early list items are remembered best.
+      C: Source monitoring error, in which a memory is attributed to the wrong origin.
+    answer: D
+    explain: The diagnosis created a schema through which normal behavior was read as symptomatic
+      — a top-down, expectation-driven interpretation rather than an objective record.
+    distractors:
+      A: Nothing here is a decline in responsiveness; staff were actively classifying ordinary
+        behavior.
+      B: No list or recall task is involved; the issue is how an expectation shaped the meaning
+        of an act.
+      C: Staff were not misremembering who wrote the notes; they were misclassifying what the
+        writing meant.
+    chapter: 8b-social-thinking
+    passage_id: mcat-ps-p03
+  - id: mcat-ps-039
+    q: In the study's second phase, staff were warned that impostors might seek admission and
+      subsequently judged 41 genuine patients to be pseudopatients, although no impostor presented.
+      This outcome demonstrates
+    choices:
+      A: A self-fulfilling prophecy, in which an expectation produces behavior that appears to
+        confirm it.
+      B: The false consensus effect, in which people overestimate how many share their views.
+      C: Hindsight bias, in which outcomes seem predictable after the fact.
+      D: Reactance, in which people act to restore a threatened freedom.
+    answer: A
+    explain: Told to expect fakes, staff “detected” 41 of them among genuine patients; the expectation
+      generated the very evidence that seemed to validate it.
+    distractors:
+      B: The effect concerns overestimating the prevalence of one's own opinions, not detecting
+        expected impostors.
+      C: No one was recalling a past outcome; staff were classifying present patients under a
+        strong expectancy.
+      D: Nothing in the warning threatened a freedom; it created an expectation that distorted
+        judgment.
+    chapter: 8b-social-thinking
+    passage_id: mcat-ps-p03
+  - id: mcat-ps-040
+    q: Which methodological characterization of the pseudopatient study is accurate?
+    choices:
+      C: It was covert participant observation producing qualitative data, strong in ecological
+        validity but vulnerable to observer bias.
+      D: It was a double-blind randomized experiment, strong in internal validity.
+      A: It was a longitudinal survey, strong in external validity.
+      B: It was a meta-analysis of hospital admission records.
+    answer: C
+    explain: Rosenhan's pseudopatients entered the hospitals undercover and recorded observations,
+      the defining features of covert participant observation, a qualitative field method.
+    distractors:
+      D: No treatment was randomly assigned and neither staff nor participants were blind to anything;
+        the design was naturalistic fieldwork.
+      A: No representative sample answered standardized questions; the data were field notes from
+        eight individuals.
+      B: The authors gathered primary observations inside the hospitals rather than synthesizing
+        published studies.
+    chapter: psychology
+    passage_id: mcat-ps-p03
+  - id: mcat-ps-041
+    q: A former patient in the study later reports avoiding medical care for years because she
+      feared being seen as “formerly insane.” Her experience best illustrates
+    choices:
+      C: Stigma, in which a discrediting label reduces life chances beyond the original condition.
+      D: Role strain, in which the demands of a single role conflict internally.
+      A: The looking-glass self, in which self-concept forms from imagined appraisals.
+      B: Secondary deviance, in which a person organizes life around a deviant identity.
+    answer: C
+    explain: Stigmatized labels carry consequences that persist after the labeled condition ends,
+      deterring care-seeking and limiting opportunity — a central theme of the study.
+    distractors:
+      D: Her problem is not tension within one role but a socially conferred mark that discourages
+        seeking care.
+      A: That concept explains how self-image develops from others' perceived judgments; the issue
+        here is the social cost of a diagnostic label.
+      B: She did not adopt a deviant identity; she avoided institutions because of the label attached
+        to her.
+    chapter: sociology-and-anthropology
+    passage_id: mcat-ps-p03
+- id: mcat-ps-p04
+  text: 'Investigators enrolled 4,500 adults aged 45-64 from a metropolitan area and followed
+    them annually for ten years, measuring income, education, health behaviors, and clinical outcomes.
+    Household income was grouped into quartiles: under $25,000, $25,000-$49,999, $50,000-$99,999,
+    and $100,000 or more. At baseline the lowest quartile had a mean of 11.4 years of education
+    versus 16.8 years in the highest. Over the follow-up, the age- and sex-adjusted incidence
+    of uncontrolled hypertension in the lowest quartile was 2.4 times that of the highest quartile,
+    with the two middle quartiles falling between them in an ordered pattern; type 2 diabetes
+    incidence followed the same graded pattern at 1.8 times. Life expectancy at age 45 differed
+    by 6.2 years between the extreme quartiles. Statistical adjustment for smoking, diet, and
+    physical activity reduced the hypertension association by about 30%, leaving the gradient
+    largely intact. Access measures accounted for part of the remainder: participants in the lowest
+    quartile were 3.1 times more likely to report delaying care because of cost and to lack a
+    usual source of care. The authors conclude that socioeconomic position operates through many
+    flexible resources — knowledge, money, power, prestige, and social connections — that can
+    be deployed to avoid risks or minimize their consequences, whatever the dominant risks of
+    the era happen to be.'
+  chapter: 10a-social-inequality
+  items:
+  - id: mcat-ps-042
+    q: Which feature of the findings reported in the passage is the strongest evidence for a social
+      gradient in health rather than a simple difference between the extremes?
+    choices:
+      A: Risk rose steadily across all four income quartiles, so each step down in income brought
+        a step up in disease.
+      B: The lowest quartile had a rate 2.4 times that of the highest quartile.
+      C: Participants were followed for ten years with annual examinations.
+      D: Adjustment for smoking and exercise reduced the gap by about 30%.
+    answer: A
+    explain: 'A social gradient is a stepwise dose-response: health worsens with each decline
+      in socioeconomic position, not just at the bottom, which the quartile pattern shows.'
+    distractors:
+      B: A single endpoint comparison shows a gap between rich and poor but not a graded relationship
+        across the whole distribution.
+      C: Follow-up length describes the design's sensitivity, not the shape of the income-health
+        relationship.
+      D: That result concerns mediation of the association, not whether the association is graded
+        across strata.
+    chapter: 10a-social-inequality
+    passage_id: mcat-ps-p04
+  - id: mcat-ps-043
+    q: The report states that adults in the lowest income quartile had 2.4 times the rate of uncontrolled
+      hypertension of men in the highest quartile. This statement means that
+    choices:
+      D: The incidence rate among low-income adults was 2.4 times the incidence rate among adults
+        in the highest quartile.
+      A: The absolute difference in hypertension rates between the groups was 2.4 percentage points.
+      B: 2.4% of low-income adults developed uncontrolled hypertension over the study period.
+      C: Hypertension caused 2.4 times more deaths among low-income adults.
+    answer: D
+    explain: 'A relative risk of 2.4 is a ratio: the rate in the exposed (low-income) group divided
+      by the rate in the comparison group equals 2.4.'
+    distractors:
+      A: A relative risk of 2.4 is a ratio of rates, not an arithmetic difference in percentage
+        points.
+      B: The figure is a multiplier comparing two groups, not the incidence proportion in one
+        group.
+      C: The outcome measured was uncontrolled hypertension, not mortality, and the figure compares
+        rates rather than attributing deaths.
+    chapter: 10a-social-inequality
+    passage_id: mcat-ps-p04
+  - id: mcat-ps-044
+    q: Adjusting for smoking, diet, and exercise reduced the income-hypertension association by
+      about 30%, leaving most of the gap intact. The best interpretation is that
+    choices:
+      D: Health behaviors partially mediate the association, so other pathways such as access
+        to care and chronic stress account for the remainder.
+      A: Smoking and exercise are confounders that must be removed before any conclusion is drawn.
+      B: The remaining association is best attributed to measurement error in the income data.
+      C: Income and hypertension are unrelated once behaviors are controlled.
+    answer: D
+    explain: A mediator lies on the causal pathway between exposure and outcome; partial reduction
+      on adjustment indicates partial mediation with other mechanisms still operating.
+    distractors:
+      A: Behaviors that lie on the causal path between low income and hypertension are mediators;
+        adjusting for them does not erase the association here.
+      B: Nothing in the findings points to measurement error; the gap persisted after behavioral
+        adjustment.
+      C: The association was reduced by 30%, meaning roughly 70% remained after adjustment.
+    chapter: 10a-social-inequality
+    passage_id: mcat-ps-p04
+  - id: mcat-ps-045
+    q: The investigators argue that income and education remain powerful predictors of mortality
+      across many diseases and eras because they confer knowledge, money, power, and social connections
+      that people use to avoid risk wherever it appears. This argument is the theory of
+    choices:
+      B: Fundamental social causes, proposed by Link and Phelan.
+      C: The epidemiologic transition, in which causes of death shift as societies develop.
+      D: The sick role, in which illness exempts a person from normal obligations.
+      A: The Matthew effect, in which early advantage accumulates into greater advantage.
+    answer: B
+    explain: Link and Phelan's fundamental cause theory holds that socioeconomic status endures
+      as a predictor because it supplies flexible resources useful against whatever risks prevail
+      at a given time.
+    distractors:
+      C: That describes changing mortality profiles over time, not why socioeconomic position
+        keeps predicting disease across changing risks.
+      D: Parsons's sick role concerns the social meaning of being ill, not the distribution of
+        disease by socioeconomic position.
+      A: Cumulative advantage explains widening gaps over time; the argument here is about flexible
+        resources protecting health across many risks.
+    chapter: 10a-social-inequality
+    passage_id: mcat-ps-p04
+  - id: mcat-ps-046
+    q: Which statement about the design of this study is accurate?
+    choices:
+      D: As a prospective cohort study it can establish temporal ordering but cannot by itself
+        rule out residual confounding.
+      A: As a randomized experiment it supports firm causal conclusions.
+      B: As a case-control study it began with disease status and looked backward for exposures.
+      C: As a cross-sectional survey it measured exposure and outcome at a single point in time.
+    answer: D
+    explain: Prospective cohort designs measure exposure before outcome, but because exposure
+      is not randomized, unmeasured differences between groups can still confound the estimate.
+    distractors:
+      A: Participants were not assigned to income levels; no randomization occurred, so causal
+        claims remain cautious.
+      B: The study enrolled participants by income and followed them forward in time, which is
+        a cohort, not a case-control, design.
+      C: Data were collected annually for ten years, which is longitudinal rather than cross-sectional.
+    chapter: psychology
+    passage_id: mcat-ps-p04
+- id: mcat-ps-p05
+  text: A 28-year-old client sought treatment for a disabling fear of dogs that began at age nine,
+    when she was knocked down and bitten by a neighbor's German shepherd and needed 14 stitches.
+    Since then she has avoided parks, friends' homes with pets, and her own street when a dog
+    is visible, and she rates her anxiety at 95 on a 0-100 subjective units of discomfort scale
+    when a large dog runs toward her. The therapist began with four sessions of progressive deep-muscle
+    relaxation training, which the client practiced daily at home. Next they jointly constructed
+    a 10-item anxiety hierarchy, ranging from looking at a photograph of a small dog (rated 20)
+    to sitting in a park while a large unrestrained dog approaches (rated 95). In the remaining
+    sessions the client relaxed, imagined the lowest item, and stayed with it until her discomfort
+    fell below 15 before the therapist moved to the next item; if anxiety rose above 40 she returned
+    to an earlier scene. Two sessions near the end were conducted in vivo at a veterinary clinic
+    waiting room. After 12 sessions the client rated approaching a large dog at 25 and reported
+    walking her sister's terrier daily.
+  chapter: psychology
+  items:
+  - id: mcat-ps-047
+    q: The therapist has the client practice deep-muscle relaxation before imagining the lowest
+      item on the hierarchy, on the rationale that relaxation and anxiety cannot coexist at full
+      strength. Which theorist is associated with this rationale?
+    choices:
+      C: Joseph Wolpe, whose principle of reciprocal inhibition underlies systematic desensitization.
+      D: Aaron Beck, whose cognitive therapy targets distorted automatic thoughts.
+      A: B. F. Skinner, whose operant conditioning arranges consequences for behavior.
+      B: Albert Ellis, whose REBT disputes irrational beliefs directly.
+    answer: C
+    explain: Wolpe's reciprocal inhibition holds that a response incompatible with anxiety (relaxation),
+      when paired with the conditioned stimulus, weakens the conditioned anxious response.
+    distractors:
+      D: Beck's approach restructures beliefs about the feared object; it does not rely on an
+        incompatibility between relaxation and anxiety.
+      A: No reinforcement contingency is arranged here; the treatment pairs an incompatible response
+        with a conditioned stimulus.
+      B: Ellis's rational emotive therapy argues with the client's beliefs rather than counterconditioning
+        a physiological response.
+    chapter: psychology
+    passage_id: mcat-ps-p05
+  - id: mcat-ps-048
+    q: Which sequence correctly describes the order of steps in this treatment?
+    choices:
+      A: Train the client in deep relaxation, construct an ordered anxiety hierarchy, then pair
+        relaxation with hierarchy items progressing from least to most feared.
+      B: Present the most feared stimulus first, then descend the hierarchy as tolerance develops.
+      C: Construct the hierarchy, present all items simultaneously, then teach relaxation afterwards.
+      D: Teach relaxation, expose the client only in vivo, and never use imagined scenes.
+    answer: A
+    explain: Systematic desensitization proceeds relaxation training → hierarchy construction
+      → graded pairing, moving up the list only when anxiety at the current step subsides.
+    distractors:
+      B: Descending from the most feared scene describes flooding-style implosion, not the graded
+        progression used here.
+      C: Relaxation training must precede pairing so an incompatible response is available; simultaneous
+        presentation is not graded exposure.
+      D: The protocol begins with imagined scenes from the hierarchy and adds in-vivo work later.
+    chapter: psychology
+    passage_id: mcat-ps-p05
+  - id: mcat-ps-049
+    q: In behavioral terms, the dog bite that began the client's fear at age nine, and the fear
+      she now feels when a dog approaches, are respectively the
+    choices:
+      A: Unconditioned stimulus and the conditioned response.
+      B: Conditioned stimulus and the unconditioned response.
+      C: Conditioned response and the conditioned stimulus.
+      D: Unconditioned response and the unconditioned stimulus.
+    answer: A
+    explain: Bite (US) → fear (UR) occurred without learning; after association, dog (CS) → fear
+      (CR). The passage's treatment therefore aims at the CS-CR link.
+    distractors:
+      B: The bite required no learning to produce fear, so it is unconditioned; the fear now elicited
+        by dogs is the learned, hence conditioned, response.
+      C: 'That reverses the pairing: the bite is the original eliciting event and the dog is the
+        cue that acquired its power through association.'
+      D: The bite was not itself a fear reaction, and the dog now evokes fear only because of
+        learning, so neither label fits.
+    chapter: psychology
+    passage_id: mcat-ps-p05
+  - id: mcat-ps-050
+    q: A colleague proposes instead to take the client straight into a room with three large dogs
+      and remain there until her anxiety subsides, without any relaxation training. This alternative
+      is
+    choices:
+      C: Flooding, which relies on extinction through prolonged exposure at full intensity.
+      D: Systematic desensitization without the hierarchy component.
+      A: A token economy, which reinforces approach behavior with conditioned reinforcers.
+      B: Aversive conditioning, which pairs the feared object with an unpleasant stimulus.
+    answer: C
+    explain: Flooding exposes the client to the most feared stimulus immediately and prevents
+      escape, extinguishing the conditioned response without graded steps or counterconditioning.
+    distractors:
+      D: Desensitization requires graded presentation paired with an anxiety-incompatible response;
+        presenting the full fear at once is a different procedure.
+      A: No reinforcement contingencies or tokens are involved; the procedure is exposure-based.
+      B: Nothing unpleasant is added; the dogs themselves are the feared stimulus and the procedure
+        relies on extinction, not punishment.
+    chapter: 7c-attitude-and-behavior-change
+    passage_id: mcat-ps-p05
+- id: mcat-ps-p06
+  text: Sixteen healthy volunteers aged 21-34 lived for 14 days in a windowless sleep laboratory
+    with fixed 23:00 lights-out and 07:00 wake times, no caffeine after 14:00, and standardized
+    meals. In a crossover design, each participant spent five evenings in a blue-enriched LED
+    condition (about 400 lux, peak near 460 nm) and five evenings in a dim incandescent condition
+    (under 50 lux), receiving the light for three hours before bedtime, with the order counterbalanced
+    and a five-day washout between blocks. Researchers assayed saliva hourly from 19:00 to 01:00
+    to determine the dim-light melatonin onset (DLMO), and recorded polysomnography. In the blue-light
+    condition, melatonin onset was delayed by a mean of 78 minutes, sleep latency lengthened by
+    18 minutes, rapid eye movement sleep was reduced, and next-morning alertness ratings were
+    lower. In a follow-up session, participants wore amber blue-blocking goggles during the same
+    evening exposure window and their melatonin timing returned to baseline. The authors note
+    that intrinsically photosensitive retinal ganglion cells project by way of the retinohypothalamic
+    tract to the suprachiasmatic nucleus, which drives the pineal gland's melatonin secretion,
+    and that this homeostatic pressure process, indexed by adenosine accumulation, operates independently
+    of the circadian clock.
+  chapter: psychology
+  items:
+  - id: mcat-ps-051
+    q: The researchers hypothesize that blue-enriched light acts on a pathway from the retina
+      to the hypothalamus. Which structure receives this input and, via the pineal gland, controls
+      the timing of melatonin release?
+    choices:
+      C: The suprachiasmatic nucleus of the hypothalamus.
+      D: The hippocampus, which consolidates new explicit memories during sleep.
+      A: The pineal gland itself, which generates its own light-sensitive rhythm.
+      B: The reticular activating system, which maintains wakefulness throughout the day.
+    answer: C
+    explain: Retinal ganglion cells project via the retinohypothalamic tract to the suprachiasmatic
+      nucleus, the master clock that regulates pineal melatonin secretion.
+    distractors:
+      D: The hippocampus handles memory formation; circadian timing is governed by a hypothalamic
+        nucleus that receives direct retinal input.
+      A: The pineal secretes melatonin but is not directly light-sensitive in humans; it is driven
+        by the SCN through a multisynaptic pathway.
+      B: That system regulates arousal level rather than the circadian phase of melatonin secretion.
+    chapter: psychology
+    passage_id: mcat-ps-p06
+  - id: mcat-ps-052
+    q: Each participant completed both the blue-light condition and the dim-light condition on
+      separate nights. The main methodological advantage of this crossover design is that
+    choices:
+      D: Each participant serves as her own control, so stable individual differences cannot confound
+        the comparison.
+      A: It eliminates the need for a control condition entirely.
+      B: It removes order effects, because every participant experiences both conditions.
+      C: It allows a much larger sample to be recruited for the same cost.
+    answer: D
+    explain: In a within-subjects (crossover) design, each person's two measurements are compared,
+      so traits such as baseline melatonin timing or age cannot differ systematically between
+      conditions.
+    distractors:
+      A: The dim-light night is the control condition; crossover designs do not remove the need
+        for comparison, they change who provides it.
+      B: Order effects are a risk introduced by repeated testing, which is why such designs counterbalance
+        or wash out between sessions.
+      C: Sample size is unchanged; the efficiency gain is in statistical power, because between-subject
+        variability is removed.
+    chapter: psychology
+    passage_id: mcat-ps-p06
+  - id: mcat-ps-053
+    q: One participant shows normal circadian melatonin timing but reports profound daytime sleepiness
+      after two nights of only four hours of sleep. Which distinction best explains this dissociation?
+    choices:
+      C: Homeostatic sleep pressure, driven partly by adenosine accumulation, is separable from
+        the circadian timing system.
+      D: Melatonin levels determine sleep need, so her melatonin must be abnormal.
+      A: Sleep is a single process, so timing and sleepiness cannot dissociate.
+      B: Sleepiness reflects REM deprivation only, which is unrelated to sleep duration.
+    answer: C
+    explain: Process S (homeostatic pressure, with adenosine as a candidate marker) builds with
+      time awake, while Process C (the SCN-driven circadian rhythm) sets the timing of sleep propensity;
+      the two can come apart.
+    distractors:
+      D: Melatonin marks circadian phase rather than the accumulated need for sleep that builds
+        across nights of restriction.
+      A: The dissociation described is the standard evidence for two interacting processes, homeostatic
+        and circadian.
+      B: Short sleep reduces multiple stages; sleepiness after restriction is not confined to
+        loss of REM.
+    chapter: psychology
+    passage_id: mcat-ps-p06
+  - id: mcat-ps-054
+    q: Given the observed 78-minute delay in melatonin onset after evening blue-light exposure,
+      the results are best summarized as
+    choices:
+      B: Evening blue-enriched light phase-delays the circadian clock, postponing sleep onset
+        and reducing morning alertness.
+      C: Blue light shortens the intrinsic period of the clock, permanently resetting it.
+      D: Melatonin is destroyed by blue light before it can enter the bloodstream.
+      A: The delay reflects participants staying awake voluntarily because the light was pleasant.
+    answer: B
+    explain: Light exposure in the biological evening shifts the phase of the SCN clock later
+      (a phase delay), delaying melatonin onset and sleep, much as westward travel or a delayed
+      sleep phase does.
+    distractors:
+      C: The effect observed was a transient delay in timing over the exposure nights, not an
+        alteration of the clock's intrinsic period.
+      D: Melatonin secretion is suppressed by retinal input to the SCN; the hormone itself is
+        not degraded by light in the blood.
+      A: Lights-out time was fixed by the protocol, and sleep latency was measured physiologically
+        rather than reported.
+    chapter: 6c-responding-to-the-world
+    passage_id: mcat-ps-p06
+  - id: mcat-ps-055
+    q: Which statement best evaluates the operationalization of the dependent variable in this
+      study?
+    choices:
+      B: Salivary dim-light melatonin onset is an objective physiological measure, avoiding the
+        self-report bias that affects sleep questionnaires.
+      C: It is subjective, because participants decide when their melatonin rises.
+      D: It measures sleep quality directly, so no other outcome is needed.
+      A: It is invalid, because melatonin cannot be measured outside a laboratory.
+    answer: B
+    explain: Dim-light melatonin onset is a well-validated, researcher-measured circadian phase
+      marker, which strengthens the operationalization relative to self-report alone.
+    distractors:
+      C: Melatonin onset is read from assayed saliva samples by the researchers; participants
+        never judge it.
+      D: Melatonin onset is a phase marker, an indirect index of sleep propensity, which is why
+        latency and alertness were also measured.
+      A: Salivary assays are standard for melatonin and were collected under controlled conditions
+        in the study.
+    chapter: psychology
+    passage_id: mcat-ps-p06
+- id: mcat-ps-p07
+  text: 'Demographers assembled the following series for Country X, a country that industrialized
+    over the twentieth century. Crude birth rate per 1,000 population: 42 (1900), 41 (1920), 40
+    (1940), 34 (1960), 22 (1980), 18 (1990), 12 (2020). Crude death rate per 1,000: 38 (1900),
+    30 (1920), 20 (1940), 12 (1960), 10 (1980), 9 (1990), 9 (2020). Total fertility rate: 6.8
+    (1900), 5.9 (1940), 3.2 (1980), 1.7 (2020). Life expectancy at birth: 41 years (1900), 58
+    (1960), 79 (2020). Total population: 8.0 million (1900), 9.3 million (1920), 12.8 million
+    (1940), 19.5 million (1960), 27.3 million (1980), 30.3 million (1990), 36.1 million (2020).
+    Share of the population living in urban areas: 22% (1900), 81% (2020). Between 1900 and 1940
+    the death rate fell by nearly half while the birth rate held near 40 per 1,000, and the population
+    grew by 60%. Birth rates began a sustained decline after about 1940 as schooling lengthened,
+    women''s labor-force participation rose, and child mortality fell. By 2020 the proportion
+    of the population aged 65 and over was 21% and rising, and demographers projected that, with
+    fertility below replacement, total population would peak around 2045 and then decline.'
+  chapter: 9b-demographic-characteristics-and-processes
+  items:
+  - id: mcat-ps-056
+    q: During 1900-1940, Country X's crude death rate fell from 38 to 20 per 1,000 while its crude
+      birth rate stayed near 40 per 1,000 and its population grew by 60%. In demographic transition
+      terms the country was in
+    choices:
+      A: Stage 2, in which mortality declines while fertility remains high, producing rapid growth.
+      B: Stage 1, in which both rates are high and fluctuate in balance.
+      C: Stage 3, in which birth rates fall and growth slows.
+      D: Stage 4, in which both rates are low and the population is stable.
+    answer: A
+    explain: The gap that opens when mortality falls ahead of fertility produces rapid natural
+      increase; that is stage 2 of demographic transition.
+    distractors:
+      B: Stage 1 populations show little sustained growth because high birth rates are offset
+        by high death rates; the death rate here was falling sharply.
+      C: The birth rate had not yet begun to decline in this period, which is what defines stage
+        3.
+      D: Both rates remained far above the low levels characteristic of stage 4.
+    chapter: 9b-demographic-characteristics-and-processes
+    passage_id: mcat-ps-p07
+  - id: mcat-ps-057
+    q: What accounted for Country X's population growth between 1900 and 1940?
+    choices:
+      B: A falling death rate driven by public health and sanitation, with fertility essentially
+        unchanged.
+      C: A rising birth rate caused by earlier marriage and larger families.
+      D: Immigration, which the passage identifies as the main driver.
+      A: A simultaneous fall in both birth and death rates, which kept growth constant.
+    answer: B
+    explain: In stage 2 the transition is driven by mortality decline — sanitation, clean water,
+      and infectious disease control — while fertility remains high.
+    distractors:
+      C: The crude birth rate held steady near 40 per 1,000, so growth came from the denominator
+        of deaths rather than a rise in births.
+      D: The growth described follows the birth and death rate series; net migration is not cited
+        as the mechanism.
+      A: A fall in both rates would narrow the natural increase, not produce the fastest growth
+        in the country's history.
+    chapter: 9b-demographic-characteristics-and-processes
+    passage_id: mcat-ps-p07
+  - id: mcat-ps-058
+    q: By 2020 Country X's total fertility rate was 1.7, below replacement, yet the population
+      was still growing. How is this possible?
+    choices:
+      B: 'Population momentum: the large cohort of women born during earlier high-fertility decades
+        is still moving through childbearing ages.'
+      C: The crude birth rate must be higher than the total fertility rate implies.
+      D: Immigration has replaced fertility as the source of growth, according to the passage.
+      A: Life expectancy gains mean deaths have fallen to zero in the oldest groups.
+    answer: B
+    explain: Because of the age structure, a population can keep growing for decades after fertility
+      falls below replacement — population momentum.
+    distractors:
+      C: The crude birth rate is derived from the age-specific rates and age structure; it does
+        not contradict sub-replacement fertility.
+      D: The passage attributes continued growth to age structure, not to net migration.
+      A: Mortality cannot fall below zero deaths; growth persists despite deaths because births
+        still outnumber them.
+    chapter: 9b-demographic-characteristics-and-processes
+    passage_id: mcat-ps-p07
+  - id: mcat-ps-059
+    q: If Country X's total fertility rate stays near 1.7 while life expectancy continues to rise,
+      the most likely consequence for its society is
+    choices:
+      D: A rising old-age dependency ratio, increasing the burden on the working-age population
+        to fund pensions and care.
+      A: A youth bulge that strains schools and entry-level labor markets.
+      B: Rapid population growth that outpaces food supply, as Malthus predicted.
+      C: A declining median age as longevity extends life at every age equally.
+    answer: D
+    explain: Low fertility plus longer life produces an aging population in which each worker
+      supports more retirees — a rising old-age dependency ratio.
+    distractors:
+      A: Sub-replacement fertility shrinks the youngest cohorts over time rather than swelling
+        them.
+      B: Slowing fertility reduces the growth rate, moving the country away from, not toward,
+        Malthusian pressure.
+      C: Longer life combined with fewer births raises, not lowers, the median age.
+    chapter: 9b-demographic-characteristics-and-processes
+    passage_id: mcat-ps-p07

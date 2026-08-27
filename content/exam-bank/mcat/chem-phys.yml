@@ -1,0 +1,959 @@
+exam: mcat
+section: chem-phys
+label: Chemical and Physical Foundations
+subject: chem-phys
+block: chem-phys
+items_expected: 59
+items:
+- id: mcat-cp-033
+  q: 'A mixture of 4.0 g of H2 and 16 g of O2 is ignited and reacts completely: 2H2 + O2 → 2H2O. How many
+    grams of water form?'
+  choices:
+    A: 18 g
+    B: 36 g
+    C: 9.0 g
+    D: 20 g
+  answer: A
+  explain: n(H2) = 2.0 mol, n(O2) = 0.50 mol; O2 limits, giving 1.0 mol H2O = 18 g.
+  distractors:
+    B: Treated the excess H2 as if it were the limiting reagent.
+    C: Halved the 1.0 mol of water actually produced.
+    D: Added the two reactant masses as if everything became water.
+  chapter: general-chemistry
+  passage_id: ''
+- id: mcat-cp-034
+  q: What mass of NaCl (58.4 g/mol) is required to prepare 250 mL of a 0.20 M solution?
+  choices:
+    A: 5.8 g
+    B: 1.5 g
+    C: 2.9 g
+    D: 0.58 g
+  answer: C
+  explain: n = 0.250 L x 0.20 M = 0.050 mol; m = 0.050 x 58.4 = 2.9 g.
+  distractors:
+    A: Used 0.10 mol, double the required amount.
+    B: Halved the required moles.
+    D: Slipped a decimal place in the mole calculation.
+  chapter: analytical-chemistry
+  passage_id: ''
+- id: mcat-cp-035
+  q: What is the mass percent of water in CuSO4·5H2O (M = 249.7 g/mol)?
+  choices:
+    A: 64%
+    B: 36%
+    C: 90%
+    D: 18%
+  answer: B
+  explain: 90.1/249.7 = 0.36, so 36% by mass is water.
+  distractors:
+    A: That is the anhydrous CuSO4 fraction, 159.6/249.7.
+    C: Reported the mass of water rather than its percent of the whole.
+    D: Counted only 2.5 waters of hydration.
+  chapter: general-chemistry
+  passage_id: ''
+- id: mcat-cp-036
+  q: Which pure substance has the highest normal boiling point?
+  choices:
+    A: H2S
+    B: CH4
+    C: CO2
+    D: H2O
+  answer: D
+  explain: O-H bonds give water an extensive hydrogen-bonded network, the strongest IMF here.
+  distractors:
+    A: Heavier than water, but S-H is not polar enough to hydrogen-bond.
+    B: Nonpolar; only weak London dispersion forces.
+    C: A nonpolar linear molecule held together only by London forces.
+  chapter: 5b-molecules-and-intermolecular-interactions
+  passage_id: ''
+- id: mcat-cp-037
+  q: The H-N-H bond angle in NH3 is closest to
+  choices:
+    A: 107°
+    B: 109.5°
+    C: 120°
+    D: 104.5°
+  answer: A
+  explain: sp3 nitrogen with one lone pair compresses 109.5° to about 107°.
+  distractors:
+    B: Ignores the extra repulsion from the nitrogen lone pair.
+    C: That is trigonal planar (sp2) geometry.
+    D: That is water, which carries two lone pairs.
+  chapter: 5b-molecules-and-intermolecular-interactions
+  passage_id: ''
+- id: mcat-cp-038
+  q: Which atom has the largest atomic radius?
+  choices:
+    A: Na
+    B: Mg
+    C: K
+    D: Cl
+  answer: C
+  explain: Radius grows down a group faster than it shrinks across a period, so K (period 4) wins.
+  distractors:
+    A: Same group as K but one period higher, so it is smaller.
+    B: Sits to the right of Na in period 3, so it is smaller still.
+    D: Far right of period 3; its high effective nuclear charge pulls the radius in.
+  chapter: general-chemistry
+  passage_id: ''
+- id: mcat-cp-039
+  q: Which atom has the highest first ionization energy?
+  choices:
+    A: Na
+    B: Cl
+    C: Al
+    D: Mg
+  answer: B
+  explain: IE1 rises left to right as Zeff increases; Cl is the farthest right of the four.
+  distractors:
+    A: Its single 3s electron is the easiest of the four to remove.
+    C: Its lone 3p electron is shielded, so Al is below Mg and far below Cl.
+    D: Its 3s pair is held tightly, but Cl has the greater effective nuclear charge.
+  chapter: general-chemistry
+  passage_id: ''
+- id: mcat-cp-040
+  q: Assuming both protons dissociate completely, the pH of 0.0050 M H2SO4 is
+  choices:
+    A: '2.30'
+    B: '3.00'
+    C: '1.00'
+    D: '2.00'
+  answer: D
+  explain: '[H+] = 2 x 0.0050 = 0.010 M, so pH = -log(0.010) = 2.00.'
+  distractors:
+    A: Treated the acid as monoprotic (-log 0.0050).
+    B: Used [H+] = 0.0010 M instead of 0.010 M.
+    C: Misread the concentration as 0.10 M.
+  chapter: 5a-unique-nature-of-water-and-its-solutions
+  passage_id: ''
+- id: mcat-cp-041
+  q: Given Ka(formic acid) = 1.8 x 10^-4, what is Kb for the formate ion?
+  choices:
+    A: 5.6 x 10^-11
+    B: 5.6 x 10^-10
+    C: 1.8 x 10^-4
+    D: 1.0 x 10^-14
+  answer: A
+  explain: Kb = Kw/Ka = 1.0 x 10^-14 / 1.8 x 10^-4 = 5.6 x 10^-11.
+  distractors:
+    B: Used Ka = 1.8 x 10^-5 (acetic acid) rather than the value given.
+    C: Reported Ka itself instead of the conjugate base's Kb.
+    D: Quoted Kw without dividing it by Ka.
+  chapter: 5a-unique-nature-of-water-and-its-solutions
+  passage_id: ''
+- id: mcat-cp-042
+  q: Doubling [A] at fixed [B] quadruples the rate; doubling [B] at fixed [A] doubles it. The overall
+    reaction order is
+  choices:
+    A: '2'
+    B: '4'
+    C: '3'
+    D: '1'
+  answer: C
+  explain: rate = k[A]²[B], so overall order = 2 + 1 = 3.
+  distractors:
+    A: Counted only the order with respect to A.
+    B: Multiplied the individual orders instead of adding them.
+    D: Counted only the order with respect to B.
+  chapter: 5e-chemical-thermodynamics-and-kinetics
+  passage_id: ''
+- id: mcat-cp-043
+  q: For a reaction whose rate law is rate = k[A][B], the units of k are
+  choices:
+    A: s⁻¹
+    B: M⁻¹ s⁻¹
+    C: M s⁻¹
+    D: M⁻² s⁻¹
+  answer: B
+  explain: k = rate/([A][B]) = (M s⁻¹)/M² = M⁻¹ s⁻¹.
+  distractors:
+    A: Those belong to a first-order rate law.
+    C: That is the unit of rate, not of the rate constant.
+    D: Those correspond to a third-order rate law.
+  chapter: 5e-chemical-thermodynamics-and-kinetics
+  passage_id: ''
+- id: mcat-cp-044
+  q: The equilibrium expression for N2(g) + 3H2(g) ⇌ 2NH3(g) is
+  choices:
+    A: Kc = [N2][H2]³ / [NH3]²
+    B: Kc = [NH3]² / ([N2][H2])
+    C: Kc = [NH3] / ([N2][H2])
+    D: Kc = [NH3]² / ([N2][H2]³)
+  answer: D
+  explain: 'Products over reactants, each raised to its coefficient: [NH3]²/([N2][H2]³).'
+  distractors:
+    A: 'Inverted the expression: products belong on top.'
+    B: Dropped the exponent 3 on hydrogen.
+    C: Ignored every stoichiometric coefficient.
+  chapter: general-chemistry
+  passage_id: ''
+- id: mcat-cp-045
+  q: For N2(g) + 3H2(g) ⇌ 2NH3(g) with ΔH < 0, which change shifts the equilibrium toward more NH3?
+  choices:
+    A: Decreasing the volume at constant temperature
+    B: Raising the temperature
+    C: Adding an inert gas at constant volume
+    D: Removing N2 from the vessel
+  answer: A
+  explain: Four moles of gas sit left and two right, so compression favors NH3.
+  distractors:
+    B: Added heat drives an exothermic equilibrium back toward reactants.
+    C: The partial pressures of the reacting gases are unchanged, so nothing shifts.
+    D: Removing a reactant pulls the position toward reactants.
+  chapter: general-chemistry
+  passage_id: ''
+- id: mcat-cp-046
+  q: Given E°(Cu²⁺/Cu) = +0.34 V and E°(Zn²⁺/Zn) = -0.76 V, what is E°cell for Zn(s) + Cu²⁺(aq) → Zn²⁺(aq)
+    + Cu(s)?
+  choices:
+    A: 0.42 V
+    B: +1.10 V
+    C: -1.10 V
+    D: 0.76 V
+  answer: B
+  explain: E°cell = E°cathode - E°anode = 0.34 - (-0.76) = +1.10 V.
+  distractors:
+    A: Subtracted in the wrong order (cathode - anode reversed).
+    C: 'Wrong sign: this cell is spontaneous as written.'
+    D: Reported only the zinc half-cell potential.
+  chapter: 4c-electrochemistry-and-electrical-circuits
+  passage_id: ''
+- id: mcat-cp-047
+  q: A current of 1.00 A is passed for 965 s through a Cu²⁺ solution. What mass of copper plates out?
+    (F = 9.65 x 10^4 C/mol; Cu = 63.5 g/mol)
+  choices:
+    A: 0.64 g
+    B: 0.16 g
+    C: 0.32 g
+    D: 0.010 g
+  answer: C
+  explain: Q = 965 C = 0.0100 mol e⁻; Cu = 0.0050 mol, so m = 0.0050 x 63.5 = 0.32 g.
+  distractors:
+    A: Assumed one mole of electrons per mole of copper.
+    B: Halved the correct amount, as if four electrons were needed per Cu.
+    D: Took the moles of electrons as grams of copper.
+  chapter: 4c-electrochemistry-and-electrical-circuits
+  passage_id: ''
+- id: mcat-cp-048
+  q: Ice of density 0.92 g/cm³ floats in seawater of density 1.025 g/cm³. What fraction of the ice is
+    submerged?
+  choices:
+    A: 92%
+    B: 8%
+    C: 50%
+    D: 90%
+  answer: D
+  explain: Fraction submerged = ρice/ρfluid = 0.92/1.025 = 0.90.
+  distractors:
+    A: Compared with fresh water (1.00 g/cm³) instead of seawater.
+    B: That is the fraction sitting above the surface.
+    C: Nothing supports an even split; Archimedes sets it by the density ratio.
+  chapter: 4b-fluids-for-circulation-and-gas-exchange
+  passage_id: ''
+- id: mcat-cp-049
+  q: Water flows through a pipe that narrows to half its radius. In the narrow section the water's speed
+    is
+  choices:
+    A: 4 times the original speed
+    B: 2 times the original speed
+    C: 8 times the original speed
+    D: one quarter of the original speed
+  answer: A
+  explain: A' = A/4, so A1v1 = A2v2 gives v' = 4v.
+  distractors:
+    B: Scaled by the radius instead of the cross-sectional area.
+    C: Used r³ rather than r² for the area scaling.
+    D: Speed increases where the area shrinks; it does not decrease.
+  chapter: 4b-fluids-for-circulation-and-gas-exchange
+  passage_id: ''
+- id: mcat-cp-050
+  q: The gauge pressure 10.0 m below the surface of a freshwater lake (ρ = 1.0 x 10^3 kg/m³) is about
+  choices:
+    A: 9.8 x 10^5 Pa
+    B: 9.8 x 10^3 Pa
+    C: 9.8 x 10^4 Pa
+    D: 1.96 x 10^5 Pa
+  answer: C
+  explain: P = ρgh = (1.0 x 10^3)(9.8)(10.0) = 9.8 x 10^4 Pa, about one atmosphere.
+  distractors:
+    A: Slipped a power of ten in ρgh.
+    B: Dropped a factor of ten in ρgh.
+    D: Used a 20 m depth instead of 10.0 m.
+  chapter: 4b-fluids-for-circulation-and-gas-exchange
+  passage_id: ''
+- id: mcat-cp-051
+  q: A 6.0 Ω resistor in parallel with a 3.0 Ω resistor is connected in series with a 4.0 Ω resistor across
+    a 12 V battery. The battery current is
+  choices:
+    A: 0.92 A
+    B: 2.0 A
+    C: 3.0 A
+    D: 6.0 A
+  answer: B
+  explain: Parallel pair = (6.0 x 3.0)/(9.0) = 2.0 Ω; total 6.0 Ω; I = 12/6.0 = 2.0 A.
+  distractors:
+    A: Added all three resistances in series (13 Ω).
+    C: Used only the 4.0 Ω resistor.
+    D: Used only the 2.0 Ω equivalent of the parallel pair.
+  chapter: electricity-and-magnetism
+  passage_id: ''
+- id: mcat-cp-052
+  q: A sound wave of wavelength 0.68 m travels at 340 m/s. Its frequency is
+  choices:
+    A: 2.3 x 10^2 Hz
+    B: 2.0 x 10^-3 s
+    C: 6.8 x 10^2 Hz
+    D: 5.0 x 10^2 Hz
+  answer: D
+  explain: f = v/λ = 340/0.68 = 5.0 x 10^2 Hz.
+  distractors:
+    A: Multiplied v by λ instead of dividing.
+    B: That is the period, not the frequency.
+    C: Doubled the correct value.
+  chapter: vibrations-waves-and-optics
+  passage_id: ''
+- id: mcat-cp-053
+  q: Two tuning forks of 440 Hz and 444 Hz are struck together. What is heard?
+  choices:
+    A: A loudness that pulses 4 times per second
+    B: A steady pitch at 442 Hz
+    C: A pitch at 884 Hz
+    D: No interference, since the frequencies differ
+  answer: A
+  explain: Beat frequency = |f1 - f2| = |444 - 440| = 4 Hz.
+  distractors:
+    B: The average is not what is produced; the amplitude oscillates at the frequency difference.
+    C: Added the frequencies instead of taking their difference.
+    D: Any small frequency difference produces audible beats.
+  chapter: 4d-light-and-sound-interacting-with-matter
+  passage_id: ''
+- id: mcat-cp-054
+  q: The speed of light in a glass with index of refraction 1.5 is
+  choices:
+    A: 4.5 x 10^8 m/s
+    B: 1.5 x 10^8 m/s
+    C: 2.0 x 10^8 m/s
+    D: 3.0 x 10^8 m/s
+  answer: C
+  explain: v = c/n = 3.0 x 10^8/1.5 = 2.0 x 10^8 m/s.
+  distractors:
+    A: Multiplied c by n instead of dividing.
+    B: Confused the index with the speed itself.
+    D: That is the vacuum speed; light slows in glass.
+  chapter: 4d-light-and-sound-interacting-with-matter
+  passage_id: ''
+- id: mcat-cp-055
+  q: An 80 g sample of a radionuclide with a half-life of 5.0 days is stored for 15 days. How much remains?
+  choices:
+    A: 20 g
+    B: 10 g
+    C: 5.0 g
+    D: 40 g
+  answer: B
+  explain: '15/5.0 = 3 half-lives: 80 → 40 → 20 → 10 g.'
+  distractors:
+    A: Counted only two half-lives.
+    C: Counted four half-lives.
+    D: Counted a single half-life.
+  chapter: modern-physics
+  passage_id: ''
+- id: mcat-cp-056
+  q: A nucleus emits a beta particle (an electron). What happens to its mass number A and atomic number
+    Z?
+  choices:
+    A: A is unchanged; Z increases by 1
+    B: A decreases by 4; Z decreases by 2
+    C: A is unchanged; Z decreases by 1
+    D: A increases by 1; Z is unchanged
+  answer: A
+  explain: 'A neutron becomes a proton plus an emitted electron: A constant, Z + 1.'
+  distractors:
+    B: That describes alpha decay.
+    C: That describes positron emission or electron capture.
+    D: No nucleon is captured in beta decay; the nucleon count is conserved.
+  chapter: modern-physics
+  passage_id: ''
+- id: mcat-cp-057
+  q: How much heat is needed to warm 200 g of water from 25 °C to 75 °C (c = 4.18 J g⁻¹ °C⁻¹)?
+  choices:
+    A: 8.4 x 10^3 J
+    B: 2.1 x 10^4 J
+    C: 8.4 x 10^4 J
+    D: 4.2 x 10^4 J
+  answer: D
+  explain: q = mcΔT = 200 x 4.18 x 50 = 4.2 x 10^4 J.
+  distractors:
+    A: Used a temperature change of 10 °C.
+    B: Halved the temperature change.
+    C: Doubled the temperature change.
+  chapter: thermodynamics
+  passage_id: ''
+- id: mcat-cp-058
+  q: How many moles of an ideal gas occupy 11.2 L at STP?
+  choices:
+    A: 1.00 mol
+    B: 0.250 mol
+    C: 0.500 mol
+    D: 2.00 mol
+  answer: C
+  explain: n = 11.2/22.4 = 0.500 mol.
+  distractors:
+    A: Treated 11.2 L as a full molar volume.
+    B: Divided by 44.8 L instead of 22.4 L.
+    D: Multiplied by 2 instead of dividing 22.4 by 11.2.
+  chapter: general-chemistry
+  passage_id: ''
+- id: mcat-cp-059
+  q: What is the oxidation number of Mn in the permanganate ion, MnO4⁻?
+  choices:
+    A: '+6'
+    B: '+7'
+    C: '+8'
+    D: '+4'
+  answer: B
+  explain: x + 4(-2) = -1, so x = +7.
+  distractors:
+    A: That is manganese in the manganate ion, MnO4²⁻.
+    C: Added the oxygen contribution instead of subtracting it.
+    D: That would fit MnO2, not MnO4⁻.
+  chapter: general-chemistry
+  passage_id: ''
+passages:
+- id: mcat-cp-p01
+  text: 'An enzyme preparation isolated from barley was assayed at 25 °C in phosphate buffer, pH 7.2,
+    with the enzyme held at a final concentration of 0.20 µM. Initial velocities (v0) were recorded over
+    the first 60 s of each reaction, a window in which less than 5% of the substrate had been consumed.
+    A Lineweaver–Burk (double-reciprocal) plot of the data was linear, with a y-intercept of 0.025 mL·min/µmol
+    and a slope of 0.0125 mM·mL·min/µmol. In a second series of runs, 1.0 mM of a competitive inhibitor
+    was added to every tube. With the inhibitor present the plot was still linear: the slope doubled to
+    0.0250, while the y-intercept stayed at 0.025.'
+  chapter: 5e-chemical-thermodynamics-and-kinetics
+  items:
+  - id: mcat-cp-001
+    q: What is the Vmax of the enzyme preparation?
+    choices:
+      A: 0.025 µmol min⁻¹ mL⁻¹
+      B: 40 µmol min⁻¹ mL⁻¹
+      C: 80 µmol min⁻¹ mL⁻¹
+      D: 4.0 µmol min⁻¹ mL⁻¹
+    answer: B
+    explain: y-intercept = 1/Vmax, so Vmax = 1/0.025 = 40 µmol min⁻¹ mL⁻¹.
+    distractors:
+      A: The y-intercept is 1/Vmax, not Vmax itself.
+      C: Inverting the slope (1/0.0125) gives 80; the slope is not 1/Vmax.
+      D: Decimal-place slip while inverting 0.025.
+    chapter: 5e-chemical-thermodynamics-and-kinetics
+    passage_id: mcat-cp-p01
+  - id: mcat-cp-002
+    q: What is Km for this substrate?
+    choices:
+      A: 0.50 mM
+      B: 2.0 mM
+      C: 0.0125 mM
+      D: 0.025 mM
+    answer: A
+    explain: Km = slope x Vmax = 0.0125 x 40 = 0.50 mM (x-intercept = -1/Km = -2.0 mM⁻¹).
+    distractors:
+      B: That is |x-intercept| = 1/Km = 2.0, not Km.
+      C: That is the slope (Km/Vmax), not Km.
+      D: That is the y-intercept (1/Vmax), not Km.
+    chapter: 5e-chemical-thermodynamics-and-kinetics
+    passage_id: mcat-cp-p01
+  - id: mcat-cp-003
+    q: At [S] = 0.50 mM, what initial velocity does the Michaelis–Menten relation predict?
+    choices:
+      A: 40 µmol min⁻¹ mL⁻¹
+      B: 10 µmol min⁻¹ mL⁻¹
+      C: 30 µmol min⁻¹ mL⁻¹
+      D: 20 µmol min⁻¹ mL⁻¹
+    answer: D
+    explain: v = Vmax[S]/(Km+[S]) = 40(0.50)/(0.50+0.50) = Vmax/2 = 20 µmol min⁻¹ mL⁻¹.
+    distractors:
+      A: Assumes [S] = Km already saturates the enzyme.
+      B: Divides Vmax by four instead of by two.
+      C: That is v at [S] = 1.5 mM, not at 0.50 mM.
+    chapter: 5e-chemical-thermodynamics-and-kinetics
+    passage_id: mcat-cp-p01
+  - id: mcat-cp-004
+    q: Predict v0 when [S] = 1.5 mM.
+    choices:
+      A: 13 µmol min⁻¹ mL⁻¹
+      B: 40 µmol min⁻¹ mL⁻¹
+      C: 30 µmol min⁻¹ mL⁻¹
+      D: 60 µmol min⁻¹ mL⁻¹
+    answer: C
+    explain: v = 40(1.5)/(0.50+1.5) = 60/2.0 = 30 µmol min⁻¹ mL⁻¹.
+    distractors:
+      A: Inverted the ratio, computing 40 x 0.50/1.5.
+      B: Dropped Km from the denominator, as if [S] >> Km.
+      D: Subtracted Km from [S] in the denominator (1.5 - 0.5).
+    chapter: biochemistry
+    passage_id: mcat-cp-p01
+  - id: mcat-cp-005
+    q: Compared with the uninhibited runs, which kinetic parameter does the competitive inhibitor change?
+    choices:
+      A: Only Vmax, which decreases; Km is unchanged
+      B: Only Km, which increases; Vmax is unchanged
+      C: Both Km and Vmax, each of them decreasing
+      D: Neither parameter; the plot is identical
+    answer: B
+    explain: Competitive inhibition raises the slope (Km/Vmax) while leaving 1/Vmax fixed, so Km rises
+      and Vmax stays 40 µmol min⁻¹ mL⁻¹.
+    distractors:
+      A: That is the signature of a noncompetitive inhibitor.
+      C: Neither intercept changes, so Vmax is not affected at all.
+      D: The slope did double, so the apparent Km did change.
+    chapter: biochemistry
+    passage_id: mcat-cp-p01
+- id: mcat-cp-p02
+  text: A student titrated 20.0 mL of 0.100 M acetic acid (Ka = 1.8 x 10^-5; pKa = 4.76) with 0.100 M
+    NaOH delivered from a buret, recording pH with a calibrated meter. Before any base was added, the
+    flask held only the weak acid at that concentration. After 10.0 mL of base had been delivered the
+    meter read 4.76. Equivalence was reached at 20.0 mL, where the meter read 8.7. The titration was continued
+    to a total of 30.0 mL of added base.
+  chapter: 5a-unique-nature-of-water-and-its-solutions
+  items:
+  - id: mcat-cp-006
+    q: What was the pH of the solution before any NaOH was added?
+    choices:
+      A: '4.76'
+      B: '1.00'
+      C: '5.76'
+      D: '2.87'
+    answer: D
+    explain: '[H+] = sqrt(Ka x C) = sqrt(1.8e-5 x 0.100) = 1.34e-3 M; pH = 2.87.'
+    distractors:
+      A: Quoted pKa instead of the pH of the un-neutralized weak acid.
+      B: Treated 0.100 M acetic acid as if it dissociated completely.
+      C: Used pKa + log C, which has the sign flipped.
+    chapter: 5a-unique-nature-of-water-and-its-solutions
+    passage_id: mcat-cp-p02
+  - id: mcat-cp-007
+    q: Why does the meter read 4.76 when 10.0 mL of base has been added?
+    choices:
+      A: Half the acid has been converted to acetate, so pH = pKa
+      B: The acetic acid has been completely neutralized at that point
+      C: NaOH and acetic acid are present at equal molar concentrations
+      D: The buffer capacity of the mixture has already been exceeded
+    answer: A
+    explain: At half-equivalence [A-] = [HA], so pH = pKa + log(1) = 4.76.
+    distractors:
+      B: Neutralization is complete only at 20.0 mL, the equivalence volume.
+      C: The reading reflects [A-] = [HA], not equality of the two added reagents.
+      D: The HA/A- pair buffers best right around this point.
+    chapter: 5a-unique-nature-of-water-and-its-solutions
+    passage_id: mcat-cp-p02
+  - id: mcat-cp-008
+    q: What is the molar concentration of acetate ion at the equivalence point?
+    choices:
+      A: 0.100 M
+      B: 0.0250 M
+      C: 0.0500 M
+      D: 0.0333 M
+    answer: C
+    explain: n = 0.0200 L x 0.100 M = 2.00 mmol; volume = 40.0 mL, so 2.00/40.0 = 0.0500 M.
+    distractors:
+      A: Ignored the dilution caused by the added base.
+      B: Halved the moles as well as doubling the volume.
+      D: Divided by 60.0 mL instead of the actual 40.0 mL total.
+    chapter: analytical-chemistry
+    passage_id: mcat-cp-p02
+  - id: mcat-cp-009
+    q: What is the pH after 30.0 mL of NaOH has been added?
+    choices:
+      A: '8.70'
+      B: '12.30'
+      C: '4.76'
+      D: '1.70'
+    answer: B
+    explain: Excess OH- = 3.00 - 2.00 = 1.00 mmol in 50.0 mL = 0.0200 M; pOH = 1.70, pH = 12.30.
+    distractors:
+      A: That is the equivalence-point reading; past 20.0 mL excess NaOH sets the pH.
+      C: Henderson–Hasselbalch no longer applies once all HA has been consumed.
+      D: Reported the pOH as if it were the pH.
+    chapter: 5a-unique-nature-of-water-and-its-solutions
+    passage_id: mcat-cp-p02
+  - id: mcat-cp-010
+    q: Which indicator would give the sharpest end point for this titration?
+    choices:
+      A: Phenolphthalein (transition 8.3-10.0)
+      B: Methyl orange (transition 3.1-4.4)
+      C: Bromocresol green (transition 3.8-5.4)
+      D: Thymol blue, acid range (transition 1.2-2.8)
+    answer: A
+    explain: The end point sits at pH 8.7, inside phenolphthalein's 8.3-10.0 range.
+    distractors:
+      B: Changes color near the initial acid pH, long before equivalence.
+      C: Matches the buffer region around half-equivalence, not the equivalence point.
+      D: Changes color before any appreciable neutralization has occurred.
+    chapter: analytical-chemistry
+    passage_id: mcat-cp-p02
+- id: mcat-cp-p03
+  text: In a projectile lab a spring launcher fired a 0.150 kg ball horizontally from the edge of a 20.0
+    m rooftop. A photogate at the muzzle recorded a launch speed of 15.0 m/s, and air resistance was negligible
+    throughout (g = 9.8 m/s²). Students located the landing point with carbon paper on a range board and
+    measured the horizontal distance from the base of the building. In a second trial the same launcher,
+    set identically, was fired from a rooftop of the same height.
+  chapter: 4a-motion-forces-work-energy-equilibrium
+  items:
+  - id: mcat-cp-011
+    q: How long is the ball in flight?
+    choices:
+      A: 1.43 s
+      B: 4.08 s
+      C: 4.04 s
+      D: 2.02 s
+    answer: D
+    explain: t = sqrt(2h/g) = sqrt(2 x 20.0/9.8) = sqrt(4.08) = 2.02 s.
+    distractors:
+      A: Dropped the factor of 2, computing sqrt(h/g).
+      B: Computed h/g = 2.04 x 2 without taking the square root.
+      C: Doubled the correct fall time.
+    chapter: 4a-motion-forces-work-energy-equilibrium
+    passage_id: mcat-cp-p03
+  - id: mcat-cp-012
+    q: How far from the base of the building does the ball land?
+    choices:
+      A: 15.0 m
+      B: 30.3 m
+      C: 21.4 m
+      D: 60.6 m
+    answer: B
+    explain: Range = v0 x t = 15.0 x 2.02 = 30.3 m.
+    distractors:
+      A: Assumed only 1.0 s of flight time.
+      C: Used the fall time for half the height (1.43 s).
+      D: Used a flight time of 4.04 s.
+    chapter: 4a-motion-forces-work-energy-equilibrium
+    passage_id: mcat-cp-p03
+  - id: mcat-cp-013
+    q: With what speed does the ball strike the ground?
+    choices:
+      A: 19.8 m/s
+      B: 34.8 m/s
+      C: 24.8 m/s
+      D: 15.0 m/s
+    answer: C
+    explain: v² = v0² + 2gh = 225 + 2(9.8)(20.0) = 617, so v = 24.8 m/s.
+    distractors:
+      A: Used only the vertical component (gt = 19.8 m/s).
+      B: Added the two components arithmetically instead of in quadrature.
+      D: Ignored the vertical motion entirely.
+    chapter: mechanics
+    passage_id: mcat-cp-p03
+  - id: mcat-cp-014
+    q: What is the ball's kinetic energy just before impact?
+    choices:
+      A: 46 J
+      B: 17 J
+      C: 29 J
+      D: 93 J
+    answer: A
+    explain: KE = ½(0.150)(24.8²) = ½(0.150)(617) = 46 J.
+    distractors:
+      B: That is the launch KE (0.5 x 0.150 x 15²); the free-fall gain is missing.
+      C: That is only the potential energy converted on the way down (mgh).
+      D: Dropped the factor of one half in KE = ½mv².
+    chapter: 4a-motion-forces-work-energy-equilibrium
+    passage_id: mcat-cp-p03
+  - id: mcat-cp-015
+    q: If the launch speed were doubled to 30.0 m/s, the range would be
+    choices:
+      A: 30.3 m (unchanged)
+      B: 121 m (quadrupled)
+      C: 42.8 m (increased by a factor of sqrt 2)
+      D: 60.6 m (doubled)
+    answer: D
+    explain: 'Fall time depends only on h, so range is proportional to v0: 2 x 30.3 = 60.6 m.'
+    distractors:
+      A: Range scales with launch speed as well as with time.
+      B: Range is linear in v0, not quadratic.
+      C: The fall time is unchanged, so no sqrt 2 factor arises.
+    chapter: mechanics
+    passage_id: mcat-cp-p03
+- id: mcat-cp-p04
+  text: A 50.0 µF capacitor was connected in series with a 200 kΩ resistor and a 12.0 V battery of negligible
+    internal resistance; the capacitor was initially uncharged. The switch closed at t = 0, and a data-logger
+    recorded the capacitor voltage every 0.5 s. For a charging RC circuit the time constant is RC and
+    the capacitor voltage follows Vc = V(1 - e^(-t/RC)). The value e^-1 = 0.368 may be used where needed.
+  chapter: 4c-electrochemistry-and-electrical-circuits
+  items:
+  - id: mcat-cp-016
+    q: What is the time constant of the circuit?
+    choices:
+      A: 1.0 s
+      B: 1.0 x 10^4 s
+      C: 10.0 s
+      D: 100 s
+    answer: C
+    explain: τ = RC = (2.00 x 10^5 Ω)(5.00 x 10^-5 F) = 10.0 s.
+    distractors:
+      A: Used 5.0 µF rather than the 50.0 µF in the passage.
+      B: Multiplied 200 x 50 with no conversion from kΩ·µF to s.
+      D: Slipped a factor of ten in the microfarad conversion.
+    chapter: 4c-electrochemistry-and-electrical-circuits
+    passage_id: mcat-cp-p04
+  - id: mcat-cp-017
+    q: What is the current through the resistor immediately after the switch closes?
+    choices:
+      A: '0'
+      B: 60 µA
+      C: 6.0 µA
+      D: 60 mA
+    answer: B
+    explain: I(0) = V/R = 12.0/(2.00 x 10^5) = 6.0 x 10^-5 A = 60 µA.
+    distractors:
+      A: At t = 0 the capacitor supplies no back-voltage, so it is not yet an open circuit.
+      C: Dropped a factor of ten in the current.
+      D: Converted µA to mA incorrectly, off by three orders of magnitude.
+    chapter: electricity-and-magnetism
+    passage_id: mcat-cp-p04
+  - id: mcat-cp-018
+    q: What charge does the capacitor hold when it is fully charged?
+    choices:
+      A: 6.0 x 10^-4 C
+      B: 6.0 x 10^-6 C
+      C: 6.0 C
+      D: 3.6 x 10^-3
+    answer: A
+    explain: Q = CV = (5.00 x 10^-5 F)(12.0 V) = 6.0 x 10^-4 C = 600 µC.
+    distractors:
+      B: Slipped two powers of ten in the capacitance.
+      C: Ignored the micro prefix on the capacitance.
+      D: That is the stored energy (½CV²) in joules, not the charge.
+    chapter: 4c-electrochemistry-and-electrical-circuits
+    passage_id: mcat-cp-p04
+  - id: mcat-cp-019
+    q: What does the data-logger read for the capacitor voltage at t = 10.0 s?
+    choices:
+      A: 4.42 V
+      B: 6.00 V
+      C: 12.0 V
+      D: 7.58 V
+    answer: D
+    explain: Vc = 12.0(1 - e^-1) = 12.0(0.632) = 7.58 V.
+    distractors:
+      A: That is the resistor's share, 12.0 x 0.368.
+      B: Assumed the capacitor is half charged at one time constant.
+      C: Assumed charging is already complete at t = τ.
+    chapter: electricity-and-magnetism
+    passage_id: mcat-cp-p04
+  - id: mcat-cp-020
+    q: After the circuit has been connected for many minutes, the current is
+    choices:
+      A: 60 µA
+      B: zero
+      C: 30 µA
+      D: 7.6 µA
+    answer: B
+    explain: Once Vc = 12.0 V the capacitor's potential cancels the battery's, so no current flows.
+    distractors:
+      A: That is the t = 0 current, not the steady-state value.
+      C: Halved the initial current as if R and C split the current.
+      D: Divided Vc(τ) by R as though the current stayed at its t = τ value.
+    chapter: 4c-electrochemistry-and-electrical-circuits
+    passage_id: mcat-cp-p04
+- id: mcat-cp-p05
+  text: A rigid 2.00 L steel vessel was filled with air at 1.50 atm and 27 °C, then sealed and placed
+    in an oven whose interior was held at 87 °C. The vessel is a rigid container, so its volume does not
+    change, and no gas escapes. In a separate bench trial a gas-filled cylinder fitted with a light, freely
+    moving piston held the pressure constant at 1.50 atm while the temperature was raised through the
+    same range. R = 0.0821 L·atm mol⁻¹ K⁻¹.
+  chapter: thermodynamics
+  items:
+  - id: mcat-cp-021
+    q: What is the oven temperature in kelvins?
+    choices:
+      A: 87 K
+      B: 60 K
+      C: 360 K
+      D: 273 K
+    answer: C
+    explain: T(K) = 87 + 273 = 360 K.
+    distractors:
+      A: Used the Celsius reading directly.
+      B: Used only the temperature change, not the absolute temperature.
+      D: Quoted the conversion constant instead of applying it.
+    chapter: general-chemistry
+    passage_id: mcat-cp-p05
+  - id: mcat-cp-022
+    q: What is the pressure inside the rigid vessel once it reaches oven temperature?
+    choices:
+      A: 1.80 atm
+      B: 1.25 atm
+      C: 4.83 atm
+      D: 1.50 atm
+    answer: A
+    explain: 'P1/T1 = P2/T2: P2 = 1.50 x (360/300) = 1.80 atm.'
+    distractors:
+      B: Inverted the temperature ratio (multiplied by 300/360).
+      C: Scaled by the Celsius readings (87/27) instead of kelvins.
+      D: Assumed pressure is independent of temperature in a fixed volume.
+    chapter: thermodynamics
+    passage_id: mcat-cp-p05
+  - id: mcat-cp-023
+    q: How many moles of gas does the vessel contain?
+    choices:
+      A: 1.35 mol
+      B: 0.0122 mol
+      C: 0.244 mol
+      D: 0.122 mol
+    answer: D
+    explain: n = PV/RT = (1.50)(2.00)/(0.0821 x 300) = 3.00/24.6 = 0.122 mol.
+    distractors:
+      A: Used 27 °C instead of 300 K in the denominator.
+      B: Slipped a power of ten in the division.
+      C: Doubled the result, as if the volume were 4.00 L.
+    chapter: general-chemistry
+    passage_id: mcat-cp-p05
+  - id: mcat-cp-024
+    q: In the piston trial (constant pressure), the 2.00 L volume becomes
+    choices:
+      A: 1.67 L
+      B: 4.80 L
+      C: 2.40 L
+      D: 2.00 L
+    answer: C
+    explain: 'V1/T1 = V2/T2: V2 = 2.00 x (360/300) = 2.40 L.'
+    distractors:
+      A: Inverted the temperature ratio (multiplied by 300/360).
+      B: Doubled the volume instead of scaling it by 360/300.
+      D: Assumed the volume is unaffected by a temperature change.
+    chapter: thermodynamics
+    passage_id: mcat-cp-p05
+- id: mcat-cp-p06
+  text: On an optical bench a student placed a luminous arrow 15.0 cm in front of a thin converging lens
+    whose focal length was 10.0 cm; the bench scale reads to 0.1 cm. The student slid a screen along the
+    far side of the lens until a sharply focused image of the arrow appeared on the screen. In a later
+    trial the arrow was moved so that it sat exactly at the lens's focal point.
+  chapter: vibrations-waves-and-optics
+  items:
+  - id: mcat-cp-025
+    q: Where is the image formed?
+    choices:
+      A: 6.0 cm in front of the lens
+      B: 30.0 cm behind the lens, on the side opposite the object
+      C: 5.0 cm behind the lens
+      D: 25.0 cm behind the lens
+    answer: B
+    explain: 1/di = 1/f - 1/do = 1/10.0 - 1/15.0 = 1/30.0, so di = 30.0 cm (positive = real, far side).
+    distractors:
+      A: Added the reciprocals (1/10.0 + 1/15.0 = 1/6.0) instead of subtracting.
+      C: Subtracted the focal length from the object distance.
+      D: Treated the image distance as do + f.
+    chapter: vibrations-waves-and-optics
+    passage_id: mcat-cp-p06
+  - id: mcat-cp-026
+    q: The image caught on the screen is
+    choices:
+      A: real and inverted, twice the height of the object
+      B: virtual and upright, twice the height of the object
+      C: real and upright, half the height of the object
+      D: real and inverted, half the height of the object
+    answer: A
+    explain: 'm = -di/do = -30.0/15.0 = -2.0: inverted and magnified, and it forms on a screen.'
+    distractors:
+      B: A virtual image cannot be projected onto a screen.
+      C: Both the sign and the size are wrong for an object between f and 2f.
+      D: Inverted the ratio as di/do instead of computing m = -di/do.
+    chapter: 4d-light-and-sound-interacting-with-matter
+    passage_id: mcat-cp-p06
+  - id: mcat-cp-027
+    q: In the later trial, with the arrow exactly at the focal point, the student finds
+    choices:
+      A: a sharp image formed right at the lens surface
+      B: a sharp image 20.0 cm behind the lens
+      C: a sharp, upright image the same size as the object
+      D: no sharp image anywhere, because the refracted rays leave parallel
+    answer: D
+    explain: 1/di = 1/10.0 - 1/10.0 = 0, so di → infinity and the emerging rays are parallel.
+    distractors:
+      A: Rays from the focal point are not made to converge at the lens itself.
+      B: Confused do = 2f (where di = do) with do = f.
+      C: Unit magnification occurs at do = 2f, not at do = f.
+    chapter: vibrations-waves-and-optics
+    passage_id: mcat-cp-p06
+  - id: mcat-cp-028
+    q: What is the power of this lens?
+    choices:
+      A: 0.10 D
+      B: +10.0 D
+      C: 1.0 D
+      D: -10.0 D
+    answer: B
+    explain: P = 1/f = 1/0.100 m = +10.0 diopters.
+    distractors:
+      A: Used the centimeter value without converting to meters.
+      C: Dropped a factor of ten in 1/f.
+      D: A negative power belongs to a diverging lens.
+    chapter: vibrations-waves-and-optics
+    passage_id: mcat-cp-p06
+- id: mcat-cp-p07
+  text: A coffee-cup calorimeter was charged with 100.0 g of water at 22.0 °C. A 4.00 g sample of an unknown
+    ionic solid (molar mass 80.0 g/mol) was added with stirring and dissolved completely, and the water
+    temperature rose to 27.0 °C. The mass of the solid is included in the 100.0 g, the solution's specific
+    heat is 4.18 J g⁻¹ °C⁻¹, and no heat is lost to the surroundings. The cup is open to the atmosphere,
+    so the dissolution runs at constant pressure.
+  chapter: thermodynamics
+  items:
+  - id: mcat-cp-029
+    q: How much heat did the water absorb?
+    choices:
+      A: 209 J
+      B: 4.18 x 10^3 J
+      C: 2.09 x 10^3 J
+      D: 20.9 J
+    answer: C
+    explain: q = mcΔT = (100.0 g)(4.18 J g⁻¹ °C⁻¹)(5.0 °C) = 2.09 x 10^3 J.
+    distractors:
+      A: Slipped a decimal place in mcΔT.
+      B: Doubled the temperature change.
+      D: Slipped two decimal places in mcΔT.
+    chapter: thermodynamics
+    passage_id: mcat-cp-p07
+  - id: mcat-cp-030
+    q: What is ΔH of solution for the solid?
+    choices:
+      A: -41.8 kJ/mol
+      B: +41.8 kJ/mol
+      C: -20.9 kJ/mol
+      D: -83.6 kJ/mol
+    answer: A
+    explain: n = 4.00/80.0 = 0.0500 mol; ΔH = -2.09 kJ/0.0500 mol = -41.8 kJ/mol.
+    distractors:
+      B: 'The water warmed, so heat left the process: ΔH must be negative.'
+      C: Used 0.100 mol instead of the actual 0.0500 mol.
+      D: Used 0.0250 mol instead of the actual 0.0500 mol.
+    chapter: 5e-chemical-thermodynamics-and-kinetics
+    passage_id: mcat-cp-p07
+  - id: mcat-cp-031
+    q: If 8.00 g of the same solid had been dissolved in the same 100.0 g of water, the temperature rise
+      would have been about
+    choices:
+      A: 5.0 °C
+      B: 20.0 °C
+      C: 2.5 °C
+      D: 10.0 °C
+    answer: D
+    explain: '8.00 g is 0.100 mol, twice the heat, and ΔT ∝ q: 2 x 5.0 = 10.0 °C.'
+    distractors:
+      A: The heat released doubles with the amount dissolved.
+      B: ΔT scales linearly with moles of solute, not quadratically.
+      C: More solute releases more heat, so ΔT rises rather than falls.
+    chapter: thermodynamics
+    passage_id: mcat-cp-p07
+  - id: mcat-cp-032
+    q: The heat the student measured equals ΔH (rather than ΔU) because
+    choices:
+      A: the specific heat of water is known to three significant figures
+      B: the solid dissolves completely
+      C: the cup is open to the atmosphere, so the process runs at constant pressure
+      D: no heat escapes, so q = 0
+    answer: C
+    explain: At constant pressure qp = ΔH; ΔU would be measured in a sealed constant-volume bomb.
+    distractors:
+      A: The precision of c has nothing to do with which state function is measured.
+      B: Completeness fixes the extent of reaction, not the q = ΔH versus q = ΔU distinction.
+      D: If q were zero the water temperature would not have changed.
+    chapter: 5e-chemical-thermodynamics-and-kinetics
+    passage_id: mcat-cp-p07

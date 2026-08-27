@@ -1,0 +1,491 @@
+exam: nmat
+section: part1-verbal
+label: Verbal
+subject: verbal
+block: part1
+items_expected: 30
+items:
+- id: nmat-p1v-001
+  q: 'METICULOUS : CAREFUL :: MENDACIOUS : ?'
+  choices:
+    A: dishonest
+    B: truthful
+    C: careless
+    D: hasty
+  answer: A
+  explain: Mendacious means given to lying, just as meticulous means careful.
+  distractors:
+    B: Truthful is the opposite of mendacious, not its equivalent.
+    C: Careless pairs with sloppy, not with mendacious; it merely echoes the first pair.
+    D: Hasty describes speed, while mendacious describes untruthfulness.
+  chapter: analogies
+- id: nmat-p1v-002
+  q: 'PLACATE : APPEASE :: OBFUSCATE : ?'
+  choices:
+    A: clarify
+    B: anger
+    C: confuse
+    D: ignore
+  answer: C
+  explain: Obfuscate means to make unclear, matching the synonym pair placate/appease.
+  distractors:
+    A: Clarify is the opposite of obfuscate.
+    B: Anger is what placating relieves; obfuscating does not produce anger.
+    D: Ignoring someone leaves them uninformed, but obfuscating actively muddles them.
+  chapter: analogies
+- id: nmat-p1v-003
+  q: 'GARRULOUS : TALKATIVE :: BENEVOLENT : ?'
+  choices:
+    A: malevolent
+    B: kind
+    C: greedy
+    D: wealthy
+  answer: B
+  explain: Benevolent means kind and well-meaning, matching garrulous/talkative.
+  distractors:
+    A: Malevolent is the antonym of benevolent.
+    C: Greedy names self-interest, which benevolence is opposed to.
+    D: Wealth may fund generosity, but benevolence itself is a disposition, not money.
+  chapter: analogies
+- id: nmat-p1v-004
+  q: 'STINGY : GENEROUS :: PRODIGAL : ?'
+  choices:
+    A: lavish
+    B: wasteful
+    C: prosperous
+    D: thrifty
+  answer: D
+  explain: Prodigal means wastefully extravagant, so its opposite is thrifty, as generous opposes stingy.
+  distractors:
+    A: Lavish is a synonym of prodigal, not its opposite.
+    B: Wasteful restates prodigal; the pair demands a contrast.
+    C: Prosperity is about wealth held, not about how freely one spends it.
+  chapter: analogies
+- id: nmat-p1v-005
+  q: 'TRANSPARENT : OPAQUE :: CANDID : ?'
+  choices:
+    A: honest
+    B: evasive
+    C: blunt
+    D: frank
+  answer: B
+  explain: Candid means open and direct, the opposite of evasive, as opaque opposes transparent.
+  distractors:
+    A: Honest is a synonym of candid, so it fails to supply the contrast.
+    C: Blunt candor is still candor; the pair requires an opposite.
+    D: Frank is another synonym of candid, not its opposite.
+  chapter: analogies
+- id: nmat-p1v-006
+  q: 'COMMENCE : CONCLUDE :: INITIATE : ?'
+  choices:
+    A: terminate
+    B: begin
+    C: launch
+    D: propose
+  answer: A
+  explain: 'Initiate is to terminate as commence is to conclude: starting against ending.'
+  distractors:
+    B: Begin is a synonym of initiate, not a contrast to it.
+    C: Launch also means to start something.
+    D: Proposing is putting an idea forward, not ending one.
+  chapter: analogies
+- id: nmat-p1v-007
+  q: 'PETAL : FLOWER :: PAGE : ?'
+  choices:
+    A: library
+    B: ink
+    C: chapter
+    D: book
+  answer: D
+  explain: A page is a part of a book, as a petal is a part of a flower.
+  distractors:
+    A: A library is a collection of books, one level of organization above a book.
+    B: Ink is the material a page carries, not the whole the page belongs to.
+    C: A chapter is itself only a part of a book, so it cannot be the whole.
+  chapter: analogies
+- id: nmat-p1v-008
+  q: 'CHAPTER : BOOK :: EPISODE : ?'
+  choices:
+    A: television
+    B: commercial
+    C: season
+    D: series
+  answer: C
+  explain: An episode is one unit of a season, as a chapter is one unit of a book.
+  distractors:
+    A: Television is the medium the episode appears on, not a unit composed of episodes.
+    B: A commercial interrupts an episode; it is not built out of them.
+    D: A series is made of seasons, one level above the answer.
+  chapter: analogies
+- id: nmat-p1v-009
+  q: 'ISLAND : ARCHIPELAGO :: LETTER : ?'
+  choices:
+    A: word
+    B: sentence
+    C: page
+    D: pen
+  answer: A
+  explain: A letter is a unit that combines with others to form a word, as an island combines into an
+    archipelago.
+  distractors:
+    B: Letters form words first; a sentence is built from words, one level up.
+    C: A page holds letters but is not composed of them as a word is.
+    D: A pen is the instrument used to write, not a whole made of letters.
+  chapter: analogies
+- id: nmat-p1v-010
+  q: 'PILOT : COCKPIT :: SURGEON : ?'
+  choices:
+    A: hospital
+    B: operating room
+    C: waiting room
+    D: pharmacy
+  answer: B
+  explain: A surgeon works in an operating room, as a pilot works in a cockpit.
+  distractors:
+    A: A hospital is the larger institution; the surgeon's specific workplace is the operating room.
+    C: The waiting room is where patients sit before treatment.
+    D: A pharmacy dispenses medication and is not where surgery is performed.
+  chapter: analogies
+- id: nmat-p1v-011
+  q: 'MECHANIC : GARAGE :: PHYSICIAN : ?'
+  choices:
+    A: patient
+    B: stethoscope
+    C: prescription
+    D: clinic
+  answer: D
+  explain: A physician's workplace is a clinic, as a mechanic's is a garage.
+  distractors:
+    A: The patient is the person worked on, which corresponds to the car, not to the workplace.
+    B: A stethoscope is an instrument of the trade, not a place of work.
+    C: A prescription is an output of the work, not the setting.
+  chapter: analogies
+- id: nmat-p1v-012
+  q: 'FRICTION : HEAT :: VIRUS : ?'
+  choices:
+    A: bacteria
+    B: medicine
+    C: illness
+    D: immunity
+  answer: C
+  explain: A virus produces illness, as friction produces heat.
+  distractors:
+    A: Bacteria are a rival cause of illness, not the effect of a virus.
+    B: Medicine treats the illness that follows; it is not produced by the virus.
+    D: Immunity is the body's defense against a virus, not its product.
+  chapter: analogies
+- id: nmat-p1v-013
+  q: 'CARELESSNESS : ACCIDENT :: INDUSTRY : ?'
+  choices:
+    A: laziness
+    B: success
+    C: factory
+    D: salary
+  answer: B
+  explain: Industry, meaning diligent effort, brings success, as carelessness brings accidents.
+  distractors:
+    A: Laziness is the antonym of industry, not its effect.
+    C: This reads 'industry' as manufacturing; the pair uses it to mean diligent work.
+    D: A salary is what an employer pays, not what diligence itself produces.
+  chapter: analogies
+- id: nmat-p1v-014
+  q: 'BREEZE : GALE :: DRIZZLE : ?'
+  choices:
+    A: downpour
+    B: cloud
+    C: puddle
+    D: humidity
+  answer: A
+  explain: A downpour is drizzle intensified, as a gale is a breeze intensified.
+  distractors:
+    B: The cloud is where the rain comes from, not a heavier form of drizzle.
+    C: A puddle is water that has already collected on the ground.
+    D: Humidity is water vapor in the air, not a volume of falling rain.
+  chapter: analogies
+- id: nmat-p1v-015
+  q: 'PEBBLE : BOULDER :: STREAM : ?'
+  choices:
+    A: ocean
+    B: brook
+    C: river
+    D: delta
+  answer: C
+  explain: A river is a stream on a larger scale, as a boulder is a pebble on a larger scale.
+  distractors:
+    A: An ocean is a far larger category of water body, not the next size up from a stream.
+    B: A brook is smaller than a stream, which reverses the direction of the scale.
+    D: A delta is the landform at a river's mouth, not a larger stream.
+  chapter: analogies
+- id: nmat-p1v-016
+  q: For decades the jeepney has been the backbone of Philippine public transport, prized for low fares
+    and for routes that reach streets the buses ignore. Under the government's modernization program,
+    older units are being phased out in favor of minibus-style vehicles with standardized routes and higher
+    fares. Operators of traditional units warn that the equity payments required for new vehicles would
+    bankrupt small drivers. Which statement best expresses the main idea of the passage?
+  choices:
+    A: Jeepney fares will fall once vehicles are modernized.
+    B: Buses have already replaced jeepneys on most Philippine routes.
+    C: Jeepneys survive mainly because tourists find them picturesque.
+    D: Modernization promises cleaner and more orderly service but threatens the livelihoods of small
+      jeepney operators.
+  answer: D
+  explain: The passage weighs the program's promised benefits against the small operators' warning that
+    equity payments would bankrupt them.
+  distractors:
+    A: The passage states the new vehicles carry higher fares.
+    B: Nothing has been replaced yet; the program is only phasing out older units.
+    C: Tourism is never mentioned; the passage credits low fares and wide route coverage.
+  chapter: reading-comprehension
+- id: nmat-p1v-017
+  q: The Ifugao rice terraces of the Cordillera, carved into the mountainside many centuries ago, are
+    watered by channels that draw from the forests above them. Those forests, called muyong, are tended
+    by families who hold them in trust for the community; when a watershed is cleared, the springs that
+    feed the channels begin to fail. According to the passage, the terraces remain productive chiefly
+    because of
+  choices:
+    A: modern pumps installed by the national government.
+    B: the mild climate of the lowland plains.
+    C: the protected forests that feed their irrigation channels.
+    D: chemical fertilizers introduced after the Second World War.
+  answer: C
+  explain: The passage states that clearing a watershed makes the springs fail, so the protected muyong
+    forests are what keep water flowing to the terraces.
+  distractors:
+    A: No pumps or government works are mentioned; the water arrives through channels fed by the muyong.
+    B: The terraces stand in the mountains, and climate is never given as the reason.
+    D: The passage attributes productivity to the watershed above, not to fertilizers.
+  chapter: reading-comprehension
+- id: nmat-p1v-018
+  q: Jose Rizal printed the first edition of Noli Me Tangere in Berlin in 1887 after borrowing money to
+    cover the costs. Colonial authorities in Manila banned the book, yet copies crossed into the islands
+    anyway, passed hand to hand among Filipinos who could read Spanish. Which inference is best supported
+    by the passage?
+  choices:
+    A: Most Filipinos in 1887 could read Spanish.
+    B: The novel found Filipino readers despite official prohibition.
+    C: Spanish friars secretly financed the printing.
+    D: Rizal wrote the novel in Tagalog for a mass audience.
+  answer: B
+  explain: A book that circulates hand to hand after being banned shows the prohibition failed to stop
+    its spread.
+  distractors:
+    A: The passage says copies passed among those who could read Spanish, which implies such readers were
+      a limited group.
+    C: The passage says Rizal borrowed money to cover the costs.
+    D: It circulated among readers of Spanish, and no Tagalog version is mentioned.
+  chapter: reading-comprehension
+- id: nmat-p1v-019
+  q: Few officials matched Jesse Robredo's habit of taking the bus home to Naga every weekend, or his
+    decision to post the city's budget online so that any resident could question it. He left behind fewer
+    possessions than many of the people he had served. The tone of the passage is best described as
+  choices:
+    A: admiring
+    B: sarcastic
+    C: indifferent
+    D: hostile
+  answer: A
+  explain: The details chosen, from bus rides to published budgets to modest belongings, are all presented
+    favorably.
+  distractors:
+    B: Sarcasm would mock its subject; every detail here credits him.
+    C: The writer has selected details that celebrate Robredo, which is the opposite of detachment.
+    D: Nothing in the passage criticizes or attacks him.
+  chapter: reading-comprehension
+- id: nmat-p1v-020
+  q: The Sinulog festival of Cebu reenacts the acceptance of Christianity through dancers who step twice
+    forward and once back, a movement said to imitate the sway of the river current. The name sinulog
+    itself comes from the Cebuano word sulog, meaning current. According to the passage, the festival's
+    name is derived from a word meaning
+  choices:
+    A: dance
+    B: river
+    C: Christianity
+    D: current
+  answer: D
+  explain: The passage states directly that sinulog comes from sulog, which means current.
+  distractors:
+    A: The dance is named for the current, not the other way around.
+    B: Sulog names the current of the water, not the river itself.
+    C: The festival commemorates the acceptance of Christianity, but its name comes from sulog.
+  chapter: reading-comprehension
+- id: nmat-p1v-021
+  q: Critics once dismissed Taglish, the alternating of Tagalog and English within a single sentence,
+    as evidence of poor schooling. Linguists now describe it as systematic, governed by rules about where
+    a switch may fall, and note that bilingual communities around the world behave the same way. Which
+    statement best expresses the main idea of the passage?
+  choices:
+    A: Code-switching follows a grammar of its own rather than reflecting carelessness.
+    B: Taglish should be made the sole language of instruction.
+    C: Linguists agree with the earlier critics of Taglish.
+    D: Only Filipino speakers combine languages in one sentence.
+  answer: A
+  explain: The passage moves from an old criticism to the linguists' finding that the practice is rule-governed
+    and widespread.
+  distractors:
+    B: The passage makes no recommendation about schooling policy.
+    C: The linguists' view is presented as a correction of the critics', not an endorsement.
+    D: The passage says bilingual communities worldwide do the same thing.
+  chapter: reading-comprehension
+- id: nmat-p1v-022
+  q: After a dengue outbreak, one barangay emptied its canals and held weekly clean-up drives while neighboring
+    areas changed nothing, and cases in the barangay fell by half. Health officials point out that the
+    mosquito carrying dengue breeds in clean, stagnant water collected in containers, drains, and discarded
+    tires. Which inference is best supported by the passage?
+  choices:
+    A: Dengue is transmitted by dirty canal water.
+    B: The mosquito breeds only in polluted water.
+    C: Removing standing water reduced the barangay's dengue cases.
+    D: The clean-up drives made the outbreak worse.
+  answer: C
+  explain: Cases fell where standing water was removed, which matches the officials' account of where
+    the mosquito breeds.
+  distractors:
+    A: Mosquitoes, not water, transmit dengue, and the officials specify clean stagnant water.
+    B: 'The passage says the opposite: clean, stagnant water.'
+    D: Cases fell by half after the drives began.
+  chapter: reading-comprehension
+- id: nmat-p1v-023
+  q: Spanish officials described the 1896 uprising as precipitate, by which they meant that it had been
+    launched before the Katipunan was ready. The Katipunan's leaders answered that waiting longer would
+    only give the authorities time to hunt them down. As used in the passage, precipitate most nearly
+    means
+  choices:
+    A: condensed from vapor, as in a chemistry laboratory
+    B: hasty
+    C: delayed until conditions improved
+    D: unusually violent
+  answer: B
+  explain: The officials meant the rising came before the Katipunan was ready, which is exactly what hasty
+    conveys.
+  distractors:
+    A: That is the laboratory sense of the word; the passage is discussing timing.
+    C: The officials' complaint was that the uprising came too soon, not too late.
+    D: The objection raised was to the timing of the rising, not to its bloodshed.
+  chapter: reading-comprehension
+- id: nmat-p1v-024
+  q: Money sent home by overseas Filipino workers amounts to roughly a tenth of the country's economic
+    output, paying tuition, building houses, and stocking small shops in thousands of towns. Economists
+    caution, however, that such dependence leaves households exposed when host economies slow, as it did
+    for workers in the Gulf when oil prices fell. Which statement best expresses the main idea of the
+    passage?
+  choices:
+    A: Remittances are too small to matter to the economy.
+    B: Overseas workers exaggerate their earnings to their families.
+    C: Host countries deliberately cut migrant wages during downturns.
+    D: Remittances sustain many families but leave the economy exposed to shocks abroad.
+  answer: D
+  explain: The passage sets the scale of remittances against the vulnerability created by relying on foreign
+    labor markets.
+  distractors:
+    A: The passage places them at about a tenth of economic output.
+    B: Nothing in the passage concerns exaggeration or underreporting.
+    C: The passage describes work slowing down, not a deliberate policy.
+  chapter: reading-comprehension
+- id: nmat-p1v-025
+  q: The city unveiled its new flood-control pump station with a brass band and a ribbon, and the pumps
+    failed during the first heavy rain that same week. Officials have since announced a second, larger
+    station, to be built by the same contractor. The tone of the passage is best described as
+  choices:
+    A: celebratory
+    B: apologetic
+    C: sorrowful
+    D: ironic
+  answer: D
+  explain: The deadpan sequence of a ribbon-cutting, an immediate failure, and the same contractor rehired
+    invites the reader to notice the contradiction.
+  distractors:
+    A: The brass band belongs to the city's ceremony; the writer's point is the failure that followed
+      it.
+    B: The writer offers no defense of the officials.
+    C: The passage registers folly and waste, not grief.
+  chapter: reading-comprehension
+- id: nmat-p1v-026
+  q: The tamaraw, a small buffalo found only on the island of Mindoro, once numbered in the thousands.
+    Hunting and the clearing of habitat have reduced it to a few hundred, and it now survives mainly inside
+    a single protected park where rangers patrol against poachers. Which inference is best supported by
+    the passage?
+  choices:
+    A: The tamaraw's survival depends on protecting the habitat it has left.
+    B: Tamaraws breed readily on other Philippine islands.
+    C: Hunting has never been a threat to the species.
+    D: The park population is already too large for Mindoro.
+  answer: A
+  explain: With only a few hundred animals confined to one park, the species' future turns on keeping
+    that habitat intact.
+  distractors:
+    B: The passage says the species is found only on Mindoro.
+    C: Hunting is named as one of the two causes of the decline.
+    D: Only a few hundred survive, so no overcrowding is suggested.
+  chapter: reading-comprehension
+- id: nmat-p1v-027
+  q: The University of Santo Tomas, founded in Manila in 1611, is a quarter of a century older than Harvard,
+    which opened in 1636. Both institutions began as schools for the training of clergy before expanding
+    into law, medicine, and the secular disciplines. According to the passage, Harvard differs from Santo
+    Tomas in that Harvard
+  choices:
+    A: was founded first.
+    B: began as a secular institution.
+    C: opened later.
+    D: never expanded beyond theology.
+  answer: C
+  explain: The only difference the passage states is the founding date, 1636 against 1611.
+  distractors:
+    A: Santo Tomas dates from 1611 and Harvard from 1636.
+    B: The passage says both began by training clergy.
+    D: Both are described as expanding into law, medicine, and other fields.
+  chapter: reading-comprehension
+- id: nmat-p1v-028
+  q: Coconut farmers in Quezon earn little from copra because buyers at the farm gate pay prices set far
+    from the farm. Cooperatives that mill their own oil and sell directly to processors have raised members'
+    incomes considerably, but they demand capital and management skills that small farmers rarely have.
+    Which statement best expresses the main idea of the passage?
+  choices:
+    A: World demand alone sets the price of copra.
+    B: Farmer cooperatives can raise incomes, but obstacles keep most small farmers from forming them.
+    C: Middlemen should be prohibited by law.
+    D: Coconut farming cannot be made profitable anywhere.
+  answer: B
+  explain: The passage pairs the cooperatives' success with the capital and skills they require, which
+    most small farmers lack.
+  distractors:
+    A: The passage blames farm-gate buyers and prices set far from the farm, not world demand.
+    C: The passage reports the problem; it never calls for a ban.
+    D: Cooperatives are described as raising members' incomes considerably.
+  chapter: reading-comprehension
+- id: nmat-p1v-029
+  q: For two and a half centuries, Manila galleons carried Mexican silver to Manila and Chinese silk,
+    porcelain, and spices back to Acapulco. The trade enriched a small circle of Spanish merchants inside
+    Intramuros, while most Filipinos in the countryside went on farming much as before. Which inference
+    is best supported by the passage?
+  choices:
+    A: Filipino farmers directed the galleon trade.
+    B: The gains from the galleon trade were concentrated in few hands.
+    C: The Philippines exported silver to Mexico.
+    D: Galleons sailed directly to Spain.
+  answer: B
+  explain: A small circle of merchants profited while the rural majority was untouched, so the benefits
+    were narrow.
+  distractors:
+    A: The beneficiaries named are Spanish merchants inside Intramuros.
+    C: Silver flowed from Mexico to Manila; silk and porcelain went the other way.
+    D: The route named runs between Manila and Acapulco.
+  chapter: reading-comprehension
+- id: nmat-p1v-030
+  q: Jeepney drivers pay the vehicle's owner a fixed daily amount called the boundary and keep whatever
+    fare money remains. Drivers say the arrangement pushes them to stay on the road for shifts of fourteen
+    hours, and that a driver who falls ill still owes the boundary for that day. According to the passage,
+    the boundary system pressures drivers to
+  choices:
+    A: work shifts far longer than a normal day.
+    B: buy the jeepney from its owner.
+    C: withhold the boundary when earnings are low.
+    D: carry fewer passengers to save fuel.
+  answer: A
+  explain: Drivers keep what remains after a fixed payment, so they extend their shifts to cover the boundary
+    and still earn something.
+  distractors:
+    B: No purchase is described; drivers rent the vehicle day by day.
+    C: The passage says the boundary is still owed even when a driver is sick.
+    D: Nothing about fuel or limiting passengers appears in the passage.
+  chapter: reading-comprehension
+passages: []
