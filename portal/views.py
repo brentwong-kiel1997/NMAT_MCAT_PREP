@@ -492,6 +492,13 @@ def practice_attempt_api(request):
     items = {q["id"]: q for q in practice_for(subject_slug)}
     item = items.get(question_id)
     if not item:
+        # exam-bank fallback: lets the review notebook's redo flow record
+        # attempts on bank items and feed the same accuracy aggregations
+        from .content import all_bank_items
+        bank_item = all_bank_items().get(question_id)
+        if bank_item and bank_item.get("chapter"):
+            item = {"id": bank_item["id"], "answer": bank_item["answer"]}
+    if not item:
         return JsonResponse({"ok": False, "error": "Unknown question"}, status=404)
     correct = chosen == item["answer"]
     username = _learner_name(request)

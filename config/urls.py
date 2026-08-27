@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 
-from portal import accounts, coach_admin, exam_views, views
+from portal import accounts, coach_admin, dashboard, exam_views, views
 
 urlpatterns = [
     path("", views.home, name="home"),
@@ -62,5 +62,11 @@ urlpatterns = [
     path("exams/api/answer/", exam_views.exam_answer_api, name="exam_answer_api"),
     path("exams/api/submit/", exam_views.exam_submit_api, name="exam_submit_api"),
     path("exams/result/<int:attempt_id>/", exam_views.exam_result, name="exam_result"),
+    # ---- study platform ----
+    path("dashboard/", dashboard.dashboard, name="dashboard"),
+    path("review/", dashboard.review, name="review"),
+    path("review/redo/<slug:chapter_id>/", dashboard.review_redo, name="review_redo"),
+    path("plan/", dashboard.plan, name="plan"),
+    path("plan/save/", dashboard.plan_save, name="plan_save"),
     path("admin/", admin.site.urls),
 ]

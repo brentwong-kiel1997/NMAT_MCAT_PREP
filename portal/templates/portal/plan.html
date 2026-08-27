@@ -1,0 +1,57 @@
+{% extends "portal/base.html" %}
+
+{% block title %}Study plan · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">Study plan</p>
+    <h1>Day-by-day to exam day</h1>
+    <p class="lead">Deterministic: same settings always rebuild the same plan. Ticking a chapter marks it done everywhere.</p>
+  </div>
+</div>
+
+<section class="section">
+  <article class="practice-card">
+    <h2>Settings</h2>
+    <form method="post" action="{% url 'plan_save' %}" class="exam-nav">
+      {% csrf_token %}
+      <label>Exam
+        <select name="exam">
+          {% for e in exams %}
+          <option value="{{ e.id }}" {% if study_plan and study_plan.exam == e.id %}selected{% endif %}>{{ e.name }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label>Exam date
+        <input type="date" name="exam_date" required
+               value="{{ study_plan.exam_date|date:'Y-m-d' }}">
+      </label>
+      <label>Hours / week
+        <input type="number" name="weekly_hours" min="1" max="80" value="{{ study_plan.weekly_hours|default:10 }}">
+      </label>
+      <button type="submit" class="btn btn-primary">Build plan</button>
+    </form>
+  </article>
+
+  {% if plan %}
+  <article class="practice-card">
+    <h2>{{ plan.total_tasks }} tasks · ~{{ plan.total_hours }} hours total</h2>
+    {% for day in plan.days %}
+    <details class="tut-question" {% if forloop.first %}open{% endif %}>
+      <summary><strong>{{ day.date }}</strong> · {{ day.tasks|length }} task{{ day.tasks|length|pluralize }} · {{ day.minutes }} min</summary>
+      <ul class="tut-q-options exam-review-body">
+        {% for t in day.tasks %}
+        <li>
+          [{{ t.kind }}] {{ t.minutes }} min —
+          {% if t.url %}<a href="{{ t.url }}">{{ t.label }}</a>{% else %}{{ t.label }}{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </details>
+    {% endfor %}
+  </article>
+  {% endif %}
+</section>
+{% endblock %}

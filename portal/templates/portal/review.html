@@ -1,0 +1,44 @@
+{% extends "portal/base.html" %}
+
+{% block title %}Review notebook · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">Review</p>
+    <h1>Wrong-answer notebook</h1>
+    <p class="lead">{{ total }} distinct miss{{ total|pluralize }} across practice and mock exams, grouped by chapter.</p>
+  </div>
+</div>
+
+<section class="section">
+  {% for g in groups %}
+  <article class="practice-card">
+    <h2>{{ g.chapter_title }} <span class="note-line">({{ g.count }})</span></h2>
+    <p class="note-line">
+      <a href="{% if g.discipline %}{% url 'tutorial_detail' g.discipline g.chapter_id %}{% else %}#{% endif %}">Open chapter</a>
+      · <a href="{% url 'review_redo' g.chapter_id %}">Redo these {{ g.count }}</a>
+    </p>
+    {% for it in g.items %}
+    <details class="tut-question">
+      <summary><span class="exam-verdict">✗</span> {{ it.stem|truncatechars:100 }}</summary>
+      <div class="exam-review-body">
+        <ul class="tut-q-options">
+          {% for letter, text in it.choices.items %}
+          <li class="{% if letter == it.answer %}is-correct{% endif %}{% if letter == it.chosen and letter != it.answer %}is-wrong{% endif %}">
+            <strong>{{ letter }}</strong> {{ text }}
+            {% if letter == it.chosen %}<em>← you picked this</em>{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        <p><strong>Answer: {{ it.answer }}</strong> — {{ it.explain }}</p>
+      </div>
+    </details>
+    {% endfor %}
+  </article>
+  {% empty %}
+  <article class="practice-card"><p>No wrong answers recorded yet — take a mock exam or drill some practice sets.</p></article>
+  {% endfor %}
+</section>
+{% endblock %}

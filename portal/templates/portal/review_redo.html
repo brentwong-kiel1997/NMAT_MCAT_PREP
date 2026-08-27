@@ -1,0 +1,41 @@
+{% extends "portal/base.html" %}
+{% load static %}
+
+{% block title %}Redo: {{ chapter.title }} · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">Redo</p>
+    <h1>{{ chapter.title }}</h1>
+    <p class="lead">{{ count }} previously-missed item{{ count|pluralize }}. Instant feedback; attempts feed your weak-chapter stats.</p>
+    <p><a href="{% url 'review' %}">← Back to notebook</a></p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="practice-shell" data-practice data-practice-key="gabay_redo_{{ chapter_id }}" data-practice-subject="{{ discipline }}">
+    <div class="practice-status">
+      <span>Progress</span>
+      <strong class="practice-pos">1</strong> / <span class="practice-total">{{ count }}</span>
+      · Correct
+      <strong class="practice-score">0</strong>
+    </div>
+    <article class="practice-card">
+      <p class="practice-chapter"></p>
+      <h2 class="practice-q"></h2>
+      <div class="practice-choices" role="group"></div>
+      <div class="practice-feedback" hidden>
+        <p class="practice-verdict"></p>
+        <p class="practice-explain"></p>
+      </div>
+      <div class="practice-nav">
+        <button type="button" class="practice-prev">Previous</button>
+        <button type="button" class="practice-next btn btn-primary">Next</button>
+      </div>
+    </article>
+    <script type="application/json" class="practice-data">{{ items_json|safe }}</script>
+  </div>
+</section>
+{% endblock %}

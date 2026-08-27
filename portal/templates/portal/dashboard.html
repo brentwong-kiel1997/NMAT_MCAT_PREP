@@ -1,0 +1,67 @@
+{% extends "portal/base.html" %}
+
+{% block title %}Dashboard · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">Dashboard</p>
+    <h1>Your prep at a glance</h1>
+    <p class="lead">{{ attempt_count }} finished mock{{ attempt_count|pluralize }} · {{ wrong_count }} wrong answer{{ wrong_count|pluralize }} to review</p>
+  </div>
+</div>
+
+<section class="section">
+  {% if continue_learning %}
+  <article class="practice-card">
+    <h2>Continue</h2>
+    <p><a class="btn btn-primary" href="{% url 'tutorial_detail' continue_learning.discipline continue_learning.chapter_id %}">{{ continue_learning.title }} →</a></p>
+  </article>
+  {% endif %}
+
+  {% if history %}
+  <article class="practice-card">
+    <h2>Mock exam history</h2>
+    <table class="mini-table">
+      <thead><tr><th>Date</th><th>Exam</th><th>Score</th><th>%</th><th></th></tr></thead>
+      <tbody>
+        {% for h in history reversed %}
+        <tr><td>{{ h.date|date:"M d" }}</td><td>{{ h.exam|upper }}</td>
+            <td>{{ h.correct }}/{{ h.items }}</td><td>{{ h.pct }}%</td>
+            <td><a href="{% url 'exam_result' h.id %}">report</a></td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </article>
+  {% endif %}
+
+  {% if weak_chapters %}
+  <article class="practice-card">
+    <h2>Weak chapters</h2>
+    <ul class="note-line">
+      {% for w in weak_chapters %}
+      <li><a href="{% url 'tutorial_detail' w.discipline w.chapter_id %}">{{ w.title }}</a>
+          — {{ w.correct }}/{{ w.total }} ({{ w.pct }}%)
+          · <a href="{% url 'review_redo' w.chapter_id %}">redo</a></li>
+      {% endfor %}
+    </ul>
+  </article>
+  {% endif %}
+
+  <article class="practice-card">
+    <h2>Subject progress</h2>
+    <table class="mini-table">
+      <thead><tr><th>Subject</th><th>Done</th><th>Chapters</th><th></th></tr></thead>
+      <tbody>
+        {% for s in subjects %}
+        <tr><td><a href="{% url 'subject_detail' s.slug %}">{{ s.label }}</a></td>
+            <td>{{ s.done }}/{{ s.total }}</td><td>{{ s.pct }}%</td>
+            <td><span class="progress-track"><span class="progress-fill" style="width: {{ s.pct }}%"></span></span></td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p class="note-line"><a href="{% url 'plan' %}">→ Build a study plan</a> · <a href="{% url 'review' %}">→ Review notebook</a></p>
+  </article>
+</section>
+{% endblock %}
