@@ -173,8 +173,8 @@ items:
     D: Narcolepsy is a disorder of uncontrollable sleep attacks during the day.
   chapter: psychology
 - id: nmat-p2s-011
-  q: Ana can tell that a 100-gram weight is heavier than a 105-gram weight, but she cannot distinguish
-    1,000 grams from 1,005 grams. Weber's law explains this because the difference threshold…
+  q: Ana can tell that a 105-gram weight is heavier than a 100-gram weight, but she cannot distinguish
+    1,000 grams from 1,005 grams. Which law explains this?
   choices:
     A: is a fixed number of grams regardless of the starting weight
     B: is a constant proportion of the original stimulus intensity

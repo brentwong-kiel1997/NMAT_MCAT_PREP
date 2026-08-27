@@ -16,7 +16,7 @@ items:
   answer: A
   explain: h = 1/2 g t^2 = 0.5 x 9.8 x (3.0)^2 = 44 m.
   distractors:
-    B: used the final speed v = gt as if it applied to the whole fall (v x t)
+    B: reported the final speed v = gt = 29.4 m/s as if it were the height fallen.
     C: dropped the factor of 1/2 (gt^2 instead of 1/2 gt^2)
     D: used t instead of t^2 (1/2 g t)
   chapter: 4a-motion-forces-work-energy-equilibrium

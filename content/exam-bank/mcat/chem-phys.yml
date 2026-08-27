@@ -525,7 +525,7 @@ passages:
     distractors:
       A: Quoted pKa instead of the pH of the un-neutralized weak acid.
       B: Treated 0.100 M acetic acid as if it dissociated completely.
-      C: Used pKa + log C, which has the sign flipped.
+      C: 'Dropped the factor of ½ and flipped the sign: pKa − log C = 4.76 + 1.'
     chapter: 5a-unique-nature-of-water-and-its-solutions
     passage_id: mcat-cp-p02
   - id: mcat-cp-007
@@ -744,13 +744,13 @@ passages:
       A: 60 µA
       B: zero
       C: 30 µA
-      D: 7.6 µA
+      D: 38 µA
     answer: B
     explain: Once Vc = 12.0 V the capacitor's potential cancels the battery's, so no current flows.
     distractors:
       A: That is the t = 0 current, not the steady-state value.
       C: Halved the initial current as if R and C split the current.
-      D: Divided Vc(τ) by R as though the current stayed at its t = τ value.
+      D: Divided Vc(τ) by R but slipped a factor of 5 (7.58 V / 200 kΩ is 38 µA).
     chapter: 4c-electrochemistry-and-electrical-circuits
     passage_id: mcat-cp-p04
 - id: mcat-cp-p05

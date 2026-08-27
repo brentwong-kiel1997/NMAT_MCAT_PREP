@@ -120,7 +120,7 @@ items:
   distractors:
     A: That reuses the +3 gap from the middle of the series instead of the next gap of +6.
     C: That repeats the +5 gap; the gaps grow by 1 each time, so the next is +6.
-    D: That uses +8, doubling the last gap instead of adding 1 to it.
+    D: That uses +8 (twice the second-to-last +4 gap) instead of the next gap of +6.
   chapter: number-and-letter-series
 - id: nmat-p1i-009
   q: What letter continues the series? B, D, G, K, P, ___
@@ -133,7 +133,7 @@ items:
   explain: 'Alphabet positions: B=2, D=4, G=7, K=11, P=16 — the gaps are +2, +3, +4, +5. The next gap
     is +6, giving position 22, which is V.'
   distractors:
-    A: That adds 3, the smallest gap in the series, instead of the next gap of 6.
+    A: That adds 3, an early gap in the series, instead of the next gap of 6.
     B: That adds 4, an earlier gap, rather than 6.
     C: That adds 5, repeating the last gap; the gaps increase by 1 each step.
   chapter: number-and-letter-series

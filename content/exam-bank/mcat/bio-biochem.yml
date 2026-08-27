@@ -401,7 +401,8 @@ items:
     glucose uptake and storage.
   distractors:
     A: Alpha cells secrete glucagon, which raises blood glucose.
-    B: Acinar cells secrete digestive enzymes and bicarbonate-rich fluid into the duodenum.
+    B: Acinar cells secrete the enzyme-rich fluid; the bicarbonate-rich watery component comes from ductal
+      cells.
     D: Delta cells secrete somatostatin, which inhibits both insulin and glucagon release.
   chapter: 3b-main-organ-systems
   passage_id: ''
@@ -909,9 +910,8 @@ passages:
       C: An inability to remove the RNA primers laid down during replication.
       D: Loss of the 5'-to-3' proofreading exonuclease of DNA polymerase.
     answer: A
-    explain: MSH2 recognizes base-base mismatches and small insertion-depletion loops after the replication
-      fork. Losing it produces replication errors that go uncorrected, seen as point-mutation accumulation
-      and microsatellite instability.
+    explain: MSH2 recognizes base-base mismatches and small insertion-deletion loops; its loss shows up
+      as microsatellite instability.
     distractors:
       B: Thymine dimers are handled by nucleotide excision repair, not mismatch repair.
       C: Primer removal is carried out by RNase H and flap endonuclease, not by the mismatch-repair system.

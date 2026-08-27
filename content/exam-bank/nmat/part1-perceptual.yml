@@ -50,7 +50,7 @@ items:
   distractors:
     A: qp rotates both letter shapes correctly but does not reverse their left-to-right order.
     C: db leaves both letter shapes unrotated.
-    D: qb merely swaps the two letters' positions without rotating either shape.
+    D: qb rotates the b into a q but leaves the d unrotated — only one of the two shapes is turned.
   chapter: mirror-image
 - id: nmat-p1p-004
   q: 'Turned upside down as in a water image (an up-down flip), the lowercase letter ''d'' becomes:'
@@ -308,11 +308,11 @@ items:
     B: Q and S
     D: R and S
   answer: C
-  explain: P and Q are character-for-character the same; R regroups the digits with an extra space and
-    S ends in 8827.
+  explain: P and Q are character-for-character the same; R shifts the second space one place right (after
+    5538) and S ends in 8827.
   distractors:
-    A: R inserts a space after 553, so it is not identical to P even though the digits run in the same
-      order.
+    A: R moves the second space from after 553 to after 5538 (0917 5538 821), so the grouping differs
+      even though the digit order does not.
     B: S ends in 8827, not 8821.
     D: R is regrouped and S ends in 8827, so the two differ from each other as well.
   chapter: identical-information

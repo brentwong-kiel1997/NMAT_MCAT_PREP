@@ -18,7 +18,7 @@ items:
   distractors:
     A: 26 is the proton count; a 3+ charge means three electrons were removed.
     B: 29 adds the charge to Z instead of subtracting it.
-    D: 20 subtracts the charge from the mass number (56) instead of from Z.
+    D: 20 subtracts the charge twice (26 - 3 - 3), removing six electrons for a 3+ ion.
   chapter: 4e-atoms-nuclear-decay-electronic-structure
 - id: nmat-p2c-002
   q: Which of these elements has the highest first ionization energy?
@@ -298,7 +298,6 @@ items:
     D: '4'
   answer: C
   explain: 2^x = 4 gives x = 2 for A and 2^y = 2 gives y = 1 for B, so the overall order is 2 + 1 = 3
-    (k = 2.0e-3/[(0.10)^2(0.10)] = 2.0).
   distractors:
     A: 1 reads only the B dependence from the data.
     B: 2 reads only the A dependence from the data.
