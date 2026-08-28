@@ -136,10 +136,9 @@ def tutorial_detail(request, slug, chapter_id):
             "back": back,
             "drill_count": enrich.drill_count(chapter_id, slug),
             "is_high_yield": enrich.chapter_high_yield(chapter_id),
-            "bridges": enrich.chapter_bridges(chapter_id),
+            "bridges": enrich.chapter_bridges(chapter_id, subject_slug=slug),
             "clinical": enrich.clinical_links(chapter_id),
-            "key_terms": enrich.glossary_for_subjects([slug] + [
-                s for s in (subject.get("summary") and [] or [])]),
+            "key_terms": enrich.glossary_for_subjects(enrich.glossary_tags(slug)),
         },
     )
 
