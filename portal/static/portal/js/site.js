@@ -169,7 +169,10 @@
     const key = root.dataset.practiceKey || "gabay_practice";
     let state = { i: 0, score: 0, answered: {} };
     try {
-      state = Object.assign(state, JSON.parse(localStorage.getItem(key) || "{}"));
+      const saved = JSON.parse(localStorage.getItem(key) || "{}");
+      state = Object.assign(state, saved);
+      // guard against a stored cursor from a different (longer) item set
+      if (items.length && state.i >= items.length) { state.i = 0; state.score = 0; state.answered = {}; }
     } catch (_) {}
 
     const posEl = root.querySelector(".practice-pos");
@@ -189,13 +192,23 @@
     }
 
     function showFeedback(item, pick) {
-      const ok = pick === item.answer;
+      const serverJudge = root.dataset.serverJudge === "1";
+      let ok = pick === item.answer;
+      let answerText = item.answer;
+      let explainText = item.explain || "";
+      if (serverJudge) {
+        const fb = (state.serverFeedback || {})[item.id];
+        if (!fb) { feedback.hidden = true; return; }  // grading in flight
+        ok = fb.correct;
+        answerText = fb.answer;
+        explainText = fb.explain || "";
+      }
       feedback.hidden = false;
       verdict.textContent = ok
-        ? `Correct · ${item.answer}`
-        : `Incorrect · answer ${item.answer}`;
+        ? `Correct · ${answerText}`
+        : `Incorrect · answer ${answerText}`;
       verdict.className = "practice-verdict " + (ok ? "is-ok" : "is-bad");
-      if (explainEl) explainEl.textContent = item.explain || "";
+      if (explainEl) explainEl.textContent = explainText;
     }
 
     function paint() {
@@ -221,8 +234,9 @@
         } else {
           btn.addEventListener("click", () => {
             if (state.answered[item.id]) return;
+            const serverJudge = root.dataset.serverJudge === "1";
             state.answered[item.id] = letter;
-            if (letter === item.answer) state.score += 1;
+            if (!serverJudge && letter === item.answer) state.score += 1;
             save();
             paint();
             const subject = root.dataset.practiceSubject || "";
@@ -239,7 +253,33 @@
                   question_id: item.id,
                   chosen: letter,
                 }),
-              }).catch(() => {});
+              })
+                .then((res) => (res.ok ? res.json() : null))
+                .then((data) => {
+                  if (!serverJudge) { return; }
+                  if (!data) {
+                    delete state.answered[item.id];
+                    save();
+                    paint();
+                    return;
+                  }
+                  state.serverFeedback = state.serverFeedback || {};
+                  state.serverFeedback[item.id] = {
+                    correct: !!data.correct,
+                    answer: data.answer || "",
+                    explain: data.explain || "",
+                  };
+                  if (data.correct) state.score += 1;
+                  save();
+                  paint();
+                })
+                .catch(() => {
+                  if (serverJudge) {
+                    delete state.answered[item.id];
+                    save();
+                    paint();
+                  }
+                });
             }
           });
         }

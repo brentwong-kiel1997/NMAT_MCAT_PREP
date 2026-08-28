@@ -4,13 +4,13 @@ from __future__ import annotations
 
 import datetime as dt
 import json
-
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.shortcuts import redirect, render
 from django.views.decorators.http import require_GET, require_POST
 
 from . import insights, planner
+from .views import _json_for_script
 from .content import all_bank_items, chapters_store, store
 from .models import StudyPlan
 
@@ -112,16 +112,15 @@ def review_redo(request, chapter_id: str):
         ch_title = (chs.get(item_chapter) or {}).get("title", item_chapter)
         items.append({"id": qid, "q": q.get("q", ""),
                       "choices": q.get("choices") or q.get("options") or {},
-                      "answer": q.get("answer", ""), "explain": q.get("explain", ""),
                       "chapter": ch_title})
     if not items:
         return redirect("review")
-    items_json = json.dumps(items, ensure_ascii=False).replace("<", "\\u003c")
     return render(request, "portal/review_redo.html", {
         "chapter": ch, "chapter_id": chapter_id,
         "discipline": ch.get("discipline", ""),
-        "items": items, "items_json": items_json,
+        "items": items, "items_json": _json_for_script(items),
         "count": len(items),
+        "practice_key": f"gabay_redo_{chapter_id}",
     })
 
 

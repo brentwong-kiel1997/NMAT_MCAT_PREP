@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.http import Http404, JsonResponse
 from django.shortcuts import redirect, render
 from django.views.decorators.http import require_GET, require_POST
@@ -33,7 +34,8 @@ def _learner_name(request) -> str:
 
 
 def _json_for_script(data) -> str:
-    return json.dumps(data, ensure_ascii=False).replace("<", "\\u003c")
+    return (json.dumps(data, ensure_ascii=False)
+            .replace("<", "\\u003c").replace("<!--", "\\u003c!--"))
 
 
 def _chapter_titles(entity: dict) -> list[str]:
@@ -499,12 +501,14 @@ def practice_attempt_api(request):
     items = {q["id"]: q for q in practice_for(subject_slug)}
     item = items.get(question_id)
     if not item:
-        # exam-bank fallback: lets the review notebook's redo flow record
-        # attempts on bank items and feed the same accuracy aggregations
+        # exam-bank fallback: lets the chapter drill and the review notebook's
+        # redo flow record attempts on bank items and feed the same accuracy
+        # aggregations. Grading stays server-side: the page never holds the key.
         from .content import all_bank_items
         bank_item = all_bank_items().get(question_id)
         if bank_item and bank_item.get("chapter"):
-            item = {"id": bank_item["id"], "answer": bank_item["answer"]}
+            item = {"id": bank_item["id"], "answer": bank_item["answer"],
+                    "explain": bank_item.get("explain", "")}
     if not item:
         return JsonResponse({"ok": False, "error": "Unknown question"}, status=404)
     correct = chosen == item["answer"]
@@ -515,6 +519,7 @@ def practice_attempt_api(request):
             "ok": True,
             "correct": correct,
             "answer": item["answer"],
+            "explain": item.get("explain", ""),
             "username": username,
         }
     )
@@ -699,12 +704,14 @@ def tutorial_pdf(request, slug, chapter_id):
     return response
 
 
+@login_required
 @require_GET
 def tutorial_drill(request, slug, chapter_id):
-    """End-of-chapter drill: bank items for this chapter (TPR-style),
-    falling back to the discipline practice set when the bank has none."""
-    import json as _json
-
+    """End-of-chapter drill: bank items for this chapter (instant-feedback
+    practice format), falling back to the discipline practice set when the
+    bank has none. Bank items ship WITHOUT answer keys — grading happens
+    server-side through practice_attempt_api, matching the exam engine's
+    no-keys-before-scoring invariant."""
     subject = exams.get_shared(slug) or exams.get_nmat_unique(slug) or exams.get_mcat_section(slug)
     if not subject:
         raise Http404("Subject not found")
@@ -719,13 +726,12 @@ def tutorial_drill(request, slug, chapter_id):
     from . import enrich
 
     raw = enrich.bank_items_for_chapter(chapter_id)
+    chapter_specific = bool(raw)
     items = [{"id": i["id"], "q": i["q"], "choices": i["choices"],
-              "answer": i["answer"], "explain": i["explain"],
               "chapter": chapter.get("title", chapter_id)} for i in raw]
     if not items:
         items = [
             {"id": q["id"], "q": q["q"], "choices": q.get("choices") or {},
-             "answer": q.get("answer", ""), "explain": q.get("explain", ""),
              "chapter": q.get("chapter", chapter_id)}
             for q in practice_for(slug)
         ]
@@ -742,5 +748,7 @@ def tutorial_drill(request, slug, chapter_id):
             "items": items,
             "items_json": items_json,
             "count": len(items),
+            "practice_key": f"gabay_drill_{chapter_id}",
+            "chapter_specific": chapter_specific,
         },
     )

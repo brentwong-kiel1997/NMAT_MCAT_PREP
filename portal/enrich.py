@@ -1,4 +1,4 @@
-"""Chapter-page enrichment: the TPR-style pedagogy layer.
+"""Chapter-page enrichment: the pedagogy layer.
 
 Everything here is original to Gabay — the *formats* (key-terms panel,
 bridge boxes, clinical links, high-yield flags, end-of-chapter drills,
@@ -13,7 +13,7 @@ from .content import (
     store, tutorial_for,
 )
 
-# clinical mapping: disease -> chapter ids whose science explains it
+# clinical mapping: chapter -> disease slugs whose science this chapter explains
 # chapter -> diseases whose science this chapter explains (the Real-World
 # layer). Skill subjects (reasoning/reading) intentionally have none.
 CLINICAL: dict[str, list[str]] = {
@@ -187,11 +187,10 @@ def chapter_bridges(chapter_id: str, subject_slug: str | None = None) -> list[di
 def clinical_links(chapter_id: str) -> list[dict]:
     out = []
     for slug in CLINICAL.get(chapter_id, []):
-        if True:
-            d = get_disease(slug)
-            if d:
-                out.append({"slug": slug, "name": d.get("name", slug),
-                            "short": d.get("short", "")})
+        d = get_disease(slug)
+        if d:
+            out.append({"slug": slug, "name": d.get("name", slug),
+                        "short": d.get("short", "")})
     return out
 
 

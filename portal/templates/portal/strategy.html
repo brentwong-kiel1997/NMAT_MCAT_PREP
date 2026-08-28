@@ -8,7 +8,7 @@
     {% include "portal/includes/nav.html" with solid=1 %}
     <p class="section-kicker">Test-taking strategy</p>
     <h1>The strategy library</h1>
-    <p class="lead">Eight original technique guides — the tactics that decide points when content alone is not enough. Each takes five minutes to read and one practice block to make automatic.</p>
+    <p class="lead">{{ guides|length }} original technique guides — the tactics that decide points when content alone is not enough. Each takes five minutes to read and one practice block to make automatic.</p>
   </div>
 </div>
 
@@ -17,7 +17,7 @@
   <article class="practice-card" id="{{ guide.slug }}">
     <h2>{{ guide.name }} <span class="muted-inline" style="font-size:.85rem;">{{ guide.exam }}</span></h2>
     <p class="lead" style="font-size:.98rem;">{{ guide.summary }}</p>
-    <ol class="tut-bridge-list" style="margin-top:.6rem;">
+    <ol class="strategy-steps" style="margin-top:.6rem;">
       {% for step in guide.steps %}<li>{{ step }}</li>{% endfor %}
     </ol>
     <p class="note-line" style="margin-top:.5rem;"><strong>Watch out:</strong> {{ guide.pitfall }}</p>

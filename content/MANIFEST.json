@@ -1,5 +1,5 @@
 {
-  "source_rev": "09f0639",
+  "source_rev": "6e273df",
   "counts": {
     "chapters": 70,
     "note_bullets": 449,
@@ -113,7 +113,7 @@
     "materials/glossary.yml": "5b5c71f6964523401468536f924f2b58375fff397769f81078aaade3d92b4c0e",
     "materials/paths.yml": "2bb7a6fac3c8b625f246ff97b89242097fb3f256e98590bdb0ef472d92078a40",
     "materials/tips.yml": "99f0cf22ba8786eba985614d59e52b3897625fdb19c0f79de3721ec4db324dc0",
-    "strategy.yml": "267a477fefb2c7face025e808828ec452445ee157d58b53b03822e1a6baf93ed",
+    "strategy.yml": "bdb6c03a046d5892fefa7b964c9aeb4f5bf8e7a73664734dc7673ae56fefabf9",
     "subjects/behavioral-social.yml": "41ddfd82235a9d8a511edef642a283d5e9127e2a0d121292957d509d2561498a",
     "subjects/bio-biochem.yml": "bda7f4dd268e4fffbd8826b5083b81c16b1364f4d0c923c74ff053c9a53c2dd4",
     "subjects/biochemistry.yml": "65f93a72ba9c6d9041b4adb9a311c61ca066f0bb110df3b97a4dcffb00c79e41",

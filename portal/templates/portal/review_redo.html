@@ -9,13 +9,13 @@
     {% include "portal/includes/nav.html" with solid=1 %}
     <p class="section-kicker">Redo</p>
     <h1>{{ chapter.title }}</h1>
-    <p class="lead">{{ count }} previously-missed item{{ count|pluralize }}. Instant feedback; attempts feed your weak-chapter stats.</p>
+    <p class="lead">{% if chapter_specific %}{{ count }}-item end-of-chapter drill. Instant feedback; attempts feed your weak-chapter stats.{% else %}Whole-subject practice set ({{ count }} items) — this chapter has no dedicated bank items yet.{% endif %}</p>
     <p><a href="{% url 'review' %}">← Back to notebook</a></p>
   </div>
 </div>
 
 <section class="section">
-  <div class="practice-shell" data-practice data-practice-key="gabay_redo_{{ chapter_id }}" data-practice-subject="{{ discipline }}">
+  <div class="practice-shell" data-practice data-server-judge="1" data-practice-key="{{ practice_key }}" data-practice-subject="{{ discipline }}">
     <div class="practice-status">
       <span>Progress</span>
       <strong class="practice-pos">1</strong> / <span class="practice-total">{{ count }}</span>
@@ -39,7 +39,9 @@
     <script type="application/json" class="practice-data">{{ items_json|safe }}</script>
     <script>
       document.getElementById("redo-reset").addEventListener("click", function () {
-        try { localStorage.removeItem("gabay_redo_{{ chapter_id }}"); } catch (e) {}
+        const shell = document.querySelector("[data-practice]");
+        const key = shell ? shell.dataset.practiceKey : "";
+        try { if (key) localStorage.removeItem(key); } catch (e) {}
         window.location.reload();
       });
     </script>

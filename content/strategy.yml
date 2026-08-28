@@ -61,7 +61,7 @@ guides:
   - 'Two-pass method: pass 1 answer everything under the fair-share, flagging stalls; pass 2 returns only
     to flags.'
   - Never burn more than 2× fair-share on one item — two wrong answers cost less than three skipped later.
-  - 'Guess policy: same letter for every true guess (letter-persistence beats random darts on tie-breakers).'
+  - 'Guess policy: same letter for every true guess (a fixed letter matches random guessing in expectation while costing fewer decisions).'
   pitfall: Clock-watching every item. Checkpoints exist so you can forget the clock between them.
 - slug: flag-discipline
   exam: Both
@@ -81,8 +81,7 @@ guides:
   summary: 'Both exams score right-only: an unanswered question is a donated point.'
   steps:
   - Never leave a blank — there is no wrong-answer penalty on the MCAT or NMAT.
-  - Pick one letter as your default guess BEFORE exam day and use it for every pure guess; mixed darts
-    underperform letter-persistence slightly and cost decisions.
+  - Pick one letter as your default guess BEFORE exam day and use it for every pure guess; a fixed letter is equal in expectation and saves decision time.
   - 'Educated guesses first: POE to two options, then your default letter only if still stuck.'
   - Reserve 60 seconds at block end for a blank-scan — the navigator grid shows unanswered cells at a
     glance.
