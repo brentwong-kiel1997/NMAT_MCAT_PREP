@@ -42,6 +42,11 @@ urlpatterns = [
         views.tutorial_detail,
         name="tutorial_detail",
     ),
+    path(
+        "tutorials/<slug:slug>/<str:chapter_id>/pdf/",
+        views.tutorial_pdf,
+        name="tutorial_pdf",
+    ),
     path("nmat/", views.nmat_hub, name="nmat_hub"),
     path("nmat/<slug:slug>/", views.nmat_subject, name="nmat_subject"),
     path("mcat/", views.mcat_hub, name="mcat_hub"),

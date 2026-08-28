@@ -1,0 +1,213 @@
+{% load rich %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ tut.title }} · {{ subject.name }}</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 2cm 1.8cm;
+      @bottom-center {
+        content: "{{ tut.title }} · page " counter(page) " of " counter(pages);
+        font-size: 8pt; color: #888;
+        font-family: "DejaVu Sans", sans-serif;
+      }
+    }
+    @page :first { @bottom-center { content: ""; } }
+    body { font-family: "DejaVu Sans", sans-serif; font-size: 10pt; line-height: 1.55; color: #1a1a1a; }
+
+    .cover { text-align: center; page-break-after: always; padding-top: 5cm; }
+    .cover h1 { font-size: 22pt; margin: 0 0 .3cm; }
+    .cover .subject { font-size: 13pt; color: #444; margin-bottom: 2.5cm; }
+    .cover .license {
+      font-size: 8.5pt; color: #555; border: 1px solid #ccc; border-radius: 6px;
+      padding: .5cm .7cm; margin: 0 auto; max-width: 14cm; text-align: left; line-height: 1.5;
+    }
+    .cover .license h3 { font-size: 9.5pt; margin: 0 0 .15cm; }
+    .cover .generated { margin-top: 1cm; font-size: 8.5pt; color: #888; }
+
+    h2 { font-size: 14pt; border-bottom: 1.5pt solid #333; padding-bottom: 2pt;
+         margin: 1.1em 0 .5em; page-break-after: avoid; }
+    h3 { font-size: 11.5pt; margin: .9em 0 .3em; page-break-after: avoid; }
+    p { margin: .45em 0; }
+    mark { background: #fff3b8; padding: 0 2pt; }
+    table { border-collapse: collapse; width: 100%; margin: .6em 0; page-break-inside: avoid; }
+    th, td { border: .5pt solid #999; padding: 4pt 6pt; font-size: 9pt; text-align: left; }
+    th { background: #f0f0f0; }
+
+    .tut-figure { margin: .8em 0; page-break-inside: avoid; text-align: center; }
+    .tut-figure img { max-width: 100%; }
+    figcaption { font-size: 8pt; color: #555; margin-top: 3pt; text-align: left; }
+    .fig-credit { display: block; font-style: italic; color: #777; }
+
+    .tut-label { font-size: 8.5pt; font-weight: 700; text-transform: uppercase;
+                 letter-spacing: .5pt; color: #555; margin: .8em 0 .2em; page-break-after: avoid; }
+    .tut-section-no { font-size: 8.5pt; color: #888; text-transform: uppercase; margin: 0; }
+
+    .question { border: .5pt solid #ccc; border-radius: 6px; padding: 7pt 9pt;
+                margin: .5em 0; page-break-inside: avoid; }
+    .question .q { font-weight: 600; }
+    .question ol { margin: .3em 0 .2em; padding-left: 1.4em; }
+    .question .answer { color: #1b5e20; font-weight: 600; }
+    .question .why { font-size: 9pt; color: #444; margin: .15em 0; }
+    .distractors { font-size: 9pt; color: #555; margin: .2em 0 0; padding-left: 1.2em; }
+
+    .keypoints li { margin: .25em 0; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: .2em 0; }
+    .avoid-break { page-break-inside: avoid; }
+  </style>
+</head>
+<body>
+
+  <div class="cover">
+    <h1>{{ tut.title }}</h1>
+    <div class="subject">{{ subject.name }} · Gabay study companion</div>
+    <div class="license">
+      <h3>License &amp; attribution</h3>
+      <p>All teaching prose in this chapter was written for this site and cites its
+         sources below. Figures are from OpenStax textbooks (CC BY-NC-SA 4.0) and keep
+         their per-figure credits throughout. This PDF is for <strong>personal,
+         non-commercial study</strong>: you may keep and print it, but redistributing
+         it requires honoring the same license terms for the OpenStax material
+         (share-alike with attribution).</p>
+      <p style="margin:.3em 0 0;">Sources consulted for facts: {% for src in tut.sources %}{{ src.detail.title|default:src.ref }}{% if src.detail.license %} ({{ src.detail.license }}){% endif %}{% if not forloop.last %}; {% endif %}{% endfor %}.</p>
+    </div>
+    <div class="generated">Generated {{ today }} · gabay — NMAT &amp; MCAT study companion</div>
+  </div>
+
+  {% if tut.overview %}
+  <p class="tut-label">Why this chapter</p>
+  <p>{{ tut.overview|rich }}</p>
+  {% endif %}
+
+  {% for section in tut.sections %}
+  <h2>{{ forloop.counter }}. {{ section.heading }}</h2>
+  {% for para in section.body %}<p>{{ para|rich }}</p>{% endfor %}
+
+  {% if section.table %}
+  <table>
+    {% if section.table.caption %}<caption>{{ section.table.caption }}</caption>{% endif %}
+    <thead><tr>{% for h in section.table.headers %}<th>{{ h }}</th>{% endfor %}</tr></thead>
+    <tbody>
+      {% for row in section.table.rows %}
+      <tr>{% for cell in row %}<td>{{ cell|rich }}</td>{% endfor %}</tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+
+  {% for fig in section.figures %}
+  {% if fig.disk_src %}
+  <figure class="tut-figure">
+    <img src="{{ fig.disk_src }}" alt="">
+    <figcaption>{{ fig.caption|rich }}{% if fig.credit %} <span class="fig-credit">{{ fig.credit }}</span>{% endif %}</figcaption>
+  </figure>
+  {% endif %}
+  {% endfor %}
+
+  {% for check in section.check %}
+  <div class="question">
+    <p class="q">Check: {{ check.q }}</p>
+    <ol>
+      {% for letter, text in check.options.items %}<li><strong>{{ letter }}.</strong> {{ text }}</li>{% endfor %}
+    </ol>
+    <p class="answer">Answer: {{ check.answer }} — {{ check.explain }}</p>
+  </div>
+  {% endfor %}
+  {% endfor %}
+
+  {% for example in tut.examples %}
+  <p class="tut-label">Worked example</p>
+  <div class="avoid-break">
+    <p><strong>{{ example.prompt|rich }}</strong></p>
+    <ol>{% for step in example.solution %}<li>{{ step|rich }}</li>{% endfor %}</ol>
+    <p><strong>Answer:</strong> {{ example.answer|rich }}</p>
+    {% if example.distractors %}
+    <p class="tut-label" style="margin-top:.4em;">Why the others are wrong</p>
+    <ul class="distractors">
+      {% for opt, why in example.distractors.items %}<li><strong>{{ opt }}.</strong> {{ why|rich }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endfor %}
+
+  {% if tut.mnemonics %}
+  <h2>Mnemonics</h2>
+  <ul>{% for m in tut.mnemonics %}<li><strong>{{ m.phrase }}</strong>{% if m.means %} — {{ m.means|rich }}{% endif %}</li>{% endfor %}</ul>
+  {% endif %}
+
+  {% for mp in tut.maps %}
+  <p class="tut-label">{{ mp.title }}</p>
+  <ol class="avoid-break">{% for step in mp.steps %}<li>{{ step|rich }}</li>{% endfor %}</ol>
+  {% if mp.note %}<p style="font-size:9pt;color:#555;">{{ mp.note|rich }}</p>{% endif %}
+  {% endfor %}
+
+  {% if tut.key_points %}
+  <h2>Key points</h2>
+  <ul class="keypoints">{% for point in tut.key_points %}<li>{{ point|rich }}</li>{% endfor %}</ul>
+  {% endif %}
+
+  {% if tut.pitfalls %}
+  <h2>Common pitfalls</h2>
+  <ul>{% for pitfall in tut.pitfalls %}<li>{{ pitfall|rich }}</li>{% endfor %}</ul>
+  {% endif %}
+
+  {% if tut.exam_map %}
+  <h2>How each exam tests this</h2>
+  {% for exam, text in tut.exam_map.items %}
+  <p class="tut-label">{{ exam }}</p><p>{{ text|rich }}</p>
+  {% endfor %}
+  {% endif %}
+
+  {% if tut.passage %}
+  <h2>Passage</h2>
+  {% for para in tut.passage.text_paragraphs %}<p>{{ para|rich }}</p>{% endfor %}
+  {% for question in tut.passage.questions %}
+  <div class="question">
+    <p class="q">{{ question.q }}</p>
+    <ol>{% for letter, text in question.options.items %}<li><strong>{{ letter }}.</strong> {{ text }}</li>{% endfor %}</ol>
+    <p class="answer">Answer: {{ question.answer }} — {{ question.explain }}</p>
+    {% if question.distractors %}
+    <ul class="distractors">
+      {% for opt, why in question.distractors.items %}<li><strong>{{ opt }}.</strong> {{ why }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  {% if tut.review_questions %}
+  <h2>Review questions</h2>
+  {% for question in tut.review_questions %}
+  <div class="question">
+    <p class="q">{{ forloop.counter }}. {{ question.q }}</p>
+    <ol>{% for letter, text in question.options.items %}<li><strong>{{ letter }}.</strong> {{ text }}</li>{% endfor %}</ol>
+    <p class="answer">Answer: {{ question.answer }} — {{ question.explain }}</p>
+    {% if question.distractors %}
+    <ul class="distractors">
+      {% for opt, why in question.distractors.items %}<li><strong>{{ opt }}.</strong> {{ why }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  <h2>Sources &amp; further reading</h2>
+  {% if tut.further_reading %}
+  <ul>{% for r in tut.further_reading %}<li>{{ r.title }}{% if r.note %} — {{ r.note }}{% endif %}</li>{% endfor %}</ul>
+  {% endif %}
+  <p class="tut-label">Sources</p>
+  <p style="font-size:9pt;color:#555;">Facts and structure checked against the references below; all prose is written for this site.</p>
+  <ul style="font-size:9pt;">
+    {% for src in tut.sources %}
+    <li><strong>{{ src.detail.title|default:src.ref }}</strong>{% if src.detail.publisher %} · {{ src.detail.publisher }}{% endif %}
+        {% if src.detail.license %} · {{ src.detail.license }}{% endif %}
+        {% if src.detail.accessed %} · accessed {{ src.detail.accessed }}{% endif %}
+        — used: {{ src.relation }}{% if src.used %} ({{ src.used|join:"; " }}){% endif %}</li>
+    {% endfor %}
+  </ul>
+
+</body>
+</html>

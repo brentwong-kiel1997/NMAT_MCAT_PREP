@@ -4,7 +4,7 @@ from django.views.decorators.http import require_GET, require_POST
 import json
 
 from .diseases import all_diseases, get_disease
-from . import exams
+from . import content, exams
 from .learners import progress_map, record_practice, set_chapter_done
 from .materials import (
     exam_checklists,
@@ -618,4 +618,64 @@ def content_image(request, path):
     content_type = mimetypes.guess_type(str(target))[0] or "application/octet-stream"
     response = FileResponse(open(target, "rb"), content_type=content_type)
     response["Cache-Control"] = "public, max-age=86400"
+    return response
+
+
+@require_GET
+def tutorial_pdf(request, slug, chapter_id):
+    """One tutorial chapter as a PDF for personal offline study.
+
+    Prose is original to this project; OpenStax figures are CC BY-NC-SA 4.0
+    and keep their per-figure credits; the cover page states the terms.
+    """
+    import re as _re
+
+    from django.http import HttpResponse
+
+    subject = exams.get_shared(slug) or exams.get_nmat_unique(slug) or exams.get_mcat_section(slug)
+    if not subject:
+        raise Http404("Subject not found")
+    flat = [
+        item
+        for group in subject.get("chapters") or []
+        for item in group.get("items") or []
+    ]
+    chapter = next((item for item in flat if item.get("chapter_id") == chapter_id), None)
+    if chapter is None:
+        raise Http404("Chapter not found")
+    tutorial = tutorial_for(slug, chapter.get("title", ""))
+    if tutorial is None:
+        raise Http404("Tutorial not written yet")
+
+    if tutorial.get("passage"):
+        tutorial["passage"]["text_paragraphs"] = [
+            p.strip()
+            for p in (tutorial["passage"].get("text") or "").split("\n\n")
+            if p.strip()
+        ]
+    for entry in tutorial.get("sources") or []:
+        entry["detail"] = source_info(entry.get("ref", ""))
+
+    # WeasyPrint reads images straight from disk (no JS, no self-TLS fetch)
+    image_root = content.CONTENT_DIR / "images"
+    for section in tutorial.get("sections") or []:
+        for fig in section.get("figures") or []:
+            disk = image_root / fig.get("src", "")
+            fig["disk_src"] = disk.as_uri() if disk.exists() else ""
+
+    from django.template.loader import render_to_string
+    from django.utils import timezone as _tz
+
+    html = render_to_string(
+        "portal/tutorial_pdf.html",
+        {"subject": subject, "chapter_id": chapter_id, "tut": tutorial,
+         "today": _tz.localdate()},
+        request=request,
+    )
+    from weasyprint import HTML
+
+    pdf = HTML(string=html, base_url=request.build_absolute_uri("/")).write_pdf()
+    safe_title = _re.sub(r"[^a-z0-9]+", "-", tutorial["title"].lower()).strip("-")
+    response = HttpResponse(pdf, content_type="application/pdf")
+    response["Content-Disposition"] = f'attachment; filename="{safe_title}.pdf"'
     return response
