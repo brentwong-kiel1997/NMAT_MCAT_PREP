@@ -120,6 +120,8 @@ def tutorial_detail(request, slug, chapter_id):
         elif exams.get_mcat_section(slug):
             back = ("mcat_section", slug)
 
+    from . import enrich
+
     return render(
         request,
         "portal/tutorial_detail.html",
@@ -132,6 +134,12 @@ def tutorial_detail(request, slug, chapter_id):
             "prev_ch": prev_ch,
             "next_ch": next_ch,
             "back": back,
+            "drill_count": enrich.drill_count(chapter_id, slug),
+            "is_high_yield": enrich.chapter_high_yield(chapter_id),
+            "bridges": enrich.chapter_bridges(chapter_id),
+            "clinical": enrich.clinical_links(chapter_id),
+            "key_terms": enrich.glossary_for_subjects([slug] + [
+                s for s in (subject.get("summary") and [] or [])]),
         },
     )
 
@@ -622,6 +630,17 @@ def content_image(request, path):
 
 
 @require_GET
+def strategy_library(request):
+    from .content import strategy_guides
+    guides = strategy_guides()
+    by_exam = {"MCAT": [], "NMAT": [], "Both": []}
+    for g in guides:
+        by_exam.setdefault(g.get("exam", "Both"), []).append(g)
+    return render(request, "portal/strategy.html",
+                  {"guides": guides, "by_exam": by_exam})
+
+
+@require_GET
 def tutorial_pdf(request, slug, chapter_id):
     """One tutorial chapter as a PDF for personal offline study.
 
@@ -679,3 +698,50 @@ def tutorial_pdf(request, slug, chapter_id):
     response = HttpResponse(pdf, content_type="application/pdf")
     response["Content-Disposition"] = f'attachment; filename="{safe_title}.pdf"'
     return response
+
+
+@require_GET
+def tutorial_drill(request, slug, chapter_id):
+    """End-of-chapter drill: bank items for this chapter (TPR-style),
+    falling back to the discipline practice set when the bank has none."""
+    import json as _json
+
+    subject = exams.get_shared(slug) or exams.get_nmat_unique(slug) or exams.get_mcat_section(slug)
+    if not subject:
+        raise Http404("Subject not found")
+    flat = [
+        item
+        for group in subject.get("chapters") or []
+        for item in group.get("items") or []
+    ]
+    chapter = next((item for item in flat if item.get("chapter_id") == chapter_id), None)
+    if chapter is None:
+        raise Http404("Chapter not found")
+    from . import enrich
+
+    raw = enrich.bank_items_for_chapter(chapter_id)
+    items = [{"id": i["id"], "q": i["q"], "choices": i["choices"],
+              "answer": i["answer"], "explain": i["explain"],
+              "chapter": chapter.get("title", chapter_id)} for i in raw]
+    if not items:
+        items = [
+            {"id": q["id"], "q": q["q"], "choices": q.get("choices") or {},
+             "answer": q.get("answer", ""), "explain": q.get("explain", ""),
+             "chapter": q.get("chapter", chapter_id)}
+            for q in practice_for(slug)
+        ]
+    if not items:
+        raise Http404("No drill items for this chapter")
+    items_json = _json_for_script(items)
+    return render(
+        request,
+        "portal/review_redo.html",
+        {
+            "chapter": chapter,
+            "chapter_id": chapter_id,
+            "discipline": slug,
+            "items": items,
+            "items_json": items_json,
+            "count": len(items),
+        },
+    )

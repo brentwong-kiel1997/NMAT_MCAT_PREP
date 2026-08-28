@@ -1,0 +1,103 @@
+slug: strategy
+name: Strategy library
+guides:
+- slug: passage-triage
+  exam: MCAT
+  name: Passage triage
+  summary: 'Decide in 20 seconds how each science passage gets your time: attack, skim, or defer.'
+  steps:
+  - Read the question stems FIRST (10 s) — they tell you what the passage must supply.
+  - 'Grade the passage: A if stems look computational and you are fresh, B if conceptual, C if it leans
+    on a table you can hunt on demand.'
+  - 'Attack order: your A-grade passages early in the block while attention is full.'
+  - For C-grade passages, go straight stem-by-stem into the text — read only the sentence each stem needs.
+  - 'Never let one passage own more than its share: block minutes ÷ block passages is your fair-share
+    number.'
+  pitfall: Reading top-to-bottom by default. The passage is a lookup tool, not a chapter.
+- slug: process-of-elimination
+  exam: Both
+  name: Process of elimination (POE)
+  summary: You rarely KNOW the answer — you eliminate three liars. Score with POE as the default, not
+    the fallback.
+  steps:
+  - Cover the options, predict an answer in your own words, then match it to the closest option.
+  - 'If no option matches, switch to elimination: kill any option that is outside scope, wrong scope-size
+    (all vs some), reversed polarity, or true-but-irrelevant.'
+  - Two survivors? Pick the one whose wording stays closest to the passage/stem — extreme wording (always,
+    never, only) dies unless the stem is absolute.
+  - 'Budget: 15 s per eliminated option maximum; if a kill takes a proof, you are over-reading.'
+  pitfall: 'Eliminating on vibes. Every kill must name a reason: scope, polarity, or support.'
+- slug: unit-analysis
+  exam: Both
+  name: Unit analysis as an answer weapon
+  summary: Most numeric options can be killed by dimensions alone — do this before any arithmetic.
+  steps:
+  - Write what the answer must be IN UNITS (m/s? J? mol?) before computing.
+  - 'Cancel: kill options whose units cannot produce the target — no arithmetic needed.'
+  - 'Sanity the magnitude: is it human-scale (speeds of walking, not 10^6 m/s) for biology-flavored items?'
+  - Only then compute, with the surviving options as a checksum.
+  pitfall: Computing first and matching later — that is how unit traps (km/h vs m/s, grams vs moles) catch
+    you.
+- slug: cars-passage-map
+  exam: MCAT CARS
+  name: CARS passage mapping
+  summary: A 30-second skeleton of each CARS passage makes 5 questions answerable from structure.
+  steps:
+  - 'Paragraph one line: P1 = claim, P2 = concession, P3 = counter-example, P4 = author''s verdict.'
+  - Circle pivot words (but, however, yet) — the author's real position is almost always AFTER the pivot.
+  - 'Name the voice: is a view being PRESENTED (''critics argue'') or ENDORSED? Presented views are not
+    the author''s.'
+  - For main-idea items, your paragraph one-liners compress into the thesis in five words.
+  - For new-scenario items, reuse the author's principle — never your opinion of it.
+  pitfall: Annotating details you were never asked to remember. Structure, not facts.
+- slug: timing-protocol
+  exam: Both
+  name: A timing protocol you can actually run
+  summary: Per-item budgets with two checkpoints beat one long clock.
+  steps:
+  - 'Set a fair-share: block seconds ÷ items (MCAT CP ≈ 96 s/item; NMAT ≈ 70 s/item).'
+  - 'Checkpoint 1 at one-third of the block: you should be one-third through items. Behind? Drop your
+    hardest passage-type to C-triage.'
+  - 'Two-pass method: pass 1 answer everything under the fair-share, flagging stalls; pass 2 returns only
+    to flags.'
+  - Never burn more than 2× fair-share on one item — two wrong answers cost less than three skipped later.
+  - 'Guess policy: same letter for every true guess (letter-persistence beats random darts on tie-breakers).'
+  pitfall: Clock-watching every item. Checkpoints exist so you can forget the clock between them.
+- slug: flag-discipline
+  exam: Both
+  name: Flag discipline
+  summary: Flags are a promise to return with a plan, not a bucket for doubt.
+  steps:
+  - 'Flag only when you can name WHAT is missing: a number to compute, a term to decode, a passage table
+    to re-read.'
+  - Write your next move mentally ('need Q = It') before flagging — if you cannot, it is not a flag, it
+    is a guess.
+  - 'On the return pass, do flagged items in length-order: shortest completion first.'
+  - Cap flags at ~10% of the block. More than that means your triage thresholds are set wrong.
+  pitfall: Flag-and-flee on every hard stem — you will meet them all again with less time and more panic.
+- slug: guessing-policy
+  exam: Both
+  name: Guessing policy — no blanks, ever
+  summary: 'Both exams score right-only: an unanswered question is a donated point.'
+  steps:
+  - Never leave a blank — there is no wrong-answer penalty on the MCAT or NMAT.
+  - Pick one letter as your default guess BEFORE exam day and use it for every pure guess; mixed darts
+    underperform letter-persistence slightly and cost decisions.
+  - 'Educated guesses first: POE to two options, then your default letter only if still stuck.'
+  - Reserve 60 seconds at block end for a blank-scan — the navigator grid shows unanswered cells at a
+    glance.
+  pitfall: Saving guessing decisions for in-exam improvisation; every improvised guess costs 20 extra
+    seconds.
+- slug: review-loop
+  exam: Both
+  name: The review loop that converts misses into points
+  summary: 'Reviewing a miss is a skill: diagnose the CAUSE, not just the fact you lacked.'
+  steps:
+  - 'For every miss, label the cause: content gap, misread stem, arithmetic slip, or trap option (you
+    eliminated the right one for a wrong reason).'
+  - Content gaps go to the chapter and get re-read; trap options get a note on WHY that option was built.
+  - Re-drill the same chapter in 48 h — spaced redo is what moves accuracy, not reading the explanation
+    once.
+  - 'Weekly: your dashboard''s weak-chapter list IS the syllabus. Study what is measurably weakest, not
+    what feels weakest.'
+  pitfall: Reading explanations passively. An explanation read without re-attempting the item is entertainment.

@@ -210,6 +210,7 @@ def _build() -> dict:
         "source_registry": sources,
         "nmat": _read("exams/nmat.yml"),
         "mcat": _read("exams/mcat.yml"),
+        "strategy": _read("strategy.yml") if (CONTENT_DIR / "strategy.yml").exists() else {},
         "exam_defs": {
             f.stem: _read(f"exams/{f.name}")
             for f in sorted((CONTENT_DIR / "exams").glob("*.yml"))
@@ -610,6 +611,12 @@ def units_of(subject_slug: str) -> list:
 
 
 # ---- mock-exam engine accessors -------------------------------------------
+
+def strategy_guides() -> list[dict]:
+    """Original test-strategy guides (content/strategy.yml)."""
+    doc = store().get("strategy") or {}
+    return deepcopy(doc.get("guides") or [])
+
 
 def chapters_store() -> dict:
     """id → chapter doc (from the unified library)."""

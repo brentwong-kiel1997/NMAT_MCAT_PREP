@@ -13,6 +13,9 @@
       <a href="{% url back.0 subject.slug %}">← All {{ subject.name }} chapters</a>
     </p>
     <p style="margin-top:.6rem;">
+      {% if is_high_yield %}<span class="hy-badge" title="One of the most heavily tested chapters — large question coverage">★ High-yield</span>{% endif %}
+      <a class="btn" href="{% url 'tutorial_drill' subject.slug chapter.chapter_id %}">
+        ▶ Chapter drill ({{ drill_count }})</a>
       <a class="btn" href="{% url 'tutorial_pdf' subject.slug chapter.chapter_id %}" rel="nofollow">
         ⬇ Download PDF</a>
       <span class="muted-inline" style="font-size:.85rem;">
@@ -205,6 +208,45 @@
         {% for question in tutorial.review_questions %}
         {% include "portal/includes/tutorial_question.html" with q=question %}
         {% endfor %}
+      </article>
+      {% endif %}
+
+      {% if key_terms %}
+      <article class="tut-keyterms" id="key-terms">
+        <h2>Key terms</h2>
+        <p class="muted-inline">Vocabulary the exams assume. Full definitions live in the <a href="{% url 'materials_glossary' %}">glossary</a>.</p>
+        <dl class="tut-terms">
+          {% for term in key_terms %}
+          <dt><strong>{{ term.term }}</strong></dt>
+          <dd>{{ term.def }}</dd>
+          {% endfor %}
+        </dl>
+      </article>
+      {% endif %}
+
+      {% if bridges %}
+      <article class="tut-bridges" id="bridges">
+        <h2>Bridges — where this connects</h2>
+        <p class="muted-inline">The exams love cross-topic links; these chapters complete the picture.</p>
+        <ul class="tut-bridge-list">
+          {% for b in bridges %}
+          <li><a href="{% url 'tutorial_detail' b.discipline b.chapter_id %}">{{ b.title }}</a>
+              <span class="muted-inline">({{ b.discipline }})</span></li>
+          {% endfor %}
+        </ul>
+      </article>
+      {% endif %}
+
+      {% if clinical %}
+      <article class="tut-clinical" id="clinical-links">
+        <h2>Clinical link — science in the clinic</h2>
+        <p class="muted-inline">See this chapter's science explaining real disease:</p>
+        <ul class="tut-bridge-list">
+          {% for d in clinical %}
+          <li><a href="{% url 'disease_detail' d.slug %}">{{ d.name }}</a>
+              {% if d.short %}<span class="muted-inline">— {{ d.short|truncatechars:140 }}</span>{% endif %}</li>
+          {% endfor %}
+        </ul>
       </article>
       {% endif %}
 

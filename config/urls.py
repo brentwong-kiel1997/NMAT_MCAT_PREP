@@ -22,6 +22,7 @@ urlpatterns = [
         name="manage_model_action",
     ),
     path("study/", views.study_hub, name="study_hub"),
+    path("strategy/", views.strategy_library, name="strategy_library"),
     path("materials/", views.materials_hub, name="materials_hub"),
     path("materials/glossary/", views.materials_glossary, name="materials_glossary"),
     path("materials/formulas/<slug:slug>/", views.materials_formulas, name="materials_formulas"),
@@ -41,6 +42,11 @@ urlpatterns = [
         "tutorials/<slug:slug>/<str:chapter_id>/",
         views.tutorial_detail,
         name="tutorial_detail",
+    ),
+    path(
+        "tutorials/<slug:slug>/<str:chapter_id>/drill/",
+        views.tutorial_drill,
+        name="tutorial_drill",
     ),
     path(
         "tutorials/<slug:slug>/<str:chapter_id>/pdf/",

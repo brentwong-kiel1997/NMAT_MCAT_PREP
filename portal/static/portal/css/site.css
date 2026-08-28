@@ -1283,3 +1283,12 @@ details.tut-question[open] summary, details.tut-check-q[open] summary { margin-b
 .tut-figure .fig-credit {
   display: block; font-size: 0.78rem; opacity: 0.75; margin-top: 0.15rem;
 }
+
+/* chapter enrichment (key terms / bridges / clinical / high-yield) */
+.hy-badge { display: inline-block; background: #fff3cd; border: 1px solid #d4a017;
+  color: #7a5c00; border-radius: 999px; padding: .15rem .7rem; font-size: .85rem; font-weight: 600; }
+.tut-terms { margin: .5rem 0; }
+.tut-terms dt { margin-top: .5rem; }
+.tut-terms dd { margin: 0 0 .3rem 1.2rem; color: #444; font-size: .95rem; }
+.tut-bridge-list { list-style: disc; padding-left: 1.3rem; }
+.tut-bridge-list li { margin: .3rem 0; }
