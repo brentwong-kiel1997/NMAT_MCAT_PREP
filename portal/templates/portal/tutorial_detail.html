@@ -13,7 +13,7 @@
       <a href="{% url back.0 subject.slug %}">← All {{ subject.name }} chapters</a>
     </p>
     <p style="margin-top:.6rem;">
-      <a class="btn" href="{% url 'tutorial_pdf' subject.slug chapter_id %}" rel="nofollow">
+      <a class="btn" href="{% url 'tutorial_pdf' subject.slug chapter.chapter_id %}" rel="nofollow">
         ⬇ Download PDF</a>
       <span class="muted-inline" style="font-size:.85rem;">
         A4 with cover, figures, and full question review — for personal study.</span>
