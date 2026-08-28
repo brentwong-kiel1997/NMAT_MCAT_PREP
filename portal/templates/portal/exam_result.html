@@ -41,6 +41,9 @@
 
   <article class="practice-card">
     <h2>Per-question review</h2>
+    {% if attempt.status == "active" %}<p class="note-line">Review unlocks when the exam is submitted or expires.</p>
+    {% elif not review %}<p class="note-line">No items recorded for this attempt.</p>{% endif %}
+    {% if attempt.status != "active" %}
     {% for r in review %}
     <details class="tut-question {% if r.correct %}is-ok{% else %}is-bad{% endif %}">
       <summary>
@@ -72,6 +75,7 @@
       </div>
     </details>
     {% endfor %}
+    {% endif %}
   </article>
 </section>
 {% endblock %}

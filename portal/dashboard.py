@@ -93,27 +93,27 @@ def review_redo(request, chapter_id: str):
         raise Http404("Unknown chapter")
     wrong_ids = {w["question_id"] for w in insights.wrong_questions(profile, limit=1000)}
     index = all_bank_items()
-    practice_store = {}
-    for c2 in store()["chapters"].values():
-        for q in c2.get("practice") or []:
-            if q.get("id"):
-                practice_store[q["id"]] = q
+    # practice items store `chapter` as the chapter TITLE; build title -> id
+    # so practice-source wrongs can be redone too (the old id-only filter
+    # silently dropped them all)
+    title_to_id = {c["title"]: cid for cid, c in store()["chapters"].items()}
     items = []
     for qid in sorted(wrong_ids):
-        q = practice_store.get(qid) or index.get(qid)
-        if not q:
+        q = index.get(qid)
+        item_chapter = (q or {}).get("chapter") or ""
+        if not q or not item_chapter:
+            for c2 in store()["chapters"].values():
+                q = next((x for x in c2.get("practice") or [] if x.get("id") == qid), None)
+                if q:
+                    item_chapter = title_to_id.get(q.get("chapter", ""), c2["id"])
+                    break
+        if not q or item_chapter != chapter_id:
             continue
-        # chapter filter: bank items carry chapter; practice rows resolve via the store
-        item_chapter = q.get("chapter") or ""
-        if not item_chapter:
-            item_chapter = next((c2["id"] for c2 in store()["chapters"].values()
-                                 if any(x.get("id") == qid for x in c2.get("practice") or [])), "")
-        if item_chapter != chapter_id:
-            continue
+        ch_title = (chs.get(item_chapter) or {}).get("title", item_chapter)
         items.append({"id": qid, "q": q.get("q", ""),
                       "choices": q.get("choices") or q.get("options") or {},
                       "answer": q.get("answer", ""), "explain": q.get("explain", ""),
-                      "chapter": ch.get("title", chapter_id)})
+                      "chapter": ch_title})
     if not items:
         return redirect("review")
     items_json = json.dumps(items, ensure_ascii=False).replace("<", "\\u003c")
@@ -157,6 +157,8 @@ def plan_save(request):
         exam_date = dt.date.fromisoformat(request.POST.get("exam_date") or "")
     except ValueError:
         raise Http404("Bad date")
+    if exam_date <= dt.date.today():
+        return redirect("plan")
     try:
         weekly_hours = max(1, min(80, int(request.POST.get("weekly_hours") or 10)))
     except ValueError:

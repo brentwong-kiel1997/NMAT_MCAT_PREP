@@ -44,20 +44,35 @@
 
     let deadlinePassed = false;
 
-    // ---- countdown (monotonic from the server value; never reads the client clock)
+    // ---- countdown: anchored to a deadline, immune to interval drift and to
+    // background-tab timer throttling (recomputed, never decremented)
+    const deadlineMs = Date.now() + remaining * 1000;
     function tick() {
       if (deadlinePassed) return;
-      remaining -= 1;
+      remaining = Math.max(0, Math.round((deadlineMs - Date.now()) / 1000));
       if (clock) clock.textContent = fmt(remaining);
       if (remaining <= 60 && clock) clock.classList.add("is-low");
       if (remaining <= 0) {
         deadlinePassed = true;
-        submitExam(true); // server finalizes regardless; this just speeds it up
+        lockNav();
+        // The server owns block closure: navigating re-runs maybe_finalize,
+        // which closes ONLY this block. Never call the global submit here —
+        // a multi-block exam must survive one block's clock running out.
+        window.location.href = `/exams/${examId}/take/${attemptId}/`;
       }
     }
     if (clock) {
       clock.textContent = fmt(remaining);
       setInterval(tick, 1000);
+      document.addEventListener("visibilitychange", () => {
+        if (!document.hidden && !deadlinePassed) tick();
+      });
+    }
+    function lockNav() {
+      document.querySelectorAll(".exam-grid a, .exam-nav a").forEach((a) => {
+        a.style.pointerEvents = "none";
+        a.setAttribute("aria-disabled", "true");
+      });
     }
 
     // ---- autosave
@@ -78,15 +93,20 @@
       pending = null;
       post(body).then((res) => {
         if (res.status === 409) {
-          // server expired the block — go to the result page
-          window.location.href = `/exams/result/${attemptId}/`;
+          // server says this save is no longer valid (block expired) —
+          // navigate so the server can close the block properly
+          window.location.href = `/exams/${examId}/take/${attemptId}/`;
           return;
         }
-        if (savedNote && res.ok) {
-          savedNote.textContent = "Saved";
-          setTimeout(() => { savedNote.textContent = ""; }, 1500);
+        if (savedNote) {
+          savedNote.textContent = res.ok ? "Saved" : "Not saved — retrying";
+          if (res.ok) setTimeout(() => { savedNote.textContent = ""; }, 1500);
         }
-      }).catch(() => {});
+        if (!res.ok && body.chosen) { pending = body; setTimeout(() => flush(true), 2000); }
+      }).catch(() => {
+        if (savedNote) savedNote.textContent = "Offline — will retry";
+        if (body.chosen) { pending = body; setTimeout(() => flush(true), 3000); }
+      });
     }
     function queueSave() {
       pending = { attempt_id: attemptId, block_id: blockId, pos: pos,
@@ -120,14 +140,24 @@
     // ---- submit
     function submitExam(auto) {
       if (!auto && !window.confirm("Submit the exam for scoring?")) return;
-      fetch("/exams/api/submit/", {
+      // flush any debounced save first so the final choice is scored
+      const flushFirst = pending
+        ? post({ ...pending }).catch(() => {})
+        : Promise.resolve();
+      pending = null;
+      flushFirst.then(() => fetch("/exams/api/submit/", {
         method: "POST",
         credentials: "same-origin",
+        keepalive: true,
         headers: { "Content-Type": "application/json", "X-CSRFToken": csrfToken() },
         body: JSON.stringify({ attempt_id: attemptId }),
-      }).then(() => {
+      })).then((res) => res.json().catch(() => ({})).then((data) => {
+        if (data.error === "blocks-remaining" && data.next_block) {
+          window.location.href = `/exams/${examId}/break/${attemptId}/${data.next_block}/`;
+          return;
+        }
         window.location.href = `/exams/result/${attemptId}/`;
-      }).catch(() => {
+      })).catch(() => {
         window.location.href = `/exams/result/${attemptId}/`;
       });
     }
@@ -141,6 +171,7 @@
 
     // ---- flush pending save before leaving the page
     window.addEventListener("beforeunload", () => { if (pending) flush(true); });
+    window.addEventListener("pagehide", () => { if (pending) flush(true); });
     document.querySelectorAll(".exam-grid a, .exam-nav a, .exam-finish button")
       .forEach((a) => a.addEventListener("click", () => { if (pending) flush(true); }));
   }

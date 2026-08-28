@@ -82,6 +82,14 @@ def _owned_attempt(request, exam_id: str, attempt_id: int) -> ExamAttempt:
     return examsys.maybe_finalize(attempt)
 
 
+def _plan_block(attempt: ExamAttempt, block_id: str) -> dict:
+    """A block from the frozen plan, or 404 for unknown ids."""
+    for b in attempt.plan.get("blocks") or []:
+        if b["id"] == block_id:
+            return b
+    raise Http404("Block not found")
+
+
 def _nav_context(attempt: ExamAttempt, block_id: str) -> dict:
     blocks = attempt.plan.get("blocks") or []
     idx = examsys.block_index(attempt, block_id)
@@ -122,14 +130,12 @@ def exam_question(request, exam_id: str, attempt_id: int,
     attempt = _owned_attempt(request, exam_id, attempt_id)
     if attempt.status != "active":
         return redirect("exam_result", attempt_id=attempt.id)
+    _plan_block(attempt, block_id)  # 404 on unknown ids before state checks
     if not examsys.block_started(attempt, block_id):
         return redirect("exam_break", exam_id=exam_id, attempt_id=attempt.id,
                         block_id=block_id)
     blocks = attempt.plan.get("blocks") or []
-    try:
-        block = next(b for b in blocks if b["id"] == block_id)
-    except StopIteration as exc:
-        raise Http404("Block not found") from exc
+    block = next(b for b in blocks if b["id"] == block_id)
     if not 1 <= pos <= len(block["items"]):
         raise Http404("Question out of range")
     if examsys.remaining_seconds(attempt, block_id) <= 0:
@@ -172,11 +178,7 @@ def exam_break(request, exam_id: str, attempt_id: int, block_id: str):
     attempt = _owned_attempt(request, exam_id, attempt_id)
     if attempt.status != "active":
         return redirect("exam_result", attempt_id=attempt.id)
-    blocks = attempt.plan.get("blocks") or []
-    try:
-        block = next(b for b in blocks if b["id"] == block_id)
-    except StopIteration as exc:
-        raise Http404("Block not found") from exc
+    block = _plan_block(attempt, block_id)
     return render(request, "portal/exam_break.html", {
         "attempt": attempt, "exam": {"id": exam_id}, "blk": block,
         "remaining": examsys.remaining_seconds(attempt, block_id),
@@ -189,9 +191,37 @@ def exam_begin(request, exam_id: str, attempt_id: int, block_id: str):
     attempt = _owned_attempt(request, exam_id, attempt_id)
     if attempt.status != "active":
         return redirect("exam_result", attempt_id=attempt.id)
-    examsys.begin_block(attempt, block_id)
+    _plan_block(attempt, block_id)
+    try:
+        examsys.begin_block(attempt, block_id)
+    except ExamError:
+        # sequence violation (e.g. double-POST of an already-begun next block):
+        # land wherever the engine says the learner should be
+        return redirect("exam_take", exam_id=exam_id, attempt_id=attempt.id)
     return redirect("exam_question", exam_id=exam_id, attempt_id=attempt.id,
                     block_id=block_id, pos=1)
+
+
+@login_required
+@require_POST
+def exam_finish_block(request, exam_id: str, attempt_id: int, block_id: str):
+    """Close this block's clock and move on. The next block's timer starts
+    only when its own Begin is pressed, so breaks stay untimed."""
+    attempt = _owned_attempt(request, exam_id, attempt_id)
+    if attempt.status != "active":
+        return redirect("exam_result", attempt_id=attempt.id)
+    _plan_block(attempt, block_id)
+    try:
+        examsys.finish_block(attempt, block_id)
+    except ExamError:
+        pass
+    if attempt.status != "active":
+        return redirect("exam_result", attempt_id=attempt.id)
+    nxt = examsys.current_block(attempt)
+    if not nxt:
+        return redirect("exam_result", attempt_id=attempt.id)
+    return redirect("exam_break", exam_id=exam_id, attempt_id=attempt.id,
+                    block_id=nxt)
 
 
 @login_required
@@ -219,7 +249,9 @@ def exam_answer_api(request):
         result = examsys.save_answer(attempt, block_id, pos, chosen, flagged)
     except ExamError as exc:
         return JsonResponse({"ok": False, "error": str(exc)}, status=400)
-    status = 200 if result.get("ok") else 409
+    if result.get("ok"):
+        return JsonResponse(result)
+    status = 409 if result.get("error") == "expired" else 400
     return JsonResponse(result, status=status)
 
 
@@ -238,6 +270,11 @@ def exam_submit_api(request):
     if not attempt:
         return JsonResponse({"ok": False, "error": "unknown attempt"}, status=404)
     if attempt.status == "active":
+        if examsys.current_block(attempt) is not None:
+            # unfinished blocks remain — the exam is not submittable yet
+            return JsonResponse({"ok": False, "error": "blocks-remaining",
+                                 "next_block": examsys.current_block(attempt)},
+                                status=409)
         attempt = examsys.finalize(attempt, reason="submitted")
     return JsonResponse({"ok": True, "attempt_id": attempt.id,
                          "status": attempt.status})
@@ -250,6 +287,9 @@ def exam_result(request, attempt_id: int):
     if not attempt:
         raise Http404("Attempt not found")
     attempt = examsys.maybe_finalize(attempt)
+    if attempt.status == "active":
+        # mid-exam: the answer key must never be reachable
+        return redirect("exam_take", exam_id=attempt.exam, attempt_id=attempt.id)
     score = attempt.score or {}
 
     review = []

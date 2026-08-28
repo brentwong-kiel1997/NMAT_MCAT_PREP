@@ -65,19 +65,21 @@ def build_plan(*, exam_id: str, exam_date: dt.date, weekly_hours: int,
         date = today + dt.timedelta(days=offset)
         day = {"date": date.isoformat(), "minutes": 0, "tasks": []}
         remaining_days = days - offset
-        # mock cadence: every 14th day, then every 3rd day in the last 10
-        is_mock_day = (offset > 0 and offset % 14 == 0) or (remaining_days <= 10 and remaining_days % 3 == 0 and remaining_days > 1)
-        if is_mock_day:
-            day["tasks"].append({"kind": "mock", "label": f"Full-length {exam_id.upper()} mock exam",
-                                 "url": f"/exams/{exam_id}/", "minutes": 240,
-                                 "chapter_id": ""})
-            day["minutes"] += 240
+        # mock cadence: every 14th day, then every 3rd day in the last 10 —
+        # never on the eve of the exam (that day is rest)
+        is_mock_day = ((offset > 0 and offset % 14 == 0 and remaining_days > 1)
+                       or (1 < remaining_days <= 10 and remaining_days % 3 == 0))
         if remaining_days == 1:
             day["tasks"].append({"kind": "rest", "label": "Light review + early night",
                                  "url": "/review/", "minutes": 60, "chapter_id": ""})
             day["minutes"] += 60
             plan.append(day)
             continue
+        if is_mock_day:
+            day["tasks"].append({"kind": "mock", "label": f"Full-length {exam_id.upper()} mock exam",
+                                 "url": f"/exams/{exam_id}/", "minutes": 240,
+                                 "chapter_id": ""})
+            day["minutes"] += 240
         budget = daily_minutes - day["minutes"]
         while budget >= 20 and qi < len(queue):
             entry = queue[qi]
@@ -97,11 +99,11 @@ def build_plan(*, exam_id: str, exam_date: dt.date, weekly_hours: int,
                 budget -= drill
             qi += 1
         if qi >= len(queue):
-            # syllabus exhausted — cycle back for revision passes
-            queue = [t for t in tasks if t["chapter_id"] not in done]
+            # syllabus exhausted — restart revision passes; mocks and the
+            # final rest day still get scheduled even when everything is read
+            cycle = [t for t in tasks if t["chapter_id"] not in done]
+            queue = cycle if cycle else tasks
             qi = 0
-            if not queue:
-                break
         plan.append(day)
     return plan
 

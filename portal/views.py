@@ -486,7 +486,7 @@ def practice_attempt_api(request):
     subject_slug = (payload.get("subject_slug") or "").strip()
     question_id = (payload.get("question_id") or "").strip()
     chosen = (payload.get("chosen") or "").strip().upper()[:1]
-    if not subject_slug or not question_id or chosen not in "ABCD":
+    if not subject_slug or not question_id or chosen not in {"A", "B", "C", "D"}:
         return JsonResponse({"ok": False, "error": "Invalid attempt"}, status=400)
 
     items = {q["id"]: q for q in practice_for(subject_slug)}

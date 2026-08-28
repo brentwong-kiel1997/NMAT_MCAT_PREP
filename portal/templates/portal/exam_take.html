@@ -18,7 +18,7 @@
   <header class="exam-bar">
     <span class="exam-brand">{{ exam.id|upper }} · {{ blk.label }}</span>
     <span class="exam-progress">Q {{ pos }} / {{ total }} · block {{ block_idx|add:1 }}/{{ num_blocks }}</span>
-    <span class="exam-clock" id="exam-clock" aria-live="polite">--:--</span>
+    <span class="exam-clock" id="exam-clock" role="timer" aria-live="off">--:--</span>
   </header>
 
   <div class="exam-body">
@@ -31,9 +31,9 @@
       </div>
       <p class="note-line">Green = answered · orange = flagged</p>
       {% if not is_last_block and is_last %}
-      <form method="post" action="{% url 'exam_begin' exam.id attempt.id next_block.id %}" class="exam-finish">
+      <form method="post" action="{% url 'exam_finish_block' exam.id attempt.id blk.id %}" class="exam-finish">
         {% csrf_token %}
-        <button type="submit" class="btn">Finish block →</button>
+        <button type="submit" class="btn">Finish {{ blk.label }} →</button>
       </form>
       {% elif is_last_block and is_last %}
       <form method="post" action="{% url 'exam_submit_api' %}" class="exam-finish" id="exam-submit-form">
@@ -57,7 +57,7 @@
       <div class="exam-choices" role="group" aria-label="Answer choices">
         {% for letter, text in item.choices.items %}
         <button type="button"
-                class="exam-choice{% if letter == chosen %}is-selected{% endif %}"
+                class="exam-choice{% if letter == chosen %} is-selected{% endif %}"
                 data-letter="{{ letter }}">
           <strong>{{ letter }}</strong> {{ text }}
         </button>

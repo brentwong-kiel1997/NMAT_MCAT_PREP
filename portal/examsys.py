@@ -61,19 +61,24 @@ def exam_item_list(exam_id: str) -> list[dict]:
 
 def start_attempt(username: str, exam_id: str) -> ExamAttempt:
     profile = _learner(username)
+    plan = build_plan(exam_id)
     try:
         return ExamAttempt.objects.create(
             profile=profile,
             exam=exam_id,
-            plan=build_plan(exam_id),
+            plan=plan,
             sections=[{"id": b["id"], "started_ts": None, "seconds": b["seconds"],
                        "finished_ts": None, "pos": 0}
-                      for b in build_plan(exam_id)["blocks"]],
+                      for b in plan["blocks"]],
             answers={},
         )
     except IntegrityError:
-        # one active attempt per (profile, exam) — resume it
-        return ExamAttempt.objects.get(profile=profile, exam=exam_id, status="active")
+        # one active attempt per (profile, exam) — resume the winner's attempt
+        existing = ExamAttempt.objects.filter(profile=profile, exam=exam_id,
+                                              status="active").first()
+        if existing:
+            return existing
+        raise
 
 
 def get_attempt(username: str, attempt_id: int) -> ExamAttempt | None:
@@ -133,10 +138,13 @@ def block_position(attempt: ExamAttempt, block_id: str) -> int:
 
 
 def set_position(attempt: ExamAttempt, block_id: str, pos: int) -> None:
-    s = _section_state(attempt, block_id)
-    if s.get("pos") != pos:
-        s["pos"] = pos
-        attempt.save(update_fields=["sections", "updated_at"])
+    with transaction.atomic():
+        locked = ExamAttempt.objects.select_for_update().get(id=attempt.id)
+        s = _section_state(locked, block_id)
+        if s.get("pos") != pos:
+            s["pos"] = pos
+            locked.save(update_fields=["sections", "updated_at"])
+            attempt.sections = locked.sections
 
 
 def maybe_finalize(attempt: ExamAttempt) -> ExamAttempt:
@@ -162,6 +170,10 @@ def _close_block(attempt: ExamAttempt, block_id: str) -> None:
 
 
 def begin_block(attempt: ExamAttempt, block_id: str) -> None:
+    # sequence guard: only the first unfinished block may begin (no skipping)
+    first = current_block(attempt)
+    if first != block_id:
+        raise ExamError(f"block {block_id!r} is not the next block ({first!r})")
     s = _section_state(attempt, block_id)
     if not s.get("started_ts"):
         s["started_ts"] = _now_ts()
@@ -170,33 +182,40 @@ def begin_block(attempt: ExamAttempt, block_id: str) -> None:
 
 def save_answer(attempt: ExamAttempt, block_id: str, pos: int,
                 chosen: str | None, flagged: bool) -> dict:
-    """Autosave one item's captured state. Last write wins before finalize."""
-    if attempt.status != "active":
-        return {"ok": False, "error": "closed"}
-    s = _section_state(attempt, block_id)
-    if not s.get("started_ts"):
-        return {"ok": False, "error": "not-started"}
-    if s.get("finished_ts") or remaining_seconds(attempt, block_id) <= 0:
-        _close_block(attempt, block_id)
-        return {"ok": False, "error": "expired"}
-    items = build_plan(attempt.exam)["blocks"]
-    block = next((b for b in items if b["id"] == block_id), None)
-    if not block or not (1 <= pos <= len(block["items"])):
-        return {"ok": False, "error": "bad-pos"}
-    item_id = block["items"][pos - 1]
-    answers = attempt.answers or {}
-    entry = answers.get(item_id) or {}
-    if chosen is not None:
-        chosen = str(chosen).strip().upper()[:1]
-        if chosen not in ("A", "B", "C", "D"):
-            return {"ok": False, "error": "bad-choice"}
-        entry["c"] = chosen
-    entry["f"] = 1 if flagged else 0
-    answers[item_id] = entry
-    attempt.answers = answers
-    if s.get("pos") != pos:
-        s["pos"] = pos
-    attempt.save(update_fields=["answers", "sections", "updated_at"])
+    """Autosave one item's captured state. Row-locked so concurrent saves
+    from two tabs cannot clobber each other's answers."""
+    with transaction.atomic():
+        locked = ExamAttempt.objects.select_for_update().get(id=attempt.id)
+        if locked.status != "active":
+            return {"ok": False, "error": "closed"}
+        s = _section_state(locked, block_id)
+        if not s.get("started_ts"):
+            return {"ok": False, "error": "not-started"}
+        if s.get("finished_ts") or remaining_seconds(locked, block_id) <= 0:
+            _close_block(locked, block_id)
+            return {"ok": False, "error": "expired"}
+        # pos -> item from the FROZEN plan (bank edits mid-attempt must not
+        # shift which question an answer lands on)
+        block = next((b for b in locked.plan.get("blocks") or []
+                      if b["id"] == block_id), None)
+        if not block or not (1 <= pos <= len(block["items"])):
+            return {"ok": False, "error": "bad-pos"}
+        item_id = block["items"][pos - 1]
+        answers = locked.answers or {}
+        entry = answers.get(item_id) or {}
+        if chosen is not None:
+            chosen = str(chosen).strip().upper()[:1]
+            if chosen not in ("A", "B", "C", "D"):
+                return {"ok": False, "error": "bad-choice"}
+            entry["c"] = chosen
+        entry["f"] = 1 if flagged else 0
+        answers[item_id] = entry
+        locked.answers = answers
+        if s.get("pos") != pos:
+            s["pos"] = pos
+        locked.save(update_fields=["answers", "sections", "updated_at"])
+    attempt.answers = locked.answers
+    attempt.sections = locked.sections
     return {"ok": True, "item_id": item_id}
 
 
@@ -282,7 +301,7 @@ def _seconds_used(attempt: ExamAttempt, block_id: str) -> int:
     if not s.get("started_ts"):
         return 0
     end = s.get("finished_ts") or _now_ts()
-    return max(0, int(end) - int(s["started_ts"]))
+    return max(0, min(int(end) - int(s["started_ts"]), int(s.get("seconds", 0))))
 
 
 @transaction.atomic
@@ -315,7 +334,7 @@ def finalize(attempt: ExamAttempt, *, reason: str) -> ExamAttempt:
                 chosen=chosen, correct=bool(chosen) and chosen == item.get("answer"),
                 flagged=bool(entry.get("f")),
             ))
-    ExamResponse.objects.bulk_create(rows, batch_size=500, ignore_conflicts=True)
+    ExamResponse.objects.bulk_create(rows, batch_size=500)
     return reloaded
 
 

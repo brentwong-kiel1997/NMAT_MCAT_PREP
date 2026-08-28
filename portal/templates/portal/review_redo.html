@@ -21,6 +21,7 @@
       <strong class="practice-pos">1</strong> / <span class="practice-total">{{ count }}</span>
       · Correct
       <strong class="practice-score">0</strong>
+      · <button type="button" class="btn" id="redo-reset">Restart</button>
     </div>
     <article class="practice-card">
       <p class="practice-chapter"></p>
@@ -36,6 +37,12 @@
       </div>
     </article>
     <script type="application/json" class="practice-data">{{ items_json|safe }}</script>
+    <script>
+      document.getElementById("redo-reset").addEventListener("click", function () {
+        try { localStorage.removeItem("gabay_redo_{{ chapter_id }}"); } catch (e) {}
+        window.location.reload();
+      });
+    </script>
   </div>
 </section>
 {% endblock %}

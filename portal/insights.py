@@ -13,16 +13,21 @@ from .models import ChapterProgress, ExamAttempt, ExamResponse, PracticeAttempt
 
 
 def _chapter_index() -> dict[str, dict]:
-    """question_id (practice or bank) -> {chapter_id, discipline}."""
+    """question_id (practice or bank) -> {chapter_id, discipline}.
+
+    Reads store() directly (no per-item deepcopy) — this used to deep-copy
+    the whole chapter library once per bank item (~23 s per dashboard).
+    """
+    chs = store()["chapters"]
     out: dict[str, dict] = {}
-    for ch in store()["chapters"].values():
+    for ch in chs.values():
         for q in ch.get("practice") or []:
             if q.get("id"):
                 out[q["id"]] = {"chapter_id": ch["id"], "discipline": ch.get("discipline", "")}
     for item in all_bank_items().values():
         if item.get("id") and item.get("chapter"):
-            disc = (chapters_store().get(item["chapter"]) or {}).get("discipline", "")
-            out[item["id"]] = {"chapter_id": item["chapter"], "discipline": disc}
+            ch = chs.get(item["chapter"]) or {}
+            out[item["id"]] = {"chapter_id": item["chapter"], "discipline": ch.get("discipline", "")}
     return out
 
 
@@ -85,31 +90,40 @@ def wrong_chapters(profile, limit: int = 8) -> list[dict]:
 def wrong_questions(profile, limit: int = 300) -> list[dict]:
     """All distinct wrong answers, newest first — the review notebook."""
     qindex = _chapter_index()
-    chs = chapters_store()
-    seen: set[str] = set()
-    out: list[dict] = []
-    for r in (PracticeAttempt.objects.filter(profile=profile, correct=False)
-              .order_by("-created_at")[:limit]):
-        if r.question_id in seen:
-            continue
-        seen.add(r.question_id)
-        meta = qindex.get(r.question_id) or {}
-        out.append({"source": "practice", "question_id": r.question_id,
-                    "chosen": r.chosen, "chapter_id": meta.get("chapter_id", ""),
-                    "discipline": meta.get("discipline", ""), "when": r.created_at})
+    chs = store()["chapters"]
+    # Retire recovered items: an item is "still wrong" only if its LATEST
+    # attempt is wrong. Latest-attempt resolution over both sources.
+    latest: dict[str, tuple] = {}  # question_id -> (when, is_correct, row-info)
+
+    def consider(qid, when, is_correct, info):
+        prev = latest.get(qid)
+        if prev is None or (when and when > (prev[0] or when)):
+            latest[qid] = (when, is_correct, info)
+
+    for r in PracticeAttempt.objects.filter(profile=profile).order_by("created_at"):
+        consider(r.question_id, r.created_at, r.correct,
+                 {"source": "practice", "question_id": r.question_id,
+                  "chosen": r.chosen, "when": r.created_at})
     submitted = ExamAttempt.objects.filter(profile=profile).exclude(status="active")
     for resp in (ExamResponse.objects
-                 .filter(attempt__in=submitted, correct=False)
-                 .select_related("attempt").order_by("-attempt__finished_at")):
-        if resp.item_id in seen:
-            continue
-        seen.add(resp.item_id)
-        ch = chapters_store().get(resp.chapter_id) or {}
-        out.append({"source": "exam", "question_id": resp.item_id,
-                    "attempt_id": resp.attempt_id,
-                    "chosen": resp.chosen, "chapter_id": resp.chapter_id,
-                    "discipline": ch.get("discipline", ""), "when": resp.attempt.finished_at})
-    return out[:limit]
+                 .filter(attempt__in=submitted)
+                 .select_related("attempt").order_by("attempt__finished_at")):
+        consider(resp.item_id, resp.attempt.finished_at, resp.correct,
+                 {"source": "exam", "question_id": resp.item_id,
+                  "attempt_id": resp.attempt_id, "chosen": resp.chosen,
+                  "when": resp.attempt.finished_at})
+
+    wrong_rows = [info for (when, is_correct, info) in latest.values()
+                  if not is_correct]
+    wrong_rows.sort(key=lambda info: info.get("when") or info.get("when"), reverse=True)
+    out: list[dict] = []
+    for info in wrong_rows[:limit]:
+        meta = qindex.get(info["question_id"]) or {}
+        ch = chs.get(meta.get("chapter_id") or info.get("chapter_id", "")) or {}
+        out.append({**info,
+                    "chapter_id": meta.get("chapter_id") or info.get("chapter_id", ""),
+                    "discipline": ch.get("discipline", "")})
+    return out
 
 
 def subject_progress(profile, subject_slug: str) -> dict:
@@ -124,8 +138,11 @@ def subject_progress(profile, subject_slug: str) -> dict:
         for ref in group.get("chapters") or []:
             if ref not in chapter_ids:
                 chapter_ids.append(ref)
-    done = progress_map(profile.username, subject_slug)
-    n_done = sum(1 for cid in chapter_ids if done.get(cid))
+    # Progress is keyed by chapter_id alone: a chapter ticked from any subject
+    # page that contains it counts here too (6 chapters live in 2-3 outlines).
+    done_rows = set(ChapterProgress.objects.filter(
+        profile=profile, chapter_id__in=chapter_ids).values_list("chapter_id", flat=True))
+    n_done = len(done_rows)
     total = len(chapter_ids)
     return {"done": n_done, "total": total,
             "pct": round(100 * n_done / total) if total else 0}

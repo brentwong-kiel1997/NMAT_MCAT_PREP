@@ -59,6 +59,8 @@ urlpatterns = [
          exam_views.exam_break, name="exam_break"),
     path("exams/<slug:exam_id>/begin/<int:attempt_id>/<slug:block_id>/",
          exam_views.exam_begin, name="exam_begin"),
+    path("exams/<slug:exam_id>/finish/<int:attempt_id>/<slug:block_id>/",
+         exam_views.exam_finish_block, name="exam_finish_block"),
     path("exams/api/answer/", exam_views.exam_answer_api, name="exam_answer_api"),
     path("exams/api/submit/", exam_views.exam_submit_api, name="exam_submit_api"),
     path("exams/result/<int:attempt_id>/", exam_views.exam_result, name="exam_result"),
