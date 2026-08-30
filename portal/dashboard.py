@@ -5,14 +5,24 @@ from __future__ import annotations
 import datetime as dt
 import json
 from django.contrib.auth.decorators import login_required
-from django.http import Http404
+from django.http import Http404, JsonResponse
 from django.shortcuts import redirect, render
 from django.views.decorators.http import require_GET, require_POST
 
 from . import insights, planner
+
+
+def cause_distribution_local(profile):
+    counts = {"content": 0, "misread": 0, "careless": 0, "trap": 0, "unlabeled": 0}
+    for it in insights.wrong_questions(profile, limit=1000):
+        note = ReviewNote.objects.filter(profile=profile,
+                                         question_id=it["question_id"]).first()
+        key = note.cause if note else "unlabeled"
+        counts[key] = counts.get(key, 0) + 1
+    return counts
 from .views import _json_for_script
 from .content import all_bank_items, chapters_store, store
-from .models import StudyPlan
+from .models import ReviewNote, StudyPlan
 
 
 def _profile(request):
@@ -36,8 +46,25 @@ def dashboard(request):
         prog = insights.subject_progress(profile, slug)
         if prog["total"]:
             subjects.append({"slug": slug, "label": label, **prog})
+    causes = cause_distribution_local(profile)
+    # subject accuracy merged from chapter_accuracy
+    chs = insights.chapter_accuracy(profile)
+    chapters_store = store()["chapters"]
+    subj_acc: dict = {}
+    for cid, slot in chs.items():
+        ch = chapters_store.get(cid) or {}
+        disc = ch.get("discipline", "")
+        if not disc:
+            continue
+        agg = subj_acc.setdefault(disc, {"correct": 0, "total": 0})
+        agg["correct"] += slot["correct"]
+        agg["total"] += slot["total"]
     ctx = {
         "history": history,
+        "subject_accuracy": [{"discipline": d, **v,
+                              "pct": round(100 * v["correct"] / v["total"]) if v["total"] else 0}
+                             for d, v in sorted(subj_acc.items()) if v["total"]],
+        "causes": causes,
         "subjects": subjects,
         "weak_chapters": insights.wrong_chapters(profile),
         "continue_learning": insights.continue_learning(profile),
@@ -79,8 +106,12 @@ def review(request):
                        "discipline": first["discipline"],
                        "chapter_title": first["chapter_title"] or chapter_id,
                        "items": group})
+    causes = dict(ReviewNote.CAUSES)
     return render(request, "portal/review.html", {"groups": groups,
-                                                  "total": len(items)})
+                                                  "total": len(items),
+                                                  "cause_labels": causes.items(),
+                                                  "cause_dist": cause_distribution_local(profile)})
+
 
 
 @login_required
@@ -166,3 +197,36 @@ def plan_save(request):
         profile=profile,
         defaults={"exam": exam, "exam_date": exam_date, "weekly_hours": weekly_hours})
     return redirect("plan")
+
+
+@login_required
+@require_POST
+def review_cause_api(request):
+    """Label the cause of a miss (the review-loop taxonomy)."""
+    import json as _json
+
+    from .models import ReviewNote
+
+    try:
+        payload = _json.loads(request.body.decode("utf-8"))
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        return JsonResponse({"ok": False, "error": "Invalid JSON"}, status=400)
+    question_id = (payload.get("question_id") or "").strip()
+    cause = (payload.get("cause") or "").strip()
+    if not question_id or cause not in {"content", "misread", "careless", "trap"}:
+        return JsonResponse({"ok": False, "error": "Invalid cause"}, status=400)
+    profile = _profile(request)
+    ReviewNote.objects.update_or_create(
+        profile=profile, question_id=question_id,
+        defaults={"cause": cause, "note": (payload.get("note") or "")[:500]})
+    return JsonResponse({"ok": True})
+
+
+def cause_distribution(profile) -> dict:
+    counts = {"content": 0, "misread": 0, "careless": 0, "trap": 0, "unlabeled": 0}
+    for it in insights.wrong_questions(profile, limit=1000):
+        note = ReviewNote.objects.filter(profile=profile,
+                                         question_id=it["question_id"]).first()
+        key = note.cause if note else "unlabeled"
+        counts[key] = counts.get(key, 0) + 1
+    return counts

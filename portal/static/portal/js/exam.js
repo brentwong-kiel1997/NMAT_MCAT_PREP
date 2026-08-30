@@ -43,6 +43,18 @@
     if (selected) chosen = selected.dataset.letter;
 
     let deadlinePassed = false;
+    // per-question time tracking: pauses when the tab hides (consistent with
+    // the timer's throttling behavior)
+    let itemStart = Date.now();
+    let hiddenAt = null;
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) { hiddenAt = Date.now(); }
+      else if (hiddenAt !== null) { itemStart += Date.now() - hiddenAt; hiddenAt = null; }
+    });
+    function elapsedSeconds() {
+      const now = hiddenAt !== null ? hiddenAt : Date.now();
+      return Math.max(0, Math.round((now - itemStart) / 1000));
+    }
 
     // ---- countdown: anchored to a deadline, immune to interval drift and to
     // background-tab timer throttling (recomputed, never decremented)
@@ -110,7 +122,8 @@
     }
     function queueSave() {
       pending = { attempt_id: attemptId, block_id: blockId, pos: pos,
-                  chosen: chosen, flagged: flagged };
+                  chosen: chosen, flagged: flagged,
+                  elapsed_seconds: elapsedSeconds() };
       if (timer) clearTimeout(timer);
       timer = setTimeout(() => flush(true), 600);
     }

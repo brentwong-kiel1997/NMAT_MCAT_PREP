@@ -42,3 +42,30 @@
   {% endfor %}
 </section>
 {% endblock %}
+
+{% block page_js %}
+<script>
+(function () {
+  function csrf() {
+    const m = document.cookie.match(/(?:^|; )csrftoken=([^;]+)/);
+    return m ? decodeURIComponent(m[1]) : (document.querySelector(".csrf-slot input") || {}).value || "";
+  }
+  document.querySelectorAll(".cause-row").forEach((row) => {
+    row.querySelectorAll(".cause-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        row.querySelectorAll(".cause-btn").forEach((b) => b.classList.remove("is-on"));
+        btn.classList.add("is-on");
+        fetch("/api/review/cause/", {
+          method: "POST", credentials: "same-origin",
+          headers: { "Content-Type": "application/json", "X-CSRFToken": csrf() },
+          body: JSON.stringify({ question_id: row.dataset.qid, cause: btn.dataset.cause }),
+        }).then((res) => {
+          const note = row.querySelector(".cause-saved");
+          if (note) { note.hidden = !res.ok; if (res.ok) setTimeout(() => { note.hidden = true; }, 1200); }
+        }).catch(() => {});
+      });
+    });
+  });
+})();
+</script>
+{% endblock %}

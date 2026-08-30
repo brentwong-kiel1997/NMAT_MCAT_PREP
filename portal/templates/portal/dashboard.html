@@ -22,7 +22,20 @@
 
   {% if history %}
   <article class="practice-card">
-    <h2>Mock exam history</h2>
+    <h2>Score trend</h2>
+    <div class="trend-list">
+      {% for h in history %}
+      <div class="trend-row">
+        <span class="trend-date">{{ h.date|date:"M d" }}</span>
+        <span class="trend-bar" title="{{ h.correct }}/{{ h.items }}">
+          <span class="trend-fill" style="width: {{ h.pct }}%">{{ h.pct }}%</span>
+        </span>
+        <span class="muted-inline">{{ h.exam|upper }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    <table class="mini-table">
+      <thead><tr><th>Date</th><th>Exam</th><th>Score</th><th>%</th><th></th></tr></thead>
     <table class="mini-table">
       <thead><tr><th>Date</th><th>Exam</th><th>Score</th><th>%</th><th></th></tr></thead>
       <tbody>
@@ -61,6 +74,25 @@
         {% endfor %}
       </tbody>
     </table>
+    {% if subject_accuracy %}
+    <h2>Accuracy by subject</h2>
+    <div class="trend-list">
+      {% for s in subject_accuracy %}
+      <div class="trend-row">
+        <span class="trend-date">{{ s.discipline }}</span>
+        <span class="trend-bar"><span class="trend-fill trend-acc" style="width: {{ s.pct }}%">{{ s.pct }}%</span></span>
+        <span class="muted-inline">{{ s.correct }}/{{ s.total }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if causes %}
+    <h2>Why you miss questions</h2>
+    <p class="note-line">
+      {% for key, n in causes.items %}{% if n %}{{ key }}: <strong>{{ n }}</strong>{% if not forloop.last %} · {% endif %}{% endif %}{% endfor %}
+      — <a href="{% url 'review' %}">label them in the notebook</a>
+    </p>
+    {% endif %}
     <p class="note-line">
       <a href="{% url 'plan' %}">→ Study plan</a> ·
       <a href="{% url 'review' %}">→ Review notebook</a> ·

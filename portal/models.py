@@ -149,6 +149,7 @@ class ExamResponse(models.Model):
     chosen = models.CharField(max_length=1, blank=True)  # "" = unanswered
     correct = models.BooleanField(default=False)
     flagged = models.BooleanField(default=False)
+    time_spent = models.IntegerField(null=True, blank=True)  # seconds on the item
 
     class Meta:
         unique_together = [("attempt", "position")]
@@ -203,3 +204,29 @@ class SrsCard(models.Model):
 
     def __str__(self) -> str:
         return f"{self.profile_id}:{self.card_key[:12]} @{self.due_date}"
+
+
+class ReviewNote(models.Model):
+    """Per-learner miss-cause label for a wrong answer (the review-loop
+    taxonomy: content gap / misread / careless slip / trap option)."""
+
+    CAUSES = [
+        ("content", "Content gap"),
+        ("misread", "Misread the stem"),
+        ("careless", "Careless slip"),
+        ("trap", "Trap option"),
+    ]
+
+    profile = models.ForeignKey(
+        LearnerProfile, on_delete=models.CASCADE, related_name="review_notes"
+    )
+    question_id = models.CharField(max_length=64)
+    cause = models.CharField(max_length=12, choices=CAUSES)
+    note = models.TextField(blank=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        unique_together = [("profile", "question_id")]
+
+    def __str__(self) -> str:
+        return f"{self.profile_id}:{self.question_id}:{self.cause}"

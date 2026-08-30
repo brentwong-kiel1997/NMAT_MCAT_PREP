@@ -214,7 +214,8 @@ def begin_block(attempt: ExamAttempt, block_id: str) -> None:
 
 
 def save_answer(attempt: ExamAttempt, block_id: str, pos: int,
-                chosen: str | None, flagged: bool) -> dict:
+                chosen: str | None, flagged: bool,
+                elapsed_seconds: int | None = None) -> dict:
     """Autosave one item's captured state. Row-locked so concurrent saves
     from two tabs cannot clobber each other's answers."""
     with transaction.atomic():
@@ -247,6 +248,8 @@ def save_answer(attempt: ExamAttempt, block_id: str, pos: int,
                 return {"ok": False, "error": "bad-choice"}
             entry["c"] = chosen
         entry["f"] = 1 if flagged else 0
+        if elapsed_seconds is not None:
+            entry["s"] = max(0, min(int(elapsed_seconds), 3600))
         answers[item_id] = entry
         locked.answers = answers
         if s.get("pos") != pos:
@@ -280,6 +283,8 @@ def score_attempt(attempt: ExamAttempt) -> dict:
     for b in blocks:
         subtests: dict[str, dict] = {}
         b_correct = b_items = 0
+        b_seconds = 0
+        fair_share = max(1, b.get("seconds", 0) // max(1, len(b.get("items") or [1])))
         for pos, item_id in enumerate(b.get("items") or [], start=1):
             item = index.get(item_id)
             if not item:
@@ -299,6 +304,7 @@ def score_attempt(attempt: ExamAttempt) -> dict:
             sec["items"] += 1
             if is_correct:
                 sec["correct"] += 1
+            b_seconds += entry.get("s") or 0
             chapter = item.get("chapter") or ""
             if chapter:
                 agg = weak.setdefault(chapter, {"chapter_id": chapter, "items": 0, "correct": 0,
@@ -313,6 +319,9 @@ def score_attempt(attempt: ExamAttempt) -> dict:
             "items": b_items, "correct": b_correct,
             "pct": round(100 * b_correct / b_items, 1) if b_items else 0.0,
             "seconds_used": _seconds_used(attempt, b["id"]),
+            "seconds_on_items": b_seconds,
+            "avg_seconds_per_item": round(b_seconds / b_items, 1) if b_items else 0.0,
+            "fair_share": fair_share,
             "subtests": list(subtests.values()),
         })
     weak_list = [w for w in weak.values() if w["correct"] < w["items"]]
@@ -371,6 +380,7 @@ def finalize(attempt: ExamAttempt, *, reason: str) -> ExamAttempt:
                 chapter_id=item.get("chapter") or "", position=position,
                 chosen=chosen, correct=bool(chosen) and chosen == item.get("answer"),
                 flagged=bool(entry.get("f")),
+                time_spent=entry.get("s"),
             ))
     ExamResponse.objects.bulk_create(rows, batch_size=500)
     return reloaded

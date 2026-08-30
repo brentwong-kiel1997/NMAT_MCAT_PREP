@@ -1295,3 +1295,16 @@ details.tut-question[open] summary, details.tut-check-q[open] summary { margin-b
 
 .strategy-steps { list-style: decimal; padding-left: 1.4rem; }
 .strategy-steps li { margin: .35rem 0; }
+
+/* dashboard trend + accuracy bars */
+.trend-list { display: grid; gap: .35rem; margin: .5rem 0; }
+.trend-row { display: grid; grid-template-columns: 4.5rem 1fr auto; gap: .6rem; align-items: center; font-size: .92rem; }
+.trend-date { color: #666; }
+.trend-bar { background: #eee; border-radius: 999px; height: 1.05rem; overflow: hidden; }
+.trend-fill { display: block; height: 100%; background: #3b5bdb; color: #fff;
+  font-size: .72rem; line-height: 1.05rem; padding: 0 .4rem; border-radius: 999px;
+  min-width: 2rem; text-align: right; }
+.trend-fill.trend-acc { background: #2e7d4f; }
+.cause-btn { border: 1px solid #ccc; background: #fff; border-radius: 999px;
+  padding: .1rem .6rem; margin: 0 .2rem .2rem 0; cursor: pointer; font-size: .82rem; }
+.cause-btn.is-on { background: #eef2ff; border-color: #3b5bdb; }

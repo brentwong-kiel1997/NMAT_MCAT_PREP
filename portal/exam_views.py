@@ -257,7 +257,11 @@ def exam_answer_api(request):
     chosen = payload.get("chosen")
     flagged = bool(payload.get("flagged"))
     try:
-        result = examsys.save_answer(attempt, block_id, pos, chosen, flagged)
+        elapsed = int(payload.get("elapsed_seconds") or 0)
+    except (TypeError, ValueError):
+        elapsed = 0
+    try:
+        result = examsys.save_answer(attempt, block_id, pos, chosen, flagged, elapsed)
     except ExamError as exc:
         return JsonResponse({"ok": False, "error": str(exc)}, status=400)
     if result.get("ok"):
@@ -329,6 +333,7 @@ def exam_result(request, attempt_id: int):
                 "distractors": item.get("distractors") or {},
                 "passage_text": item.get("passage_text", ""),
                 "flagged": bool(entry.get("f")),
+                "time_spent": (r.time_spent if r else entry.get("s")) or 0,
                 "chapter": item.get("chapter") or "",
                 "chapter_title": (chapter or {}).get("title", ""),
                 "discipline": (chapter or {}).get("discipline", ""),
