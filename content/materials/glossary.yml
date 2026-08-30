@@ -591,3 +591,167 @@ terms:
   subjects:
   - perceptual-acuity
   - behavioral-social
+- term: Alligation
+  def: 'A mixture method: the ratio of components equals the distance of each price/strength from the
+    desired mean, inverted.'
+  subjects:
+  - quantitative
+- term: Harmonic mean
+  def: For equal distances at two speeds, the round-trip average is 2/(1/a + 1/b) — always below the arithmetic
+    mean.
+  subjects:
+  - quantitative
+- term: Work-rate addition
+  def: 'Combined rate is the sum of individual rates: 1/t = 1/a + 1/b for two workers on one job.'
+  subjects:
+  - quantitative
+- term: Percent-point change
+  def: The arithmetic difference between two percentages (e.g. 12% to 15% is 3 percentage points, not
+    3 percent).
+  subjects:
+  - quantitative
+  - behavioral-social
+- term: Weighted average
+  def: A mean where each value contributes proportionally to its group size; group counts are the weights.
+  subjects:
+  - quantitative
+  - sociology-and-anthropology
+- term: Concession
+  def: A point the author grants to the opposing side before pivoting ('to be sure… but'); locating it
+    prevents mistaking the conceded view for the thesis.
+  subjects:
+  - cars
+- term: Scope
+  def: How broadly an answer choice claims; correct CARS answers match the passage's scope exactly — never
+    broader ('all'), never narrower than the claim.
+  subjects:
+  - cars
+- term: Peripheral cue
+  def: A persuasion shortcut (credibility, attractiveness) used when elaboration is low; contrasted with
+    argument quality.
+  subjects:
+  - cars
+  - psychology
+- term: Counterexample
+  def: A specific case that defeats a general claim; in CARS, weakening items often hinge on spotting
+    or supplying one.
+  subjects:
+  - cars
+  - verbal
+- term: Cohesion-tension
+  def: Water rises in xylem because transpiration pulls a continuous column held together by cohesion
+    and adhered to vessel walls.
+  subjects:
+  - biology
+- term: Countercurrent exchange
+  def: Two fluids flowing opposite directions maximize gradient-driven exchange — fish gills and kidney
+    loop of Henle.
+  subjects:
+  - biology
+- term: Semiconservative replication
+  def: Each daughter DNA duplex keeps one parental strand and one newly synthesized strand.
+  subjects:
+  - biology
+  - biochemistry
+- term: Nondisjunction
+  def: Failure of homologs or sister chromatids to separate in meiosis, producing aneuploid gametes (e.g.
+    trisomy 21).
+  subjects:
+  - biology
+- term: K-strategist
+  def: Species with few offspring, heavy parental investment, and populations near carrying capacity.
+  subjects:
+  - biology
+- term: Common-ion effect
+  def: Adding an ion already present in an equilibrium suppresses its salt's solubility — a Le Châtelier
+    application.
+  subjects:
+  - chemistry
+- term: Molality
+  def: Moles of solute per kilogram of solvent (not solution); used for colligative properties because
+    it is temperature-independent.
+  subjects:
+  - chemistry
+- term: Leaving group
+  def: The fragment that departs with electron pair in substitution; better leaving groups = weaker bases
+    (I⁻ > Br⁻ > Cl⁻).
+  subjects:
+  - organic-chemistry
+- term: Fair-share time
+  def: Block seconds divided by item count — the per-question budget that pacing checkpoints compare against.
+  subjects:
+  - physics
+  - quantitative
+- term: Escape speed
+  def: 'Minimum launch speed for an object to leave a body''s gravity: v = √(2GM/r), independent of launch
+    direction.'
+  subjects:
+  - physics
+- term: Doppler shift
+  def: Observed frequency rises on approach and falls on recession by v/f of relative motion along the
+    line of sight.
+  subjects:
+  - physics
+- term: Refractory period
+  def: The milliseconds after an action potential when a neuron cannot re-fire (absolute) or needs stronger
+    input (relative).
+  subjects:
+  - physics
+  - biology
+- term: Anfinsen's principle
+  def: A protein's native fold is encoded in its amino-acid sequence — denatured ribonuclease refolds
+    spontaneously in the right buffer.
+  subjects:
+  - biochemistry
+  - biology
+- term: Cori cycle
+  def: Muscle lactate travels to the liver for gluconeogenesis, and the regenerated glucose returns —
+    recycling NADH balance across organs.
+  subjects:
+  - biochemistry
+- term: Ketone bodies
+  def: Liver-made acetoacetate and β-hydroxybutyrate from fasting acetyl-CoA surplus; the brain's alternate
+    fuel in prolonged fasting.
+  subjects:
+  - biochemistry
+- term: Michaelis constant (Km)
+  def: Substrate concentration at half-Vmax; numerically equals the dissociation sense of enzyme-substrate
+    affinity — lower Km, higher affinity.
+  subjects:
+  - biochemistry
+- term: Allosteric activator
+  def: A molecule binding outside the active site that stabilizes the active enzyme form — e.g. fructose-2,6-bisphosphate
+    on PFK-1.
+  subjects:
+  - biochemistry
+- term: Allostatic load
+  def: Cumulative physiological wear from chronic stress activation — elevated cortisol, blood pressure,
+    and inflammation over time.
+  subjects:
+  - behavioral-social
+  - psych-soc
+- term: Fundamental cause
+  def: A social factor (like SES) that keeps producing health gaps even as specific diseases and treatments
+    change.
+  subjects:
+  - behavioral-social
+  - psych-soc
+- term: Kin keeper
+  def: The family member (statistically often a woman) who carries the emotional and logistical labor
+    of kin networks.
+  subjects:
+  - behavioral-social
+  - psych-soc
+- term: Anomie
+  def: Durkheim's normlessness — society's rules lose grip when rapid change outpaces regulation; Merton
+    links it to deviance pressure.
+  subjects:
+  - behavioral-social
+  - psych-soc
+- term: Ecological fallacy
+  def: Inferring individual behavior from group averages — group-level correlations need not hold for
+    members.
+  subjects:
+  - behavioral-social
+  - psych-soc
+  - psychology

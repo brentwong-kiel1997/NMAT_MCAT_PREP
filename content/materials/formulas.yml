@@ -81,6 +81,9 @@ sheets:
   - title: Redox electron transfer
     formula: n = Δoxidation number × atoms
     note: Balance half-reactions to find electrons.
+  - title: Half-life
+    formula: t₁/₂ = 0.693 / k
+    note: First-order decay; fraction remaining = (½)ⁿ after n half-lives.
 - slug: physics
   entries:
   - title: Newton’s second law
@@ -131,6 +134,15 @@ sheets:
   - title: Photon energy
     formula: E = hf = hc/λ
     note: Quantum and photoelectric contexts.
+  - title: Kinematic displacement
+    formula: x = v₀t + ½at²
+    note: Constant acceleration only; pick the kinematic equation matching your knowns.
+  - title: Work–energy theorem
+    formula: W_net = ΔKE = ½mv² − ½mv₀²
+    note: Net work equals the change in kinetic energy.
+  - title: Torque
+    formula: τ = rF sin θ
+    note: Lever arm times the perpendicular force component.
 - slug: biochemistry
   entries:
   - title: Michaelis–Menten
@@ -169,6 +181,9 @@ sheets:
   - title: Translation energy
     formula: ~4 ATP per peptide bond (approx.)
     note: Multiple steps per elongation cycle.
+  - title: Nernst equation (37 °C)
+    formula: E = (61 mV / z) · log([out]/[in])
+    note: Equilibrium potential for an ion of charge z.
 - slug: chem-phys
   entries:
   - title: Ideal gas
@@ -292,6 +307,9 @@ sheets:
   - title: Combinations
     formula: C(n,k) = n! / (k!(n−k)!)
     note: Unordered selections; use P(n,k) when order matters.
+  - title: Combined work rate
+    formula: 1/t = 1/t₁ + 1/t₂
+    note: Rates add; the fair-share of time is the reciprocal of the sum.
 - slug: behavioral-social
   entries:
   - title: Weber’s law
