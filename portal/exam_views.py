@@ -156,7 +156,8 @@ def exam_question(request, exam_id: str, attempt_id: int,
     vmap = (block.get("vmap") or {}).get(item_id) or {}
     if vmap:
         shown_choices = {shown: item["choices"][original]
-                         for shown, original in vmap.items()}
+                         for shown, original in vmap.items()
+                         if original in item["choices"]}
         shown_letter = next((shown for shown, original in vmap.items()
                              if original == shown_letter), "")
 

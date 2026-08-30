@@ -16,7 +16,7 @@ from .content import flashcards_for
 from .learners import get_or_create_profile
 from .models import SrsCard
 
-NEW_PER_DAY = 10
+NEW_PER_DAY = 10  # per queue render (i.e. per session), not per calendar day
 
 
 def card_key(subject_slug: str, chapter: str, text: str) -> str:
@@ -34,9 +34,10 @@ def split_card(text: str) -> tuple[str, str]:
 
 
 def deck_for(subject_slug: str) -> list[dict]:
-    """All cards for a subject with their content key."""
+    """Every card for a subject with its content key (no 40-card cap —
+    the whole curriculum belongs in rotation)."""
     out = []
-    for card in flashcards_for(subject_slug):
+    for card in flashcards_for(subject_slug, limit=None):
         text = card.get("text", "")
         front, back = split_card(text)
         out.append({
@@ -52,11 +53,33 @@ def due_queue(username: str, subject_slug: str | None) -> dict:
     """Today's queue: due reviews first, then up to NEW_PER_DAY unseen cards."""
     profile = get_or_create_profile(username)
     today = timezone.localdate()
-    reviews = (SrsCard.objects.filter(profile=profile, interval_days__gt=0)
-               .filter(due_date__lte=today))
+    # interval_days=0 cards (lapsed "again") are due immediately — the filter
+    # is on due_date alone so they re-enter today's queue instead of vanishing
+    reviews = SrsCard.objects.filter(profile=profile).filter(due_date__lte=today)
     if subject_slug:
         reviews = reviews.filter(subject_slug=subject_slug)
-    due = list(reviews.order_by("due_date"))
+    # ghost guard: drop scheduling rows whose card left the content deck
+    # (edited notes change their key; the row would otherwise be shown and
+    # be ungradable forever)
+    live_keys: set[str] = set()
+    deck_cache: dict[str, list[dict]] = {}
+    for subj in ([subject_slug] if subject_slug else _subjects_with_decks()):
+        deck_cache[subj] = deck_for(subj)
+        live_keys.update(c["key"] for c in deck_cache[subj])
+    due = [c for c in reviews.order_by("due_date") if c.card_key in live_keys]
+    # refresh stored text so edited notes show their current wording
+    for c in due:
+        for subj, deck in deck_cache.items():
+            match = next((x for x in deck if x["key"] == c.card_key), None)
+            if match:
+                changed = (c.front != match["front"] or c.back != match["back"]
+                           or c.chapter != match["chapter"])
+                if changed:
+                    c.front = match["front"][:400]
+                    c.back = match["back"][:600]
+                    c.chapter = match["chapter"][:200]
+                    c.save(update_fields=["front", "back", "chapter"])
+                break
 
     learned_keys = set(SrsCard.objects.filter(profile=profile)
                        .values_list("card_key", flat=True))
@@ -66,7 +89,7 @@ def due_queue(username: str, subject_slug: str | None) -> dict:
         for card in deck_for(subj):
             if card["key"] not in learned_keys:
                 new_cards.append({**card, "subject_slug": subj})
-    new_cards = new_cards[: max(0, NEW_PER_DAY - 0)][:NEW_PER_DAY]
+    new_cards = new_cards[:NEW_PER_DAY]
     return {"due": due, "new": new_cards}
 
 
@@ -97,11 +120,12 @@ def grade_card(username: str, subject_slug: str, key: str, front: str,
         interval = max(1, int(interval * 1.2))
     elif grade == "easy":
         ease = min(3.2, ease + 0.15)
-        interval = max(1, int((interval or 0.5) * ease * 1.3))
+        interval = max(3, round(max(interval, 1) * ease * 1.3)) if interval == 0 else max(interval + 1, round(interval * ease * 1.3))
     else:  # good
         interval = 1 if interval == 0 else max(1, int(interval * ease))
     card.ease = ease
     card.interval_days = interval
+    interval = min(interval, 365)
     card.due_date = timezone.localdate() + dt.timedelta(days=interval)
     card.reps += 1
     card.save()
@@ -112,6 +136,6 @@ def srs_stats(username: str) -> dict:
     profile = get_or_create_profile(username)
     today = timezone.localdate()
     total = SrsCard.objects.filter(profile=profile).count()
-    due = (SrsCard.objects.filter(profile=profile, interval_days__gt=0,
+    due = (SrsCard.objects.filter(profile=profile,
                                   due_date__lte=today).count())
     return {"total": total, "due_today": due}

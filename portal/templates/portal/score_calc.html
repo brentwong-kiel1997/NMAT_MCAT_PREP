@@ -40,12 +40,12 @@
       <p id="nmat-standard" class="lead"></p>
       <p id="nmat-percentile" class="lead"></p>
       <table class="mini-table" style="margin-top:.8rem;">
-        <thead><tr><th>Target</th><th>Percentile</th><th>Standard score</th><th>Accuracy needed on 240 items</th></tr></thead>
+        <thead><tr><th>Target</th><th>Percentile</th><th>Standard score</th><th id="nmat-acc-header">Accuracy needed on 240 items</th></tr></thead>
         <tbody>
           <tr><td>CHED minimum</td><td>40th</td><td>~475</td><td id="nmat-t40"></td></tr>
           <tr><td>Most Metro Manila schools</td><td>60th</td><td>~525</td><td id="nmat-t60"></td></tr>
           <tr><td>Competitive (UST, Ateneo)</td><td>85th</td><td>~604</td><td id="nmat-t85"></td></tr>
-          <tr><td>UP College of Medicine</td><td>95th+</td><td>~645</td><td id="nmat-t95"></td></tr>
+          <tr><td>UP College of Medicine</td><td>95th+</td><td id="nmat-s95"></td><td id="nmat-t95"></td></tr>
         </tbody>
       </table>
     </div>
@@ -59,8 +59,10 @@
     <p class="note-line" style="margin-top:1rem;">
       How it works: both exams report on a scale centered near the middle of the cohort.
       For planning we map your raw accuracy through a normal curve (NMAT: mean 500, SD 100;
-      MCAT section: midpoint 125, SD ≈ 2.5 per the published 118–132 range). Real forms vary —
-      treat the outputs as targets to plan against, not predictions.
+      MCAT section: midpoint 125, SD ≈ 2.5 per the published 118–132 range). The
+      "accuracy needed" column additionally assumes cohort accuracy is ~normal with
+      mean 60% and SD 12% — a planning assumption, not a CEM/AAMC figure. Real forms
+      vary — treat all outputs as targets, not predictions.
     </p>
   </div>
 </section>
@@ -96,7 +98,14 @@
   }
 
   const NMAT_ITEMS = 240;
-  function nmatStandard(pct) { return Math.round(500 + 100 * invNorm(pct / 100)); }
+  function nmatStandard(pct) {
+      const p = Math.max(0.001, Math.min(99.9, pct));
+      return Math.round(500 + 100 * invNorm(p / 100));
+    }
+    function nmatPercentile(pct) {
+      const std = nmatStandard(pct);
+      return Math.max(1, Math.round(normCdf((std - 500) / 100) * 100));
+    }
   function nmatAccuracyForPercentile(p) {
     // percentile -> needed accuracy: z at p, then accuracy = mean_accuracy + z * SD_accuracy
     // accuracy on 240 4-option items: mean 0.25+ chance-adjusted — CEM reports standard
@@ -104,9 +113,8 @@
     const z = invNorm(p / 100);
     return Math.max(0.25, Math.min(1, 0.6 + z * 0.12));
   }
-  function mcatSection(pct) { return Math.round(125 + 2.5 * invNorm(pct / 100)); }
 
-  function accuracyPct(frac) { return Math.round(frac * 240); }
+  function accuracyPct(frac, total) { return Math.round(frac * (total || 240)); }
 
   function update() {
     const exam = document.getElementById("calc-exam").value;
@@ -117,8 +125,12 @@
     document.getElementById("calc-nmat-out").hidden = exam !== "nmat";
     document.getElementById("calc-mcat-out").hidden = exam !== "mcat";
     if (exam === "nmat") {
-      const std = nmatStandard(pct);
-      const pr = Math.round(normCdf((std - 500) / 100) * 100);
+      // one consistent model: percentile derived from the same cohort
+      // accuracy assumption the accuracy column uses
+      const modelPct = Math.max(1, Math.min(99,
+        50 + (pct - 60) / 0.12 / 2.5));
+      const std = nmatStandard(modelPct);
+      const pr = nmatPercentile(modelPct);
       document.getElementById("nmat-standard").textContent =
         `Estimated standard score: ${Math.max(200, Math.min(800, std))} (scale 200–800)`;
       document.getElementById("nmat-percentile").textContent =
@@ -127,10 +139,17 @@
          (pr >= 85) ? "competitive range (UST, Ateneo)." :
          (pr >= 60) ? "clears most Metro Manila cut-offs." :
          (pr >= 40) ? "above the CHED minimum." : "below the CHED 40th-percentile minimum.");
+      [["nmat-s95", 95], ["nmat-t95", 95]].forEach(([id, p]) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = `~${nmatStandard(p)}`;
+      });
       [["nmat-t40", 40], ["nmat-t60", 60], ["nmat-t85", 85], ["nmat-t95", 95]].forEach(([id, p]) => {
         const acc = nmatAccuracyForPercentile(p);
-        document.getElementById(id).textContent = `${accuracyPct(acc)} / 240 (${Math.round(acc * 100)}%)`;
+        const el = document.getElementById(id);
+        if (el) el.textContent = `${accuracyPct(acc, total)} / ${total} (${Math.round(acc * 100)}%)`;
       });
+      const header = document.getElementById("nmat-acc-header");
+      if (header) header.textContent = `Accuracy needed on ${total} items`;
     } else {
       // MCAT section: 4-option items, chance floor near 0.25; published midpoint 125
       const chance = 0.25;
@@ -141,7 +160,8 @@
       const pctile = Math.round(Math.max(1, Math.min(99, normCdf(z) * 100)));
       document.getElementById("mcat-section-score").textContent =
         `Estimated section score: ${score} / 132 (≈ ${pctile}th percentile within the cohort) — ` +
-        (score >= 128 ? "strong section." : score >= 125 ? "at the midpoint — balanced." : "below midpoint; the weak-chapter list is your syllabus.");
+        (score >= 128 ? "strong section." : score >= 125 ? "at the midpoint — balanced." : "below midpoint; the weak-chapter list is your syllabus.")
+        + (frac <= 0.5 ? " Note: with the 0.25 chance floor, the section midpoint (125) corresponds to roughly 62-63% raw accuracy." : "");
     }
   }
   ["calc-exam", "calc-correct", "calc-total"].forEach((id) =>

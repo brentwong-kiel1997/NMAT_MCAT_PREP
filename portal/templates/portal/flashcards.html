@@ -23,10 +23,10 @@
     <p class="note-line">
       <a href="{% url 'flashcards_hub' %}">All decks</a>
       {% for d in decks %}
-      {% if d.slug != active %} · <a href="?subject={{ d.slug }}">{{ d.label }}</a>{% endif %}
+      {% if d.slug != active_subject %} · <a href="?subject={{ d.slug }}">{{ d.label }}</a>{% endif %}
       {% endfor %}
     </p>
-    {% if active %}<p class="note-line">Active deck: <strong>{{ active }}</strong></p>{% endif %}
+    {% if active_subject %}<p class="note-line">Active deck: <strong>{{ active_subject }}</strong></p>{% endif %}
   </div>
 
   <div class="practice-card" id="srs-root" data-srs
@@ -55,8 +55,8 @@
 {% block page_js %}
 <script>
 (function () {
-  const due = [{% for d in due %}{"key":"{{ d.card_key }}","subject":"{{ d.subject_slug }}","front":"{{ d.front|escapejs }}","back":"{{ d.back|escapejs }}","chapter":"{{ d.chapter|escapejs }}"}{% if not forloop.last %},{% endif %}{% endfor %}];
-  const fresh = [{% for n in new_cards %}{"key":"{{ n.key }}","subject":"{{ n.subject_slug }}","front":"{{ n.front|escapejs }}","back":"{{ n.back|escapejs }}","chapter":"{{ n.chapter|escapejs }}"}{% if not forloop.last %},{% endif %}{% endfor %}];
+  const due = [{% for d in due %}{"key":"{{ d.card_key|escapejs }}","subject":"{{ d.subject_slug|escapejs }}","front":"{{ d.front|escapejs }}","back":"{{ d.back|escapejs }}","chapter":"{{ d.chapter|escapejs }}"}{% if not forloop.last %},{% endif %}{% endfor %}];
+  const fresh = [{% for n in new_cards %}{"key":"{{ n.key|escapejs }}","subject":"{{ n.subject_slug|escapejs }}","front":"{{ n.front|escapejs }}","back":"{{ n.back|escapejs }}","chapter":"{{ n.chapter|escapejs }}"}{% if not forloop.last %},{% endif %}{% endfor %}];
   const queue = due.concat(fresh);
   let i = 0, revealed = false;
 
@@ -79,7 +79,10 @@
     $("srs-show").hidden = false;
     ["srs-again", "srs-hard", "srs-good", "srs-easy"].forEach(id => $(id).hidden = true);
   }
+  let inFlight = false;
   function grade(g) {
+    if (inFlight || !revealed) return;
+    inFlight = true;
     const card = queue[i];
     $("srs-status").textContent = "Saving…";
     fetch("/api/flashcards/grade/", {
@@ -87,9 +90,19 @@
       headers: { "Content-Type": "application/json", "X-CSRFToken": csrf() },
       body: JSON.stringify({ subject_slug: card.subject, key: card.key, grade: g }),
     }).then((res) => {
-      $("srs-status").textContent = res.ok ? "Scheduled." : "Save failed — card retried next session.";
-      i += 1; revealed = false; paint();
+      inFlight = false;
+      if (res.ok) {
+        // "again" re-queues within this session (SM-2: due immediately)
+        if (g === "again") { queue.push(card); }
+        i += 1; revealed = false;
+        $("srs-status").textContent = "Scheduled.";
+        paint();
+      } else {
+        // keep the card up — a silent skip would drop it for the session
+        $("srs-status").textContent = "Save failed — try again.";
+      }
     }).catch(() => {
+      inFlight = false;
       $("srs-status").textContent = "Offline — grade not saved.";
     });
   }

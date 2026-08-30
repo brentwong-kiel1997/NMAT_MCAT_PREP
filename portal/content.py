@@ -390,7 +390,7 @@ def flashcards_for(slug: str, limit: int = 40) -> list[dict]:
             pairs.append((ch.get("title", ""), note))
     for title, note in sorted(pairs):
         cards.append({"chapter": title, "text": note})
-        if len(cards) >= limit:
+        if limit is not None and len(cards) >= limit:
             return cards
     return cards
 
