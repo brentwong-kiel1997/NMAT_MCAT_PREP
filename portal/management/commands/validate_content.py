@@ -256,9 +256,10 @@ def _validate_exam_bank(store: dict, seen_qids: set[str]) -> list[str]:
             # identity
             if doc.get("exam") != exam_id:
                 problems.append(f"exam-bank {section_id}: exam {doc.get('exam')!r} != directory exam {exam_id!r}")
+            is_drill = bool(doc.get("_drill"))
             if doc.get("section") != section_id:
                 problems.append(f"exam-bank {section_id}: section key mismatch")
-            if section_id not in declared_banks:
+            if not is_drill and section_id not in declared_banks:
                 problems.append(f"exam-bank {section_id}: not listed in any {exam_id} blueprint block")
 
             raw_items = list(doc.get("items") or [])
@@ -268,9 +269,12 @@ def _validate_exam_bank(store: dict, seen_qids: set[str]) -> list[str]:
                 raw_items.extend(passage.get("items") or [])
 
             expected = doc.get("items_expected")
-            if expected is not None and len(raw_items) != expected:
+            if not is_drill and expected is not None and len(raw_items) != expected:
                 problems.append(f"exam-bank {section_id}: {len(raw_items)} items, expected {expected}")
-            seen_section_items[section_id] = len(raw_items)
+            if is_drill:
+                seen_section_items[section_id] = 0  # never counts toward blueprint totals
+            else:
+                seen_section_items[section_id] = len(raw_items)
 
             letters_count = {"A": 0, "B": 0, "C": 0, "D": 0}
             stems: dict[str, str] = {}

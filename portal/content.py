@@ -259,6 +259,9 @@ def _load_exam_bank() -> dict:
         except ContentError as exc:
             errors.append(str(exc))
             continue
+        # drill/ files are practice-only: never part of a mock blueprint
+        if "drill" in file.relative_to(bank_dir).parts:
+            doc["_drill"] = True
         bank.setdefault(doc.get("exam", ""), {})[doc.get("section", file.stem)] = doc
     out: dict[str, object] = {"exams": bank}
     if errors:
