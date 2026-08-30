@@ -30,7 +30,7 @@
 | 📝 **High-yield notes** | 449 one-line bullets across 70 outline chapters, plus 116 practice MCQs and a 470-question full-length mock-exam bank (NMAT 240 + MCAT 230, 30 passages) |
 | 🔎 **Materials desk** | 105-term searchable glossary, 108 formulas in per-subject sheets, exam tips, study paths, and checklists |
 | 🩺 **Disease library** | 8 mechanism-first articles (TB, dengue, MI, …) bridging basic science to clinical intuition — enrichment reading, honestly labeled as such |
-| 🔁 **Spaced-repetition flashcards** | SM-2-style scheduling over the full 623-card deck: due queue, new cards capped per session, Again/Hard/Good/Easy grading, per-subject decks |
+| 🔁 **Spaced-repetition flashcards** | SM-2-style scheduling over the full 399-card deck: due queue, new cards capped per session, Again/Hard/Good/Easy grading, per-subject decks |
 | ✅ **Mock exams & progress tracking** | Real-mode full-length simulations (server-authoritative clocks, autosave, retake variants that reshuffle items and options, per-question review), wrong-answer notebook with redo, study-plan generator, per-chapter progress |
 | 📊 **Score interpreter** | Convert mock-exam percentages to the NMAT 200–800 scale (with CHED 40th / Metro Manila / UST-Ateneo / UP percentile reference rows) or MCAT 118–132 sections — labeled planning estimates |
 | 🤖 **AI study coach, model-agnostic** | Explain / quiz / grade modes, grounded in whichever chapter you are reading. Any OpenAI-compatible endpoint or Anthropic API — admins add, delete, and switch models at runtime |
@@ -46,7 +46,7 @@
 | Practice MCQs with explanations | **116** |
 | Glossary terms / formula entries | **115 / 108** |
 | Strategy guides | **8** |
-| Flashcards (spaced repetition) | **623** across 13 subject decks |
+| Flashcards (spaced repetition) | **399** across 13 subject decks |
 | Exam tips / study paths / checklists | **21 / 7 / 3** |
 | Disease articles | **8** |
 | Full textbook tutorials | **70 / 70 — complete** |
