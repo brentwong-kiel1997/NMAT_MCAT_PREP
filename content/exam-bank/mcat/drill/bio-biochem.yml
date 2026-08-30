@@ -1,0 +1,506 @@
+exam: mcat
+section: drill-bio-biochem
+label: Bio/Biochem drill
+subject: bio-biochem
+block: bio-biochem
+_drill: true
+items_expected: 30
+items:
+- id: mcat-d-bb-001
+  q: A and B are both heterozygous carriers of the same autosomal recessive allele. What is the probability
+    that a child of theirs will be affected?
+  choices:
+    A: 1/4
+    B: 1/2
+    C: 1/3
+    D: '0'
+  answer: A
+  explain: 'Aa x Aa gives 1 AA : 2 Aa : 1 aa, so the probability of an affected (aa) child is 1/4.'
+  distractors:
+    B: Treated the allele as dominant, in which case half the offspring would show it.
+    C: That is the risk for a child known to be unaffected, a conditional that does not apply here.
+    D: Assumed a carrier cannot transmit the allele to an affected child.
+  chapter: genetics
+  passage_id: ''
+- id: mcat-d-bb-002
+  q: Two individuals with genotype AaBb are crossed, and the two loci assort independently. What fraction
+    of the offspring is expected to be aabb?
+  choices:
+    A: 1/4
+    B: 1/16
+    C: 1/8
+    D: 9/16
+  answer: B
+  explain: Each locus gives aa with probability 1/4, so aabb = 1/4 x 1/4 = 0.0625 = 1/16.
+  distractors:
+    A: 'Squared nothing: this is the chance of one locus being homozygous recessive.'
+    C: Multiplied 1/4 by 1/2, mixing an incorrect single-locus probability into the product.
+    D: That is the fraction showing both dominant phenotypes, not both recessive alleles.
+  chapter: genetics
+  passage_id: ''
+- id: mcat-d-bb-003
+  q: A woman heterozygous for an X-linked recessive allele has children with a genotypically normal man.
+    What fraction of their sons is expected to be affected?
+  choices:
+    A: 1/4
+    B: all of them
+    C: 1/2
+    D: none
+  answer: C
+  explain: Half the sons receive the mother's mutant X and half receive her normal X, so 1/2 of sons are
+    affected (1/4 of all children).
+  distractors:
+    A: That is the fraction of all children affected; the question asks only about sons.
+    B: Boys receive their single X from the mother, not from the father.
+    D: The mother's carrier status is enough to pass the allele to half her sons.
+  chapter: genetics
+  passage_id: ''
+- id: mcat-d-bb-004
+  q: In a population at Hardy-Weinberg equilibrium, 4% of individuals are born with an autosomal recessive
+    condition. What fraction of the population consists of asymptomatic carriers?
+  choices:
+    A: 4%
+    B: 16%
+    C: 20%
+    D: 32%
+  answer: D
+  explain: q^2 = 0.04 gives q = 0.20 and p = 0.80, so 2pq = 2(0.80)(0.20) = 0.32, i.e. 32%.
+  distractors:
+    A: That is q^2, the frequency of affected homozygotes, not of heterozygotes.
+    B: That is p^2, the frequency of homozygous normal individuals.
+    C: That is q, the allele frequency, rather than the heterozygote frequency.
+  chapter: genetics
+  passage_id: ''
+- id: mcat-d-bb-005
+  q: An individual is trihybrid (AaBbCc) at three unlinked loci. How many genetically different gametes
+    can that individual produce with respect to these loci?
+  choices:
+    A: '3'
+    B: '8'
+    C: '6'
+    D: '64'
+  answer: B
+  explain: Independent assortment gives 2^n gamete types = 2^3 = 8.
+  distractors:
+    A: Counted the loci rather than the independent combinations of alleles.
+    C: Treated the three loci as pairs that must assort together.
+    D: That is the number of diploid zygote genotypes in a trihybrid self-cross (4^3), not the number
+      of haploid gametes.
+  chapter: genetics
+  passage_id: ''
+- id: mcat-d-bb-006
+  q: A eukaryotic mRNA has a coding region of 300 nucleotides between the start and stop codons. Taking
+    the average amino acid as 110 Da, what is the approximate mass of the polypeptide produced?
+  choices:
+    A: 11,000 Da
+    B: 33,000 Da
+    C: 300 Da
+    D: 330 Da
+  answer: A
+  explain: 300 nt / 3 = 100 codons, so the peptide is 100 amino acids and about 100 x 110 Da = 11,000
+    Da.
+  distractors:
+    B: Multiplied all 300 nucleotides by 110 Da, ignoring that three nucleotides specify one amino acid.
+    C: Reported the nucleotide count with the units of mass.
+    D: Divided by 300 rather than by 3 before scaling by 110 Da.
+  chapter: 1b-gene-to-protein
+  passage_id: ''
+- id: mcat-d-bb-007
+  q: A tetrapeptide has a free N-terminus, a free C-terminus, one Lys residue and one Asp residue, and
+    no other ionizable groups. What is its net charge at pH 7?
+  choices:
+    A: '+1'
+    B: '+2'
+    C: '-1'
+    D: '0'
+  answer: D
+  explain: 'At pH 7: N-terminus +1, Lys side chain +1, Asp side chain -1, C-terminus -1; the four charges
+    sum to 0, so pH 7 sits at this peptide''s isoelectric point.'
+  distractors:
+    A: Counted the N-terminus and Lys but ignored the deprotonated C-terminal carboxylate.
+    B: Counted only the basic groups (N-terminus and Lys side chain).
+    C: Counted only the acidic groups and ignored the basic ones.
+  chapter: 1a-proteins-and-amino-acids
+  passage_id: ''
+- id: mcat-d-bb-008
+  q: A buffer has pKa = 6.8. At pH 7.4, what is the ratio of deprotonated base to protonated acid ([A-]/[HA])?
+  choices:
+    A: '1 : 4'
+    B: '6 : 1'
+    C: '4 : 1'
+    D: '1.2 : 1'
+  answer: C
+  explain: 'pH = pKa + log([A-]/[HA]) gives log([A-]/[HA]) = 0.6, so [A-]/[HA] = 10^0.6 = 4.0, about 4
+    : 1.'
+  distractors:
+    A: Inverted the Henderson-Hasselbalch ratio.
+    B: Used the pH-pKa difference itself as the ratio.
+    D: Reported the difference in pH units as a ratio of 1.2 to 1.
+  chapter: 1a-proteins-and-amino-acids
+  passage_id: ''
+- id: mcat-d-bb-009
+  q: An enzyme has Vmax = 90 µmol/min. If the substrate concentration is twice the Km, what is the initial
+    velocity?
+  choices:
+    A: 60 µmol/min
+    B: 30. µmol/min
+    C: 90 µmol/min
+    D: 45 µmol/min
+  answer: A
+  explain: v = Vmax[S]/(Km + [S]); with [S] = 2Km, v = 90 x 2/(1 + 2) = 60 µmol/min, two-thirds of Vmax.
+  distractors:
+    B: Used Vmax/3 as if [S] were 0.5 Km rather than 2 Km.
+    C: That is the velocity at saturating substrate, not at 2 Km.
+    D: Reported Vmax/2, the velocity at [S] = Km, not at 2 Km.
+  chapter: biochemistry
+  passage_id: ''
+- id: mcat-d-bb-010
+  q: How many ATP are produced per glucose by substrate-level phosphorylation in glycolysis alone?
+  choices:
+    A: '4'
+    B: '2'
+    C: '36'
+    D: '0'
+  answer: B
+  explain: Four ATP are made (1,3-BPG and PEP steps, x2) but two are spent by hexokinase and phosphofructokinase,
+    leaving a net of 2 per glucose.
+  distractors:
+    A: That is the gross ATP made by the two payoff-phase phosphoglycerate kinases and pyruvate kinases,
+      before subtracting the two invested in the priming phase.
+    C: That is the order of complete oxidative phosphorylation of one glucose.
+    D: Glycolysis does produce ATP; fermentation regenerates NAD+ without consuming it.
+  chapter: 1d-bioenergetics-and-fuel-metabolism
+  passage_id: ''
+- id: mcat-d-bb-011
+  q: One acetyl-CoA is oxidized completely through the citric acid cycle, yielding 3 NADH, 1 FADH2 and
+    1 GTP. Using 2.5 ATP per NADH and 1.5 ATP per FADH2, what is the total ATP yield?
+  choices:
+    A: 12.5 ATP
+    B: 7.5 ATP
+    C: 10 ATP
+    D: 4.0 ATP
+  answer: C
+  explain: 3 x 2.5 + 1 x 1.5 + 1 = 7.5 + 1.5 + 1 = 10 ATP per acetyl-CoA.
+  distractors:
+    A: That is the yield for one turn counted with the older 3/2 ATP-per-coenzyme values plus GTP.
+    B: Counted the three NADH only and dropped FADH2 and GTP.
+    D: Counted only FADH2 and GTP, omitting the NADH contribution.
+  chapter: 1d-bioenergetics-and-fuel-metabolism
+  passage_id: ''
+- id: mcat-d-bb-012
+  q: An enzyme has Vmax = 100 µmol/min and Km = 0.20 mM. At a substrate concentration of 0.80 mM, what
+    is the reaction velocity?
+  choices:
+    A: 100 µmol/min
+    B: 50. µmol/min
+    C: 20. µmol/min
+    D: 80 µmol/min
+  answer: D
+  explain: v = Vmax[S]/(Km + [S]) = 100 x 0.80/(0.20 + 0.80) = 80 µmol/min, i.e. 80% of Vmax.
+  distractors:
+    A: That is Vmax; 0.80 mM is only four times Km, not saturating in this framework.
+    B: That is the velocity at [S] = Km, not at 0.80 mM.
+    C: Reported the Km value in place of the velocity.
+  chapter: biochemistry
+  passage_id: ''
+- id: mcat-d-bb-013
+  q: DNA labeled with heavy nitrogen (15N) is shifted into a 14N medium and allowed to replicate for three
+    rounds by the semiconservative mechanism. What fraction of the resulting duplexes still contains 15N?
+  choices:
+    A: 3/4
+    B: 1/8
+    C: 1/2
+    D: 1/4
+  answer: D
+  explain: Three rounds give 8 duplexes; the two 15N/14N hybrids persist forever, so 2/8 = 0.25.
+  distractors:
+    A: That is the fraction containing only 14N, the complement of what was asked.
+    B: Treated the heavy strands as diluted across eight duplexes as if each kept a whole 15N molecule
+      per duplex.
+    C: Assumed semiconservative replication keeps the heavy strands paired together.
+  chapter: 1c-heritable-information-diversity
+  passage_id: ''
+- id: mcat-d-bb-014
+  q: A testcross of a dihybrid produces 1000 progeny, of which 120 show recombinant phenotypes. What is
+    the map distance between the two genes?
+  choices:
+    A: 0.12 cM
+    B: 88 cM
+    C: 12 cM
+    D: 120 cM
+  answer: C
+  explain: Map distance = recombinants/total x 100 = 120/1000 x 100 = 12 cM.
+  distractors:
+    A: Reported the recombinant fraction without converting it to map units.
+    B: Used the parental fraction instead of the recombinant fraction.
+    D: Skipped the division by the total progeny.
+  chapter: 1c-heritable-information-genetic-diversity
+  passage_id: ''
+- id: mcat-d-bb-015
+  q: A diploid cell has 2n = 24. What does each gamete contain after meiosis II is complete?
+  choices:
+    A: 24 chromosomes, each with one chromatid
+    B: 12 chromosomes, each with one chromatid
+    C: 12 chromosomes, each with two chromatids
+    D: 6 chromosomes, each with one chromatid
+  answer: B
+  explain: Meiosis halves the chromosome number to n = 12 and meiosis II separates sister chromatids,
+    so each gamete has 12 unreplicated chromosomes.
+  distractors:
+    A: That is the chromosome number of the parent in G1, not of a gamete.
+    C: That describes a meiosis I product before sister chromatids separate.
+    D: Halved the haploid number as well as the ploidy.
+  chapter: 2c-cell-division-differentiation-specialization
+  passage_id: ''
+- id: mcat-d-bb-016
+  q: A cell whose cytosol is 300 mOsm/L is placed in a 300 mM NaCl solution (assume NaCl dissociates completely).
+    What happens to the cell?
+  choices:
+    A: It shrinks, because the solution is about 600 mOsm/L and water leaves the cell
+    B: It stays the same size, because 300 mM NaCl is 300 mOsm/L
+    C: It swells and may lyse, because the solution is 150 mOsm/L
+    D: It shrinks, because NaCl cannot cross the membrane and the solution is 300 mOsm/L
+  answer: A
+  explain: Complete dissociation makes the solution 2 x 300 = 600 mOsm/L, twice the cytosol, so it is
+    hypertonic and osmosis draws water out of the cell.
+  distractors:
+    B: 'Confused molarity with osmolarity: each NaCl gives two osmotically active particles.'
+    C: Divided the sodium concentration by two instead of multiplying it.
+    D: Reached the right direction but with an osmolarity that is half the true value.
+  chapter: cells-and-cellular-processes
+  passage_id: ''
+- id: mcat-d-bb-017
+  q: A spherical cell doubles its diameter. Its surface-area-to-volume ratio changes by what factor?
+  choices:
+    A: It is halved
+    B: It doubles
+    C: It is unchanged
+    D: It quadruples
+  answer: A
+  explain: SA/V scales as r^2/r^3 = 1/r, so doubling the radius (or diameter) halves the ratio; for a
+    cube it goes from 6 to 3.
+  distractors:
+    B: Both surface area and volume grow, but not by the same power of the radius.
+    C: The ratio depends on radius, so it cannot stay constant while the cell grows.
+    D: Surface area grows fourfold, but volume grows eightfold.
+  chapter: 2a-assemblies-of-molecules-cells-and-cell-groups
+  passage_id: ''
+- id: mcat-d-bb-018
+  q: A culture starts with 100 bacteria that divide every 20 minutes. Ignoring cell death, how many bacteria
+    are present after 100 minutes?
+  choices:
+    A: '600'
+    B: '3200'
+    C: '1600'
+    D: '500'
+  answer: B
+  explain: 100 minutes / 20 minutes = 5 doublings, so N = 100 x 2^5 = 3200.
+  distractors:
+    A: Assumed linear growth of 100 per division cycle instead of doubling.
+    C: Counted four doublings (80 minutes) instead of five.
+    D: Added one cell per generation rather than doubling the population.
+  chapter: 2b-prokaryotes-and-viruses
+  passage_id: ''
+- id: mcat-d-bb-019
+  q: For a neuron at 37 °C with [K+]out = 5 mM and [K+]in = 150 mM, the potassium equilibrium potential
+    is E = 61 mV x log10([K+]out/[K+]in). What is E?
+  choices:
+    A: +90 mV
+    B: -45 mV
+    C: -90 mV
+    D: -1.5 mV
+  answer: C
+  explain: E = 61 x log10(5/150) = 61 x (-1.477) = -90 mV, close to a typical resting potential.
+  distractors:
+    A: Inverted the concentration ratio, which flips the sign of the logarithm.
+    B: Reported half the calculated potential.
+    D: Reported the logarithm itself (-1.48) without multiplying by 61 mV.
+  chapter: 3a-nervous-and-endocrine-systems
+  passage_id: ''
+- id: mcat-d-bb-020
+  q: A patient has a heart rate of 72 beats/min and a stroke volume of 70 mL. What is the cardiac output?
+  choices:
+    A: 5040 L/min
+    B: 0.98 L/min
+    C: 142 mL/min
+    D: 5.0 L/min
+  answer: D
+  explain: Cardiac output = heart rate x stroke volume = 72 x 70 mL = 5040 mL/min ≈ 5.0 L/min.
+  distractors:
+    A: Never converted milliliters to liters.
+    B: Divided the stroke volume by the heart rate instead of multiplying.
+    C: Added the two numbers instead of multiplying them.
+  chapter: 3b-main-organ-systems
+  passage_id: ''
+- id: mcat-d-bb-021
+  q: After several hours of heavy sweating, plasma osmolarity rises. Which change follows through the
+    normal homeostatic response?
+  choices:
+    A: ADH secretion decreases, and the collecting ducts reabsorb more water
+    B: ADH secretion increases, and the collecting ducts reabsorb more water to produce a small volume
+      of concentrated urine
+    C: Aldosterone secretion increases, and the kidneys excrete a large volume of dilute urine
+    D: ADH secretion increases, and the loop of Henle is bypassed so that dilute urine is released
+  answer: B
+  explain: Raised osmolarity is sensed by hypothalamic osmoreceptors, which increase ADH release from
+    the posterior pituitary; ADH inserts aquaporins in the collecting duct, so water is retained and the
+    urine becomes concentrated. This is negative feedback restoring osmolarity.
+  distractors:
+    A: Reabsorption and ADH secretion move together; a fall in ADH would dilute the urine.
+    C: Excreting dilute urine would worsen the water loss that raised osmolarity.
+    D: ADH does not bypass the loop of Henle; it increases water permeability distal to it.
+  chapter: life-processes-regulation-and-homeostasis
+  passage_id: ''
+- id: mcat-d-bb-022
+  q: After four cleavage divisions of a zygote, how many cells does the embryo contain, and how does each
+    cell's volume compare with that of the zygote?
+  choices:
+    A: 16 cells, each 16 times the volume of the zygote
+    B: 8 cells, each one-eighth the volume of the zygote
+    C: 16 cells, each one-sixteenth the volume of the zygote
+    D: 16 cells, each the same volume as the zygote
+  answer: C
+  explain: Four divisions give 2^4 = 16 cells, and because the embryo does not grow during cleavage each
+    blastomere holds 1/16 of the original cytoplasm.
+  distractors:
+    A: Reversed the volume relationship; cleavage divides the cytoplasm.
+    B: Counted three divisions, not four.
+    D: Ignored that cleavage occurs without growth between divisions.
+  chapter: development
+  passage_id: ''
+- id: mcat-d-bb-023
+  q: Producers in an ecosystem capture 10,000 kJ of energy per square meter per year. Using the 10% rule,
+    how much energy reaches the tertiary consumer level?
+  choices:
+    A: 1000 kJ
+    B: 100 kJ
+    C: 100,000 kJ
+    D: 10 kJ
+  answer: D
+  explain: Three transfers from producer to tertiary consumer give 10,000 x (0.1)^3 = 10 kJ.
+  distractors:
+    A: Stopped at the primary consumer level, one transfer in.
+    B: Stopped at the secondary consumer level, two transfers in.
+    C: Multiplied by 10 at each step instead of dividing by 10.
+  chapter: organisms-and-their-environment
+  passage_id: ''
+- id: mcat-d-bb-024
+  q: Characters are scored for four species. Species 1 and 2 have fur; species 3 and 4 have scales. Which
+    statement is consistent with cladistic analysis?
+  choices:
+    A: Species 1 and 2 share a more recent common ancestor with each other than either shares with species
+      3, because fur is a shared derived character
+    B: Species 1 and 2 are closest because fur is ancestral to all four species
+    C: Species 3 and 4 are closest because scales are a shared derived character unique to them
+    D: All four species are equally related because they share a common ancestor
+  answer: A
+  explain: Only shared derived characters (synapomorphies) define clades. Fur is derived within this set
+    and is shared by 1 and 2, so they form a clade separate from the scaled species.
+  distractors:
+    B: An ancestral (plesiomorphic) character cannot diagnose a clade, and scales rather than fur are
+      ancestral here.
+    C: Scales are the ancestral state shared with the outgroup, so they do not group 3 with 4 as a derived
+      clade.
+    D: True in principle but uninformative; cladistics ranks recency of common ancestry using shared derived
+      characters.
+  chapter: unity-and-diversity-of-life
+  passage_id: ''
+- id: mcat-d-bb-025
+  q: In photosynthesis, 6 CO2 + 6 H2O → C6H12O6 + 6 O2. What mass of CO2 (44 g/mol) is required to produce
+    90 g of glucose (180 g/mol)?
+  choices:
+    A: 132 g
+    B: 44 g
+    C: 264 g
+    D: 30. g
+  answer: A
+  explain: 90 g glucose = 0.50 mol, needing 6 x 0.50 = 3.0 mol CO2 = 3.0 x 44 = 132 g.
+  distractors:
+    B: Assumed a 1:1 ratio of CO2 to glucose rather than 6:1.
+    C: Scaled for a full mole of glucose (6 mol CO2) rather than 0.5 mol.
+    D: Divided the glucose mass by 3, as if the ratio were 2:1.
+  chapter: the-world-of-plants-and-animals
+  passage_id: ''
+- id: mcat-d-bb-026
+  q: A Lineweaver-Burk plot of an uncatalyzed-free enzyme gives a y-intercept of 0.010 (min·µmol^-1) and
+    an x-intercept of -5.0 mM^-1. What is Km?
+  choices:
+    A: 5.0 mM
+    B: 0.20 mM
+    C: 100 µmol/min
+    D: 0.010 mM
+  answer: B
+  explain: The x-intercept equals -1/Km = -5.0 mM^-1, so Km = 1/5.0 = 0.20 mM.
+  distractors:
+    A: Reported the x-intercept itself; Km is -1/slope-intercept, i.e. -1/x-intercept.
+    C: That is Vmax, read from the y-intercept.
+    D: Used the y-intercept value as if it were the x-intercept.
+  chapter: biochemistry
+  passage_id: ''
+- id: mcat-d-bb-027
+  q: How many peptide bonds are formed when a 51-residue polypeptide is assembled from its free amino
+    acids?
+  choices:
+    A: '51'
+    B: '49'
+    C: '50'
+    D: '102'
+  answer: C
+  explain: N residues are joined by N - 1 peptide bonds = 51 - 1 = 50, releasing 50 water molecules.
+  distractors:
+    A: Counted the residues; the number of bonds is one less than the number of residues.
+    B: Subtracted twice instead of once.
+    D: Doubled the count, as if each bond involved two residues on both sides.
+  chapter: chemistry-of-biochemistry-cem
+  passage_id: ''
+- id: mcat-d-bb-028
+  q: One activated epinephrine receptor activates 80 G proteins. Each G protein activates an adenylyl
+    cyclase that produces 1000 molecules of cAMP. Approximately how many cAMP molecules result from a
+    single activated receptor?
+  choices:
+    A: '1000'
+    B: '80'
+    C: 80,000,000
+    D: 80,000
+  answer: D
+  explain: 'Amplification multiplies at each step: 80 G proteins x 1000 cAMP each = 80,000 cAMP.'
+  distractors:
+    A: Counted one cyclase product and ignored the 80-fold branch at the G-protein step.
+    B: Counted the G proteins but not the second messenger each generates.
+    C: Multiplied by an extra factor of 1000, as if each cAMP generated another 1000 molecules.
+  chapter: cells-and-cellular-processes
+  passage_id: ''
+- id: mcat-d-bb-029
+  q: A pre-mRNA contains two introns totalling 700 nucleotides. After splicing, the mature mRNA's coding
+    region is 501 nucleotides from start codon to and including the stop codon. How many amino acids does
+    the protein contain?
+  choices:
+    A: '166'
+    B: '167'
+    C: '501'
+    D: '100'
+  answer: A
+  explain: 501 nt = 167 codons; the last one is the stop codon, leaving 167 - 1 = 166 amino acids.
+  distractors:
+    B: Divided by three but forgot that the last codon is a stop signal.
+    C: Reported the nucleotide count as an amino acid count.
+    D: Subtracted the introns a second time, as if they were still in the mature RNA.
+  chapter: 1b-gene-to-protein
+  passage_id: ''
+- id: mcat-d-bb-030
+  q: Two carriers of an autosomal recessive condition have three children. What is the probability that
+    all three are unaffected?
+  choices:
+    A: 3/4
+    B: 27/64
+    C: 1/64
+    D: 9/16
+  answer: B
+  explain: Each child has a 3/4 chance of being unaffected, so (3/4)^3 = 27/64 = 0.4219.
+  distractors:
+    A: That is the probability for one child, not for three independent births.
+    C: That is the probability that all three are affected, (1/4)^3.
+    D: Multiplied 3/4 by 3/4, covering only two of the three births.
+  chapter: genetics
+  passage_id: ''
+passages: []

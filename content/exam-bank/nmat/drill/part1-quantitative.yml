@@ -1,0 +1,455 @@
+exam: nmat
+section: drill-part1-quantitative
+label: Quantitative drill
+subject: quantitative
+block: part1
+_drill: true
+items:
+- id: nmat-d-p1q-001
+  q: 'Evaluate: 18 - 2 x (3 + 4)^2 / 7'
+  choices:
+    A: '4'
+    B: '16'
+    C: '-80'
+    D: '140'
+  answer: A
+  explain: 'Parentheses first: (3 + 4)^2 = 49. Then 2 x 49 = 98, 98 / 7 = 14, and 18 - 14 = 4.'
+  distractors:
+    B: 'Drops the square and uses 7 instead of 49: 18 - 2 x 7 / 7 = 16.'
+    C: 'Squares and multiplies but skips the division by 7: 18 - 98 = -80.'
+    D: 'Adds 18 and 2 first, then multiplies: 20 x 49 / 7 = 140.'
+  chapter: fundamental-operations
+- id: nmat-d-p1q-002
+  q: A price rises from P360 to P450. The increase is what percent of the original price?
+  choices:
+    A: 20%
+    B: 125%
+    C: 25%
+    D: 90%
+  answer: C
+  explain: The increase is P90 on a base of P360, and 90 / 360 = 0.25, so the increase is 25% of the original
+    price.
+  distractors:
+    A: 'Uses the NEW price as the base: 90 / 450 = 20%. The base is the original P360.'
+    B: Compares the new price with the old (450 / 360) instead of comparing the increase.
+    D: Reports the peso increase as though it were already a percentage.
+  chapter: fundamental-operations
+- id: nmat-d-p1q-003
+  q: 'Evaluate: 7/8 - 2/3 + 5/12'
+  choices:
+    A: 9/8
+    B: 5/8
+    C: 5/12
+    D: 7/12
+  answer: B
+  explain: 'In twenty-fourths: 21/24 - 16/24 + 10/24 = 15/24, which reduces to 5/8.'
+  distractors:
+    A: 'Adds 2/3 instead of subtracting it: 21/24 + 16/24 - 10/24 = 27/24 = 9/8.'
+    C: Writes 5/12 as 5/24 when building the common denominator, doubling the denominator without doubling
+      the numerator.
+    D: Writes 7/8 as 20/24 instead of 21/24, giving 20 - 16 + 10 = 14/24.
+  chapter: fundamental-operations
+- id: nmat-d-p1q-004
+  q: 'Simplify: (3^4 x 3^-2) / 3^1'
+  choices:
+    A: '27'
+    B: '-243'
+    C: '729'
+    D: '3'
+  answer: D
+  explain: 'Subtract exponents when dividing: 3^(4 - 2 - 1) = 3^1 = 3.'
+  distractors:
+    A: 'Adds the exponent 1 in the division instead of subtracting it: 3^(4-2+1) = 3^3.'
+    B: Reads 3^-2 as the negative of 3^2, so 81 x (-9) / 3 = -243.
+    C: 'Drops the division and adds the first two exponents: 3^(4+2) = 3^6.'
+  chapter: fundamental-operations
+- id: nmat-d-p1q-005
+  q: 4.2 / 0.07 = ?
+  choices:
+    A: '0.6'
+    B: '60'
+    C: '6'
+    D: '600'
+  answer: B
+  explain: 'Multiply top and bottom by 100: 420 / 7 = 60.'
+  distractors:
+    A: Shifts the decimal the wrong way, treating the divisor as 7 rather than 0.07.
+    C: Shifts only one place instead of two when clearing the decimal from the divisor.
+    D: Shifts three places, as though dividing 4.2 by 0.007.
+  chapter: fundamental-operations
+- id: nmat-d-p1q-006
+  q: 'Evaluate: 3 1/2 x 2 2/5'
+  choices:
+    A: 8 2/5
+    B: 6 1/5
+    C: 5 9/10
+    D: 7 1/5
+  answer: A
+  explain: 'As improper fractions: 7/2 x 12/5 = 84/10 = 42/5 = 8 2/5.'
+  distractors:
+    B: 'Multiplies the whole numbers and the fractions separately: 3 x 2 and 1/2 x 2/5.'
+    C: Adds the two mixed numbers instead of multiplying them.
+    D: Converts 2 2/5 to 12/5 but multiplies it by 3 only, dropping the half.
+  chapter: fundamental-operations
+- id: nmat-d-p1q-007
+  q: Two partners share profits in the ratio 4:7. The larger share is P4,200 more than the smaller share.
+    What is the smaller share?
+  choices:
+    A: P4,200
+    B: P9,800
+    C: P2,400
+    D: P5,600
+  answer: D
+  explain: The difference is 7 - 4 = 3 parts, so one part is P1,400 and the smaller share is 4 x P1,400
+    = P5,600.
+  distractors:
+    A: Takes the difference itself as the smaller share, ignoring that the difference is 3 parts.
+    B: That is the larger share, 7 parts of P1,400.
+    C: Divides 4,200 by 7 and multiplies by 4, using the wrong number of parts in the difference.
+  chapter: fundamental-operations
+- id: nmat-d-p1q-008
+  q: A loan of P12,000 earns 6% simple interest a year. What is the total owed after 8 months?
+  choices:
+    A: P480
+    B: P12,720
+    C: P12,480
+    D: P11,520
+  answer: C
+  explain: Interest is 12,000 x 0.06 x 8/12 = P480, so the total owed is 12,000 + 480 = P12,480.
+  distractors:
+    A: Reports the interest alone as though it were the total owed.
+    B: Charges a full year of interest instead of eight months' worth.
+    D: Subtracts the interest instead of adding it to the principal.
+  chapter: fundamental-operations
+- id: nmat-d-p1q-009
+  q: Which value is closest to the square root of 245?
+  choices:
+    A: '15.7'
+    B: '15.5'
+    C: '16.5'
+    D: '14.5'
+  answer: A
+  explain: 15^2 = 225 and 16^2 = 256, so the root lies between them; 15.7^2 = 246.5 is closest to 245.
+  distractors:
+    B: Averages 15 and 16 instead of moving toward 16 because 245 sits nearer 256 than 225.
+    C: Puts the root past 16, though 16.5^2 = 272 is already well above 245.
+    D: Rounds 245 down toward 225; 14.5^2 = 210 is far short.
+  chapter: fundamental-operations
+- id: nmat-d-p1q-010
+  q: Ben is three times as old as his son. In 12 years he will be exactly twice as old as his son. How
+    old is the son now?
+  choices:
+    A: 24 years old
+    B: 12 years old
+    C: 36 years old
+    D: 6 years old
+  answer: B
+  explain: 'If the son is s, Ben is 3s, and 3s + 12 = 2(s + 12), so 3s + 12 = 2s + 24 and s = 12. Check:
+    Ben is 36, later 48 and 24.'
+  distractors:
+    A: Reports the son's age 12 years from now rather than now.
+    C: Reports Ben's present age, not the son's.
+    D: Halves the 12-year span instead of solving the two conditions together.
+  chapter: problem-solving
+- id: nmat-d-p1q-011
+  q: Pipe A fills a tank in 4 hours. A leak at the bottom drains the full tank in 12 hours. With the pipe
+    open and the leak running, how long does the empty tank take to fill?
+  choices:
+    A: 3 hours
+    B: 8 hours
+    C: 16 hours
+    D: 6 hours
+  answer: D
+  explain: Net rate is 1/4 - 1/12 = 3/12 - 1/12 = 2/12 = 1/6 of a tank an hour, so the tank fills in 6
+    hours.
+  distractors:
+    A: Adds the two rates (1/4 + 1/12 = 1/3) instead of subtracting the leak.
+    B: Averages the two given times instead of combining the rates.
+    C: Adds the two given times as though the leak merely slowed the fill by its own duration.
+  chapter: problem-solving
+- id: nmat-d-p1q-012
+  q: How many kilograms of rice costing P48 a kilogram must be mixed with 12 kg of rice costing P60 a
+    kilogram to make a blend worth P52 a kilogram?
+  choices:
+    A: 6 kg
+    B: 36 kg
+    C: 24 kg
+    D: 12 kg
+  answer: C
+  explain: 'The gaps are 60 - 52 = 8 and 52 - 48 = 4, so cheap : dear = 8 : 4 = 2 : 1. Twice 12 kg is
+    24 kg.'
+  distractors:
+    A: Inverts the alligation ratio 2:1 and allots the smaller amount to the cheaper rice.
+    B: Adds the price differences (8 + 4) instead of taking their ratio.
+    D: Assumes the two rice lots must be equal in weight.
+  chapter: problem-solving
+- id: nmat-d-p1q-013
+  q: A motorist covers 120 km at 60 km/h and the next 120 km at 40 km/h. What is the average speed for
+    the whole trip?
+  choices:
+    A: 50 km/h
+    B: 48 km/h
+    C: 53 km/h
+    D: 40 km/h
+  answer: B
+  explain: The legs take 2 h and 3 h, so 240 km over 5 h gives 48 km/h.
+  distractors:
+    A: Takes the simple average of the two speeds, which is wrong when the times differ.
+    C: Uses 1.5 hours for the first leg instead of 2, giving 240 / 4.5.
+    D: Reports the slower leg's speed rather than the whole-trip average.
+  chapter: problem-solving
+- id: nmat-d-p1q-014
+  q: The sum of three consecutive odd integers is 141. What is the product of the smallest and the largest?
+  choices:
+    A: '2205'
+    B: '2025'
+    C: '2160'
+    D: '2401'
+  answer: A
+  explain: The middle integer is 141 / 3 = 47, so the three are 45, 47 and 49, and 45 x 49 = 2205.
+  distractors:
+    B: Squares the middle term instead of multiplying the smallest by the largest.
+    C: Multiplies the smallest by the middle term.
+    D: Squares the largest term.
+  chapter: problem-solving
+- id: nmat-d-p1q-015
+  q: A shop marks up an item 40% on cost, then sells it at a 10% discount on the marked price. The selling
+    price is P2,520. What did the item cost?
+  choices:
+    A: P1,800
+    B: P2,268
+    C: P2,000
+    D: P2,800
+  answer: C
+  explain: Selling price = cost x 1.40 x 0.90 = 1.26 x cost, so the cost is 2,520 / 1.26 = P2,000.
+  distractors:
+    A: Divides by the 1.40 markup and stops, ignoring the 10% discount.
+    B: Applies the 10% discount again instead of undoing it.
+    D: Divides by 0.9 only, ignoring the 40% markup.
+  chapter: problem-solving
+- id: nmat-d-p1q-016
+  q: A rectangular garden measuring 18 m by 12 m is surrounded by a uniform walkway 2 m wide. What is
+    the area of the walkway?
+  choices:
+    A: 64 square meters
+    B: 120 square meters
+    C: 432 square meters
+    D: 136 square meters
+  answer: D
+  explain: The outer rectangle is 22 m by 16 m = 352 sq m; the garden is 216 sq m, so the walkway is 352
+    - 216 = 136 sq m.
+  distractors:
+    A: Adds the walkway width to only one dimension of each side, giving 20 x 14.
+    B: Multiplies the walkway's width by the garden's perimeter, ignoring the corners.
+    C: Doubles the garden's area instead of subtracting it from the larger rectangle.
+  chapter: problem-solving
+- id: nmat-d-p1q-017
+  q: In a class of 45 students, 28 joined the math club, 24 joined the science club, and 9 joined neither
+    club. How many joined both clubs?
+  choices:
+    A: '16'
+    B: '7'
+    C: '43'
+    D: '12'
+  answer: A
+  explain: 36 students joined at least one club (45 - 9), so both = 28 + 24 - 36 = 16.
+  distractors:
+    B: Subtracts the class size from the sum of the two memberships, ignoring the 9 who joined neither.
+    C: Subtracts the 9 from the sum 52 instead of from the class size.
+    D: Subtracts the science club from the union instead of from the sum of memberships.
+  chapter: problem-solving
+- id: nmat-d-p1q-018
+  q: A number leaves a remainder of 3 when divided by 5 and a remainder of 4 when divided by 7. What is
+    the smallest number greater than 10 with both properties?
+  choices:
+    A: '11'
+    B: '18'
+    C: '23'
+    D: '39'
+  answer: B
+  explain: Numbers leaving 4 by 7 are 11, 18, 25, 32, 39; the first of these leaving 3 by 5 is 18.
+  distractors:
+    A: Satisfies the divisor-7 condition only, since 11 / 5 leaves 1.
+    C: Satisfies the divisor-5 condition only, since 23 / 7 leaves 2.
+    D: 'Satisfies the two remainders with the divisors interchanged: 39 leaves 4 by 5 and 4 by 7.'
+  chapter: problem-solving
+- id: nmat-d-p1q-019
+  q: 'A barangay health center logged three months of consultations and the medicine cost charged against
+    them:
+
+
+    Month | Consultations | Medicine cost
+
+    January | 240 | P36,000
+
+    February | 300 | P45,000
+
+    March | 210 | P37,800
+
+
+    What was the medicine cost per consultation in February?'
+  choices:
+    A: P120
+    B: P214
+    C: P150
+    D: P135
+  answer: C
+  explain: 'February: P45,000 over 300 consultations is P150 each.'
+  distractors:
+    A: Divides January's cost by February's consultations.
+    B: Divides February's cost by March's consultations.
+    D: Averages January's and February's per-consultation costs instead of computing February's.
+  chapter: data-interpretation
+- id: nmat-d-p1q-020
+  q: 'A barangay health center logged three months of consultations and the medicine cost charged against
+    them:
+
+
+    Month | Consultations | Medicine cost
+
+    January | 240 | P36,000
+
+    February | 300 | P45,000
+
+    March | 210 | P37,800
+
+
+    The medicine cost per consultation in March is what percent higher than in January?'
+  choices:
+    A: 5%
+    B: 16.7%
+    C: 30%
+    D: 20%
+  answer: D
+  explain: January is 36,000 / 240 = P150 and March is 37,800 / 210 = P180 per consultation, so the rise
+    is 30 / 150 = 20%.
+  distractors:
+    A: Compares the two total medicine costs, ignoring that consultations fell as well.
+    B: Divides the P30 rise by the March figure of P180 instead of by the January base.
+    C: Reports the peso rise of P30 as though it were 30%.
+  chapter: data-interpretation
+- id: nmat-d-p1q-021
+  q: 'A barangay health center logged three months of consultations and the medicine cost charged against
+    them:
+
+
+    Month | Consultations | Medicine cost
+
+    January | 240 | P36,000
+
+    February | 300 | P45,000
+
+    March | 210 | P37,800
+
+
+    How many consultations did the center record over the three months?'
+  choices:
+    A: '750'
+    B: '720'
+    C: '780'
+    D: '300'
+  answer: A
+  explain: 240 + 300 + 210 = 750 consultations.
+  distractors:
+    B: Loses 30 of February's consultations when adding.
+    C: Counts 30 of February's consultations twice.
+    D: Reports the highest single month instead of the three-month total.
+  chapter: data-interpretation
+- id: nmat-d-p1q-022
+  q: 'Two branches of a pharmacy chain reported a month of sales and the staff on duty:
+
+
+    Branch | Sales | Staff
+
+    Quiapo | P1,200,000 | 8
+
+    Divisoria | P900,000 | 9
+
+
+    Which branch recorded the higher sales per member of staff, and by how much?'
+  choices:
+    A: Divisoria, by P50,000
+    B: Quiapo, by P300,000
+    C: Quiapo, by P50,000
+    D: Quiapo, by P12,500
+  answer: C
+  explain: 'Quiapo: 1,200,000 / 8 = P150,000. Divisoria: 900,000 / 9 = P100,000. The gap is P50,000 in
+    Quiapo''s favor.'
+  distractors:
+    A: Swaps the two branches; Divisoria's sales per member of staff is the lower one.
+    B: Compares the difference in total sales instead of sales per member of staff.
+    D: Divides the total sales difference by the combined staff of 24.
+  chapter: data-interpretation
+- id: nmat-d-p1q-023
+  q: 'Two branches of a pharmacy chain reported a month of sales and the staff on duty:
+
+
+    Branch | Sales | Staff
+
+    Quiapo | P1,200,000 | 8
+
+    Divisoria | P900,000 | 9
+
+
+    The two branches together aimed at P2,500,000. What percent of the target did they reach?'
+  choices:
+    A: 119%
+    B: 84%
+    C: 16%
+    D: 87.5%
+  answer: B
+  explain: Combined sales are 1,200,000 + 900,000 = P2,100,000, and 2,100,000 / 2,500,000 = 84%.
+  distractors:
+    A: Inverts the ratio and divides the target by the sales.
+    C: Reports the shortfall of P400,000 as the attainment.
+    D: Uses a target of P2,400,000, dropping P100,000 from the stated figure.
+  chapter: data-interpretation
+- id: nmat-d-p1q-024
+  q: 'Two branches of a pharmacy chain reported a month of sales and the staff on duty:
+
+
+    Branch | Sales | Staff
+
+    Quiapo | P1,200,000 | 8
+
+    Divisoria | P900,000 | 9
+
+
+    Next month Quiapo''s sales rise 10% and Divisoria''s fall 10%. What would the two branches take together?'
+  choices:
+    A: P2,100,000
+    B: P1,320,000
+    C: P2,310,000
+    D: P2,130,000
+  answer: D
+  explain: Quiapo becomes 1,200,000 x 1.10 = P1,320,000 and Divisoria 900,000 x 0.90 = P810,000, a total
+    of P2,130,000.
+  distractors:
+    A: Assumes a 10% rise and a 10% fall cancel, though the two bases differ.
+    B: Counts Quiapo's higher total only.
+    C: Raises both branches by 10% instead of lowering Divisoria's.
+  chapter: data-interpretation
+- id: nmat-d-p1q-025
+  q: 'Two branches of a pharmacy chain reported a month of sales and the staff on duty:
+
+
+    Branch | Sales | Staff
+
+    Quiapo | P1,200,000 | 8
+
+    Divisoria | P900,000 | 9
+
+
+    What percent of the two branches'' combined sales came from Divisoria?'
+  choices:
+    A: 42.9%
+    B: 30%
+    C: 57.1%
+    D: 75%
+  answer: A
+  explain: 900,000 / 2,100,000 = 0.4286, about 42.9% of the combined sales.
+  distractors:
+    B: Divides Divisoria's staff share or its sales against P3,000,000 instead of the combined total.
+    C: Reports Quiapo's share of the combined sales.
+    D: Compares Divisoria's sales with Quiapo's instead of with the combined total.
+  chapter: data-interpretation

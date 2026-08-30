@@ -1,0 +1,404 @@
+exam: nmat
+section: drill-part1-verbal
+label: Verbal drill
+subject: verbal
+block: part1
+_drill: true
+items:
+- id: nmat-d-p1v-001
+  q: 'SERRATED : SMOOTH :: VACILLATING : ?'
+  choices:
+    A: resolute
+    B: unsteady
+    C: hesitant
+    D: yielding
+  answer: A
+  explain: 'Serrated and smooth are opposites, so the second pair must be opposites too: vacillating (wavering)
+    is the opposite of resolute (firm).'
+  distractors:
+    B: Unsteady restates vacillating; the pair demands a contrast, as smooth contrasts with serrated.
+    C: Hesitant is a synonym of vacillating, not its opposite.
+    D: Yielding describes giving way to others, which is not the firmness that opposes wavering.
+  chapter: analogies
+- id: nmat-d-p1v-002
+  q: 'EPHEMERAL : TRANSIENT :: QUOTIDIAN : ?'
+  choices:
+    A: rare
+    B: eternal
+    C: everyday
+    D: monthly
+  answer: C
+  explain: Quotidian means belonging to every day, so it matches the synonym pair ephemeral/transient
+    as everyday.
+  distractors:
+    A: Rare is close to the opposite of quotidian, which names the ordinary daily round.
+    B: Eternal describes endless duration; quotidian describes what recurs each day.
+    D: Monthly names a different interval; quotidian specifically means daily.
+  chapter: analogies
+- id: nmat-d-p1v-003
+  q: 'GAGGLE : GEESE :: PRIDE : ?'
+  choices:
+    A: peacocks
+    B: lions
+    C: wolves
+    D: bees
+  answer: B
+  explain: A gaggle is the collective term for geese, as a pride is the collective term for lions.
+  distractors:
+    A: The collective term for peacocks is a muster or an ostentation, not a pride.
+    C: A group of wolves is a pack.
+    D: A group of bees is a swarm or a colony.
+  chapter: analogies
+- id: nmat-d-p1v-004
+  q: 'BAROMETER : PRESSURE :: ODOMETER : ?'
+  choices:
+    A: speed
+    B: engine temperature
+    C: fuel remaining
+    D: distance traveled
+  answer: D
+  explain: A barometer measures atmospheric pressure, as an odometer measures distance traveled.
+  distractors:
+    A: Speed is read on a speedometer, a separate instrument.
+    B: Engine heat is read on a temperature gauge, not on an odometer.
+    C: A fuel gauge, not an odometer, reports how much fuel is left.
+  chapter: analogies
+- id: nmat-d-p1v-005
+  q: 'WARM : SCALDING :: COOL : ?'
+  choices:
+    A: tepid
+    B: frigid
+    C: damp
+    D: lukewarm
+  answer: B
+  explain: 'Warm is to scalding as cool is to frigid: each second term is the extreme of the same scale
+    as its partner.'
+  distractors:
+    A: Tepid is only mildly warm, a lesser degree rather than a greater one.
+    C: Damp describes moisture, not temperature.
+    D: Lukewarm sits near the mild end of the scale, the opposite direction from the pair.
+  chapter: analogies
+- id: nmat-d-p1v-006
+  q: 'PREFACE : BOOK :: OVERTURE : ?'
+  choices:
+    A: opera
+    B: curtain call
+    C: aria
+    D: libretto
+  answer: A
+  explain: A preface introduces a book, as an overture introduces an opera.
+  distractors:
+    B: A curtain call comes at the end of a performance, not at the start.
+    C: An aria is a solo number inside an opera, itself only a part.
+    D: A libretto is the sung text of an opera, not its instrumental introduction.
+  chapter: analogies
+- id: nmat-d-p1v-007
+  q: 'POLYGLOT : LANGUAGES :: GOURMET : ?'
+  choices:
+    A: gardens
+    B: music
+    C: coins
+    D: food
+  answer: D
+  explain: A polyglot is a person expert in languages, as a gourmet is a person expert in food.
+  distractors:
+    A: A gardener or horticulturist, not a gourmet, is the expert on gardens.
+    B: A trained musician or listener, not a gourmet, is the expert on music.
+    C: A numismatist, not a gourmet, is the expert on coins.
+  chapter: analogies
+- id: nmat-d-p1v-008
+  q: 'CASCADE : WATER :: AVALANCHE : ?'
+  choices:
+    A: dune
+    B: cloud
+    C: snow
+    D: breeze
+  answer: C
+  explain: A cascade is a rushing fall of water, as an avalanche is a rushing slide of snow.
+  distractors:
+    A: A dune is a stationary heap of sand, not a moving mass of it.
+    B: A cloud is the source a storm draws on, not the rushing mass itself.
+    D: A breeze is a light movement of air, a matter of strength rather than of substance.
+  chapter: analogies
+- id: nmat-d-p1v-009
+  q: 'JOEY : KANGAROO :: CYGNET : ?'
+  choices:
+    A: swan
+    B: goose
+    C: duck
+    D: eagle
+  answer: A
+  explain: A joey is a young kangaroo, as a cygnet is a young swan.
+  distractors:
+    B: A young goose is a gosling.
+    C: A young duck is a duckling.
+    D: A young eagle is an eaglet.
+  chapter: analogies
+- id: nmat-d-p1v-010
+  q: 'ORNITHOLOGY : BIRDS :: ENTOMOLOGY : ?'
+  choices:
+    A: words
+    B: insects
+    C: reptiles
+    D: humankind
+  answer: B
+  explain: Ornithology is the study of birds, as entomology is the study of insects.
+  distractors:
+    A: Etymology, the sound-alike trap, traces word origins.
+    C: Herpetology, not entomology, covers reptiles and amphibians.
+    D: Anthropology studies humankind; the 'ant' at its start is only a false cue.
+  chapter: analogies
+- id: nmat-d-p1v-011
+  q: 'AFFABLE : SURLY :: GREGARIOUS : ?'
+  choices:
+    A: sociable
+    B: talkative
+    C: timid
+    D: solitary
+  answer: D
+  explain: Affable and surly are opposites, so gregarious (fond of company) must pair with its opposite,
+    solitary.
+  distractors:
+    A: Sociable is a synonym of gregarious, so the pair would not be opposites.
+    B: Talkativeness concerns speech, while gregariousness concerns company.
+    C: Timidity is fear of risk, not a preference for being alone.
+  chapter: analogies
+- id: nmat-d-p1v-012
+  q: 'BICENTENNIAL : 200 YEARS :: SESQUICENTENNIAL : ?'
+  choices:
+    A: 1,000 years
+    B: 100 years
+    C: 150 years
+    D: 10 years
+  answer: C
+  explain: Bi- marks two centuries, so sesqui- (one and a half) marks 150 years, half as much again as
+    a centennial.
+  distractors:
+    A: A millennium, not a sesquicentennial, is 1,000 years.
+    B: A centennial is 100 years; the 'sesqui-' adds half as much again.
+    D: A decennial event recurs every 10 years.
+  chapter: analogies
+- id: nmat-d-p1v-013
+  q: 'POISON : ANTIDOTE :: INFECTION : ?'
+  choices:
+    A: analgesic
+    B: antibiotic
+    C: vaccine
+    D: antiseptic
+  answer: B
+  explain: An antidote counteracts a poison, as an antibiotic counteracts an infection.
+  distractors:
+    A: An analgesic dulls pain; it does not act on the infection causing it.
+    C: A vaccine builds protection beforehand; it is not a remedy once infection is established.
+    D: An antiseptic works on the surface of a wound and does not reach an established internal infection.
+  chapter: analogies
+- id: nmat-d-p1v-014
+  q: 'Towns on the coast that kept a belt of mangroves between their shore and their fish pens recorded
+    far less damage when a typhoon made landfall than neighboring towns that had cleared the same trees
+    to build salt beds. Engineers credit the mangroves'' tangled roots, which slow the incoming surge
+    and hold the mud in place. The passage mainly explains:'
+  choices:
+    A: why towns that kept their mangroves suffered less storm damage
+    B: how salt beds are built on cleared coastal land
+    C: why fish pens yield more when mangroves stand nearby
+    D: how engineers plant mangrove seedlings along a shore
+  answer: A
+  explain: 'The passage sets up a comparison of storm damage and then assigns the cause: roots that slow
+    the surge and hold the mud.'
+  distractors:
+    B: Salt beds are mentioned only to say what the comparison towns did with the cleared ground.
+    C: The pens mark a location; the passage makes no claim about their yield.
+    D: Nothing about planting or engineering methods appears in the passage.
+  chapter: reading-comprehension
+- id: nmat-d-p1v-015
+  q: In a trial, half the volunteers were given a sugar tablet and told it was a new migraine medicine;
+    the other half received the actual medicine. Both groups reported the same average drop in pain over
+    four hours, so the investigators recorded no measurable advantage for the medicine. The findings best
+    support which statement?
+  choices:
+    A: Sugar tablets act directly on migraine pain.
+    B: Migraine medicines are useless in general.
+    C: Some of the relief patients report can come from expecting relief.
+    D: The volunteers exaggerated their pain to please the investigators.
+  answer: C
+  explain: A sugar tablet matched the medicine, so the improvement shared by both groups must come from
+    expectation rather than from the drug.
+  distractors:
+    A: The tablet has no medicinal action; the drop in that group is explained by belief, not chemistry.
+    B: One trial of one medicine cannot carry so broad a claim.
+    D: Nothing shows exaggeration, and both groups fell by the same amount, so no group had reason to
+      differ.
+  chapter: reading-comprehension
+- id: nmat-d-p1v-016
+  q: 'Reviewing a hospital chart, the resident wrote: ''Post-operative course uneventful; drains out on
+    day two; tolerated diet; discharged ambulatory on day five.'' A student reading the note for the first
+    time asks what ''uneventful'' means here. In the note, ''uneventful'' most nearly means:'
+  choices:
+    A: dull for the patient
+    B: unusually rapid
+    C: undertreated
+    D: free of complications
+  answer: D
+  explain: In clinical shorthand 'uneventful' marks a recovery in which nothing went wrong.
+  distractors:
+    A: The word records the absence of problems, not the patient's boredom.
+    B: The note times the discharge but claims no unusual speed of recovery.
+    C: The note reports routine steps taken, not a shortfall in care.
+  chapter: reading-comprehension
+- id: nmat-d-p1v-017
+  q: 'A barangay''s anti-dengue drive had four parts: weekly draining of water jars, larvicide dropped
+    into unused tires, free testing at the health center every Wednesday, and a fine for households that
+    ignored written warnings. By August the center reported cases down two thirds from the same month
+    the year before, although the fine had been issued only once. According to the passage, all of the
+    following were part of the drive EXCEPT:'
+  choices:
+    A: spraying insecticide inside homes
+    B: weekly draining of water jars
+    C: free testing at the health center every Wednesday
+    D: a fine for households that ignored written warnings
+  answer: A
+  explain: The four named parts are the jars, the tires, the Wednesday testing, and the fine; spraying
+    is never mentioned.
+  distractors:
+    B: Draining the jars is the first part named.
+    C: The Wednesday testing is the third part named.
+    D: The fine is the fourth part named, though it was issued only once.
+  chapter: reading-comprehension
+- id: nmat-d-p1v-018
+  q: 'The auditor''s report notes, without comment, that the agency bought 400 laptops for a staff of
+    120, that the purchase was split into three smaller orders just under the level that would require
+    competitive bidding, and that delivery was accepted while the supplier''s owner was abroad. The author''s
+    primary purpose is to:'
+  choices:
+    A: prove in court that the purchases were illegal
+    B: present facts whose pattern invites the reader to question the purchase
+    C: praise the agency for modernizing its equipment
+    D: explain how competitive bidding is required by law
+  answer: B
+  explain: The author offers no judgment but stacks three odd details, leaving the reader to draw the
+    inference.
+  distractors:
+    A: The report records facts without comment and names no statute that was broken.
+    C: Nothing in the selection is approving; the numbers are set out as anomalies.
+    D: Bidding appears only as a threshold the three orders stayed just under.
+  chapter: reading-comprehension
+- id: nmat-d-p1v-019
+  q: 'A principal reported that after the school banned phones, average scores rose, and concluded that
+    the phones were the cause. Records show, however, that during the same term the school cut class sizes
+    by a third and raised the grade needed to pass. The principal''s conclusion is weakened because:'
+  choices:
+    A: average scores are never a fair measure of learning
+    B: banning phones cannot possibly affect attention
+    C: other changes that term could account for the rise in scores
+    D: the passing grade was raised after the scores were computed
+  answer: C
+  explain: Two other changes landed in the same term, so the rise cannot be credited to the ban alone.
+  distractors:
+    A: The flaw is the ignored rival explanation, not the choice of measure.
+    B: No such claim is made, and it would not touch the reasoning as stated.
+    D: The passage places the change in the same term, not after the results.
+  chapter: reading-comprehension
+- id: nmat-d-p1v-020
+  q: 'A clinic''s rule reads: any patient with a fever above 38.5 degrees and a rash of fewer than three
+    days'' duration must be seen the same day. Miko arrived on a Tuesday with a fever of 39.1 degrees
+    and a rash that first appeared on the Sunday before. Which conclusion follows?'
+  choices:
+    A: Miko must be referred to a dermatologist.
+    B: Miko's fever is too low to qualify.
+    C: The rule does not apply because the rash is too recent.
+    D: Miko must be seen the same day.
+  answer: D
+  explain: 'Both conditions hold: 39.1 exceeds 38.5, and a rash appearing on Sunday is two days old on
+    Tuesday, fewer than three.'
+  distractors:
+    A: The rule says nothing about referral to a specialist.
+    B: 39.1 degrees is above the 38.5-degree threshold the rule sets.
+    C: A rash first seen on Sunday is two days old on Tuesday, which the rule allows.
+  chapter: reading-comprehension
+- id: nmat-d-p1v-021
+  q: 'A city found that painting roofs white lowered indoor temperatures by about two degrees, because
+    the coating reflected sunlight that dark roofs had absorbed. A barangay captain wants the same benefit
+    for a row of warehouses whose walls, not roofs, take the afternoon sun. Applying the passage''s principle,
+    the most promising step is to:'
+  choices:
+    A: coat the sun-facing walls in a light reflective finish
+    B: paint the roofs white as well, since that is what worked downtown
+    C: install thicker curtains inside the offices
+    D: plant trees between the warehouses and the street
+  answer: A
+  explain: The principle is that a light surface reflects the sun instead of absorbing it, so it belongs
+    on whichever surface receives the sun.
+  distractors:
+    B: The roofs are not the surfaces taking the afternoon sun in this row of buildings.
+    C: The passage's mechanism is reflection from a surface, not added insulation.
+    D: Tree shade works by blocking light rather than by reflecting it off a building surface.
+  chapter: reading-comprehension
+- id: nmat-d-p1v-022
+  q: 'The cooperative lent P480,000 to its members in the first quarter: P200,000 in April, P160,000 in
+    May, and the rest in June. Repayments received in the same quarter totaled P300,000, of which P90,000
+    was interest. In June the cooperative lent:'
+  choices:
+    A: P180,000
+    B: P90,000
+    C: P120,000
+    D: P280,000
+  answer: C
+  explain: April and May account for P360,000 of the P480,000, leaving P120,000 for June; the repayment
+    figures belong to a different flow.
+  distractors:
+    A: That subtracts the quarter's repayments from the quarter's lending, though repayments are a separate
+      flow.
+    B: That figure is the interest received during the quarter, not June's lending.
+    D: That removes only April's P200,000 from the quarter's total.
+  chapter: reading-comprehension
+- id: nmat-d-p1v-023
+  q: 'The essay opens by describing a rice terrace as it looks at planting time, then explains how the
+    terraces were cut and kept clear over four centuries, and closes by noting that young people are leaving
+    the villages and that some walls already stand abandoned. The passage is organized chiefly by:'
+  choices:
+    A: listing problems and then proposing solutions
+    B: moving from a present scene to its history and then to its likely future
+    C: comparing two villages side by side
+    D: stating a thesis and answering objections to it
+  answer: B
+  explain: The three paragraphs run present, past, then prospect, which is the movement the answer names.
+  distractors:
+    A: No solution is proposed; the essay ends on the abandoned walls.
+    C: Only one place is described throughout.
+    D: No opposing argument is raised, so none is answered.
+  chapter: reading-comprehension
+- id: nmat-d-p1v-024
+  q: 'Although the mayor announced that the new pier would be finished by March, the engineer in charge
+    kept two barges and a full crew on retainer through June and told the crew chief to keep the dredge
+    fueled. The engineer''s arrangements suggest that she:'
+  choices:
+    A: planned to take on other projects once the pier was done
+    B: doubted that the pier would ever be built at all
+    C: had already finished the work ahead of schedule
+    D: expected the March date to slip
+  answer: D
+  explain: Retainers and a fueled dredge running into June only make sense if she did not believe the
+    March completion date.
+  distractors:
+    A: The barges and the dredge are tied to the pier itself, not to other work.
+    B: Holding a crew ready is planning for the job, not doubt that the job exists.
+    C: A finished pier would leave no reason to keep a dredge fueled on retainer.
+  chapter: reading-comprehension
+- id: nmat-d-p1v-025
+  q: 'Because antibiotics kill bacteria rather than viruses, doctors who prescribe them for colds do nothing
+    for the patient while helping the bacteria in that patient''s body survive the drug. Health agencies
+    therefore urge physicians to reserve the medicines for infections they can confirm are bacterial.
+    The passage is chiefly concerned with:'
+  choices:
+    A: why prescribing antibiotics for colds is both useless and harmful
+    B: how bacteria become resistant to antibiotics
+    C: the cost of antibiotics to public health budgets
+    D: the difference between colds and influenza
+  answer: A
+  explain: 'Both halves of the answer appear: the prescription does nothing for a viral cold and it trains
+    bacteria to survive the drug.'
+  distractors:
+    B: Resistance is named as the result, not explained as a process.
+    C: Cost is never raised in the passage.
+    D: Influenza is never mentioned.
+  chapter: reading-comprehension

@@ -1,0 +1,418 @@
+exam: nmat
+section: drill-part2-biology
+label: Biology drill
+subject: biology
+block: part2
+_drill: true
+items_expected: 25
+passages: []
+items:
+- id: nmat-d-p2b-001
+  q: A woman whose mother died of a mitochondrial myopathy (a mutation in mitochondrial DNA) marries
+    an unrelated, unaffected man. What is the risk that her first child inherits the disorder?
+  choices:
+    A: 100%, because all of her children inherit her mitochondria through the egg
+    B: 50%, because the disorder is transmitted like an autosomal dominant allele
+    C: 25%, because only one in four offspring of carrier parents is affected
+    D: 0%, because mitochondria are not inherited by offspring at all
+  answer: A
+  explain: Mitochondria and their mutated DNA travel in the egg's cytoplasm, so every child of an
+    affected mother inherits the disorder, while an affected father passes on none.
+  distractors:
+    B: treated cytoplasmic inheritance as Mendelian segregation, which mtDNA does not follow
+    C: borrowed the 1:2:1 autosomal recessive ratio, but only one parent is a carrier here
+    D: forgot that the egg contributes nearly all of the zygote's cytoplasm and mitochondria
+  chapter: genetics
+- id: nmat-d-p2b-002
+  q: If nondisjunction of one homologous pair occurs during meiosis I of a human primary oocyte (n
+    = 23), what chromosome counts do the four resulting gametes carry?
+  choices:
+    B: two gametes with 24 and two with 22
+    A: two with 24, one with 23, and one with 22
+    C: all four with 23, because meiosis II corrects the meiosis I error
+    D: all four with 24, because both divisions fail to separate the affected pair
+  answer: B
+  explain: Nondisjunction in meiosis I sends both homologues to one pole, so two gametes get an extra
+    chromosome (n+1 = 24) and two get none (n-1 = 22); meiosis II then divides normally.
+  distractors:
+    A: described meiosis II nondisjunction, where only two of the four products are aneuploid
+    C: assumed the second division can repair a segregation failure; it cannot, it only splits what
+      is present
+    D: applied the meiosis I error twice; meiosis II of the affected cell is a normal equational
+      split
+  chapter: 1c-heritable-information-genetic-diversity
+- id: nmat-d-p2b-003
+  q: A single base pair is deleted near the start of a bacterial gene's coding region. The most likely
+    effect on the polypeptide is that
+  choices:
+    C: every codon downstream is read in a new frame, so most amino acids after the deletion change
+    A: only one amino acid is missing and the rest of the protein is unchanged
+    B: the deleted base is replaced by its partner on the complementary strand, so nothing changes
+    D: translation stops immediately at the deletion, so no amino acids at all are added
+  answer: C
+  explain: Losing a single base shifts every downstream codon into a new frame, changing most amino
+    acids from that point on and usually introducing a premature stop codon.
+  distractors:
+    A: described an in-frame deletion; losing one base shifts the reading frame instead
+    B: confused base-pairing with mutation repair; the sequence itself is not restored
+    D: confused a frameshift with a nonsense codon; a new stop codon is only encountered further
+      downstream
+  chapter: 1c-heritable-information-genetic-diversity
+- id: nmat-d-p2b-004
+  q: Two pea plants heterozygous for round seeds (Rr) and yellow cotyledons (Yy), with the two genes
+    on different chromosomes, are crossed. What fraction of the offspring is expected to be rrYY?
+  choices:
+    D: 1/16
+    A: 1/4
+    B: 1/8
+    C: 9/16
+  answer: D
+  explain: Independent assortment gives rr = 1/4 and YY = 1/4, and the two probabilities multiply
+    to 1/16 (one genotype out of the 16 equally likely combinations).
+  distractors:
+    A: collapsed the two independent events into one; rr and YY must both occur
+    B: multiplied 1/4 by 1/2, as if the YY combination had the probability of Yy
+    C: took the fraction with both dominant phenotypes instead of both recessive alleles
+  chapter: genetics
+- id: nmat-d-p2b-005
+  q: In a population of 10,000 people, 1,600 show a recessive phenotype (aa). Assuming Hardy-Weinberg
+    equilibrium, what percentage is expected to be heterozygous (Aa)?
+  choices:
+    D: 48%
+    A: 36%
+    B: 40%
+    C: 84%
+  answer: D
+  explain: q^2 = 1600/10000 = 0.16, so q = 0.4 and p = 0.6; the carrier frequency 2pq = 2(0.6)(0.4)
+    = 0.48, or 48%.
+  distractors:
+    A: reported p^2, the homozygous dominant class, instead of 2pq
+    B: reported q, the recessive allele frequency, as if it were the carrier rate
+    C: added the recessive class to p^2 (0.36 + 0.48) instead of taking 2pq alone
+  chapter: genetics
+- id: nmat-d-p2b-006
+  q: Genes A and B lie on the same chromosome 8 map units apart. A dihybrid testcross AB/ab x ab/ab
+    yields 1000 offspring. What is the most likely number of ab/ab offspring?
+  choices:
+    A: about 460
+    B: about 250
+    C: about 40
+    D: about 80
+  answer: A
+  explain: The parental classes share 100% - 8% = 92% of the offspring, about 460 each, while the
+    two recombinant classes split the 8%, about 40 each.
+  distractors:
+    B: assumed independent assortment, which would make the four classes equal
+    C: used the 8% recombination frequency as a single class, i.e. a recombinant class size
+    D: reported the total number of recombinant offspring (Ab plus aB) instead of the ab/ab class
+  chapter: 1c-heritable-information-genetic-diversity
+- id: nmat-d-p2b-007
+  q: A man with type AB blood has children with a woman with type O blood (ii). Which blood types
+    are possible in their children?
+  choices:
+    B: Type A and type B only
+    A: Types A, B, AB, and O in equal proportions
+    C: Type AB only, because the father always passes both of his alleles
+    D: Type O only, because the mother passes an i allele to every child
+  answer: B
+  explain: The father passes I^A or I^B and the mother always passes i, so every child is I^A i (type
+    A) or I^B i (type B); neither AB nor O is possible.
+  distractors:
+    A: treated the cross as a 1:1:1:1 testcross; the father never passes both alleles at once
+    C: forgot that homologous chromosomes separate at meiosis, so each gamete gets one allele
+    D: counted only the maternal contribution; the father supplies an I^A or I^B allele
+  chapter: genetics
+- id: nmat-d-p2b-008
+  q: A toxin blocks the actin-myosin contractile ring, so a human skin cell completes mitosis but
+    never divides its cytoplasm. The result is
+  choices:
+    C: one cell containing two nuclei, each with the diploid chromosome number
+    A: two daughter cells, each with half the usual chromosome number
+    B: a single cell arrested in metaphase with its chromosomes aligned
+    D: one cell with a single nucleus holding 92 chromosomes
+  answer: C
+  explain: 'Blocking the contractile ring prevents cytokinesis only, so mitosis finishes and two
+    diploid nuclei share one cytoplasm: a binucleate cell.'
+  distractors:
+    A: described normal cytokinesis, which the toxin prevented
+    B: confused the cytokinesis block with a spindle-assembly checkpoint arrest
+    D: forgot that the two nuclear envelopes re-formed separately around each chromosome set
+  chapter: 2c-cell-division-differentiation-specialization
+- id: nmat-d-p2b-009
+  q: A neuron and a liver cell from the same person carry identical DNA yet make different proteins
+    chiefly because
+  choices:
+    C: different sets of genes are transcribed in the two cell types
+    A: the neuron has extra copies of the genes it needs most
+    B: genes that are not needed are deleted from differentiated cells
+    D: each cell acquired different mutations during development
+  answer: C
+  explain: Every nucleated cell keeps the full genome; cell identity comes from transcription factors
+    and epigenetic marks that switch different gene sets on.
+  distractors:
+    A: assumed gene amplification, which is not how ordinary differentiation works
+    B: confused differential expression with DNA loss; the genome is retained
+    D: relied on random mutation, but differentiation is a regulated change in expression
+  chapter: 2c-cell-division-differentiation-specialization
+- id: nmat-d-p2b-010
+  q: A cell is treated with a drug that prevents tubulin polymerization, so spindle fibers cannot
+    form. At which stage does the cell arrest?
+  choices:
+    D: metaphase, because the chromosomes cannot attach to spindle fibers and separate
+    A: prophase I, because crossing-over cannot occur without spindle fibers
+    B: S phase, because DNA polymerase also requires tubulin
+    C: telophase, because the nuclear envelope cannot re-form without tubulin
+  answer: D
+  explain: Microtubules make up the spindle, so a tubulin poison leaves the kinetochores unattached
+    and the spindle-assembly checkpoint holds the cell at metaphase.
+  distractors:
+    A: tied recombination to the spindle; crossing-over is a homologous-pair event that needs no
+      tubulin
+    B: linked replication to the cytoskeleton; DNA synthesis proceeds without microtubules
+    C: picked a late stage; the cell never reaches the metaphase-to-anaphase transition
+  chapter: 2c-cell-division-differentiation-specialization
+- id: nmat-d-p2b-011
+  q: A temperate bacteriophage infects E. coli and enters the lysogenic cycle. Which best describes
+    the infected cell?
+  choices:
+    A: Phage DNA is integrated into the bacterial chromosome and is copied whenever the cell divides
+    B: The cell lyses at once and releases hundreds of new virions
+    C: The phage replicates in the cytoplasm without killing the host cell
+    D: The phage stays attached to the outside of the cell without injecting its DNA
+  answer: A
+  explain: In lysogeny the phage genome integrates as a prophage and is replicated along with the
+    host chromosome each time the bacterium divides.
+  distractors:
+    B: described the lytic cycle, which a lysogenic phage postpones
+    C: put the phage genome in the cytoplasm; the prophage is inserted in the host chromosome
+    D: confused lysogeny with adsorption; the DNA has already entered and integrated
+  chapter: 2b-prokaryotes-and-viruses
+- id: nmat-d-p2b-012
+  q: Which observation supports the claim that mitochondria descend from free-living bacteria?
+  choices:
+    B: Mitochondria have their own circular DNA, a double membrane, and divide by splitting in two
+    A: Mitochondrial genes use exactly the same codon table as the nuclear genome
+    C: Every mitochondrial protein is encoded by a nuclear gene
+    D: Mitochondria are surrounded by a single membrane, like a lysosome
+  answer: B
+  explain: Circular DNA, a double membrane, ribosomes, and binary fission are bacterial hallmarks
+    that mitochondria retain from their free-living ancestor.
+  distractors:
+    A: overstated the similarity; mitochondrial codon usage differs from the nuclear code in several
+      cases
+    C: denies the key evidence; mitochondria still encode some of their own proteins and rRNAs
+    D: misstates the structure; the double membrane is part of the endosymbiotic evidence
+  chapter: 2a-assemblies-of-molecules-cells-and-cell-groups
+- id: nmat-d-p2b-013
+  q: An enzyme with a temperature optimum of 37 C is warmed to 45 C. What happens to the reaction
+    rate, and why?
+  choices:
+    B: It falls sharply, because the extra heat disrupts the hydrogen bonds that hold the active
+      site's shape
+    A: It keeps rising, because higher temperature always increases enzyme activity
+    C: It is unchanged, because enzyme shape does not affect the active site
+    D: It falls, but recovers completely when the enzyme is cooled back to 37 C
+  answer: B
+  explain: Above the optimum, thermal agitation breaks the hydrogen and ionic bonds of the tertiary
+    structure, the active site deforms, and the rate collapses irreversibly.
+  distractors:
+    A: extended the pre-optimum trend past the point where the protein begins to denature
+    C: denies the lock-and-key dependence of catalysis on the protein's three-dimensional shape
+    D: treated denaturation as reversible like a simple rate change; the tertiary structure is destroyed
+  chapter: cells-and-cellular-processes
+- id: nmat-d-p2b-014
+  q: An Elodea leaf is placed in 10% NaCl and, under the microscope, the cell membrane is seen pulling
+    away from the cell wall. This happened because
+  choices:
+    C: water left the vacuole by osmosis, so the protoplast shrank while the wall kept its shape
+    A: salt was pumped into the cell, pressing the membrane inward
+    B: the cell wall dissolved in the salt solution and could no longer support the membrane
+    D: water entered the cell by osmosis and pushed the membrane off the wall
+  answer: C
+  explain: A hypertonic external solution draws water out of the vacuole, so the protoplast contracts
+    and pulls away from the rigid cellulose wall (plasmolysis).
+  distractors:
+    A: assumed active salt uptake; the movement seen is water leaving, not solute entering
+    B: blamed the wall; cellulose walls are not dissolved by salt, they simply separate from the
+      protoplast
+    D: reversed the direction of osmosis; the outside solution is hypertonic, so water leaves
+  chapter: cells-and-cellular-processes
+- id: nmat-d-p2b-015
+  q: On a sunny morning guard cells actively pump K+ into themselves. What follows?
+  choices:
+    D: Water enters by osmosis, the guard cells become turgid and bow apart, and the stoma opens
+    A: Water leaves the guard cells, they go limp and the stoma closes
+    B: K+ enters with no water movement, because ions cross membranes freely
+    C: The stoma opens because the guard cell walls dissolve under turgor pressure
+  answer: D
+  explain: Accumulated K+ raises guard-cell solute concentration, water follows by osmosis, turgor
+    pressure builds against the thinner outer wall, and the pore opens.
+  distractors:
+    A: reversed the osmotic consequence of raising the guard cells' solute concentration
+    B: ignored the osmotic pull that an accumulated ion creates across the membrane
+    C: blamed wall breakdown; the cellulose wall bows because of its uneven thickening
+  chapter: the-world-of-plants-and-animals
+- id: nmat-d-p2b-016
+  q: A gardener pinches off the shoot tip of a basil plant. The most likely result is that
+  choices:
+    A: the lateral buds grow out and the plant becomes bushier, because tip-produced auxin no longer
+      suppresses them
+    B: the plant stops producing leaves, since the tip was the only growing region
+    C: the stem elongates faster, because auxin is now made along the whole stem
+    D: all lateral buds die, because they depended on auxin exported by the tip
+  answer: A
+  explain: Apical dominance depends on auxin flowing down from the shoot tip; removing the tip removes
+    that inhibition, so lateral buds sprout.
+  distractors:
+    B: forgot that lateral meristems and buds can resume growth once apical dominance is lifted
+    C: reversed the effect; removing the tip lowers auxin and so slows stem elongation
+    D: reversed auxin's role; auxin inhibits lateral buds rather than sustaining them
+  chapter: the-world-of-plants-and-animals
+- id: nmat-d-p2b-017
+  q: In a chain grass -> grasshopper -> frog -> snake, the snakes are removed. What long-term change
+    is expected?
+  choices:
+    A: Frogs increase, grasshoppers decrease, and grass biomass increases
+    B: Frogs decrease and grass biomass falls
+    C: All levels stay the same, because each level is regulated independently
+    D: Grasshoppers increase, because the frogs no longer compete with them
+  answer: A
+  explain: 'Removing the top predator frees the frogs, more frogs eat more grasshoppers, and the
+    released grass increases: a trophic cascade.'
+  distractors:
+    B: traced the effects up only one level; losing the top predator releases the level below it
+    C: denied the linkage between trophic levels that a food chain describes
+    D: treated predator and prey as competitors instead of a consumer-resource pair
+  chapter: organisms-and-their-environment
+- id: nmat-d-p2b-018
+  q: A farmer rotates legumes with cereal crops mainly because
+  choices:
+    B: bacteria in the legumes' root nodules fix N2 into ammonium that enriches the soil
+    A: legume roots convert soil nitrates back into N2 gas, which cereals then absorb
+    C: the rotation suppresses cereal root diseases, which is the nitrogen benefit sought
+    D: legumes need no nitrogen, so the soil's reserves are left untouched for the cereal
+  answer: B
+  explain: Rhizobium in legume nodules reduces atmospheric N2 to ammonium; residues left behind add
+    nitrogen that the following cereal crop can use.
+  distractors:
+    A: confused nitrogen fixation with denitrification, which removes usable nitrogen
+    C: cited a real side benefit as if it were the nitrogen economy the rotation provides
+    D: overstated it; legumes use the fixed nitrogen themselves and only the surplus reaches the
+      soil
+  chapter: unity-and-diversity-of-life
+- id: nmat-d-p2b-019
+  q: A microbe from saturated brine at pH 2 has a circular chromosome, no membrane-bound organelles,
+    and ether-linked branched membrane lipids. It belongs to
+  choices:
+    C: Domain Archaea
+    A: Domain Bacteria, because it lacks a nucleus
+    B: Kingdom Fungi, because it tolerates extreme conditions
+    D: Kingdom Protista, because it is unicellular
+  answer: C
+  explain: Ether-linked branched membrane lipids plus a circular chromosome and no organelles identify
+    an archaeon, the domain of halophiles and acidophiles.
+  distractors:
+    A: used a trait shared by all prokaryotes; the ether-linked lipids point to archaea
+    B: matched an ecological trait to a kingdom; fungi are eukaryotes with membrane-bound organelles
+    D: equated single-celled organization with protists, ignoring the molecular evidence
+  chapter: unity-and-diversity-of-life
+- id: nmat-d-p2b-020
+  q: A panicking student breathes rapidly and deeply for several minutes. What happens to the blood,
+    and what does the body do about it?
+  choices:
+    D: CO2 falls, pH rises toward alkalosis, and the respiratory center temporarily reduces the drive
+      to breathe
+    A: CO2 rises, pH falls, and breathing speeds up further to correct it
+    B: O2 rises so much that the blood becomes acidotic
+    C: Blood pH is unaffected, because ventilation cannot change pH
+  answer: D
+  explain: Hyperventilation lowers arterial CO2, so carbonic acid falls and pH rises; the medullary
+    center responds by reducing the ventilatory drive until CO2 recovers.
+  distractors:
+    A: described hypoventilation; fast deep breathing blows CO2 off rather than retaining it
+    B: pinned the pH change on O2; the pH signal is set by dissolved CO2, not by oxygen
+    C: denied the CO2-bicarbonate link that makes ventilation a powerful pH control
+  chapter: life-processes-regulation-and-homeostasis
+- id: nmat-d-p2b-021
+  q: A person exposed to the measles virus ten years after vaccination responds with
+  choices:
+    D: memory B cells activating quickly to produce a faster, larger IgG response than at first exposure
+    A: naive B cells starting the whole selection process over at the original speed
+    B: antibodies secreted only by the plasma cells that survived from the vaccination
+    C: a slower response, because memory cells must first turn into stem cells
+  answer: D
+  explain: The secondary response draws on pre-existing memory cells, so IgG rises within days to
+    a much higher level than the primary response and blocks infection.
+  distractors:
+    A: described the primary response; the memory population bypasses that slow first step
+    B: overstated plasma cell lifespan; long-lived memory cells divide again to make new plasma cells
+    C: invented a de-differentiation step; memory lymphocytes are already committed
+  chapter: life-processes-regulation-and-homeostasis
+- id: nmat-d-p2b-022
+  q: A farm worker exposed to an organophosphate insecticide, an acetylcholinesterase inhibitor,
+    develops fasciculations and salivation. The mechanism is that
+  choices:
+    A: acetylcholine is no longer broken down in the synaptic cleft, so it keeps stimulating the
+      muscle
+    B: acetylcholine is reabsorbed too quickly, so fewer receptors are stimulated
+    C: Ca2+ is pumped back into the sarcoplasmic reticulum too slowly, leaving the muscle contracted
+    D: the motor neuron fires spontaneously because its Na+ channels stay open
+  answer: A
+  explain: Acetylcholinesterase normally clears ACh from the cleft; inhibiting it lets ACh accumulate
+    and fire the motor end plate repeatedly (SLUDGE plus fasciculations).
+  distractors:
+    B: reversed the effect; the enzyme's loss leaves ACh in the cleft longer, not shorter
+    C: shifted the lesion into the muscle fiber; the insecticide acts at the synaptic cleft
+    D: blamed the presynaptic membrane when the transmitter itself is the problem
+  chapter: 3a-nervous-and-endocrine-systems
+- id: nmat-d-p2b-023
+  q: In multiple sclerosis, myelin sheaths within the central nervous system are destroyed. The most
+    direct effect on signaling is that
+  choices:
+    B: action potentials travel more slowly and may fail to reach the terminal, since saltatory conduction
+      is lost
+    A: the resting membrane potential is abolished, because myelin generates it
+    C: synaptic vesicles can no longer fuse with the presynaptic membrane
+    D: the axon stops making ATP and degenerates immediately
+  answer: B
+  explain: Myelin lets the impulse jump between nodes of Ranvier; losing it forces slow continuous
+    propagation and conduction often fails altogether.
+  distractors:
+    A: credited myelin with the resting potential, which the Na+/K+ pump and leak channels maintain
+    C: moved the defect to transmitter release, which is unaffected by demyelination
+    D: confused electrical insulation with metabolic support of the fiber
+  chapter: 3a-nervous-and-endocrine-systems
+- id: nmat-d-p2b-024
+  q: A pregnant woman takes a drug known to be a teratogen. When is the embryo most vulnerable to
+    major structural malformations?
+  choices:
+    C: weeks 3 to 8, when the organs are being laid down
+    A: the first two weeks, before implantation is complete
+    B: the fetal period after week 20, when organs only enlarge
+    D: at birth, when the organs first begin to function
+  answer: C
+  explain: Organogenesis (weeks 3-8) is when organ primordia form, so a teratogen then produces major
+    structural malformations.
+  distractors:
+    A: picked the all-or-none period, when damage usually kills the embryo or is fully repaired
+    B: chose a stage of growth and maturation, when gross structure is already set
+    D: assumed structural defects appear at the time an organ starts working
+  chapter: development
+- id: nmat-d-p2b-025
+  q: After a 400-m sprint an athlete keeps breathing hard for several minutes. The extra oxygen is
+    used chiefly to
+  choices:
+    B: convert the accumulated lactate back to glucose in the liver and restore ATP and creatine
+      phosphate
+    A: flush out CO2 that built up inside the muscle fibers as carbonate
+    C: re-oxygenate myoglobin alone, since that is the only store that was depleted
+    D: digest the glycogen that piled up in the muscles during the sprint
+  answer: B
+  explain: Repaying the oxygen debt oxidizes lactate (mostly via gluconeogenesis in the liver) and
+    replenishes ATP and phosphocreatine stores.
+  distractors:
+    A: attributed the debt to CO2; CO2 is exhaled, not stored as an oxygen-requiring debt
+    C: took one small store for the whole recovery; ATP, phosphocreatine and lactate also must be
+      restored
+    D: reversed the fuel flow; glycogen is broken down during the sprint and resynthesized afterwards
+  chapter: 3b-main-organ-systems

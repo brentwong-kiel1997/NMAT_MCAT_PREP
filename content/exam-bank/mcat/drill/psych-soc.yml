@@ -1,0 +1,533 @@
+exam: mcat
+section: drill-psych-soc
+label: Psych/Soc drill
+subject: psych-soc
+block: psych-soc
+_drill: true
+items_expected: 30
+items:
+- id: mcat-d-ps-001
+  q: A researcher randomly assigns one group of volunteers to sleep 4 hours and another to sleep 8 hours,
+    then measures how quickly each group presses a button in response to a tone. In this study, what are
+    the independent and dependent variables?
+  choices:
+    A: Reaction time is the independent variable and sleep duration is the dependent variable
+    B: Sleep duration is the independent variable and reaction time is the dependent variable
+    C: Sleep duration is the independent variable and the volunteers are the dependent variable
+    D: Reaction time is the independent variable and sleep is a confound
+  answer: B
+  explain: The independent variable is what the experimenter manipulates (hours of sleep allowed); the
+    dependent variable is what is measured as the outcome (button-press latency).
+  distractors:
+    A: Reverses the two; reaction time is measured, not manipulated.
+    C: Volunteers are the units of study, not the measured outcome.
+    D: Sleep is manipulated by random assignment, so it cannot be a confound in this design.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-d-ps-002
+  q: In a sleep-deprivation study, the 4-hour group is tested at 11 p.m. and the 8-hour group at 9 a.m.
+    What is the most serious threat to the validity of the conclusion that sleep loss slowed reaction
+    time?
+  choices:
+    A: Time of day is confounded with the independent variable, so it could account for the difference
+      in performance
+    B: Reaction time is not a valid measure of alertness
+    C: Random assignment makes any difference uninterpretable
+    D: The sample size is too small to compute a mean
+  answer: A
+  explain: Two variables change together across groups, so the design cannot tell whether sleep loss or
+    circadian position produced the slower responses. That uncontrolled co-variation is a confound and
+    it damages internal validity.
+  distractors:
+    B: The measure itself is well established; the problem is the unbalanced testing schedule.
+    C: Random assignment strengthens causal inference; the flaw here is the systematic scheduling difference.
+    D: Nothing in the stem indicates a sample-size problem.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-d-ps-003
+  q: A public-health database finds that districts selling more ice cream have more drownings. Which inference
+    is best supported?
+  choices:
+    A: Ice cream consumption causes risky swimming
+    B: Ice cream sales and drownings are unrelated because the correlation is coincidental
+    C: The association is probably explained by a third variable, such as hot weather driving both swimming
+      and ice-cream sales
+    D: Drownings cause people to buy more ice cream
+  answer: C
+  explain: Observational correlations admit a third-variable explanation. Summer heat raises both swimming
+    (and drowning risk) and ice-cream purchases, which is the standard spuriousness pattern.
+  distractors:
+    A: No mechanism is offered and the design is observational, so a causal claim is unwarranted.
+    B: A consistent population-level association is real; the question is what produces it.
+    D: Reverse causation is not plausible here and is not the best-supported reading of the data.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-d-ps-004
+  q: A study reports that it measured stress as the concentration of cortisol in a saliva sample collected
+    on waking. This is an example of which methodological feature?
+  choices:
+    A: A double-blind procedure
+    B: A manipulation check
+    C: Random assignment
+    D: An operational definition of the dependent variable
+  answer: D
+  explain: Turning 'stress' into a measurable quantity (waking salivary cortisol) is an operational definition.
+  distractors:
+    A: Blinding concerns who knows the condition, not how stress is quantified.
+    B: A manipulation check verifies that the independent variable changed the intended state.
+    C: Random assignment concerns how participants are placed in conditions.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-d-ps-005
+  q: A memory study recruits all of its participants from one university's introductory psychology course
+    and reports a large effect. What is the main limitation on the conclusion?
+  choices:
+    A: Internal validity is limited because participants were not randomly assigned
+    B: The effect cannot be replicated in principle
+    C: The study violates the requirement of informed consent
+    D: External validity is limited because the convenience sample may not represent the wider population
+  answer: D
+  explain: A sample drawn from a narrow, unrepresentative pool constrains how far the finding generalizes,
+    which is external validity.
+  distractors:
+    A: The concern described is about who was sampled, not about how conditions were assigned.
+    B: Convenience sampling affects generalization, not the possibility of replication.
+    C: Standard recruitment from a subject pool with consent raises no such violation.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-d-ps-006
+  q: In a trial of a new anxiolytic, neither the participants nor the researchers who rate symptoms know
+    who received the drug and who received an identical-looking placebo. What is the chief purpose of
+    this double-blind design?
+  choices:
+    A: To make the sample representative of the target population
+    B: To prevent participant and experimenter expectancy from influencing the reported outcome
+    C: To guarantee that the drug and placebo have identical chemical effects
+    D: To allow the researchers to infer causation without a control group
+  answer: B
+  explain: Blinding both parties controls demand and expectation effects on the part of participants and
+    observer bias on the part of raters.
+  distractors:
+    A: Representativeness is a sampling matter, not a blinding matter.
+    C: Blinding does not change pharmacology; it controls expectations about it.
+    D: A placebo control group is still required, and blinding never substitutes for one.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-d-ps-007
+  q: A bathroom scale reads exactly 2 kg high on every measurement but is perfectly consistent from day
+    to day. What does this instrument demonstrate?
+  choices:
+    A: High reliability but low validity
+    B: High validity but low reliability
+    C: Both low reliability and low validity
+    D: High reliability and high validity
+  answer: A
+  explain: Reliability is consistency across repeated measurements; validity is agreement with the true
+    value. A systematic offset preserves the first and destroys the second.
+  distractors:
+    B: Reverses the two properties; a consistent bias is not accuracy.
+    C: A perfectly consistent reading is by definition reliable.
+    D: Consistency does not establish that the scale measures the true value.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-d-ps-008
+  q: A researcher concludes that a new therapy works, when in fact the observed difference arose by chance.
+    What kind of error is this?
+  choices:
+    A: A Type II error, a false negative
+    B: A confounding error
+    C: A Type I error, a false positive
+    D: A selection bias
+  answer: C
+  explain: 'Rejecting a true null hypothesis is a Type I (alpha) error: reporting an effect that is not
+    there.'
+  distractors:
+    A: A Type II error is failing to detect an effect that exists, the opposite outcome.
+    B: Confounding is a design flaw, not a statistical decision error.
+    D: Selection bias concerns how participants entered the sample.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-d-ps-009
+  q: A study reports p = 0.03 for the difference between two group means. Which statement correctly interprets
+    this value?
+  choices:
+    A: There is a 3% probability that the null hypothesis is true
+    B: The effect size is 3% of the standard deviation
+    C: If the null hypothesis were true, data at least this extreme would occur about 3% of the time
+    D: The result will replicate in 97% of future samples
+  answer: C
+  explain: By definition, p is the probability of obtaining data at least this extreme given that the
+    null hypothesis is true.
+  distractors:
+    A: A p-value is not the probability of a hypothesis; it is computed assuming the null holds.
+    B: p-values say nothing about the magnitude of the effect.
+    D: Replication probability is not given by p; this is a common misreading.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-d-ps-010
+  q: Participants in a study of 'cognitive performance under distraction' correctly guess the hypothesis
+    and deliberately slow down in the control condition. Which threat does this best illustrate?
+  choices:
+    A: Observer bias
+    B: Attrition bias
+    C: Regression to the mean
+    D: Demand characteristics
+  answer: D
+  explain: When participants infer the hypothesis and act to confirm or defy it, the study has demand
+    characteristics.
+  distractors:
+    A: Observer bias is distortion by the researchers recording behavior, not by participants.
+    B: Attrition involves participants dropping out differentially.
+    C: Regression concerns extreme scores moving toward the average on retesting.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-d-ps-011
+  q: A study of moral decision-making tells participants they are administering shocks but debriefs them
+    fully afterward, revealing that no real shocks were delivered. What does the debriefing accomplish?
+  choices:
+    A: It substitutes for informed consent, which can then be skipped
+    B: It removes deception and addresses any distress, satisfying the ethical requirement that accompanies
+      the use of deception
+    C: It converts the study into an observational design
+    D: It eliminates the need for institutional review
+  answer: B
+  explain: Deception is permissible only with a plan for thorough debriefing, which restores the participant's
+    understanding and addresses lingering harm.
+  distractors:
+    A: Informed consent is still required; debriefing supplements rather than replaces it.
+    C: The design remains experimental; debriefing is an ethical procedure, not a design change.
+    D: Review by an ethics board is required before any deceptive research begins.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-d-ps-012
+  q: Participants asked how often they exercise report far more activity than their activity trackers
+    record. Which bias best explains the discrepancy?
+  choices:
+    A: Social desirability bias in self-report
+    B: Acquiescence bias
+    C: Hawthorne effect
+    D: Selection bias
+  answer: A
+  explain: Over-reporting socially valued behavior is the classic social desirability bias, which is why
+    objective measures are often paired with self-report.
+  distractors:
+    B: Acquiescence is agreeing with items regardless of content; it does not explain inflating exercise.
+    C: The Hawthorne effect is altered behavior from being observed, not misreporting on a questionnaire.
+    D: Selection bias concerns who is in the sample, not how they answer.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-d-ps-013
+  q: A researcher spends two years living in a fishing village, joining its cooperative labor and recording
+    ceremonies in field notes, in order to describe the community's economic norms from the inside. Which
+    method and limitation apply?
+  choices:
+    A: Participant observation; findings rest on one community and resist statistical generalization
+    B: Cross-sectional survey; the researcher cannot establish temporal ordering
+    C: Experiment; participants cannot be randomly assigned to a village
+    D: Longitudinal cohort study; the sample is too small to compute a correlation
+  answer: A
+  explain: 'Living inside a group while taking part in its activities is ethnographic participant observation:
+    rich, context-bound description with limited generalizability.'
+  distractors:
+    B: No survey is described, and the limitation named does not belong to that method.
+    C: There is no manipulation or control condition here, so it is not an experiment.
+    D: A cohort study tracks a defined sample over time with repeated measures, which is not what is described.
+  chapter: sociology-and-anthropology
+  passage_id: ''
+- id: mcat-d-ps-014
+  q: A researcher records playground aggression by watching children from behind a one-way mirror without
+    intervening. Compared with a laboratory experiment, what tradeoff does this method make?
+  choices:
+    A: Greater control over extraneous variables but less ecological validity
+    B: Greater internal validity but a smaller sample
+    C: Greater ecological validity but less control over extraneous variables
+    D: More random assignment but more demand characteristics
+  answer: C
+  explain: Observing behavior where it naturally occurs raises realism (ecological validity) but removes
+    the experimenter's control over conditions.
+  distractors:
+    A: That is the laboratory's advantage, not the field observation's.
+    B: Field observation typically weakens internal validity because nothing is manipulated.
+    D: No assignment occurs in naturalistic observation, and children do not know they are being studied
+      here.
+  chapter: psychology
+  passage_id: ''
+- id: mcat-d-ps-015
+  q: In a town, most households earn between $30,000 and $60,000, while a handful of households earn above
+    $2 million. What is the relationship between the mean and the median household income?
+  choices:
+    A: The median exceeds the mean because the distribution is right-skewed
+    B: The mean and median are equal because income is a continuous variable
+    C: The mean falls below every observation because of the outliers
+    D: The mean exceeds the median because the distribution is right-skewed
+  answer: D
+  explain: A long right tail inflates the mean while the median stays with the bulk of households, so
+    mean > median in a right-skewed income distribution.
+  distractors:
+    A: Right-skew pulls the mean above the median, not below it.
+    B: Continuity does not imply symmetry; a few extreme values dominate the mean.
+    C: A mean cannot be below all of the values it summarizes.
+  chapter: fc10-stratification-and-resources
+  passage_id: ''
+- id: mcat-d-ps-016
+  q: A radiologist adopts a very lenient criterion for calling a lesion present on a scan. Compared with
+    a strict criterion, what change in signal-detection outcomes follows?
+  choices:
+    A: Fewer hits and fewer false alarms
+    B: More hits and more false alarms
+    C: Fewer hits and more false alarms
+    D: More hits and no change in false alarms
+  answer: B
+  explain: 'Shifting the response criterion changes the response pattern without changing sensitivity
+    (d''): a liberal criterion says ''present'' more often, raising both hits and false alarms.'
+  distractors:
+    A: That is what a strict, conservative criterion produces.
+    C: A lenient criterion raises, not lowers, the hit rate.
+    D: Hits and false alarms move together when only the criterion shifts, because sensitivity is unchanged.
+  chapter: 6a-sensing-the-environment
+  passage_id: ''
+- id: mcat-d-ps-017
+  q: A faded road sign reads only 'SP', but drivers reliably report seeing 'STOP' because of the octagonal
+    shape and the intersection context. Which perceptual process does this show?
+  choices:
+    A: Bottom-up processing driven by feature detection
+    B: Top-down processing driven by context and expectation
+    C: Sensory adaptation
+    D: Difference threshold
+  answer: B
+  explain: Context and prior knowledge are filling in sensory gaps, which is top-down (concept-driven)
+    perception.
+  distractors:
+    A: The missing letters supply no features to detect; the completion comes from above.
+    C: Adaptation is a reduced response to a constant stimulus over time.
+    D: A threshold concerns detecting a change in intensity, not filling in missing letters.
+  chapter: 6b-making-sense-of-the-environment
+  passage_id: ''
+- id: mcat-d-ps-018
+  q: A person can just notice that a 100 g weight is heavier than a 90 g reference. According to Weber's
+    law, what difference from a 500 g reference would that person just barely notice?
+  choices:
+    A: 10. g
+    B: 100. g
+    C: 490. g
+    D: 50 g
+  answer: D
+  explain: 'The Weber fraction is 10/100 = 0.10, so the JND scales with the reference: 0.10 x 500 g =
+    50 g.'
+  distractors:
+    A: Applied the absolute difference from the first comparison instead of the Weber fraction.
+    B: Doubled the reference weight's JND, using a fraction of 0.20.
+    C: Reported the reference weight itself rather than the increment above it.
+  chapter: fc6-perceive-think-react
+  passage_id: ''
+- id: mcat-d-ps-019
+  q: A dog salivates when meat powder is placed in its mouth. A bell is rung just before the meat powder
+    on many trials, until the dog salivates at the bell alone. In this preparation, what is the unconditioned
+    stimulus?
+  choices:
+    A: The meat powder
+    B: The bell
+    C: Salivation to the meat powder
+    D: Salivation to the bell
+  answer: A
+  explain: Meat powder elicits salivation with no learning, so it is the unconditioned stimulus; the paired
+    bell becomes the conditioned stimulus.
+  distractors:
+    B: The bell begins as a neutral stimulus and becomes the conditioned stimulus.
+    C: That is the unconditioned response, not the stimulus that elicits it.
+    D: That is the conditioned response, established by pairing.
+  chapter: 6c-responding-to-the-world
+  passage_id: ''
+- id: mcat-d-ps-020
+  q: A colleague arrives late to a meeting and a teammate concludes that he is careless, ignoring the
+    closed highway that delayed his commute. Which tendency does the teammate display?
+  choices:
+    A: The self-serving bias
+    B: The false consensus effect
+    C: The fundamental attribution error
+    D: Cognitive dissonance
+  answer: C
+  explain: Overweighting disposition (carelessness) and underweighting the situation (a closed highway)
+    when explaining someone else's behavior is the fundamental attribution error.
+  distractors:
+    A: Self-serving bias protects one's own self-image, not judgments about other people.
+    B: False consensus is overestimating how many others share one's views.
+    D: Dissonance is discomfort from inconsistent attitudes and behavior, not a judgment error about others.
+  chapter: 7a-individual-influences-on-behavior
+  passage_id: ''
+- id: mcat-d-ps-021
+  q: In a line-judgment study, a participant gives an obviously wrong answer that matches the unanimous
+    confederates and later says he did not want to look foolish. Which influence explains the response?
+  choices:
+    A: Informational social influence
+    B: Obedience to authority
+    C: Normative social influence
+    D: Groupthink
+  answer: C
+  explain: Conforming to avoid social rejection or ridicule is normative influence; the participant change
+    behavior without believing the group was right.
+  distractors:
+    A: Informational influence operates when the group seems to know something the participant does not.
+    B: No authority figure issued an order in this setting.
+    D: Groupthink is a decision-making failure in cohesive groups, not line-judgment conformity.
+  chapter: 7b-social-processes-that-influence-behavior
+  passage_id: ''
+- id: mcat-d-ps-022
+  q: A charity asks householders to sign a petition, and a week later asks the same householders to put
+    a large sign on their lawn; many more agree than in a group asked only for the sign. Which technique
+    is illustrated?
+  choices:
+    A: Foot-in-the-door
+    B: Door-in-the-face
+    C: Low-balling
+    D: Norm of reciprocity
+  answer: A
+  explain: Securing compliance with a small initial request and following it with a larger one is the
+    foot-in-the-door technique; commitment and self-perception carry the effect.
+  distractors:
+    B: Door-in-the-face opens with a large request that is then withdrawn in favor of a smaller one.
+    C: Low-balling secures agreement, then changes the terms after commitment.
+    D: Reciprocity depends on first giving something to the target, which a petition signature does not.
+  chapter: 7c-attitude-and-behavior-change
+  passage_id: ''
+- id: mcat-d-ps-023
+  q: After winning a match, a player credits her training; after losing, she blames the officiating. Which
+    pattern is this?
+  choices:
+    A: The fundamental attribution error
+    B: Self-serving bias
+    C: The looking-glass self
+    D: Social loafing
+  answer: B
+  explain: Taking credit for success while externalizing failure protects self-esteem and is the self-serving
+    bias.
+  distractors:
+    A: That error concerns judging other people, not one's own outcomes.
+    C: The looking-glass self describes a self-image built from others' reactions, not outcome attributions.
+    D: Social loafing is reduced individual effort in a group task.
+  chapter: 8a-self-identity
+  passage_id: ''
+- id: mcat-d-ps-024
+  q: Participants are divided into two groups using a trivial coin toss and immediately rate their own
+    group's painting as better. What does this minimal group paradigm demonstrate?
+  choices:
+    A: Discrimination requires a history of real conflict between the groups
+    B: Favoritism appears only when rewards are tangible
+    C: Conformity pressure from other members drives the ratings
+    D: Mere categorization into an in-group and an out-group is enough to produce favoritism
+  answer: D
+  explain: Tajfel's minimal group studies show that an arbitrary category label alone produces in-group
+    favoritism, which is the social-identity account of prejudice.
+  distractors:
+    A: The finding is precisely that no real conflict or interest is needed.
+    B: Even with no material stake, in-group favoritism emerges.
+    C: The groups are alone in a room with no member pressure; categorization alone suffices.
+  chapter: 8b-social-thinking
+  passage_id: ''
+- id: mcat-d-ps-025
+  q: Told by an experimenter in a lab coat to continue, most participants in a famous study increased
+    what they believed were painful shocks to a struggling learner. Which variable most strongly raised
+    compliance?
+  choices:
+    A: The participants' underlying aggression toward strangers
+    B: Group unanimity of the peers
+    C: The attractiveness of the learning task
+    D: Proximity to and perceived legitimacy of the authority giving the order
+  answer: D
+  explain: Milgram's obedience studies varied the authority's presence and legitimacy; compliance rose
+    when the authority was close and credible, and fell when orders came remotely or from a peer.
+  distractors:
+    A: Baseline aggression does not explain the sharp variation across the study's conditions.
+    B: Peer unanimity drives conformity in Asch's design, not obedience in this one.
+    C: Task appeal was held constant and is not the mechanism of obedience.
+  chapter: 8c-social-interactions
+  passage_id: ''
+- id: mcat-d-ps-026
+  q: A nurse who is also a single parent finds that an evening shift and her child's school concert are
+    scheduled at the same time. Which concept applies?
+  choices:
+    A: Role strain within a single role
+    B: Role conflict between two different statuses
+    C: Role exit
+    D: Ascribed status
+  answer: B
+  explain: Tension between the expectations of two different statuses held by one person is role conflict;
+    strain inside one role would be role strain.
+  distractors:
+    A: Role strain is tension inside one role, such as two conflicting demands of the nursing job alone.
+    C: Role exit means leaving a role behind altogether, which she has not done.
+    D: Both employee and parent are achieved statuses, and the question is about competing demands.
+  chapter: 9a-understanding-social-structure
+  passage_id: ''
+- id: mcat-d-ps-027
+  q: A country recorded 500,000 live births in a year in a population of 20 million. What is its crude
+    birth rate?
+  choices:
+    A: 25 per 100 population per year
+    B: 0.025 per 1,000 population per year
+    C: 25 per 1,000 population per year
+    D: 40 per 1,000 population per year
+  answer: C
+  explain: Crude birth rate = (births / total population) x 1,000 = (500,000/20,000,000) x 1,000 = 25
+    per 1,000 per year.
+  distractors:
+    A: Used the wrong denominator base; rates are conventionally per 1,000.
+    B: Divided the births by the population but never multiplied by 1,000.
+    D: Inverted the ratio and divided population by births.
+  chapter: 9b-demographic-characteristics-and-processes
+  passage_id: ''
+- id: mcat-d-ps-028
+  q: A job applicant from a working-class neighborhood is hired largely because a neighbor who already
+    works at the firm vouched for her. Which concept best captures the resource she used?
+  choices:
+    A: Social capital
+    B: Human capital
+    C: Cultural capital
+    D: Merited achievement
+  answer: A
+  explain: Benefits that flow from network ties and relationships are social capital; the neighbor's endorsement,
+    not her individual credentials, did the work here.
+  distractors:
+    B: Human capital is her own schooling and skills, not her network.
+    C: Cultural capital is familiarity with elite tastes and credentials, which is not what secured the
+      referral.
+    D: The hire turned on a connection rather than on measured performance.
+  chapter: 10a-social-inequality
+  passage_id: ''
+- id: mcat-d-ps-029
+  q: A gambler keeps feeding coins into a machine that pays out after an unpredictable number of plays,
+    and the behavior is very hard to extinguish. Which schedule is in force?
+  choices:
+    A: Fixed-ratio reinforcement
+    B: Variable-ratio reinforcement
+    C: Variable-interval reinforcement
+    D: Fixed-interval reinforcement
+  answer: B
+  explain: Reinforcing after an unpredictable number of responses is the variable-ratio schedule, which
+    produces high, steady responding and the greatest resistance to extinction.
+  distractors:
+    A: A fixed ratio pays after a set number of responses, which makes extinction easier to detect.
+    C: Variable intervals reinforce the first response after varying times, as in checking for mail.
+    D: Fixed intervals produce a scalloped pattern, like studying harder just before a scheduled exam.
+  chapter: fc7-behavior-and-behavior-change
+  passage_id: ''
+- id: mcat-d-ps-030
+  q: Immigrant parents encourage their children to speak the language of their new country at home and
+    to set aside the family's own language in order to be seen as fully belonging. Which process is illustrated?
+  choices:
+    A: Cultural relativism
+    B: Multiculturalism
+    C: Assimilation
+    D: Xenophobia
+  answer: C
+  explain: Shedding a home-culture marker in order to blend into the dominant society is assimilation;
+    the family is trading language maintenance for perceived belonging.
+  distractors:
+    A: Cultural relativism is a stance for judging practices within their own context, not a process of
+      adopting a host culture.
+    B: Multiculturalism preserves distinct cultural practices alongside the host society's.
+    D: Xenophobia is hostility toward outsiders; the pressure here comes from within the family's own
+      strategy for belonging.
+  chapter: fc9-cultural-and-social-differences
+  passage_id: ''
+passages: []

@@ -1,5 +1,5 @@
 {
-  "source_rev": "ec4a082",
+  "source_rev": "75cbd40",
   "counts": {
     "chapters": 70,
     "note_bullets": 449,
@@ -10,8 +10,8 @@
     "paths": 7,
     "checklists": 3,
     "diseases": 8,
-    "exam_items": 470,
-    "exam_passages": 30
+    "exam_items": 770,
+    "exam_passages": 32
   },
   "files": {
     "SOURCES.yml": "e8c37335da395e1e1fd8c3f6fcf194a060fe2691d6882d83c2e857762ff5974d",
@@ -97,7 +97,19 @@
     "exam-bank/mcat/bio-biochem.yml": "91990e4c99caba9edf05dee09f3dfa4ad804696ab719a0385934d2dc4ab26629",
     "exam-bank/mcat/cars.yml": "262443843b5a014f80a04f9b7caef671f6648fe11450446099f00cfec7acbfe4",
     "exam-bank/mcat/chem-phys.yml": "95b00741da980931be62dba05027634e3744d40dbfdb980fb9b190825f9616c3",
+    "exam-bank/mcat/drill/bio-biochem.yml": "71c3dfec7d450dcddf88f148c0623003be6da7a70751299feb44c5926d351ab5",
+    "exam-bank/mcat/drill/cars.yml": "96d3288ddd421c92eaf2141b719095fd629972a5161dd207db6468d8612db487",
+    "exam-bank/mcat/drill/chem-phys.yml": "a4c5ebaf1ad7be6a900575ecb19a039466eabbee6ec61b580ddfd958e1b9a006",
+    "exam-bank/mcat/drill/psych-soc.yml": "42b2c4e22be691ddf29ba9e2f0c1046f3e51658d5c4fbca3976be7bb01b3b192",
     "exam-bank/mcat/psych-soc.yml": "d30169c8c73693bc5bf5ed560078919238b266a0eb1f0cf1a88cbc50232475ca",
+    "exam-bank/nmat/drill/part1-inductive.yml": "1696e0e0e39c8fbfe00b3260994f4a94bff5439239a50b6f05db884785d9a379",
+    "exam-bank/nmat/drill/part1-perceptual.yml": "3dd86c0a9225d898a782fe000ace809a65db1ade5c479be4957c1414106d6b5a",
+    "exam-bank/nmat/drill/part1-quantitative.yml": "831757b0544586b062502f3d1e9b40773cf6b598c0a7e7c345526f13b1ca7c01",
+    "exam-bank/nmat/drill/part1-verbal.yml": "63cc68e49d8b6d261b8386cd0316932c23c6f95fabbada898b7cbc8f66328950",
+    "exam-bank/nmat/drill/part2-biology.yml": "2076bc99a8205f23bc0aab6fe74ad3e4332b1d6be484da78c6f5158f07e6e87e",
+    "exam-bank/nmat/drill/part2-chemistry.yml": "1dce73a08cbed3982f80b10a3ddc2e45aebc339666b897fc8917dc51d863d0c5",
+    "exam-bank/nmat/drill/part2-physics.yml": "3e399711b73836aada808d3eba4708d6159c8cd2200a98c84e7bcd3a0ca5e4a9",
+    "exam-bank/nmat/drill/part2-social-science.yml": "0d13f44a69e557dec1fd94107052b4af67417159a3c54628f6aa764413e8df3d",
     "exam-bank/nmat/part1-inductive.yml": "14d2517c32dc713fd7dea309a578d68873736ff4b28387dd243e727d9ec655c3",
     "exam-bank/nmat/part1-perceptual.yml": "d485db9be21ad86eb3feb9dbfe0029a153ce70ee3eff8a8ba8104387f0b7f265",
     "exam-bank/nmat/part1-quantitative.yml": "7fca563cdffb952f90a8f206933da2228efaf73a7bdc53cc6e09d6cdf376edd7",
