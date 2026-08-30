@@ -27,7 +27,7 @@
 | 🗺️ **Dual-exam curriculum map** | 13 subjects covering NMAT Part 1 & 2 and all four MCAT sections, with shared science subjects merged — no duplicated pages, no fake chapters beyond the official blueprints |
 | 📖 **Teaching chapters** | Full-textbook tutorials: overview → teaching sections with figures → worked examples → key points → pitfalls → per-exam mapping, every chapter citing its sources — plus subject key terms, cross-discipline bridges, clinical links into the disease library, high-yield badges, and one-click PDF export |
 | 🎯 **Strategy library** | 8 original test-taking technique guides — passage triage, process of elimination, unit analysis, CARS passage mapping, timing protocol, flag discipline, guessing policy, the review loop |
-| 📝 **High-yield notes** | 449 one-line bullets across 70 outline chapters, plus 116 practice MCQs and a 470-question full-length mock-exam bank (NMAT 240 + MCAT 230, 30 passages) |
+| 📝 **High-yield notes** | 449 one-line bullets across 70 outline chapters, plus 116 practice MCQs and a 770-question bank (NMAT 240 + MCAT 230 full-length mocks + 300 practice-only drill items, 32 passages) |
 | 🔎 **Materials desk** | 105-term searchable glossary, 108 formulas in per-subject sheets, exam tips, study paths, and checklists |
 | 🩺 **Disease library** | 8 mechanism-first articles (TB, dengue, MI, …) bridging basic science to clinical intuition — enrichment reading, honestly labeled as such |
 | 🔁 **Spaced-repetition flashcards** | SM-2-style scheduling over the full 399-card deck: due queue, new cards capped per session, Again/Hard/Good/Easy grading, per-subject decks |
@@ -50,7 +50,7 @@
 | Exam tips / study paths / checklists | **21 / 7 / 3** |
 | Disease articles | **8** |
 | Full textbook tutorials | **70 / 70 — complete** |
-| Mock-exam questions (NMAT + MCAT full length) | **470** + 30 passages |
+| Mock-exam + drill questions | **770** + 32 passages |
 
 Everything lives in [`content/`](content/) as plain YAML and is documented
 standalone in [`content/README.md`](content/README.md). Per-chapter tutorial
