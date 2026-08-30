@@ -1,0 +1,70 @@
+"""AI-powered weak-point analysis: aggregates the learner's data, asks the
+configured coach model for a study plan critique, and degrades gracefully
+to a plain data report when no model is configured."""
+
+from __future__ import annotations
+
+import json
+
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
+from django.views.decorators.http import require_GET
+
+from . import insights
+from .llm import chat_completion, coach_ready
+from .models import ReviewNote
+
+
+def _aggregate(username: str) -> dict:
+    profile = __import__("portal.learners", fromlist=["get_or_create_profile"]).get_or_create_profile(username)
+    weak = insights.wrong_chapters(profile, limit=10)
+    causes = {}
+    for it in insights.wrong_questions(profile, limit=1000):
+        note = ReviewNote.objects.filter(profile=profile,
+                                         question_id=it["question_id"]).first()
+        key = note.cause if note else "unlabeled"
+        causes[key] = causes.get(key, 0) + 1
+    history = insights.exam_history(profile)
+    trend = [h["pct"] for h in history]
+    slow = []
+    return {
+        "weak_chapters": weak,
+        "causes": causes,
+        "mock_count": len(history),
+        "trend": trend,
+        "trend_direction": ("up" if len(trend) >= 2 and trend[-1] > trend[0]
+                            else "down" if len(trend) >= 2 and trend[-1] < trend[0] else "flat"),
+        "slow_items": slow,
+    }
+
+
+def _prompt(data: dict) -> str:
+    return (
+        "You are an MCAT/NMAT study coach. Based ONLY on the learner data below, "
+        "write a focused study recommendation in English: (1) which 2-3 chapters to "
+        "prioritize and why, (2) what the miss-cause pattern says about study habits, "
+        "(3) one concrete next action. Do not invent data that is not listed.\n\n"
+        f"Weak chapters (accuracy %): {json.dumps(data['weak_chapters'])}\n"
+        f"Miss causes: {json.dumps(data['causes'])}\n"
+        f"Mock attempts: {data['mock_count']}\n"
+        f"Score trend: {data['trend']} ({data['trend_direction']})\n"
+    )
+
+
+@login_required
+@require_GET
+def coach_insights(request):
+    data = _aggregate(request.user.username)
+    ai_text = ""
+    ai_error = ""
+    if coach_ready():
+        try:
+            ai_text = chat_completion([{"role": "user", "content": _prompt(data)}],
+                                      max_tokens=700, temperature=0.3)
+        except Exception as exc:  # network/API failure — degrade, don't 500
+            ai_error = str(exc)[:200]
+    else:
+        ai_error = "No AI model configured — showing your data report only."
+    return render(request, "portal/coach_insights.html", {
+        "data": data, "ai_text": ai_text, "ai_error": ai_error,
+    })

@@ -1,0 +1,46 @@
+{% extends "portal/base.html" %}
+
+{% block title %}AI weak-point analysis · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">AI coach</p>
+    <h1>Your weak-point analysis</h1>
+    <p class="lead">Built from your miss causes, chapter accuracy, and mock-exam trend.</p>
+  </div>
+</div>
+
+<section class="section">
+  <article class="practice-card">
+    <h2>The data behind this</h2>
+    <p class="note-line">
+      Mock attempts: <strong>{{ data.mock_count }}</strong> ·
+      Trend: <strong>{{ data.trend_direction }}</strong>
+      {% if data.trend %}({{ data.trend|join:"% → " }}%){% endif %}
+    </p>
+    {% if data.weak_chapters %}
+    <h3>Weak chapters</h3>
+    <ul class="tut-bridge-list">
+      {% for w in data.weak_chapters %}
+      <li><a href="{% url 'tutorial_detail' w.discipline w.chapter_id %}">{{ w.title }}</a> — {{ w.correct }}/{{ w.total }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <h3>Miss causes</h3>
+    <p class="note-line">{% for key, n in data.causes.items %}{% if n %}{{ key }}: <strong>{{ n }}</strong> · {% endif %}{% endfor %}label them in the <a href="{% url 'review' %}">notebook</a> for sharper analysis.</p>
+  </article>
+
+  <article class="practice-card">
+    <h2>Coach recommendation</h2>
+    {% if ai_text %}
+    <div class="exam-review-body">{{ ai_text }}</div>
+    {% elif ai_error %}
+    <p class="note-line">{{ ai_error }} Add a model under <strong>Manage → Models</strong> to enable the written recommendation — the data report above works without it.</p>
+    {% else %}
+    <p class="note-line">Not enough data yet — take a mock exam first.</p>
+    {% endif %}
+  </article>
+</section>
+{% endblock %}

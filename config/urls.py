@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 
-from portal import accounts, coach_admin, dashboard, exam_views, views
+from portal import accounts, coach_admin, coach_insights, dashboard, exam_views, views
 
 urlpatterns = [
     path("", views.home, name="home"),
@@ -83,6 +83,7 @@ urlpatterns = [
     path("plan/", dashboard.plan, name="plan"),
     path("flashcards/", exam_views.flashcards_hub, name="flashcards_hub"),
     path("scores/", views.score_interpreter, name="score_interpreter"),
+    path("coach/insights/", coach_insights.coach_insights, name="coach_insights"),
     path("api/flashcards/grade/", exam_views.flashcard_grade_api, name="flashcard_grade_api"),
     path("plan/save/", dashboard.plan_save, name="plan_save"),
     path("admin/", admin.site.urls),
