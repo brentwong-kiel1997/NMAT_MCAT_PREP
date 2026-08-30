@@ -17,18 +17,19 @@ the single source of truth — there is no generated artifact to keep in sync.
 | `units.yml` | Two learning projects (NMAT/MCAT) split into study units with per-chapter exam annotations and cross-project links | 15 units |
 | `exams/nmat.yml` | NMAT structure: parts, timing, item counts, Part-2 subject links | 2 parts |
 | `exams/mcat.yml` | MCAT structure: sections, timing, discipline mix | 4 sections |
-| `chapters/<slug>.yml` | **The unified chapter library** — one file per unique chapter: title, discipline, exams, points, notes, practice items | 72 chapters |
+| `chapters/<slug>.yml` | **The unified chapter library** — one file per unique chapter: title, discipline, exams, points, notes, practice items | 70 chapters |
 | `subjects/*.yml` | Exam-facing ordered reference lists over the library (group headings + chapter slugs) | 13 subjects |
 | `diseases/*.yml` | Disease articles (enrichment reading, not a clinical syllabus) | 8 articles |
-| `materials/glossary.yml` | Terms with definitions and subject tags | 105 terms |
+| `materials/glossary.yml` | Terms with definitions and subject tags (incl. reasoning-skill decks) | 115 terms |
 | `materials/formulas.yml` | Formula sheets grouped by subject | 108 entries |
 | `materials/tips.yml` | Exam strategy tips (NMAT / MCAT / BOTH) | 21 tips |
 | `materials/paths.yml` | Suggested study paths with step links | 7 paths |
 | `materials/checklists.yml` | Exam-day and study checklists | 3 lists |
 | `tutorials/<subject>/<chapter>.yml` | Full textbook chapters: overview, teaching sections, tables, worked examples, key points, pitfalls, exam map, sources | 70 (complete) |
+| `strategy.yml` | Original test-strategy guides (passage triage, POE, unit analysis, CARS mapping, timing, flags, guessing, review loop) | 8 guides |
 | `docs/TUTORIAL_TEMPLATE.md` | Authoring template + field reference for new chapters | — |
 | `docs/PROGRESS.md` | Per-chapter fill progress tracker (70 chapters) | 70 / 70 |
-| `exam-bank/<exam>/<section>.yml` | Full-length mock-exam items: choices, keyed answer, explain, distractors, chapter back-link; MCAT science/CARS in passage groups. Timing/structure live in `exams/*.yml` `blueprint:` | 470 + 30 passages |
+| `exam-bank/<exam>/<section>.yml` | Full-length mock-exam items: choices, keyed answer, explain, distractors, chapter back-link; MCAT science/CARS in passage groups. Timing/structure live in `exams/*.yml` `blueprint:`. Retake attempts reshuffle item order and option letters (folded back to canonical keys for scoring) | 470 + 30 passages |
 | `docs/CHAPTER_LOG.md` | Per-chapter development log — what was actually done, decisions, landmines | 001 / 70 |
 | `MANIFEST.json` | Counts and SHA-256 hashes of every file, for integrity checks | — |
 
@@ -122,6 +123,7 @@ Each chapter file carries the fields:
 | `key_points` | Must-not-miss bullet takeaways |
 | `pitfalls` | Common wrong answers and misconceptions |
 | `exam_map` | Map of `NMAT:` / `MCAT:` — how each exam tests this chapter |
+| `figures` | Per-section OpenStax figures: `src` (path under `content/images/`), `caption`, `credit` (license line) |
 | `sources` | Every reference cited: `ref` (an id from `SOURCES.yml`), `used` (chapters/sections), `relation` |
 | `sections[].check` | "Check yourself" — 1–2 quick questions per section (same question shape) |
 | `mnemonics` | Memory hooks: `phrase` + `means` |
