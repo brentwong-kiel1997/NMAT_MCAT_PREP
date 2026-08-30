@@ -13,6 +13,18 @@
 </div>
 
 <section class="section">
+  <article class="practice-card" style="border-color:#3b5bdb;">
+    <h2>Today</h2>
+    <ul class="tut-bridge-list">
+      {% if due_cards %}<li>🔁 <a href="{% url 'flashcards_hub' %}">{{ due_cards }} flashcard{{ due_cards|pluralize }} due for review</a></li>{% endif %}
+      {% for task in today_tasks %}
+      <li>☐ [{{ task.kind }}] {{ task.minutes }} min — {% if task.url %}<a href="{{ task.url }}">{{ task.label }}</a>{% else %}{{ task.label }}{% endif %}</li>
+      {% endfor %}
+      {% if mock_recommended %}<li>🎯 No mock exam on record — <a href="{% url 'exam_list' %}">start with a half-length diagnostic</a> to baseline yourself.</li>{% endif %}
+      {% if not today_tasks and not due_cards %}<li>Queue clear. Drill a weak chapter or run a mock.</li>{% endif %}
+    </ul>
+  </article>
+
   {% if continue_learning %}
   <article class="practice-card">
     <h2>Continue</h2>

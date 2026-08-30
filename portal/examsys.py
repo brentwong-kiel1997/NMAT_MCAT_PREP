@@ -59,6 +59,26 @@ def exam_item_list(exam_id: str) -> list[dict]:
     return exam_items(exam_id, with_key=True)
 
 
+def _diagnostic_plan(exam_id: str, plan: dict) -> dict:
+    """Half-length: for each block, round-robin one item per chapter until
+    half the block's items are taken — even coverage across the syllabus."""
+    index = exam_item_index(exam_id)
+    for b in plan["blocks"]:
+        items = b["items"]
+        target = max(4, len(items) // 2)
+        by_chapter: dict[str, list[str]] = {}
+        for iid in items:
+            by_chapter.setdefault((index.get(iid) or {}).get("chapter") or "", []).append(iid)
+        picked: list[str] = []
+        pools = [ids for ids in by_chapter.values() if ids]
+        while len(picked) < target and pools:
+            for pool in pools:
+                if pool and len(picked) < target:
+                    picked.append(pool.pop(0))
+        b["items"] = picked
+    return plan
+
+
 def _variant_map(item_ids: list[str], seed: str) -> dict:
     """Retake variant for one block: shuffled item order + a per-item letter
     permutation. Deterministic from (seed, item ids) so a rebuilt plan stays
@@ -77,14 +97,18 @@ def _variant_map(item_ids: list[str], seed: str) -> dict:
     return {"order": order, "vmap": vmap}
 
 
-def start_attempt(username: str, exam_id: str) -> ExamAttempt:
+def start_attempt(username: str, exam_id: str, mode: str = "real") -> ExamAttempt:
     profile = _learner(username)
     plan = build_plan(exam_id)
-    # retake variant: anyone who already finished this exam gets a reshuffled
-    # form — item order and option letters permuted, scored on canonical keys
+    if mode == "diagnostic":
+        plan = _diagnostic_plan(exam_id, plan)
+    # retake variant: anyone who already finished a REAL attempt of this exam
+    # gets a reshuffled form — item order and option letters permuted, scored
+    # on canonical keys. Diagnostics never permute (they are one-shot).
     seen_before = ExamAttempt.objects.filter(
-        profile=profile, exam=exam_id).exclude(status="active").exists()
-    variant_seed = f"{username}:{exam_id}:{timezone.now().timestamp():.0f}" if seen_before else ""
+        profile=profile, exam=exam_id, mode="real").exclude(status="active").exists()
+    variant_seed = (f"{username}:{exam_id}:{timezone.now().timestamp():.0f}"
+                    if seen_before and mode == "real" else "")
     blocks = []
     for b in plan["blocks"]:
         entry = {"id": b["id"], "label": b.get("label", b["id"]),
@@ -93,12 +117,15 @@ def start_attempt(username: str, exam_id: str) -> ExamAttempt:
             v = _variant_map(b["items"], f"{variant_seed}:{b['id']}")
             entry["items"] = v["order"]
             entry["vmap"] = v["vmap"]
+        if mode == "diagnostic":
+            entry["seconds"] = max(300, entry["seconds"] // 2)
         blocks.append(entry)
     plan = {"blocks": blocks}
     try:
         return ExamAttempt.objects.create(
             profile=profile,
             exam=exam_id,
+            mode=mode,
             plan=plan,
             sections=[{"id": b["id"], "started_ts": None, "seconds": b["seconds"],
                        "finished_ts": None, "pos": 0}

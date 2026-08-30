@@ -71,7 +71,8 @@ def exam_detail(request, exam_id: str):
 def exam_start(request, exam_id: str):
     if exam_id not in exam_defs():
         raise Http404("Exam not found")
-    attempt = examsys.start_attempt(request.user.username, exam_id)
+    mode = "diagnostic" if request.POST.get("mode") == "diagnostic" else "real"
+    attempt = examsys.start_attempt(request.user.username, exam_id, mode=mode)
     return redirect("exam_take", exam_id=exam_id, attempt_id=attempt.id)
 
 

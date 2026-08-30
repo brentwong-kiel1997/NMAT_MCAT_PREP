@@ -39,8 +39,12 @@
     {% if active %}
     <p><a class="btn btn-primary" href="{% url 'exam_take' exam.id active.id %}">Resume attempt (started {{ active.started_at|date:"M d H:i" }})</a></p>
     {% elif user.is_authenticated %}
+    <form method="post" action="{% url 'exam_start' exam.id %}" style="margin-bottom:.5rem;">{% csrf_token %}
+      <button type="submit" class="btn btn-primary">Start the full {{ exam.name }}</button>
+    </form>
     <form method="post" action="{% url 'exam_start' exam.id %}">{% csrf_token %}
-      <button type="submit" class="btn btn-primary">Start the {{ exam.name }}</button>
+      <input type="hidden" name="mode" value="diagnostic">
+      <button type="submit" class="btn">Start half-length diagnostic (per-subject sample, half clock)</button>
     </form>
     {% else %}
     <p><a class="btn btn-primary" href="{% url 'login' %}">Sign in to start</a></p>

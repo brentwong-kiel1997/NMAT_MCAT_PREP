@@ -22,7 +22,7 @@ def cause_distribution_local(profile):
     return counts
 from .views import _json_for_script
 from .content import all_bank_items, chapters_store, store
-from .models import ReviewNote, StudyPlan
+from .models import ExamAttempt, ReviewNote, StudyPlan
 
 
 def _profile(request):
@@ -59,8 +59,24 @@ def dashboard(request):
         agg = subj_acc.setdefault(disc, {"correct": 0, "total": 0})
         agg["correct"] += slot["correct"]
         agg["total"] += slot["total"]
+    from .srs import srs_stats
+    from .planner import build_plan
+    sp = getattr(profile, "study_plan", None)
+    today_tasks, mock_recommended = [], False
+    if sp:
+        done = {row.chapter_id for row in ChapterProgress.objects.filter(profile=profile)}
+        full = planner.build_plan(exam_id=sp.exam, exam_date=sp.exam_date,
+                                  weekly_hours=sp.weekly_hours, done=done)
+        today_tasks = full[0]["tasks"] if full else []
+    stats = srs_stats(request.user.username)
+    has_real = ExamAttempt.objects.filter(profile=profile, exam__in=("nmat", "mcat"),
+                                          mode="real").exclude(status="active").exists()
     ctx = {
         "history": history,
+        "today_tasks": today_tasks,
+        "due_cards": stats["due_today"],
+        "has_real_mock": has_real,
+        "mock_recommended": not has_real,
         "subject_accuracy": [{"discipline": d, **v,
                               "pct": round(100 * v["correct"] / v["total"]) if v["total"] else 0}
                              for d, v in sorted(subj_acc.items()) if v["total"]],
