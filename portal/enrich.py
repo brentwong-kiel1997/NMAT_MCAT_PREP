@@ -9,8 +9,8 @@ mappings are ours.
 from __future__ import annotations
 
 from .content import (
-    all_bank_items, chapters_store, get_disease, get_subject, practice_for,
-    store, tutorial_for,
+    bank_items_by_chapter, chapters_store, get_disease, get_subject,
+    practice_for, store, tutorial_for,
 )
 
 # clinical mapping: chapter -> disease slugs whose science this chapter explains
@@ -103,10 +103,12 @@ BRIDGES: dict[str, list[str]] = {
 
 
 def bank_items_for_chapter(chapter_id: str) -> list[dict]:
-    """Normalized drill items for one chapter (with keys — server-side only)."""
-    items = [i for i in all_bank_items().values() if i.get("chapter") == chapter_id]
-    items.sort(key=lambda i: i["id"])
-    return items
+    """Keyless drill items for one chapter, from the amortized store index.
+
+    Note: the drill page grades server-side through practice_attempt_api, so
+    these keyless items plus the graded response are all it needs. Any future
+    caller that needs keys must use content.exam_item_index instead."""
+    return bank_items_by_chapter().get(chapter_id) or []
 
 
 def drill_count(chapter_id: str, discipline: str) -> int:
@@ -195,12 +197,10 @@ def clinical_links(chapter_id: str) -> list[dict]:
 
 
 def chapter_high_yield(chapter_id: str) -> bool:
-    counts = {}
-    for item in all_bank_items().values():
-        if item.get("chapter"):
-            counts[item["chapter"]] = counts.get(item["chapter"], 0) + 1
+    counts = {cid: len(items) for cid, items in
+              bank_items_by_chapter().items()}
     values = sorted(counts.values(), reverse=True)
     if not values:
         return False
-    cut = values[max(0, int(len(values) * 0.25) - 1)]  # top ~25%
-    return counts.get(chapter_id, 0) >= max(6, cut)
+    cut = max(6, values[int(len(values) * 0.25)])
+    return counts.get(chapter_id, 0) >= cut

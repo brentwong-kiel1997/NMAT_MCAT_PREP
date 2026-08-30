@@ -226,7 +226,9 @@
         btn.type = "button";
         btn.className = "practice-choice";
         btn.dataset.letter = letter;
-        btn.innerHTML = `<strong>${letter}</strong> ${choice}`;
+        const strong = document.createElement("strong");
+        strong.textContent = letter;
+        btn.append(strong, ` ${choice}`);
         if (prior) {
           btn.disabled = true;
           if (letter === item.answer) btn.classList.add("is-correct");

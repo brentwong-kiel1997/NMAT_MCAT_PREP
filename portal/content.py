@@ -216,7 +216,29 @@ def _build() -> dict:
             for f in sorted((CONTENT_DIR / "exams").glob("*.yml"))
         },
         "exam_bank": _load_exam_bank(),
+        "bank_items_by_chapter": _bank_index(),
     }
+
+
+def _bank_index() -> dict[str, list[dict]]:
+    """chapter id -> keyless normalized bank items (id order), computed once
+    per store build. Consumers on pre-answer pages must never re-add keys."""
+    by_chapter: dict[str, list[dict]] = {}
+    bank = _load_exam_bank()
+    for exam_id, sections in (bank.get("exams") or {}).items():
+        for section_id, doc in sections.items():
+            for raw in doc.get("items") or []:
+                item = _normalize_item(raw, exam_id=exam_id, section_id=section_id,
+                                       block_id="", passage=None)
+                by_chapter.setdefault(item["chapter"], []).append(_strip_key(item))
+            for passage in doc.get("passages") or []:
+                for raw in passage.get("items") or []:
+                    item = _normalize_item(raw, exam_id=exam_id, section_id=section_id,
+                                           block_id="", passage=passage)
+                    by_chapter.setdefault(item["chapter"], []).append(_strip_key(item))
+    for items in by_chapter.values():
+        items.sort(key=lambda i: i["id"])
+    return by_chapter
 
 
 def _load_exam_bank() -> dict:
@@ -616,6 +638,16 @@ def strategy_guides() -> list[dict]:
     """Original test-strategy guides (content/strategy.yml)."""
     doc = store().get("strategy") or {}
     return deepcopy(doc.get("guides") or [])
+
+
+def bank_items_by_chapter() -> dict[str, list[dict]]:
+    """chapter id -> keyless items (amortized: precomputed per store build).
+
+    Returns the store's own mapping WITHOUT copying — treat as read-only.
+    Every current caller only reads/scans it; hand out copies if that ever
+    changes. This keeps chapter pages from re-deepcopying 470 items each hit.
+    """
+    return store().get("bank_items_by_chapter") or {}
 
 
 def chapters_store() -> dict:

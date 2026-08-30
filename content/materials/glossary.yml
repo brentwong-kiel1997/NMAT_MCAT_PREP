@@ -540,3 +540,54 @@ terms:
   subjects:
   - cars
   - verbal
+- term: Series generator
+  def: The rule that produces each next term of a sequence (constant difference, constant ratio, interleaved
+    tracks, or a position formula); identifying it is the whole task in series items.
+  subjects:
+  - inductive-reasoning
+- term: Interleaved series
+  def: Two rules alternating by position (odd/even terms follow separate tracks); the tell is one rule
+    failing on every other term.
+  subjects:
+  - inductive-reasoning
+- term: Wraparound
+  def: In letter series, positions continuing past Z back to A (mod 26); Y -> A -> C is a +2 walk that
+    wraps.
+  subjects:
+  - inductive-reasoning
+- term: Figure grouping
+  def: Sorting figures by a shared feature (symmetry, side count, fill, orientation) that every member
+    holds and every outsider breaks.
+  subjects:
+  - inductive-reasoning
+- term: Mirror axis
+  def: 'The line a reflection flips across: a vertical axis reverses left-right (b becomes d); a horizontal
+    axis reverses up-down (b becomes p).'
+  subjects:
+  - perceptual-acuity
+- term: Reflection vs rotation
+  def: A mirror flip reverses handedness; a rotation preserves it. q rotated 180 degrees is b, but q mirrored
+    vertically is p.
+  subjects:
+  - perceptual-acuity
+- term: Contour tracking
+  def: Following a target's outline edge-by-edge inside clutter, ignoring fills and background lines that
+    cross it.
+  subjects:
+  - perceptual-acuity
+- term: Transposition
+  def: Swapping adjacent characters in an otherwise identical string (45 vs 54); the most common hidden
+    difference in identical-information items.
+  subjects:
+  - perceptual-acuity
+- term: Glyph trap
+  def: 'Character pairs that look alike across fonts: 0/O, 1/l/I, 5/S, 8/B — a classic same-or-different
+    distractor.'
+  subjects:
+  - perceptual-acuity
+- term: Pluralistic ignorance
+  def: Each bystander reads others' inaction as evidence nothing is wrong, so nobody reacts; distinct
+    from diffusion of responsibility (which splits the duty to act).
+  subjects:
+  - perceptual-acuity
+  - behavioral-social

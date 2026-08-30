@@ -1,10 +1,10 @@
 {
-  "source_rev": "6e273df",
+  "source_rev": "4e41af5",
   "counts": {
     "chapters": 70,
     "note_bullets": 449,
     "practice": 116,
-    "glossary": 105,
+    "glossary": 115,
     "formulas": 108,
     "tips": 21,
     "paths": 7,
@@ -110,7 +110,7 @@
     "exams/nmat.yml": "60350dd9dd8d797b148eb2c012448a754da93bcbc8b86d4a26945600ae2635c5",
     "materials/checklists.yml": "59357dcdfdd0070de5c8be2d2bc15c818a6fcaf479994b8500d4a8cd8ff2662d",
     "materials/formulas.yml": "3d43208292ba3269c0bfe89559a5509c21487dc9d63648567e92e492e7dd694c",
-    "materials/glossary.yml": "5b5c71f6964523401468536f924f2b58375fff397769f81078aaade3d92b4c0e",
+    "materials/glossary.yml": "5256e6e794109d9171ae36c0ddd56d8472561da01ab55dbcfc51f9d3de61e92a",
     "materials/paths.yml": "2bb7a6fac3c8b625f246ff97b89242097fb3f256e98590bdb0ef472d92078a40",
     "materials/tips.yml": "99f0cf22ba8786eba985614d59e52b3897625fdb19c0f79de3721ec4db324dc0",
     "strategy.yml": "bdb6c03a046d5892fefa7b964c9aeb4f5bf8e7a73664734dc7673ae56fefabf9",
