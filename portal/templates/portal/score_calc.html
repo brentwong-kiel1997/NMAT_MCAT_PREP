@@ -1,0 +1,152 @@
+{% extends "portal/base.html" %}
+{% load static %}
+
+{% block head_extra %}
+<link rel="stylesheet" href="{% static 'portal/css/exam.css' %}?v=20260828b">
+{% endblock %}
+
+{% block title %}Score interpreter · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">Score interpreter</p>
+    <h1>What does my practice score mean?</h1>
+    <p class="lead">Convert a mock-exam percentage into the official score scale — and see the accuracy a target score demands. These are normal-approximation estimates for planning, not official conversions.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="practice-card" data-calc>
+    <h2>Inputs</h2>
+    <div class="exam-nav">
+      <label>Exam
+        <select id="calc-exam">
+          <option value="nmat">NMAT</option>
+          <option value="mcat">MCAT (one section)</option>
+        </select>
+      </label>
+      <label>Items answered correctly
+        <input type="number" id="calc-correct" min="0" value="180">
+      </label>
+      <label>Items total
+        <input type="number" id="calc-total" min="1" value="240">
+      </label>
+    </div>
+
+    <div id="calc-nmat-out" style="margin-top:1rem;">
+      <h2>NMAT reading</h2>
+      <p id="nmat-standard" class="lead"></p>
+      <p id="nmat-percentile" class="lead"></p>
+      <table class="mini-table" style="margin-top:.8rem;">
+        <thead><tr><th>Target</th><th>Percentile</th><th>Standard score</th><th>Accuracy needed on 240 items</th></tr></thead>
+        <tbody>
+          <tr><td>CHED minimum</td><td>40th</td><td>~475</td><td id="nmat-t40"></td></tr>
+          <tr><td>Most Metro Manila schools</td><td>60th</td><td>~525</td><td id="nmat-t60"></td></tr>
+          <tr><td>Competitive (UST, Ateneo)</td><td>85th</td><td>~604</td><td id="nmat-t85"></td></tr>
+          <tr><td>UP College of Medicine</td><td>95th+</td><td>~645</td><td id="nmat-t95"></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="calc-mcat-out" style="margin-top:1rem;" hidden>
+      <h2>MCAT section reading</h2>
+      <p id="mcat-section-score" class="lead"></p>
+      <p class="note-line">The MCAT section score runs 118–132 (midpoint 125); the total runs 472–528. Section scores combine to the total — a balanced 125/125/125/125 lands 500.</p>
+    </div>
+
+    <p class="note-line" style="margin-top:1rem;">
+      How it works: both exams report on a scale centered near the middle of the cohort.
+      For planning we map your raw accuracy through a normal curve (NMAT: mean 500, SD 100;
+      MCAT section: midpoint 125, SD ≈ 2.5 per the published 118–132 range). Real forms vary —
+      treat the outputs as targets to plan against, not predictions.
+    </p>
+  </div>
+</section>
+{% endblock %}
+
+{% block page_js %}
+<script>
+(function () {
+  // inverse normal CDF (Acklam's approximation) — percentile -> z
+  function invNorm(p) {
+    const a = [-3.969683028665376e+01, 2.209460984245205e+02, -2.759285104469687e+02, 1.383577518672690e+02, -3.066479806614716e+01, 2.506628277459239e+00];
+    const b = [-5.447609879822406e+01, 1.615858368580409e+02, -1.556989798598866e+02, 6.680131188771972e+01, -1.328068155288572e+01];
+    const c = [-7.784894002430293e-03, -3.223964580411365e-01, -2.400758277161838e+00, -2.549732539343734e+00, 4.374664141464968e+00, 2.938163982698783e+00];
+    const d = [7.784695709041462e-03, 3.224671290700398e-01, 2.445134137142996e+00, 3.754408661907416e+00];
+    const pl = 0.02425;
+    let q, r;
+    if (p < pl) {
+      q = Math.sqrt(-2 * Math.log(p));
+      return (((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5]) / ((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1);
+    }
+    if (p <= 1 - pl) {
+      q = p - 0.5; r = q * q;
+      return (((((a[0]*r+a[1])*r+a[2])*r+a[3])*r+a[4])*r+a[5])*q / (((((b[0]*r+b[1])*r+b[2])*r+b[3])*r+b[4])*r+1);
+    }
+    q = Math.sqrt(-2 * Math.log(1 - p));
+    return -(((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5]) / ((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1);
+  }
+  function normCdf(z) { /* erf-based */
+    const t = 1 / (1 + 0.2316419 * Math.abs(z));
+    const d = 0.3989423 * Math.exp(-z * z / 2);
+    const prob = d * t * (0.319381530 + t * (-0.356563782 + t * (1.781477937 + t * (-1.821255978 + t * 1.330274429))));
+    return z > 0 ? 1 - prob : prob;
+  }
+
+  const NMAT_ITEMS = 240;
+  function nmatStandard(pct) { return Math.round(500 + 100 * invNorm(pct / 100)); }
+  function nmatAccuracyForPercentile(p) {
+    // percentile -> needed accuracy: z at p, then accuracy = mean_accuracy + z * SD_accuracy
+    // accuracy on 240 4-option items: mean 0.25+ chance-adjusted — CEM reports standard
+    // scores from raw counts; we approximate with mean 0.6, SD 0.12 of typical cohorts
+    const z = invNorm(p / 100);
+    return Math.max(0.25, Math.min(1, 0.6 + z * 0.12));
+  }
+  function mcatSection(pct) { return Math.round(125 + 2.5 * invNorm(pct / 100)); }
+
+  function accuracyPct(frac) { return Math.round(frac * 240); }
+
+  function update() {
+    const exam = document.getElementById("calc-exam").value;
+    const correct = parseInt(document.getElementById("calc-correct").value || "0", 10);
+    const total = Math.max(1, parseInt(document.getElementById("calc-total").value || "1", 10));
+    const frac = Math.max(0, Math.min(1, correct / total));
+    const pct = frac * 100;
+    document.getElementById("calc-nmat-out").hidden = exam !== "nmat";
+    document.getElementById("calc-mcat-out").hidden = exam !== "mcat";
+    if (exam === "nmat") {
+      const std = nmatStandard(pct);
+      const pr = Math.round(normCdf((std - 500) / 100) * 100);
+      document.getElementById("nmat-standard").textContent =
+        `Estimated standard score: ${Math.max(200, Math.min(800, std))} (scale 200–800)`;
+      document.getElementById("nmat-percentile").textContent =
+        `Approximate percentile rank: ${Math.max(1, pr)} — ` +
+        ((pr >= 95) ? "UP College of Medicine range." :
+         (pr >= 85) ? "competitive range (UST, Ateneo)." :
+         (pr >= 60) ? "clears most Metro Manila cut-offs." :
+         (pr >= 40) ? "above the CHED minimum." : "below the CHED 40th-percentile minimum.");
+      [["nmat-t40", 40], ["nmat-t60", 60], ["nmat-t85", 85], ["nmat-t95", 95]].forEach(([id, p]) => {
+        const acc = nmatAccuracyForPercentile(p);
+        document.getElementById(id).textContent = `${accuracyPct(acc)} / 240 (${Math.round(acc * 100)}%)`;
+      });
+    } else {
+      // MCAT section: 4-option items, chance floor near 0.25; published midpoint 125
+      const chance = 0.25;
+      const span = 1 - chance;
+      const fracAbove = Math.max(0, (frac - chance) / span);
+      const z = invNorm(Math.max(0.01, Math.min(0.99, fracAbove)));
+      const score = Math.max(118, Math.min(132, Math.round(125 + 2.5 * z)));
+      const pctile = Math.round(Math.max(1, Math.min(99, normCdf(z) * 100)));
+      document.getElementById("mcat-section-score").textContent =
+        `Estimated section score: ${score} / 132 (≈ ${pctile}th percentile within the cohort) — ` +
+        (score >= 128 ? "strong section." : score >= 125 ? "at the midpoint — balanced." : "below midpoint; the weak-chapter list is your syllabus.");
+    }
+  }
+  ["calc-exam", "calc-correct", "calc-total"].forEach((id) =>
+    document.getElementById(id).addEventListener("input", update));
+  update();
+})();
+</script>
+{% endblock %}

@@ -150,6 +150,16 @@ def exam_question(request, exam_id: str, attempt_id: int,
     examsys.set_position(attempt, block_id, pos)
     entry = (attempt.answers or {}).get(item_id) or {}
 
+    # retake variant: present the permuted letters; entry.c stores canonical
+    shown_choices = item["choices"]
+    shown_letter = entry.get("c") or ""
+    vmap = (block.get("vmap") or {}).get(item_id) or {}
+    if vmap:
+        shown_choices = {shown: item["choices"][original]
+                         for shown, original in vmap.items()}
+        shown_letter = next((shown for shown, original in vmap.items()
+                             if original == shown_letter), "")
+
     return render(request, "portal/exam_take.html", {
         "attempt": attempt,
         "exam": {"id": exam_id},
@@ -158,10 +168,10 @@ def exam_question(request, exam_id: str, attempt_id: int,
         "num_blocks": len(blocks),
         "pos": pos,
         "total": len(block["items"]),
-        "item": {"id": item["id"], "q": item["q"], "choices": item["choices"],
+        "item": {"id": item["id"], "q": item["q"], "choices": shown_choices,
                  "passage_text": item.get("passage_text", ""),
                  "passage_id": item.get("passage_id", "")},
-        "chosen": entry.get("c") or "",
+        "chosen": shown_letter,
         "flagged": bool(entry.get("f")),
         "remaining": examsys.remaining_seconds(attempt, block_id),
         "nav": examsys.navigator(attempt, block_id),
@@ -329,3 +339,47 @@ def exam_result(request, attempt_id: int):
         "review": review,
         "exam_name": (exam_defs().get(attempt.exam) or {}).get("name", attempt.exam),
     })
+
+
+# ---- spaced-repetition flashcards ------------------------------------------
+
+@login_required
+@require_GET
+def flashcards_hub(request):
+    from .srs import due_queue, srs_stats, _subjects_with_decks
+    from .content import labels
+
+    subject = request.GET.get("subject") or ""
+    queue = due_queue(request.user.username, subject or None)
+    stats = srs_stats(request.user.username)
+    decks = [{"slug": s, "label": labels().get(s, s)} for s in _subjects_with_decks()]
+    return render(request, "portal/flashcards.html", {
+        "decks": decks, "active_subject": subject,
+        "due": queue["due"], "new_cards": queue["new"],
+        "stats": stats,
+    })
+
+
+@login_required
+@require_POST
+def flashcard_grade_api(request):
+    import json as _json
+
+    from .srs import card_key, deck_for, grade_card
+    try:
+        payload = _json.loads(request.body.decode("utf-8"))
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        return JsonResponse({"ok": False, "error": "Invalid JSON"}, status=400)
+    subject_slug = (payload.get("subject_slug") or "").strip()
+    grade = (payload.get("grade") or "").strip().lower()
+    if grade not in ("again", "hard", "good", "easy"):
+        return JsonResponse({"ok": False, "error": "bad grade"}, status=400)
+    # card identity is verified against the content deck — the client never
+    # dictates front/back text
+    key = (payload.get("key") or "").strip()
+    card = next((c for c in deck_for(subject_slug) if c["key"] == key), None)
+    if not card:
+        return JsonResponse({"ok": False, "error": "Unknown card"}, status=404)
+    return JsonResponse(grade_card(
+        request.user.username, subject_slug, key,
+        card["front"], card["back"], card["chapter"], grade))

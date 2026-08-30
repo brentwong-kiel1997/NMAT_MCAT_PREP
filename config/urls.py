@@ -80,6 +80,9 @@ urlpatterns = [
     path("review/", dashboard.review, name="review"),
     path("review/redo/<slug:chapter_id>/", dashboard.review_redo, name="review_redo"),
     path("plan/", dashboard.plan, name="plan"),
+    path("flashcards/", exam_views.flashcards_hub, name="flashcards_hub"),
+    path("scores/", views.score_interpreter, name="score_interpreter"),
+    path("api/flashcards/grade/", exam_views.flashcard_grade_api, name="flashcard_grade_api"),
     path("plan/save/", dashboard.plan_save, name="plan_save"),
     path("admin/", admin.site.urls),
 ]

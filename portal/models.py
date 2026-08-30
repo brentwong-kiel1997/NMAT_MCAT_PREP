@@ -174,3 +174,32 @@ class StudyPlan(models.Model):
 
     def __str__(self) -> str:
         return f"{self.profile_id}:{self.exam}:{self.exam_date}"
+
+
+class SrsCard(models.Model):
+    """Spaced-repetition state for one flashcard, per learner (SM-2 style).
+
+    card_key is a stable content hash (chapter + card text) so content edits
+    never orphan scheduling state.
+    """
+
+    profile = models.ForeignKey(
+        LearnerProfile, on_delete=models.CASCADE, related_name="srs_cards"
+    )
+    subject_slug = models.SlugField(max_length=80)
+    card_key = models.CharField(max_length=40)
+    front = models.CharField(max_length=400)
+    back = models.CharField(max_length=600, blank=True)
+    chapter = models.CharField(max_length=200, blank=True)
+    ease = models.FloatField(default=2.5)
+    interval_days = models.IntegerField(default=0)
+    due_date = models.DateField(default=timezone.localdate)
+    reps = models.IntegerField(default=0)
+    lapses = models.IntegerField(default=0)
+
+    class Meta:
+        unique_together = [("profile", "card_key")]
+        indexes = [models.Index(fields=["profile", "due_date"])]
+
+    def __str__(self) -> str:
+        return f"{self.profile_id}:{self.card_key[:12]} @{self.due_date}"

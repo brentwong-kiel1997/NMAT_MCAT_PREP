@@ -61,7 +61,12 @@
         {% endfor %}
       </tbody>
     </table>
-    <p class="note-line"><a href="{% url 'plan' %}">→ Build a study plan</a> · <a href="{% url 'review' %}">→ Review notebook</a></p>
+    <p class="note-line">
+      <a href="{% url 'plan' %}">→ Study plan</a> ·
+      <a href="{% url 'review' %}">→ Review notebook</a> ·
+      <a href="{% url 'flashcards_hub' %}">→ Flashcards</a> ·
+      <a href="{% url 'score_interpreter' %}">→ Score interpreter</a>
+    </p>
   </article>
 </section>
 {% endblock %}

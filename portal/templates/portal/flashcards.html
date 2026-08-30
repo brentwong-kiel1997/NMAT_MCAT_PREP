@@ -1,0 +1,109 @@
+{% extends "portal/base.html" %}
+{% load static %}
+
+{% block head_extra %}
+<link rel="stylesheet" href="{% static 'portal/css/exam.css' %}?v=20260828b">
+{% endblock %}
+
+{% block title %}Flashcards · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">Spaced repetition</p>
+    <h1>Flashcards</h1>
+    <p class="lead">{{ stats.total }} cards in rotation · {{ stats.due_today }} due today. New cards enter at up to 10/day per session so the queue stays humane.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="practice-card">
+    <h2>Deck</h2>
+    <p class="note-line">
+      <a href="{% url 'flashcards_hub' %}">All decks</a>
+      {% for d in decks %}
+      {% if d.slug != active %} · <a href="?subject={{ d.slug }}">{{ d.label }}</a>{% endif %}
+      {% endfor %}
+    </p>
+    {% if active %}<p class="note-line">Active deck: <strong>{{ active }}</strong></p>{% endif %}
+  </div>
+
+  <div class="practice-card" id="srs-root" data-srs
+       data-queue="{{ due|length }}+{{ new_cards|length }}">
+    <h2>Today's queue — {{ due|length }} review{{ due|length|pluralize }} + {{ new_cards|length }} new</h2>
+
+    <div id="srs-card" class="exam-main" style="margin-top:1rem;">
+      <p class="muted-inline" id="srs-chapter"></p>
+      <h2 class="exam-stem" id="srs-front">Pick a deck and start reviewing.</h2>
+      <div id="srs-back" hidden style="border-top:1px solid #ddd;margin-top:.8rem;padding-top:.8rem;">
+        <p id="srs-back-text"></p>
+      </div>
+      <div class="exam-nav" id="srs-controls">
+        <button type="button" class="btn btn-primary" id="srs-show" hidden>Show answer</button>
+        <button type="button" class="btn" id="srs-again" hidden>Again</button>
+        <button type="button" class="btn" id="srs-hard" hidden>Hard</button>
+        <button type="button" class="btn" id="srs-good" hidden>Good</button>
+        <button type="button" class="btn" id="srs-easy" hidden>Easy</button>
+      </div>
+      <p class="exam-saved" id="srs-status" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block page_js %}
+<script>
+(function () {
+  const due = [{% for d in due %}{"key":"{{ d.card_key }}","subject":"{{ d.subject_slug }}","front":"{{ d.front|escapejs }}","back":"{{ d.back|escapejs }}","chapter":"{{ d.chapter|escapejs }}"}{% if not forloop.last %},{% endif %}{% endfor %}];
+  const fresh = [{% for n in new_cards %}{"key":"{{ n.key }}","subject":"{{ n.subject_slug }}","front":"{{ n.front|escapejs }}","back":"{{ n.back|escapejs }}","chapter":"{{ n.chapter|escapejs }}"}{% if not forloop.last %},{% endif %}{% endfor %}];
+  const queue = due.concat(fresh);
+  let i = 0, revealed = false;
+
+  const $ = (id) => document.getElementById(id);
+  function csrf() {
+    const m = document.cookie.match(/(?:^|; )csrftoken=([^;]+)/);
+    return m ? decodeURIComponent(m[1]) : (document.querySelector(".csrf-slot input") || {}).value || "";
+  }
+  function paint() {
+    if (i >= queue.length) {
+      $("srs-front").textContent = "Queue clear — come back tomorrow.";
+      $("srs-back").hidden = true;
+      ["srs-show", "srs-again", "srs-hard", "srs-good", "srs-easy"].forEach(id => $(id).hidden = true);
+      return;
+    }
+    const card = queue[i];
+    $("srs-chapter").textContent = card.chapter;
+    $("srs-front").textContent = card.front;
+    $("srs-back").hidden = true;
+    $("srs-show").hidden = false;
+    ["srs-again", "srs-hard", "srs-good", "srs-easy"].forEach(id => $(id).hidden = true);
+  }
+  function grade(g) {
+    const card = queue[i];
+    $("srs-status").textContent = "Saving…";
+    fetch("/api/flashcards/grade/", {
+      method: "POST", credentials: "same-origin",
+      headers: { "Content-Type": "application/json", "X-CSRFToken": csrf() },
+      body: JSON.stringify({ subject_slug: card.subject, key: card.key, grade: g }),
+    }).then((res) => {
+      $("srs-status").textContent = res.ok ? "Scheduled." : "Save failed — card retried next session.";
+      i += 1; revealed = false; paint();
+    }).catch(() => {
+      $("srs-status").textContent = "Offline — grade not saved.";
+    });
+  }
+  $("srs-show").addEventListener("click", () => {
+    revealed = true;
+    $("srs-back-text").textContent = queue[i].back || "(self-check card)";
+    $("srs-back").hidden = false;
+    $("srs-show").hidden = true;
+    ["srs-again", "srs-hard", "srs-good", "srs-easy"].forEach(id => $(id).hidden = false);
+  });
+  ["again", "hard", "good", "easy"].forEach((g) => {
+    $("srs-" + g).addEventListener("click", () => { if (revealed) grade(g); });
+  });
+  paint();
+})();
+</script>
+{% endblock %}

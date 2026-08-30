@@ -59,9 +59,42 @@ def exam_item_list(exam_id: str) -> list[dict]:
     return exam_items(exam_id, with_key=True)
 
 
+def _variant_map(item_ids: list[str], seed: str) -> dict:
+    """Retake variant for one block: shuffled item order + a per-item letter
+    permutation. Deterministic from (seed, item ids) so a rebuilt plan stays
+    stable. Scores map back to the canonical key, so scoring never changes."""
+    import random
+
+    rng = random.Random(seed)
+    order = list(item_ids)
+    rng.shuffle(order)
+    letters = ["A", "B", "C", "D"]
+    vmap = {}
+    for iid in order:
+        perm = letters[:]
+        rng.shuffle(perm)
+        vmap[iid] = {shown: original for shown, original in zip(letters, perm)}
+    return {"order": order, "vmap": vmap}
+
+
 def start_attempt(username: str, exam_id: str) -> ExamAttempt:
     profile = _learner(username)
     plan = build_plan(exam_id)
+    # retake variant: anyone who already finished this exam gets a reshuffled
+    # form — item order and option letters permuted, scored on canonical keys
+    seen_before = ExamAttempt.objects.filter(
+        profile=profile, exam=exam_id).exclude(status="active").exists()
+    variant_seed = f"{username}:{exam_id}:{timezone.now().timestamp():.0f}" if seen_before else ""
+    blocks = []
+    for b in plan["blocks"]:
+        entry = {"id": b["id"], "label": b.get("label", b["id"]),
+                 "seconds": b.get("seconds", 0), "items": b["items"]}
+        if variant_seed:
+            v = _variant_map(b["items"], f"{variant_seed}:{b['id']}")
+            entry["items"] = v["order"]
+            entry["vmap"] = v["vmap"]
+        blocks.append(entry)
+    plan = {"blocks": blocks}
     try:
         return ExamAttempt.objects.create(
             profile=profile,
@@ -205,6 +238,11 @@ def save_answer(attempt: ExamAttempt, block_id: str, pos: int,
         entry = answers.get(item_id) or {}
         if chosen is not None:
             chosen = str(chosen).strip().upper()[:1]
+            # retake variant: the page shows permuted letters — fold the
+            # shown letter back to the canonical one before storing
+            shown_map = ((block.get("vmap") or {}).get(item_id) or {})
+            if shown_map:
+                chosen = shown_map.get(chosen)
             if chosen not in ("A", "B", "C", "D"):
                 return {"ok": False, "error": "bad-choice"}
             entry["c"] = chosen

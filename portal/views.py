@@ -645,6 +645,11 @@ def strategy_library(request):
 
 
 @require_GET
+def score_interpreter(request):
+    return render(request, "portal/score_calc.html")
+
+
+@require_GET
 def tutorial_pdf(request, slug, chapter_id):
     """One tutorial chapter as a PDF for personal offline study.
 
