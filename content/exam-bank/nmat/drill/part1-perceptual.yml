@@ -23,6 +23,7 @@ items:
       MUMINIM.'
     D: It contains C, which has no left-right symmetry, and reversed it reads CIMIM.
   chapter: mirror-image
+  figure: items/pa-mirror-b.svg
 - id: nmat-d-p1p-002
   q: Which capital letter still looks the same after an up-down flip, the way a letter looks in the water
     below it?
@@ -53,6 +54,7 @@ items:
     C: A mirrored 3 opens the other way and reads as the letter E.
     D: A mirrored 6 matches no digit; a 6 turns into a 9 only under a half turn.
   chapter: mirror-image
+  figure: items/pa-mirror-b.svg
 - id: nmat-d-p1p-004
   q: A card printed with the word MOOD is held facing a vertical mirror. Which describes the image?
   choices:
@@ -68,6 +70,7 @@ items:
     B: A mirror puts the rightmost letter nearest the glass, so the order reverses.
     C: That describes a water image or a half turn, not a vertical mirror.
   chapter: mirror-image
+  figure: items/pa-mirror-b.svg
 - id: nmat-d-p1p-005
   q: Which figure has exactly one line of symmetry?
   choices:
@@ -99,6 +102,7 @@ items:
     C: That is the half turn alone, with the mirror left out.
     D: That is the mirrored L alone, with the half turn left out.
   chapter: mirror-image
+  figure: items/pa-mirror-b.svg
 - id: nmat-d-p1p-007
   q: Which word is made only of capital letters that are each unchanged by an up-down flip?
   choices:
@@ -146,6 +150,7 @@ items:
     C: That is the result of a half turn, not of a mirror reflection.
     D: It flips each letter as a half turn would, without reversing their order.
   chapter: mirror-image
+  figure: items/pa-mirror-b.svg
 - id: nmat-d-p1p-010
   q: 'Target: PHC-2026-0408-RM2 Which option is an exact character-for-character match for the target?'
   choices:

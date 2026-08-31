@@ -52,6 +52,7 @@ items:
     C: db leaves both letter shapes unrotated.
     D: qb rotates the b into a q but leaves the d unrotated — only one of the two shapes is turned.
   chapter: mirror-image
+  figure: items/ir-rot-arrow-1.svg
 - id: nmat-p1p-004
   q: 'Turned upside down as in a water image (an up-down flip), the lowercase letter ''d'' becomes:'
   choices:
@@ -113,6 +114,7 @@ items:
     C: That is a 180-degree rotation of the arrow, not a left-right reflection.
     D: That is the object itself; the image must at least swap left and right.
   chapter: mirror-image
+  figure: items/ir-rot-arrow-1.svg
 - id: nmat-p1p-008
   q: Which pair of lowercase letters are left-right mirror images of each other - each becoming the other
     in a vertical mirror?
@@ -431,6 +433,7 @@ items:
     C: Its top is capped by a flat bar; the two slanted strokes of the arrowhead are missing.
     D: Its top strokes form a cup that opens upward, with no point at the top.
   chapter: hidden-figure
+  figure: items/ir-rot-arrow-1.svg
 - id: nmat-p1p-028
   q: 'Target outline: a capital letter A - two slanted strokes meeting at a top point with a horizontal
     crossbar between them. Which panel contains it?'

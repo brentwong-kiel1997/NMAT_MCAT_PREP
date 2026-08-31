@@ -264,6 +264,7 @@ items:
     C: Turns both figures the same way; they move in opposite directions.
     D: Reads the shading as turning counter-clockwise instead of clockwise.
   chapter: figure-series
+  figure: items/ir-seq-3d-s-r90.svg
 - id: nmat-d-p1i-018
   q: 'Frame 1: a small upward-pointing triangle on the left half of the frame. Each frame the triangle
     doubles in size and moves to the other half of the frame, and on every second frame it points downward.

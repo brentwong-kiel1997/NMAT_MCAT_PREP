@@ -199,6 +199,7 @@ items:
     B: That is Frame 3's orientation, two turns early.
     C: The arrow turns a quarter-turn at a time; it never sits on a diagonal.
   chapter: figure-series
+  figure: items/ir-rot-arrow-1.svg
 - id: nmat-p1i-014
   q: 'Frame 1: a square with 1 dot in the middle. Frame 2: a square with 3 dots in a horizontal row. Frame
     3: a square with 5 dots in a horizontal row. Frame 4: a square with 7 dots in a horizontal row. What
