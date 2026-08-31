@@ -98,6 +98,16 @@ def _subjects_with_decks() -> list[str]:
     return all_practice_slugs()
 
 
+def get_or_create_srs(username, subject_slug, card_key, front, back, chapter):
+    profile = get_or_create_profile(username)
+    card, _ = SrsCard.objects.get_or_create(
+        profile=profile, card_key=card_key,
+        defaults={"subject_slug": subject_slug, "front": front[:400],
+                  "back": back[:600], "chapter": chapter[:200],
+                  "due_date": timezone.localdate()})
+    return card
+
+
 def grade_card(username: str, subject_slug: str, key: str, front: str,
                back: str, chapter: str, grade: str) -> dict:
     """grade in {again, hard, good, easy}; classic SM-2 adaptation."""

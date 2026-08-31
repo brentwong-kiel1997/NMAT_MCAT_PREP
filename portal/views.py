@@ -514,6 +514,26 @@ def practice_attempt_api(request):
     correct = chosen == item["answer"]
     username = _learner_name(request)
     record_practice(username, subject_slug, question_id, chosen, correct)
+    # wrong answers auto-enter SRS as flashcards (the review loop)
+    if not correct:
+        try:
+            from .srs import card_key, split_card, get_or_create_srs
+            from .learners import get_or_create_profile
+            prof = get_or_create_profile(username)
+            text = item.get("q", "")
+            chapter_label = item.get("chapter", "")
+            ck = card_key(subject_slug, chapter_label, text)
+            front, back = split_card(text)
+            from .models import SrsCard
+            from django.utils import timezone
+            SrsCard.objects.get_or_create(
+                profile=prof, card_key=ck,
+                defaults={"subject_slug": subject_slug, "front": front[:400],
+                          "back": (item.get("explain", ""))[:600],
+                          "chapter": chapter_label[:200],
+                          "due_date": timezone.localdate()})
+        except Exception:
+            pass  # SRS failure must never break the practice flow
     return JsonResponse(
         {
             "ok": True,

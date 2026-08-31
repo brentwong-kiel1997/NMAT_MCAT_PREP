@@ -192,9 +192,10 @@ def plan(request):
     if study_plan:
         from .models import ChapterProgress
         done = {row.chapter_id for row in ChapterProgress.objects.filter(profile=profile)}
+        weak = {w["chapter_id"] for w in insights.wrong_chapters(profile, limit=20)}
         generated = planner.build_plan(
             exam_id=study_plan.exam, exam_date=study_plan.exam_date,
-            weekly_hours=study_plan.weekly_hours, done=done)
+            weekly_hours=study_plan.weekly_hours, done=done, weak=weak)
         total_tasks = sum(len(day["tasks"]) for day in generated)
         total_minutes = sum(day["minutes"] for day in generated)
         generated = {"days": generated, "total_tasks": total_tasks,

@@ -51,7 +51,9 @@ def task_minutes(entry: dict) -> int:
 
 
 def build_plan(*, exam_id: str, exam_date: dt.date, weekly_hours: int,
-               done: set[str], today: dt.date | None = None) -> list[dict]:
+               done: set[str], weak: set[str] | None = None,
+               today: dt.date | None = None) -> list[dict]:
+    weak = weak or set()
     today = today or dt.date.today()
     days = (exam_date - today).days
     if days <= 0:
@@ -59,7 +61,14 @@ def build_plan(*, exam_id: str, exam_date: dt.date, weekly_hours: int,
     daily_minutes = max(30, int(weekly_hours * 60 / 7))
     tasks = syllabus(exam_id)
     plan: list[dict] = []
-    queue = [t for t in tasks if t["chapter_id"] not in done]
+    # weak chapters (recently missed) get priority: front-load and double-tap
+    if weak:
+        weak_first = [t for t in tasks if t["chapter_id"] in weak and t["chapter_id"] not in done]
+        rest = [t for t in tasks if t["chapter_id"] not in done and t["chapter_id"] not in weak]
+        queue = weak_first + rest
+    else:
+        queue = [t for t in tasks if t["chapter_id"] not in done]
+    qi = 0
     qi = 0
     for offset in range(days):
         date = today + dt.timedelta(days=offset)

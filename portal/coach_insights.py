@@ -38,6 +38,22 @@ def _aggregate(username: str) -> dict:
 
 
 def _prompt(data: dict) -> str:
+    # enrich with tutorial key_points/pitfalls for weak chapters so the coach
+    # can reference specific misconceptions, not just chapter names
+    from .content import tutorial_for, chapters_store
+    chs = chapters_store()
+    prose_bits = []
+    for w in data.get("weak_chapters", [])[:3]:
+        ch = chs.get(w.get("chapter_id") or "")
+        if not ch:
+            continue
+        tut = tutorial_for(ch.get("discipline", ""), ch.get("title", ""))
+        if tut:
+            kp = "; ".join(tut.get("key_points") or [])[:300]
+            pf = "; ".join(tut.get("pitfalls") or [])[:300]
+            prose_bits.append(f"{ch['title']}: key points: {kp}. Pitfalls: {pf}")
+    prose_block = "\n".join(prose_bits) if prose_bits else "(no tutorial prose available)"
+
     return (
         "You are an MCAT/NMAT study coach. Based ONLY on the learner data below, "
         "write a focused study recommendation in English: (1) which 2-3 chapters to "
@@ -46,7 +62,8 @@ def _prompt(data: dict) -> str:
         f"Weak chapters (accuracy %): {json.dumps(data['weak_chapters'])}\n"
         f"Miss causes: {json.dumps(data['causes'])}\n"
         f"Mock attempts: {data['mock_count']}\n"
-        f"Score trend: {data['trend']} ({data['trend_direction']})\n"
+        f"Score trend: {data['trend']} ({data['trend_direction']})\n\n"
+        f"Tutorial content for the weak chapters:\n{prose_block}\n"
     )
 
 
