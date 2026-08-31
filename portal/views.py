@@ -733,6 +733,7 @@ def tutorial_drill(request, slug, chapter_id):
     raw = enrich.bank_items_for_chapter(chapter_id)
     chapter_specific = bool(raw)
     items = [{"id": i["id"], "q": i["q"], "choices": i["choices"],
+              "figure": i.get("figure", ""),
               "chapter": chapter.get("title", chapter_id)} for i in raw]
     if not items:
         items = [

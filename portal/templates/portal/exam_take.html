@@ -52,6 +52,9 @@
       </details>
       {% endif %}
 
+      {% if item.figure %}
+      <div class="exam-figure"><img src="{{ item.figure }}" alt="Item figure" style="max-width:100%;"></div>
+      {% endif %}
       <h2 class="exam-stem">{{ item.q }}</h2>
 
       <div class="exam-choices" role="group" aria-label="Answer choices">

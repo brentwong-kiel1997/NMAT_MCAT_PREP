@@ -217,6 +217,18 @@
       if (scoreEl) scoreEl.textContent = String(state.score);
       if (chapterEl) chapterEl.textContent = item.chapter || "";
       if (qEl) qEl.textContent = item.q || "";
+      // render figure if the item has one (drill-bank items may carry SVG)
+      const figParent = qEl ? qEl.parentElement : null;
+      let figEl = figParent ? figParent.querySelector(".practice-figure") : null;
+      if (figEl) figEl.remove();
+      if (item.figure_url && figParent) {
+        const img = document.createElement("img");
+        img.src = item.figure_url;
+        img.alt = "Item figure";
+        img.className = "practice-figure";
+        img.style.maxWidth = "100%";
+        figParent.insertBefore(img, qEl.nextSibling);
+      }
       choicesEl.innerHTML = "";
       const prior = state.answered[item.id];
       ["A", "B", "C", "D"].forEach((letter) => {

@@ -170,6 +170,7 @@ def review_redo(request, chapter_id: str):
         ch_title = (chs.get(item_chapter) or {}).get("title", item_chapter)
         items.append({"id": qid, "q": q.get("q", ""),
                       "choices": q.get("choices") or q.get("options") or {},
+                      "figure": f"/content-images/{q.get('figure','')}" if q.get("figure") else "",
                       "chapter": ch_title})
     if not items:
         return redirect("review")

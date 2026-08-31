@@ -704,6 +704,7 @@ def _normalize_item(raw: dict, *, exam_id: str, section_id: str, block_id: str,
         "explain": raw.get("explain", ""),
         "distractors": dict(raw.get("distractors") or {}),
         "chapter": raw.get("chapter", ""),
+        "figure": raw.get("figure", ""),
         "passage_id": (passage or {}).get("id", ""),
         "passage_text": (passage or {}).get("text", ""),
     }
