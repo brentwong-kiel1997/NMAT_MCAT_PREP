@@ -67,7 +67,7 @@ items:
   explain: q^2 = 0.04 gives q = 0.20 and p = 0.80, so 2pq = 2(0.80)(0.20) = 0.32, i.e. 32%.
   distractors:
     A: That is q^2, the frequency of affected homozygotes, not of heterozygotes.
-    B: That is p^2, the frequency of homozygous normal individuals.
+    B: Computed p·q but forgot to double it (heterozygotes are 2pq).
     C: That is q, the allele frequency, rather than the heterozygote frequency.
   chapter: genetics
   passage_id: ''
@@ -84,8 +84,7 @@ items:
   distractors:
     A: Counted the loci rather than the independent combinations of alleles.
     C: Treated the three loci as pairs that must assort together.
-    D: That is the number of diploid zygote genotypes in a trihybrid self-cross (4^3), not the number
-      of haploid gametes.
+    D: Counted the 64 Punnett-square cells (8 gametes x 8) instead of the 27 distinct genotypes.
   chapter: genetics
   passage_id: ''
 - id: mcat-d-bb-006
@@ -102,7 +101,7 @@ items:
   distractors:
     B: Multiplied all 300 nucleotides by 110 Da, ignoring that three nucleotides specify one amino acid.
     C: Reported the nucleotide count with the units of mass.
-    D: Divided by 300 rather than by 3 before scaling by 110 Da.
+    D: Divided by 100 instead of 3 (mass per codon wrong).
   chapter: 1b-gene-to-protein
   passage_id: ''
 - id: mcat-d-bb-007
@@ -182,9 +181,9 @@ items:
   answer: C
   explain: 3 x 2.5 + 1 x 1.5 + 1 = 7.5 + 1.5 + 1 = 10 ATP per acetyl-CoA.
   distractors:
-    A: That is the yield for one turn counted with the older 3/2 ATP-per-coenzyme values plus GTP.
+    A: Counted a fourth NADH (pyruvate dehydrogenase's) at 2.5, misplacing it in the cycle.
     B: Counted the three NADH only and dropped FADH2 and GTP.
-    D: Counted only FADH2 and GTP, omitting the NADH contribution.
+    D: Added only one NADH (2.5) with FADH2 (1.5).
   chapter: 1d-bioenergetics-and-fuel-metabolism
   passage_id: ''
 - id: mcat-d-bb-012
@@ -386,7 +385,7 @@ items:
   passage_id: ''
 - id: mcat-d-bb-024
   q: Characters are scored for four species. Species 1 and 2 have fur; species 3 and 4 have scales. Which
-    statement is consistent with cladistic analysis?
+    statement is consistent with cladistic analysis?. An outgroup species has scales.
   choices:
     A: Species 1 and 2 share a more recent common ancestor with each other than either shares with species
       3, because fur is a shared derived character

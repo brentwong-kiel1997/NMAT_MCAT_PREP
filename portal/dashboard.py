@@ -13,16 +13,20 @@ from . import insights, planner
 
 
 def cause_distribution_local(profile):
-    counts = {"content": 0, "misread": 0, "careless": 0, "trap": 0, "unlabeled": 0}
-    for it in insights.wrong_questions(profile, limit=1000):
-        note = ReviewNote.objects.filter(profile=profile,
-                                         question_id=it["question_id"]).first()
-        key = note.cause if note else "unlabeled"
+    """Distribution over distinct wrong questions, batched."""
+    wrong = insights.wrong_questions(profile, limit=1000)
+    qids = [w["question_id"] for w in wrong]
+    notes = {n.question_id: n.cause
+             for n in ReviewNote.objects.filter(profile=profile,
+                                                question_id__in=qids)}
+    counts = {}
+    for w in wrong:
+        key = notes.get(w["question_id"], "unlabeled")
         counts[key] = counts.get(key, 0) + 1
     return counts
 from .views import _json_for_script
 from .content import all_bank_items, chapters_store, store
-from .models import ExamAttempt, ReviewNote, StudyPlan
+from .models import ChapterProgress, ExamAttempt, ReviewNote, StudyPlan
 
 
 def _profile(request):
@@ -115,6 +119,13 @@ def review(request):
     by_chapter: dict[str, list] = {}
     for it in items:
         by_chapter.setdefault(it["chapter_id"] or "other", []).append(it)
+    # batch-fetch stored causes instead of per-item queries (were N+1)
+    qids = [it["question_id"] for it in items]
+    stored = {n.question_id: n.cause
+              for n in ReviewNote.objects.filter(profile=profile,
+                                                 question_id__in=qids)}
+    for it in items:
+        it["stored_cause"] = stored.get(it["question_id"])
     groups = []
     for chapter_id, group in sorted(by_chapter.items(), key=lambda kv: -len(kv[1])):
         first = group[0]
@@ -227,22 +238,30 @@ def review_cause_api(request):
         payload = _json.loads(request.body.decode("utf-8"))
     except (json.JSONDecodeError, UnicodeDecodeError):
         return JsonResponse({"ok": False, "error": "Invalid JSON"}, status=400)
-    question_id = (payload.get("question_id") or "").strip()
-    cause = (payload.get("cause") or "").strip()
+    try:
+        question_id = str(payload.get("question_id") or "").strip()[:64]
+        cause = str(payload.get("cause") or "").strip()
+        note_text = str(payload.get("note") or "")[:500]
+    except (TypeError, ValueError):
+        return JsonResponse({"ok": False, "error": "Invalid payload"}, status=400)
+    if not question_id or cause not in {"content", "misread", "careless", "trap"}:
+        return JsonResponse({"ok": False, "error": "Invalid cause"}, status=400)
     if not question_id or cause not in {"content", "misread", "careless", "trap"}:
         return JsonResponse({"ok": False, "error": "Invalid cause"}, status=400)
     profile = _profile(request)
+    # only questions recorded as wrong (or bank/practice-known) may be labeled —
+    # prevents ghost rows for fabricated ids
+    known_ids = {w["question_id"] for w in insights.wrong_questions(profile, limit=1000)}
+    from .content import all_bank_items, store as _content_store
+    known_ids |= set(all_bank_items().keys())
+    for ch in _content_store()["chapters"].values():
+        known_ids |= {q.get("id") for q in ch.get("practice") or [] if q.get("id")}
+    if question_id not in known_ids:
+        return JsonResponse({"ok": False, "error": "Unknown question"}, status=404)
     ReviewNote.objects.update_or_create(
         profile=profile, question_id=question_id,
-        defaults={"cause": cause, "note": (payload.get("note") or "")[:500]})
+        defaults={"cause": cause, "note": note_text})
     return JsonResponse({"ok": True})
 
 
-def cause_distribution(profile) -> dict:
-    counts = {"content": 0, "misread": 0, "careless": 0, "trap": 0, "unlabeled": 0}
-    for it in insights.wrong_questions(profile, limit=1000):
-        note = ReviewNote.objects.filter(profile=profile,
-                                         question_id=it["question_id"]).first()
-        key = note.cause if note else "unlabeled"
-        counts[key] = counts.get(key, 0) + 1
-    return counts
+

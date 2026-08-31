@@ -5,6 +5,7 @@ to a plain data report when no model is configured."""
 from __future__ import annotations
 
 import json
+import logging
 
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
@@ -26,7 +27,6 @@ def _aggregate(username: str) -> dict:
         causes[key] = causes.get(key, 0) + 1
     history = insights.exam_history(profile)
     trend = [h["pct"] for h in history]
-    slow = []
     return {
         "weak_chapters": weak,
         "causes": causes,
@@ -34,7 +34,6 @@ def _aggregate(username: str) -> dict:
         "trend": trend,
         "trend_direction": ("up" if len(trend) >= 2 and trend[-1] > trend[0]
                             else "down" if len(trend) >= 2 and trend[-1] < trend[0] else "flat"),
-        "slow_items": slow,
     }
 
 
@@ -61,8 +60,11 @@ def coach_insights(request):
         try:
             ai_text = chat_completion([{"role": "user", "content": _prompt(data)}],
                                       max_tokens=700, temperature=0.3)
-        except Exception as exc:  # network/API failure — degrade, don't 500
-            ai_error = str(exc)[:200]
+        except Exception:  # network/API failure — degrade, don't 500
+            # no upstream URL/body on screen; the real error goes to the log
+            logging.getLogger("portal.coach").exception(
+                "coach insights generation failed")
+            ai_error = "The study coach is unavailable right now — your data report is below."
     else:
         ai_error = "No AI model configured — showing your data report only."
     return render(request, "portal/coach_insights.html", {

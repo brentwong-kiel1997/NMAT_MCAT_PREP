@@ -48,8 +48,6 @@
     </div>
     <table class="mini-table">
       <thead><tr><th>Date</th><th>Exam</th><th>Score</th><th>%</th><th></th></tr></thead>
-    <table class="mini-table">
-      <thead><tr><th>Date</th><th>Exam</th><th>Score</th><th>%</th><th></th></tr></thead>
       <tbody>
         {% for h in history reversed %}
         <tr><td>{{ h.date|date:"M d" }}</td><td>{{ h.exam|upper }}</td>

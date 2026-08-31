@@ -208,8 +208,8 @@ items:
   answer: A
   explain: The middle integer is 141 / 3 = 47, so the three are 45, 47 and 49, and 45 x 49 = 2205.
   distractors:
-    B: Squares the middle term instead of multiplying the smallest by the largest.
-    C: Multiplies the smallest by the middle term.
+    B: 'Squares the smallest term instead of multiplying extremes: 45² = 2025.'
+    C: 'Off-by-one on the middle: 45 x 48 = 2160, not 45 x 47.'
     D: Squares the largest term.
   chapter: problem-solving
 - id: nmat-d-p1q-015

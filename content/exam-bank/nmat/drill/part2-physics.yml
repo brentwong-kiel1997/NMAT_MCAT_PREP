@@ -16,16 +16,16 @@ items:
     C: 3.9 m/s
     D: 1.0 m/s
   answer: A
-  explain: Only gravity does work, so mgh = 1/2 mv^2 and v = sqrt(2 x 9.8 x 0.20) = sqrt(3.92) =
-    2.0 m/s; the mass cancels.
+  explain: Only gravity does work, so mgh = 1/2 mv^2 and v = sqrt(2 x 9.8 x 0.20) = sqrt(3.92) = 2.0 m/s;
+    the mass cancels.
   distractors:
     B: used sqrt(gh) instead of sqrt(2gh), dropping the factor of 2
     C: reported 2gh = 3.9 directly, forgetting the square root
     D: halved the energy drop (gh/2 under the root) instead of doubling it
   chapter: 4a-motion-forces-work-energy-equilibrium
 - id: nmat-d-p2p-002
-  q: A 0.20-kg ball is whirled in a horizontal circle of radius 0.80 m at a steady 4.0 m/s. What
-    is the tension in the string supplying the centripetal force?
+  q: A 0.20-kg ball is whirled in a horizontal circle of radius 0.80 m at a steady 4.0 m/s. What is the
+    tension in the string supplying the centripetal force?
   choices:
     B: 4.0 N
     A: 3.2 N
@@ -39,48 +39,48 @@ items:
     D: multiplied by the radius instead of dividing by it (m v r)
   chapter: 4a-motion-forces-work-energy-equilibrium
 - id: nmat-d-p2p-003
-  q: A uniform 400-N beam 4.0 m long is hinged to a wall and held horizontal by a vertical cable
-    attached to its far end. What is the cable tension?
+  q: A uniform 400-N beam 4.0 m long is hinged to a wall and held horizontal by a vertical cable attached
+    to its far end. What is the cable tension?
   choices:
     C: 200 N
     A: 400 N
     B: 800 N
     D: 0 N
   answer: C
-  explain: Taking torques about the hinge, T x 4.0 = 400 x 2.0, because a uniform beam's weight acts
-    at its centre, so T = 200 N.
+  explain: Taking torques about the hinge, T x 4.0 = 400 x 2.0, because a uniform beam's weight acts at
+    its centre, so T = 200 N.
   distractors:
     A: placed the beam's whole weight at the far end instead of at its midpoint
-    B: used W x L for the weight's torque, omitting the factor of 1/2
+    B: 'Reversed the lever arms: T x 2.0 = 400 x 4.0, doubling the true tension.'
     D: assumed the hinge carries everything, forgetting the beam would rotate about it
   chapter: 4a-motion-forces-work-energy-equilibrium
 - id: nmat-d-p2p-004
-  q: A 0.10-kg ball strikes a wall at 10 m/s and rebounds along the same line at 6.0 m/s, staying
-    in contact for 0.050 s. What average force does the wall exert on the ball?
+  q: A 0.10-kg ball strikes a wall at 10 m/s and rebounds along the same line at 6.0 m/s, staying in contact
+    for 0.050 s. What average force does the wall exert on the ball?
   choices:
     D: 32 N
     A: 1.6 N
     B: 8.0 N
     C: 320 N
   answer: D
-  explain: The velocity reverses, so dv = 6.0 - (-10) = 16 m/s and F = m dv / t = 0.10 x 16 / 0.050
-    = 32 N.
+  explain: The velocity reverses, so dv = 6.0 - (-10) = 16 m/s and F = m dv / t = 0.10 x 16 / 0.050 =
+    32 N.
   distractors:
     A: reported the impulse m(dv) = 1.6 N.s as if it were the force
     B: subtracted the speeds (10 - 6.0) instead of adding them for a reversal
     C: slipped a decimal in the contact time (0.0050 s)
   chapter: mechanics
 - id: nmat-d-p2p-005
-  q: A 1000-kg car travelling at 20 m/s brakes to a stop with a steady friction force of 5000 N.
-    How far does it travel while stopping?
+  q: A 1000-kg car travelling at 20 m/s brakes to a stop with a steady friction force of 5000 N. How far
+    does it travel while stopping?
   choices:
     D: 40 m
     A: 80 m
     B: 0.040 m
     C: 4.0 m
   answer: D
-  explain: 1/2 mv^2 = 2.0 x 10^5 J of kinetic energy must equal the work done against friction, so
-    d = 200,000 / 5000 = 40 m.
+  explain: 1/2 mv^2 = 2.0 x 10^5 J of kinetic energy must equal the work done against friction, so d =
+    200,000 / 5000 = 40 m.
   distractors:
     A: used mv^2 instead of 1/2 mv^2 for the kinetic energy
     B: inserted the braking force directly as the deceleration
@@ -95,12 +95,11 @@ items:
     C: 1500 N
     D: 15 N
   answer: A
-  explain: The pressure is the same in both pistons, so F = 150 x (0.30/0.0030) = 150 x 100 = 15,000
-    N.
+  explain: The pressure is the same in both pistons, so F = 150 x (0.30/0.0030) = 150 x 100 = 15,000 N.
   distractors:
     B: assumed force itself is transmitted; Pascal's law transmits pressure
     C: slipped a decimal place in the piston area ratio of 100
-    D: inverted the area ratio, dividing by 100 instead of multiplying
+    D: Slipped two places in the area ratio — multiplied by 0.1 instead of 100.
   chapter: 4b-fluids-for-circulation-and-gas-exchange
 - id: nmat-d-p2p-007
   q: A block of density 600 kg/m^3 floats in water of density 1000 kg/m^3. What fraction of the block
@@ -118,8 +117,8 @@ items:
     D: assumed a floating body is fully immersed, ignoring Archimedes' condition
   chapter: 4b-fluids-for-circulation-and-gas-exchange
 - id: nmat-d-p2p-008
-  q: A small hole sits 5.0 m below the water line of a large open tank. What is the efflux speed
-    of the water? (g = 9.8 m/s^2)
+  q: A small hole sits 5.0 m below the water line of a large open tank. What is the efflux speed of the
+    water? (g = 9.8 m/s^2)
   choices:
     C: 9.9 m/s
     A: 98 m/s
@@ -133,8 +132,8 @@ items:
     D: set the speed equal to the depth rather than to sqrt(2gh)
   chapter: 4b-fluids-for-circulation-and-gas-exchange
 - id: nmat-d-p2p-009
-  q: Two glass capillary tubes of inner radii 0.50 mm and 2.0 mm are dipped in the same water. How
-    do the rises compare?
+  q: Two glass capillary tubes of inner radii 0.50 mm and 2.0 mm are dipped in the same water. How do
+    the rises compare?
   choices:
     C: The 0.50-mm tube rises 4 times higher, since height varies inversely with radius
     A: The 2.0-mm tube rises 4 times higher, since it can carry more water
@@ -149,16 +148,16 @@ items:
     D: squared the radius where the inverse is linear
   chapter: 4b-fluids-for-circulation-and-gas-exchange
 - id: nmat-d-p2p-010
-  q: A battery of emf 12 V and internal resistance 0.50 ohm drives a 5.5-ohm resistor. What is the
-    terminal voltage?
+  q: A battery of emf 12 V and internal resistance 0.50 ohm drives a 5.5-ohm resistor. What is the terminal
+    voltage?
   choices:
     D: 11 V
     A: 12 V
     B: 1.0 V
     C: 13 V
   answer: D
-  explain: I = emf/(R + r) = 12/6.0 = 2.0 A, and the terminal voltage is emf - Ir = 12 - 2.0(0.50)
-    = 11 V, the same as IR.
+  explain: I = emf/(R + r) = 12/6.0 = 2.0 A, and the terminal voltage is emf - Ir = 12 - 2.0(0.50) = 11
+    V, the same as IR.
   distractors:
     A: treated the battery as ideal and ignored the internal drop
     B: subtracted the external resistor's 11-V drop instead of the internal one
@@ -174,53 +173,53 @@ items:
   answer: A
   explain: Q = CV = (4.0 x 10^-6)(12) = 4.8 x 10^-5 C = 48 microC on each plate.
   distractors:
-    B: divided capacitance by voltage (C/V) instead of multiplying
-    C: divided voltage by capacitance (V/C)
+    B: Divided voltage by capacitance (V/C) instead of multiplying.
+    C: Divided capacitance by voltage (C/V) instead of multiplying.
     D: slipped the micro-to-milli prefix by three orders of magnitude
   chapter: 4c-electrochemistry-and-electrical-circuits
 - id: nmat-d-p2p-012
-  q: A copper wire has resistance 2.0 ohm. A second wire of the same material has twice the length
-    and half the diameter. What is its resistance?
+  q: A copper wire has resistance 2.0 ohm. A second wire of the same material has twice the length and
+    half the diameter. What is its resistance?
   choices:
     B: 16 ohm
     A: 4.0 ohm
     C: 8.0 ohm
     D: 64 ohm
   answer: B
-  explain: 'R varies as L/A: twice the length doubles it, and half the diameter quarters the area,
-    so R = 2.0 x 2 x 4 = 16 ohm.'
+  explain: 'R varies as L/A: twice the length doubles it, and half the diameter quarters the area, so
+    R = 2.0 x 2 x 4 = 16 ohm.'
   distractors:
     A: doubled for the length but ignored the smaller cross-section
     C: took half the diameter to mean half the area instead of one quarter
     D: applied the x4 area factor twice on top of the length doubling
   chapter: electricity-and-magnetism
 - id: nmat-d-p2p-013
-  q: Two identical 60-W bulbs are wired in parallel across an ideal 12-V battery. One bulb burns
-    out. What happens to the other?
+  q: Two identical 60-W bulbs are wired in parallel across an ideal 12-V battery. One bulb burns out.
+    What happens to the other?
   choices:
     B: It stays at 60 W, because each parallel branch still sees the full 12 V
     A: It dims to 30 W, because the current must now be shared by one path
     C: It brightens to 120 W, because the current that fed the other bulb now flows through it
     D: It goes out too, because the circuit is now broken
   answer: B
-  explain: 'Parallel branches are independent: the surviving bulb still has 12 V across it and still
-    dissipates V^2/R = 60 W.'
+  explain: 'Parallel branches are independent: the surviving bulb still has 12 V across it and still dissipates
+    V^2/R = 60 W.'
   distractors:
     A: treated the parallel pair as if they shared the supply current
     C: assumed the branches share a fixed current, as a series circuit would
     D: confused an open parallel branch with an open series element
   chapter: electricity-and-magnetism
 - id: nmat-d-p2p-014
-  q: A bar magnet is dropped north-pole-down through a horizontal copper ring. As the north pole
-    approaches, the induced current in the ring flows so that
+  q: A bar magnet is dropped north-pole-down through a horizontal copper ring. As the north pole approaches,
+    the induced current in the ring flows so that
   choices:
     C: the top of the ring becomes a north pole, repelling the magnet and slowing its fall
     A: the top of the ring becomes a south pole, attracting the magnet and speeding it up
     B: no current flows, because the magnet never touches the ring
     D: the current reverses direction continuously and so produces no net field
   answer: C
-  explain: Lenz's law opposes the increasing flux, so the ring's near face becomes a north pole that
-    repels the falling north pole, damping the motion.
+  explain: Lenz's law opposes the increasing flux, so the ring's near face becomes a north pole that repels
+    the falling north pole, damping the motion.
   distractors:
     A: reversed the induced polarity; Lenz's law opposes the change in flux
     B: required contact for induction, but a changing magnetic flux is enough
@@ -234,24 +233,23 @@ items:
     B: 6.0 kWh
     C: 0.75 kWh
   answer: D
-  explain: Energy = Pt = 1500 x 2.0 = 3000 Wh = 3.0 kWh, which is 3.0 x 3.6 x 10^6 = 1.08 x 10^7
-    J.
+  explain: Energy = Pt = 1500 x 2.0 = 3000 Wh = 3.0 kWh, which is 3.0 x 3.6 x 10^6 = 1.08 x 10^7 J.
   distractors:
     A: quoted the power rating as if it were the energy consumed
     B: multiplied the power by the square of the time
     C: divided the power by the time instead of multiplying
   chapter: electricity-and-magnetism
 - id: nmat-d-p2p-016
-  q: How much heat is needed to melt 0.10 kg of ice at 0 C and then warm the water to 20 C? (L_f
-    = 3.34 x 10^5 J/kg, c = 4186 J/(kg C))
+  q: How much heat is needed to melt 0.10 kg of ice at 0 C and then warm the water to 20 C? (L_f = 3.34
+    x 10^5 J/kg, c = 4186 J/(kg C))
   choices:
     A: 4.2 x 10^4 J
     B: 3.3 x 10^4 J
     C: 8.4 x 10^3 J
     D: 4.2 x 10^7 J
   answer: A
-  explain: Melting takes mL = 0.10 x 3.34 x 10^5 = 3.34 x 10^4 J and warming takes mc(dT) = 0.10
-    x 4186 x 20 = 8.4 x 10^3 J, for a total of 4.2 x 10^4 J.
+  explain: Melting takes mL = 0.10 x 3.34 x 10^5 = 3.34 x 10^4 J and warming takes mc(dT) = 0.10 x 4186
+    x 20 = 8.4 x 10^3 J, for a total of 4.2 x 10^4 J.
   distractors:
     B: counted only the latent heat and ignored the warming stage
     C: counted only the warming and ignored the latent heat of fusion
@@ -266,40 +264,39 @@ items:
     C: -700 J
     D: 0 J
   answer: A
-  explain: The first law with the sign convention dU = Q - W gives 500 - 200 = +300 J, since the
-    gas spends 200 J doing work.
+  explain: The first law with the sign convention dU = Q - W gives 500 - 200 = +300 J, since the gas spends
+    200 J doing work.
   distractors:
     B: added the work done by the gas instead of subtracting it
     C: reversed the sign of both terms in the first law
     D: assumed an ideal gas keeps a constant internal energy under any process
   chapter: thermodynamics
 - id: nmat-d-p2p-018
-  q: An engine takes in 1000 J of heat per cycle from a 500-K reservoir and rejects heat to a 300-K
-    sink. What is the maximum work it can deliver per cycle?
+  q: An engine takes in 1000 J of heat per cycle from a 500-K reservoir and rejects heat to a 300-K sink.
+    What is the maximum work it can deliver per cycle?
   choices:
     B: 400 J
     A: 600 J
     C: 200 J
     D: 1000 J
   answer: B
-  explain: The Carnot efficiency is 1 - Tc/Th = 1 - 300/500 = 0.40, so the maximum work is 0.40 x
-    1000 = 400 J.
+  explain: The Carnot efficiency is 1 - Tc/Th = 1 - 300/500 = 0.40, so the maximum work is 0.40 x 1000
+    = 400 J.
   distractors:
     A: used the rejected fraction (1 - 0.40) as the work fraction
     C: read the 200-K temperature difference between the reservoirs as the work in joules
     D: assumed the Carnot limit allows all the input heat to become work
   chapter: thermodynamics
 - id: nmat-d-p2p-019
-  q: A 1.5-m string fixed at both ends vibrates in its third harmonic. What is the wavelength of
-    the standing wave?
+  q: A 1.5-m string fixed at both ends vibrates in its third harmonic. What is the wavelength of the standing
+    wave?
   choices:
     C: 1.0 m
     A: 4.5 m
     B: 0.50 m
     D: 3.0 m
   answer: C
-  explain: For a string fixed at both ends the nth harmonic has wavelength 2L/n = 2(1.5)/3 = 1.0
-    m.
+  explain: For a string fixed at both ends the nth harmonic has wavelength 2L/n = 2(1.5)/3 = 1.0 m.
   distractors:
     A: multiplied the length by 3 instead of using 2L/3
     B: divided the length by 3 and never doubled it
@@ -313,45 +310,44 @@ items:
     B: Two separate tones that do not interact, because the frequencies differ
     C: A tone of 441.5 Hz whose loudness stays constant
   answer: D
-  explain: Superposition gives an average frequency of (440 + 443)/2 = 441.5 Hz, beat modulated at
-    the difference 443 - 440 = 3 Hz.
+  explain: Superposition gives an average frequency of (440 + 443)/2 = 441.5 Hz, beat modulated at the
+    difference 443 - 440 = 3 Hz.
   distractors:
     A: added the frequencies instead of averaging them and taking the difference as the beat rate
     B: denied superposition; close frequencies always interfere in time
     C: found the average frequency but missed the beat produced by the 3-Hz difference
   chapter: vibrations-waves-and-optics
 - id: nmat-d-p2p-021
-  q: An object is placed 5.0 cm from a converging lens of focal length 10 cm. Where is the image
-    and what is it like?
+  q: An object is placed 5.0 cm from a converging lens of focal length 10 cm. Where is the image and what
+    is it like?
   choices:
     D: '10 cm from the lens on the same side as the object: virtual, upright and twice as tall'
     A: 10 cm behind the lens, real and inverted
     B: At infinity, because the object sits at the focal point
     C: 5.0 cm from the lens on the same side, virtual and the same size
   answer: D
-  explain: '1/di = 1/10 - 1/5 = -1/10, so di = -10 cm: a virtual image 10 cm in front of the lens,
-    upright and magnified m = 10/5 = 2x (a magnifying glass).'
+  explain: '1/di = 1/10 - 1/5 = -1/10, so di = -10 cm: a virtual image 10 cm in front of the lens, upright
+    and magnified m = 10/5 = 2x (a magnifying glass).'
   distractors:
     A: dropped the minus sign from 1/di = 1/10 - 1/5, which turns the virtual image into a real one
     B: read the 5.0-cm object distance as the 10-cm focal length
     C: took the image distance as the object distance and skipped the magnification
   chapter: 4d-light-and-sound-interacting-with-matter
 - id: nmat-d-p2p-022
-  q: Light travelling in glass (n = 1.5) strikes the glass-air surface at 30 degrees to the normal.
-    What angle does the refracted ray make with the normal in air?
+  q: Light travelling in glass (n = 1.5) strikes the glass-air surface at 30 degrees to the normal. What
+    angle does the refracted ray make with the normal in air?
   choices:
     A: 49 degrees
     B: 19 degrees
     C: 30 degrees
     D: 90 degrees, that is total internal reflection
   answer: A
-  explain: Snell's law n(glass) sin 30 = n(air) sin t gives sin t = 1.5 x 0.50 = 0.75, so t = 49
-    degrees; the ray bends away from the normal.
+  explain: Snell's law n(glass) sin 30 = n(air) sin t gives sin t = 1.5 x 0.50 = 0.75, so t = 49 degrees;
+    the ray bends away from the normal.
   distractors:
     B: divided sin 30 by 1.5, putting the index on the wrong side of Snell's law
     C: assumed the ray leaves at the angle it arrived, as if the media matched
-    D: applied the critical-angle test without checking; the 42-degree critical angle exceeds 30
-      degrees
+    D: applied the critical-angle test without checking; the 42-degree critical angle exceeds 30 degrees
   chapter: 4d-light-and-sound-interacting-with-matter
 - id: nmat-d-p2p-023
   q: An electron is accelerated from rest through a potential difference of 100 V. What kinetic energy
@@ -385,16 +381,16 @@ items:
     D: denied that a higher photon flux ejects more electrons per second
   chapter: modern-physics
 - id: nmat-d-p2p-025
-  q: An electron moves at 2.0 x 10^6 m/s parallel to a uniform 0.50-T magnetic field. What magnetic
-    force acts on it?
+  q: An electron moves at 2.0 x 10^6 m/s parallel to a uniform 0.50-T magnetic field. What magnetic force
+    acts on it?
   choices:
     B: zero, because the velocity is parallel to the field
     A: 1.6 x 10^-13 N
     C: 3.2 x 10^-13 N
     D: 0.50 N
   answer: B
-  explain: The magnetic force is qvB sin(theta); with v parallel to B, theta = 0 and sin 0 = 0, so
-    there is no force.
+  explain: The magnetic force is qvB sin(theta); with v parallel to B, theta = 0 and sin 0 = 0, so there
+    is no force.
   distractors:
     A: evaluated qvB with sin 90 even though the motion is along the field
     C: doubled the charge as well as taking sin 90

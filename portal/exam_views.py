@@ -320,6 +320,13 @@ def exam_result(request, attempt_id: int):
             r = responses.get(item_id)
             entry = (attempt.answers or {}).get(item_id) or {}
             chosen = (r.chosen if r else entry.get("c")) or ""
+            # retake variants: show the letter the learner actually clicked,
+            # folded back through the attempt's permutation
+            vmap = (block.get("vmap") or {}).get(item_id) or {}
+            if chosen and vmap and chosen in vmap.values():
+                shown = next((s for s, o in vmap.items() if o == chosen), chosen)
+            else:
+                shown = chosen
             chapter = chapters_store.get(item.get("chapter") or {})
             review.append({
                 "pos_global": len(review) + 1,
@@ -327,8 +334,10 @@ def exam_result(request, attempt_id: int):
                 "pos": pos,
                 "q": item["q"],
                 "choices": item["choices"],
-                "answer": item["answer"],
-                "chosen": chosen,
+                "answer": (next((s for s, o in vmap.items()
+                                    if o == item["answer"]), item["answer"])
+                             if vmap else item["answer"]),
+                "chosen": shown,
                 "correct": bool(chosen) and chosen == item["answer"],
                 "explain": item.get("explain", ""),
                 "distractors": item.get("distractors") or {},

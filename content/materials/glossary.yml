@@ -688,8 +688,8 @@ terms:
   subjects:
   - physics
 - term: Doppler shift
-  def: Observed frequency rises on approach and falls on recession by v/f of relative motion along the
-    line of sight.
+  def: Observed frequency rises on approach and falls on recession; the fractional shift is about v/c,
+    where v is the relative speed along the line of sight.
   subjects:
   - physics
 - term: Refractory period
@@ -705,8 +705,8 @@ terms:
   - biochemistry
   - biology
 - term: Cori cycle
-  def: Muscle lactate travels to the liver for gluconeogenesis, and the regenerated glucose returns —
-    recycling NADH balance across organs.
+  def: Muscle lactate travels to the liver for gluconeogenesis, regenerating muscle NAD+ for continued
+    glycolysis at a net liver energy cost.
   subjects:
   - biochemistry
 - term: Ketone bodies
@@ -715,8 +715,8 @@ terms:
   subjects:
   - biochemistry
 - term: Michaelis constant (Km)
-  def: Substrate concentration at half-Vmax; numerically equals the dissociation sense of enzyme-substrate
-    affinity — lower Km, higher affinity.
+  def: Substrate concentration at half-Vmax; it approaches the enzyme-substrate dissociation constant
+    only when catalysis is much slower than dissociation (k2 much less than k-1) — lower Km, higher affinity.
   subjects:
   - biochemistry
 - term: Allosteric activator

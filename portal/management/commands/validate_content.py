@@ -254,6 +254,8 @@ def _validate_exam_bank(store: dict, seen_qids: set[str]) -> list[str]:
 
         for section_id, doc in sorted(sections.items()):
             # identity
+            # the loader groups by doc["exam"], so a file lying about its exam
+            # silently overwrites — compare against the DIRECTORY instead
             if doc.get("exam") != exam_id:
                 problems.append(f"exam-bank {section_id}: exam {doc.get('exam')!r} != directory exam {exam_id!r}")
             is_drill = bool(doc.get("_drill"))

@@ -96,7 +96,7 @@ items:
     on the right.
   distractors:
     B: 'The two moves do not cancel: the mirror reverses left and right, the half turn then reverses both.'
-    C: That applies the half turn before the mirror, which is the other order.
+    C: That is the half turn alone, with the mirror left out.
     D: That is the mirrored L alone, with the half turn left out.
   chapter: mirror-image
 - id: nmat-d-p1p-007

@@ -137,6 +137,10 @@ def start_attempt(username: str, exam_id: str, mode: str = "real") -> ExamAttemp
         existing = ExamAttempt.objects.filter(profile=profile, exam=exam_id,
                                               status="active").first()
         if existing:
+            if existing.mode != mode:
+                raise ExamError(
+                    f"an active {existing.mode} attempt is already running — "
+                    f"finish it before starting a {mode} one")
             return existing
         raise
 
@@ -276,7 +280,10 @@ def save_answer(attempt: ExamAttempt, block_id: str, pos: int,
             entry["c"] = chosen
         entry["f"] = 1 if flagged else 0
         if elapsed_seconds is not None:
-            entry["s"] = max(0, min(int(elapsed_seconds), 3600))
+            # accumulate visits to the same item (last-visit-only made the
+            # average undercount multi-visit questions)
+            prior = int(entry.get("s") or 0)
+            entry["s"] = max(0, min(prior + int(elapsed_seconds), 3600))
         answers[item_id] = entry
         locked.answers = answers
         if s.get("pos") != pos:
@@ -311,7 +318,8 @@ def score_attempt(attempt: ExamAttempt) -> dict:
         subtests: dict[str, dict] = {}
         b_correct = b_items = 0
         b_seconds = 0
-        fair_share = max(1, b.get("seconds", 0) // max(1, len(b.get("items") or [1])))
+        n_items = len(b.get("items") or [])
+        fair_share = max(1, b.get("seconds", 0) // n_items) if n_items else 0
         for pos, item_id in enumerate(b.get("items") or [], start=1):
             item = index.get(item_id)
             if not item:

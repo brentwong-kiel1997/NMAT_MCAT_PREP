@@ -33,6 +33,14 @@
           {% endfor %}
         </ul>
         <p><strong>Answer: {{ it.answer }}</strong> — {{ it.explain }}</p>
+        <div class="cause-row" data-qid="{{ it.question_id }}">
+          <span class="muted-inline">Why did you miss it?</span>
+          {% for key, label in cause_labels %}
+          <button type="button" class="cause-btn{% if it.stored_cause == key %} is-on{% endif %}"
+                  data-cause="{{ key }}">{{ label }}</button>
+          {% endfor %}
+          <span class="cause-saved note-line" hidden>Saved</span>
+        </div>
       </div>
     </details>
     {% endfor %}

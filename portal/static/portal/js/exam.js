@@ -46,7 +46,7 @@
     // per-question time tracking: pauses when the tab hides (consistent with
     // the timer's throttling behavior)
     let itemStart = Date.now();
-    let hiddenAt = null;
+    let hiddenAt = document.hidden ? Date.now() : null;
     document.addEventListener("visibilitychange", () => {
       if (document.hidden) { hiddenAt = Date.now(); }
       else if (hiddenAt !== null) { itemStart += Date.now() - hiddenAt; hiddenAt = null; }

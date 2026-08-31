@@ -252,6 +252,7 @@ def _load_exam_bank() -> dict:
     if not bank_dir.is_dir():
         return {}
     bank: dict[str, dict[str, dict]] = {}
+    _seen_bank_keys: set[tuple[str, str]] = set()
     errors: list[str] = []
     for file in sorted(bank_dir.rglob("*.yml")):
         try:
@@ -262,6 +263,12 @@ def _load_exam_bank() -> dict:
         # drill/ files are practice-only: never part of a mock blueprint
         if "drill" in file.relative_to(bank_dir).parts:
             doc["_drill"] = True
+        key = (doc.get("exam", ""), doc.get("section", file.stem))
+        if key in _seen_bank_keys:
+            errors.append(f"duplicate exam-bank key {key!r} — files in one "
+                          f"(exam, section) slot must be unique")
+            continue
+        _seen_bank_keys.add(key)
         bank.setdefault(doc.get("exam", ""), {})[doc.get("section", file.stem)] = doc
     out: dict[str, object] = {"exams": bank}
     if errors:
