@@ -38,14 +38,15 @@ def manage_models(request):
             make_active = request.POST.get("make_active") == "on" or not AIProvider.objects.exists()
             if make_active:
                 AIProvider.objects.update(is_active=False)
-            AIProvider.objects.create(
+            provider = AIProvider.objects.create(
                 name=name,
                 api_style=api_style,
                 base_url=base_url,
                 model_id=model_id,
-                api_key=api_key,
                 is_active=make_active,
             )
+            provider.set_api_key(api_key)
+            provider.save(update_fields=["api_key_enc", "updated_at"])
             messages.success(request, f"Added model {name}.")
             return redirect("manage_models")
 

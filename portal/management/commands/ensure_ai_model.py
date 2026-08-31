@@ -30,7 +30,8 @@ class Command(BaseCommand):
             api_style="openai",
             base_url=env_value("MINIMAX_BASE_URL", "https://api.minimaxi.com/v1"),
             model_id=env_value("MINIMAX_MODEL", "MiniMax-M3"),
-            api_key=api_key,
             is_active=True,
         )
+        provider.set_api_key(api_key)
+        provider.save(update_fields=["api_key_enc", "updated_at"])
         self.stdout.write(self.style.SUCCESS(f"imported active provider: {provider}"))

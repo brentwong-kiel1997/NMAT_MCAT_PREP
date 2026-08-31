@@ -122,16 +122,19 @@ def start_attempt(username: str, exam_id: str, mode: str = "real") -> ExamAttemp
         blocks.append(entry)
     plan = {"blocks": blocks}
     try:
-        return ExamAttempt.objects.create(
-            profile=profile,
-            exam=exam_id,
-            mode=mode,
-            plan=plan,
-            sections=[{"id": b["id"], "started_ts": None, "seconds": b["seconds"],
-                       "finished_ts": None, "pos": 0}
-                      for b in plan["blocks"]],
-            answers={},
-        )
+        # inner atomic: contains the IntegrityError so a live active attempt
+        # (or the test-runner's outer transaction) doesn't get poisoned
+        with transaction.atomic():
+            return ExamAttempt.objects.create(
+                profile=profile,
+                exam=exam_id,
+                mode=mode,
+                plan=plan,
+                sections=[{"id": b["id"], "started_ts": None, "seconds": b["seconds"],
+                           "finished_ts": None, "pos": 0}
+                          for b in plan["blocks"]],
+                answers={},
+            )
     except IntegrityError:
         # one active attempt per (profile, exam) — resume the winner's attempt
         existing = ExamAttempt.objects.filter(profile=profile, exam=exam_id,

@@ -6,6 +6,7 @@ from portal import accounts, coach_admin, coach_insights, dashboard, exam_views,
 urlpatterns = [
     path("", views.home, name="home"),
     path("login/", accounts.login_view, name="login"),
+    path("register/", accounts.register_view, name="register"),
     path("logout/", accounts.logout_view, name="logout"),
     path("account/", accounts.account_view, name="account"),
     path("account/password/", accounts.password_change_view, name="password_change"),

@@ -10,6 +10,7 @@ from django.shortcuts import redirect, render
 from django.views.decorators.http import require_GET, require_POST
 
 from . import insights, planner
+from .content import figure_url
 
 
 def cause_distribution_local(profile):
@@ -170,7 +171,7 @@ def review_redo(request, chapter_id: str):
         ch_title = (chs.get(item_chapter) or {}).get("title", item_chapter)
         items.append({"id": qid, "q": q.get("q", ""),
                       "choices": q.get("choices") or q.get("options") or {},
-                      "figure": f"/content-images/{q.get('figure','')}" if q.get("figure") else "",
+                      "figure": figure_url(q.get("figure", "")),
                       "chapter": ch_title})
     if not items:
         return redirect("review")

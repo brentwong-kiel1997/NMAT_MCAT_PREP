@@ -670,6 +670,14 @@ def exam_defs() -> dict:
     return deepcopy(store().get("exam_defs") or {})
 
 
+def figure_url(ref: str) -> str:
+    """Bank figure refs are repo-relative (items/x.svg); the serving route is
+    /content-images/<path> (views.content_image). Absolute refs pass through."""
+    if ref and not ref.startswith(("/", "http://", "https://")):
+        return f"/content-images/{ref}"
+    return ref
+
+
 def exam_blueprint(exam_id: str) -> dict | None:
     doc = store().get("exam_defs", {}).get(exam_id)
     if not doc:

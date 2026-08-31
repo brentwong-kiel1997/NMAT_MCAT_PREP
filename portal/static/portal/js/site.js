@@ -217,13 +217,15 @@
       if (scoreEl) scoreEl.textContent = String(state.score);
       if (chapterEl) chapterEl.textContent = item.chapter || "";
       if (qEl) qEl.textContent = item.q || "";
-      // render figure if the item has one (drill-bank items may carry SVG)
+      // render figure if the item has one (drill/exam items carry an
+      // absolute /content-images/... URL under `figure`)
+      const figSrc = item.figure || item.figure_url || "";
       const figParent = qEl ? qEl.parentElement : null;
       let figEl = figParent ? figParent.querySelector(".practice-figure") : null;
       if (figEl) figEl.remove();
-      if (item.figure_url && figParent) {
+      if (figSrc && figParent) {
         const img = document.createElement("img");
-        img.src = item.figure_url;
+        img.src = figSrc;
         img.alt = "Item figure";
         img.className = "practice-figure";
         img.style.maxWidth = "100%";

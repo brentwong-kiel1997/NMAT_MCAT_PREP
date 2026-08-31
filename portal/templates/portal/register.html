@@ -1,0 +1,44 @@
+{% extends "portal/base.html" %}
+
+{% block title %}Register · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">Account</p>
+    <h1>Create an account</h1>
+    <p class="lead">Chapter progress, practice attempts, mock-exam scores and flashcards all save to your account.</p>
+  </div>
+</div>
+
+<section class="section">
+  <form class="auth-form" method="post" action="{% url 'register' %}">
+    {% csrf_token %}
+    {% if next %}<input type="hidden" name="next" value="{{ next }}">{% endif %}
+    {% if error == "username" %}
+    <p class="form-error">Pick a username without spaces (max 150 characters).</p>
+    {% elif error == "exists" %}
+    <p class="form-error">That username is taken.</p>
+    {% elif error == "mismatch" %}
+    <p class="form-error">Passwords do not match.</p>
+    {% elif error == "weak" %}
+    <p class="form-error">Password too weak — use at least 8 characters, not purely numeric.</p>
+    {% endif %}
+    <label>
+      <span>Username</span>
+      <input type="text" name="username" value="{{ username_prefill }}" autocomplete="username" required>
+    </label>
+    <label>
+      <span>Password</span>
+      <input type="password" name="password1" autocomplete="new-password" required>
+    </label>
+    <label>
+      <span>Repeat password</span>
+      <input type="password" name="password2" autocomplete="new-password" required>
+    </label>
+    <button class="btn btn-primary" type="submit">Create account</button>
+    <p class="form-hint">Already registered? <a href="{% url 'login' %}">Sign in</a>.</p>
+  </form>
+</section>
+{% endblock %}

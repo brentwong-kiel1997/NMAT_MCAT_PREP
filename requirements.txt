@@ -2,3 +2,4 @@ Django>=5.0,<6
 gunicorn>=22.0,<24
 PyYAML>=6,<7
 weasyprint>=61
+cryptography>=42

@@ -77,8 +77,10 @@ class AIProvider(models.Model):
         max_length=300, help_text="API root, e.g. https://api.openai.com/v1"
     )
     model_id = models.CharField(max_length=120, help_text="Model id sent to the API")
-    api_key = models.CharField(
-        max_length=400, blank=True, help_text="Stored server-side only; masked in UI"
+    # Fernet ciphertext (portal.fieldcrypto), key derived from SECRET_KEY.
+    # Use .api_key / .set_api_key() — never read or write this column directly.
+    api_key_enc = models.CharField(
+        max_length=500, blank=True, help_text="Encrypted at rest; masked in UI"
     )
     is_active = models.BooleanField(default=False)
     updated_at = models.DateTimeField(auto_now=True)
@@ -89,6 +91,22 @@ class AIProvider(models.Model):
 
     def __str__(self) -> str:
         return f"{self.name} ({self.model_id})"
+
+    @property
+    def api_key(self) -> str:
+        """Plaintext key for API calls; legacy plaintext rows decrypt as-is."""
+        from .fieldcrypto import decrypt_value
+
+        return decrypt_value(self.api_key_enc)
+
+    @api_key.setter
+    def api_key(self, raw: str) -> None:
+        from .fieldcrypto import encrypt_value
+
+        self.api_key_enc = encrypt_value(raw or "")
+
+    def set_api_key(self, raw: str) -> None:
+        self.api_key = raw
 
 
 class ExamAttempt(models.Model):

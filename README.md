@@ -69,6 +69,9 @@ python3 -m venv .venv
 # keep runtime data (user DB) inside the checkout
 export GABAY_RUNTIME_DIR="$PWD/runtime"
 
+# required: the app refuses to start without a secret (never commit one)
+export DJANGO_SECRET_KEY="$(python3 -c 'import secrets; print(secrets.token_urlsafe(64))')"
+
 .venv/bin/python manage.py migrate
 .venv/bin/python manage.py ensure_admin --username admin --password <pick-one>
 .venv/bin/python manage.py runserver
@@ -118,6 +121,20 @@ flowchart LR
 - **A deploy gate guards content.** Every deploy runs `validate_content`
   against `MANIFEST.json` hashes and structural invariants; broken content
   fails loudly while the old processes keep serving.
+
+## 🔐 Security posture
+
+- **No secrets in git.** `DJANGO_SECRET_KEY` is required at startup (env var
+  or `.env` file) — the app refuses to boot without it. AI-provider API keys
+  are Fernet-encrypted at rest in the database, keyed off the secret.
+- **Sessions are the only identity.** Progress/practice/coach APIs answer
+  only to the logged-in user; anonymous callers get `401`, and no header can
+  impersonate anyone.
+- **Self-serve accounts.** Anyone can register at `/register/`; staff accounts
+  stay admin-managed.
+- **Tests + CI.** `manage.py test` covers the auth gates, registration,
+  field crypto, and the mock-exam engine; GitHub Actions runs it plus
+  `validate_content` on every push.
 
 ## 🤖 Built with AI agents
 

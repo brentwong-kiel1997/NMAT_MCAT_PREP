@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import Http404, JsonResponse
 from django.shortcuts import redirect, render
 from django.views.decorators.http import require_GET, require_POST
+from functools import wraps
 import json
 
 from .diseases import all_diseases, get_disease
@@ -24,13 +25,27 @@ from .content import source_info, tutorial_for, tutorial_titles
 
 
 def _learner_name(request) -> str:
+    # Identity comes only from the authenticated session. The old
+    # X-Remote-User fallback let anyone impersonate any learner by setting a
+    # header, so it is gone; anonymous page views just render as "guest".
     if getattr(request, "user", None) is not None and request.user.is_authenticated:
         return request.user.username
-    return (
-        request.META.get("HTTP_X_REMOTE_USER")
-        or request.headers.get("X-Remote-User")
-        or ""
-    ).strip() or "guest"
+    return "guest"
+
+
+def api_login_required(view):
+    """@login_required for JSON endpoints: 401 instead of a login-page redirect
+    (fetch() callers cannot follow an HTML redirect meaningfully)."""
+
+    @wraps(view)
+    def wrapped(request, *args, **kwargs):
+        if not request.user.is_authenticated:
+            return JsonResponse(
+                {"ok": False, "error": "login required"}, status=401
+            )
+        return view(request, *args, **kwargs)
+
+    return wrapped
 
 
 def _json_for_script(data) -> str:
@@ -445,6 +460,7 @@ def practice_detail(request, slug):
 
 
 @require_GET
+@api_login_required
 def progress_api(request):
     subject_slug = (request.GET.get("subject_slug") or "").strip()
     if not subject_slug:
@@ -461,6 +477,7 @@ def progress_api(request):
 
 
 @require_POST
+@api_login_required
 def progress_update_api(request):
     try:
         payload = json.loads(request.body.decode("utf-8"))
@@ -486,6 +503,7 @@ def progress_update_api(request):
 
 
 @require_POST
+@api_login_required
 def practice_attempt_api(request):
     try:
         payload = json.loads(request.body.decode("utf-8"))
@@ -546,6 +564,7 @@ def practice_attempt_api(request):
 
 
 @require_POST
+@api_login_required
 def study_api(request):
     try:
         payload = json.loads(request.body.decode("utf-8"))
@@ -753,7 +772,7 @@ def tutorial_drill(request, slug, chapter_id):
     raw = enrich.bank_items_for_chapter(chapter_id)
     chapter_specific = bool(raw)
     items = [{"id": i["id"], "q": i["q"], "choices": i["choices"],
-              "figure": i.get("figure", ""),
+              "figure": content.figure_url(i.get("figure", "")),
               "chapter": chapter.get("title", chapter_id)} for i in raw]
     if not items:
         items = [

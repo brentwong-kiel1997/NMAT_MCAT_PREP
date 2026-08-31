@@ -5,12 +5,19 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ.get(
-    "DJANGO_SECRET_KEY",
-    "86dc94006042cb484d3f130124e2e0dce567d371e8f8a79cd557b77ed4b114c5",
-)
-
 DEBUG = os.environ.get("DJANGO_DEBUG", "0") == "1"
+
+# No committed fallback: a secret in git history is a leaked secret. The key
+# comes from the process env or from the .env files portal.envfile scans
+# (production keeps it in /home/ubuntu/runtime/.env, outside any checkout).
+from portal.envfile import env_value as _env_value  # noqa: E402  (plain module, app-free)
+
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY") or _env_value("DJANGO_SECRET_KEY")
+if not SECRET_KEY:
+    raise RuntimeError(
+        "DJANGO_SECRET_KEY is not set — export it or add it to a .env file "
+        f"scanned by portal.envfile (e.g. {BASE_DIR / '.env'})"
+    )
 
 ALLOWED_HOSTS = [
     h.strip()
@@ -102,8 +109,14 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # Behind Nginx TLS termination on :8888
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 USE_X_FORWARDED_HOST = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+# Secure cookies only when actually serving over TLS; DEBUG/dev runserver is
+# plain HTTP, where the old always-on flags turned login into a redirect loop.
+# Override with GABAY_SECURE_COOKIES=0/1 when testing prod mode locally.
+_secure_cookies = os.environ.get("GABAY_SECURE_COOKIES", "").strip()
+if _secure_cookies not in {"0", "1"}:
+    _secure_cookies = "0" if DEBUG else "1"
+SESSION_COOKIE_SECURE = _secure_cookies == "1"
+CSRF_COOKIE_SECURE = _secure_cookies == "1"
 SECURE_SSL_REDIRECT = False  # Nginx enforces HTTPS; avoid redirect loops
 
 CSRF_TRUSTED_ORIGINS = [

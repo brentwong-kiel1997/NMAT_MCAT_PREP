@@ -55,6 +55,51 @@ def logout_view(request):
     return redirect("home")
 
 
+@require_http_methods(["GET", "POST"])
+def register_view(request):
+    """Self-service sign-up — replaces staff-only account creation."""
+    if request.user.is_authenticated:
+        return redirect("account")
+
+    error = ""
+    if request.method == "POST":
+        username = (request.POST.get("username") or "").strip()
+        password1 = request.POST.get("password1") or ""
+        password2 = request.POST.get("password2") or ""
+        if not username or " " in username or len(username) > 150:
+            error = "username"
+        elif User.objects.filter(username__iexact=username).exists():
+            error = "exists"
+        elif password1 != password2:
+            error = "mismatch"
+        else:
+            from django.contrib.auth.password_validation import validate_password
+            from django.core.exceptions import ValidationError
+
+            try:
+                validate_password(password1)
+            except ValidationError:
+                error = "weak"
+            else:
+                user = User.objects.create_user(username=username, password=password1)
+                ensure_profile_for_user(user)
+                login(request, user)
+                next_url = request.POST.get("next") or request.GET.get("next") or ""
+                if next_url.startswith("/") and not next_url.startswith("//"):
+                    return redirect(next_url)
+                return redirect("account")
+
+    return render(
+        request,
+        "portal/register.html",
+        {
+            "error": error,
+            "next": request.GET.get("next") or "",
+            "username_prefill": request.POST.get("username") or "",
+        },
+    )
+
+
 @login_required
 @require_GET
 def account_view(request):
