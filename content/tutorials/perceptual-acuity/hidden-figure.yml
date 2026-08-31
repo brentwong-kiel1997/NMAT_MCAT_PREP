@@ -15,16 +15,16 @@ sections:
   check:
   - q: A target triangle is hidden inside a hatched rectangle with diagonal lines. What do you follow?
     options:
-      A: The target's outline edges
+      A: The rectangle's corners
       B: The hatching direction
-      C: The rectangle's corners
+      C: The target's outline edges
       D: The overall color
-    answer: A
+    answer: C
     explain: Only the contour identifies the shape — clutter is noise.
     distractors:
-      A: Correct.
+      A: The frame is background.
       B: Texture is noise.
-      C: The frame is background.
+      C: Correct.
       D: Color is irrelevant.
 - heading: Contour tracking, not whole-figure matching
   body:
@@ -36,17 +36,17 @@ sections:
   check:
   - q: The recommended first foothold in a hidden shape is…
     options:
-      A: Its longest distinctive edge or an L-corner
+      A: Its color
       B: Its centroid
-      C: The largest enclosed area
-      D: Its color
-    answer: A
+      C: Its longest distinctive edge or an L-corner
+      D: The largest enclosed area
+    answer: C
     explain: A distinctive edge anchors the trace.
     distractors:
-      A: Correct.
+      A: Color is noise.
       B: Centroid says nothing about edges.
-      C: Area is ambiguous.
-      D: Color is noise.
+      C: Correct.
+      D: Area is ambiguous.
 - heading: Rotation and mirror tolerance
   body:
   - ==The target often appears rotated 90 or 180 degrees — rotate the target mentally and re-trace==.
@@ -57,17 +57,17 @@ sections:
   check:
   - q: An F-shaped target appears with its bars facing left instead of right (mirrored). It is…
     options:
-      A: Still the target — mirroring is allowed
-      B: Definitely the wrong shape
-      C: Impossible in these items
-      D: A different question
-    answer: A
+      A: A different question
+      B: Impossible in these items
+      C: Still the target — mirroring is allowed
+      D: Definitely the wrong shape
+    answer: C
     explain: Mirrored copies are valid placements.
     distractors:
-      A: Correct.
-      B: The shape matches.
-      C: It happens.
-      D: Same item type.
+      A: Same item type.
+      B: It happens.
+      C: Correct.
+      D: The shape matches.
 - heading: Dealing with clutter
   body:
   - ==Cut through clutter — ignore hatching, dots, and secondary lines; they are distractors==. ==Crossing
@@ -78,17 +78,17 @@ sections:
   check:
   - q: A background ruled line crosses the target's edge at a right angle. The edge…
     options:
-      A: Continues straight through the crossing
-      B: Turns and follows the crossing line
-      C: Stops there
-      D: Becomes dashed
-    answer: A
+      A: Becomes dashed
+      B: Stops there
+      C: Turns and follows the crossing line
+      D: Continues straight through the crossing
+    answer: D
     explain: The target's contour is unbroken — the crossing is background.
     distractors:
-      A: Correct.
-      B: That would trace the clutter.
-      C: Edges do not stop at crossings.
-      D: No such transformation.
+      A: No such transformation.
+      B: Edges do not stop at crossings.
+      C: That would trace the clutter.
+      D: Correct.
 - heading: Speed tactics and item hygiene
   body:
   - ==Scan order — hibernate the target image mentally, then sweep the clutter region by region (quadrants)==.
@@ -99,15 +99,15 @@ sections:
   check:
   - q: After 45 seconds on a hidden-figure item, the best move is…
     options:
-      A: Switch regions or re-anchor edges
-      B: Guess immediately
+      A: Guess immediately
+      B: Switch regions or re-anchor edges
       C: Stare harder
       D: Skip it entirely
-    answer: A
+    answer: B
     explain: Fresh region scan breaks fixation.
     distractors:
-      A: Correct.
-      B: Too early.
+      A: Too early.
+      B: Correct.
       C: Fixation worsens.
       D: It is still winnable.
 examples:
@@ -157,41 +157,41 @@ passage:
   questions:
   - q: A T made of two grid rules that CROSS (not butt) is…
     options:
-      A: Not the target — the contour does not close
-      B: The target
+      A: The target
+      B: Not the target — the contour does not close
       C: A mirrored T
       D: Impossible to distinguish
-    answer: A
+    answer: B
     explain: A crossing makes an X junction, not a T cap — the contour fails.
     distractors:
-      A: Correct.
-      B: The stem continues through.
+      A: The stem continues through.
+      B: Correct.
       C: No mirror involved.
       D: The junction angle differs.
   - q: The target inside the hatched band…
     options:
-      A: Is valid — hatching is clutter
+      A: Is mirrored
       B: Is invalid — hatching erases it
-      C: Is mirrored
-      D: Does not exist
-    answer: A
+      C: Does not exist
+      D: Is valid — hatching is clutter
+    answer: D
     explain: Texture does not destroy an outline.
     distractors:
-      A: Correct.
+      A: No flip.
       B: The outline survives.
-      C: No flip.
-      D: It can be there.
+      C: It can be there.
+      D: Correct.
   - q: If the target T appears with its cap on the bottom, it is…
     options:
-      A: A valid rotated placement
-      B: A different letter
+      A: A different letter
+      B: A valid rotated placement
       C: An error in the item
       D: A mirrored F
-    answer: A
+    answer: B
     explain: 180-degree rotation keeps the T a T.
     distractors:
-      A: Correct.
-      B: Still a T.
+      A: Still a T.
+      B: Correct.
       C: No error.
       D: The bars differ.
 pitfalls:
@@ -217,17 +217,17 @@ further_reading:
 review_questions:
 - q: A target square appears rotated 45 degrees (diamond). It is…
   options:
-    A: Still the target
+    A: A pentagon
     B: Invalid
-    C: A pentagon
-    D: Mirrored only
-  answer: A
+    C: Mirrored only
+    D: Still the target
+  answer: D
   explain: Rotation is tolerated.
   distractors:
-    A: Correct.
+    A: Same sides.
     B: Rotation is fine.
-    C: Same sides.
-    D: Rotation only.
+    C: Rotation only.
+    D: Correct.
 - q: Hatching inside the target area…
   options:
     A: Does not affect the outline

@@ -16,15 +16,15 @@ sections:
   check:
   - q: Which pair are stereoisomers?
     options:
-      A: Butane and isobutane
-      B: cis-2-butene and trans-2-butene
-      C: Ethanol and dimethyl ether
+      A: Ethanol and dimethyl ether
+      B: Butane and isobutane
+      C: cis-2-butene and trans-2-butene
       D: CH4 and CH3Cl
-    answer: B
+    answer: C
     explain: Same connectivity, different spatial arrangement about the double bond.
     distractors:
-      A: Different connectivity — constitutional.
-      C: Different functional groups.
+      A: Different functional groups.
+      B: Different connectivity — constitutional.
       D: Different formulas.
   figures:
   - src: organic-chemistry/fig-05dc78c5.webp
@@ -44,16 +44,16 @@ sections:
   check:
   - q: Enantiomers differ in…
     options:
-      A: Boiling point
-      B: Optical rotation direction
+      A: Molecular formula
+      B: Boiling point
       C: Connectivity
-      D: Molecular formula
-    answer: B
+      D: Optical rotation direction
+    answer: D
     explain: Mirror images rotate plane-polarized light oppositely; all scalar properties match.
     distractors:
-      A: Identical BP.
+      A: Same formula.
+      B: Identical BP.
       C: Same connectivity by definition.
-      D: Same formula.
 - heading: Substitution and elimination
   body:
   - ==SN2 — one step, backside attack, inversion of configuration, favored by strong nucleophile, good
@@ -66,16 +66,16 @@ sections:
   - q: Secondary alkyl bromide + NaOH in acetone (polar aprotic) at low temperature gives mainly…
     options:
       A: SN1
-      B: SN2
-      C: E1
-      D: E2
-    answer: B
+      B: E2
+      C: SN2
+      D: E1
+    answer: C
     explain: Strong nucleophile, aprotic solvent, secondary substrate, low temperature — substitution
       via backside attack.
     distractors:
       A: Needs polar protic and weak nucleophile.
-      C: Weak base would be needed.
-      D: Heat and bulky base favor elimination.
+      B: Heat and bulky base favor elimination.
+      D: Weak base would be needed.
 - heading: Addition reactions of alkenes
   body:
   - 'Electrophiles add across the double bond — ==Markovnikov: H goes to the carbon with more hydrogens,
@@ -87,16 +87,16 @@ sections:
   check:
   - q: HCl adds to propene. The major product is…
     options:
-      A: 1-chloropropane
-      B: 2-chloropropane
-      C: 1,2-dichloropropane
-      D: Propyl chloride peroxide
-    answer: B
+      A: 1,2-dichloropropane
+      B: Propyl chloride peroxide
+      C: 1-chloropropane
+      D: 2-chloropropane
+    answer: D
     explain: Markovnikov — H adds to CH2, Cl to the secondary carbocation center.
     distractors:
-      A: Anti-Markovnikov needs peroxides (and HBr only).
-      C: One Cl adds.
-      D: Nonsense option.
+      A: One Cl adds.
+      B: Nonsense option.
+      C: Anti-Markovnikov needs peroxides (and HBr only).
 - heading: Aldehydes, ketones, and carboxylic acid derivatives
   body:
   - Nucleophilic addition to aldehydes and ketones — hydride (LiAlH4, NaBH4) gives alcohols; organometallics
@@ -108,16 +108,16 @@ sections:
   check:
   - q: Which reagent reduces an ester to a primary alcohol?
     options:
-      A: NaBH4
-      B: LiAlH4
-      C: KMnO4
-      D: H2/Pd
-    answer: B
+      A: LiAlH4
+      B: H2/Pd
+      C: NaBH4
+      D: KMnO4
+    answer: A
     explain: LiAlH4 is strong enough for esters; NaBH4 stops at aldehydes and ketones.
     distractors:
-      A: Too weak for esters.
-      C: Oxidizer.
-      D: Reduces alkenes and aldehydes/ketones, not typically esters.
+      B: Reduces alkenes and aldehydes/ketones, not typically esters.
+      C: Too weak for esters.
+      D: Oxidizer.
 examples:
 - prompt: (R)-2-bromobutane reacts with HO- in acetone via SN2. What is the configuration of 2-butanol
     product?
@@ -163,16 +163,16 @@ passage:
   questions:
   - q: The tosylation step…
     options:
-      A: Inverts the stereocenter
-      B: Retains configuration at carbon
-      C: Racemizes
-      D: Destroys chirality
-    answer: B
+      A: Racemizes
+      B: Destroys chirality
+      C: Retains configuration at carbon
+      D: Inverts the stereocenter
+    answer: C
     explain: OTs replaces the OH at oxygen — the stereocenter carbon is untouched.
     distractors:
-      A: C-O bond at carbon is not broken.
-      C: No ionization occurs.
-      D: Center still has four different groups.
+      A: No ionization occurs.
+      B: Center still has four different groups.
+      D: C-O bond at carbon is not broken.
   - q: The opposite-sign rotation after displacement plus hydrolysis indicates…
     options:
       A: SN2 inversion twice

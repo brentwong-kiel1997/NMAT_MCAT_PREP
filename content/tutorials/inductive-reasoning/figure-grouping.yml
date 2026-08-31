@@ -36,17 +36,17 @@ sections:
   check:
   - q: 'A figure set of letters: H, I, O, X, and the candidate A. The shared feature is…'
     options:
-      A: Vertical and horizontal symmetry
-      B: Only vertical
+      A: Curved lines
+      B: Vertical and horizontal symmetry
       C: Only horizontal
-      D: Curved lines
-    answer: A
+      D: Only vertical
+    answer: B
     explain: H, I, O, X all have both a vertical and a horizontal mirror axis; A has only vertical, so
       it is the outsider.
     distractors:
-      B: True of A alone — the shared feature must cover all four set letters.
+      A: Letter strokes here are straight lines.
       C: None of the set letters is horizontal-only.
-      D: Letter strokes here are straight lines.
+      D: True of A alone — the shared feature must cover all four set letters.
 - heading: Shape family grouping — sides and angles
   body:
   - ==Sides rule — group by number of sides (triangles/quadrilaterals) or by aspect (acute vs obtuse dominant)==.
@@ -56,14 +56,14 @@ sections:
   check:
   - q: 'Set: rhombus, rectangle, square. The common feature (beyond four sides) is…'
     options:
-      A: Four equal or parallel-paired sides with symmetry
-      B: All have right angles
+      A: All have right angles
+      B: Four equal or parallel-paired sides with symmetry
       C: All are equilateral
       D: All are non-convex
-    answer: A
+    answer: B
     explain: All are parallelograms — the true family.
     distractors:
-      B: Rectangle has 90s but rhombus may not.
+      A: Rectangle has 90s but rhombus may not.
       C: Square only.
       D: All are convex.
 - heading: Fill, pattern, and texture sorting
@@ -76,15 +76,15 @@ sections:
   - q: 'Group A: solid circle, solid square, solid triangle. Group B: empty versions of each. The discriminator
       is…'
     options:
-      A: Fill state
-      B: Shape
-      C: Size
+      A: Shape
+      B: Size
+      C: Fill state
       D: Rotation
-    answer: A
+    answer: C
     explain: The only change between groups is filled vs empty.
     distractors:
-      B: Shapes vary within groups.
-      C: No size change.
+      A: Shapes vary within groups.
+      B: No size change.
       D: No rotation.
 - heading: Odd-one-out strategy and answer hygiene
   body:
@@ -96,16 +96,16 @@ sections:
   check:
   - q: Five figures — four have exactly two lines of symmetry, one has one. The odd one…
     options:
-      A: The one-line figure
-      B: Any symmetric figure
-      C: The most symmetric
-      D: The shaded one
-    answer: A
+      A: The shaded one
+      B: The most symmetric
+      C: Any symmetric figure
+      D: The one-line figure
+    answer: D
     explain: The count discriminates cleanly.
     distractors:
-      B: All have symmetry.
-      C: The highest is a gradient, not a group.
-      D: Shading is absent.
+      A: Shading is absent.
+      B: The highest is a gradient, not a group.
+      C: All have symmetry.
 examples:
 - prompt: 'Sort into two groups: figure 1 (pentagon, empty), 2 (pentagon, hatched), 3 (square, empty),
     4 (hexagon, hatched), 5 (square, hatched).'
@@ -163,30 +163,30 @@ passage:
       D: No size data.
   - q: If forced to use shape, the counts are…
     options:
-      A: 4 triangles, 2 quadrilaterals
-      B: 3 and 3
-      C: 5 and 1
-      D: 2 and 4
-    answer: A
+      A: 3 and 3
+      B: 2 and 4
+      C: 4 triangles, 2 quadrilaterals
+      D: 5 and 1
+    answer: C
     explain: 'Triangles: 1, 2, 3, 6 — four; quads: 4, 5 — two.'
     distractors:
-      A: Correct.
-      B: Only by fill.
-      C: No.
-      D: Glass-half-full
+      A: Only by fill.
+      B: Glass-half-full
+      C: Correct.
+      D: No.
   - q: A tile with a hatched pentagon added would…
     options:
-      A: Join the hatched group
+      A: Be irrelevant
       B: Join the empty group
-      C: Break both rules
-      D: Be irrelevant
-    answer: A
+      C: Join the hatched group
+      D: Break both rules
+    answer: C
     explain: It satisfies the fill criterion — the hatched group.
     distractors:
-      A: Correct.
+      A: It matches.
       B: It has fill.
-      C: Rules still hold.
-      D: It matches.
+      C: Correct.
+      D: Rules still hold.
 pitfalls:
 - Choosing a feature that partially fits the outsider.
 - Forgetting rotational symmetry when testing line symmetry.
@@ -210,17 +210,17 @@ further_reading:
 review_questions:
 - q: Which shape breaks a group of three closed figures (square, circle, triangle)?
   options:
-    A: An open arc
-    B: Another triangle
+    A: Another triangle
+    B: An ellipse
     C: A rectangle
-    D: An ellipse
-  answer: A
+    D: An open arc
+  answer: D
   explain: The group rule is 'closed' — the arc is open.
   distractors:
-    A: Correct.
+    A: Fits.
     B: Fits.
     C: Fits (closed).
-    D: Fits.
+    D: Correct.
 - q: A set all with right angles is…
   options:
     A: Square, rectangle

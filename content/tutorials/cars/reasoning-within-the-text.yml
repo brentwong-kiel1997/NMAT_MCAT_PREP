@@ -15,16 +15,16 @@ sections:
   - q: 'Passage: ''Rising nitrate levels have coincided with increased algal blooms.'' A safe inference
       is…'
     options:
-      A: The author links the two trends as associated, possibly causally
-      B: Nitrates cause all blooms
-      C: Algae cause nitrates
+      A: Nitrates cause all blooms
+      B: Algae cause nitrates
+      C: The author links the two trends as associated, possibly causally
       D: Rising nitrates are natural
-    answer: A
+    answer: C
     explain: Coincidence wording licenses association, not full causation.
     distractors:
-      A: Correct.
-      B: Overreaches.
-      C: Reversed direction.
+      A: Overreaches.
+      B: Reversed direction.
+      C: Correct.
       D: Outside the passage.
 - heading: Question forms — strengthen, weaken, assumption
   body:
@@ -35,17 +35,17 @@ sections:
   check:
   - q: An argument relies on the assumption that…
     options:
-      A: A gap the argument needs but never states
+      A: An outside fact
       B: Any statement the author mentions
       C: The conclusion itself
-      D: An outside fact
-    answer: A
+      D: A gap the argument needs but never states
+    answer: D
     explain: Assumptions bridge unstated gaps.
     distractors:
-      A: Correct.
+      A: Outside facts are excluded.
       B: Mentioned statements are explicit.
       C: The conclusion is the destination.
-      D: Outside facts are excluded.
+      D: Correct.
 - heading: Structure questions — how the argument is built
   body:
   - ==Structure items — identify premise, counterclaim, concession, evidence, qualification — and the
@@ -57,17 +57,17 @@ sections:
   - q: '''To be sure, the data are preliminary. But the trend cannot be ignored.'' The first sentence
       is…'
     options:
-      A: A concession that limits the evidence's weight
-      B: The main claim
-      C: The conclusion
-      D: An example
-    answer: A
+      A: An example
+      B: A concession that limits the evidence's weight
+      C: The main claim
+      D: The conclusion
+    answer: B
     explain: The author grants weakness before pivoting — the concession pattern.
     distractors:
-      A: Correct.
-      B: The pivot follows it.
-      C: The 'But' clause concludes.
-      D: No example given.
+      A: No example given.
+      B: Correct.
+      C: The pivot follows it.
+      D: The 'But' clause concludes.
 - heading: Purposes and functions of sentences
   body:
   - '==Function questions — what a sentence does: introduce the thesis, give evidence, present a counterargument,
@@ -78,17 +78,17 @@ sections:
   check:
   - q: '''Since the serum occludes the artery, the heart muscle beyond it starves.'' The first clause…'
     options:
-      A: Gives the reason for the second
+      A: Is an analogy
       B: Contradicts the second
       C: Is the conclusion
-      D: Is an analogy
-    answer: A
+      D: Gives the reason for the second
+    answer: D
     explain: '''Since'' marks a premise supporting the consequence.'
     distractors:
-      A: Correct.
+      A: No analogy.
       B: Same direction.
       C: The second clause concludes.
-      D: No analogy.
+      D: Correct.
 - heading: Answer hygiene for within-the-text items
   body:
   - ==Every word of an answer is testable — scope, polarity, and degree all come from the passage==. ==Reject
@@ -99,17 +99,17 @@ sections:
   check:
   - q: An inference answer that is true but about a different part of the passage…
     options:
-      A: Fails — it must answer the question asked
+      A: Beats the wrong one
       B: Passes anyway
-      C: Beats the wrong one
-      D: Is a free point
-    answer: A
+      C: Is a free point
+      D: Fails — it must answer the question asked
+    answer: D
     explain: Relevance to the stem is mandatory.
     distractors:
-      A: Correct.
+      A: No partial credit.
       B: Relevance is scored.
-      C: No partial credit.
-      D: Nothing is free.
+      C: Nothing is free.
+      D: Correct.
 examples:
 - prompt: 'Passage: ''The museum''s acquisitions policy favors modern works. Consequently, its nineteenth-century
     holdings are thinning — many sold to fund purchases. The director defends the pattern as fiscal, but
@@ -160,43 +160,43 @@ passage:
   questions:
   - q: The best-supported inference is…
     options:
-      A: The authors regard two years as enough to see major density shifts but flag causation
-      B: The authors proved dairy is harmful
-      C: Plant milk causes bone loss
-      D: The study was fraudulent
-    answer: A
+      A: The study was fraudulent
+      B: Plant milk causes bone loss
+      C: The authors regard two years as enough to see major density shifts but flag causation
+      D: The authors proved dairy is harmful
+    answer: C
     explain: '''Cautiously attribute'' + ''critics note follow-up is short'' — a qualified claim.'
     distractors:
-      A: Correct.
-      B: No harm shown.
-      C: No density change was found.
-      D: No fraud suggested.
+      A: No fraud suggested.
+      B: No density change was found.
+      C: Correct.
+      D: No harm shown.
   - q: Which statement, if true, most weakens the authors' attribution?
     options:
-      A: Calcium intake did not differ between groups
-      B: Calcium intake rose in the plant group
+      A: Calcium intake rose in the plant group
+      B: Calcium intake did not differ between groups
       C: Follow-up instruments were validated
       D: Dropout was balanced
-    answer: A
+    answer: B
     explain: Removing the mechanism (compensatory calcium) guts the attribution.
     distractors:
-      A: Correct — the mechanism dies.
-      B: That SUPPORTS it.
+      A: That SUPPORTS it.
+      B: Correct — the mechanism dies.
       C: Strengthens measurement.
       D: Strengthens internal validity.
   - q: The critics' remark functions as…
     options:
-      A: A limitation flag on external validity
-      B: A refutation of all findings
+      A: A definition
+      B: A limitation flag on external validity
       C: A new conclusion
-      D: A definition
-    answer: A
+      D: A refutation of all findings
+    answer: B
     explain: Short follow-up limits generalizing the no-change result.
     distractors:
-      A: Correct.
-      B: They dispute only duration.
+      A: No term defined.
+      B: Correct.
       C: No new claim.
-      D: No term defined.
+      D: They dispute only duration.
 pitfalls:
 - Two-step jumps masquerading as inference.
 - Outside facts smuggled into answers.
@@ -221,17 +221,17 @@ further_reading:
 review_questions:
 - q: Strengthen questions ask for…
   options:
-    A: The option that adds support to the claim
-    B: The claim itself
-    C: The strongest wording
-    D: The longest answer
-  answer: A
+    A: The claim itself
+    B: The longest answer
+    C: The option that adds support to the claim
+    D: The strongest wording
+  answer: C
   explain: Support addition — mechanism, evidence, or exclusion of rivals.
   distractors:
-    A: Correct.
-    B: The claim is given.
-    C: Strength is in support.
-    D: Length is irrelevant.
+    A: The claim is given.
+    B: Length is irrelevant.
+    C: Correct.
+    D: Strength is in support.
 - q: '''Which is most analogous to the author''s reasoning?'' tests…'
   options:
     A: Structure recognition

@@ -7,5 +7,48 @@ exams:
 points:
 - Intro biological macromolecules
 - Intro metabolism concepts linked to intro chemistry
-notes: []
-practice: []
+notes:
+- Enzymes lower activation energy; they never change ΔG or Keq
+- Monomers join by condensation (water out) and split by hydrolysis (water in)
+- 'Coupled ΔG°′ values add: only a net-negative sum is spontaneous'
+- 'Four macromolecule classes: carbs, lipids, proteins, nucleic acids'
+- NADH and FADH₂ shuttle electrons to the ETC; O₂ is the final acceptor
+practice:
+- id: chemistry-of-biochemistry-cem-p1
+  q: Two monosaccharides join into a disaccharide by which process?
+  choices:
+    A: Hydrolysis, which adds a water molecule
+    B: Condensation, which releases water and forms a glycosidic bond
+    C: Oxidation of the anomeric carbon to a carboxylate
+    D: Phosphorylation of C-6 by ATP
+  answer: B
+  explain: A glycosidic bond forms when one —OH attacks the anomeric carbon and a water molecule
+    leaves. A is the reverse (breakdown) reaction, and C and D are modification reactions
+    that do not link monomers.
+  chapter: Chemistry of Biochemistry (CEM)
+- id: chemistry-of-biochemistry-cem-p2
+  q: Which statement about enzyme catalysis is correct?
+  choices:
+    A: The enzyme shifts the equilibrium constant toward products
+    B: The enzyme lowers the ΔG of the overall reaction
+    C: The enzyme stabilizes the transition state, speeding forward and reverse reactions
+      equally
+    D: The enzyme works by raising the reaction temperature
+  answer: C
+  explain: Lowering the activation barrier accelerates both directions and leaves Keq and
+    ΔG untouched, so A and B name quantities enzymes cannot change. D confuses catalysis with
+    heating.
+  chapter: Chemistry of Biochemistry (CEM)
+- id: chemistry-of-biochemistry-cem-p3
+  q: A cell reaction has ΔG°′ = −20 kJ/mol. Coupled to ATP synthesis (ADP + Pi → ATP, ΔG°′
+    = +30.5 kJ/mol), what is the net ΔG°′ of the paired reaction?
+  choices:
+    A: −50.5 kJ/mol
+    B: +30.5 kJ/mol
+    C: −10.5 kJ/mol
+    D: +10.5 kJ/mol
+  answer: D
+  explain: 'Coupled ΔG°′ values add: (−20) + (+30.5) = +10.5 kJ/mol, so at standard state
+    this pairing is not spontaneous. A treats ATP synthesis as releasing 30.5, B reports the
+    uncoupled ATP step alone, and C makes a sign error (20 − 30.5).'
+  chapter: Chemistry of Biochemistry (CEM)

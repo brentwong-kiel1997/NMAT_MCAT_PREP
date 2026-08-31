@@ -12,15 +12,15 @@ sections:
   check:
   - q: Herders overgraze a shared pasture despite knowing it ruins everyone, because…
     options:
-      A: Individual gains accrue privately while costs are shared
+      A: The pasture is privately owned
       B: Herders dislike each other
-      C: The pasture is privately owned
+      C: Individual gains accrue privately while costs are shared
       D: Cooperation is impossible
-    answer: A
+    answer: C
     explain: Misaligned incentives — private benefit, socialized cost.
     distractors:
+      A: Commons are shared.
       B: Animosity unnecessary.
-      C: Commons are shared.
       D: Institutions can sustain cooperation.
 - heading: Aggression — biology meets learning
   body:
@@ -30,16 +30,16 @@ sections:
   check:
   - q: Frontal-lobe damage most directly affects aggression by…
     options:
-      A: Reducing inhibitory control over impulses
-      B: Increasing amygdala size
-      C: Raising testosterone
-      D: Eliminating frustration
-    answer: A
+      A: Increasing amygdala size
+      B: Eliminating frustration
+      C: Reducing inhibitory control over impulses
+      D: Raising testosterone
+    answer: C
     explain: Prefrontal normally brakes limbic drive.
     distractors:
-      B: No such claim.
-      C: Endocrine route.
-      D: Frustration still occurs.
+      A: No such claim.
+      B: Frustration still occurs.
+      D: Endocrine route.
 - heading: Helping — the bystander calculus
   body:
   - The bystander effect — more bystanders, less helping each — via diffusion of responsibility and pluralistic
@@ -48,16 +48,16 @@ sections:
   check:
   - q: Smoke fills a room; five strangers glance at the calm others and stay put. This illustrates…
     options:
-      A: Pluralistic ignorance
-      B: Social facilitation
-      C: Deindividuation
-      D: In-group bias
-    answer: A
+      A: Social facilitation
+      B: Deindividuation
+      C: In-group bias
+      D: Pluralistic ignorance
+    answer: D
     explain: Each reads others' inaction as evidence of safety.
     distractors:
-      B: Performance under observation.
-      C: Anonymity.
-      D: Group favoritism.
+      A: Performance under observation.
+      B: Anonymity.
+      C: Group favoritism.
   figures:
   - src: 8c-social-interactions/fig-c5959bf5.webp
     caption: Prosocial behavior — helping, altruism, and the bystander calculus.
@@ -149,16 +149,16 @@ passage:
       D: Irrelevant.
   - q: Which finding would most directly challenge the study's internal validity?
     options:
-      A: A large sample size
-      B: A confederate accidentally hinting at the expected answer
-      C: High statistical significance
-      D: A replication in a different country
-    answer: B
+      A: High statistical significance
+      B: A replication in a different country
+      C: A large sample size
+      D: A confederate accidentally hinting at the expected answer
+    answer: D
     explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
     distractors:
-      A: Power, not validity.
-      C: Significance is downstream of validity.
-      D: That tests external validity.
+      A: Significance is downstream of validity.
+      B: That tests external validity.
+      C: Power, not validity.
 pitfalls:
 - Calling every crowd effect diffusion — interpretation failure precedes it.
 - Batson as proving pure altruism universally — specific to high empathy.

@@ -18,15 +18,15 @@ sections:
   - q: In column chromatography with a polar stationary phase and nonpolar solvent, which compound elutes
       first?
     options:
-      A: The most polar compound
-      B: The least polar compound
-      C: The largest molecule
+      A: The largest molecule
+      B: The most polar compound
+      C: The least polar compound
       D: The smallest molecule
-    answer: B
+    answer: C
     explain: Least polar compound dissolves best in the nonpolar mobile phase — moves fastest.
     distractors:
-      A: Polar compounds bind to the polar stationary phase and lag.
-      C: Size is secondary to polarity here.
+      A: Size is secondary to polarity here.
+      B: Polar compounds bind to the polar stationary phase and lag.
       D: Size is secondary.
 - heading: Electrophoresis — separation by charge and size
   body:
@@ -66,16 +66,16 @@ sections:
   - q: Why is a mixture of ethanol and water difficult to separate by distillation?
     options:
       A: Their boiling points are identical
-      B: They form an azeotrope
+      B: Ethanol is too volatile
       C: They react
-      D: Ethanol is too volatile
-    answer: B
+      D: They form an azeotrope
+    answer: D
     explain: 95.6% ethanol forms an azeotrope that boils at a constant temperature — distillation cannot
       enrich beyond this.
     distractors:
       A: BP difference exists (78C vs 100C).
+      B: Ethanol BP is moderate.
       C: They do not react.
-      D: Ethanol BP is moderate.
   figures:
   - src: 5c-separation-and-purification-methods/fig-5ac75f50.webp
     caption: Boiling and condensation — the vaporization-condensation cycle that underlies distillation.
@@ -91,15 +91,15 @@ sections:
   check:
   - q: At low-speed centrifugation, which sediments first?
     options:
-      A: Ribosomes
-      B: Nuclei
-      C: Proteins
+      A: Proteins
+      B: Ribosomes
+      C: Nuclei
       D: DNA fragments
-    answer: B
+    answer: C
     explain: Nuclei are the largest, densest organelle — pellet at 600g.
     distractors:
-      A: Ribosomes need ultracentrifugation.
-      C: Proteins remain soluble.
+      A: Proteins remain soluble.
+      B: Ribosomes need ultracentrifugation.
       D: DNA fragments stay in solution.
 - heading: Reading separation data
   body:
@@ -109,16 +109,16 @@ sections:
   check:
   - q: In an HPLC chromatogram, peak identity is determined by…
     options:
-      A: Peak height
-      B: Retention time
-      C: Peak width
-      D: Solvent composition
-    answer: B
+      A: Solvent composition
+      B: Peak width
+      C: Peak height
+      D: Retention time
+    answer: D
     explain: Each compound has a characteristic retention time under fixed conditions.
     distractors:
-      A: Height varies with concentration.
-      C: Width varies with efficiency.
-      D: Solvent is the same for all peaks.
+      A: Solvent is the same for all peaks.
+      B: Width varies with efficiency.
+      C: Height varies with concentration.
 examples:
 - prompt: A mixture of amino acids is separated by paper chromatography with a polar stationary phase
     and a moderately polar solvent. Predict the elution order for glycine, phenylalanine, and lysine.
@@ -167,15 +167,15 @@ passage:
   - q: SDS-PAGE separates proteins by…
     options:
       A: Native charge
-      B: Molecular weight only
-      C: Shape
-      D: pH optimum
-    answer: B
+      B: pH optimum
+      C: Molecular weight only
+      D: Shape
+    answer: C
     explain: SDS coats all proteins with uniform negative charge — size alone determines migration.
     distractors:
       A: SDS denatures and charges uniformly.
-      C: Shape is disrupted by SDS.
-      D: pI is irrelevant after SDS.
+      B: pI is irrelevant after SDS.
+      D: Shape is disrupted by SDS.
   - q: The band at 120 kDa indicates…
     options:
       A: A protein subunit of 120 kDa
@@ -190,16 +190,16 @@ passage:
       D: A dimer would run as monomers after SDS.
   - q: If the sample was run on native PAGE instead, the bands would…
     options:
-      A: Be identical to SDS-PAGE
-      B: Shift based on native charge and shape
-      C: All run at the same position
-      D: Not separate
-    answer: B
+      A: All run at the same position
+      B: Be identical to SDS-PAGE
+      C: Not separate
+      D: Shift based on native charge and shape
+    answer: D
     explain: Native PAGE preserves folding — both charge and size determine migration.
     distractors:
-      A: SDS changes the basis of separation.
-      C: They would differ in position but still separate.
-      D: Separation still occurs.
+      A: They would differ in position but still separate.
+      B: SDS changes the basis of separation.
+      C: Separation still occurs.
 pitfalls:
 - Confusing mobile and stationary phase effects.
 - Forgetting that SDS-PAGE denatures — subunits separate, not intact complexes.

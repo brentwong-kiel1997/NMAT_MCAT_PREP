@@ -16,17 +16,17 @@ sections:
   check:
   - q: 45 mL of 0.20 M NaCl is diluted to 150 mL. The new molarity is…
     options:
-      A: 0.060 M
-      B: 0.15 M
+      A: 0.15 M
+      B: 0.67 M
       C: 0.20 M
-      D: 0.67 M
-    answer: A
+      D: 0.060 M
+    answer: D
     explain: M2 = M1V1/V2 = 0.20 x 45 / 150 = 0.060 M.
     distractors:
-      A: Correct arithmetic.
-      B: That is closer to undiluted.
+      A: That is closer to undiluted.
+      B: That is concentration going up.
       C: Unchanged only if volume unchanged.
-      D: That is concentration going up.
+      D: Correct arithmetic.
 - heading: Acid-base titrations
   body:
   - At the equivalence point, moles of acid equal moles of base. ==Strong acid + strong base gives pH
@@ -38,17 +38,17 @@ sections:
   check:
   - q: Titrating acetic acid (pKa 4.76) with NaOH, the pH at half-equivalence is…
     options:
-      A: '2.38'
-      B: '4.76'
+      A: '9.24'
+      B: '2.38'
       C: '7.00'
-      D: '9.24'
-    answer: B
+      D: '4.76'
+    answer: D
     explain: At half-equivalence [HA] = [A-] and pH = pKa.
     distractors:
-      A: Half of pKa is not the rule.
-      B: Correct — equal HA and A- gives pH = pKa.
+      A: That is beyond equivalence.
+      B: Half of pKa is not the rule.
       C: Equivalence for weak acid is basic (~8.7); half-equivalence is pKa.
-      D: That is beyond equivalence.
+      D: Correct — equal HA and A- gives pH = pKa.
   figures:
   - src: analytical-chemistry/fig-457d4944.webp
     caption: Titration curves for weak versus strong acid with 0.100 M NaOH — equivalence pH 8.72 vs 7.00,
@@ -65,16 +65,16 @@ sections:
   check:
   - q: A buffer has equal moles of HA and A-. Adding a small amount of HCl will…
     options:
-      A: Drop pH by several units
-      B: Convert some A- to HA with small pH change
+      A: Neutralize all the acid only
+      B: Drop pH by several units
       C: Have no effect at all
-      D: Neutralize all the acid only
-    answer: B
+      D: Convert some A- to HA with small pH change
+    answer: D
     explain: Added H+ consumes A-; ratio shifts modestly — that is buffering.
     distractors:
-      A: Unbuffered behavior.
+      A: The buffer does resist but not infinitely.
+      B: Unbuffered behavior.
       C: pH does change slightly.
-      D: The buffer does resist but not infinitely.
   figures:
   - src: analytical-chemistry/fig-620c6acf.webp
     caption: pH color-change ranges of common indicators — choose one that brackets the equivalence point.
@@ -175,28 +175,28 @@ passage:
       D: Basic side is wrong for equal acid/base.
   - q: The added HCl converts…
     options:
-      A: HA to A-
-      B: A- to HA
-      C: Both unchanged
-      D: HCl to acetate directly
-    answer: B
+      A: Both unchanged
+      B: HCl to acetate directly
+      C: A- to HA
+      D: HA to A-
+    answer: C
     explain: Added strong acid protonates the conjugate base.
     distractors:
-      A: That is what added base would do.
-      C: The ratio must shift.
-      D: Net effect is the same as protonating A-.
+      A: The ratio must shift.
+      B: Net effect is the same as protonating A-.
+      D: That is what added base would do.
   - q: After the addition, the pH…
     options:
       A: Rises sharply
-      B: Falls slightly
-      C: Is unchanged
+      B: Is unchanged
+      C: Falls slightly
       D: Falls to 2
-    answer: B
+    answer: C
     explain: 'HCl converts A- to HA: 0.050 -> 0.049 A-, 0.050 -> 0.051 HA; the ratio falls 1 -> 0.96,
       so pH drops log(0.96) about 0.02 units — small, as buffering promises.'
     distractors:
       A: Acid was added, not base.
-      C: Small change, not zero — the ratio moved.
+      B: Small change, not zero — the ratio moved.
       D: Unbuffered behavior.
 pitfalls:
 - Confusing molarity and molality.
@@ -227,14 +227,14 @@ review_questions:
 - q: Molality is defined as…
   options:
     A: Moles per liter of solution
-    B: Moles per kilogram of solvent
-    C: Grams per liter
+    B: Grams per liter
+    C: Moles per kilogram of solvent
     D: Moles per mole
-  answer: B
+  answer: C
   explain: Mass-based — independent of temperature.
   distractors:
     A: That is molarity.
-    C: Not a standard unit.
+    B: Not a standard unit.
     D: That is a mole fraction flavor.
 - q: A good indicator for a weak acid-strong base titration has…
   options:

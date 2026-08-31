@@ -15,16 +15,16 @@ sections:
   check:
   - q: 'A ball thrown horizontally off a cliff: which changes as it falls?'
     options:
-      A: Horizontal velocity
-      B: Vertical velocity
-      C: Total speed stays constant
-      D: Horizontal acceleration
-    answer: B
+      A: Total speed stays constant
+      B: Horizontal acceleration
+      C: Horizontal velocity
+      D: Vertical velocity
+    answer: D
     explain: Only vertical motion accelerates — horizontal velocity stays vx.
     distractors:
-      A: No horizontal force.
-      C: KE grows — speed rises.
-      D: No horizontal force → no acceleration.
+      A: KE grows — speed rises.
+      B: No horizontal force → no acceleration.
+      C: No horizontal force.
   figures:
   - src: 4a-motion-forces-work-energy-equilibrium/fig-072de49c.webp
     caption: Projectile trajectories — initial speed and launch angle shape the range.
@@ -43,17 +43,17 @@ sections:
   check:
   - q: A skier accelerates down a 30-degree frictionless slope at…
     options:
-      A: g
-      B: g sin(30) = 4.9 m/s2
-      C: 2g
-      D: Zero
-    answer: B
+      A: g sin(30) = 4.9 m/s2
+      B: g
+      C: Zero
+      D: 2g
+    answer: A
     explain: Only the slope component mg sin(theta) drives motion; normal balances the rest.
     distractors:
-      A: Full g would need a straight drop.
-      B: Correct.
-      C: g > g sin(theta).
-      D: Gravity acts.
+      A: Correct.
+      B: Full g would need a straight drop.
+      C: Gravity acts.
+      D: g > g sin(theta).
 - heading: Work, energy, and power
   body:
   - '==W = F d cos(theta); KE = (1/2)mv2; PE-g = mgh; PE-s = (1/2)kx2; mechanical energy conserved with
@@ -63,17 +63,17 @@ sections:
   check:
   - q: Centripetal force on a rolling ball does…
     options:
-      A: Positive work
-      B: Zero work
-      C: Negative work — it braks
-      D: Depends on speed
-    answer: B
+      A: Depends on speed
+      B: Positive work
+      C: Zero work
+      D: Negative work — it braks
+    answer: C
     explain: Always perpendicular to velocity — the work dot product is zero.
     distractors:
-      A: Perpendicular forces do no work.
-      B: Correct.
-      C: Speed stays constant — no braking.
-      D: Direction, not magnitude, changes.
+      A: Direction, not magnitude, changes.
+      B: Perpendicular forces do no work.
+      C: Correct.
+      D: Speed stays constant — no braking.
 - heading: Linear and angular momentum
   body:
   - ==Momentum p = mv conserved with no external impulse; impulse = F delta-t = delta-p==. Elastic collision
@@ -84,17 +84,17 @@ sections:
   check:
   - q: A diver tucks her body mid-air — she…
     options:
-      A: Spins slower because I rises
-      B: Spins faster, L conserved
-      C: Loses angular momentum
-      D: Cannot change spin rate
-    answer: B
+      A: Loses angular momentum
+      B: Spins slower because I rises
+      C: Cannot change spin rate
+      D: Spins faster, L conserved
+    answer: D
     explain: Tucking lowers I → omega rises to keep L = I omega constant.
     distractors:
-      A: Tucking LOWERS I.
-      B: Correct — no external torque.
-      C: Conserved means no loss.
-      D: She clearly can.
+      A: Conserved means no loss.
+      B: Tucking LOWERS I.
+      C: She clearly can.
+      D: Correct — no external torque.
 - heading: Equilibrium and elasticity in biology
   body:
   - ==Bones and tendons experience stress (F/A) and strain (delta-L/L); the elastic modulus E = stress/strain
@@ -107,16 +107,16 @@ sections:
   - q: The flexor muscle of the forearm acts 5 cm from the elbow while the load is at 30 cm. Holding a
       4 kg weight requires muscle force…
     options:
-      A: 96 N
-      B: 235 N
+      A: 39 N
+      B: 96 N
       C: 400 N
-      D: 39 N
-    answer: B
+      D: 235 N
+    answer: D
     explain: 'Torque balance: F x 0.05 = mg x 0.30, so F = (39.2)(0.30)/(0.05) = 235 N.'
     distractors:
-      A: 96 N — inverted lever ratio.
+      A: 39 N — the weight, before lever amplification.
+      B: 96 N — inverted lever ratio.
       C: 400 N — the load mass, not the force.
-      D: 39 N — the weight, before lever amplification.
 examples:
 - prompt: A 70 kg person stands on a scale in an elevator accelerating upward at 2.0 m/s2. What does the
     scale read?

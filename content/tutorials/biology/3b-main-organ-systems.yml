@@ -22,15 +22,15 @@ sections:
   - q: The Bohr effect helps working muscle because increased CO₂ and H⁺…
     options:
       A: Increase hemoglobin's oxygen affinity
-      B: Shift the curve right — hemoglobin RELEASES more O₂
+      B: Reverse blood flow
       C: Stop the heart
-      D: Reverse blood flow
-    answer: B
+      D: Shift the curve right — hemoglobin RELEASES more O₂
+    answer: D
     explain: Acid and CO₂ lower affinity precisely where oxygen is needed most.
     distractors:
       A: Affinity DROPS — that is the point.
+      B: Not a flow effect.
       C: Not a cardiac effect.
-      D: Not a flow effect.
 - heading: Digestion — a selective disassembly line
   body:
   - The gut is a tube open at both ends, technically OUTSIDE the body — so digestion is disassembly in
@@ -45,17 +45,17 @@ sections:
   check:
   - q: Bile's digestive role is to…
     options:
-      A: Chemically break peptide bonds
-      B: Emulsify fats — surface area for lipase
+      A: Neutralize acid
+      B: Chemically break peptide bonds
       C: Absorb glucose
-      D: Neutralize acid
-    answer: B
+      D: Emulsify fats — surface area for lipase
+    answer: D
     explain: Detergent action disperses fat droplets so lipase can work; bicarbonate neutralization is
       the pancreas's job.
     distractors:
-      A: Proteases do that.
+      A: Pancreatic bicarbonate.
+      B: Proteases do that.
       C: Enterocytes absorb.
-      D: Pancreatic bicarbonate.
 - heading: Excretion — the kidney as precision filter
   body:
   - The nephron does three jobs in order — ==filtration== (glomerulus — pressure drives plasma into Bowman's
@@ -69,16 +69,16 @@ sections:
   check:
   - q: Glucose appearing in urine most directly indicates…
     options:
-      A: Excess ADH
-      B: Filtration exceeded the transport maximum for reabsorption
-      C: Enhanced aldosterone
+      A: Filtration exceeded the transport maximum for reabsorption
+      B: Enhanced aldosterone
+      C: Excess ADH
       D: Renal failure of filtration itself
-    answer: B
+    answer: A
     explain: Glucose is filtered freely and normally reabsorbed to the last molecule — saturation of carriers
       spills it (the glycosuria of uncontrolled diabetes).
     distractors:
-      A: ADH governs water only.
-      C: Aldosterone handles Na⁺/K⁺.
+      B: Aldosterone handles Na⁺/K⁺.
+      C: ADH governs water only.
       D: Filtration failure reduces urine, not glycosuria.
 - heading: Defense — innate first, adaptive after
   body:
@@ -123,17 +123,17 @@ sections:
   check:
   - q: During intense exercise, blood is redistributed mainly toward…
     options:
-      A: The gut and skin equally
-      B: Skeletal muscle and skin, away from the splanchnic bed
-      C: The kidneys exclusively
-      D: Bone marrow
-    answer: B
+      A: Skeletal muscle and skin, away from the splanchnic bed
+      B: The gut and skin equally
+      C: Bone marrow
+      D: The kidneys exclusively
+    answer: A
     explain: Sympathetic vasomotor priorities — working muscle gets fuel and flow; skin handles heat;
       digestion waits.
     distractors:
-      A: Gut flow FALLS.
-      C: Renal flow drops moderately.
-      D: Not an acute redistribution target.
+      B: Gut flow FALLS.
+      C: Not an acute redistribution target.
+      D: Renal flow drops moderately.
 examples:
 - prompt: Predict the shifts, and their causes, when a person moves from sea level to high altitude for
     two weeks.
@@ -182,39 +182,39 @@ passage:
   - q: The high K⁺ is best explained by…
     options:
       A: Kidney filtration failure
-      B: Missing aldosterone — reduced K⁺ secretion at the distal tubule
-      C: Excess ADH
-      D: Hemolysis of the sample
-    answer: B
+      B: Excess ADH
+      C: Hemolysis of the sample
+      D: Missing aldosterone — reduced K⁺ secretion at the distal tubule
+    answer: D
     explain: Aldosterone's exchange — Na⁺ back, K⁺ out — is aldosterone's job; without it K⁺ climbs.
     distractors:
       A: Filtration failure retains everything, including Na⁺.
-      C: ADH moves water only.
-      D: Not an artifact question.
+      B: ADH moves water only.
+      C: Not an artifact question.
   - q: High renin makes sense because…
     options:
-      A: The adrenal cortex directly drives renin
-      B: Low blood pressure and low Na⁺ at the kidney's apparatus stimulate renin release — the axis is
+      A: K⁺ directly inhibits renin
+      B: The adrenal cortex directly drives renin
+      C: Low blood pressure and low Na⁺ at the kidney's apparatus stimulate renin release — the axis is
         intact, the gland is not
-      C: Renin substitutes for aldosterone
-      D: K⁺ directly inhibits renin
-    answer: B
+      D: Renin substitutes for aldosterone
+    answer: C
     explain: The kidney correctly senses trouble and signals — the adrenal target simply cannot respond.
     distractors:
-      A: Direction reversed.
-      C: Renin is an enzyme of the angiotensin cascade, not a substitute mineralocorticoid.
-      D: Data show the opposite.
+      A: Data show the opposite.
+      B: Direction reversed.
+      D: Renin is an enzyme of the angiotensin cascade, not a substitute mineralocorticoid.
   - q: Which replacement therapy would correct the Na⁺ and K⁺ fastest?
     options:
-      A: ADH analog
-      B: Aldosterone analog
-      C: Insulin
+      A: Aldosterone analog
+      B: Insulin
+      C: ADH analog
       D: Erythropoietin
-    answer: B
+    answer: A
     explain: Replace the missing mineralocorticoid and the distal tubule exchange resumes.
     distractors:
-      A: Water handling, not electrolyte exchange.
-      C: Glucose axis.
+      B: Glucose axis.
+      C: Water handling, not electrolyte exchange.
       D: Red-cell production.
 pitfalls:
 - Assigning digestion to the large intestine — the small intestine is the absorber; the colon only reclaims
@@ -251,16 +251,16 @@ further_reading:
 review_questions:
 - q: Which vessel is the primary exchange site?
   options:
-    A: Arteries
-    B: Capillaries
-    C: Veins
-    D: Lymphatics
-  answer: B
+    A: Veins
+    B: Lymphatics
+    C: Capillaries
+    D: Arteries
+  answer: C
   explain: One-cell walls and maximal total area — everything crosses there.
   distractors:
-    A: Thick-walled conduits.
-    C: Low-pressure reservoirs.
-    D: Return drainage, not the main exchange.
+    A: Low-pressure reservoirs.
+    B: Return drainage, not the main exchange.
+    D: Thick-walled conduits.
 - q: Secretin is released when acidic chyme reaches the duodenum and stimulates…
   options:
     A: Gastric acid secretion

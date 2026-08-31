@@ -16,16 +16,16 @@ sections:
   check:
   - q: Judging another society's marriage practices by your own standards is…
     options:
-      A: Cultural relativism
-      B: Ethnocentrism
-      C: Culture shock
-      D: Assimilation
-    answer: B
+      A: Assimilation
+      B: Cultural relativism
+      C: Ethnocentrism
+      D: Culture shock
+    answer: C
     explain: Using your own culture as the measuring stick.
     distractors:
-      A: That judges within context.
-      C: Adjustment to a new culture.
-      D: Minority adoption of majority norms.
+      A: Minority adoption of majority norms.
+      B: That judges within context.
+      D: Adjustment to a new culture.
   figures:
   - src: behavioral-social/sociology-and-anthropology/fig-2cba6a31.webp
     caption: Judo as cultural practice — sport encodes values, rules, and ritual.
@@ -40,16 +40,16 @@ sections:
   check:
   - q: A child who imagines how her teacher sees her and adjusts her self-image is experiencing…
     options:
-      A: The looking-glass self
-      B: Labeling
-      C: Role strain
-      D: Resocialization
-    answer: A
+      A: Labeling
+      B: Role strain
+      C: Resocialization
+      D: The looking-glass self
+    answer: D
     explain: Imagined appraisals reflected back form the sense of self.
     distractors:
-      B: Labels from others.
-      C: One role's conflict.
-      D: Forced relearning.
+      A: Labels from others.
+      B: One role's conflict.
+      C: Forced relearning.
 - heading: Social structure and groups
   body:
   - ==Status (ascribed by birth vs achieved by effort) and roles — role strain within one role; role conflict
@@ -61,15 +61,15 @@ sections:
   - q: A resident torn between emergency duty and family obligations faces…
     options:
       A: Role strain
-      B: Role conflict
-      C: Status inconsistency
-      D: Anomie
-    answer: B
+      B: Status inconsistency
+      C: Anomie
+      D: Role conflict
+    answer: D
     explain: Two different roles' demands collide.
     distractors:
       A: One role's tension.
-      C: Mismatched statuses.
-      D: Normative breakdown.
+      B: Mismatched statuses.
+      C: Normative breakdown.
 - heading: Inequality, stratification, and mobility
   body:
   - '==Stratification = systematic ranking by class, status, power (Weber) or by relationship to the means
@@ -81,15 +81,15 @@ sections:
   check:
   - q: Which system is the most closed?
     options:
-      A: Class
-      B: Caste
-      C: Estate
+      A: Estate
+      B: Class
+      C: Caste
       D: Meritocracy
-    answer: B
+    answer: C
     explain: Caste ranks are fixed at birth — no legitimate mobility.
     distractors:
-      A: Class allows movement.
-      C: Estates are less rigid than caste.
+      A: Estates are less rigid than caste.
+      B: Class allows movement.
       D: Meritocracy is open.
   figures:
   - src: behavioral-social/sociology-and-anthropology/fig-c4a4fedf.webp
@@ -106,17 +106,17 @@ sections:
   check:
   - q: Merton's strain theory explains deviance as…
     options:
-      A: Inherited traits
-      B: A gap between cultural goals and legitimate means
-      C: Labeling by authorities
-      D: Poor parenting
-    answer: B
+      A: Poor parenting
+      B: Labeling by authorities
+      C: Inherited traits
+      D: A gap between cultural goals and legitimate means
+    answer: D
     explain: Anomie — goals accepted, means blocked — pushes toward innovation/deviance.
     distractors:
-      A: Biological determinism.
-      B: Correct.
-      C: That is labeling theory.
-      D: Not the theory's frame.
+      A: Not the theory's frame.
+      B: That is labeling theory.
+      C: Biological determinism.
+      D: Correct.
 examples:
 - prompt: A researcher moves into a farming village for 14 months, lives with families, and writes a detailed
     account of local harvest rituals. Identify the method, its key features, and its characteristic strengths/limits.

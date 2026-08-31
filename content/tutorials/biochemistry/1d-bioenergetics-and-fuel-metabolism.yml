@@ -16,16 +16,16 @@ sections:
   check:
   - q: NADPH's primary role is…
     options:
-      A: Reductive biosynthesis
-      B: ATP synthesis
-      C: Signal transduction
-      D: Waste disposal
-    answer: A
+      A: Signal transduction
+      B: Waste disposal
+      C: ATP synthesis
+      D: Reductive biosynthesis
+    answer: D
     explain: Anabolic reductions — fatty acid synthesis, detoxification.
     distractors:
-      B: NADH fuels the ETC.
-      C: ATP is the currency.
-      D: Not its lane.
+      A: ATP is the currency.
+      B: Not its lane.
+      C: NADH fuels the ETC.
 - heading: Glycolysis and its regulation
   body:
   - '==Glycolysis (cytosol): glucose -> 2 pyruvate; investment 2 ATP, payoff 4 ATP, net 2 ATP + 2 NADH==.
@@ -37,16 +37,16 @@ sections:
   check:
   - q: The committed step of glycolysis is…
     options:
-      A: Hexokinase
-      B: Phosphofructokinase-1
-      C: Pyruvate kinase
+      A: Pyruvate kinase
+      B: Hexokinase
+      C: Phosphofructokinase-1
       D: Glyceraldehyde oxidation
-    answer: B
+    answer: C
     explain: PFK-1 commits glucose derivatives to the glycolytic path — the main control point.
     distractors:
-      A: First step but reversible hexose trap.
-      B: Correct.
-      C: Payoff step after commitment.
+      A: Payoff step after commitment.
+      B: First step but reversible hexose trap.
+      C: Correct.
       D: An intermediate conversion.
 - heading: The TCA cycle and oxidative phosphorylation
   body:
@@ -112,16 +112,16 @@ sections:
   check:
   - q: During a 24-hour fast, blood glucose is maintained by…
     options:
-      A: Glycogenolysis and gluconeogenesis in the liver
-      B: Muscle glucose uptake
-      C: Lipogenesis
-      D: Ketone reabsorption
-    answer: A
+      A: Lipogenesis
+      B: Ketone reabsorption
+      C: Glycogenolysis and gluconeogenesis in the liver
+      D: Muscle glucose uptake
+    answer: C
     explain: Liver releases stored and freshly made glucose.
     distractors:
-      B: Muscle stores glycogen locally.
-      C: That is the fed flow.
-      D: Ketones spare glucose, not make it.
+      A: That is the fed flow.
+      B: Ketones spare glucose, not make it.
+      D: Muscle stores glycogen locally.
 examples:
 - prompt: 'Calculate the net ATP from one glucose under aerobic conditions using the two-citrus accounting
     (modern yields: NADH 2.5, FADH2 1.5).'
@@ -166,30 +166,30 @@ passage:
   questions:
   - q: The stable blood glucose reflects…
     options:
-      A: Hepatic glycogenolysis plus gluconeogenesis
-      B: Muscle glycogen release into blood
+      A: Muscle glycogen release into blood
+      B: Renal reabsorption
       C: Insulin-driven uptake
-      D: Renal reabsorption
-    answer: A
+      D: Hepatic glycogenolysis plus gluconeogenesis
+    answer: D
     explain: Liver is the only source of circulating glucose.
     distractors:
-      A: Correct.
-      B: Muscle glycogen is muscle-bound.
+      A: Muscle glycogen is muscle-bound.
+      B: Kidneys return, not make.
       C: Insulin would lower glucose.
-      D: Kidneys return, not make.
+      D: Correct.
   - q: The ketone rise indicates…
     options:
-      A: Liver excess acetyl-CoA from fatty acids
-      B: Kidney failure
+      A: Kidney failure
+      B: Excess protein
       C: Aerobic insufficiency
-      D: Excess protein
-    answer: A
+      D: Liver excess acetyl-CoA from fatty acids
+    answer: D
     explain: Fasting — beta-oxidation floods the liver with acetyl-CoA, which converts to ketones.
     distractors:
-      A: Correct.
-      B: No renal clue.
+      A: No renal clue.
+      B: Gluconeogenesis uses amino acids.
       C: Exercise uses glucose/fat normally.
-      D: Gluconeogenesis uses amino acids.
+      D: Correct.
   - q: If the fast extended for two weeks, the brain's primary fuel adapts to…
     options:
       A: Ketones

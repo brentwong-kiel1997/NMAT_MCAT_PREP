@@ -16,17 +16,17 @@ sections:
   check:
   - q: Melting 10 g of ice at 0C absorbs about…
     options:
-      A: 4.18 kJ
-      B: 3.34 kJ
-      C: 33.4 kJ
-      D: 0.418 kJ
-    answer: B
+      A: 0.418 kJ
+      B: 33.4 kJ
+      C: 4.18 kJ
+      D: 3.34 kJ
+    answer: D
     explain: Q = mL = 0.010 kg x 334 kJ/kg = 3.34 kJ.
     distractors:
-      A: That warms liquid water by 100 K.
-      B: Correct — Q = mL for fusion.
-      C: Ten times too large — that melts 100 g.
-      D: Too small.
+      A: Too small.
+      B: Ten times too large — that melts 100 g.
+      C: That warms liquid water by 100 K.
+      D: Correct — Q = mL for fusion.
 - heading: Kinetic theory and the gas laws
   body:
   - '==Ideal gas: PV = nRT==. Doubling temperature at constant volume doubles pressure; halving volume
@@ -88,16 +88,16 @@ sections:
   check:
   - q: A Carnot engine runs between 400 K and 300 K. Its maximum efficiency is…
     options:
-      A: 75%
-      B: 25%
-      C: 33%
-      D: 50%
-    answer: B
+      A: 50%
+      B: 33%
+      C: 75%
+      D: 25%
+    answer: D
     explain: e = 1 - 300/400 = 0.25.
     distractors:
-      A: That is Qc/Qh, not the complement.
-      B: Correct — 25%.
-      C: That would need Tc = 200 K.
+      B: That would need Tc = 200 K.
+      C: That is Qc/Qh, not the complement.
+      D: Correct — 25%.
 - heading: Heat transfer and physiology
   body:
   - Three mechanisms — ==conduction (contact, proportional to delta-T and area, inverse to thickness),
@@ -109,17 +109,17 @@ sections:
   check:
   - q: A fever patient feels cold despite high core temperature because…
     options:
-      A: Skin vessels constrict in cold
-      B: Radiation peaks at T^4 outward
-      C: The heat is trapped inside
-      D: Convection stops
-    answer: B
+      A: Radiation peaks at T^4 outward
+      B: Convection stops
+      C: Skin vessels constrict in cold
+      D: The heat is trapped inside
+    answer: A
     explain: The body loses heat to surroundings by radiation proportional to the fourth power of skin
       temperature.
     distractors:
-      A: Fever often dilates vessels.
-      C: Core heat does escape.
-      D: Convection still acts.
+      B: Convection still acts.
+      C: Fever often dilates vessels.
+      D: Core heat does escape.
 examples:
 - prompt: 0.20 kg of steam at 100C is bubbled into 0.80 kg of water at 20C in an insulated cup. Find the
     final temperature.
@@ -165,40 +165,40 @@ passage:
   questions:
   - q: The dominant cooling mechanism for active sweating is…
     options:
-      A: Conduction
-      B: Evaporation
+      A: Evaporation
+      B: Radiation
       C: Convection
-      D: Radiation
-    answer: B
+      D: Conduction
+    answer: A
     explain: Large latent heat of vaporization dominates when enthalpy is available.
     distractors:
-      A: Contact is minor in dry air.
+      B: Skin at 33C radiates to 30C air.
       C: Secondary.
-      D: Skin at 33C radiates to 30C air.
+      D: Contact is minor in dry air.
   - q: Wind increases heat loss by…
     options:
       A: Radiation
-      B: Convection
-      C: Conduction through the air
+      B: Conduction through the air
+      C: Convection
       D: Latent heat
-    answer: B
+    answer: C
     explain: Moving air removes the warmed boundary layer — convective loss climbs.
     distractors:
       A: Wind does not change T^4.
-      C: Air is a poor conductor regardless.
+      B: Air is a poor conductor regardless.
       D: Evaporation needs water.
   - q: If she shivers, the body is generating heat through…
     options:
       A: Brown fat only
-      B: Muscle contractions and increased metabolism
+      B: Reduced blood flow only
       C: Mental focus
-      D: Reduced blood flow only
-    answer: B
+      D: Muscle contractions and increased metabolism
+    answer: D
     explain: Shivering is involuntary muscle work converting chemical energy to heat.
     distractors:
       A: Brown fat is one channel, not alone.
+      B: Vasoconstriction conserves heat, does not make it.
       C: Not physiological.
-      D: Vasoconstriction conserves heat, does not make it.
 pitfalls:
 - Sign conventions in the first law — Q in positive, W out positive.
 - Using Celsius in Kelvin-only gas law and Carnot ratios.
@@ -227,15 +227,15 @@ further_reading:
 review_questions:
 - q: Entropy of an isolated system…
   options:
-    A: Always decreases
-    B: Never decreases
-    C: Stays constant
+    A: Stays constant
+    B: Always decreases
+    C: Never decreases
     D: Is undefined
-  answer: B
+  answer: C
   explain: Cannot decrease — second law of thermodynamics.
   distractors:
-    A: Violation.
-    C: Only for reversible processes.
+    A: Only for reversible processes.
+    B: Violation.
     D: Defined.
 - q: Sweating works because…
   options:

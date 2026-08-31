@@ -1,42 +1,65 @@
 subject: biochemistry
 chapter: 1C · Heritable information & diversity
 title: 1C · Heritable Information and Diversity
-overview: 'How genetic information is transmitted, mutated, and recombined — the biochemistry view of
-  heredity and variation. Complements the biology 1C (genetic diversity processes) with the molecular
-  mechanisms: repair, recombination, and mutation signatures.'
+overview: 'The molecular half of heredity: how DNA copies itself faithfully, gets damaged, gets repaired,
+  and gets reshuffled at the sequence level. Pairs with the biology 1C chapter, which carries the
+  transmission side — Mendelian patterns, pedigrees, nondisjunction, and population allele frequencies.'
 sections:
-- heading: Mutations and their repair
+- heading: Mutation types — reading-frame consequences
   body:
-  - ==Mutation types — point (silent, missense, nonsense), frameshift (insertion/deletion not multiple
-    of 3), and larger rearrangements==. Causes — replication errors, oxidative damage, UV dimers, chemical
-    mutagens. ==Repair — mismatch (after replication), base excision (BER for damaged bases), nucleotide
-    excision (NER for bulky lesions like thymine dimers), double-strand break (homologous recombination/NHEJ)==.
-  - ==Mutation rates are low because proofreading (3'-5' exonuclease), mismatch repair, and DNA damage
-    checkpoints police every division==. ==Exposure pattern — frameshift = function severely compromised;
+  - ==Mutation types — point (silent, missense, nonsense), frameshift (insertion/deletion not a
+    multiple of 3), and larger rearrangements==. Causes — replication errors, oxidative damage, UV
+    dimers, chemical mutagens. ==Exposure pattern — frameshift = function severely compromised;
     nonsense = truncation; silent = no change==.
+  - '==Spontaneous chemistry supplies most lesions — depurination, cytosine deamination, oxidative
+    hits — while mutagens add signatures of their own (UV dimers, alkylation, intercalation)==.
+    ==The codon table sets the cost of a point mutation — silent keeps the amino acid, missense swaps
+    one, nonsense stops the chain early==.'
   check:
-  - q: UV-induced thymine dimers are repaired by…
+  - q: A single-base insertion early in a coding sequence usually…
     options:
-      A: Mismatch repair
-      B: Nucleotide excision repair
-      C: Base excision repair
-      D: Telomerase
-    answer: B
-    explain: Bulky helix-distorting lesions — the NER pathway cuts a patch.
+      A: Leaves the protein unchanged
+      B: Deletes the whole gene
+      C: Swaps one amino acid for another
+      D: Shifts the reading frame and scrambles everything downstream
+    answer: D
+    explain: An indel not in multiples of three re-reads every downstream codon, usually to an early
+      stop.
     distractors:
-      A: Post-replication errors, not lesions.
-      B: Correct.
-      C: Small damaged bases only.
-      D: Ends replication.
+      A: Reading frames rarely survive an indel.
+      B: The sequence stays — the meaning is what changes.
+      C: That is a missense point mutation.
+      D: Correct.
   figures:
   - src: 1c-heritable-information-diversity/dna-double-helix.webp
     caption: Antiparallel strands, A-T (2 H-bonds) and G-C (3 H-bonds) pairing — the template logic of
       replication.
     credit: Fig 14.7 · OpenStax Biology 2e — CC BY-NC-SA 4.0
-  - src: 1c-heritable-information-diversity/chromosome-packing.webp
-    caption: Chromosome packing — DNA wrapped around histones into nucleosomes, then coiled into chromosomes.
-    credit: Fig 14.6 · OpenStax Biology 2e — CC BY-NC-SA 4.0
-- heading: Recombination — diversifying the genome
+- heading: Repair pathways — proofreading to excision lanes
+  body:
+  - ==Mutation rates stay low because proofreading (3'-5' exonuclease), mismatch repair, and DNA damage
+    checkpoints police every division==. ==Repair lanes are matched to lesion size — mismatch (G-T
+    mispairs after replication), base excision (BER, one damaged base via a glycosylase), nucleotide
+    excision (NER, a patch around bulky lesions like thymine dimers), double-strand break repair
+    (homologous recombination in S/G2, non-homologous end joining any time)==.
+  - '==Which lane runs decides the phenotype — NER defects give xeroderma pigmentosum, mismatch-repair
+    defects give Lynch syndrome with microsatellite instability, BRCA1/2 defects leave double-strand
+    breaks to error-prone end joining==.'
+  check:
+  - q: UV-induced thymine dimers are repaired by…
+    options:
+      A: Mismatch repair
+      B: Base excision repair
+      C: Nucleotide excision repair
+      D: Telomerase
+    answer: C
+    explain: Bulky helix-distorting lesions — the NER pathway cuts a patch.
+    distractors:
+      A: Post-replication errors, not lesions.
+      B: Small damaged bases only.
+      C: Correct.
+      D: Ends replication.
+- heading: Recombination — homologous and site-specific
   body:
   - ==Homologous recombination — exchanging DNA between similar sequences; in meiosis, crossing over in
     prophase I creates chiasmata and new allele combinations==. ==Site-specific — V(D)J recombination
@@ -48,37 +71,16 @@ sections:
   - q: V(D)J recombination generates antibody diversity by…
     options:
       A: Random point mutation
-      B: Assembling gene segments combinatorially
-      C: Frameshifts
-      D: Gene duplication
-    answer: B
+      B: Frameshifts
+      C: Gene duplication
+      D: Assembling gene segments combinatorially
+    answer: D
     explain: Different V, D, J segments join in combinations — the combinatorial explosion.
     distractors:
       A: Somatic hypermutation adds later.
-      B: Correct.
-      C: No frameshifts involved.
-      D: Duplication is a different process.
-- heading: Chromosomal variation — from alleles to syndromes
-  body:
-  - '==Ploidy — polyploidy (whole-genome duplication: plants common, animals fatal), aneuploidy (single
-    chromosome gains/losses via nondisjunction — trisomy 21)==. ==Structural — deletions, duplications,
-    inversions, translocations (Philadelphia translocation in CML)==.'
-  - ==Genotype-phenotype caveats — incomplete penetrance, variable expressivity, X-inactivation mosaicism,
-    imprinting (parental origin effects)==. ==Mendelian patterns — autosomal dominant/recessive, X-linked;
-    pedigree logic resolves most exam items==.
-  check:
-  - q: Trisomy 21 arises most often from…
-    options:
-      A: Nondisjunction in meiosis
-      B: Crossing over
-      C: Translocation
-      D: Point mutation
-    answer: A
-    explain: Homologous chromosomes fail to separate — an extra copy in a gamete.
-    distractors:
-      B: That recombines, not duplicates whole chromosomes.
-      C: Philadelphia is the classic but rare.
-      D: One base cannot make a whole chromosome.
+      B: No frameshifts involved.
+      C: Duplication is a different process.
+      D: Correct.
 - heading: Epigenetics — heritable but not sequence-based
   body:
   - '==Epigenetics = heritable changes in expression with DNA sequence unchanged — DNA methylation (CpG
@@ -91,37 +93,45 @@ sections:
   check:
   - q: A woman heterozygous for a X-linked trait can show patchy expression because…
     options:
-      A: X-inactivation silences one X per cell
+      A: Hormones erase traits
       B: Genes mutate quickly
-      C: Hormones erase traits
-      D: DNA is lost
-    answer: A
+      C: DNA is lost
+      D: X-inactivation silences one X per cell
+    answer: D
     explain: Random inactivation freezes a mosaic of active maternal/paternal X cells.
     distractors:
+      A: Hormones modulate, don't erase.
       B: Mutations are rare.
-      C: Hormones modulate, don't erase.
-      D: Chromosomes persist.
-- heading: Population genetics — the source of diversity
+      C: Chromosomes persist.
+      D: Correct.
+  figures:
+  - src: 1c-heritable-information-diversity/chromosome-packing.webp
+    caption: Chromosome packing — DNA wrapped around histones into nucleosomes, then coiled into chromosomes.
+    credit: Fig 14.6 · OpenStax Biology 2e — CC BY-NC-SA 4.0
+- heading: Genome instability — when a repair lane is missing
   body:
-  - ==Hardy-Weinberg — p + q = 1, p2 + 2pq + q2 = 1; equilibrium requires no mutation, no selection, no
-    migration, no drift, random mating==. Deviations reveal forces — selection changes allele frequencies,
-    drift in small populations, founder/bottleneck effects.
-  - ==Applying HWE — carrier frequency 2pq approximated as 2q when q is small; disease frequency q2. ==Mutation-selection
-    balance and heterozygote advantage (sickle cell) explain why harmful alleles persist==.
+  - '==Repair defects map onto cancer syndromes — xeroderma pigmentosum (NER → UV-driven skin cancers),
+    Lynch syndrome (mismatch repair → microsatellite instability in colorectal cancer), BRCA1/2
+    (homologous recombination → breast/ovarian)==. ==Tumor genomes accumulate damage faster because a
+    lane is missing, not because mutagens got stronger==.'
+  - '==Telomeres cap chromosome ends — the end-replication problem shortens them each division==.
+    ==Telomerase re-extends telomeres in germline and stem cells, and most cancers reactivate it to
+    escape the replicative limit==.'
   check:
-  - q: In a population with q = 0.01 for a recessive disease, the carrier frequency is about…
+  - q: A colorectal tumor shows microsatellite instability. The likeliest defect is in…
     options:
-      A: 1%
-      B: 2%
-      C: 0.01%
-      D: 10%
-    answer: B
-    explain: 2pq ~ 2q = 0.02 — near 2%.
+      A: Base excision repair
+      B: Nucleotide excision repair
+      C: Mismatch repair
+      D: Telomerase
+    answer: C
+    explain: Slipped repeats escape mismatch repair, so repeat tracts lengthen or shorten between
+      generations.
     distractors:
-      A: q alone.
-      B: Correct.
-      C: q2 is the disease rate.
-      D: 10x overestimate.
+      A: BER clears oxidized and deaminated bases.
+      B: NER defects show UV sensitivity, not repeat instability.
+      C: Correct.
+      D: Telomerase sets replicative lifespan.
 examples:
 - prompt: CFTR has a deletion of 3 bases removing phenylalanine at position 508 (delta-F508). Classify
     the mutation and explain why most heterozygotes are healthy.
@@ -136,17 +146,18 @@ examples:
     B: Nonsense — that stops translation early.
     C: Silent — the amino acid clearly changed.
 key_points:
-- Point vs frameshift — reading frame is the hinge.
-- NER for dimers; mismatch for post-replication errors.
-- Crossing over in prophase I — new combinations.
-- V(D)J recombination — combinatorial antibody diversity.
-- Aneuploidy from nondisjunction; imprinting — parental origin.
-- HWE — no force list; 2pq ~ 2q when q small.
+- Point vs frameshift — reading frame is the hinge; nonsense truncates, silent changes nothing.
+- NER for bulky dimers; BER for single damaged bases; mismatch for post-replication mispairs.
+- Double-strand breaks — homologous recombination in S/G2, NHEJ elsewhere in the cycle.
+- V(D)J recombination — combinatorial antibody diversity from gene segments.
+- Repair-defect syndromes — XP (NER), Lynch (MMR/MSI), BRCA (HR) — mapped by lesion type.
+- Epigenetics — methylation, histone marks, imprinting, X-inactivation silence without sequence change.
+- Telomerase re-extends telomeres in germline/stem cells and most cancers.
 mnemonics:
 - phrase: Excision repairs the bad base, mismatch fixes the wrong pair
   means: BER/NER vs mismatch-repair lanes.
-- phrase: p squared, 2pq, q squared
-  means: Genotype frequencies when HWE holds.
+- phrase: HR copies the sister, NHEJ jams the ends
+  means: Double-strand break choice — a template in S/G2, or fast-and-dirty ligation.
 maps:
 - title: Mutation repair lanes
   steps:
@@ -154,69 +165,73 @@ maps:
   - small damaged base — BER
   - bulky lesion (thymine dimer) — NER
   - double-strand break — HR or NHEJ
-- title: Chromosomal categories
+- title: Mutation types and their costs
   steps:
-  - copy number — aneuploidy, polyploidy
-  - structure — deletion, duplication, inversion, translocation
-  - expression — imprinting, X-inactivation
-  - sequence — point, frameshift
+  - silent — codon still codes the same amino acid
+  - missense — one amino acid swapped
+  - nonsense — premature stop codon
+  - frameshift — indel not a multiple of 3, downstream codons re-read
+  - rearrangement — deletion, duplication, inversion, translocation
 passage:
-  text: A population study finds a recessive allele at frequency 4%. Sequencing shows the allele arose
-    in a founder individual 300 years ago, and carriers show no detectable phenotype. Another region near
-    the allele shows unusually low diversity.
+  text: A 6-year-old burns after minutes of sun, freckles on sun-exposed skin, and has already had two
+    skin cancers. Cultured fibroblasts fail to resume DNA synthesis after UV irradiation, and cell-fusion
+    studies assign the defect to complementation group C. No internal malignancies are found.
   questions:
-  - q: The disease frequency in the population is approximately…
+  - q: The UV-hypersensitivity points to a defect in…
     options:
-      A: 4%
-      B: 0.16%
-      C: 8%
-      D: 1.6%
-    answer: B
-    explain: q2 = (0.04)2 = 0.0016 — 0.16%.
-    distractors:
-      A: That is q.
-      B: Correct.
-      C: 2q mistake.
-      D: Half of q2 — wrong math.
-  - q: Low diversity near the allele suggests…
-    options:
-      A: A selective sweep or hitchhiking with a favorable variant
-      B: Random sampling
-      C: Hardy-Weinberg equilibrium
-      D: No relation
+      A: Nucleotide excision repair
+      B: Mismatch repair
+      C: Base excision repair
+      D: Telomerase
     answer: A
-    explain: Linked neutral sites ride along as selection acts.
+    explain: Thymine dimers are bulky lesions — NER cuts a patch around them; its loss is xeroderma
+      pigmentosum.
     distractors:
       A: Correct.
-      B: Selection-free conditions remove sweeps.
-      C: HWE implies no sweep.
-      D: Haplotype structure reveals history.
-  - q: The founder origin 300 years ago best explains…
+      B: Mispairs after replication, not UV lesions.
+      C: Single damaged bases only.
+      D: End-replication, not lesion repair.
+  - q: Complementation group C tells you…
     options:
-      A: Elevated allele frequency through drift in a small founding population
-      B: Mutation reoccurring
-      C: Migration waves
-      D: Random segregation
+      A: Several different genes can produce the same phenotype — one pathway, many proteins
+      B: Three separate repair pathways are defective
+      C: The patient carries three copies of the gene
+      D: The phenotype is not genetic
     answer: A
-    explain: A few founders carry rare alleles at high frequency by chance.
+    explain: Fusing XP cells from different groups restores repair when the mutations complement — the
+      pathway has many components.
     distractors:
       A: Correct.
-      B: One origin, not recurrence.
-      C: One origin, not waves.
-      D: Segregation is normal.
+      B: Fusion tests one defect at a time.
+      C: Copy number is unrelated to complementation.
+      D: Complementation is a classic genetic result.
+  - q: Why does the mutation burden climb in these patients?
+    options:
+      A: Telomeres shorten faster
+      B: Polymerase copies UV lesions accurately
+      C: Unrepaired dimers stall replication, and bypass past them is error-prone
+      D: Mitochondrial DNA takes the damage
+    answer: C
+    explain: Replication across an unrepaired dimer needs translesion polymerases — the errors fix in as
+      mutations.
+    distractors:
+      A: Telomere loss limits divisions, not fidelity.
+      B: Lesion-bypass polymerases are the inaccurate ones.
+      C: Correct.
+      D: The phenotype is nuclear-repair based.
 pitfalls:
 - Nonsense vs missense vs silent — read the codon outcome.
 - BER vs NER — lesion size decides.
-- HWE arithmetic — q vs q2.
+- HR vs NHEJ — the cell cycle decides whether a sister template exists.
 - Imprinting vs X-inactivation — mechanism differs.
-- Carrier = heterozygote, not affected.
+- Microsatellite instability implicates mismatch repair, not excision repair.
 exam_map:
-  NMAT: Mutation types, Mendelian basics.
-  MCAT: Content Category 1C — pedigree, mutation passages, Epi- and population logic.
+  NMAT: Mutation types, repair lanes, and epigenetic vocabulary at intro depth.
+  MCAT: Content Category 1C — mutation and repair passages, cancer-syndrome mapping, epigenetic logic.
 sources:
 - ref: openstax-biology-2e
   used:
-  - 'Ch 11-13: Meiosis, Mendel; Ch 15-16: Expression, Cancer genes; Ch 19-20: Evolution genetics'
+  - 'Ch 14: DNA Structure and Function — mutation, repair; Ch 16: Gene Expression — epigenetics'
   relation: consulted
 - ref: aamc-whatson-mcat
   used:
@@ -226,9 +241,9 @@ further_reading:
 - title: OpenStax Biology 2e — DNA Structure and Function
   url: https://openstax.org/books/biology-2e/pages/14-introduction
   note: Mutations and repair.
-- title: OpenStax Biology 2e — Evolution and Population Genetics
-  url: https://openstax.org/books/biology-2e/pages/19-introduction
-  note: HWE and forces.
+- title: OpenStax Biology 2e — Gene Expression
+  url: https://openstax.org/books/biology-2e/pages/16-introduction
+  note: Eukaryotic control and epigenetic regulation.
 review_questions:
 - q: A point mutation changing an amino acid is…
   options:
@@ -243,19 +258,20 @@ review_questions:
     B: Correct.
     C: Stop codon.
     D: Reading-frame shift.
-- q: Founder effect describes…
+- q: A glycosylase flips an oxidized base out of the helix and clips it out. Which pathway finishes the
+    repair?
   options:
-    A: Allele frequencies set by a small colonizing group
-    B: Random mutation
-    C: Selection against a trait
-    D: Gene flow balancing
-  answer: A
-  explain: Bottleneck of origin — drift amplifies random allele sampling.
+    A: Nucleotide excision repair
+    B: Base excision repair
+    C: Non-homologous end joining
+    D: Mismatch repair
+  answer: B
+  explain: AP endonuclease, repair polymerase, and ligase fill the single-nucleotide gap.
   distractors:
-    A: Correct.
-    B: Mutation adds variation.
-    C: Selection shapes fitness.
-    D: Migration homogenizes.
+    A: Patch excision is for bulky lesions.
+    B: Correct.
+    C: That rejoins double-strand breaks.
+    D: Its cue is a mispair after replication.
 - q: Imprinting silences…
   options:
     A: An allele based on its parental origin
@@ -269,16 +285,16 @@ review_questions:
     B: Imprinting is mono-allelic.
     C: X-inactivation is random.
     D: Mitochondria are maternal.
-- q: Heterozygote advantage explains…
+- q: A double-strand break in G1 is repaired mainly by…
   options:
-    A: Sickle cell persistence despite recessive disease
-    B: Genetic drift
-    C: Imprinting
-    D: Polyploidy
-  answer: A
-  explain: Carriers resist malaria — selection keeps the allele.
+    A: Homologous recombination
+    B: Non-homologous end joining
+    C: Nucleotide excision repair
+    D: Mismatch repair
+  answer: B
+  explain: No sister chromatid is available yet, so ends are trimmed and ligated directly — error-prone.
   distractors:
-    A: Correct.
-    B: Drift is random.
-    C: Imprinting is parental.
-    D: Ploidy is karyotype.
+    A: It needs the S/G2 sister template.
+    B: Correct.
+    C: Excision handles lesions, not breaks.
+    D: Mismatch repair follows replication.

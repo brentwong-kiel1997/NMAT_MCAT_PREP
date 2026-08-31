@@ -82,15 +82,15 @@ sections:
   - q: The hydrophobic effect is primarily driven by…
     options:
       A: Strong attraction between nonpolar molecules
-      B: Entropy gain when water is released
+      B: Ionic interactions
       C: Covalent bonding
-      D: Ionic interactions
-    answer: B
+      D: Entropy gain when water is released
+    answer: D
     explain: Releasing ordered water increases entropy — the driving force.
     distractors:
       A: Nonpolar molecules attract weakly.
+      B: No ions involved.
       C: No new bonds.
-      D: No ions involved.
 - heading: Partition and gas solubility
   body:
   - 'Partition coefficient P equals concentration in organic phase divided by concentration in aqueous

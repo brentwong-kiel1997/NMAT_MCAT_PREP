@@ -27,19 +27,19 @@ sections:
   - q: A cell is found to contain a region of DNA that is not surrounded by a membrane. Which conclusion
       follows?
     options:
-      A: It is a eukaryotic cell caught between divisions
-      B: It is a prokaryotic cell, or a eukaryotic organelle like mitochondria
-      C: It must be a virus
-      D: The DNA is misfolded and will be degraded
-    answer: B
+      A: It must be a virus
+      B: The DNA is misfolded and will be degraded
+      C: It is a eukaryotic cell caught between divisions
+      D: It is a prokaryotic cell, or a eukaryotic organelle like mitochondria
+    answer: D
     explain: A non-membrane-bound DNA region is a nucleoid — the prokaryotic signature. Mitochondria and
       chloroplasts also keep circular DNA without a nuclear membrane, which is exactly the endosymbiosis
       clue developed later.
     distractors:
-      A: Even during division, eukaryotic DNA stays within the nuclear-envelope lineage; a naked nucleoid
+      A: A virus has no cell at all — the question describes a cell.
+      B: Naked-but-organized DNA is a normal architecture, not damage.
+      C: Even during division, eukaryotic DNA stays within the nuclear-envelope lineage; a naked nucleoid
         is not a eukaryotic state.
-      C: A virus has no cell at all — the question describes a cell.
-      D: Naked-but-organized DNA is a normal architecture, not damage.
 - heading: 'Organelles: a division of labor'
   body:
   - Treat the organelles as departments, not a list to memorize. **Ribosomes** translate mRNA into protein
@@ -87,17 +87,17 @@ sections:
   check:
   - q: A protein destined for export from the cell is synthesized and then…
     options:
-      A: Freely diffuses through the cytosol to the plasma membrane
-      B: Enters the rough ER, moves to the Golgi, and leaves in a vesicle
-      C: Is packaged directly by the lysosome
-      D: Crosses the nuclear envelope to be modified by DNA
-    answer: B
+      A: Is packaged directly by the lysosome
+      B: Freely diffuses through the cytosol to the plasma membrane
+      C: Crosses the nuclear envelope to be modified by DNA
+      D: Enters the rough ER, moves to the Golgi, and leaves in a vesicle
+    answer: D
     explain: Secreted proteins enter the endomembrane route at the rough ER, are modified and sorted in
       the Golgi, and exit toward the membrane in Golgi-derived vesicles.
     distractors:
-      A: Secreted proteins never swim free in the cytosol — that is the point of the vesicle system.
-      C: Lysosomes digest; they do not export.
-      D: The nucleus stores DNA; proteins are not modified there.
+      A: Lysosomes digest; they do not export.
+      B: Secreted proteins never swim free in the cytosol — that is the point of the vesicle system.
+      C: The nucleus stores DNA; proteins are not modified there.
   figures:
   - src: cells-and-cellular-processes/animal-cell.webp
     caption: A typical animal cell — nucleus, ER, Golgi, mitochondria, and the cytoskeleton in place.
@@ -123,16 +123,16 @@ sections:
   check:
   - q: A cell is placed in a solution and begins to swell. The solution is best described as…
     options:
-      A: Hypertonic to the cell
-      B: Hypotonic to the cell
-      C: Isotonic to the cell
+      A: Isotonic to the cell
+      B: Hypertonic to the cell
+      C: Hypotonic to the cell
       D: Active compared to the cell
-    answer: B
+    answer: C
     explain: Swelling means net water inflow, which happens when the outside solution has LOWER solute
       concentration than the cell — hypotonic.
     distractors:
-      A: Hypertonic pulls water OUT — the cell would shrink.
-      C: Isotonic means no net movement.
+      A: Isotonic means no net movement.
+      B: Hypertonic pulls water OUT — the cell would shrink.
       D: '''Active'' is not a tonicity term.'
   figures:
   - src: cells-and-cellular-processes/plasma-membrane.webp
@@ -156,17 +156,17 @@ sections:
   check:
   - q: In a eukaryotic cell, the electron transport chain operates…
     options:
-      A: Free in the cytosol
-      B: On the inner mitochondrial membrane
-      C: Inside the lysosome
-      D: On the nuclear envelope
-    answer: B
+      A: On the inner mitochondrial membrane
+      B: Free in the cytosol
+      C: On the nuclear envelope
+      D: Inside the lysosome
+    answer: A
     explain: The chain and ATP synthase are embedded in the inner mitochondrial membrane, using the proton
       gradient built across it.
     distractors:
-      A: Glycolysis is cytosolic — the chain is not.
-      C: Lysosomes digest; they hold no electron chain.
-      D: The nucleus is not an energy organelle.
+      B: Glycolysis is cytosolic — the chain is not.
+      C: The nucleus is not an energy organelle.
+      D: Lysosomes digest; they hold no electron chain.
   figures:
   - src: cells-and-cellular-processes/mitochondrion.webp
     caption: Transmission electron micrograph — outer membrane, folded cristae, matrix.
@@ -251,29 +251,29 @@ passage:
   questions:
   - q: The falling per-volume uptake in the unmodified cells is best explained by…
     options:
-      A: The larger cells running out of DNA
-      B: Surface area scaling with the square of diameter while volume scales with the cube
-      C: Glucose becoming limiting in the medium
-      D: Larger cells losing their mitochondria
-    answer: B
+      A: Glucose becoming limiting in the medium
+      B: Larger cells losing their mitochondria
+      C: Surface area scaling with the square of diameter while volume scales with the cube
+      D: The larger cells running out of DNA
+    answer: C
     explain: Import capacity lives on the surface while demand lives in the volume; the cube outgrows
       the square, so per-volume import falls.
     distractors:
-      A: DNA content does not set import rate here, and the passage gives no evidence of it.
-      C: The passage fixes the medium and varies only cell size.
-      D: No mitochondrial loss is described.
+      A: The passage fixes the medium and varies only cell size.
+      B: No mitochondrial loss is described.
+      D: DNA content does not set import rate here, and the passage gives no evidence of it.
   - q: The invagination experiment supports which general conclusion?
     options:
-      A: Cell size is limited by membrane composition, not geometry
-      B: Increasing surface area at constant volume restores exchange capacity
-      C: Large cells must switch to fermentation
-      D: Glucose transport is ATP-driven in these cells
-    answer: B
+      A: Increasing surface area at constant volume restores exchange capacity
+      B: Glucose transport is ATP-driven in these cells
+      C: Cell size is limited by membrane composition, not geometry
+      D: Large cells must switch to fermentation
+    answer: A
     explain: Holding volume fixed and raising area recovered uptake — a clean geometry result.
     distractors:
-      A: Composition was not manipulated; geometry was.
-      C: Oxygen and fermentation are not part of this setup.
-      D: Nothing in the passage tests transport energetics.
+      B: Nothing in the passage tests transport energetics.
+      C: Composition was not manipulated; geometry was.
+      D: Oxygen and fermentation are not part of this setup.
   - q: Which natural structure is the same solution in a tissue?
     options:
       A: Microvilli on intestinal epithelial cells
@@ -327,15 +327,15 @@ review_questions:
 - q: Which pair correctly matches organelle to function?
   options:
     A: Golgi — lipid synthesis only
-    B: Lysosome — intracellular digestion in an acidic interior
-    C: Smooth ER — protein export folding
-    D: Nucleolus — ATP production
-  answer: B
+    B: Smooth ER — protein export folding
+    C: Nucleolus — ATP production
+    D: Lysosome — intracellular digestion in an acidic interior
+  answer: D
   explain: Lysosomes are acid-filled digestion and recycling compartments.
   distractors:
     A: Lipid synthesis is smooth ER; the Golgi sorts and ships.
-    C: Folding secretory proteins is ROUGH ER's job.
-    D: The nucleolus assembles ribosomal subunits; ATP is mitochondrial.
+    B: Folding secretory proteins is ROUGH ER's job.
+    C: The nucleolus assembles ribosomal subunits; ATP is mitochondrial.
 - q: A cell in an isotonic solution is moved to a hypertonic one. Net water movement will be…
   options:
     A: Into the cell

@@ -16,16 +16,16 @@ sections:
   - q: A student believes she can master organic chemistry and persists through failures. This belief
       is…
     options:
-      A: Self-esteem
-      B: Self-efficacy
-      C: Self-schema
-      D: Self-serving bias
-    answer: B
+      A: Self-schema
+      B: Self-serving bias
+      C: Self-efficacy
+      D: Self-esteem
+    answer: C
     explain: Domain-specific capability belief — Bandura's construct.
     distractors:
-      A: Global evaluation.
-      C: Stable self-belief.
-      D: Attribution of success.
+      A: Stable self-belief.
+      B: Attribution of success.
+      D: Global evaluation.
 - heading: Social cognition — how we judge others
   body:
   - ==Attribution — internal (dispositional) vs external (situational); fundamental attribution error
@@ -37,16 +37,16 @@ sections:
   check:
   - q: Explaining someone else's rudeness as 'a rude person' rather than 'a bad day' is…
     options:
-      A: The fundamental attribution error
-      B: The self-serving bias
-      C: The actor-observer asymmetry
-      D: Cognitive dissonance
-    answer: A
+      A: The actor-observer asymmetry
+      B: Cognitive dissonance
+      C: The self-serving bias
+      D: The fundamental attribution error
+    answer: D
     explain: Dispositional over attribution for OTHERS' behavior.
     distractors:
-      B: That is a self-serving success effect.
-      C: Related but centered on self-other difference.
-      D: Post-decision discomfort.
+      A: Related but centered on self-other difference.
+      B: Post-decision discomfort.
+      C: That is a self-serving success effect.
 - heading: Conformity, obedience, and group influence
   body:
   - ==Asch — conformity with unambiguous stimuli under group pressure; informational (accurate belief)
@@ -59,15 +59,15 @@ sections:
   - q: Social loafing is least likely when…
     options:
       A: The group is large and anonymous
-      B: Individual contributions are identifiable
-      C: The task is dull
+      B: The task is dull
+      C: Individual contributions are identifiable
       D: Members are strangers
-    answer: B
+    answer: C
     explain: Identifiability restores accountability — effort returns.
     distractors:
       A: Anonymity enables loafing.
-      B: Correct — monitoring kills it.
-      C: Dull tasks loaf more.
+      B: Dull tasks loaf more.
+      C: Correct — monitoring kills it.
       D: Strangers loaf more.
 - heading: Aggression, altruism, and attraction
   body:
@@ -80,16 +80,16 @@ sections:
   check:
   - q: Five strangers see smoke in a waiting room and each waits for another to react. This is…
     options:
-      A: Pluralistic ignorance
-      B: Social loafing
+      A: Social loafing
+      B: Deindividuation
       C: Groupthink
-      D: Deindividuation
-    answer: A
+      D: Pluralistic ignorance
+    answer: D
     explain: Everyone interprets others' inaction as evidence nothing is wrong.
     distractors:
-      B: Effort loss, not interpretation.
+      A: Effort loss, not interpretation.
+      B: Loss of self-awareness.
       C: Consensus in decisions.
-      D: Loss of self-awareness.
   figures:
   - src: behavioral-social/fc8-self-others-interactions/fig-9fdf2315.webp
     caption: Non-human primate social behavior — displays and interaction in natural context.
@@ -108,16 +108,16 @@ sections:
   - q: A Black student underperforms on a math test after being reminded that the test measures racial
       math gaps. This exemplifies…
     options:
-      A: Stereotype threat
+      A: Social loafing
       B: Fundamental attribution error
-      C: Group polarization
-      D: Social loafing
-    answer: A
+      C: Stereotype threat
+      D: Group polarization
+    answer: C
     explain: Anxiety about confirming a negative stereotype consumes working memory.
     distractors:
+      A: Effort in groups.
       B: That is attribution of others.
-      C: Group discussion effect.
-      D: Effort in groups.
+      D: Group discussion effect.
 examples:
 - prompt: Design a field experiment showing the bystander effect while controlling for pluralistic ignorance
     as the mechanism.
@@ -175,17 +175,17 @@ passage:
       D: No prior exposure tracked.
   - q: The 60% in the blindfolded condition shows…
     options:
-      A: People still help when cues do not contradict
+      A: Helping is impossible in groups
       B: Blindfolded participants helped
       C: The effect is purely obedience
-      D: Helping is impossible in groups
-    answer: A
+      D: People still help when cues do not contradict
+    answer: D
     explain: Removing the misinformation restores most helping — interpretation was the hinge.
     distractors:
-      A: Correct.
+      A: Groups still act when the signal is clear.
       B: Confederates were passive by design.
       C: No authority.
-      D: Groups still act when the signal is clear.
+      D: Correct.
   - q: The strongest test of the mechanism is…
     options:
       A: The blindfolded-control contrast

@@ -7,10 +7,13 @@ re-applied to them.
 """
 import glob
 import re
+from pathlib import Path
+
 import yaml
 from collections import Counter
 
 PATH = "/home/ubuntu/django-wsgi/content/exam-bank/nmat/drill/part1-inductive.yml"
+REPO = Path(__file__).resolve().parents[2]
 ALLOWED = {"number-and-letter-series", "figure-series", "figure-grouping"}
 
 d = yaml.safe_load(open(PATH))
@@ -26,7 +29,8 @@ assert max(ans.values()) <= 7, ans
 chapters = Counter()
 ids = []
 for i in d["items"]:
-    assert set(i) == {"id", "q", "choices", "answer", "explain", "distractors", "chapter"}, sorted(i)
+    assert set(i) <= {"id", "q", "choices", "answer", "explain", "distractors",
+                      "chapter", "figure"}, sorted(i)
     assert re.fullmatch(r"nmat-d-p1i-\d{3}", i["id"]), i["id"]
     ids.append(i["id"])
     assert set(i["choices"]) == {"A", "B", "C", "D"} and i["answer"] in i["choices"]
@@ -36,6 +40,12 @@ for i in d["items"]:
     chapters[i["chapter"]] += 1
     assert i["q"] and i["explain"]
     assert len(set(i["choices"].values())) == 4, i["id"]
+    if "figure" in i:
+        # an attached sheet replaces the in-words description of the figures;
+        # the stem keeps only the question and the file must be on disk
+        assert i["figure"].startswith("items/"), i["figure"]
+        assert (REPO / "content" / "images" / i["figure"]).is_file(), i["figure"]
+        assert i["q"].strip().endswith("?"), i["id"]
 assert chapters == Counter({"number-and-letter-series": 10,
                             "figure-series": 8, "figure-grouping": 7}), chapters
 assert ids == ["nmat-d-p1i-%03d" % n for n in range(1, 26)], ids[:5]

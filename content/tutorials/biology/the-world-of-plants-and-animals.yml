@@ -21,16 +21,16 @@ sections:
   check:
   - q: Sugars from a source leaf travel to a growing root through…
     options:
-      A: Xylem, upward only
-      B: Phloem, bidirectional
-      C: Cambium
-      D: Sclerenchyma fibers
-    answer: B
+      A: Sclerenchyma fibers
+      B: Cambium
+      C: Phloem, bidirectional
+      D: Xylem, upward only
+    answer: C
     explain: Phloem translocates sugars from sources to sinks in either direction along the plant.
     distractors:
-      A: Xylem is the water-and-mineral one-way elevator.
-      C: Cambium is the growth layer, not a transport tissue.
-      D: Sclerenchyma is dead support tissue.
+      A: Sclerenchyma is dead support tissue.
+      B: Cambium is the growth layer, not a transport tissue.
+      D: Xylem is the water-and-mineral one-way elevator.
 - heading: Plant reproduction and the alternation of generations
   body:
   - Plants live ==two alternating lives== — a diploid **sporophyte** that makes spores by meiosis, and
@@ -44,17 +44,17 @@ sections:
   check:
   - q: In flowering plants, endosperm is…
     options:
-      A: Haploid food from the egg
-      B: Triploid food from a second fertilization
-      C: The diploid embryo itself
-      D: A spore
-    answer: B
+      A: Triploid food from a second fertilization
+      B: Haploid food from the egg
+      C: A spore
+      D: The diploid embryo itself
+    answer: A
     explain: Double fertilization — one sperm + egg (diploid embryo), one sperm + two polar nuclei (triploid
       endosperm).
     distractors:
-      A: Wrong ploidy and wrong parentage.
-      C: The embryo is the other product of double fertilization.
-      D: Spores are made by meiosis in the anther/ovule, not by fusion.
+      B: Wrong ploidy and wrong parentage.
+      C: Spores are made by meiosis in the anther/ovule, not by fusion.
+      D: The embryo is the other product of double fertilization.
   figures:
   - src: the-world-of-plants-and-animals/hydra-budding.webp
     caption: Budding in hydra — asexual reproduction where the offspring detaches as a clone.
@@ -72,16 +72,16 @@ sections:
   check:
   - q: A true coelom is best described as…
     options:
-      A: Any body cavity
-      B: A fluid cavity lined entirely by mesoderm
-      C: The gut lumen
-      D: The space inside a blastocoel
-    answer: B
+      A: The gut lumen
+      B: Any body cavity
+      C: The space inside a blastocoel
+      D: A fluid cavity lined entirely by mesoderm
+    answer: D
     explain: Complete mesoderm lining defines a TRUE coelom and distinguishes it from a pseudocoel.
     distractors:
-      A: Pseudocoels and acoels are cavities too — the lining decides.
-      C: The gut is endoderm-derived and open to the outside.
-      D: The blastocoel is an early embryo space, not an adult cavity.
+      A: The gut is endoderm-derived and open to the outside.
+      B: Pseudocoels and acoels are cavities too — the lining decides.
+      C: The blastocoel is an early embryo space, not an adult cavity.
   figures:
   - src: the-world-of-plants-and-animals/fig-1116bfbf.webp
     caption: Features of the animal kingdom — a black bear beside preserved zoological specimens, the
@@ -98,16 +98,16 @@ sections:
   check:
   - q: An animal sheds its outer covering to grow. Which phylum?
     options:
-      A: Porifera
-      B: Arthropoda
-      C: Annelida
-      D: Chordata
-    answer: B
+      A: Chordata
+      B: Porifera
+      C: Arthropoda
+      D: Annelida
+    answer: C
     explain: A rigid chitin exoskeleton forces molting (ecdysis) at every growth step.
     distractors:
-      A: Sponges have no exoskeleton to shed.
-      C: Annelids grow within soft segments.
-      D: Chordates grow continuously; no molting.
+      A: Chordates grow continuously; no molting.
+      B: Sponges have no exoskeleton to shed.
+      D: Annelids grow within soft segments.
 - heading: Chordates and the amniotic revolution
   body:
   - Chordate trademarks at some life stage — **notochord**, dorsal hollow nerve cord, pharyngeal slits,
@@ -121,16 +121,16 @@ sections:
   check:
   - q: Which innovation most directly freed vertebrates from needing water to reproduce?
     options:
-      A: The lateral line system
-      B: The amniotic egg with extraembryonic membranes
-      C: Gills
+      A: The amniotic egg with extraembryonic membranes
+      B: Gills
+      C: The lateral line system
       D: The notochord
-    answer: B
+    answer: A
     explain: Amnion (bath), chorion (gas exchange), yolk sac (food), allantois (waste) package an aquatic
       nursery inside a shell or womb.
     distractors:
-      A: That is a fish sensory system.
-      C: Gills are the opposite — they bind you to water.
+      B: Gills are the opposite — they bind you to water.
+      C: That is a fish sensory system.
       D: The notochord is a support rod, present even in aquatic chordates.
 examples:
 - prompt: A student sectioned a stem and a root and must tell them apart in one field of view. Give the
@@ -180,41 +180,41 @@ passage:
   questions:
   - q: The swelling above the ring happens because…
     options:
-      A: Xylem transport is blocked
-      B: Phloem sugars from leaves cannot pass the girdle and accumulate above it
-      C: The cambium dies immediately
-      D: Water flow reverses direction
-    answer: B
+      A: Water flow reverses direction
+      B: The cambium dies immediately
+      C: Xylem transport is blocked
+      D: Phloem sugars from leaves cannot pass the girdle and accumulate above it
+    answer: D
     explain: Removing the phloem ring blocks sugar translocation; the intact xylem keeps leaves supplied
       with water.
     distractors:
-      A: Xylem is intact — leaves stay healthy for exactly that reason.
-      C: Cambium damage matters for regrowth, not for sugar pile-up.
-      D: Water direction is fixed by transpiration pull.
+      A: Water direction is fixed by transpiration pull.
+      B: Cambium damage matters for regrowth, not for sugar pile-up.
+      C: Xylem is intact — leaves stay healthy for exactly that reason.
   - q: Predict the tree's fate over months.
     options:
-      A: Immediate death of the canopy
-      B: Gradual root starvation, since roots receive no new sugars
+      A: No effect at all
+      B: Immediate death of the canopy
       C: Faster growth above the ring
-      D: No effect at all
-    answer: B
+      D: Gradual root starvation, since roots receive no new sugars
+    answer: D
     explain: Roots are the sugar sinks below the block; starved roots fail to absorb, and the whole tree
       eventually declines.
     distractors:
-      A: Leaves have water and light; they persist for a long while.
+      A: Complete girdling is a classic killing technique.
+      B: Leaves have water and light; they persist for a long while.
       C: Swelling is accumulation, not growth.
-      D: Complete girdling is a classic killing technique.
   - q: Which process directly delivers the accumulating sugars to tissue above the ring?
     options:
-      A: Transpiration stream
-      B: Pressure-flow loading into sieve tubes
-      C: Active transport through xylem vessels
+      A: Pressure-flow loading into sieve tubes
+      B: Active transport through xylem vessels
+      C: Transpiration stream
       D: Root pressure
-    answer: B
+    answer: A
     explain: Phloem loading at sources builds pressure that pushes sap toward sinks through sieve tubes.
     distractors:
-      A: Transpiration moves water, not sugars.
-      C: Xylem vessels carry no sugar in normal plants.
+      B: Xylem vessels carry no sugar in normal plants.
+      C: Transpiration moves water, not sugars.
       D: Root pressure pushes xylem water up at night, not sap.
 pitfalls:
 - Assigning phloem one direction — it runs source-to-sink, which flips seasonally.

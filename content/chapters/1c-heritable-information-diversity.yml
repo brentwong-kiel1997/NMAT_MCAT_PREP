@@ -5,13 +5,14 @@ exams:
 - NMAT
 - MCAT
 points:
-- Heritable information and genetic diversity processes
+- Molecular machinery that copies, damages, repairs, and reshuffles DNA
 notes:
-- Semiconservative replication; proofreading/repair
-- Meiotic recombination and independent assortment
-- Mutation plus selection/drift change allele frequencies (intro)
+- Semiconservative replication with polymerase proofreading + mismatch repair sets fidelity
+- Mutation types — point (silent/missense/nonsense) vs frameshift; frameshift usually costs more
+- Repair lanes — mismatch, base excision, nucleotide excision, double-strand break (HR/NHEJ)
+- Homologous and V(D)J recombination reshuffle DNA at the sequence level
 - Telomerase compensates end shortening in germline/stem cells
-- Frameshift mutations often impact more than missense
+- Epigenetics — methylation, histone marks, imprinting, X-inactivation silence without changing sequence
 practice:
 - id: bb-2
   q: 'In the DNA double helix, base pairing follows:'

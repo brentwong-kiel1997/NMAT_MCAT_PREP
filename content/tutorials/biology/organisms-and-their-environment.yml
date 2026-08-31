@@ -44,16 +44,16 @@ sections:
   check:
   - q: Two barnacle species overlap; one shifts to a drier zone. This is…
     options:
-      A: Competitive exclusion
-      B: Niche partitioning after competition
-      C: Mutualism
-      D: Predation
-    answer: B
+      A: Mutualism
+      B: Predation
+      C: Competitive exclusion
+      D: Niche partitioning after competition
+    answer: D
     explain: The shift allows coexistence — classic partitioning (the real Balanus/Chthamalus result).
     distractors:
-      A: Exclusion is the OUTCOME when partitioning fails.
-      C: No benefit flows both ways.
-      D: Nobody is eaten.
+      A: No benefit flows both ways.
+      B: Nobody is eaten.
+      C: Exclusion is the OUTCOME when partitioning fails.
 - heading: Communities — succession and structure
   body:
   - After a disturbance, structure reassembles. **Primary succession** starts on bare rock (pioneer lichens
@@ -66,16 +66,16 @@ sections:
   check:
   - q: Lava creates new land; the first colonizers are most likely…
     options:
-      A: Tall trees
-      B: Pioneer lichens and microbes that make soil
+      A: Climax forest species
+      B: Tall trees
       C: Large grazing mammals
-      D: Climax forest species
-    answer: B
+      D: Pioneer lichens and microbes that make soil
+    answer: D
     explain: Primary succession begins with soil-makers that tolerate bareness.
     distractors:
-      A: Trees need the soil the pioneers build.
+      A: Climax arrives last.
+      B: Trees need the soil the pioneers build.
       C: Grazers need forage first.
-      D: Climax arrives last.
 - heading: Ecosystems — energy flows, one-way
   body:
   - The master sentence of ecology — ==energy flows; matter cycles==. Producers fix sunlight (or chemicals);
@@ -90,15 +90,15 @@ sections:
       above producers)?
     options:
       A: 50 kg
-      B: 5,000 kg
-      C: 50,000 kg
-      D: 500 kg
-    answer: B
+      B: 500 kg
+      C: 5,000 kg
+      D: 50,000 kg
+    answer: C
     explain: Three transfers at 10% each — 5 × 10³ = 5,000 kg of producers.
     distractors:
       A: That assumes ONE 10% transfer.
-      C: Four transfers, one too many.
-      D: Two transfers.
+      B: Two transfers.
+      D: Four transfers, one too many.
   figures:
   - src: organisms-and-their-environment/food-chain.webp
     caption: Trophic levels in a Lake Ontario food chain — from green algae to Chinook salmon.
@@ -121,17 +121,17 @@ sections:
   check:
   - q: The conversion of atmospheric N₂ into biologically usable forms is performed by…
     options:
-      A: Plants directly
-      B: Nitrogen-fixing bacteria (free-living or in legume nodules)
+      A: Animals
+      B: Plants directly
       C: Fungi alone
-      D: Animals
-    answer: B
+      D: Nitrogen-fixing bacteria (free-living or in legume nodules)
+    answer: D
     explain: Only certain prokaryotes carry nitrogenase — every other organism inherits fixed nitrogen
       downstream.
     distractors:
-      A: Plants absorb but cannot split N₂.
+      A: Animals neither fix nor absorb N₂ directly.
+      B: Plants absorb but cannot split N₂.
       C: Fungi decompose, they do not fix N₂.
-      D: Animals neither fix nor absorb N₂ directly.
 examples:
 - prompt: A wildlife reserve's wolf population is removed. Over a decade, elk numbers triple, young willows
     and aspens vanish, beavers decline, and songbird diversity drops. Name the mechanism and predict the
@@ -197,16 +197,16 @@ passage:
       D: Contradicts a crash.
   - q: The lag between rabbit peaks and vegetation decline shows that…
     options:
-      A: Vegetation drives rabbit numbers instantly
-      B: Resource response integrates over time — depletion and recovery trail the consumer
-      C: Rabbits do not eat plants
-      D: The satellite data are wrong
-    answer: B
+      A: Rabbits do not eat plants
+      B: The satellite data are wrong
+      C: Resource response integrates over time — depletion and recovery trail the consumer
+      D: Vegetation drives rabbit numbers instantly
+    answer: C
     explain: Plant biomass responds cumulatively to grazing pressure — effect trails cause.
     distractors:
-      A: Instant response contradicts the lag.
-      C: They obviously do.
-      D: Trust the data given.
+      A: They obviously do.
+      B: Trust the data given.
+      D: Instant response contradicts the lag.
   - q: The hare's low steady numbers despite rabbit boom-bust suggest…
     options:
       A: The hare is the better competitor

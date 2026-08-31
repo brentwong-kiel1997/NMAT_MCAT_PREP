@@ -10,4 +10,42 @@ notes:
 - 'Demographic processes: fertility, mortality, migration'
 - 'Demographic transition: high birth/death → low birth/death'
 - Aging populations raise dependency ratios and care demand
-practice: []
+practice:
+- id: 9b-demographic-characteristics-and-processes-p1
+  q: Which pattern defines stage 2 of the demographic transition?
+  choices:
+    A: Birth and death rates are both low, so growth is near zero
+    B: Death rates fall while birth rates stay high, so the population grows rapidly
+    C: Birth and death rates are both high and the population is stable
+    D: Birth rates fall below death rates and the population declines
+  answer: B
+  explain: 'Stage 2 is the transition gap: sanitation and medicine cut mortality while fertility
+    stays high, producing the fastest growth of the model. A describes stage 4, C stage 1,
+    and D a stage 5 decline.'
+  chapter: 9B · Demographic characteristics and processes
+- id: 9b-demographic-characteristics-and-processes-p2
+  q: A country of 1,000,000 has 250,000 people under 15 and 120,000 aged 65 or older. What
+    is its age dependency ratio per 100 working-age people?
+  choices:
+    A: 37 per 100
+    B: 40 per 100
+    C: 170 per 100
+    D: 59 per 100
+  answer: D
+  explain: Dependents = 250,000 + 120,000 = 370,000; working-age = 1,000,000 − 370,000 = 630,000;
+    ratio = 370,000/630,000 × 100 ≈ 59. A divides by the total population (370/1000), B counts
+    only children (250/630 ≈ 40), C inverts the ratio (630/370 ≈ 170).
+  chapter: 9B · Demographic characteristics and processes
+- id: 9b-demographic-characteristics-and-processes-p3
+  q: 'A nurse migrates abroad for hospital work and sends money home each month. Those money
+    transfers are called:'
+  choices:
+    A: Chain migration
+    B: Internal migration
+    C: Remittances
+    D: Forced displacement
+  answer: C
+  explain: Remittances are money migrants send back to origin communities. A is migration
+    financed and routed by earlier migrants' kin networks, B means moving within national
+    borders, and D means involuntary movement under threat.
+  chapter: 9B · Demographic characteristics and processes

@@ -14,4 +14,44 @@ notes:
 - 'C₃/C₄/CAM plants: carbon-fixation paths and climate adaptation'
 - 'Open vs closed circulation: insects vs vertebrates'
 - 'Adaptive radiation: common ancestor → diverse niche forms'
-practice: []
+practice:
+- id: the-world-of-plants-and-animals-p1
+  q: Where do the light-dependent reactions of photosynthesis occur, and what do they directly
+    produce?
+  choices:
+    A: Stroma; glucose
+    B: Thylakoid membranes; ATP and NADPH
+    C: Thylakoid membranes; glucose
+    D: Stroma; ATP and NADPH
+  answer: B
+  explain: Photosystems and the electron transport chain sit in the thylakoid membranes and
+    yield ATP plus NADPH. Glucose is made in the stroma by the Calvin cycle, which A and C
+    wrongly place in the light reactions and D gets the location wrong.
+  chapter: The World of Plants and Animals
+- id: the-world-of-plants-and-animals-p2
+  q: Which pairing of animal group and gas-exchange strategy is correct?
+  choices:
+    A: Insects — closed circulatory system that carries oxygen in hemolymph
+    B: Fish — lungs ventilated tidally
+    C: Mammals — open circulatory system with a hemocoel
+    D: Birds — lungs with unidirectional airflow driven by air sacs
+  answer: D
+  explain: 'Bird lungs get one-way flow through parabronchi, so gas exchange never stalls
+    at a dead end. A is doubly wrong: insects have open circulation and their tracheal system
+    delivers air directly to tissues, B fish use gills with countercurrent exchange, and C
+    mammals have closed circulation.'
+  chapter: The World of Plants and Animals
+- id: the-world-of-plants-and-animals-p3
+  q: 'Galápagos finches diversified from one ancestor into many beak forms. The main mechanism
+    was:'
+  choices:
+    A: Divergent selection as populations filled unoccupied niches
+    B: Genetic drift alone in a large interbreeding population
+    C: Convergent evolution of unrelated lineages
+    D: Gene flow homogenizing the populations
+  answer: A
+  explain: Adaptive radiation is divergent selection on an ancestral stock as subpopulations
+    specialize on different food sources. B needs small, isolated populations for drift to
+    dominate, C requires unrelated ancestors arriving at similar forms, and D would erase
+    divergence rather than create it.
+  chapter: The World of Plants and Animals

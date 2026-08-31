@@ -16,16 +16,16 @@ sections:
   check:
   - q: Removing a curfew to increase a teen's coming-home behavior is…
     options:
-      A: Positive punishment
-      B: Negative reinforcement
-      C: Positive reinforcement
-      D: Extinction
-    answer: B
+      A: Extinction
+      B: Positive reinforcement
+      C: Positive punishment
+      D: Negative reinforcement
+    answer: D
     explain: An aversive is REMOVED to INCREASE behavior.
     distractors:
-      A: Adding aversive.
-      C: Adding reward.
-      D: Withholding reinforcement.
+      A: Withholding reinforcement.
+      B: Adding reward.
+      C: Adding aversive.
   figures:
   - src: behavioral-social/fc7-behavior-and-behavior-change/fig-0a68ead5.webp
     caption: Classical conditioning's classic case — bell-food pairing producing the conditioned response.
@@ -41,16 +41,16 @@ sections:
   check:
   - q: Anchoring biases judgment toward…
     options:
-      A: The first value encountered
-      B: Easily recalled examples
-      C: Prototype similarity
-      D: Group consensus
-    answer: A
+      A: Prototype similarity
+      B: Group consensus
+      C: The first value encountered
+      D: Easily recalled examples
+    answer: C
     explain: The initial anchor drags subsequent estimates toward itself.
     distractors:
-      B: That is availability.
-      C: That is representativeness.
-      D: That is conformity theory.
+      A: That is representativeness.
+      B: That is conformity theory.
+      D: That is availability.
 - heading: Motivation and emotion
   body:
   - ==Drive-reduction (homeostasis), incentive (external goals), arousal (Yerkes-Dodson — inverted U),
@@ -62,16 +62,16 @@ sections:
   - q: The Yerkes-Dodson law states performance peaks at…
     options:
       A: Zero arousal
-      B: Moderate arousal
-      C: Maximum arousal
-      D: Any arousal
-    answer: B
+      B: Any arousal
+      C: Moderate arousal
+      D: Maximum arousal
+    answer: C
     explain: Inverted-U — too little or too much arousal degrades performance.
     distractors:
       A: Task switching helps.
-      B: Correct.
-      C: High arousal narrows attention.
-      D: Tasks differ but the peak is moderate.
+      B: Tasks differ but the peak is moderate.
+      C: Correct.
+      D: High arousal narrows attention.
 - heading: Attitude and behavior change
   body:
   - ==Attitude = affect + behavior + cognition (ABC); formed by classical conditioning, operant, observational
@@ -106,16 +106,16 @@ sections:
   check:
   - q: Cognitive behavioral therapy for phobias primarily…
     options:
-      A: Reframes catastrophic beliefs and uses exposure
-      B: Rewires synapses by drugs
-      C: Analyzes the unconscious
-      D: Changes brain chemistry alone
-    answer: A
+      A: Changes brain chemistry alone
+      B: Analyzes the unconscious
+      C: Rewires synapses by drugs
+      D: Reframes catastrophic beliefs and uses exposure
+    answer: D
     explain: CBT attacks the fearful interpretation and the avoidance behavior together.
     distractors:
-      B: That is pharmacology.
-      C: That is psychodynamic.
-      D: Drug-only is incomplete.
+      A: Drug-only is incomplete.
+      B: That is psychodynamic.
+      C: That is pharmacology.
   figures:
   - src: behavioral-social/fc7-behavior-and-behavior-change/fig-35b14c98.webp
     caption: Individuals introduced as case studies in the psychological disorders chapter.
@@ -165,28 +165,28 @@ passage:
   questions:
   - q: Group A's procedure is best described as…
     options:
-      A: Systematic desensitization with exposure hierarchy
-      B: Psychoanalysis
-      C: Aversive conditioning
-      D: Token economy
-    answer: A
+      A: Psychoanalysis
+      B: Aversive conditioning
+      C: Token economy
+      D: Systematic desensitization with exposure hierarchy
+    answer: D
     explain: Relaxation paired with graduated approach — the classic fear-reduction package.
     distractors:
-      B: No unconscious work.
-      C: No punishment used.
-      D: No tokens exchanged.
+      A: No unconscious work.
+      B: No punishment used.
+      C: No tokens exchanged.
   - q: The anxiety reduction most directly depends on…
     options:
-      A: Classical conditioning reversal — new CS-US pairing
+      A: Medication compliance
       B: Insight into childhood conflicts
-      C: Diet
-      D: Medication compliance
-    answer: A
+      C: Classical conditioning reversal — new CS-US pairing
+      D: Diet
+    answer: C
     explain: The exam situation (CS) no longer predicts panic — relaxation dominates.
     distractors:
+      A: None given.
       B: Not the mechanism here.
-      C: Irrelevant.
-      D: None given.
+      D: Irrelevant.
   - q: A confound threatening internal validity would be…
     options:
       A: Participants in Group A also practicing exam skills

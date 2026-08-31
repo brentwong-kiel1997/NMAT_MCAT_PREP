@@ -84,15 +84,15 @@ sections:
   - q: How many moles are in 11.2 L of gas at STP?
     options:
       A: '0.25'
-      B: '0.5'
-      C: '1.0'
-      D: '2.0'
-    answer: B
+      B: '1.0'
+      C: '2.0'
+      D: '0.5'
+    answer: D
     explain: At STP, 1 mole = 22.4 L. So 11.2 / 22.4 = 0.5 mol.
     distractors:
       A: 11.2 / 44.8 — wrong molar volume.
-      C: 11.2 / 11.2 — coincidence trap.
-      D: 11.2 / 5.6 — inverted.
+      B: 11.2 / 11.2 — coincidence trap.
+      C: 11.2 / 5.6 — inverted.
 - heading: Solutions and acid-base chemistry
   body:
   - Molarity M equals moles solute per liter solution. Dilution follows M1V1 = M2V2. Most nitrate, sodium,
@@ -104,15 +104,15 @@ sections:
   - q: What is the pH of a 0.01 M HCl solution?
     options:
       A: '1'
-      B: '2'
-      C: '12'
-      D: '14'
-    answer: B
+      B: '12'
+      C: '14'
+      D: '2'
+    answer: D
     explain: HCl is a strong acid — hydrogen ion concentration = 0.01 M. pH = -log(0.01) = 2.
     distractors:
       A: That is pH of 0.1 M.
-      C: That is pOH, not pH.
-      D: That is maximum basicity.
+      B: That is pOH, not pH.
+      C: That is maximum basicity.
   figures:
   - src: general-chemistry/acidbase-b523238d.webp
     caption: Acid-base indicators — color changes across the pH scale.

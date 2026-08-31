@@ -16,16 +16,16 @@ sections:
   check:
   - q: Which amino acid is NOT chiral?
     options:
-      A: Alanine
-      B: Glycine
-      C: Serine
+      A: Serine
+      B: Alanine
+      C: Glycine
       D: Valine
-    answer: B
+    answer: C
     explain: Glycine's R group is H — the alpha carbon carries two hydrogens.
     distractors:
-      A: Ala has CH3 R.
-      B: Correct.
-      C: Ser has CH2OH R.
+      A: Ser has CH2OH R.
+      B: Ala has CH3 R.
+      C: Correct.
       D: Val has branched R.
   figures:
   - src: 1a-proteins-and-amino-acids/fig-2865acde.webp
@@ -43,17 +43,17 @@ sections:
   check:
   - q: A decapeptide has how many peptide bonds?
     options:
-      A: '10'
-      B: '9'
-      C: '11'
-      D: '8'
-    answer: B
+      A: '11'
+      B: '8'
+      C: '9'
+      D: '10'
+    answer: C
     explain: Peptide bonds = n-1 for a linear chain of n residues.
     distractors:
-      A: That is residues.
-      B: Correct — 9.
-      C: N to C confusion.
-      D: Circular counting.
+      A: N to C confusion.
+      B: Circular counting.
+      C: Correct — 9.
+      D: That is residues.
 - heading: Secondary structure — local folds
   body:
   - ==Alpha-helix — backbone C=O H-bonds to the N-H four residues ahead (i, i+4); 3.6 residues/turn; proline
@@ -65,17 +65,17 @@ sections:
   check:
   - q: Alpha-helices are stabilized mainly by…
     options:
-      A: Hydrophobic interactions
-      B: Backbone hydrogen bonds
-      C: Disulfide bonds
-      D: Salt bridges
-    answer: B
+      A: Disulfide bonds
+      B: Salt bridges
+      C: Hydrophobic interactions
+      D: Backbone hydrogen bonds
+    answer: D
     explain: i to i+4 backbone C=O to N-H bonds.
     distractors:
-      A: Side-chain effect is tertiary.
-      B: Correct.
-      C: Cysteine oxidation.
-      D: Ionic side chain pairs.
+      A: Cysteine oxidation.
+      B: Ionic side chain pairs.
+      C: Side-chain effect is tertiary.
+      D: Correct.
 - heading: Tertiary and quaternary structure
   body:
   - ==Tertiary structure = the full 3D fold from side-chain interactions — hydrophobic effect (dominant),
@@ -87,17 +87,17 @@ sections:
   check:
   - q: Hemoglobin's alpha2 beta2 arrangement is…
     options:
-      A: Primary structure
-      B: Quaternary structure
-      C: Secondary structure
-      D: Just a peptide
-    answer: B
+      A: Just a peptide
+      B: Primary structure
+      C: Quaternary structure
+      D: Secondary structure
+    answer: C
     explain: Multiple folded chains assembling — the fourth level.
     distractors:
-      A: Sequence.
-      B: Correct.
-      C: Local folding.
-      D: One chain.
+      A: One chain.
+      B: Sequence.
+      C: Correct.
+      D: Local folding.
   figures:
   - src: 1a-proteins-and-amino-acids/fig-0971e65c.webp
     caption: Tertiary structure stabilizers — ionic bonds, hydrogen bonds, disulfide linkages, and hydrophobic
@@ -113,17 +113,17 @@ sections:
   check:
   - q: Antibody specificity comes from…
     options:
-      A: The constant region
-      B: The variable regions of light and heavy chains
+      A: The Fc sugar
+      B: The constant region
       C: The hinge
-      D: The Fc sugar
-    answer: B
+      D: The variable regions of light and heavy chains
+    answer: D
     explain: Variable domains make the antigen-binding pocket.
     distractors:
-      A: Constant mediates effector function.
-      B: Correct.
+      A: Fc is effector-side.
+      B: Constant mediates effector function.
       C: Hinge allows flexibility.
-      D: Fc is effector-side.
+      D: Correct.
 examples:
 - prompt: 'A protein segment is analyzed: sequence Gly-Pro-Leu forms a left-handed structure with a period
     of about 3.0 A per residue. Identify the structure and name the residue that makes it unique.'
@@ -169,18 +169,18 @@ passage:
   questions:
   - q: The Leu-to-Asp mutation disrupts folding by…
     options:
-      A: Introducing a charged group into a hydrophobic core
-      B: Removing a disulfide
+      A: Removing a disulfide
+      B: Breaking a peptide bond
       C: Truncating the chain
-      D: Breaking a peptide bond
-    answer: A
+      D: Introducing a charged group into a hydrophobic core
+    answer: D
     explain: Asp is negative at pH 7 and drawn to the aqueous surface — the hydrophobic core cannot bury
       it.
     distractors:
-      A: Correct.
-      B: No Cys involved.
+      A: No Cys involved.
+      B: No hydrolysis.
       C: Same length.
-      D: No hydrolysis.
+      D: Correct.
   - q: Lowering the pH to 5 restores folding because…
     options:
       A: Asp becomes protonated and neutral

@@ -28,16 +28,16 @@ sections:
   check:
   - q: Which property does a virus lack on its own, outside a host cell?
     options:
-      A: It cannot evolve over generations
+      A: It has no independent metabolism and no self-reproduction
       B: It does not carry heritable information
-      C: It has no independent metabolism and no self-reproduction
+      C: It cannot evolve over generations
       D: It cannot respond to any stimulus even inside a host
-    answer: C
+    answer: A
     explain: Viruses carry genes and evolve, but they have no metabolism of their own and cannot reproduce
       without host machinery — the checklist items they fail.
     distractors:
-      A: Wrong — viruses DO evolve; drug resistance in viruses is a textbook example.
       B: Wrong — a virus's nucleic acid IS heritable information.
+      C: Wrong — viruses DO evolve; drug resistance in viruses is a textbook example.
       D: Wrong — inside a host, viruses do respond to (hijack) cellular machinery.
 - heading: Levels of organization and **emergent properties**
   body:
@@ -109,17 +109,17 @@ sections:
   - q: Which two domains share the most recent common ancestor?
     options:
       A: Bacteria and Archaea
-      B: Archaea and Eukarya
-      C: Bacteria and Eukarya
-      D: All three diverged at the same time
-    answer: B
+      B: Bacteria and Eukarya
+      C: All three diverged at the same time
+      D: Archaea and Eukarya
+    answer: D
     explain: Molecular data place Archaea closest to Eukarya; 'prokaryotic appearance' is misleading —
       relatedness follows shared ancestry, not cell shape.
     distractors:
       A: The classic trap — both are prokaryotes, but that is a collection of traits, not a branch of
         the tree.
-      C: Eukarya's membrane biology resembles archaea more than bacteria; sequence data agree.
-      D: The three-domain split is not a three-way simultaneous event; Archaea and Eukarya share a later
+      B: Eukarya's membrane biology resembles archaea more than bacteria; sequence data agree.
+      C: The three-domain split is not a three-way simultaneous event; Archaea and Eukarya share a later
         node.
   figures:
   - src: unity-and-diversity-of-life/tree-of-life.webp
@@ -143,18 +143,18 @@ sections:
   - q: A bat wing and a butterfly wing are best described as…
     options:
       A: Homologous — same underlying parts, shared ancestry
-      B: Analogous — similar function, independent origin
-      C: Vestigial — remnants of a fully lost function
-      D: Closely related — they belong to the same clade
-    answer: B
+      B: Vestigial — remnants of a fully lost function
+      C: Closely related — they belong to the same clade
+      D: Analogous — similar function, independent origin
+    answer: D
     explain: Flight is separately evolved in each lineage; the parts involved are unrelated in origin,
       so the structures are analogous, not homologous.
     distractors:
       A: Homology requires shared ancestry of the SAME parts; bat bone framework vs insect chitin wings
         have no common ancestor.
-      C: Vestigial structures are leftovers of an ancestor's functional trait (whale pelvis); these wings
+      B: Vestigial structures are leftovers of an ancestor's functional trait (whale pelvis); these wings
         still function.
-      D: Bats and butterflies diverged far down the tree; similarity here is function, not recent common
+      C: Bats and butterflies diverged far down the tree; similarity here is function, not recent common
         ancestry.
 - heading: 'Diversity: where it comes from and how we read it'
   body:
@@ -300,17 +300,17 @@ passage:
   questions:
   - q: Based on the passage, the first isolate belongs to which domain?
     options:
-      A: Bacteria
-      B: Archaea
-      C: Eukarya
-      D: Viruses
-    answer: B
+      A: Viruses
+      B: Eukarya
+      C: Bacteria
+      D: Archaea
+    answer: D
     explain: No nucleus → prokaryotic; ether-linked lipids and rRNA clustering closer to eukaryotic sequences
       are the archaeal signature.
     distractors:
-      A: Ether lipids, not ester lipids, distinguish it from bacteria; rRNA also points away from them.
-      C: It lacks a nucleus, so it cannot be eukaryotic despite the rRNA similarity.
-      D: It has DNA of its own and metabolizes; a virus has neither on its own.
+      A: It has DNA of its own and metabolizes; a virus has neither on its own.
+      B: It lacks a nucleus, so it cannot be eukaryotic despite the rRNA similarity.
+      C: Ether lipids, not ester lipids, distinguish it from bacteria; rRNA also points away from them.
   - q: The observation that both isolates swim toward glucose despite different membranes is best explained
       by…
     options:

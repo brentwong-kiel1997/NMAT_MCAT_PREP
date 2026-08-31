@@ -16,16 +16,16 @@ sections:
   - q: I fear smoking (feeling), think it causes cancer (belief), and avoid it (action). Together these
       are…
     options:
-      A: The ABC model of attitudes
-      B: Cognitive dissonance
-      C: The elaboration likelihood model
-      D: Mere exposure
-    answer: A
+      A: Cognitive dissonance
+      B: Mere exposure
+      C: The ABC model of attitudes
+      D: The elaboration likelihood model
+    answer: C
     explain: Affect, Behavior, Cognition.
     distractors:
-      B: Tension between inconsistent cognitions.
-      C: Persuasion routes.
-      D: Familiarity effect.
+      A: Tension between inconsistent cognitions.
+      B: Familiarity effect.
+      D: Persuasion routes.
 - heading: Dissonance and self-perception — behavior leads
   body:
   - Beyond induced compliance — effort justification (we value what we suffer for) and hypocrisy induction
@@ -36,15 +36,15 @@ sections:
   - q: Children rewarded heavily for markers they already enjoyed later play less once rewards stop. This
       is…
     options:
-      A: Overjustification effect
-      B: Foot-in-the-door
-      C: Effort justification
+      A: Foot-in-the-door
+      B: Effort justification
+      C: Overjustification effect
       D: Reactance
-    answer: A
+    answer: C
     explain: External reward reframes play as work.
     distractors:
-      B: Compliance escalation.
-      C: Valuing suffering — reverse.
+      A: Compliance escalation.
+      B: Valuing suffering — reverse.
       D: Resistance to threatened freedom.
 - heading: Engineering behavior change — therapy techniques
   body:
@@ -150,27 +150,27 @@ passage:
   - q: A planner misses a week to exams. The best-supported reframe is…
     options:
       A: The plan failed — abandon it
-      B: A lapse — identify barriers and resume
-      C: Punish the lapse
+      B: Punish the lapse
+      C: A lapse — identify barriers and resume
       D: Escalate immediately
-    answer: B
+    answer: C
     explain: Lapse-as-data prevents collapse.
     distractors:
       A: The abstinence trap.
-      C: Counterproductive.
+      B: Counterproductive.
       D: Untailored escalation invites dropout.
   - q: Which finding would most directly challenge the study's internal validity?
     options:
-      A: A large sample size
-      B: A confederate accidentally hinting at the expected answer
+      A: A replication in a different country
+      B: A large sample size
       C: High statistical significance
-      D: A replication in a different country
-    answer: B
+      D: A confederate accidentally hinting at the expected answer
+    answer: D
     explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
     distractors:
-      A: Power, not validity.
+      A: That tests external validity.
+      B: Power, not validity.
       C: Significance is downstream of validity.
-      D: That tests external validity.
 pitfalls:
 - Confusing overjustification with effort justification.
 - Giving flooding the desensitization label.
@@ -198,16 +198,16 @@ further_reading:
 review_questions:
 - q: Overjustification occurs when…
   options:
-    A: Effort raises valuation
-    B: Tangible rewards undermine intrinsic enjoyment
-    C: Thin justification maximizes dissonance
-    D: Authority commands belief
-  answer: B
+    A: Thin justification maximizes dissonance
+    B: Effort raises valuation
+    C: Authority commands belief
+    D: Tangible rewards undermine intrinsic enjoyment
+  answer: D
   explain: Reward reframes play as work.
   distractors:
-    A: Effort justification.
-    C: Induced compliance.
-    D: Obedience.
+    A: Induced compliance.
+    B: Effort justification.
+    C: Obedience.
 - q: The stages-of-change model's correct order begins…
   options:
     A: Action → precontemplation → maintenance

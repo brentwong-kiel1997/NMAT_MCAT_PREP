@@ -17,14 +17,14 @@ sections:
   - q: A participant counting basketball passes misses a person in a gorilla suit. This demonstrates…
     options:
       A: Sensory adaptation
-      B: Inattentional blindness
-      C: Change blindness
+      B: Change blindness
+      C: Inattentional blindness
       D: Divided attention success
-    answer: B
+    answer: C
     explain: An unexpected, unattended stimulus is wholly missed.
     distractors:
       A: Adaptation needs constant stimulation.
-      C: Change blindness compares scene versions.
+      B: Change blindness compares scene versions.
       D: The counting task consumed attention — the failure mode.
   figures:
   - src: 6b-making-sense-of-the-environment/memory-stages.webp
@@ -42,16 +42,16 @@ sections:
   - q: After hippocampal damage, a patient learns a mirror-tracing skill daily but cannot recall practicing.
       This shows…
     options:
-      A: Complete amnesia of all systems
-      B: Intact procedural memory with impaired explicit formation
+      A: Intact procedural memory with impaired explicit formation
+      B: Sensory memory impairment
       C: Working memory loss
-      D: Sensory memory impairment
-    answer: B
+      D: Complete amnesia of all systems
+    answer: A
     explain: The H.M. pattern — implicit/procedural spared, explicit consolidation broken.
     distractors:
-      A: Procedural learning persisted.
+      B: Sensory registers are unaffected.
       C: Working memory is cortical and largely spared.
-      D: Sensory registers are unaffected.
+      D: Procedural learning persisted.
   figures:
   - src: 6b-making-sense-of-the-environment/ltm-types.webp
     caption: Long-term memory taxonomy — explicit (episodic, semantic) versus implicit (procedural, priming,
@@ -68,16 +68,16 @@ sections:
   check:
   - q: You struggle to remember your NEW locker code because your OLD one keeps coming to mind. This is…
     options:
-      A: Retroactive interference
-      B: Proactive interference
-      C: Encoding failure
-      D: Decay
-    answer: B
+      A: Decay
+      B: Retroactive interference
+      C: Proactive interference
+      D: Encoding failure
+    answer: C
     explain: OLD interferes with NEW — proactive.
     distractors:
-      A: Retroactive runs backward — new blocks old.
-      C: The code was learned; retrieval is contaminated.
-      D: Time-based fading is not described.
+      A: Time-based fading is not described.
+      B: Retroactive runs backward — new blocks old.
+      D: The code was learned; retrieval is contaminated.
 - heading: Consciousness and its states
   body:
   - Consciousness ranges along a continuum — alertness through sleep stages (N1-N3 and REM) to altered
@@ -143,40 +143,40 @@ passage:
   - q: The pattern (small recognition gap, large recall gap) is best explained by…
     options:
       A: The distractor group lost stored traces overnight
-      B: Divided attention weakened encoding — cues adequate for recognition, too sparse for free recall
-      C: The distractor group forgot instructions
-      D: Recognition measures implicit memory
-    answer: B
+      B: The distractor group forgot instructions
+      C: Recognition measures implicit memory
+      D: Divided attention weakened encoding — cues adequate for recognition, too sparse for free recall
+    answer: D
     explain: Weak semantic encoding supports familiarity-based recognition but few retrieval routes for
       recall.
     distractors:
       A: Storage was weak from the start, not lost overnight.
-      C: Instructions not at issue.
-      D: Recognition is explicit.
+      B: Instructions not at issue.
+      C: Recognition is explicit.
   - q: Which would most likely CLOSE the recall gap?
     options:
       A: Testing recall after one week
-      B: Providing the first word of each pair as a cue
+      B: Testing in a different room
       C: Increasing list length
-      D: Testing in a different room
-    answer: B
+      D: Providing the first word of each pair as a cue
+    answer: D
     explain: Retrieval cues restore access to weakly encoded traces.
     distractors:
       A: Delay widens it.
+      B: Context change hurts.
       C: Length worsens interference.
-      D: Context change hurts.
   - q: Which finding would most directly challenge the study's internal validity?
     options:
-      A: A large sample size
-      B: A confederate accidentally hinting at the expected answer
-      C: High statistical significance
-      D: A replication in a different country
-    answer: B
+      A: A confederate accidentally hinting at the expected answer
+      B: High statistical significance
+      C: A replication in a different country
+      D: A large sample size
+    answer: A
     explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
     distractors:
-      A: Power, not validity.
-      C: Significance is downstream of validity.
-      D: That tests external validity.
+      B: Significance is downstream of validity.
+      C: That tests external validity.
+      D: Power, not validity.
 pitfalls:
 - Treating memory failure as storage loss by default — encoding and retrieval failures dominate.
 - Swapping proactive and retroactive interference.

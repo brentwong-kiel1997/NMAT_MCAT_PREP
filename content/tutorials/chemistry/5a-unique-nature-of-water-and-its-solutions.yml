@@ -38,16 +38,16 @@ sections:
   check:
   - q: Which is a strong electrolyte?
     options:
-      A: CH3COOH
-      B: C6H12O6
-      C: NaCl
-      D: NH3
-    answer: C
+      A: C6H12O6
+      B: NH3
+      C: CH3COOH
+      D: NaCl
+    answer: D
     explain: NaCl dissociates completely in water.
     distractors:
-      A: Acetic acid is a weak electrolyte.
-      B: Glucose is a nonelectrolyte.
-      D: Ammonia is a weak base.
+      A: Glucose is a nonelectrolyte.
+      B: Ammonia is a weak base.
+      C: Acetic acid is a weak electrolyte.
   figures:
   - src: 5a-unique-nature-of-water-and-its-solutions/fig-9f65aae0.webp
     caption: Dissolution — a solute dispersing into solvent to form a homogeneous solution.
@@ -65,16 +65,16 @@ sections:
   check:
   - q: What is the [OH-] in a solution with pH = 5?
     options:
-      A: 10^-5 M
-      B: 10^-9 M
-      C: 10^-14 M
-      D: 5 M
-    answer: B
+      A: 5 M
+      B: 10^-14 M
+      C: 10^-5 M
+      D: 10^-9 M
+    answer: D
     explain: pOH = 14 - 5 = 9, so [OH-] = 10^-9 M.
     distractors:
-      A: That is [H+].
-      C: That is the product [H+][OH-].
-      D: That is just the pH value as molarity.
+      A: That is just the pH value as molarity.
+      B: That is the product [H+][OH-].
+      C: That is [H+].
 - heading: Buffers and the Henderson-Hasselbalch equation
   body:
   - A buffer is a weak acid plus its conjugate base (or weak base plus conjugate acid) that resists pH
@@ -87,15 +87,15 @@ sections:
   check:
   - q: A buffer has equal concentrations of HA and A-. The pH equals…
     options:
-      A: '7.0'
-      B: pKa + 1
-      C: pKa
+      A: pKa
+      B: '7.0'
+      C: pKa + 1
       D: 14 - pKa
-    answer: C
+    answer: A
     explain: log(1) = 0, so pH = pKa + 0 = pKa.
     distractors:
-      A: That is neutral pH, unrelated to the buffer.
-      B: That is when [A-] = 10 times [HA].
+      B: That is neutral pH, unrelated to the buffer.
+      C: That is when [A-] = 10 times [HA].
       D: That is pOH.
 - heading: Titrations and equivalence points
   body:
@@ -110,15 +110,15 @@ sections:
   - q: At the half-equivalence point of a weak acid titration…
     options:
       A: pH = 7
-      B: pH = pKa
+      B: All acid is consumed
       C: pH = pKb
-      D: All acid is consumed
-    answer: B
+      D: pH = pKa
+    answer: D
     explain: Half the acid is neutralized; [HA] = [A-]; pH = pKa + log(1) = pKa.
     distractors:
       A: That is strong-strong only.
+      B: That is the equivalence point.
       C: That relates to the base, not the acid.
-      D: That is the equivalence point.
 examples:
 - prompt: Calculate the pH of a buffer containing 0.10 M acetic acid (pKa = 4.76) and 0.15 M sodium acetate.
   solution:

@@ -15,17 +15,17 @@ sections:
   check:
   - q: 'Doctor : hospital :: teacher : ?'
     options:
-      A: School
-      B: Students
-      C: Books
-      D: Desk
-    answer: A
+      A: Desk
+      B: Books
+      C: Students
+      D: School
+    answer: D
     explain: Worker to workplace — the direction matches.
     distractors:
-      A: Correct.
-      B: Worker to client — relational mismatch.
-      C: Worker to tool.
-      D: Worker to furniture.
+      A: Worker to furniture.
+      B: Worker to tool.
+      C: Worker to client — relational mismatch.
+      D: Correct.
 - heading: The relation families
   body:
   - ==Core families — synonyms, antonyms, part-whole, class-member, cause-effect, worker-tool/workplace,
@@ -36,17 +36,17 @@ sections:
   check:
   - q: 'Which pair has the same relation as ''humid : arid''?'
     options:
-      A: 'Wealthy : poor'
-      B: 'Rain : flood'
+      A: 'Rain : flood'
+      B: 'Hot : warm'
       C: 'Water : plant'
-      D: 'Hot : warm'
-    answer: A
+      D: 'Wealthy : poor'
+    answer: D
     explain: Antonyms — humid is the opposite of arid.
     distractors:
-      A: Correct.
-      B: Cause-effect.
+      A: Cause-effect.
+      B: Degree, not opposition.
       C: Necessary-for.
-      D: Degree, not opposition.
+      D: Correct.
 - heading: Applying the relation to the second pair
   body:
   - ==Test each option — the relation named must hold with the unknown in the same slot-position==. ==When
@@ -57,17 +57,17 @@ sections:
   check:
   - q: 'Glove : hand :: sock : ?'
     options:
-      A: Foot
-      B: Shoe
+      A: Wool
+      B: Foot
       C: Footwear
-      D: Wool
-    answer: A
+      D: Shoe
+    answer: B
     explain: Covering to covered part — the same relation as glove to hand.
     distractors:
-      A: Correct.
-      B: Outer layer, not the covered part.
+      A: Material.
+      B: Correct.
       C: Class renaming.
-      D: Material.
+      D: Outer layer, not the covered part.
 - heading: Vocabulary dependence and recovery
   body:
   - ==The relation is only as good as the word set — the highest-yield study is word families, not isolated
@@ -79,16 +79,16 @@ sections:
   check:
   - q: With an unknown word 'elucidate', the best recovery is…
     options:
-      A: Its formal feel and '-ate' suffix suggest 'to make clear' — a clarify-type verb
-      B: Guess randomly
-      C: Skip the item
+      A: Skip the item
+      B: Its formal feel and '-ate' suffix suggest 'to make clear' — a clarify-type verb
+      C: Guess randomly
       D: Rewrite the stem
-    answer: A
+    answer: B
     explain: Pattern and register clues place the word's role.
     distractors:
-      A: Correct.
-      B: There are recoverable cues.
-      C: Every item is winnable.
+      A: Every item is winnable.
+      B: Correct.
+      C: There are recoverable cues.
       D: The stem is fixed.
 - heading: Speed and hygiene
   body:
@@ -99,17 +99,17 @@ sections:
   check:
   - q: The most reliable check before choosing is…
     options:
-      A: Re-reading the relation in the stem's direction with the option in place
-      B: Picking the longest option
-      C: Choosing the rarest word
-      D: Matching the first letter
-    answer: A
+      A: Matching the first letter
+      B: Choosing the rarest word
+      C: Re-reading the relation in the stem's direction with the option in place
+      D: Picking the longest option
+    answer: C
     explain: The full directional read catches reversals.
     distractors:
-      A: Correct.
-      B: Length is noise.
-      C: Rarity does not add relation.
-      D: Alphabet is irrelevant.
+      A: Alphabet is irrelevant.
+      B: Rarity does not add relation.
+      C: Correct.
+      D: Length is noise.
 examples:
 - prompt: 'Opaque : transparent :: rigid : ?'
   solution:
@@ -156,42 +156,42 @@ passage:
   questions:
   - q: 'Stem 1 ''Sand : shore :: water : ?'' — the best unknown is…'
     options:
-      A: Lake
-      B: Ocean
-      C: Wave
-      D: Beach
-    answer: A
+      A: Wave
+      B: Beach
+      C: Ocean
+      D: Lake
+    answer: D
     explain: Part of the whole — sand is on a shore; water is in a lake (container-content).
     distractors:
-      A: Correct.
-      B: Ocean is broader, not the fit slot.
-      C: Wave is an action.
-      D: Beach is a near-duplicate of shore.
+      A: Wave is an action.
+      B: Beach is a near-duplicate of shore.
+      C: Ocean is broader, not the fit slot.
+      D: Correct.
   - q: 'Stem 2 ''Blossom : bloom :: river : ?'' — the relation is…'
     options:
-      A: Interchangeable synonyms
-      B: Opposites
-      C: Whole-part
-      D: Tool-function
-    answer: A
+      A: Opposites
+      B: Tool-function
+      C: Interchangeable synonyms
+      D: Whole-part
+    answer: C
     explain: Blossom and bloom are synonyms; river and stream likewise.
     distractors:
-      A: Correct.
-      B: No opposition.
-      C: Neither is a part of the other.
-      D: Neither is a tool.
+      A: No opposition.
+      B: Neither is a tool.
+      C: Correct.
+      D: Neither is a part of the other.
   - q: 'Stem 3 ''Calm : storm :: plain : ?'' — the unknown word class is…'
     options:
-      A: Noun (a terrain feature contrasting with plain)
-      B: Verb
-      C: Adjective
+      A: Verb
+      B: Adjective
+      C: Noun (a terrain feature contrasting with plain)
       D: Adverb
-    answer: A
+    answer: C
     explain: The mirrored word is a counterpart noun — mountain.
     distractors:
-      A: Correct.
-      B: Stem slots are nouns.
-      C: No adjective required.
+      A: Stem slots are nouns.
+      B: No adjective required.
+      C: Correct.
       D: No adverb.
 pitfalls:
 - Choosing a synonym when the relation demanded an antonym.
@@ -216,15 +216,15 @@ further_reading:
 review_questions:
 - q: 'Famous : notorious :: cheap : ?'
   options:
-    A: Inexpensive
-    B: Economical
+    A: Economical
+    B: Inexpensive
     C: Thrifty
     D: Valuable
-  answer: A
+  answer: B
   explain: Degree-and-connotation neighbors — famous/notorious and cheap/inexpensive pair by register.
   distractors:
-    A: Correct — neutral synonym.
-    B: Overly positive.
+    A: Overly positive.
+    B: Correct — neutral synonym.
     C: Fiscal habit.
     D: Opposite.
 - q: 'Author : book :: ? : ?'

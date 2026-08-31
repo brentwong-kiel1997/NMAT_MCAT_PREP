@@ -15,17 +15,17 @@ sections:
   check:
   - q: 'Simplify: 12 - 3 x (4 - 1)^2 + 6 / 2'
     options:
-      A: '-12'
-      B: '9'
-      C: '-3'
-      D: '18'
-    answer: A
+      A: '-3'
+      B: '18'
+      C: '-12'
+      D: '9'
+    answer: C
     explain: 12 - 3 x 9 + 3 = 12 - 27 + 3 = -12.
     distractors:
-      A: Correct.
-      B: Left-to-right without PEMDAS.
-      C: Partial order slip.
-      D: Wrong precedence on exponents.
+      A: Partial order slip.
+      B: Wrong precedence on exponents.
+      C: Correct.
+      D: Left-to-right without PEMDAS.
 - heading: Fractions, decimals, and percents
   body:
   - ==Fraction fraction rules — add/subtract require common denominators; multiply straight across; divide
@@ -35,17 +35,17 @@ sections:
   check:
   - q: Convert 3/8 to a percent.
     options:
-      A: 37.5%
-      B: 38%
-      C: 26.7%
-      D: 42.9%
-    answer: A
+      A: 26.7%
+      B: 42.9%
+      C: 38%
+      D: 37.5%
+    answer: D
     explain: 3/8 = 0.375 = 37.5%.
     distractors:
-      A: Correct.
-      B: Rounding 3/8 up.
-      C: That is 4/15.
-      D: That is 3/7.
+      A: That is 4/15.
+      B: That is 3/7.
+      C: Rounding 3/8 up.
+      D: Correct.
 - heading: Ratios, proportions, and unit alignment
   body:
   - ==A ratio compares parts (3:2); a proportion states equality of two ratios — cross-multiply only after
@@ -56,17 +56,17 @@ sections:
   check:
   - q: A pump fills a tank in 6 hours; another fills it in 4. Together, how long?
     options:
-      A: 2.4 hours
-      B: 5 hours
-      C: 10 hours
-      D: 3 hours
-    answer: A
+      A: 10 hours
+      B: 3 hours
+      C: 5 hours
+      D: 2.4 hours
+    answer: D
     explain: 1/t = 1/6 + 1/4 = 5/12, so t = 12/5 = 2.4 h.
     distractors:
-      A: Correct.
-      B: Average of times.
-      C: Sum of times.
-      D: Half the sum.
+      A: Sum of times.
+      B: Half the sum.
+      C: Average of times.
+      D: Correct.
 - heading: Exponents and roots
   body:
   - '==Multiplication adds exponents (x^a x^b = x^(a+b)); division subtracts (x^a/x^b = x^(a-b)); power
@@ -76,16 +76,16 @@ sections:
   check:
   - q: 'Simplify: (2^3 x 2^4) / 2^5'
     options:
-      A: '4'
+      A: '16'
       B: '8'
-      C: '16'
+      C: '4'
       D: '2'
-    answer: A
+    answer: C
     explain: 2^(3+4-5) = 2^2 = 4.
     distractors:
-      A: Correct.
+      A: Multiplying exponents.
       B: Adding exponents only.
-      C: Multiplying exponents.
+      C: Correct.
       D: Subtracting wrong.
 - heading: Estimation and answer-sanity checks
   body:
@@ -96,17 +96,17 @@ sections:
   check:
   - q: 'Estimate: 27.9% of 1,198'
     options:
-      A: About 240
-      B: About 335
-      C: About 480
-      D: About 119
-    answer: B
+      A: About 480
+      B: About 240
+      C: About 119
+      D: About 335
+    answer: D
     explain: 28% of 1,200 = 0.28 x 1200 = 336.
     distractors:
-      A: Underestimate.
-      B: Correct.
-      C: Overestimate.
-      D: That is 10%.
+      A: Overestimate.
+      B: Underestimate.
+      C: That is 10%.
+      D: Correct.
 examples:
 - prompt: A shirt costs 1,200 pesos after a 20% discount. What was the original price?
   solution:

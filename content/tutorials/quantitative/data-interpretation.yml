@@ -36,16 +36,16 @@ sections:
   check:
   - q: A line rises steeply from 2019 to 2020 then flatlines. The best summary is…
     options:
-      A: Fast growth then stagnation
+      A: No change
       B: Constant decline
       C: Slow steady rise
-      D: No change
-    answer: A
+      D: Fast growth then stagnation
+    answer: D
     explain: Steep upslope = rapid increase; flat = no further change.
     distractors:
+      A: Contradicts the slope.
       B: Opposite direction.
       C: Rate is wrong.
-      D: Contradicts the slope.
 - heading: Pie charts and parts-of-a-whole
   body:
   - ==Pie slices — each percent is a fraction of the total; the WHOLE must sum to 100%==. ==Computing
@@ -56,16 +56,16 @@ sections:
   - q: A pie chart shows 40% transport, 25% food, 20% housing, 15% other. A 30-degree slice corresponds
       to…
     options:
-      A: 8.3%
-      B: 10%
-      C: 12%
+      A: 10%
+      B: 12%
+      C: 8.3%
       D: 15%
-    answer: A
+    answer: C
     explain: 30/360 = 8.33% of the whole.
     distractors:
-      A: Correct.
-      B: 30/300.
-      C: 30/250.
+      A: 30/300.
+      B: 30/250.
+      C: Correct.
       D: The 'other' slice.
 - heading: Ratios, rates, and percent change from data
   body:
@@ -76,17 +76,17 @@ sections:
   check:
   - q: GDP rose from 40,000 to 44,000. The percent change is…
     options:
-      A: 10%
-      B: 9.1%
-      C: 11%
-      D: 4%
-    answer: A
+      A: 11%
+      B: 4%
+      C: 9.1%
+      D: 10%
+    answer: D
     explain: (44000 - 40000)/40000 = 10%.
     distractors:
-      A: Correct.
-      B: New base % change.
-      C: Rounding.
-      D: Four percent.
+      A: Rounding.
+      B: Four percent.
+      C: New base % change.
+      D: Correct.
 - heading: Reading experimental graphs in other sections
   body:
   - ==Scatter plots — direction, strength, clusters; correlation is not causation==. ==Grouped bar/multiple
@@ -152,29 +152,29 @@ passage:
   questions:
   - q: The cases per 100,000 in Region A is…
     options:
-      A: 1,600
+      A: '160'
       B: '16'
-      C: '160'
-      D: '1.6'
-    answer: A
+      C: '1.6'
+      D: 1,600
+    answer: D
     explain: 8000/500000 x 100000 = 1600.
     distractors:
-      A: Correct.
+      A: Wrong decimal.
       B: Raw ratio.
-      C: Wrong decimal.
-      D: Percent.
+      C: Percent.
+      D: Correct.
   - q: Which region has the higher per-capita case rate?
     options:
-      A: Region A
+      A: Equal
       B: Region B
-      C: Equal
+      C: Region A
       D: Cannot tell from the table
-    answer: A
+    answer: C
     explain: 'A: 1600/100k vs B: 1200/100k — A higher.'
     distractors:
-      A: Correct.
+      A: Rates differ.
       B: Larger absolute counts mislead.
-      C: Rates differ.
+      C: Correct.
       D: The data is complete.
   - q: A 60% increase in A's cases would add…
     options:

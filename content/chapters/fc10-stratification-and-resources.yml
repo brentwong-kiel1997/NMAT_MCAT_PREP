@@ -12,4 +12,42 @@ notes:
 - Access to care is structurally constrained
 - 'Health social gradient: lower SES, higher risk'
 - Structural barriers limit healthcare access
-practice: []
+practice:
+- id: fc10-stratification-and-resources-p1
+  q: Which perspective argues that stratification persists because the owning class controls
+    the means of production and reproduces its advantage across generations?
+  choices:
+    A: Functionalist theory (Davis–Moore)
+    B: Conflict theory
+    C: Symbolic interactionism
+    D: Modernization theory
+  answer: B
+  explain: Conflict theory sees inequality as rooted in ownership and coercion. A is the opposite
+    reading — unequal rewards are functional because they draw talent to vital roles, C studies
+    face-to-face meaning rather than class structure, and D blames internal development factors,
+    not ownership.
+  chapter: FC10 · Stratification and resources
+- id: fc10-stratification-and-resources-p2
+  q: Which finding best demonstrates the social gradient in health?
+  choices:
+    A: Morbidity risk rises stepwise at every income band, not just below the poverty line
+    B: Mortality is identical across socioeconomic groups once age is controlled
+    C: Risk is flat above the poverty threshold, so only absolute deprivation matters
+    D: SES-health gaps disappear once genetics are taken into account
+  answer: A
+  explain: 'The gradient is dose-like: each step down in SES brings higher risk. B denies
+    the gradient, C confuses it with a poverty threshold effect, and D attributes structural
+    differences to heredity.'
+  chapter: FC10 · Stratification and resources
+- id: fc10-stratification-and-resources-p3
+  q: Bourdieu's 'cultural capital' refers to which of the following?
+  choices:
+    A: Money, property, and other transferable assets
+    B: Network ties that can be called on for favors
+    C: Knowledge, credentials, tastes, and language styles valued by institutions
+    D: Government transfer payments to low-income households
+  answer: C
+  explain: Cultural capital is embodied and institutionalized advantage — credentials, speech
+    styles, familiarity with elite norms. A is economic capital and B is social capital, the
+    two concepts students most often swap in.
+  chapter: FC10 · Stratification and resources

@@ -16,16 +16,16 @@ sections:
   check:
   - q: An astronaut's wristwatch ticks slow when viewed from Earth because…
     options:
-      A: The watch is defective
-      B: Time dilation — the astronaut is moving relative to Earth
-      C: Gravity is weaker in space
-      D: The Earth rotates
-    answer: B
+      A: The Earth rotates
+      B: The watch is defective
+      C: Time dilation — the astronaut is moving relative to Earth
+      D: Gravity is weaker in space
+    answer: C
     explain: Relative motion dilates time — the moving frame's time is dilated by gamma.
     distractors:
-      A: Physics, not hardware.
-      C: Weak gravity — general relativity is separate.
-      D: Rotation is not the mechanism.
+      A: Rotation is not the mechanism.
+      B: Physics, not hardware.
+      D: Weak gravity — general relativity is separate.
 - heading: Photoelectric effect and photons
   body:
   - '==Light arrives in energy quanta E = h f = hc/lambda — intensity raises the NUMBER of photons, not
@@ -36,16 +36,16 @@ sections:
   check:
   - q: Shining brighter (higher intensity) light at a fixed frequency above threshold…
     options:
-      A: Increases electron speed
-      B: Increases the number of electrons
-      C: Lowers the work function
-      D: Ejects electrons with more KE
-    answer: B
+      A: Ejects electrons with more KE
+      B: Lowers the work function
+      C: Increases electron speed
+      D: Increases the number of electrons
+    answer: D
     explain: Intensity = more photons = more electrons at the SAME energy.
     distractors:
-      A: Frequency sets energy.
-      C: The work function is a material constant.
-      D: KE fixed by f.
+      A: KE fixed by f.
+      B: The work function is a material constant.
+      C: Frequency sets energy.
 - heading: Nuclear structure and binding energy
   body:
   - ==Nuclei carry Z protons and N neutrons; mass number A = Z + N==. Isotopes share Z, differ N. Mass
@@ -56,16 +56,16 @@ sections:
   check:
   - q: Iron-56 has the highest binding energy per nucleon, so…
     options:
-      A: It is the easiest to split
-      B: Fusion of light and fission of heavy both release energy
+      A: It emits alpha particles
+      B: It is the easiest to split
       C: It decays readily
-      D: It emits alpha particles
-    answer: B
+      D: Fusion of light and fission of heavy both release energy
+    answer: D
     explain: Iron sits at the energy minimum — anything moving toward it releases energy.
     distractors:
-      A: The peak means it will not split easily.
+      A: It is stable.
+      B: The peak means it will not split easily.
       C: Peak stability = stable nucleus.
-      D: It is stable.
   figures:
   - src: modern-physics/fig-12db370a.webp
     caption: Atomic scale — atom about 10^-10 m, nucleus about 10^-15 m — most of the atom is empty space.
@@ -84,17 +84,17 @@ sections:
   check:
   - q: A 24-day half-life isotope is reduced to 1/8 its original after…
     options:
-      A: 8 days
-      B: 72 days
-      C: 24 days
-      D: 96 days
-    answer: B
+      A: 96 days
+      B: 24 days
+      C: 8 days
+      D: 72 days
+    answer: D
     explain: 1/8 = 3 half-lives — 3 x 24 = 72 days.
     distractors:
-      A: 1/3 of 24 is wrong.
-      B: Correct.
-      C: One half-life gives 1/2.
-      D: Four half-lives.
+      A: Four half-lives.
+      B: One half-life gives 1/2.
+      C: 1/3 of 24 is wrong.
+      D: Correct.
 - heading: Quantum numbers and atomic spectra
   body:
   - '==Electron configuration: n (shell), l (subshell 0..n-1), ml, ms — Pauli excludes identical quadruples==.
@@ -106,15 +106,15 @@ sections:
   - q: Which electron transition emits the MOST energetic photon?
     options:
       A: n=3 to n=2
-      B: n=4 to n=1
-      C: n=2 to n=3
-      D: n=3 to n=4
-    answer: B
+      B: n=3 to n=4
+      C: n=4 to n=1
+      D: n=2 to n=3
+    answer: C
     explain: Largest energy drop emits the largest photon — deepest fall wins.
     distractors:
       A: Smaller gap.
-      C: Absorption, not emission.
-      D: Absorption.
+      B: Absorption.
+      D: Absorption, not emission.
 examples:
 - prompt: A light source gives photons with wavelength 400 nm. Find the photon energy in eV and the max
     KE of electrons expelled from cesium (work function 2.1 eV).

@@ -15,17 +15,17 @@ sections:
   check:
   - q: During the initial read, the strongest habit is…
     options:
-      A: Marking the thesis and paragraph functions
-      B: Reading slowly twice
+      A: Reading slowly twice
+      B: Skipping to the questions first
       C: Reading only the first paragraph
-      D: Skipping to the questions first
-    answer: A
+      D: Marking the thesis and paragraph functions
+    answer: D
     explain: A structural annotation serves every question family.
     distractors:
-      A: Correct.
-      B: One pass with marking beats two passive ones.
+      A: One pass with marking beats two passive ones.
+      B: Questions assume the whole passage.
       C: Thesis alone is not enough.
-      D: Questions assume the whole passage.
+      D: Correct.
 - heading: Main idea and title items
   body:
   - ==Main idea items reward the claim, not the topic — 'about X' answers fail; 'argues that X' answers
@@ -35,17 +35,17 @@ sections:
   check:
   - q: '''This passage is primarily concerned with…'' wants…'
     options:
-      A: The author's central claim, not a subject label
-      B: A list of examples
-      C: The first paragraph's noun
-      D: The title of the source
-    answer: A
+      A: The title of the source
+      B: The author's central claim, not a subject label
+      C: A list of examples
+      D: The first paragraph's noun
+    answer: B
     explain: Concern = claim; topic words alone are traps.
     distractors:
-      A: Correct.
-      B: Examples support, not constitute, the claim.
-      C: A noun is a topic, not the claim.
-      D: Titles come from claims.
+      A: Titles come from claims.
+      B: Correct.
+      C: Examples support, not constitute, the claim.
+      D: A noun is a topic, not the claim.
 - heading: Detail and evidence items
   body:
   - ==Detail items point at a specific claim — relocate the sentence and paraphrase precisely, keeping
@@ -55,15 +55,15 @@ sections:
   check:
   - q: The passage says 'many patients benefit'. An option says 'all patients benefit'. That option…
     options:
-      A: Overstates the scope — wrong
-      B: Is a fair paraphrase
+      A: Is a fair paraphrase
+      B: Overstates the scope — wrong
       C: Stronger than the passage claims
       D: Is unrelated
-    answer: A
+    answer: B
     explain: '''Many'' limits; ''all'' exceeds the passage''s claim.'
     distractors:
-      A: Correct.
-      B: Scope changed.
+      A: Scope changed.
+      B: Correct.
       C: Stronger is not accurate.
       D: Same topic, but the claim differs.
 - heading: Inference and application items
@@ -75,17 +75,17 @@ sections:
   check:
   - q: A safe inference from 'The study's sample was small and urban' is that…
     options:
-      A: Generalizing to rural populations is not licensed
-      B: The study is fraudulent
+      A: The study is fraudulent
+      B: The sample was perfect
       C: The urban setting is irrelevant
-      D: The sample was perfect
-    answer: A
+      D: Generalizing to rural populations is not licensed
+    answer: D
     explain: The limitation limits generalization — one careful step.
     distractors:
-      A: Correct.
-      B: Small is not invalid.
+      A: Small is not invalid.
+      B: Limits were stated.
       C: Urbanity mattered to the design.
-      D: Limits were stated.
+      D: Correct.
 - heading: Tone, function, and speed hygiene
   body:
   - ==Tone items — the emotional register from language, evidenced in the passage==. ==Function items
@@ -95,17 +95,17 @@ sections:
   check:
   - q: A passage full of 'as we have seen', 'it is clear that' suggests a tone of…
     options:
-      A: Measured confidence
+      A: Indifference
       B: Panic
-      C: Sarcasm
-      D: Indifference
-    answer: A
+      C: Measured confidence
+      D: Sarcasm
+    answer: C
     explain: The register asserts steadily without excess.
     distractors:
-      A: Correct.
+      A: Assertions show engagement.
       B: No alarm.
-      C: No irony markers.
-      D: Assertions show engagement.
+      C: Correct.
+      D: No irony markers.
 examples:
 - prompt: 'Passage: ''The jeepney''s persistence is usually explained by economics alone. But its cultural
     load — the decorated body, the community of drivers, the route folklore — is what preserves it as
@@ -154,41 +154,41 @@ passage:
   questions:
   - q: The main idea is…
     options:
-      A: A sustainable traditional system is now threatened by labor migration
-      B: Rice terraces are antique curiosities
-      C: Industrial farming is superior
-      D: Nutrients are wasted
-    answer: A
+      A: Industrial farming is superior
+      B: Nutrients are wasted
+      C: A sustainable traditional system is now threatened by labor migration
+      D: Rice terraces are antique curiosities
+    answer: C
     explain: The 'yet' pivot closes with the abandonment threat.
     distractors:
-      A: Correct.
-      B: No museum framing — the system works.
-      C: No industrial comparison.
-      D: The opposite of nutrient waste.
+      A: No industrial comparison.
+      B: The opposite of nutrient waste.
+      C: Correct.
+      D: No museum framing — the system works.
   - q: Which claim is a DETAIL the passage supports?
     options:
-      A: Stone walls trap silt, recycling nutrients
-      B: The terraces produce all Philippine rice
-      C: Fertilizers caused migration
-      D: Rivers feed every terrace
-    answer: A
+      A: The terraces produce all Philippine rice
+      B: Fertilizers caused migration
+      C: Rivers feed every terrace
+      D: Stone walls trap silt, recycling nutrients
+    answer: D
     explain: The sentence is stated directly.
     distractors:
-      A: Correct.
-      B: Scope blasts beyond the text.
-      C: No causal claim.
-      D: No hydrology data.
+      A: Scope blasts beyond the text.
+      B: No causal claim.
+      C: No hydrology data.
+      D: Correct.
   - q: A safe inference is…
     options:
-      A: Abandoning upper terraces may erode part of the system
-      B: The system will collapse by next year
+      A: The system will collapse by next year
+      B: Abandoning upper terraces may erode part of the system
       C: The farmers reject tradition
       D: Cities are better places to farm
-    answer: A
+    answer: B
     explain: Abandonment plausibly degrades a silt-retention network — one careful step.
     distractors:
-      A: Correct.
-      B: Timing is unknown.
+      A: Timing is unknown.
+      B: Correct.
       C: Migration is economic, not ideological.
       D: The passage makes no urban comparison.
 pitfalls:
@@ -219,17 +219,17 @@ further_reading:
 review_questions:
 - q: '''The author''s tone is best described as…'' — the evidence comes from…'
   options:
-    A: The passage's language
-    B: The topic's fame
-    C: The answer choices' look
-    D: Your opinion
-  answer: A
+    A: Your opinion
+    B: The answer choices' look
+    C: The passage's language
+    D: The topic's fame
+  answer: C
   explain: Register is in the words.
   distractors:
-    A: Correct.
-    B: Topic is not tone.
-    C: Choices are data, not evidence.
-    D: Opinion is excluded.
+    A: Opinion is excluded.
+    B: Choices are data, not evidence.
+    C: Correct.
+    D: Topic is not tone.
 - q: A paragraph starting 'For instance…' functions as…
   options:
     A: Evidence for the preceding claim

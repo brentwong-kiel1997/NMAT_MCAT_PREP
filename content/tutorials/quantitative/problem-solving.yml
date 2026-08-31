@@ -14,17 +14,17 @@ sections:
   check:
   - q: Ten more than twice a number is 34. The number is…
     options:
-      A: '12'
-      B: '10'
-      C: '22'
-      D: '3.4'
-    answer: A
+      A: '22'
+      B: '3.4'
+      C: '12'
+      D: '10'
+    answer: C
     explain: 2n + 10 = 34 → n = 12.
     distractors:
-      A: Correct.
-      B: Subtracting 10 yields 24/2 = 12 — mirror.
-      C: 34 - 12.
-      D: Division slip.
+      A: 34 - 12.
+      B: Division slip.
+      C: Correct.
+      D: Subtracting 10 yields 24/2 = 12 — mirror.
 - heading: Age, ratio, and consecutive-number problems
   body:
   - ==Age problems — build the present ages, then write the 'x years ago/from now' relation==. ==Ratio
@@ -34,17 +34,17 @@ sections:
   check:
   - q: A father is 38; his son is 8. In how many years will the father be twice the son's age?
     options:
-      A: '22'
+      A: '12'
       B: '15'
       C: '30'
-      D: '12'
-    answer: A
+      D: '22'
+    answer: D
     explain: 38 + x = 2(8 + x) → 38 + x = 16 + 2x → x = 22.
     distractors:
-      A: Correct.
+      A: Difference minus one.
       B: Half the gap.
       C: Sum of ages.
-      D: Difference minus one.
+      D: Correct.
 - heading: Mixture and work problems
   body:
   - '==Mixtures — value equation: Q1 x C1 + Q2 x C2 = (Q1 + Q2) x C-final==. ==Work — rate x time = 1
@@ -54,16 +54,16 @@ sections:
   check:
   - q: How many liters of 30% alcohol must be mixed with 10 liters of 60% alcohol to get 40%?
     options:
-      A: 20 L
-      B: 10 L
-      C: 15 L
+      A: 10 L
+      B: 15 L
+      C: 20 L
       D: 30 L
-    answer: A
+    answer: C
     explain: 0.3x + 0.6(10) = 0.4(x + 10) → 0.3x + 6 = 0.4x + 4 → x = 20.
     distractors:
-      A: Correct.
-      B: Half.
-      C: Median guess.
+      A: Half.
+      B: Median guess.
+      C: Correct.
       D: Symmetric double.
 - heading: Distance, rate, and time
   body:
@@ -77,16 +77,16 @@ sections:
       speed is…
     options:
       A: 15 km/h
-      B: 13.3 km/h
-      C: 12 km/h
-      D: 16 km/h
-    answer: B
+      B: 16 km/h
+      C: 13.3 km/h
+      D: 12 km/h
+    answer: C
     explain: 'Times: 4 h + 2 h = 6 h for 80 km → 80/6 = 13.3 km/h.'
     distractors:
       A: Arithmetic mean — wrong for equal distances.
-      B: Correct — harmonic mean.
-      C: Downstream only.
-      D: Weighted wrong.
+      B: Weighted wrong.
+      C: Correct — harmonic mean.
+      D: Downstream only.
 - heading: Geometry and measurement applied
   body:
   - ==Shapes — rectangle P = 2(l + w), A = lw; triangle A = (1/2)bh; circle A = pi r2, C = 2 pi r; the
@@ -98,16 +98,16 @@ sections:
   - q: Doubling the radius of a circle multiplies its area by…
     options:
       A: '2'
-      B: '4'
+      B: pi
       C: '8'
-      D: pi
-    answer: B
+      D: '4'
+    answer: D
     explain: A = pi r2 — r doubles, r2 quadruples.
     distractors:
       A: Linear.
-      B: Correct.
+      B: Constant factors.
       C: Cubed — spheres.
-      D: Constant factors.
+      D: Correct.
 examples:
 - prompt: Ana is 3 years older than Ben. In 5 years, Ana will be twice as old as Ben. Find their ages
     now.
@@ -159,16 +159,16 @@ passage:
   - q: In the first 6 hours with both open, the net fill fraction is…
     options:
       A: 1/2
-      B: 1/6
-      C: 1/3
-      D: 1/4
-    answer: B
+      B: 1/3
+      C: 1/4
+      D: 1/6
+    answer: D
     explain: Net rate = 1/12 - 1/18 = 1/36 per hour; 6 h -> 6/36 = 1/6.
     distractors:
       A: Half of A alone.
-      B: Correct.
-      C: Sum minus.
-      D: Fourth.
+      B: Sum minus.
+      C: Fourth.
+      D: Correct.
   - q: After B shuts, A alone needs how many more hours to fill the rest?
     options:
       A: 6 h

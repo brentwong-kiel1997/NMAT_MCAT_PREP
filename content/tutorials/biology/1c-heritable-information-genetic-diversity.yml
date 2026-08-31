@@ -1,34 +1,37 @@
 subject: biology
 chapter: 1C · Heritable information & genetic diversity
 title: 1C · Heritable information & genetic diversity
-overview: AAMC's 1C asks how information flows from DNA to function and how processes generate, preserve,
-  and shuffle variation. The NMAT side needs the same molecular vocabulary at intro depth, so this chapter
-  serves both — replication fidelity, expression logic, the variation toolkit, and the experiments (PCR,
-  CRISPR) that test it all. Prerequisites — Genetics (meiosis, mutation), Cells (nucleus, ribosome).
+overview: 'The transmission half of heredity: how information crosses generations and how processes
+  generate, shuffle, and fix variation. Covers replication as inheritance, expression control, Mendelian
+  patterns and pedigrees, aneuploidy, H-W population logic, and the read/write toolkit (PCR, CRISPR).
+  The molecular machinery itself — polymerases, repair pathways, mutation signatures — lives in the
+  biochemistry 1C chapter. Prerequisites — Genetics (meiosis, mutation), Cells (nucleus, ribosome).'
 sections:
-- heading: Replication — copying with fidelity
+- heading: Replication — how information crosses generations
   body:
-  - Semi-conservative replication — each old strand templates a new partner — is the Meselson-Stahl result
-    and the design logic of DNA. Replication bubbles open at origins; ==DNA polymerase only synthesizes
-    5'→3'==, so the lagging strand is built in Okazaki fragments stitched by ligase. Proofreading polymerases
-    and mismatch repair push error rates to ~10⁻⁹ per base — fidelity is not one mechanism but a stack
-    of them.
-  - Repair matters clinically — excision repair (one strand's damage cut out and re-filled) handles bulky
-    lesions; the BRCA-linked pathway mends double-strand breaks. When repair fails, mutation rates climb
-    and cancer risk follows — the MCAT's favorite causal chain from molecule to disease.
+  - '==Semi-conservative replication — each old strand templates a new partner== — is how heritable
+    information physically passes from cell to cell, and the Meselson–Stahl density experiment is the
+    evidence. ==Fidelity matters here for a transmission reason: an error that survives replication
+    becomes a heritable allele — the raw material the variation toolkit below works with==.'
+  - ==The transmission sequence — replication copies the message in S phase, meiosis I segregates
+    homologs, meiosis II separates sisters, fertilization restores diploidy==. Failures of that
+    packaging, not of chemistry, produce the aneuploidies later in this chapter. (Polymerase mechanics
+    and the repair stack are the biochemistry 1C chapter's territory.)
   check:
-  - q: DNA polymerase's directionality forces which arrangement?
+  - q: The Meselson–Stahl experiment showed that DNA replication is…
     options:
-      A: Both strands synthesize continuously
-      B: The lagging strand is made in short fragments joined by ligase
-      C: Replication runs 3'→5'
-      D: RNA polymerase replaces DNA polymerase
-    answer: B
-    explain: Antiparallel template + 5'→3' enzyme = discontinuous lagging-strand synthesis (Okazaki fragments).
+      A: Dispersive — parental and new DNA mix in pieces along each strand
+      B: Random — some cells copy one way, some the other
+      C: Conservative — the parental duplex stays whole and a new duplex is built
+      D: Semi-conservative — every duplex carries one parental and one new strand
+    answer: D
+    explain: After one round the density label sat in hybrid duplexes — one heavy parental strand plus
+      one light new strand.
     distractors:
-      A: Only the leading strand is continuous.
-      C: No known DNA polymerase does that.
-      D: RNA primers START replication; DNA polymerase extends it.
+      A: Dispersive copying gives a single intermediate density in every generation.
+      B: One mechanism fit all the density data.
+      C: That would leave the original duplex at full density.
+      D: Correct.
   figures:
   - src: 1c-heritable-information-genetic-diversity/dna-double-helix.webp
     caption: Antiparallel strands, A-T (2 H-bonds) and G-C (3 H-bonds) pairing — the template logic of
@@ -43,27 +46,29 @@ sections:
     factors, RNA processing (splicing, capping, poly-A), and translation itself.
   - The genetic code's properties are question bank staples — a **triplet** code, ==degenerate== (multiple
     codons per amino acid, which buffers silent mutations), nearly universal, with fixed start (AUG) and
-    three stops. Transcription makes any gene's RNA; translation reads it in the ribosome's 5'→3' groove
-    with charged tRNAs delivering amino acids.
+    three stops. Transcription makes any gene's RNA; translation reads it in the ribosome with charged
+    tRNAs delivering amino acids.
   check:
   - q: The degeneracy of the genetic code means…
     options:
-      A: Every codon specifies a different amino acid
-      B: Several codons can specify the same amino acid
-      C: The code differs among organelles of one cell
-      D: Codons overlap
-    answer: B
+      A: Codons overlap
+      B: The code differs among organelles of one cell
+      C: Every codon specifies a different amino acid
+      D: Several codons can specify the same amino acid
+    answer: D
     explain: Synonymous codons — the buffer that turns many point mutations silent.
     distractors:
-      A: That would be the opposite of degenerate.
-      C: Mitochondrial code differences exist but are not the definition.
-      D: The code is non-overlapping.
+      A: The code is non-overlapping.
+      B: Mitochondrial code differences exist but are not the definition.
+      C: That would be the opposite of degenerate.
 - heading: The variation toolkit — sources and shufflers
   body:
   - Variation enters by three doors — **mutation** (new alleles, ultimate source, mostly neutral or harmful),
     ==recombination== (crossing over shuffles existing alleles into new combinations), and **assortment
-    + fertilization** (randomized packaging and union). Add migration (gene flow) bringing alleles in,
-    and drift sampling them at random, and you hold the full microevolution kit.
+    + fertilization** (randomized packaging and union). ==Recombination frequency is measurable — in a
+    testcross, recombinant offspring over total gives map units, the distance between genes==. Add
+    migration (gene flow) bringing alleles in, and drift sampling them at random, and you hold the full
+    microevolution kit.
   - The Hardy-Weinberg equilibrium formalizes "no evolution" — allele frequencies p and q stay put when
     five conditions hold (no mutation, no selection, no drift [large population], no migration, random
     mating), giving ==p² + 2pq + q²==. Its exam use is as a NULL MODEL — real populations deviate, and
@@ -71,16 +76,42 @@ sections:
   check:
   - q: In a population at H-W equilibrium with q = 0.2, the frequency of heterozygotes is…
     options:
-      A: '0.04'
-      B: '0.32'
-      C: '0.64'
-      D: '0.16'
-    answer: B
+      A: '0.16'
+      B: '0.64'
+      C: '0.32'
+      D: '0.04'
+    answer: C
     explain: p = 0.8; 2pq = 2(0.8)(0.2) = 0.32.
     distractors:
-      A: That is q² — homozygous recessive.
-      C: That is p² — homozygous dominant.
-      D: That is q(1−q), a common slip.
+      A: That is q(1−q), a common slip.
+      B: That is p² — homozygous dominant.
+      D: That is q² — homozygous recessive.
+- heading: Inheritance patterns and pedigrees
+  body:
+  - '==Mendelian patterns — autosomal dominant (every generation, both sexes, father-to-son possible),
+    autosomal recessive (skips generations, unaffected carriers), X-linked recessive (more males, no
+    male-to-male), X-linked dominant (affected father passes to every daughter)==. Mitochondrial traits
+    run mother-to-all-children; Y-linked run father-to-all-sons.'
+  - '==Pedigree reading — squares are male, circles female, shading marks affected, a horizontal bar is
+    a mating, a vertical line descent==. ==Exam items usually turn on exclusions: an affected child of
+    unaffected parents rules out dominant, an affected daughter rules out X-linked recessive, father-to-son
+    transmission rules out everything on the X==.'
+  check:
+  - q: A trait appears in every generation, each affected person has an affected parent, and affected
+      fathers pass it equally to sons and daughters. The pattern is…
+    options:
+      A: Autosomal dominant
+      B: Autosomal recessive
+      C: X-linked recessive
+      D: X-linked dominant
+    answer: A
+    explain: Vertical transmission plus male-to-male transfer requires an autosome — no X-linked mode can
+      give father-to-son.
+    distractors:
+      A: Correct.
+      B: Recessive traits skip generations.
+      C: X-linked recessive skews male and never passes father to son.
+      D: X-linked dominant gives an affected father affected daughters only.
 - heading: Chromosomal variation — when the packages mis-segregate
   body:
   - Nondisjunction in meiosis I or II yields gametes with extra or missing chromosomes — after fertilization,
@@ -95,17 +126,17 @@ sections:
   - q: A phenotypically normal parent carries a balanced reciprocal translocation. The main reproductive
       risk is…
     options:
-      A: The parent will develop cancer
-      B: Gametes may receive unbalanced chromosome sets
-      C: All children will have Down syndrome
-      D: Infertility is certain
-    answer: B
+      A: Gametes may receive unbalanced chromosome sets
+      B: Infertility is certain
+      C: The parent will develop cancer
+      D: All children will have Down syndrome
+    answer: A
     explain: Segregation of translocated chromosomes can produce gametes with duplications and deletions
       — miscarriage or abnormal offspring.
     distractors:
-      A: Not a somatic-disease mechanism.
-      C: Trisomy 21 requires specific chromosome 21 mis-segregation.
-      D: Fertility may be reduced but is not certainly absent.
+      B: Fertility may be reduced but is not certainly absent.
+      C: Not a somatic-disease mechanism.
+      D: Trisomy 21 requires specific chromosome 21 mis-segregation.
 - heading: Reading and writing DNA — the technology toolkit
   body:
   - PCR amplifies a chosen segment exponentially — denature, anneal primers, extend, repeat; ==each cycle
@@ -138,34 +169,36 @@ sections:
     caption: Photo 51 — Franklin's X-ray diffraction pattern that revealed the double helix.
     credit: Fig 14.6 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 examples:
-- prompt: A lab finds a 3-bp deletion in exon 7 of a gene. Predict the mRNA and protein consequences and
-    the best detection method.
+- prompt: In family one, unaffected parents have an affected daughter and an unaffected son. In family
+    two, an affected father passes the trait to his son. Classify the likeliest mode in each family and
+    justify it with pedigree logic.
   solution:
-  - Step 1 — a 3-bp deletion removes exactly one codon from the mRNA after processing.
-  - Step 2 — the protein loses ONE amino acid but keeps the reading frame — an in-frame deletion.
-  - Step 3 — consequence ranges from silent-ish (loop region) to serious (domain core) — but no frameshift
-    downstream.
-  - Step 4 — detection — a size shift of 3 bp is invisible on routine gels; allele-specific PCR or sequencing
-    is the right tool.
-  answer: In-frame single-amino-acid deletion; detect by sequencing (or allele-specific assays), not standard
-    gel size.
+  - Family one — an affected child of unaffected parents means both parents carry the allele silently.
+  - An affected daughter rules out X-linked recessive — she would need a mutant X from an affected father.
+  - Dominant modes need an affected parent in every case — so family one is autosomal recessive.
+  - Family two — father-to-son transmission needs an autosome, so the likeliest mode is autosomal dominant.
+  answer: Family one autosomal recessive (unaffected carrier parents); family two autosomal dominant
+    (vertical transmission with male-to-male transfer).
   distractors:
-    A: Calling it a frameshift — three bases is exactly one codon; the frame survives.
-    B: Expecting a nonsense stop — deletion of a codon does not create a stop.
-    C: Choosing gel electrophoresis — 3 bp is far below gel resolution for large exons.
+    A: X-linked recessive — an affected daughter would require an affected father.
+    B: X-linked dominant — fathers pass the X to daughters only, never to sons.
+    C: Mitochondrial — mothers transmit to all children; paternal transmission does not occur.
 key_points:
-- Semi-conservative replication; 5'→3' synthesis; Okazaki on the lagging strand; repair stacks (proofread,
-  mismatch, excision, DSB) deliver 10⁻⁹ fidelity.
+- Semi-conservative replication copies the genome before meiosis — the physical basis of heritable
+  transmission.
 - Prokaryotic operons integrate signals (lac — lactose on, glucose off); eukaryotes regulate at chromatin,
   transcription, processing, translation.
 - Triplet, degenerate, near-universal code — AUG starts, three stops.
 - Variation kit — mutation creates, recombination shuffles, assortment randomizes; H-W (p²+2pq+q²) is
   the no-evolution null.
+- Recombination frequency (map units) — recombinant offspring over total in a testcross.
 - Nondisjunction → aneuploidy; structural rearrangements balanced in carriers, unbalanced in gametes.
+- Pedigree logic — vertical transmission = dominant, skipped generations = recessive, father-to-son =
+  autosomal.
 - Toolkit observables — PCR counts, gels size, sequencing reads, CRISPR edits.
 mnemonics:
-- phrase: 5 to 3, build as you flee
-  means: Nucleic-acid polymerases synthesize 5'→3' — every strand, every enzyme.
+- phrase: Squares are sperm, circles are eggs
+  means: Pedigree symbols — square male, circle female, shaded affected.
 - phrase: p² + 2pq + q² — the population's ledger
   means: Homozygous dominant, heterozygote, homozygous recessive frequencies at one locus.
 maps:
@@ -180,6 +213,13 @@ maps:
   - recombination → new allele COMBINATIONS on one chromosome
   - assortment + fertilization → new genome-level mixes
   - selection / drift / migration → change allele FREQUENCIES
+- title: Reading a pedigree
+  steps:
+  - vertical transmission, every generation — dominant
+  - skips generations, unaffected carriers — recessive
+  - more males, never father-to-son — X-linked recessive
+  - affected father → every daughter — X-linked dominant
+  - mother → all children — mitochondrial
 passage:
   text: Cystic fibrosis is autosomal recessive and affects 1 in 2,500 newborns in a population. A student
     screens 1,000 unrelated adults with a sequencing panel and finds 20 carriers. The student then compares
@@ -187,29 +227,29 @@ passage:
   questions:
   - q: From the disease incidence alone, the EXPECTED carrier rate is closest to…
     options:
-      A: 1/50
-      B: 1/25
-      C: 1/2500
-      D: 1/100
-    answer: B
+      A: 1/2500
+      B: 1/100
+      C: 1/25
+      D: 1/50
+    answer: C
     explain: q2 = 1/2500, so q = 0.02; 2pq = 2(0.98)(0.02) = 0.0392 — about 1 in 25 carriers.
     distractors:
-      A: That is q, the allele frequency — carriers are 2pq.
-      C: Twenty-fold too low.
-      D: Two-fold too high.
+      A: Twenty-fold too low.
+      B: Two-fold too high.
+      D: That is q, the allele frequency — carriers are 2pq.
   - q: The observed 20/1000 differs from the expectation. The most likely statistical explanation is…
     options:
-      A: The H-W model never applies
-      B: Sampling variation around a small expected count
-      C: Mutation hotspots raised the rate
-      D: The trait is dominant
-    answer: B
+      A: The trait is dominant
+      B: Mutation hotspots raised the rate
+      C: The H-W model never applies
+      D: Sampling variation around a small expected count
+    answer: D
     explain: Expected carriers ≈ 40 (2pq ≈ 1/25 of 1,000); observing 20 sits within sampling variation
       for a count this size — check confidence intervals before any biological claim.
     distractors:
-      A: H-W is a null model — it applies as a baseline.
-      C: Possible but not first-line.
-      D: Dominance contradicts the given inheritance.
+      A: Dominance contradicts the given inheritance.
+      B: Possible but not first-line.
+      C: H-W is a null model — it applies as a baseline.
   - q: The shared marker haplotypes among carriers suggest…
     options:
       A: Independent origins of every carrier allele
@@ -227,14 +267,15 @@ pitfalls:
 - Confusing mutation (creates alleles) with recombination (shuffles them) — the toolkit's most common
   mix-up.
 - Reading H-W as a law of nature — it is the null; deviations are the data.
-- Calling every deletion a frameshift — check multiples of three.
+- Naming a mode before excluding others — check whether every affected person has an affected parent.
 - Expecting karyotypes to show point mutations — scale must match tool.
 - Forgetting PCR's exponential arithmetic — n cycles, 2ⁿ copies.
 exam_map:
-  NMAT: Intro-depth molecular vocabulary — central dogma terms, operon names, aneuploidy examples, and
-    one-step H-W algebra.
-  MCAT: Content Category 1C builds passages on replication/repair defects, operon logic, pedigree-plus-H-W
-    calculation, aneuploidy mechanisms, and PCR/CRISPR experiment interpretation.
+  NMAT: Intro-depth transmission vocabulary — pedigree symbols, aneuploidy examples, and one-step H-W
+    algebra.
+  MCAT: Content Category 1C builds passages on pedigree-plus-H-W calculation, inheritance patterns,
+    aneuploidy mechanisms, and PCR/CRISPR experiment interpretation. Mutation typing and repair pathways
+    sit in the biochemistry 1C chapter.
 sources:
 - ref: openstax-biology-2e
   used:
@@ -256,30 +297,6 @@ further_reading:
   url: https://openstax.org/books/biology-2e/pages/19-introduction
   note: Hardy-Weinberg in population context.
 review_questions:
-- q: Which repair system fixes a thymine dimer caused by UV light?
-  options:
-    A: Mismatch repair
-    B: Nucleotide excision repair
-    C: Ligase alone
-    D: Okazaki processing
-  answer: B
-  explain: Bulky lesions are cut out as a patch and re-synthesized by the excision system.
-  distractors:
-    A: Mismatch repair fixes replication mispairing.
-    C: Ligase seals nicks — it cannot remove damage.
-    D: That is lagging-strand maturation.
-- q: A mutation changes one codon from AAA to AAG, both coding lysine. This is…
-  options:
-    A: A missense mutation
-    B: A silent mutation
-    C: A nonsense mutation
-    D: A frameshift
-  answer: B
-  explain: Degenerate code — same amino acid, no protein change.
-  distractors:
-    A: Missense CHANGES the amino acid.
-    C: Nonsense creates a stop.
-    D: No insertion/deletion occurred.
 - q: In the lac operon, high lactose AND low glucose produce…
   options:
     A: Maximal transcription
@@ -304,3 +321,30 @@ review_questions:
     A: Structural rearrangement, wrong scale.
     C: Sequence-level, wrong scale.
     D: Not a natural meiotic event.
+- q: An F1 dihybrid is testcrossed and yields 18 recombinant offspring out of 100 progeny. The map
+    distance between the two genes is…
+  options:
+    A: 36 map units
+    B: 18 map units
+    C: 82 map units
+    D: 9 map units
+  answer: B
+  explain: Recombination frequency = recombinants / total = 18/100 = 18% = 18 map units.
+  distractors:
+    A: That doubles the recombinant count.
+    C: That is the parental share, not the recombinant classes.
+    D: That halves the recombinant count.
+- q: Which single pedigree observation rules out X-linked recessive inheritance?
+  options:
+    A: An affected daughter whose father is unaffected
+    B: More affected males than females
+    C: Unaffected mothers who are carriers
+    D: An affected mother transmitting to a son
+  answer: A
+  explain: An X-linked recessive daughter needs a mutant X from each parent, so her father would have to
+    be affected.
+  distractors:
+    A: Correct.
+    B: That supports X-linked recessive.
+    C: Carrier mothers are expected in X-linked recessive traits.
+    D: Affected mothers pass the mutant X to sons and daughters alike.

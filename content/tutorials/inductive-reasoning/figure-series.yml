@@ -14,16 +14,16 @@ sections:
   check:
   - q: A figure shows a triangle rotating clockwise each frame. Frame 5 should show it…
     options:
-      A: 90 degrees further clockwise
-      B: Upside down
-      C: Shaded
-      D: Bigger
-    answer: A
+      A: Shaded
+      B: 90 degrees further clockwise
+      C: Bigger
+      D: Upside down
+    answer: B
     explain: Rotation continues a fixed angular step.
     distractors:
-      B: That is one step of half-turn.
-      C: No shading rule shown.
-      D: Size unchanged.
+      A: No shading rule shown.
+      C: Size unchanged.
+      D: That is one step of half-turn.
 - heading: Rotation and reflection reads
   body:
   - ==Rotation direction — clockwise vs counterclockwise; fixed step (90, 45, 180) vs acceleration (30,
@@ -34,16 +34,16 @@ sections:
   check:
   - q: An arrow is at 12 o'clock, then 3, then 6. Next should be…
     options:
-      A: 9 o'clock
-      B: '12'
+      A: '12'
+      B: '3:30'
       C: '6'
-      D: '3:30'
-    answer: A
+      D: 9 o'clock
+    answer: D
     explain: Continuing +90 degrees clockwise from 6 o'clock lands at 9 o'clock.
     distractors:
-      B: That is the starting position, not the next step.
+      A: That is the starting position, not the next step.
+      B: Half step.
       C: One step short.
-      D: Half step.
 - heading: Shading, hatching, and color coding
   body:
   - ==Shading patterns — solid → hatched → empty → repeat; or increasing fill proportion==. ==Two-channel
@@ -51,16 +51,16 @@ sections:
   check:
   - q: 'Cycle: solid, dashed, empty, solid, dashed, ?'
     options:
-      A: Empty
-      B: Solid
-      C: Dashed
+      A: Dashed
+      B: Empty
+      C: Solid
       D: Half
-    answer: A
+    answer: B
     explain: Three-state cycle repeats — empty.
     distractors:
-      A: Correct.
-      B: Back to start early.
-      C: Two cycles straight.
+      A: Two cycles straight.
+      B: Correct.
+      C: Back to start early.
       D: Outside the cycle.
 - heading: Counting and size rules
   body:
@@ -71,17 +71,17 @@ sections:
   check:
   - q: 'Elements per frame: 2, 4, 6, 8, next…'
     options:
-      A: '10'
-      B: '9'
+      A: '9'
+      B: '6'
       C: '12'
-      D: '6'
-    answer: A
+      D: '10'
+    answer: D
     explain: +2 each frame → 10.
     distractors:
-      A: Correct.
-      B: Prime stop.
+      A: Prime stop.
+      B: Down trend.
       C: '+4.'
-      D: Down trend.
+      D: Correct.
 - heading: 'Strategy: describe, then match'
   body:
   - ==Describe the rule in words — if you cannot say it, you cannot pick it==. ==Eliminate — options violating
@@ -91,16 +91,16 @@ sections:
   check:
   - q: The best first move when facing an unfamiliar figure series is…
     options:
-      A: Describe the change between frames 1 and 2
-      B: Look at options first
-      C: Guess the answer
+      A: Guess the answer
+      B: Describe the change between frames 1 and 2
+      C: Look at options first
       D: Skip it
-    answer: A
+    answer: B
     explain: The first transition usually reveals the generator.
     distractors:
-      A: Correct.
-      B: Options come after the rule.
-      C: Too early.
+      A: Too early.
+      B: Correct.
+      C: Options come after the rule.
       D: It is only a minute.
 examples:
 - prompt: 'Frames: (1) open square; (2) closed square with a dot in the center; (3) open square with dot;
@@ -149,42 +149,42 @@ passage:
   questions:
   - q: The size rule is…
     options:
-      A: Shrinking to a floor
+      A: Alternating big-small
       B: Growing to the ceiling
-      C: Constant
-      D: Alternating big-small
-    answer: A
+      C: Shrinking to a floor
+      D: Constant
+    answer: C
     explain: Large, medium, small — fixed decrement.
     distractors:
-      A: Correct.
+      A: No alternation.
       B: Opposite.
-      C: Sizes changed.
-      D: No alternation.
+      C: Correct.
+      D: Sizes changed.
   - q: The shading rule (empty → hatched at F4) most likely continues as…
     options:
-      A: Densest fill next
-      B: Return to empty
-      C: No shading change
-      D: Split fill
-    answer: A
+      A: No shading change
+      B: Split fill
+      C: Densest fill next
+      D: Return to empty
+    answer: C
     explain: The sequence moved one level — the natural continuation is deeper fill.
     distractors:
-      A: Correct per the implied gradient.
-      B: Opposite direction.
-      C: Change already happened.
-      D: No basis.
+      A: Change already happened.
+      B: No basis.
+      C: Correct per the implied gradient.
+      D: Opposite direction.
   - q: 'If the series instead goes F1-F5: circle, square, circle, square, ? the rule is…'
     options:
-      A: Alternating shape — circle
-      B: Random
+      A: Random
+      B: Growing square
       C: Rotation of the circle
-      D: Growing square
-    answer: A
+      D: Alternating shape — circle
+    answer: D
     explain: Two-state shape alternation, most parsimonious.
     distractors:
-      B: There is a clear rule.
+      A: There is a clear rule.
+      B: No size data.
       C: Rotation contradicts alternation.
-      D: No size data.
 pitfalls:
 - Reading shading as rotation — channels separate.
 - Assuming acceleration when the step is constant.
@@ -208,17 +208,17 @@ further_reading:
 review_questions:
 - q: A dot moves top, center, bottom, top, center, ?
   options:
-    A: Bottom
-    B: Top
-    C: Center
-    D: Nowhere
-  answer: A
+    A: Top
+    B: Nowhere
+    C: Bottom
+    D: Center
+  answer: C
   explain: Three-position cycle — bottom.
   distractors:
-    A: Correct.
-    B: Restart.
-    C: Stall.
-    D: No position.
+    A: Restart.
+    B: No position.
+    C: Correct.
+    D: Stall.
 - q: Frames show triangles with 0, 1, 2, 3 lines. Next has…
   options:
     A: '4'

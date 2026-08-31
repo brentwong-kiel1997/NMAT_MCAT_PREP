@@ -14,16 +14,16 @@ sections:
   check:
   - q: The mirror image of 'b' in a vertical mirror is…
     options:
-      A: d
-      B: q
-      C: p
-      D: b
-    answer: A
+      A: p
+      B: b
+      C: q
+      D: d
+    answer: D
     explain: Left-right reflection — the bowl flips to the right side.
     distractors:
-      B: That is 180-degree rotation.
-      C: That is a horizontal flip.
-      D: Unchanged — impossible.
+      A: That is a horizontal flip.
+      B: Unchanged — impossible.
+      C: That is 180-degree rotation.
 - heading: Vertical vs horizontal mirror axes
   body:
   - '==Vertical mirror (left-right) — the most common NMAT axis: reverses left and right, keeps top and
@@ -34,17 +34,17 @@ sections:
   check:
   - q: With a horizontal mirror, 'b' becomes…
     options:
-      A: p
-      B: d
+      A: d
+      B: b
       C: q
-      D: b
-    answer: A
+      D: p
+    answer: D
     explain: Top-bottom flip — the stem flips down.
     distractors:
-      A: Correct.
-      B: Vertical mirror.
+      A: Vertical mirror.
+      B: No change.
       C: Rotation.
-      D: No change.
+      D: Correct.
 - heading: Asymmetric-feature checking
   body:
   - '==Scan the asymmetric details — the notch, the protruding line, the loop — then decide its mirrored
@@ -55,15 +55,15 @@ sections:
   check:
   - q: An arrow pointing right, mirrored in a vertical mirror, points…
     options:
-      A: Left
-      B: Right
+      A: Right
+      B: Left
       C: Down
       D: Up
-    answer: A
+    answer: B
     explain: Left-right reflection reverses the heading.
     distractors:
-      A: Correct.
-      B: Only rotation keeps heading.
+      A: Only rotation keeps heading.
+      B: Correct.
       C: Horizontal axis needed.
       D: No.
 - heading: Mirror confusion with digits and letters
@@ -76,17 +76,17 @@ sections:
   check:
   - q: Which stays the same in a vertical mirror?
     options:
-      A: A
-      B: b
-      C: F
-      D: R
-    answer: A
+      A: F
+      B: R
+      C: A
+      D: b
+    answer: C
     explain: Capitals A, H, I, M, O, T, U, V, W, X, Y are vertical-mirror symmetric.
     distractors:
-      A: Correct.
-      B: d is its image.
-      C: F reverses.
-      D: R reverses.
+      A: F reverses.
+      B: R reverses.
+      C: Correct.
+      D: d is its image.
 - heading: Speed tactics for mirror items
   body:
   - ==Fix the axis mentally — decide left/right and up/down mapping before scanning options==. ==Eliminate
@@ -96,17 +96,17 @@ sections:
   check:
   - q: The fastest mirror-item attack is…
     options:
-      A: Reflect the stem once, then match
-      B: Generate all four images
-      C: Guess by symmetry
-      D: Skip
-    answer: A
+      A: Guess by symmetry
+      B: Skip
+      C: Reflect the stem once, then match
+      D: Generate all four images
+    answer: C
     explain: One reflection, one comparison — others multiply work.
     distractors:
-      A: Correct.
-      B: Four-way waste.
-      C: Symmetry only helps symmetric figures.
-      D: Every item is winnable.
+      A: Symmetry only helps symmetric figures.
+      B: Every item is winnable.
+      C: Correct.
+      D: Four-way waste.
 examples:
 - prompt: 'Given figure: an ''L'' rotated 90 degrees clockwise with a dot above the long end. Which option
     is its vertical mirror image?'
@@ -153,43 +153,43 @@ passage:
   questions:
   - q: Which transformation could be the vertical mirror image of F?
     options:
-      A: The reversed-F silhouette
-      B: The rotated-F silhouette
-      C: The F itself
-      D: The doubled-F
-    answer: A
+      A: The doubled-F
+      B: The reversed-F silhouette
+      C: The rotated-F silhouette
+      D: The F itself
+    answer: B
     explain: Left-right reversal — the mirror of F.
     distractors:
-      A: Correct.
-      B: Rotation — not a reflection.
-      C: F is not symmetric.
-      D: No doubling.
+      A: No doubling.
+      B: Correct.
+      C: Rotation — not a reflection.
+      D: F is not symmetric.
   - q: The image of 'F' under a horizontal mirror would…
     options:
-      A: Flip the two bars vertically
-      B: Stay identical
-      C: Become an S-shape
+      A: Stay identical
+      B: Become an S-shape
+      C: Flip the two bars vertically
       D: Rotate 90
-    answer: A
+    answer: C
     explain: Top-bottom reversal — the top bar moves to the bottom.
     distractors:
-      A: Correct.
-      B: Only symmetric letters pass.
-      C: That is a rotation.
+      A: Only symmetric letters pass.
+      B: That is a rotation.
+      C: Correct.
       D: Reflection ≠ rotation.
   - q: A vertical mirror followed by a horizontal mirror equals…
     options:
-      A: A 180-degree rotation
-      B: Another reflection with no rotation
-      C: Identity
-      D: A 90-degree rotation
-    answer: A
+      A: Another reflection with no rotation
+      B: Identity
+      C: A 90-degree rotation
+      D: A 180-degree rotation
+    answer: D
     explain: Two perpendicular reflections compose a half-turn.
     distractors:
-      A: Correct.
-      B: Two parallel reflections give translation.
-      C: One flip only.
-      D: Wrong composition.
+      A: Two parallel reflections give translation.
+      B: One flip only.
+      C: Wrong composition.
+      D: Correct.
 pitfalls:
 - Rotation mistaken for mirroring.
 - Wrong axis — vertical vs horizontal.

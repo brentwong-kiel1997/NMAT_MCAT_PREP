@@ -273,7 +273,7 @@ items:
   chapter: 1a-proteins-and-amino-acids
   passage_id: ''
 - id: mcat-bb-049
-  q: What are the net products of glycolysis from one molecule of glucose?
+  q: The pathway summary shown traces glycolysis from one molecule of glucose. What are its net products?
   choices:
     A: 2 pyruvate, 4 ATP, and 2 NADH
     B: 2 pyruvate and no ATP
@@ -287,6 +287,7 @@ items:
     B: Substrate-level phosphorylation clearly produces net ATP.
     C: One glucose yields two pyruvates, not one.
   chapter: 1d-bioenergetics-and-fuel-metabolism
+  figure: items/mcat-bb-049-glycolysis.svg
   passage_id: ''
 - id: mcat-bb-050
   q: Complete beta-oxidation of palmitoyl-CoA (C16:0) requires how many rounds of the pathway, and how
@@ -407,8 +408,8 @@ items:
   chapter: 3b-main-organ-systems
   passage_id: ''
 - id: mcat-bb-057
-  q: During vigorous exercise the oxygen-hemoglobin dissociation curve shifts to the right. What does
-    that shift accomplish?
+  q: In the dissociation curves shown, vigorous exercise moves the oxygen-hemoglobin curve to the right
+    of the resting curve. What does that shift accomplish?
   choices:
     A: Hemoglobin binds O2 more tightly in metabolically active tissues.
     B: Less O2 is delivered to working muscle.
@@ -422,6 +423,7 @@ items:
     B: The shift increases O2 delivery to working tissue.
     C: Exercise raises CO2 and lowers pH, the opposite of the stated conditions.
   chapter: 3b-main-organ-systems
+  figure: items/mcat-bb-057-o2hb.svg
   passage_id: ''
 - id: mcat-bb-058
   q: How does antidiuretic hormone (ADH, vasopressin) increase water reabsorption?
@@ -468,7 +470,7 @@ passages:
   chapter: genetics
   items:
   - id: mcat-bb-001
-    q: Based on the pedigree, what is the most likely mode of inheritance?
+    q: Based on the pedigree shown, what is the most likely mode of inheritance?
     choices:
       A: Autosomal recessive
       B: Autosomal dominant
@@ -484,6 +486,7 @@ passages:
       D: Maternal inheritance passes the trait to all offspring of an affected mother, not to offspring
         of unaffected parents.
     chapter: genetics
+    figure: items/mcat-bb-001-pedigree.svg
     passage_id: mcat-bb-p01
   - id: mcat-bb-002
     q: What are the genotypes of I-1 and I-2?
@@ -561,7 +564,8 @@ passages:
   chapter: 1a-proteins-and-amino-acids
   items:
   - id: mcat-bb-006
-    q: What does the data for Compound X indicate about its mechanism?
+    q: The saturation curves for the three assay conditions are shown. What does the data for Compound
+      X indicate about its mechanism?
     choices:
       A: It is a noncompetitive inhibitor.
       B: It is a competitive inhibitor.
@@ -575,6 +579,7 @@ passages:
       C: Uncompetitive inhibition lowers both Km and Vmax.
       D: X's effects are reversible on dialysis, so it is not covalently bound.
     chapter: 1a-proteins-and-amino-acids
+    figure: items/mcat-bb-006-saturation.svg
     passage_id: mcat-bb-p02
   - id: mcat-bb-007
     q: What does the data for Compound Y indicate about its mechanism?

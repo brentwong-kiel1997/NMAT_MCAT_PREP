@@ -16,15 +16,15 @@ sections:
   check:
   - q: Which functional group is most reactive toward nucleophilic attack?
     options:
-      A: Amide
-      B: Ester
-      C: Anhydride
+      A: Anhydride
+      B: Amide
+      C: Ester
       D: Carboxylate
-    answer: C
+    answer: A
     explain: Anhydrides have the best leaving group (carboxylate) — fastest acyl substitution.
     distractors:
-      A: Amides have the worst leaving group.
-      B: Esters are intermediate.
+      B: Amides have the worst leaving group.
+      C: Esters are intermediate.
       D: Carboxylates are the leaving group, not the reactant.
 - heading: Carbohydrates — polyhydroxy aldehydes and ketones
   body:
@@ -38,15 +38,15 @@ sections:
   check:
   - q: The glycosidic bond in sucrose links…
     options:
-      A: Glucose alpha-1 to glucose alpha-4
-      B: Glucose alpha-1 to fructose beta-2
-      C: Glucose beta-1 to glucose beta-4
+      A: Glucose alpha-1 to fructose beta-2
+      B: Glucose beta-1 to glucose beta-4
+      C: Glucose alpha-1 to glucose alpha-4
       D: Two fructose molecules
-    answer: B
+    answer: A
     explain: Sucrose is glucose(alpha-1) linked to fructose(beta-2) — a nonreducing disaccharide.
     distractors:
-      A: That is maltose.
-      C: That beta linkage is cellobiose — the repeating unit of cellulose.
+      B: That beta linkage is cellobiose — the repeating unit of cellulose.
+      C: That is maltose.
       D: Sucrose contains glucose and fructose.
   figures:
   - src: 5d-biologically-relevant-molecules/fig-35fa1423.webp
@@ -67,16 +67,16 @@ sections:
   check:
   - q: At pH 7, which amino acid side chain is positively charged?
     options:
-      A: Glutamate
-      B: Lysine
-      C: Serine
-      D: Alanine
-    answer: B
+      A: Serine
+      B: Alanine
+      C: Glutamate
+      D: Lysine
+    answer: D
     explain: Lysine's epsilon-amino group has pKa ~10.5 — protonated (positive) at pH 7.
     distractors:
-      A: Glutamate is negative.
-      C: Serine is neutral.
-      D: Alanine is nonpolar.
+      A: Serine is neutral.
+      B: Alanine is nonpolar.
+      C: Glutamate is negative.
 - heading: Nucleic acids — phosphate esters of nucleosides
   body:
   - DNA and RNA are polymers of nucleotides — sugar + base + phosphate. ==The 3-5 phosphodiester bond
@@ -88,16 +88,16 @@ sections:
   check:
   - q: Why does GC-rich DNA have a higher melting temperature?
     options:
-      A: GC base pairs are covalent
-      B: GC pairs form three hydrogen bonds vs two for AT
-      C: Guanine is heavier
-      D: GC pairs stack differently
-    answer: B
+      A: Guanine is heavier
+      B: GC pairs stack differently
+      C: GC base pairs are covalent
+      D: GC pairs form three hydrogen bonds vs two for AT
+    answer: D
     explain: Three hydrogen bonds require more thermal energy to disrupt.
     distractors:
-      A: No covalent bonds between bases.
-      C: Mass is irrelevant.
-      D: Stacking matters but is secondary.
+      A: Mass is irrelevant.
+      B: Stacking matters but is secondary.
+      C: No covalent bonds between bases.
 - heading: Lipids — hydrophobic and amphipathic
   body:
   - Lipids are defined by insolubility in water, not by a shared structure. Fatty acids are long hydrocarbon
@@ -109,16 +109,16 @@ sections:
   check:
   - q: Which lipid forms biological membranes?
     options:
-      A: Triacylglycerol
-      B: Phospholipid
+      A: Wax
+      B: Triacylglycerol
       C: Cholesterol ester
-      D: Wax
-    answer: B
+      D: Phospholipid
+    answer: D
     explain: Amphipathic — hydrophilic phosphate head, hydrophobic tails — forms bilayers.
     distractors:
-      A: Energy storage only.
+      A: Protective coating.
+      B: Energy storage only.
       C: Transport form.
-      D: Protective coating.
 examples:
 - prompt: 'A biochemist treats a tetrapeptide with chymotrypsin (cleaves after aromatic amino acids Phe,
     Tyr, Trp). Sequence: Ala-Phe-Gly-Trp-Lys. Predict the fragments.'

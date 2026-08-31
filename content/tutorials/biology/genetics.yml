@@ -20,16 +20,16 @@ sections:
   check:
   - q: A cell with 20 chromosomes (2n = 20) enters meiosis. Each gamete receives…
     options:
-      A: 20 chromosomes, identical to the parent
-      B: 10 chromosomes, recombined
-      C: 40 chromosomes
+      A: 10 chromosomes, recombined
+      B: 40 chromosomes
+      C: 20 chromosomes, identical to the parent
       D: 10 identical copies of one homolog
-    answer: B
+    answer: A
     explain: Meiosis halves the ploidy (n = 10) and recombines every chromatid by crossing over — gametes
       are haploid AND mosaic.
     distractors:
-      A: That describes mitosis products.
-      C: Meiosis halves; it never doubles.
+      B: Meiosis halves; it never doubles.
+      C: That describes mitosis products.
       D: Haploid sets draw from BOTH homologs after recombination, not one.
   figures:
   - src: genetics/meiosis-stages.webp
@@ -57,16 +57,16 @@ sections:
   - q: AaBb × AaBb (unlinked genes). What fraction shows the dominant A trait and the recessive b trait?
     options:
       A: 1/16
-      B: 3/16
+      B: 1/4
       C: 9/16
-      D: 1/4
-    answer: B
+      D: 3/16
+    answer: D
     explain: P(A_) = 3/4 and P(bb) = 1/4; independent genes multiply — 3/4 × 1/4 = 3/16, the second class
       of the classic 9:3:3:1.
     distractors:
       A: That is the double-recessive class aabb.
+      B: 1/4 is P(bb) alone; you dropped the A trait.
       C: That is the double-dominant class.
-      D: 1/4 is P(bb) alone; you dropped the A trait.
 - heading: Beyond simple dominance
   body:
   - Complete dominance is the exception, not the rule, and the MCAT tests the exceptions. **Incomplete
@@ -80,17 +80,17 @@ sections:
   check:
   - q: Two pink-flowered plants (RW) cross. Expected phenotype ratio?
     options:
-      A: '3 red : 1 white'
-      B: '1 red : 2 pink : 1 white'
-      C: All pink
-      D: '2 red : 2 white'
-    answer: B
+      A: '2 red : 2 white'
+      B: All pink
+      C: '1 red : 2 pink : 1 white'
+      D: '3 red : 1 white'
+    answer: C
     explain: Incomplete dominance makes genotype directly visible, and RW × RW yields the 1:2:1 genotype
       ratio as phenotypes.
     distractors:
-      A: That is complete-dominance thinking (Aa × Aa).
-      C: Only RW × RR-or-ww style crosses fix one phenotype.
-      D: There is no mechanism that erases the heterozygote class.
+      A: There is no mechanism that erases the heterozygote class.
+      B: Only RW × RR-or-ww style crosses fix one phenotype.
+      D: That is complete-dominance thinking (Aa × Aa).
 - heading: Linkage, recombination, and gene maps
   body:
   - Genes on the SAME chromosome do not assort independently — they travel together unless crossing over
@@ -105,15 +105,15 @@ sections:
   - q: A testcross of AaBb (genes linked, 20 map units apart) × aabb yields offspring ratios closest to…
     options:
       A: 1:1:1:1 across all classes
-      B: 40% each parental class, 10% each recombinant class
-      C: '9:3:3:1'
+      B: '9:3:3:1'
+      C: 40% each parental class, 10% each recombinant class
       D: All parental, no recombinants
-    answer: B
+    answer: C
     explain: 20 map units = 20% total recombinants, split between the two recombinant classes (10% each);
       the remaining 80% splits between parental classes.
     distractors:
       A: That is the UNLINKED testcross signature.
-      C: 9:3:3:1 belongs to a dihybrid self-cross, not a testcross.
+      B: 9:3:3:1 belongs to a dihybrid self-cross, not a testcross.
       D: Only complete linkage (0 map units) forbids recombinants.
 - heading: From genotype to molecule — DNA and mutation
   body:
@@ -130,14 +130,14 @@ sections:
   check:
   - q: A deletion of one nucleotide pair within an exon most likely causes…
     options:
-      A: A silent mutation
-      B: A frameshift altering all downstream codons
+      A: A frameshift altering all downstream codons
+      B: A silent mutation
       C: Improved protein folding
       D: Trisomy
-    answer: B
+    answer: A
     explain: One removed pair shifts the reading frame from that point on — the classic frameshift.
     distractors:
-      A: Silent changes leave the amino acid unchanged; frameshifts rarely do.
+      B: Silent changes leave the amino acid unchanged; frameshifts rarely do.
       C: No mechanism improves folding as a rule.
       D: Trisomy is a whole-chromosome nondisjunction outcome, not a one-pair deletion.
 examples:
@@ -190,30 +190,30 @@ passage:
   questions:
   - q: The mother of the proband is best described as…
     options:
-      A: Homozygous affected
-      B: An obligate carrier
-      C: Unlinked to the trait
-      D: X-linked dominant
-    answer: B
+      A: X-linked dominant
+      B: Unlinked to the trait
+      C: Homozygous affected
+      D: An obligate carrier
+    answer: D
     explain: An unaffected woman with an affected father-less son and an affected brother must carry one
       recessible X — she is an obligate carrier.
     distractors:
-      A: Homozygous affected women would be color-blind themselves.
-      C: Her sons' affected status derives from her X.
-      D: Dominance would affect daughters and sons equally without skipping.
+      A: Dominance would affect daughters and sons equally without skipping.
+      B: Her sons' affected status derives from her X.
+      C: Homozygous affected women would be color-blind themselves.
   - q: Probability that the unaffected daughter is a carrier?
     options:
-      A: 1/4
-      B: 1/2
-      C: '1'
-      D: '0'
-    answer: B
+      A: '0'
+      B: '1'
+      C: 1/4
+      D: 1/2
+    answer: D
     explain: Carrier mother (XᶜX) × normal father (XY) daughters get the father's normal X plus one of
       the mother's two X — half receive the carrier X.
     distractors:
-      A: 1/4 is the chance of being an affected MALE in this cross.
-      C: She would only be certain if the father were affected.
-      D: Zero ignores that the mother passes either X at random.
+      A: Zero ignores that the mother passes either X at random.
+      B: She would only be certain if the father were affected.
+      C: 1/4 is the chance of being an affected MALE in this cross.
   - q: If the daughter IS a carrier, the chance her son is affected?
     options:
       A: 1/4

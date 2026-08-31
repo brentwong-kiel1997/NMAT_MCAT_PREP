@@ -16,16 +16,16 @@ sections:
   check:
   - q: A surgeon with high income but low community status shows…
     options:
-      A: Status inconsistency
-      B: Class consciousness
-      C: Social closure
+      A: Class consciousness
+      B: Social closure
+      C: Status inconsistency
       D: Relative deprivation
-    answer: A
+    answer: C
     explain: Weber's dimensions misaligned — a stress risk pattern.
     distractors:
-      A: Correct — Weber's dimensions misaligned.
-      B: Marx's framework, not Weber's dimensions.
-      C: An exclusion mechanism — different concept.
+      A: Marx's framework, not Weber's dimensions.
+      B: An exclusion mechanism — different concept.
+      C: Correct — Weber's dimensions misaligned.
       D: Comparing to a reference group — not misalignment.
 - heading: Class, poverty, and mobility
   body:
@@ -64,16 +64,16 @@ sections:
   check:
   - q: The weathering hypothesis attributes elevated hypertension in minority populations to…
     options:
-      A: Cumulative stress from discrimination
-      B: Genetic determinism
-      C: Diet alone
-      D: Random variation
-    answer: A
+      A: Genetic determinism
+      B: Diet alone
+      C: Random variation
+      D: Cumulative stress from discrimination
+    answer: D
     explain: Allostatic load from chronic devaluation ages bodies faster.
     distractors:
-      B: No genetic claim.
-      C: Diet is one channel among many.
-      D: Systematic, not random.
+      A: No genetic claim.
+      B: Diet is one channel among many.
+      C: Systematic, not random.
 - heading: Gender, age, and other axes
   body:
   - ==Gender stratification — occupational segregation, wage gaps, double burden; sex vs gender (biologic
@@ -104,16 +104,16 @@ sections:
   check:
   - q: The inverse care law states…
     options:
-      A: Care is least available where need is greatest
-      B: More care always equals better health
-      C: Prevention is useless
-      D: Doctors are always available
-    answer: A
+      A: More care always equals better health
+      B: Doctors are always available
+      C: Care is least available where need is greatest
+      D: Prevention is useless
+    answer: C
     explain: Markets route supply away from high-need, low-pay areas (Tudor Hart).
     distractors:
-      B: Marginal care plateaus.
-      C: Prevention is key.
-      D: Availability is uneven.
+      A: Marginal care plateaus.
+      B: Availability is uneven.
+      D: Prevention is key.
   figures:
   - src: behavioral-social/fc10-stratification-and-resources/fig-226fa5f7.webp
     caption: Commuting through a snowstorm — transportation access as a daily resource.
@@ -177,28 +177,28 @@ passage:
       D: Both were screened.
   - q: Treating Tract B as 'lifestyle deficit' rather than structural exposure invokes…
     options:
-      A: Victim-blaming frames
-      B: The contact hypothesis
+      A: The contact hypothesis
+      B: Social closure
       C: Cultural relativism
-      D: Social closure
-    answer: A
+      D: Victim-blaming frames
+    answer: D
     explain: It locates the cause in choices rather than opportunity structure.
     distractors:
-      B: That reduces intergroup bias via contact.
+      A: That reduces intergroup bias via contact.
+      B: Exclusion mechanism.
       C: Judging within context.
-      D: Exclusion mechanism.
   - q: Allostatic load is greatest in which pattern?
     options:
-      A: Chronic recurring stress without recovery
-      B: One-time acute event
+      A: One-time acute event
+      B: Short-lived mild stress
       C: No stressors
-      D: Short-lived mild stress
-    answer: A
+      D: Chronic recurring stress without recovery
+    answer: D
     explain: Cumulative wear — the biological toll of repeated activation.
     distractors:
-      B: Acute events heal.
+      A: Acute events heal.
+      B: Within recovery range.
       C: No wear.
-      D: Within recovery range.
 pitfalls:
 - Status inconsistency confused with social mobility.
 - Absolute vs relative poverty.
@@ -227,17 +227,17 @@ further_reading:
 review_questions:
 - q: Absolute poverty is…
   options:
-    A: A threshold of minimal living standards
-    B: Relative to national medians
-    C: Always worse than relative
-    D: About inequality alone
-  answer: A
+    A: Relative to national medians
+    B: About inequality alone
+    C: A threshold of minimal living standards
+    D: Always worse than relative
+  answer: C
   explain: A fixed material floor — calories, shelter, basics.
   distractors:
-    A: Correct.
-    B: That is relative.
-    C: Both are severe in different ways.
-    D: Absolute is about floors, not spread.
+    A: That is relative.
+    B: Absolute is about floors, not spread.
+    C: Correct.
+    D: Both are severe in different ways.
 - q: Occupational segregation by gender refers to…
   options:
     A: Different jobs available by sex systematically

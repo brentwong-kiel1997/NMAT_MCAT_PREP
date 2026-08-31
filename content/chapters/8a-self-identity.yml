@@ -10,4 +10,45 @@ notes:
 - Self-presentation and impression management
 - Self-schemas organize self-related knowledge
 - 'Social identity: group membership shapes self-esteem'
-practice: []
+practice:
+- id: 8a-self-identity-p1
+  q: Which statement best distinguishes self-esteem from self-concept?
+  choices:
+    A: Self-concept is the cognitive set of beliefs about who you are; self-esteem is the
+      affective evaluation of that self
+    B: Self-esteem is the cognitive description of who you are; self-concept is the emotional
+      judgment of it
+    C: Self-esteem is what other people think of you; self-concept is what you think of yourself
+    D: Both are fixed at birth and unaffected by group membership
+  answer: A
+  explain: Self-concept answers 'who am I' (descriptive); self-esteem answers 'how do I feel
+    about it' (evaluative). B reverses the two, C describes reflected appraisal (the looking-glass
+    self) rather than self-esteem, and D ignores that both are socially built.
+  chapter: 8A · Self-identity
+- id: 8a-self-identity-p2
+  q: 'An adolescent has explored no career or ideological options and made no commitments.
+    In Marcia''s terms this status is:'
+  choices:
+    A: Identity achievement
+    B: Moratorium
+    C: Foreclosure
+    D: Identity diffusion
+  answer: D
+  explain: Diffusion = no exploration + no commitment. C is the trap of committing without
+    exploring (adopting parents' defaults), B is exploring without committing, and A combines
+    both.
+  chapter: 8A · Self-identity
+- id: 8a-self-identity-p3
+  q: 'After comparing her grades with a top-scoring classmate, a student feels worse about
+    her own performance. This illustrates:'
+  choices:
+    A: Downward social comparison
+    B: Self-serving attributional bias
+    C: Upward social comparison
+    D: The spotlight effect
+  answer: C
+  explain: Comparing with someone who does better is upward comparison and typically lowers
+    self-esteem. A compares with worse-off targets and usually boosts esteem, B is crediting
+    successes internally and failures externally, and D is overestimating how much others
+    notice you.
+  chapter: 8A · Self-identity

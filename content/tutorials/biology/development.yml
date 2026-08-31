@@ -71,16 +71,16 @@ sections:
   check:
   - q: A morphogen gradient assigns cell fate because…
     options:
-      A: All cells receive identical signals
-      B: Concentration of the signal encodes position along the field
+      A: Only mesoderm can respond to any signal
+      B: All cells receive identical signals
       C: The gradient destroys distant cells
-      D: Only mesoderm can respond to any signal
-    answer: B
+      D: Concentration of the signal encodes position along the field
+    answer: D
     explain: Threshold concentrations trigger different gene programs, mapping position to identity.
     distractors:
-      A: Identical signaling cannot make different fates.
+      A: Competence varies, but is not mesoderm-exclusive.
+      B: Identical signaling cannot make different fates.
       C: Gradients instruct, not execute.
-      D: Competence varies, but is not mesoderm-exclusive.
 - heading: Development in plants — a different operating system
   body:
   - Animals commit fates early and mostly stop; plants keep ==totipotent stem-cell zones for life==. **Meristems**
@@ -93,14 +93,14 @@ sections:
   check:
   - q: A gardener roots a cutting from a stem and grows a full plant. The cellular basis is…
     options:
-      A: Animal-style induced pluripotency of neurons
-      B: Dedifferentiation of living cells back to meristem-like states
+      A: Dedifferentiation of living cells back to meristem-like states
+      B: Animal-style induced pluripotency of neurons
       C: Meiosis in the cut surface
       D: Fusion of two cuttings
-    answer: B
+    answer: A
     explain: Mature plant cells reclaim meristem identity — totipotency that animals have largely lost.
     distractors:
-      A: Plants have no neurons; the mechanism is cellular, not neural.
+      B: Plants have no neurons; the mechanism is cellular, not neural.
       C: Meiosis would halve the genome; propagation stays diploid.
       D: One cutting suffices.
   figures:
@@ -120,16 +120,16 @@ sections:
   check:
   - q: A drug taken during organogenesis is MOST likely to cause…
     options:
-      A: Nothing, since organs are already formed
-      B: Structural malformations in organs under construction
-      C: Aging effects only
-      D: Chromosomal nondisjunction
-    answer: B
+      A: Aging effects only
+      B: Chromosomal nondisjunction
+      C: Nothing, since organs are already formed
+      D: Structural malformations in organs under construction
+    answer: D
     explain: Organogenesis is the structural-defect window.
     distractors:
-      A: Weeks 3–8 organs are forming, not formed.
-      C: Long-latency effects are not the primary teratogen risk.
-      D: Nondisjunction is a meiotic error, not a drug effect.
+      A: Long-latency effects are not the primary teratogen risk.
+      B: Nondisjunction is a meiotic error, not a drug effect.
+      C: Weeks 3–8 organs are forming, not formed.
 examples:
 - prompt: Spemann-style experiment — a transplanted dorsal blastopore lip (the organizer) into a host
     embryo's ventral side yields a second body axis. Explain the logic.
@@ -177,26 +177,26 @@ passage:
   - q: The early experiment shows that donor cells were…
     options:
       A: Genetically skin cells already
-      B: Still labile and respecified by host positional signals
-      C: Killed and replaced by host cells
-      D: Totipotent
-    answer: B
+      B: Killed and replaced by host cells
+      C: Totipotent
+      D: Still labile and respecified by host positional signals
+    answer: D
     explain: At gastrulation, fate is specified by position — the transplant obeyed the new address.
     distractors:
       A: They were destined gut cells; genotype did not change.
-      C: Replacement is unnecessary; the data show respecification.
-      D: Totipotency means forming a WHOLE embryo; a tissue switch is lesser.
+      B: Replacement is unnecessary; the data show respecification.
+      C: Totipotency means forming a WHOLE embryo; a tissue switch is lesser.
   - q: The later experiment differs because…
     options:
       A: Transplant technique improved
-      B: Donor cells had become DETERMINED and now resist host signals
-      C: Host signals weakened with age
+      B: Host signals weakened with age
+      C: Donor cells had become DETERMINED and now resist host signals
       D: Gut fate became dominant over skin
-    answer: B
+    answer: C
     explain: Determination locks fate — the same operation at a later stage no longer redirects it.
     distractors:
       A: Irrelevant to outcome.
-      C: Host positional cues persist; the cells' competence closed.
+      B: Host positional cues persist; the cells' competence closed.
       D: No dominance hierarchy is shown.
   - q: Which molecular concept best explains the early result?
     options:

@@ -12,4 +12,44 @@ notes:
 - H-bond donor/acceptor pairing drives specificity
 - 'Rough IMF strength: ionic > H-bond > dipole > dispersion'
 - 'Raoult’s law: vapor pressure tracks mole fraction in ideal solutions'
-practice: []
+practice:
+- id: 5b-molecules-and-intermolecular-interactions-p1
+  q: 'Water boils about 160 °C higher than H₂S even though their molar masses are nearly identical.
+    The best explanation is:'
+  choices:
+    A: Water forms an extensive hydrogen-bond network; H₂S offers only weak dipole-dipole
+      and dispersion forces
+    B: Boiling water requires breaking O–H covalent bonds
+    C: The O–H bond is so ionic that water is an ionic solid
+    D: H₂S has stronger London dispersion forces because sulfur is larger
+  answer: A
+  explain: 'O is small and electronegative, so each water molecule donates and accepts multiple
+    H bonds that must be overcome to vaporize. B is the classic error: phase changes break
+    intermolecular forces, never covalent bonds; C mislabels water as ionic; D is backwards
+    — larger S does give H₂S more dispersion, but not enough to approach water''s H-bond network.'
+  chapter: 5B · Molecules and intermolecular interactions
+- id: 5b-molecules-and-intermolecular-interactions-p2
+  q: Which pure liquid has the highest normal boiling point?
+  choices:
+    A: Propane (CH₃CH₂CH₃, M = 44)
+    B: Dimethyl ether (CH₃OCH₃, M = 46)
+    C: Ethanol (CH₃CH₂OH, M = 46)
+    D: n-Butane (CH₃CH₂CH₂CH₃, M = 58)
+  answer: C
+  explain: Ethanol (bp 78 °C) is the only one with an O–H hydrogen-bond donor plus an acceptor.
+    Butane's larger molar mass buys more dispersion but still boils at −0.5 °C, and dimethyl
+    ether (−24 °C) has acceptors but no donor — the exact trap of choosing B on molar mass
+    alone.
+  chapter: 5B · Molecules and intermolecular interactions
+- id: 5b-molecules-and-intermolecular-interactions-p3
+  q: Which compound is most soluble in water?
+  choices:
+    A: n-Hexane
+    B: 1-Butanol
+    C: n-Octane
+    D: Cholesterol
+  answer: B
+  explain: 1-Butanol both donates and accepts hydrogen bonds, so it dissolves despite its
+    four-carbon tail. Hexane and octane are dispersion-only hydrocarbons, and cholesterol's
+    bulky hydrocarbon framework swamps its single —OH group.
+  chapter: 5B · Molecules and intermolecular interactions

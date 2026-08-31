@@ -19,16 +19,16 @@ sections:
   check:
   - q: The resting potential is closest to…
     options:
-      A: +30 mV
-      B: −70 mV
-      C: 0 mV
-      D: −9 mV
-    answer: B
+      A: −9 mV
+      B: 0 mV
+      C: +30 mV
+      D: −70 mV
+    answer: D
     explain: Typical neuronal resting potential — inside negative relative to outside.
     distractors:
-      A: That is near the AP peak.
-      C: No gradient, no signaling.
-      D: Too small — pump plus K⁺ leak goes much further.
+      A: Too small — pump plus K⁺ leak goes much further.
+      B: No gradient, no signaling.
+      C: That is near the AP peak.
   figures:
   - src: 3a-nervous-and-endocrine-systems/neuron-structure.webp
     caption: The neuron — soma, dendrites, axon, myelin with nodes of Ranvier, and the synapse.
@@ -46,16 +46,16 @@ sections:
   check:
   - q: During the absolute refractory period…
     options:
-      A: Any stimulus fires a new spike
-      B: No stimulus can fire a spike because Na⁺ channels are inactivated
-      C: K⁺ channels are closed the whole time
-      D: The neuron is dead
-    answer: B
+      A: K⁺ channels are closed the whole time
+      B: The neuron is dead
+      C: No stimulus can fire a spike because Na⁺ channels are inactivated
+      D: Any stimulus fires a new spike
+    answer: C
     explain: Inactivation is un-jammable by voltage — the pause that sets maximum firing rate.
     distractors:
-      A: That is the opposite of 'absolute'.
-      C: K⁺ closure is not what defines the period.
-      D: It is a functional state, not death.
+      A: K⁺ closure is not what defines the period.
+      B: It is a functional state, not death.
+      D: That is the opposite of 'absolute'.
 - heading: The synapse — chemistry across a 20-nanometer gap
   body:
   - A spike reaches the terminal, ==voltage-gated Ca²⁺ channels open==, vesicles fuse, and neurotransmitter
@@ -99,15 +99,15 @@ sections:
   - q: A steroid hormone's receptor is located…
     options:
       A: On the cell surface only
-      B: In the cytosol/nucleus, acting on DNA
+      B: On the mitochondrial outer membrane only
       C: In the synaptic cleft
-      D: On the mitochondrial outer membrane only
-    answer: B
+      D: In the cytosol/nucleus, acting on DNA
+    answer: D
     explain: Lipid-soluble hormones enter cells and pair with intracellular receptors that regulate transcription.
     distractors:
       A: Surface receptors are the peptide-hormone pattern.
+      B: Wrong compartment story.
       C: Not a neurotransmitter arrangement.
-      D: Wrong compartment story.
 - heading: One body, two speeds — integration of neural and hormonal
   body:
   - The systems differ by design — neural signaling is ==millisecond and point-to-point== (a wire); hormonal
@@ -186,29 +186,29 @@ passage:
   questions:
   - q: The blunted glucose response occurs because…
     options:
-      A: Muscle cannot receive neural input
-      B: Adrenal-medullary epinephrine normally amplifies glycogenolysis and mobilization alongside direct
+      A: Cortisol was also blocked
+      B: Muscle cannot receive neural input
+      C: Adrenal-medullary epinephrine normally amplifies glycogenolysis and mobilization alongside direct
         neural effects
-      C: Insulin secretion rose
-      D: Cortisol was also blocked
-    answer: B
+      D: Insulin secretion rose
+    answer: C
     explain: Neural drive remains, but the hormonal arm — epinephrine acting on liver and fat — is missing.
     distractors:
-      A: The block is at the medulla, not at target innervation.
-      C: Exercise suppresses insulin; nothing raised it.
-      D: Only the medulla was blocked.
+      A: Only the medulla was blocked.
+      B: The block is at the medulla, not at target innervation.
+      D: Exercise suppresses insulin; nothing raised it.
   - q: Heart rate still climbing in this experiment demonstrates…
     options:
-      A: Hormones are unnecessary for the heart entirely
-      B: Direct sympathetic innervation suffices for the cardiac chronotropic response
-      C: The vagus was cut
+      A: Direct sympathetic innervation suffices for the cardiac chronotropic response
+      B: The vagus was cut
+      C: Hormones are unnecessary for the heart entirely
       D: Parasympathetic tone rose
-    answer: B
+    answer: A
     explain: Two arms drive the exercised heart; the neural one alone still delivers most of the rate
       response.
     distractors:
-      A: Overclaims — the data only show sufficiency here.
-      C: No vagotomy described.
+      B: No vagotomy described.
+      C: Overclaims — the data only show sufficiency here.
       D: Opposite of what exercise does.
   - q: Which treatment arm would restore the full glucose response?
     options:
@@ -253,16 +253,16 @@ further_reading:
 review_questions:
 - q: Which event directly triggers neurotransmitter vesicle fusion?
   options:
-    A: Na⁺ influx at the axon hillock
-    B: Ca²⁺ influx at the terminal
-    C: K⁺ efflux during repolarization
-    D: Myelin compression
-  answer: B
+    A: Myelin compression
+    B: K⁺ efflux during repolarization
+    C: Na⁺ influx at the axon hillock
+    D: Ca²⁺ influx at the terminal
+  answer: D
   explain: Voltage-gated calcium is the fusion signal.
   distractors:
-    A: That starts the spike upstream.
-    C: That ends the spike.
-    D: Not a mechanism.
+    A: Not a mechanism.
+    B: That ends the spike.
+    C: That starts the spike upstream.
 - q: Insulin differs from cortisol in that insulin…
   options:
     A: Enters cells and binds DNA

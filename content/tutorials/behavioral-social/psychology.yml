@@ -18,16 +18,16 @@ sections:
   check:
   - q: Damage to the amygdala most directly impairs…
     options:
-      A: Language production
-      B: Fear conditioning and emotional responses
-      C: Coordination
-      D: Object recognition
-    answer: B
+      A: Object recognition
+      B: Language production
+      C: Fear conditioning and emotional responses
+      D: Coordination
+    answer: C
     explain: Amygdala is the fear/emotion hub — encoding emotional significance.
     distractors:
-      A: Broca area does that.
-      C: Cerebellum.
-      D: Temporal/occipital junction.
+      A: Temporal/occipital junction.
+      B: Broca area does that.
+      D: Cerebellum.
 - heading: Learning and conditioning
   body:
   - '==Classical conditioning (Pavlov) — neutral stimulus paired with an unconditioned one acquires the
@@ -41,15 +41,15 @@ sections:
   - q: A slot machine pays on a…
     options:
       A: Fixed ratio schedule
-      B: Variable ratio schedule
+      B: Variable interval schedule
       C: Fixed interval schedule
-      D: Variable interval schedule
-    answer: B
+      D: Variable ratio schedule
+    answer: D
     explain: Unpredictable reinforcement after variable trials — maximal resistance to extinction.
     distractors:
       A: Predictable payouts.
+      B: Time-based.
       C: Time-based.
-      D: Time-based.
   figures:
   - src: behavioral-social/psychology/fig-0a68ead5.webp
     caption: Classical conditioning — the dog salivating to the bell after repeated bell-food pairings.
@@ -68,16 +68,16 @@ sections:
   check:
   - q: Riding a bicycle uses…
     options:
-      A: Episodic memory
-      B: Procedural memory
-      C: Semantic memory
-      D: Working memory only
-    answer: B
+      A: Procedural memory
+      B: Episodic memory
+      C: Working memory only
+      D: Semantic memory
+    answer: A
     explain: Skills are procedural — implicit, learned by practice.
     distractors:
-      A: Event recall.
-      C: Fact recall.
-      D: Not storing the skill.
+      B: Event recall.
+      C: Not storing the skill.
+      D: Fact recall.
 - heading: Cognition, language, and intelligence
   body:
   - '==Heuristics — availability (judge by ease of recall), representativeness (match prototypes), anchoring;
@@ -89,15 +89,15 @@ sections:
   check:
   - q: Judging the likelihood of events by how easily examples come to mind is…
     options:
-      A: The representativeness heuristic
-      B: The availability heuristic
-      C: Anchoring
+      A: The availability heuristic
+      B: Anchoring
+      C: The representativeness heuristic
       D: Framing
-    answer: B
+    answer: A
     explain: Easily recalled = judged probable — the availability shortcut.
     distractors:
-      A: Prototype matching.
-      C: Initial value bias.
+      B: Initial value bias.
+      C: Prototype matching.
       D: How options are worded.
 - heading: Motivation, emotion, and stress
   body:
@@ -164,43 +164,43 @@ passage:
   questions:
   - q: The mirror-drawing learning is…
     options:
-      A: Episodic — explicit
-      B: Procedural — implicit
-      C: Semantic — explicit
-      D: Working memory
-    answer: B
+      A: Working memory
+      B: Semantic — explicit
+      C: Episodic — explicit
+      D: Procedural — implicit
+    answer: D
     explain: Skill acquisition survives — procedural memory is hippocampus-independent.
     distractors:
-      A: Events are lost.
-      B: Correct.
-      C: Facts would also fail.
-      D: It is stored, not held transient.
+      A: It is stored, not held transient.
+      B: Facts would also fail.
+      C: Events are lost.
+      D: Correct.
   - q: The word-pair failure reflects…
     options:
-      A: Motivation
-      B: Explicit memory loss via the hippocampus
-      C: Sensory gating
-      D: Attention deficit
-    answer: B
+      A: Attention deficit
+      B: Motivation
+      C: Explicit memory loss via the hippocampus
+      D: Sensory gating
+    answer: C
     explain: Hippocampus consolidates explicit episodes and associations.
     distractors:
-      A: He tries normally.
-      B: Correct.
-      C: Senses work.
-      D: Attention is preserved.
+      A: Attention is preserved.
+      B: He tries normally.
+      C: Correct.
+      D: Senses work.
   - q: Which study design best separates explicit from implicit memory?
     options:
       A: Free recall of a word list
-      B: Priming — word-stem completion after brief exposure
+      B: Retroactive interference lists
       C: Serial position curve measurement
-      D: Retroactive interference lists
-    answer: B
+      D: Priming — word-stem completion after brief exposure
+    answer: D
     explain: Priming alters performance without conscious recollection — implicit.
     distractors:
       A: Explicit recall.
-      B: Correct.
+      B: Tests interference, not implicit.
       C: Curve reflects stores, not the dichotomy cleanly.
-      D: Tests interference, not implicit.
+      D: Correct.
 pitfalls:
 - Classical vs operant — respond to what (stimulus vs consequence) controls behavior.
 - Negative reinforcement is NOT punishment — sign of the operation differs.
@@ -229,17 +229,17 @@ further_reading:
 review_questions:
 - q: The myelin sheath…
   options:
-    A: Stores memories
-    B: Speeds conduction by insulating the axon
-    C: Releases dopamine
-    D: Detects pain
-  answer: B
+    A: Speeds conduction by insulating the axon
+    B: Releases dopamine
+    C: Detects pain
+    D: Stores memories
+  answer: A
   explain: Saltatory conduction — signal jumps between nodes of Ranvier.
   distractors:
-    A: Hippocampus does.
-    B: Correct.
-    C: Axon terminals do.
-    D: Nociceptors do.
+    A: Correct.
+    B: Axon terminals do.
+    C: Nociceptors do.
+    D: Hippocampus does.
 - q: Extinction in classical conditioning is…
   options:
     A: Forgetting the CR entirely

@@ -16,16 +16,16 @@ sections:
   check:
   - q: The hidden curriculum refers to…
     options:
-      A: Unofficial norms and values taught alongside academics
-      B: The official syllabus
-      C: Parent-teacher meetings
-      D: State standards
-    answer: A
+      A: Parent-teacher meetings
+      B: State standards
+      C: The official syllabus
+      D: Unofficial norms and values taught alongside academics
+    answer: D
     explain: Schools transmit punctuality, obedience, hierarchy implicitly.
     distractors:
-      B: That is the formal transcript.
-      C: Not an academic channel.
-      D: Regulatory layer.
+      A: Not an academic channel.
+      B: Regulatory layer.
+      C: That is the formal transcript.
 - heading: Culture — shared meaning in groups
   body:
   - ==Culture = symbols, language, values, norms, artifacts; ethnocentrism vs cultural relativism==. Subculture
@@ -37,16 +37,16 @@ sections:
   - q: A first-generation college student learns the unspoken etiquette of faculty meetings to navigate
       them. This is…
     options:
-      A: Cultural capital acquisition
+      A: Anomie
       B: Culture lag
-      C: Assimilation pressure
-      D: Anomie
-    answer: A
+      C: Cultural capital acquisition
+      D: Assimilation pressure
+    answer: C
     explain: Learning high-status knowledge and practice that pays off.
     distractors:
+      A: Normative confusion.
       B: A norm-technology gap.
-      C: Full identity replacement.
-      D: Normative confusion.
+      D: Full identity replacement.
   figures:
   - src: behavioral-social/fc9-cultural-and-social-differences/fig-4e6565f8.webp
     caption: The ribbon as a shared symbol — meaning carried by the health-awareness campaign.
@@ -67,16 +67,16 @@ sections:
       as…
     options:
       A: Conformity
-      B: Innovation
-      C: Ritualism
-      D: Retreatism
-    answer: B
+      B: Retreatism
+      C: Innovation
+      D: Ritualism
+    answer: C
     explain: Accepting goals, substituting illegitimate means.
     distractors:
       A: Same goals and means.
-      B: Correct.
-      C: Dropping goals, keeping routine.
-      D: Rejecting both.
+      B: Rejecting both.
+      C: Correct.
+      D: Dropping goals, keeping routine.
 - heading: Social stratification and mobility
   body:
   - ==Stratification dimensions — class, status, power (Weber); Marx — ownership of production.== Closed
@@ -88,17 +88,17 @@ sections:
   - q: Two children with identical test scores but different family wealth end up in different income
       brackets. This illustrates…
     options:
-      A: Meritocracy working perfectly
-      B: Reproduction of inequality via non-merit channels
-      C: Genetic determinism
-      D: Absolute mobility
-    answer: B
+      A: Absolute mobility
+      B: Meritocracy working perfectly
+      C: Reproduction of inequality via non-merit channels
+      D: Genetic determinism
+    answer: C
     explain: Outcomes track origin beyond ability — structural channels.
     distractors:
-      A: No.
-      B: Correct.
-      C: No genetic claim.
-      D: That is growth across generations, not inequity.
+      A: That is growth across generations, not inequity.
+      B: No.
+      C: Correct.
+      D: No genetic claim.
 - heading: Demographic and health population patterns
   body:
   - ==Demographic transition — stage 1 (both high), 2 (deaths fall, boom), 3 (fertility falls), 4 (both
@@ -165,29 +165,29 @@ passage:
   questions:
   - q: The walkability finding suggests…
     options:
-      A: Neighborhood structure shapes health independent of individual SES
+      A: Access has no effect
       B: Genes cause walkability
       C: Hospitals cause mortality
-      D: Access has no effect
-    answer: A
+      D: Neighborhood structure shapes health independent of individual SES
+    answer: D
     explain: Controlled individual factors — place effects remain.
     distractors:
-      A: Correct.
+      A: The analysis says otherwise.
       B: No genetic data.
       C: Hospitals not the exposure.
-      D: The analysis says otherwise.
+      D: Correct.
   - q: The persistence of obesity gradients after SES controls supports…
     options:
-      A: Life-course and built-environment mechanisms
+      A: Measurement failure
       B: Pure genetics
       C: Random chance
-      D: Measurement failure
-    answer: A
+      D: Life-course and built-environment mechanisms
+    answer: D
     explain: Repeated exposure to structure accumulates advantage or disadvantage.
     distractors:
+      A: Consistent across analyses.
       B: No heritability estimate.
       C: Controlled designs argue against.
-      D: Consistent across analyses.
   - q: Which design test would most directly support a causal neighborhood effect?
     options:
       A: Moving-to-opportunity style assignment

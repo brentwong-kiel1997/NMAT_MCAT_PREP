@@ -332,8 +332,7 @@ items:
     D: The figures are squares throughout, not circles.
   chapter: figure-series
 - id: nmat-p1i-022
-  q: Four figures are shown. A. an equilateral triangle; B. a square; C. a regular pentagon; D. a right
-    triangle. Which figure does not belong with the other three?
+  q: Which figure does not belong with the other three?
   choices:
     A: A — the equilateral triangle
     B: B — the square
@@ -347,6 +346,7 @@ items:
     B: It belongs; having four sides is not what separates the odd figure — equal sides and angles is.
     C: It belongs; it has the most sides, but side count is not the grouping property here.
   chapter: figure-grouping
+  figure: items/nmat-p1i-022.svg
 - id: nmat-p1i-023
   q: Four capital letters are shown. A. N; B. H; C. M; D. A. Which letter does not belong with the other
     three?
@@ -364,8 +364,7 @@ items:
     D: 'A belongs: a vertical line through its apex divides it into mirror halves.'
   chapter: figure-grouping
 - id: nmat-p1i-024
-  q: Four figures are shown. A. a rectangle; B. a triangle; C. a circle; D. a square. Which figure does
-    not belong with the other three?
+  q: Which of the four shapes is the odd one out?
   choices:
     A: A — the rectangle
     B: B — the triangle
@@ -380,10 +379,9 @@ items:
       with corners.
     D: 'It belongs: four equal straight sides and four corners, like the rectangle and the triangle.'
   chapter: figure-grouping
+  figure: items/nmat-p1i-024.svg
 - id: nmat-p1i-025
-  q: Four figures are shown. A. a rectangle with one vertical line drawn down its middle; B. a triangle
-    with nothing drawn inside it; C. a square with one diagonal drawn; D. a circle with one diameter drawn.
-    Which figure does not belong with the other three?
+  q: Which figure is least like the other three?
   choices:
     A: A — the split rectangle
     B: B — the plain triangle
@@ -397,11 +395,9 @@ items:
     C: 'It belongs: the diagonal cuts it into two triangular regions.'
     D: 'It belongs: the diameter splits it into two half-disc regions.'
   chapter: figure-grouping
+  figure: items/nmat-p1i-025.svg
 - id: nmat-p1i-026
-  q: Four figures are shown. A. a square with a dot at each of its four corners; B. a circle with four
-    dots spaced evenly around its edge; C. an equilateral triangle with a dot at each of its three corners;
-    D. a square with all four dots placed side by side along its bottom edge. Which figure does not belong
-    with the other three?
+  q: Three of the four figures share a property. Which one does not belong?
   choices:
     A: A — the square with corner dots
     B: B — the circle with evenly spaced dots
@@ -416,9 +412,9 @@ items:
     C: It belongs; it has three dots rather than four, but every dot still sits at a vertex, so the placement
       is symmetric — the count is not what separates the odd figure.
   chapter: figure-grouping
+  figure: items/nmat-p1i-026.svg
 - id: nmat-p1i-027
-  q: Four figures are shown. A. a hexagon (6 sides); B. a square (4 sides); C. a pentagon (5 sides); D.
-    an octagon (8 sides). Which figure does not belong with the other three?
+  q: Which figure does not fit with the other three?
   choices:
     A: A — the hexagon
     B: B — the square
@@ -432,9 +428,9 @@ items:
     B: 'It belongs: 4 is even.'
     D: 'It belongs: 8 is even.'
   chapter: figure-grouping
+  figure: items/nmat-p1i-027.svg
 - id: nmat-p1i-028
-  q: Four figures are shown. A. the capital letter U; B. a triangle; C. a circle; D. a square. Which figure
-    does not belong with the other three?
+  q: Which figure stands apart from the other three?
   choices:
     A: A — the letter U
     B: B — the triangle
@@ -448,9 +444,9 @@ items:
     C: 'It belongs: the curve closes on itself and encloses a region.'
     D: 'It belongs: its four sides form a closed boundary.'
   chapter: figure-grouping
+  figure: items/nmat-p1i-028.svg
 - id: nmat-p1i-029
-  q: Four figures are shown. A. a rectangle; B. a scalene triangle; C. an isosceles triangle; D. a regular
-    pentagon. Which figure does not belong with the other three?
+  q: One of the four figures is unlike the others. Which one?
   choices:
     A: A — the rectangle
     B: B — the scalene triangle
@@ -464,9 +460,9 @@ items:
     C: 'It belongs: a vertical line through its apex and base midpoint mirrors it onto itself.'
     D: 'It belongs: five lines of symmetry, one through each vertex.'
   chapter: figure-grouping
+  figure: items/nmat-p1i-029.svg
 - id: nmat-p1i-030
-  q: Four figures are shown. A. a triangle containing 3 dots; B. a square containing 3 dots; C. a pentagon
-    containing 4 dots; D. a circle containing 3 dots. Which figure does not belong with the other three?
+  q: Which of the four figures shown does not belong with the rest?
   choices:
     A: A — the triangle with 3 dots
     B: B — the square with 3 dots
@@ -481,4 +477,5 @@ items:
     B: 'It belongs: three dots inside, like the triangle and the circle.'
     D: 'It belongs: three dots inside.'
   chapter: figure-grouping
+  figure: items/nmat-p1i-030.svg
 passages: []

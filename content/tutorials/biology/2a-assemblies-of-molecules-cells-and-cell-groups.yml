@@ -42,16 +42,16 @@ sections:
   check:
   - q: Which molecule physically links the ECM to a cell's cytoskeleton?
     options:
-      A: Collagen directly
-      B: Integrins spanning the membrane
-      C: Cholesterol
+      A: Integrins spanning the membrane
+      B: Cholesterol
+      C: Collagen directly
       D: Glycine
-    answer: B
+    answer: A
     explain: Integrins are the transmembrane handshakes — ECM outside, cytoskeleton inside, signals both
       directions.
     distractors:
-      A: Collagen is the scaffold itself, not the link.
-      C: Cholesterol tunes fluidity.
+      B: Cholesterol tunes fluidity.
+      C: Collagen is the scaffold itself, not the link.
       D: An amino acid, not a connector.
 - heading: Junctions — how cells weld, rivet, and wire together
   body:
@@ -66,16 +66,16 @@ sections:
   check:
   - q: Cardiac muscle cells contract nearly in unison largely via…
     options:
-      A: Tight junctions
-      B: Gap junctions passing ions between cells
-      C: Desmosomes only
-      D: ECM collagen
-    answer: B
+      A: Desmosomes only
+      B: ECM collagen
+      C: Tight junctions
+      D: Gap junctions passing ions between cells
+    answer: D
     explain: Electrical coupling through connexons coordinates the heartbeat.
     distractors:
-      A: Sealing junctions — no channel.
-      C: Desmosomes add strength, not signaling.
-      D: Scaffold, not conduction.
+      A: Desmosomes add strength, not signaling.
+      B: Scaffold, not conduction.
+      C: Sealing junctions — no channel.
 - heading: Tissues — the four fabrics
   body:
   - Assemblies of cells plus ECM make four tissue types — **epithelial** (sheets — barriers, absorption,
@@ -89,15 +89,15 @@ sections:
   check:
   - q: Blood is classified as which tissue type?
     options:
-      A: Epithelial
-      B: Connective — cells dispersed in plasma matrix
-      C: Muscle
+      A: Muscle
+      B: Epithelial
+      C: Connective — cells dispersed in plasma matrix
       D: Nervous
-    answer: B
+    answer: C
     explain: Cells sparse in an abundant extracellular fluid — the connective-tissue design rule.
     distractors:
-      A: Blood is not a sheet.
-      C: No fibers contracting.
+      A: No fibers contracting.
+      B: Blood is not a sheet.
       D: No neurons.
   figures:
   - src: 2a-assemblies-of-molecules-cells-and-cell-groups/body-symmetry.webp
@@ -117,16 +117,16 @@ sections:
   check:
   - q: Apical Na⁺-glucose cotransport across the gut epithelium is classified as…
     options:
-      A: Simple diffusion
-      B: Secondary active transport
-      C: Primary active transport
+      A: Primary active transport
+      B: Simple diffusion
+      C: Secondary active transport
       D: Facilitated diffusion of glucose
-    answer: B
+    answer: C
     explain: It stores no ATP itself but spends the Na⁺ gradient that primary pumping built — secondary
       active.
     distractors:
-      A: Charged ion + uphill glucose = not simple.
-      C: The ATP is burned elsewhere (basolateral pump).
+      A: The ATP is burned elsewhere (basolateral pump).
+      B: Charged ion + uphill glucose = not simple.
       D: GLUT on the basal side is the facilitated step — wrong side.
   figures:
   - src: 2a-assemblies-of-molecules-cells-and-cell-groups/body-cavities.webp
@@ -182,17 +182,17 @@ passage:
   questions:
   - q: The delayed resistance drop after EDTA implies…
     options:
-      A: Cadherins directly form the seal
-      B: The sealing junctions depend on or disassemble together with cadherin-anchored structure
-      C: Gap junctions carry current
-      D: The cells died instantly
-    answer: B
+      A: Gap junctions carry current
+      B: The cells died instantly
+      C: Cadherins directly form the seal
+      D: The sealing junctions depend on or disassemble together with cadherin-anchored structure
+    answer: D
     explain: Adherens disruption destabilizes the junctional complex — the seal fails as the architecture
       collapses, not instantly as a direct effect.
     distractors:
-      A: If cadherins sealed directly, resistance would fall in minutes, not after a delay.
-      C: That is the OTHER experiment's result.
-      D: Instant death contradicts graded, condition-specific results.
+      A: That is the OTHER experiment's result.
+      B: Instant death contradicts graded, condition-specific results.
+      C: If cadherins sealed directly, resistance would fall in minutes, not after a delay.
   - q: The gap-junction blocker result shows gap junctions…
     options:
       A: Provide the paracellular barrier

@@ -9,10 +9,12 @@ Part 3: distractor notes must address real option text and be distinct.
 """
 import re
 from collections import Counter
+from pathlib import Path
 
 import yaml
 
 PATH = "/home/ubuntu/django-wsgi/content/exam-bank/nmat/part1-inductive.yml"
+IMAGES = Path(__file__).resolve().parents[2] / "content" / "images"
 fails = []
 
 
@@ -156,11 +158,24 @@ check(seq[-1] - 6 >= 1, "12: in range")
 expected_letter(by_n[12], chr(64 + seq[-1] - 6))
 
 # ------------------------------------- figure items must be self-contained ---
+# An item either spells its figures out in words (stem carries every panel) or
+# attaches a generated 4-panel sheet (figure: items/<id>.svg) and keeps only
+# the question. Both routes must leave the item answerable on its own.
 figser = [i for i in d["items"] if i["chapter"] == "figure-series"]
 figgrp = [i for i in d["items"] if i["chapter"] == "figure-grouping"]
 check(len(figser) == 9, "9 figure-series, got %d" % len(figser))
 check(len(figgrp) == 9, "9 figure-grouping, got %d" % len(figgrp))
 for i in figser + figgrp:
+    if i.get("figure"):
+        check(i["figure"].startswith("items/"), "%s: odd figure path %r"
+              % (i["id"], i["figure"]))
+        check((IMAGES / i["figure"]).is_file(),
+              "%s: figure file missing: %s" % (i["id"], i["figure"]))
+        check(i["q"].strip().endswith("?"),
+              i["id"] + ": figure-backed stem is not a question")
+        check("Four figures are shown" not in i["q"],
+              i["id"] + ": stem still narrates the figure instead of attaching it")
+        continue
     check(len(i["q"]) > 100, "%s: figure stem too thin to be self-contained (%d chars)"
           % (i["id"], len(i["q"])))
     if i in figser:

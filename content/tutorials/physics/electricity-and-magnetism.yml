@@ -16,16 +16,16 @@ sections:
   check:
   - q: Two charges, +2q and -2q, separated by distance d. Halving the distance…
     options:
-      A: Quadruples the force
+      A: Flips the force
       B: Doubles the force
       C: Halves the force
-      D: Flips the force
-    answer: A
+      D: Quadruples the force
+    answer: D
     explain: F ~ 1/r2 — d/2 gives 4x the force (still attractive).
     distractors:
+      A: No.
       B: Inverse square.
       C: Inverse-square gives 4, not 2.
-      D: No.
   figures:
   - src: electricity-and-magnetism/fig-74e73828.webp
     caption: Electric force — attraction between opposite charges, repulsion between like charges.
@@ -44,16 +44,16 @@ sections:
   check:
   - q: Two resistors, 2 ohm and 8 ohm, in series with a 12 V battery. The current is…
     options:
-      A: 1.2 A
+      A: 0.12 A
       B: 6 A
-      C: 1.5 A
-      D: 0.12 A
-    answer: A
+      C: 1.2 A
+      D: 1.5 A
+    answer: C
     explain: R-total = 10 ohm; I = 12/10 = 1.2 A.
     distractors:
+      A: Decimal slip.
       B: Parallel math.
-      C: 10 ohm, not 2.
-      D: Decimal slip.
+      D: 10 ohm, not 2.
 - heading: Capacitors and RC circuits
   body:
   - ==Capacitance C = Q/V; parallel plates C = epsilon A/d==. Energy stored = (1/2)CV2. In series, 1/C
@@ -84,15 +84,15 @@ sections:
   - q: A charge moving PARALLEL to a magnetic field experiences…
     options:
       A: Maximum force
-      B: Zero magnetic force
-      C: Force perpendicular only
-      D: It speeds up
-    answer: B
+      B: Force perpendicular only
+      C: It speeds up
+      D: Zero magnetic force
+    answer: D
     explain: sin(0) = 0 — force is zero when v is parallel to B.
     distractors:
       A: That needs v perpendicular.
-      C: That IS the case when perpendicular.
-      D: No force means no acceleration.
+      B: That IS the case when perpendicular.
+      C: No force means no acceleration.
 - heading: Electrochemistry and biological fields
   body:
   - Nernst equation V = (RT/zF) ln([out]/[in]) ties concentration gradients to membrane potentials; ==resting
@@ -158,17 +158,17 @@ passage:
   questions:
   - q: The current through the load is…
     options:
-      A: 1.8 mA
+      A: 90 mA
       B: 0.9 mA
       C: 18 mA
-      D: 90 mA
-    answer: A
+      D: 1.8 mA
+    answer: D
     explain: I = 9 / (100 + 5000) = 1.76e-3 A ≈ 1.8 mA.
     distractors:
-      A: Correct — includes internal R.
+      A: Wrong division.
       B: Omits internal resistance.
       C: Wrong division.
-      D: Wrong division.
+      D: Correct — includes internal R.
   - q: The power dissipated in the load is…
     options:
       A: 16 mW

@@ -13,15 +13,15 @@ sections:
   - q: Hearing intelligent-cold-industrious versus intelligent-warm-industrious produces very different
       impressions. This demonstrates…
     options:
-      A: Central-trait effects
-      B: Mere exposure
-      C: Self-fulfilling prophecy
+      A: Mere exposure
+      B: Self-fulfilling prophecy
+      C: Central-trait effects
       D: Recency effect
-    answer: A
+    answer: C
     explain: Warm-cold reconfigures all other information.
     distractors:
-      B: Familiarity.
-      C: Expectation changing BEHAVIOR.
+      A: Familiarity.
+      B: Expectation changing BEHAVIOR.
       D: Late info dominating — reversed.
   figures:
   - src: 8b-social-thinking/fig-195a9b26.webp
@@ -36,15 +36,15 @@ sections:
   - q: An employer holds no explicit bias yet micro-hesitates with certain names. The automatic layer
       is measured by…
     options:
-      A: IAT-style latency tasks
+      A: Reference checks
       B: Self-report survey
-      C: Reference checks
+      C: IAT-style latency tasks
       D: Intelligence testing
-    answer: A
+    answer: C
     explain: Reaction-time pairings index automatic associations.
     distractors:
+      A: History, not association.
       B: Explicit misses automatic.
-      C: History, not association.
       D: Unrelated.
   figures:
   - src: 8b-social-thinking/fig-a14732df.webp
@@ -60,16 +60,16 @@ sections:
   - q: Everyone laughs at this comedian (consensus high), only at comedians (distinctive), every show
       (consistent). The laughing is attributed…
     options:
-      A: Dispositionally, to the laughers
-      B: Situationally — something about the stimulus
+      A: To coincidence
+      B: Dispositionally, to the laughers
       C: To unstable causes
-      D: To coincidence
-    answer: B
+      D: Situationally — something about the stimulus
+    answer: D
     explain: High-high-High → external/stimulus attribution.
     distractors:
-      A: Low consensus would support that.
+      A: Not a model term.
+      B: Low consensus would support that.
       C: Consistency rules out instability.
-      D: Not a model term.
 - heading: Judgment shortcuts
   body:
   - Availability drives stereotype-consistent frequency estimates; representativeness drives base-rate
@@ -79,15 +79,15 @@ sections:
   - q: An observer notices misbehavior clustering in a small group because both are distinctive. This
       is…
     options:
-      A: Illusory correlation
-      B: Valid correlation
-      C: Self-fulfilling prophecy
+      A: Valid correlation
+      B: Self-fulfilling prophecy
+      C: Illusory correlation
       D: In-group favoritism
-    answer: A
+    answer: C
     explain: Two salient rarities pair in memory beyond their true rate.
     distractors:
-      B: No real covariation established.
-      C: Expectancy altering behavior.
+      A: No real covariation established.
+      B: Expectancy altering behavior.
       D: Allocation bias.
 examples:
 - prompt: The librarian/farmer problem — Tom is withdrawn, meticulous; the pool is 70% farmers. Most judge
@@ -156,15 +156,15 @@ passage:
   - q: Which finding would most directly challenge the study's internal validity?
     options:
       A: A large sample size
-      B: A confederate accidentally hinting at the expected answer
+      B: A replication in a different country
       C: High statistical significance
-      D: A replication in a different country
-    answer: B
+      D: A confederate accidentally hinting at the expected answer
+    answer: D
     explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
     distractors:
       A: Power, not validity.
+      B: That tests external validity.
       C: Significance is downstream of validity.
-      D: That tests external validity.
 pitfalls:
 - Treating IAT scores as proof of discrimination — contested reliability.
 - Fundamental attribution error where Kelley's verdict belongs.

@@ -15,16 +15,16 @@ sections:
   check:
   - q: A reaction with delta-H < 0 and delta-S < 0 is…
     options:
-      A: Spontaneous at all temperatures
-      B: Spontaneous only at low temperature
-      C: Spontaneous only at high temperature
-      D: Never spontaneous
-    answer: B
+      A: Never spontaneous
+      B: Spontaneous only at high temperature
+      C: Spontaneous only at low temperature
+      D: Spontaneous at all temperatures
+    answer: C
     explain: At low T the favorable enthalpy term dominates — T delta-S is small.
     distractors:
-      A: Not all temperatures — high T makes -T delta-S positive.
-      C: That is delta-H>0, delta-S>0.
-      D: Not never.
+      A: Not never.
+      B: That is delta-H>0, delta-S>0.
+      D: Not all temperatures — high T makes -T delta-S positive.
 - heading: Equilibrium — the balance point
   body:
   - Every reversible reaction reaches equilibrium where forward and reverse rates equal. ==K = products
@@ -36,16 +36,16 @@ sections:
   check:
   - q: For N2 + 3H2 <-> 2NH3 (delta-H < 0), increasing temperature will…
     options:
-      A: Shift right and increase K
-      B: Shift left and decrease K
-      C: Shift right and decrease K
-      D: No change
-    answer: B
+      A: Shift right and decrease K
+      B: No change
+      C: Shift left and decrease K
+      D: Shift right and increase K
+    answer: C
     explain: Exothermic — heat is a product, so added heat shifts left AND lowers K.
     distractors:
-      A: Direction wrong.
-      C: Direction inconsistent with exothermic.
-      D: Temperature always matters.
+      A: Direction inconsistent with exothermic.
+      B: Temperature always matters.
+      D: Direction wrong.
 - heading: Kinetics — rates and rate laws
   body:
   - Rate measures concentration change per time — ==rate = k[A]^m[B]^n== where m and n come ONLY from
@@ -58,16 +58,16 @@ sections:
   check:
   - q: A catalyst changes…
     options:
-      A: The equilibrium constant
-      B: The activation energy
-      C: Delta-G of the reaction
-      D: The final concentrations at equilibrium
-    answer: B
+      A: The final concentrations at equilibrium
+      B: Delta-G of the reaction
+      C: The equilibrium constant
+      D: The activation energy
+    answer: D
     explain: Catalysts lower Ea — equilibrium is reached faster, same position.
     distractors:
-      A: K is temperature-only.
-      C: Delta-G is a state function — unchanged.
-      D: Same final concentrations.
+      A: Same final concentrations.
+      B: Delta-G is a state function — unchanged.
+      C: K is temperature-only.
   figures:
   - src: 5e-principles-of-chemical-thermodynamics-and-kinetics/fig-29762773.webp
     caption: Reaction rate from a concentration-time curve — initial and instantaneous rates as slopes.
@@ -87,16 +87,16 @@ sections:
   check:
   - q: A reaction with delta-G standard > 0 can proceed forward when…
     options:
-      A: Q > K
-      B: Q < K
-      C: Temperature is zero
-      D: A catalyst is added
-    answer: B
+      A: Temperature is zero
+      B: A catalyst is added
+      C: Q > K
+      D: Q < K
+    answer: D
     explain: With Q < K, the RT ln Q term makes actual delta-G negative.
     distractors:
-      A: Q > K makes it reverse.
-      C: Unphysical.
-      D: Catalyst changes rate, not direction.
+      A: Unphysical.
+      B: Catalyst changes rate, not direction.
+      C: Q > K makes it reverse.
 - heading: Reaction mechanisms
   body:
   - Mechanisms are stepwise elementary reactions that sum to the overall equation. ==The slowest step
@@ -108,16 +108,16 @@ sections:
   check:
   - q: The rate-determining step is…
     options:
-      A: The first step always
-      B: The slowest elementary step
-      C: The fastest step
-      D: The step with the catalyst
-    answer: B
+      A: The fastest step
+      B: The step with the catalyst
+      C: The first step always
+      D: The slowest elementary step
+    answer: D
     explain: The slow step bottlenecks the whole sequence.
     distractors:
-      A: Not necessarily first.
-      C: The fast step is not limiting.
-      D: Catalyst location is separate.
+      A: The fast step is not limiting.
+      B: Catalyst location is separate.
+      C: Not necessarily first.
 examples:
 - prompt: For a reaction, delta-H = +75 kJ/mol and delta-S = +150 J/mol-K. Above what temperature does
     it become spontaneous?
@@ -173,28 +173,28 @@ passage:
       D: Enzymes are not heat sources.
   - q: The unchanged product-to-reactant ratio confirms…
     options:
-      A: Zero-order kinetics
-      B: Equilibrium position depends on delta-G, not catalysis
-      C: The enzyme is denatured
+      A: Equilibrium position depends on delta-G, not catalysis
+      B: The enzyme is denatured
+      C: Zero-order kinetics
       D: Irreversibility
-    answer: B
+    answer: A
     explain: Same K, same final concentrations — catalysts affect rate only.
     distractors:
-      A: Kinetics order is unrelated.
-      C: It is active — rate rose 10^8 fold.
+      B: It is active — rate rose 10^8 fold.
+      C: Kinetics order is unrelated.
       D: Hydrolysis is reversible.
   - q: If delta-G standard is -14 kJ/mol, the ratio K at 25C is approximately…
     options:
       A: e^-5.6 (about 0.004)
-      B: e^+5.6 (about 270)
-      C: '1'
-      D: '14'
-    answer: B
+      B: '14'
+      C: e^+5.6 (about 270)
+      D: '1'
+    answer: C
     explain: K = exp(-delta-G standard / RT) = exp(14,000 / (8.314 x 298)) about e^5.6.
     distractors:
       A: Sign flipped — that is the reciprocal.
-      C: Only at delta-G = 0.
-      D: Units mismatch.
+      B: Units mismatch.
+      D: Only at delta-G = 0.
 pitfalls:
 - Confusing spontaneity with speed — delta-G says nothing about rate.
 - Getting rate-law exponents from coefficients of the overall equation.

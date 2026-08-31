@@ -564,7 +564,8 @@ passages:
     chapter: 7b-social-processes-that-influence-behavior
     passage_id: mcat-ps-p01
   - id: mcat-ps-028
-    q: Which result most strongly supports the claim that the visible behavior of peers, not the demands
+    q: The bar graph summarizes the percentage of participants who continued to 450 V in each variation.
+      Which result most strongly supports the claim that the visible behavior of peers, not the demands
       of the task alone, controls obedience?
     choices:
       D: When two additional participants (confederates) refused to continue, only 10% of real participants
@@ -581,6 +582,7 @@ passages:
       B: Payment was constant across conditions and so cannot explain the variation in compliance.
       C: The Bridgeport result concerns the setting's prestige, not the behavior of peers.
     chapter: 7b-social-processes-that-influence-behavior
+    figure: items/mcat-ps-028-milgram.svg
     passage_id: mcat-ps-p01
   - id: mcat-ps-029
     q: A participant begins the study but the experimenter takes a phone call and gives instructions to
@@ -1217,9 +1219,9 @@ passages:
   chapter: 9b-demographic-characteristics-and-processes
   items:
   - id: mcat-ps-056
-    q: During 1900-1940, Country X's crude death rate fell from 38 to 20 per 1,000 while its crude birth
-      rate stayed near 40 per 1,000 and its population grew by 60%. In demographic transition terms the
-      country was in
+    q: The graph plots Country X's crude birth and death rates from 1900 to 2020. Between 1900 and 1940
+      the death rate fell from 38 to 20 per 1,000 while the birth rate stayed near 40 per 1,000 and the
+      population grew by 60%. In demographic transition terms the country was in
     choices:
       A: Stage 2, in which mortality declines while fertility remains high, producing rapid growth.
       B: Stage 1, in which both rates are high and fluctuate in balance.
@@ -1234,9 +1236,11 @@ passages:
       C: The birth rate had not yet begun to decline in this period, which is what defines stage 3.
       D: Both rates remained far above the low levels characteristic of stage 4.
     chapter: 9b-demographic-characteristics-and-processes
+    figure: items/mcat-ps-056-transition.svg
     passage_id: mcat-ps-p07
   - id: mcat-ps-057
-    q: What accounted for Country X's population growth between 1900 and 1940?
+    q: As the graph of birth and death rates shows, what accounted for Country X's population growth
+      between 1900 and 1940?
     choices:
       B: A falling death rate driven by public health and sanitation, with fertility essentially unchanged.
       C: A rising birth rate caused by earlier marriage and larger families.
@@ -1253,6 +1257,7 @@ passages:
       A: A fall in both rates would narrow the natural increase, not produce the fastest growth in the
         country's history.
     chapter: 9b-demographic-characteristics-and-processes
+    figure: items/mcat-ps-056-transition.svg
     passage_id: mcat-ps-p07
   - id: mcat-ps-058
     q: By 2020 Country X's total fertility rate was 1.7, below replacement, yet the population was still

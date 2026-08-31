@@ -282,8 +282,8 @@ items:
   chapter: 4b-fluids-for-circulation-and-gas-exchange
   passage_id: ''
 - id: mcat-cp-051
-  q: A 6.0 Ω resistor in parallel with a 3.0 Ω resistor is connected in series with a 4.0 Ω resistor across
-    a 12 V battery. The battery current is
+  q: In the circuit shown, a 6.0 Ω resistor in parallel with a 3.0 Ω resistor is connected in series with
+    a 4.0 Ω resistor across a 12 V battery. The battery current is
   choices:
     A: 0.92 A
     B: 2.0 A
@@ -296,6 +296,7 @@ items:
     C: Used only the 4.0 Ω resistor.
     D: Used only the 2.0 Ω equivalent of the parallel pair.
   chapter: electricity-and-magnetism
+  figure: items/mcat-cp-051-circuit.svg
   passage_id: ''
 - id: mcat-cp-052
   q: A sound wave of wavelength 0.68 m travels at 340 m/s. Its frequency is
@@ -430,7 +431,8 @@ passages:
   chapter: 5e-chemical-thermodynamics-and-kinetics
   items:
   - id: mcat-cp-001
-    q: What is the Vmax of the enzyme preparation?
+    q: The double-reciprocal plot for the uninhibited runs is shown. What is the Vmax of the enzyme
+      preparation?
     choices:
       A: 0.025 µmol min⁻¹ mL⁻¹
       B: 40 µmol min⁻¹ mL⁻¹
@@ -443,6 +445,7 @@ passages:
       C: Inverting the slope (1/0.0125) gives 80; the slope is not 1/Vmax.
       D: Decimal-place slip while inverting 0.025.
     chapter: 5e-chemical-thermodynamics-and-kinetics
+    figure: items/mcat-cp-001-lb-plot.svg
     passage_id: mcat-cp-p01
   - id: mcat-cp-002
     q: What is Km for this substrate?
@@ -490,7 +493,8 @@ passages:
     chapter: biochemistry
     passage_id: mcat-cp-p01
   - id: mcat-cp-005
-    q: Compared with the uninhibited runs, which kinetic parameter does the competitive inhibitor change?
+    q: Both double-reciprocal plots are shown. Compared with the uninhibited runs, which kinetic parameter
+      does the competitive inhibitor change?
     choices:
       A: Only Vmax, which decreases; Km is unchanged
       B: Only Km, which increases; Vmax is unchanged
@@ -504,6 +508,7 @@ passages:
       C: Neither intercept changes, so Vmax is not affected at all.
       D: The slope did double, so the apparent Km did change.
     chapter: biochemistry
+    figure: items/mcat-cp-005-lb-inhibitor.svg
     passage_id: mcat-cp-p01
 - id: mcat-cp-p02
   text: A student titrated 20.0 mL of 0.100 M acetic acid (Ka = 1.8 x 10^-5; pKa = 4.76) with 0.100 M
@@ -529,7 +534,8 @@ passages:
     chapter: 5a-unique-nature-of-water-and-its-solutions
     passage_id: mcat-cp-p02
   - id: mcat-cp-007
-    q: Why does the meter read 4.76 when 10.0 mL of base has been added?
+    q: The titration curve for the run is shown. Why does the meter read 4.76 when 10.0 mL of base has
+      been added?
     choices:
       A: Half the acid has been converted to acetate, so pH = pKa
       B: The acetic acid has been completely neutralized at that point
@@ -542,6 +548,7 @@ passages:
       C: The reading reflects [A-] = [HA], not equality of the two added reagents.
       D: The HA/A- pair buffers best right around this point.
     chapter: 5a-unique-nature-of-water-and-its-solutions
+    figure: items/mcat-cp-007-titration.svg
     passage_id: mcat-cp-p02
   - id: mcat-cp-008
     q: What is the molar concentration of acetate ion at the equivalence point?
@@ -627,7 +634,8 @@ passages:
     chapter: 4a-motion-forces-work-energy-equilibrium
     passage_id: mcat-cp-p03
   - id: mcat-cp-013
-    q: With what speed does the ball strike the ground?
+    q: The graph shows the ball's velocity components throughout the flight. With what speed does the
+      ball strike the ground?
     choices:
       A: 19.8 m/s
       B: 34.8 m/s
@@ -640,6 +648,7 @@ passages:
       B: Added the two components arithmetically instead of in quadrature.
       D: Ignored the vertical motion entirely.
     chapter: mechanics
+    figure: items/mcat-cp-013-velocity-time.svg
     passage_id: mcat-cp-p03
   - id: mcat-cp-014
     q: What is the ball's kinetic energy just before impact?

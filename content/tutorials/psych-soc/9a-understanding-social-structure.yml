@@ -12,16 +12,16 @@ sections:
   check:
   - q: A researcher asks how licensing boards protect quality but also raise barriers. This combines…
     options:
-      A: Functionalism and conflict theory
-      B: Symbolic interactionism alone
-      C: Social exchange alone
-      D: Evolutionary psychology alone
-    answer: A
+      A: Social exchange alone
+      B: Evolutionary psychology alone
+      C: Symbolic interactionism alone
+      D: Functionalism and conflict theory
+    answer: D
     explain: Functions served + distributional consequences — the two lenses.
     distractors:
-      B: Micro-meaning.
-      C: Interpersonal.
-      D: Not sociological three.
+      A: Interpersonal.
+      B: Not sociological three.
+      C: Micro-meaning.
   figures:
   - src: 9a-understanding-social-structure/fig-962529d0.webp
     caption: Religious community life moving onto video calls — institutions adapting their routines to
@@ -35,16 +35,16 @@ sections:
   check:
   - q: A resident must choose between family emergency and on-call duty. This is…
     options:
-      A: Role conflict
+      A: Groupthink
       B: Role strain
-      C: Status inconsistency
-      D: Groupthink
-    answer: A
+      C: Role conflict
+      D: Status inconsistency
+    answer: C
     explain: Two roles' demands collide.
     distractors:
+      A: Group defect.
       B: Within a single role.
-      C: Misaligned ranks.
-      D: Group defect.
+      D: Misaligned ranks.
 - heading: Bureaucracy and organizations
   body:
   - Weber's ideal type — hierarchy, written rules, division of labor, impersonality. Predictability as
@@ -53,16 +53,16 @@ sections:
   check:
   - q: Dashboard targets drive staff to game wait-time statistics rather than improve care. This is…
     options:
-      A: Goal displacement
-      B: Role exit
+      A: Role exit
+      B: Diffusion of responsibility
       C: Ascribed status
-      D: Diffusion of responsibility
-    answer: A
+      D: Goal displacement
+    answer: D
     explain: Means become ends.
     distractors:
-      B: Leaving a role.
+      A: Leaving a role.
+      B: Bystander mechanism.
       C: Birth-assigned.
-      D: Bystander mechanism.
   figures:
   - src: 9a-understanding-social-structure/fig-af42b92c.webp
     caption: Formal organizations and bureaucracy — Weber's ideal type and its variations.
@@ -75,16 +75,16 @@ sections:
   check:
   - q: Genetic screening outpaces social norms on privacy. This mismatch is…
     options:
-      A: Culture lag
-      B: Cultural diffusion
-      C: Assimilation
-      D: Innovation diffusion
-    answer: A
+      A: Innovation diffusion
+      B: Assimilation
+      C: Culture lag
+      D: Cultural diffusion
+    answer: C
     explain: Material culture changes faster than guiding norms.
     distractors:
-      B: Trait spread.
-      C: Minority absorption.
-      D: Adoption curve.
+      A: Adoption curve.
+      B: Minority absorption.
+      D: Trait spread.
 examples:
 - prompt: Analyze a medical school's grading system through all three lenses.
   solution:

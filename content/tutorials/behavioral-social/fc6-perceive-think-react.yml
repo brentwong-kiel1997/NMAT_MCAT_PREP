@@ -16,16 +16,16 @@ sections:
   check:
   - q: Benzodiazepines reduce anxiety by…
     options:
-      A: Blocking dopamine receptors
-      B: Enhancing GABA-mediated inhibition
-      C: Increasing glutamate
-      D: Blocking reuptake of serotonin
-    answer: B
+      A: Blocking reuptake of serotonin
+      B: Increasing glutamate
+      C: Enhancing GABA-mediated inhibition
+      D: Blocking dopamine receptors
+    answer: C
     explain: They bind the GABA-A receptor and increase chloride influx — inhibition down.
     distractors:
-      A: That is antipsychotics.
-      C: Opposite direction.
-      D: SSRIs do that.
+      A: SSRIs do that.
+      B: Opposite direction.
+      D: That is antipsychotics.
 - heading: Sensation and perception — getting the world in
   body:
   - ==Sensation = transduction — receptors convert stimuli into neural signals; perception = interpretation==.
@@ -37,16 +37,16 @@ sections:
   check:
   - q: Seeing a circle where three dashed arcs nearly meet is…
     options:
-      A: Closure
-      B: Similarity
-      C: Proximity
-      D: Figure-ground
-    answer: A
+      A: Similarity
+      B: Figure-ground
+      C: Closure
+      D: Proximity
+    answer: C
     explain: The mind completes the missing piece — Gestalt closure.
     distractors:
-      B: Grouping by appearance.
-      C: Grouping by nearness.
-      D: Separating object from background.
+      A: Grouping by appearance.
+      B: Separating object from background.
+      D: Grouping by nearness.
   figures:
   - src: behavioral-social/fc6-perceive-think-react/muller-lyer.webp
     caption: The Müller-Lyer illusion — the mind's depth cues override equal line lengths.
@@ -62,16 +62,16 @@ sections:
   check:
   - q: REM sleep is characterized by…
     options:
-      A: Slow-wave EEG
-      B: Rapid eye movement and skeletal muscle atonia
-      C: Deep non-dreaming rest
+      A: Deep non-dreaming rest
+      B: Slow-wave EEG
+      C: Rapid eye movement and skeletal muscle atonia
       D: No brain activity
-    answer: B
+    answer: C
     explain: Dreaming accompanies REM; muscles are actively paralyzed.
     distractors:
-      A: Stage 3 has slow waves.
-      B: Correct.
-      C: REM is not NREM 3.
+      A: REM is not NREM 3.
+      B: Stage 3 has slow waves.
+      C: Correct.
       D: Brain is very active.
 - heading: Cognition and emotion — thinking makes feeling
   body:
@@ -84,17 +84,17 @@ sections:
   check:
   - q: Leptin primarily…
     options:
-      A: Stimulates hunger
-      B: Signals fat stores to reduce hunger
-      C: Triggers thirst
-      D: Promotes sleep
-    answer: B
+      A: Triggers thirst
+      B: Promotes sleep
+      C: Stimulates hunger
+      D: Signals fat stores to reduce hunger
+    answer: D
     explain: Adipose-derived — high levels suppress appetite via the hypothalamus.
     distractors:
-      A: Ghrelin does that.
-      B: Correct.
-      C: Thirst is separate.
-      D: Not its signal.
+      A: Thirst is separate.
+      B: Not its signal.
+      C: Ghrelin does that.
+      D: Correct.
 - heading: Stress and the biology of reaction
   body:
   - ==HPA axis — hypothalamus releases CRH, pituitary ACTH, adrenal cortex cortisol; SNS gives the quick
@@ -106,16 +106,16 @@ sections:
   check:
   - q: The FAST initial reaction to a threat is…
     options:
-      A: Cortisol release
-      B: Epinephrine via the sympathetic system
-      C: ACTH from the pituitary
-      D: Serotonin reuptake
-    answer: B
+      A: ACTH from the pituitary
+      B: Cortisol release
+      C: Serotonin reuptake
+      D: Epinephrine via the sympathetic system
+    answer: D
     explain: Sympathetic-adrenal-medullary axis — seconds; cortisol takes minutes.
     distractors:
-      A: The slow HPA path.
-      C: HPA step.
-      D: Not a stress channel.
+      A: HPA step.
+      B: The slow HPA path.
+      C: Not a stress channel.
   figures:
   - src: behavioral-social/fc6-perceive-think-react/fig-b561c8c9.webp
     caption: The autonomic nervous system — sympathetic emergency mobilization versus parasympathetic
@@ -193,16 +193,16 @@ passage:
   - q: Which finding would most challenge the study's internal validity?
     options:
       A: A large sample size
-      B: The stress group knowing whether they received oxytocin or placebo
-      C: High statistical significance
-      D: Replication with a longer task
-    answer: B
+      B: High statistical significance
+      C: Replication with a longer task
+      D: The stress group knowing whether they received oxytocin or placebo
+    answer: D
     explain: Expectation effects contaminate the manipulation — demand characteristics.
     distractors:
       A: Power, not validity.
-      B: Correct.
-      C: Significance is downstream.
-      D: That tests external validity.
+      B: Significance is downstream.
+      C: That tests external validity.
+      D: Correct.
 pitfalls:
 - HPA vs SNS timing — seconds vs minutes.
 - Confusing rods and cones roles.

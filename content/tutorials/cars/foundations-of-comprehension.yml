@@ -13,17 +13,17 @@ sections:
   check:
   - q: Which is the best answer source for a CARS main-idea item?
     options:
-      A: The passage's own assertions
-      B: Your background knowledge
-      C: The other examinees' notes
-      D: The answer key pattern
-    answer: A
+      A: Your background knowledge
+      B: The other examinees' notes
+      C: The answer key pattern
+      D: The passage's own assertions
+    answer: D
     explain: CARS is a reading test — the passage is the text.
     distractors:
-      A: Correct.
-      B: Outside knowledge is excluded.
-      C: Not available.
-      D: No such pattern is reliable.
+      A: Outside knowledge is excluded.
+      B: Not available.
+      C: No such pattern is reliable.
+      D: Correct.
 - heading: Main idea — thesis hunting
   body:
   - ==Thesis signals — the first paragraph's last sentence, the closing paragraph, contrast markers (however,
@@ -34,17 +34,17 @@ sections:
   check:
   - q: Where do authors most often state the main claim?
     options:
-      A: First paragraph, often its final sentence
-      B: Randomly mid-passage
-      C: In the footnotes
-      D: Never explicitly
-    answer: A
+      A: In the footnotes
+      B: Never explicitly
+      C: Randomly mid-passage
+      D: First paragraph, often its final sentence
+    answer: D
     explain: Thesis-first is the dominant organization.
     distractors:
-      A: Correct.
-      B: Not typical.
-      C: Footnotes hold citations.
-      D: Usually explicit.
+      A: Footnotes hold citations.
+      B: Usually explicit.
+      C: Not typical.
+      D: Correct.
 - heading: Paragraph function — the roadmap layer
   body:
   - ==Every paragraph does a job — introduce, define, exemplify, contrast, refute, qualify, transition,
@@ -54,17 +54,17 @@ sections:
   check:
   - q: A paragraph opens by defining a term, then gives two examples. Its function is…
     options:
-      A: Define and illustrate
-      B: Refute a claim
+      A: Refute a claim
+      B: Conclude the passage
       C: Compare two positions
-      D: Conclude the passage
-    answer: A
+      D: Define and illustrate
+    answer: D
     explain: Definition plus exemplification is the paragraph's role.
     distractors:
-      A: Correct.
-      B: No opponent is attacked.
+      A: No opponent is attacked.
+      B: Not the close.
       C: No second position shown.
-      D: Not the close.
+      D: Correct.
 - heading: Detail location and accuracy
   body:
   - ==Detail items point at specific claims — relocate the exact sentence, then paraphrase precisely==.
@@ -74,17 +74,17 @@ sections:
   check:
   - q: A passage states 'most historians agree'. A detail answer claiming 'all historians agree'…
     options:
-      A: Overstates the passage
-      B: Matches the passage
+      A: Is unrelated
+      B: Overstates the passage
       C: Is milder
-      D: Is unrelated
-    answer: A
+      D: Matches the passage
+    answer: B
     explain: Most → all is a scope change — the classic trap.
     distractors:
-      A: Correct.
-      B: All exceeds most.
+      A: It is the same topic.
+      B: Correct.
       C: It is stronger, not milder.
-      D: It is the same topic.
+      D: All exceeds most.
 - heading: Tone and attitude
   body:
   - '==Tone items — map adjectives and adverbs: approving, skeptical, neutral, critical, ambivalent==.
@@ -95,17 +95,17 @@ sections:
   check:
   - q: An author calls the proposal 'bold but impractical'. The tone is…
     options:
-      A: Mixed — admiring yet skeptical
-      B: Entirely approving
-      C: Entirely hostile
-      D: Neutral
-    answer: A
+      A: Neutral
+      B: Entirely hostile
+      C: Mixed — admiring yet skeptical
+      D: Entirely approving
+    answer: C
     explain: '''Bold'' credits it; ''impractical'' withholds support — ambivalence.'
     distractors:
-      A: Correct.
-      B: Impractical blocks approval.
-      C: Bold blocks hostility.
-      D: Judgment appears.
+      A: Judgment appears.
+      B: Bold blocks hostility.
+      C: Correct.
+      D: Impractical blocks approval.
 examples:
 - prompt: 'Passage opening: ''Urban beekeeping is usually presented as a purely environmental success.
     But the hives also concentrate pesticide exposure in densely planted neighborhoods, and city ordinances
@@ -154,41 +154,41 @@ passage:
   questions:
   - q: The main idea of the passage is…
     options:
-      A: The guilds' civic and training functions were real, but monopoly behavior persisted
-      B: Guilds were simple monopolies
-      C: Guilds were civic utopias
-      D: Guilds had no economic role
-    answer: A
+      A: Guilds were civic utopias
+      B: Guilds had no economic role
+      C: The guilds' civic and training functions were real, but monopoly behavior persisted
+      D: Guilds were simple monopolies
+    answer: C
     explain: The 'therefore partial' close updates the thesis — both sides kept.
     distractors:
-      A: Correct.
-      B: That is the older account.
-      C: Ignores the monopoly caveat.
-      D: Contradicts the passage.
+      A: Ignores the monopoly caveat.
+      B: Contradicts the passage.
+      C: Correct.
+      D: That is the older account.
   - q: The final sentence functions as…
     options:
-      A: A qualification of the revision
+      A: A definition
       B: A list of examples
-      C: An attack on the author
-      D: A definition
-    answer: A
+      C: A qualification of the revision
+      D: An attack on the author
+    answer: C
     explain: '''Partial, not total'' qualifies how far the revision displaces the old view.'
     distractors:
-      A: Correct.
+      A: No term defined.
       B: No list appears.
-      C: No attack.
-      D: No term defined.
+      C: Correct.
+      D: No attack.
   - q: A tone not evidenced in the passage is…
     options:
-      A: Outrage at the guilds
-      B: Measured scholarly assessment
+      A: Measured scholarly assessment
+      B: Outrage at the guilds
       C: Qualified sympathy for the revision
       D: Analytical distance
-    answer: A
+    answer: B
     explain: No intense emotion appears — the register is scholarly.
     distractors:
-      A: Correct.
-      B: '''Partial'' is measured.'
+      A: '''Partial'' is measured.'
+      B: Correct.
       C: '''Not total'' qualifies.'
       D: Neutral vocabulary dominates.
 pitfalls:
@@ -215,17 +215,17 @@ further_reading:
 review_questions:
 - q: A detail item asks about a passage sentence. The strongest answer…
   options:
-    A: Paraphrases that sentence without adding scope
-    B: Adds a generality
-    C: Uses common knowledge
-    D: Agrees with the author
-  answer: A
+    A: Adds a generality
+    B: Paraphrases that sentence without adding scope
+    C: Agrees with the author
+    D: Uses common knowledge
+  answer: B
   explain: Accurate paraphrase, unchanged scope.
   distractors:
-    A: Correct.
-    B: Scope additions fail.
-    C: Outside knowledge fails.
-    D: Agreement is irrelevant to accuracy.
+    A: Scope additions fail.
+    B: Correct.
+    C: Agreement is irrelevant to accuracy.
+    D: Outside knowledge fails.
 - q: '''The author is mainly concerned with…'' is which family?'
   options:
     A: Main idea

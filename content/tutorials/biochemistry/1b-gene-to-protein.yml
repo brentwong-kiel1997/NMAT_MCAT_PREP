@@ -17,16 +17,16 @@ sections:
   - q: A DNA double helix is antiparallel because…
     options:
       A: One strand is left-handed
-      B: The two strands run 5' to 3' in opposite directions
-      C: One strand is RNA
-      D: Chargaff broke a rule
-    answer: B
+      B: Chargaff broke a rule
+      C: The two strands run 5' to 3' in opposite directions
+      D: One strand is RNA
+    answer: C
     explain: Backbone polarity opposes — that is what enables base pairing in the groove.
     distractors:
       A: Both are right-handed.
-      B: Correct.
-      C: Both DNA.
-      D: Base composition is complementary.
+      B: Base composition is complementary.
+      C: Correct.
+      D: Both DNA.
   figures:
   - src: 1b-gene-to-protein/fig-5eb113a0.webp
     caption: DNA-protein interaction, alpha-helices, and the folded protein — the hierarchy from information
@@ -44,16 +44,16 @@ sections:
   - q: DNA polymerase cannot…
     options:
       A: Add nucleotides 5' to 3'
-      B: Initiate synthesis without a primer
+      B: Pair A with T
       C: Read the template
-      D: Pair A with T
-    answer: B
+      D: Initiate synthesis without a primer
+    answer: D
     explain: It extends pre-existing 3'-OH ends — primase provides the starter.
     distractors:
       A: It always adds to the 3' end.
-      B: Correct.
+      B: It pairs faithful bases.
       C: It reads the template.
-      D: It pairs faithful bases.
+      D: Correct.
 - heading: Transcription — DNA to RNA
   body:
   - ==RNA polymerase reads the template strand 3' to 5', synthesizing RNA 5' to 3'; the coding strand
@@ -86,17 +86,17 @@ sections:
   check:
   - q: Aminoacyl-tRNA synthetase…
     options:
-      A: Matches each amino acid to its tRNA using ATP
+      A: Cleaves mRNA
       B: Ribosome assembly
       C: Folds proteins
-      D: Cleaves mRNA
-    answer: A
+      D: Matches each amino acid to its tRNA using ATP
+    answer: D
     explain: The charging step — ATP-dependent, the code's executioner.
     distractors:
-      A: Correct.
+      A: Nucleases do.
       B: That is the ribosome.
       C: Chaperones do.
-      D: Nucleases do.
+      D: Correct.
 - heading: 'Methods: blots, sequencing, and editing'
   body:
   - ==Southern blot = DNA, Northern = RNA, Western = protein — probe on membrane (labeled nucleic acid
@@ -108,17 +108,17 @@ sections:
   check:
   - q: PCR amplifies DNA exponentially because…
     options:
-      A: Each cycle doubles every template
-      B: The polymerase never stops
-      C: Primers mutate
-      D: dNTPs replicate
-    answer: A
+      A: Primers mutate
+      B: dNTPs replicate
+      C: The polymerase never stops
+      D: Each cycle doubles every template
+    answer: D
     explain: Products become templates next cycle — 2^n amplification.
     distractors:
-      A: Correct.
-      B: It stops at product completion.
-      C: Primers are constants.
-      D: dNTPs are monomers.
+      A: Primers are constants.
+      B: dNTPs are monomers.
+      C: It stops at product completion.
+      D: Correct.
   figures:
   - src: 1b-gene-to-protein/gel-electrophoresis.webp
     caption: Gel electrophoresis — fragments separate by size; the smallest run farthest.
@@ -169,17 +169,17 @@ passage:
   questions:
   - q: The GC-richness raises the melting temperature because…
     options:
-      A: GC pairs form 3 H-bonds
-      B: GC pairs form 2 H-bonds
-      C: Primers are GC-poor
-      D: Salt lowers Tm
-    answer: A
+      A: GC pairs form 2 H-bonds
+      B: Salt lowers Tm
+      C: GC pairs form 3 H-bonds
+      D: Primers are GC-poor
+    answer: C
     explain: Three H-bonds per pair outnumber AT's two.
     distractors:
-      A: Correct.
-      B: Opposite.
-      C: Primers are designed to match the target.
-      D: Salt raises Tm.
+      A: Opposite.
+      B: Salt raises Tm.
+      C: Correct.
+      D: Primers are designed to match the target.
   - q: After 35 cycles, the number of amplicon copies per starting template is approximately…
     options:
       A: 35x

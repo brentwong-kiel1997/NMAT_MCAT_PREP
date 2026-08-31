@@ -20,15 +20,15 @@ sections:
   - q: Lipopolysaccharide (endotoxin) is found in the envelope of…
     options:
       A: Gram-positive bacteria only
-      B: Gram-negative bacteria's outer membrane
+      B: All cells
       C: Viruses
-      D: All cells
-    answer: B
+      D: Gram-negative bacteria's outer membrane
+    answer: D
     explain: LPS anchors the Gram-negative outer membrane and drives endotoxic shock.
     distractors:
       A: Gram-positives lack an outer membrane entirely.
+      B: Eukaryotic plasma membranes carry no LPS.
       C: Viruses have no envelope chemistry of this kind.
-      D: Eukaryotic plasma membranes carry no LPS.
 - heading: Horizontal gene transfer — sex without reproduction
   body:
   - Prokaryotes shuffle genes three ways without dividing. **Transformation** — uptake of free environmental
@@ -42,16 +42,16 @@ sections:
   check:
   - q: A phage carries a segment of its previous host's chromosome into a new bacterium. This is…
     options:
-      A: Transformation
-      B: Transduction
-      C: Conjugation
-      D: Binary fission
-    answer: B
+      A: Binary fission
+      B: Conjugation
+      C: Transduction
+      D: Transformation
+    answer: C
     explain: Virus-mediated horizontal transfer is transduction.
     distractors:
-      A: Transformation is naked-DNA uptake.
-      C: Conjugation requires cell-to-cell contact.
-      D: Fission is reproduction, not transfer.
+      A: Fission is reproduction, not transfer.
+      B: Conjugation requires cell-to-cell contact.
+      D: Transformation is naked-DNA uptake.
 - heading: Viruses — genomes in boxes
   body:
   - A virus is genome (DNA or RNA, single- or double-stranded) in a **capsid** of repeating units, sometimes
@@ -66,16 +66,16 @@ sections:
   check:
   - q: Why are antibiotics ineffective against viruses?
     options:
-      A: Viruses metabolize too fast
-      B: Viruses lack the targets — walls, ribosomes, folate pathways
-      C: Viruses are too small
-      D: Viruses live inside red blood cells
-    answer: B
+      A: Viruses lack the targets — walls, ribosomes, folate pathways
+      B: Viruses are too small
+      C: Viruses live inside red blood cells
+      D: Viruses metabolize too fast
+    answer: A
     explain: Antibiotics hit prokaryote-specific machinery viruses simply do not have.
     distractors:
-      A: They have no metabolism at all.
-      C: Size is not the mechanism.
-      D: Most viruses do not; location is irrelevant.
+      B: Size is not the mechanism.
+      C: Most viruses do not; location is irrelevant.
+      D: They have no metabolism at all.
   figures:
   - src: 2b-prokaryotes-and-viruses/virus-shapes.webp
     caption: Capsid architectures — helical (TMV), icosahedral (rhinovirus), and complex.
@@ -98,16 +98,16 @@ sections:
   - q: During the eclipse period of a lytic infection, infectious particles inside the cell are undetectable
       because…
     options:
-      A: The virus is dormant
-      B: Genomes and capsids are being made but not yet assembled
-      C: The host degraded all viral DNA
-      D: Release has already occurred
-    answer: B
+      A: Genomes and capsids are being made but not yet assembled
+      B: The host degraded all viral DNA
+      C: Release has already occurred
+      D: The virus is dormant
+    answer: A
     explain: Eclipse = replication and synthesis before assembly — parts exist, infective wholes do not.
     distractors:
-      A: Dormancy is lysogeny, not eclipse.
-      C: Degradation would end the infection.
-      D: Release defines the end of the cycle.
+      B: Degradation would end the infection.
+      C: Release defines the end of the cycle.
+      D: Dormancy is lysogeny, not eclipse.
   figures:
   - src: 2b-prokaryotes-and-viruses/virus-em-grid.webp
     caption: Transmission electron micrographs — naked icosahedral, enveloped, helical, and complex capsids
@@ -127,16 +127,16 @@ sections:
   - q: A new influenza subtype appears suddenly with genes from two strains infecting one host. The mechanism
       is…
     options:
-      A: Antigenic drift
-      B: Antigenic shift via segment reassortment
-      C: Conjugation
-      D: Lysogenic conversion
-    answer: B
+      A: Lysogenic conversion
+      B: Conjugation
+      C: Antigenic drift
+      D: Antigenic shift via segment reassortment
+    answer: D
     explain: Segmented genomes reassort wholesale — shift, not gradual drift.
     distractors:
-      A: Drift is year-to-year point-mutation accumulation.
-      C: Bacterial DNA transfer.
-      D: Phage-to-bacterium gene gift — wrong player.
+      A: Phage-to-bacterium gene gift — wrong player.
+      B: Bacterial DNA transfer.
+      C: Drift is year-to-year point-mutation accumulation.
 examples:
 - prompt: In the Hershey-Chase style logic — one culture's phage particles are labeled in protein (³⁵S),
     another's in DNA (³²P). After infection and blending, which label enters the cells and enters the
@@ -199,32 +199,32 @@ passage:
         this rate.
   - q: Which gene location most plausibly moved?
     options:
-      A: Any chromosomal gene by itself
-      B: Resistance is most efficiently spread when carried on mobile elements; here the chromosomal marker
-        moved via an Hfr-like conjugation event
+      A: The gene was in a phage head
+      B: Any chromosomal gene by itself
       C: The gene jumped by transposon directly
-      D: The gene was in a phage head
-    answer: B
+      D: Resistance is most efficiently spread when carried on mobile elements; here the chromosomal marker
+        moved via an Hfr-like conjugation event
+    answer: D
     explain: Chromosomal markers transfer when conjugation drags the chromosome across (Hfr logic) — slower
       and rarer than plasmid transfer, matching the small number observed.
     distractors:
-      A: Chromosomal genes do not transfer alone — they need the conjugation bridge.
+      A: No phage present.
+      B: Chromosomal genes do not transfer alone — they need the conjugation bridge.
       C: Transposons move within/between replicons in the SAME cell lineage, not between cells.
-      D: No phage present.
   - q: If the experiment were repeated with a Gram-positive streptomycin-resistant donor instead, conjugation
       rates would likely be lower because…
     options:
-      A: Gram-positives have no genome
-      B: Conjugation machinery differs and is generally less efficient in Gram-positives
-      C: Peptidoglycan blocks all DNA
-      D: Gram-positives cannot be resistant
-    answer: B
+      A: Conjugation machinery differs and is generally less efficient in Gram-positives
+      B: Gram-positives cannot be resistant
+      C: Gram-positives have no genome
+      D: Peptidoglycan blocks all DNA
+    answer: A
     explain: The pilus-driven conjugation classic is Gram-negative; Gram-positive transfer exists but
       by other, generally less efficient systems.
     distractors:
-      A: Absurd on its face.
-      C: Their walls pass DNA-transferring systems fine.
-      D: Resistance exists across both groups.
+      B: Resistance exists across both groups.
+      C: Absurd on its face.
+      D: Their walls pass DNA-transferring systems fine.
 pitfalls:
 - Treating Gram stain as membrane thickness alone — it is the peptidoglycan/outer-membrane architecture
   that holds or loses the dye.
@@ -256,16 +256,16 @@ further_reading:
 review_questions:
 - q: Which structure mediates bacterial conjugation?
   options:
-    A: Flagellum
-    B: Sex pilus (F plasmid encoded)
-    C: Capsule
-    D: Endospore
-  answer: B
+    A: Endospore
+    B: Capsule
+    C: Sex pilus (F plasmid encoded)
+    D: Flagellum
+  answer: C
   explain: The F pilus builds the bridge; the plasmid copies across it.
   distractors:
-    A: Motility organelle.
-    C: Adherence and immune evasion.
-    D: Survival capsule.
+    A: Survival capsule.
+    B: Adherence and immune evasion.
+    D: Motility organelle.
 - q: A retrovirus such as HIV must carry…
   options:
     A: DNA polymerase only

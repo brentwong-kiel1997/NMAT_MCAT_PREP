@@ -283,8 +283,7 @@ items:
     D: Repeats Frame 3, ignoring both the doubling and the flip.
   chapter: figure-series
 - id: nmat-d-p1i-019
-  q: 'Four figures are shown: the capital letters A, B, R and P. Which letter does not belong with the
-    other three?'
+  q: Which letter does not belong with the other three?
   choices:
     A: the capital letter A
     B: the capital letter R
@@ -297,9 +296,9 @@ items:
     B: Its bowl encloses exactly one region, as A and P do.
     D: Its bowl encloses exactly one region, as A and R do.
   chapter: figure-grouping
+  figure: items/nmat-d-p1i-019.svg
 - id: nmat-d-p1i-020
-  q: 'Four figures are shown: an isosceles trapezoid, a parallelogram, an isosceles triangle, and a rectangle
-    that is not a square. Which figure does not belong with the other three?'
+  q: Which of the four figures is the odd one out?
   choices:
     A: the isosceles trapezoid
     B: the isosceles triangle
@@ -313,11 +312,9 @@ items:
     B: It has a line of symmetry from its apex to the midpoint of its base.
     C: It has two lines of symmetry, one through each pair of midpoints.
   chapter: figure-grouping
+  figure: items/nmat-d-p1i-020.svg
 - id: nmat-d-p1i-021
-  q: 'Four figures are shown: a square with a dot at the midpoint of each of its four sides, a triangle
-    with a dot at each of its three corners, a pentagon with a dot at the midpoint of each of its five
-    sides, and a hexagon with a dot at the midpoint of each of its six sides. Which figure does not belong
-    with the other three?'
+  q: Which figure is not like the other three?
   choices:
     A: the triangle with a dot at each of its three corners
     B: the square with dots at the midpoints of its four sides
@@ -331,9 +328,9 @@ items:
     C: Its dots also sit at side midpoints.
     D: Its dots also sit at side midpoints.
   chapter: figure-grouping
+  figure: items/nmat-d-p1i-021.svg
 - id: nmat-d-p1i-022
-  q: 'Four figures are shown: an equilateral triangle, a square, a regular hexagon and a regular pentagon.
-    Which figure cannot, by itself, tile a flat surface without gaps or overlaps?'
+  q: Which figure cannot, by itself, tile a flat surface without gaps or overlaps?
   choices:
     A: the equilateral triangle
     B: the square
@@ -347,9 +344,9 @@ items:
     B: Four of them fit around a point because 4 x 90 = 360 degrees.
     D: Three of them fit around a point because 3 x 120 = 360 degrees.
   chapter: figure-grouping
+  figure: items/nmat-d-p1i-022.svg
 - id: nmat-d-p1i-023
-  q: 'Four figures are shown: a circle, a figure eight (a curve crossing itself once at a single point),
-    a square, and a triangle. Which figure does not belong with the other three?'
+  q: Which of the four figures does not belong with the other three?
   choices:
     A: the circle
     B: the figure eight
@@ -363,6 +360,7 @@ items:
     C: A square's sides meet only at its four corners and never cross.
     D: A triangle's sides meet only at its three corners and never cross.
   chapter: figure-grouping
+  figure: items/nmat-d-p1i-023.svg
 - id: nmat-d-p1i-024
   q: 'Four capital letters are shown: N, M, Z and H. Which letter does not belong with the other three?'
   choices:
@@ -378,8 +376,7 @@ items:
     C: 'H is drawn with three straight strokes: two verticals and one crossbar.'
   chapter: figure-grouping
 - id: nmat-d-p1i-025
-  q: 'Four figures are shown: a square, a regular hexagon, a five-pointed star and an equilateral triangle.
-    Which figure does not belong with the other three?'
+  q: Which figure is unlike the other three?
   choices:
     A: the five-pointed star
     B: the square
@@ -392,4 +389,5 @@ items:
     B: Every interior angle of a square is 90 degrees, so it bulges outward everywhere.
     C: Its interior angles are all 120 degrees, again all under 180.
     D: Its three interior angles are 60 degrees each.
+  figure: items/nmat-d-p1i-025.svg
   chapter: figure-grouping

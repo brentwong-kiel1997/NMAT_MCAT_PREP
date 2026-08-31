@@ -17,15 +17,15 @@ sections:
   - q: In any electrochemical cell, reduction occurs at the…
     options:
       A: Anode
-      B: Cathode
-      C: Salt bridge
+      B: Salt bridge
+      C: Cathode
       D: Electrolyte
-    answer: B
+    answer: C
     explain: Cathode is always the reduction site — 'Red Cat.'
     distractors:
       A: Oxidation site.
-      B: Correct.
-      C: Ionic conductor.
+      B: Ionic conductor.
+      C: Correct.
       D: Medium, not a site.
 - heading: Circuit elements — EMF, current, resistance
   body:
@@ -37,17 +37,17 @@ sections:
   - q: A battery with EMF 9 V and internal resistance 1 ohm drives a 5 ohm load. The terminal voltage
       is…
     options:
-      A: 9 V
-      B: 7.5 V
-      C: 1.5 V
-      D: 10.8 V
-    answer: B
+      A: 1.5 V
+      B: 10.8 V
+      C: 9 V
+      D: 7.5 V
+    answer: D
     explain: I = 9/(1 + 5) = 1.5 A; terminal = 9 - (1.5)(1) = 7.5 V.
     distractors:
-      A: Ignoring internal drop.
-      B: Correct — 7.5 V.
-      C: That is the internal drop.
-      D: Terminal can't exceed EMF.
+      A: That is the internal drop.
+      B: Terminal can't exceed EMF.
+      C: Ignoring internal drop.
+      D: Correct — 7.5 V.
   figures:
   - src: 4c-electrochemistry-and-electrical-circuits/fig-494753ca.webp
     caption: A simple circuit — conventional current from positive to negative; electrons flow the reverse
@@ -66,17 +66,17 @@ sections:
   check:
   - q: Two 3 uF capacitors in series give…
     options:
-      A: 6 uF
-      B: 1.5 uF
-      C: 3 uF
-      D: 0.5 uF
-    answer: B
+      A: 3 uF
+      B: 0.5 uF
+      C: 6 uF
+      D: 1.5 uF
+    answer: D
     explain: 1/C = 1/3 + 1/3 → C = 1.5 uF — series capacitors ADD reciprocals.
     distractors:
-      A: That's parallel.
-      B: Correct.
-      C: One only.
-      D: Half again of wrong.
+      A: One only.
+      B: Half again of wrong.
+      C: That's parallel.
+      D: Correct.
 - heading: Power, heating, and circuit safety
   body:
   - ==P = IV = I2R = V2/R==. In series, the biggest resistor burns the most power (same current). In parallel,
@@ -109,16 +109,16 @@ sections:
   check:
   - q: Raising the EXTERNAL K+ concentration (keeping internal fixed) makes the resting potential…
     options:
-      A: More negative
-      B: Less negative (depolarized)
-      C: Unchanged
+      A: Unchanged
+      B: More negative
+      C: Less negative (depolarized)
       D: Infinite
-    answer: B
+    answer: C
     explain: The K+ gradient shrinks — the Nernst term approaches zero — E moves toward zero.
     distractors:
-      A: Opposite direction.
-      B: Correct — gradient weakening depolarizes.
-      C: Cl- held constant.
+      A: Cl- held constant.
+      B: Opposite direction.
+      C: Correct — gradient weakening depolarizes.
       D: The pump still runs.
 examples:
 - prompt: Compute the resting potential contribution of K+ with [K+]out = 4 mM, [K+]in = 140 mM at 37C.
@@ -164,43 +164,43 @@ passage:
   questions:
   - q: The depolarization is best explained by…
     options:
-      A: Na+ channel opening
-      B: K+ gradient shrinking per Nernst
-      C: Cl- influx
-      D: Na-K pump halt
-    answer: B
+      A: Na-K pump halt
+      B: Na+ channel opening
+      C: K+ gradient shrinking per Nernst
+      D: Cl- influx
+    answer: C
     explain: Tripling external K+ shrinks the K+ equilibrium gradient — the Goldman sum moves toward zero.
     distractors:
-      A: Na+ was held constant.
-      B: Correct.
-      C: Cl- held constant.
-      D: The pump still runs.
+      A: The pump still runs.
+      B: Na+ was held constant.
+      C: Correct.
+      D: Cl- held constant.
   - q: If instead external Na+ were tripled, the effect would be…
     options:
-      A: Much larger
-      B: Much smaller
-      C: Identical
+      A: Much smaller
+      B: Identical
+      C: Much larger
       D: Zero
-    answer: B
+    answer: A
     explain: Resting permeability to Na+ is ~1/50 of K+ — its Nernst influence is weighted tiny.
     distractors:
-      A: Opposite — Na+ is damped at rest.
-      B: Correct.
-      C: Permeabilities differ.
+      A: Correct.
+      B: Permeabilities differ.
+      C: Opposite — Na+ is damped at rest.
       D: Na+ contributes slightly.
   - q: The membrane time constant tau determines…
     options:
       A: The speed of channel opening
-      B: How fast voltage settles to a new value
-      C: The threshold voltage
-      D: The action potential amplitude
-    answer: B
+      B: The threshold voltage
+      C: The action potential amplitude
+      D: How fast voltage settles to a new value
+    answer: D
     explain: tau = RC — the membrane charges and decays with this time constant.
     distractors:
       A: Gating is molecular, not RC.
-      B: Correct.
-      C: Threshold is set by channels.
-      D: Amplitude is set by Nernst gains.
+      B: Threshold is set by channels.
+      C: Amplitude is set by Nernst gains.
+      D: Correct.
 pitfalls:
 - Redox direction — lose electrons is oxidation even for negative ions.
 - Terminal voltage vs EMF confusion.
@@ -229,17 +229,17 @@ further_reading:
 review_questions:
 - q: A galvanic cell's E-cell is +1.1 V. The reaction…
   options:
-    A: Requires external voltage
-    B: Is spontaneous
-    C: Is at equilibrium
-    D: Releases only heat
-  answer: B
+    A: Is spontaneous
+    B: Releases only heat
+    C: Requires external voltage
+    D: Is at equilibrium
+  answer: A
   explain: Positive E-cell → negative delta-G → spontaneous.
   distractors:
-    A: That is electrolytic.
-    B: Correct.
-    C: E = 0 at equilibrium.
-    D: It does electric work.
+    A: Correct.
+    B: It does electric work.
+    C: That is electrolytic.
+    D: E = 0 at equilibrium.
 - q: Doubling the voltage across a resistor doubles the…
   options:
     A: Resistance

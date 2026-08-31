@@ -10,4 +10,44 @@ notes:
 - Institutions shape opportunity structures
 - 'Social roles: sets of expected behaviors'
 - 'Bureaucracy: rational authority and rule orientation'
-practice: []
+practice:
+- id: 9a-understanding-social-structure-p1
+  q: Which feature is NOT part of Weber's ideal-type bureaucracy?
+  choices:
+    A: A hierarchy of offices with clear chains of command
+    B: Written rules and standardized procedures
+    C: Impersonal, universalistic treatment of clients
+    D: Positions filled through kinship ties and personal loyalty
+  answer: D
+  explain: Bureaucracy is defined by merit-based, technically qualified appointment, so kinship
+    staffing is precisely what it replaces. A, B, and C are the three classic features Weber
+    listed.
+  chapter: 9A · Understanding social structure
+- id: 9a-understanding-social-structure-p2
+  q: 'A school keeps children supervised during the workday, which is not its stated purpose.
+    In functionalist terms this is a:'
+  choices:
+    A: Manifest function
+    B: Latent function
+    C: Dysfunction
+    D: Symbolic ritual
+  answer: B
+  explain: Latent functions are unintended, unrecognized consequences; childcare-by-default
+    is the textbook example. A covers the intended outcomes (transmitting knowledge, credentialing),
+    C requires a harmful consequence, and D belongs to symbolic interactionism's micro-level
+    vocabulary.
+  chapter: 9A · Understanding social structure
+- id: 9a-understanding-social-structure-p3
+  q: 'After release, a former inmate is continually treated as ''a criminal'' by employers
+    and neighbors and reoffends. Labeling theory explains this as:'
+  choices:
+    A: 'Secondary deviance: the label is internalized and becomes a master status'
+    B: 'Differential association: deviant peers transmit techniques and motives'
+    C: 'Strain: blocked legitimate opportunities push people toward innovation'
+    D: 'Anomie: a society-wide breakdown of shared norms'
+  answer: A
+  explain: Labeling theory holds that societal reaction converts primary acts into secondary
+    deviance once the label is adopted as a master status. B is Sutherland's learning explanation,
+    C is Merton's strain typology, and D is Durkheim's normlessness, none of which invoke
+    a label.
+  chapter: 9A · Understanding social structure

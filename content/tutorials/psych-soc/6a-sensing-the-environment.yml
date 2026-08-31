@@ -19,16 +19,16 @@ sections:
   - q: Weber's law implies that noticing a change in a loud tone requires a bigger increment than in a
       soft tone because…
     options:
-      A: Loud tones damage receptors
-      B: The JND is a constant proportion of the starting intensity
+      A: Absolute thresholds rise with volume
+      B: Loud tones damage receptors
       C: Perception skips loud sounds
-      D: Absolute thresholds rise with volume
-    answer: B
+      D: The JND is a constant proportion of the starting intensity
+    answer: D
     explain: The just-noticeable difference scales with baseline intensity — proportional, not fixed.
     distractors:
-      A: Damage is not the mechanism at normal volumes.
+      A: Absolute threshold is about detecting presence, not change.
+      B: Damage is not the mechanism at normal volumes.
       C: Nothing is skipped; the fraction grows with the base.
-      D: Absolute threshold is about detecting presence, not change.
   figures:
   - src: 6a-sensing-the-environment/top-down-bottom-up.webp
     caption: Top-down versus bottom-up processing — expectation-driven versus stimulus-driven perception.
@@ -72,15 +72,15 @@ sections:
   - q: Distant railroad tracks appear to converge. This monocular depth cue is…
     options:
       A: Retinal disparity
-      B: Linear perspective
-      C: Closure
-      D: Convergence
-    answer: B
+      B: Closure
+      C: Convergence
+      D: Linear perspective
+    answer: D
     explain: Parallel lines seeming to meet is the textbook linear perspective cue.
     distractors:
       A: Binocular cue — needs two eyes.
-      C: A Gestalt grouping principle, not depth.
-      D: Binocular cue — eyes angling inward.
+      B: A Gestalt grouping principle, not depth.
+      C: Binocular cue — eyes angling inward.
   figures:
   - src: 6a-sensing-the-environment/inattentional-blindness.webp
     caption: Inattentional blindness — one third miss the red cross while attending to black or white
@@ -98,16 +98,16 @@ sections:
   check:
   - q: A patient cannot recognize faces despite intact visual acuity. The deficit is at the level of…
     options:
-      A: Sensation — receptor damage
-      B: Perception — cortical interpretation
-      C: Transduction
-      D: Absolute threshold
-    answer: B
+      A: Transduction
+      B: Absolute threshold
+      C: Perception — cortical interpretation
+      D: Sensation — receptor damage
+    answer: C
     explain: Intact acuity = intact sensation; the interpretive cortex is the broken link.
     distractors:
-      A: Signal arrives normally.
-      C: Already established as intact.
-      D: Threshold is detection, not recognition.
+      A: Already established as intact.
+      B: Threshold is detection, not recognition.
+      D: Signal arrives normally.
 examples:
 - prompt: In signal detection terms, a radiologist flags a shadow that turns out normal. Name the outcome
     and one perceptual factor that raises its rate.
@@ -164,15 +164,15 @@ passage:
       D: No compensatory rerouting is described.
   - q: The raised flash threshold reflects impaired…
     options:
-      A: Perception of edges
-      B: Sensation — rod transduction capacity
-      C: Weber fraction
+      A: Weber fraction
+      B: Perception of edges
+      C: Sensation — rod transduction capacity
       D: Gestalt closure
-    answer: B
+    answer: C
     explain: Detecting a dim flash is a sensory threshold question, not interpretation.
     distractors:
-      A: Interpretation is intact once signal arrives.
-      C: Weber concerns difference detection between two stimuli.
+      A: Weber concerns difference detection between two stimuli.
+      B: Interpretation is intact once signal arrives.
       D: Grouping principle, unrelated.
   - q: Which finding would most directly challenge the study's internal validity?
     options:

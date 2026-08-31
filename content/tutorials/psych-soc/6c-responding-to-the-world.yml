@@ -16,15 +16,15 @@ sections:
   - q: After conditioning, the bell is presented repeatedly without food and salivation fades. Later,
       one ring again produces salivation. The return is…
     options:
-      A: Generalization
-      B: Spontaneous recovery
-      C: Shaping
+      A: Shaping
+      B: Generalization
+      C: Spontaneous recovery
       D: Second-order conditioning
-    answer: B
+    answer: C
     explain: Faded response reappearing after rest.
     distractors:
-      A: Similar-stimulus spread.
-      C: Operant procedure.
+      A: Operant procedure.
+      B: Similar-stimulus spread.
       D: New neutral stimulus paired with the CS.
   figures:
   - src: 6c-responding-to-the-world/skinner-box.webp
@@ -91,15 +91,15 @@ sections:
   check:
   - q: After news covers a rare shark attack, beachgoers overestimate its likelihood. The bias is…
     options:
-      A: Representativeness
-      B: Availability
-      C: Anchoring
+      A: Anchoring
+      B: Representativeness
+      C: Availability
       D: Functional fixedness
-    answer: B
+    answer: C
     explain: Vivid, easily recalled instances inflate frequency estimates.
     distractors:
-      A: Similarity-to-prototype.
-      C: Initial-value adjustment failure.
+      A: Initial-value adjustment failure.
+      B: Similarity-to-prototype.
       D: Problem-solving rigidity.
 examples:
 - prompt: A child receives a candy each time she puts toys away. Later, candy is given only after several
@@ -143,15 +143,15 @@ passage:
   questions:
   - q: The Phase 2 decline demonstrates…
     options:
-      A: Punishment
-      B: Extinction of an operant response
-      C: Discrimination failure
+      A: Discrimination failure
+      B: Punishment
+      C: Extinction of an operant response
       D: Spontaneous recovery
-    answer: B
+    answer: C
     explain: Removing reinforcement drops the behavior.
     distractors:
-      A: Nothing aversive was added.
-      C: Classical vocabulary.
+      A: Classical vocabulary.
+      B: Nothing aversive was added.
       D: Recovery comes after rest.
   - q: The slower decline after Phase 3 follows from…
     options:
@@ -168,15 +168,15 @@ passage:
   - q: Which finding would most directly challenge the study's internal validity?
     options:
       A: A large sample size
-      B: A confederate accidentally hinting at the expected answer
+      B: A replication in a different country
       C: High statistical significance
-      D: A replication in a different country
-    answer: B
+      D: A confederate accidentally hinting at the expected answer
+    answer: D
     explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
     distractors:
       A: Power, not validity.
+      B: That tests external validity.
       C: Significance is downstream of validity.
-      D: That tests external validity.
 pitfalls:
 - Equating negative reinforcement with punishment.
 - Fixed-interval data given the fixed-ratio label — look for the time gate.
@@ -205,16 +205,16 @@ further_reading:
 review_questions:
 - q: Removal of an unpleasant stimulus that INCREASES behavior is…
   options:
-    A: Positive punishment
-    B: Negative reinforcement
-    C: Positive reinforcement
-    D: Extinction
-  answer: B
+    A: Positive reinforcement
+    B: Extinction
+    C: Positive punishment
+    D: Negative reinforcement
+  answer: D
   explain: Removal + increase = negative reinforcement.
   distractors:
-    A: Punishment decreases.
-    C: Nothing pleasant was added.
-    D: Extinction removes reinforcement.
+    A: Nothing pleasant was added.
+    B: Extinction removes reinforcement.
+    C: Punishment decreases.
 - q: A pigeon pecks fastest and quits last on a…
   options:
     A: Fixed interval

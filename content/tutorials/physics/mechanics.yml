@@ -17,15 +17,15 @@ sections:
   - q: A ball thrown straight up. At its highest point…
     options:
       A: Velocity zero, acceleration zero
-      B: Velocity zero, acceleration g downward
-      C: Velocity g, acceleration zero
-      D: Velocity and acceleration both g
-    answer: B
+      B: Velocity g, acceleration zero
+      C: Velocity and acceleration both g
+      D: Velocity zero, acceleration g downward
+    answer: D
     explain: Instantaneous rest at the peak, but gravity never turns off.
     distractors:
       A: Gravity is constant.
-      C: Velocity at peak is zero.
-      D: Same error.
+      B: Velocity at peak is zero.
+      C: Same error.
 - heading: Newton's laws and forces
   body:
   - ==F = ma sums ALL forces; equilibrium means a = 0, not v = 0==. Every force has a paired equal-and-opposite
@@ -37,16 +37,16 @@ sections:
   check:
   - q: A crate slides at constant velocity down an incline. The component mg sin(theta) equals…
     options:
-      A: The normal force
-      B: The kinetic friction force
-      C: Weight
-      D: Net force upward
-    answer: B
+      A: The kinetic friction force
+      B: Net force upward
+      C: The normal force
+      D: Weight
+    answer: A
     explain: Constant velocity means zero net force down the slope.
     distractors:
-      A: Normal has a different direction.
-      C: mg is not the slope component.
-      D: Net force is zero.
+      B: Net force is zero.
+      C: Normal has a different direction.
+      D: mg is not the slope component.
   figures:
   - src: mechanics/fig-61192c4a.webp
     caption: The same force acting on a basketball and a car — smaller mass accelerates faster (F = ma).
@@ -85,15 +85,15 @@ sections:
   check:
   - q: In a perfectly inelastic collision…
     options:
-      A: KE is conserved
-      B: The objects stick together
-      C: Momentum is not conserved
+      A: The objects stick together
+      B: Momentum is not conserved
+      C: KE is conserved
       D: Both reverse direction
-    answer: B
+    answer: A
     explain: Maximum energy loss; momentum still conserved.
     distractors:
-      A: KE is NOT conserved.
-      C: Momentum always conserved in collisions.
+      B: Momentum always conserved in collisions.
+      C: KE is NOT conserved.
       D: Only elastic head-on.
 - heading: Rotational mechanics
   body:
@@ -106,16 +106,16 @@ sections:
   check:
   - q: A figure skater pulls her arms in while spinning — she…
     options:
-      A: Slows down
-      B: Speeds up, angular momentum conserved
+      A: Speeds up, angular momentum conserved
+      B: Stops rotating
       C: Loses angular momentum
-      D: Stops rotating
-    answer: B
+      D: Slows down
+    answer: A
     explain: I drops, omega rises to keep L = I omega constant.
     distractors:
-      A: Wrong direction.
+      B: No braking torque.
       C: Conserved under zero net torque.
-      D: No braking torque.
+      D: Wrong direction.
 examples:
 - prompt: A 2.0 kg block slides off a 1.0 m high table with initial speed 3.0 m/s horizontally. Find its
     speed just before hitting the floor.
@@ -171,29 +171,29 @@ passage:
       D: Cable supports the weight at least.
   - q: During the cruise phase, the tension is…
     options:
-      A: Greater than mg
-      B: Equal to mg
-      C: Less than mg
-      D: Zero
-    answer: B
+      A: Zero
+      B: Less than mg
+      C: Equal to mg
+      D: Greater than mg
+    answer: C
     explain: Constant velocity = zero acceleration = T = mg.
     distractors:
-      A: Only accelerating upward exceeds mg.
-      C: Deceleration would undershoot.
-      D: Cable still supports.
+      A: Cable still supports.
+      B: Deceleration would undershoot.
+      D: Only accelerating upward exceeds mg.
   - q: The total distance traveled during the constant-speed phase is…
     options:
       A: 9 m
-      B: 18 m
-      C: 21.75 m
-      D: 30 m
-    answer: B
+      B: 21.75 m
+      C: 30 m
+      D: 18 m
+    answer: D
     explain: 'Speed after acceleration: v = at = (1.2)(2.5) = 3.0 m/s; cruise distance = 3.0 x 6 = 18
       m.'
     distractors:
       A: Using wrong speed.
-      B: Correct — 18 m.
-      C: Adding acceleration distance wrongly.
+      B: Adding acceleration distance wrongly.
+      D: Correct — 18 m.
 pitfalls:
 - 'Projectile peak: velocity zero, acceleration NOT.'
 - Friction direction reversed.
@@ -223,15 +223,15 @@ review_questions:
 - q: A car rounds a curve at constant speed. Its acceleration is…
   options:
     A: Zero
-    B: Directed toward the center
-    C: Directed outward
-    D: Along the tangent
-  answer: B
+    B: Directed outward
+    C: Along the tangent
+    D: Directed toward the center
+  answer: D
   explain: Constant speed does not mean constant velocity — centripetal acceleration points to the center.
   distractors:
     A: Velocity direction changes.
-    C: That is the centrifugal fiction.
-    D: Velocity direction changes continuously.
+    B: That is the centrifugal fiction.
+    C: Velocity direction changes continuously.
 - q: Doubling an object's speed quadruples its…
   options:
     A: Momentum

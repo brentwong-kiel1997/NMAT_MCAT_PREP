@@ -17,16 +17,16 @@ sections:
   check:
   - q: The restriction point commits the cell to…
     options:
-      A: Exiting to G0 permanently
-      B: Passing G1 and entering S phase
-      C: Immediately entering mitosis
-      D: Apoptosis
-    answer: B
+      A: Apoptosis
+      B: Immediately entering mitosis
+      C: Exiting to G0 permanently
+      D: Passing G1 and entering S phase
+    answer: D
     explain: G1's GO signal is the once-per-cycle commitment to replicate DNA and finish the round.
     distractors:
-      A: That is the no-signal outcome, not commitment.
-      C: M is two phases away.
-      D: Suicide is the damaged-cell branch.
+      A: Suicide is the damaged-cell branch.
+      B: M is two phases away.
+      C: That is the no-signal outcome, not commitment.
   figures:
   - src: 2c-cell-division-differentiation-specialization/chromosome-packing.webp
     caption: From 2-nm double helix to mitotic chromosome — the compaction ladder the cycle must untangle
@@ -46,16 +46,16 @@ sections:
   check:
   - q: CDKs are enzymatically active only when…
     options:
-      A: DNA is damaged
-      B: Bound to their cyclin partner
-      C: The cell is in G0
-      D: Phosphorylated by p53
-    answer: B
+      A: The cell is in G0
+      B: Phosphorylated by p53
+      C: DNA is damaged
+      D: Bound to their cyclin partner
+    answer: D
     explain: Cyclin binding is the on-switch; oscillating cyclin levels make CDK activity pulse.
     distractors:
-      A: Damage turns the cycle OFF.
-      C: G0 cells idle without cycling.
-      D: p53 is not a kinase of CDKs.
+      A: G0 cells idle without cycling.
+      B: p53 is not a kinase of CDKs.
+      C: Damage turns the cycle OFF.
 - heading: Differentiation — same genome, different readers
   body:
   - Every nucleated cell carries the same DNA; differentiation is ==differential gene expression==, set
@@ -121,16 +121,16 @@ sections:
   check:
   - q: Why do tumor-suppressor loss mutations behave recessively at the cellular level?
     options:
-      A: The genes are silent in all cells
-      B: Both alleles must fail before the brake is gone
+      A: Both alleles must fail before the brake is gone
+      B: Suppressors are dominant, oncogenes are not
       C: They are on the X chromosome only
-      D: Suppressors are dominant, oncogenes are not
-    answer: B
+      D: The genes are silent in all cells
+    answer: A
     explain: One working copy still brakes the cycle — two hits needed (Knudson's logic).
     distractors:
-      A: They are active in dividing cells.
+      B: Inverted statement.
       C: p53, Rb are autosomal.
-      D: Inverted statement.
+      D: They are active in dividing cells.
 examples:
 - prompt: HPV's E6 protein binds p53 and targets it for destruction; E7 inactivates Rb. Explain why persistent
     HPV infection is a cervical-cancer risk in one causal chain.
@@ -179,45 +179,45 @@ passage:
   questions:
   - q: The lost kinase most likely operates at…
     options:
-      A: The G1 restriction point
-      B: The spindle (metaphase) checkpoint
+      A: The spindle (metaphase) checkpoint
+      B: The G1 restriction point
       C: The S-phase origin-licensing step
       D: Apoptosis initiation only
-    answer: B
+    answer: A
     explain: Cells ignoring a microtubule poison's arrest and drifting aneuploid define spindle-checkpoint
       failure.
     distractors:
-      A: G1 failure would not read as mitotic escape.
+      B: G1 failure would not read as mitotic escape.
       C: Licensing failure blocks replication, not mitosis.
       D: p53-mediated apoptosis is intact here.
   - q: The rising chromosome counts (aneuploidy) arise because…
     options:
       A: DNA polymerase is absent
-      B: Misattached chromosomes proceed into anaphase without correction
-      C: Cells fuse spontaneously
+      B: Cells fuse spontaneously
+      C: Misattached chromosomes proceed into anaphase without correction
       D: The medium mutates them
-    answer: B
+    answer: C
     explain: Without the checkpoint, unaligned or misattached chromosomes are pulled apart anyway — gains
       and losses follow.
     distractors:
       A: Replication still occurs.
-      C: Cell fusion is not the mechanism described.
+      B: Cell fusion is not the mechanism described.
       D: Not a media artifact.
   - q: Predict these cells' sensitivity to microtubule-targeting chemotherapy compared with normal cells.
     options:
       A: More sensitive, because the poison still depolymerizes their microtubules and they cannot arrest
         or die properly
-      B: Less sensitive in the sense that the mitotic-arrest death pathway is bypassed — though division
-        fails, targeted cell death pathways may be weakened
+      B: Immune to all drugs
       C: Identical to normal
-      D: Immune to all drugs
-    answer: B
+      D: Less sensitive in the sense that the mitotic-arrest death pathway is bypassed — though division
+        fails, targeted cell death pathways may be weakened
+    answer: D
     explain: Checkpoint-deficient cells fail to arrest-and-die the way normal cells do — resistance to
       the poison's KILLING pathway, even as division suffers.
     distractors:
       A: Confuses physical drug action with the death response.
+      B: No cell is immune to all drugs.
       C: The deleted checkpoint changes the outcome.
-      D: No cell is immune to all drugs.
 pitfalls:
 - Putting the restriction point in G2 — commitment is a G1 event.
 - Treating CDKs as oscillating — cyclins oscillate; CDK levels are steady.

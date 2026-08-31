@@ -36,16 +36,16 @@ sections:
   - q: Hiring penalties largest for women of a racialized minority, exceeding either main effect alone,
       illustrate…
     options:
-      A: Intersectionality
-      B: Matching hypothesis
-      C: In-group favoritism
-      D: Institutional reform
-    answer: A
+      A: Matching hypothesis
+      B: Intersectionality
+      C: Institutional reform
+      D: In-group favoritism
+    answer: B
     explain: Intersecting identities compounding.
     distractors:
-      B: Attraction pairing.
-      C: Could contribute — the interaction is the pattern.
-      D: Not a disparity mechanism.
+      A: Attraction pairing.
+      C: Not a disparity mechanism.
+      D: Could contribute — the interaction is the pattern.
 - heading: Health disparities
   body:
   - The social gradient in health — each SES step up predicts longer life. Driven by access, exposure,
@@ -53,16 +53,16 @@ sections:
   check:
   - q: Life expectancy rises monotonically with each income quintile. This demonstrates…
     options:
-      A: The social gradient in health
-      B: Natural selection
-      C: Reverse causation only
-      D: Random variation
-    answer: A
+      A: Random variation
+      B: Reverse causation only
+      C: Natural selection
+      D: The social gradient in health
+    answer: D
     explain: Stepwise SES-mortality across the distribution.
     distractors:
-      B: Not the frame.
-      C: Gradients persist prospectively.
-      D: Monotonicity is the opposite.
+      A: Monotonicity is the opposite.
+      B: Gradients persist prospectively.
+      C: Not the frame.
   figures:
   - src: 10a-social-inequality/fig-bd0d76eb.webp
     caption: The social construction of health — SES disparities in outcomes.
@@ -75,16 +75,16 @@ sections:
   check:
   - q: A millennial works a job type that barely existed in the parent generation. This illustrates…
     options:
-      A: Structural mobility
-      B: Exchange mobility only
-      C: Caste closure
-      D: Status inconsistency
-    answer: A
+      A: Status inconsistency
+      B: Structural mobility
+      C: Exchange mobility only
+      D: Caste closure
+    answer: B
     explain: The occupational structure itself changed.
     distractors:
-      B: People swapping fixed positions.
-      C: Closed systems block movement.
-      D: Misaligned ranks.
+      A: Misaligned ranks.
+      C: People swapping fixed positions.
+      D: Closed systems block movement.
 examples:
 - prompt: Infant mortality by income quartile shows a two-fold gap stable across a decade despite a new
     regional hospital serving all quartiles. Interpret.
@@ -130,40 +130,40 @@ passage:
   questions:
   - q: The diverging trends demonstrate…
     options:
-      A: Widening health disparities along the gradient
+      A: Clinic success
       B: Genetic drift
-      C: Clinic success
+      C: Widening health disparities along the gradient
       D: Random fluctuation
-    answer: A
+    answer: C
     explain: Opposite-signed trends by income band.
     distractors:
+      A: No inflection followed.
       B: Tracts divide socially.
-      C: No inflection followed.
       D: Two decades of divergence is not noise.
   - q: The clinic non-effect is best explained by…
     options:
-      A: Downstream care not addressing upstream determinants like food access
+      A: Patient noncompliance
       B: Clinics unnecessary
-      C: Patient noncompliance
+      C: Downstream care not addressing upstream determinants like food access
       D: Error
-    answer: A
+    answer: C
     explain: The supermarket gap marks an upstream driver.
     distractors:
+      A: Blaming patients ignores mapped structure.
       B: Care matters — it is insufficient.
-      C: Blaming patients ignores mapped structure.
       D: No indicator.
   - q: Which intervention follows most directly from the mapping?
     options:
-      A: Attracting food retail into bottom tracts
+      A: Higher copays
       B: More clinics of the same type
-      C: Billboards on symptoms
-      D: Higher copays
-    answer: A
+      C: Attracting food retail into bottom tracts
+      D: Billboards on symptoms
+    answer: C
     explain: The mapped deficiency is food access.
     distractors:
+      A: Would raise barriers.
       B: Supply proved insufficient.
-      C: Information alone does not build access.
-      D: Would raise barriers.
+      D: Information alone does not build access.
 pitfalls:
 - Income and wealth interchangeably — flows vs. stocks.
 - Minority as numerical — it means disadvantaged position.
@@ -196,16 +196,16 @@ further_reading:
 review_questions:
 - q: Davis-Moore's functionalist account explains stratification as…
   options:
-    A: Rewarding functionally important, scarce positions
+    A: Mere tradition
     B: Class warfare
-    C: Mere tradition
-    D: Genetic hierarchy
-  answer: A
+    C: Genetic hierarchy
+    D: Rewarding functionally important, scarce positions
+  answer: D
   explain: Unequal rewards induce effort into demanding roles.
   distractors:
+    A: No content.
     B: Conflict theory.
-    C: No content.
-    D: Biological determinism — rejected.
+    C: Biological determinism — rejected.
 - q: The glass ceiling refers to…
   options:
     A: Invisible barriers blocking ascent to top positions

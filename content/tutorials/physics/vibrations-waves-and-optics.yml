@@ -16,15 +16,15 @@ sections:
   - q: A pendulum's period doubles if…
     options:
       A: The mass doubles
-      B: The length quadruples
-      C: The amplitude doubles
-      D: Gravity doubles
-    answer: B
+      B: The amplitude doubles
+      C: Gravity doubles
+      D: The length quadruples
+    answer: D
     explain: T ~ sqrt(L) — quadrupling L doubles T.
     distractors:
       A: Mass cancels.
-      C: Amplitude does not enter.
-      D: T ~ 1/sqrt(g) — would halve.
+      B: Amplitude does not enter.
+      C: T ~ 1/sqrt(g) — would halve.
 - heading: Wave properties
   body:
   - Waves carry energy, not matter. ==v = f lambda== — speed is a medium property; changing frequency
@@ -35,16 +35,16 @@ sections:
   check:
   - q: Sound travels at 343 m/s in air. Doubling the frequency…
     options:
-      A: Doubles the wavelength
-      B: Halves the wavelength
-      C: Slows the wave
-      D: Raises the speed
-    answer: B
+      A: Raises the speed
+      B: Doubles the wavelength
+      C: Halves the wavelength
+      D: Slows the wave
+    answer: C
     explain: v fixed, f up means lambda down — v = f lambda.
     distractors:
-      A: Inverse relation.
-      C: Medium sets speed.
-      D: Not so.
+      A: Not so.
+      B: Inverse relation.
+      D: Medium sets speed.
 - heading: Sound, hearing, and beats
   body:
   - Sound intensity level dB = 10 log(I/I0) — ==+10 dB = 10x intensity; doubling intensity adds ~3 dB==.
@@ -55,15 +55,15 @@ sections:
   - q: A sound at 440 Hz and another at 444 Hz produce…
     options:
       A: A 442 Hz tone
-      B: Beats of 4 Hz
-      C: Silence
-      D: A 884 Hz overtone
-    answer: B
+      B: A 884 Hz overtone
+      C: Beats of 4 Hz
+      D: Silence
+    answer: C
     explain: Beat frequency is the difference.
     distractors:
       A: That is wrong math.
-      C: Interference does not cancel steady tones.
-      D: Sum is not heard as a single tone.
+      B: Sum is not heard as a single tone.
+      D: Interference does not cancel steady tones.
   figures:
   - src: vibrations-waves-and-optics/fig-4f7a2c07.webp
     caption: A sound wave's compressions and rarefactions pressing on the eardrum — F = PA at work in
@@ -82,16 +82,16 @@ sections:
   check:
   - q: A diverging lens always produces an image that is…
     options:
-      A: Real and inverted
-      B: Virtual and upright
-      C: Real and upright
-      D: Magnified
-    answer: B
+      A: Magnified
+      B: Real and upright
+      C: Real and inverted
+      D: Virtual and upright
+    answer: D
     explain: A diverging lens bends rays apart — never a real image.
     distractors:
-      A: Only converging lenses focus to real images.
-      C: Reference to magnification.
-      D: Never magnified.
+      A: Never magnified.
+      B: Reference to magnification.
+      C: Only converging lenses focus to real images.
 - heading: Mirror and prism applications
   body:
   - '==Flat mirrors: virtual image, same size, distance behind mirror equals object distance in front==.
@@ -158,17 +158,17 @@ passage:
   questions:
   - q: The wavelength of the standing wave is…
     options:
-      A: 0.335 m
-      B: 0.670 m
-      C: 1.005 m
+      A: 1.005 m
+      B: 0.335 m
+      C: 0.670 m
       D: 1.340 m
-    answer: B
+    answer: C
     explain: Successive resonances differ by half a wavelength — 0.670 - 0.335 = 0.335 = lambda/2 → lambda
       = 0.670 m.
     distractors:
-      A: That is half the wavelength.
-      B: Correct — 0.670 m.
-      C: That is 3/2 wavelength.
+      A: That is 3/2 wavelength.
+      B: That is half the wavelength.
+      C: Correct — 0.670 m.
       D: Overshoot.
   - q: The speed of sound predicted by this experiment is…
     options:
@@ -186,16 +186,16 @@ passage:
   - q: If the fork were 1024 Hz instead, adjacent resonance lengths would…
     options:
       A: Double
-      B: Halve
+      B: Quadruple
       C: Stay the same
-      D: Quadruple
-    answer: B
+      D: Halve
+    answer: D
     explain: Doubling f halves lambda, so the half-wavelength spacing halves.
     distractors:
       A: Inverse relation.
-      B: Correct.
+      B: Inverse square.
       C: T unchanged.
-      D: Inverse square.
+      D: Correct.
 pitfalls:
 - Period dependence on amplitude (it does not).
 - Conflating source speed with wave speed.

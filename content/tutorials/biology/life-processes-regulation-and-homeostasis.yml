@@ -20,14 +20,14 @@ sections:
   - q: Sweating cools the body and stops when temperature normalizes. This is…
     options:
       A: Positive feedback
-      B: Negative feedback
-      C: Feed-forward failure
+      B: Feed-forward failure
+      C: Negative feedback
       D: A set point shift
-    answer: B
+    answer: C
     explain: The response removes its own stimulus — the negative feedback signature.
     distractors:
       A: Positive feedback reinforces the deviation.
-      C: No anticipatory pathway is described.
+      B: No anticipatory pathway is described.
       D: The target never moved.
 - heading: Temperature — endotherms, ectotherms, and countercurrents
   body:
@@ -42,17 +42,17 @@ sections:
   check:
   - q: Countercurrent heat exchange in a duck's legs primarily serves to…
     options:
-      A: Cool the core faster
-      B: Conserve core heat while keeping limbs supplied with blood
-      C: Mix arterial and venous blood directly
-      D: Generate heat by friction
-    answer: B
+      A: Conserve core heat while keeping limbs supplied with blood
+      B: Cool the core faster
+      C: Generate heat by friction
+      D: Mix arterial and venous blood directly
+    answer: A
     explain: Warmth flows from outbound arteries to returning veins — the core keeps its heat, the foot
       stays cold, the blood stays separate.
     distractors:
-      A: It is a conservation device, not a radiator.
-      C: Vessels exchange heat, not contents.
-      D: Friction is negligible; this is passive physics.
+      B: It is a conservation device, not a radiator.
+      C: Friction is negligible; this is passive physics.
+      D: Vessels exchange heat, not contents.
 - heading: Water and solutes — osmoregulation across habitats
   body:
   - Water follows solutes, so osmoregulation IS solute management. Marine bony fish (surrounded by salt)
@@ -66,15 +66,15 @@ sections:
   check:
   - q: A freshwater fish's problem and response are…
     options:
-      A: Water loss — drink constantly
-      B: Water flooding — excrete large volumes of dilute urine
-      C: Salt loading — pump salt from gills
+      A: Salt loading — pump salt from gills
+      B: Water loss — drink constantly
+      C: Water flooding — excrete large volumes of dilute urine
       D: Ammonia buildup — convert to uric acid
-    answer: B
+    answer: C
     explain: The hypotonic pond pushes water in; the fish voids it dilute while reclaiming ions.
     distractors:
-      A: That is the marine bony fish strategy.
-      C: Salt EXCRETION belongs to seawater fish.
+      A: Salt EXCRETION belongs to seawater fish.
+      B: That is the marine bony fish strategy.
       D: Freshwater fish release ammonia directly.
   figures:
   - src: life-processes-regulation-and-homeostasis/tonicity.webp
@@ -99,15 +99,15 @@ sections:
   - q: Between meals, blood glucose is maintained mainly by…
     options:
       A: Insulin-driven uptake
-      B: Glucagon-driven liver glycogenolysis
-      C: Sweating
-      D: Countercurrent exchange
-    answer: B
+      B: Sweating
+      C: Countercurrent exchange
+      D: Glucagon-driven liver glycogenolysis
+    answer: D
     explain: Glucagon tells the liver to release stored glucose.
     distractors:
       A: Insulin LOWERS glucose — that arm is quiet while fasting.
-      C: Thermoregulation, not fuel.
-      D: Heat conservation, not fuel.
+      B: Thermoregulation, not fuel.
+      C: Heat conservation, not fuel.
 - heading: When loops fail — fever, dehydration, and the general rule
   body:
   - Fever is instructive — infection pyrogens RAISE the hypothalamic set point, so the body shivers to
@@ -179,40 +179,40 @@ passage:
   - q: The initial skin vasoconstriction serves to…
     options:
       A: Increase heat loss from the core
-      B: Reduce heat loss by routing blood away from the surface
-      C: Raise the set point
-      D: Supply muscles with oxygen for shivering
-    answer: B
+      B: Supply muscles with oxygen for shivering
+      C: Reduce heat loss by routing blood away from the surface
+      D: Raise the set point
+    answer: C
     explain: Cutting surface flow insulates the core — the shell sacrifices itself.
     distractors:
       A: That would accelerate cooling.
-      C: Set-point resetting is hypothalamic, not vascular.
-      D: Muscle supply is real but not vasoconstriction's primary role here.
+      B: Muscle supply is real but not vasoconstriction's primary role here.
+      D: Set-point resetting is hypothalamic, not vascular.
   - q: Continued shivering with falling core temperature shows that…
     options:
-      A: Feedback has reversed polarity
-      B: Effector output can no longer match the heat debt — the loop is overwhelmed
-      C: Positive feedback dominates
-      D: The sensor has failed
-    answer: B
+      A: Positive feedback dominates
+      B: The sensor has failed
+      C: Feedback has reversed polarity
+      D: Effector output can no longer match the heat debt — the loop is overwhelmed
+    answer: D
     explain: Shivering persists (loop engaged) but heat loss exceeds production — compensation, not control
       failure.
     distractors:
-      A: Polarity is unchanged; capacity is exceeded.
-      C: No self-amplification of cold is shown.
-      D: Sensors still report — shivering and later sweating prove loops live.
+      A: No self-amplification of cold is shown.
+      B: Sensors still report — shivering and later sweating prove loops live.
+      C: Polarity is unchanged; capacity is exceeded.
   - q: Sweating while still hot after removal is best explained by…
     options:
-      A: A broken effector
-      B: Normal lag — the loop keeps correcting until the variable reaches set point
-      C: Set point dropping below normal
-      D: Positive feedback
-    answer: B
+      A: Set point dropping below normal
+      B: A broken effector
+      C: Positive feedback
+      D: Normal lag — the loop keeps correcting until the variable reaches set point
+    answer: D
     explain: Overshoot correction continues while the error persists — classic negative-feedback dynamics.
     distractors:
-      A: Effectors are working, not broken.
-      C: No evidence the target moved.
-      D: No amplification here.
+      A: No evidence the target moved.
+      B: Effectors are working, not broken.
+      C: No amplification here.
 pitfalls:
 - Calling fever a positive-feedback failure — it is feedback to a raised set point.
 - Mixing up insulin and glucagon sources — beta brings down, alpha asks up.
@@ -244,17 +244,17 @@ further_reading:
 review_questions:
 - q: Which is a NORMAL positive-feedback process?
   options:
-    A: Thermoregulation in cold water
-    B: Oxytocin cascade during labor
-    C: Insulin release after glucose load
-    D: Blood glucose recovery while fasting
-  answer: B
+    A: Oxytocin cascade during labor
+    B: Insulin release after glucose load
+    C: Blood glucose recovery while fasting
+    D: Thermoregulation in cold water
+  answer: A
   explain: Contractions stretch the cervix, more oxytocin, stronger contractions — amplification to a
     self-ending climax.
   distractors:
-    A: Shivering and vasoconstriction correct — negative feedback.
-    C: Insulin removes its own stimulus — negative feedback.
-    D: Glucagon corrects a fall — negative feedback.
+    B: Insulin removes its own stimulus — negative feedback.
+    C: Glucagon corrects a fall — negative feedback.
+    D: Shivering and vasoconstriction correct — negative feedback.
 - q: Uric acid as nitrogen waste indicates an animal that most likely…
   options:
     A: Lives in fresh water

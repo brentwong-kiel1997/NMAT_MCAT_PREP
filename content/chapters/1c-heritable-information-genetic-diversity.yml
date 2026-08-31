@@ -5,20 +5,58 @@ exams:
 - NMAT
 - MCAT
 points:
-- Transmission across generations
-- Processes that increase genetic diversity
-- Heritable transmission and processes that increase diversity
+- Heritable transmission across generations
+- Processes that increase genetic diversity (mutation, recombination, assortment)
+- Mendelian inheritance, pedigrees, and population-level allele-frequency logic
 notes:
-- Semiconservative replication; mutation feeds variation
-- Meiotic recombination + assortment → gamete diversity
-- 'HWE ideal: no mutation/selection/drift/migration + random mating'
-- Polymerase proofreading + mismatch repair boost fidelity
+- Replication copies the genome before meiosis; segregation + fertilization restore diploidy
+- Meiotic recombination + assortment → gamete diversity; recombination frequency maps gene distance
 - Crossing over occurs in prophase I of meiosis
+- 'HWE ideal: no mutation/selection/drift/migration + random mating'
 - 'Hardy–Weinberg: p² + 2pq + q² = 1'
-- Replication fidelity and repair paths (intro)
-- Meiotic errors → aneuploidy idea
-- CRISPR guides Cas to cut specific DNA sequences
-- 'Aneuploidy: abnormal chromosome number'
-- Point vs frameshift mutations often differ in severity
+- Mendelian patterns — autosomal dominant/recessive, X-linked; pedigree logic resolves most items
+- Meiotic nondisjunction → aneuploidy (trisomy 21, Turner XO, Klinefelter XXY)
+- 'Aneuploidy: abnormal chromosome number; balanced structural changes can still make unbalanced gametes'
 - Heterozygote advantage can maintain deleterious allele frequencies
-practice: []
+- CRISPR guides Cas to cut specific DNA sequences
+practice:
+- id: 1c-heritable-information-genetic-diversity-p1
+  q: An autosomal recessive disease affects 1 in 2,500 newborns in a Hardy-Weinberg population.
+    About what fraction of the population are carriers?
+  choices:
+    A: About 1 in 25
+    B: About 1 in 50
+    C: About 1 in 2,500
+    D: About 1 in 12.5
+  answer: A
+  explain: q² = 1/2500, so q = 0.02 and p = 0.98; carriers = 2pq = 2(0.98)(0.02) = 0.0392
+    ≈ 1 in 25. B gives q (allele, not carrier frequency), C gives q² (affected, not carrier),
+    D doubles q a second time (0.08 instead of 2q = 0.04).
+  chapter: 1C · Heritable information & genetic diversity
+- id: 1c-heritable-information-genetic-diversity-p2
+  q: Two unaffected parents have an affected daughter and one unaffected son. Which mode of
+    inheritance is consistent with this pedigree?
+  choices:
+    A: X-linked recessive
+    B: Autosomal recessive
+    C: Autosomal dominant
+    D: X-linked dominant
+  answer: B
+  explain: An affected child of unaffected parents means the parents are heterozygous carriers,
+    which fits autosomal recessive. An affected daughter rules out X-linked recessive (she
+    would need an affected father to supply the mutant X), and dominant modes require an affected
+    parent.
+  chapter: 1C · Heritable information & genetic diversity
+- id: 1c-heritable-information-genetic-diversity-p3
+  q: 'A testcross of a dihybrid yields 200 progeny: 82 and 78 show the parental phenotypes,
+    while 19 and 21 show recombinant phenotypes. What is the recombination frequency?'
+  choices:
+    A: 80 cM
+    B: 40 cM
+    C: 20 cM
+    D: 10 cM
+  answer: C
+  explain: Recombinants = 19 + 21 = 40 of 200, so RF = 40/200 = 0.20 = 20% = 20 map units.
+    A uses the parental classes (160/200), B doubles the recombinant count, D counts only
+    one recombinant class (20/200).
+  chapter: 1C · Heritable information & genetic diversity

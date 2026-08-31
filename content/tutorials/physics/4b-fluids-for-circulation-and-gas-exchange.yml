@@ -86,17 +86,17 @@ sections:
   check:
   - q: A mountain climber at high altitude has lower driving pressure for O2 diffusion because…
     options:
-      A: Hemoglobin is bigger
-      B: The partial pressure gradient falls with total pressure
-      C: The alveoli shrink
-      D: Blood is thicker
-    answer: B
+      A: The partial pressure gradient falls with total pressure
+      B: Blood is thicker
+      C: Hemoglobin is bigger
+      D: The alveoli shrink
+    answer: A
     explain: Dalton — PO2 scales with total barometric pressure; altitude lowers it.
     distractors:
-      A: Hemoglobin is unchanged.
-      B: Correct — gradient falls.
-      C: Alveoli adapt, not shrink.
-      D: Viscosity is secondary.
+      A: Correct — gradient falls.
+      B: Viscosity is secondary.
+      C: Hemoglobin is unchanged.
+      D: Alveoli adapt, not shrink.
 - heading: Fluids in the body — circulation mechanics
   body:
   - '==Mean arterial pressure = cardiac output x total peripheral resistance (P = Q R)==. Starling forces
@@ -108,17 +108,17 @@ sections:
   check:
   - q: Capillary filtration at the arterial end exceeds reabsorption at the venous end because…
     options:
-      A: Oncotic pressure is higher
-      B: Hydrostatic driving force exceeds oncotic pull at the arterial end
-      C: Arterial blood is thicker
-      D: The capillaries leak
-    answer: B
+      A: Hydrostatic driving force exceeds oncotic pull at the arterial end
+      B: Arterial blood is thicker
+      C: The capillaries leak
+      D: Oncotic pressure is higher
+    answer: A
     explain: Net filtration pressure is positive at the arterial end — hydrostatic minus oncotic.
     distractors:
-      A: Oncotic pulls IN.
-      B: Correct.
-      C: Blood viscosity is not the driver.
-      D: Normal physiology lets small proteins across.
+      A: Correct.
+      B: Blood viscosity is not the driver.
+      C: Normal physiology lets small proteins across.
+      D: Oncotic pulls IN.
 examples:
 - prompt: A vessel with radius 1.0 mm carries 5 mL/s. A branch with radius 2.0 mm and the same pressure
     drop carries how much?
@@ -176,17 +176,17 @@ passage:
       D: Correct — about 39x.
   - q: To restore flow to 400 mL/min, the driving pressure would need…
     options:
-      A: Doubling
-      B: Roughly 39x
-      C: 16x
-      D: Unchanged
-    answer: B
+      A: Unchanged
+      B: 16x
+      C: Roughly 39x
+      D: Doubling
+    answer: C
     explain: Q = delta-P/R — compensate for a 39x R with a 39x pressure increase.
     distractors:
-      A: Not enough.
-      B: Correct.
-      C: r^4 ratio is not the pressure ratio.
-      D: Resistance changed.
+      A: Resistance changed.
+      B: r^4 ratio is not the pressure ratio.
+      C: Correct.
+      D: Not enough.
   - q: The velocity of blood inside the 2 mm segment relative to the 5 mm segment is…
     options:
       A: 2.5x faster

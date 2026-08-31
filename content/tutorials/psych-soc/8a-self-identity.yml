@@ -13,16 +13,16 @@ sections:
   check:
   - q: A teen accepts the family's career without considering alternatives. Marcia calls this…
     options:
-      A: Identity achievement
-      B: Foreclosure
-      C: Moratorium
-      D: Diffusion
-    answer: B
+      A: Moratorium
+      B: Diffusion
+      C: Foreclosure
+      D: Identity achievement
+    answer: C
     explain: Commitment without exploration.
     distractors:
-      A: Requires exploration first.
-      C: Exploring, no commitment.
-      D: Neither.
+      A: Exploring, no commitment.
+      B: Neither.
+      D: Requires exploration first.
   figures:
   - src: 8a-self-identity/fig-1752bba5.webp
     caption: Stages of development — Erikson's psychosocial crises across the lifespan.
@@ -38,16 +38,16 @@ sections:
   check:
   - q: A student believes she can master statistics through effort. This is…
     options:
-      A: Self-esteem
-      B: Self-efficacy
-      C: Self-handicapping
-      D: Ideal self
-    answer: B
+      A: Self-handicapping
+      B: Ideal self
+      C: Self-efficacy
+      D: Self-esteem
+    answer: C
     explain: Domain-specific capability belief.
     distractors:
-      A: Global self-worth.
-      C: Pre-emptive excuse.
-      D: Self-discrepancy term.
+      A: Pre-emptive excuse.
+      B: Self-discrepancy term.
+      D: Global self-worth.
 - heading: Social identity — the group in the self
   body:
   - Tajfel — categorize, identify, compare. Minimal-group experiments (random label assignment alone produces
@@ -56,16 +56,16 @@ sections:
   check:
   - q: Random assignment to Team Blue produces in-group favoritism. This supports…
     options:
-      A: Social identity theory's minimal-group effect
+      A: Mere exposure
       B: Social loafing
-      C: Deindividuation
-      D: Mere exposure
-    answer: A
+      C: Social identity theory's minimal-group effect
+      D: Deindividuation
+    answer: C
     explain: Categorization alone suffices for bias.
     distractors:
+      A: Familiarity, not allocation.
       B: Effort drop.
-      C: Anonymity disinhibition.
-      D: Familiarity, not allocation.
+      D: Anonymity disinhibition.
 - heading: Self-concept across cultures
   body:
   - Culture shapes the default self — **individualist** cultures build an independent self (traits, autonomy,
@@ -80,16 +80,16 @@ sections:
   - q: A respondent describes themselves primarily through relationships and social roles. This pattern
       is more common in…
     options:
-      A: Individualist cultures
-      B: Collectivist cultures
-      C: Both equally
-      D: Neither — it reflects personality only
-    answer: B
+      A: Neither — it reflects personality only
+      B: Both equally
+      C: Individualist cultures
+      D: Collectivist cultures
+    answer: D
     explain: Interdependent selves foreground relationship and context over traits.
     distractors:
-      A: Independent selves lead with traits.
-      C: Culture shifts the default.
-      D: Culture is a systematic shaper.
+      A: Culture is a systematic shaper.
+      B: Culture shifts the default.
+      C: Independent selves lead with traits.
 examples:
 - prompt: A stereotype-threat experiment — math test framed as diagnostic of ability vs. problem-solving
     exercise, stereotyped vs. non-stereotyped group. Predict the 2×2.
@@ -157,16 +157,16 @@ passage:
       D: Dismissive.
   - q: Which finding would most directly challenge the study's internal validity?
     options:
-      A: A large sample size
-      B: A confederate accidentally hinting at the expected answer
-      C: High statistical significance
-      D: A replication in a different country
-    answer: B
+      A: High statistical significance
+      B: A large sample size
+      C: A replication in a different country
+      D: A confederate accidentally hinting at the expected answer
+    answer: D
     explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
     distractors:
-      A: Power, not validity.
-      C: Significance is downstream of validity.
-      D: That tests external validity.
+      A: Significance is downstream of validity.
+      B: Power, not validity.
+      C: That tests external validity.
 pitfalls:
 - Confusing self-esteem with self-efficacy.
 - Foreclosure where achievement belongs — check exploration.

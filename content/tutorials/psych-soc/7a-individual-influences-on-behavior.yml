@@ -16,16 +16,16 @@ sections:
   check:
   - q: MZ twins reared apart show IQ correlations similar to MZ twins together, both above DZ. This supports…
     options:
-      A: Substantial genetic influence on IQ variation
-      B: IQ being purely environmental
-      C: Zero heritability
-      D: Adoption improving IQ
-    answer: A
+      A: IQ being purely environmental
+      B: Adoption improving IQ
+      C: Substantial genetic influence on IQ variation
+      D: Zero heritability
+    answer: C
     explain: Genetic similarity tracks phenotypic similarity even when environment differs.
     distractors:
-      B: Contradicts the shared-environment control.
-      C: The MZ-DZ gap is the signal.
-      D: No such comparison implied.
+      A: Contradicts the shared-environment control.
+      B: No such comparison implied.
+      D: The MZ-DZ gap is the signal.
 - heading: Motivation and emotion — drives and displays
   body:
   - Motivation theories stack — drive reduction (homeostatic pushes), arousal theory (Yerkes-Dodson curve),
@@ -64,16 +64,16 @@ sections:
   check:
   - q: A student angry at a teacher returns home and yells at a sibling. The defense mechanism is…
     options:
-      A: Projection
-      B: Displacement
-      C: Sublimation
-      D: Reaction formation
-    answer: B
+      A: Sublimation
+      B: Projection
+      C: Reaction formation
+      D: Displacement
+    answer: D
     explain: Impulse redirected to a safer target.
     distractors:
-      A: Attributing one's own feelings TO others.
-      C: Channeling into valued activity.
-      D: Behaving opposite to the impulse.
+      A: Channeling into valued activity.
+      B: Attributing one's own feelings TO others.
+      C: Behaving opposite to the impulse.
 - heading: Stress — physiology, appraisal, health
   body:
   - The stress response is 3A's axis — sympathetic surge (epinephrine seconds) and HPA cascade (cortisol
@@ -165,15 +165,15 @@ passage:
   - q: Which finding would most directly challenge the study's internal validity?
     options:
       A: A large sample size
-      B: A confederate accidentally hinting at the expected answer
-      C: High statistical significance
-      D: A replication in a different country
-    answer: B
+      B: High statistical significance
+      C: A replication in a different country
+      D: A confederate accidentally hinting at the expected answer
+    answer: D
     explain: A leaked expectation contaminates the manipulation — the effect may reflect demand.
     distractors:
       A: Power, not validity.
-      C: Significance is downstream of validity.
-      D: That tests external validity.
+      B: Significance is downstream of validity.
+      C: That tests external validity.
 pitfalls:
 - Reading heritability as individual genetic determinism.
 - Mixing up the three emotion theories.

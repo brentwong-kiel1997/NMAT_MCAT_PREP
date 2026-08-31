@@ -14,17 +14,17 @@ sections:
   check:
   - q: AB-1234 vs AB-1234 — are they the same?
     options:
-      A: Same
+      A: Depends on context
       B: Different
       C: Cannot tell
-      D: Depends on context
-    answer: A
+      D: Same
+    answer: D
     explain: Every character matches, including the hyphen.
     distractors:
-      A: Correct.
+      A: No context needed.
       B: No variance.
       C: They are written out.
-      D: No context needed.
+      D: Correct.
 - heading: The classic traps
   body:
   - ==Case traps — 'aBc' vs 'Abc' differ at position 2==. ==Zero-letter traps — 0 vs O vs the letter O;
@@ -56,17 +56,17 @@ sections:
   check:
   - q: The most reliable quick scan reads…
     options:
-      A: First, middle, last segments
-      B: Only the first character
-      C: Only the last character
-      D: The overall length
-    answer: A
+      A: Only the first character
+      B: First, middle, last segments
+      C: The overall length
+      D: Only the last character
+    answer: B
     explain: Interior differences are the norm — verify both ends and the middle.
     distractors:
-      A: Correct.
-      B: Misses the interior.
-      C: Misses everything else.
-      D: Length rarely differs alone.
+      A: Misses the interior.
+      B: Correct.
+      C: Length rarely differs alone.
+      D: Misses everything else.
 - heading: Speed and accuracy balance
   body:
   - ==Accuracy first — the items are individually fast; one careless miss costs as much as several guesses==.
@@ -77,17 +77,17 @@ sections:
   check:
   - q: You find a difference at position 6 of a 15-character pair. Next…
     options:
-      A: Mark 'different' and move on
-      B: Re-read all 15 slowly
-      C: Re-read the first 5
-      D: Ask for a second look
-    answer: A
+      A: Ask for a second look
+      B: Re-read the first 5
+      C: Mark 'different' and move on
+      D: Re-read all 15 slowly
+    answer: C
     explain: One confirmed difference decides the item — tail checks are waste.
     distractors:
-      A: Correct.
-      B: Over-verification.
-      C: The difference is at 6.
-      D: No such option.
+      A: No such option.
+      B: The difference is at 6.
+      C: Correct.
+      D: Over-verification.
 - heading: Applied formats — codes, IDs, records
   body:
   - ==Codes and IDs — alphanumeric with fixed structure (e.g., PHL-2026-0925); verify each segment independently==.
@@ -98,17 +98,17 @@ sections:
   check:
   - q: 'Record A: REF 2026-Q3-PH. Record B: REF 2026-03-PH. They differ…'
     options:
-      A: Q3 vs 03
-      B: At the first two letters
-      C: In the dash style
-      D: Not at all
-    answer: A
+      A: Not at all
+      B: In the dash style
+      C: Q3 vs 03
+      D: At the first two letters
+    answer: C
     explain: 'Positions 10-11: Q3 vs 03 — the middle segment varies.'
     distractors:
-      A: Correct.
-      B: REF matches.
-      C: Dashes match.
-      D: They differ.
+      A: They differ.
+      B: Dashes match.
+      C: Correct.
+      D: REF matches.
 examples:
 - prompt: 'Compare: 09F4-88K2-L7P vs 09F4-88K2-L7P — same or different?'
   solution:
@@ -153,43 +153,43 @@ passage:
   questions:
   - q: The Lot record differs by…
     options:
-      A: The '#' symbol — presence vs absence
-      B: The digits
+      A: The digits
+      B: Nothing
       C: The letters
-      D: Nothing
-    answer: A
+      D: The '#' symbol — presence vs absence
+    answer: D
     explain: Sheet has '#', record lacks it — a punctuation difference.
     distractors:
-      A: Correct.
-      B: 84-7102-AX23 matches.
+      A: 84-7102-AX23 matches.
+      B: They differ once.
       C: AX23 matches.
-      D: They differ once.
+      D: Correct.
   - q: PO-99120 vs PO-99120 are…
     options:
-      A: Identical
+      A: Impossible to compare
       B: Different in the interior
-      C: Different at the end
-      D: Impossible to compare
-    answer: A
+      C: Identical
+      D: Different at the end
+    answer: C
     explain: Character-for-character match.
     distractors:
-      A: Correct.
+      A: They are printed.
       B: Same digits.
-      C: Same digits.
-      D: They are printed.
+      C: Correct.
+      D: Same digits.
   - q: 12:45 vs 12:54 differ…
     options:
-      A: At digits 4-5 (45 vs 54)
+      A: At the first digit
       B: At the colon
-      C: At the first digit
-      D: Nowhere
-    answer: A
+      C: Nowhere
+      D: At digits 4-5 (45 vs 54)
+    answer: D
     explain: Middle transposition — 45 swapped to 54.
     distractors:
-      A: Correct.
+      A: 12 matches.
       B: Colon matches.
-      C: 12 matches.
-      D: They differ.
+      C: They differ.
+      D: Correct.
 pitfalls:
 - Holistic shape matching instead of character reading.
 - Case blindness — aB vs Ab.
@@ -213,17 +213,17 @@ further_reading:
 review_questions:
 - q: Kw-12 vs Kw-12 — same?
   options:
-    A: 'Yes'
-    B: 'No'
-    C: Almost
-    D: Unknown
-  answer: A
+    A: 'No'
+    B: 'Yes'
+    C: Unknown
+    D: Almost
+  answer: B
   explain: All characters match.
   distractors:
-    A: Correct.
-    B: No variance.
-    C: Variance is decisive.
-    D: They are shown.
+    A: No variance.
+    B: Correct.
+    C: They are shown.
+    D: Variance is decisive.
 - q: MN-009 vs MN-090 — differs…
   options:
     A: In the trailing digits

@@ -15,17 +15,17 @@ sections:
   check:
   - q: Cellulose differs from starch because…
     options:
-      A: Its glucose units link by beta-1,4 bonds
-      B: It is made of fructose
+      A: It is made of fructose
+      B: It is a protein
       C: It is digested by humans
-      D: It is a protein
-    answer: A
+      D: Its glucose units link by beta-1,4 bonds
+    answer: D
     explain: Beta linkage — humans lack cellulase to break it.
     distractors:
-      A: Correct.
-      B: Glucose only.
+      A: Glucose only.
+      B: Not a biomolecule type.
       C: Humans cannot digest it.
-      D: Not a biomolecule type.
+      D: Correct.
   figures:
   - src: chemistry-of-biochemistry-cem/fig-35fa1423.webp
     caption: Amylose (linear) versus amylopectin (branched) — glucose polymers differing in glycosidic
@@ -45,17 +45,17 @@ sections:
   check:
   - q: Increasing substrate concentration overcomes…
     options:
-      A: Competitive inhibition
+      A: pH effects
       B: Noncompetitive inhibition
-      C: Denaturation
-      D: pH effects
-    answer: A
+      C: Competitive inhibition
+      D: Denaturation
+    answer: C
     explain: More substrate outcompetes the inhibitor at the same site.
     distractors:
-      A: Correct.
+      A: pH optimum stands.
       B: Saturates elsewhere.
-      C: Shape destruction is irreversible.
-      D: pH optimum stands.
+      C: Correct.
+      D: Shape destruction is irreversible.
 - heading: Bioenergetics — energy flow in cells
   body:
   - ==ATP is the universal currency (hydrolysis releases ~30 kJ/mol); ADP + P -> ATP requires input (respiration/photosynthesis)==.
@@ -67,17 +67,17 @@ sections:
   check:
   - q: The main role of the electron transport chain is…
     options:
-      A: Building ATP from the proton gradient
-      B: Digesting food
-      C: Storing glucose
-      D: Fixing CO2
-    answer: A
+      A: Fixing CO2
+      B: Storing glucose
+      C: Building ATP from the proton gradient
+      D: Digesting food
+    answer: C
     explain: Protons pumped by the chain drive ATP synthase — chemiosmosis.
     distractors:
-      A: Correct.
-      B: That is digestion.
-      C: Glycogenesis.
-      D: That is the Calvin cycle.
+      A: That is the Calvin cycle.
+      B: Glycogenesis.
+      C: Correct.
+      D: That is digestion.
 - heading: Vitamins, minerals, and clinical chemistry
   body:
   - ==Water-soluble vitamins (B complex, C) — coenzymes or their precursors (NAD from niacin, FAD from
@@ -110,17 +110,17 @@ sections:
   check:
   - q: HbA1c reflects…
     options:
-      A: Blood glucose over about 3 months
-      B: Today's glucose
-      C: Pancreatic inflammation
-      D: Kidney filtration
-    answer: A
+      A: Pancreatic inflammation
+      B: Kidney filtration
+      C: Today's glucose
+      D: Blood glucose over about 3 months
+    answer: D
     explain: Glycated hemoglobin accumulates with long-term average glucose.
     distractors:
-      A: Correct.
-      B: Fingertip glucose does that.
-      C: Amylase/lipase.
-      D: Creatinine does.
+      A: Amylase/lipase.
+      B: Creatinine does.
+      C: Fingertip glucose does that.
+      D: Correct.
 examples:
 - prompt: A patient presents with lactose intolerance after a gastric infection. Explain the enzyme and
     the biochemical basis.
@@ -165,30 +165,30 @@ passage:
   questions:
   - q: The most concerning ratios for cardiovascular risk are…
     options:
-      A: High LDL + low HDL
+      A: Normal glucose
       B: High HDL only
       C: Low triglycerides
-      D: Normal glucose
-    answer: A
+      D: High LDL + low HDL
+    answer: D
     explain: LDL is the atherogenic cargo; HDL the protective reverse transport.
     distractors:
-      A: Correct.
+      A: Glucose at 110 is pre-diabetic but secondary.
       B: That would be protective.
       C: His TG is high, not low.
-      D: Glucose at 110 is pre-diabetic but secondary.
+      D: Correct.
   - q: His triglycerides are best lowered by…
     options:
-      A: Reducing refined carbs and alcohol
+      A: Stopping exercise
       B: Vitamin C
-      C: Increasing saturated fat
-      D: Stopping exercise
-    answer: A
+      C: Reducing refined carbs and alcohol
+      D: Increasing saturated fat
+    answer: C
     explain: TG tracks carbohydrate/ethanol intake more than dietary fat.
     distractors:
-      A: Correct.
+      A: Exercise helps.
       B: Not the driver.
-      C: Saturated fat raises LDL, not TG.
-      D: Exercise helps.
+      C: Correct.
+      D: Saturated fat raises LDL, not TG.
   - q: The family history raises the value of…
     options:
       A: Early lipid screening

@@ -16,15 +16,15 @@ sections:
   check:
   - q: A jury leaning mildly toward conviction deliberates and emerges strongly pro-conviction. This is…
     options:
-      A: Group polarization
+      A: Conformity to a confederate
       B: Social loafing
-      C: Conformity to a confederate
+      C: Group polarization
       D: Deindividuation
-    answer: A
+    answer: C
     explain: Discussion amplified the initial lean.
     distractors:
+      A: No planted majority.
       B: Effort drop — not this.
-      C: No planted majority.
       D: Anonymity effects, absent.
   figures:
   - src: 7b-social-processes-that-influence-behavior/social-roles.webp
@@ -42,16 +42,16 @@ sections:
   check:
   - q: A nurse follows a physician's inappropriate verbal order, deferring to rank. This is…
     options:
-      A: Conformity
-      B: Obedience to authority
-      C: Social facilitation
-      D: Groupthink
-    answer: B
+      A: Social facilitation
+      B: Groupthink
+      C: Conformity
+      D: Obedience to authority
+    answer: D
     explain: A direct command from authority.
     distractors:
-      A: No group norm — a hierarchy.
-      C: Performance in mere presence.
-      D: Group decision defect.
+      A: Performance in mere presence.
+      B: Group decision defect.
+      C: No group norm — a hierarchy.
 - heading: Attribution, attitudes, persuasion
   body:
   - Attribution — dispositional versus situational — with the fundamental attribution error (overweighting
@@ -87,16 +87,16 @@ sections:
   - q: A runner sprints faster with spectators; a brainstorming group produces fewer ideas per person
       than working alone. These are respectively…
     options:
-      A: Social facilitation and social loafing
+      A: Both loafing
       B: Social loafing and facilitation
       C: Both facilitation
-      D: Both loafing
-    answer: A
+      D: Social facilitation and social loafing
+    answer: D
     explain: Arousal on individual performance vs. effort-drop in unidentifiable groups.
     distractors:
+      A: The sprint shows facilitation.
       B: Reversed.
       C: The group task shows loafing.
-      D: The sprint shows facilitation.
 examples:
 - prompt: Festinger's design — participants paid $1 or $20 to tell a peer a boring task was fun. Predict
     the attitude change.

@@ -15,15 +15,15 @@ sections:
   check:
   - q: Alpha-helices are stabilized primarily by…
     options:
-      A: Hydrophobic interactions
-      B: Backbone hydrogen bonds
-      C: Disulfide bridges
+      A: Disulfide bridges
+      B: Hydrophobic interactions
+      C: Backbone hydrogen bonds
       D: Peptide bond hydrolysis
-    answer: B
+    answer: C
     explain: C=O of one residue H-bonds to N-H four residues along the helix.
     distractors:
-      A: That drives tertiary fold.
-      C: Tertiary stabilizer.
+      A: Tertiary stabilizer.
+      B: That drives tertiary fold.
       D: Destroys structure.
 - heading: Enzymes — catalysis and kinetics
   body:
@@ -37,14 +37,14 @@ sections:
   - q: A competitive inhibitor…
     options:
       A: Lowers Vmax
-      B: Raises apparent Km
-      C: Lowers Km
+      B: Lowers Km
+      C: Raises apparent Km
       D: Cannot be overcome
-    answer: B
+    answer: C
     explain: Substrate competes for the active site — more substrate restores Vmax but the Km shift persists.
     distractors:
       A: Vmax is unchanged.
-      C: Wrong direction.
+      B: Wrong direction.
       D: It can be overcome by substrate.
 - heading: Regulation — allostery and covalent modification
   body:
@@ -57,16 +57,16 @@ sections:
   check:
   - q: Sigmoid (rather than hyperbolic) kinetics indicates…
     options:
-      A: Competitive inhibition
-      B: Cooperative binding
+      A: Denaturation
+      B: Competitive inhibition
       C: Zero-order
-      D: Denaturation
-    answer: B
+      D: Cooperative binding
+    answer: D
     explain: Multiple sites communicate — binding at one raises affinity at the rest.
     distractors:
-      A: Competitive keeps hyperbolic shape.
+      A: Denaturation kills activity.
+      B: Competitive keeps hyperbolic shape.
       C: Order is unrelated.
-      D: Denaturation kills activity.
 - heading: Metabolism overview — the energy map
   body:
   - Glycolysis — glucose to 2 pyruvate, cytosol, ==net 2 ATP + 2 NADH==; investment phase spends 2 ATP,
@@ -78,16 +78,16 @@ sections:
   check:
   - q: The net ATP from glycolysis alone per glucose is…
     options:
-      A: '2'
+      A: 30-32
       B: '4'
-      C: 30-32
-      D: 36-38
-    answer: A
+      C: 36-38
+      D: '2'
+    answer: D
     explain: 4 made minus 2 invested in the priming phase.
     distractors:
+      A: Full aerobic total.
       B: Gross, not net.
-      C: Full aerobic total.
-      D: Older textbook total.
+      C: Older textbook total.
   figures:
   - src: biochemistry/fig-30c947dd.webp
     caption: Mitochondrion architecture — electron transport chain and ATP synthase embedded in the inner
@@ -109,15 +109,15 @@ sections:
   - q: PFK-1 is inhibited by…
     options:
       A: AMP
-      B: ATP and citrate
-      C: Fructose-2,6-bisphosphate
-      D: Insulin
-    answer: B
+      B: Fructose-2,6-bisphosphate
+      C: Insulin
+      D: ATP and citrate
+    answer: D
     explain: High energy charge and abundant citrate signal that glycolysis should slow.
     distractors:
       A: AMP activates — low energy.
-      C: F2,6BP activates PFK-1 strongly.
-      D: Insulin works upstream.
+      B: F2,6BP activates PFK-1 strongly.
+      C: Insulin works upstream.
 examples:
 - prompt: An enzyme has Km = 2 mM and Vmax = 100 umol/min. At [S] = 6 mM, what fraction of Vmax is observed?
   solution:

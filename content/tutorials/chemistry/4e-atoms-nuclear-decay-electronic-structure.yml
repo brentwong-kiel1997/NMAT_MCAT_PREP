@@ -21,14 +21,14 @@ sections:
     options:
       A: '2'
       B: '6'
-      C: '10'
-      D: '14'
-    answer: C
+      C: '14'
+      D: '10'
+    answer: D
     explain: d has 5 orbitals times 2 electrons each = 10.
     distractors:
       A: That is one orbital.
       B: That is p (3 orbitals).
-      D: That is f (7 orbitals).
+      C: That is f (7 orbitals).
 - heading: Nuclear notation and isotopes
   body:
   - Write isotopes as upper-left mass number, lower-left atomic number, symbol. Carbon-14 is 14/6 C. The
@@ -40,16 +40,16 @@ sections:
   check:
   - q: An isotope has A = 39, Z = 19. How many neutrons?
     options:
-      A: '19'
-      B: '20'
+      A: '20'
+      B: '58'
       C: '39'
-      D: '58'
-    answer: B
+      D: '19'
+    answer: A
     explain: A - Z = 39 - 19 = 20 neutrons (potassium-39).
     distractors:
-      A: That is the proton count.
+      B: That is A + Z.
       C: That is the mass number.
-      D: That is A + Z.
+      D: That is the proton count.
 - heading: Nuclear decay — alpha, beta, gamma
   body:
   - ==Alpha decay emits a helium-4 nucleus== (A decreases by 4, Z decreases by 2). Beta-minus decay emits
@@ -62,16 +62,16 @@ sections:
   check:
   - q: A radioactive isotope has a half-life of 8 days. What fraction remains after 24 days?
     options:
-      A: 1/2
-      B: 1/4
-      C: 1/8
-      D: 1/16
-    answer: C
+      A: 1/8
+      B: 1/16
+      C: 1/2
+      D: 1/4
+    answer: A
     explain: 24 / 8 = 3 half-lives. (1/2)3 = 1/8.
     distractors:
-      A: That is one half-life.
-      B: That is two half-lives.
-      D: That is four half-lives.
+      B: That is four half-lives.
+      C: That is one half-life.
+      D: That is two half-lives.
   figures:
   - src: 4e-atoms-nuclear-decay-electronic-structure/4e-1a783933.webp
     caption: Nuclear stability and decay modes — the valley of stability.
@@ -92,15 +92,15 @@ sections:
   - q: An electron falls from n = 3 to n = 2 in hydrogen. This emits a photon in the…
     options:
       A: Ultraviolet
-      B: Visible
+      B: X-ray
       C: Infrared
-      D: X-ray
-    answer: B
+      D: Visible
+    answer: D
     explain: The Balmer series ends at n = 2 and includes the visible H-alpha (red) line.
     distractors:
       A: Lyman series (to n = 1) is UV.
+      B: X-rays are inner-shell transitions in heavy atoms.
       C: Paschen series (to n = 3) is IR.
-      D: X-rays are inner-shell transitions in heavy atoms.
 - heading: Absorption and emission spectroscopy
   body:
   - Absorption spectra show dark lines where atoms absorb specific wavelengths; emission spectra show
@@ -113,15 +113,15 @@ sections:
   - q: In a Beer-Lambert plot of absorbance versus concentration, the slope equals…
     options:
       A: Path length b
-      B: Molar absorptivity epsilon times path length b
+      B: Wavelength
       C: Concentration c
-      D: Wavelength
-    answer: B
+      D: Molar absorptivity epsilon times path length b
+    answer: D
     explain: A = epsilon times b times c — the slope of A versus c is the product epsilon times b.
     distractors:
       A: Only b — epsilon is missing.
+      B: Wavelength is fixed.
       C: That is the x-axis variable.
-      D: Wavelength is fixed.
 examples:
 - prompt: Uranium-238 undergoes alpha decay followed by beta-minus decay. What is the daughter nuclide?
   solution:
@@ -231,16 +231,16 @@ further_reading:
 review_questions:
 - q: Which quantum number determines the shape of an orbital?
   options:
-    A: n
-    B: l
-    C: ml
-    D: ms
-  answer: B
+    A: l
+    B: ml
+    C: ms
+    D: n
+  answer: A
   explain: l = 0 gives s (spherical), l = 1 gives p (dumbbell), l = 2 gives d (lobed).
   distractors:
-    A: n determines size/energy.
-    C: ml determines orientation.
-    D: ms is spin.
+    B: ml determines orientation.
+    C: ms is spin.
+    D: n determines size/energy.
 - q: What particle is emitted in alpha decay?
   options:
     A: An electron
