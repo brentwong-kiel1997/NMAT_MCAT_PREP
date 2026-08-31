@@ -844,6 +844,13 @@ a {
   gap: 0.75rem;
 }
 
+.site-footer-note {
+  flex-basis: 100%;
+  font-size: 0.8rem;
+  opacity: 0.75;
+  line-height: 1.5;
+}
+
 @keyframes rise {
   from {
     opacity: 0;
