@@ -615,7 +615,7 @@ terms:
   def: A mean where each value contributes proportionally to its group size; group counts are the weights.
   subjects:
   - quantitative
-  - sociology-and-anthropology
+  - behavioral-social
 - term: Concession
   def: A point the author grants to the opposing side before pivoting ('to be sure… but'); locating it
     prevents mistaking the conceded view for the thesis.
@@ -631,7 +631,7 @@ terms:
     argument quality.
   subjects:
   - cars
-  - psychology
+  - psych-soc
 - term: Counterexample
   def: A specific case that defeats a general claim; in CARS, weakening items often hinge on spotting
     or supplying one.
@@ -676,7 +676,7 @@ terms:
   def: The fragment that departs with electron pair in substitution; better leaving groups = weaker bases
     (I⁻ > Br⁻ > Cl⁻).
   subjects:
-  - organic-chemistry
+  - chemistry
 - term: Fair-share time
   def: Block seconds divided by item count — the per-question budget that pacing checkpoints compare against.
   subjects:
@@ -754,4 +754,3 @@ terms:
   subjects:
   - behavioral-social
   - psych-soc
-  - psychology

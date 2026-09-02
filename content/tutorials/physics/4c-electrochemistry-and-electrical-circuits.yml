@@ -243,7 +243,7 @@ review_questions:
 - q: Doubling the voltage across a resistor doubles the…
   options:
     A: Resistance
-    B: Current and power quadruples
+    B: Current (power quadruples)
     C: Only current
     D: Nothing
   answer: B

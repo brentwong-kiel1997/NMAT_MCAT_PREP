@@ -92,7 +92,7 @@ sections:
   - ==Kill absurd options first — magnitude, sign, and unit filters remove 2-3 options before any computation==.
     ==Round-then-compute — 19.7 x 3.1 ≈ 20 x 3 = 60; distractor traps hide behind 5-10% errors==.
   - ==Sanity checks — percents must be between 0 and 100 (except gains/losses problems), ratios must preserve
-    order, work rates must be slower than the fastest member alone==.
+    order, combined work rates must be faster than the fastest member alone==.
   check:
   - q: 'Estimate: 27.9% of 1,198'
     options:
@@ -116,7 +116,7 @@ examples:
   answer: 1,500 pesos.
   distractors:
     A: 960 — applying 20% off the wrong base.
-    B: 1,440 — subtracting 1200 x 0.2 from 1200 (double discount).
+    B: 1,440 — adding 20% of 1,200 back on instead of dividing by 0.8.
     C: 1,000 — rounding the base down.
 key_points:
 - PEMDAS — left to right within tiers; -3^2 = -9.

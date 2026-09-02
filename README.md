@@ -12,9 +12,9 @@
 ![Django](https://img.shields.io/badge/Django-5.x-0C4B33?logo=django&logoColor=white)
 ![Subjects](https://img.shields.io/badge/subjects-13-purple)
 ![Chapters](https://img.shields.io/badge/tutorials-70%20%2F%2070-green)
-![Questions](https://img.shields.io/badge/practice%20MCQs-116-red)
+![Questions](https://img.shields.io/badge/practice%20MCQs-149-red)
 
-[Features](#-features) · [Curriculum](#-the-curriculum-at-a-glance) · [Quickstart](#-quickstart) · [How it works](#-how-it-works) · [Built with AI](#-built-with-ai-agents) · [License](#%EF%B8%8F-sources--license)
+[Features](#-features) · [Curriculum](#-the-curriculum-at-a-glance) · [Quickstart](#-quickstart) · [How it works](#-how-it-works) · [Deploy](#-deploying-for-real) · [Built with AI](#-built-with-ai-agents) · [License](#%EF%B8%8F-sources--license)
 
 </div>
 
@@ -27,11 +27,12 @@
 | 🗺️ **Dual-exam curriculum map** | 13 subjects covering NMAT Part 1 & 2 and all four MCAT sections, with shared science subjects merged — no duplicated pages, no fake chapters beyond the official blueprints |
 | 📖 **Teaching chapters** | Full-textbook tutorials: overview → teaching sections with figures → worked examples → key points → pitfalls → per-exam mapping, every chapter citing its sources — plus subject key terms, cross-discipline bridges, clinical links into the disease library, high-yield badges, and one-click PDF export |
 | 🎯 **Strategy library** | 8 original test-taking technique guides — passage triage, process of elimination, unit analysis, CARS passage mapping, timing protocol, flag discipline, guessing policy, the review loop |
-| 📝 **High-yield notes** | 449 one-line bullets across 70 outline chapters, plus 116 practice MCQs and a 770-question bank (NMAT 240 + MCAT 230 full-length mocks + 300 practice-only drill items, 32 passages) |
-| 🔎 **Materials desk** | 105-term searchable glossary, 108 formulas in per-subject sheets, exam tips, study paths, and checklists |
+| 📝 **High-yield notes** | 453 one-line bullets across 70 outline chapters, plus 149 practice MCQs and a 770-question bank (NMAT 240 + MCAT 230 full-length mocks + 300 practice-only drill items, 32 passages) |
+| 🔎 **Materials desk** | 146-term searchable glossary, 114 formulas in per-subject sheets, exam tips, study paths, and checklists |
 | 🩺 **Disease library** | 8 mechanism-first articles (TB, dengue, MI, …) bridging basic science to clinical intuition — enrichment reading, honestly labeled as such |
-| 🔁 **Spaced-repetition flashcards** | SM-2-style scheduling over the full 399-card deck: due queue, new cards capped per session, Again/Hard/Good/Easy grading, per-subject decks |
+| 🔁 **Spaced-repetition flashcards** | SM-2-style scheduling over the full 625-card deck: due queue, new cards capped per session, Again/Hard/Good/Easy grading, per-subject decks |
 | ✅ **Mock exams & progress tracking** | Real-mode full-length simulations (server-authoritative clocks, autosave, retake variants that reshuffle items and options, per-question review), wrong-answer notebook with redo, study-plan generator, per-chapter progress |
+| 🖼️ **Real figures, not text about figures** | Diagram items render generated SVG art — NMAT Part 1 perception/induction panels, circuits, titration and kinetics plots, pedigrees, pathway maps — balanced A–D answer keys across the bank |
 | 📊 **Score interpreter** | Convert mock-exam percentages to the NMAT 200–800 scale (with CHED 40th / Metro Manila / UST-Ateneo / UP percentile reference rows) or MCAT 118–132 sections — labeled planning estimates |
 | 🤖 **AI study coach, model-agnostic** | Explain / quiz / grade modes, grounded in whichever chapter you are reading. Any OpenAI-compatible endpoint or Anthropic API — admins add, delete, and switch models at runtime |
 | 📁 **File-based content** | The entire curriculum is version-controlled YAML: edit, validate, push — no database migration, no build step |
@@ -42,11 +43,11 @@
 | --- | --- |
 | Subjects (5 shared · 4 NMAT-only · 4 MCAT sections) | **13** |
 | Outline chapters mapped to CEM / AAMC blueprints | **70** |
-| High-yield note bullets | **449** |
-| Practice MCQs with explanations | **116** |
-| Glossary terms / formula entries | **115 / 108** |
+| High-yield note bullets | **453** |
+| Practice MCQs with explanations | **149** |
+| Glossary terms / formula entries | **146 / 114** |
 | Strategy guides | **8** |
-| Flashcards (spaced repetition) | **399** across 13 subject decks |
+| Flashcards (spaced repetition) | **625** across 13 subject decks |
 | Exam tips / study paths / checklists | **21 / 7 / 3** |
 | Disease articles | **8** |
 | Full textbook tutorials | **70 / 70 — complete** |
@@ -77,7 +78,8 @@ export DJANGO_SECRET_KEY="$(python3 -c 'import secrets; print(secrets.token_urls
 .venv/bin/python manage.py runserver
 ```
 
-Open <http://127.0.0.1:8000/> and sign in.
+Open <http://127.0.0.1:8000/> — register your own account at `/register/`,
+or sign in as the admin you just created.
 
 <details>
 <summary><strong>Enabling the AI study coach (optional)</strong></summary>
@@ -121,6 +123,13 @@ flowchart LR
 - **A deploy gate guards content.** Every deploy runs `validate_content`
   against `MANIFEST.json` hashes and structural invariants; broken content
   fails loudly while the old processes keep serving.
+
+## 🚢 Deploying for real
+
+The quickstart above is for poking at the app locally. Running it as a
+service — bare-repo push-to-deploy, systemd gunicorn, nginx TLS with a
+password front door, secrets outside git, backups — is documented step by
+step in [`DEPLOYMENT.md`](DEPLOYMENT.md).
 
 ## 🔐 Security posture
 

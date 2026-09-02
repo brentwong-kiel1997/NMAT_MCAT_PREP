@@ -143,7 +143,7 @@ mnemonics:
 - phrase: FRAP FIVR
   means: Fixed ratio — pause AFTER, variable ratio — no pause; fixed interval — scallop, variable interval
     — steady.
-- phrase: Amydala FEAR, hippocaMPUS memory
+- phrase: Amygdala FEAR, hippocaMPUS memory
   means: Two limbic landmarks in one line.
 maps:
 - title: Memory pipeline

@@ -29,7 +29,8 @@ items:
   answer: C
   explain: 'Each term is 3 times the one before: 2, 6, 18, 54, 162, so 162 x 3 = 486.'
   distractors:
-    A: That adds the last gap (108), treating the series as arithmetic; the gaps themselves grow by x3.
+    A: That adds the last gap (108), treating the series as arithmetic; the gaps themselves
+      grow by x3.
     B: That multiplies by 2, but the series has no doubling step.
     D: That applies x3 twice and jumps two terms ahead.
   chapter: number-and-letter-series
@@ -41,13 +42,13 @@ items:
     C: '18'
     D: '4'
   answer: A
-  explain: 'The steps alternate +5 and -3: 4 (+5) 9 (-3) 6 (+5) 11 (-3) 8 (+5) 13, so the next step is
-    -3 and 13 - 3 = 10.'
+  explain: 'The steps alternate +5 and -3: 4 (+5) 9 (-3) 6 (+5) 11 (-3) 8 (+5) 13,
+    so the next step is -3 and 13 - 3 = 10.'
   distractors:
     B: That uses +3 instead of -3 — the sign of the second step is flipped.
     C: That applies the +5 step to 13; +5 belongs to the odd positions only.
-    D: That restarts the block, repeating the first term (4); the series keeps alternating instead of
-      cycling.
+    D: That restarts the block, repeating the first term (4); the series keeps alternating
+      instead of cycling.
   chapter: number-and-letter-series
 - id: nmat-p1i-004
   q: What number continues the series? 2, 15, 5, 13, 8, 11, ___
@@ -57,8 +58,9 @@ items:
     C: '13'
     D: '11'
   answer: D
-  explain: 'Two series are interleaved. Odd positions: 2, 5, 8 (adding 3). Even positions: 15, 13, 11
-    (subtracting 2). The seventh term belongs to the odd leg, so 8 + 3 = 11.'
+  explain: 'Two series are interleaved. Odd positions: 2, 5, 8 (adding 3). Even positions:
+    15, 13, 11 (subtracting 2). The seventh term belongs to the odd leg, so 8 + 3
+    = 11.'
   distractors:
     A: That follows the decreasing leg (-2) — it is the eighth term, not the seventh.
     B: That adds 3 twice to 8; only one +3 step separates the odd-position terms.
@@ -72,10 +74,11 @@ items:
     C: '144'
     D: '169'
   answer: B
-  explain: The terms are the squares of the odd numbers 1, 3, 5, 7, 9, so the next term is 11 squared
-    = 121.
+  explain: The terms are the squares of the odd numbers 1, 3, 5, 7, 9, so the next
+    term is 11 squared = 121.
   distractors:
-    A: That is 10 squared; the series squares odd numbers only, so the next base is 11.
+    A: That is 10 squared; the series squares odd numbers only, so the next base is
+      11.
     C: That is 12 squared, skipping 11.
     D: That is 13 squared, two bases ahead.
   chapter: number-and-letter-series
@@ -87,10 +90,12 @@ items:
     C: '216'
     D: '256'
   answer: C
-  explain: The terms are the cubes of 1, 2, 3, 4, 5, so the next term is 6 cubed = 216.
+  explain: The terms are the cubes of 1, 2, 3, 4, 5, so the next term is 6 cubed =
+    216.
   distractors:
     A: That is 14 squared; the series runs on cubes, not squares.
-    B: 'That uses the wrong gap: 125 + 81 = 206, whereas the gap from 5^3 to 6^3 is 91.'
+    B: 'That uses the wrong gap: 125 + 81 = 206, whereas the gap from 5^3 to 6^3 is
+      91.'
     D: That is 2^8 (16 squared), not 6 cubed.
   chapter: number-and-letter-series
 - id: nmat-p1i-007
@@ -101,11 +106,12 @@ items:
     C: '36'
     D: '47'
   answer: A
-  explain: 'From the third term on, each term is the sum of the two before it: 1 + 3 = 4, 3 + 4 = 7, 4
-    + 7 = 11, 7 + 11 = 18, so 11 + 18 = 29.'
+  explain: 'From the third term on, each term is the sum of the two before it: 1 +
+    3 = 4, 3 + 4 = 7, 4 + 7 = 11, 7 + 11 = 18, so 11 + 18 = 29.'
   distractors:
     B: That adds the fourth term (7) instead of the fifth (11).
-    C: That is 18 x 2 — it doubles the last term instead of adding the term before it.
+    C: That is 18 x 2 — it doubles the last term instead of adding the term before
+      it.
     D: 'That is one step too far: 18 + 29.'
   chapter: number-and-letter-series
 - id: nmat-p1i-008
@@ -116,9 +122,11 @@ items:
     C: '22'
     D: '25'
   answer: B
-  explain: 'The gaps grow by 1: +1, +2, +3, +4, +5, so the next gap is +6 and 17 + 6 = 23.'
+  explain: 'The gaps grow by 1: +1, +2, +3, +4, +5, so the next gap is +6 and 17 +
+    6 = 23.'
   distractors:
-    A: That reuses the +3 gap from the middle of the series instead of the next gap of +6.
+    A: That reuses the +3 gap from the middle of the series instead of the next gap
+      of +6.
     C: That repeats the +5 gap; the gaps grow by 1 each time, so the next is +6.
     D: That uses +8 (twice the second-to-last +4 gap) instead of the next gap of +6.
   chapter: number-and-letter-series
@@ -130,8 +138,8 @@ items:
     C: U
     D: V
   answer: D
-  explain: 'Alphabet positions: B=2, D=4, G=7, K=11, P=16 — the gaps are +2, +3, +4, +5. The next gap
-    is +6, giving position 22, which is V.'
+  explain: 'Alphabet positions: B=2, D=4, G=7, K=11, P=16 — the gaps are +2, +3, +4,
+    +5. The next gap is +6, giving position 22, which is V.'
   distractors:
     A: That adds 3, an early gap in the series, instead of the next gap of 6.
     B: That adds 4, an earlier gap, rather than 6.
@@ -145,10 +153,11 @@ items:
     C: EW
     D: DX
   answer: B
-  explain: The first letters advance A, B, C, D while the second letters retreat Z, Y, X, W, so the next
-    pair is DW.
+  explain: The first letters advance A, B, C, D while the second letters retreat Z,
+    Y, X, W, so the next pair is DW.
   distractors:
-    A: The first letter is right, but the second moves back only one place (X to W), not two.
+    A: The first letter is right, but the second moves back only one place (X to W),
+      not two.
     C: That skips ahead two letters in the first position (C to E).
     D: That advances the first letter but leaves the second one fixed at X.
   chapter: number-and-letter-series
@@ -160,8 +169,8 @@ items:
     C: '44'
     D: '48'
   answer: A
-  explain: 'The subtractions grow by 4 each time: 100 - 4 = 96, 96 - 8 = 88, 88 - 12 = 76, 76 - 16 = 60,
-    so the next subtraction is -20 and 60 - 20 = 40.'
+  explain: 'The subtractions grow by 4 each time: 100 - 4 = 96, 96 - 8 = 88, 88 -
+    12 = 76, 76 - 16 = 60, so the next subtraction is -20 and 60 - 20 = 40.'
   distractors:
     B: That uses the next-but-one subtraction (-24) instead of -20.
     C: That repeats the previous subtraction of 16.
@@ -175,25 +184,25 @@ items:
     C: H
     D: E
   answer: B
-  explain: 'Alphabet positions: Z=26, X=24, U=21, Q=17, L=12 — the gaps are -2, -3, -4, -5. The next gap
-    is -6, giving position 6, which is F.'
+  explain: 'Alphabet positions: Z=26, X=24, U=21, Q=17, L=12 — the gaps are -2, -3,
+    -4, -5. The next gap is -6, giving position 6, which is F.'
   distractors:
     A: That steps back only 5, repeating the last gap.
     C: That steps back 4, an earlier gap in the series.
     D: That steps back 7, one place too far.
   chapter: number-and-letter-series
 - id: nmat-p1i-013
-  q: 'Each frame shows a square frame containing a single arrow. Frame 1: the arrow points up. Frame 2:
-    the arrow points right. Frame 3: the arrow points down. Frame 4: the arrow points left. What does
-    Frame 5 look like?'
+  q: 'Each frame shows a square frame containing a single arrow. Frame 1: the arrow
+    points up. Frame 2: the arrow points right. Frame 3: the arrow points down. Frame
+    4: the arrow points left. What does Frame 5 look like?'
   choices:
     A: An arrow pointing right
     B: An arrow pointing down
     C: An arrow pointing diagonally up and to the right
     D: An arrow pointing up
   answer: D
-  explain: 'The arrow rotates 90 degrees clockwise from frame to frame: up, right, down, left, and back
-    to up in Frame 5.'
+  explain: 'The arrow rotates 90 degrees clockwise from frame to frame: up, right,
+    down, left, and back to up in Frame 5.'
   distractors:
     A: That is Frame 2's orientation; after left the arrow turns back to up.
     B: That is Frame 3's orientation, two turns early.
@@ -201,131 +210,140 @@ items:
   chapter: figure-series
   figure: items/ir-rot-arrow-1.svg
 - id: nmat-p1i-014
-  q: 'Frame 1: a square with 1 dot in the middle. Frame 2: a square with 3 dots in a horizontal row. Frame
-    3: a square with 5 dots in a horizontal row. Frame 4: a square with 7 dots in a horizontal row. What
-    does Frame 5 look like?'
+  q: 'Frame 1: a square with 1 dot in the middle. Frame 2: a square with 3 dots in
+    a horizontal row. Frame 3: a square with 5 dots in a horizontal row. Frame 4:
+    a square with 7 dots in a horizontal row. What does Frame 5 look like?'
   choices:
     A: A square with 9 dots in a horizontal row
     B: A square with 8 dots in a horizontal row
     C: A square with 10 dots in a horizontal row
     D: A square with 12 dots in a horizontal row
   answer: A
-  explain: The dot count goes 1, 3, 5, 7 — odd numbers rising by 2 — so Frame 5 holds 9 dots.
+  explain: The dot count goes 1, 3, 5, 7 — odd numbers rising by 2 — so Frame 5 holds
+    9 dots.
   distractors:
     B: That adds only one dot; each frame adds two.
     C: That adds three dots; the increase per frame is two.
     D: That adds five dots, overshooting the pattern.
   chapter: figure-series
 - id: nmat-p1i-015
-  q: 'Frame 1: a circle filled in solid black. Frame 2: a circle with a black outline and a white interior.
-    Frame 3: a circle filled in solid black. Frame 4: a circle with a black outline and a white interior.
-    What does Frame 5 look like?'
+  q: 'Frame 1: a circle filled in solid black. Frame 2: a circle with a black outline
+    and a white interior. Frame 3: a circle filled in solid black. Frame 4: a circle
+    with a black outline and a white interior. What does Frame 5 look like?'
   choices:
     A: A circle with a black outline and a white interior
     B: A circle filled in solid grey
     C: A circle filled in solid black
     D: A circle with a white outline and a black interior
   answer: C
-  explain: The fill alternates black, white, black, white, so Frame 5 returns to a solid black circle.
+  explain: The fill alternates black, white, black, white, so Frame 5 returns to a
+    solid black circle.
   distractors:
     A: That is Frame 4, the state the series has just left.
     B: No grey appears anywhere in the series; only black and white are used.
     D: The outline stays black in every frame; only the fill alternates.
   chapter: figure-series
 - id: nmat-p1i-016
-  q: 'Frame 1: a triangle (3 sides). Frame 2: a square (4 sides). Frame 3: a pentagon (5 sides). Frame
-    4: a hexagon (6 sides). What does Frame 5 look like?'
+  q: 'Frame 1: a triangle (3 sides). Frame 2: a square (4 sides). Frame 3: a pentagon
+    (5 sides). Frame 4: a hexagon (6 sides). What does Frame 5 look like?'
   choices:
     A: An octagon (8 sides)
     B: A heptagon (7 sides)
     C: A hexagon (6 sides)
     D: A triangle (3 sides)
   answer: B
-  explain: 'The number of sides increases by one each frame: 3, 4, 5, 6, so Frame 5 is a 7-sided figure,
-    a heptagon.'
+  explain: 'The number of sides increases by one each frame: 3, 4, 5, 6, so Frame
+    5 is a 7-sided figure, a heptagon.'
   distractors:
     A: That skips the 7-sided figure.
     C: That repeats Frame 4 without adding a side.
     D: Nothing in the series suggests restarting the cycle after only four frames.
   chapter: figure-series
 - id: nmat-p1i-017
-  q: 'A square is divided into a 2 x 2 grid of four cells. Frame 1: only the top-left cell is shaded.
-    Frame 2: only the top-right cell is shaded. Frame 3: only the bottom-right cell is shaded. Frame 4:
-    only the bottom-left cell is shaded. What does Frame 5 look like?'
+  q: 'A square is divided into a 2 x 2 grid of four cells. Frame 1: only the top-left
+    cell is shaded. Frame 2: only the top-right cell is shaded. Frame 3: only the
+    bottom-right cell is shaded. Frame 4: only the bottom-left cell is shaded. What
+    does Frame 5 look like?'
   choices:
     A: Only the top-left cell is shaded
     B: Only the top-right cell is shaded
     C: Only the bottom-left cell is shaded
     D: The top-left and top-right cells are both shaded
   answer: A
-  explain: 'The shaded cell moves clockwise: top-left, top-right, bottom-right, bottom-left, so it returns
-    to the top-left in Frame 5.'
+  explain: 'The shaded cell moves clockwise: top-left, top-right, bottom-right, bottom-left,
+    so it returns to the top-left in Frame 5.'
   distractors:
     B: That is Frame 2; after the bottom-left the shading wraps around to the top-left.
     C: That is Frame 4 unchanged; the shaded cell keeps moving.
     D: Exactly one cell is shaded in every frame of this series.
   chapter: figure-series
 - id: nmat-p1i-018
-  q: 'Frame 1: a white circle containing 1 star. Frame 2: a shaded circle containing 2 stars. Frame 3:
-    a white circle containing 3 stars. Frame 4: a shaded circle containing 4 stars. What does Frame 5
-    look like?'
+  q: 'Frame 1: a white circle containing 1 star. Frame 2: a shaded circle containing
+    2 stars. Frame 3: a white circle containing 3 stars. Frame 4: a shaded circle
+    containing 4 stars. What does Frame 5 look like?'
   choices:
     A: A shaded circle containing 5 stars
     B: A white circle containing 6 stars
     C: A shaded circle containing 6 stars
     D: A white circle containing 5 stars
   answer: D
-  explain: 'Two rules run together: the star count rises 1, 2, 3, 4, 5, and the fill alternates white,
-    shaded, white, shaded. Frame 5 is therefore a white circle with 5 stars.'
+  explain: 'Two rules run together: the star count rises 1, 2, 3, 4, 5, and the fill
+    alternates white, shaded, white, shaded. Frame 5 is therefore a white circle with
+    5 stars.'
   distractors:
     A: The count is right, but the fill alternates, so Frame 5 must be white.
     B: The fill is right, but the star count rises by one, not two.
-    C: 'Both attributes are off: the fill should be white and the count should be 5.'
+    C: 'Both attributes are off: the fill should be white and the count should be
+      5.'
   chapter: figure-series
 - id: nmat-p1i-019
-  q: 'Each frame shows an L-shaped figure whose right-angled corner sits in one corner of a square frame.
-    Frame 1: the corner is at the bottom-left. Frame 2: the corner is at the bottom-right. Frame 3: the
-    corner is at the top-right. Frame 4: the corner is at the top-left. What does Frame 5 look like?'
+  q: 'Each frame shows an L-shaped figure whose right-angled corner sits in one corner
+    of a square frame. Frame 1: the corner is at the bottom-left. Frame 2: the corner
+    is at the bottom-right. Frame 3: the corner is at the top-right. Frame 4: the
+    corner is at the top-left. What does Frame 5 look like?'
   choices:
     A: The corner is at the bottom-right
     B: The corner is at the top-left
     C: The corner is at the bottom-left
     D: The corner is at the center of the frame
   answer: C
-  explain: The figure rotates 90 degrees clockwise each frame, visiting bottom-left, bottom-right, top-right,
-    top-left, and returning to bottom-left.
+  explain: The figure rotates 90 degrees clockwise each frame, visiting bottom-left,
+    bottom-right, top-right, top-left, and returning to bottom-left.
   distractors:
     A: That is Frame 2's position; the figure completes its circuit back at the bottom-left.
     B: That is Frame 4 unchanged.
     D: The corner always sits on the frame's edge, never in the middle.
   chapter: figure-series
 - id: nmat-p1i-020
-  q: 'Each frame shows four identical small circles. Frame 1: the circles lie in a horizontal row. Frame
-    2: the circles form a 2 x 2 square. Frame 3: the circles lie in a vertical column. Frame 4: the circles
-    form a 2 x 2 square. What does Frame 5 look like?'
+  q: 'Each frame shows four identical small circles. Frame 1: the circles lie in a
+    horizontal row. Frame 2: the circles form a 2 x 2 square. Frame 3: the circles
+    lie in a vertical column. Frame 4: the circles form a 2 x 2 square. What does
+    Frame 5 look like?'
   choices:
     A: The circles form a 2 x 2 square
     B: The circles lie in a vertical column
     C: Three circles lie in a row with the fourth floating above them
     D: The circles lie in a horizontal row
   answer: D
-  explain: The arrangement cycles row, 2 x 2 square, column, 2 x 2 square, so Frame 5 returns to a horizontal
-    row.
+  explain: The arrangement cycles row, 2 x 2 square, column, 2 x 2 square, so Frame
+    5 returns to a horizontal row.
   distractors:
     A: That is Frame 4; the 2 x 2 square appears only between the row and the column.
     B: That is Frame 3's arrangement, two frames back.
     C: All four circles keep one symmetric arrangement; none is ever set apart.
   chapter: figure-series
 - id: nmat-p1i-021
-  q: 'Frame 1: one square. Frame 2: two concentric squares, one inside the other. Frame 3: three concentric
-    squares. Frame 4: four concentric squares. What does Frame 5 look like?'
+  q: 'Frame 1: one square. Frame 2: two concentric squares, one inside the other.
+    Frame 3: three concentric squares. Frame 4: four concentric squares. What does
+    Frame 5 look like?'
   choices:
     A: Five concentric squares
     B: Six concentric squares
     C: Four concentric squares
     D: Five concentric circles
   answer: A
-  explain: 'One nested layer is added per frame: 1, 2, 3, 4, so Frame 5 shows five concentric squares.'
+  explain: 'One nested layer is added per frame: 1, 2, 3, 4, so Frame 5 shows five
+    concentric squares.'
   distractors:
     B: That skips the fifth layer.
     C: That leaves the figure unchanged from Frame 4.
@@ -339,27 +357,31 @@ items:
     C: C — the regular pentagon
     D: D — the right triangle
   answer: D
-  explain: 'A, B and C are regular polygons: every side and every angle is equal. A right triangle has
-    unequal sides and one 90-degree angle, so it is the outsider.'
+  explain: 'A, B and C are regular polygons: every side and every angle is equal.
+    A right triangle has unequal sides and one 90-degree angle, so it is the outsider.'
   distractors:
-    A: 'It belongs: all three of its sides and angles are equal, like the square and the regular pentagon.'
-    B: It belongs; having four sides is not what separates the odd figure — equal sides and angles is.
-    C: It belongs; it has the most sides, but side count is not the grouping property here.
+    A: 'It belongs: all three of its sides and angles are equal, like the square and
+      the regular pentagon.'
+    B: It belongs; having four sides is not what separates the odd figure — equal
+      sides and angles is.
+    C: It belongs; it has the most sides, but side count is not the grouping property
+      here.
   chapter: figure-grouping
   figure: items/nmat-p1i-022.svg
 - id: nmat-p1i-023
-  q: Four capital letters are shown. A. N; B. H; C. M; D. A. Which letter does not belong with the other
-    three?
+  q: 'Four capital letters are offered: A. N; B. H; C. M; D. A. Judged by mirror symmetry
+    alone, which letter does not belong with the other three?'
   choices:
     A: A — N
     B: B — H
     C: C — M
     D: D — A
   answer: A
-  explain: H, M and A each have a vertical mirror line. N has none — it matches itself only under a 180-degree
-    rotation — so it is the outsider.
+  explain: H, M and A each have a vertical mirror line. N has none — it matches itself
+    only under a 180-degree rotation — so it is the outsider.
   distractors:
-    B: 'H belongs: it is symmetric about a vertical mirror line (and a horizontal one too).'
+    B: 'H belongs: it is symmetric about a vertical mirror line (and a horizontal
+      one too).'
     C: 'M belongs: its left and right halves mirror each other.'
     D: 'A belongs: a vertical line through its apex divides it into mirror halves.'
   chapter: figure-grouping
@@ -371,13 +393,14 @@ items:
     C: C — the circle
     D: D — the square
   answer: C
-  explain: The rectangle, triangle and square are polygons bounded by straight sides meeting at corners.
-    A circle is one continuous curved line with no corners.
+  explain: The rectangle, triangle and square are polygons bounded by straight sides
+    meeting at corners. A circle is one continuous curved line with no corners.
   distractors:
     A: 'It belongs: it is closed by four straight sides and has four corners.'
-    B: It belongs; having the fewest sides does not set it apart — it is still a straight-sided figure
-      with corners.
-    D: 'It belongs: four equal straight sides and four corners, like the rectangle and the triangle.'
+    B: It belongs; having the fewest sides does not set it apart — it is still a straight-sided
+      figure with corners.
+    D: 'It belongs: four equal straight sides and four corners, like the rectangle
+      and the triangle.'
   chapter: figure-grouping
   figure: items/nmat-p1i-024.svg
 - id: nmat-p1i-025
@@ -388,8 +411,8 @@ items:
     C: C — the square with a diagonal
     D: D — the circle with a diameter
   answer: B
-  explain: A, C and D are each divided by a single line into two enclosed regions. The plain triangle
-    is one undivided region.
+  explain: A, C and D are each divided by a single line into two enclosed regions.
+    The plain triangle is one undivided region.
   distractors:
     A: 'It belongs: the single line divides it into exactly two enclosed regions.'
     C: 'It belongs: the diagonal cuts it into two triangular regions.'
@@ -404,13 +427,14 @@ items:
     C: C — the triangle with dots at its corners
     D: D — the square with all four dots along its bottom edge
   answer: D
-  explain: In A, B and C the dots are distributed symmetrically about the figure. In D all four dots are
-    crowded along one edge, so the arrangement has no symmetry.
+  explain: In A, B and C the dots are distributed symmetrically about the figure.
+    In D all four dots are crowded along one edge, so the arrangement has no symmetry.
   distractors:
     A: 'It belongs: the four dots sit symmetrically at the corners.'
     B: 'It belongs: the dots are spread evenly around the figure.'
-    C: It belongs; it has three dots rather than four, but every dot still sits at a vertex, so the placement
-      is symmetric — the count is not what separates the odd figure.
+    C: It belongs; it has three dots rather than four, but every dot still sits at
+      a vertex, so the placement is symmetric — the count is not what separates the
+      odd figure.
   chapter: figure-grouping
   figure: items/nmat-p1i-026.svg
 - id: nmat-p1i-027
@@ -421,8 +445,8 @@ items:
     C: C — the pentagon
     D: D — the octagon
   answer: C
-  explain: The square, hexagon and octagon all have an even number of sides (4, 6, 8). The pentagon has
-    5, which is odd.
+  explain: The square, hexagon and octagon all have an even number of sides (4, 6,
+    8). The pentagon has 5, which is odd.
   distractors:
     A: 'It belongs: 6 is an even number of sides, like 4 and 8.'
     B: 'It belongs: 4 is even.'
@@ -437,8 +461,8 @@ items:
     C: C — the circle
     D: D — the square
   answer: A
-  explain: The triangle, circle and square are closed figures enclosing an interior. The letter U is an
-    open curve whose two ends never meet.
+  explain: The triangle, circle and square are closed figures enclosing an interior.
+    The letter U is an open curve whose two ends never meet.
   distractors:
     B: 'It belongs: its three sides close around an interior region.'
     C: 'It belongs: the curve closes on itself and encloses a region.'
@@ -453,11 +477,13 @@ items:
     C: C — the isosceles triangle
     D: D — the regular pentagon
   answer: B
-  explain: The rectangle, isosceles triangle and regular pentagon each have at least one line of symmetry.
-    A scalene triangle has three unequal sides and no line of symmetry at all.
+  explain: The rectangle, isosceles triangle and regular pentagon each have at least
+    one line of symmetry. A scalene triangle has three unequal sides and no line of
+    symmetry at all.
   distractors:
     A: 'It belongs: it has two lines of symmetry, one through each pair of midpoints.'
-    C: 'It belongs: a vertical line through its apex and base midpoint mirrors it onto itself.'
+    C: 'It belongs: a vertical line through its apex and base midpoint mirrors it
+      onto itself.'
     D: 'It belongs: five lines of symmetry, one through each vertex.'
   chapter: figure-grouping
   figure: items/nmat-p1i-029.svg
@@ -469,11 +495,12 @@ items:
     C: C — the pentagon with 4 dots
     D: D — the circle with 3 dots
   answer: C
-  explain: A, B and D each contain exactly three dots, whatever their outline. C contains four, so it
-    is the outsider.
+  explain: A, B and D each contain exactly three dots, whatever their outline. C contains
+    four, so it is the outsider.
   distractors:
-    A: It belongs; its outline is a triangle while the others are a square and a circle, but the outer
-      shape varies across the whole set — the dot count is the shared property.
+    A: It belongs; its outline is a triangle while the others are a square and a circle,
+      but the outer shape varies across the whole set — the dot count is the shared
+      property.
     B: 'It belongs: three dots inside, like the triangle and the circle.'
     D: 'It belongs: three dots inside.'
   chapter: figure-grouping

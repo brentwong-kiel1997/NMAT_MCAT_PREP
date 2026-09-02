@@ -7,11 +7,14 @@ compared against it, and exactly one option may match.
 """
 import glob
 import re
+from pathlib import Path
+
 import yaml
 from collections import Counter
 
 PATH = "/home/ubuntu/django-wsgi/content/exam-bank/nmat/drill/part1-perceptual.yml"
 ALLOWED = {"mirror-image", "identical-information", "hidden-figure"}
+IMAGES = Path("/home/ubuntu/django-wsgi/content/images")
 
 d = yaml.safe_load(open(PATH))
 assert set(d) == {"exam", "section", "label", "subject", "block", "_drill", "items"}, sorted(d)
@@ -26,7 +29,12 @@ assert max(ans.values()) <= 7, ans
 chapters = Counter()
 ids = []
 for i in d["items"]:
-    assert set(i) == {"id", "q", "choices", "answer", "explain", "distractors", "chapter"}, sorted(i)
+    BASE = {"id", "q", "choices", "answer", "explain", "distractors", "chapter"}
+    # figure is optional: mirror-plate items carry a shared demonstration SVG
+    assert BASE <= set(i) <= BASE | {"figure"}, sorted(i)
+    if i.get("figure"):
+        assert i["figure"].startswith("items/"), i["id"]
+        assert (IMAGES / i["figure"]).is_file(), f"{i['id']}: missing {i['figure']}"
     assert re.fullmatch(r"nmat-d-p1p-\d{3}", i["id"]), i["id"]
     ids.append(i["id"])
     assert set(i["choices"]) == {"A", "B", "C", "D"} and i["answer"] in i["choices"]

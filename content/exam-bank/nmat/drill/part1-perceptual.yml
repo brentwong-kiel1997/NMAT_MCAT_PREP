@@ -6,49 +6,54 @@ block: part1
 _drill: true
 items:
 - id: nmat-d-p1p-001
-  q: Which word still reads exactly the same, letter for letter, after reflection in a vertical mirror,
-    where each capital is flipped left to right and the letter order reverses?
+  q: Which word still reads exactly the same, letter for letter, after reflection
+    in a vertical mirror, where each capital is flipped left to right and the letter
+    order reverses?
   choices:
     A: TOOT
     B: MAXIM
     C: MINIMUM
     D: MIMIC
   answer: A
-  explain: TOOT is a palindrome, and T and O are each unchanged by a left-right flip, so the mirror returns
-    the same word.
+  explain: TOOT is a palindrome, and T and O are each unchanged by a left-right flip,
+    so the mirror returns the same word.
   distractors:
-    B: 'Its letters M, A, X and I are all mirror-safe, but the word is not a palindrome: reversed it reads
-      MIXAM.'
-    C: 'Its letters M, I, N and U are all mirror-safe, but the word is not a palindrome: reversed it reads
-      MUMINIM.'
+    B: 'Its letters M, A, X and I are all mirror-safe, but the word is not a palindrome:
+      reversed it reads MIXAM.'
+    C: 'Its letters M, I, N and U are all mirror-safe, but the word is not a palindrome:
+      reversed it reads MUMINIM.'
     D: It contains C, which has no left-right symmetry, and reversed it reads CIMIM.
   chapter: mirror-image
   figure: items/pa-mirror-b.svg
 - id: nmat-d-p1p-002
-  q: Which capital letter still looks the same after an up-down flip, the way a letter looks in the water
-    below it?
+  q: Which capital letter still looks the same after an up-down flip, the way a letter
+    looks in the water below it?
   choices:
     A: N
     B: M
     C: H
     D: T
   answer: C
-  explain: H is symmetric about a horizontal line through its crossbar, so an up-down flip leaves it unchanged.
+  explain: H is symmetric about a horizontal line through its crossbar, so an up-down
+    flip leaves it unchanged.
   distractors:
-    A: N matches itself only under a half turn; flipped up and down its diagonal runs the other way.
+    A: N matches itself only under a half turn; flipped up and down its diagonal runs
+      the other way.
     B: M has a vertical mirror line only; flipped up and down it reads like W.
-    D: T has a vertical mirror line only; flipped up and down its stem points the wrong way.
+    D: T has a vertical mirror line only; flipped up and down its stem points the
+      wrong way.
   chapter: mirror-image
 - id: nmat-d-p1p-003
-  q: A seven-segment display shows a single digit. Seen in a vertical mirror, which digit still reads
-    as a digit?
+  q: A seven-segment display shows a single digit. Seen in a vertical mirror, which
+    digit still reads as a digit?
   choices:
     A: '2'
     B: '8'
     C: '3'
     D: '6'
   answer: B
-  explain: 8 uses both columns of segments on each side, so swapping left and right changes nothing.
+  explain: 8 uses both columns of segments on each side, so swapping left and right
+    changes nothing.
   distractors:
     A: A mirrored 2 lights the segments of a 5, so it reads as a different digit.
     C: A mirrored 3 opens the other way and reads as the letter E.
@@ -56,17 +61,20 @@ items:
   chapter: mirror-image
   figure: items/pa-mirror-b.svg
 - id: nmat-d-p1p-004
-  q: A card printed with the word MOOD is held facing a vertical mirror. Which describes the image?
+  q: A card printed with the word MOOD is held facing a vertical mirror. Which describes
+    the image?
   choices:
     A: The word appears exactly as printed, because O and M are symmetric
     B: The letters keep their left-to-right order but each one is flipped
     C: The word appears upside down, reading MOOD from the top
-    D: The letters appear in reverse order, D, O, O and M from left to right, and only the D is reversed
+    D: The letters appear in reverse order, D, O, O and M from left to right, and
+      only the D is reversed
   answer: D
-  explain: A vertical mirror reverses the running order and flips each letter; only the D is changed in
-    shape.
+  explain: A vertical mirror reverses the running order and flips each letter; only
+    the D is changed in shape.
   distractors:
-    A: It overlooks both the D, which is not symmetric, and the reversal of the letter order.
+    A: It overlooks both the D, which is not symmetric, and the reversal of the letter
+      order.
     B: A mirror puts the rightmost letter nearest the glass, so the order reverses.
     C: That describes a water image or a half turn, not a vertical mirror.
   chapter: mirror-image
@@ -79,40 +87,45 @@ items:
     C: a circle
     D: a rectangle that is not a square
   answer: B
-  explain: Only the isosceles triangle folds onto itself in exactly one way, from apex to the midpoint
-    of its base.
+  explain: Only the isosceles triangle folds onto itself in exactly one way, from
+    apex to the midpoint of its base.
   distractors:
     A: A square has four lines of symmetry, one for each pair of opposite points.
-    C: A circle has a line of symmetry through every diameter, so it has endlessly many.
+    C: A circle has a line of symmetry through every diameter, so it has endlessly
+      many.
     D: A non-square rectangle has two, one through each pair of midpoints.
   chapter: mirror-image
 - id: nmat-d-p1p-006
-  q: The capital letter L - a vertical stroke with a horizontal foot to the right at its bottom - is reflected
-    in a vertical mirror, and that image is then given a half turn. What is left?
+  q: The capital letter L - a vertical stroke with a horizontal foot to the right
+    at its bottom - is reflected in a vertical mirror, and that image is then given
+    a half turn. What is left?
   choices:
-    A: a vertical stroke with a horizontal foot at its top extending to the right, an upside-down L
+    A: a vertical stroke with a horizontal foot at its top extending to the right,
+      an upside-down L
     B: the original L, with its foot at the bottom to the right
     C: a vertical stroke with a foot at its top extending to the left
     D: a vertical stroke with a foot at its bottom extending to the left
   answer: A
-  explain: The mirror moves the foot to the left at the bottom; the half turn then carries it to the top
-    on the right.
+  explain: The mirror moves the foot to the left at the bottom; the half turn then
+    carries it to the top on the right.
   distractors:
-    B: 'The two moves do not cancel: the mirror reverses left and right, the half turn then reverses both.'
+    B: 'The two moves do not cancel: the mirror reverses left and right, the half
+      turn then reverses both.'
     C: That is the half turn alone, with the mirror left out.
     D: That is the mirrored L alone, with the half turn left out.
   chapter: mirror-image
   figure: items/pa-mirror-b.svg
 - id: nmat-d-p1p-007
-  q: Which word is made only of capital letters that are each unchanged by an up-down flip?
+  q: Which word is made only of capital letters that are each unchanged by an up-down
+    flip?
   choices:
     A: BEDTIME
     B: DECODER
     C: CHICKEN
     D: CHOICE
   answer: D
-  explain: C, H, O, I and E are all symmetric about a horizontal line, so every letter of CHOICE survives
-    an up-down flip.
+  explain: C, H, O, I and E are all symmetric about a horizontal line, so every letter
+    of CHOICE survives an up-down flip.
   distractors:
     A: Its M and T lack a horizontal line of symmetry.
     B: Its final R has no horizontal line of symmetry.
@@ -126,25 +139,27 @@ items:
     C: each is unchanged by a half turn, and none is unchanged by a mirror reflection
     D: N and Z are mirror images of each other
   answer: C
-  explain: N, S and Z all have half-turn symmetry and none of them has a mirror line, so the first statement
-    covers all three.
+  explain: N, S and Z all have half-turn symmetry and none of them has a mirror line,
+    so the first statement covers all three.
   distractors:
-    A: None of the three has any mirror line; a flipped N, S or Z reads the wrong way round.
+    A: None of the three has any mirror line; a flipped N, S or Z reads the wrong
+      way round.
     B: All three are unchanged by a half turn, not only Z.
-    D: Mirroring N keeps its two strokes vertical; Z's strokes are horizontal, so no mirror takes one
-      to the other.
+    D: Mirroring N keeps its two strokes vertical; Z's strokes are horizontal, so
+      no mirror takes one to the other.
   chapter: mirror-image
 - id: nmat-d-p1p-009
-  q: A strip of paper printed with the two lowercase letters 'bd' is held up to a vertical mirror. What
-    does the mirror show?
+  q: A strip of paper printed with the two lowercase letters 'bd' is held up to a
+    vertical mirror. What does the mirror show?
   choices:
-    A: bd, unchanged, because b and d are each other's mirror images and the reversal swaps their places
+    A: bd, unchanged, because b and d are each other's mirror images and the reversal
+      swaps their places
     B: db
     C: pq
     D: qp
   answer: A
-  explain: Mirroring turns b into d and d into b, and the reversal then puts them back in the order b,
-    d.
+  explain: Mirroring turns b into d and d into b, and the reversal then puts them
+    back in the order b, d.
   distractors:
     B: It reverses the order but forgets that each letter also flips left to right.
     C: That is the result of a half turn, not of a mirror reflection.
@@ -152,41 +167,44 @@ items:
   chapter: mirror-image
   figure: items/pa-mirror-b.svg
 - id: nmat-d-p1p-010
-  q: 'Target: PHC-2026-0408-RM2 Which option is an exact character-for-character match for the target?'
+  q: 'Target: PHC-2026-0408-RM2 Which option is an exact character-for-character match
+    for the target?'
   choices:
     A: PHC-2026-O408-RM2
     B: PHC-2026-0408-RM2
     C: PHC-2026-040B-RM2
     D: PHC-2Q26-0408-RM2
   answer: B
-  explain: Only this option repeats the target character for character. The record number mixes letters
-    and digits, so the zero and the 8 are the two characters most often mistyped.
+  explain: Only this option repeats the target character for character. The record
+    number mixes letters and digits, so the zero and the 8 are the two characters
+    most often mistyped.
   distractors:
-    A: 'Off by one character: position 10 reads ''O'' where the target has ''0'' - that is the capital
-      letter O standing in for a zero.'
-    C: 'Off by one character: position 13 reads ''B'' where the target has ''8'' - that is the letter
-      B standing in for the digit 8.'
-    D: 'Off by one character: position 6 reads ''Q'' where the target has ''0'' - that is the letter Q
-      in place of the zero in the year.'
+    A: 'Off by one character: position 10 reads ''O'' where the target has ''0'' -
+      that is the capital letter O standing in for a zero.'
+    C: 'Off by one character: position 13 reads ''B'' where the target has ''8'' -
+      that is the letter B standing in for the digit 8.'
+    D: 'Off by one character: position 6 reads ''Q'' where the target has ''0'' -
+      that is the letter Q in place of the zero in the year.'
   chapter: identical-information
 - id: nmat-d-p1p-011
-  q: 'Target: Santos, Mariel T. Ocampo Which option is an exact character-for-character match for the
-    target?'
+  q: 'Target: Santos, Mariel T. Ocampo Which option is an exact character-for-character
+    match for the target?'
   choices:
     A: Santos, Muriel T. Ocampo
     B: Santos, Mariel T. Ocmapo
     C: Santos, Mariel T. Ocamp0
     D: Santos, Mariel T. Ocampo
   answer: D
-  explain: Only this option repeats the target character for character. In names, a swapped pair of letters
-    and a letter read as a digit are the usual near-misses.
+  explain: Only this option repeats the target character for character. In names,
+    a swapped pair of letters and a letter read as a digit are the usual near-misses.
   distractors:
-    A: 'Off by one character: position 10 reads ''u'' where the target has ''a'' - the given name is spelled
-      Mariel, with an a.'
-    B: 'Off by two characters: position 21 reads ''m'' and position 22 reads ''a'', where the target has
-      ''a'' and ''m'' - the last two letters of the surname are swapped.'
-    C: 'Off by one character: position 24 reads ''0'' where the target has ''o'' - that is a zero at the
-      end, not the letter o.'
+    A: 'Off by one character: position 10 reads ''u'' where the target has ''a'' -
+      the given name is spelled Mariel, with an a.'
+    B: 'Off by two characters: position 21 reads ''m'' and position 22 reads ''a'',
+      where the target has ''a'' and ''m'' - the last two letters of the surname are
+      swapped.'
+    C: 'Off by one character: position 24 reads ''0'' where the target has ''o'' -
+      that is a zero at the end, not the letter o.'
   chapter: identical-information
 - id: nmat-d-p1p-012
   q: 'Target: Lot 14-B, Purok 3, Brgy. San Isidro 1918 Which option is an exact character-for-character
@@ -197,69 +215,77 @@ items:
     C: Lot 14-B, Purok 3, Brgy. San Isidro 1918
     D: Lot 14-8, Purok 3, Brgy. San Isidro 1918
   answer: C
-  explain: Only this option repeats the target character for character. The lot number and the postal
-    code each hide one trap, and the B after the lot number hides a third.
+  explain: Only this option repeats the target character for character. The lot number
+    and the postal code each hide one trap, and the B after the lot number hides a
+    third.
   distractors:
-    A: 'Off by two characters: position 5 reads ''4'' and position 6 reads ''1'', where the target has
-      ''1'' and ''4'' - the lot digits are transposed.'
-    B: 'Off by one character: position 40 reads ''6'' where the target has ''8'' - the postal code ends
-      in 8, not 6.'
-    D: 'Off by one character: position 8 reads ''8'' where the target has ''B'' - that is the digit 8
-      where the target has the letter B.'
+    A: 'Off by two characters: position 5 reads ''4'' and position 6 reads ''1'',
+      where the target has ''1'' and ''4'' - the lot digits are transposed.'
+    B: 'Off by one character: position 40 reads ''6'' where the target has ''8'' -
+      the postal code ends in 8, not 6.'
+    D: 'Off by one character: position 8 reads ''8'' where the target has ''B'' -
+      that is the digit 8 where the target has the letter B.'
   chapter: identical-information
 - id: nmat-d-p1p-013
-  q: 'Target: LTO Driver 4-22-1988-C Which option is an exact character-for-character match for the target?'
+  q: 'Target: LTO Driver 4-22-1988-C Which option is an exact character-for-character
+    match for the target?'
   choices:
     A: LTO Driver 4-22-1988-c
     B: LTO Driver 4-22-1988-C
     C: LTO Driver 4-22-1998-C
     D: L70 Driver 4-22-1988-C
   answer: B
-  explain: 'Only this option repeats the target character for character. Case matters here: the same letter
-    in the wrong case is still a different character.'
+  explain: 'Only this option repeats the target character for character. Case matters
+    here: the same letter in the wrong case is still a different character.'
   distractors:
-    A: 'Off by one character: position 22 reads ''c'' where the target has ''C'' - the trailing letter
-      is a capital in the target.'
-    C: 'Off by one character: position 19 reads ''9'' where the target has ''8'' - the year is 1988, not
-      1998.'
-    D: 'Off by two characters: position 2 reads ''7'' and position 3 reads ''0'', where the target has
-      ''T'' and ''O'' - that is the digit 7 where the target has the letter T.'
+    A: 'Off by one character: position 22 reads ''c'' where the target has ''C'' -
+      the trailing letter is a capital in the target.'
+    C: 'Off by one character: position 19 reads ''9'' where the target has ''8'' -
+      the year is 1988, not 1998.'
+    D: 'Off by two characters: position 2 reads ''7'' and position 3 reads ''0'',
+      where the target has ''T'' and ''O'' - that is the digit 7 where the target
+      has the letter T.'
   chapter: identical-information
 - id: nmat-d-p1p-014
-  q: 'Target: 4821 9037 5566 1204 Which option is an exact character-for-character match for the target?'
+  q: 'Target: 7395 2418 6603 9417 Which option is an exact character-for-character
+    match for the target?'
   choices:
-    A: 4821 9037 5566 1204
-    B: 4821 9073 5566 1204
-    C: 4827 9037 5566 1204
-    D: 4821 9037 5566 1240
+    A: 7395 2418 6603 9417
+    B: 7395 2481 6603 9417
+    C: 7392 2418 6603 9417
+    D: 7395 2418 6603 9471
   answer: A
-  explain: Only this option repeats the target character for character. Grouped digits invite transpositions
-    inside a group, which is exactly what the first and third options carry.
+  explain: Only this option repeats the target character for character. Grouped digits
+    invite transpositions inside a group, which is exactly what the second and last
+    options carry.
   distractors:
-    B: 'Off by two characters: position 8 reads ''7'' and position 9 reads ''3'', where the target has
-      ''3'' and ''7'' - the third and fourth digits of the second group are swapped.'
-    C: 'Off by one character: position 4 reads ''7'' where the target has ''1'' - the fourth digit of
-      the first group is 1, not 7.'
-    D: 'Off by two characters: position 18 reads ''4'' and position 19 reads ''0'', where the target has
-      ''0'' and ''4'' - the last two digits are swapped.'
+    B: 'Off by two characters: position 8 reads ''8'' and position 9 reads ''1'',
+      where the target has ''1'' and ''8'' - the third and fourth digits of the second
+      group are swapped.'
+    C: 'Off by one character: position 4 reads ''2'' where the target has ''5''.'
+    D: 'Off by two characters: position 18 reads ''7'' and position 19 reads ''1'',
+      where the target has ''1'' and ''7'' - the last two digits of the final group
+      are swapped.'
   chapter: identical-information
 - id: nmat-d-p1p-015
-  q: 'Target: REF 2027-NC-004518-B Which option is an exact character-for-character match for the target?'
+  q: 'Target: REF 2031-KV-007284-M Which option is an exact character-for-character
+    match for the target?'
   choices:
-    A: REF 2O27-NC-004518-B
-    B: REF 2027-NC-0045I8-B
-    C: REF 2027-NC-004518-B
-    D: REF 2027-NC-004518-8
+    A: REF 203I-KV-007284-M
+    B: REF 2031-KV-O07284-M
+    C: REF 2031-KV-007284-M
+    D: REF 2031-KV-007284-W
   answer: C
-  explain: Only this option repeats the target character for character. Every wrong entry here turns one
-    character into a lookalike, which is the only way this check fails.
+  explain: Only this option repeats the reference character for character. Every wrong
+    entry here turns one character into a lookalike, which is the only way this check
+    fails.
   distractors:
-    A: 'Off by one character: position 6 reads ''O'' where the target has ''0'' - that is the letter O
-      in place of the zero in 2027.'
-    B: 'Off by one character: position 17 reads ''I'' where the target has ''1'' - that is a capital I
-      in place of the digit 1.'
-    D: 'Off by one character: position 20 reads ''8'' where the target has ''B'' - that is the digit 8
-      where the target ends in the letter B.'
+    A: 'Off by one character: position 8 reads ''I'' where the target has ''1'' -
+      a capital I in place of the one in 2031.'
+    B: 'Off by one character: position 13 reads ''O'' where the target has ''0'' -
+      the letter O leading the digit serial.'
+    D: 'Off by one character: position 20 reads ''W'' where the target has ''M'' -
+      an upside-down lookalike.'
   chapter: identical-information
 - id: nmat-d-p1p-016
   q: 'Two clinic codes are compared: ''TR-55831-QB'' and ''TR-5583I-QB''. They are:'
@@ -269,143 +295,158 @@ items:
     C: identical once the letters are read as digits
     D: not identical, because they differ in one character
   answer: D
-  explain: Reading character by character, the fifth character of the code is 1 in the first and the letter
-    I in the second.
+  explain: Reading character by character, the fifth character of the code is 1 in
+    the first and the letter I in the second.
   distractors:
-    A: The fifth character of the second group differs, so the strings are not the same.
+    A: The fifth character of the second group differs, so the strings are not the
+      same.
     B: Only one position differs; nothing else in the two strings moves.
     C: 'A character check makes no such allowance: I is not 1, so the strings differ.'
   chapter: identical-information
 - id: nmat-d-p1p-017
-  q: 'Two land-tax ledger lines are compared: ''Lot 17-C: area 240 sq m, tax due P1,880'' and ''Lot 17-C:
-    area 240 sq m, tax due P1,88O''. They are:'
+  q: 'Two land-tax ledger lines are compared: ''Lot 17-C: area 240 sq m, tax due P1,880''
+    and ''Lot 17-C: area 240 sq m, tax due P1,88O''. They are:'
   choices:
     A: not identical, because they differ in one character
     B: identical, character for character
     C: not identical, because they differ in two characters
     D: identical, because the amounts are the same size
   answer: A
-  explain: The last character is 0 (zero) in the first line and O (capital letter) in the second, so the
-    lines differ in one place.
+  explain: The last character is 0 (zero) in the first line and O (capital letter)
+    in the second, so the lines differ in one place.
   distractors:
     B: The final character is a zero in one line and a capital O in the other.
     C: Only the last character differs; the area and the rest of the amount agree.
     D: Identity is character by character, not numeric; O is a letter, not a zero.
   chapter: identical-information
 - id: nmat-d-p1p-018
-  q: 'Target: a triangle with a straight line drawn from its apex to the midpoint of its base. Which panel
-    contains it?'
+  q: 'Target: a triangle with a straight line drawn from its apex to the midpoint
+    of its base. Which panel contains it?'
   choices:
-    A: a triangle with a line from its apex to a point close to one end of its base, with a small square
-      beside it
-    B: a triangle with a line from its apex to the midpoint of its base, drawn inside a square frame
+    A: a triangle with a line from its apex to a point close to one end of its base,
+      with a small square beside it
+    B: a triangle with a line from its apex to the midpoint of its base, drawn inside
+      a square frame
     C: a triangle with a horizontal line drawn parallel to its base
-    D: a triangle with a line from the midpoint of its base to the midpoint of one side
+    D: a triangle with a line from the midpoint of its base to the midpoint of one
+      side
   answer: B
-  explain: Only the second panel runs a line from the apex to the halfway point of the base; the frame
-    is clutter.
+  explain: Only the second panel runs a line from the apex to the halfway point of
+    the base; the frame is clutter.
   distractors:
     A: The line stops near the end of the base, not at its midpoint.
     C: That line runs side to side, so it never reaches the apex.
     D: That line starts on the base rather than at the apex.
   chapter: hidden-figure
 - id: nmat-d-p1p-019
-  q: 'Target: two concentric circles with a single dot exactly at their common center. Which panel contains
-    it?'
+  q: 'Target: two concentric circles with a single dot exactly at their common center.
+    Which panel contains it?'
   choices:
     A: two circles side by side, each with a dot at its own center
     B: two concentric circles with a dot resting on the rim of the inner circle
     C: two concentric circles with a dot at their shared center, inside a dashed square
     D: a single circle with two dots side by side inside it
   answer: C
-  explain: Concentric means one inside the other about the same center, and the dot must sit on that center.
+  explain: Concentric means one inside the other about the same center, and the dot
+    must sit on that center.
   distractors:
     A: The circles do not share a center, so they are not concentric.
     B: The dot sits on the inner circle, not at the shared center.
     D: There is only one circle, and there are two dots.
   chapter: hidden-figure
 - id: nmat-d-p1p-020
-  q: 'Target: a closed outline made of exactly five straight sides. Which panel contains it?'
+  q: 'Target: a closed outline made of exactly five straight sides. Which panel contains
+    it?'
   choices:
     A: a rectangle with both diagonals drawn, forming four triangles
     B: a hexagon with a single line joining two opposite corners
     C: a circle with a square drawn inside it
     D: a square with a triangle sitting on its upper edge and sharing that edge
   answer: D
-  explain: A square with a triangular roof reads as one five-sided outline, which is the pentagon sought.
+  explain: A square with a triangular roof reads as one five-sided outline, which
+    is the pentagon sought.
   distractors:
     A: Its outlines have four sides and three sides, never five.
     B: Its outline has six sides, and the line cuts it into two four-sided halves.
     C: The circle is not straight-sided and the square has only four sides.
   chapter: hidden-figure
 - id: nmat-d-p1p-021
-  q: 'Target: a figure divided into exactly four enclosed regions by two lines that cross at a point.
-    Which panel contains it?'
+  q: 'Target: a figure divided into exactly four enclosed regions by two lines that
+    cross at a point. Which panel contains it?'
   choices:
     A: a square with both diagonals drawn, crossing at its center
     B: a square with one diagonal only
     C: a circle with a single diameter
     D: a rectangle with two parallel vertical lines
   answer: A
-  explain: Two crossing lines make four wedges; the two diagonals of a square do exactly that.
+  explain: Two crossing lines make four wedges; the two diagonals of a square do exactly
+    that.
   distractors:
     B: One line alone divides it into two regions.
     C: That is two regions, and the outline is round rather than straight-sided.
     D: Three regions result, and parallel lines never cross.
   chapter: hidden-figure
 - id: nmat-d-p1p-022
-  q: 'Target: an L-shaped outline with exactly six straight sides. Which panel contains it?'
+  q: 'Target: an L-shaped outline with exactly six straight sides. Which panel contains
+    it?'
   choices:
     A: a square with a smaller square drawn inside it, touching nothing
     B: a rectangle with a notch cut into the middle of one side
     C: a square with a smaller square removed from one corner
     D: a triangle with a square drawn on one of its sides
   answer: C
-  explain: Removing a corner square from a larger square leaves one outline with six sides.
+  explain: Removing a corner square from a larger square leaves one outline with six
+    sides.
   distractors:
     A: The outlines are two separate four-sided figures, not one six-sided outline.
     B: Cutting a notch into a side leaves eight sides, not six.
     D: The outline there has five sides, and the parts are three- and four-sided.
   chapter: hidden-figure
 - id: nmat-d-p1p-023
-  q: 'Target: a circle divided into exactly two equal parts by one straight line through its center. Which
-    panel contains it?'
+  q: 'Target: a circle divided into exactly two equal parts by one straight line through
+    its center. Which panel contains it?'
   choices:
     A: a circle with a straight line that crosses it but misses the center
-    B: a circle with one straight line through its center, with a small square drawn on top of the line
+    B: a circle with one straight line through its center, with a small square drawn
+      on top of the line
     C: a circle with two perpendicular lines through its center
     D: a square with one straight line through its center
   answer: B
-  explain: Equal halves need a diameter; the small square laid over the line is only clutter.
+  explain: Equal halves need a diameter; the small square laid over the line is only
+    clutter.
   distractors:
     A: An off-center chord divides the circle into two unequal parts.
     C: Two lines make four parts, not two.
     D: The outline is a square, not a circle.
   chapter: hidden-figure
 - id: nmat-d-p1p-024
-  q: 'Target: a square with a triangle drawn entirely inside it. Which panel contains it?'
+  q: 'Target: a square with a triangle drawn entirely inside it. Which panel contains
+    it?'
   choices:
     A: a square with a triangle drawn outside it, sharing one side
     B: a triangle with a smaller square drawn inside it
     C: a square with a triangle sitting across its upper edge, half in and half out
     D: a square with a triangle drawn inside it, with three small dots nearby
   answer: D
-  explain: The dots are clutter; the triangle sits wholly within the four sides of the square.
+  explain: The dots are clutter; the triangle sits wholly within the four sides of
+    the square.
   distractors:
     A: The triangle lies outside the square.
     B: The two figures are the wrong way round.
     C: The triangle is not entirely inside.
   chapter: hidden-figure
 - id: nmat-d-p1p-025
-  q: 'Target: a triangle with a horizontal line across its middle, dividing it into a smaller triangle
-    and a trapezoid. Which panel contains it?'
+  q: 'Target: a triangle with a horizontal line across its middle, dividing it into
+    a smaller triangle and a trapezoid. Which panel contains it?'
   choices:
-    A: a triangle with a horizontal line across its middle, and a circle drawn outside it
+    A: a triangle with a horizontal line across its middle, and a circle drawn outside
+      it
     B: a triangle with a vertical line from its apex to its base
     C: a triangle with a horizontal line drawn just below its base
     D: a trapezoid with a horizontal line across its middle
   answer: A
-  explain: Only a horizontal line inside the triangle leaves a triangle on top and a trapezoid below.
+  explain: Only a horizontal line inside the triangle leaves a triangle on top and
+    a trapezoid below.
   distractors:
     B: That line runs up and down, so the two parts are both triangles.
     C: A line outside the outline divides nothing.

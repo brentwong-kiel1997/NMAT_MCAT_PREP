@@ -66,7 +66,7 @@ sections:
       A: Depends on speed
       B: Positive work
       C: Zero work
-      D: Negative work — it braks
+      D: Negative work — it brakes
     answer: C
     explain: Always perpendicular to velocity — the work dot product is zero.
     distractors:
@@ -108,14 +108,14 @@ sections:
       4 kg weight requires muscle force…
     options:
       A: 39 N
-      B: 96 N
+      B: 6.5 N
       C: 400 N
       D: 235 N
     answer: D
     explain: 'Torque balance: F x 0.05 = mg x 0.30, so F = (39.2)(0.30)/(0.05) = 235 N.'
     distractors:
       A: 39 N — the weight, before lever amplification.
-      B: 96 N — inverted lever ratio.
+      B: 6.5 N — inverted lever ratio (0.05/0.30).
       C: 400 N — the load mass, not the force.
 examples:
 - prompt: A 70 kg person stands on a scale in an elevator accelerating upward at 2.0 m/s2. What does the

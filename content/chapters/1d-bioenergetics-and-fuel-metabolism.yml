@@ -19,7 +19,7 @@ notes:
 - Phosphocreatine buffers rapid ATP demand
 - 'Cori cycle: muscle lactate → liver gluconeogenesis'
 - 'Fed: insulin-driven storage; fasting: glucagon mobilization'
-- β-oxidation in the mitochondrial matrix yields acetyl-CoA
+- Each β-oxidation cycle cleaves 2 carbons as acetyl-CoA plus 1 NADH and 1 FADH₂
 practice:
 - id: bb-5
   q: 'The terminal electron acceptor in aerobic respiration is:'

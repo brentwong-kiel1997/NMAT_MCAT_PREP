@@ -6,501 +6,583 @@ block: part2
 items_expected: 30
 items:
 - id: nmat-p2s-001
-  q: A toddler who was never afraid of white rats begins to cry the moment one is shown, after a researcher
-    repeatedly paired the rat with a frightening loud noise. The rat has become…
+  q: A toddler who was never afraid of white rats begins to cry the moment one is
+    shown, after a researcher repeatedly paired the rat with a frightening loud noise.
+    The rat has become…
   choices:
     A: an operant reinforcer that strengthened the fear by reward
     B: an unconditioned stimulus for fear
     C: a conditioned stimulus that elicits a learned fear response
     D: a negative reinforcer removing an aversive state
   answer: C
-  explain: 'Watson and Rayner''s Little Albert design: a neutral stimulus repeatedly paired with an unconditioned
-    stimulus acquires the power to elicit a conditioned response.'
+  explain: 'Watson and Rayner''s Little Albert design: a neutral stimulus repeatedly
+    paired with an unconditioned stimulus acquires the power to elicit a conditioned
+    response.'
   distractors:
-    A: Nothing followed or rewarded the child's crying; the fear was elicited by a paired stimulus.
-    B: The loud noise was the unconditioned stimulus; the rat only acquired that power through pairing.
-    D: Negative reinforcement concerns removing something aversive after a behavior, not stimulus pairing.
+    A: Nothing followed or rewarded the child's crying; the fear was elicited by a
+      paired stimulus.
+    B: The loud noise was the unconditioned stimulus; the rat only acquired that power
+      through pairing.
+    D: Negative reinforcement concerns removing something aversive after a behavior,
+      not stimulus pairing.
   chapter: fc7-behavior-and-behavior-change
 - id: nmat-p2s-002
-  q: A car keeps beeping until the driver fastens his seat belt. He now buckles up immediately on every
-    trip. The beep functions as…
+  q: A car keeps beeping until the driver fastens his seat belt. He now buckles up
+    immediately on every trip. The beep functions as…
   choices:
     A: a negative reinforcer, because its removal increases the buckling behavior
     B: a positive punisher, because it is an unpleasant stimulus
     C: a conditioned stimulus eliciting buckling automatically
     D: a fixed-interval schedule maintaining the behavior
   answer: A
-  explain: Reinforcement is defined by its effect — it increases the behavior. Removing an aversive stimulus
-    after a response is negative reinforcement; the 'negative' marks the removal.
+  explain: Reinforcement is defined by its effect — it increases the behavior. Removing
+    an aversive stimulus after a response is negative reinforcement; the 'negative'
+    marks the removal.
   distractors:
-    B: Punishment weakens behavior; here buckling increased, and the beep ended rather than followed it.
-    C: Buckling is emitted to escape the beep; it is an operant consequence, not a reflex.
-    D: Reinforcement depends on the response of buckling, not on the passage of a set time.
+    B: Punishment weakens behavior; here buckling increased, and the beep ended rather
+      than followed it.
+    C: Buckling is emitted to escape the beep; it is an operant consequence, not a
+      reflex.
+    D: Reinforcement depends on the response of buckling, not on the passage of a
+      set time.
   chapter: fc7-behavior-and-behavior-change
 - id: nmat-p2s-003
-  q: A slot-machine player keeps pulling the lever because wins arrive unpredictably after varying numbers
-    of pulls, and the behavior survives long stretches without a win. This is which reinforcement schedule?
+  q: A slot-machine player keeps pulling the lever because wins arrive unpredictably
+    after varying numbers of pulls, and the behavior survives long stretches without
+    a win. This is which reinforcement schedule?
   choices:
     A: Fixed ratio
     B: Fixed interval
     C: Variable interval
     D: Variable ratio
   answer: D
-  explain: Reinforcement after an unpredictable number of responses is a variable-ratio schedule; it produces
-    high, steady response rates and the greatest resistance to extinction.
+  explain: Reinforcement after an unpredictable number of responses is a variable-ratio
+    schedule; it produces high, steady response rates and the greatest resistance
+    to extinction.
   distractors:
-    A: A fixed ratio delivers reinforcement after a set number of responses, not a varying one.
-    B: A fixed interval reinforces the first response after a set time, producing a scalloped pause pattern.
-    C: A variable interval is based on varying amounts of time, not on varying numbers of responses.
+    A: A fixed ratio delivers reinforcement after a set number of responses, not a
+      varying one.
+    B: A fixed interval reinforces the first response after a set time, producing
+      a scalloped pause pattern.
+    C: A variable interval is based on varying amounts of time, not on varying numbers
+      of responses.
   chapter: fc7-behavior-and-behavior-change
 - id: nmat-p2s-004
-  q: Rina, a longtime smoker who knows smoking causes cancer, starts telling friends that the health warnings
-    are exaggerated. Her new belief most directly reduces…
+  q: Rina, a longtime smoker who knows smoking causes cancer, starts telling friends
+    that the health warnings are exaggerated. Her new belief most directly reduces…
   choices:
     A: normative social influence from her peer group
     B: cognitive dissonance between her behavior and her attitude
     C: a self-serving attribution about her own risk taking
     D: reactance against health authorities
   answer: B
-  explain: 'Festinger''s cognitive dissonance theory: inconsistency between attitude and behavior creates
-    tension, which people reduce by changing the attitude or adding justifying beliefs.'
+  explain: 'Festinger''s cognitive dissonance theory: inconsistency between attitude
+    and behavior creates tension, which people reduce by changing the attitude or
+    adding justifying beliefs.'
   distractors:
-    A: No group pressure is described; the discomfort arises from her own inconsistent beliefs and actions.
-    C: She is not explaining a success or failure; she is easing inconsistency between attitude and behavior.
-    D: Reactance is resistance to a perceived threat to one's freedom, not tension between one's own beliefs
-      and acts.
+    A: No group pressure is described; the discomfort arises from her own inconsistent
+      beliefs and actions.
+    C: She is not explaining a success or failure; she is easing inconsistency between
+      attitude and behavior.
+    D: Reactance is resistance to a perceived threat to one's freedom, not tension
+      between one's own beliefs and acts.
   chapter: fc7-behavior-and-behavior-change
 - id: nmat-p2s-005
-  q: After a near collision, Paolo's heart pounds. At first he feels only arousal; once he recognizes
-    that the other car swerved into his lane, the arousal becomes fear. This sequence best illustrates…
+  q: After a near collision, Paolo's heart pounds. At first he feels only arousal;
+    once he recognizes that the other car swerved into his lane, the arousal becomes
+    fear. This sequence best illustrates…
   choices:
     A: the James-Lange theory, in which emotion is the perception of bodily change
     B: the Cannon-Bard theory, in which arousal and emotion occur independently
-    C: 'the Schachter-Singer two-factor theory: physiological arousal plus a cognitive label'
+    C: 'the Schachter-Singer two-factor theory: physiological arousal plus a cognitive
+      label'
     D: the Yerkes-Dodson law of optimal arousal for performance
   answer: C
-  explain: Schachter's two-factor theory holds that experienced emotion equals physiological arousal plus
-    a cognitive interpretation of the situation; the same arousal can become fear, anger, or joy.
+  explain: Schachter's two-factor theory holds that experienced emotion equals physiological
+    arousal plus a cognitive interpretation of the situation; the same arousal can
+    become fear, anger, or joy.
   distractors:
-    A: James-Lange stops at perceiving the body's response and requires no separate labeling of the situation.
-    B: Cannon-Bard treats arousal and felt emotion as simultaneous and independent, not as arousal that
-      is then labeled.
-    D: That law links arousal level to task performance, not to how an emotion gets identified.
+    A: James-Lange stops at perceiving the body's response and requires no separate
+      labeling of the situation.
+    B: Cannon-Bard treats arousal and felt emotion as simultaneous and independent,
+      not as arousal that is then labeled.
+    D: That law links arousal level to task performance, not to how an emotion gets
+      identified.
   chapter: psychology
 - id: nmat-p2s-006
-  q: A patient with hippocampal damage cannot form new conscious memories of facts and events, yet steadily
-    improves at a mirror-tracing task across sessions. This dissociation shows that…
+  q: A patient with hippocampal damage cannot form new conscious memories of facts
+    and events, yet steadily improves at a mirror-tracing task across sessions. This
+    dissociation shows that…
   choices:
     A: declarative memory and procedural memory depend on different brain systems
     B: procedural skills are stored together with facts in the hippocampus
     C: all memory consolidation takes place in the amygdala
     D: working memory has a very large storage capacity
   answer: A
-  explain: The hippocampus is essential for forming new declarative memories, whereas skill learning (procedural
-    memory) relies on basal ganglia and cerebellar circuits.
+  explain: The hippocampus is essential for forming new declarative memories, whereas
+    skill learning (procedural memory) relies on basal ganglia and cerebellar circuits.
   distractors:
     B: His continued skill learning shows procedural memory survives hippocampal damage.
-    C: The amygdala is central to emotional memory, not to general consolidation of facts and events.
-    D: Nothing here concerns capacity; working memory is famously limited to a few items.
+    C: The amygdala is central to emotional memory, not to general consolidation of
+      facts and events.
+    D: Nothing here concerns capacity; working memory is famously limited to a few
+      items.
   chapter: psychology
 - id: nmat-p2s-007
-  q: A child agrees that two identical glasses hold the same amount of water, but says the taller, narrower
-    glass has 'more' once the water is poured into it. In Piaget's terms the child lacks…
+  q: A child agrees that two identical glasses hold the same amount of water, but
+    says the taller, narrower glass has 'more' once the water is poured into it. In
+    Piaget's terms the child lacks…
   choices:
     A: object permanence
     B: conservation of quantity
     C: abstract and hypothetical reasoning
     D: egocentrism
   answer: B
-  explain: Conservation — knowing quantity is unchanged by a change in appearance — is the hallmark of
-    moving from the preoperational to the concrete operational stage.
+  explain: Conservation — knowing quantity is unchanged by a change in appearance
+    — is the hallmark of moving from the preoperational to the concrete operational
+    stage.
   distractors:
-    A: Object permanence is knowing an object still exists when out of sight, mastered in the sensorimotor
-      stage.
-    C: Formal operational reasoning appears in early adolescence, far beyond this liquid task.
-    D: Egocentrism is difficulty taking another's viewpoint; the child here is comparing amounts, not
-      perspectives.
+    A: Object permanence is knowing an object still exists when out of sight, mastered
+      in the sensorimotor stage.
+    C: Formal operational reasoning appears in early adolescence, far beyond this
+      liquid task.
+    D: Egocentrism is difficulty taking another's viewpoint; the child here is comparing
+      amounts, not perspectives.
   chapter: psychology
 - id: nmat-p2s-008
-  q: In Ainsworth's Strange Situation, a toddler plays with the toys while his mother is present, cries
-    when she leaves, greets her warmly when she returns, and is easily comforted. This pattern is classified
-    as…
+  q: In Ainsworth's Strange Situation, a toddler plays with the toys while his mother
+    is present, cries when she leaves, greets her warmly when she returns, and is
+    easily comforted. This pattern is classified as…
   choices:
     A: insecure-avoidant attachment
     B: insecure-resistant (ambivalent) attachment
     C: disorganized attachment
     D: secure attachment
   answer: D
-  explain: Securely attached infants use the caregiver as a safe base, show distress on separation, and
-    are readily soothed at reunion.
+  explain: Securely attached infants use the caregiver as a safe base, show distress
+    on separation, and are readily soothed at reunion.
   distractors:
-    A: Avoidant infants show little distress at separation and ignore or avoid the caregiver at reunion.
-    B: Resistant infants cling before separation and remain hard to soothe after reunion, often showing
-      anger.
-    C: Disorganized attachment shows contradictory, frozen, or fearful behavior toward the caregiver.
+    A: Avoidant infants show little distress at separation and ignore or avoid the
+      caregiver at reunion.
+    B: Resistant infants cling before separation and remain hard to soothe after reunion,
+      often showing anger.
+    C: Disorganized attachment shows contradictory, frozen, or fearful behavior toward
+      the caregiver.
   chapter: psychology
 - id: nmat-p2s-009
-  q: Which neurotransmitter is most closely tied to the brain's reward pathways, and is implicated both
-    in Parkinson's disease when depleted and in schizophrenia when excessive?
+  q: Which neurotransmitter is most closely tied to the brain's reward pathways, and
+    is implicated both in Parkinson's disease when depleted and in schizophrenia when
+    excessive?
   choices:
     A: Acetylcholine
     B: GABA
     C: Dopamine
     D: Serotonin
   answer: C
-  explain: Dopamine mediates reward in the mesolimbic pathway; loss of dopaminergic neurons in the substantia
-    nigra causes Parkinsonian symptoms, and excess activity is linked to psychosis.
+  explain: Dopamine mediates reward in the mesolimbic pathway; loss of dopaminergic
+    neurons in the substantia nigra causes Parkinsonian symptoms, and excess activity
+    is linked to psychosis.
   distractors:
-    A: Acetylcholine drives muscle activation and memory; it is depleted early in Alzheimer's disease.
+    A: Acetylcholine drives muscle activation and memory; it is depleted early in
+      Alzheimer's disease.
     B: GABA is the nervous system's principal inhibitory neurotransmitter.
-    D: Serotonin regulates mood, sleep, and appetite; it is not the reward-pathway transmitter.
+    D: Serotonin regulates mood, sleep, and appetite; it is not the reward-pathway
+      transmitter.
   chapter: psychology
 - id: nmat-p2s-010
-  q: After three nights of badly shortened sleep, a student spends an unusually large share of the next
-    night in rapid-eye-movement sleep. This compensation is called…
+  q: After three nights of badly shortened sleep, a student spends an unusually large
+    share of the next night in rapid-eye-movement sleep. This compensation is called…
   choices:
     A: REM rebound
     B: sleep apnea
     C: sleep spindling
     D: narcolepsy
   answer: A
-  explain: Deprived of REM sleep, the brain increases the proportion and intensity of REM on recovery
-    nights — the REM rebound effect.
+  explain: Deprived of REM sleep, the brain increases the proportion and intensity
+    of REM on recovery nights — the REM rebound effect.
   distractors:
-    B: Sleep apnea is repeated interruption of breathing during sleep, a disorder rather than a recovery
-      effect.
-    C: Sleep spindles are brief bursts of activity in stage 2 NREM sleep, not a rise in REM.
+    B: Sleep apnea is repeated interruption of breathing during sleep, a disorder
+      rather than a recovery effect.
+    C: Sleep spindles are brief bursts of activity in stage 2 NREM sleep, not a rise
+      in REM.
     D: Narcolepsy is a disorder of uncontrollable sleep attacks during the day.
   chapter: psychology
 - id: nmat-p2s-011
-  q: Ana can tell that a 105-gram weight is heavier than a 100-gram weight, but she cannot distinguish
-    1,000 grams from 1,005 grams. Which law explains this?
+  q: Ana can tell that a 105-gram weight is heavier than a 100-gram weight, but she
+    cannot distinguish 1,000 grams from 1,005 grams. According to Weber's law, the
+    just-noticeable difference…
   choices:
     A: is a fixed number of grams regardless of the starting weight
     B: is a constant proportion of the original stimulus intensity
     C: depends on how long the weights are held
     D: is the smallest stimulus intensity that can be detected at all
   answer: B
-  explain: 'Weber''s law: the just-noticeable difference is a constant fraction of the standard stimulus,
-    so heavier weights require proportionally larger differences to be told apart.'
+  explain: 'Weber''s law: the just-noticeable difference is a constant fraction of
+    the standard stimulus, so heavier weights require proportionally larger differences
+    to be told apart.'
   distractors:
-    A: A constant absolute difference is exactly what Weber's law rules out; larger standards need larger
-      differences.
-    C: Duration may affect performance, but Weber's law relates the threshold to stimulus intensity.
-    D: That defines the absolute threshold, a different concept from the just-noticeable difference.
+    A: A constant absolute difference is exactly what Weber's law rules out; larger
+      standards need larger differences.
+    C: Duration may affect performance, but Weber's law relates the threshold to stimulus
+      intensity.
+    D: That defines the absolute threshold, a different concept from the just-noticeable
+      difference.
   chapter: fc6-perceive-think-react
 - id: nmat-p2s-012
-  q: In Milgram's studies, most participants delivered the highest shock level to a protesting learner
-    because an experimenter in a lab coat told them to continue. The central finding was that…
+  q: In Milgram's studies, most participants delivered the highest shock level to
+    a protesting learner because an experimenter in a lab coat told them to continue.
+    The central finding was that…
   choices:
     A: only people with hostile personalities obey destructive orders
     B: groups rarely change the judgment of a lone individual
     C: people obey only when the victim cannot be seen
     D: ordinary people will follow a legitimate authority into harmful actions
   answer: D
-  explain: 'Milgram showed the power of legitimate authority: about two-thirds of ordinary adult participants
-    went to the maximum shock level despite voicing discomfort.'
+  explain: 'Milgram showed the power of legitimate authority: about two-thirds of
+    ordinary adult participants went to the maximum shock level despite voicing discomfort.'
   distractors:
-    A: The participants were ordinary adults; obedience did not require an aggressive character.
+    A: The participants were ordinary adults; obedience did not require an aggressive
+      character.
     B: That is the conformity question studied by Asch, not Milgram's authority paradigm.
     C: Obedience stayed high even when the learner was visible and in the same room.
   chapter: fc8-self-others-interactions
 - id: nmat-p2s-013
-  q: Asked to say publicly which of three lines matches a standard line, a participant chooses one he
-    can plainly see is wrong because everyone before him chose it. This illustrates…
+  q: Asked to say publicly which of three lines matches a standard line, a participant
+    chooses one he can plainly see is wrong because everyone before him chose it.
+    This illustrates…
   choices:
     A: obedience to a legitimate authority
     B: the fundamental attribution error
     C: normative conformity to a unanimous majority
     D: deindividuation in a large crowd
   answer: C
-  explain: Asch's line studies demonstrated normative social influence — people conform to a unanimous
-    majority to avoid rejection even against clear perceptual evidence.
+  explain: Asch's line studies demonstrated normative social influence — people conform
+    to a unanimous majority to avoid rejection even against clear perceptual evidence.
   distractors:
-    A: No authority gives an order here; the pressure comes from peers who are not in charge.
-    B: That error concerns how we explain other people's behavior, not yielding to a group's judgment.
-    D: Deindividuation is a loss of self-awareness in a group; this participant is singled out and answerable.
+    A: No authority gives an order here; the pressure comes from peers who are not
+      in charge.
+    B: That error concerns how we explain other people's behavior, not yielding to
+      a group's judgment.
+    D: Deindividuation is a loss of self-awareness in a group; this participant is
+      singled out and answerable.
   chapter: fc8-self-others-interactions
 - id: nmat-p2s-014
-  q: A man collapses on a busy sidewalk. Dozens of people slow down and glance, but no one stops to help.
-    The best explanation is…
+  q: A man collapses on a busy sidewalk. Dozens of people slow down and glance, but
+    no one stops to help. The best explanation is…
   choices:
     A: social loafing on a shared group task
     B: diffusion of responsibility when many witnesses are present
     C: groupthink driven by the desire for consensus
     D: the mere-exposure effect
   answer: B
-  explain: 'Darley and Latané''s bystander effect: responsibility is divided among everyone present, so
-    each individual feels less personally obliged to intervene.'
+  explain: 'Darley and Latané''s bystander effect: responsibility is divided among
+    everyone present, so each individual feels less personally obliged to intervene.'
   distractors:
-    A: Social loafing is reduced individual effort on a cooperative task, not failure to help in an emergency.
+    A: Social loafing is reduced individual effort on a cooperative task, not failure
+      to help in an emergency.
     C: Groupthink is a decision-making flaw in cohesive groups that suppresses dissent.
     D: Mere exposure is a growing preference for familiar stimuli, unrelated to helping.
   chapter: fc8-self-others-interactions
 - id: nmat-p2s-015
-  q: Kara watches a stranger trip on a raised curb and concludes, 'He's clumsy.' A minute later she trips
-    on the same curb and says, 'That curb is broken.' Her first judgment illustrates…
+  q: Kara watches a stranger trip on a raised curb and concludes, 'He's clumsy.' A
+    minute later she trips on the same curb and says, 'That curb is broken.' Her first
+    judgment illustrates…
   choices:
     A: the fundamental attribution error
     B: the self-serving bias
     C: the false-consensus effect
     D: cognitive dissonance
   answer: A
-  explain: The fundamental attribution error is the tendency to overattribute others' behavior to their
-    dispositions while underweighting situational causes.
+  explain: The fundamental attribution error is the tendency to overattribute others'
+    behavior to their dispositions while underweighting situational causes.
   distractors:
-    B: The self-serving bias is about our own outcomes — it is her second, situational judgment about
-      herself.
-    C: False consensus is overestimating how many others share one's own attitudes or behavior.
-    D: Dissonance is tension from inconsistent attitudes and behavior, not an explanation of someone's
-      fall.
+    B: The self-serving bias is about our own outcomes — it is her second, situational
+      judgment about herself.
+    C: False consensus is overestimating how many others share one's own attitudes
+      or behavior.
+    D: Dissonance is tension from inconsistent attitudes and behavior, not an explanation
+      of someone's fall.
   chapter: fc8-self-others-interactions
 - id: nmat-p2s-016
-  q: A researcher randomly assigns one class to study with flashcards and another to reread their notes,
-    then compares scores on the same exam. The dependent variable is…
+  q: A researcher randomly assigns one class to study with flashcards and another
+    to reread their notes, then compares scores on the same exam. The dependent variable
+    is…
   choices:
     A: the study method
     B: the class section
     C: random assignment
     D: the exam score
   answer: D
-  explain: The dependent variable is the measured outcome presumed to depend on the manipulated independent
-    variable — here, the study method.
+  explain: The dependent variable is the measured outcome presumed to depend on the
+    manipulated independent variable — here, the study method.
   distractors:
     A: The study method is what the researcher manipulates — the independent variable.
     B: Class section belongs to the assignment procedure used to control confounds.
     C: Random assignment is a design procedure, not an outcome that is measured.
   chapter: psychology
 - id: nmat-p2s-017
-  q: A study finds that neighborhoods with more ice cream shops also have higher drowning rates. The soundest
-    conclusion is that…
+  q: A study finds that neighborhoods with more ice cream shops also have higher drowning
+    rates. The soundest conclusion is that…
   choices:
     A: ice cream shops cause swimming, which causes drowning
     B: drownings attract ice cream shops to an area
-    C: the two variables covary, most plausibly through a third factor such as hot weather
+    C: the two variables covary, most plausibly through a third factor such as hot
+      weather
     D: the correlation establishes a causal link in one direction or the other
   answer: C
-  explain: A correlation shows association only. A third variable — summer heat raises both ice-cream
-    sales and swimming — can generate the whole relationship.
+  explain: A correlation shows association only. A third variable — summer heat raises
+    both ice-cream sales and swimming — can generate the whole relationship.
   distractors:
-    A: A correlation alone cannot establish causal direction or exclude a confounding variable.
+    A: A correlation alone cannot establish causal direction or exclude a confounding
+      variable.
     B: The reverse causal direction is equally unsupported by an observed association.
-    D: Covariation is necessary but not sufficient for causation; a confound can produce the whole pattern.
+    D: Covariation is necessary but not sufficient for causation; a confound can produce
+      the whole pattern.
   chapter: psychology
 - id: nmat-p2s-018
-  q: Visiting a community that eats with its hands, an engineer calls the practice 'uncivilized' and insists
-    that his own utensils are the proper way to eat. His reaction illustrates…
+  q: Visiting a community that eats with its hands, an engineer calls the practice
+    'uncivilized' and insists that his own utensils are the proper way to eat. His
+    reaction illustrates…
   choices:
     A: cultural relativism
     B: ethnocentrism
     C: cultural diffusion
     D: cultural assimilation
   answer: B
-  explain: Ethnocentrism judges another culture by the standards of one's own and treats one's own as
-    superior; relativism evaluates practices inside their own cultural frame.
+  explain: Ethnocentrism judges another culture by the standards of one's own and
+    treats one's own as superior; relativism evaluates practices inside their own
+    cultural frame.
   distractors:
-    A: Relativism suspends judgment and asks what the practice means within its own cultural context.
-    C: Diffusion is the spread of cultural traits from one society to another, not a judgment about them.
-    D: Assimilation is adopting another group's culture, not rating other people's ways as inferior.
+    A: Relativism suspends judgment and asks what the practice means within its own
+      cultural context.
+    C: Diffusion is the spread of cultural traits from one society to another, not
+      a judgment about them.
+    D: Assimilation is adopting another group's culture, not rating other people's
+      ways as inferior.
   chapter: fc9-cultural-and-social-differences
 - id: nmat-p2s-019
-  q: In a farming community, eating with one's mouth open brings mild amusement, while stealing a neighbor's
-    harvest brings lasting disgrace and shunning by the community. The two behaviors differ in that…
+  q: In a farming community, eating with one's mouth open brings mild amusement, while
+    stealing a neighbor's harvest brings lasting disgrace and shunning by the community.
+    The two behaviors differ in that…
   choices:
     A: the first violates a folkway, the second a more
     B: the first violates a more, the second a folkway
     C: both are taboos enforced by law
     D: both are laws because both carry sanctions
   answer: A
-  explain: Folkways are everyday etiquette norms backed by weak sanctions; mores carry moral weight and
-    bring serious sanctions — here, disgrace and shunning.
+  explain: Folkways are everyday etiquette norms backed by weak sanctions; mores carry
+    moral weight and bring serious sanctions — here, disgrace and shunning.
   distractors:
-    B: 'The labels are reversed: moral outrage and serious sanction mark mores, not everyday etiquette.'
-    C: Taboos evoke deep revulsion and are often forbidden outright; neither act described reaches that
-      level.
-    D: Laws are norms formally enacted and enforced by the state; only the second act approaches that.
+    B: 'The labels are reversed: moral outrage and serious sanction mark mores, not
+      everyday etiquette.'
+    C: Taboos evoke deep revulsion and are often forbidden outright; neither act described
+      reaches that level.
+    D: Laws are norms formally enacted and enforced by the state; only the second
+      act approaches that.
   chapter: fc9-cultural-and-social-differences
 - id: nmat-p2s-020
-  q: A country's courts still apply libel statutes written for print newspapers, and judges struggle to
-    decide cases about viral social-media posts. Ogburn would call this gap between technology and the
-    norms governing it…
+  q: A country's courts still apply libel statutes written for print newspapers, and
+    judges struggle to decide cases about viral social-media posts. Ogburn would call
+    this gap between technology and the norms governing it…
   choices:
     A: cultural diffusion
     B: cultural relativism
     C: cultural integration
     D: culture lag
   answer: D
-  explain: 'Ogburn''s culture lag: material culture (technology) changes faster than the nonmaterial culture
-    (laws, norms, beliefs) that has to regulate it.'
+  explain: 'Ogburn''s culture lag: material culture (technology) changes faster than
+    the nonmaterial culture (laws, norms, beliefs) that has to regulate it.'
   distractors:
-    A: Diffusion is the spread of traits across societies, not a delay in adjusting norms.
-    B: Relativism is an evaluative stance toward practices, not a mismatch between technology and rules.
-    C: Integration describes how well parts of a culture fit together; the case is a failure to keep pace.
+    A: Diffusion is the spread of traits across societies, not a delay in adjusting
+      norms.
+    B: Relativism is an evaluative stance toward practices, not a mismatch between
+      technology and rules.
+    C: Integration describes how well parts of a culture fit together; the case is
+      a failure to keep pace.
   chapter: fc9-cultural-and-social-differences
 - id: nmat-p2s-021
-  q: A mother must attend a work meeting at the same hour as her daughter's school recital, so the demands
-    of being an employee clash with those of being a parent. At work she also feels torn within her one
-    role as supervisor, wanting to stay an approachable mentor to her staff while still enforcing hard
-    deadlines. The first situation is role conflict; the second is…
+  q: A mother must attend a work meeting at the same hour as her daughter's school
+    recital, so the demands of being an employee clash with those of being a parent.
+    At work she also feels torn within her one role as supervisor, wanting to stay
+    an approachable mentor to her staff while still enforcing hard deadlines. The
+    first situation is role conflict; the second is…
   choices:
     A: role exit
     B: role engulfment
     C: role strain
     D: role modeling
   answer: C
-  explain: Role conflict pits the expectations of different statuses against each other; role strain is
-    tension among the expectations attached to a single status.
+  explain: Role conflict pits the expectations of different statuses against each
+    other; role strain is tension among the expectations attached to a single status.
   distractors:
     A: Role exit is leaving a status altogether, as in retiring or divorcing.
     B: That term does not name tension among the expectations attached to one status.
-    D: Role modeling is imitating another person's behavior, not tension within a role.
+    D: Role modeling is imitating another person's behavior, not tension within a
+      role.
   chapter: fc9-cultural-and-social-differences
 - id: nmat-p2s-022
-  q: Weber analyzed standing in terms of three distinct dimensions. A respected traditional healer who
-    owns little property but is widely honored in her community illustrates…
+  q: Weber analyzed standing in terms of three distinct dimensions. A respected traditional
+    healer who owns little property but is widely honored in her community illustrates…
   choices:
     A: class, or economic position in the market
     B: status, or social honor and prestige
     C: party, or organized power in groups
     D: caste, a ritually fixed rank
   answer: B
-  explain: Weber separated class (wealth and market position), status (prestige or honor), and party (organized
-    power). Honor without property is status standing alone.
+  explain: Weber separated class (wealth and market position), status (prestige or
+    honor), and party (organized power). Honor without property is status standing
+    alone.
   distractors:
     A: Class is defined by wealth and market position, which the healer lacks.
-    C: Party refers to organized capacity to influence collective decisions, not general esteem.
+    C: Party refers to organized capacity to influence collective decisions, not general
+      esteem.
     D: Caste is a closed birth-ascribed system, not one of Weber's dimensions of standing.
   chapter: fc10-stratification-and-resources
 - id: nmat-p2s-023
-  q: For Marx, the fundamental division of capitalist society separates those who own the means of production
-    from those who…
+  q: For Marx, the fundamental division of capitalist society separates those who
+    own the means of production from those who…
   choices:
     A: hold the most honored status positions
     B: control the means of coercion
     C: organize the most effective political party
     D: must sell their labor for wages
   answer: D
-  explain: Marx's two-class model pits the bourgeoisie, who own capital, against the proletariat, whose
-    only resource is labor power sold for wages.
+  explain: Marx's two-class model pits the bourgeoisie, who own capital, against the
+    proletariat, whose only resource is labor power sold for wages.
   distractors:
-    A: Status prestige is Weber's dimension; Marx's divide runs along ownership of capital.
-    B: Control of coercion belongs to the state and figures in Weber's analysis, not Marx's class criterion.
+    A: Status prestige is Weber's dimension; Marx's divide runs along ownership of
+      capital.
+    B: Control of coercion belongs to the state and figures in Weber's analysis, not
+      Marx's class criterion.
     C: Party is Weber's third dimension, not the boundary of Marx's two classes.
   chapter: fc10-stratification-and-resources
 - id: nmat-p2s-024
-  q: In a society where a person's occupation, marriage partner, and rank are fixed at birth and cannot
-    be changed, the stratification system is best described as…
+  q: In a society where a person's occupation, marriage partner, and rank are fixed
+    at birth and cannot be changed, the stratification system is best described as…
   choices:
     A: a caste system, because status is ascribed and the boundaries are closed
     B: a class system, because placement rests on achievement
     C: a meritocracy, because ability determines placement
     D: an estate system, because landholding defines the strata
   answer: A
-  explain: Castes are closed systems of birth-ascribed rank with strict endogamy and fixed occupation;
-    classes are at least partly achieved and open to mobility.
+  explain: Castes are closed systems of birth-ascribed rank with strict endogamy and
+    fixed occupation; classes are at least partly achieved and open to mobility.
   distractors:
     B: Class systems are open to mobility; the system described forbids it.
-    C: Meritocracy ranks people by talent and effort — the opposite of birth-fixed placement.
-    D: Estate systems, as in feudal Europe, rest on legally defined landholding, not ritual birth rank.
+    C: Meritocracy ranks people by talent and effort — the opposite of birth-fixed
+      placement.
+    D: Estate systems, as in feudal Europe, rest on legally defined landholding, not
+      ritual birth rank.
   chapter: fc10-stratification-and-resources
 - id: nmat-p2s-025
-  q: A farmer's daughter qualifies as a physician and earns far more than her parents ever did. This is
-    an example of…
+  q: A farmer's daughter qualifies as a physician and earns far more than her parents
+    ever did. This is an example of…
   choices:
     A: horizontal mobility
     B: structural mobility
     C: upward intergenerational mobility
     D: downward intragenerational mobility
   answer: C
-  explain: Intergenerational mobility compares a person's position with her parents'; movement to a higher
-    rank is upward mobility.
+  explain: Intergenerational mobility compares a person's position with her parents';
+    movement to a higher rank is upward mobility.
   distractors:
     A: Horizontal mobility is a move within the same rank, not to a higher one.
-    B: Structural mobility comes from change in the economy as a whole, not from an individual trajectory.
-    D: Her rank rose rather than fell, and the comparison spans generations, not one career.
+    B: Structural mobility comes from change in the economy as a whole, not from an
+      individual trajectory.
+    D: Her rank rose rather than fell, and the comparison spans generations, not one
+      career.
   chapter: fc10-stratification-and-resources
 - id: nmat-p2s-026
-  q: In Merton's strain theory, a poor student who accepts the cultural goal of wealth but reaches it
-    by selling counterfeit documents is using which adaptation?
+  q: In Merton's strain theory, a poor student who accepts the cultural goal of wealth
+    but reaches it by selling counterfeit documents is using which adaptation?
   choices:
     A: Conformity
     B: Innovation
     C: Ritualism
     D: Retreatism
   answer: B
-  explain: Innovation accepts society's goals while rejecting or lacking the legitimate means, turning
-    to illegitimate routes to reach them.
+  explain: Innovation accepts society's goals while rejecting or lacking the legitimate
+    means, turning to illegitimate routes to reach them.
   distractors:
-    A: Conformity accepts both the cultural goals and the institutionalized means of reaching them.
-    C: Ritualism abandons the goals but clings rigidly to the rules, like the clerk with no ambition.
-    D: Retreatism rejects both the goals and the means, withdrawing from the race altogether.
+    A: Conformity accepts both the cultural goals and the institutionalized means
+      of reaching them.
+    C: Ritualism abandons the goals but clings rigidly to the rules, like the clerk
+      with no ambition.
+    D: Retreatism rejects both the goals and the means, withdrawing from the race
+      altogether.
   chapter: fc10-stratification-and-resources
 - id: nmat-p2s-027
-  q: A boy caught shoplifting is called a 'delinquent' by his teachers and neighbors; he then drifts into
-    the company of other labeled youths and offends more often. This sequence is best explained by…
+  q: A boy caught shoplifting is called a 'delinquent' by his teachers and neighbors;
+    he then drifts into the company of other labeled youths and offends more often.
+    This sequence is best explained by…
   choices:
     A: Merton's strain theory
     B: differential association theory
     C: rational choice theory
     D: labeling theory
   answer: D
-  explain: 'Labeling theory: the label applied by others can become a master status that channels the
-    person into further, or secondary, deviance.'
+  explain: 'Labeling theory: the label applied by others can become a master status
+    that channels the person into further, or secondary, deviance.'
   distractors:
-    A: Strain explains deviance as the gap between goals and legitimate means, not as a reaction to a
-      public label.
-    B: Differential association explains deviance as learned in intimate groups, without the pivotal public
-      label.
-    C: Rational choice weighs the costs and benefits of an act and does not center on society's reaction.
+    A: Strain explains deviance as the gap between goals and legitimate means, not
+      as a reaction to a public label.
+    B: Differential association explains deviance as learned in intimate groups, without
+      the pivotal public label.
+    C: Rational choice weighs the costs and benefits of an act and does not center
+      on society's reaction.
   chapter: fc10-stratification-and-resources
 - id: nmat-p2s-028
-  q: A country's death rate has stayed low for a generation while its birth rate has fallen sharply; the
-    population still grows, but more slowly than before. Which stage of demographic transition is this?
+  q: A country's death rate has stayed low for a generation while its birth rate has
+    fallen sharply; the population still grows, but more slowly than before. Which
+    stage of demographic transition is this?
   choices:
     A: 'Stage 3: birth rate falling while the death rate remains low'
     B: 'Stage 1: high birth rate and high death rate'
     C: 'Stage 2: death rate falling while the birth rate stays high'
     D: 'Stage 4: both rates low and the population roughly stable'
   answer: A
-  explain: In stage 3 fertility falls while mortality stays low, so the gap opened in stage 2 narrows
-    and growth slows.
+  explain: In stage 3 fertility falls while mortality stays low, so the gap opened
+    in stage 2 narrows and growth slows.
   distractors:
     B: Stage 1 has both rates high and produces little or no growth.
     C: Stage 2 is where the death rate drops first, producing very rapid growth.
     D: Stage 4 has a low birth rate too, so growth levels off rather than continuing.
   chapter: fc10-stratification-and-resources
 - id: nmat-p2s-029
-  q: A population pyramid shows a very wide base for ages 0-4, with each older band noticeably narrower.
-    What does this shape indicate?
+  q: A population pyramid shows a very wide base for ages 0-4, with each older band
+    noticeably narrower. What does this shape indicate?
   choices:
     A: Low birth rate and slow population growth
     B: An aging population with a shrinking younger cohort
     C: High birth rate and high potential for future population growth
     D: Near-zero growth with similar numbers at every age
   answer: C
-  explain: A broad-based pyramid means many children relative to adults — high fertility and a cohort
-    wave that will keep the population growing as it ages.
+  explain: A broad-based pyramid means many children relative to adults — high fertility
+    and a cohort wave that will keep the population growing as it ages.
   distractors:
     A: A low-fertility population shows a narrow base, not a broad one.
     B: An aging population is top-heavy, with a constricted base and wide older bands.
     D: Zero growth yields a straight-sided or barrel-shaped pyramid.
   chapter: fc10-stratification-and-resources
 - id: nmat-p2s-030
-  q: An anthropologist lives in a barangay for two years, joins the rice-planting rituals, and records
-    what the harvest means to villagers in their own terms. She later compares those meanings with harvest
-    rites elsewhere using outside analytical categories. The first approach is emic; the second is…
+  q: An anthropologist lives in a barangay for two years, joins the rice-planting
+    rituals, and records what the harvest means to villagers in their own terms. She
+    later compares those meanings with harvest rites elsewhere using outside analytical
+    categories. The first approach is emic; the second is…
   choices:
     A: participant observation
     B: etic
     C: ethnographic interviewing
     D: cultural materialism
   answer: B
-  explain: Etic analysis applies the observer's external, comparative categories; emic description captures
-    what the practice means to the members themselves.
+  explain: Etic analysis applies the observer's external, comparative categories;
+    emic description captures what the practice means to the members themselves.
   distractors:
-    A: Participant observation is the fieldwork method of joining daily life, not the analytical contrast
-      to emic.
-    C: Interviewing is a data-collection technique, not the outsider's analytical standpoint.
-    D: Cultural materialism is a theoretical paradigm about explaining culture through material conditions.
+    A: Participant observation is the fieldwork method of joining daily life, not
+      the analytical contrast to emic.
+    C: Interviewing is a data-collection technique, not the outsider's analytical
+      standpoint.
+    D: Cultural materialism is a theoretical paradigm about explaining culture through
+      material conditions.
   chapter: sociology-and-anthropology
 passages: []

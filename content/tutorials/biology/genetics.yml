@@ -195,8 +195,8 @@ passage:
       C: Homozygous affected
       D: An obligate carrier
     answer: D
-    explain: An unaffected woman with an affected father-less son and an affected brother must carry one
-      recessible X — she is an obligate carrier.
+    explain: An unaffected woman with an affected son and an affected brother must carry one
+      recessive X — she is an obligate carrier.
     distractors:
       A: Dominance would affect daughters and sons equally without skipping.
       B: Her sons' affected status derives from her X.

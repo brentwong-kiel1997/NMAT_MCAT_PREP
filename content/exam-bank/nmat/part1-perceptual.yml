@@ -6,180 +6,196 @@ block: part1
 items_expected: 30
 items:
 - id: nmat-p1p-001
-  q: Which lowercase letter looks exactly the same after a left-right flip in a vertical mirror?
+  q: Which lowercase letter looks exactly the same after a left-right flip in a vertical
+    mirror?
   choices:
     C: m
     A: b
     B: d
     D: p
   answer: C
-  explain: m is symmetric about its own vertical axis, so a left-right reflection leaves it unchanged;
-    b, d and p all carry their asymmetry on one side.
+  explain: m is symmetric about its own vertical axis, so a left-right reflection
+    leaves it unchanged; b, d and p all carry their asymmetry on one side.
   distractors:
     A: b reflected left-right becomes d.
     B: d reflected left-right becomes b.
     D: p reflected left-right becomes q.
   chapter: mirror-image
 - id: nmat-p1p-002
-  q: 'Convention: a vertical mirror flips each lowercase letter left-to-right and also reverses the letter
-    order, exactly as a real mirror does. Reflected this way, the word ''pod'' appears as:'
+  q: 'Convention: a vertical mirror flips each lowercase letter left-to-right and
+    also reverses the letter order, exactly as a real mirror does. Reflected this
+    way, the word ''pod'' appears as:'
   choices:
     A: boq
     B: qob
     C: bod
     D: qod
   answer: A
-  explain: 'Reading the image from the left you meet the original right-hand letters first: d becomes
-    b, o stays o, p becomes q - ''boq''.'
+  explain: 'Reading the image from the left you meet the original right-hand letters
+    first: d becomes b, o stays o, p becomes q - ''boq''.'
   distractors:
-    B: qob flips each letter correctly but forgets that a mirror also reverses the letter order.
+    B: qob flips each letter correctly but forgets that a mirror also reverses the
+      letter order.
     C: bod flips the p as if by an up-down (water-image) flip and leaves the d unflipped.
-    D: qod flips the p correctly but leaves the d unflipped; a vertical mirror turns d into b.
+    D: qod flips the p correctly but leaves the d unflipped; a vertical mirror turns
+      d into b.
   chapter: mirror-image
 - id: nmat-p1p-003
-  q: A strip of paper printed with the lowercase letters 'bd' is rotated 180 degrees in the plane. What
-    does the strip read afterwards?
+  q: A strip of paper printed with the lowercase letters 'bd' is rotated 180 degrees
+    in the plane. What does the strip read afterwards?
   choices:
     B: pq
     A: qp
     C: db
     D: qb
   answer: B
-  explain: A 180-degree turn sends b to q and d to p, and it reverses the order of the letters as well,
-    so the strip reads p then q.
+  explain: A 180-degree turn sends b to q and d to p, and it reverses the order of
+    the letters as well, so the strip reads p then q.
   distractors:
-    A: qp rotates both letter shapes correctly but does not reverse their left-to-right order.
+    A: qp rotates both letter shapes correctly but does not reverse their left-to-right
+      order.
     C: db leaves both letter shapes unrotated.
-    D: qb rotates the b into a q but leaves the d unrotated — only one of the two shapes is turned.
+    D: qb rotates the b into a q but leaves the d unrotated — only one of the two
+      shapes is turned.
   chapter: mirror-image
-  figure: items/ir-rot-arrow-1.svg
 - id: nmat-p1p-004
-  q: 'Turned upside down as in a water image (an up-down flip), the lowercase letter ''d'' becomes:'
+  q: 'Turned upside down as in a water image (an up-down flip), the lowercase letter
+    ''d'' becomes:'
   choices:
     C: q
     A: b
     B: p
     D: d
   answer: C
-  explain: 'An up-down reflection maps d to q (and b to p): the ascending stem now descends below the
-    baseline while the bowl stays on the same side.'
+  explain: 'An up-down reflection maps d to q (and b to p): the ascending stem now
+    descends below the baseline while the bowl stays on the same side.'
   distractors:
     A: b is d's left-right mirror image, not its up-down flip.
     B: p is what you get by rotating d through 180 degrees.
     D: d has no horizontal axis of symmetry, so it cannot survive this flip unchanged.
   chapter: mirror-image
 - id: nmat-p1p-005
-  q: Which word still reads the same, letter for letter, after reflection in a vertical mirror (each letter
-    flipped left-to-right and the order reversed)?
+  q: Which word still reads the same, letter for letter, after reflection in a vertical
+    mirror (each letter flipped left-to-right and the order reversed)?
   choices:
     A: MOM
     B: DAD
     C: NOON
     D: EYE
   answer: A
-  explain: M and O are both symmetric about a vertical axis, and MOM is a palindrome, so the reversal
-    of letter order changes nothing.
+  explain: M and O are both symmetric about a vertical axis, and MOM is a palindrome,
+    so the reversal of letter order changes nothing.
   distractors:
     B: D is not left-right symmetric - it flips into a backwards D.
     C: N has no vertical mirror symmetry; it turns into a backwards N.
-    D: 'E is not left-right symmetric: its spine sits on the left and would move to the right.'
+    D: 'E is not left-right symmetric: its spine sits on the left and would move to
+      the right.'
   chapter: mirror-image
 - id: nmat-p1p-006
-  q: Which capital letter is symmetric about BOTH a vertical mirror and a horizontal mirror?
+  q: Which capital letter is symmetric about BOTH a vertical mirror and a horizontal
+    mirror?
   choices:
     D: H
     A: N
     B: C
     C: M
   answer: D
-  explain: H is unchanged by a left-right flip and by an up-down flip, the only option carrying both mirror
-    symmetries.
+  explain: H is unchanged by a left-right flip and by an up-down flip, the only option
+    carrying both mirror symmetries.
   distractors:
     A: N has 180-degree rotational symmetry but no mirror symmetry about either axis.
-    B: C survives only an up-down flip; a left-right flip turns it into a backwards C.
+    B: C survives only an up-down flip; a left-right flip turns it into a backwards
+      C.
     C: M survives only a left-right flip; an up-down flip turns it into a W-like shape.
   chapter: mirror-image
 - id: nmat-p1p-007
-  q: 'An arrow points up and to the right. Held in front of a vertical mirror, the image arrow points:'
+  q: 'An arrow points up and to the right. Held in front of a vertical mirror, the
+    image arrow points:'
   choices:
     B: up and to the left
     A: down and to the right
     C: down and to the left
     D: up and to the right
   answer: B
-  explain: A vertical mirror swaps left and right and leaves up and down alone, so up-right becomes up-left.
+  explain: A vertical mirror swaps left and right and leaves up and down alone, so
+    up-right becomes up-left.
   distractors:
-    A: That keeps the rightward direction unchanged, but the horizontal component is exactly what a vertical
-      mirror flips.
+    A: That keeps the rightward direction unchanged, but the horizontal component
+      is exactly what a vertical mirror flips.
     C: That is a 180-degree rotation of the arrow, not a left-right reflection.
     D: That is the object itself; the image must at least swap left and right.
   chapter: mirror-image
-  figure: items/ir-rot-arrow-1.svg
 - id: nmat-p1p-008
-  q: Which pair of lowercase letters are left-right mirror images of each other - each becoming the other
-    in a vertical mirror?
+  q: Which pair of lowercase letters are left-right mirror images of each other -
+    each becoming the other in a vertical mirror?
   choices:
     D: b and d
     A: p and d
     B: q and b
     C: n and u
   answer: D
-  explain: 'A vertical mirror moves the bowl to the other side of the stem: b to d, d to b, and likewise
-    p to q.'
+  explain: 'A vertical mirror moves the bowl to the other side of the stem: b to d,
+    d to b, and likewise p to q.'
   distractors:
     A: p and d are 180-degree rotations of each other.
     B: q and b are 180-degree rotations of each other.
     C: n and u swap under an up-down (water-image) flip, not a left-right one.
   chapter: mirror-image
 - id: nmat-p1p-009
-  q: 'A capital L - a vertical stroke with a horizontal foot extending to the right at its bottom - is
-    reflected in a vertical mirror. The image is:'
+  q: 'A capital L - a vertical stroke with a horizontal foot extending to the right
+    at its bottom - is reflected in a vertical mirror. The image is:'
   choices:
     A: a vertical stroke with its foot extending to the left at the bottom
     B: a vertical stroke with its foot extending to the right at the top
     C: the same L, unchanged
     D: a vertical stroke with its foot extending to the left at the top
   answer: A
-  explain: Left and right swap, so the foot now points left; up and down are untouched, so the foot stays
-    at the bottom.
+  explain: Left and right swap, so the foot now points left; up and down are untouched,
+    so the foot stays at the bottom.
   distractors:
-    B: 'That is an up-down (water-image) flip: the foot moved to the top instead of switching sides.'
+    B: 'That is an up-down (water-image) flip: the foot moved to the top instead of
+      switching sides.'
     C: L is not symmetric left-to-right; its foot must switch sides in the image.
     D: 'That is a 180-degree rotation: the foot changed both its side and its end.'
   chapter: mirror-image
 - id: nmat-p1p-010
-  q: Which word is made only of capital letters that are unchanged by a left-right (vertical-mirror) flip?
+  q: Which word is made only of capital letters that are unchanged by a left-right
+    (vertical-mirror) flip?
   choices:
     C: TOMATO
     A: DAMAGE
     B: PIXEL
     D: CHOICE
   answer: C
-  explain: T, O, M and A all have vertical mirror symmetry, so TOMATO shows the same letters after the
-    flip.
+  explain: T, O, M and A all have vertical mirror symmetry, so TOMATO shows the same
+    letters after the flip.
   distractors:
     A: The D and the E have no vertical symmetry - D flips into a backwards D.
     B: The P and the E both flip into backwards versions of themselves.
     D: The C and the E are not left-right symmetric.
   chapter: mirror-image
 - id: nmat-p1p-011
-  q: 'Two inventory codes are read aloud for checking: ''TR-55831-QB'' and ''TR-5583I-QB''. They are:'
+  q: 'Two inventory codes are read aloud for checking: ''TR-55831-QB'' and ''TR-5583I-QB''.
+    They are:'
   choices:
-    B: different - the eighth character is the digit 1 in one code and the capital letter I in the other
+    B: different - the eighth character is the digit 1 in one code and the capital
+      letter I in the other
     A: identical
     C: different - a zero has been typed for the letter O
     D: different - a character has been left out of one code
   answer: B
-  explain: Character 8 is the digit 1 in the first code and the capital letter I in the second; every
-    other position matches.
+  explain: Character 8 is the digit 1 in the first code and the capital letter I in
+    the second; every other position matches.
   distractors:
-    A: 'The two codes are not identical: character 8 is the digit 1 in the first and the capital letter
-      I in the second.'
-    C: Neither code contains a zero or a letter O; the trap in these strings is 1 versus I.
+    A: 'The two codes are not identical: character 8 is the digit 1 in the first and
+      the capital letter I in the second.'
+    C: Neither code contains a zero or a letter O; the trap in these strings is 1
+      versus I.
     D: Both codes are 11 characters long; nothing is missing.
   chapter: identical-information
 - id: nmat-p1p-012
-  q: 'Target: MARBELLA-0417-CP. Which option is an exact character-for-character match for the target?'
+  q: 'Target: MARBELLA-0417-CP. Which option is an exact character-for-character match
+    for the target?'
   choices:
     A: MARBELLA-0417-CP
     B: MARBELLA-O417-CP
@@ -188,163 +204,176 @@ items:
   answer: A
   explain: 'Option A repeats the target exactly: MARBELLA, hyphen, 0417, hyphen, CP.'
   distractors:
-    B: Its second block opens with the letter O instead of the digit 0 (O417, not 0417).
+    B: Its second block opens with the letter O instead of the digit 0 (O417, not
+      0417).
     C: It drops one L, spelling MARBELA.
     D: Its final letter is G, not C (GP, not CP).
   chapter: identical-information
 - id: nmat-p1p-013
-  q: 'Four name entries are listed. P: ''Delos Santos, Maria Corazon A.''  Q: ''Delos Santos, Maria Corrazon
-    A.''  R: ''Delos Santos, Maria Corazon A.''  S: ''De Los Santos, Maria Corazon A.''  Which pair is
-    identical?'
+  q: 'Four name entries are listed. P: ''Delos Santos, Maria Corazon A.''  Q: ''Delos
+    Santos, Maria Corrazon A.''  R: ''Delos Santos, Maria Corazon A.''  S: ''De Los
+    Santos, Maria Corazon A.''  Which pair is identical?'
   choices:
     C: P and R
     A: P and Q
     B: P and S
     D: Q and R
   answer: C
-  explain: P and R are character-for-character the same; Q doubles the r in Corazon and S splits Delos
-    into two words.
+  explain: P and R are character-for-character the same; Q doubles the r in Corazon
+    and S splits Delos into two words.
   distractors:
     A: Q spells the middle name 'Corrazon' with a doubled r.
     B: S writes 'De Los Santos' instead of 'Delos Santos'.
     D: Q carries the doubled r in the middle name, so it differs from R too.
   chapter: identical-information
 - id: nmat-p1p-014
-  q: 'Compare these two serial numbers: ''4O71-BRN-09'' and ''4071-BRN-09''. They are:'
+  q: 'Compare these two serial numbers: ''4O71-BRN-09'' and ''4071-BRN-09''. They
+    are:'
   choices:
-    D: different - the second character is the letter O in one and the digit 0 in the other
+    D: different - the second character is the letter O in one and the digit 0 in
+      the other
     A: identical
     B: different - one serial is one character longer than the other
     C: different - the final block differs
   answer: D
-  explain: Character 2 is a capital O in the first serial and a zero in the second; the remaining ten
-    characters match.
+  explain: Character 2 is a capital O in the first serial and a zero in the second;
+    the remaining ten characters match.
   distractors:
     A: 'They differ at character 2: a capital O against a zero.'
     B: Both serials are 11 characters long; nothing was added or dropped.
     C: Both end in '-09'; the mismatch is up front.
   chapter: identical-information
 - id: nmat-p1p-015
-  q: 'Two ledger lines are compared: ''Account 88-4012-B: Variable Rate 6.125%'' and ''Account 88-4012-B:
-    Variable Rate 6.152%''. They are:'
+  q: 'Two ledger lines are compared: ''Account 88-4012-B: Variable Rate 6.125%'' and
+    ''Account 88-4012-B: Variable Rate 6.152%''. They are:'
   choices:
     B: different - the last three digits of the rate are transposed (125 against 152)
     A: identical
     C: different - the account number differs
     D: different - the two lines differ in capitalization
   answer: B
-  explain: Account number, label and capitalization all match; only the rate differs, 6.125% against 6.152%
-    - the last two digits have been swapped.
+  explain: Account number, label and capitalization all match; only the rate differs,
+    6.125% against 6.152% - the last two digits have been swapped.
   distractors:
     A: 'The lines differ inside the rate: 6.125% against 6.152%.'
     C: Both lines read 'Account 88-4012-B' identically.
     D: Every letter matches case for case; only digits differ.
   chapter: identical-information
 - id: nmat-p1p-016
-  q: 'Target: 1I7-lI7-771. Which option is an exact character-for-character match for the target?'
+  q: 'Target: 1I7-lI7-771. Which option is an exact character-for-character match
+    for the target?'
   choices:
     C: 1I7-lI7-771
     A: lI7-lI7-771
     B: 1I7-l17-771
     D: 1I7-lI7-77l
   answer: C
-  explain: 'Option C reproduces the target exactly: digit 1, capital I, 7, hyphen, lowercase l, capital
-    I, 7, hyphen, 7, 7, digit 1.'
+  explain: 'Option C reproduces the target exactly: digit 1, capital I, 7, hyphen,
+    lowercase l, capital I, 7, hyphen, 7, 7, digit 1.'
   distractors:
     A: Its first character is a lowercase l instead of the digit 1.
     B: Its second block reads l17 - the capital I has become the digit 1.
     D: Its last character is a lowercase l instead of the digit 1.
   chapter: identical-information
 - id: nmat-p1p-017
-  q: 'Four address lines are listed. P: ''12-B Mabini St., Brgy. San Roque, QC 1109''  Q: ''12-B Mabini
-    St., Brgy. San Roque, QC 1109''  R: ''12-B Mabini St., Brgy. San Rogue, QC 1109''  S: ''12-B Mabini
-    St, Brgy. San Roque, QC 1109''  Which pair is identical?'
+  q: 'Four address lines are listed. P: ''12-B Mabini St., Brgy. San Roque, QC 1109''  Q:
+    ''12-B Mabini St., Brgy. San Roque, QC 1109''  R: ''12-B Mabini St., Brgy. San
+    Rogue, QC 1109''  S: ''12-B Mabini St, Brgy. San Roque, QC 1109''  Which pair
+    is identical?'
   choices:
     A: P and Q
     B: P and R
     C: R and S
     D: Q and S
   answer: A
-  explain: P and Q are character-for-character the same; R misspells Roque as Rogue and S drops the period
-    after 'St'.
+  explain: P and Q are character-for-character the same; R misspells Roque as Rogue
+    and S drops the period after 'St'.
   distractors:
     B: R reads 'San Rogue' rather than 'San Roque'.
     C: R carries the Rogue misspelling and S drops the period after 'St'.
     D: S is missing the period after 'St'.
   chapter: identical-information
 - id: nmat-p1p-018
-  q: 'Target: REF 2027-NC-004518-B / DUE 30 SEP. Which option is an exact character-for-character match
-    for the target?'
+  q: 'Target: REF 2027-NC-004518-B / DUE 30 SEP. Which option is an exact character-for-character
+    match for the target?'
   choices:
     D: REF 2027-NC-004518-B / DUE 30 SEP
     A: REF 2027-NC-004518-8 / DUE 30 SEP
     B: REF 2027-NC-00451 8-B / DUE 30 SEP
     C: REF 2027-NC-004518-B / DUE 39 SEP
   answer: D
-  explain: Option D reproduces the reference, the slash and the due date exactly, with single spaces throughout.
+  explain: Option D reproduces the reference, the slash and the due date exactly,
+    with single spaces throughout.
   distractors:
     A: The reference ends in the digit 8 instead of the letter B.
     B: 'An extra space has crept into the reference: ''00451 8-B''.'
     C: The due day reads 39 instead of 30.
   chapter: identical-information
 - id: nmat-p1p-019
-  q: 'Target: 4821 9037 5566 1204. Which option is an exact character-for-character match for the target?'
+  q: 'Target: 4821 9037 5566 1204. Which option is an exact character-for-character
+    match for the target?'
   choices:
     A: 4821 9037 5566 1204
     B: 4821 9073 5566 1204
     C: 4821 9037 5666 1204
     D: 4821 9037 5566 12O4
   answer: A
-  explain: Option A reproduces all four four-digit blocks and the three separating spaces exactly.
+  explain: Option A reproduces all four four-digit blocks and the three separating
+    spaces exactly.
   distractors:
     B: Its second block reads 9073 - the 3 and the 7 have been swapped.
     C: Its third block reads 5666 instead of 5566.
     D: Its final block uses the letter O in place of the zero (12O4).
   chapter: identical-information
 - id: nmat-p1p-020
-  q: 'Four contact numbers are listed. P: ''0917 553 8821''  Q: ''0917 553 8821''  R: ''0917 5538 821''  S:
-    ''0917 553 8827''  Which pair is identical?'
+  q: 'Four contact numbers are listed. P: ''0917 553 8821''  Q: ''0917 553 8821''  R:
+    ''0917 5538 821''  S: ''0917 553 8827''  Which pair is identical?'
   choices:
     C: P and Q
     A: P and R
     B: Q and S
     D: R and S
   answer: C
-  explain: P and Q are character-for-character the same; R shifts the second space one place right (after
-    5538) and S ends in 8827.
+  explain: P and Q are character-for-character the same; R shifts the second space
+    one place right (after 5538) and S ends in 8827.
   distractors:
-    A: R moves the second space from after 553 to after 5538 (0917 5538 821), so the grouping differs
-      even though the digit order does not.
+    A: R moves the second space from after 553 to after 5538 (0917 5538 821), so the
+      grouping differs even though the digit order does not.
     B: S ends in 8827, not 8821.
     D: R is regrouped and S ends in 8827, so the two differ from each other as well.
   chapter: identical-information
 - id: nmat-p1p-021
-  q: 'Target outline: a circle with a single straight line drawn through its center from top to bottom
-    (a vertical diameter). Each panel is described in words. Which panel contains the target?'
+  q: 'Target outline: a circle with a single straight line drawn through its center
+    from top to bottom (a vertical diameter). Each panel is described in words. Which
+    panel contains the target?'
   choices:
-    B: A circle with a single vertical line through its center, partly crossed by two overlapping squares
-    A: A circle with a single horizontal line through its center, beside two small triangles
+    B: A circle with a single vertical line through its center, partly crossed by
+      two overlapping squares
+    A: A circle with a single horizontal line through its center, beside two small
+      triangles
     C: An ellipse (a flattened oval) with a single vertical line through its center
     D: A square with a single vertical line through its center
   answer: B
-  explain: Only this panel pairs a circular outline with a top-to-bottom line through the middle; the
-    two squares are extra clutter that does not erase the target.
+  explain: Only this panel pairs a circular outline with a top-to-bottom line through
+    the middle; the two squares are extra clutter that does not erase the target.
   distractors:
     A: The line inside its circle runs horizontally, not top to bottom.
     C: Its outline is an ellipse, not a circle.
     D: Its outline is a square, not a circle.
   chapter: hidden-figure
 - id: nmat-p1p-022
-  q: 'Target outline: a plus sign - one horizontal and one vertical stroke crossing exactly at their midpoints.
-    Which panel contains it?'
+  q: 'Target outline: a plus sign - one horizontal and one vertical stroke crossing
+    exactly at their midpoints. Which panel contains it?'
   choices:
-    C: One horizontal and one vertical stroke crossing at their midpoints, drawn over a zigzag line
+    C: One horizontal and one vertical stroke crossing at their midpoints, drawn over
+      a zigzag line
     A: Two diagonal strokes crossing at their midpoints, surrounded by four circles
     B: A vertical stroke meeting the end of a horizontal stroke, beside two triangles
-    D: One vertical stroke touching two parallel horizontal strokes without crossing either
+    D: One vertical stroke touching two parallel horizontal strokes without crossing
+      either
   answer: C
-  explain: Only this panel has a horizontal and a vertical stroke that cross at their midpoints, with
-    the zigzag merely clutter around them.
+  explain: Only this panel has a horizontal and a vertical stroke that cross at their
+    midpoints, with the zigzag merely clutter around them.
   distractors:
     A: Its two strokes are diagonal, forming an X rather than an upright plus.
     B: Its strokes meet end to end in an L shape; neither crosses the other.
@@ -358,126 +387,134 @@ items:
     C: A four-pointed star inside a circle
     D: A plain five-sided pentagon with no inner lines
   answer: A
-  explain: The rectangles are clutter; the five-pointed star is present underneath them, while the other
-    panels hold stars with the wrong number of points or none at all.
+  explain: The rectangles are clutter; the five-pointed star is present underneath
+    them, while the other panels hold stars with the wrong number of points or none
+    at all.
   distractors:
     B: That star has six points, not five.
     C: That star has only four points.
     D: A pentagon is a five-sided outline, not a five-pointed star.
   chapter: hidden-figure
 - id: nmat-p1p-024
-  q: Five panels are described left to right. (1) a circle drawn inside a triangle. (2) a triangle drawn
-    inside a circle. (3) a circle drawn inside a square. (4) a circle drawn inside a triangle, with a
-    small square in one corner. (5) two circles drawn inside a square. How many panels contain a circle
-    drawn inside a triangle?
+  q: Five panels are described left to right. (1) a circle drawn inside a triangle.
+    (2) a triangle drawn inside a circle. (3) a circle drawn inside a square. (4)
+    a circle drawn inside a triangle, with a small square in one corner. (5) two circles
+    drawn inside a square. How many panels contain a circle drawn inside a triangle?
   choices:
     D: '2'
     A: '1'
     B: '3'
     C: '4'
   answer: D
-  explain: Panels 1 and 4 each show a circle inside a triangle; panel 2 reverses the arrangement, panel
-    3 uses a square, and panel 5 has no triangle.
+  explain: Panels 1 and 4 each show a circle inside a triangle; panel 2 reverses the
+    arrangement, panel 3 uses a square, and panel 5 has no triangle.
   distractors:
-    A: That counts only panel 1; panel 4 still holds a circle inside a triangle even with the extra square.
-    B: That adds a panel whose circle is not inside a triangle - panel 2 is a triangle inside a circle
-      and panel 3 puts the circle inside a square.
+    A: That counts only panel 1; panel 4 still holds a circle inside a triangle even
+      with the extra square.
+    B: That adds a panel whose circle is not inside a triangle - panel 2 is a triangle
+      inside a circle and panel 3 puts the circle inside a square.
     C: That counts nearly every panel showing a circle, ignoring what surrounds it.
   chapter: hidden-figure
 - id: nmat-p1p-025
-  q: 'Target outline: a rectangle divided into two equal parts by a vertical line through its midpoint.
-    Which panel does NOT contain the target?'
+  q: 'Target outline: a rectangle divided into two equal parts by a vertical line
+    through its midpoint. Which panel does NOT contain the target?'
   choices:
     B: A rectangle with a horizontal line through its midpoint
-    A: A rectangle with a vertical line through its midpoint and a small circle in the lower-left corner
+    A: A rectangle with a vertical line through its midpoint and a small circle in
+      the lower-left corner
     C: A rectangle with a vertical line through its midpoint and one diagonal added
     D: A plain rectangle with a vertical line through its midpoint
   answer: B
-  explain: Its dividing line runs horizontally, so it splits the rectangle top and bottom rather than
-    left and right.
+  explain: Its dividing line runs horizontally, so it splits the rectangle top and
+    bottom rather than left and right.
   distractors:
     A: The circle is extra clutter; the rectangle is still split by a vertical midline.
     C: The diagonal is clutter; the vertical midline of the target is still there.
     D: That is the target drawn on its own, with no extra lines at all.
   chapter: hidden-figure
 - id: nmat-p1p-026
-  q: 'Target outline: two straight strokes joined end to end at a right angle (an L shape). Which panel
-    contains it?'
+  q: 'Target outline: two straight strokes joined end to end at a right angle (an
+    L shape). Which panel contains it?'
   choices:
     C: Two strokes joined end to end at a right angle, partly hidden by a shaded circle
     A: Two strokes crossing at their midpoints to form four right angles
     B: Two strokes joined end to end at a 45-degree angle
     D: Two parallel strokes lying side by side without touching
   answer: C
-  explain: The shaded circle is clutter laid over the target; the two strokes beneath it are still joined
-    end to end at 90 degrees.
+  explain: The shaded circle is clutter laid over the target; the two strokes beneath
+    it are still joined end to end at 90 degrees.
   distractors:
     A: Its strokes cross at their midpoints instead of being joined end to end.
     B: The angle between its strokes is 45 degrees, not 90.
     D: Its strokes never meet, so no corner is formed at all.
   chapter: hidden-figure
 - id: nmat-p1p-027
-  q: 'Target outline: an upward arrow - a vertical shaft with two slanted strokes rising to a single point
-    at the top of the shaft. Which panel contains it?'
+  q: 'Target outline: an upward arrow - a vertical shaft with two slanted strokes
+    rising to a single point at the top of the shaft. Which panel contains it?'
   choices:
-    A: A vertical shaft with two slanted strokes meeting in a point at its top, drawn across a field of
-      small circles
+    A: A vertical shaft with two slanted strokes meeting in a point at its top, drawn
+      across a field of small circles
     B: A vertical shaft with two slanted strokes meeting in a point at its bottom
     C: A vertical shaft with a horizontal bar across its top
-    D: A vertical shaft with two slanted strokes forming a V that opens upward at its top
+    D: A vertical shaft with two slanted strokes forming a V that opens upward at
+      its top
   answer: A
-  explain: The field of small circles is clutter; the shaft below it still carries two slanted strokes
-    meeting in a point at the top.
+  explain: The field of small circles is clutter; the shaft below it still carries
+    two slanted strokes meeting in a point at the top.
   distractors:
     B: Its arrowhead sits at the bottom of the shaft, so the arrow points down.
-    C: Its top is capped by a flat bar; the two slanted strokes of the arrowhead are missing.
+    C: Its top is capped by a flat bar; the two slanted strokes of the arrowhead are
+      missing.
     D: Its top strokes form a cup that opens upward, with no point at the top.
   chapter: hidden-figure
-  figure: items/ir-rot-arrow-1.svg
 - id: nmat-p1p-028
-  q: 'Target outline: a capital letter A - two slanted strokes meeting at a top point with a horizontal
-    crossbar between them. Which panel contains it?'
+  q: 'Target outline: a capital letter A - two slanted strokes meeting at a top point
+    with a horizontal crossbar between them. Which panel contains it?'
   choices:
-    D: Two slanted strokes meeting at a point at the top with a horizontal crossbar between them, printed
-      inside a bordered box
+    D: Two slanted strokes meeting at a point at the top with a horizontal crossbar
+      between them, printed inside a bordered box
     A: Two vertical strokes joined by a crossbar in the middle, among other letters
-    B: Two slanted strokes meeting at a point at the top with no crossbar, among other letters
-    C: Two slanted strokes meeting at a point at the bottom with no crossbar, among other letters
+    B: Two slanted strokes meeting at a point at the top with no crossbar, among other
+      letters
+    C: Two slanted strokes meeting at a point at the bottom with no crossbar, among
+      other letters
   answer: D
-  explain: The bordered box is clutter around the letter; the strokes and crossbar inside it are exactly
-    the target.
+  explain: The bordered box is clutter around the letter; the strokes and crossbar
+    inside it are exactly the target.
   distractors:
-    A: That is a capital H - both side strokes are vertical and meet no point at the top.
+    A: That is a capital H - both side strokes are vertical and meet no point at the
+      top.
     B: That is a capital V; the crossbar is missing.
     C: Its strokes meet at the bottom rather than the top, and it has no crossbar.
   chapter: hidden-figure
 - id: nmat-p1p-029
-  q: 'Target outline: a square with one diagonal, a single line joining two opposite corners. Which panel
-    contains it?'
+  q: 'Target outline: a square with one diagonal, a single line joining two opposite
+    corners. Which panel contains it?'
   choices:
     B: A square with both diagonals drawn, overlapped by a triangle
-    A: A square rotated 45 degrees with a line joining the midpoints of two opposite sides
+    A: A square rotated 45 degrees with a line joining the midpoints of two opposite
+      sides
     C: A rectangle, longer than it is wide, with one line joining two opposite corners
     D: A triangle with one line drawn from a corner to the opposite side
   answer: B
-  explain: 'The target is embedded in heavier clutter: of the two diagonals shown, either one together
-    with the square outline forms the target.'
+  explain: 'The target is embedded in heavier clutter: of the two diagonals shown,
+    either one together with the square outline forms the target.'
   distractors:
     A: Its line joins the midpoints of sides, not two corners, so it is not a diagonal.
     C: Its outline is a non-square rectangle, so the square of the target is missing.
     D: Its outline is a three-sided figure, not a four-sided square.
   chapter: hidden-figure
 - id: nmat-p1p-030
-  q: 'Target outline: a rectangle with a semicircle sitting on its top edge, flat side down (a tombstone
-    shape). Which panel contains it?'
+  q: 'Target outline: a rectangle with a semicircle sitting on its top edge, flat
+    side down (a tombstone shape). Which panel contains it?'
   choices:
     D: A rectangle with a semicircle on its top edge, flat side down
     A: A rectangle with a triangle on its top edge
     B: A rectangle with a semicircle hanging from its bottom edge
     C: A rectangle with a full circle sitting on its top edge
   answer: D
-  explain: This panel has the rectangle with a half-circle resting flat-side down on its top edge, exactly
-    the target outline.
+  explain: This panel has the rectangle with a half-circle resting flat-side down
+    on its top edge, exactly the target outline.
   distractors:
     A: A triangle caps its rectangle - the house shape, not a semicircle.
     B: Its semicircle is underneath, so the figure is the target turned upside down.

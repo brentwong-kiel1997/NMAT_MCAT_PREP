@@ -1,127 +1,96 @@
 paths:
 - id: nmat-part1-week
   title: NMAT Part 1 one-week sprint
-  blurb: 'CEM BOI mental-ability blocks: one subject deep drill daily plus timed full Part 1 every other
-    day.'
+  blurb: 'CEM BOI mental-ability blocks: one subject deep drill daily plus timed full
+    Part 1 every other day.'
   steps:
-  - zh: Verbal
-    en: Verbal
+  - en: Verbal
     href: /subjects/verbal/
-  - zh: Inductive Reasoning
-    en: Inductive Reasoning
+  - en: Inductive Reasoning
     href: /subjects/inductive-reasoning/
-  - zh: Quantitative Reasoning
-    en: Quantitative
+  - en: Quantitative
     href: /subjects/quantitative/
-  - zh: Perceptual Acuity
-    en: Perceptual Acuity
+  - en: Perceptual Acuity
     href: /subjects/perceptual-acuity/
-  - zh: Part 1 practice
-    en: Part 1 practice
+  - en: Part 1 practice
     href: /practice/verbal/
 - id: nmat-part2-sciences
   title: NMAT Part 2 sciences
-  blurb: Biology, Physics, Social Science, Chemistry — 30 items each. BOI-chapter notes plus per-subject
-    practice.
+  blurb: Biology, Physics, Social Science, Chemistry — 30 items each. BOI-chapter
+    notes plus per-subject practice.
   steps:
-  - zh: Biology
-    en: Biology
+  - en: Biology
     href: /subjects/biology/
-  - zh: Physics
-    en: Physics
+  - en: Physics
     href: /subjects/physics/
-  - zh: Social Science
-    en: Social Science
+  - en: Social Science
     href: /subjects/behavioral-social/
-  - zh: Chemistry
-    en: Chemistry
+  - en: Chemistry
     href: /subjects/chemistry/
-  - zh: Biology practice
-    en: Biology practice
+  - en: Biology practice
     href: /practice/biology/
 - id: mcat-science-core
   title: MCAT science core
-  blurb: Chem/Phys, Bio/Biochem, Psych/Soc along AAMC FC chapters; shared Biology/Chemistry/Physics notes
-    as foundation.
+  blurb: Chem/Phys, Bio/Biochem, Psych/Soc along AAMC FC chapters; shared Biology/Chemistry/Physics
+    notes as foundation.
   steps:
-  - zh: Chem/Phys
-    en: Chem/Phys
+  - en: Chem/Phys
     href: /subjects/chem-phys/
-  - zh: Bio/Biochem
-    en: Bio/Biochem
+  - en: Bio/Biochem
     href: /subjects/bio-biochem/
-  - zh: Psych/Soc
-    en: Psych/Soc
+  - en: Psych/Soc
     href: /subjects/psych-soc/
-  - zh: Biochemistry
-    en: Biochemistry
+  - en: Biochemistry
     href: /subjects/biochemistry/
-  - zh: Chem/Phys practice
-    en: Chem/Phys practice
+  - en: Chem/Phys practice
     href: /practice/chem-phys/
 - id: cars-verbal-skills
   title: CARS and verbal skills
-  blurb: MCAT CARS three skill axes plus NMAT Verbal analogies and reading — evidence and relations, not
-    science facts.
+  blurb: MCAT CARS three skill axes plus NMAT Verbal analogies and reading — evidence
+    and relations, not science facts.
   steps:
-  - zh: CARS
-    en: CARS
+  - en: CARS
     href: /subjects/cars/
-  - zh: Verbal
-    en: Verbal
+  - en: Verbal
     href: /subjects/verbal/
-  - zh: CARS practice
-    en: CARS practice
+  - en: CARS practice
     href: /practice/cars/
-  - zh: Verbal practice
-    en: Verbal practice
+  - en: Verbal practice
     href: /practice/verbal/
 - id: biochem-bridge
   title: Biochemistry bridge (NMAT↔MCAT)
-  blurb: From NMAT Chemistry·Biochemistry to MCAT FC1 (1A–1D) and FC1D metabolism — one note set for both
-    exams.
+  blurb: From NMAT Chemistry·Biochemistry to MCAT FC1 (1A–1D) and FC1D metabolism
+    — one note set for both exams.
   steps:
-  - zh: Chemistry (with biochemistry blocks)
-    en: Chemistry (biochem block)
+  - en: Chemistry (biochem block)
     href: /subjects/chemistry/
-  - zh: Biochemistry topics
-    en: Biochemistry
+  - en: Biochemistry
     href: /subjects/biochemistry/
-  - zh: Bio/Biochem
-    en: Bio/Biochem
+  - en: Bio/Biochem
     href: /subjects/bio-biochem/
-  - zh: Biochemistry practice
-    en: Biochemistry practice
+  - en: Biochemistry practice
     href: /practice/biochemistry/
 - id: exam-week-final
   title: Final-week review
   blurb: Glossary + formulas + miss drills + tips — no new major chapters.
   steps:
-  - zh: Glossary
-    en: Glossary
+  - en: Glossary
     href: /materials/glossary/
-  - zh: Exam tips
-    en: Exam tips
+  - en: Exam tips
     href: /materials/tips/
-  - zh: Checklists
-    en: Checklists
+  - en: Checklists
     href: /materials/checklists/
-  - zh: Practice hub
-    en: Practice hub
+  - en: Practice hub
     href: /practice/
 - id: daily-loop
   title: Daily 90-minute loop
   blurb: 30 min notes → 20 min cards → 30 min drills → 10 min coach.
   steps:
-  - zh: Materials desk
-    en: Materials desk
+  - en: Materials desk
     href: /materials/
-  - zh: Biology notes
-    en: Biology notes
+  - en: Biology notes
     href: /subjects/biology/
-  - zh: Biology practice
-    en: Biology practice
+  - en: Biology practice
     href: /practice/biology/
-  - zh: Study coach
-    en: Study coach
+  - en: Study coach
     href: /study/

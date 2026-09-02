@@ -182,8 +182,8 @@ di = 1 / (1 / 10 - 1 / 5)                      # magnifying-glass image distance
 assert near(abs(parse_num(PH[21]["choices"][PH[21]["answer"]])), abs(di)) and di < 0
 assert near(2 * 1.5 / 3, parse_num(PH[19]["choices"][PH[19]["answer"]]))
 assert "virtual" in PH[21]["choices"][PH[21]["answer"]] and "twice as tall" in PH[21]["choices"][PH[21]["answer"]]
-assert "441.5" in PH[20]["choices"]["C"] and "441.5" in PH[20]["choices"]["D"]
-assert near(883.0, parse_num(PH[20]["choices"]["A"]))
+assert "510.5" in PH[20]["choices"]["C"] and "510.5" in PH[20]["choices"]["D"]
+assert near(1021.0, parse_num(PH[20]["choices"]["A"]))
 assert "3 times per second" in PH[20]["choices"][PH[20]["answer"]]
 assert PH[11]["choices"][PH[11]["answer"]] == "48 microC"
 assert "48" in PH[11]["choices"]["D"] and " mC" in PH[11]["choices"]["D"]

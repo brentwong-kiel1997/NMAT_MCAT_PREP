@@ -7,7 +7,8 @@ points:
 - Attitude and behavior change
 notes:
 - Cognitive dissonance and dual-process persuasion
-- Habituation vs sensitization
+- Non-associative learning: habituation weakens a response, sensitization strengthens
+    it
 - 'Cognitive dissonance: attitude–behavior mismatch causes discomfort'
 - 'Peripheral route: persuasion via cues and emotion'
 practice:
@@ -20,4 +21,28 @@ practice:
     D: Rejecting all information
   answer: A
   explain: Central route uses logic and evidence; peripheral route uses cues and heuristics.
+  chapter: 7C · Attitude and behavior change
+- id: ps-22
+  q: A smoker who believes smoking is harmful keeps smoking, then begins telling friends
+    that the health evidence is inconclusive. This shift reduces…
+  choices:
+    A: the peripheral route to persuasion
+    B: cognitive dissonance, by changing a cognition to fit the behavior
+    C: the foot-in-the-door effect
+    D: reactance against the health message
+  answer: B
+  explain: Attitude–behavior mismatch creates dissonant tension; adding a counter-knowledge
+    ('evidence is inconclusive') is a classic cognition-change route to reduce it.
+  chapter: 7C · Attitude and behavior change
+- id: ps-23
+  q: A bright, jingle-heavy ad features a beloved celebrity holding a soft drink.
+    Viewers who then buy it were persuaded mainly through…
+  choices:
+    A: the central route, via careful analysis of the drink's merits
+    B: two-sided messaging that preempts counterarguments
+    C: cognitive dissonance about their previous brand choice
+    D: the peripheral route — source attractiveness and mood cues
+  answer: D
+  explain: No product arguments are given; positive cues (celebrity, music, color)
+    do the persuading, which defines the peripheral route.
   chapter: 7C · Attitude and behavior change

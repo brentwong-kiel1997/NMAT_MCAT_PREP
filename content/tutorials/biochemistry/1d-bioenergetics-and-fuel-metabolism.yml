@@ -64,7 +64,8 @@ sections:
       C: 3 NADH, 2 FADH2, 2 GTP
       D: 1 NADH, 1 FADH2, 1 GTP
     answer: B
-    explain: Three redox steps (2 boxes) — 3 NADH; plus FADH2 and GTP.
+    explain: Three NAD+-linked oxidation steps give 3 NADH; succinate dehydrogenase
+      gives FADH2; one GTP by substrate-level phosphorylation.
     distractors:
       A: One NADH short.
       B: Correct — 3 NADH, 1 FADH2, 1 GTP.
@@ -123,8 +124,8 @@ sections:
       B: Ketones spare glucose, not make it.
       D: Muscle stores glycogen locally.
 examples:
-- prompt: 'Calculate the net ATP from one glucose under aerobic conditions using the two-citrus accounting
-    (modern yields: NADH 2.5, FADH2 1.5).'
+- prompt: 'Calculate the net ATP from one glucose under aerobic conditions using modern
+    P/O accounting (NADH 2.5, FADH2 1.5).'
   solution:
   - 'Glycolysis net: 2 ATP + 2 NADH (cytosolic NADH ~2.5 each — malate shuttle) = 2 + 5 = 7.'
   - 'Pyruvate PDH: 2 NADH = 5.'

@@ -14,14 +14,14 @@ the single source of truth — there is no generated artifact to keep in sync.
 | Path | Contents | Scale |
 | --- | --- | --- |
 | `catalog.yml` | Subject ordering per exam kind, formula-sheet order, subject display labels | 13 labels |
-| `units.yml` | Two learning projects (NMAT/MCAT) split into study units with per-chapter exam annotations and cross-project links | 15 units |
+| `units.yml` | Two learning projects (NMAT/MCAT) split into study units with per-chapter exam annotations and cross-project links | 16 units |
 | `exams/nmat.yml` | NMAT structure: parts, timing, item counts, Part-2 subject links | 2 parts |
 | `exams/mcat.yml` | MCAT structure: sections, timing, discipline mix | 4 sections |
 | `chapters/<slug>.yml` | **The unified chapter library** — one file per unique chapter: title, discipline, exams, points, notes, practice items | 70 chapters |
 | `subjects/*.yml` | Exam-facing ordered reference lists over the library (group headings + chapter slugs) | 13 subjects |
 | `diseases/*.yml` | Disease articles (enrichment reading, not a clinical syllabus) | 8 articles |
-| `materials/glossary.yml` | Terms with definitions and subject tags (incl. reasoning-skill decks) | 115 terms |
-| `materials/formulas.yml` | Formula sheets grouped by subject | 108 entries |
+| `materials/glossary.yml` | Terms with definitions and subject tags (incl. reasoning-skill decks) | 146 terms |
+| `materials/formulas.yml` | Formula sheets grouped by subject | 114 entries |
 | `materials/tips.yml` | Exam strategy tips (NMAT / MCAT / BOTH) | 21 tips |
 | `materials/paths.yml` | Suggested study paths with step links | 7 paths |
 | `materials/checklists.yml` | Exam-day and study checklists | 3 lists |
@@ -40,18 +40,18 @@ records and must not change casually:
 
 1. `slug` fields (subjects, diseases, paths)
 2. Question `id` values (globally unique, e.g. `bio-1`)
-3. The order and titles of chapter outline items — chapter IDs are derived as
-   `ch-{index}-{slugified-title}` (index counts continuously across groups
-   within a subject). Renaming a chapter title or reordering items changes its
-   ID and orphans recorded progress.
+3. Chapter IDs — each chapter's `id` is its library file slug
+   (`chapters/<id>.yml`). Renaming a chapter file or changing its `id`
+   orphans recorded progress; old `ch-N-slug` style IDs from the outline era
+   are redirected, but new code should only use the file slug.
 
 **Bilingual history.** This pack was originally bilingual (Chinese/English) and
 is now English-only. Do not reintroduce paired-language fields; write plain
 English scalars.
 
-**Ordering is meaningful.** List order in `notes/`, `practice/`, `glossary`,
-`formulas`, `tips`, and `paths` files is display order. Do not sort entries
-when editing.
+**Ordering is meaningful.** List order in chapter `notes:`/`practice:` lists
+and in the `glossary`, `formulas`, `tips`, and `paths` files is display
+order. Do not sort entries when editing.
 
 **Escaping.** Use `allow_unicode: false`-safe plain text. Strings containing
 `: ` (colon + space) must be quoted in YAML.
@@ -111,7 +111,8 @@ Full textbook chapters live in `tutorials/<subject-slug>/<title-slug>.yml`.
 A chapter is keyed to exactly one outline chapter (`subject` + `chapter`
 must match an item in `subjects/`), so progress records and navigation stay
 consistent. The URL shape is `/tutorials/<subject>/<chapter-id>/`, where
-`chapter-id` is the derived `ch-N-slugified-title` value from the outline.
+`chapter-id` is the chapter library's file slug; legacy `ch-N-slug` IDs
+redirect to the slug form.
 
 Each chapter file carries the fields:
 

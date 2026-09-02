@@ -23,7 +23,7 @@ sections:
     answer: A
     explain: 17 electrons — fill to 3p5 (chlorine).
     distractors:
-      B: That is 18 electrons — argon.
+      B: That is 19 electrons — potassium.
       C: That is 16 electrons — sulfur.
       D: That is the noble gas after chlorine.
   figures:
@@ -171,7 +171,8 @@ passage:
     distractors:
       A: 0.1 times 0.5 times 40 = 2.0, not 0.5.
       B: Wrong volume calculation.
-      C: Double the correct amount.
+      C: Correct.
+      D: Double the correct amount.
   - q: What is the concentration of the HCl solution?
     options:
       A: 0.037 M

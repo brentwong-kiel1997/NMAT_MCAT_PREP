@@ -85,11 +85,11 @@ Legend: **✅ Published** · ⬜ Not started · Exams column shows each chapter'
 
 | # | Chapter | Exams | Status | Tutorial |
 |---|---|---|---|---|
-| 1 | 1A · Proteins and amino acids | MCAT | ✅ Published | [tutorial](tutorials/biochemistry/1a-proteins-and-amino-acids.yml) |
-| 2 | 1B · Gene to protein | MCAT | ✅ Published | [tutorial](tutorials/biochemistry/1b-gene-to-protein.yml) |
-| 3 | 1C · Heritable information & diversity | MCAT | ✅ Published | [tutorial](tutorials/biochemistry/1c-heritable-information-diversity.yml) |
-| 4 | 1D · Bioenergetics and fuel metabolism | MCAT | ✅ Published | [tutorial](tutorials/biochemistry/1d-bioenergetics-and-fuel-metabolism.yml) |
-| 5 | Chemistry of Biochemistry (CEM) | NMAT | ✅ Published | [tutorial](tutorials/biochemistry/chemistry-of-biochemistry-cem.yml) |
+| 1 | 1A · Proteins and amino acids | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biochemistry/1a-proteins-and-amino-acids.yml) |
+| 2 | 1B · Gene to protein | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biochemistry/1b-gene-to-protein.yml) |
+| 3 | 1C · Heritable information & diversity | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biochemistry/1c-heritable-information-diversity.yml) |
+| 4 | 1D · Bioenergetics and fuel metabolism | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biochemistry/1d-bioenergetics-and-fuel-metabolism.yml) |
+| 5 | Chemistry of Biochemistry (CEM) | NMAT · MCAT | ✅ Published | [tutorial](tutorials/biochemistry/chemistry-of-biochemistry-cem.yml) |
 
 
 ### CARS (cars) · 3 chapters

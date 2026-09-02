@@ -11,8 +11,8 @@ notes:
 - 'Ask: difference, ratio, or trend?'
 - Percent change ≠ percentage-point change
 - Mean pulled by extremes; median is more robust
-- 'Graph items: read axis labels and units first'
-- Mean is pulled by outliers; median is more robust
+- 'Truncated axes (y not starting at zero) exaggerate visual differences'
+- Scatter-plot correlation alone never establishes causation
 practice:
 - id: quant-1
   q: 'Data-interpretation items usually start by:'

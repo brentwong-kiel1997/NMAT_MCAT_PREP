@@ -7,16 +7,17 @@ _drill: true
 items_expected: 30
 items:
 - id: mcat-d-cp-001
-  q: Calcium carbonate decomposes according to CaCO3(s) → CaO(s) + CO2(g). What mass of CaCO3 (100. g/mol)
-    must decompose to give 11.2 L of CO2 measured at STP (22.4 L/mol)?
+  q: Calcium carbonate decomposes according to CaCO3(s) → CaO(s) + CO2(g). What mass
+    of CaCO3 (100. g/mol) must decompose to give 11.2 L of CO2 measured at STP (22.4
+    L/mol)?
   choices:
     A: 50.0 g
     B: 25 g
     C: 100. g
     D: 11.2 g
   answer: A
-  explain: n(CO2) = 11.2 L / 22.4 L/mol = 0.50 mol. The 1:1 stoichiometry gives 0.50 mol CaCO3, and 0.50
-    mol x 100. g/mol = 50.0 g.
+  explain: n(CO2) = 11.2 L / 22.4 L/mol = 0.50 mol. The 1:1 stoichiometry gives 0.50
+    mol CaCO3, and 0.50 mol x 100. g/mol = 50.0 g.
   distractors:
     B: Halved the mole ratio, as if 2 mol CaCO3 were needed per mol CO2.
     C: Assumed 1.00 mol of gas was collected instead of 0.50 mol.
@@ -24,7 +25,8 @@ items:
   chapter: general-chemistry
   passage_id: ''
 - id: mcat-d-cp-002
-  q: What volume of a 2.0 M stock solution is needed to prepare 500 mL of a 0.050 M working solution?
+  q: What volume of a 2.0 M stock solution is needed to prepare 500 mL of a 0.050
+    M working solution?
   choices:
     A: 5.0 mL
     B: 12.5 mL
@@ -39,18 +41,19 @@ items:
   chapter: analytical-chemistry
   passage_id: ''
 - id: mcat-d-cp-003
-  q: A 25.0 mL sample of HCl of unknown concentration requires 20.0 mL of 0.100 M NaOH to reach the equivalence
-    point. What is [HCl]?
+  q: A 25.0 mL sample of HCl of unknown concentration requires 20.0 mL of 0.100 M
+    NaOH to reach the equivalence point. What is [HCl]?
   choices:
     A: 0.125 M
     B: 0.0500 M
     C: 0.080 M
     D: 0.800 M
   answer: C
-  explain: mmol NaOH = 0.100 M x 20.0 mL = 2.00 mmol. HCl and NaOH react 1:1, so [HCl] = 2.00 mmol / 25.0
-    mL = 0.080 M.
+  explain: mmol NaOH = 0.100 M x 20.0 mL = 2.00 mmol. HCl and NaOH react 1:1, so [HCl]
+    = 2.00 mmol / 25.0 mL = 0.080 M.
   distractors:
-    A: Divided by the base volume and multiplied by the acid volume, inverting the ratio.
+    A: Divided by the base volume and multiplied by the acid volume, inverting the
+      ratio.
     B: Used only half of the delivered base volume, as if the flask held 50.0 mL.
     D: 'Slipped a decimal place: 2.0 mmol / 25.0 mL is 0.0800, not 0.800.'
   chapter: analytical-chemistry
@@ -63,7 +66,8 @@ items:
     C: '13'
     D: '11'
   answer: D
-  explain: NaOH fully dissociates, so [OH-] = 1.0 x 10^-3 M, pOH = 3.00 and pH = 14.00 - 3.00 = 11.
+  explain: NaOH fully dissociates, so [OH-] = 1.0 x 10^-3 M, pOH = 3.00 and pH = 14.00
+    - 3.00 = 11.
   distractors:
     A: Reported the pOH instead of the pH.
     B: Treated the solution as 10^-3 M HCl and took -log(10^-2) after a decimal error.
@@ -71,15 +75,16 @@ items:
   chapter: general-chemistry
   passage_id: ''
 - id: mcat-d-cp-005
-  q: A 0.10 M solution of a weak monoprotic acid HA has Ka = 1.0 x 10^-5. What is the pH? (Approximate
-    the equilibrium by x = sqrt(Ka C).)
+  q: A 0.10 M solution of a weak monoprotic acid HA has Ka = 1.0 x 10^-5. What is
+    the pH? (Approximate the equilibrium by x = sqrt(Ka C).)
   choices:
     A: '3.0'
     B: '5.0'
     C: '2.5'
     D: '6.0'
   answer: A
-  explain: '[H+] = sqrt(Ka C) = sqrt(1.0 x 10^-5 x 0.10) = 1.0 x 10^-3 M, so pH = 3.0.'
+  explain: '[H+] = sqrt(Ka C) = sqrt(1.0 x 10^-5 x 0.10) = 1.0 x 10^-3 M, so pH =
+    3.0.'
   distractors:
     B: Set [H+] equal to Ka itself instead of solving the equilibrium expression.
     C: 'Dropped the C: used [H+] = √Ka = 3.16e-3 M.'
@@ -87,15 +92,16 @@ items:
   chapter: general-chemistry
   passage_id: ''
 - id: mcat-d-cp-006
-  q: What is the freezing point of a 1.0 m solution of NaCl in water? (Kf = 1.86 °C kg/mol; assume ideal
-    behavior.)
+  q: What is the freezing point of a 1.0 m solution of NaCl in water? (Kf = 1.86 °C
+    kg/mol; assume ideal behavior.)
   choices:
     A: -1.9 °C
     B: -3.7 °C
     C: 3.7 °C
     D: -5.6 °C
   answer: B
-  explain: ΔTf = i Kf m = 2 x 1.86 x 1.0 = 3.72 °C, so the solution freezes at -3.7 °C.
+  explain: ΔTf = i Kf m = 2 x 1.86 x 1.0 = 3.72 °C, so the solution freezes at -3.7
+    °C.
   distractors:
     A: Forgot that NaCl is a strong electrolyte and used i = 1 instead of i = 2.
     C: Computed the magnitude of the depression but reported it as an elevation.
@@ -103,16 +109,16 @@ items:
   chapter: 5a-unique-nature-of-water-and-its-solutions
   passage_id: ''
 - id: mcat-d-cp-007
-  q: For the reaction N2(g) + 3 H2(g) → 2 NH3(g), ΔH° = -92.0 kJ/mol and ΔS° = -198 J/(mol·K). What is
-    ΔG° at 298 K?
+  q: For the reaction N2(g) + 3 H2(g) → 2 NH3(g), ΔH° = -92.0 kJ/mol and ΔS° = -198
+    J/(mol·K). What is ΔG° at 298 K?
   choices:
     A: -151 kJ/mol
     B: +33.0 kJ/mol
     C: -33.0 kJ/mol
     D: -92.0 kJ/mol
   answer: C
-  explain: ΔG° = ΔH° - TΔS° = -92.0 kJ/mol - (298 K)(-0.198 kJ/mol·K) = -92.0 + 59.0 = -33.0 kJ/mol, so
-    the reaction is spontaneous at 298 K.
+  explain: ΔG° = ΔH° - TΔS° = -92.0 kJ/mol - (298 K)(-0.198 kJ/mol·K) = -92.0 + 59.0
+    = -33.0 kJ/mol, so the reaction is spontaneous at 298 K.
   distractors:
     A: Added -TΔS° as if ΔS° were positive, subtracting another 59 kJ.
     B: Flipped the overall sign; the reaction is spontaneous as written.
@@ -120,15 +126,17 @@ items:
   chapter: 5e-chemical-thermodynamics-and-kinetics
   passage_id: ''
 - id: mcat-d-cp-008
-  q: A drug is eliminated by first-order kinetics with a rate constant of 0.0693 min^-1. How long does
-    it take for the plasma concentration to fall to 25% of its initial value?
+  q: A drug is eliminated by first-order kinetics with a rate constant of 0.0693 min^-1.
+    How long does it take for the plasma concentration to fall to 25% of its initial
+    value?
   choices:
     A: 10 min
     B: 5.0 min
     C: 40. min
     D: 20 min
   answer: D
-  explain: t1/2 = 0.693/k = 0.693/0.0693 = 10 min. Falling to 25% takes two half-lives, so t = 20 min.
+  explain: t1/2 = 0.693/k = 0.693/0.0693 = 10 min. Falling to 25% takes two half-lives,
+    so t = 20 min.
   distractors:
     A: Stopped after one half-life, at which point 50% remains.
     B: Used half of one half-life as if the fraction were linear.
@@ -136,8 +144,8 @@ items:
   chapter: 5e-chemical-thermodynamics-and-kinetics
   passage_id: ''
 - id: mcat-d-cp-009
-  q: A reaction obeys the rate law rate = k[A][B]^2. If [A] is doubled and [B] is tripled, by what factor
-    does the initial rate increase?
+  q: A reaction obeys the rate law rate = k[A][B]^2. If [A] is doubled and [B] is
+    tripled, by what factor does the initial rate increase?
   choices:
     A: '18'
     B: '6'
@@ -152,15 +160,16 @@ items:
   chapter: 5e-chemical-thermodynamics-and-kinetics
   passage_id: ''
 - id: mcat-d-cp-010
-  q: On a thin-layer chromatography plate the solvent front travels 6.0 cm from the origin while a spot
-    travels 3.0 cm. What is the Rf of the compound?
+  q: On a thin-layer chromatography plate the solvent front travels 6.0 cm from the
+    origin while a spot travels 3.0 cm. What is the Rf of the compound?
   choices:
     A: '2.0'
     B: '0.50'
     C: '0.25'
     D: 3.0 cm
   answer: B
-  explain: Rf = distance moved by spot / distance moved by solvent front = 3.0/6.0 = 0.50.
+  explain: Rf = distance moved by spot / distance moved by solvent front = 3.0/6.0
+    = 0.50.
   distractors:
     A: Divided the solvent-front distance by the spot distance, inverting Rf.
     C: Used half of the spot distance, as if the solvent front were at 12 cm.
@@ -168,7 +177,8 @@ items:
   chapter: 5c-separation-and-purification-methods
   passage_id: ''
 - id: mcat-d-cp-011
-  q: How much heat is required to vaporize 0.50 mol of water at 100 °C? (ΔHvap = 40.7 kJ/mol)
+  q: How much heat is required to vaporize 0.50 mol of water at 100 °C? (ΔHvap = 40.7
+    kJ/mol)
   choices:
     A: 81.4 kJ
     B: 10.2 kJ
@@ -183,15 +193,16 @@ items:
   chapter: 5b-molecules-and-intermolecular-interactions
   passage_id: ''
 - id: mcat-d-cp-012
-  q: Complete hydrogenation of 1.0 mol of linoleic acid (C18H32O2), which contains two carbon-carbon double
-    bonds, requires what mass of H2 (2.0 g/mol)?
+  q: Complete hydrogenation of 1.0 mol of linoleic acid (C18H32O2), which contains
+    two carbon-carbon double bonds, requires what mass of H2 (2.0 g/mol)?
   choices:
     A: 2.0 g
     B: 8.0 g
     C: 1.0 g
     D: 4.0 g
   answer: D
-  explain: Each C=C consumes 1 mol H2, so 2 mol H2 = 2 x 2.0 g = 4.0 g of hydrogen per mol of acid.
+  explain: Each C=C consumes 1 mol H2, so 2 mol H2 = 2 x 2.0 g = 4.0 g of hydrogen
+    per mol of acid.
   distractors:
     A: Counted only one of the two double bonds.
     B: Assumed four double bonds and consumed 4 mol of hydrogen.
@@ -199,8 +210,8 @@ items:
   chapter: 5d-biologically-relevant-molecules
   passage_id: ''
 - id: mcat-d-cp-013
-  q: A synthesis has a theoretical yield of 10.0 g. If 7.5 g of purified product is isolated, what is
-    the percent yield?
+  q: A synthesis has a theoretical yield of 10.0 g. If 7.5 g of purified product is
+    isolated, what is the percent yield?
   choices:
     A: 75%
     B: 133%
@@ -215,8 +226,8 @@ items:
   chapter: organic-chemistry
   passage_id: ''
 - id: mcat-d-cp-014
-  q: What is the pressure exerted by 0.50 mol of an ideal gas held at 300 K in a 12.3 L vessel? (R = 0.0821
-    L·atm/mol·K)
+  q: What is the pressure exerted by 0.50 mol of an ideal gas held at 300 K in a 12.3
+    L vessel? (R = 0.0821 L·atm/mol·K)
   choices:
     A: 0.50 atm
     B: 1.0 atm
@@ -231,15 +242,16 @@ items:
   chapter: general-chemistry
   passage_id: ''
 - id: mcat-d-cp-015
-  q: A galvanic cell couples Cu2+/Cu (E°red = +0.34 V) with Zn2+/Zn (E°red = -0.76 V), with copper reduced
-    at the cathode. What is E°cell?
+  q: A galvanic cell couples Cu2+/Cu (E°red = +0.34 V) with Zn2+/Zn (E°red = -0.76
+    V), with copper reduced at the cathode. What is E°cell?
   choices:
     A: +0.42 V
     B: +0.76 V
     C: +1.10 V
     D: -1.10 V
   answer: C
-  explain: E°cell = E°cathode - E°anode(reduction) = 0.34 - (-0.76) = +1.10 V; zinc is oxidized.
+  explain: E°cell = E°cathode - E°anode(reduction) = 0.34 - (-0.76) = +1.10 V; zinc
+    is oxidized.
   distractors:
     A: Reversed the cathode and anode magnitudes (0.76 − 0.34).
     B: Reported the zinc electrode potential alone.
@@ -247,23 +259,27 @@ items:
   chapter: 4c-electrochemistry-and-electrical-circuits
   passage_id: ''
 - id: mcat-d-cp-016
-  q: Two identical 4.0 Ω resistors are connected in parallel across a 12 V battery of negligible internal
-    resistance. What is the total current delivered by the battery?
+  q: Two identical 4.0 Ω resistors are connected in parallel across a 12 V battery
+    of negligible internal resistance. What is the total current delivered by the
+    battery?
   choices:
     A: 1.5 A
     B: 12. A
     C: 3.0 A
     D: 6.0 A
   answer: D
-  explain: R_eq = 4.0/2 = 2.0 Ω for two equal parallel resistors, so I = V/R_eq = 12/2.0 = 6.0 A.
+  explain: R_eq = 4.0/2 = 2.0 Ω for two equal parallel resistors, so I = V/R_eq =
+    12/2.0 = 6.0 A.
   distractors:
-    A: Added the resistances as if they were in series (8.0 Ω) before applying Ohm's law.
+    A: Added the resistances as if they were in series (8.0 Ω) before applying Ohm's
+      law.
     B: Took the equivalent resistance to be 1.0 Ω rather than 2.0 Ω.
     C: Found the correct 6.0 A but divided by the number of parallel branches.
   chapter: 4c-electrochemistry-and-electrical-circuits
   passage_id: ''
 - id: mcat-d-cp-017
-  q: A 15 Ω heating element is connected to a 120 V supply. At what rate does it dissipate energy?
+  q: A 15 Ω heating element is connected to a 120 V supply. At what rate does it dissipate
+    energy?
   choices:
     A: 960 W
     B: 8.0 W
@@ -278,15 +294,16 @@ items:
   chapter: electricity-and-magnetism
   passage_id: ''
 - id: mcat-d-cp-018
-  q: A 10 µF capacitor charges through a 100 kΩ resistor. What is the time constant of the circuit?
+  q: A 10 µF capacitor charges through a 100 kΩ resistor. What is the time constant
+    of the circuit?
   choices:
     A: 1.0 x 10^6 s
     B: 1.0 s
     C: 1.0 x 10^-1 s
     D: 10. s
   answer: B
-  explain: τ = RC = (1.0 x 10^5 Ω)(1.0 x 10^-5 F) = 1.0 s; the capacitor reaches 63% of full charge in
-    that time.
+  explain: τ = RC = (1.0 x 10^5 Ω)(1.0 x 10^-5 F) = 1.0 s; the capacitor reaches 63%
+    of full charge in that time.
   distractors:
     A: Misread the capacitance as 10 F instead of 1e-5 F.
     C: Used R = 10 kΩ, a thousandfold slip on the resistor value.
@@ -294,8 +311,8 @@ items:
   chapter: 4c-electrochemistry-and-electrical-circuits
   passage_id: ''
 - id: mcat-d-cp-019
-  q: A stone is dropped from rest from a 20 m cliff. Ignoring air resistance and taking g = 10 m/s^2,
-    what is its speed just before impact?
+  q: A stone is dropped from rest from a 20 m cliff. Ignoring air resistance and taking
+    g = 10 m/s^2, what is its speed just before impact?
   choices:
     A: 40. m/s
     B: 14 m/s
@@ -310,15 +327,16 @@ items:
   chapter: 4a-motion-forces-work-energy-equilibrium
   passage_id: ''
 - id: mcat-d-cp-020
-  q: A 2.0 kg block at rest on a frictionless surface is pushed by a constant 10 N force through 5.0 m.
-    What is its final speed?
+  q: A 2.0 kg block at rest on a frictionless surface is pushed by a constant 10 N
+    force through 5.0 m. What is its final speed?
   choices:
     A: 5.0 m/s
     B: 10. m/s
     C: 50. m/s
     D: 7.1 m/s
   answer: D
-  explain: W = Fd = 10 x 5.0 = 50 J, and W = ½mv^2 gives v = sqrt(2 x 50/2.0) = 7.1 m/s.
+  explain: W = Fd = 10 x 5.0 = 50 J, and W = ½mv^2 gives v = sqrt(2 x 50/2.0) = 7.1
+    m/s.
   distractors:
     A: Omitted the factor of two and used v = sqrt(W/m).
     B: Ignored the mass and used v = sqrt(2W).
@@ -326,8 +344,9 @@ items:
   chapter: mechanics
   passage_id: ''
 - id: mcat-d-cp-021
-  q: Blood flowing at 30 cm/s through a vessel of cross-sectional area 3.0 cm² enters a bed whose total
-    cross-sectional area is 900 cm². What is the flow speed in the bed?
+  q: Blood flowing at 30 cm/s through a vessel of cross-sectional area 3.0 cm² enters
+    a bed whose total cross-sectional area is 900 cm². What is the flow speed in the
+    bed?
   choices:
     A: 0.10 cm/s
     B: 300 cm/s
@@ -342,8 +361,8 @@ items:
   chapter: 4b-fluids-for-circulation-and-gas-exchange
   passage_id: ''
 - id: mcat-d-cp-022
-  q: Ice has a density of 0.92 g/cm³ and freshwater 1.00 g/cm³. What fraction of a floating ice cube's
-    volume is submerged?
+  q: Ice has a density of 0.92 g/cm³ and freshwater 1.00 g/cm³. What fraction of a
+    floating ice cube's volume is submerged?
   choices:
     A: 8.0%
     B: 92%
@@ -354,35 +373,38 @@ items:
   distractors:
     A: Reported the fraction above the surface rather than below it.
     C: Took half of the correct value, as if only half the weight were supported.
-    D: Divided the water density by the ice density, giving a physically impossible value above 100%.
+    D: Divided the water density by the ice density, giving a physically impossible
+      value above 100%.
   chapter: 4b-fluids-for-circulation-and-gas-exchange
   passage_id: ''
 - id: mcat-d-cp-023
-  q: An object stands 30 cm from a converging lens of focal length 10 cm. How far from the lens does the
-    image form?
+  q: An object stands 60 cm from a converging lens of focal length 15 cm. How far
+    from the lens does the image form?
   choices:
-    A: 7.5 cm
-    B: 20. cm
-    C: 15 cm
-    D: 30. cm
+    A: 12 cm
+    B: 45 cm
+    C: 20 cm
+    D: 60 cm
   answer: C
-  explain: 1/f = 1/do + 1/di gives 1/di = 1/10 - 1/30 = 2/30, so di = 15 cm; m = -di/do = -0.5, so the
-    image is real, inverted and half size.
+  explain: 1/f = 1/do + 1/di gives 1/di = 1/15 - 1/60 = 3/60, so di = 20 cm; m = -di/do
+    = -1/3, so the image is real, inverted and one-third size.
   distractors:
-    A: 'Sign error: 1/di = 1/do + 1/f (10 + 30 ⇒ 7.5 cm).'
-    B: Subtracted 10 from 30 (do − f = 20) instead of using the lens equation.
+    A: 'Sign error: 1/di = 1/do + 1/f (15 + 60 gives 12 cm).'
+    B: Subtracted 15 from 60 (do - f = 45) instead of using the lens equation.
     D: Assumed the image forms at the object distance.
   chapter: vibrations-waves-and-optics
   passage_id: ''
 - id: mcat-d-cp-024
-  q: Light passes from vacuum into glass of refractive index 1.5. What is its speed in the glass?
+  q: Light passes from vacuum into glass of refractive index 1.5. What is its speed
+    in the glass?
   choices:
     A: 4.5 x 10^8 m/s
     B: 1.5 x 10^8 m/s
     C: 3.0 x 10^8 m/s
     D: 2.0 x 10^8 m/s
   answer: D
-  explain: v = c/n = (3.0 x 10^8 m/s)/1.5 = 2.0 x 10^8 m/s (the frequency, not the speed, is fixed).
+  explain: v = c/n = (3.0 x 10^8 m/s)/1.5 = 2.0 x 10^8 m/s (the frequency, not the
+    speed, is fixed).
   distractors:
     A: Multiplied c by n instead of dividing, exceeding the vacuum speed of light.
     B: Halved c twice, once for n = 1.5 and once more for no reason.
@@ -390,7 +412,8 @@ items:
   chapter: 4d-light-and-sound-interacting-with-matter
   passage_id: ''
 - id: mcat-d-cp-025
-  q: A tuning fork emits a 170 Hz tone in air, where the speed of sound is 340 m/s. What is the wavelength?
+  q: A tuning fork emits a 170 Hz tone in air, where the speed of sound is 340 m/s.
+    What is the wavelength?
   choices:
     A: 2.0 m
     B: 0.50 m
@@ -405,15 +428,16 @@ items:
   chapter: vibrations-waves-and-optics
   passage_id: ''
 - id: mcat-d-cp-026
-  q: A 440 Hz ambulance siren drives directly toward a stationary listener at 34 m/s. Taking the speed
-    of sound as 340 m/s, what frequency does the listener hear?
+  q: A 440 Hz ambulance siren drives directly toward a stationary listener at 34 m/s.
+    Taking the speed of sound as 340 m/s, what frequency does the listener hear?
   choices:
     A: 400 Hz
     B: 489 Hz
     C: 396 Hz
     D: 440 Hz
   answer: B
-  explain: f' = f v/(v - vs) = 440 x 340/(340 - 34) = 440 x 340/306 ≈ 489 Hz, an upward shift.
+  explain: f' = f v/(v - vs) = 440 x 340/(340 - 34) = 440 x 340/306 ≈ 489 Hz, an upward
+    shift.
   distractors:
     A: Applied the receding-source formula with (v + vs) in the denominator.
     C: Multiplied by 0.9 instead of dividing by 0.9 when the source approached.
@@ -421,8 +445,8 @@ items:
   chapter: 4d-light-and-sound-interacting-with-matter
   passage_id: ''
 - id: mcat-d-cp-027
-  q: Light of wavelength 400 nm (E = 1240 eV·nm/λ) strikes a metal whose work function is 2.1 eV. What
-    is the maximum kinetic energy of the emitted photoelectrons?
+  q: Light of wavelength 400 nm (E = 1240 eV·nm/λ) strikes a metal whose work function
+    is 2.1 eV. What is the maximum kinetic energy of the emitted photoelectrons?
   choices:
     A: 3.1 eV
     B: 5.2 eV
@@ -437,8 +461,8 @@ items:
   chapter: modern-physics
   passage_id: ''
 - id: mcat-d-cp-028
-  q: A 20 g sample of a radionuclide has a half-life of 5.0 days. What mass remains undecayed after 15
-    days?
+  q: A 20 g sample of a radionuclide has a half-life of 5.0 days. What mass remains
+    undecayed after 15 days?
   choices:
     A: 10. g
     B: 1.25 g
@@ -453,8 +477,8 @@ items:
   chapter: modern-physics
   passage_id: ''
 - id: mcat-d-cp-029
-  q: A reversible heat engine absorbs 1000 J per cycle from a reservoir at 600 K and rejects heat to a
-    reservoir at 300 K. How much work does it do per cycle?
+  q: A reversible heat engine absorbs 1000 J per cycle from a reservoir at 600 K and
+    rejects heat to a reservoir at 300 K. How much work does it do per cycle?
   choices:
     A: 500 J
     B: 1000 J
@@ -465,12 +489,14 @@ items:
   distractors:
     B: Assumed all the absorbed heat becomes work, which violates the second law.
     C: Applied the efficiency formula twice, using η² instead of η.
-    D: Used the cold-reservoir temperature as the efficiency and applied it to 1000 J.
+    D: Used the cold-reservoir temperature as the efficiency and applied it to 1000
+      J.
   chapter: thermodynamics
   passage_id: ''
 - id: mcat-d-cp-030
-  q: A protein solution in a 1.0 cm cuvette has molar absorptivity 5.0 x 10^3 M^-1 cm^-1 and concentration
-    2.0 x 10^-5 M. What absorbance does a spectrophotometer read?
+  q: A protein solution in a 1.0 cm cuvette has molar absorptivity 5.0 x 10^3 M^-1
+    cm^-1 and concentration 2.0 x 10^-5 M. What absorbance does a spectrophotometer
+    read?
   choices:
     A: '1.0'
     B: '0.10'

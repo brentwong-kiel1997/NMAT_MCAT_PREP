@@ -40,23 +40,30 @@ practice:
   explain: 'For incompressible flow: A₁v₁ = A₂v₂.'
   chapter: 4B · Fluids for circulation and gas exchange
 - id: phy-10
-  q: 'By Bernoulli’s principle (ideal, steady, incompressible flow), where a pipe narrows:'
+  q: 'By Bernoulli’s principle (ideal, steady, incompressible flow), where a pipe
+    narrows:'
   choices:
     A: Speed rises and static pressure drops
     B: Speed falls and static pressure rises
     C: Both speed and pressure stay constant
     D: Density must be zero
   answer: A
-  explain: Continuity (Av = constant) raises speed in a narrow region; Bernoulli links higher speed to
-    lower static pressure.
+  explain: Continuity (Av = constant) raises speed in a narrow region; Bernoulli links
+    higher speed to lower static pressure.
   chapter: 4B · Fluids for circulation and gas exchange
 - id: phy-11
-  q: In ideal flow, what happens to speed where a pipe narrows?
+  q: Under laminar flow, an arteriole's radius falls to half its original value. By
+    Poiseuille's law (flow ∝ r⁴), the flow rate becomes…
   choices:
-    A: Decreases
-    B: Increases
-    C: Stays the same
-    D: Becomes zero
-  answer: B
-  explain: 'Continuity: A₁v₁=A₂v₂; smaller area means higher speed.'
+    A: One-quarter of the original
+    B: One-eighth of the original
+    C: One-half of the original
+    D: One-sixteenth of the original
+  answer: D
+  explain: (1/2)⁴ = 1/16 — flow scales with the fourth power of radius, which is why
+    even small plaque buildup sharply raises resistance.
   chapter: 4B · Fluids for circulation and gas exchange
+  distractors:
+    A: Squared the radius change (r²) instead of applying the fourth power.
+    B: Multiplied the halving out three times; the exponent is four, not three.
+    C: Assumed flow scales linearly with radius — Poiseuille is far steeper.

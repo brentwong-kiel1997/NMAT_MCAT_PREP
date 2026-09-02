@@ -16,12 +16,38 @@ notes:
 - 'Theory of planned behavior: attitude, subjective norm, perceived control'
 practice:
 - id: beh-7
-  q: 'Cognitive dissonance theory predicts that when attitudes and behavior clash, people often:'
+  q: 'Cognitive dissonance theory predicts that when attitudes and behavior clash,
+    people often:'
   choices:
     A: Change attitudes or reinterpret behavior to reduce discomfort
     B: Permanently lose memory
     C: Only increase arousal with no psychological change
     D: Always admit error immediately
   answer: A
-  explain: Inconsistency is aversive, motivating attitude/belief shifts to restore consistency.
+  explain: Inconsistency is aversive, motivating attitude/belief shifts to restore
+    consistency.
+  chapter: FC7 · Behavior and behavior change
+- id: beh-24
+  q: After a month on a busy street, a resident no longer notices the nightly traffic
+    noise. This change in responsiveness is…
+  choices:
+    A: sensitization, because the stimulus repeats
+    B: habituation — a repeated, harmless stimulus stops eliciting the response
+    C: classical conditioning to the traffic sounds
+    D: shaping by successive approximations
+  answer: B
+  explain: Repeated exposure to a non-harmful stimulus weakens the orienting response
+    — non-associative habituation, not sensitization (which strengthens responses).
+  chapter: FC7 · Behavior and behavior change
+- id: beh-25
+  q: Ajzen's theory of planned behavior predicts intention from attitude, subjective
+    norm, and one more factor — which?
+  choices:
+    A: outcome expectancy
+    B: self-monitoring style
+    C: perceived behavioral control
+    D: response efficacy
+  answer: C
+  explain: Perceived behavioral control — how easy or hard the person judges the behavior
+    to be — is the theory's distinctive third predictor.
   chapter: FC7 · Behavior and behavior change
