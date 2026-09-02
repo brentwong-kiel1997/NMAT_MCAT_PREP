@@ -18,6 +18,16 @@ urlpatterns = [
     ),
     path("manage/models/", coach_admin.manage_models, name="manage_models"),
     path(
+        "manage/models/<int:provider_id>/edit/",
+        coach_admin.manage_model_edit,
+        name="manage_model_edit",
+    ),
+    path(
+        "manage/models/<int:provider_id>/test/",
+        coach_admin.manage_model_test,
+        name="manage_model_test",
+    ),
+    path(
         "manage/models/<int:provider_id>/",
         coach_admin.manage_model_action,
         name="manage_model_action",

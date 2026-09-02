@@ -51,8 +51,10 @@ def chat_completion(
     *,
     max_tokens: int = 1200,
     temperature: float = 0.4,
+    provider: AIProvider | None = None,
+    timeout: int = 90,
 ) -> str:
-    provider = active_provider()
+    provider = provider or active_provider()
     if provider is None:
         raise RuntimeError(
             "No AI model is configured. Ask an admin to add one under "
@@ -65,11 +67,13 @@ def chat_completion(
         )
     base = provider.base_url.rstrip("/")
     if provider.api_style == "anthropic":
-        return _call_anthropic(provider, base, messages, max_tokens, temperature)
-    return _call_openai_style(provider, base, messages, max_tokens, temperature)
+        return _call_anthropic(provider, base, messages, max_tokens, temperature,
+                               timeout)
+    return _call_openai_style(provider, base, messages, max_tokens, temperature,
+                              timeout)
 
 
-def _post(url: str, headers: dict, payload: dict):
+def _post(url: str, headers: dict, payload: dict, timeout: int = 90):
     req = urllib.request.Request(
         url,
         data=json.dumps(payload).encode("utf-8"),
@@ -77,7 +81,7 @@ def _post(url: str, headers: dict, payload: dict):
         method="POST",
     )
     try:
-        with urllib.request.urlopen(req, timeout=90) as resp:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
             return json.loads(resp.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
         body = exc.read().decode("utf-8", errors="replace")[:400]
@@ -87,7 +91,8 @@ def _post(url: str, headers: dict, payload: dict):
 
 
 def _call_openai_style(
-    provider, base: str, messages: list[dict], max_tokens: int, temperature: float
+    provider, base: str, messages: list[dict], max_tokens: int, temperature: float,
+    timeout: int = 90,
 ) -> str:
     payload: dict = {
         "model": provider.model_id,
@@ -103,6 +108,7 @@ def _call_openai_style(
         f"{base}/chat/completions",
         {"Authorization": f"Bearer {provider.api_key}"},
         payload,
+        timeout,
     )
     try:
         message = data["choices"][0]["message"]
@@ -121,7 +127,8 @@ def _call_openai_style(
 
 
 def _call_anthropic(
-    provider, base: str, messages: list[dict], max_tokens: int, temperature: float
+    provider, base: str, messages: list[dict], max_tokens: int, temperature: float,
+    timeout: int = 90,
 ) -> str:
     system = "\n\n".join(m["content"] for m in messages if m["role"] == "system")
     convo = [m for m in messages if m["role"] != "system"]
@@ -140,6 +147,7 @@ def _call_anthropic(
             "anthropic-version": "2023-06-01",
         },
         payload,
+        timeout,
     )
     try:
         parts = [

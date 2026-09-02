@@ -1,0 +1,73 @@
+{% extends "portal/base.html" %}
+
+{% block title %}Edit {{ provider.name }} · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">Admin · AI models</p>
+    <h1>Edit {{ provider.name }}</h1>
+    <p class="lead">Change identity, endpoint, or model id. The stored API key is
+      encrypted at rest — leave the key field blank to keep it.</p>
+  </div>
+</div>
+
+<section class="section">
+  {% if messages %}
+  <ul class="flash-msgs">
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <article class="block">
+    <form class="auth-form" method="post">
+      {% csrf_token %}
+      {% if edit_error == "invalid" %}
+      <p class="form-error">Name, style, https base URL, and model id are required.</p>
+      {% elif edit_error == "exists" %}
+      <p class="form-error">A model with that name already exists.</p>
+      {% endif %}
+      <label>
+        <span>Display name</span>
+        <input type="text" name="name" value="{{ provider.name }}" required autocomplete="off">
+      </label>
+      <label>
+        <span>API style</span>
+        <select name="api_style">
+          {% for value, label in styles %}
+          <option value="{{ value }}" {% if provider.api_style == value %}selected{% endif %}>{{ label }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label>
+        <span>Base URL</span>
+        <input type="url" name="base_url" value="{{ provider.base_url }}" required autocomplete="off">
+      </label>
+      <label>
+        <span>Model id</span>
+        <input type="text" name="model_id" value="{{ provider.model_id }}" required autocomplete="off">
+      </label>
+      <label>
+        <span>API key</span>
+        <input type="password" name="api_key" autocomplete="new-password"
+               placeholder="{% if key_tail %}····{{ key_tail }} — leave blank to keep{% else %}not set — enter sk-…{% endif %}">
+        <small class="muted-inline">{% if key_tail %}Stored key ends in {{ key_tail }}. Type a new key only to replace it (it will be re-encrypted).{% else %}No key stored yet — the coach cannot call this model until one is set.{% endif %}</small>
+      </label>
+      <label class="check-row">
+        <input type="checkbox" name="make_active" {% if provider.is_active %}checked{% endif %}>
+        <span>Make this the current model</span>
+      </label>
+      <div class="user-actions">
+        <button class="btn btn-primary" type="submit">Save changes</button>
+        <a class="btn" href="{% url 'manage_models' %}">Cancel</a>
+      </div>
+    </form>
+  </article>
+
+  <p class="note-line">After saving, use <strong>Test</strong> on the model list to verify
+    the endpoint answers before making it current.</p>
+</section>
+{% endblock %}

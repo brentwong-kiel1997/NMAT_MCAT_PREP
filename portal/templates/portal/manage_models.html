@@ -9,7 +9,8 @@
     <p class="section-kicker">Admin</p>
     <h1>AI models</h1>
     <p class="lead">The study coach calls whichever model is marked current. Add any
-      OpenAI-compatible endpoint or an Anthropic API key; keys stay on this server.</p>
+      OpenAI-compatible endpoint or an Anthropic API key; keys are encrypted at rest
+      and never shown again — only their last 4 characters.</p>
   </div>
 </div>
 
@@ -22,7 +23,37 @@
   </ul>
   {% endif %}
 
-  <article class="block" style="margin-bottom:2rem;">
+  <h2>Configured models</h2>
+  {% if providers %}
+  <ul class="user-admin-list">
+    {% for p in providers %}
+    <li>
+      <div>
+        <strong>{{ p.name }}</strong>
+        {% if p.is_active %}<span class="badge-staff">current</span>{% endif %}
+        <p class="muted-inline">{{ p.get_api_style_display }} · {{ p.base_url }} ·
+          {{ p.model_id }}</p>
+        <p class="muted-inline">
+          {% if p.key_set %}key ····{{ p.key_tail }}{% else %}<strong>no API key set</strong>{% endif %}
+          · updated {{ p.updated_at|date:"M d, H:i" }}
+        </p>
+      </div>
+      <div class="user-actions">
+        <a class="btn" href="{% url 'manage_model_edit' p.id %}">Edit</a>
+        <form method="post" action="{% url 'manage_model_test' p.id %}">{% csrf_token %}<button type="submit" {% if not p.key_set %}disabled title="Set an API key first"{% endif %}>Test</button></form>
+        {% if not p.is_active %}
+        <form method="post" action="{% url 'manage_model_action' p.id %}">{% csrf_token %}<input type="hidden" name="action" value="activate"><button type="submit">Set current</button></form>
+        {% endif %}
+        <form method="post" action="{% url 'manage_model_action' p.id %}" onsubmit="return confirm('Delete model {{ p.name }}?')">{% csrf_token %}<input type="hidden" name="action" value="delete"><button type="submit">Delete</button></form>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="muted-inline">No models yet — the study coach is offline until one is added.</p>
+  {% endif %}
+
+  <article class="block" style="margin-top:2rem;">
     <h2>Add a model</h2>
     <form class="auth-form" method="post">
       {% csrf_token %}
@@ -62,29 +93,5 @@
       <button class="btn btn-primary" type="submit">Add model</button>
     </form>
   </article>
-
-  <h2>Configured models</h2>
-  {% if providers %}
-  <ul class="user-admin-list">
-    {% for p in providers %}
-    <li>
-      <div>
-        <strong>{{ p.name }}</strong>
-        {% if p.is_active %}<span class="badge-staff">current</span>{% endif %}
-        <p class="muted-inline">{{ p.get_api_style_display }} · {{ p.base_url }} ·
-          {{ p.model_id }} · key ···{{ p.api_key|slice:"-4:" }}</p>
-      </div>
-      <div class="user-actions">
-        {% if not p.is_active %}
-        <form method="post" action="{% url 'manage_model_action' p.id %}">{% csrf_token %}<input type="hidden" name="action" value="activate"><button type="submit">Set current</button></form>
-        {% endif %}
-        <form method="post" action="{% url 'manage_model_action' p.id %}" onsubmit="return confirm('Delete model {{ p.name }}?')">{% csrf_token %}<input type="hidden" name="action" value="delete"><button type="submit">Delete</button></form>
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-  <p class="muted-inline">No models yet — the study coach is offline until one is added.</p>
-  {% endif %}
 </section>
 {% endblock %}

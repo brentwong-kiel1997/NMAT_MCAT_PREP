@@ -456,6 +456,98 @@ class RateLimitTests(TestCase):
         self.assertEqual(res.status_code, 429)
 
 
+class ManageModelsTests(TestCase):
+    """Admin model-config page: edit identity/endpoint, replace the encrypted
+    key, and test connectivity — staff only."""
+
+    def setUp(self):
+        self.admin = User.objects.create_user("staffadmin", password="pw-123456789",
+                                              is_staff=True)
+        self.peasant = User.objects.create_user("pleb", password="pw-123456789")
+        self.provider = AIProvider.objects.create(
+            name="Old Name", api_style="openai",
+            base_url="https://api.example.com/v1", model_id="m1",
+        )
+        self.provider.set_api_key("sk-live-abcdef1234")
+        self.provider.save(update_fields=["api_key_enc", "updated_at"])
+        self.old_cipher = self.provider.api_key_enc
+        self.client = Client()
+
+    def _post_edit(self, **overrides):
+        payload = {
+            "name": "New Name", "api_style": "openai",
+            "base_url": "https://api.example.com/v1", "model_id": "m2",
+            "api_key": "",
+        }
+        payload.update(overrides)
+        return self.client.post(f"/manage/models/{self.provider.id}/edit/", payload)
+
+    def test_non_staff_redirected(self):
+        self.client.force_login(self.peasant)
+        res = self.client.get(f"/manage/models/{self.provider.id}/edit/")
+        self.assertEqual(res.status_code, 302)
+        self.client.force_login(self.admin)
+        self.assertEqual(
+            self.client.get(f"/manage/models/{self.provider.id}/edit/").status_code, 200)
+
+    def test_edit_updates_fields_and_keeps_key_when_blank(self):
+        self.client.force_login(self.admin)
+        res = self._post_edit()
+        self.assertEqual(res.status_code, 302)
+        self.provider.refresh_from_db()
+        self.assertEqual(self.provider.name, "New Name")
+        self.assertEqual(self.provider.model_id, "m2")
+        self.assertEqual(self.provider.api_key_enc, self.old_cipher)  # unchanged
+        self.assertEqual(self.provider.api_key, "sk-live-abcdef1234")
+
+    def test_edit_with_new_key_reencrypts(self):
+        self.client.force_login(self.admin)
+        self._post_edit(api_key="sk-replacement-999")
+        self.provider.refresh_from_db()
+        self.assertNotEqual(self.provider.api_key_enc, self.old_cipher)
+        self.assertEqual(self.provider.api_key, "sk-replacement-999")
+        self.assertTrue(self.provider.api_key_enc.startswith("gAAAA"))
+
+    def test_name_uniqueness_excludes_self(self):
+        # renaming yourself to your own name is fine…
+        self.client.force_login(self.admin)
+        self.assertEqual(self._post_edit(name="Old Name").status_code, 302)
+        # …but stealing another model's name is not
+        other = AIProvider.objects.create(
+            name="Other Model", api_style="openai",
+            base_url="https://other.example.com/v1", model_id="m9",
+        )
+        res = self.client.post(f"/manage/models/{other.id}/edit/", {
+            "name": "Old Name", "api_style": "openai",
+            "base_url": "https://other.example.com/v1", "model_id": "m9",
+            "api_key": "",
+        })
+        self.assertContains(res, "already exists")
+
+    def test_edit_invalid_base_url_rejected(self):
+        self.client.force_login(self.admin)
+        res = self._post_edit(base_url="ftp://nope")
+        self.assertContains(res, "required")
+
+    def test_test_action_reports_unreachable_endpoint(self):
+        self.provider.base_url = "http://127.0.0.1:1/v1"  # nothing listens
+        self.provider.save(update_fields=["base_url"])
+        self.client.force_login(self.admin)
+        res = self.client.post(f"/manage/models/{self.provider.id}/test/",
+                               follow=True)
+        messages = [str(m) for m in res.context["messages"]]
+        self.assertTrue(any("test FAILED" in m for m in messages), messages)
+
+    def test_test_action_without_key(self):
+        self.provider.set_api_key("")
+        self.provider.save(update_fields=["api_key_enc", "updated_at"])
+        self.client.force_login(self.admin)
+        res = self.client.post(f"/manage/models/{self.provider.id}/test/",
+                               follow=True)
+        messages = [str(m) for m in res.context["messages"]]
+        self.assertTrue(any("no API key set" in m for m in messages), messages)
+
+
 class ContentValidationTests(TestCase):
     def test_validate_content_green(self):
         call_command("validate_content", verbosity=0)
