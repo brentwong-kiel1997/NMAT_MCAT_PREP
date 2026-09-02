@@ -25,3 +25,27 @@ practice:
   answer: B
   explain: Light slows in a denser medium; the refracted ray bends toward the normal.
   chapter: Vibrations, Waves, and Optics
+- id: vibrations-waves-and-optics-p1
+  q: 'A wave has frequency 120 Hz and wavelength 2.5 m. Its speed is:'
+  choices:
+    A: 122.5 m/s
+    B: 300 m/s
+    C: 48 m/s
+    D: 0.021 m/s
+  answer: B
+  explain: v = fλ = 120 × 2.5 = 300 m/s. 48 m/s divides instead of multiplying, 122.5
+    m/s adds the numbers, and 0.021 m/s inverts the ratio.
+  chapter: Vibrations, Waves, and Optics
+- id: vibrations-waves-and-optics-p2
+  q: 'A 0.50 kg mass hangs from a spring with k = 200 N/m. The oscillation period
+    is about:'
+  choices:
+    A: 0.016 s
+    B: 12.6 s
+    C: 0.05 s
+    D: 0.31 s
+  answer: D
+  explain: T = 2π√(m/k) = 2π√(0.50/200) = 2π(0.05) ≈ 0.31 s. Dropping the 2π gives
+    0.05 s, omitting the square root gives 0.016 s, and 12.6 s is 1/f rather than
+    T.
+  chapter: Vibrations, Waves, and Optics

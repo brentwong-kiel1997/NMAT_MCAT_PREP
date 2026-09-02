@@ -22,20 +22,31 @@ practice:
 - id: cp-7
   q: 'Half-life is:'
   choices:
-    A: Time for activity of a radionuclide to fall by half
-    B: Time for any reaction to reach 50% completion (general kinetics)
-    C: Electron orbital radius
-    D: Half the speed of light
-  answer: A
+    A: Half the speed of light
+    B: Electron orbital radius
+    C: Time for activity of a radionuclide to fall by half
+    D: Time for any reaction to reach 50% completion (general kinetics)
+  answer: C
   explain: Radioactive decay is exponential; half-life is the characteristic time for first-order decay.
   chapter: 4E · Atoms, nuclear decay, electronic structure
 - id: cp-8
   q: 'In the photoelectric effect, raising intensity (above threshold frequency) mainly increases:'
   choices:
-    A: Max KE per electron
-    B: Number of electrons emitted per time
-    C: Work function
-    D: Threshold frequency
-  answer: B
+    A: Threshold frequency
+    B: Work function
+    C: Max KE per electron
+    D: Number of electrons emitted per time
+  answer: D
   explain: Intensity sets photon count → photocurrent; frequency sets max KE.
+  chapter: 4E · Atoms, nuclear decay, electronic structure
+- id: 4e-atoms-nuclear-decay-electronic-structure-p1
+  q: A radionuclide has a half-life of 8.0 days. Of an 80 mg sample, how much remains after 24 days?
+  choices:
+    A: 40 mg
+    B: 2.5 mg
+    C: 20 mg
+    D: 10 mg
+  answer: D
+  explain: 24 days = 3 half-lives, so 80 → 40 → 20 → 10 mg. 20 mg counts only two half-lives, 2.5 mg four,
+    and 40 mg one.
   chapter: 4E · Atoms, nuclear decay, electronic structure

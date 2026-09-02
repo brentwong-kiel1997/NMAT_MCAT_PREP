@@ -23,5 +23,29 @@ practice:
     C: Linking only lipids
     D: Containing no nitrogen
   answer: A
-  explain: Resonance gives the peptide bond planarity and restricted rotation, shaping the protein backbone.
+  explain: Resonance gives the peptide bond planarity and restricted rotation, shaping
+    the protein backbone.
+  chapter: Biochemistry
+- id: biochemistry-p1
+  q: 'An enzyme has Km = 2 mM. The substrate concentration at which velocity equals
+    half of Vmax is:'
+  choices:
+    A: 4 mM
+    B: 1 mM
+    C: 2 mM
+    D: Indeterminate without knowing Vmax
+  answer: C
+  explain: By definition Km is the substrate concentration giving half-maximal velocity,
+    so it is 2 mM. Vmax does not set that point.
+  chapter: Biochemistry
+- id: biochemistry-p2
+  q: 'During catabolism, NAD⁺ and FAD mainly act as:'
+  choices:
+    A: Structural components of membranes
+    B: Mobile redox carriers that accept electrons and hydrogens for oxidative phosphorylation
+    C: Peptide signaling molecules
+    D: Hydrolytic enzymes
+  answer: B
+  explain: 'NAD⁺ and FAD are coenzyme electron carriers: reduced to NADH/FADH₂, they
+    shuttle electrons to the electron transport chain.'
   chapter: Biochemistry

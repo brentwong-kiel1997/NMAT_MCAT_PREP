@@ -22,21 +22,32 @@ practice:
 - id: bb-6
   q: 'A defining feature of stem cells is:'
   choices:
-    A: Self-renewal plus differentiation potential
-    B: Inability to divide
-    C: Loss of the nucleus
-    D: Production of only one terminal cell type ever
-  answer: A
+    A: Loss of the nucleus
+    B: Production of only one terminal cell type ever
+    C: Self-renewal plus differentiation potential
+    D: Inability to divide
+  answer: C
   explain: Stem cells replenish themselves and can differentiate; potency varies by stem-cell type.
   chapter: 2C · Cell division, differentiation, specialization
 - id: bio-9
   q: 'After mitosis, daughter cells have chromosome number:'
   choices:
-    A: Halved
-    B: The same as the parent (diploidy maintained)
-    C: Quadrupled
-    D: Randomly variable
-  answer: B
+    A: Quadrupled
+    B: Randomly variable
+    C: Halved
+    D: The same as the parent (diploidy maintained)
+  answer: D
   explain: Mitosis duplicates then evenly partitions chromosomes, yielding genetically identical diploid
     daughters.
+  chapter: 2C · Cell division, differentiation, specialization
+- id: 2c-cell-division-differentiation-specialization-p1
+  q: 'Entry into M phase is triggered by:'
+  choices:
+    A: Hydrolysis of GTP by the ribosome
+    B: Loss of the G₁ checkpoint
+    C: MPF, the active cyclin B–CDK1 complex
+    D: Telomerase extending chromosome ends
+  answer: C
+  explain: Cyclin B binding activates CDK1, forming MPF, which phosphorylates targets that launch mitosis.
+    Cyclin–CDK complexes are the cycle's drivers.
   chapter: 2C · Cell division, differentiation, specialization

@@ -27,3 +27,28 @@ practice:
   answer: A
   explain: The perceptual system tends to organize one region as figure and the rest as ground.
   chapter: FC6 · Perceive, think, react
+- id: fc6-perceive-think-react-p7
+  q: 'You can tell 100 g from 105 g, but not 1,000 g from 1,005 g — you need about 1,050 g. This illustrates:'
+  choices:
+    A: Sensory adaptation lowering receptor output over time
+    B: An absolute threshold fixed at about 5 g for all weights
+    C: 'Weber''s law: the just noticeable difference is a roughly constant fraction of the baseline intensity'
+    D: Signal detection bias, since hits and false alarms depend on motivation
+  answer: C
+  explain: Weber's law states the JND scales proportionally with stimulus magnitude (here about 5%), rather
+    than staying at a fixed absolute value. Adaptation concerns sustained stimulation, and signal detection
+    concerns willingness to report, not discriminable difference.
+  chapter: FC6 · Perceive, think, react
+- id: fc6-perceive-think-react-p8
+  q: 'A clerk must hold the digits 4, 8, 1, 7, 2, 9, 5, 0 in working memory. The most effective way to
+    raise effective capacity is to:'
+  choices:
+    A: Chunk them as 4817 and 2950 — two meaningful units instead of eight items
+    B: Repeat each digit separately with a pause between them
+    C: Keep staring at the digits until receptor adaptation stops competing for attention
+    D: Switch to System 1 and let the fast heuristic route store the digits
+  answer: A
+  explain: Working memory holds only a few items, but chunking packs more information into each unit —
+    the basis of phone-number grouping. Repeating items one by one stays at eight items, adaptation is
+    a receptor phenomenon, and System 1 is the fast heuristic route, not a storage expansion.
+  chapter: FC6 · Perceive, think, react

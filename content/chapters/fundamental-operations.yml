@@ -34,3 +34,15 @@ practice:
   answer: B
   explain: 'Cross-multiply: 9x=36 → x=4.'
   chapter: Fundamental Operations
+- id: fundamental-operations-p7
+  q: A tax rate rises from 4% to 5%. Which statement is correct?
+  choices:
+    A: It rose by 25 percentage points
+    B: It rose by 0.25 percentage points
+    C: It rose by 4 percentage points
+    D: It rose by 1 percentage point, which is a 25% relative increase
+  answer: D
+  explain: 'Percentage points subtract the rates: 5 − 4 = 1 point. Relative percent change divides by
+    the baseline: 1 ÷ 4 = 25%. Option A promotes the relative figure to points, B swaps the two, C uses
+    the old rate as the change.'
+  chapter: Fundamental Operations

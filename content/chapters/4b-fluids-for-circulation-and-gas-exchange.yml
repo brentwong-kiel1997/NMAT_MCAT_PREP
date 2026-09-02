@@ -22,46 +22,45 @@ practice:
 - id: cp-1
   q: 'A small drop in vessel radius typically makes laminar flow:'
   choices:
-    A: Almost unchanged
-    B: Drop sharply (highly radius-sensitive)
-    C: Must rise
+    A: Must rise
+    B: Almost unchanged
+    C: Drop sharply (highly radius-sensitive)
     D: Independent of radius
-  answer: B
+  answer: C
   explain: Poiseuille flow scales with radius to the fourth power.
   chapter: 4B · Fluids for circulation and gas exchange
 - id: phy-2
   q: 'The continuity equation for ideal flow mainly says:'
   choices:
-    A: Smaller area → higher speed (volume flow conserved)
+    A: Temperature must rise
     B: Pressure is equal everywhere
-    C: Temperature must rise
-    D: Density must be zero
-  answer: A
+    C: Density must be zero
+    D: Smaller area → higher speed (volume flow conserved)
+  answer: D
   explain: 'For incompressible flow: A₁v₁ = A₂v₂.'
   chapter: 4B · Fluids for circulation and gas exchange
 - id: phy-10
-  q: 'By Bernoulli’s principle (ideal, steady, incompressible flow), where a pipe
-    narrows:'
+  q: 'By Bernoulli’s principle (ideal, steady, incompressible flow), where a pipe narrows:'
   choices:
-    A: Speed rises and static pressure drops
+    A: Both speed and pressure stay constant
     B: Speed falls and static pressure rises
-    C: Both speed and pressure stay constant
-    D: Density must be zero
-  answer: A
-  explain: Continuity (Av = constant) raises speed in a narrow region; Bernoulli links
-    higher speed to lower static pressure.
+    C: Density must be zero
+    D: Speed rises and static pressure drops
+  answer: D
+  explain: Continuity (Av = constant) raises speed in a narrow region; Bernoulli links higher speed to
+    lower static pressure.
   chapter: 4B · Fluids for circulation and gas exchange
 - id: phy-11
-  q: Under laminar flow, an arteriole's radius falls to half its original value. By
-    Poiseuille's law (flow ∝ r⁴), the flow rate becomes…
+  q: Under laminar flow, an arteriole's radius falls to half its original value. By Poiseuille's law (flow
+    ∝ r⁴), the flow rate becomes…
   choices:
     A: One-quarter of the original
     B: One-eighth of the original
     C: One-half of the original
     D: One-sixteenth of the original
   answer: D
-  explain: (1/2)⁴ = 1/16 — flow scales with the fourth power of radius, which is why
-    even small plaque buildup sharply raises resistance.
+  explain: (1/2)⁴ = 1/16 — flow scales with the fourth power of radius, which is why even small plaque
+    buildup sharply raises resistance.
   chapter: 4B · Fluids for circulation and gas exchange
   distractors:
     A: Squared the radius change (r²) instead of applying the fourth power.

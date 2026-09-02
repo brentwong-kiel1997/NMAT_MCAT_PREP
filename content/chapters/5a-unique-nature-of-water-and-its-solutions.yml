@@ -22,20 +22,31 @@ practice:
 - id: cp-3
   q: 'A strong electrolyte in aqueous solution:'
   choices:
-    A: Ionizes almost completely
-    B: Does not ionize at all
-    C: Exists only as neutral molecules
-    D: Cannot conduct electricity
-  answer: A
+    A: Does not ionize at all
+    B: Exists only as neutral molecules
+    C: Cannot conduct electricity
+    D: Ionizes almost completely
+  answer: D
   explain: E.g., NaCl and strong acids/bases dissociate nearly fully; weak electrolytes dissociate partially.
   chapter: 5A · Unique nature of water and its solutions
 - id: chem-8
   q: 'Hydrogen bonding in water mainly contributes to its high specific heat by:'
   choices:
-    A: Absorbing heat to break H-bonds without large temperature rise
-    B: Making water boil at 0 °C
-    C: Eliminating intermolecular forces
+    A: Making water boil at 0 °C
+    B: Eliminating intermolecular forces
+    C: Absorbing heat to break H-bonds without large temperature rise
     D: Making water a strong electrolyte
-  answer: A
+  answer: C
   explain: The H-bond network stores thermal energy, buffering temperature swings—critical for life.
+  chapter: 5A · Unique nature of water and its solutions
+- id: 5a-unique-nature-of-water-and-its-solutions-p1
+  q: 'A buffer uses a weak acid with pKa = 4.8. If [A⁻]/[HA] = 10, the pH is:'
+  choices:
+    A: '3.8'
+    B: '4.8'
+    C: '5.8'
+    D: '48'
+  answer: C
+  explain: 'Henderson–Hasselbalch: pH = pKa + log([A⁻]/[HA]) = 4.8 + log 10 = 5.8. 3.8 subtracts the log
+    term, 4.8 ignores the ratio, 48 misreads the ratio as a percentage.'
   chapter: 5A · Unique nature of water and its solutions

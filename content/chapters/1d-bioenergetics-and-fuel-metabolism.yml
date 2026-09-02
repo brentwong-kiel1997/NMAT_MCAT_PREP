@@ -24,50 +24,52 @@ practice:
 - id: bb-5
   q: 'The terminal electron acceptor in aerobic respiration is:'
   choices:
-    A: O₂
-    B: N₂
-    C: CO₂
-    D: Glucose
-  answer: A
+    A: Glucose
+    B: CO₂
+    C: O₂
+    D: N₂
+  answer: C
   explain: Complex IV passes electrons to O₂ forming H₂O, completing the ETC.
   chapter: 1D · Bioenergetics and fuel metabolism
 - id: bb-8
-  q: 'Oxidative phosphorylation directly depends on:'
+  q: After an all-out sprint, muscle lactate travels to the liver, is converted back to glucose, and returns
+    to the muscle. This shuttle is the…
   choices:
-    A: Golgi vesicle traffic
-    B: Inner-membrane proton gradient driving ATP synthase
-    C: Nuclear transcription
-    D: Cytoskeletal contraction
-  answer: B
-  explain: ETC pumps protons; ATP synthase uses the return flow to make ATP.
+    A: malate–aspartate shuttle
+    B: glycerol-3-phosphate shuttle
+    C: enterohepatic circulation
+    D: Cori cycle
+  answer: D
+  explain: Muscle lactate → liver gluconeogenesis → blood glucose → muscle is the Cori cycle; it recycles
+    the anaerobic burden and clears lactate.
   chapter: 1D · Bioenergetics and fuel metabolism
 - id: bioc-2
   q: 'Oxidative phosphorylation most directly depends on:'
   choices:
-    A: A proton gradient across the inner mitochondrial membrane
-    B: Nuclear transcription rate
-    C: Plasma-membrane cholesterol alone
-    D: Golgi budding
-  answer: A
+    A: Golgi budding
+    B: Plasma-membrane cholesterol alone
+    C: Nuclear transcription rate
+    D: A proton gradient across the inner mitochondrial membrane
+  answer: D
   explain: ETC pumps protons; ATP synthase uses the return flow.
   chapter: 1D · Bioenergetics and fuel metabolism
 - id: bioc-6
   q: 'The net products of glycolysis per glucose are:'
   choices:
-    A: 2 ATP, 2 NADH, 2 pyruvate
-    B: 38 ATP, no NADH
-    C: Only CO₂
-    D: Only O₂
-  answer: A
+    A: Only O₂
+    B: Only CO₂
+    C: 38 ATP, no NADH
+    D: 2 ATP, 2 NADH, 2 pyruvate
+  answer: D
   explain: Glycolysis occurs in the cytosol; 2 ATP invested and 4 produced → net 2 ATP plus 2 NADH.
   chapter: 1D · Bioenergetics and fuel metabolism
 - id: bch-9
   q: 'Net ATP from glycolysis per glucose is about:'
   choices:
-    A: '0'
-    B: '2'
-    C: '32'
-    D: 36–38
-  answer: B
+    A: 36–38
+    B: '32'
+    C: '2'
+    D: '0'
+  answer: C
   explain: Uses 2 and makes 4 → net 2 ATP (plus NADH).
   chapter: 1D · Bioenergetics and fuel metabolism

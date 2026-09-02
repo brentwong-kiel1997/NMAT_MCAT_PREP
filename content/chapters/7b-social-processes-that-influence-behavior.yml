@@ -21,3 +21,28 @@ practice:
   answer: A
   explain: Asch showed group pressure can make people give clearly wrong answers.
   chapter: 7B · Social processes that influence behavior
+- id: 7b-social-processes-that-influence-behavior-p7
+  q: 'A committee member does far less on a group report than she would have alone, because no one can
+    tell which sections were hers. This is:'
+  choices:
+    A: Social facilitation on a difficult task
+    B: Obedience to an authority figure
+    C: Social loafing — individual effort drops when contributions are not identifiable
+    D: Groupthink
+  answer: C
+  explain: Social loafing is reduced individual effort in a group task, driven by diffusion of responsibility
+    and anonymity. Social facilitation is the opposite direction (presence of others boosts performance
+    on easy/well-learned tasks), and obedience requires a direct order.
+  chapter: 7B · Social processes that influence behavior
+- id: 7b-social-processes-that-influence-behavior-p8
+  q: 'In Milgram''s obedience studies, the highest shock-delivery rates occurred when:'
+  choices:
+    A: The legitimate authority stayed present in the room and issued the order in person
+    B: The learner was moved into the same room and could be touched
+    C: The experimenter left and gave instructions by telephone
+    D: The study was run in a plain office building instead of a university
+  answer: A
+  explain: Obedience rose with the authority's presence and legitimacy and fell when the victim was closer,
+    when the experimenter departed, or when the setting looked less institutional — the opposite of the
+    tempting distractors.
+  chapter: 7B · Social processes that influence behavior

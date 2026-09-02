@@ -22,5 +22,32 @@ practice:
     C: Odor
     D: Radioactivity alone
   answer: A
-  explain: Negatively charged DNA migrates toward the anode; shorter fragments move faster.
+  explain: Negatively charged DNA migrates toward the anode; shorter fragments move
+    faster.
+  chapter: 5C · Separation and purification methods
+- id: 5c-separation-and-purification-methods-p1
+  q: 'On a TLC plate a spot migrates 3.6 cm from the origin while the solvent front
+    travels 6.0 cm. The Rf value is:'
+  choices:
+    A: '0.40'
+    B: '1.67'
+    C: '0.36'
+    D: '0.60'
+  answer: D
+  explain: Rf = spot distance / solvent-front distance = 3.6/6.0 = 0.60. 0.40 uses
+    the 2.4 cm gap instead, 1.67 inverts the ratio, and 0.36 divides by an arbitrary
+    10 cm.
+  chapter: 5C · Separation and purification methods
+- id: 5c-separation-and-purification-methods-p2
+  q: 'High-pressure liquid chromatography (HPLC) improves on simple column chromatography
+    because:'
+  choices:
+    A: High pressure forces the mobile phase through tightly packed fine media, raising
+      resolution and speed
+    B: It separates compounds by volatility instead of polarity
+    C: It separates only charged species
+    D: It needs no stationary phase
+  answer: A
+  explain: HPLC's high pressure permits finer packing, giving more theoretical plates
+    — better resolution in less time. Volatility is gas chromatography.
   chapter: 5C · Separation and purification methods

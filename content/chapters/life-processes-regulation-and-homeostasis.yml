@@ -23,7 +23,8 @@ practice:
     C: Increase mutation rate
     D: Block all physiological change
   answer: B
-  explain: Negative feedback opposes drift from set points; positive feedback amplifies (e.g., labor).
+  explain: Negative feedback opposes drift from set points; positive feedback amplifies
+    (e.g., labor).
   chapter: 'Life Processes: Regulation and Homeostasis'
 - id: bio-7
   q: Insulin raises or lowers blood glucose?
@@ -33,5 +34,18 @@ practice:
     C: Has no effect on glucose
     D: Affects only blood calcium
   answer: B
-  explain: Insulin drives glucose into cells and promotes glycogen/fat synthesis, lowering blood glucose.
+  explain: Insulin drives glucose into cells and promotes glycogen/fat synthesis,
+    lowering blood glucose.
+  chapter: 'Life Processes: Regulation and Homeostasis'
+- id: life-processes-regulation-and-homeostasis-p1
+  q: Which of these is a positive-feedback loop?
+  choices:
+    A: Insulin lowering blood glucose after a meal
+    B: Sweating reducing a rise in body temperature
+    C: ADP accumulation slowing ATP use in the cell
+    D: Oxytocin intensifying uterine contractions during labor
+  answer: D
+  explain: Labor contractions drive more oxytocin release, which strengthens contractions
+    — amplification toward an endpoint. The other loops oppose a change and are negative
+    feedback.
   chapter: 'Life Processes: Regulation and Homeostasis'

@@ -18,11 +18,35 @@ practice:
 - id: bio-10
   q: 'Compared with viruses, prokaryotic cells typically have:'
   choices:
-    A: Ribosomes and cytoplasm capable of independent metabolism
-    B: A membrane-bound nucleus
-    C: Replication only inside a host
+    A: A membrane-bound nucleus
+    B: Replication only inside a host
+    C: Ribosomes and cytoplasm capable of independent metabolism
     D: No genetic material
-  answer: A
+  answer: C
   explain: Prokaryotes are free-living cells; viruses depend on host machinery and lack full cellular
     organization.
+  chapter: 2B · Prokaryotes and viruses
+- id: 2b-prokaryotes-and-viruses-p1
+  q: 'A bacteriophage genome integrates into the host chromosome and is copied passively as the cell divides.
+    This is the:'
+  choices:
+    A: Lytic cycle
+    B: Assembly phase
+    C: Lysogenic cycle
+    D: Attachment phase
+  answer: C
+  explain: Lysogeny integrates prophage DNA into the host chromosome; the lytic cycle instead immediately
+    replicates, assembles, and lyses the cell.
+  chapter: 2B · Prokaryotes and viruses
+- id: 2b-prokaryotes-and-viruses-p2
+  q: Which resistance mechanism lets a bacterium keep an antibiotic concentration below its own intracellular
+    level?
+  choices:
+    A: Enzymatic degradation of the drug
+    B: Mutation of the drug's target
+    C: Loss of the cell wall
+    D: Efflux pumping of the drug out of the cell
+  answer: D
+  explain: Efflux pumps export the drug; the other listed resistance routes are enzymatic degradation
+    and target change, not active export.
   chapter: 2B · Prokaryotes and viruses

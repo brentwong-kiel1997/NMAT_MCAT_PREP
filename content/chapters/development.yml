@@ -22,6 +22,29 @@ practice:
     C: All cells become functionally identical
     D: All protein synthesis stops
   answer: B
-  explain: Differentiation arises from regulated gene expression, not wholesale DNA change (except somatic
-    mutations).
+  explain: Differentiation arises from regulated gene expression, not wholesale DNA
+    change (except somatic mutations).
+  chapter: Development
+- id: development-p1
+  q: 'A morphogen gradient patterns an embryo field mainly by:'
+  choices:
+    A: Cells reading concentration thresholds and adopting different fates
+    B: Every cell expressing an identical gene set
+    C: Triggering uniform apoptosis across the field
+    D: Applying mechanical compression to the tissue
+  answer: A
+  explain: Cells respond to morphogen concentration thresholds, so one gradient specifies
+    several fates and sets body axes and organ positions.
+  chapter: Development
+- id: development-p2
+  q: How does stem-cell potency change across development?
+  choices:
+    A: It increases as tissues specialize
+    B: It stays the same from zygote to adult tissue
+    C: Potency applies only to plant cells
+    D: 'It narrows: early cells are totipotent/pluripotent and later cells are progressively
+      restricted'
+  answer: D
+  explain: Potency decreases with developmental stage — a zygote is totipotent, later
+    stem cells are multipotent, and most mature cells are terminally differentiated.
   chapter: Development

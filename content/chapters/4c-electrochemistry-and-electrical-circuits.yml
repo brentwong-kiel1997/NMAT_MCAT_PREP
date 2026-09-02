@@ -21,11 +21,34 @@ practice:
 - id: cp-4
   q: 'In a series circuit, the current:'
   choices:
-    A: Is the same through each element
-    B: Differs randomly at each element
-    C: Is always zero
-    D: Exists only inside the battery
-  answer: A
+    A: Differs randomly at each element
+    B: Exists only inside the battery
+    C: Is the same through each element
+    D: Is always zero
+  answer: C
   explain: One path in series → charge conservation gives the same current everywhere; voltage divides
     across elements.
+  chapter: 4C · Electrochemistry and electrical circuits
+- id: 4c-electrochemistry-and-electrical-circuits-p1
+  q: 'A 4 Ω resistor in parallel with another 4 Ω resistor is connected in series with a 3 Ω resistor.
+    The equivalent resistance is:'
+  choices:
+    A: 11 Ω, from adding all three in series
+    B: 2 Ω, the parallel pair alone
+    C: 1.2 Ω, from paralleling all three
+    D: 5 Ω
+  answer: D
+  explain: 4∥4 = (4·4)/(4+4) = 2 Ω; adding the series 3 Ω gives 5 Ω. 11 Ω ignores the parallel pair, 2
+    Ω drops the series resistor, 1.2 Ω parallels all three.
+  chapter: 4C · Electrochemistry and electrical circuits
+- id: 4c-electrochemistry-and-electrical-circuits-p2
+  q: 'A 100 kΩ resistor charges a 25 µF capacitor. The RC time constant is:'
+  choices:
+    A: 0.0025 s
+    B: 0.4 s
+    C: 2500 s
+    D: 2.5 s
+  answer: D
+  explain: τ = RC = (1.0×10^5 Ω)(2.5×10^-5 F) = 2.5 s. Using 100 Ω gives 0.0025 s, misreading µF as mF
+    gives 2500 s, and 0.4 s is 1/τ, the rate constant.
   chapter: 4C · Electrochemistry and electrical circuits

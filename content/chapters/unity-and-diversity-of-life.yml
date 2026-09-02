@@ -25,3 +25,26 @@ practice:
   answer: B
   explain: Selection acts via differential reproductive success on existing variation.
   chapter: Unity and Diversity of Life
+- id: unity-and-diversity-of-life-p1
+  q: 'A bat''s wing and a whale''s flipper share the same bone arrangement. This similarity
+    is:'
+  choices:
+    A: Homologous — inherited from a common ancestor despite different functions
+    B: Analogous — similar function alone explains the structure
+    C: A vestigial coincidence with no evolutionary meaning
+    D: Proof that bats and whales are the same species
+  answer: A
+  explain: Same underlying anatomy, different function = homology (shared ancestry).
+    Analogy is similar function without shared structural origin.
+  chapter: Unity and Diversity of Life
+- id: unity-and-diversity-of-life-p2
+  q: Which option correctly lists the three domains of life?
+  choices:
+    A: Plants, animals, fungi
+    B: Prokaryotes, eukaryotes, viruses
+    C: Bacteria, Archaea, Eukarya
+    D: Bacteria, protists, animals
+  answer: C
+  explain: The three-domain system groups all life into Bacteria, Archaea, and Eukarya;
+    viruses are not cellular life and the kingdom-level names sit below this rank.
+  chapter: Unity and Diversity of Life

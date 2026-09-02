@@ -26,3 +26,26 @@ practice:
   answer: A
   explain: Norms rely on socialization and informal sanction; laws are codified with formal enforcement.
   chapter: Sociology and Anthropology
+- id: sociology-and-anthropology-p6
+  q: 'An anthropologist spends a year in a highland village, planting rice alongside farmers and joining
+    rituals while keeping daily field notes. This method is:'
+  choices:
+    A: A structured survey with a fixed questionnaire
+    B: A laboratory experiment with random assignment
+    C: Participant observation — the core ethnographic method
+    D: Secondary analysis of census records
+  answer: C
+  explain: Living inside the setting and taking part in daily life while recording observations is participant
+    observation, the ethnographic route to grasping a culture's meaning from the inside.
+  chapter: Sociology and Anthropology
+- id: sociology-and-anthropology-p7
+  q: Which of the following is an ascribed status rather than an achieved one?
+  choices:
+    A: The ethnic group a person is born into
+    B: A licensed registered nurse
+    C: An elected council member
+    D: A doctoral degree holder
+  answer: A
+  explain: Ascribed status is assigned at birth or involuntarily (ethnicity, sex, age in most legal systems);
+    achieved status is earned through action, as with licenses, offices, and degrees.
+  chapter: Sociology and Anthropology

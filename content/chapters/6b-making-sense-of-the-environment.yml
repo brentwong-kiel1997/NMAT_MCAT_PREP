@@ -21,29 +21,27 @@ practice:
     C: Ignoring the stimulus entirely
     D: Using only long-term memory
   answer: A
-  explain: Bottom-up builds percepts from sensory data; top-down uses context and
-    expectations.
+  explain: Bottom-up builds percepts from sensory data; top-down uses context and expectations.
   chapter: 6B · Making sense of the environment
 - id: ps-10
-  q: 'After pairing a bell with food, the bell alone elicits salivation. The bell
-    is the:'
+  q: 'After pairing a bell with food, the bell alone elicits salivation. The bell is the:'
   choices:
     A: Unconditioned stimulus
-    B: Conditioned stimulus
-    C: Unconditioned response
-    D: Extinguished reinforcer
-  answer: B
+    B: Unconditioned response
+    C: Extinguished reinforcer
+    D: Conditioned stimulus
+  answer: D
   explain: The once-neutral cue becomes the conditioned stimulus (CS).
   chapter: 6B · Making sense of the environment
 - id: ps-21
-  q: You can read a friend's handwriting on a crumpled note even though several letters
-    are incomplete. Completing the degraded letters relies mainly on…
+  q: You can read a friend's handwriting on a crumpled note even though several letters are incomplete.
+    Completing the degraded letters relies mainly on…
   choices:
     A: bottom-up feature detection building each letter from strokes
     B: retinal disparity cues from binocular vision
     C: top-down processing, with expectations and context filling the gaps
     D: perceptual constancy for the ink's color and brightness
   answer: C
-  explain: Knowledge and context complete degraded input — the signature of top-down
-    processing; feature detection alone would stall on the missing strokes.
+  explain: Knowledge and context complete degraded input — the signature of top-down processing; feature
+    detection alone would stall on the missing strokes.
   chapter: 6B · Making sense of the environment

@@ -23,3 +23,27 @@ practice:
   answer: A
   explain: Subtle differences often hide in middle characters, punctuation, or case.
   chapter: Identical Information
+- id: identical-information-p4
+  q: 'Compare these two record strings: AB-47/II·09 and AB-47/ll·09. Which verdict is right?'
+  choices:
+    A: Identical — the slash makes the following characters irrelevant
+    B: 'Different: after the slash, the first has two capital I''s and the second has two lowercase L''s'
+    C: 'Different: the digit 4 has been replaced by a letter in the second string'
+    D: 'Different: the hyphen has been dropped from the second string'
+  answer: B
+  explain: Capital I and lowercase l are near-identical glyphs — the classic confusable-pair trap. Every
+    other position matches, so the divergence sits exactly at that one place and only a character-by-character
+    scan finds it.
+  chapter: Identical Information
+- id: identical-information-p5
+  q: Which pair is NOT identical? (1) 839-2041 vs 839-2041 ; (2) Kayla.Rae@med.ph vs Kayla.Rae@med.ph
+    ; (3) 0.5 mL, q6h vs 0.5 mL, q6h ; (4) PN-9912-Q vs PN-9912-O
+  choices:
+    A: Pair 1
+    B: Pair 2
+    C: Pair 3
+    D: Pair 4
+  answer: D
+  explain: Pairs 1–3 match at every position. Pair 4 differs only in the final character (Q vs O), a confusable
+    pair hiding at the end of the string — exactly where hurried scanning relaxes.
+  chapter: Identical Information

@@ -32,6 +32,18 @@ practice:
     C: Energy independent of frequency
     D: Infinitely long wavelength
   answer: B
-  explain: Electrons emit only when hf exceeds the work function; classical waves cannot explain a cutoff
-    frequency.
+  explain: Electrons emit only when hf exceeds the work function; classical waves
+    cannot explain a cutoff frequency.
+  chapter: Modern Physics
+- id: modern-physics-p1
+  q: 'Using h = 6.6×10⁻³⁴ J·s, an electron with momentum p = 1.0×10⁻²⁴ kg·m/s has
+    a de Broglie wavelength of:'
+  choices:
+    A: 6.6×10⁻⁵⁸ m
+    B: 1.5×10⁹ m
+    C: 6.6×10⁻³⁴ m
+    D: 6.6×10⁻¹⁰ m
+  answer: D
+  explain: λ = h/p = 6.6×10⁻³⁴ / 1.0×10⁻²⁴ = 6.6×10⁻¹⁰ m. Multiplying h by p gives
+    6.6×10⁻⁵⁸, inverting gives 1.5×10⁹, and 6.6×10⁻³⁴ forgets to divide by p.
   chapter: Modern Physics

@@ -22,10 +22,32 @@ practice:
 - id: bio-12
   q: 'The “all-or-none” property of a neuronal action potential means:'
   choices:
-    A: Stronger stimuli produce larger single action potentials
-    B: At threshold a fixed-size spike occurs; below threshold, none
-    C: Neurons never fire
-    D: Synaptic transmission needs no neurotransmitter
-  answer: B
+    A: Neurons never fire
+    B: Synaptic transmission needs no neurotransmitter
+    C: At threshold a fixed-size spike occurs; below threshold, none
+    D: Stronger stimuli produce larger single action potentials
+  answer: C
   explain: Single spike amplitude is constant; stimulus strength mainly affects firing frequency.
+  chapter: 3A · Nervous and endocrine systems
+- id: 3a-nervous-and-endocrine-systems-p1
+  q: 'Steroid hormones typically change target-cell behavior by:'
+  choices:
+    A: Binding a cell-surface receptor to open an ion channel
+    B: Being released from nerve terminals into a synapse
+    C: Diffusing through the membrane to bind intracellular receptors that alter transcription
+    D: Being converted to peptide fragments inside the lysosome
+  answer: C
+  explain: Steroids are lipophilic, cross the bilayer, and act on intracellular receptors; peptide hormones
+    instead use surface receptors and second messengers.
+  chapter: 3A · Nervous and endocrine systems
+- id: 3a-nervous-and-endocrine-systems-p2
+  q: 'Myelinated axons conduct quickly because the action potential:'
+  choices:
+    A: Travels as a graded potential along the myelin
+    B: Is regenerated at every successive patch of membrane
+    C: Requires no sodium influx at all
+    D: Jumps between nodes of Ranvier, bypassing the insulated internodes
+  answer: D
+  explain: 'Saltatory conduction: myelin insulates the internodes, so the spike regenerates only at the
+    nodes, speeding long-distance transmission.'
   chapter: 3A · Nervous and endocrine systems

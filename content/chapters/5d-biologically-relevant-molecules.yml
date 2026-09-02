@@ -15,17 +15,17 @@ notes:
 - Peptide-bond resonance planarizes and restricts rotation
 practice:
 - id: 5d-biologically-relevant-molecules-p1
-  q: Which functional group is attached to the α-carbon of every amino acid and behaves as
-    a base (proton acceptor)?
+  q: Which functional group is attached to the α-carbon of every amino acid and behaves as a base (proton
+    acceptor)?
   choices:
     A: Carboxyl group
-    B: Amino group
-    C: Hydroxyl group
-    D: Sulfhydryl group
-  answer: B
-  explain: The α-amino group (—NH₂ / —NH₃⁺) takes up a proton; the carboxyl group instead
-    donates one. Hydroxyl occurs only in serine/threonine/tyrosine and sulfhydryl only in
-    cysteine, so neither is on every α-carbon.
+    B: Sulfhydryl group
+    C: Amino group
+    D: Hydroxyl group
+  answer: C
+  explain: The α-amino group (—NH₂ / —NH₃⁺) takes up a proton; the carboxyl group instead donates one.
+    Hydroxyl occurs only in serine/threonine/tyrosine and sulfhydryl only in cysteine, so neither is on
+    every α-carbon.
   chapter: 5D · Biologically relevant molecules
 - id: 5d-biologically-relevant-molecules-p2
   q: An aldohexose has four chiral centers. How many stereoisomers exist?
@@ -35,8 +35,8 @@ practice:
     C: '32'
     D: '16'
   answer: D
-  explain: Stereoisomers = 2ⁿ = 2⁴ = 16. B drops one center (2³ = 8), C invents a fifth center
-    (2⁵ = 32), and A squares the center count as if n = 2 (2² = 4).
+  explain: Stereoisomers = 2ⁿ = 2⁴ = 16. B drops one center (2³ = 8), C invents a fifth center (2⁵ = 32),
+    and A squares the center count as if n = 2 (2² = 4).
   chapter: 5D · Biologically relevant molecules
 - id: 5d-biologically-relevant-molecules-p3
   q: Which bond joins glycerol to fatty acids in a triacylglycerol?
@@ -46,7 +46,6 @@ practice:
     C: Glycosidic bond
     D: Peptide bond
   answer: A
-  explain: Each fatty-acid carboxyl condenses with a glycerol —OH to give an ester. Phosphodiester
-    bonds belong to nucleic-acid backbones, glycosidic bonds link sugars, and peptide bonds
-    link amino acids.
+  explain: Each fatty-acid carboxyl condenses with a glycerol —OH to give an ester. Phosphodiester bonds
+    belong to nucleic-acid backbones, glycosidic bonds link sugars, and peptide bonds link amino acids.
   chapter: 5D · Biologically relevant molecules

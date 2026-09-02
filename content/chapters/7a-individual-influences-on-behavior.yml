@@ -21,3 +21,29 @@ practice:
   answer: A
   explain: Extinction reflects learned inhibition, not erasure; spontaneous recovery can occur.
   chapter: 7A · Individual influences on behavior
+- id: 7a-individual-influences-on-behavior-p6
+  q: 'In the five-factor model, a person described as imaginative, curious, and eager to try new experiences
+    scores high on:'
+  choices:
+    A: Agreeableness
+    B: Conscientiousness
+    C: Openness to experience
+    D: Neuroticism
+  answer: C
+  explain: 'OCEAN: the O stands for openness to experience — imagination, curiosity, preference for novelty.
+    Conscientiousness is organization and self-discipline, agreeableness is warmth and cooperation, neuroticism
+    is emotional instability.'
+  chapter: 7A · Individual influences on behavior
+- id: 7a-individual-influences-on-behavior-p7
+  q: 'Two children carry the same risk allele for a disorder, but only the one raised in a high-stress
+    household develops it. This pattern illustrates:'
+  choices:
+    A: Genes determining the outcome regardless of surroundings
+    B: The environment rewriting the DNA sequence itself
+    C: Parenting being the only cause of psychological outcomes
+    D: 'Gene–environment interaction: the same gene has different effects in different contexts'
+  answer: D
+  explain: Gene–environment interaction means a genetic predisposition is expressed or suppressed depending
+    on context. The DNA sequence is unchanged, and neither the gene nor the setting alone is sufficient
+    to predict the outcome.
+  chapter: 7A · Individual influences on behavior

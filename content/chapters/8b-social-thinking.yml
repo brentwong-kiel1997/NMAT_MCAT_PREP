@@ -21,3 +21,28 @@ practice:
   answer: A
   explain: This bias protects self-esteem and a positive self-image.
   chapter: 8B · Social thinking
+- id: 8b-social-thinking-p9
+  q: 'After a week of heavy news coverage of two train crashes, a commuter rates rail travel as far riskier
+    than driving. This judgment error is best explained by:'
+  choices:
+    A: The just-world hypothesis
+    B: The self-serving bias
+    C: Cognitive dissonance
+    D: The availability heuristic — vivid, easily recalled cases inflate frequency estimates
+  answer: D
+  explain: The availability heuristic judges frequency by how easily examples come to mind. Well-publicized
+    disasters are highly memorable, so their perceived frequency is inflated. Self-serving bias concerns
+    explaining one's own outcomes.
+  chapter: 8B · Social thinking
+- id: 8b-social-thinking-p10
+  q: 'An attitude has three components — how you feel about something, how you tend to act toward it,
+    and what you believe about it. These are respectively:'
+  choices:
+    A: Cognitive, behavioral, affective
+    B: Normative, descriptive, predictive
+    C: Id, ego, superego
+    D: Affective, behavioral, cognitive
+  answer: D
+  explain: 'The ABC model: Affect (feelings), Behavior (action tendency), Cognition (beliefs) — in that
+    order. Swapping affect and cognition is the classic trap.'
+  chapter: 8B · Social thinking

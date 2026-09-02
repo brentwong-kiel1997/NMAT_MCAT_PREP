@@ -13,41 +13,39 @@ notes:
 - Energy conservation requires noting nonconservative work
 practice:
 - id: 4a-motion-forces-work-energy-equilibrium-p1
-  q: A instrument pack falls from rest and drops for 3.0 s before landing (g = 9.8 m/s², drag
-    negligible). How far did it fall?
+  q: A instrument pack falls from rest and drops for 3.0 s before landing (g = 9.8 m/s², drag negligible).
+    How far did it fall?
   choices:
-    A: 44 m
-    B: 29 m
-    C: 88 m
+    A: 29 m
+    B: 88 m
+    C: 44 m
     D: 15 m
-  answer: A
-  explain: Δy = ½gt² = 0.5(9.8)(3.0)² = 44.1 m ≈ 44 m. B reports the impact speed (v = gt
-    = 29.4 m/s), C omits the ½ factor (9.8 × 9 = 88.2), D uses t once instead of t² (½ × 9.8
-    × 3.0 = 14.7).
+  answer: C
+  explain: Δy = ½gt² = 0.5(9.8)(3.0)² = 44.1 m ≈ 44 m. B reports the impact speed (v = gt = 29.4 m/s),
+    C omits the ½ factor (9.8 × 9 = 88.2), D uses t once instead of t² (½ × 9.8 × 3.0 = 14.7).
   chapter: 4A · Motion, forces, work, energy, equilibrium
 - id: 4a-motion-forces-work-energy-equilibrium-p2
-  q: A 60 kg patient stands on a bathroom scale inside an elevator that accelerates upward
-    at 2.0 m/s² (g = 9.8 m/s²). What does the scale read?
+  q: A 60 kg patient stands on a bathroom scale inside an elevator that accelerates upward at 2.0 m/s²
+    (g = 9.8 m/s²). What does the scale read?
   choices:
     A: 588 N
     B: 468 N
     C: 120 N
     D: 708 N
   answer: D
-  explain: 'Upward acceleration: N − mg = ma, so N = m(g + a) = 60(9.8 + 2.0) = 708 N. A ignores
-    the acceleration (mg = 588 N), B uses g − a as if the elevator accelerated downward (468
-    N), C includes only ma = 120 N and drops gravity.'
+  explain: 'Upward acceleration: N − mg = ma, so N = m(g + a) = 60(9.8 + 2.0) = 708 N. A ignores the acceleration
+    (mg = 588 N), B uses g − a as if the elevator accelerated downward (468 N), C includes only ma = 120
+    N and drops gravity.'
   chapter: 4A · Motion, forces, work, energy, equilibrium
 - id: 4a-motion-forces-work-energy-equilibrium-p3
-  q: A 2.0 kg cart starts from rest and rolls down a frictionless track from a height of 5.0
-    m. What is its speed at the bottom?
+  q: A 2.0 kg cart starts from rest and rolls down a frictionless track from a height of 5.0 m. What is
+    its speed at the bottom?
   choices:
     A: 7.0 m/s
-    B: 9.9 m/s
-    C: 49 m/s
-    D: 98 m/s
-  answer: B
-  explain: mgh = ½mv², so v = √(2gh) = √(2 × 9.8 × 5.0) = √98 = 9.9 m/s. A drops the factor
-    of 2 (√gh = 7.0), C reports gh itself (49), D reports v² (2gh = 98) without taking the
-    square root.
+    B: 49 m/s
+    C: 98 m/s
+    D: 9.9 m/s
+  answer: D
+  explain: mgh = ½mv², so v = √(2gh) = √(2 × 9.8 × 5.0) = √98 = 9.9 m/s. A drops the factor of 2 (√gh
+    = 7.0), C reports gh itself (49), D reports v² (2gh = 98) without taking the square root.
   chapter: 4A · Motion, forces, work, energy, equilibrium

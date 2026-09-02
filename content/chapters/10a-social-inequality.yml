@@ -14,11 +14,11 @@ practice:
 - id: ps-9
   q: 'Social stratification refers to:'
   choices:
-    A: Hierarchical ranking and unequal distribution of status and resources
-    B: Perfectly equal resources for everyone
-    C: Geological rock layers only
+    A: Perfectly equal resources for everyone
+    B: Geological rock layers only
+    C: Hierarchical ranking and unequal distribution of status and resources
     D: Neuronal lamination only
-  answer: A
+  answer: C
   explain: Stratification reflects structural inequality across class, education, income, and related
     dimensions.
   chapter: 10A · Social inequality
@@ -31,4 +31,15 @@ practice:
     D: Blood type
   answer: D
   explain: SES composites income, education, occupation — not blood type.
+  chapter: 10A · Social inequality
+- id: 10a-social-inequality-p12
+  q: 'The “Matthew effect” in social inequality describes the tendency for:'
+  choices:
+    A: Progressive taxation to level wealth across generations
+    B: Groups with different starting points to converge on equal outcomes
+    C: Early advantage to compound, so those who start ahead pull further ahead
+    D: Schooling by itself to erase class differences in health
+  answer: C
+  explain: 'Advantage accumulates and amplifies: children who read early read more and gain vocabulary
+    faster, and capital earns returns on returns. The result is widening gaps, not convergence.'
   chapter: 10A · Social inequality

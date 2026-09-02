@@ -26,3 +26,29 @@ practice:
   answer: A
   explain: Arousal helps simple tasks; complex novel tasks may suffer.
   chapter: FC9 · Cultural and social differences
+- id: fc9-cultural-and-social-differences-p10
+  q: 'A manager assumes that applicants from a certain region are lazy, and therefore rejects one of them.
+    The assumption and the rejection are, in order:'
+  choices:
+    A: Prejudice, then stereotype
+    B: Stereotype, then discrimination
+    C: Discrimination, then prejudice
+    D: Ethnocentrism, then cultural relativism
+  answer: B
+  explain: Stereotype is the belief/cognition about a group; prejudice is the negative feeling; discrimination
+    is the unequal behavior. Here the belief drives an action, so stereotype → discrimination. Relativism
+    and ethnocentrism concern judging cultures, not individuals.
+  chapter: FC9 · Cultural and social differences
+- id: fc9-cultural-and-social-differences-p11
+  q: 'In the health belief model, whether a patient with a chronic condition seeks care depends mainly
+    on:'
+  choices:
+    A: The prestige and bedside manner of the treating physician
+    B: The country's gross national income alone
+    C: The patient's genotype for drug metabolism
+    D: Perceived susceptibility, perceived severity, and the perceived benefits versus barriers of acting
+  answer: D
+  explain: 'The health belief model is a perceived-threat and perceived-efficacy model: susceptibility,
+    severity, benefits, and barriers (plus cues to action) predict care-seeking. Income and clinician
+    prestige are external context, not the model''s constructs.'
+  chapter: FC9 · Cultural and social differences

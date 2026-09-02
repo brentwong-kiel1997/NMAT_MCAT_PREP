@@ -25,7 +25,8 @@ practice:
     C: Ability to metabolize
     D: Presence of a cell membrane
   answer: B
-  explain: Eukaryotes have a membrane-bound nucleus/compartments; both have ribosomes and membranes.
+  explain: Eukaryotes have a membrane-bound nucleus/compartments; both have ribosomes
+    and membranes.
   chapter: Cells and Cellular Processes
 - id: bio-5
   q: 'Active transport differs from simple diffusion mainly because it:'
@@ -35,6 +36,18 @@ practice:
     C: Occurs only through nuclear pores
     D: Transports only gases
   answer: B
-  explain: Active transport uses carriers/pumps and energy; simple diffusion follows a gradient without
-    metabolic energy.
+  explain: Active transport uses carriers/pumps and energy; simple diffusion follows
+    a gradient without metabolic energy.
+  chapter: Cells and Cellular Processes
+- id: cells-and-cellular-processes-p1
+  q: 'A competitive inhibitor of an enzyme changes the kinetics by:'
+  choices:
+    A: Lowering both apparent Km and Vmax
+    B: Lowering Vmax while Km stays the same
+    C: Raising apparent Km while Vmax is unchanged
+    D: Leaving both Km and Vmax unchanged
+  answer: C
+  explain: The competitor competes for the active site, so more substrate is needed
+    to reach half-Vmax (higher apparent Km); saturating substrate still reaches the
+    same Vmax. Lowered Vmax with unchanged Km is noncompetitive inhibition.
   chapter: Cells and Cellular Processes

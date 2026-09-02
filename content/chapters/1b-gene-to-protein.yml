@@ -25,20 +25,31 @@ practice:
 - id: bb-3
   q: 'Ribosomes directly:'
   choices:
-    A: Catalyze peptide-bond formation (translation)
-    B: Replicate DNA
+    A: Replicate DNA
+    B: Pump protons
     C: Synthesize fatty acids
-    D: Pump protons
-  answer: A
+    D: Catalyze peptide-bond formation (translation)
+  answer: D
   explain: Ribosomes read mRNA; tRNAs deliver amino acids; rRNA/protein components catalyze peptide elongation.
   chapter: 1B · Gene to protein
 - id: bioc-4
   q: Where does transcription occur in eukaryotes?
   choices:
-    A: Nucleus
-    B: Mitochondrial intermembrane space alone
+    A: Mitochondrial intermembrane space alone
+    B: Outside the plasma membrane
     C: Golgi lumen
-    D: Outside the plasma membrane
-  answer: A
+    D: Nucleus
+  answer: D
   explain: DNA is transcribed to mRNA in the nucleus; mature mRNA is translated in the cytoplasm.
+  chapter: 1B · Gene to protein
+- id: 1b-gene-to-protein-p1
+  q: 'In eukaryotes, intron removal from pre-mRNA is carried out by:'
+  choices:
+    A: DNA polymerase proofreading
+    B: Aminoacyl-tRNA synthetases
+    C: The spliceosome, a complex of snRNPs
+    D: Ribosomal A-site peptidyl transferase
+  answer: C
+  explain: snRNPs assemble into the spliceosome, which catalyzes intron excision and exon ligation; the
+    other enzymes act in replication, tRNA charging, and translation.
   chapter: 1B · Gene to protein

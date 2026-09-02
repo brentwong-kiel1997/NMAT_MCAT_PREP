@@ -33,6 +33,18 @@ practice:
     C: A reaction that never occurs
     D: Doubling sample mass
   answer: A
-  explain: The endpoint is signaled by indicator/instrument; the equivalence point is theoretical—they
-    should be close.
+  explain: The endpoint is signaled by indicator/instrument; the equivalence point
+    is theoretical—they should be close.
+  chapter: Analytical Chemistry
+- id: analytical-chemistry-p1
+  q: 'Beer''s law with ε = 2.0×10³ L mol⁻¹ cm⁻¹, path length 1.0 cm, and c = 5.0×10⁻⁵
+    M gives an absorbance of:'
+  choices:
+    A: '0.10'
+    B: '0.010'
+    C: '10'
+    D: '0.025'
+  answer: A
+  explain: A = εlc = (2.0×10³)(1.0)(5.0×10⁻⁵) = 0.10. 0.010 is a tenfold slip in ε,
+    10 ignores the 10⁻⁵ scale of c, and 0.025 divides instead of multiplying.
   chapter: Analytical Chemistry

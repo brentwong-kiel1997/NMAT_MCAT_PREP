@@ -15,11 +15,34 @@ practice:
 - id: bb-7
   q: 'In the nephron, the glomerulus mainly:'
   choices:
-    A: Filters plasma to form filtrate
-    B: Synthesizes insulin
-    C: Generates action-potential conduction
-    D: Secretes bile
-  answer: A
+    A: Secretes bile
+    B: Generates action-potential conduction
+    C: Filters plasma to form filtrate
+    D: Synthesizes insulin
+  answer: C
   explain: The glomerular barrier retains cells and large proteins; tubules reabsorb and secrete to refine
     urine.
+  chapter: 3B · Main organ systems
+- id: 3b-main-organ-systems-p1
+  q: 'In the homeostatic loop, thermoreceptors in the skin that report a fall in body temperature act
+    as the:'
+  choices:
+    A: Set point
+    B: Integrator
+    C: Effector
+    D: Sensor
+  answer: D
+  explain: Sensors detect the deviation; the integrator (CNS) compares it to the set point and effectors
+    (muscles, vessels) produce the response.
+  chapter: 3B · Main organ systems
+- id: 3b-main-organ-systems-p2
+  q: 'The huge variety of antibody antigen-binding sites is generated chiefly by:'
+  choices:
+    A: Copying antibody genes from the pathogen's genome
+    B: Random post-translational glycosylation
+    C: Somatic V(D)J recombination of gene segments
+    D: Alternative splicing of one constant-region transcript
+  answer: C
+  explain: V(D)J recombination assembles variable-region gene segments in many combinations, producing
+    antibody diversity.
   chapter: 3B · Main organ systems

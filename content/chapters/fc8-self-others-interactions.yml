@@ -36,3 +36,16 @@ practice:
   explain: Diffusion of responsibility and pluralistic ignorance reduce helping; clear responsibility
     weakens the effect.
   chapter: FC8 · Self, others, interactions
+- id: fc8-self-others-interactions-p9
+  q: 'After an hour of discussion, a like-minded panel''s average position on the issue is more extreme
+    than the average of its members'' private views beforehand. This shift is:'
+  choices:
+    A: Group polarization — deliberation amplifies the group's prevailing lean
+    B: Social loafing
+    C: Deindividuation
+    D: The false consensus effect
+  answer: A
+  explain: Group polarization is the post-discussion drift toward a more extreme version of the initial
+    tendency. Deindividuation is loss of self-awareness in crowds, and false consensus is overestimating
+    how many others share your view.
+  chapter: FC8 · Self, others, interactions

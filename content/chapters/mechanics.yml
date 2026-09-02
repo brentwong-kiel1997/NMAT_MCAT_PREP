@@ -34,6 +34,17 @@ practice:
     C: Away from the center
     D: Is zero
   answer: B
-  explain: Centripetal acceleration changes velocity direction; velocity is tangential, acceleration points
-    inward.
+  explain: Centripetal acceleration changes velocity direction; velocity is tangential,
+    acceleration points inward.
+  chapter: Mechanics
+- id: mechanics-p1
+  q: 'A 2.0 kg block slides at 3.0 m/s. Its kinetic energy is:'
+  choices:
+    A: 3.0 J
+    B: 9.0 J
+    C: 18 J
+    D: 6.0 J
+  answer: B
+  explain: Ek = ½mv² = ½(2.0)(3.0)² = 9.0 J. 18 J omits the ½ factor, 6.0 J uses mv,
+    and 3.0 J is neither.
   chapter: Mechanics

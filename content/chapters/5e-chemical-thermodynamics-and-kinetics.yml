@@ -28,11 +28,11 @@ practice:
 - id: chem-4
   q: 'A catalyst speeds a reaction by:'
   choices:
-    A: Raising ΔG of the reaction
-    B: Providing a lower-activation-energy path
-    C: Changing product element identities
-    D: Permanently consuming reactants against K
-  answer: B
+    A: Changing product element identities
+    B: Permanently consuming reactants against K
+    C: Providing a lower-activation-energy path
+    D: Raising ΔG of the reaction
+  answer: C
   explain: Catalysts change the path and lower Ea; overall ΔG / equilibrium position stay the same.
   chapter: 5E · Chemical thermodynamics and kinetics
 - id: chem-9
@@ -48,10 +48,10 @@ practice:
 - id: chem-12
   q: How does a catalyst affect a reversible reaction?
   choices:
-    A: Changes equilibrium constant K
-    B: Speeds forward and reverse rates, reaching equilibrium sooner
-    C: Speeds only the forward reaction
-    D: Raises ΔG
-  answer: B
+    A: Speeds only the forward reaction
+    B: Raises ΔG
+    C: Changes equilibrium constant K
+    D: Speeds forward and reverse rates, reaching equilibrium sooner
+  answer: D
   explain: Catalysts affect both directions equally and do not change equilibrium composition.
   chapter: 5E · Chemical thermodynamics and kinetics

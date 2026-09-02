@@ -23,3 +23,29 @@ practice:
   answer: A
   explain: Piecewise outline matching beats unfocused whole-figure scanning.
   chapter: Hidden Figure
+- id: hidden-figure-p3
+  q: A hidden-figure target is an L-shape made of two arms of equal length meeting at a right angle. Somewhere
+    in the clutter it appears turned upside down and back to front. Which candidate is that target?
+  choices:
+    A: An L-shape whose vertical arm is twice as long as its horizontal arm
+    B: A T-shape whose two arms are equal
+    C: An L-shape with equal arms, rotated 180° so the corner points the other way
+    D: A plus sign with four equal arms
+  answer: C
+  explain: Rotation and mirroring preserve the shape, so the target is still an equal-armed L. Changing
+    an arm's length produces a different figure, and T and cross shapes have different line junctions
+    entirely.
+  chapter: Hidden Figure
+- id: hidden-figure-p4
+  q: 'On a hidden-figure item you must find a triangle buried in overlapping polygons. Checking short
+    runs of contour — one vertex plus the two lines leaving it — beats trying to see the whole triangle
+    at once because:'
+  choices:
+    A: A local junction is a small, verifiable unit, and confirmed segments add up to the outline
+    B: The eye takes in an entire complex figure in a single fixation
+    C: Background lines never cross the target's outline
+    D: Filled-in regions are easier to match than outlines
+  answer: A
+  explain: Segment matching turns one hard search into several easy ones. Whole-figure search fails because
+    background lines do cross the outline, and the target's outline — not any fill — is what must be tracked.
+  chapter: Hidden Figure

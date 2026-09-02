@@ -12,41 +12,41 @@ notes:
 - Attachment styles shape close-relationship patterns
 practice:
 - id: 8c-social-interactions-p1
-  q: 'Riders see the same commuter on a train every morning without ever speaking, and gradually
-    like them more. This is the:'
+  q: 'Riders see the same commuter on a train every morning without ever speaking, and gradually like
+    them more. This is the:'
   choices:
     A: Mere exposure effect
     B: Halo effect
     C: Misattribution of arousal
     D: Reciprocity norm
   answer: A
-  explain: Repeated exposure alone increases liking. B is letting one positive trait color
-    the whole judgment, C is blaming arousal on the wrong cause (the classic shaky-bridge
-    study), and D is liking those who like us back — none of which happened here.
+  explain: Repeated exposure alone increases liking. B is letting one positive trait color the whole judgment,
+    C is blaming arousal on the wrong cause (the classic shaky-bridge study), and D is liking those who
+    like us back — none of which happened here.
   chapter: 8C · Social interactions
 - id: 8c-social-interactions-p2
-  q: 'A mugger assaults a victim only to take the wallet; the injury is a side effect of a
-    goal. This is:'
+  q: 'A mugger assaults a victim only to take the wallet; the injury is a side effect of a goal. This
+    is:'
   choices:
     A: Hostile aggression
-    B: Instrumental aggression
-    C: Relational aggression
-    D: Deindividuation
-  answer: B
-  explain: Instrumental aggression uses harm as a means to an end. A is impulsive, anger-driven
-    aggression where pain is the goal, C targets someone's relationships or reputation rather
-    than their body, and D is a loss of self-awareness in crowds, not a category of aggression.
+    B: Relational aggression
+    C: Deindividuation
+    D: Instrumental aggression
+  answer: D
+  explain: Instrumental aggression uses harm as a means to an end. A is impulsive, anger-driven aggression
+    where pain is the goal, C targets someone's relationships or reputation rather than their body, and
+    D is a loss of self-awareness in crowds, not a category of aggression.
   chapter: 8C · Social interactions
 - id: 8c-social-interactions-p3
-  q: 'A pedestrian collapses on a busy plaza and no one helps; each onlooker assumes someone
-    else will. The best explanation is:'
+  q: 'A pedestrian collapses on a busy plaza and no one helps; each onlooker assumes someone else will.
+    The best explanation is:'
   choices:
     A: Social exchange theory
     B: The reciprocity norm
     C: Diffusion of responsibility
     D: The social responsibility norm
   answer: C
-  explain: With more bystanders, personal responsibility is divided, so helping falls — the
-    bystander effect. A frames helping as a cost-benefit calculation, B is returning favors,
-    and D is the expectation that we should help those in need, which diffusion here overrides.
+  explain: With more bystanders, personal responsibility is divided, so helping falls — the bystander
+    effect. A frames helping as a cost-benefit calculation, B is returning favors, and D is the expectation
+    that we should help those in need, which diffusion here overrides.
   chapter: 8C · Social interactions

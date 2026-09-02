@@ -33,3 +33,15 @@ practice:
   answer: A
   explain: JND concerns change detection; absolute threshold concerns detecting presence.
   chapter: 6A · Sensing the environment
+- id: 6a-sensing-the-environment-p3
+  q: 'In a signal detection task, a listener presses “yes, I heard it” on a trial where no tone was actually
+    played. This response is scored as a:'
+  choices:
+    A: Hit
+    B: Miss
+    C: Correct rejection
+    D: False alarm
+  answer: D
+  explain: 'The four outcomes cross signal present/absent with yes/no: signal plus “yes” is a hit, signal
+    plus “no” a miss, no-signal plus “no” a correct rejection, and no-signal plus “yes” a false alarm.'
+  chapter: 6A · Sensing the environment

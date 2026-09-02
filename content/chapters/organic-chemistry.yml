@@ -23,5 +23,29 @@ practice:
     C: Its nucleus is negatively charged
     D: Cannot form double bonds
   answer: A
-  explain: Carbon’s hybridization allows single, double, and triple bonds that scaffold organic molecules.
+  explain: Carbon’s hybridization allows single, double, and triple bonds that scaffold
+    organic molecules.
+  chapter: Organic Chemistry
+- id: organic-chemistry-p1
+  q: 'A tertiary alkyl halide reacts with a weak nucleophile in a polar protic solvent.
+    The dominant pathway is:'
+  choices:
+    A: SN2, with concerted backside attack
+    B: SN1, via a solvent-stabilized carbocation intermediate
+    C: Radical chain halogenation
+    D: Electrophilic aromatic substitution
+  answer: B
+  explain: 'Tertiary substrate + weak nucleophile + polar protic solvent favors SN1:
+    ionization forms a stabilized carbocation, then nucleophilic capture.'
+  chapter: Organic Chemistry
+- id: organic-chemistry-p2
+  q: 'An SN2 substitution at a stereogenic carbon produces:'
+  choices:
+    A: Complete racemization
+    B: Retention of configuration
+    C: Inversion of configuration from backside attack
+    D: No product, since SN2 requires a stereocenter to be absent
+  answer: C
+  explain: The nucleophile attacks the carbon from the side opposite the leaving group,
+    giving Walden inversion — a signature of the concerted SN2 step.
   chapter: Organic Chemistry

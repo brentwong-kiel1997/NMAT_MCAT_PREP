@@ -24,3 +24,29 @@ practice:
   answer: B
   explain: Ideal-gas internal energy is a function of T; isothermal means ΔU = 0.
   chapter: Thermodynamics
+- id: thermodynamics-p1
+  q: 'A heat engine absorbs heat at 500 K and rejects heat at 300 K. Its maximum possible
+    (Carnot) efficiency is:'
+  choices:
+    A: 60%
+    B: 40%
+    C: 20%
+    D: 100%
+  answer: B
+  explain: η_max = 1 − Tc/Th = 1 − 300/500 = 0.40, i.e. 40%. 60% is the Tc/Th ratio,
+    20% scales by the wrong temperature, and 100% would require a cold reservoir at
+    0 K.
+  chapter: Thermodynamics
+- id: thermodynamics-p2
+  q: 'An ideal gas is compressed adiabatically (Q = 0). Taking W as work done by the
+    gas in ΔU = Q − W, the gas temperature:'
+  choices:
+    A: Falls, because no heat is added
+    B: Stays constant, as in an isothermal process
+    C: Is undefined during compression
+    D: Rises, because W < 0 makes ΔU > 0
+  answer: D
+  explain: With Q = 0, ΔU = −W; compression means the gas does negative work, so internal
+    energy and therefore temperature increase. Isolated-system spontaneity ties to
+    entropy, not to Q alone.
+  chapter: Thermodynamics

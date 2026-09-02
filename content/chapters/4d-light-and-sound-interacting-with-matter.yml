@@ -23,11 +23,34 @@ practice:
 - id: cp-5
   q: 'For sound in air (a longitudinal wave), particle vibration is:'
   choices:
-    A: Parallel to the direction of propagation
+    A: There is no vibration
     B: Perpendicular to propagation
-    C: There is no vibration
-    D: Only transverse, never longitudinal
-  answer: A
+    C: Only transverse, never longitudinal
+    D: Parallel to the direction of propagation
+  answer: D
   explain: Longitudinal waves travel via compressions and rarefactions; transverse waves vibrate perpendicular
     to travel.
+  chapter: 4D · Light and sound interacting with matter
+- id: 4d-light-and-sound-interacting-with-matter-p1
+  q: 'Light in glass (n = 1.5) strikes a glass–air (n = 1.0) boundary. The critical angle for total internal
+    reflection is about:'
+  choices:
+    A: 33.7°
+    B: 48.2°
+    C: 41.8°
+    D: TIR cannot occur at this boundary
+  answer: C
+  explain: sinθc = n₂/n₁ = 1.0/1.5 = 0.667, so θc ≈ 41.8°. 33.7° is an arctan-of-the-ratio error, 48.2°
+    is the complement, and TIR does occur because n₁ > n₂.
+  chapter: 4D · Light and sound interacting with matter
+- id: 4d-light-and-sound-interacting-with-matter-p2
+  q: 'Raising the frequency of an ultrasound imaging beam:'
+  choices:
+    A: Leaves both resolution and penetration unchanged
+    B: Improves penetration but blurs the image
+    C: Increases penetration while keeping resolution constant
+    D: Improves axial resolution but shortens penetration depth
+  answer: D
+  explain: Higher-frequency ultrasound resolves finer detail but attenuates faster in tissue, so it penetrates
+    less deeply — the central resolution/depth trade-off.
   chapter: 4D · Light and sound interacting with matter

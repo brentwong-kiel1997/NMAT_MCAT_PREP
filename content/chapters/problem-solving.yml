@@ -24,3 +24,27 @@ practice:
   answer: A
   explain: Distance = rate × time = 60 × 2.5 = 150 km.
   chapter: Problem Solving
+- id: problem-solving-p4
+  q: Towns P and Q are 240 km apart. A car leaves P toward Q at 60 km/h and, at the same moment, another
+    leaves Q toward P at 40 km/h. After how long do they meet?
+  choices:
+    A: 4.0 h — dividing 240 by the faster car's speed alone
+    B: 2.4 h — the gap closes at the sum of the speeds, 100 km/h
+    C: 6.0 h — dividing 240 by the slower car's speed alone
+    D: 12 h — subtracting the speeds first, 240 ÷ 20
+  answer: B
+  explain: 'In a meet setup the closing speed is the sum: 60 + 40 = 100 km/h. Time = 240 ÷ 100 = 2.4 h.
+    Dividing by one car''s speed ignores that both are moving.'
+  chapter: Problem Solving
+- id: problem-solving-p5
+  q: How many liters of a 20% salt solution must be mixed with 10 L of a 50% solution to produce a 30%
+    mixture?
+  choices:
+    A: 5 L
+    B: 10 L
+    C: 15 L
+    D: 20 L
+  answer: D
+  explain: 'Conserve solute: 0.20x + 0.50(10) = 0.30(x + 10) → 0.20x + 5 = 0.30x + 3 → 0.1x = 2 → x =
+    20 L. Check: 4 L + 5 L = 9 L of salt in 30 L = 30%.'
+  chapter: Problem Solving

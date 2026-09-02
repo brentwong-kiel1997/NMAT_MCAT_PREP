@@ -32,3 +32,17 @@ practice:
   answer: A
   explain: Alternating rules are common—e.g., odd terms rotate, even terms add elements.
   chapter: Figure Series
+- id: figure-series-p5
+  q: 'In a figure series each frame shows a square with an arrow and some dots. The arrow starts pointing
+    to 12 o''clock and rotates 90° clockwise in every successive frame, while the dot count runs 1, 2,
+    3, … Frame 5 therefore shows:'
+  choices:
+    A: The arrow pointing right, with 5 dots
+    B: The arrow pointing up, with 5 dots
+    C: The arrow pointing down, with 5 dots
+    D: The arrow pointing up, with 4 dots
+  answer: B
+  explain: 'Two stacked rules tracked separately. Rotation: up → right → down → left → up, since 4 × 90°
+    = 360° returns to the start in frame 5. Dots: 1, 2, 3, 4, 5. Missing the wrap gives A, reading 180°
+    steps gives C, forgetting the increment gives D.'
+  chapter: Figure Series

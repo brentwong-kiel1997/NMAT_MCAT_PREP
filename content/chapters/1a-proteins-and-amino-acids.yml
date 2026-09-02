@@ -25,51 +25,51 @@ practice:
 - id: bb-1
   q: 'Peptide-bond formation involves:'
   choices:
-    A: Hydrolysis that consumes water
-    B: Condensation linking amino acids with water loss
-    C: Breaking all hydrogen bonds
-    D: Changing element identities
-  answer: B
+    A: Changing element identities
+    B: Breaking all hydrogen bonds
+    C: Condensation linking amino acids with water loss
+    D: Hydrolysis that consumes water
+  answer: C
   explain: Carboxyl + amino condense with water loss; hydrolysis reverses it.
   chapter: 1A · Proteins and amino acids
 - id: bioc-1
   q: 'Enzymes speed reactions primarily by:'
   choices:
-    A: Raising temperature
-    B: Lowering activation energy
-    C: Changing the sign of ΔG°
-    D: Destroying all products
-  answer: B
+    A: Destroying all products
+    B: Changing the sign of ΔG°
+    C: Raising temperature
+    D: Lowering activation energy
+  answer: D
   explain: Enzymes stabilize the transition state and lower Ea; overall ΔG is unchanged.
   chapter: 1A · Proteins and amino acids
 - id: bioc-3
   q: 'Primary protein structure refers to:'
   choices:
-    A: The linear sequence of amino acids
-    B: Alpha-helix content alone
-    C: Assembly of multiple subunits
-    D: The binding site alone
-  answer: A
+    A: The binding site alone
+    B: Assembly of multiple subunits
+    C: Alpha-helix content alone
+    D: The linear sequence of amino acids
+  answer: D
   explain: Primary structure is residue order, which constrains higher-order folding and function.
   chapter: 1A · Proteins and amino acids
 - id: bioc-7
   q: 'A competitive inhibitor typically:'
   choices:
-    A: Increases Km with unchanged Vmax
-    B: Drops Vmax to zero with unchanged Km
-    C: Leaves both Km and Vmax unchanged
-    D: Denatures and precipitates the enzyme
-  answer: A
+    A: Denatures and precipitates the enzyme
+    B: Leaves both Km and Vmax unchanged
+    C: Increases Km with unchanged Vmax
+    D: Drops Vmax to zero with unchanged Km
+  answer: C
   explain: Competitive inhibitors bind the active site; high substrate can overcome inhibition, so Vmax
     is reachable.
   chapter: 1A · Proteins and amino acids
 - id: bch-8
   q: 'Competitive inhibition typically:'
   choices:
-    A: Raises Km, leaves Vmax unchanged
-    B: Lowers Km and raises Vmax
-    C: Lowers both Km and Vmax
-    D: Leaves Km unchanged and raises Vmax
-  answer: A
+    A: Leaves Km unchanged and raises Vmax
+    B: Lowers both Km and Vmax
+    C: Raises Km, leaves Vmax unchanged
+    D: Lowers Km and raises Vmax
+  answer: C
   explain: Competitor fights for the active site; more substrate can still reach Vmax.
   chapter: 1A · Proteins and amino acids

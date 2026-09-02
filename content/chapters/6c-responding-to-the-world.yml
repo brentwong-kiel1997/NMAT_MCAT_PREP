@@ -23,3 +23,27 @@ practice:
   answer: A
   explain: Sympathetic activation raises heart rate, breathing, and glucose mobilization for threat response.
   chapter: 6C · Responding to the world
+- id: 6c-responding-to-the-world-p5
+  q: 'According to the James–Lange theory, the conscious feeling of fear comes:'
+  choices:
+    A: Before any bodily change, as a pure appraisal of the situation
+    B: From the reward value the situation has learned to carry
+    C: After physiological arousal — the emotion is the perception of the body's response
+    D: From the label other people attach to your behavior
+  answer: C
+  explain: 'James–Lange reverses common sense: the stimulus triggers autonomic arousal (heart races, muscles
+    tense) and the emotion IS the perception of that arousal, not its cause.'
+  chapter: 6C · Responding to the world
+- id: 6c-responding-to-the-world-p6
+  q: 'A student has been running on coffee and little sleep for exam week and now catches every cold going
+    around. In Selye''s general adaptation syndrome, this depleted state corresponds to:'
+  choices:
+    A: The alarm stage, where the sympathetic system first surges
+    B: The resistance stage, where cortisol keeps glucose and blood pressure up
+    C: Primary appraisal of the stressor
+    D: The exhaustion stage, where resources are worn down and immunity drops
+  answer: D
+  explain: GAS runs alarm → resistance → exhaustion. Prolonged resistance depletes resources, so susceptibility
+    to illness rises — the exhaustion stage. Alarm is the initial surge and appraisal happens before any
+    stage.
+  chapter: 6C · Responding to the world

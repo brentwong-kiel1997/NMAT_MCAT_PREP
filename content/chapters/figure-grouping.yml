@@ -34,3 +34,17 @@ practice:
   answer: B
   explain: Inductive items test rule consistency, not aesthetic preference.
   chapter: Figure Grouping
+- id: figure-grouping-p6
+  q: 'Four figures are shown: (1) a square with 3 dots inside; (2) an equilateral triangle with 3 dots
+    inside; (3) a pentagon with 4 dots inside; (4) a circle with 3 dots inside. Which figure does NOT
+    belong with the other three?'
+  choices:
+    A: Figure 1, the square
+    B: Figure 2, the triangle
+    C: Figure 3, the pentagon
+    D: Figure 4, the circle
+  answer: C
+  explain: The steady attribute across three figures is “exactly 3 dots inside,” so the pentagon with
+    4 dots is the odd one out. Outer shape (square, triangle, circle) is decoration — count structure
+    carries the rule.
+  chapter: Figure Grouping

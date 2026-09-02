@@ -23,10 +23,33 @@ practice:
 - id: bb-4
   q: 'The plasma membrane bilayer is mainly built from:'
   choices:
-    A: Phospholipids
+    A: Nucleic acid duplexes
     B: Free glucose
-    C: Nucleic acid duplexes
-    D: Metallic ion crystals
-  answer: A
+    C: Metallic ion crystals
+    D: Phospholipids
+  answer: D
   explain: Amphipathic phospholipids form the bilayer; proteins and cholesterol are embedded within.
+  chapter: 2A · Assemblies of molecules, cells, and cell groups
+- id: 2a-assemblies-of-molecules-cells-and-cell-groups-p1
+  q: In an epithelial sheet, which junction primarily seals the intercellular space so solutes cannot
+    leak between the cells?
+  choices:
+    A: Gap junctions
+    B: Desmosomes
+    C: Tight junctions
+    D: Basement membrane
+  answer: C
+  explain: Tight junctions block paracellular leak; desmosomes instead resist mechanical pull, and the
+    basement membrane anchors epithelium to connective tissue.
+  chapter: 2A · Assemblies of molecules, cells, and cell groups
+- id: 2a-assemblies-of-molecules-cells-and-cell-groups-p2
+  q: Which junction allows small ions and second messengers to pass directly between neighboring cells?
+  choices:
+    A: Tight junction
+    B: Desmosome
+    C: Gap junction
+    D: Hemidesmosome
+  answer: C
+  explain: Gap junctions are connexon channels that permit small-molecule intercellular signaling; tight
+    junctions seal and desmosomes anchor.
   chapter: 2A · Assemblies of molecules, cells, and cell groups
