@@ -18,12 +18,14 @@ proprietary tooling.
  ┌──────────────────┐    git push      ┌────────────────────────────────────────────┐
  │ working checkout │ ─── "deploy" ──► │ /home/ubuntu/repos/django-wsgi.git (bare)  │
  │  (GitHub origin) │                  │        │ post-receive hook                 │
- └──────────────────┘                  │        ▼ checkout -f                       │
-                                       │ /home/ubuntu/deploy/django-wsgi  (code)    │
+ └──────────────────┘                  │        ▼ checkout -f (staging)             │
+                                       │ /home/ubuntu/runtime/staging               │
                                        │        │ scripts/deploy.sh                 │
                                        │        │  pip → migrate → validate gate    │
-                                       │        │  → collectstatic → restart        │
-                                       │        ▼                                   │
+                                       │        │  → collectstatic                  │
+                                       │        ▼ atomic swap (two renames)         │
+                                       │ /home/ubuntu/deploy/django-wsgi  (live)    │
+                                       │        │ + restart gunicorn                │
                                        │ gunicorn 127.0.0.1:8000  (systemd)         │
                                        │        ▲ proxy                             │
    browser ── HTTPS :8888 ──────────► │ nginx: TLS + Basic-Auth front door         │
@@ -75,17 +77,16 @@ sudo chown -R ubuntu:ubuntu /home/ubuntu/{repos,deploy,runtime}
 git clone --bare git@github.com:brentwong-kiel1997/NMAT_MCAT_PREP.git \
     /home/ubuntu/repos/django-wsgi.git
 
-# the hook turns every push into a deploy
-cp /home/ubuntu/deploy/django-wsgi/scripts/post-receive \
-   /home/ubuntu/repos/django-wsgi.git/hooks/post-receive 2>/dev/null || \
-  git --git-dir=/home/ubuntu/repos/django-wsgi.git show main:scripts/post-receive \
-   > /home/ubuntu/repos/django-wsgi.git/hooks/post-receive
+# the hook turns every push into a deploy (staging + atomic swap)
+git --git-dir=/home/ubuntu/repos/django-wsgi.git show main:scripts/post-receive \
+  > /home/ubuntu/repos/django-wsgi.git/hooks/post-receive
 chmod +x /home/ubuntu/repos/django-wsgi.git/hooks/post-receive
 ```
 
-On a fresh server the checkout directory is still empty — seed it once
-(later pushes do this automatically through the hook; this first time it
-is required so step 5 has a `requirements.txt` to read):
+On a fresh server the live checkout is still empty — seed it once
+(this first time it is required so step 5 has a `requirements.txt` to
+read; later pushes rebuild staging and swap, never touching the live
+directory directly):
 
 ```bash
 GIT_WORK_TREE=/home/ubuntu/deploy/django-wsgi \
@@ -107,8 +108,8 @@ python3.12 -m venv /home/ubuntu/runtime/django-wsgi/venv
     -r /home/ubuntu/deploy/django-wsgi/requirements.txt
 ```
 
-> Every deploy re-runs `pip install -r requirements.txt`, so later
-> dependency changes apply themselves.
+> Every deploy re-runs `pip install -r requirements.lock` (the committed
+> freeze — exact production parity), so dependency changes apply themselves.
 
 ## 6. Secrets — outside git, always
 
@@ -265,16 +266,22 @@ git push deploy main
 
 Watch the hook output. A healthy deploy prints, in order:
 
-1. `pip` install (quiet)
-2. `migrate` applying any new migrations
+1. `pip` install (quiet, from the committed `requirements.lock`)
+2. `check` + `migrate` (run against the live DB from the staging checkout)
 3. **`validate_content` — the gate**: content hashes vs `MANIFEST.json` +
-   structural checks. If it fails, the restart never happens and the old
-   process keeps serving.
-4. `ensure_admin` / `ensure_ai_model` (idempotent seeds)
-5. `collectstatic`, then `systemctl restart gunicorn`
-6. `Deployed <rev> → gunicorn 127.0.0.1:8000`
+   structural checks, still in staging. If it fails, the script exits here
+   and the live directory was never touched — the old site keeps serving,
+   completely unchanged.
+4. `collectstatic` (into staging)
+5. **atomic swap**: staging renames onto the live path (the previous
+   revision is kept at `/home/ubuntu/deploy/.django-wsgi.prev`)
+6. `ensure_admin` / `ensure_ai_model` (idempotent seeds)
+7. `systemctl restart gunicorn`
+8. `Deployed <rev> → gunicorn 127.0.0.1:8000`
 
 Afterwards confirm the unit: `systemctl is-active gunicorn` → `active`.
+
+**Rollback**: `mv /home/ubuntu/deploy/.django-wsgi.prev /home/ubuntu/deploy/django-wsgi && sudo systemctl restart gunicorn`.
 
 ## 11. Admin account & AI coach
 

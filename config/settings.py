@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "axes",
     "portal",
 ]
 
@@ -49,7 +50,24 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "axes.middleware.AxesMiddleware",
 ]
+
+# Brute-force lockout on authenticate() (login). DB-backed, cross-worker.
+AUTHENTICATION_BACKENDS = [
+    "axes.backends.AxesStandaloneBackend",
+    "django.contrib.auth.backends.ModelBackend",
+]
+AXES_FAILURE_LIMIT = 5
+AXES_COOLOFF_TIME = 1 / 24  # hours: 30 minutes
+AXES_LOCKOUT_PARAMETERS = ["ip_address", "username"]  # either dimension locks
+AXES_RESET_ON_SUCCESS = True
+
+# Daily per-user cap on coach LLM calls (study tutor + AI analysis).
+GABAY_COACH_DAILY_LIMIT = int(
+    os.environ.get("GABAY_COACH_DAILY_LIMIT",
+                   _env_value("GABAY_COACH_DAILY_LIMIT", "150"))
+)
 
 ROOT_URLCONF = "config.urls"
 

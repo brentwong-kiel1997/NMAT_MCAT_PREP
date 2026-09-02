@@ -390,6 +390,72 @@ class DifficultyBadgeTests(TestCase):
         self.assertNotIn("mcat-cp-053", m)
 
 
+class RateLimitTests(TestCase):
+    """Self-serve endpoints get cheap cache-backed counters; login lockout
+    is django-axes (DB-backed)."""
+
+    def setUp(self):
+        self.client = Client()
+        self.user = User.objects.create_user("budgetuser", password="pw-123456789")
+
+    def test_register_rate_limited_per_network(self):
+        from . import ratelimit
+
+        ratelimit.reset()
+        self._register_rate_limited_per_network()
+
+    def _register_rate_limited_per_network(self):
+        for i in range(6):
+            # a fresh client per attempt: after the first signup the session
+            # would otherwise bounce every later POST off the "logged in"
+            # guard before the limiter ever sees it
+            client = Client()
+            res = client.post("/register/", {
+                "username": f"farmer{i}",
+                "password1": "correct-horse-battery",
+                "password2": "correct-horse-battery",
+            })
+            if i < 5:
+                self.assertEqual(res.status_code, 302, f"signup {i} should pass")
+            else:
+                self.assertEqual(res.status_code, 200)
+                self.assertContains(res, "Too many sign-up attempts")
+                self.assertFalse(User.objects.filter(username="farmer5").exists())
+
+    def test_study_api_daily_cap(self):
+        from django.test import override_settings
+
+        from . import ratelimit
+
+        ratelimit.reset()
+        self.client.force_login(self.user)
+        with override_settings(GABAY_COACH_DAILY_LIMIT=1):
+            # first call passes the cap and fails downstream (no provider
+            # configured) — that is fine, the budget was spent
+            res1 = self.client.post("/api/study/", {"message": "hi"},
+                                    content_type="application/json")
+            self.assertIn(res1.status_code, (200, 502))
+            res2 = self.client.post("/api/study/", {"message": "hi"},
+                                    content_type="application/json")
+            self.assertEqual(res2.status_code, 429)
+            self.assertIn("daily coach limit", res2.json()["error"])
+
+
+    def test_login_lockout_after_repeated_failures(self):
+        from . import ratelimit
+
+        ratelimit.reset()
+        User.objects.create_user("lockme", password="right-password-1")
+        for _ in range(5):  # AXES_FAILURE_LIMIT
+            self.client.post("/login/", {"username": "lockme",
+                                         "password": "wrong-password"})
+        # even the CORRECT password is refused while locked out
+        # (django-axes answers lockouts with 429)
+        res = self.client.post("/login/", {"username": "lockme",
+                                           "password": "right-password-1"})
+        self.assertEqual(res.status_code, 429)
+
+
 class ContentValidationTests(TestCase):
     def test_validate_content_green(self):
         call_command("validate_content", verbosity=0)

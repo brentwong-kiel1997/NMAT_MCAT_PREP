@@ -71,10 +71,19 @@ def _prompt(data: dict) -> str:
 @login_required
 @require_GET
 def coach_insights(request):
+    from django.conf import settings
+    from django.utils import timezone
+
+    from .ratelimit import hit
+
     data = _aggregate(request.user.username)
     ai_text = ""
     ai_error = ""
-    if coach_ready():
+    if not hit(f"coach:{request.user.username}:{timezone.localdate()}",
+               settings.GABAY_COACH_DAILY_LIMIT, 86400):
+        ai_error = ("Daily coach limit reached — your data report is below; "
+                    "the AI critique is back tomorrow.")
+    elif coach_ready():
         try:
             ai_text = chat_completion([{"role": "user", "content": _prompt(data)}],
                                       max_tokens=700, temperature=0.3)

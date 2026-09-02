@@ -1,14 +1,19 @@
 #!/usr/bin/env bash
-# Git post-receive: auto-deploy pushed commits to the live checkout.
+# Git post-receive: deploy pushed commits via staging validation + atomic swap.
+#
+# The checkout lands in $STAGING (NOT the live directory); scripts/deploy.sh
+# gates it there (check → migrate → validate_content → collectstatic) and only
+# then renames it onto the live path and restarts gunicorn. See deploy.sh for
+# the reasoning.
 set -euo pipefail
 
 BARE="/home/ubuntu/repos/django-wsgi.git"
-DEPLOY="/home/ubuntu/deploy/django-wsgi"
-DEPLOY_SCRIPT="/home/ubuntu/deploy/django-wsgi/scripts/deploy.sh"
+STAGING="/home/ubuntu/runtime/staging"
 
-mkdir -p "$DEPLOY"
-GIT_WORK_TREE="$DEPLOY" GIT_DIR="$BARE" git checkout -f main 2>/dev/null \
-  || GIT_WORK_TREE="$DEPLOY" GIT_DIR="$BARE" git checkout -f master
+mkdir -p "$STAGING"
+rm -rf "$STAGING"
+GIT_WORK_TREE="$STAGING" GIT_DIR="$BARE" git checkout -f main 2>/dev/null \
+  || GIT_WORK_TREE="$STAGING" GIT_DIR="$BARE" git checkout -f master
 
-chmod +x "$DEPLOY/scripts/deploy.sh" 2>/dev/null || true
-exec "$DEPLOY/scripts/deploy.sh"
+chmod +x "$STAGING/scripts/deploy.sh" 2>/dev/null || true
+exec "$STAGING/scripts/deploy.sh"

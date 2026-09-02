@@ -3,3 +3,4 @@ gunicorn>=22.0,<24
 PyYAML>=6,<7
 weasyprint>=61
 cryptography>=42
+django-axes>=7,<8

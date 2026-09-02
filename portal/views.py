@@ -588,6 +588,17 @@ def study_api(request):
     section_slug = str(payload.get("section_slug") or "").strip()[:80]
     chapter_title = str(payload.get("chapter") or "").strip()[:200]
 
+    # daily per-user cap: every call spends the configured model's budget
+    from django.conf import settings as _settings
+    from django.utils import timezone as _tz
+    from .ratelimit import hit
+
+    if not hit(f"coach:{_learner_name(request)}:{_tz.localdate()}",
+               _settings.GABAY_COACH_DAILY_LIMIT, 86400):
+        return JsonResponse(
+            {"ok": False, "error": "daily coach limit reached — back tomorrow"},
+            status=429)
+
     curriculum = build_curriculum_context(
         exam=exam,
         subject_slug=subject_slug,

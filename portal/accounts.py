@@ -63,6 +63,18 @@ def register_view(request):
 
     error = ""
     if request.method == "POST":
+        from .ratelimit import client_ip, hit
+
+        # account farming guard: 5 signups per hour per network
+        if not hit(f"register:{client_ip(request)}", 5, 3600):
+            return render(
+                request,
+                "portal/register.html",
+                {"error": "rate",
+                 "next": request.POST.get("next") or "",
+                 "username_prefill": ""},
+            )
+
         from django.contrib.auth.validators import UnicodeUsernameValidator
         from django.core.exceptions import ValidationError as _VE
 
@@ -94,7 +106,9 @@ def register_view(request):
         if not error:
             user = User.objects.create_user(username=username, password=password1)
             ensure_profile_for_user(user)
-            login(request, user)
+            # multiple auth backends (axes first) require an explicit backend
+            login(request, user,
+                  backend="django.contrib.auth.backends.ModelBackend")
             next_url = request.POST.get("next") or request.GET.get("next") or ""
             if next_url.startswith("/") and not next_url.startswith("//"):
                 return redirect(next_url)
