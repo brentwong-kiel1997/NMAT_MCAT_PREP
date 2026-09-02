@@ -50,6 +50,23 @@ def current_counts(store: dict) -> dict:
     }
 
 
+def _check_question_key(rel: str, kind: str, q: dict) -> list[str]:
+    """Tutorial question keys must sit inside a complete A-D option set with
+    unique texts — the gate used to check only that `answer` was non-empty."""
+    problems: list[str] = []
+    options = q.get("options") or {}
+    answer = q.get("answer")
+    if set(options) != {"A", "B", "C", "D"}:
+        problems.append(f"{rel}: {kind} options are not exactly A-D "
+                        f"(got {sorted(options)!r})")
+    if answer and answer not in options:
+        problems.append(f"{rel}: {kind} answer {answer!r} not in options")
+    texts = list(options.values())
+    if len(set(texts)) != len(texts):
+        problems.append(f"{rel}: {kind} has duplicate option texts")
+    return problems
+
+
 class Command(BaseCommand):
     help = "Validate content/ files; exit 1 if anything is broken."
 
@@ -161,6 +178,9 @@ class Command(BaseCommand):
                     for check in section.get("check") or []:
                         if not check.get("q") or not check.get("answer"):
                             problems.append(f"{rel}: section check missing q/answer")
+                        else:
+                            problems.extend(
+                                _check_question_key(rel, "check", check))
                     for i, v in enumerate(section.get("videos") or [], 1):
                         if not v.get("title") or not v.get("url"):
                             problems.append(f"{rel}: section {i} video missing title/url")
@@ -188,9 +208,15 @@ class Command(BaseCommand):
                     for q in passage.get("questions") or []:
                         if not q.get("q") or not q.get("answer"):
                             problems.append(f"{rel}: passage question missing q/answer")
+                        else:
+                            problems.extend(
+                                _check_question_key(rel, "passage", q))
                 for i, q in enumerate(doc.get("review_questions") or [], 1):
                     if not q.get("q") or not q.get("answer"):
                         problems.append(f"{rel}: review question {i} missing q/answer")
+                    else:
+                        problems.extend(
+                            _check_question_key(rel, f"review {i}", q))
 
         # ---- learner progress vs chapter ids --------------------------------------
         try:

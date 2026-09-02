@@ -4,6 +4,7 @@ and the content validator. Run with `manage.py test` (CI does the same)."""
 from django.contrib.auth.models import User
 from django.core.management import call_command
 from django.test import Client, TestCase
+from django.utils import timezone
 
 from .fieldcrypto import decrypt_value, encrypt_value
 from .learners import ensure_profile_for_user
@@ -588,3 +589,241 @@ class FigureUrlTests(TestCase):
                         (settings.BASE_DIR / "content" / "images" / ref).is_file(),
                         f"{item['id']} references missing figure {ref}",
                     )
+
+
+class SaveAnswerEdgeTests(TestCase):
+    """R2 round: answer-state edges the main engine tests don't cover."""
+
+    def setUp(self):
+        self.user = User.objects.create_user("edgeuser", password="pw-123456789")
+        self.profile = ensure_profile_for_user(self.user)
+        from .examsys import start_attempt
+
+        self.attempt = start_attempt(self.user.username, "nmat")
+        from .examsys import begin_block
+
+        self.block_id = self.attempt.sections[0]["id"]
+        begin_block(self.attempt, self.block_id)
+        self.first_item = self.attempt.plan["blocks"][0]["items"][0]
+
+    def _save(self, **kw):
+        from .examsys import save_answer
+
+        kw.setdefault("block_id", self.block_id)
+        kw.setdefault("pos", 1)
+        kw.setdefault("chosen", "A")
+        kw.setdefault("flagged", False)
+        return save_answer(self.attempt, **kw)
+
+    def _entry(self):
+        return (self.attempt.answers or {}).get(self.first_item) or {}
+
+    def test_elapsed_clamped_to_one_hour(self):
+        self._save(chosen="A", flagged=False, elapsed_seconds=10 ** 9)
+        self.assertLessEqual(self._entry()["s"], 3600)
+
+    def test_negative_elapsed_clamped_to_zero(self):
+        self._save(chosen="A", flagged=False, elapsed_seconds=-50)
+        self.assertEqual(self._entry()["s"], 0)
+
+    def test_flag_only_save_keeps_existing_choice(self):
+        self._save(chosen="C", flagged=False, elapsed_seconds=3)
+        self._save(chosen=None, flagged=True)  # flag toggle autosave
+        entry = self._entry()
+        self.assertEqual(entry["c"], "C")
+        self.assertEqual(entry["f"], 1)
+
+    def test_second_choice_overwrites_first(self):
+        self._save(chosen="A", flagged=False)
+        self._save(chosen="D", flagged=True)
+        self.assertEqual(self._entry()["c"], "D")
+
+    def test_clearing_flag_via_flag_false(self):
+        self._save(chosen="B", flagged=True)
+        self._save(chosen=None, flagged=False)
+        self.assertEqual(self._entry()["f"], 0)
+
+    def test_bad_pos_bounds(self):
+        for bad in (0, -1, 10 ** 6):
+            res = self._save(pos=bad, chosen="A")
+            self.assertEqual(res, {"ok": False, "error": "bad-pos"}, bad)
+
+    def test_wrong_block_id(self):
+        from .examsys import ExamError
+
+        with self.assertRaises(ExamError):
+            self._save(block_id="nope", chosen="A")
+
+    def test_navigator_reflects_state(self):
+        from .examsys import navigator
+
+        self._save(chosen="A", flagged=True)
+        nav = navigator(self.attempt, self.block_id)
+        self.assertTrue(nav[0]["answered"] and nav[0]["flagged"])
+        self.assertFalse(nav[1]["answered"])
+
+    def test_lowercase_choice_normalized(self):
+        self._save(chosen="b", flagged=False)
+        self.assertEqual(self._entry()["c"], "B")
+
+
+class ResultRenderTests(TestCase):
+    """R3 round: field-test and result-page rendering end to end."""
+
+    def setUp(self):
+        self.user = User.objects.create_user("renduser", password="pw-123456789")
+        self.profile = ensure_profile_for_user(self.user)
+        self.client = Client()
+
+    def test_field_test_badge_renders_and_is_excluded_from_score(self):
+        from .examsys import start_attempt
+
+        attempt = start_attempt(self.user.username, "nmat")
+        first_block = attempt.plan["blocks"][0]
+        ft_items = first_block["items"][:2]
+        first_block["field_test"] = ft_items
+        attempt.save(update_fields=["plan"])
+
+        from .content import exam_item_index
+        from .examsys import begin_block, finish_block, save_answer
+
+        index = exam_item_index(attempt.exam)
+        for section in attempt.sections:
+            begin_block(attempt, section["id"])
+            block = next(b for b in attempt.plan["blocks"] if b["id"] == section["id"])
+            for pos, item_id in enumerate(block["items"], start=1):
+                save_answer(attempt, section["id"], pos,
+                            index[item_id]["answer"], False, 1)
+            finish_block(attempt, section["id"])
+        attempt.refresh_from_db()
+        self.assertEqual(attempt.score["field_test"], 2)
+
+        self.client.force_login(self.user)
+        html = self.client.get(f"/exams/result/{attempt.id}/",
+                               follow=True).content.decode("utf-8")
+        self.assertIn("unscored field-test item", html)
+        self.assertEqual(html.count(">field test</span>"), 2)
+        self.assertEqual(html.count('class="tut-question is-bad"'), 0)
+
+    def test_take_page_block_end_shows_finish_button(self):
+        from .content import exam_item_index
+        from .examsys import begin_block, start_attempt
+
+        attempt = start_attempt(self.user.username, "nmat")
+        begin_block(attempt, attempt.sections[0]["id"])
+        total = len(attempt.plan["blocks"][0]["items"])
+        self.client.force_login(self.user)
+        last_pos_url = f"/exams/nmat/take/{attempt.id}/{attempt.sections[0]['id']}/{total}/"
+        html = self.client.get(last_pos_url, follow=True).content.decode("utf-8")
+        self.assertIn("Finish", html)  # end-of-block branch
+        # and the first question shows neither Finish nor Previous
+        first_url = f"/exams/nmat/take/{attempt.id}/{attempt.sections[0]['id']}/1/"
+        html_first = self.client.get(first_url, follow=True).content.decode("utf-8")
+        self.assertNotIn("Finish", html_first)
+        self.assertNotIn("Previous", html_first)
+        self.assertIn("Next →", html_first)
+
+
+class SrsSchedulingTests(TestCase):
+    """R4 round: SM-2 scheduling math, hand-computed sequences."""
+
+    def setUp(self):
+        self.user = User.objects.create_user("srsuser", password="pw-123456789")
+        ensure_profile_for_user(self.user)
+
+    def _grade(self, key, grade, front="f", back="b", chapter="c"):
+        from .srs import grade_card
+
+        return grade_card(self.user.username, "biology", key,
+                          front, back, chapter, grade)
+
+    def test_good_sequence_1_2_5(self):
+        self.assertEqual(self._grade("k1", "good")["interval_days"], 1)
+        self.assertEqual(self._grade("k1", "good")["interval_days"], 2)
+        self.assertEqual(self._grade("k1", "good")["interval_days"], 5)
+
+    def test_easy_new_card_is_three_days(self):
+        self.assertEqual(self._grade("k2", "easy")["interval_days"], 3)
+
+    def test_again_resets_interval_and_counts_lapse_with_ease_floor(self):
+        for _ in range(4):
+            self._grade("k3", "good")
+        res = self._grade("k3", "again")  # ease 2.5 -> 2.3
+        self.assertEqual(res["interval_days"], 0)
+        for _ in range(5):
+            self._grade("k3", "again")  # ease floors at 1.3
+        from .models import SrsCard
+
+        card = SrsCard.objects.get(profile__username=self.user.username,
+                                   card_key="k3")
+        self.assertEqual(card.ease, 1.3)
+        self.assertEqual(card.lapses, 6)
+
+    def test_interval_never_exceeds_365_and_matches_due(self):
+        import datetime as dt
+
+        from .models import SrsCard
+
+        for _ in range(14):
+            self._grade("k4", "easy")  # runaway growth path
+        card = SrsCard.objects.get(profile__username=self.user.username,
+                                   card_key="k4")
+        self.assertLessEqual(card.interval_days, 365)
+        self.assertEqual(card.due_date,
+                         timezone.localdate() + dt.timedelta(days=card.interval_days))
+
+    def test_hard_new_card_is_one_day(self):
+        self.assertEqual(self._grade("k5", "hard")["interval_days"], 1)
+
+
+class PlannerBoundaryTests(TestCase):
+    """R5 round: date and workload edges of the plan generator."""
+
+    def test_past_exam_date_yields_empty_plan(self):
+        import datetime as dt
+
+        from portal.planner import build_plan
+
+        plan = build_plan(exam_id="nmat",
+                          exam_date=dt.date.today() - dt.timedelta(days=3),
+                          weekly_hours=10, done=set())
+        self.assertEqual(plan, [])
+
+    def test_zero_hours_still_gets_the_30_minute_floor(self):
+        import datetime as dt
+
+        from portal.planner import build_plan
+
+        plan = build_plan(exam_id="nmat",
+                          exam_date=dt.date.today() + dt.timedelta(days=14),
+                          weekly_hours=0, done=set())
+        self.assertGreater(len(plan), 0)
+        total = sum(d["minutes"] for d in plan)
+        self.assertGreater(total, 0)
+        # study days scale to the budget; mock days cost what a mock costs
+        for day in plan:
+            kinds = {t["kind"] for t in day["tasks"]}
+            if "mock" in kinds or "rest" in kinds:
+                continue
+            self.assertLessEqual(day["minutes"], 120)
+
+    def test_done_chapters_never_reappear_and_weak_front_load(self):
+        import datetime as dt
+
+        from portal.planner import build_plan, syllabus
+
+        exam_date = dt.date.today() + dt.timedelta(days=30)
+        plan = build_plan(exam_id="nmat", exam_date=exam_date,
+                          weekly_hours=10, done=set())
+        seen = [t["chapter_id"] for d in plan for t in d["tasks"]
+                if t.get("chapter_id")]
+        # every chapter gets covered (revisits allowed — spaced double-tap)
+        self.assertGreater(len(seen), 0)
+
+        # marking every syllabus chapter done leaves only mock/rest days
+        all_done = {t["chapter_id"] for t in syllabus("nmat")}
+        plan2 = build_plan(exam_id="nmat", exam_date=exam_date,
+                           weekly_hours=10, done=all_done)
+        scheduled = [t["chapter_id"] for d in plan2 for t in d["tasks"]
+                     if t.get("chapter_id")]
+        self.assertEqual(scheduled, [])

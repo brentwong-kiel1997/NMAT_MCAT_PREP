@@ -134,8 +134,8 @@ def grade_card(username: str, subject_slug: str, key: str, front: str,
     else:  # good
         interval = 1 if interval == 0 else max(1, int(interval * ease))
     card.ease = ease
-    card.interval_days = interval
-    interval = min(interval, 365)
+    interval = min(interval, 365)  # clamp BEFORE storing: interval_days and
+    card.interval_days = interval  # due_date must never drift apart
     card.due_date = timezone.localdate() + dt.timedelta(days=interval)
     card.reps += 1
     card.save()

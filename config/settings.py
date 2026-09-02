@@ -60,7 +60,14 @@ AUTHENTICATION_BACKENDS = [
 ]
 AXES_FAILURE_LIMIT = 5
 AXES_COOLOFF_TIME = 1 / 24  # hours: 30 minutes
-AXES_LOCKOUT_PARAMETERS = ["ip_address", "username"]  # either dimension locks
+# combination form: (username, ip) must match to lock — the plain "username"
+# dimension would let anyone permanently lock a known user's account, and
+# django-ipware is NOT installed, so axes would resolve every client to
+# 127.0.0.1 behind nginx (one shared bucket = 5 typos lock the whole site).
+# X-Real-IP is trustworthy here: nginx overwrites it with $remote_addr.
+AXES_CLIENT_IP_CALLABLE = lambda r: (  # noqa: E731
+    r.META.get("HTTP_X_REAL_IP") or r.META.get("REMOTE_ADDR") or "")
+AXES_LOCKOUT_PARAMETERS = [["username", "ip_address"]]
 AXES_RESET_ON_SUCCESS = True
 
 # Daily per-user cap on coach LLM calls (study tutor + AI analysis).

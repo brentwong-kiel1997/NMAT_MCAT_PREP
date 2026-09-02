@@ -69,7 +69,6 @@ def build_plan(*, exam_id: str, exam_date: dt.date, weekly_hours: int,
     else:
         queue = [t for t in tasks if t["chapter_id"] not in done]
     qi = 0
-    qi = 0
     for offset in range(days):
         date = today + dt.timedelta(days=offset)
         day = {"date": date.isoformat(), "minutes": 0, "tasks": []}
@@ -108,10 +107,10 @@ def build_plan(*, exam_id: str, exam_date: dt.date, weekly_hours: int,
                 budget -= drill
             qi += 1
         if qi >= len(queue):
-            # syllabus exhausted — restart revision passes; mocks and the
-            # final rest day still get scheduled even when everything is read
-            cycle = [t for t in tasks if t["chapter_id"] not in done]
-            queue = cycle if cycle else tasks
+            # syllabus exhausted — mocks and the final rest day still get
+            # scheduled even when everything is read, but re-reading the
+            # whole queue from scratch made a finished plan never terminate
+            queue = []
             qi = 0
         plan.append(day)
     return plan

@@ -1,5 +1,5 @@
 {
-  "source_rev": "a619373",
+  "source_rev": "0f840a1",
   "counts": {
     "chapters": 70,
     "note_bullets": 453,
@@ -42,7 +42,7 @@
     "chapters/6c-responding-to-the-world.yml": "ea02e38f37bd4687fc65d1e6ffd3e1f596de01fb827d0294d59a2659a2dd54a8",
     "chapters/7a-individual-influences-on-behavior.yml": "edc1858ec7ef2a5e3109f6c82041dd2296959f3cb1091f65e73709da3359677e",
     "chapters/7b-social-processes-that-influence-behavior.yml": "5ba349cc72b969b2be36192944bc3727faf1eddb5de2ee781c05d91695343938",
-    "chapters/7c-attitude-and-behavior-change.yml": "8ca0624abf21540064a7826ae0eec51a5d838c32e3d2b16ccc18274d511f733c",
+    "chapters/7c-attitude-and-behavior-change.yml": "71b4f4801544bca7096d8cb00ba69d1d02508d17e75c46ee0400e210bcfac83e",
     "chapters/8a-self-identity.yml": "4a12292dc26d8082864b3cde5f81089850b38dd032c41e4f78affd78818eb280",
     "chapters/8b-social-thinking.yml": "8371ac67039f89c29b12f63be0e63b389711824929087794c50f06f079ee70fe",
     "chapters/8c-social-interactions.yml": "c0071c2d1f9587158d52db9527e147607f2bad011f018703eb0bd8837dfbe1db",

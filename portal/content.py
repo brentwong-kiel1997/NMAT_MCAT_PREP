@@ -397,6 +397,10 @@ def flashcards_for(slug: str, limit: int = 40) -> list[dict]:
     for s in _subject_chapter_slugs(slug):
         ch = data["chapters"].get(s) or {}
         for note in ch.get("notes") or []:
+            if not isinstance(note, str):
+                # an unquoted "key: value" line parses as a mapping; skip it
+                # rather than 500-ing the deck (sorted() would TypeError)
+                continue
             pairs.append((ch.get("title", ""), note))
     for title, note in sorted(pairs):
         cards.append({"chapter": title, "text": note})
