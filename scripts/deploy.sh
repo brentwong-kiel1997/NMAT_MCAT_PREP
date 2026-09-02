@@ -58,11 +58,13 @@ fi
 "${VENV}/bin/python" manage.py collectstatic --noinput
 
 # --- swap: two renames on one filesystem, microseconds wide ---
+# a root-owned $PREV (from a sudo-run hook once) must not brick the push
 if [[ -d "$DEPLOY" ]]; then
-  rm -rf "$PREV"
+  rm -rf "$PREV" 2>/dev/null || sudo -n rm -rf "$PREV" || true
   mv "$DEPLOY" "$PREV"
 fi
-mv "$STAGING" "$DEPLOY"
+# if the second rename fails, put the old tree back — never leave no live dir
+mv "$STAGING" "$DEPLOY" || { mv "$PREV" "$DEPLOY" 2>/dev/null || true; exit 1; }
 cd "$DEPLOY"
 
 "${VENV}/bin/python" manage.py ensure_admin
