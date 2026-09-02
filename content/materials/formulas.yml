@@ -32,7 +32,7 @@ sheets:
     formula: π = iMRT
     note: i is ionization factor; colloid osmotic pressure matters physiologically.
   - title: Photosynthetic quantum yield
-    formula: O₂ evolved per photon absorbed
+    formula: quantum requirement ≈ 8–10 photons per O₂ evolved
     note: Common concept item on light-reaction efficiency.
   - title: Trophic energy transfer
     formula: ~10% to next level
@@ -79,7 +79,7 @@ sheets:
     formula: pH = −log[H⁺]
     note: Negative log of hydrogen-ion activity.
   - title: Redox electron transfer
-    formula: n = Δoxidation number × atoms
+    formula: electrons transferred = (Δ oxidation number per atom) × (atoms oxidized or reduced)
     note: Balance half-reactions to find electrons.
   - title: Half-life
     formula: t₁/₂ = 0.693 / k
@@ -301,9 +301,6 @@ sheets:
   - title: Profit margin
     formula: margin = profit / revenue
     note: Denominator is revenue, not cost.
-  - title: Percent change
-    formula: '%Δ = (new−old)/old × 100%'
-    note: Distinguish relative percent from percentage points.
   - title: Combinations
     formula: C(n,k) = n! / (k!(n−k)!)
     note: Unordered selections; use P(n,k) when order matters.

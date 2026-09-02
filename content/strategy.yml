@@ -55,13 +55,16 @@ guides:
   name: A timing protocol you can actually run
   summary: Per-item budgets with two checkpoints beat one long clock.
   steps:
-  - 'Set a fair-share: block seconds ÷ items (MCAT CP ≈ 96 s/item; NMAT ≈ 70 s/item).'
+  - 'Set a fair-share: block seconds ÷ items (MCAT CP ≈ 96 s/item; NMAT Part 1 ≈ 68 s/item, Part 2 ≈ 45
+    s/item).'
   - 'Checkpoint 1 at one-third of the block: you should be one-third through items. Behind? Drop your
     hardest passage-type to C-triage.'
   - 'Two-pass method: pass 1 answer everything under the fair-share, flagging stalls; pass 2 returns only
     to flags.'
-  - Never burn more than 2× fair-share on one item — two wrong answers cost less than three skipped later.
-  - 'Guess policy: same letter for every true guess (a fixed letter matches random guessing in expectation while costing fewer decisions).'
+  - Answer every item — with right-only scoring a wrong and a blank earn the same zero, so an unanswered
+    question buys nothing; the real cost of stubbornness is minutes, not points
+  - 'Guess policy: same letter for every true guess (a fixed letter matches random guessing in expectation
+    while costing fewer decisions).'
   pitfall: Clock-watching every item. Checkpoints exist so you can forget the clock between them.
 - slug: flag-discipline
   exam: Both
@@ -81,7 +84,8 @@ guides:
   summary: 'Both exams score right-only: an unanswered question is a donated point.'
   steps:
   - Never leave a blank — there is no wrong-answer penalty on the MCAT or NMAT.
-  - Pick one letter as your default guess BEFORE exam day and use it for every pure guess; a fixed letter is equal in expectation and saves decision time.
+  - Pick one letter as your default guess BEFORE exam day and use it for every pure guess; a fixed letter
+    is equal in expectation and saves decision time.
   - 'Educated guesses first: POE to two options, then your default letter only if still stuck.'
   - Reserve 60 seconds at block end for a blank-scan — the navigator grid shows unanswered cells at a
     glance.

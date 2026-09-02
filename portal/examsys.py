@@ -71,7 +71,9 @@ def _diagnostic_plan(exam_id: str, plan: dict) -> dict:
             by_chapter.setdefault((index.get(iid) or {}).get("chapter") or "", []).append(iid)
         picked: list[str] = []
         pools = [ids for ids in by_chapter.values() if ids]
-        while len(picked) < target and pools:
+        # any(pools): exhausted pools must leave the loop, or a block with
+        # fewer items than `target` spins forever (verified worker-hang)
+        while len(picked) < target and any(pools):
             for pool in pools:
                 if pool and len(picked) < target:
                     picked.append(pool.pop(0))
@@ -278,8 +280,9 @@ def save_answer(attempt: ExamAttempt, block_id: str, pos: int,
                 chosen: str | None, flagged: bool,
                 elapsed_seconds: int | None = None,
                 crossed: list | None = None) -> dict:
-    """Autosave one item's captured state. Row-locked so concurrent saves
-    from two tabs cannot clobber each other's answers."""
+    """Autosave one item's captured state. select_for_update is a no-op on
+    SQLite — correctness comes from the atomic block plus SQLite's whole-DB
+    write serialization (WAL + busy_timeout, see settings.DATABASES)."""
     with transaction.atomic():
         locked = ExamAttempt.objects.select_for_update().get(id=attempt.id)
         if locked.status != "active":
@@ -332,12 +335,14 @@ def save_answer(attempt: ExamAttempt, block_id: str, pos: int,
     return {"ok": True, "item_id": item_id}
 
 
-def finish_block(attempt: ExamAttempt, block_id: str) -> None:
+def finish_block(attempt: ExamAttempt, block_id: str) -> ExamAttempt | None:
+    """Close one block; on the last one finalize and return the reloaded row."""
     _close_block(attempt, block_id)
     remaining_blocks = [s for s in attempt.sections
                         if not s.get("finished_ts")]
     if not remaining_blocks:
-        finalize(attempt, reason="submitted")
+        return finalize(attempt, reason="submitted")
+    return None
 
 
 def _chapter_discipline(chapter_id: str) -> str:

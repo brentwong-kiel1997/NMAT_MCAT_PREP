@@ -48,9 +48,10 @@ tips:
   body: Use CEM BOI and AAMC What’s on the MCAT as the chapter spine; notes and practice attach to official
     headings — no invented pseudo-chapters.
 - exam: BOTH
-  title: Using bilingual notes
-  body: 'Gabay notes are bilingual: grasp points in Chinese, then verify exam phrasing in English. MCAT
-    is English; NMAT stems are largely English too.'
+  title: Rewrite notes in exam English
+  body: Whatever language you think in, re-express each point in the exam's own English phrasing — stem
+    words like 'most nearly', 'EXCEPT', and 'best explains' carry grading weight. Write one English line
+    per concept, then test yourself from that line alone.
 - exam: MCAT
   title: Science section reading order
   body: For passages, skim figures and question stems first, then locate evidence; tackle standalone concept

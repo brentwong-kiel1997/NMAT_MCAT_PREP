@@ -177,11 +177,14 @@
     // ---- submit
     function submitExam(auto) {
       if (!auto && !window.confirm("Submit the exam for scoring?")) return;
-      // flush any debounced save first so the final choice is scored
-      const flushFirst = pending
-        ? post({ ...pending }).catch(() => {})
-        : Promise.resolve();
-      pending = null;
+      // flush any debounced save first so the final choice is scored; one
+      // retry on a flaky connection, then submit regardless
+      let flushFirst = Promise.resolve();
+      if (pending) {
+        const body = { ...pending };
+        flushFirst = post(body).catch(() => post(body).catch(() => {}));
+        pending = null;
+      }
       flushFirst.then(() => fetch("/exams/api/submit/", {
         method: "POST",
         credentials: "same-origin",

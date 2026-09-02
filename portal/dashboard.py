@@ -13,6 +13,9 @@ from . import insights, planner
 from .content import figure_url
 
 
+_PLAN_CACHE: dict = {}
+
+
 def cause_distribution_local(profile):
     """Distribution over distinct wrong questions, batched."""
     wrong = insights.wrong_questions(profile, limit=1000)
@@ -70,8 +73,17 @@ def dashboard(request):
     today_tasks, mock_recommended = [], False
     if sp:
         done = {row.chapter_id for row in ChapterProgress.objects.filter(profile=profile)}
-        full = planner.build_plan(exam_id=sp.exam, exam_date=sp.exam_date,
-                                  weekly_hours=sp.weekly_hours, done=done)
+        # build_plan re-resolves the whole syllabus (~1.4 s) — cache per
+        # (plan shape, progress) so a dashboard render doesn't recompute it
+        key = (sp.exam, str(sp.exam_date), sp.weekly_hours, hash(tuple(sorted(done))))
+        cached = _PLAN_CACHE.get(key)
+        if cached is None:
+            cached = build_plan(exam_id=sp.exam, exam_date=sp.exam_date,
+                                weekly_hours=sp.weekly_hours, done=done)
+            if len(_PLAN_CACHE) > 32:
+                _PLAN_CACHE.clear()
+            _PLAN_CACHE[key] = cached
+        full = cached
         today_tasks = full[0]["tasks"] if full else []
     stats = srs_stats(request.user.username)
     has_real = ExamAttempt.objects.filter(profile=profile, exam__in=("nmat", "mcat"),
@@ -107,10 +119,10 @@ def review(request):
                 practice_store[q["id"]] = q
     rows = insights.wrong_questions(profile)
     diff_map = insights.item_difficulty_map()
+    chs = chapters_store()  # hoisted: a full library deepcopy per loop turn cost ~14 ms
     items = []
     for row in rows:
         q = practice_store.get(row["question_id"]) or index.get(row["question_id"]) or {}
-        chs = chapters_store()
         ch = chs.get(row["chapter_id"]) or {}
         items.append({**row,
                       "stem": q.get("q", ""),
@@ -249,8 +261,6 @@ def review_cause_api(request):
         note_text = str(payload.get("note") or "")[:500]
     except (TypeError, ValueError):
         return JsonResponse({"ok": False, "error": "Invalid payload"}, status=400)
-    if not question_id or cause not in {"content", "misread", "careless", "trap"}:
-        return JsonResponse({"ok": False, "error": "Invalid cause"}, status=400)
     if not question_id or cause not in {"content", "misread", "careless", "trap"}:
         return JsonResponse({"ok": False, "error": "Invalid cause"}, status=400)
     profile = _profile(request)

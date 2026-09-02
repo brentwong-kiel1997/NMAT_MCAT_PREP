@@ -127,9 +127,15 @@ class ExamEngineTests(TestCase):
             block = next(
                 b for b in attempt.plan["blocks"] if b["id"] == block_id
             )
+            vmap = block.get("vmap") or {}
             for pos, item_id in enumerate(block["items"], start=1):
-                save_answer(attempt, block_id, pos,
-                            index[item_id]["answer"], False, 5)
+                canonical = index[item_id]["answer"]
+                # retake variants permute shown letters — the client clicks
+                # the SHOWN letter, so translate before saving
+                mapping = vmap.get(item_id) or {}
+                shown = next((s for s, o in mapping.items() if o == canonical),
+                             canonical)
+                save_answer(attempt, block_id, pos, shown, False, 5)
             finish_block(attempt, block_id)
         attempt.refresh_from_db()
         return attempt
@@ -242,6 +248,37 @@ class ExamEngineTests(TestCase):
         self.assertTrue(flagged_rows.first().is_field_test)  # …as unscored
         # the live helper labels nothing for zero-response attempts of others
         self.assertIsNotNone(get_attempt(self.user.username, attempt.id))
+
+    def test_diagnostic_plan_terminates_on_tiny_block(self):
+        """A block with fewer items than the diagnostic target used to spin
+        forever (verified worker-hang); it must now return the items it has."""
+        from .examsys import _diagnostic_plan, start_attempt
+
+        start_attempt(self.user.username, "nmat")  # warm the content index
+        real = start_attempt(self.user.username, "nmat")
+        first_item = real.plan["blocks"][0]["items"][0]
+        plan = {"blocks": [{"id": "tiny", "seconds": 300, "items": [first_item]}]}
+        result = _diagnostic_plan("nmat", plan)
+        self.assertEqual(result["blocks"][0]["items"], [first_item])
+
+    def test_retake_result_review_matches_shown_letters(self):
+        """The retake variant permutes option letters; the result review must
+        fold choice texts through the same map or it highlights the wrong
+        option as correct (verified pre-fix)."""
+        from .examsys import get_attempt, start_attempt
+
+        self._answer_everything(self._start())
+        second = self._answer_everything(self._start())
+        reloaded = get_attempt(self.user.username, second.id)
+        self.assertEqual(reloaded.score["pct"], 100.0)
+
+        self.client.force_login(self.user)
+        html = self.client.get(
+            f"/exams/result/{second.id}/", follow=True).content.decode("utf-8")
+        rows_ok = html.count('class="tut-question is-ok"')
+        rows_bad = html.count('class="tut-question is-bad"')
+        self.assertGreater(rows_ok, 0)
+        self.assertEqual(rows_bad, 0)  # all-correct sitting renders all ✓
 
     def test_zero_out_of_four_attempt_statuses(self):
         # finalize is idempotent: re-finalizing a closed attempt is a no-op

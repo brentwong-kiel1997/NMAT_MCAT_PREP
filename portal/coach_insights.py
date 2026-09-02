@@ -20,10 +20,11 @@ def _aggregate(username: str) -> dict:
     profile = __import__("portal.learners", fromlist=["get_or_create_profile"]).get_or_create_profile(username)
     weak = insights.wrong_chapters(profile, limit=10)
     causes = {}
-    for it in insights.wrong_questions(profile, limit=1000):
-        note = ReviewNote.objects.filter(profile=profile,
-                                         question_id=it["question_id"]).first()
-        key = note.cause if note else "unlabeled"
+    wrong = insights.wrong_questions(profile, limit=1000)
+    stored = {n.question_id: n.cause for n in ReviewNote.objects.filter(
+        profile=profile, question_id__in=[it["question_id"] for it in wrong])}
+    for it in wrong:
+        key = stored.get(it["question_id"], "unlabeled")
         causes[key] = causes.get(key, 0) + 1
     history = insights.exam_history(profile)
     trend = [h["pct"] for h in history]

@@ -13,7 +13,8 @@ SOCK="127.0.0.1:8000"
 mkdir -p "$LOGS" "$DEPLOY"
 
 export DJANGO_DEBUG="${DJANGO_DEBUG:-0}"
-export DJANGO_ALLOWED_HOSTS="${DJANGO_ALLOWED_HOSTS:-localhost,127.0.0.1,*}"
+# no wildcard: keep the Host header pinned to names the server is reached by
+export DJANGO_ALLOWED_HOSTS="${DJANGO_ALLOWED_HOSTS:-localhost,127.0.0.1,124.222.115.8,10.0.0.14}"
 
 # Tutor keys are read from .env per request (portal/envfile.py). Drop any model
 # credentials inherited from the pushing shell so the server process and its
@@ -31,7 +32,12 @@ if [[ ! -d "$VENV" ]]; then
 fi
 
 "${VENV}/bin/pip" install -q --upgrade pip
-"${VENV}/bin/pip" install -q -r requirements.txt
+# prefer the committed lockfile (exact prod parity); fall back to ranges
+if [[ -f requirements.lock ]]; then
+  "${VENV}/bin/pip" install -q -r requirements.lock
+else
+  "${VENV}/bin/pip" install -q -r requirements.txt
+fi
 
 # --- Databases under $RUNTIME ---
 # users.sqlite3 (default): auth / sessions / learner progress.

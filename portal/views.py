@@ -462,7 +462,7 @@ def practice_detail(request, slug):
 @require_GET
 @api_login_required
 def progress_api(request):
-    subject_slug = (request.GET.get("subject_slug") or "").strip()
+    subject_slug = str(request.GET.get("subject_slug") or "").strip()[:80]
     if not subject_slug:
         return JsonResponse({"ok": False, "error": "subject_slug required"}, status=400)
     username = _learner_name(request)
@@ -484,8 +484,10 @@ def progress_update_api(request):
     except (json.JSONDecodeError, UnicodeDecodeError):
         return JsonResponse({"ok": False, "error": "Invalid JSON"}, status=400)
 
-    subject_slug = (payload.get("subject_slug") or "").strip()
-    chapter_id = (payload.get("chapter_id") or "").strip()
+    # str() coercion: JSON values may arrive as numbers/lists — .strip() on
+    # those raised an unhandled AttributeError (verified 500)
+    subject_slug = str(payload.get("subject_slug") or "").strip()[:80]
+    chapter_id = str(payload.get("chapter_id") or "").strip()[:120]
     if not subject_slug or not chapter_id:
         return JsonResponse(
             {"ok": False, "error": "subject_slug and chapter_id required"}, status=400
@@ -510,9 +512,9 @@ def practice_attempt_api(request):
     except (json.JSONDecodeError, UnicodeDecodeError):
         return JsonResponse({"ok": False, "error": "Invalid JSON"}, status=400)
 
-    subject_slug = (payload.get("subject_slug") or "").strip()
-    question_id = (payload.get("question_id") or "").strip()
-    chosen = (payload.get("chosen") or "").strip().upper()[:1]
+    subject_slug = str(payload.get("subject_slug") or "").strip()[:80]
+    question_id = str(payload.get("question_id") or "").strip()[:64]
+    chosen = str(payload.get("chosen") or "").strip().upper()[:1]
     if not subject_slug or not question_id or chosen not in {"A", "B", "C", "D"}:
         return JsonResponse({"ok": False, "error": "Invalid attempt"}, status=400)
 
@@ -581,10 +583,10 @@ def study_api(request):
     if len(user_text) > 4000:
         return JsonResponse({"ok": False, "error": "Message too long"}, status=400)
 
-    exam = (payload.get("exam") or "").strip()
-    subject_slug = (payload.get("subject_slug") or "").strip()
-    section_slug = (payload.get("section_slug") or "").strip()
-    chapter_title = (payload.get("chapter") or "").strip()
+    exam = str(payload.get("exam") or "").strip()[:20]
+    subject_slug = str(payload.get("subject_slug") or "").strip()[:80]
+    section_slug = str(payload.get("section_slug") or "").strip()[:80]
+    chapter_title = str(payload.get("chapter") or "").strip()[:200]
 
     curriculum = build_curriculum_context(
         exam=exam,
@@ -664,7 +666,11 @@ def content_image(request, path):
 
     base = (_P(__file__).resolve().parent.parent / "content" / "images").resolve()
     target = (base / path).resolve()
-    if not str(target).startswith(str(base)) or not target.is_file():
+    try:
+        target.relative_to(base)
+    except ValueError:
+        raise Http404("Image not found")
+    if not target.is_file():
         raise Http404("Image not found")
     content_type = mimetypes.guess_type(str(target))[0] or "application/octet-stream"
     response = FileResponse(open(target, "rb"), content_type=content_type)

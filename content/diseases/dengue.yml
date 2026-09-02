@@ -12,7 +12,7 @@ exam_fit: Extension reading serving biology/pathophysiology intuition; the NMAT 
 pathogen: Dengue virus (Flavivirus, +ssRNA); serotypes DENV-1–4
 transmission: Aedes aegypti (daytime biting); human–mosquito–human cycle.
 pathophysiology:
-- Infects endothelium and immune cells, triggering a cytokine-storm-like response.
+- Infects monocytes, macrophages and dendritic cells; cytokine-mediated endothelial dysfunction drives plasma leakage and immune cells, triggering a cytokine-storm-like response.
 - Secondary infection with a heterologous serotype can worsen disease via ADE (antibody-dependent enhancement).
 - Vascular permeability increases → plasma leakage → shock (DSS) and bleeding risk.
 clinical:

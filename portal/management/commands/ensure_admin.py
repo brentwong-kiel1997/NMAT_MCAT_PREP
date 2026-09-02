@@ -51,8 +51,14 @@ class Command(BaseCommand):
         user.is_staff = True
         user.is_superuser = True
         user.is_active = True
-        user.set_password(password)
-        user.save()
+        # Only (re)set the password when it doesn't match: an admin who changed
+        # their password in the UI must not be silently reverted on next deploy.
+        if created or not user.check_password(password):
+            user.set_password(password)
+            user.save()
+            action = "created" if created else "password reset"
+        else:
+            user.save()
+            action = "already up to date"
         ensure_profile_for_user(user, display_name="Admin")
-        action = "created" if created else "updated"
         self.stdout.write(self.style.SUCCESS(f"Admin user {action}: {username}"))

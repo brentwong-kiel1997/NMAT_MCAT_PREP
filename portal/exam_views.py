@@ -26,9 +26,10 @@ def _error_snapshot() -> list[str]:
 
 @require_GET
 def exam_list(request):
+    all_defs = exam_defs()  # hoisted: each call is a full deepcopy
     defs = []
-    for exam_id in sorted(exam_defs()):
-        doc = exam_defs()[exam_id]
+    for exam_id in sorted(all_defs):
+        doc = all_defs[exam_id]
         bp = doc.get("blueprint") or {}
         if not bp.get("blocks"):
             continue
@@ -227,10 +228,15 @@ def exam_finish_block(request, exam_id: str, attempt_id: int, block_id: str):
     if attempt.status != "active":
         return redirect("exam_result", attempt_id=attempt.id)
     _plan_block(attempt, block_id)
+    reloaded = None
     try:
-        examsys.finish_block(attempt, block_id)
+        reloaded = examsys.finish_block(attempt, block_id)
     except ExamError:
         pass
+    # finish_block may finalize (and returns the reloaded row) — reading the
+    # stale in-memory copy here sent the wrong redirect on last-block submits
+    if reloaded is not None:
+        attempt = reloaded
     if attempt.status != "active":
         return redirect("exam_result", attempt_id=attempt.id)
     nxt = examsys.current_block(attempt)
@@ -282,14 +288,22 @@ def exam_answer_api(request):
 @login_required
 @require_POST
 def exam_submit_api(request):
-    try:
-        payload = json.loads(request.body.decode("utf-8"))
-    except (json.JSONDecodeError, UnicodeDecodeError):
-        return JsonResponse({"ok": False, "error": "Invalid JSON"}, status=400)
-    try:
-        attempt_id = int(payload.get("attempt_id") or 0)
-    except (TypeError, ValueError):
-        return JsonResponse({"ok": False, "error": "bad attempt_id"}, status=400)
+    # JSON from the exam page's fetch(); form-encoded fallback so the noscript
+    # submit button still works without JavaScript
+    if request.content_type and "json" not in request.content_type:
+        try:
+            attempt_id = int(request.POST.get("attempt_id") or 0)
+        except (TypeError, ValueError):
+            return JsonResponse({"ok": False, "error": "bad attempt_id"}, status=400)
+    else:
+        try:
+            payload = json.loads(request.body.decode("utf-8"))
+        except (json.JSONDecodeError, UnicodeDecodeError):
+            return JsonResponse({"ok": False, "error": "Invalid JSON"}, status=400)
+        try:
+            attempt_id = int(payload.get("attempt_id") or 0)
+        except (TypeError, ValueError):
+            return JsonResponse({"ok": False, "error": "bad attempt_id"}, status=400)
     attempt = examsys.get_attempt(request.user.username, attempt_id)
     if not attempt:
         return JsonResponse({"ok": False, "error": "unknown attempt"}, status=404)
@@ -337,13 +351,21 @@ def exam_result(request, attempt_id: int):
             else:
                 shown = chosen
             chapter = chapters_store.get(item.get("chapter") or {})
+            # retake variants permute shown letters: fold the choice texts
+            # through vmap exactly as exam_question does, so the review's
+            # highlighted "correct" row matches the letters the learner saw
+            shown_choices = item["choices"]
+            if vmap:
+                shown_choices = {shown: item["choices"][original]
+                                 for shown, original in vmap.items()
+                                 if original in item["choices"]}
             review.append({
+                "choices": shown_choices,
                 "pos_global": len(review) + 1,
                 "block": block["id"],
                 "pos": pos,
                 "field_test": item_id in (block.get("field_test") or []),
                 "q": item["q"],
-                "choices": item["choices"],
                 "answer": (next((s for s, o in vmap.items()
                                     if o == item["answer"]), item["answer"])
                              if vmap else item["answer"]),
@@ -382,11 +404,16 @@ def flashcards_export(request):
     response["Content-Disposition"] = 'attachment; filename="gabay-flashcards.csv"'
     writer = csv.writer(response)
     writer.writerow(["front", "back", "chapter", "subject", "due", "reps", "lapses"])
+    def _safe(cell):
+        # neutralise spreadsheet formula injection (=, +, -, @ prefixes)
+        text = str(cell)
+        return "'" + text if text.startswith(("=", "+", "-", "@", "\t", "\r")) else text
+
     cards = (SrsCard.objects.filter(profile__username=request.user.username)
              .order_by("subject_slug", "chapter", "front"))
     for c in cards:
-        writer.writerow([c.front, c.back, c.chapter, c.subject_slug,
-                         c.due_date, c.reps, c.lapses])
+        writer.writerow([_safe(c.front), _safe(c.back), _safe(c.chapter),
+                         _safe(c.subject_slug), c.due_date, c.reps, c.lapses])
     return response
 
 
@@ -417,13 +444,13 @@ def flashcard_grade_api(request):
         payload = _json.loads(request.body.decode("utf-8"))
     except (json.JSONDecodeError, UnicodeDecodeError):
         return JsonResponse({"ok": False, "error": "Invalid JSON"}, status=400)
-    subject_slug = (payload.get("subject_slug") or "").strip()
-    grade = (payload.get("grade") or "").strip().lower()
+    subject_slug = str(payload.get("subject_slug") or "").strip()[:80]
+    grade = str(payload.get("grade") or "").strip().lower()
     if grade not in ("again", "hard", "good", "easy"):
         return JsonResponse({"ok": False, "error": "bad grade"}, status=400)
     # card identity is verified against the content deck — the client never
     # dictates front/back text
-    key = (payload.get("key") or "").strip()
+    key = str(payload.get("key") or "").strip()[:64]
     card = next((c for c in deck_for(subject_slug) if c["key"] == key), None)
     if not card:
         return JsonResponse({"ok": False, "error": "Unknown card"}, status=404)

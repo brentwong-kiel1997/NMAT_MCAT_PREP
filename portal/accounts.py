@@ -63,16 +63,26 @@ def register_view(request):
 
     error = ""
     if request.method == "POST":
-        username = (request.POST.get("username") or "").strip()
+        from django.contrib.auth.validators import UnicodeUsernameValidator
+        from django.core.exceptions import ValidationError as _VE
+
+        username = str(request.POST.get("username") or "").strip()
         password1 = request.POST.get("password1") or ""
         password2 = request.POST.get("password2") or ""
-        if not username or " " in username or len(username) > 150:
+        # the real username validator (create_user skips full_clean), so
+        # "<", "/", "%" and friends can't sneak into a username
+        try:
+            if not username or len(username) > 150:
+                raise _VE("empty")
+            UnicodeUsernameValidator()(username)
+        except _VE:
             error = "username"
-        elif User.objects.filter(username__iexact=username).exists():
+
+        if not error and User.objects.filter(username__iexact=username).exists():
             error = "exists"
-        elif password1 != password2:
+        if not error and password1 != password2:
             error = "mismatch"
-        else:
+        if not error:
             from django.contrib.auth.password_validation import validate_password
             from django.core.exceptions import ValidationError
 
@@ -80,14 +90,15 @@ def register_view(request):
                 validate_password(password1)
             except ValidationError:
                 error = "weak"
-            else:
-                user = User.objects.create_user(username=username, password=password1)
-                ensure_profile_for_user(user)
-                login(request, user)
-                next_url = request.POST.get("next") or request.GET.get("next") or ""
-                if next_url.startswith("/") and not next_url.startswith("//"):
-                    return redirect(next_url)
-                return redirect("account")
+
+        if not error:
+            user = User.objects.create_user(username=username, password=password1)
+            ensure_profile_for_user(user)
+            login(request, user)
+            next_url = request.POST.get("next") or request.GET.get("next") or ""
+            if next_url.startswith("/") and not next_url.startswith("//"):
+                return redirect(next_url)
+            return redirect("account")
 
     return render(
         request,

@@ -23,7 +23,10 @@ ALLOWED_HOSTS = [
     h.strip()
     for h in os.environ.get(
         "DJANGO_ALLOWED_HOSTS",
-        "localhost,127.0.0.1,*",
+        # no wildcard: with USE_X_FORWARDED_HOST the Host header steers
+        # build_absolute_uri (e.g. WeasyPrint base_url); keep it to the
+        # names the deployment is actually reached by
+        "localhost,127.0.0.1,124.222.115.8,10.0.0.14",
     ).split(",")
     if h.strip()
 ]
@@ -82,6 +85,12 @@ DATABASES = {
         "NAME": Path(
             os.environ.get("GABAY_USER_DB", str(RUNTIME_DIR / "users.sqlite3"))
         ),
+        # WAL + busy_timeout: gunicorn runs 2 sync workers against one file;
+        # without these, concurrent autosave writes can raise
+        # "database is locked" (select_for_update is a no-op on SQLite)
+        "OPTIONS": {
+            "init_command": "PRAGMA journal_mode=WAL; PRAGMA busy_timeout=5000;",
+        },
     },
 }
 

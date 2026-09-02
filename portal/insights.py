@@ -115,7 +115,9 @@ def wrong_questions(profile, limit: int = 300) -> list[dict]:
 
     wrong_rows = [info for (when, is_correct, info) in latest.values()
                   if not is_correct]
-    wrong_rows.sort(key=lambda info: info.get("when") or info.get("when"), reverse=True)
+    import datetime as _dt
+    _epoch = _dt.datetime.min.replace(tzinfo=_dt.timezone.utc)
+    wrong_rows.sort(key=lambda info: info.get("when") or _epoch, reverse=True)
     out: list[dict] = []
     for info in wrong_rows[:limit]:
         meta = qindex.get(info["question_id"]) or {}

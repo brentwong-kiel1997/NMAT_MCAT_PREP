@@ -16,11 +16,10 @@ jobs:
           python-version: "3.12"
           cache: pip
 
-      # weasyprint needs system pango/cairo — CI only exercises the test
-      # suite and the content validator, so skip it (nothing imports it lazily
-      # outside the PDF view).
+      # install the exact production lockfile; weasyprint's wheels install
+      # fine (only rendering needs system pango, which CI never triggers)
       - name: Install deps
-        run: pip install "Django>=5.0,<6" "PyYAML>=6,<7" "cryptography>=42"
+        run: pip install -r requirements.lock
 
       - name: Django checks
         run: |
