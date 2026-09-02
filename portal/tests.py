@@ -219,6 +219,30 @@ class ExamEngineTests(TestCase):
         self.assertIn("exam-pt-open", html)
         self.assertIn("pt-grid", html)
 
+    def test_field_test_items_excluded_from_scoring(self):
+        """Blueprint-opted field-test items stay on the paper, are recorded,
+        but never count toward the score."""
+        from .examsys import get_attempt, start_attempt
+        from .models import ExamResponse
+
+        attempt = self._start()
+        first_item = attempt.plan["blocks"][0]["items"][0]
+        attempt.plan["blocks"][0]["field_test"] = [first_item]
+        attempt.save(update_fields=["plan"])
+        total_before = sum(len(b["items"]) for b in attempt.plan["blocks"])
+
+        attempt = self._answer_everything(attempt)
+        self.assertEqual(attempt.num_items, total_before - 1)
+        self.assertEqual(attempt.score["field_test"], 1)
+        self.assertEqual(attempt.score["pct"], 100.0)  # the rest all correct
+
+        flagged_rows = ExamResponse.objects.filter(
+            attempt=attempt, item_id=first_item)
+        self.assertEqual(flagged_rows.count(), 1)  # still recorded…
+        self.assertTrue(flagged_rows.first().is_field_test)  # …as unscored
+        # the live helper labels nothing for zero-response attempts of others
+        self.assertIsNotNone(get_attempt(self.user.username, attempt.id))
+
     def test_zero_out_of_four_attempt_statuses(self):
         # finalize is idempotent: re-finalizing a closed attempt is a no-op
         from .examsys import finalize
@@ -261,6 +285,73 @@ class FlashcardExportTests(TestCase):
         self.assertEqual(rows[0], "front,back,chapter,subject,due,reps,lapses")
         self.assertIn("powerhouse", rows[1])
         self.assertIn("Mitochondrion", rows[1])
+
+class DifficultyBadgeTests(TestCase):
+    """Difficulty labels come from graded ExamResponse rows across all
+    learners; items with fewer than 5 graded responses stay unlabeled."""
+
+    def setUp(self):
+        self.user = User.objects.create_user("diffuser", password="pw-123456789")
+        self.profile = ensure_profile_for_user(self.user)
+        self.client = Client()
+
+    def _graded_attempt(self, item_id, chapter_id):
+        from django.utils import timezone
+
+        from .models import ExamAttempt, ExamResponse
+
+        attempt = ExamAttempt.objects.create(
+            profile=self.profile, exam="nmat", mode="real", status="submitted",
+            finished_at=timezone.now(),
+        )
+        for i in range(5):
+            ExamResponse.objects.create(
+                attempt=attempt, item_id=item_id, block_id="b1",
+                chapter_id=chapter_id, position=i + 1,
+                chosen="A", correct=(i < 2),  # 3 wrong of 5
+            )
+        return attempt
+
+    def test_map_and_review_badge(self):
+        from .insights import item_difficulty_map
+
+        item_id = "nmat-p2p-022"
+        self._graded_attempt(item_id, "mechanics")
+        m = item_difficulty_map()
+        self.assertEqual(m[item_id], {"n": 5, "miss_pct": 60})
+
+        # a wrong answer routes the item into the review notebook with a badge
+        from .learners import record_practice
+
+        record_practice(self.user.username, "physics", item_id, "B", False)
+        self.client.force_login(self.user)
+        res = self.client.get("/review/")
+        html = res.content.decode("utf-8")
+        self.assertIn("60% miss", html)
+        self.assertIn("diff-hot", html)
+
+    def test_cold_items_stay_unlabeled(self):
+        from .insights import item_difficulty_map
+
+        self._graded_attempt("nmat-p2s-011", "psych-soc")  # only 5 rows? yes min_n=5
+        # second item has just 1 graded response -> unlabeled
+        from django.utils import timezone
+
+        from .models import ExamAttempt, ExamResponse
+
+        attempt = ExamAttempt.objects.create(
+            profile=self.profile, exam="nmat", mode="real", status="submitted",
+            finished_at=timezone.now(),
+        )
+        ExamResponse.objects.create(
+            attempt=attempt, item_id="mcat-cp-053", block_id="b1",
+            chapter_id="vibrations-waves-and-optics", position=1,
+            chosen="B", correct=False,
+        )
+        m = item_difficulty_map()
+        self.assertIn("nmat-p2s-011", m)
+        self.assertNotIn("mcat-cp-053", m)
+
 
 class ContentValidationTests(TestCase):
     def test_validate_content_green(self):

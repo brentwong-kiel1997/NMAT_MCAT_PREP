@@ -106,6 +106,7 @@ def review(request):
             if q.get("id"):
                 practice_store[q["id"]] = q
     rows = insights.wrong_questions(profile)
+    diff_map = insights.item_difficulty_map()
     items = []
     for row in rows:
         q = practice_store.get(row["question_id"]) or index.get(row["question_id"]) or {}
@@ -116,6 +117,7 @@ def review(request):
                       "choices": q.get("choices") or q.get("options") or {},
                       "answer": q.get("answer", ""),
                       "explain": q.get("explain", ""),
+                      "difficulty": diff_map.get(row["question_id"]),
                       "chapter_title": ch.get("title", row["chapter_id"])})
     by_chapter: dict[str, list] = {}
     for it in items:

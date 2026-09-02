@@ -14,7 +14,7 @@ from django.http import Http404, HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
 from django.views.decorators.http import require_GET, require_POST
 
-from . import content, examsys
+from . import content, examsys, insights
 from .content import all_bank_items, exam_bank_errors, exam_blueprint, exam_defs
 from .examsys import ExamError
 from .models import ExamAttempt
@@ -319,6 +319,7 @@ def exam_result(request, attempt_id: int):
     review = []
     index = all_bank_items()
     chapters_store = content.store()["chapters"]
+    difficulty = insights.item_difficulty_map()
     responses = {r.item_id: r for r in attempt.responses.all()}
     for block in attempt.plan.get("blocks") or []:
         for pos, item_id in enumerate(block.get("items") or [], start=1):
@@ -340,6 +341,7 @@ def exam_result(request, attempt_id: int):
                 "pos_global": len(review) + 1,
                 "block": block["id"],
                 "pos": pos,
+                "field_test": item_id in (block.get("field_test") or []),
                 "q": item["q"],
                 "choices": item["choices"],
                 "answer": (next((s for s, o in vmap.items()
@@ -352,6 +354,7 @@ def exam_result(request, attempt_id: int):
                 "passage_text": item.get("passage_text", ""),
                 "flagged": bool(entry.get("f")),
                 "time_spent": (r.time_spent if r else entry.get("s")) or 0,
+                "difficulty": difficulty.get(item_id),
                 "chapter": item.get("chapter") or "",
                 "chapter_title": (chapter or {}).get("title", ""),
                 "discipline": (chapter or {}).get("discipline", ""),

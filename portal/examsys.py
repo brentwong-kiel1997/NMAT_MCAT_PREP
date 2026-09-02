@@ -79,6 +79,32 @@ def _diagnostic_plan(exam_id: str, plan: dict) -> dict:
     return plan
 
 
+def _assign_field_test(exam_id: str, username: str, plan: dict) -> None:
+    """Mark blueprint-requested unscored field-test items (MCAT-style).
+
+    Opt-in: only when the exam's blueprint declares `field_test: N`.
+    Selection is deterministic per sitting but varies across sittings; the
+    items stay in the paper (learners answer them normally) and their
+    responses are still recorded — they just don't count toward the score.
+    """
+    bp = exam_blueprint(exam_id) or {}
+    try:
+        wanted = int(bp.get("field_test") or 0)
+    except (TypeError, ValueError):
+        wanted = 0
+    if wanted <= 0:
+        return
+    pool = [iid for b in plan["blocks"] for iid in b["items"]]
+    if not pool:
+        return
+    import random
+
+    rng = random.Random(f"ft:{username}:{exam_id}:{time.time():.0f}")
+    picked = set(rng.sample(pool, min(wanted, len(pool))))
+    for b in plan["blocks"]:
+        b["field_test"] = [iid for iid in b["items"] if iid in picked]
+
+
 def _variant_map(item_ids: list[str], seed: str) -> dict:
     """Retake variant for one block: shuffled item order + a per-item letter
     permutation. Deterministic from (seed, item ids) so a rebuilt plan stays
@@ -102,6 +128,7 @@ def start_attempt(username: str, exam_id: str, mode: str = "real") -> ExamAttemp
     plan = build_plan(exam_id)
     if mode == "diagnostic":
         plan = _diagnostic_plan(exam_id, plan)
+    _assign_field_test(exam_id, username, plan)
     # retake variant: anyone who already finished a REAL attempt of this exam
     # gets a reshuffled form — item order and option letters permuted, scored
     # on canonical keys. Diagnostics never permute (they are one-shot).
@@ -325,16 +352,21 @@ def score_attempt(attempt: ExamAttempt) -> dict:
     out_blocks = []
     total = correct_total = answered_total = 0
     weak: dict[str, dict] = {}
+    field_test_total = 0
     for b in blocks:
         subtests: dict[str, dict] = {}
         b_correct = b_items = 0
         b_seconds = 0
-        n_items = len(b.get("items") or [])
+        field_test = set(b.get("field_test") or [])
+        field_test_total += len(field_test)
+        n_items = len(b.get("items") or []) - len(field_test)
         fair_share = max(1, b.get("seconds", 0) // n_items) if n_items else 0
         for pos, item_id in enumerate(b.get("items") or [], start=1):
             item = index.get(item_id)
             if not item:
                 continue
+            if item_id in field_test:
+                continue  # recorded for calibration, never scored
             b_items += 1
             entry = (attempt.answers or {}).get(item_id) or {}
             chosen = entry.get("c")
@@ -378,6 +410,7 @@ def score_attempt(attempt: ExamAttempt) -> dict:
         "answered": answered_total,
         "correct": correct_total,
         "pct": round(100 * correct_total / total, 1) if total else 0.0,
+        "field_test": field_test_total,
         "blocks": out_blocks,
         "weak_chapters": weak_list[:10],
     }
@@ -416,6 +449,7 @@ def finalize(attempt: ExamAttempt, *, reason: str) -> ExamAttempt:
     rows = []
     position = 0
     for b in reloaded.plan.get("blocks") or []:
+        field_test = set(b.get("field_test") or [])
         for pos, item_id in enumerate(b.get("items") or [], start=1):
             position += 1
             item = index.get(item_id) or {}
@@ -426,6 +460,7 @@ def finalize(attempt: ExamAttempt, *, reason: str) -> ExamAttempt:
                 chapter_id=item.get("chapter") or "", position=position,
                 chosen=chosen, correct=bool(chosen) and chosen == item.get("answer"),
                 flagged=bool(entry.get("f")),
+                is_field_test=item_id in field_test,
                 time_spent=entry.get("s"),
             ))
     ExamResponse.objects.bulk_create(rows, batch_size=500)

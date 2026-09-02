@@ -9,6 +9,7 @@
     <p class="section-kicker">{{ attempt.status }}</p>
     <h1>{{ exam_name }} — {{ score.correct }}/{{ score.items }} ({{ score.pct }}%)</h1>
     <p class="lead">Answered {{ score.answered }} of {{ score.items }} · started {{ attempt.started_at|date:"M d, H:i" }}</p>
+    {% if score.field_test %}<p class="note-line">Includes {{ score.field_test }} unscored field-test item{{ score.field_test|pluralize }} — answered for calibration, not counted in your score.</p>{% endif %}
   </div>
 </div>
 
@@ -50,6 +51,9 @@
         <span class="exam-verdict">{% if r.correct %}✓{% else %}✗{% endif %}</span>
         Q{{ r.pos_global }} · {{ r.q|truncatechars:90 }}
         {% if r.flagged %}<span title="flagged">★</span>{% endif %}
+        {% if r.field_test %}<span class="diff-badge" title="Unscored field-test item — recorded for calibration only">field test</span>{% endif %}
+        {% if r.difficulty %}<span class="diff-badge{% if r.difficulty.miss_pct >= 50 %} diff-hot{% endif %}"
+              title="Missed by {{ r.difficulty.miss_pct }}% of {{ r.difficulty.n }} graded attempts across all learners">{{ r.difficulty.miss_pct }}% miss</span>{% endif %}
       </summary>
       <div class="exam-review-body">
         {% if r.passage_text %}<p class="note-line"><em>Passage item.</em></p>{% endif %}

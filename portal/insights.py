@@ -161,3 +161,27 @@ def continue_learning(profile) -> dict | None:
     return {"chapter_id": row.chapter_id, "discipline": ch["discipline"],
             "title": ch.get("title", row.chapter_id), "subject": row.subject_slug,
             "when": row.updated_at}
+
+
+def item_difficulty_map(min_n: int = 5) -> dict[str, dict]:
+    """Anonymised, data-driven difficulty per bank item.
+
+    Aggregates every graded ExamResponse repo-wide (attempts of all
+    learners) into a miss rate; items with fewer than `min_n` graded
+    responses stay unlabeled — small samples lie. Purely aggregate data,
+    never per-learner.
+    """
+    from django.db.models import Count, Q
+
+    rows = (ExamResponse.objects
+            .values("item_id")
+            .annotate(n=Count("id"),
+                      misses=Count("id", filter=Q(correct=False))))
+    out: dict[str, dict] = {}
+    for r in rows:
+        if r["n"] >= min_n:
+            out[r["item_id"]] = {
+                "n": r["n"],
+                "miss_pct": int(round(100 * r["misses"] / r["n"])),
+            }
+    return out

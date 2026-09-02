@@ -112,3 +112,12 @@ details.is-ok .exam-verdict { color: #2e7d4f; }
 .exam-review-body { padding: .5rem .25rem; }
 .mini-table { width: 100%; border-collapse: collapse; margin: .5rem 0 1rem; }
 .mini-table th, .mini-table td { border: 1px solid var(--line, #ddd); padding: .4rem .6rem; text-align: left; }
+
+/* data-driven difficulty badge (review notebook + exam result) */
+.diff-badge {
+  display: inline-block; margin-left: .4rem; padding: 0 .45rem;
+  border-radius: 999px; font-size: .7rem; font-weight: 600;
+  background: var(--soft, #f4f4f5); color: var(--muted, #666);
+  border: 1px solid var(--line, #ddd); vertical-align: 1px;
+}
+.diff-badge.diff-hot { background: #fde8e8; color: #b00020; border-color: #f3c1c1; }

@@ -167,6 +167,9 @@ class ExamResponse(models.Model):
     chosen = models.CharField(max_length=1, blank=True)  # "" = unanswered
     correct = models.BooleanField(default=False)
     flagged = models.BooleanField(default=False)
+    # unscored field-test item (blueprint `field_test`); still recorded so
+    # aggregated difficulty stats keep calibrating from every sitting
+    is_field_test = models.BooleanField(default=False)
     time_spent = models.IntegerField(null=True, blank=True)  # seconds on the item
 
     class Meta:
