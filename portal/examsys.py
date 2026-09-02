@@ -249,7 +249,8 @@ def begin_block(attempt: ExamAttempt, block_id: str) -> None:
 
 def save_answer(attempt: ExamAttempt, block_id: str, pos: int,
                 chosen: str | None, flagged: bool,
-                elapsed_seconds: int | None = None) -> dict:
+                elapsed_seconds: int | None = None,
+                crossed: list | None = None) -> dict:
     """Autosave one item's captured state. Row-locked so concurrent saves
     from two tabs cannot clobber each other's answers."""
     with transaction.atomic():
@@ -282,6 +283,13 @@ def save_answer(attempt: ExamAttempt, block_id: str, pos: int,
                 return {"ok": False, "error": "bad-choice"}
             entry["c"] = chosen
         entry["f"] = 1 if flagged else 0
+        if crossed is not None:
+            # eliminated choices (shown letters); UI-only, never scored
+            clean = sorted({str(c).strip().upper()[:1] for c in crossed} & {"A", "B", "C", "D"})
+            if clean:
+                entry["x"] = clean
+            else:
+                entry.pop("x", None)
         if elapsed_seconds is not None:
             # accumulate visits to the same item (last-visit-only made the
             # average undercount multi-visit questions)

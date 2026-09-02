@@ -10,7 +10,7 @@ from __future__ import annotations
 import json
 
 from django.contrib.auth.decorators import login_required
-from django.http import Http404, JsonResponse
+from django.http import Http404, HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
 from django.views.decorators.http import require_GET, require_POST
 
@@ -175,6 +175,9 @@ def exam_question(request, exam_id: str, attempt_id: int,
                  "passage_text": item.get("passage_text", ""),
                  "passage_id": item.get("passage_id", "")},
         "chosen": shown_letter,
+        # crossed letters are stored as shown letters (vmap is frozen per
+        # attempt, so shown letters are stable across re-renders)
+        "crossed": entry.get("x") or [],
         "flagged": bool(entry.get("f")),
         "remaining": examsys.remaining_seconds(attempt, block_id),
         "nav": examsys.navigator(attempt, block_id),
@@ -258,12 +261,16 @@ def exam_answer_api(request):
         return JsonResponse({"ok": False, "error": "bad pos"}, status=400)
     chosen = payload.get("chosen")
     flagged = bool(payload.get("flagged"))
+    crossed = payload.get("crossed")
+    if crossed is not None and not isinstance(crossed, list):
+        crossed = None
     try:
         elapsed = int(payload.get("elapsed_seconds") or 0)
     except (TypeError, ValueError):
         elapsed = 0
     try:
-        result = examsys.save_answer(attempt, block_id, pos, chosen, flagged, elapsed)
+        result = examsys.save_answer(attempt, block_id, pos, chosen, flagged, elapsed,
+                                     crossed=crossed)
     except ExamError as exc:
         return JsonResponse({"ok": False, "error": str(exc)}, status=400)
     if result.get("ok"):
@@ -359,6 +366,26 @@ def exam_result(request, attempt_id: int):
 
 
 # ---- spaced-repetition flashcards ------------------------------------------
+
+@login_required
+@require_GET
+def flashcards_export(request):
+    """Export the learner's whole SRS deck as CSV (Anki-importable)."""
+    import csv
+
+    from .models import SrsCard
+
+    response = HttpResponse(content_type="text/csv; charset=utf-8")
+    response["Content-Disposition"] = 'attachment; filename="gabay-flashcards.csv"'
+    writer = csv.writer(response)
+    writer.writerow(["front", "back", "chapter", "subject", "due", "reps", "lapses"])
+    cards = (SrsCard.objects.filter(profile__username=request.user.username)
+             .order_by("subject_slug", "chapter", "front"))
+    for c in cards:
+        writer.writerow([c.front, c.back, c.chapter, c.subject_slug,
+                         c.due_date, c.reps, c.lapses])
+    return response
+
 
 @login_required
 @require_GET

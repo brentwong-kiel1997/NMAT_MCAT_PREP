@@ -192,6 +192,33 @@ class ExamEngineTests(TestCase):
         res = save_answer(attempt, block_id, 1, "A", False)
         self.assertEqual(res, {"ok": False, "error": "expired"})
 
+    def test_crossed_choices_persist_and_survive_answer_change(self):
+        from .examsys import begin_block, save_answer
+
+        attempt = self._start()
+        block_id = attempt.sections[0]["id"]
+        begin_block(attempt, block_id)
+        save_answer(attempt, block_id, 1, None, False, 0, crossed=["B", "a", "Z"])
+        entry = attempt.answers[list(attempt.plan["blocks"][0]["items"])[0]]
+        self.assertEqual(entry.get("x"), ["A", "B"])  # cleaned, sorted; Z dropped
+        # clearing crosses removes the key
+        save_answer(attempt, block_id, 1, "C", False, 0, crossed=[])
+        entry = attempt.answers[list(attempt.plan["blocks"][0]["items"])[0]]
+        self.assertNotIn("x", entry)
+        self.assertEqual(entry["c"], "C")
+
+    def test_take_page_renders_cross_out_and_periodic_table(self):
+        from .examsys import begin_block, start_attempt
+
+        attempt = start_attempt(self.user.username, "nmat")
+        begin_block(attempt, attempt.sections[0]["id"])
+        self.client.force_login(self.user)
+        res = self.client.get(f"/exams/nmat/take/{attempt.id}/", follow=True)
+        html = res.content.decode("utf-8")
+        self.assertIn("choice-cross", html)
+        self.assertIn("exam-pt-open", html)
+        self.assertIn("pt-grid", html)
+
     def test_zero_out_of_four_attempt_statuses(self):
         # finalize is idempotent: re-finalizing a closed attempt is a no-op
         from .examsys import finalize
@@ -203,6 +230,37 @@ class ExamEngineTests(TestCase):
         self.assertEqual(attempt.status, "submitted")
         self.assertEqual(attempt.finished_at, before)
 
+
+class FlashcardExportTests(TestCase):
+    def setUp(self):
+        self.user = User.objects.create_user("deckuser", password="pw-123456789")
+        self.profile = ensure_profile_for_user(self.user)
+        self.client = Client()
+
+    def test_export_requires_login(self):
+        res = self.client.get("/flashcards/export/")
+        self.assertEqual(res.status_code, 302)
+        self.assertIn("/login/", res.url)
+
+    def test_export_csv_contents(self):
+        from django.utils import timezone
+
+        from .models import SrsCard
+
+        SrsCard.objects.create(
+            profile=self.profile, subject_slug="biology", card_key="k1",
+            front="What is the powerhouse of the cell?",
+            back="Mitochondrion", chapter="Cells",
+            due_date=timezone.localdate(),
+        )
+        self.client.force_login(self.user)
+        res = self.client.get("/flashcards/export/")
+        self.assertEqual(res.status_code, 200)
+        self.assertEqual(res["Content-Type"], "text/csv; charset=utf-8")
+        rows = list(res.content.decode("utf-8").splitlines())
+        self.assertEqual(rows[0], "front,back,chapter,subject,due,reps,lapses")
+        self.assertIn("powerhouse", rows[1])
+        self.assertIn("Mitochondrion", rows[1])
 
 class ContentValidationTests(TestCase):
     def test_validate_content_green(self):

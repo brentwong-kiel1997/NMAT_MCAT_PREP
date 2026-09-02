@@ -41,6 +41,16 @@
     let chosen = null;
     const selected = root.querySelector(".exam-choice.is-selected");
     if (selected) chosen = selected.dataset.letter;
+    // crossed-out (eliminated) choices — UI aid, stored with the answer state
+    let crossed = new Set((root.dataset.crossed || "").split(",").filter(Boolean));
+    function paintCrossed() {
+      root.querySelectorAll(".exam-choice").forEach((btn) => {
+        const on = crossed.has(btn.dataset.letter);
+        btn.classList.toggle("is-crossed", on);
+        const x = btn.parentElement.querySelector(".choice-cross");
+        if (x) x.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+    }
 
     let deadlinePassed = false;
     // per-question time tracking: pauses when the tab hides (consistent with
@@ -123,10 +133,24 @@
     function queueSave() {
       pending = { attempt_id: attemptId, block_id: blockId, pos: pos,
                   chosen: chosen, flagged: flagged,
+                  crossed: Array.from(crossed).sort(),
                   elapsed_seconds: elapsedSeconds() };
       if (timer) clearTimeout(timer);
       timer = setTimeout(() => flush(true), 600);
     }
+
+    // ---- cross-out toggles
+    root.querySelectorAll(".choice-cross").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (deadlinePassed) return;
+        const letter = btn.dataset.cross;
+        if (crossed.has(letter)) crossed.delete(letter);
+        else crossed.add(letter);
+        paintCrossed();
+        queueSave();
+      });
+    });
+    paintCrossed();
 
     // ---- choice clicks
     root.querySelectorAll(".exam-choice").forEach((btn) => {

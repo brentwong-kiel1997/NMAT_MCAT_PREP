@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block head_extra %}
-<link rel="stylesheet" href="{% static 'portal/css/exam.css' %}?v=20260827a">
+<link rel="stylesheet" href="{% static 'portal/css/exam.css' %}?v=20260902a">
 {% endblock %}
 
 {% block title %}{{ exam.id }} · {{ blk.label }} Q{{ pos }} · Gabay{% endblock %}
@@ -14,10 +14,12 @@
      data-block="{{ blk.id }}"
      data-pos="{{ pos }}"
      data-total="{{ total }}"
-     data-remaining="{{ remaining }}">
+     data-remaining="{{ remaining }}"
+     data-crossed="{{ crossed|join:',' }}">
   <header class="exam-bar">
     <span class="exam-brand">{{ exam.id|upper }} · {{ blk.label }}</span>
     <span class="exam-progress">Q {{ pos }} / {{ total }} · block {{ block_idx|add:1 }}/{{ num_blocks }}</span>
+    <button type="button" class="btn exam-pt-btn" id="exam-pt-open" aria-haspopup="dialog">Periodic table</button>
     <span class="exam-clock" id="exam-clock" role="timer" aria-live="off">--:--</span>
   </header>
 
@@ -59,11 +61,16 @@
 
       <div class="exam-choices" role="group" aria-label="Answer choices">
         {% for letter, text in item.choices.items %}
-        <button type="button"
-                class="exam-choice{% if letter == chosen %} is-selected{% endif %}"
-                data-letter="{{ letter }}">
-          <strong>{{ letter }}</strong> {{ text }}
-        </button>
+        <div class="exam-choice-row">
+          <button type="button"
+                  class="exam-choice{% if letter == chosen %} is-selected{% endif %}"
+                  data-letter="{{ letter }}">
+            <strong>{{ letter }}</strong> {{ text }}
+          </button>
+          <button type="button" class="choice-cross" data-cross="{{ letter }}"
+                  aria-label="Cross out choice {{ letter }}" aria-pressed="false"
+                  title="Cross out (strike through) this choice">✕</button>
+        </div>
         {% endfor %}
       </div>
 
@@ -81,9 +88,10 @@
       <p class="exam-saved" id="exam-saved" aria-live="polite"></p>
     </main>
   </div>
+  {% include "portal/includes/periodic_table.html" %}
 </div>
 {% endblock %}
 
 {% block page_js %}
-<script src="{% static 'portal/js/exam.js' %}?v=20260827a" defer></script>
+<script src="{% static 'portal/js/exam.js' %}?v=20260902a" defer></script>
 {% endblock %}

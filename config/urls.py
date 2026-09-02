@@ -83,6 +83,7 @@ urlpatterns = [
     path("api/review/cause/", dashboard.review_cause_api, name="review_cause_api"),
     path("plan/", dashboard.plan, name="plan"),
     path("flashcards/", exam_views.flashcards_hub, name="flashcards_hub"),
+    path("flashcards/export/", exam_views.flashcards_export, name="flashcards_export"),
     path("scores/", views.score_interpreter, name="score_interpreter"),
     path("coach/insights/", coach_insights.coach_insights, name="coach_insights"),
     path("api/flashcards/grade/", exam_views.flashcard_grade_api, name="flashcard_grade_api"),
