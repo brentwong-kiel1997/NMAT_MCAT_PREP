@@ -802,7 +802,8 @@ class AiDrillTests(TestCase):
         joined = " ".join(m["content"] for m in msgs)
         self.assertIn("HINT", joined)
         self.assertIn("Never state the final answer", joined)
-        self.assertIn("dominant self-reported cause: trap", joined)
+        self.assertIn("[Learner context]", joined)
+        self.assertIn("cause: trap", joined)
 
     def test_difficulty_reaches_prompt_and_payload(self):
         from unittest.mock import patch
