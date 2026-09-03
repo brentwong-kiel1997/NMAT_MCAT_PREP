@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 # Git post-receive: deploy pushed commits via staging validation + atomic swap.
 #
-# The checkout lands in $STAGING (NOT the live directory); scripts/deploy.sh
-# gates it there (check → migrate → validate_content → collectstatic) and only
-# then renames it onto the live path and restarts gunicorn. See deploy.sh for
-# the reasoning.
+# The tree lands in $STAGING (NOT the live directory) via `git archive` —
+# archive works on a bare repo without any work-tree semantics, which plain
+# `git checkout` refuses here. scripts/deploy.sh gates the staging tree
+# (check → migrate → validate_content → collectstatic) and only then renames
+# it onto the live path and restarts gunicorn.
 set -euo pipefail
 
 BARE="/home/ubuntu/repos/django-wsgi.git"
 STAGING="/home/ubuntu/runtime/staging"
 
-mkdir -p "$STAGING"
 rm -rf "$STAGING"
-GIT_WORK_TREE="$STAGING" GIT_DIR="$BARE" git checkout -f main 2>/dev/null \
-  || GIT_WORK_TREE="$STAGING" GIT_DIR="$BARE" git checkout -f master
+mkdir -p "$STAGING"
+git --git-dir="$BARE" archive main | tar -x -C "$STAGING"
 
 chmod +x "$STAGING/scripts/deploy.sh" 2>/dev/null || true
 exec "$STAGING/scripts/deploy.sh"

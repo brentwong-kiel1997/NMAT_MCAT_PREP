@@ -89,7 +89,9 @@ def group_cell(shape: str, filled: bool) -> str:
     else:
         base = '<polygon points="150,50 245,215 55,215" '
     style = ('fill="#333"' if filled else 'fill="none" stroke="#333" stroke-width="4"')
-    return _wrap(f'<{base} {style}/>')
+    # base already opens the element ("<circle …") — no extra "<" here, which
+    # used to emit invalid `<<circle …/>` markup
+    return _wrap(f'{base} {style}/>')
 
 
 # ---------- sequence frame (dots/shading progression) ---------------------

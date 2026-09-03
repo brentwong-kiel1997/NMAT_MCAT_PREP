@@ -32,6 +32,15 @@ jobs:
           export DJANGO_SECRET_KEY=ci-test-key-not-secret
           python manage.py validate_content
 
+      - name: Exam-bank verify scripts
+        run: |
+          export DJANGO_SECRET_KEY=ci-test-key-not-secret
+          fails=0
+          for f in scripts/exam-bank/verify_*.py; do
+            python "$f" >/dev/null || { echo "FAILED: $f"; fails=1; }
+          done
+          exit $fails
+
       - name: Tests
         run: |
           export DJANGO_SECRET_KEY=ci-test-key-not-secret

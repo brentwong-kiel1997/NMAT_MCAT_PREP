@@ -104,9 +104,22 @@ class Command(BaseCommand):
                     problems.append(f"duplicate question id {q['id']}")
                 else:
                     seen_qids.add(q["id"])
-                if q.get("answer") not in (q.get("choices") or {}):
+                choices = q.get("choices") or {}
+                if set(choices) != {"A", "B", "C", "D"}:
+                    problems.append(
+                        f"practice {q.get('id')}: options are not exactly A-D "
+                        f"(got {sorted(choices)!r})"
+                    )
+                if len(set(choices.values())) != len(choices):
+                    problems.append(f"practice {q.get('id')}: duplicate option texts")
+                if q.get("answer") not in choices:
                     problems.append(
                         f"practice {q.get('id')}: answer {q.get('answer')!r} not in choices"
+                    )
+                if q.get("chapter") and q["chapter"] != ch.get("title"):
+                    problems.append(
+                        f"practice {q.get('id')}: chapter back-link {q['chapter']!r} "
+                        f"!= chapter title {ch.get('title')!r}"
                     )
 
         # ---- subject & unit reference lists ----------------------------------
@@ -181,6 +194,10 @@ class Command(BaseCommand):
                         else:
                             problems.extend(
                                 _check_question_key(rel, "check", check))
+                    for fig in section.get("figures") or []:
+                        src = fig.get("src") or ""
+                        if src and not (CONTENT / "images" / src).is_file():
+                            problems.append(f"{rel}: figure file missing: {src}")
                     for i, v in enumerate(section.get("videos") or [], 1):
                         if not v.get("title") or not v.get("url"):
                             problems.append(f"{rel}: section {i} video missing title/url")
@@ -335,6 +352,9 @@ def _validate_exam_bank(store: dict, seen_qids: set[str]) -> list[str]:
                 chapter_id = item.get("chapter")
                 if not chapter_id:
                     problems.append(f"exam-bank {iid}: missing chapter back-link")
+                figure = item.get("figure")
+                if figure and not (CONTENT / "images" / figure).is_file():
+                    problems.append(f"exam-bank {iid}: figure file missing: {figure}")
                 elif chapter_id not in chapters:
                     problems.append(f"exam-bank {iid}: unknown chapter {chapter_id!r}")
                 else:

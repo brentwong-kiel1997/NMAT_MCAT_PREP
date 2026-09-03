@@ -27,19 +27,22 @@ LETTERS = ["A", "B", "C", "D"]
 
 
 def permute(item: dict, target: str, rng: random.Random) -> dict:
-    """Move the correct answer's text to `target`; carry distractor notes."""
+    """Move the correct answer's text to `target`; carry distractor notes.
+
+    No shuffling of the wrong texts: the relabeling is a pure letter
+    permutation (old letter X keeps its text, now under a different letter).
+    A shuffle here would decouple each distractor note from the option text
+    it explains — audited as a 16/16 mis-attachment.
+    """
     correct_text = item["choices"][item["answer"]]
     wrong_old = [k for k in LETTERS if k != item["answer"]]
-    others = [item["choices"][k] for k in wrong_old]
-    rng.shuffle(others)
     remaining = [k for k in LETTERS if k != target]
-    # every old letter maps to exactly one new letter (3 wrong slots + target)
     mapping = {item["answer"]: target}
     for old, new in zip(wrong_old, remaining):
         mapping[old] = new
     new_choices = {target: correct_text}
-    for old, text in zip(wrong_old, others):
-        new_choices[mapping[old]] = text
+    for old in wrong_old:
+        new_choices[mapping[old]] = item["choices"][old]
     item["choices"] = {k: new_choices[k] for k in LETTERS}
     old_answer = item["answer"]
     item["answer"] = target
@@ -60,7 +63,8 @@ def main() -> int:
     before: Counter[str] = Counter()
     for path in files:
         doc = yaml.safe_load(open(path))
-        plist = doc.get("practice") or []
+        plist = [p for p in (doc.get("practice") or [])
+                 if p.get("answer") in LETTERS]  # skip malformed items loudly-ignored
         items[path] = plist
         before.update(p["answer"] for p in plist)
     total = sum(before.values())
@@ -71,7 +75,6 @@ def main() -> int:
     counts = Counter(before)
     plan: list[tuple[Path, dict, str]] = []
     for path in files:  # deterministic order
-        rng = random.Random(f"{args.seed}:{path.name}")
         used = Counter(p["answer"] for p in items[path])
         for p in items[path]:
             cur = p["answer"]
@@ -80,6 +83,8 @@ def main() -> int:
             under = [l for l in LETTERS if counts[l] < caps[l]]
             if not under:
                 continue
+            # per-item seeded draw (path+id): deterministic, varies within a file
+            rng = random.Random(f"{args.seed}:{path.name}:{p['id']}")
             # prefer a letter unused elsewhere in this file (distinct keys per file)
             free = [l for l in under if used[l] == 0] or under
             target = free[rng.randrange(len(free))]
@@ -102,15 +107,22 @@ def main() -> int:
         print("dry run — rerun with --write to apply")
         return 0
 
+    # group by file: one load → mutate → one dump per touched file
+    by_file: dict[Path, list] = {}
     for path, p, target in plan:
-        permute(p, target, random.Random(f"{args.seed}:{path.name}"))
+        by_file.setdefault(path, []).append((p, target))
+    for path, moves in by_file.items():
         doc = yaml.safe_load(open(path))
-        for i, existing in enumerate(doc.get("practice") or []):
-            if existing["id"] == p["id"]:
-                doc["practice"][i] = p
-                break
+        ids = {p["id"] for p, _ in moves}
+        assert len(ids) == len(moves), f"duplicate practice ids in {path}"
+        for p, target in moves:
+            permute(p, target)
+            for i, existing in enumerate(doc.get("practice") or []):
+                if existing["id"] == p["id"]:
+                    doc["practice"][i] = p
+                    break
         yaml.safe_dump(doc, open(path, "w"), allow_unicode=True, sort_keys=False, width=100)
-    print(f"wrote {len(plan)} rebalanced items")
+    print(f"wrote {len(plan)} rebalanced items across {len(by_file)} files")
     return 0
 
 
