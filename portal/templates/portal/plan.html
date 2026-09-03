@@ -36,6 +36,16 @@
   </article>
 
   {% if plan %}
+  {% if exam_brief %}
+  <article class="practice-card" style="border-color:#3b5bdb;">
+    <h2>Exam-week briefing</h2>
+    <div class="ai-brief">
+      <span class="ai-badge">AI</span> {{ exam_brief }}
+      <a class="ai-refresh" href="?refresh=1" title="Regenerate (uses one coach call)">↻</a>
+    </div>
+    <p class="note-line">Generated from your current weak-chapter data — always cross-check against the official blueprint.</p>
+  </article>
+  {% endif %}
   <article class="practice-card">
     <h2>{{ plan.total_tasks }} tasks · ~{{ plan.total_hours }} hours total</h2>
     {% for day in plan.days %}

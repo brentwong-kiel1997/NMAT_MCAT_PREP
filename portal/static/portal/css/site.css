@@ -1315,3 +1315,17 @@ details.tut-question[open] summary, details.tut-check-q[open] summary { margin-b
 .cause-btn { border: 1px solid #ccc; background: #fff; border-radius: 999px;
   padding: .1rem .6rem; margin: 0 .2rem .2rem 0; cursor: pointer; font-size: .82rem; }
 .cause-btn.is-on { background: #eef2ff; border-color: #3b5bdb; }
+
+/* AI brief cards (dashboard / plan / review) */
+.ai-brief {
+  margin-top: .75rem; padding: .6rem .8rem; border: 1px solid var(--line, #ddd);
+  border-left: 3px solid #3b5bdb; border-radius: 8px; background: #f6f8ff;
+  font-size: .95rem;
+}
+.ai-badge {
+  display: inline-block; margin-right: .35rem; padding: 0 .4rem;
+  border-radius: 4px; background: #3b5bdb; color: #fff;
+  font-size: .65rem; font-weight: 700; letter-spacing: .04em; vertical-align: 1px;
+}
+.ai-refresh { margin-left: .4rem; text-decoration: none; color: var(--muted, #666); }
+.ai-refresh:hover { color: #3b5bdb; }

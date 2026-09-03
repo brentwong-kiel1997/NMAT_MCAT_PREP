@@ -13,6 +13,15 @@
 </div>
 
 <section class="section">
+  {% if autopsy %}
+  <article class="practice-card" style="border-color:#3b5bdb;">
+    <h2>Autopsy: {{ autopsy.title }}</h2>
+    <div class="ai-brief">
+      <span class="ai-badge">AI</span> {{ autopsy.text }}
+      <a class="ai-refresh" href="?refresh=1" title="Regenerate (uses one coach call)">↻</a>
+    </div>
+  </article>
+  {% endif %}
   {% for g in groups %}
   <article class="practice-card">
     <h2>{{ g.chapter_title }} <span class="note-line">({{ g.count }})</span></h2>

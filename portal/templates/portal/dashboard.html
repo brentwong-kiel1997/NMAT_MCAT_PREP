@@ -23,6 +23,12 @@
       {% if mock_recommended %}<li>🎯 No mock exam on record — <a href="{% url 'exam_list' %}">start with a half-length diagnostic</a> to baseline yourself.</li>{% endif %}
       {% if not today_tasks and not due_cards %}<li>Queue clear. Drill a weak chapter or run a mock.</li>{% endif %}
     </ul>
+    {% if ai_brief %}
+    <div class="ai-brief">
+      <span class="ai-badge">AI</span> {{ ai_brief }}
+      <a class="ai-refresh" href="?refresh=1" title="Regenerate (uses one coach call)">↻</a>
+    </div>
+    {% endif %}
   </article>
 
   {% if continue_learning %}

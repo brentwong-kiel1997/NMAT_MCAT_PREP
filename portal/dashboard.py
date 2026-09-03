@@ -88,9 +88,16 @@ def dashboard(request):
     stats = srs_stats(request.user.username)
     has_real = ExamAttempt.objects.filter(profile=profile, exam__in=("nmat", "mcat"),
                                           mode="real").exclude(status="active").exists()
+    from . import ai_briefs
+
+    ai_brief = ai_briefs.daily_brief(
+        request.user.username, stats["due_today"], today_tasks,
+        refresh=request.GET.get("refresh") == "1",
+    )
     ctx = {
         "history": history,
         "today_tasks": today_tasks,
+        "ai_brief": ai_brief,
         "due_cards": stats["due_today"],
         "has_real_mock": has_real,
         "mock_recommended": not has_real,
@@ -141,6 +148,10 @@ def review(request):
                                                  question_id__in=qids)}
     for it in items:
         it["stored_cause"] = stored.get(it["question_id"])
+    from . import ai_briefs
+
+    autopsy = ai_briefs.miss_autopsy(
+        request.user.username, refresh=request.GET.get("refresh") == "1")
     groups = []
     for chapter_id, group in sorted(by_chapter.items(), key=lambda kv: -len(kv[1])):
         first = group[0]
@@ -152,6 +163,7 @@ def review(request):
     return render(request, "portal/review.html", {"groups": groups,
                                                   "total": len(items),
                                                   "cause_labels": causes.items(),
+                                                  "autopsy": autopsy,
                                                   "cause_dist": cause_distribution_local(profile)})
 
 
@@ -216,8 +228,14 @@ def plan(request):
         generated = {"days": generated, "total_tasks": total_tasks,
                      "total_hours": round(total_minutes / 60)}
     exams = [{"id": "nmat", "name": "NMAT"}, {"id": "mcat", "name": "MCAT"}]
-    return render(request, "portal/plan.html",
-                  {"study_plan": study_plan, "plan": generated, "exams": exams})
+    from . import ai_briefs
+
+    return render(request, "portal/plan.html", {
+        "study_plan": study_plan, "plan": generated, "exams": exams,
+        "exam_brief": ai_briefs.exam_eve_brief(
+            request.user.username,
+            refresh=request.GET.get("refresh") == "1"),
+    })
 
 
 @login_required

@@ -549,6 +549,86 @@ class ManageModelsTests(TestCase):
         self.assertTrue(any("no API key set" in m for m in messages), messages)
 
 
+class AiBriefTests(TestCase):
+    """AI briefs: one model call per (user, brief, day), cached in-process;
+    degrade to empty (hidden card) with no model or over budget."""
+
+    def setUp(self):
+        self.user = User.objects.create_user("briefuser", password="pw-123456789")
+        ensure_profile_for_user(self.user)
+        self.client = Client()
+        from . import ai_briefs
+
+        ai_briefs._BRIEF_CACHE.clear()
+        from . import ratelimit
+
+        ratelimit.reset()
+
+    def _seed_wrong_answer(self):
+        from django.utils import timezone
+
+        from .learners import ensure_profile_for_user as _ensure, record_practice
+        from .models import ExamAttempt, ExamResponse
+
+        profile = _ensure(self.user)
+        attempt = ExamAttempt.objects.create(
+            profile=profile, exam="nmat", mode="real", status="submitted",
+            finished_at=timezone.now(),
+        )
+        for i in range(5):
+            ExamResponse.objects.create(
+                attempt=attempt, item_id="nmat-p2p-022", block_id="b1",
+                chapter_id="mechanics", position=i + 1,
+                chosen="A", correct=(i < 2),
+            )
+        record_practice(self.user.username, "physics", "nmat-p2p-022", "B", False)
+
+    def test_no_model_degrades_to_empty(self):
+        from . import ai_briefs
+
+        self.assertEqual(ai_briefs.daily_brief(self.user.username, 3, []), "")
+        self.assertEqual(ai_briefs.exam_eve_brief(self.user.username), "")
+        self.assertIsNone(ai_briefs.miss_autopsy(self.user.username))
+
+    def test_generated_once_then_cached(self):
+        from unittest.mock import patch
+
+        from . import ai_briefs
+
+        self._seed_wrong_answer()
+        calls = []
+
+        def fake_completion(messages, **kwargs):
+            calls.append(messages)
+            return "Focus on mechanics tonight, then 10 flashcards."
+
+        with patch("portal.llm.coach_ready", return_value=True), \
+             patch("portal.llm.chat_completion", side_effect=fake_completion):
+            brief1 = ai_briefs.daily_brief(self.user.username, 3, [])
+            brief2 = ai_briefs.daily_brief(self.user.username, 3, [])
+        self.assertTrue(brief1.strip())
+        self.assertEqual(brief1, brief2)
+        self.assertEqual(len(calls), 1)  # cached: second render spends nothing
+
+    def test_budget_exhausted_degrades(self):
+        from unittest.mock import patch
+
+        from . import ai_briefs
+        from django.test import override_settings
+
+        self._seed_wrong_answer()
+        with override_settings(GABAY_COACH_DAILY_LIMIT=0), \
+             patch("portal.llm.coach_ready", return_value=True), \
+             patch("portal.llm.chat_completion",
+                   side_effect=AssertionError("must not call")):
+            self.assertEqual(ai_briefs.daily_brief(self.user.username, 1, []), "")
+
+    def test_eve_brief_requires_future_exam(self):
+        from . import ai_briefs
+
+        self.assertEqual(ai_briefs.exam_eve_brief(self.user.username), "")
+
+
 class ContentValidationTests(TestCase):
     def test_validate_content_green(self):
         call_command("validate_content", verbosity=0)
