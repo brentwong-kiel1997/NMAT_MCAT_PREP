@@ -4,9 +4,10 @@ deterministic data views.
 Three briefs, all sharing one contract:
   - grounded ONLY in the learner's real aggregates + chapter tutorial prose
     (prompts forbid invention, matching coach_insights)
-  - at most ONE model call per (user, brief, day): results live in a
-    process-level dict — NOT the Django cache, which locmem empties on every
-    request (see portal/ratelimit.py for the same discovery)
+  - at most ONE model call per (user, brief, day) per worker: results live
+    in a process-level dict — NOT the Django cache, which locmem empties on
+    every request (see portal/ratelimit.py for the same discovery); with
+    gunicorn workers=2 worst-case limits are doubled
   - each call spends the shared GABAY_COACH_DAILY_LIMIT budget; over budget
     or without a configured model the brief degrades to "" and the template
     simply hides the card
@@ -127,10 +128,11 @@ def exam_eve_brief(username: str, refresh: bool = False) -> str:
     return _cached(key, username, prompt, max_tokens=280, refresh=refresh)
 
 
-def miss_autopsy(username: str, refresh: bool = False) -> dict | None:
+def miss_autopsy(username: str, snap: dict | None = None,
+                 refresh: bool = False) -> dict | None:
     """A paragraph tying the biggest weak chapter's cause pattern to its
     tutorial pitfalls; None when there is nothing to autopsy."""
-    snap = _snapshot(username)
+    snap = snap or _snapshot(username)
     worst = snap["weak"][0] if snap["weak"] else None
     if not worst:
         return None
@@ -163,10 +165,11 @@ def miss_autopsy(username: str, refresh: bool = False) -> dict | None:
     return {"title": title, "text": text} if text else None
 
 
-def bridge_brief(username: str, refresh: bool = False) -> dict | None:
+def bridge_brief(username: str, snap: dict | None = None,
+                 refresh: bool = False) -> dict | None:
     """Connect the top TWO weak chapters: how the concepts support each other
     and one integrated example; None when fewer than two weak chapters."""
-    snap = _snapshot(username)
+    snap = snap or _snapshot(username)
     if len(snap["weak"]) < 2:
         return None
     from .content import chapters_store, tutorial_for

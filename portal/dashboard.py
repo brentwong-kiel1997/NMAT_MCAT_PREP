@@ -92,7 +92,7 @@ def dashboard(request):
 
     ai_brief = ai_briefs.daily_brief(
         request.user.username, stats["due_today"], today_tasks,
-        refresh=request.GET.get("refresh") == "1",
+        refresh=request.GET.get("refresh") == "daily",
     )
     ctx = {
         "history": history,
@@ -150,10 +150,14 @@ def review(request):
         it["stored_cause"] = stored.get(it["question_id"])
     from . import ai_briefs
 
+    # one shared snapshot feeds both briefs (previously each rebuilt it:
+    # 26 queries per render); refresh= targets a single card
+    snap = ai_briefs._snapshot(request.user.username)
+    refresh = request.GET.get("refresh") or ""
     autopsy = ai_briefs.miss_autopsy(
-        request.user.username, refresh=request.GET.get("refresh") == "1")
+        request.user.username, snap=snap, refresh=refresh == "autopsy")
     bridge = ai_briefs.bridge_brief(
-        request.user.username, refresh=request.GET.get("refresh") == "1")
+        request.user.username, snap=snap, refresh=refresh == "bridge")
     groups = []
     for chapter_id, group in sorted(by_chapter.items(), key=lambda kv: -len(kv[1])):
         first = group[0]
@@ -237,7 +241,7 @@ def plan(request):
         "study_plan": study_plan, "plan": generated, "exams": exams,
         "exam_brief": ai_briefs.exam_eve_brief(
             request.user.username,
-            refresh=request.GET.get("refresh") == "1"),
+            refresh=request.GET.get("refresh") == "eve"),
     })
 
 

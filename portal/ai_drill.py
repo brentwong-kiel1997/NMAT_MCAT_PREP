@@ -42,9 +42,11 @@ def _chapter_grounding(chapter_id: str) -> tuple[str, str]:
     title = ch.get("title") or chapter_id
     tut = tutorial_for(ch.get("discipline", ""), ch.get("title", "")) or {}
     parts = [
-        "Chapter points: " + "; ".join(ch.get("points") or [])[:500],
-        "Key points: " + "; ".join(tut.get("key_points") or [])[:500],
-        "Recorded pitfalls: " + "; ".join(tut.get("pitfalls") or [])[:400],
+        # truncate the JOINED string — [:500] on the list capped elements,
+        # not characters, leaving the budget unbounded as content grows
+        "Chapter points: " + ("; ".join(ch.get("points") or []))[:500],
+        "Key points: " + ("; ".join(tut.get("key_points") or []))[:500],
+        "Recorded pitfalls: " + ("; ".join(tut.get("pitfalls") or []))[:400],
     ]
     return title, "\n".join(parts)
 
@@ -112,17 +114,26 @@ def _extract_json(text: str) -> dict:
 
 
 def validate_questions(questions, max_items: int = 5) -> list[dict]:
-    """Structural validation; raises ValueError describing every problem."""
+    """Structural validation; raises ValueError describing every problem.
+    Tolerates a model returning non-objects or unhashable choice values."""
     problems: list[str] = []
     clean: list[dict] = []
     if not isinstance(questions, list) or not questions:
         raise ValueError("model returned no questions array")
     seen_stems: set[str] = set()
     for n, q in enumerate(questions[:max_items], 1):
-        stem = str(q.get("q") or "").strip()
-        choices = q.get("choices") or {}
+        if not isinstance(q, dict):
+            problems.append(f"item {n}: not an object")
+            continue
+        stem = str(q.get("q") or "").strip()[:2000]
+        choices_raw = q.get("choices")
+        if not isinstance(choices_raw, dict):
+            problems.append(f"q{n}: choices not an object")
+            continue
+        choices = {str(k).strip().upper()[:1]: str(v).strip()[:2000]
+                   for k, v in choices_raw.items()}
         answer = str(q.get("answer") or "").strip().upper()[:1]
-        explain = str(q.get("explain") or "").strip()
+        explain = str(q.get("explain") or "").strip()[:2000]
         if not stem:
             problems.append(f"q{n}: empty stem")
             continue
@@ -150,21 +161,17 @@ def validate_questions(questions, max_items: int = 5) -> list[dict]:
 
 
 def generate_quiz(username: str, mode: str, chapter_id: str | None) -> AiQuiz:
-    """Generate (with one error-feedback retry), validate, persist, return."""
+    """Generate (with one error-feedback retry), validate, persist, return.
+    All failure paths raise RuntimeError — the view renders them as messages."""
     from django.conf import settings
 
     from .learners import get_or_create_profile
     from .llm import chat_completion, coach_ready
 
-    if not hit(f"aidrill:{username}:{timezone.localdate()}",
-               _MAX_SETS_PER_DAY, 86400):
-        raise RuntimeError("Daily AI-drill limit reached (10 sets) — back tomorrow.")
-    if not hit(f"coach:{username}:{timezone.localdate()}",
-               settings.GABAY_COACH_DAILY_LIMIT, 86400):
-        raise RuntimeError("Daily coach limit reached — the AI drill is back tomorrow.")
+    # cheap, side-effect-free checks FIRST — the budget counters must not burn
+    # quota for a request that can never reach the model
     if not coach_ready():
         raise RuntimeError("No AI model is configured — ask an admin to add one.")
-
     if mode == "misses":
         title, grounding = _miss_grounding(username, chapter_id or None)
         if not grounding:
@@ -175,18 +182,34 @@ def generate_quiz(username: str, mode: str, chapter_id: str | None) -> AiQuiz:
         if not grounding.strip():
             raise RuntimeError("Unknown chapter — pick one from the list.")
 
+    if not hit(f"aidrill:{username}:{timezone.localdate()}",
+               _MAX_SETS_PER_DAY, 86400):
+        raise RuntimeError("Daily AI-drill limit reached (10 sets) — back tomorrow.")
+    if not hit(f"coach:{username}:{timezone.localdate()}",
+               settings.GABAY_COACH_DAILY_LIMIT, 86400):
+        raise RuntimeError("Daily coach limit reached — the AI drill is back tomorrow.")
+
     prompt = _build_prompt(mode, title, grounding)
-    try:
-        raw = chat_completion([{"role": "user", "content": prompt}],
-                              max_tokens=1600, temperature=0.5)
-        questions = validate_questions(_extract_json(raw).get("questions"))
-    except (ValueError, json.JSONDecodeError) as first_error:
-        # one repair pass: show the model its mistake
-        retry_prompt = (f"{prompt}\n\nYour previous reply was rejected: "
-                        f"{first_error}. Return the corrected STRICT JSON now.")
-        raw = chat_completion([{"role": "user", "content": retry_prompt}],
-                              max_tokens=1600, temperature=0.2)
-        questions = validate_questions(_extract_json(raw).get("questions"))
+    questions = None
+    last_error: Exception | None = None
+    # two passes total: fresh attempt, then one repair pass that shows the
+    # model its mistake. ANY validation failure raises RuntimeError so the
+    # view degrades gracefully (a ValueError here used to 500 the route).
+    for temperature in (0.5, 0.2):
+        try:
+            raw = chat_completion([{"role": "user", "content": prompt}],
+                                  max_tokens=1600, temperature=temperature)
+            questions = validate_questions(_extract_json(raw).get("questions"))
+            break
+        except (ValueError, TypeError, AttributeError, KeyError,
+                json.JSONDecodeError) as exc:
+            last_error = exc
+            prompt = (f"{prompt}\n\nYour previous reply was rejected: {exc}. "
+                      "Return the corrected STRICT JSON now.")
+    if questions is None:
+        raise RuntimeError(
+            "The model's replies were malformed twice — please try again "
+            f"later. (Last error: {last_error})")
 
     for n, q in enumerate(questions, 1):
         q["id"] = f"ai-{n}"
@@ -260,7 +283,7 @@ def ai_drill_report(request, quiz_id: int):
     AiQuiz.objects.filter(pk=quiz.pk).update(bad_reports=F("bad_reports") + 1)
     messages.success(
         request,
-        "Thanks — reported. AI items stay out of official statistics; repeated "
-        "reports downgrade the set.",
+        "Thanks — reported. AI items stay out of official statistics; reports "
+        "flag low-quality sets for review.",
     )
     return redirect("ai_drill_quiz", quiz_id=quiz.id)

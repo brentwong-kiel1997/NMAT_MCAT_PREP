@@ -630,6 +630,40 @@ class AiBriefTests(TestCase):
 
         self.assertEqual(ai_briefs.exam_eve_brief(self.user.username), "")
 
+    def test_bridge_needs_two_weak_chapters_and_accepts_snapshot(self):
+        from unittest.mock import patch
+
+        from . import ai_briefs
+
+        self._seed_wrong_answer()
+        # single weak chapter -> no bridge
+        self.assertIsNone(ai_briefs.bridge_brief(self.user.username))
+        # a second weak chapter arrives -> bridge generates from the snapshot
+        from django.utils import timezone
+
+        from .learners import record_practice
+        from .models import ExamAttempt, ExamResponse
+
+        profile = ai_briefs._profile_for(self.user.username)
+        attempt = ExamAttempt.objects.create(
+            profile=profile, exam="nmat", mode="real", status="submitted",
+            finished_at=timezone.now(),
+        )
+        for i in range(5):
+            ExamResponse.objects.create(
+                attempt=attempt, item_id="nmat-p2s-011", block_id="b1",
+                chapter_id="psych-soc", position=i + 1,
+                chosen="A", correct=(i < 2),
+            )
+        record_practice(self.user.username, "psych-soc", "nmat-p2s-011", "C", False)
+
+        snap = ai_briefs._snapshot(self.user.username)
+        with patch("portal.llm.coach_ready", return_value=True), \
+             patch("portal.llm.chat_completion", side_effect=["Two chapters connect."]):
+            bridge = ai_briefs.bridge_brief(self.user.username, snap=snap)
+        self.assertIsNotNone(bridge)
+        self.assertIn("↔", bridge["title"])
+
 
 class AiDrillTests(TestCase):
     """AI drill: strict server-side validation of generated items, ownership
@@ -670,16 +704,43 @@ class AiDrillTests(TestCase):
         quiz = self._generate(["```json\n" + self.GOOD + "\n```"])
         self.assertEqual(len(quiz.payload), 4)
 
-    def test_invalid_output_retried_then_error(self):
+    def test_invalid_output_retried_then_runtimeerror(self):
+        # two malformed replies must surface as RuntimeError (the view renders
+        # it as a message) — a raw ValueError here used to 500 the route
         from unittest.mock import patch
 
         from . import ai_drill
 
         with patch("portal.llm.coach_ready", return_value=True), \
              patch("portal.llm.chat_completion", side_effect=["not json at all", "still bad"]):
-            with self.assertRaises(ValueError):
+            with self.assertRaises(RuntimeError):
                 ai_drill.generate_quiz(self.user.username, "chapter", "mechanics")
-        self.assertFalse(ai_drill.__dict__.get("_sentinel"))
+
+    def test_non_object_questions_500_guard(self):
+        # {"questions": ["a","b","c","d"]} used to raise AttributeError → 500
+        from unittest.mock import patch
+
+        from . import ai_drill
+
+        bad = json.dumps({"questions": ["a", "b", "c", "d"]})
+        with patch("portal.llm.coach_ready", return_value=True), \
+             patch("portal.llm.chat_completion", side_effect=[bad, bad]):
+            with self.assertRaises(RuntimeError):
+                ai_drill.generate_quiz(self.user.username, "chapter", "mechanics")
+
+    def test_no_quota_burn_when_no_model(self):
+        # budget counters must not tick for requests that never reach the model
+        from unittest.mock import patch
+
+        from . import ai_drill, ratelimit
+
+        ratelimit.reset()
+        with patch("portal.llm.coach_ready", return_value=False), \
+             patch("portal.llm.chat_completion",
+                   side_effect=AssertionError("must not call")):
+            with self.assertRaises(RuntimeError):
+                ai_drill.generate_quiz(self.user.username, "chapter", "mechanics")
+        self.assertIsNone(ratelimit._hits.get(f"coach:{self.user.username}"))
 
     def test_structurally_invalid_items_dropped(self):
         def q(n, **over):
@@ -695,13 +756,12 @@ class AiDrillTests(TestCase):
             q(3),
             q(4, choices={"A": "same", "B": "same", "C": "c4", "D": "d4"}),  # dup texts
             q(5, answer="E"),                                        # bad: answer out
-            q(6),
         ]})
         quiz = self._generate([mostly_bad, mostly_bad])
         self.assertEqual(len(quiz.payload), 3)  # broken items dropped, 3 survive
 
         mostly_ok = json.dumps({"questions": [q(1)]})
-        with self.assertRaises(ValueError):
+        with self.assertRaises(RuntimeError):
             self._generate([mostly_ok, mostly_ok])  # 1 valid < 3 minimum raises
 
     def test_views_ownership_and_report(self):
