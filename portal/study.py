@@ -76,6 +76,7 @@ def tutor_messages(
     user_text: str,
     curriculum: str,
     chapter_title: str = "",
+    learner_line: str = "",
 ) -> list[dict]:
     mode = (mode or "ask").lower()
     chapter_line = (
@@ -83,11 +84,23 @@ def tutor_messages(
         if chapter_title
         else "Current chapter: none specified (coach the whole subject)"
     )
+    learner_block = (
+        f"\n\n[Learner context]\n{learner_line}"
+        if learner_line
+        else ""
+    )
 
     if mode == "explain":
         task = (
             "Explain the current chapter: 3–5 core concepts first, then one mini "
             "example, then 2 common pitfalls. Do not quiz."
+        )
+    elif mode == "hint":
+        task = (
+            "The user is working through this chapter and wants a HINT, not the "
+            "answer. Give one nudge at a time: name the concept or first step to "
+            "consider, at most one sentence, then stop. Never state the final "
+            "answer or the full solution."
         )
     elif mode == "quiz":
         task = (
@@ -110,6 +123,7 @@ def tutor_messages(
         f"[Gabay outline]\n{curriculum}\n\n"
         f"[Task]\n{task}\n\n"
         f"[User input]\n{user_text.strip() or '(none)'}"
+        + learner_block
     )
     return [
         {"role": "system", "content": SYSTEM_PROMPT},

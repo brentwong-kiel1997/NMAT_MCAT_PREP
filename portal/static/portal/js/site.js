@@ -363,6 +363,7 @@
       <div class="tutor-controls">
         <select class="tutor-chapter" aria-label="chapter">${chapterOptions}</select>
         <button type="button" data-mode="explain">Explain</button>
+        <button type="button" data-mode="hint">Hint</button>
         <button type="button" data-mode="quiz">Quiz me</button>
       </div>
       <div class="tutor-log" aria-live="polite"></div>

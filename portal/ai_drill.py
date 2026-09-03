@@ -83,7 +83,13 @@ def _miss_grounding(username: str, chapter_id: str | None) -> tuple[str, str]:
     return title, "The learner recently missed:\n" + "\n".join(lines)
 
 
-def _build_prompt(mode: str, grounding_title: str, grounding: str) -> str:
+def _build_prompt(mode: str, grounding_title: str, grounding: str,
+                  difficulty: str) -> str:
+    difficulty_line = {
+        "easy": "Difficulty: EASY — single-step recall, obvious distractors.",
+        "challenge": ("Difficulty: CHALLENGE — multi-step reasoning, distractors "
+                      "built from subtle misconceptions."),
+    }.get(difficulty, "Difficulty: STANDARD — exam-typical single best answer.")
     return (
         "You are an NMAT/MCAT item writer for the Gabay prep platform. Write "
         f"{_QUESTIONS_WANTED} NEW multiple-choice practice questions grounded "
@@ -91,7 +97,7 @@ def _build_prompt(mode: str, grounding_title: str, grounding: str) -> str:
         + (" and the learner's own misses (same skill, fresh numbers/context — "
            "never copy the missed stems)" if mode == "misses" else "")
         + ". Match official style: single best answer, plausible distractors "
-        "that each encode one specific error.\n\n"
+        "that each encode one specific error. " + difficulty_line + "\n\n"
         "Return STRICT JSON only — no markdown fences, no commentary:\n"
         '{"questions": [{"q": "stem", "choices": {"A": "...", "B": "...", '
         '"C": "...", "D": "..."}, "answer": "B", "explain": "why B is right '
@@ -160,7 +166,8 @@ def validate_questions(questions, max_items: int = 5) -> list[dict]:
     return clean
 
 
-def generate_quiz(username: str, mode: str, chapter_id: str | None) -> AiQuiz:
+def generate_quiz(username: str, mode: str, chapter_id: str | None,
+                  difficulty: str = "standard") -> AiQuiz:
     """Generate (with one error-feedback retry), validate, persist, return.
     All failure paths raise RuntimeError — the view renders them as messages."""
     from django.conf import settings
@@ -189,7 +196,7 @@ def generate_quiz(username: str, mode: str, chapter_id: str | None) -> AiQuiz:
                settings.GABAY_COACH_DAILY_LIMIT, 86400):
         raise RuntimeError("Daily coach limit reached — the AI drill is back tomorrow.")
 
-    prompt = _build_prompt(mode, title, grounding)
+    prompt = _build_prompt(mode, title, grounding, difficulty)
     questions = None
     last_error: Exception | None = None
     # two passes total: fresh attempt, then one repair pass that shows the
@@ -214,6 +221,7 @@ def generate_quiz(username: str, mode: str, chapter_id: str | None) -> AiQuiz:
     for n, q in enumerate(questions, 1):
         q["id"] = f"ai-{n}"
         q["chapter"] = title
+        q["difficulty"] = difficulty
     return AiQuiz.objects.create(
         profile=get_or_create_profile(username),
         chapter_id=chapter_id or "", mode=mode, payload=questions,
@@ -245,11 +253,15 @@ def ai_drill_generate(request):
 
     mode = "misses" if request.POST.get("mode") == "misses" else "chapter"
     chapter_id = str(request.POST.get("chapter_id") or "").strip()[:120]
+    difficulty = request.POST.get("difficulty") or "standard"
+    if difficulty not in ("easy", "standard", "challenge"):
+        difficulty = "standard"
     if mode == "chapter" and chapter_id not in chapters_store():
         messages.error(request, "Pick a chapter from the list.")
         return redirect("ai_drill_index")
     try:
-        quiz = generate_quiz(request.user.username, mode, chapter_id or None)
+        quiz = generate_quiz(request.user.username, mode, chapter_id or None,
+                             difficulty=difficulty)
     except RuntimeError as exc:
         messages.error(request, f"AI drill: {exc}")
         return redirect("ai_drill_index")

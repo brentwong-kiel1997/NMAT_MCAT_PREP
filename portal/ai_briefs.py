@@ -15,12 +15,16 @@ Three briefs, all sharing one contract:
 
 from __future__ import annotations
 
+import time
+
 from django.utils import timezone
 
 from . import insights
 from .ratelimit import hit
 
 _BRIEF_CACHE: dict[tuple, str] = {}
+_SNAPSHOT_TTL = 60.0  # seconds; consecutive page views reuse the aggregates
+_SNAPSHOTS: dict[str, tuple[float, dict]] = {}
 
 
 def _profile_for(username: str):
@@ -30,7 +34,18 @@ def _profile_for(username: str):
 
 
 def _snapshot(username: str) -> dict:
-    """Learner aggregates shared by every brief (pure reads)."""
+    now = time.monotonic()
+    cached = _SNAPSHOTS.get(username)
+    if cached and now - cached[0] < _SNAPSHOT_TTL:
+        return cached[1]
+    snap = _build_snapshot(username)
+    _SNAPSHOTS[username] = (now, snap)
+    return snap
+
+
+def _build_snapshot(username: str) -> dict:
+    """Learner aggregates shared by every brief (pure reads), memoized for a
+    minute so dashboard → review back-to-back views don't re-aggregate."""
     from .models import ReviewNote
 
     profile = _profile_for(username)
@@ -98,7 +113,7 @@ def daily_brief(username: str, due_cards: int, today_tasks: list,
         "dashboard: what to focus on today and ONE concrete first action. Plain "
         "text, no markdown, no invented data.\n\n" + data
     )
-    key = ("daily", username, str(timezone.localdate()))
+    key = ("daily", username, str(timezone.localdate()), due_cards, len(today_tasks))
     return _cached(key, username, prompt, max_tokens=160, refresh=refresh)
 
 

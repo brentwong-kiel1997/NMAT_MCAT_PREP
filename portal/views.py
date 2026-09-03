@@ -574,7 +574,7 @@ def study_api(request):
         return JsonResponse({"ok": False, "error": "Invalid JSON"}, status=400)
 
     mode = (payload.get("mode") or "ask").strip().lower()
-    if mode not in {"ask", "explain", "quiz", "grade"}:
+    if mode not in {"ask", "explain", "hint", "quiz", "grade"}:
         return JsonResponse({"ok": False, "error": "Unsupported mode"}, status=400)
 
     user_text = (payload.get("message") or "").strip()
@@ -587,6 +587,30 @@ def study_api(request):
     subject_slug = str(payload.get("subject_slug") or "").strip()[:80]
     section_slug = str(payload.get("section_slug") or "").strip()[:80]
     chapter_title = str(payload.get("chapter") or "").strip()[:200]
+
+    # learner-aware coaching: when a chapter is specified, surface how this
+    # learner is doing there (wrong count + dominant self-reported cause) so
+    # hints/explanations target their actual gaps. One filtered query pass.
+    learner_line = ""
+    if chapter_title:
+        from .learners import get_or_create_profile
+        from .models import ReviewNote
+
+        prof = get_or_create_profile(_learner_name(request))
+        wrong = insights.wrong_questions(prof, limit=100)
+        in_chapter = [w for w in wrong if w.get("title") == chapter_title]
+        if in_chapter:
+            stored = {n.question_id: n.cause for n in ReviewNote.objects.filter(
+                profile=prof,
+                question_id__in=[w["question_id"] for w in in_chapter])}
+            counts: dict[str, int] = {}
+            for w in in_chapter:
+                c = stored.get(w["question_id"], "unlabeled")
+                counts[c] = counts.get(c, 0) + 1
+            top = max(counts, key=counts.get)
+            learner_line = (f"This learner has {len(in_chapter)} open wrong "
+                            f"item(s) in this chapter; dominant self-reported "
+                            f"cause: {top}.")
 
     # daily per-user cap: every call spends the configured model's budget
     from django.conf import settings as _settings
@@ -608,6 +632,7 @@ def study_api(request):
     messages = tutor_messages(
         mode=mode,
         user_text=user_text,
+        learner_line=learner_line,
         curriculum=curriculum,
         chapter_title=chapter_title,
     )

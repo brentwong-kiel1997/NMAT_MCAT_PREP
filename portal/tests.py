@@ -791,6 +791,38 @@ class AiDrillTests(TestCase):
                 ai_drill.generate_quiz(self.user.username, "misses", None)
 
 
+    def test_hint_mode_reaches_prompt_builder(self):
+        from .study import tutor_messages
+
+        msgs = tutor_messages(
+            mode="hint", user_text="", curriculum="outline text",
+            chapter_title="Mechanics",
+            learner_line="This learner has 2 open wrong item(s) here; cause: trap.",
+        )
+        joined = " ".join(m["content"] for m in msgs)
+        self.assertIn("HINT", joined)
+        self.assertIn("Never state the final answer", joined)
+        self.assertIn("dominant self-reported cause: trap", joined)
+
+    def test_difficulty_reaches_prompt_and_payload(self):
+        from unittest.mock import patch
+
+        from . import ai_drill
+
+        captured = {}
+
+        def fake_completion(messages, **kwargs):
+            captured["prompt"] = messages[0]["content"]
+            return self.GOOD
+
+        with patch("portal.llm.coach_ready", return_value=True), \
+             patch("portal.llm.chat_completion", side_effect=fake_completion):
+            quiz = ai_drill.generate_quiz(self.user.username, "chapter",
+                                          "mechanics", difficulty="challenge")
+        self.assertIn("CHALLENGE", captured["prompt"])
+        self.assertEqual({q["difficulty"] for q in quiz.payload}, {"challenge"})
+
+
 class ContentValidationTests(TestCase):
     def test_validate_content_green(self):
         call_command("validate_content", verbosity=0)
