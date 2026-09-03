@@ -251,3 +251,32 @@ class ReviewNote(models.Model):
 
     def __str__(self) -> str:
         return f"{self.profile_id}:{self.question_id}:{self.cause}"
+
+
+class AiQuiz(models.Model):
+    """One AI-generated practice set (user-requested, never part of the
+    official bank or accuracy statistics).
+
+    payload holds the validated questions JSON
+    ([{id, q, choices, answer, explain, chapter}, ...]); `mode` records what
+    grounded the generation ("chapter" or "misses"). bad_reports counts
+    learner flags on generated items.
+    """
+
+    MODES = [("chapter", "chapter-grounded"), ("misses", "miss-grounded")]
+
+    profile = models.ForeignKey(
+        LearnerProfile, on_delete=models.CASCADE, related_name="ai_quizzes"
+    )
+    chapter_id = models.CharField(max_length=120, blank=True)
+    mode = models.CharField(max_length=12, choices=MODES, default="chapter")
+    payload = models.JSONField(default=list)
+    bad_reports = models.IntegerField(default=0)
+    created_at = models.DateTimeField(default=timezone.now)
+
+    class Meta:
+        ordering = ["-created_at"]
+        verbose_name = "AI quiz"
+
+    def __str__(self) -> str:
+        return f"AI quiz #{self.pk} ({self.mode}) for {self.profile}"

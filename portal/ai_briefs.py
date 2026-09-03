@@ -161,3 +161,33 @@ def miss_autopsy(username: str, refresh: bool = False) -> dict | None:
     key = ("autopsy", username, str(timezone.localdate()))
     text = _cached(key, username, prompt, max_tokens=220, refresh=refresh)
     return {"title": title, "text": text} if text else None
+
+
+def bridge_brief(username: str, refresh: bool = False) -> dict | None:
+    """Connect the top TWO weak chapters: how the concepts support each other
+    and one integrated example; None when fewer than two weak chapters."""
+    snap = _snapshot(username)
+    if len(snap["weak"]) < 2:
+        return None
+    from .content import chapters_store, tutorial_for
+
+    chs = chapters_store()
+    a, b = snap["weak"][:2]
+    prose_bits = []
+    for w in (a, b):
+        ch = chs.get(w["chapter_id"]) or {}
+        tut = tutorial_for(ch.get("discipline", ""), ch.get("title", "")) or {}
+        kps = "; ".join((tut.get("key_points") or [])[:2])[:300]
+        prose_bits.append(f"{w['title']} ({w['pct']}%): {kps}")
+    prompt = (
+        "You are the Gabay study coach. Using ONLY the data below, write one "
+        "short paragraph (max 100 words, English, plain text) showing how these "
+        "two weak chapters support each other — one integrated idea the learner "
+        "can use on both. No invented content.\n\n"
+        + "\n".join(prose_bits)
+    )
+    key = ("bridge", username, str(timezone.localdate()))
+    text = _cached(key, username, prompt, max_tokens=240, refresh=refresh)
+    if not text:
+        return None
+    return {"title": f'{a["title"]} ↔ {b["title"]}', "text": text}

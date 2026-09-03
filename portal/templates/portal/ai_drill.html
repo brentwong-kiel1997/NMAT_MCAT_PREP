@@ -1,0 +1,68 @@
+{% extends "portal/base.html" %}
+
+{% block title %}AI drill · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">AI coach</p>
+    <h1>AI drill</h1>
+    <p class="lead">Generated practice, grounded in the chapter you choose or in your own
+      recent misses. Instant feedback, clearly labelled AI — never counted in official statistics.</p>
+  </div>
+</div>
+
+<section class="section">
+  {% if messages %}
+  <ul class="flash-msgs">
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <article class="block">
+    <h2>Generate a set</h2>
+    <form class="auth-form" method="post" action="{% url 'ai_drill_generate' %}">
+      {% csrf_token %}
+      <label>
+        <span>Mode</span>
+        <select name="mode" id="drill-mode">
+          <option value="chapter">Chapter drill — grounded in the chapter you pick</option>
+          <option value="misses">Miss variants — fresh versions of what YOU got wrong</option>
+        </select>
+      </label>
+      <label>
+        <span>Chapter (chapter mode)</span>
+        <select name="chapter_id">
+          {% for w in weak %}
+          <option value="{{ w.chapter_id }}">{{ w.title }} — {{ w.pct }}%</option>
+          {% endfor %}
+        </select>
+      </label>
+      <button class="btn btn-primary" type="submit">Generate {{ request.GET.n|default:"4" }} questions</button>
+      <p class="note-line">Each set spends one coach-budget call; up to {{ max_sets }} sets per day.
+        Generated items can contain mistakes — use the Report button on anything suspicious.</p>
+    </form>
+  </article>
+
+  {% if recent %}
+  <h2>Your recent sets</h2>
+  <ul class="user-admin-list">
+    {% for qz in recent %}
+    <li>
+      <div>
+        <strong>{{ qz.get_mode_display }}</strong>
+        <p class="muted-inline">{{ qz.payload|length }} items · {{ qz.created_at|date:"M d, H:i" }}
+          {% if qz.bad_reports %}· {{ qz.bad_reports }} report{{ qz.bad_reports|pluralize }}{% endif %}</p>
+      </div>
+      <div class="user-actions">
+        <a class="btn" href="{% url 'ai_drill_quiz' qz.id %}">Open</a>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</section>
+{% endblock %}

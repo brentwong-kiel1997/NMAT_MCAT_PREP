@@ -20,6 +20,14 @@
       <span class="ai-badge">AI</span> {{ autopsy.text }}
       <a class="ai-refresh" href="?refresh=1" title="Regenerate (uses one coach call)">↻</a>
     </div>
+    {% if bridge %}
+    <div class="ai-brief" style="margin-top:.5rem;">
+      <span class="ai-badge">AI</span> <strong>{{ bridge.title }}</strong> — {{ bridge.text }}
+    </div>
+    {% endif %}
+    <p style="margin-top:.75rem;">
+      <a class="btn btn-primary" href="{% url 'ai_drill_index' %}">Generate AI drill from these misses →</a>
+    </p>
   </article>
   {% endif %}
   {% for g in groups %}

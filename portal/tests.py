@@ -1,6 +1,8 @@
 """Test suite: auth gates, self-registration, field crypto, exam engine,
 and the content validator. Run with `manage.py test` (CI does the same)."""
 
+import json
+
 from django.contrib.auth.models import User
 from django.core.management import call_command
 from django.test import Client, TestCase
@@ -627,6 +629,106 @@ class AiBriefTests(TestCase):
         from . import ai_briefs
 
         self.assertEqual(ai_briefs.exam_eve_brief(self.user.username), "")
+
+
+class AiDrillTests(TestCase):
+    """AI drill: strict server-side validation of generated items, ownership
+    on every route, reporting, and the misses-grounding mode."""
+
+    GOOD = json.dumps({"questions": [
+        {"q": f"Question {i} about torque?",
+         "choices": {"A": "right-1", "B": "wrong-1", "C": "wrong-2", "D": "wrong-3"},
+         "answer": "A",
+         "explain": "Torque balance gives right-1; B inverts the ratio."}
+        for i in range(4)]})
+
+    def setUp(self):
+        self.user = User.objects.create_user("drilluser", password="pw-123456789")
+        ensure_profile_for_user(self.user)
+        self.client = Client()
+        self.client.force_login(self.user)
+        from . import ratelimit
+
+        ratelimit.reset()
+
+    def _generate(self, replies):
+        from unittest.mock import patch
+
+        from . import ai_drill
+
+        with patch("portal.llm.coach_ready", return_value=True), \
+             patch("portal.llm.chat_completion", side_effect=replies):
+            return ai_drill.generate_quiz(self.user.username, "chapter", "mechanics")
+
+    def test_generation_validates_and_persists(self):
+        quiz = self._generate([self.GOOD])
+        self.assertEqual(len(quiz.payload), 4)
+        self.assertEqual(quiz.mode, "chapter")
+        self.assertEqual([q["id"] for q in quiz.payload], ["ai-1", "ai-2", "ai-3", "ai-4"])
+
+    def test_fenced_json_accepted(self):
+        quiz = self._generate(["```json\n" + self.GOOD + "\n```"])
+        self.assertEqual(len(quiz.payload), 4)
+
+    def test_invalid_output_retried_then_error(self):
+        from unittest.mock import patch
+
+        from . import ai_drill
+
+        with patch("portal.llm.coach_ready", return_value=True), \
+             patch("portal.llm.chat_completion", side_effect=["not json at all", "still bad"]):
+            with self.assertRaises(ValueError):
+                ai_drill.generate_quiz(self.user.username, "chapter", "mechanics")
+        self.assertFalse(ai_drill.__dict__.get("_sentinel"))
+
+    def test_structurally_invalid_items_dropped(self):
+        def q(n, **over):
+            base = {"q": f"ok question {n}",
+                    "choices": {"A": f"a{n}", "B": f"b{n}", "C": f"c{n}", "D": f"d{n}"},
+                    "answer": "A", "explain": "fine"}
+            base.update(over)
+            return base
+
+        mostly_bad = json.dumps({"questions": [
+            q(1),
+            q(2),
+            q(3),
+            q(4, choices={"A": "same", "B": "same", "C": "c4", "D": "d4"}),  # dup texts
+            q(5, answer="E"),                                        # bad: answer out
+            q(6),
+        ]})
+        quiz = self._generate([mostly_bad, mostly_bad])
+        self.assertEqual(len(quiz.payload), 3)  # broken items dropped, 3 survive
+
+        mostly_ok = json.dumps({"questions": [q(1)]})
+        with self.assertRaises(ValueError):
+            self._generate([mostly_ok, mostly_ok])  # 1 valid < 3 minimum raises
+
+    def test_views_ownership_and_report(self):
+        other = User.objects.create_user("otheruser", password="pw-123456789")
+        other_profile = ensure_profile_for_user(other)
+        quiz = self._generate([self.GOOD])
+        # owner can open; a stranger cannot
+        self.assertEqual(self.client.get(f"/ai/drill/{quiz.id}/").status_code, 200)
+        stranger = Client()
+        stranger.force_login(other)
+        self.assertEqual(stranger.get(f"/ai/drill/{quiz.id}/").status_code, 404)
+        # report increments only own quiz
+        self.client.post(f"/ai/drill/{quiz.id}/report/")
+        quiz.refresh_from_db()
+        self.assertEqual(quiz.bad_reports, 1)
+        # generate requires login
+        anon = Client()
+        self.assertEqual(anon.get("/ai/drill/").status_code, 302)
+
+    def test_misses_mode_requires_recorded_misses(self):
+        from unittest.mock import patch
+
+        from . import ai_drill
+
+        with patch("portal.llm.coach_ready", return_value=True):
+            with self.assertRaises(RuntimeError):
+                ai_drill.generate_quiz(self.user.username, "misses", None)
 
 
 class ContentValidationTests(TestCase):

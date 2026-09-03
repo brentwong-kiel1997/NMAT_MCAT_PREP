@@ -1,0 +1,51 @@
+{% extends "portal/base.html" %}
+{% load static %}
+
+{% block title %}AI quiz · Gabay{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">AI coach</p>
+    <h1>AI quiz — {{ quiz.get_mode_display }}</h1>
+    <p class="lead">AI-generated practice. Instant feedback; correct counts stay on this device and
+      nothing here feeds official statistics.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="practice-shell" data-practice data-practice-key="gabay_ai_quiz_{{ quiz.id }}">
+    <div class="practice-status">
+      <span>Progress</span>
+      <strong class="practice-pos">1</strong> / <span class="practice-total">{{ total }}</span>
+      · Correct
+      <strong class="practice-score">0</strong>
+    </div>
+    <article class="practice-card">
+      <p class="practice-chapter"></p>
+      <h2 class="practice-q"></h2>
+      <div class="practice-choices" role="group"></div>
+      <div class="practice-feedback" hidden>
+        <p class="practice-verdict"></p>
+        <p class="practice-explain"></p>
+      </div>
+      <div class="practice-nav">
+        <button type="button" class="practice-prev">Previous</button>
+        <button type="button" class="practice-next btn btn-primary">Next</button>
+      </div>
+    </article>
+    <script type="application/json" class="practice-data">{{ items_json|safe }}</script>
+  </div>
+
+  <article class="block" style="margin-top:1.5rem;">
+    <form method="post" action="{% url 'ai_drill_report' quiz.id %}"
+          onsubmit="return confirm('Report a problem with this AI quiz?')">
+      {% csrf_token %}
+      <button type="submit" class="btn">⚑ Report a bad item</button>
+      <a class="btn" href="{% url 'ai_drill_index' %}">← AI drill home</a>
+    </form>
+    <p class="note-line">Generated {{ quiz.created_at|date:"M d, H:i" }} · reports help downgrade low-quality sets.</p>
+  </article>
+</section>
+{% endblock %}

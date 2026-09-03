@@ -152,6 +152,8 @@ def review(request):
 
     autopsy = ai_briefs.miss_autopsy(
         request.user.username, refresh=request.GET.get("refresh") == "1")
+    bridge = ai_briefs.bridge_brief(
+        request.user.username, refresh=request.GET.get("refresh") == "1")
     groups = []
     for chapter_id, group in sorted(by_chapter.items(), key=lambda kv: -len(kv[1])):
         first = group[0]
@@ -164,6 +166,7 @@ def review(request):
                                                   "total": len(items),
                                                   "cause_labels": causes.items(),
                                                   "autopsy": autopsy,
+                                                  "bridge": bridge,
                                                   "cause_dist": cause_distribution_local(profile)})
 
 
