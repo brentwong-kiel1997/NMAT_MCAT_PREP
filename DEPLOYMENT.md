@@ -161,6 +161,7 @@ Group=ubuntu
 WorkingDirectory=/home/ubuntu/deploy/django-wsgi
 Environment=DJANGO_DEBUG=0
 Environment=DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1,*
+ExecReload=/bin/kill -HUP $MAINPID
 ExecStart=/home/ubuntu/runtime/django-wsgi/venv/bin/gunicorn config.wsgi:application \
   --bind 127.0.0.1:8000 \
   --workers 2 \

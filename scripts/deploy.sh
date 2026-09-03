@@ -73,8 +73,9 @@ cd "$DEPLOY"
 "${VENV}/bin/python" manage.py env_status
 
 # Gunicorn runs as a systemd unit (gunicorn.service) — enabled at boot,
-# restarted on failure. deploy.sh only restarts it after a green swap.
-sudo systemctl restart gunicorn
+# restarted on failure. Reload (HUP) gracefully recycles workers so in-flight
+# requests finish; fall back to restart if the unit lacks ExecReload.
+sudo systemctl reload gunicorn 2>/dev/null || sudo systemctl restart gunicorn
 systemctl is-active --quiet gunicorn
 
 REV="$(git --git-dir="$BARE" rev-parse --short HEAD 2>/dev/null || echo unknown)"
