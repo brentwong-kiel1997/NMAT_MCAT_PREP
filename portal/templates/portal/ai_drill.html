@@ -29,15 +29,15 @@
       <label>
         <span>Mode</span>
         <select name="mode" id="drill-mode">
-          <option value="chapter">Chapter drill — grounded in the chapter you pick</option>
-          <option value="misses">Miss variants — fresh versions of what YOU got wrong</option>
+          <option value="chapter" {% if preselect_mode != "misses" %}selected{% endif %}>Chapter drill — grounded in the chapter you pick</option>
+          <option value="misses" {% if preselect_mode == "misses" %}selected{% endif %}>Miss variants — fresh versions of what YOU got wrong</option>
         </select>
       </label>
       <label>
         <span>Chapter (chapter mode)</span>
         <select name="chapter_id">
           {% for w in weak %}
-          <option value="{{ w.chapter_id }}">{{ w.title }} — {{ w.pct }}%</option>
+          <option value="{{ w.chapter_id }}" {% if preselect_chapter and w.chapter_id == preselect_chapter %}selected{% endif %}>{{ w.title }} — {{ w.pct }}%</option>
           {% endfor %}
         </select>
       </label>

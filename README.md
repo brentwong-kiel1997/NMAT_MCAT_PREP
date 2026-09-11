@@ -46,7 +46,7 @@
 | · of which shared across both exams' syllabi | one file per chapter — e.g. genetics 1C ships as two *complementary* scopes (biochemistry: molecular/repair; biology: transmission/population), never duplicated prose |
 | High-yield note bullets | **453** |
 | Practice MCQs with explanations | **219** |
-| Glossary terms / formula entries | **146 / 114** |
+| Glossary terms / formula entries | **146 / 113** |
 | Strategy guides | **8** |
 | Flashcards (spaced repetition) | **625** across 13 subject decks |
 | Exam tips / study paths / checklists | **21 / 7 / 3** |

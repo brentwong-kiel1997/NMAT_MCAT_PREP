@@ -239,9 +239,13 @@ def ai_drill_index(request):
     profile = get_or_create_profile(request.user.username)
     weak = wrong_chapters(profile, limit=8)
     recent = AiQuiz.objects.filter(profile=profile)[:8]
+    preselect_mode = "misses" if request.GET.get("mode") == "misses" else ""
+    preselect_chapter = str(request.GET.get("chapter") or "").strip()[:120]
     return render(request, "portal/ai_drill.html", {
         "weak": weak,
         "recent": recent,
+        "preselect_mode": preselect_mode,
+        "preselect_chapter": preselect_chapter,
         "max_sets": _MAX_SETS_PER_DAY,
     })
 

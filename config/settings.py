@@ -131,7 +131,7 @@ LOGIN_REDIRECT_URL = "account"
 LOGOUT_REDIRECT_URL = "home"
 
 LANGUAGE_CODE = "en"
-TIME_ZONE = "Asia/Shanghai"
+TIME_ZONE = "Asia/Manila"
 USE_I18N = True
 USE_TZ = True
 

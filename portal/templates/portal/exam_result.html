@@ -10,6 +10,12 @@
     <h1>{{ exam_name }} — {{ score.correct }}/{{ score.items }} ({{ score.pct }}%)</h1>
     <p class="lead">Answered {{ score.answered }} of {{ score.items }} · started {{ attempt.started_at|date:"M d, H:i" }}</p>
     {% if score.field_test %}<p class="note-line">Includes {{ score.field_test }} unscored field-test item{{ score.field_test|pluralize }} — answered for calibration, not counted in your score.</p>{% endif %}
+    {% if attempt.mode == "diagnostic" and review %}
+    <p style="margin-top:.75rem;">
+      <a class="btn btn-primary" href="{% url 'ai_drill_index' %}?mode=misses">Practice these misses with the AI drill →</a>
+      <a class="btn" href="{% url 'review' %}">Open them in the review notebook</a>
+    </p>
+    {% endif %}
   </div>
 </div>
 

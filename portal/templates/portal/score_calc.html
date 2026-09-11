@@ -43,7 +43,7 @@
         <thead><tr><th>Target</th><th>Percentile</th><th>Standard score</th><th id="nmat-acc-header">Accuracy needed on 240 items</th></tr></thead>
         <tbody>
           <tr><td>CHED national minimum</td><td>40th</td><td>~475</td><td id="nmat-t40"></td></tr>
-          <tr><td>Most Metro Manila schools</td><td>60th</td><td>~525</td><td id="nmat-t60"></td></tr>
+          <tr><td>Commonly cited regional cut-off</td><td>60th</td><td>~525</td><td id="nmat-t60"></td></tr>
           <tr><td>Competitive programs</td><td>85th</td><td>~604</td><td id="nmat-t85"></td></tr>
           <tr><td>Top-tier program cutoffs</td><td>95th+</td><td id="nmat-s95"></td><td id="nmat-t95"></td></tr>
         </tbody>
@@ -137,7 +137,7 @@
         `Approximate percentile rank: ${Math.max(1, pr)} — ` +
         ((pr >= 95) ? "top-tier program range." :
          (pr >= 85) ? "competitive-program range." :
-         (pr >= 60) ? "clears most Metro Manila cut-offs." :
+         (pr >= 60) ? "clears commonly cited regional cut-offs." :
          (pr >= 40) ? "above the CHED minimum." : "below the CHED 40th-percentile minimum.");
       [["nmat-s95", 95], ["nmat-t95", 95]].forEach(([id, p]) => {
         const el = document.getElementById(id);

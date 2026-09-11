@@ -73,13 +73,17 @@ def dashboard(request):
     today_tasks, mock_recommended = [], False
     if sp:
         done = {row.chapter_id for row in ChapterProgress.objects.filter(profile=profile)}
+        # the plan follows the latest mock: weak chapters (re)weight tasks
+        weak = {w["chapter_id"] for w in insights.wrong_chapters(profile, limit=20)}
         # build_plan re-resolves the whole syllabus (~1.4 s) — cache per
         # (plan shape, progress) so a dashboard render doesn't recompute it
-        key = (sp.exam, str(sp.exam_date), sp.weekly_hours, hash(tuple(sorted(done))))
+        key = (sp.exam, str(sp.exam_date), sp.weekly_hours,
+               hash(tuple(sorted(done))), hash(tuple(sorted(weak))))
         cached = _PLAN_CACHE.get(key)
         if cached is None:
             cached = build_plan(exam_id=sp.exam, exam_date=sp.exam_date,
-                                weekly_hours=sp.weekly_hours, done=done)
+                                weekly_hours=sp.weekly_hours, done=done,
+                                weak=weak)
             if len(_PLAN_CACHE) > 32:
                 _PLAN_CACHE.clear()
             _PLAN_CACHE[key] = cached
