@@ -51,6 +51,25 @@ def build_curriculum_context(
             "listed on the Gabay site."
         )
 
+    # ground the coach in the CURRENT chapter's tutorial prose (key points +
+    # pitfalls), not just the outline points — capped so the prompt stays small
+    if chapter_title:
+        from .content import chapters_store, tutorial_for
+
+        chs = chapters_store()
+        ch = next((c for c in chs.values() if c.get("title") == chapter_title), None)
+        if ch:
+            tut = tutorial_for(ch.get("discipline", ""), ch.get("title", ""))
+            if tut:
+                kp = "; ".join(tut.get("key_points") or [])[:800]
+                pf = "; ".join(tut.get("pitfalls") or [])[:600]
+                if kp or pf:
+                    chunks.append("[Current chapter — tutorial key points]")
+                    if kp:
+                        chunks.append(kp)
+                    if pf:
+                        chunks.append(f"[Common pitfalls] {pf}")
+
     return "\n".join(chunks)
 
 

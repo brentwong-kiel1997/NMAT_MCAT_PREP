@@ -12,7 +12,7 @@
 ![Django](https://img.shields.io/badge/Django-5.x-0C4B33?logo=django&logoColor=white)
 ![Subjects](https://img.shields.io/badge/subjects-13-purple)
 ![Chapters](https://img.shields.io/badge/tutorials-70%20%2F%2070-green)
-![Questions](https://img.shields.io/badge/practice%20MCQs-149-red)
+![Questions](https://img.shields.io/badge/practice%20MCQs-219-red)
 
 [Features](#-features) · [Curriculum](#-the-curriculum-at-a-glance) · [Quickstart](#-quickstart) · [How it works](#-how-it-works) · [Deploy](#-deploying-for-real) · [Built with AI](#-built-with-ai-agents) · [License](#%EF%B8%8F-sources--license)
 
@@ -27,14 +27,14 @@
 | 🗺️ **Dual-exam curriculum map** | 13 subjects covering NMAT Part 1 & 2 and all four MCAT sections, with shared science subjects merged — no duplicated pages, no fake chapters beyond the official blueprints |
 | 📖 **Teaching chapters** | Full-textbook tutorials: overview → teaching sections with figures → worked examples → key points → pitfalls → per-exam mapping, every chapter citing its sources — plus subject key terms, cross-discipline bridges, clinical links into the disease library, high-yield badges, and one-click PDF export |
 | 🎯 **Strategy library** | 8 original test-taking technique guides — passage triage, process of elimination, unit analysis, CARS passage mapping, timing protocol, flag discipline, guessing policy, the review loop |
-| 📝 **High-yield notes** | 453 one-line bullets across 70 outline chapters, plus 149 practice MCQs and a 770-question bank (NMAT 240 + MCAT 230 full-length mocks + 300 practice-only drill items, 32 passages) |
+| 📝 **High-yield notes** | 453 one-line bullets across 70 outline chapters, plus 219 practice MCQs and a 770-question bank (NMAT 240 + MCAT 230 full-length mocks + 300 practice-only drill items, 32 passages) |
 | 🔎 **Materials desk** | 146-term searchable glossary, 114 formulas in per-subject sheets, exam tips, study paths, and checklists |
 | 🩺 **Disease library** | 8 mechanism-first articles (TB, dengue, MI, …) bridging basic science to clinical intuition — enrichment reading, honestly labeled as such |
 | 🔁 **Spaced-repetition flashcards** | SM-2-style scheduling over the full 625-card deck: due queue, new cards capped per session, Again/Hard/Good/Easy grading, per-subject decks |
 | ✅ **Mock exams & progress tracking** | Real-mode full-length simulations (server-authoritative clocks, autosave with cross-out elimination, retake variants that reshuffle items and options, optional MCAT-style unscored field-test items, per-question review with data-driven difficulty badges), wrong-answer notebook with redo, study-plan generator, per-chapter progress |
-| 🖼️ **Real figures, not text about figures** | Diagram items render generated SVG art — NMAT Part 1 perception/induction panels, circuits, titration and kinetics plots, pedigrees, pathway maps — balanced A–D answer keys across the bank |
-| 📊 **Score interpreter** | Convert mock-exam percentages to the NMAT 200–800 scale (with CHED 40th / Metro Manila / UST-Ateneo / UP percentile reference rows) or MCAT 118–132 sections — labeled planning estimates |
-| 🤖 **AI study coach, model-agnostic** | Explain / quiz / grade modes, grounded in whichever chapter you are reading. Any OpenAI-compatible endpoint or Anthropic API — admins add, delete, and switch models at runtime |
+| 🖼️ **Real figures where the exam shows figures** | Diagram items render generated SVG art instead of describing panels in words — NMAT Part 1 inductive/perceptual plates (in progress: inductive done, perceptual mirror/hidden landing), MCAT circuits, titration and kinetics plots, pedigrees, pathway maps |
+| 📊 **Score interpreter** | Convert mock-exam percentages to the NMAT 200–800 scale (with CHED 40th minimum and commonly cited percentile reference rows) or MCAT 118–132 sections — labeled planning estimates, no school names |
+| 🤖 **AI study coach, model-agnostic** | Explain / hint / quiz / grade modes, aware of your own miss record in the current chapter, grounded in whichever chapter you are reading. Any OpenAI-compatible endpoint or Anthropic API — admins add, edit, and switch models at runtime |
 | 📁 **File-based content** | The entire curriculum is version-controlled YAML: edit, validate, push — no database migration, no build step |
 
 ## 📚 The curriculum at a glance
@@ -43,8 +43,9 @@
 | --- | --- |
 | Subjects (5 shared · 4 NMAT-only · 4 MCAT sections) | **13** |
 | Outline chapters mapped to CEM / AAMC blueprints | **70** |
+| · of which shared across both exams' syllabi | one file per chapter — e.g. genetics 1C ships as two *complementary* scopes (biochemistry: molecular/repair; biology: transmission/population), never duplicated prose |
 | High-yield note bullets | **453** |
-| Practice MCQs with explanations | **149** |
+| Practice MCQs with explanations | **219** |
 | Glossary terms / formula entries | **146 / 114** |
 | Strategy guides | **8** |
 | Flashcards (spaced repetition) | **625** across 13 subject decks |

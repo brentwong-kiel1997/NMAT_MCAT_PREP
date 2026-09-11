@@ -25,8 +25,8 @@ STAGING="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 mkdir -p "$LOGS"
 
 export DJANGO_DEBUG="${DJANGO_DEBUG:-0}"
-# no wildcard: keep the Host header pinned to names the server is reached by
-export DJANGO_ALLOWED_HOSTS="${DJANGO_ALLOWED_HOSTS:-localhost,127.0.0.1,124.222.115.8,10.0.0.14}"
+# no wildcard / no IPs in code — deployments list their reachable names here
+export DJANGO_ALLOWED_HOSTS="${DJANGO_ALLOWED_HOSTS:-localhost,127.0.0.1}"
 
 # Tutor/model keys are read from .env per request (portal/envfile.py). Drop
 # any model credentials inherited from the pushing shell so neither the

@@ -159,8 +159,10 @@ Type=exec
 User=ubuntu
 Group=ubuntu
 WorkingDirectory=/home/ubuntu/deploy/django-wsgi
+Environment=GABAY_RUNTIME_DIR=/home/ubuntu/runtime/django-wsgi
 Environment=DJANGO_DEBUG=0
-Environment=DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1,*
+Environment=DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1
+Environment=DJANGO_CSRF_TRUSTED_ORIGINS=https://127.0.0.1:8888,https://localhost:8888
 ExecReload=/bin/kill -HUP $MAINPID
 ExecStart=/home/ubuntu/runtime/django-wsgi/venv/bin/gunicorn config.wsgi:application \
   --bind 127.0.0.1:8000 \

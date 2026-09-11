@@ -23,10 +23,10 @@ ALLOWED_HOSTS = [
     h.strip()
     for h in os.environ.get(
         "DJANGO_ALLOWED_HOSTS",
-        # no wildcard: with USE_X_FORWARDED_HOST the Host header steers
-        # build_absolute_uri (e.g. WeasyPrint base_url); keep it to the
-        # names the deployment is actually reached by
-        "localhost,127.0.0.1,124.222.115.8,10.0.0.14",
+        # no wildcard, no server IPs in code: with USE_X_FORWARDED_HOST the
+        # Host header steers build_absolute_uri (e.g. WeasyPrint base_url) —
+        # real deployments set the reachable names via env
+        "localhost,127.0.0.1",
     ).split(",")
     if h.strip()
 ]
@@ -99,7 +99,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 # The user DB (accounts, sessions, learner progress) lives under RUNTIME_DIR.
 # Curriculum knowledge is file-based now: content/*.yml read by portal/content.py.
 RUNTIME_DIR = Path(
-    os.environ.get("GABAY_RUNTIME_DIR", "/home/ubuntu/runtime/django-wsgi")
+    os.environ.get("GABAY_RUNTIME_DIR", str(BASE_DIR / "runtime"))
 )
 RUNTIME_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -130,7 +130,7 @@ LOGIN_URL = "login"
 LOGIN_REDIRECT_URL = "account"
 LOGOUT_REDIRECT_URL = "home"
 
-LANGUAGE_CODE = "zh-hans"
+LANGUAGE_CODE = "en"
 TIME_ZONE = "Asia/Shanghai"
 USE_I18N = True
 USE_TZ = True
@@ -157,7 +157,7 @@ CSRF_TRUSTED_ORIGINS = [
     o.strip()
     for o in os.environ.get(
         "DJANGO_CSRF_TRUSTED_ORIGINS",
-        "https://127.0.0.1:8888,https://localhost:8888,https://124.222.115.8:8888,https://10.0.0.14:8888",
+        "https://127.0.0.1:8888,https://localhost:8888",
     ).split(",")
     if o.strip()
 ]
