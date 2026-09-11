@@ -9,7 +9,7 @@ DEBUG = os.environ.get("DJANGO_DEBUG", "0") == "1"
 
 # No committed fallback: a secret in git history is a leaked secret. The key
 # comes from the process env or from the .env files portal.envfile scans
-# (production keeps it in /home/ubuntu/runtime/.env, outside any checkout).
+# (production keeps it outside any checkout — set GABAY_ENV_FILE or rely on the .env lookup chain).
 from portal.envfile import env_value as _env_value  # noqa: E402  (plain module, app-free)
 
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY") or _env_value("DJANGO_SECRET_KEY")

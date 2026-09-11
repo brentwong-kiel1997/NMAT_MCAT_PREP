@@ -761,3 +761,363 @@ def write_inductive_sheets() -> list[str]:
     """Emit every 4-panel sheet; returns the figure paths in bank order."""
     return [write(iid, sheet(bodies))
             for iid, bodies in sorted(inductive_sheets().items())]
+
+
+# ===========================================================================
+# Part-1 perceptual sheets (mirror-image + hidden-figure)
+#
+# Same sheet grammar as the inductive items: a 2x2 grid whose panels A-D are
+# labelled with the choice letters, so the choices act as the legend. Mirror
+# panels draw the object, the dashed mirror axis and an image produced by a
+# real SVG transform, so a panel can never contradict its own choice text.
+# Item nmat-p1p-024 is a counting task over five panels, so it gets a
+# numbered 1x5 strip instead of an A-D sheet.
+# ===========================================================================
+CLUTTER = "#bbb"          # faint strokes that bury a hidden figure
+OBJECT = "#888"           # the un-reflected object in a mirror panel
+AXIS = "#3b5bdb"          # dashed mirror axes, panel letters, image glyphs
+STRIP_CELL = 150          # cell edge for the numbered strip
+STRIP_GAP = 12
+
+
+def _glyph(ch: str, x: float, y: float, size: int, fill=INK) -> str:
+    return (f'<text x="{x:.0f}" y="{y:.0f}" font-size="{size}" font-family="serif" '
+            f'text-anchor="middle" fill="{fill}">{_esc(ch)}</text>')
+
+
+def _hflip(inner: str) -> str:
+    """Mirror `inner` left-right about the panel's vertical centre (x = 150)."""
+    return f'<g transform="translate(300 0) scale(-1 1)">{inner}</g>'
+
+
+def seg(x1, y1, x2, y2, color=INK, width=4, dash=None) -> str:
+    d = f' stroke-dasharray="{dash}"' if dash else ""
+    return (f'<line x1="{x1:.0f}" y1="{y1:.0f}" x2="{x2:.0f}" y2="{y2:.0f}" '
+            f'stroke="{color}" stroke-width="{width}"{d}/>')
+
+
+def ellipse_fig(rx: float, ry: float, cx: float = 150, cy: float = 150) -> str:
+    return f'<ellipse cx="{cx:.0f}" cy="{cy:.0f}" rx="{rx:.0f}" ry="{ry:.0f}" {STROKE}/>'
+
+
+def open_poly(pts, color=INK, width=4) -> str:
+    s = " ".join(f"{x:.0f},{y:.0f}" for x, y in pts)
+    return (f'<polyline points="{s}" fill="none" stroke="{color}" '
+            f'stroke-width="{width}"/>')
+
+
+def tri_c(pts, color=INK, width=4) -> str:
+    """A closed triangle in an arbitrary colour (clutter variants)."""
+    return _sheet_poly(pts).replace('stroke="#333"', f'stroke="{color}"')
+
+
+def box(x, y, w, h, color=INK, width=4, fill="none") -> str:
+    return (f'<rect x="{x:.0f}" y="{y:.0f}" width="{w:.0f}" height="{h:.0f}" '
+            f'fill="{fill}" stroke="{color}" stroke-width="{width}"/>')
+
+
+def shaded_circle(r: float, cx: float, cy: float) -> str:
+    return (f'<circle cx="{cx:.0f}" cy="{cy:.0f}" r="{r:.0f}" fill="#cfcfcf" '
+            f'stroke="{CLUTTER}" stroke-width="3"/>')
+
+
+def small_circle(r: float, cx: float, cy: float) -> str:
+    return (f'<circle cx="{cx:.0f}" cy="{cy:.0f}" r="{r:.0f}" fill="none" '
+            f'stroke="{CLUTTER}" stroke-width="3"/>')
+
+
+def small_letter(ch: str, x: float, y: float, size: int = 42) -> str:
+    return _glyph(ch, x, y, size, fill="#999")
+
+
+def v_axis(x: float = 150) -> str:
+    return (f'<line x1="{x:.0f}" y1="28" x2="{x:.0f}" y2="272" stroke="{AXIS}" '
+            f'stroke-width="2" stroke-dasharray="6 4"/>')
+
+
+def h_axis(y: float = 150) -> str:
+    return (f'<line x1="28" y1="{y:.0f}" x2="272" y2="{y:.0f}" stroke="{AXIS}" '
+            f'stroke-width="2" stroke-dasharray="6 4"/>')
+
+
+def arrow_seg(x1, y1, x2, y2, color=INK, width=5) -> str:
+    return (f'<line x1="{x1:.0f}" y1="{y1:.0f}" x2="{x2:.0f}" y2="{y2:.0f}" '
+            f'stroke="{color}" stroke-width="{width}" {ARROW}/>')
+
+
+# ---------- mirror-image panels -------------------------------------------
+def mirror_cell(ch: str, size: int = 120) -> str:
+    """`ch`, the vertical mirror, and the image a real transform produces."""
+    return (_glyph(ch, 88, 195, size) + v_axis()
+            + _hflip(_glyph(ch, 88, 195, size, fill=AXIS)))
+
+
+def word_mirror_cell(word: str) -> str:
+    """A word, the mirror, and its reflection (order reversed, glyphs flipped).
+
+    Font size is scaled to the letter count so even a six-letter word in the
+    wide DejaVu serif (MOM ~2.8 em, TOMATO ~4.7 em) keeps clear of the axis.
+    """
+    size = {3: 42, 4: 36, 5: 30, 6: 26}[len(word)]
+    return (_glyph(word, 82, 168, size) + v_axis()
+            + _hflip(_glyph(word, 82, 168, size, fill=AXIS)))
+
+
+def word_image_cell(obj: str, image: str, size: int = 54) -> str:
+    """The object string on the left, a candidate image on the right."""
+    return (_glyph(obj, 85, 168, size) + v_axis()
+            + _glyph(image, 215, 168, size, fill=AXIS))
+
+
+def rot_cell(obj: str, image: str, size: int = 84) -> str:
+    """Object string, a half-turn arrow over the pair, candidate result."""
+    arc = (f'<path d="M118 58 A56 38 0 0 1 182 58" fill="none" stroke="{AXIS}" '
+           f'stroke-width="3" {ARROW}/>')
+    return _glyph(obj, 82, 190, size) + _glyph(image, 218, 190, size) + arc
+
+
+def water_cell(obj: str, image: str, size: int = 92) -> str:
+    """Object above a horizontal mirror line, candidate image below it."""
+    return (_glyph(obj, 150, 126, size) + h_axis(150)
+            + _glyph(image, 150, 264, size, fill=AXIS))
+
+
+def pair_cell(left: str, right: str, size: int = 120) -> str:
+    """The two letters of a candidate pair, mirror line between them."""
+    return _glyph(left, 88, 195, size) + v_axis() + _glyph(right, 212, 195, size)
+
+
+def axes_cell(ch: str, size: int = 170) -> str:
+    """A letter with both mirror axes drawn across it."""
+    return v_axis() + h_axis() + letter(ch, size)
+
+
+_ARROW_DIRS = {  # (tail, head) for each diagonal pointing, image half centre
+    "up-right": ((183, 222), (247, 158)),
+    "up-left": ((247, 222), (183, 158)),
+    "down-right": ((183, 158), (247, 222)),
+    "down-left": ((247, 158), (183, 222)),
+}
+
+
+def image_arrow_cell(pointing: str) -> str:
+    """Object arrow (up-right), the mirror, and an image arrow `pointing`."""
+    tail, head = _ARROW_DIRS[pointing]
+    return (arrow_seg(53, 222, 117, 158, color=OBJECT) + v_axis()
+            + arrow_seg(*tail, *head))
+
+
+def stroke_L(stem_x: float, foot_x: float, y_top: float, y_bot: float,
+             foot_end: str, color=INK, width=11) -> str:
+    """An L of two strokes: vertical stem, horizontal foot at either end."""
+    if foot_end == "bottom":
+        d = f"M{stem_x:.0f} {y_top:.0f} V{y_bot:.0f} H{foot_x:.0f}"
+    else:
+        d = f"M{stem_x:.0f} {y_bot:.0f} V{y_top:.0f} H{foot_x:.0f}"
+    return f'<path d="{d}" fill="none" stroke="{color}" stroke-width="{width}"/>'
+
+
+def mirror_L_cell(foot: str, end: str) -> str:
+    """Object L (foot to the right at the bottom) and its claimed image."""
+    obj = stroke_L(85, 135, 70, 230, "bottom", color=OBJECT)
+    foot_x = 215 + (50 if foot == "right" else -50)
+    return obj + v_axis() + stroke_L(215, foot_x, 70, 230, end)
+
+
+# ---------- hidden-figure panels ------------------------------------------
+def arrow_fig(pointing: str = "up") -> str:
+    """Shaft plus two slanted strokes meeting in a point, up or down."""
+    if pointing == "up":
+        return (seg(150, 240, 150, 70) + seg(110, 105, 150, 60)
+                + seg(190, 105, 150, 60))
+    return seg(150, 60, 150, 240) + seg(110, 195, 150, 240) + seg(190, 195, 150, 240)
+
+
+def tombstone() -> str:
+    """Rectangle with a semicircle resting flat-side down on its top edge."""
+    return box(65, 130, 170, 110) + \
+        '<path d="M65 130 A85 85 0 0 1 235 130" fill="none" ' \
+        f'stroke="{INK}" stroke-width="4"/>'
+
+
+# ---------- the numbered strip for the counting item ----------------------
+def strip(label_bodies: dict) -> str:
+    """1xN row of numbered cells, label bottom-right in the house colour."""
+    n = len(label_bodies)
+    m = STRIP_GAP
+    w = n * STRIP_CELL + (n + 1) * m
+    h = STRIP_CELL + 2 * m
+    cells = "".join(
+        f'<g transform="translate({m + i * (STRIP_CELL + m)} {m})">'
+        f'<rect width="{STRIP_CELL}" height="{STRIP_CELL}" fill="#fafafa" '
+        f'stroke="#ddd"/>{body}'
+        f'<text x="{STRIP_CELL - 10}" y="{STRIP_CELL - 10}" font-size="24" '
+        f'font-family="serif" font-weight="bold" text-anchor="end" '
+        f'fill="{AXIS}">{label}</text></g>'
+        for i, (label, body) in enumerate(label_bodies.items()))
+    return _wrap(cells, w, h)
+
+
+TRI_IN_TRI = (tri((75, 22), (138, 128), (12, 128))
+              + f'<circle cx="75" cy="92" r="30" {STROKE}/>')
+
+
+def strip_panels() -> dict:
+    """The five panels of nmat-p1p-024, keyed by their printed number."""
+    return {
+        "1": TRI_IN_TRI,                                   # circle in triangle
+        "2": circle(58, 75, 75) + tri((75, 32), (115, 105), (35, 105)),
+        "3": sq(116, 75, 75) + f'<circle cx="75" cy="75" r="38" {STROKE}/>',
+        "4": TRI_IN_TRI + box(8, 8, 18, 18),               # + small corner square
+        "5": sq(116, 75, 75) + f'<circle cx="52" cy="75" r="22" {STROKE}/>'
+             + f'<circle cx="98" cy="75" r="22" {STROKE}/>',
+    }
+
+
+# ---------- the 19 perceptual sheets, panel per choice letter -------------
+def perceptual_sheets() -> dict:
+    """item id -> 4-panel SVG bodies, keyed by the choice each panel depicts."""
+    return {
+        # --- mirror-image ---------------------------------------------------
+        "nmat-p1p-001": {"A": mirror_cell("b"), "B": mirror_cell("d"),
+                         "C": mirror_cell("m"), "D": mirror_cell("p")},
+        "nmat-p1p-002": {"A": word_image_cell("pod", "boq"),
+                         "B": word_image_cell("pod", "qob"),
+                         "C": word_image_cell("pod", "bod"),
+                         "D": word_image_cell("pod", "qod")},
+        "nmat-p1p-003": {"A": rot_cell("bd", "qp"), "B": rot_cell("bd", "pq"),
+                         "C": rot_cell("bd", "db"), "D": rot_cell("bd", "qb")},
+        "nmat-p1p-004": {"A": water_cell("d", "b"), "B": water_cell("d", "p"),
+                         "C": water_cell("d", "q"), "D": water_cell("d", "d")},
+        "nmat-p1p-005": {"A": word_mirror_cell("MOM"),
+                         "B": word_mirror_cell("DAD"),
+                         "C": word_mirror_cell("NOON"),
+                         "D": word_mirror_cell("EYE")},
+        "nmat-p1p-006": {"A": axes_cell("N"), "B": axes_cell("C"),
+                         "C": axes_cell("M"), "D": axes_cell("H")},
+        "nmat-p1p-007": {"A": image_arrow_cell("down-right"),
+                         "B": image_arrow_cell("up-left"),
+                         "C": image_arrow_cell("down-left"),
+                         "D": image_arrow_cell("up-right")},
+        "nmat-p1p-008": {"A": pair_cell("p", "d"), "B": pair_cell("q", "b"),
+                         "C": pair_cell("n", "u"), "D": pair_cell("b", "d")},
+        "nmat-p1p-009": {"A": mirror_L_cell("left", "bottom"),
+                         "B": mirror_L_cell("right", "top"),
+                         "C": mirror_L_cell("right", "bottom"),
+                         "D": mirror_L_cell("left", "top")},
+        "nmat-p1p-010": {"A": word_mirror_cell("DAMAGE"),
+                         "B": word_mirror_cell("PIXEL"),
+                         "C": word_mirror_cell("TOMATO"),
+                         "D": word_mirror_cell("CHOICE")},
+        # --- hidden figure ---------------------------------------------------
+        "nmat-p1p-021": {
+            # A: circle + horizontal midline, two small triangles beside it
+            "A": (circle(80, 100, 150) + seg(20, 150, 180, 150)
+                  + tri((200, 80), (280, 80), (240, 135))
+                  + tri((200, 215), (280, 215), (240, 160))),
+            # B: the target (circle + vertical diameter) partly crossed by
+            #    two overlapping squares
+            "B": (circle(80, 100, 150) + seg(100, 70, 100, 230)
+                  + box(140, 100, 75, 75) + box(180, 145, 75, 75)),
+            "C": ellipse_fig(95, 55) + seg(150, 95, 150, 205),
+            "D": sq(160) + seg(150, 70, 150, 230),
+        },
+        "nmat-p1p-022": {
+            # A: an X, four circles around it
+            "A": (seg(75, 75, 225, 225) + seg(225, 75, 75, 225)
+                  + small_circle(22, 60, 60) + small_circle(22, 240, 60)
+                  + small_circle(22, 60, 240) + small_circle(22, 240, 240)),
+            # B: an L (strokes meeting end to end), two triangles beside
+            "B": (seg(110, 70, 110, 230) + seg(110, 230, 200, 230)
+                  + tri((215, 70), (285, 70), (250, 125))
+                  + tri((215, 190), (285, 190), (250, 245))),
+            # C: the target plus, drawn over a zigzag
+            "C": (open_poly(((20, 60), (65, 110), (105, 50), (150, 105),
+                             (190, 45), (235, 100), (280, 40)), color=CLUTTER)
+                  + seg(150, 60, 150, 240) + seg(60, 150, 240, 150)),
+            # D: vertical stroke touching two parallels without crossing
+            "D": seg(90, 70, 210, 70) + seg(90, 230, 210, 230)
+                 + seg(150, 70, 150, 230),
+        },
+        "nmat-p1p-023": {
+            # A: the target star over three overlapping rectangles
+            "A": (box(40, 60, 140, 90, color=CLUTTER, width=3)
+                  + box(90, 110, 150, 95, color=CLUTTER, width=3)
+                  + box(55, 160, 130, 85, color=CLUTTER, width=3)
+                  + star(5, r_out=105, r_in=42)),
+            "B": poly(3, r=105, rot=-90) + poly(3, r=105, rot=90),
+            "C": circle(105) + star(4, r_out=105, r_in=38),
+            "D": poly(5, r=TRI_R),
+        },
+        "nmat-p1p-025": {
+            "A": (rect() + seg(150, 84, 150, 216)
+                  + f'<circle cx="62" cy="202" r="13" {STROKE}/>'),
+            "B": rect() + seg(44, 150, 256, 150),
+            "C": rect() + seg(150, 84, 150, 216) + seg(44, 84, 256, 216),
+            "D": rect() + seg(150, 84, 150, 216),
+        },
+        "nmat-p1p-026": {
+            "A": seg(150, 60, 150, 240) + seg(60, 150, 240, 150),
+            "B": seg(150, 235, 150, 105) + seg(150, 105, 214, 41),
+            # C: the target L, partly hidden by a shaded circle laid over it
+            "C": (seg(120, 60, 120, 235) + seg(120, 235, 235, 235)
+                  + shaded_circle(60, 170, 100)),
+            "D": seg(110, 70, 110, 230) + seg(190, 70, 190, 230),
+        },
+        "nmat-p1p-027": {
+            # A: the target up arrow, across a field of small circles
+            "A": ("".join(small_circle(9, x, y) for x, y in
+                          ((45, 60), (105, 45), (215, 55), (265, 95), (40, 150),
+                           (255, 170), (70, 240), (140, 265), (220, 250),
+                           (262, 262), (36, 210), (250, 120)))
+                  + arrow_fig("up")),
+            "B": arrow_fig("down"),
+            "C": seg(150, 80, 150, 240) + seg(85, 80, 215, 80),
+            "D": seg(150, 120, 150, 240) + seg(105, 60, 150, 125)
+                 + seg(195, 60, 150, 125),
+        },
+        "nmat-p1p-028": {
+            # A: an H among other letters
+            "A": (seg(105, 70, 105, 230) + seg(195, 70, 195, 230)
+                  + seg(105, 150, 195, 150)
+                  + small_letter("s", 55, 112) + small_letter("e", 250, 122)
+                  + small_letter("t", 58, 236) + small_letter("r", 246, 240)),
+            # B: slanted strokes meeting at the top, no crossbar
+            "B": (seg(85, 230, 150, 70) + seg(150, 70, 215, 230)
+                  + small_letter("s", 52, 120) + small_letter("e", 252, 130)
+                  + small_letter("r", 120, 272, size=36)),
+            # C: slanted strokes meeting at the bottom, no crossbar
+            "C": (seg(85, 70, 150, 230) + seg(150, 230, 215, 70)
+                  + small_letter("s", 52, 130) + small_letter("e", 252, 120)
+                  + small_letter("t", 180, 272, size=36)),
+            # D: the target capital A, printed inside a bordered box
+            "D": (box(55, 55, 190, 190, width=3)
+                  + seg(85, 230, 150, 70) + seg(150, 70, 215, 230)
+                  + seg(108, 175, 192, 175)),
+        },
+        "nmat-p1p-029": {
+            # A: a square on its corner, line joining two side midpoints
+            "A": poly(4, r=110, rot=-90) + seg(205, 95, 95, 205),
+            # B: square with both diagonals, overlapped by a triangle
+            "B": (sq(170) + seg(65, 65, 235, 235) + seg(235, 65, 65, 235)
+                  + tri_c(((150, 30), (270, 170), (60, 200)), color=CLUTTER)),
+            "C": rect(230, 120) + seg(35, 90, 265, 210),
+            "D": tri((150, 50), (250, 235), (50, 235)) + seg(150, 50, 150, 235),
+        },
+        "nmat-p1p-030": {
+            "A": box(65, 130, 170, 110) + tri((65, 130), (235, 130), (150, 55)),
+            "B": (box(65, 70, 170, 110)
+                  + '<path d="M65 180 A85 85 0 0 0 235 180" fill="none" '
+                    f'stroke="{INK}" stroke-width="4"/>'),
+            "C": box(65, 130, 170, 110) + f'<circle cx="150" cy="80" r="50" {STROKE}/>',
+            "D": tombstone(),
+        },
+    }
+
+
+def write_perceptual_figures() -> list[str]:
+    """Emit the 19 perceptual sheets plus the one counting strip."""
+    paths = [write(iid, sheet(bodies))
+             for iid, bodies in sorted(perceptual_sheets().items())]
+    paths.append(write("nmat-p1p-024", strip(strip_panels())))
+    return paths

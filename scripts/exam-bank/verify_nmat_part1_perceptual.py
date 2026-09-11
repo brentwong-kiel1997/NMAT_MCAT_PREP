@@ -23,8 +23,15 @@ assert d["passages"] == []
 ans = Counter(i["answer"] for i in d["items"])
 assert max(ans.values()) <= 8, ans
 ids, stems = [], []
+from pathlib import Path as _Path
+_IMAGES = _Path("/home/ubuntu/django-wsgi/content/images")
 for i in d["items"]:
-    assert set(i) == {"id", "q", "choices", "answer", "explain", "distractors", "chapter"}, sorted(i)
+    BASE = {"id", "q", "choices", "answer", "explain", "distractors", "chapter"}
+    # figure is optional: mirror/hidden panels ship generated SVG plates
+    assert BASE <= set(i) <= BASE | {"figure"}, sorted(i)
+    if i.get("figure"):
+        assert i["figure"].startswith("items/"), i["id"]
+        assert (_IMAGES / i["figure"]).is_file(), f"{i['id']}: missing {i['figure']}"
     assert re.fullmatch(r"nmat-p1p-\d{3}", i["id"]), i["id"]
     ids.append(i["id"])
     assert set(i["choices"]) == {"A", "B", "C", "D"}

@@ -21,6 +21,7 @@ items:
     B: d reflected left-right becomes b.
     D: p reflected left-right becomes q.
   chapter: mirror-image
+  figure: items/nmat-p1p-001.svg
 - id: nmat-p1p-002
   q: 'Convention: a vertical mirror flips each lowercase letter left-to-right and
     also reverses the letter order, exactly as a real mirror does. Reflected this
@@ -40,6 +41,7 @@ items:
     D: qod flips the p correctly but leaves the d unflipped; a vertical mirror turns
       d into b.
   chapter: mirror-image
+  figure: items/nmat-p1p-002.svg
 - id: nmat-p1p-003
   q: A strip of paper printed with the lowercase letters 'bd' is rotated 180 degrees
     in the plane. What does the strip read afterwards?
@@ -58,6 +60,7 @@ items:
     D: qb rotates the b into a q but leaves the d unrotated — only one of the two
       shapes is turned.
   chapter: mirror-image
+  figure: items/nmat-p1p-003.svg
 - id: nmat-p1p-004
   q: 'Turned upside down as in a water image (an up-down flip), the lowercase letter
     ''d'' becomes:'
@@ -74,6 +77,7 @@ items:
     B: p is what you get by rotating d through 180 degrees.
     D: d has no horizontal axis of symmetry, so it cannot survive this flip unchanged.
   chapter: mirror-image
+  figure: items/nmat-p1p-004.svg
 - id: nmat-p1p-005
   q: Which word still reads the same, letter for letter, after reflection in a vertical
     mirror (each letter flipped left-to-right and the order reversed)?
@@ -91,6 +95,7 @@ items:
     D: 'E is not left-right symmetric: its spine sits on the left and would move to
       the right.'
   chapter: mirror-image
+  figure: items/nmat-p1p-005.svg
 - id: nmat-p1p-006
   q: Which capital letter is symmetric about BOTH a vertical mirror and a horizontal
     mirror?
@@ -108,6 +113,7 @@ items:
       C.
     C: M survives only a left-right flip; an up-down flip turns it into a W-like shape.
   chapter: mirror-image
+  figure: items/nmat-p1p-006.svg
 - id: nmat-p1p-007
   q: 'An arrow points up and to the right. Held in front of a vertical mirror, the
     image arrow points:'
@@ -125,6 +131,7 @@ items:
     C: That is a 180-degree rotation of the arrow, not a left-right reflection.
     D: That is the object itself; the image must at least swap left and right.
   chapter: mirror-image
+  figure: items/nmat-p1p-007.svg
 - id: nmat-p1p-008
   q: Which pair of lowercase letters are left-right mirror images of each other -
     each becoming the other in a vertical mirror?
@@ -141,6 +148,7 @@ items:
     B: q and b are 180-degree rotations of each other.
     C: n and u swap under an up-down (water-image) flip, not a left-right one.
   chapter: mirror-image
+  figure: items/nmat-p1p-008.svg
 - id: nmat-p1p-009
   q: 'A capital L - a vertical stroke with a horizontal foot extending to the right
     at its bottom - is reflected in a vertical mirror. The image is:'
@@ -158,6 +166,7 @@ items:
     C: L is not symmetric left-to-right; its foot must switch sides in the image.
     D: 'That is a 180-degree rotation: the foot changed both its side and its end.'
   chapter: mirror-image
+  figure: items/nmat-p1p-009.svg
 - id: nmat-p1p-010
   q: Which word is made only of capital letters that are unchanged by a left-right
     (vertical-mirror) flip?
@@ -174,6 +183,7 @@ items:
     B: The P and the E both flip into backwards versions of themselves.
     D: The C and the E are not left-right symmetric.
   chapter: mirror-image
+  figure: items/nmat-p1p-010.svg
 - id: nmat-p1p-011
   q: 'Two inventory codes are read aloud for checking: ''TR-55831-QB'' and ''TR-5583I-QB''.
     They are:'
@@ -344,8 +354,7 @@ items:
   chapter: identical-information
 - id: nmat-p1p-021
   q: 'Target outline: a circle with a single straight line drawn through its center
-    from top to bottom (a vertical diameter). Each panel is described in words. Which
-    panel contains the target?'
+    from top to bottom (a vertical diameter). Which panel contains the target?'
   choices:
     B: A circle with a single vertical line through its center, partly crossed by
       two overlapping squares
@@ -361,6 +370,7 @@ items:
     C: Its outline is an ellipse, not a circle.
     D: Its outline is a square, not a circle.
   chapter: hidden-figure
+  figure: items/nmat-p1p-021.svg
 - id: nmat-p1p-022
   q: 'Target outline: a plus sign - one horizontal and one vertical stroke crossing
     exactly at their midpoints. Which panel contains it?'
@@ -379,6 +389,7 @@ items:
     B: Its strokes meet end to end in an L shape; neither crosses the other.
     D: Its strokes touch but do not cross, so no midpoint intersection is formed.
   chapter: hidden-figure
+  figure: items/nmat-p1p-022.svg
 - id: nmat-p1p-023
   q: 'Target outline: a five-pointed star. Which panel contains it?'
   choices:
@@ -395,11 +406,10 @@ items:
     C: That star has only four points.
     D: A pentagon is a five-sided outline, not a five-pointed star.
   chapter: hidden-figure
+  figure: items/nmat-p1p-023.svg
 - id: nmat-p1p-024
-  q: Five panels are described left to right. (1) a circle drawn inside a triangle.
-    (2) a triangle drawn inside a circle. (3) a circle drawn inside a square. (4)
-    a circle drawn inside a triangle, with a small square in one corner. (5) two circles
-    drawn inside a square. How many panels contain a circle drawn inside a triangle?
+  q: 'Five panels are shown. How many panels contain a circle drawn inside a
+    triangle?'
   choices:
     D: '2'
     A: '1'
@@ -415,6 +425,7 @@ items:
       inside a circle and panel 3 puts the circle inside a square.
     C: That counts nearly every panel showing a circle, ignoring what surrounds it.
   chapter: hidden-figure
+  figure: items/nmat-p1p-024.svg
 - id: nmat-p1p-025
   q: 'Target outline: a rectangle divided into two equal parts by a vertical line
     through its midpoint. Which panel does NOT contain the target?'
@@ -432,6 +443,7 @@ items:
     C: The diagonal is clutter; the vertical midline of the target is still there.
     D: That is the target drawn on its own, with no extra lines at all.
   chapter: hidden-figure
+  figure: items/nmat-p1p-025.svg
 - id: nmat-p1p-026
   q: 'Target outline: two straight strokes joined end to end at a right angle (an
     L shape). Which panel contains it?'
@@ -448,6 +460,7 @@ items:
     B: The angle between its strokes is 45 degrees, not 90.
     D: Its strokes never meet, so no corner is formed at all.
   chapter: hidden-figure
+  figure: items/nmat-p1p-026.svg
 - id: nmat-p1p-027
   q: 'Target outline: an upward arrow - a vertical shaft with two slanted strokes
     rising to a single point at the top of the shaft. Which panel contains it?'
@@ -467,6 +480,7 @@ items:
       missing.
     D: Its top strokes form a cup that opens upward, with no point at the top.
   chapter: hidden-figure
+  figure: items/nmat-p1p-027.svg
 - id: nmat-p1p-028
   q: 'Target outline: a capital letter A - two slanted strokes meeting at a top point
     with a horizontal crossbar between them. Which panel contains it?'
@@ -487,6 +501,7 @@ items:
     B: That is a capital V; the crossbar is missing.
     C: Its strokes meet at the bottom rather than the top, and it has no crossbar.
   chapter: hidden-figure
+  figure: items/nmat-p1p-028.svg
 - id: nmat-p1p-029
   q: 'Target outline: a square with one diagonal, a single line joining two opposite
     corners. Which panel contains it?'
@@ -504,6 +519,7 @@ items:
     C: Its outline is a non-square rectangle, so the square of the target is missing.
     D: Its outline is a three-sided figure, not a four-sided square.
   chapter: hidden-figure
+  figure: items/nmat-p1p-029.svg
 - id: nmat-p1p-030
   q: 'Target outline: a rectangle with a semicircle sitting on its top edge, flat
     side down (a tombstone shape). Which panel contains it?'
@@ -520,4 +536,5 @@ items:
     B: Its semicircle is underneath, so the figure is the target turned upside down.
     C: The shape on top is a complete circle, not a semicircle with a flat side.
   chapter: hidden-figure
+  figure: items/nmat-p1p-030.svg
 passages: []

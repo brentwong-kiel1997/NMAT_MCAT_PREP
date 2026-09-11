@@ -185,8 +185,9 @@ Notes:
 
 - No secrets live in this unit — the secret key and AI keys come from
   `.env` files at runtime (`portal/envfile.py`).
-- `DJANGO_ALLOWED_HOSTS=*` is convenient; tighten to your real hostname
-  once things work.
+- List every name/IP the server is actually reached by in
+  `DJANGO_ALLOWED_HOSTS` and `DJANGO_CSRF_TRUSTED_ORIGINS` — never use `*`
+  (the Host header steers `build_absolute_uri`).
 - gunicorn binds **127.0.0.1 only** — it must never be reachable directly.
 
 ## 8. TLS certificate
@@ -285,6 +286,11 @@ Watch the hook output. A healthy deploy prints, in order:
 Afterwards confirm the unit: `systemctl is-active gunicorn` → `active`.
 
 **Rollback**: `mv /home/ubuntu/deploy/.django-wsgi.prev /home/ubuntu/deploy/django-wsgi && sudo systemctl restart gunicorn`.
+
+**After changing `Environment=` lines in the unit you must `restart`, not
+`reload`**: HUP recycles workers but the master keeps the OLD environment, so
+new unit variables (e.g. `GABAY_RUNTIME_DIR`) silently stay unset and
+defaults apply instead.
 
 ## 11. Admin account & AI coach
 

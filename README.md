@@ -28,7 +28,7 @@
 | 📖 **Teaching chapters** | Full-textbook tutorials: overview → teaching sections with figures → worked examples → key points → pitfalls → per-exam mapping, every chapter citing its sources — plus subject key terms, cross-discipline bridges, clinical links into the disease library, high-yield badges, and one-click PDF export |
 | 🎯 **Strategy library** | 8 original test-taking technique guides — passage triage, process of elimination, unit analysis, CARS passage mapping, timing protocol, flag discipline, guessing policy, the review loop |
 | 📝 **High-yield notes** | 453 one-line bullets across 70 outline chapters, plus 219 practice MCQs and a 770-question bank (NMAT 240 + MCAT 230 full-length mocks + 300 practice-only drill items, 32 passages) |
-| 🔎 **Materials desk** | 146-term searchable glossary, 114 formulas in per-subject sheets, exam tips, study paths, and checklists |
+| 🔎 **Materials desk** | 146-term searchable glossary, 113 formulas in per-subject sheets, exam tips, study paths, and checklists |
 | 🩺 **Disease library** | 8 mechanism-first articles (TB, dengue, MI, …) bridging basic science to clinical intuition — enrichment reading, honestly labeled as such |
 | 🔁 **Spaced-repetition flashcards** | SM-2-style scheduling over the full 625-card deck: due queue, new cards capped per session, Again/Hard/Good/Easy grading, per-subject decks |
 | ✅ **Mock exams & progress tracking** | Real-mode full-length simulations (server-authoritative clocks, autosave with cross-out elimination, retake variants that reshuffle items and options, optional MCAT-style unscored field-test items, per-question review with data-driven difficulty badges), wrong-answer notebook with redo, study-plan generator, per-chapter progress |

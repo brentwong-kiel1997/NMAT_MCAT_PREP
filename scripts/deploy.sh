@@ -27,6 +27,11 @@ mkdir -p "$LOGS"
 export DJANGO_DEBUG="${DJANGO_DEBUG:-0}"
 # no wildcard / no IPs in code — deployments list their reachable names here
 export DJANGO_ALLOWED_HOSTS="${DJANGO_ALLOWED_HOSTS:-localhost,127.0.0.1}"
+# CRITICAL: pin the gate's DB to the real runtime dir. RUNTIME_DIR's default
+# is now <checkout>/runtime — without this, migrate/ensure_admin would run
+# against a throwaway DB inside the tree and the next migration-carrying push
+# would ship to an unmigrated production database.
+export GABAY_RUNTIME_DIR="$RUNTIME"
 
 # Tutor/model keys are read from .env per request (portal/envfile.py). Drop
 # any model credentials inherited from the pushing shell so neither the
