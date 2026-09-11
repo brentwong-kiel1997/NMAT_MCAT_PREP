@@ -6,7 +6,7 @@ from functools import wraps
 import json
 
 from .diseases import all_diseases, get_disease
-from . import content, exams
+from . import content, exams, insights
 from .learners import progress_map, record_practice, set_chapter_done
 from .materials import (
     exam_checklists,
@@ -586,33 +586,13 @@ def study_api(request):
     exam = str(payload.get("exam") or "").strip()[:20]
     subject_slug = str(payload.get("subject_slug") or "").strip()[:80]
     section_slug = str(payload.get("section_slug") or "").strip()[:80]
-    chapter_title = str(payload.get("chapter") or "").strip()[:200]
+    # collapse all whitespace: real chapter titles never contain newlines, and
+    # a newline in the LLM prompt could smuggle a second [Task] block
+    chapter_title = " ".join(str(payload.get("chapter") or "").split())[:200]
 
-    # learner-aware coaching: when a chapter is specified, surface how this
-    # learner is doing there (wrong count + dominant self-reported cause) so
-    # hints/explanations target their actual gaps. One filtered query pass.
-    learner_line = ""
-    if chapter_title:
-        from .learners import get_or_create_profile
-        from .models import ReviewNote
-
-        prof = get_or_create_profile(_learner_name(request))
-        wrong = insights.wrong_questions(prof, limit=100)
-        in_chapter = [w for w in wrong if w.get("title") == chapter_title]
-        if in_chapter:
-            stored = {n.question_id: n.cause for n in ReviewNote.objects.filter(
-                profile=prof,
-                question_id__in=[w["question_id"] for w in in_chapter])}
-            counts: dict[str, int] = {}
-            for w in in_chapter:
-                c = stored.get(w["question_id"], "unlabeled")
-                counts[c] = counts.get(c, 0) + 1
-            top = max(counts, key=counts.get)
-            learner_line = (f"This learner has {len(in_chapter)} open wrong "
-                            f"item(s) in this chapter; dominant self-reported "
-                            f"cause: {top}.")
-
-    # daily per-user cap: every call spends the configured model's budget
+    # daily per-user cap: every call spends the configured model's budget.
+    # This runs BEFORE any heavy aggregate work so an over-budget caller
+    # gets 429 without burning queries.
     from django.conf import settings as _settings
     from django.utils import timezone as _tz
     from .ratelimit import hit
@@ -622,6 +602,36 @@ def study_api(request):
         return JsonResponse(
             {"ok": False, "error": "daily coach limit reached — back tomorrow"},
             status=429)
+
+    # learner-aware coaching: when a chapter is specified, surface how this
+    # learner is doing there (open wrong count + dominant self-reported
+    # cause) so hints/explanations target their actual gaps. wrong_questions
+    # rows carry chapter_id (not title) — resolve the title to its id once.
+    learner_line = ""
+    if chapter_title:
+        from .content import chapters_store
+        from .learners import get_or_create_profile
+        from .models import ReviewNote
+
+        ch_id = next((c_id for c_id, c in chapters_store().items()
+                      if c.get("title") == chapter_title), None)
+        if ch_id:
+            prof = get_or_create_profile(_learner_name(request))
+            wrong = insights.wrong_questions(prof, limit=100)
+            in_chapter = [w for w in wrong
+                          if w.get("chapter_id") == ch_id]
+            if in_chapter:
+                stored = {n.question_id: n.cause for n in ReviewNote.objects.filter(
+                    profile=prof,
+                    question_id__in=[w["question_id"] for w in in_chapter])}
+                counts: dict[str, int] = {}
+                for w in in_chapter:
+                    c = stored.get(w["question_id"], "unlabeled")
+                    counts[c] = counts.get(c, 0) + 1
+                top = max(counts, key=counts.get)
+                learner_line = (f"This learner has {len(in_chapter)} open wrong "
+                                f"item(s) in this chapter; dominant self-reported "
+                                f"cause: {top}.")
 
     curriculum = build_curriculum_context(
         exam=exam,

@@ -411,9 +411,11 @@
         message ||
           (mode === "explain"
             ? "Explain this chapter"
-            : mode === "quiz"
-              ? "Quiz me"
-              : message)
+            : mode === "hint"
+              ? "Give me a hint"
+              : mode === "quiz"
+                ? "Quiz me"
+                : message)
       );
       const pending = document.createElement("div");
       pending.className = "tutor-bubble system";

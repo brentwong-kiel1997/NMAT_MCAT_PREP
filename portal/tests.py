@@ -824,6 +824,82 @@ class AiDrillTests(TestCase):
         self.assertEqual({q["difficulty"] for q in quiz.payload}, {"challenge"})
 
 
+class CoachLearnerContextTests(TestCase):
+    """Regression for the audit CRITICALs: a chapter-scoped tutor call used
+    to 500 (missing insights import) and, once that was fixed, the learner
+    context never fired (rows carry chapter_id, not title)."""
+
+    def setUp(self):
+        self.user = User.objects.create_user("coachuser", password="pw-123456789")
+        ensure_profile_for_user(self.user)
+        self.client = Client()
+        self.client.force_login(self.user)
+        from . import ratelimit
+
+        ratelimit.reset()
+
+    def _seed_wrong_in_chapter(self, chapter_id, item_id, chosen="C"):
+        from django.utils import timezone
+
+        from .learners import record_practice
+        from .models import ExamAttempt, ExamResponse
+
+        attempt = ExamAttempt.objects.create(
+            profile=ensure_profile_for_user(self.user), exam="nmat",
+            mode="real", status="submitted", finished_at=timezone.now(),
+        )
+        for i in range(5):
+            ExamResponse.objects.create(
+                attempt=attempt, item_id=item_id, block_id="b1",
+                chapter_id=chapter_id, position=i + 1,
+                chosen=chosen, correct=(i < 2),
+            )
+        record_practice(self.user.username, "physics", item_id, chosen, False)
+
+    def test_chapter_scoped_call_200_and_learner_line(self):
+        from unittest.mock import patch
+
+        from .content import all_bank_items
+
+        item_id = "nmat-p2p-022"
+        chapter_id = all_bank_items()[item_id]["chapter"]
+        chapter_title = next(c["title"] for c in
+                             __import__("portal.content", fromlist=["store"])
+                             .store()["chapters"].values()
+                             if c["id"] == chapter_id)
+        self._seed_wrong_in_chapter(chapter_id, item_id)
+        captured = {}
+
+        def fake_completion(messages, **kwargs):
+            captured["prompt"] = "\n".join(m["content"] for m in messages)
+            return "ok"
+
+        with patch("portal.llm.coach_ready", return_value=True), \
+             patch("portal.views.chat_completion", side_effect=fake_completion):
+            res = self.client.post("/api/study/", {
+                "mode": "hint",
+                "chapter": chapter_title,
+            }, content_type="application/json")
+        self.assertEqual(res.status_code, 200)
+        prompt = captured.get("prompt", "")
+        self.assertIn("[Learner context]", prompt)
+        self.assertIn("open wrong item(s) in this chapter", prompt)
+
+    def test_chapter_without_misses_has_no_learner_block(self):
+        from unittest.mock import patch
+
+        with patch("portal.llm.coach_ready", return_value=True), \
+             patch("portal.views.chat_completion",
+                   return_value="ok") as fake:
+            res = self.client.post("/api/study/", {
+                "mode": "hint",
+                "chapter": "Mechanics",
+            }, content_type="application/json")
+        self.assertEqual(res.status_code, 200)
+        prompt = fake.call_args[0][0][0]["content"]
+        self.assertNotIn("[Learner context]", prompt)
+
+
 class ContentValidationTests(TestCase):
     def test_validate_content_green(self):
         call_command("validate_content", verbosity=0)

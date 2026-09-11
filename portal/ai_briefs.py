@@ -4,10 +4,13 @@ deterministic data views.
 Three briefs, all sharing one contract:
   - grounded ONLY in the learner's real aggregates + chapter tutorial prose
     (prompts forbid invention, matching coach_insights)
-  - at most ONE model call per (user, brief, day) per worker: results live
-    in a process-level dict — NOT the Django cache, which locmem empties on
-    every request (see portal/ratelimit.py for the same discovery); with
-    gunicorn workers=2 worst-case limits are doubled
+  - at most ONE model call per (user, brief, day) per worker for the
+    day-cached briefs: results live in a process-level dict — NOT the Django
+    cache, which locmem empties on every request (see portal/ratelimit.py
+    for the same discovery); with gunicorn workers=2 worst-case limits are
+    doubled. The daily brief's snapshot is memoized for 60s, so its view of
+    the data can lag reality by up to a minute (a manual refresh also
+    invalidates it)
   - each call spends the shared GABAY_COACH_DAILY_LIMIT budget; over budget
     or without a configured model the brief degrades to "" and the template
     simply hides the card
@@ -33,10 +36,10 @@ def _profile_for(username: str):
     return get_or_create_profile(username)
 
 
-def _snapshot(username: str) -> dict:
+def _snapshot(username: str, refresh: bool = False) -> dict:
     now = time.monotonic()
     cached = _SNAPSHOTS.get(username)
-    if cached and now - cached[0] < _SNAPSHOT_TTL:
+    if not refresh and cached and now - cached[0] < _SNAPSHOT_TTL:
         return cached[1]
     snap = _build_snapshot(username)
     _SNAPSHOTS[username] = (now, snap)
@@ -113,7 +116,7 @@ def daily_brief(username: str, due_cards: int, today_tasks: list,
         "dashboard: what to focus on today and ONE concrete first action. Plain "
         "text, no markdown, no invented data.\n\n" + data
     )
-    key = ("daily", username, str(timezone.localdate()), due_cards, len(today_tasks))
+    key = ("daily", username, str(timezone.localdate()))
     return _cached(key, username, prompt, max_tokens=160, refresh=refresh)
 
 
@@ -147,7 +150,7 @@ def miss_autopsy(username: str, snap: dict | None = None,
                  refresh: bool = False) -> dict | None:
     """A paragraph tying the biggest weak chapter's cause pattern to its
     tutorial pitfalls; None when there is nothing to autopsy."""
-    snap = snap or _snapshot(username)
+    snap = snap or _snapshot(username, refresh=refresh)
     worst = snap["weak"][0] if snap["weak"] else None
     if not worst:
         return None
@@ -184,7 +187,7 @@ def bridge_brief(username: str, snap: dict | None = None,
                  refresh: bool = False) -> dict | None:
     """Connect the top TWO weak chapters: how the concepts support each other
     and one integrated example; None when fewer than two weak chapters."""
-    snap = snap or _snapshot(username)
+    snap = snap or _snapshot(username, refresh=refresh)
     if len(snap["weak"]) < 2:
         return None
     from .content import chapters_store, tutorial_for

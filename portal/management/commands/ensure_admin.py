@@ -12,15 +12,17 @@ from portal.learners import ensure_profile_for_user
 
 
 def _read_access_password() -> str:
+    from django.conf import settings
+
     env = os.environ.get("GABAY_ADMIN_PASSWORD", "").strip()
     if env:
         return env
-    access = Path("/home/ubuntu/runtime/django-wsgi/ACCESS.txt")
+    access = Path(settings.RUNTIME_DIR / "ACCESS.txt")
     if access.exists():
         for line in access.read_text(encoding="utf-8").splitlines():
             if line.lower().startswith("password:"):
                 return line.split(":", 1)[1].strip()
-    pwd_file = Path("/home/ubuntu/runtime/django-wsgi/auth/password.txt")
+    pwd_file = Path(settings.RUNTIME_DIR / "auth" / "password.txt")
     if pwd_file.exists():
         return pwd_file.read_text(encoding="utf-8").strip()
     return ""

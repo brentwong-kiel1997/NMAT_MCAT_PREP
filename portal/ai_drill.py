@@ -282,6 +282,8 @@ def ai_drill_quiz(request, quiz_id: int):
         "quiz": quiz,
         "items_json": items_json,
         "total": len(quiz.payload),
+        "quiz_difficulty": next((q.get("difficulty") for q in quiz.payload
+                                 if q.get("difficulty")), ""),
     })
 
 

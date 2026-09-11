@@ -9,3 +9,5 @@ venv/
 *.log
 .DS_Store
 DEPLOYMENT.local.md
+*.sqlite3-wal
+*.sqlite3-shm

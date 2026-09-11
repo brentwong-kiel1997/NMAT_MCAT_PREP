@@ -10,7 +10,9 @@
     <p class="section-kicker">AI coach</p>
     <h1>AI quiz — {{ quiz.get_mode_display }}</h1>
     <p class="lead">AI-generated practice. Instant feedback; correct counts stay on this device and
-      nothing here feeds official statistics.</p>
+      nothing here feeds official statistics.
+      {% if quiz_difficulty %}<span class="diff-badge">{{ quiz_difficulty }}</span>{% endif %}
+    </p>
   </div>
 </div>
 

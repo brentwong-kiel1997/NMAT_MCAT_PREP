@@ -7,7 +7,7 @@ into Gunicorn's environment, and editing .env takes effect without a restart.
 Lookup order (first file that defines a key wins):
   1. path in GABAY_ENV_FILE
   2. <repo>/.env
-  3. /home/ubuntu/runtime/.env
+  3. /home/ubuntu/runtime/.env            (this host's production fallback)
   4. /home/ubuntu/runtime/secrets/minimax.env
 """
 
