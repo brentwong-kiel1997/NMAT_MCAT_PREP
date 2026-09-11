@@ -353,8 +353,7 @@ items:
     D: R is regrouped and S ends in 8827, so the two differ from each other as well.
   chapter: identical-information
 - id: nmat-p1p-021
-  q: 'Target outline: a circle with a single straight line drawn through its center
-    from top to bottom (a vertical diameter). Which panel contains the target?'
+  q: Which panel contains the circle with a single vertical line through its center?
   choices:
     B: A circle with a single vertical line through its center, partly crossed by
       two overlapping squares
@@ -372,8 +371,7 @@ items:
   chapter: hidden-figure
   figure: items/nmat-p1p-021.svg
 - id: nmat-p1p-022
-  q: 'Target outline: a plus sign - one horizontal and one vertical stroke crossing
-    exactly at their midpoints. Which panel contains it?'
+  q: Which panel contains the plus sign?
   choices:
     C: One horizontal and one vertical stroke crossing at their midpoints, drawn over
       a zigzag line
@@ -391,7 +389,7 @@ items:
   chapter: hidden-figure
   figure: items/nmat-p1p-022.svg
 - id: nmat-p1p-023
-  q: 'Target outline: a five-pointed star. Which panel contains it?'
+  q: Which panel contains the five-pointed star?
   choices:
     A: A five-pointed star drawn over three overlapping rectangles
     B: A six-pointed star formed by two overlapping triangles
@@ -408,8 +406,7 @@ items:
   chapter: hidden-figure
   figure: items/nmat-p1p-023.svg
 - id: nmat-p1p-024
-  q: 'Five panels are shown. How many panels contain a circle drawn inside a
-    triangle?'
+  q: How many panels contain a circle drawn inside a triangle?
   choices:
     D: '2'
     A: '1'
@@ -427,8 +424,8 @@ items:
   chapter: hidden-figure
   figure: items/nmat-p1p-024.svg
 - id: nmat-p1p-025
-  q: 'Target outline: a rectangle divided into two equal parts by a vertical line
-    through its midpoint. Which panel does NOT contain the target?'
+  q: Which panel does NOT contain a rectangle divided into two equal parts by a vertical line through
+    its midpoint?
   choices:
     B: A rectangle with a horizontal line through its midpoint
     A: A rectangle with a vertical line through its midpoint and a small circle in
@@ -445,8 +442,7 @@ items:
   chapter: hidden-figure
   figure: items/nmat-p1p-025.svg
 - id: nmat-p1p-026
-  q: 'Target outline: two straight strokes joined end to end at a right angle (an
-    L shape). Which panel contains it?'
+  q: Which panel contains the two strokes joined end to end at a right angle?
   choices:
     C: Two strokes joined end to end at a right angle, partly hidden by a shaded circle
     A: Two strokes crossing at their midpoints to form four right angles
@@ -462,8 +458,7 @@ items:
   chapter: hidden-figure
   figure: items/nmat-p1p-026.svg
 - id: nmat-p1p-027
-  q: 'Target outline: an upward arrow - a vertical shaft with two slanted strokes
-    rising to a single point at the top of the shaft. Which panel contains it?'
+  q: Which panel contains the upward arrow?
   choices:
     A: A vertical shaft with two slanted strokes meeting in a point at its top, drawn
       across a field of small circles
@@ -482,8 +477,7 @@ items:
   chapter: hidden-figure
   figure: items/nmat-p1p-027.svg
 - id: nmat-p1p-028
-  q: 'Target outline: a capital letter A - two slanted strokes meeting at a top point
-    with a horizontal crossbar between them. Which panel contains it?'
+  q: Which panel contains the capital letter A?
   choices:
     D: Two slanted strokes meeting at a point at the top with a horizontal crossbar
       between them, printed inside a bordered box
@@ -503,8 +497,7 @@ items:
   chapter: hidden-figure
   figure: items/nmat-p1p-028.svg
 - id: nmat-p1p-029
-  q: 'Target outline: a square with one diagonal, a single line joining two opposite
-    corners. Which panel contains it?'
+  q: Which panel contains the square with one diagonal?
   choices:
     B: A square with both diagonals drawn, overlapped by a triangle
     A: A square rotated 45 degrees with a line joining the midpoints of two opposite
@@ -521,8 +514,7 @@ items:
   chapter: hidden-figure
   figure: items/nmat-p1p-029.svg
 - id: nmat-p1p-030
-  q: 'Target outline: a rectangle with a semicircle sitting on its top edge, flat
-    side down (a tombstone shape). Which panel contains it?'
+  q: Which panel contains the rectangle with a semicircle sitting on its top edge?
   choices:
     D: A rectangle with a semicircle on its top edge, flat side down
     A: A rectangle with a triangle on its top edge

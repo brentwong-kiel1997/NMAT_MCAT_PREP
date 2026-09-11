@@ -2,365 +2,365 @@ sheets:
 - slug: biology
   entries:
   - title: Hardy–Weinberg
-    formula: p² + 2pq + q² = 1
+    formula: $p^2 + 2pq + q^2 = 1$
     note: p and q are allele frequencies under ideal-population assumptions.
   - title: Exponential population growth
-    formula: N(t) = N₀e^(rt)
+    formula: $N(t) = N_0 e^{rt}$
     note: r is growth rate; assumes unlimited resources.
   - title: Logistic growth
-    formula: dN/dt = rN(1 − N/K)
+    formula: $\frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right)$
     note: K is carrying capacity.
   - title: Cardiac output
-    formula: CO = HR × SV
+    formula: $CO = HR \times SV$
     note: Heart rate times stroke volume.
   - title: Pressure–flow–resistance
-    formula: ΔP = Q × R
+    formula: $\Delta P = Q \times R$
     note: Circulatory analogy to Ohm’s law.
   - title: Respiratory exchange ratio
-    formula: RER = VCO₂/VO₂
+    formula: $RER = \frac{V_{CO_2}}{V_{O_2}}$
     note: Reflects metabolic substrate (carbohydrate vs fat).
   - title: Resting membrane potential (approx.)
-    formula: E ≈ −60 to −70 mV
+    formula: $E \approx -60$ to $-70\ \text{mV}$
     note: Cell-specific; dominated by K⁺ permeability.
   - title: Genetic distance (recombination)
-    formula: RF = recombinants / total offspring
+    formula: $RF = \frac{\text{recombinants}}{\text{total offspring}}$
     note: Recombination frequency maps to gene distance.
   - title: Dilution
-    formula: C₁V₁ = C₂V₂
+    formula: $C_1 V_1 = C_2 V_2$
     note: Moles of solute conserved before/after dilution.
   - title: Osmotic pressure (van’t Hoff)
-    formula: π = iMRT
+    formula: $\pi = iMRT$
     note: i is ionization factor; colloid osmotic pressure matters physiologically.
   - title: Photosynthetic quantum yield
-    formula: quantum requirement ≈ 8–10 photons per O₂ evolved
+    formula: $\text{quantum requirement} \approx 8\text{--}10\ \text{photons per } O_2\ \text{evolved}$
     note: Common concept item on light-reaction efficiency.
   - title: Trophic energy transfer
-    formula: ~10% to next level
+    formula: $\sim 10\%\ \text{to next level}$
     note: Most energy lost as heat between trophic levels.
 - slug: chemistry
   entries:
   - title: Ideal gas law
-    formula: PV = nRT
+    formula: $PV = nRT$
     note: Match R units to pressure and volume.
   - title: Gibbs free energy
-    formula: ΔG = ΔH − TΔS
+    formula: $\Delta G = \Delta H - T\Delta S$
     note: ΔG<0 spontaneous at constant T and P.
   - title: ΔG and K
-    formula: ΔG° = −RT ln K
+    formula: $\Delta G^\circ = -RT \ln K$
     note: Links energy to equilibrium position at standard state.
   - title: Henderson–Hasselbalch
-    formula: pH = pKa + log([A⁻]/[HA])
+    formula: $\text{pH} = \text{p}K_a + \log\left(\frac{[A^-]}{[HA]}\right)$
     note: Estimate buffer pH.
   - title: Rate law
-    formula: rate = k[A]^m[B]^n
+    formula: $\text{rate} = k[A]^m [B]^n$
     note: Orders determined experimentally.
   - title: Arrhenius equation
-    formula: k = Ae^(−Ea/RT)
+    formula: $k = A e^{-\frac{E_a}{RT}}$
     note: Ea is activation energy.
   - title: Molarity
-    formula: M = n / V (L)
+    formula: $M = \frac{n}{V}\ (\text{L})$
     note: Moles of solute per liter of solution.
   - title: Percent yield
-    formula: yield% = (actual/theoretical) × 100%
+    formula: $\text{yield\%} = \frac{\text{actual}}{\text{theoretical}} \times 100\%$
     note: Theoretical yield from stoichiometry.
   - title: Beer’s law
-    formula: A = εlc
+    formula: $A = \varepsilon l c$
     note: Absorbance linear with concentration (dilute).
   - title: Nernst equation
-    formula: E = E° − (RT/nF) ln Q
+    formula: $E = E^\circ - \frac{RT}{nF} \ln Q$
     note: Cell voltage under nonstandard conditions.
   - title: Boiling-point elevation
-    formula: ΔTb = iKbm
+    formula: $\Delta T_b = i K_b m$
     note: Colligative; m is molality.
   - title: Freezing-point depression
-    formula: ΔTf = iKfm
+    formula: $\Delta T_f = i K_f m$
     note: Solute lowers freezing point.
   - title: pH definition
-    formula: pH = −log[H⁺]
+    formula: $\text{pH} = -\log[H^+]$
     note: Negative log of hydrogen-ion activity.
   - title: Redox electron transfer
-    formula: electrons transferred = (Δ oxidation number per atom) × (atoms oxidized or reduced)
+    formula: $\text{electrons transferred} = \left(\Delta\ \text{oxidation number per atom}\right) \times \left(\text{atoms oxidized or reduced}\right)$
     note: Balance half-reactions to find electrons.
   - title: Half-life
-    formula: t₁/₂ = 0.693 / k
+    formula: $t_{1/2} = \frac{0.693}{k}$
     note: First-order decay; fraction remaining = (½)ⁿ after n half-lives.
 - slug: physics
   entries:
   - title: Newton’s second law
-    formula: F = ma
+    formula: $F = ma$
     note: Vector equation; solve in components.
   - title: Kinetic energy
-    formula: KE = ½mv²
+    formula: $KE = \frac{1}{2} m v^2$
     note: Proportional to velocity squared.
   - title: Gravitational PE
-    formula: PE = mgh
+    formula: $PE = mgh$
     note: Near-surface approximation.
   - title: Work
-    formula: W = Fd cosθ
+    formula: $W = Fd \cos\theta$
     note: Angle θ between force and displacement.
   - title: Power
-    formula: P = W/t = Fv
+    formula: $P = \frac{W}{t} = Fv$
     note: P=Fv when force aligns with velocity.
   - title: Momentum
-    formula: p = mv
+    formula: $p = mv$
     note: Conserved in isolated systems.
   - title: Impulse
-    formula: J = FΔt = Δp
+    formula: $J = F\Delta t = \Delta p$
     note: Force–time changes momentum.
   - title: SHM period (spring)
-    formula: T = 2π√(m/k)
+    formula: $T = 2\pi\sqrt{\frac{m}{k}}$
     note: Depends on mass and spring constant.
   - title: Wave speed
-    formula: v = fλ
+    formula: $v = f\lambda$
     note: Frequency times wavelength.
   - title: Coulomb’s law
-    formula: F = kq₁q₂/r²
+    formula: $F = \frac{k q_1 q_2}{r^2}$
     note: Electrostatic force between point charges.
   - title: Ohm’s law
-    formula: V = IR
+    formula: $V = IR$
     note: For ohmic conductors.
   - title: Electric power
-    formula: P = IV = I²R = V²/R
+    formula: $P = IV = I^2 R = \frac{V^2}{R}$
     note: Rate of energy use in circuits.
   - title: Poiseuille’s law
-    formula: Q = πr⁴ΔP/(8ηL)
+    formula: $Q = \frac{\pi r^4 \Delta P}{8 \eta L}$
     note: Laminar flow in tubes/blood vessels.
   - title: Bernoulli equation
-    formula: P + ½ρv² + ρgh = constant
+    formula: $P + \frac{1}{2}\rho v^2 + \rho g h = \text{constant}$
     note: Ideal steady incompressible flow along streamline.
   - title: Thin lens
-    formula: 1/f = 1/do + 1/di
+    formula: $\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}$
     note: Keep sign conventions consistent.
   - title: Photon energy
-    formula: E = hf = hc/λ
+    formula: $E = hf = \frac{hc}{\lambda}$
     note: Quantum and photoelectric contexts.
   - title: Kinematic displacement
-    formula: x = v₀t + ½at²
+    formula: $x = v_0 t + \frac{1}{2} a t^2$
     note: Constant acceleration only; pick the kinematic equation matching your knowns.
   - title: Work–energy theorem
-    formula: W_net = ΔKE = ½mv² − ½mv₀²
+    formula: $W_{\text{net}} = \Delta KE = \frac{1}{2} m v^2 - \frac{1}{2} m v_0^2$
     note: Net work equals the change in kinetic energy.
   - title: Torque
-    formula: τ = rF sin θ
+    formula: $\tau = rF \sin\theta$
     note: Lever arm times the perpendicular force component.
 - slug: biochemistry
   entries:
   - title: Michaelis–Menten
-    formula: v = Vmax[S]/(Km + [S])
+    formula: $v = \frac{V_{\text{max}}[S]}{K_m + [S]}$
     note: Initial enzyme-catalyzed rate.
   - title: Lineweaver–Burk
-    formula: 1/v = (Km/Vmax)(1/[S]) + 1/Vmax
+    formula: $\frac{1}{v} = \left(\frac{K_m}{V_{\text{max}}}\right)\left(\frac{1}{[S]}\right) + \frac{1}{V_{\text{max}}}$
     note: Double-reciprocal plot for Km and Vmax.
   - title: Glycolysis net ATP
-    formula: 2 ATP per glucose
+    formula: $2\ \text{ATP per glucose}$
     note: Cytoplasmic; also 2 NADH.
   - title: TCA per acetyl-CoA
-    formula: 3 NADH + 1 FADH₂ + 1 GTP
+    formula: $3\ \text{NADH} + 1\ \text{FADH}_2 + 1\ \text{GTP}$
     note: Mitochondrial matrix cycle.
   - title: OxPhos ATP yield
-    formula: ~2.5 ATP/NADH; ~1.5 ATP/FADH₂
+    formula: $\sim 2.5\ \text{ATP/NADH};\ \sim 1.5\ \text{ATP/FADH}_2$
     note: Approximate; varies with proton leak.
   - title: β-oxidation
-    formula: n carbons → (n/2−1) FADH₂ + (n/2−1) NADH + n/2 acetyl-CoA
+    formula: $n\ \text{carbons} \rightarrow \left(\frac{n}{2} - 1\right)\ \text{FADH}_2 + \left(\frac{n}{2} - 1\right)\ \text{NADH} + \frac{n}{2}\ \text{acetyl-CoA}$
     note: Even-chain fatty acids.
   - title: Isoelectric point
-    formula: pI ≈ (pKa₁ + pKa₂)/2
+    formula: $\text{pI} \approx \frac{\text{p}K_{a1} + \text{p}K_{a2}}{2}$
     note: Approximation for dipolar amino acids.
   - title: ATP hydrolysis
-    formula: ATP + H₂O → ADP + Pi; ΔG°′ ≈ −30 kJ/mol
+    formula: $\text{ATP} + \text{H}_2\text{O} \rightarrow \text{ADP} + \text{P}_i;\ \Delta G^{\circ\prime} \approx -30\ \text{kJ/mol}$
     note: Cellular energy currency.
   - title: Hb oxygen binding
-    formula: Sigmoid saturation curve
+    formula: $\text{Sigmoid saturation curve}$
     note: Cooperative binding; Bohr effect.
   - title: Glycogen synthesis cost
-    formula: 1 glucose → glycogen costs 1 ATP + 1 UTP
+    formula: $1\ \text{glucose} \rightarrow \text{glycogen costs } 1\ \text{ATP} + 1\ \text{UTP}$
     note: UDP-glucose precursor.
   - title: Cori cycle
-    formula: Lactate (muscle) → glucose (liver)
+    formula: $\text{Lactate (muscle)} \rightarrow \text{glucose (liver)}$
     note: Energy cost to regenerate glucose.
   - title: Translation energy
-    formula: ~4 ATP per peptide bond (approx.)
+    formula: $\sim 4\ \text{ATP per peptide bond (approx.)}$
     note: Multiple steps per elongation cycle.
   - title: Nernst equation (37 °C)
-    formula: E = (61 mV / z) · log([out]/[in])
+    formula: $E = \left(\frac{61\ \text{mV}}{z}\right) \cdot \log\left(\frac{[\text{out}]}{[\text{in}]}\right)$
     note: Equilibrium potential for an ion of charge z.
 - slug: chem-phys
   entries:
   - title: Ideal gas
-    formula: PV = nRT
+    formula: $PV = nRT$
     note: Gas and respiration calculations in Chem/Phys.
   - title: Henderson–Hasselbalch
-    formula: pH = pKa + log([A⁻]/[HA])
+    formula: $\text{pH} = \text{p}K_a + \log\left(\frac{[A^-]}{[HA]}\right)$
     note: Blood and buffer physiology.
   - title: Michaelis–Menten
-    formula: v = Vmax[S]/(Km + [S])
+    formula: $v = \frac{V_{\text{max}}[S]}{K_m + [S]}$
     note: Common biochemistry crossover item.
   - title: Gibbs free energy
-    formula: ΔG = ΔH − TΔS
+    formula: $\Delta G = \Delta H - T\Delta S$
     note: Spontaneity and equilibrium.
   - title: Ohm’s law
-    formula: V = IR
+    formula: $V = IR$
     note: Neural membrane and circuit analogies.
   - title: Poiseuille
-    formula: Q ∝ r⁴ΔP/(ηL)
+    formula: $Q \propto \frac{r^4 \Delta P}{\eta L}$
     note: Vessel radius dominates flow sensitivity.
   - title: Bernoulli
-    formula: P + ½ρv² + ρgh = const.
+    formula: $P + \frac{1}{2}\rho v^2 + \rho gh = \text{const.}$
     note: Blood flow and airway fluids.
   - title: Nernst
-    formula: E = E° − (RT/nF) ln Q
+    formula: $E = E^\circ - \frac{RT}{nF} \ln Q$
     note: Membrane potentials and electrochemical cells.
   - title: Snell’s law
-    formula: n₁sinθ₁ = n₂sinθ₂
+    formula: $n_1 \sin\theta_1 = n_2 \sin\theta_2$
     note: Optics and endoscopy contexts.
   - title: Photon energy
-    formula: E = hf
+    formula: $E = hf$
     note: Spectroscopy and photoelectric effect.
   - title: RC time constant
-    formula: τ = RC
+    formula: $\tau = RC$
     note: Membrane capacitance charge/discharge.
   - title: Work–energy theorem
-    formula: W_net = ΔKE
+    formula: $W_{\text{net}} = \Delta KE$
     note: Musculoskeletal mechanics.
   - title: Half-life
-    formula: N = N₀(½)^(t/t½)
+    formula: $N = N_0 \left(\frac{1}{2}\right)^{\frac{t}{t_{1/2}}}$
     note: Nuclear medicine isotopes.
   - title: Beer’s law
-    formula: A = εlc
+    formula: $A = \varepsilon l c$
     note: Spectrophotometric concentration.
   - title: Arrhenius
-    formula: k = Ae^(−Ea/RT)
+    formula: $k = A e^{-\frac{E_a}{RT}}$
     note: Temperature effect on rate constant.
 - slug: bio-biochem
   entries:
   - title: Hardy–Weinberg
-    formula: p² + 2pq + q² = 1
+    formula: $p^2 + 2pq + q^2 = 1$
     note: Population genetics in FC1C.
   - title: Michaelis–Menten
-    formula: v = Vmax[S]/(Km + [S])
+    formula: $v = \frac{V_{\text{max}}[S]}{K_m + [S]}$
     note: FC1A enzyme kinetics.
   - title: Glycolysis net
-    formula: 2 ATP + 2 NADH per glucose
+    formula: $2\ \text{ATP} + 2\ \text{NADH per glucose}$
     note: FC1D metabolism.
   - title: TCA output
-    formula: 3 NADH + 1 FADH₂ + 1 GTP / acetyl-CoA
+    formula: $3\ \text{NADH} + 1\ \text{FADH}_2 + 1\ \text{GTP} / \text{acetyl-CoA}$
     note: Coupled to oxidative phosphorylation.
   - title: Cardiac output
-    formula: CO = HR × SV
+    formula: $CO = HR \times SV$
     note: FC3B circulation.
   - title: Membrane potential
-    formula: ΔV ∝ Δion flux / capacitance
+    formula: $\Delta V \propto \frac{\Delta\ \text{ion flux}}{\text{capacitance}}$
     note: FC3A neural signaling.
   - title: Dilution
-    formula: C₁V₁ = C₂V₂
+    formula: $C_1 V_1 = C_2 V_2$
     note: Experimental dilution series.
   - title: Recombination frequency
-    formula: RF = recombinants / total
+    formula: $RF = \frac{\text{recombinants}}{\text{total}}$
     note: FC1C linkage mapping.
   - title: Osmotic pressure
-    formula: π = iMRT
+    formula: $\pi = iMRT$
     note: Cell volume regulation.
   - title: ATP hydrolysis
-    formula: ΔG°′ ≈ −30 kJ/mol
+    formula: $\Delta G^{\circ\prime} \approx -30\ \text{kJ/mol}$
     note: Core bioenergetics.
   - title: Oxygen saturation
-    formula: Sigmoid PO₂–Sat curve
+    formula: $\text{Sigmoid } PO_2\text{--Sat curve}$
     note: Hb cooperativity and Bohr.
   - title: Cell cycle duration
-    formula: T = G₁ + S + G₂ + M
+    formula: $T = G_1 + S + G_2 + M$
     note: FC2C division control.
   - title: Genetic code
-    formula: 64 codons → 20 aa + stop
+    formula: $64\ \text{codons} \rightarrow 20\ \text{aa} + \text{stop}$
     note: FC1B degeneracy.
   - title: Antibody diversity
-    formula: V(D)J recombination combinatorics
+    formula: $\text{V(D)J recombination combinatorics}$
     note: FC3B immunity.
 - slug: quantitative
   entries:
   - title: Percent change
-    formula: '%Δ = (new − old) / old × 100%'
+    formula: $\%\Delta = \frac{\text{new} - \text{old}}{\text{old}} \times 100\%$
     note: Distinct from percentage points.
   - title: Proportion
-    formula: a/b = c/d → ad = bc
+    formula: $\frac{a}{b} = \frac{c}{d} \rightarrow ad = bc$
     note: Cross-multiply after unit alignment.
   - title: Average speed
-    formula: v_avg = total distance / total time
+    formula: $v_{\text{avg}} = \frac{\text{total distance}}{\text{total time}}$
     note: Distinct from instantaneous speed.
   - title: Mean
-    formula: x̄ = Σx / n
+    formula: $\bar{x} = \frac{\sum x}{n}$
     note: Sensitive to outliers.
   - title: Median
-    formula: middle of ordered data
+    formula: $\text{middle of ordered data}$
     note: Average middle two if even count.
   - title: Discount price
-    formula: sale = original × (1 − discount%)
+    formula: $\text{sale} = \text{original} \times (1 - \text{discount\%})$
     note: Sequential discounts don’t add simply.
   - title: Compound interest
-    formula: A = P(1 + r/n)^(nt)
+    formula: $A = P\left(1 + \frac{r}{n}\right)^{nt}$
     note: Watch compounding periods n.
   - title: Profit margin
-    formula: margin = profit / revenue
+    formula: $\text{margin} = \frac{\text{profit}}{\text{revenue}}$
     note: Denominator is revenue, not cost.
   - title: Combinations
-    formula: C(n,k) = n! / (k!(n−k)!)
+    formula: $C(n,k) = \frac{n!}{k!(n-k)!}$
     note: Unordered selections; use P(n,k) when order matters.
   - title: Combined work rate
-    formula: 1/t = 1/t₁ + 1/t₂
+    formula: $\frac{1}{t} = \frac{1}{t_1} + \frac{1}{t_2}$
     note: Rates add; the fair-share of time is the reciprocal of the sum.
 - slug: behavioral-social
   entries:
   - title: Weber’s law
-    formula: ΔI/I = k
+    formula: $\frac{\Delta I}{I} = k$
     note: Detectable difference scales with intensity.
   - title: Fechner’s law
-    formula: S = k log I
+    formula: $S = k \log I$
     note: Perceived intensity logs stimulus strength.
   - title: Correlation
-    formula: r ∈ [−1, 1]
+    formula: $r \in [-1, 1]$
     note: Direction and strength of linear relation.
   - title: z-score
-    formula: z = (x − μ) / σ
+    formula: $z = \frac{x - \mu}{\sigma}$
     note: Standardize across scales.
   - title: Social learning
-    formula: P(behavior) ↑ after modeled reward
+    formula: $P(\text{behavior}) \uparrow\ \text{after modeled reward}$
     note: Bandura observational learning.
 - slug: psych-soc
   entries:
   - title: Weber’s law
-    formula: ΔI/I = constant
+    formula: $\frac{\Delta I}{I} = \text{constant}$
     note: FC6A sensation.
   - title: Signal detection
-    formula: d′ = Z(hit) − Z(false alarm)
+    formula: $d' = Z(\text{hit}) - Z(\text{false alarm})$
     note: Separates sensitivity from response bias.
   - title: Correlation
-    formula: r ∈ [−1, 1]
+    formula: $r \in [-1, 1]$
     note: Research-design items.
   - title: z-score
-    formula: z = (x − μ) / σ
+    formula: $z = \frac{x - \mu}{\sigma}$
     note: Standardized scores.
   - title: Self-efficacy
-    formula: behavior ∝ perceived capability
+    formula: $\text{behavior} \propto \text{perceived capability}$
     note: FC7 behavior change.
   - title: Conformity rate
-    formula: compliance ↑ with unanimous majority
+    formula: $\text{compliance} \uparrow\ \text{with unanimous majority}$
     note: FC7B social processes.
 - slug: verbal
   entries:
   - title: Analogy template
-    formula: 'A : B :: C : ?'
+    formula: '$A : B :: C : ?$'
     note: State A→B relation, then map onto C.
 - slug: cars
   entries:
   - title: Passage map
-    formula: Claim → Support → Turn → Close
+    formula: $\text{Claim} \rightarrow \text{Support} \rightarrow \text{Turn} \rightarrow \text{Close}$
     note: Mark claim, support, turn, and close.
 - slug: inductive-reasoning
   entries:
   - title: Grouping check
-    formula: Rule → Test all → Exclude near-miss
+    formula: $\text{Rule} \rightarrow \text{Test all} \rightarrow \text{Exclude near-miss}$
     note: The rule must cover every in-group member.
 - slug: perceptual-acuity
   entries:
   - title: Mirror axis
-    formula: vertical ↔ L/R · horizontal ↔ U/D
+    formula: $\text{vertical} \leftrightarrow \text{L/R} \cdot \text{horizontal} \leftrightarrow \text{U/D}$
     note: Vertical axis swaps L/R; horizontal swaps U/D.

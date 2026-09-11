@@ -42,10 +42,11 @@ for i in d["items"]:
     assert len(set(i["choices"].values())) == 4, i["id"]
     if "figure" in i:
         # an attached sheet replaces the in-words description of the figures;
-        # the stem keeps only the question and the file must be on disk
+        # the stem keeps only the question and the file must be on disk.
+        # Series stems end in "___" (the blank is the question), others in "?"
         assert i["figure"].startswith("items/"), i["figure"]
         assert (REPO / "content" / "images" / i["figure"]).is_file(), i["figure"]
-        assert i["q"].strip().endswith("?"), i["id"]
+        assert i["q"].strip().endswith(("?", "___")), i["id"]
 assert chapters == Counter({"number-and-letter-series": 10,
                             "figure-series": 8, "figure-grouping": 7}), chapters
 assert ids == ["nmat-d-p1i-%03d" % n for n in range(1, 26)], ids[:5]

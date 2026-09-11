@@ -738,6 +738,8 @@ def inductive_sheets() -> dict:
                          "B": square + dots(INSIDE3),
                          "C": poly(5, r=TRI_R) + dots(INSIDE4),
                          "D": circle() + dots(INSIDE3)},
+        "nmat-p1i-023": {"A": letter("N"), "B": letter("H"),
+                         "C": letter("M"), "D": letter("A")},
         # --- drill/part1-inductive ------------------------------------------
         "nmat-d-p1i-019": {"A": letter("A"), "B": letter("R"),
                            "C": letter("B"), "D": letter("P")},
@@ -754,6 +756,8 @@ def inductive_sheets() -> dict:
                            "C": square, "D": poly(3, r=TRI_R)},
         "nmat-d-p1i-025": {"A": star(), "B": square, "C": poly(6, r=TRI_R),
                            "D": poly(3, r=TRI_R)},
+        "nmat-d-p1i-024": {"A": letter("N"), "B": letter("Z"),
+                           "C": letter("H"), "D": letter("M")},
     }
 
 
@@ -1121,3 +1125,268 @@ def write_perceptual_figures() -> list[str]:
              for iid, bodies in sorted(perceptual_sheets().items())]
     paths.append(write("nmat-p1p-024", strip(strip_panels())))
     return paths
+
+
+# ===========================================================================
+# Figure-series frame strips
+#
+# The figure-series items used to narrate their frames in words inside the
+# stem ("Frame 1: ... Frame 2: ..."). Each now gets one strip that draws the
+# series: 300 x 300 frames in order, numbered 1..N in the house colour, so
+# the picture carries the narration and the stem shrinks to the question.
+# ===========================================================================
+def frame_strip(frames) -> str:
+    """1xN row of numbered series frames, 300 x 300 each (see ir-rot-arrow-1)."""
+    n = len(frames)
+    dividers = "".join(
+        f'<line x1="{300 * i}" y1="0" x2="{300 * i}" y2="300"/>'
+        for i in range(1, n))
+    cells = "".join(
+        f'<g transform="translate({300 * i} 0)">{body}'
+        f'<text x="285" y="285" font-size="22" font-family="sans-serif" '
+        f'text-anchor="end" fill="{AXIS}">{i + 1}</text></g>'
+        for i, body in enumerate(frames))
+    return _wrap(f'<g stroke="#ddd" stroke-width="2">{dividers}</g>{cells}', 300 * n, 300)
+
+
+# ---------- frame primitives (300 x 300 frame-local coordinates) ----------
+def frame_square() -> str:
+    """The square frame most series items draw inside."""
+    return (f'<rect x="40" y="40" width="220" height="220" fill="none" '
+            f'stroke="{INK}" stroke-width="3"/>')
+
+
+def frame_box() -> str:
+    """A faint outer frame a moving figure stays inside."""
+    return (f'<rect x="38" y="38" width="224" height="224" fill="none" '
+            f'stroke="#ddd" stroke-width="4"/>')
+
+
+def dot_row(n: int, cy: float = 150.0, r: float = 11.0, x0: float = 55.0,
+            x1: float = 245.0) -> str:
+    xs = [150.0] if n == 1 else [x0 + k * (x1 - x0) / (n - 1) for k in range(n)]
+    return "".join(f'<circle cx="{x:.1f}" cy="{cy:.1f}" r="{r}" fill="{INK}"/>'
+                   for x in xs)
+
+
+def dot_grid(rows: int, cols: int, r: float = 9.0, step: float = 48.0) -> str:
+    w, h = (cols - 1) * step, (rows - 1) * step
+    return "".join(
+        f'<circle cx="{150 - w / 2 + j * step:.1f}" cy="{150 - h / 2 + i * step:.1f}" '
+        f'r="{r}" fill="{INK}"/>'
+        for i in range(rows) for j in range(cols))
+
+
+GRID_CELLS = {"TL": (60, 60), "TR": (150, 60), "BR": (150, 150), "BL": (60, 150)}
+
+
+def grid2x2(shaded=()) -> str:
+    """A square split into four cells; the cells named in `shaded` are filled."""
+    out = [f'<rect x="{x}" y="{y}" width="90" height="90" fill="{INK}"/>'
+           for x, y in (GRID_CELLS[k] for k in shaded)]
+    out.append(f'<rect x="60" y="60" width="180" height="180" fill="none" '
+               f'stroke="{INK}" stroke-width="3"/>')
+    out.append(f'<line x1="150" y1="60" x2="150" y2="240" stroke="{INK}" '
+               f'stroke-width="3"/>')
+    out.append(f'<line x1="60" y1="150" x2="240" y2="150" stroke="{INK}" '
+               f'stroke-width="3"/>')
+    return "".join(out)
+
+
+def star_glyph(cx: float, cy: float, r_out: float = 21.0, r_in: float = 8.5) -> str:
+    pts = []
+    for k in range(10):
+        r = r_out if k % 2 == 0 else r_in
+        a = math.radians(-90 + k * 36)
+        pts.append(f"{cx + r * math.cos(a):.1f},{cy + r * math.sin(a):.1f}")
+    return f'<polygon points="{" ".join(pts)}" fill="{INK}"/>'
+
+
+STAR_SPOTS = {
+    1: [(150, 150)],
+    2: [(115, 150), (185, 150)],
+    3: [(95, 150), (150, 150), (205, 150)],
+    4: [(112, 112), (188, 112), (112, 188), (188, 188)],
+}
+
+
+def circle_with_stars(count: int, shaded: bool) -> str:
+    fill = "#cfcfcf" if shaded else "none"
+    body = (f'<circle cx="150" cy="150" r="105" fill="{fill}" stroke="{INK}" '
+            f'stroke-width="4"/>')
+    return body + "".join(star_glyph(x, y) for x, y in STAR_SPOTS[count])
+
+
+def corner_L(corner: str) -> str:
+    """An L hugging one corner of the frame (or a small one at the centre)."""
+    path = {"BL": "M60 60 V240 H240", "BR": "M240 60 V240 H60",
+            "TR": "M240 240 V60 H60", "TL": "M60 240 V60 H240",
+            "CENTRE": "M115 195 V115 H195"}[corner]
+    return f'<path d="{path}" fill="none" stroke="{INK}" stroke-width="10"/>'
+
+
+def four_circles(arrangement: str, r: float = 26.0) -> str:
+    """Four identical circles laid out in one of the series arrangements."""
+    spots = {
+        "row": [(55.5, 150), (118.5, 150), (181.5, 150), (244.5, 150)],
+        "column": [(150, 55.5), (150, 118.5), (150, 181.5), (150, 244.5)],
+        "grid2x2": [(108, 108), (192, 108), (108, 192), (192, 192)],
+    }[arrangement]
+    return "".join(
+        f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r}" fill="none" '
+        f'stroke="{INK}" stroke-width="4"/>' for x, y in spots)
+
+
+def concentric_squares(n: int) -> str:
+    return "".join(sq(s) for s in (250, 204, 158, 112, 66, 20)[:n])
+
+
+def corner_dot(corner: str) -> str:
+    x, y = {"TL": (105, 105), "TR": (195, 105), "BR": (195, 195),
+            "BL": (105, 195)}[corner]
+    return frame_square() + f'<circle cx="{x}" cy="{y}" r="13" fill="{INK}"/>'
+
+
+BLOCK_ARROW = ((150, 52), (198, 112), (172, 112), (172, 240),
+               (128, 240), (128, 112), (102, 112))
+
+
+def block_arrow(direction: str, solid: bool) -> str:
+    """A block arrow pointing `direction`, filled solid or outline only."""
+    ang = {"up": 0, "right": 90, "down": 180, "left": 270}[direction]
+    pts = " ".join(f"{x:.0f},{y:.0f}" for x, y in BLOCK_ARROW)
+    style = f'fill="{INK}"' if solid else STROKE
+    return (f'<g transform="rotate({ang} 150 150)">'
+            f'<polygon points="{pts}" {style}/></g>')
+
+
+def cell_strip(black_cell: int, white_cell: int) -> str:
+    """Six numbered cells; a black dot and a white dot sit in two of them."""
+    out = []
+    for i in range(6):
+        x = 30 + i * 40
+        out.append(f'<rect x="{x}" y="110" width="40" height="80" fill="none" '
+                   f'stroke="{INK}" stroke-width="3"/>')
+        out.append(_txt(x + 20, 215, str(i + 1), size=13, fill="#666"))
+    for cell, white in ((black_cell, False), (white_cell, True)):
+        cx = 30 + (cell - 1) * 40 + 20
+        out.append(
+            f'<circle cx="{cx}" cy="150" r="13" fill="#fff" stroke="{INK}" '
+            f'stroke-width="4"/>' if white else
+            f'<circle cx="{cx}" cy="150" r="13" fill="{INK}"/>')
+    return "".join(out)
+
+
+def square_grid(rows: int, cols: int, side: float = 90.0, gap: float = 20.0) -> str:
+    """Identical squares laid out rows x cols, centred in the frame."""
+    w = cols * side + (cols - 1) * gap
+    h = rows * side + (rows - 1) * gap
+    return "".join(
+        f'<rect x="{150 - w / 2 + j * (side + gap):.0f}" '
+        f'y="{150 - h / 2 + i * (side + gap):.0f}" width="{side:.0f}" '
+        f'height="{side:.0f}" {STROKE}/>'
+        for i in range(rows) for j in range(cols))
+
+
+def half_triangle(half: str, pointing: str, height: float, width: float) -> str:
+    """A triangle centred in one half of the frame, pointing up or down."""
+    cx = 90 if half == "left" else 210
+    y0, y1 = 150 - height / 2, 150 + height / 2
+    if pointing == "up":
+        pts = ((cx, y0), (cx - width / 2, y1), (cx + width / 2, y1))
+    else:
+        pts = ((cx, y1), (cx - width / 2, y0), (cx + width / 2, y0))
+    return (f'<line x1="150" y1="20" x2="150" y2="280" stroke="#ddd" '
+            f'stroke-width="3" stroke-dasharray="8 6"/>' + _sheet_poly(pts))
+
+
+# ---------- the series, frame by frame -------------------------------------
+def series_frames() -> dict:
+    """item id -> the frames of its series, in order."""
+    solid = f'<circle cx="150" cy="150" r="100" fill="{INK}"/>'
+    hollow = (f'<circle cx="150" cy="150" r="100" fill="#fff" '
+              f'stroke="{INK}" stroke-width="4"/>')
+    return {
+        # --- part1-inductive -------------------------------------------------
+        "nmat-p1i-014": [frame_square() + dot_row(n) for n in (1, 3, 5, 7)],
+        "nmat-p1i-015": [solid, hollow, solid, hollow],
+        "nmat-p1i-016": [poly(3, r=TRI_R), sq(SQ_SIDE), poly(5, r=TRI_R),
+                         poly(6, r=TRI_R)],
+        "nmat-p1i-017": [grid2x2([c]) for c in ("TL", "TR", "BR", "BL")],
+        "nmat-p1i-018": [circle_with_stars(1, False), circle_with_stars(2, True),
+                         circle_with_stars(3, False), circle_with_stars(4, True)],
+        "nmat-p1i-019": [frame_box() + corner_L(c) for c in ("BL", "BR", "TR", "TL")],
+        "nmat-p1i-020": [four_circles(a)
+                         for a in ("row", "grid2x2", "column", "grid2x2")],
+        "nmat-p1i-021": [concentric_squares(n) for n in (1, 2, 3, 4)],
+        # --- drill/part1-inductive -------------------------------------------
+        "nmat-d-p1i-011": [corner_dot(c) for c in ("TL", "TR", "BR")],
+        "nmat-d-p1i-012": [dot_grid(r, c) for r, c in ((1, 2), (2, 3), (3, 4))],
+        "nmat-d-p1i-013": [block_arrow("right", True), block_arrow("down", False),
+                           block_arrow("left", True)],
+        "nmat-d-p1i-014": [circle(125),
+                           circle(125) + sq(160),
+                           circle(125) + sq(160)
+                           + tri((150, 95), (200, 192), (100, 192))],
+        "nmat-d-p1i-015": [cell_strip(b, 7 - b) for b in (1, 2, 3)],
+        "nmat-d-p1i-016": [square_grid(1, 1), square_grid(1, 2), square_grid(2, 2)],
+        "nmat-d-p1i-018": [half_triangle("left", "up", 50, 46),
+                           half_triangle("right", "down", 100, 88),
+                           half_triangle("left", "up", 150, 116)],
+    }
+
+
+def write_series_strips() -> list[str]:
+    """Emit every series strip; returns the figure paths in bank order."""
+    return [write(iid, frame_strip(frames))
+            for iid, frames in sorted(series_frames().items())]
+
+
+def write_nmat_part1_figures() -> list[str]:
+    """All the Part-1 inductive art: choice sheets, series strips, glyphs."""
+    return (write_inductive_sheets() + write_series_strips()
+            + write_series_glyph_sheets() + write_perceptual_figures())
+
+
+# ===========================================================================
+# Number/letter series sheets
+#
+# The remaining inductive items are number and letter series whose choices are
+# bare numerals or letter strings. Their sheet draws each choice as a glyph,
+# read straight out of the bank file, so panel and choice text can never
+# disagree and the options gain a visual anchor without restating the stem.
+# ===========================================================================
+BANK = ROOT / "content" / "exam-bank" / "nmat"
+GLYPH_ITEMS = {
+    "part1-inductive.yml": [f"nmat-p1i-{n:03d}" for n in range(1, 13)],
+    "drill/part1-inductive.yml": [f"nmat-d-p1i-{n:03d}" for n in range(1, 11)],
+}
+
+
+def numeral(text: str) -> str:
+    """A choice value drawn large and centred, scaled to its length."""
+    size = {1: 150, 2: 120, 3: 96, 4: 80}.get(len(text), 64)
+    return (f'<text x="150" y="{150 + 0.34 * size:.0f}" font-size="{size}" '
+            f'font-family="serif" text-anchor="middle">{_esc(text)}</text>')
+
+
+def series_glyph_sheets() -> dict:
+    """item id -> a panel per choice, each drawing that choice's own text."""
+    import yaml  # only this bank-driven generator needs the bank parser
+
+    out = {}
+    for rel, ids in GLYPH_ITEMS.items():
+        doc = yaml.safe_load((BANK / rel).read_text(encoding="utf-8"))
+        by_id = {it["id"]: it for it in doc.get("items") or []}
+        for iid in ids:
+            item = by_id.get(iid)
+            if item and set(item.get("choices") or {}) == set(PANEL_LABELS):
+                out[iid] = {L: numeral(str(item["choices"][L]))
+                            for L in PANEL_LABELS}
+    return out
+
+
+def write_series_glyph_sheets() -> list[str]:
+    """Emit the choice-glyph sheets for the number/letter series items."""
+    return [write(iid, sheet(bodies))
+            for iid, bodies in sorted(series_glyph_sheets().items())]

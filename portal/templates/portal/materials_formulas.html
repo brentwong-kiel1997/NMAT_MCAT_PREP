@@ -1,6 +1,11 @@
 {% extends "portal/base.html" %}
+{% load static %}
 
 {% block title %}{{ label }} Formulas · Gabay{% endblock %}
+
+{% block head_extra %}
+  <link rel="stylesheet" href="{% static 'vendor/katex/katex.min.css' %}?v=0.16.22">
+{% endblock %}
 
 {% block body %}
 <div class="page-hero">
@@ -30,4 +35,20 @@
     {% endfor %}
   </p>
 </section>
+{% endblock %}
+
+{% block page_js %}
+  <script src="{% static 'vendor/katex/katex.min.js' %}?v=0.16.22" defer></script>
+  <script src="{% static 'vendor/katex/contrib/auto-render.min.js' %}?v=0.16.22" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var list = document.querySelector(".formula-list");
+      if (!list || list.textContent.indexOf("$") === -1) return;
+      if (typeof renderMathInElement !== "function") return;
+      renderMathInElement(list, {
+        delimiters: [{ left: "$", right: "$", display: false }],
+        ignoredTags: ["script", "noscript", "style", "textarea", "pre", "option"]
+      });
+    });
+  </script>
 {% endblock %}

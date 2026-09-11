@@ -20,6 +20,7 @@ items:
     C: Doubles the last term again and skips the '+ 3' step.
     D: 'Applies both operations to one term: 34 x 2 + 3.'
   chapter: number-and-letter-series
+  figure: items/nmat-d-p1i-001.svg
 - id: nmat-d-p1i-002
   q: What number continues the series? 2, 3, 7, 16, 32, ___
   choices:
@@ -34,6 +35,7 @@ items:
     B: Assumes the differences rise by a steady 7 (16 + 7 = 23).
     D: Jumps to the next perfect square rather than adding 25 to the last term.
   chapter: number-and-letter-series
+  figure: items/nmat-d-p1i-002.svg
 - id: nmat-d-p1i-003
   q: What number continues the series? 6, 120, 8, 110, 10, 100, 12, ___
   choices:
@@ -49,6 +51,7 @@ items:
     C: Halves the drop, taking 5 from 100 rather than 10.
     D: Continues the odd-position sub-series (+ 2) instead of the even one.
   chapter: number-and-letter-series
+  figure: items/nmat-d-p1i-003.svg
 - id: nmat-d-p1i-004
   q: What number continues the series? 100, 92, 85, 79, 74, ___
   choices:
@@ -63,6 +66,7 @@ items:
     B: Repeats the previous drop of 5.
     C: Uses a drop of 3, one step back in the pattern.
   chapter: number-and-letter-series
+  figure: items/nmat-d-p1i-004.svg
 - id: nmat-d-p1i-005
   q: What letter continues the series? B, F, K, Q, X, ___
   choices:
@@ -78,6 +82,7 @@ items:
     C: Steps 9 past X instead of 8.
     D: Stops at the wrap without continuing past it.
   chapter: number-and-letter-series
+  figure: items/nmat-d-p1i-005.svg
 - id: nmat-d-p1i-006
   q: What pair continues the series? A3, C6, E9, G12, ___
   choices:
@@ -93,6 +98,7 @@ items:
     C: Holds the number still; the number rises by 3 each frame.
     D: Steps the letter by three places instead of two.
   chapter: number-and-letter-series
+  figure: items/nmat-d-p1i-006.svg
 - id: nmat-d-p1i-007
   q: What number continues the series? 3, 10, 31, 94, ___
   choices:
@@ -108,6 +114,7 @@ items:
     B: Subtracts 3 instead of adding 1.
     C: Multiplies by 4 instead of by 3.
   chapter: number-and-letter-series
+  figure: items/nmat-d-p1i-007.svg
 - id: nmat-d-p1i-008
   q: What number continues the series? 4, 6, 10, 14, 22, ___
   choices:
@@ -122,6 +129,7 @@ items:
     B: Adds the previous gap of 8 once more.
     D: Skips a prime and doubles 17 instead of 13.
   chapter: number-and-letter-series
+  figure: items/nmat-d-p1i-008.svg
 - id: nmat-d-p1i-009
   q: What number continues the series? 40, 38, 34, 28, 20, ___
   choices:
@@ -136,6 +144,7 @@ items:
     C: Uses a drop of 9, halfway between the last two steps.
     D: Restarts the doubling and drops 12 from 20.
   chapter: number-and-letter-series
+  figure: items/nmat-d-p1i-009.svg
 - id: nmat-d-p1i-010
   q: What letter continues the series? Z, W, V, S, R, ___
   choices:
@@ -151,10 +160,10 @@ items:
     C: Combines the two alternating steps into a single - 4.
     D: Applies - 3 twice, giving 18 - 3 - 3 = 12.
   chapter: number-and-letter-series
+  figure: items/nmat-d-p1i-010.svg
 - id: nmat-d-p1i-011
-  q: 'Each frame is a square with a single dot placed in one of its four corners. Frame 1: the dot sits
-    in the top-left corner. Frame 2: the top-right corner. Frame 3: the bottom-right corner. Which corner
-    holds the dot in Frame 4?'
+  q: Each frame is a square with a single dot placed in one of its four corners. Which corner holds the
+    dot in Frame 4?
   choices:
     A: the top-left corner
     B: the top-right corner
@@ -167,9 +176,9 @@ items:
     B: That follows a counter-clockwise walk, but the dot moves clockwise.
     C: That is Frame 3's position, which the dot has already left.
   chapter: figure-series
+  figure: items/nmat-d-p1i-011.svg
 - id: nmat-d-p1i-012
-  q: Frame 1 shows 2 dots arranged as 1 row of 2. Frame 2 shows 6 dots arranged as 2 rows of 3. Frame
-    3 shows 12 dots arranged as 3 rows of 4. What does Frame 4 show?
+  q: Each frame shows a grid of dots. What does Frame 4 show?
   choices:
     A: 16 dots arranged as 4 rows of 4
     B: 25 dots arranged as 5 rows of 5
@@ -182,9 +191,9 @@ items:
     B: Skips ahead to the next square number instead of the next rectangular grid.
     D: Repeats Frame 3 instead of extending the pattern.
   chapter: figure-series
+  figure: items/nmat-d-p1i-012.svg
 - id: nmat-d-p1i-013
-  q: 'Each frame shows a single arrow. Frame 1: a solid arrow pointing right. Frame 2: a hollow arrow
-    pointing down. Frame 3: a solid arrow pointing left. What does Frame 4 show?'
+  q: Each frame shows a single arrow. What does Frame 4 show?
   choices:
     A: a solid arrow pointing up
     B: a hollow arrow pointing up
@@ -198,9 +207,9 @@ items:
     C: Repeats Frame 2 instead of turning another quarter.
     D: Repeats Frame 3, ignoring both the turn and the change of fill.
   chapter: figure-series
+  figure: items/nmat-d-p1i-013.svg
 - id: nmat-d-p1i-014
-  q: 'Frame 1: a circle. Frame 2: a circle with a square drawn inside it. Frame 3: a circle with a square
-    inside it and a triangle inside the square. What does Frame 4 show?'
+  q: Each frame shows shapes nested inside one another. What does Frame 4 show?
   choices:
     A: a circle, a square, a triangle, and a smaller circle nested inside the triangle
     B: a circle, a square, a triangle, and a smaller square inside the triangle
@@ -214,10 +223,10 @@ items:
     C: The nesting grows inward, not outward.
     D: No shape is ever removed; each frame keeps every earlier shape.
   chapter: figure-series
+  figure: items/nmat-d-p1i-014.svg
 - id: nmat-d-p1i-015
-  q: 'A strip of six cells is numbered 1 to 6 from left to right. Frame 1: a black dot in cell 1 and a
-    white dot in cell 6. Each frame the black dot moves one cell right and the white dot one cell left.
-    What does Frame 4 show?'
+  q: Each frame shows a strip of six cells, numbered 1 to 6 from left to right, holding a black dot and
+    a white dot. What does Frame 4 show?
   choices:
     A: the black dot in cell 3 and the white dot in cell 4
     B: the black dot in cell 5 and the white dot in cell 2
@@ -231,9 +240,9 @@ items:
     B: Moves each dot two cells per frame instead of one.
     D: Assumes the dots merge when they cross; they pass through each other.
   chapter: figure-series
+  figure: items/nmat-d-p1i-015.svg
 - id: nmat-d-p1i-016
-  q: 'Frame 1: one small square. Frame 2: two identical squares side by side. Frame 3: four identical
-    squares arranged 2 by 2. What does Frame 4 show?'
+  q: Each frame shows identical small squares. What does Frame 4 show?
   choices:
     A: six identical squares arranged in two rows of three
     B: sixteen squares arranged 4 by 4
@@ -247,10 +256,9 @@ items:
     B: Squares the count instead of doubling it.
     C: Multiplies the count by 3 instead of by 2.
   chapter: figure-series
+  figure: items/nmat-d-p1i-016.svg
 - id: nmat-d-p1i-017
-  q: 'A circle is divided into four quadrants: north, east, south and west. Frame 1: the north quadrant
-    is shaded and a dot sits in the east quadrant. Each frame the shaded quadrant turns one step clockwise
-    while the dot turns one step counter-clockwise. What does Frame 4 show?'
+  q: 'A circle is divided into four quadrants: north, east, south and west. What does Frame 4 show?'
   choices:
     A: the west quadrant shaded and the dot in the south quadrant
     B: the east quadrant shaded and the dot in the north quadrant
@@ -266,9 +274,7 @@ items:
   chapter: figure-series
   figure: items/ir-seq-3d-s-r90.svg
 - id: nmat-d-p1i-018
-  q: 'Frame 1: a small upward-pointing triangle on the left half of the frame. Each frame the triangle
-    doubles in size and moves to the other half of the frame, and on every second frame it points downward.
-    What does Frame 4 show?'
+  q: Each frame shows a triangle on one half of the frame. What does Frame 4 show?
   choices:
     A: an extra-large upward-pointing triangle on the right half of the frame
     B: an extra-large downward-pointing triangle on the right half of the frame
@@ -282,6 +288,7 @@ items:
     C: Fails to swap halves; the triangle changes sides each frame.
     D: Repeats Frame 3, ignoring both the doubling and the flip.
   chapter: figure-series
+  figure: items/nmat-d-p1i-018.svg
 - id: nmat-d-p1i-019
   q: Which letter does not belong with the other three?
   choices:
@@ -362,7 +369,7 @@ items:
   chapter: figure-grouping
   figure: items/nmat-d-p1i-023.svg
 - id: nmat-d-p1i-024
-  q: 'Four capital letters are shown: N, M, Z and H. Which letter does not belong with the other three?'
+  q: Four capital letters are shown. Which letter does not belong with the other three?
   choices:
     A: N
     B: Z
@@ -375,6 +382,7 @@ items:
     B: 'Z is drawn with three straight strokes: two horizontals and one diagonal.'
     C: 'H is drawn with three straight strokes: two verticals and one crossbar.'
   chapter: figure-grouping
+  figure: items/nmat-d-p1i-024.svg
 - id: nmat-d-p1i-025
   q: Which figure is unlike the other three?
   choices:
