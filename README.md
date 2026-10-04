@@ -34,7 +34,7 @@
 | ✅ **Mock exams & progress tracking** | Real-mode full-length simulations (server-authoritative clocks, autosave with cross-out elimination, retake variants that reshuffle items and options, optional MCAT-style unscored field-test items, per-question review with data-driven difficulty badges), wrong-answer notebook with redo, study-plan generator, per-chapter progress |
 | 🖼️ **Real figures where the exam shows figures** | Diagram items render generated SVG art instead of describing panels in words — NMAT Part 1 inductive/perceptual panels (formal + drill banks fully plated), MCAT circuits, titration and kinetics plots, pedigrees, pathway maps |
 | 📊 **Score interpreter** | Convert mock-exam percentages to the NMAT 200–800 scale (with CHED 40th minimum and commonly cited percentile reference rows) or MCAT 118–132 sections — labeled planning estimates, no school names |
-| 🤖 **AI study coach, model-agnostic** | Explain / hint / quiz / grade modes, aware of your own miss record in the current chapter, grounded in whichever chapter you are reading. Any OpenAI-compatible endpoint or Anthropic API — admins add, edit, and switch models at runtime |
+| 🤖 **AI study coach, model-agnostic** | Explain / hint / quiz / grade modes, aware of your own miss record in the current chapter, grounded in the chapter's tutorial text. Mock and practice misses flow into spaced repetition automatically. Any OpenAI-compatible endpoint or Anthropic API — admins add, edit, and switch models at runtime |
 | 📁 **File-based content** | The entire curriculum is version-controlled YAML: edit, validate, push — no database migration, no build step |
 
 ## 📚 The curriculum at a glance
