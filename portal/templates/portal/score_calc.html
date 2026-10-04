@@ -134,7 +134,7 @@
       const pr = Math.max(1, Math.min(99, Math.round(normCdf(accZ) * 100)));
       const std = Math.max(200, Math.min(800, Math.round(500 + 100 * accZ)));
       document.getElementById("nmat-standard").textContent =
-        `Estimated standard score: ${Math.max(200, Math.min(800, std))} (scale 200–800)`;
+        `GPS-equivalent estimate: ${Math.max(200, Math.min(800, std))} (planning only — CEM reports APT/SA/GPS with percentile rank)`;
       document.getElementById("nmat-percentile").textContent =
         `Approximate percentile rank: ${Math.max(1, pr)} — ` +
         ((pr >= 95) ? "top-tier program range." :

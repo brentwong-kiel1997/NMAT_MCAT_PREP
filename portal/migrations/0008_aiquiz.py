@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name="AiQuiz",
             fields=[
-                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False)),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
                 ("chapter_id", models.CharField(blank=True, max_length=120)),
                 ("mode", models.CharField(choices=[("chapter", "chapter-grounded"), ("misses", "miss-grounded")], default="chapter", max_length=12)),
                 ("payload", models.JSONField(default=list)),

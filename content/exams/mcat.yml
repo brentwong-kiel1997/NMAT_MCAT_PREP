@@ -17,19 +17,45 @@ blueprint:
     label: Chemical and Physical Foundations
     seconds: 5700
     items: 59
-    bank: [chem-phys]
+    bank:
+    - chem-phys
+    break_before:
+      seconds: 600
+      label: 10-minute break (CP → CARS)
   - id: cars
     label: Critical Analysis and Reasoning Skills
     seconds: 5400
     items: 53
-    bank: [cars]
+    bank:
+    - cars
+    break_before:
+      seconds: 1800
+      label: 30-minute lunch break (CARS → Bio/Biochem)
+    skill_mix:
+      foundations-of-comprehension: 30
+      reasoning-within-the-text: 30
+      reasoning-beyond-the-text: 40
+    passage_words:
+    - 500
+    - 600
+    passage_domains:
+    - humanities
+    - social sciences
+    - ethics and philosophy
+    - diverse cultures
+    - population health
   - id: bio-biochem
     label: Biological and Biochemical Foundations
     seconds: 5700
     items: 59
-    bank: [bio-biochem]
+    bank:
+    - bio-biochem
+    break_before:
+      seconds: 600
+      label: 10-minute break (Bio/Biochem → Psych/Soc)
   - id: psych-soc
     label: Psychological, Social, and Biological Foundations
     seconds: 5700
     items: 59
-    bank: [psych-soc]
+    bank:
+    - psych-soc

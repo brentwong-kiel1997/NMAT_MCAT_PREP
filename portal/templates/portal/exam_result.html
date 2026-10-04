@@ -22,8 +22,16 @@
 <section class="section">
   <article class="practice-card">
     <h2>Section scores</h2>
+    {% if report_vocab %}
+    <p class="note-line">CEM reports <strong>APT</strong> (Part 1 composite), <strong>SA</strong>
+      (Part 2 composite) and <strong>GPS</strong> (eight-subtest composite), each on a 200–800
+      scale with percentile rank 1–99+. Forms are equated and never rechecked — the percentile
+      is what schools evaluate. Values below are planning estimates from this single sitting.</p>
+    <p><strong>APT ≈ {{ report_vocab.apt }}</strong> · <strong>SA ≈ {{ report_vocab.sa }}</strong> ·
+      <strong>GPS ≈ {{ report_vocab.gps }}</strong> (estimates)</p>
+    {% endif %}
     <table class="mini-table">
-      <thead><tr><th>Block</th><th>Correct</th><th>Items</th><th>%</th><th>Time used</th></tr></thead>
+      <thead><tr><th>Block</th><th>Correct</th><th>Items</th><th>%</th>{% if report_vocab %}<th>SS est.</th>{% endif %}<th>Time used</th></tr></thead>
       <tbody>
         {% for b in score.blocks %}
         <tr>
@@ -31,6 +39,11 @@
           <td>{{ b.correct }}/{{ b.items }}</td>
           <td>{{ b.items }}</td>
           <td>{{ b.pct }}%</td>
+          {% if report_vocab %}
+          <td>
+            {% for sub in b.subtests %}{% if sub.ss_est %}{{ sub.ss_est }}{% if not forloop.last %}/{% endif %}{% endif %}{% endfor %}
+          </td>
+          {% endif %}
           <td>{{ b.seconds_used }} s</td>
         </tr>
         {% endfor %}

@@ -529,3 +529,30 @@ def navigator(attempt: ExamAttempt, block_id: str) -> list[dict]:
         out.append({"pos": pos, "answered": bool(entry.get("c")),
                     "flagged": bool(entry.get("f"))})
     return out
+
+
+def gps_estimate(score: dict) -> dict | None:
+    """NMAT composite estimates from a score snapshot: per-subtest 200-800
+    standard scores on CEM's norm (mean 500 / SD 100) via a binomial z, then
+    the official APT / SA / GPS averages. Planning estimates only — CEM
+    equates forms and reports percentile rank, never these raw conversions.
+    Returns None for non-NMAT snapshots."""
+    import math
+
+    part_sss: dict[str, list] = {"part1": [], "part2": []}
+    seen = False
+    for b in score.get("blocks") or []:
+        part = "part1" if str(b.get("id") or "").startswith("part1") else "part2"
+        for sub in b.get("subtests") or []:
+            n, correct = sub.get("items") or 0, sub.get("correct") or 0
+            if n <= 0:
+                continue
+            seen = True
+            z = (correct - n * 0.25) / math.sqrt(n * 0.25 * 0.75)
+            part_sss[part].append(max(200, min(800, round(500 + 100 * z))))
+    if not seen or not part_sss["part1"] or not part_sss["part2"]:
+        return None
+    def avg(xs):
+        return round(sum(xs) / len(xs))
+    return {"apt": avg(part_sss["part1"]), "sa": avg(part_sss["part2"]),
+            "gps": avg(part_sss["part1"] + part_sss["part2"])}

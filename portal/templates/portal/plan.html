@@ -30,6 +30,11 @@
       </label>
       <label>Hours / week
         <input type="number" name="weekly_hours" min="1" max="80" value="{{ study_plan.weekly_hours|default:10 }}">
+      <label>
+        <span>Target GPS score (200–800, NMAT)</span>
+        <input type="number" name="target_score" min="200" max="800"
+               value="{{ study_plan.target_score|default:'' }}" placeholder="e.g. 600">
+      </label>
       </label>
       <button type="submit" class="btn btn-primary">Build plan</button>
     </form>

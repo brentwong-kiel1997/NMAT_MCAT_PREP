@@ -36,6 +36,11 @@
       <li>Results give per-section scores, full per-question review, and weak-chapter links back into the tutorials.</li>
       <li><strong>No calculator</strong> — exactly like the real exam. Practice your
         mental math and estimation; wrong answers here flow into your flashcard deck.</li>
+      {% if exam.id == "mcat" %}
+      <li>Full-length shape: <strong>6h15m of scored content, ~7h30m seated</strong> — the
+        two 10-minute breaks and the 30-minute lunch before Bio/Biochem are modeled in
+        this simulation.</li>
+      {% endif %}
     </ul>
 
     {% if active %}

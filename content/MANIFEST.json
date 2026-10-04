@@ -1,5 +1,5 @@
 {
-  "source_rev": "508d95b",
+  "source_rev": "2870829",
   "counts": {
     "chapters": 70,
     "note_bullets": 453,
@@ -118,7 +118,7 @@
     "exam-bank/nmat/part2-chemistry.yml": "1721c96e661a2bc6eb24b242abed728659400424906f8b4a4422436d09e4e82b",
     "exam-bank/nmat/part2-physics.yml": "151fe2bcf9ad44a57182f2903ecbfbe2132af14c53afe3dcbdb5714176ed71d1",
     "exam-bank/nmat/part2-social-science.yml": "6c54a7f6bfba9af29a98de549c00136e385e5f94713049927aef39c6f987f0ef",
-    "exams/mcat.yml": "058f37ee1fdc3b5bafc812650858fcd2bbe1e553a4d32fdbbcde1bc60f2fbca1",
+    "exams/mcat.yml": "cc94bfbd36858dc23d07fbcf9d2c873aac3512086d97b193f26849cfe33ae3a5",
     "exams/nmat.yml": "60350dd9dd8d797b148eb2c012448a754da93bcbc8b86d4a26945600ae2635c5",
     "materials/checklists.yml": "865d4d3cdf16c495007eca4064bca70dae79c7a6f2f8e21f0461d721ad7d74b9",
     "materials/formulas.yml": "299057213361d23c21d2d1bb183a0a1d26b6867baeef3550dee9e83012d678ec",

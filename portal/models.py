@@ -192,6 +192,12 @@ class StudyPlan(models.Model):
     exam = models.SlugField(max_length=20)
     exam_date = models.DateField()
     weekly_hours = models.PositiveIntegerField(default=10)
+    # NMAT GPS-equivalent target (200-800); drives the dashboard readiness readout
+    target_score = models.PositiveIntegerField(
+        null=True, blank=True,
+        help_text="Target GPS-equivalent score (NMAT 200-800 scale); "
+                  "drives the readiness readout on the dashboard",
+    )
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self) -> str:

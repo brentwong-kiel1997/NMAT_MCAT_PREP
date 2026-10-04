@@ -38,6 +38,17 @@
   </article>
   {% endif %}
 
+  {% if est_gps %}
+  <article class="practice-card" style="border-color:#3b5bdb;">
+    <h2>Readiness</h2>
+    <p>Latest NMAT mock estimates <strong>GPS ≈ {{ est_gps }}</strong> (planning estimate)
+      {% if target_score %}{% if est_gps >= target_score %}— <strong>at or above your {{ target_score }} target.</strong>
+        {% else %}— <strong>{{ target_score|floatformat:0 }} target:</strong> about {{ target_score|floatformat:0 }} vs {{ est_gps }} now.
+        {% endif %}{% endif %}
+      {% if latest_nmat_id %}<a href="{% url 'exam_result' latest_nmat_id %}">Report →</a>{% endif %}</p>
+    <p class="note-line">Planning estimates on CEM's 200–800 norm — never an official conversion.</p>
+  </article>
+  {% endif %}
   {% if history %}
   <article class="practice-card">
     <h2>Score trend</h2>

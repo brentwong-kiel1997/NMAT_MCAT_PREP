@@ -92,6 +92,19 @@ def dashboard(request):
     stats = srs_stats(request.user.username)
     has_real = ExamAttempt.objects.filter(profile=profile, exam__in=("nmat", "mcat"),
                                           mode="real").exclude(status="active").exists()
+    # readiness readout: latest NMAT mock's GPS estimate vs the plan target
+    est_gps, target_score, latest_nmat_id = None, None, None
+    latest_nmat = (ExamAttempt.objects.filter(profile=profile, exam="nmat",
+                                              mode="real")
+                   .exclude(status="active").order_by("-finished_at").first())
+    if latest_nmat and latest_nmat.score:
+        from .examsys import gps_estimate
+
+        est = gps_estimate(latest_nmat.score)
+        if est:
+            est_gps = est["gps"]
+            latest_nmat_id = latest_nmat.id
+            target_score = sp.target_score if sp else None
     from . import ai_briefs
 
     ai_brief = ai_briefs.daily_brief(
@@ -104,6 +117,9 @@ def dashboard(request):
         "ai_brief": ai_brief,
         "due_cards": stats["due_today"],
         "has_real_mock": has_real,
+        "est_gps": est_gps,
+        "target_score": target_score,
+        "latest_nmat_id": latest_nmat_id,
         "mock_recommended": not has_real,
         "subject_accuracy": [{"discipline": d, **v,
                               "pct": round(100 * v["correct"] / v["total"]) if v["total"] else 0}
@@ -266,9 +282,15 @@ def plan_save(request):
         weekly_hours = max(1, min(80, int(request.POST.get("weekly_hours") or 10)))
     except ValueError:
         weekly_hours = 10
+    try:
+        target = int(request.POST.get("target_score") or 0)
+        target = max(200, min(800, target)) if target else None
+    except ValueError:
+        target = None
     StudyPlan.objects.update_or_create(
         profile=profile,
-        defaults={"exam": exam, "exam_date": exam_date, "weekly_hours": weekly_hours})
+        defaults={"exam": exam, "exam_date": exam_date, "weekly_hours": weekly_hours,
+                  "target_score": target})
     return redirect("plan")
 
 

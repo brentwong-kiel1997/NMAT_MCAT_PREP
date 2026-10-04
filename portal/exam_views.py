@@ -103,7 +103,7 @@ def _nav_context(attempt: ExamAttempt, block_id: str) -> dict:
         "block_idx": idx,
         "remaining": examsys.remaining_seconds(attempt, block_id),
         "is_last_block": idx == len(blocks) - 1,
-        "break_before": (blocks[idx].get("break_before") if False else None),
+        "break_before": blocks[idx].get("break_before"),
     }
 
 
@@ -382,10 +382,28 @@ def exam_result(request, attempt_id: int):
                 "discipline": (chapter or {}).get("discipline", ""),
             })
 
+    # NMAT report vocabulary: per-subtest SS estimates + APT/SA/GPS composites
+    # (see examsys.gps_estimate — planning estimates only, CEM equates forms
+    # and evaluates on percentile rank).
+    report_vocab = None
+    if attempt.exam == "nmat":
+        report_vocab = examsys.gps_estimate(score)
+        if report_vocab:
+            for b in score.get("blocks") or []:
+                for sub in b.get("subtests") or []:
+                    n, correct = sub.get("items") or 0, sub.get("correct") or 0
+                    if n <= 0:
+                        continue
+                    import math
+
+                    z = (correct - n * 0.25) / math.sqrt(n * 0.25 * 0.75)
+                    sub["ss_est"] = max(200, min(800, round(500 + 100 * z)))
+
     return render(request, "portal/exam_result.html", {
         "attempt": attempt,
         "score": score,
         "review": review,
+        "report_vocab": report_vocab,
         "exam_name": (exam_defs().get(attempt.exam) or {}).get("name", attempt.exam),
     })
 
