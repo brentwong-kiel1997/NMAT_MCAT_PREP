@@ -469,7 +469,52 @@ def finalize(attempt: ExamAttempt, *, reason: str) -> ExamAttempt:
                 time_spent=entry.get("s"),
             ))
     ExamResponse.objects.bulk_create(rows, batch_size=500)
+    _queue_miss_srs(reloaded, index, rows)
     return reloaded
+
+
+def _queue_miss_srs(attempt: ExamAttempt, index: dict, rows) -> None:
+    """Full-length mock misses join the SRS deck, same as practice misses —
+    the highest-value misses should not skip spaced repetition. Wrapped so a
+    card problem can never break a submission. Field-test items are skipped:
+    their stems stay out of the learner's deck."""
+    try:
+        from .models import SrsCard
+
+        existing = set(SrsCard.objects.filter(
+            profile=attempt.profile).values_list("card_key", flat=True))
+        cards = []
+        for r in rows:
+            if r.correct or not r.chosen or r.is_field_test:
+                continue
+            item = index.get(r.item_id) or {}
+            stem = str(item.get("q") or "")[:400]
+            if not stem:
+                continue
+            card_key = f"exam:{r.item_id}"
+            if card_key in existing:
+                continue
+            existing.add(card_key)
+            cards.append(SrsCard(
+                profile=attempt.profile,
+                subject_slug=_chapter_subject(item.get("chapter") or ""),
+                card_key=card_key,
+                front=stem,
+                back=str(item.get("explain") or "")[:600],
+                chapter=str(item.get("chapter") or "")[:200],
+                due_date=timezone.localdate(),
+            ))
+        if cards:
+            SrsCard.objects.bulk_create(cards, batch_size=300, ignore_conflicts=True)
+    except Exception:
+        pass  # SRS failure must never break a submission
+
+
+def _chapter_subject(chapter_id: str) -> str:
+    from .content import chapters_store
+
+    ch = chapters_store().get(chapter_id) or {}
+    return ch.get("discipline") or ""
 
 
 def navigator(attempt: ExamAttempt, block_id: str) -> list[dict]:

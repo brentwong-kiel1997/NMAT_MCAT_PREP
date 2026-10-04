@@ -125,12 +125,14 @@
     document.getElementById("calc-nmat-out").hidden = exam !== "nmat";
     document.getElementById("calc-mcat-out").hidden = exam !== "mcat";
     if (exam === "nmat") {
-      // one consistent model: percentile derived from the same cohort
-      // accuracy assumption the accuracy column uses
-      const modelPct = Math.max(1, Math.min(99,
-        50 + (pct - 60) / 0.12 / 2.5));
-      const std = nmatStandard(modelPct);
-      const pr = nmatPercentile(modelPct);
+      // one consistent normal model: raw accuracy -> accuracy z-score (mean
+      // 0.60 / SD 0.12, the same cohort the accuracy column assumes) ->
+      // PR via the normal CDF, standard score = 500 + 100z (CEM's norm:
+      // mean 500 / SD 100). The old linear formula clamped everything above
+      // ~75% raw to PR 99 and contradicted the accuracy-needed table.
+      const accZ = (frac - 0.6) / 0.12;
+      const pr = Math.max(1, Math.min(99, Math.round(normCdf(accZ) * 100)));
+      const std = Math.max(200, Math.min(800, Math.round(500 + 100 * accZ)));
       document.getElementById("nmat-standard").textContent =
         `Estimated standard score: ${Math.max(200, Math.min(800, std))} (scale 200–800)`;
       document.getElementById("nmat-percentile").textContent =

@@ -1,13 +1,22 @@
 checklists:
 - id: nmat-day
   exam: NMAT
-  title: NMAT exam-day checklist
+  title: NMAT exam-day checklist (online CBT)
   items:
-  - Confirm permit and ID
-  - Arrive early; allow security time
+  - Run the secure-browser system check ahead of time — Windows laptop, working
+    webcam and mouse, stable connection (about 5 Mbps or better)
+  - Set up a quiet private room; you will verify identity with a webcam snapshot
+    of your face next to your ORIGINAL valid ID (recently expired IDs accepted,
+    photocopies are not)
+  - Prepare a small erasable whiteboard for scratch work — paper is not
+    allowed; keep phones and watches out of reach
   - 'Part 1: accuracy before speed; watch eye fatigue on perceptual items'
-  - 'Part 2: time-box each subject; mark hard items to revisit'
-  - Final sweep for unanswered items
+  - 'Part 2: time-box each subject against the on-screen countdown; mark hard
+    items to revisit'
+  - Know the rules — bottled water is allowed; restroom only inside the
+    official 10-minute break; a disconnect over about 20 minutes expires the
+    test link, so secure your connection first
+  - Final sweep for unanswered items before each part's timer runs out
 - id: mcat-day
   exam: MCAT
   title: MCAT exam-day checklist

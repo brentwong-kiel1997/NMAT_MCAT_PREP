@@ -1,5 +1,5 @@
 {
-  "source_rev": "5b625f4",
+  "source_rev": "508d95b",
   "counts": {
     "chapters": 70,
     "note_bullets": 453,
@@ -120,7 +120,7 @@
     "exam-bank/nmat/part2-social-science.yml": "6c54a7f6bfba9af29a98de549c00136e385e5f94713049927aef39c6f987f0ef",
     "exams/mcat.yml": "058f37ee1fdc3b5bafc812650858fcd2bbe1e553a4d32fdbbcde1bc60f2fbca1",
     "exams/nmat.yml": "60350dd9dd8d797b148eb2c012448a754da93bcbc8b86d4a26945600ae2635c5",
-    "materials/checklists.yml": "1b262cd84cfbd46d0f8999b043a740bc180cdd2b853b11d2bff4031337898583",
+    "materials/checklists.yml": "865d4d3cdf16c495007eca4064bca70dae79c7a6f2f8e21f0461d721ad7d74b9",
     "materials/formulas.yml": "299057213361d23c21d2d1bb183a0a1d26b6867baeef3550dee9e83012d678ec",
     "materials/glossary.yml": "169a4c4c4f42a052d249aa41b7157069328691798cc6d412634270b3aa208114",
     "materials/paths.yml": "234dd2770694ad666e1323535651b4d2c6bdb63569a80a9c87d842097f59f3bd",

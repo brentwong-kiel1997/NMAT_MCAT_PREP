@@ -283,6 +283,45 @@ class ExamEngineTests(TestCase):
         self.assertGreater(rows_ok, 0)
         self.assertEqual(rows_bad, 0)  # all-correct sitting renders all ✓
 
+    def test_mock_misses_flow_into_srs(self):
+        """Full-length mock misses join the SRS deck at finalize (same loop as
+        practice misses); field-test items are excluded."""
+        from .models import SrsCard
+
+        attempt = self._start()
+        block = attempt.plan["blocks"][0]
+        items = block["items"]
+        wrong_ids = items[:2]
+        # answer everything: first two items wrong, the rest right
+        from .content import exam_item_index
+        from .examsys import begin_block, save_answer, finish_block
+
+        index = exam_item_index(attempt.exam)
+        begin_block(attempt, block["id"])
+        for pos, item_id in enumerate(items, start=1):
+            correct = index[item_id]["answer"]
+            wrong_letter = "B" if correct != "B" else "C"
+            save_answer(attempt, block["id"], pos,
+                        wrong_letter if item_id in wrong_ids else correct, False, 5)
+        finish_block(attempt, block["id"])
+        # finish remaining blocks so finalize runs
+        for section in attempt.sections:
+            if section["id"] != block["id"]:
+                from .examsys import begin_block as bb, finish_block as fb
+                bb(attempt, section["id"])
+                b = next(b for b in attempt.plan["blocks"] if b["id"] == section["id"])
+                for pos, item_id in enumerate(b["items"], start=1):
+                    save_answer(attempt, section["id"], pos,
+                                index[item_id]["answer"], False, 5)
+                fb(attempt, section["id"])
+        attempt.refresh_from_db()
+        self.assertEqual(attempt.status, "submitted")
+        cards = SrsCard.objects.filter(profile=self.profile,
+                                       card_key__startswith="exam:")
+        seeded = {f"exam:{i}" for i in wrong_ids}
+        self.assertEqual({c.card_key for c in cards}, seeded)
+        self.assertEqual(cards.first().profile, self.profile)
+
     def test_zero_out_of_four_attempt_statuses(self):
         # finalize is idempotent: re-finalizing a closed attempt is a no-op
         from .examsys import finalize
