@@ -5,6 +5,10 @@ overview: 9B is population structure — demographic transition, pyramids, migra
   and graph questions. Prerequisite — 9A.
 sections:
 - heading: Demography's variables
+  objectives:
+  - Compute a population change from crude birth rate, crude death rate, and net migration.
+  - Explain population momentum from an age-structure argument.
+  - Distinguish a rate's numerator, denominator, and time base in a described measure.
   body:
   - Populations change through crude birth rate, crude death rate, and net migration. Population momentum
     — young age structures keep growing after fertility falls to replacement — explains why populations
@@ -23,7 +27,26 @@ sections:
       A: Growth is positive — not ZPG.
       B: Not a stage reversal.
       C: Catastrophe prediction.
+  - q: A country's CBR is 14 per thousand, CDR 9 per thousand, and net out-migration 3 per thousand. What
+      is the growth rate, and would a young age structure change the outlook?
+    options:
+      A: 5 per thousand growth; no, the rate is fixed
+      B: 2 per thousand growth; yes — a young age structure carries momentum and keeps growth positive
+        after fertility falls
+      C: 20 per thousand growth; migration must be excluded
+      D: Negative growth; births are below deaths
+    answer: B
+    explain: 14 - 9 - 3 = 2 per thousand now, and a broad-based age pyramid promises continued growth
+      even at replacement fertility.
+    distractors:
+      A: Momentum is precisely the reason the outlook is not fixed by the current rate.
+      C: Net migration is one of the three movers and must be included.
+      D: Births exceed deaths by 5 per thousand before migration.
 - heading: The demographic transition — four stages
+  objectives:
+  - Place a described country in a transition stage from its CBR and CDR pattern.
+  - Read a population pyramid's shape into a stage and growth trajectory.
+  - Name the structural drivers of the stage-3 fertility fall.
   body:
   - Stage 1 — high birth and death, flat. Stage 2 — death falls, growth explodes. Stage 3 — birth falls
     with urbanization and women's education, growth slows. Stage 4 — both low, flat or negative. The pyramid
@@ -41,6 +64,20 @@ sections:
       A: Wide base marks high fertility.
       B: That is a wide base.
       D: Cannot be read from shape alone.
+  - q: A country has CBR 30 per thousand and CDR 7 per thousand, with a very wide pyramid base. Which
+      stage, and what explains the gap?
+    options:
+      A: Stage 1 — both rates high
+      B: Stage 2 — death rates have fallen (sanitation, medicine) while birth rates remain high
+      C: Stage 3 — fertility has fallen with education
+      D: Stage 4 — both rates low
+    answer: B
+    explain: 'A large CBR-CDR gap plus a broad base is the stage-2 signature: mortality control arrived
+      first.'
+    distractors:
+      A: Stage 1 has high CDR as well; a rate of 7 is not high.
+      C: Stage 3 requires a falling CBR, which is not shown.
+      D: Both rates low contradicts a CBR of 30.
   figures:
   - src: 9b-demographic-characteristics-and-processes/fig-bf16bc2f.webp
     caption: Population pyramid — age-sex structure by country and demographic stage.
@@ -49,6 +86,10 @@ sections:
     caption: Demographic transition — the shift from high to low birth and death rates.
     credit: Fig 20.3 · OpenStax Introduction to Sociology 3e — CC BY-NC-SA 4.0
 - heading: Migration and urbanization
+  objectives:
+  - Classify a described mover's motivation as push or pull, and the movement as voluntary or forced.
+  - Explain chain migration and remittance flows in a described community.
+  - Distinguish urbanization, sprawl, and gentrification in a described city change.
   body:
   - Push (conflict, decline) vs. pull (jobs, safety); chain migration via settled kin; remittances flow
     back. Urbanization — sprawl and gentrification as applied edges.
@@ -65,7 +106,26 @@ sections:
       A: Motivating conditions.
       B: Movement away from cities.
       D: Skilled-emigration loss — different.
+  - q: A nurse emigrates for a higher salary, and two cousins follow her into the same hospital over the
+      next five years. Name the concepts and the direction of the money flow.
+    options:
+      A: Push factors and forced displacement; money flows outward from the origin
+      B: Pull factor (wages) plus chain migration via kin networks; remittances flow back to the origin
+        households
+      C: Brain drain and remittances are unrelated here
+      D: Counterurbanization; no money moves
+    answer: B
+    explain: Attractive wages pull, established kin channel later movers, and earnings return home as
+      remittances.
+    distractors:
+      A: Nothing forced the move, and the money runs back toward the origin, not away.
+      C: Kin-chained skilled emigration IS the brain-drain pattern described, so the two are linked.
+      D: Movement toward an employment center is urbanizing, not counterurbanizing.
 - heading: Demographic data sources and measurement
+  objectives:
+  - Match a data need to its source — census, vital statistics, or survey — with its characteristic bias.
+  - Compute and compare age-standardized rather than crude rates for two populations.
+  - Explain why crude rates mislead when age structures differ.
   body:
   - Demographic measures come from specific instruments — a **census** counts everyone at a point in time
     (complete but expensive); **vital statistics** register births and deaths continuously; **surveys**
@@ -89,18 +149,51 @@ sections:
       A: Crude rates are confounded here.
       C: Birth rate is a different variable.
       D: Irrelevant.
+  - q: Country A (young population) shows a lower crude death rate than Country B (old population). Which
+      comparison is valid, and why?
+    options:
+      A: The crude comparison is valid — death is death
+      B: Only an age-standardized comparison is valid — crude rates fold age structure into mortality
+      C: Compare birth rates instead; they are age-neutral
+      D: Compare population sizes; bigger means healthier
+    answer: B
+    explain: Age is the dominant mortality determinant, so unequal structures must be standardized away
+      before rates are comparable.
+    distractors:
+      A: The crude difference largely reflects who is old, not how well they are treated.
+      C: Birth rates answer a different question entirely.
+      D: Population size carries no health information.
 examples:
 - prompt: Match three pyramids — wide-based triangle, constricting-base diamond, inverted top-heavy —
     to stages and trajectories.
+  strategy: Read the base first. The base encodes recent fertility, the upper bars encode survival history,
+    and together they place the country in a transition stage and give the growth trajectory.
   solution:
   - Wide base — Stage 2, explosive growth.
   - Constricting base — Stage 3, decelerating.
   - Top-heavy — Stage 4, flat-to-negative with elder-support pressure.
   answer: Stage 2/3/4 with explosive → decelerating → flat-to-negative.
+  discussion: 'Pyramid reading generalises to any age-structured question: the same shape predicts future
+    school demand, workforce size, and elder-care burden decades ahead. Momentum means today''s base is
+    tomorrow''s bulge — which is why policy acts on births now and on aging later.'
   distractors:
     A: All Stage 1 — shapes differ.
     B: Swapping middle and late — the base distinguishes.
     C: Migration as driver — stages are birth/death-driven.
+  practice:
+    q: A pyramid shows a narrow base, a bulge at ages 45-60, and a wide top. Which reading follows?
+    options:
+      A: High fertility with explosive growth
+      B: Below-replacement fertility now, with a large cohort entering old age and rising dependency pressure
+      C: A Stage 2 population with momentum
+      D: Data error — pyramids cannot be top-heavy
+    answer: B
+    explain: A constricted base means current births are below replacement, while the mid-life bulge ages
+      into the elder tier within two decades.
+    distractors:
+      A: A wide base would be required for that reading.
+      C: Stage 2 populations have broad bases.
+      D: Top-heavy pyramids are common in late-transition nations.
 key_points:
 - Three movers — birth, death, migration; momentum delays.
 - Transition stages 1-4 and the pyramid each implies.

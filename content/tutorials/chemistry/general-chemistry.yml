@@ -6,6 +6,10 @@ overview: This is the NMAT-wide survey chapter — atomic structure and periodic
   NMAT tests it directly. Every other chemistry chapter builds on these fundamentals.
 sections:
 - heading: Atomic structure — the nuclear atom
+  objectives:
+  - Determine proton, neutron, and electron counts from Z, A, and charge.
+  - Explain what isotopes share and in what they differ.
+  - Apply the Aufbau, Hund, and Pauli rules to build a configuration.
   body:
   - The atom is a dense positive nucleus (protons + neutrons) orbited by electrons. The atomic number
     Z equals the number of protons and defines the element's identity; the mass number A equals protons
@@ -26,11 +30,27 @@ sections:
       B: That is 19 electrons — potassium.
       C: That is 16 electrons — sulfur.
       D: That is the noble gas after chlorine.
+  - q: The ion 40/20 Ca2+ contains…
+    options:
+      C: 20 protons, 20 neutrons, 18 electrons
+      A: 20 protons, 20 neutrons, 22 electrons
+      B: 18 protons, 22 neutrons, 18 electrons
+      D: 40 protons and 20 electrons
+    answer: C
+    explain: Z = 20 protons never change; N = 40 - 20 = 20; the 2+ charge removes two electrons for 18.
+    distractors:
+      A: Adding the charge instead of subtracting it.
+      B: Changing the proton count, which would change the element.
+      D: Reading A as the proton count.
   figures:
   - src: general-chemistry/chem-fig-1.webp
     caption: The periodic table — trends in atomic radius, ionization energy, and electronegativity.
     credit: OpenStax Chemistry 2e — CC BY-NC-SA 4.0
 - heading: The periodic table — trends as the master map
+  objectives:
+  - Predict how radius, ionization energy, and electronegativity change across a period.
+  - Rank elements by a named trend within a group or period.
+  - Predict the ion a main-group element forms from its position.
   body:
   - Periodic trends are the highest-yield chemistry facts. Atomic radius decreases across a period (more
     protons pull electrons tighter) and increases down a group (more shells). Ionization energy follows
@@ -51,7 +71,23 @@ sections:
       A: Na is furthest left — lowest IE.
       B: Mg is second from left.
       C: Al is third from left.
+  - q: Rank sodium, magnesium, and chlorine by atomic radius.
+    options:
+      B: Na > Mg > Cl
+      A: Cl > Mg > Na
+      C: Mg > Na > Cl
+      D: All three are about the same, being in one period
+    answer: B
+    explain: Radius decreases left to right across a period as nuclear charge pulls the same shell tighter.
+    distractors:
+      A: Reversing the trend.
+      C: No trend puts magnesium ahead of sodium here.
+      D: Same shell does not mean same radius — the nuclear charge differs.
 - heading: Bonding — ionic, covalent, metallic
+  objectives:
+  - Predict bond type from an electronegativity difference.
+  - Draw a Lewis structure and count the electron domains.
+  - Assign molecular geometry from a VSEPR domain count.
   body:
   - Bond type follows electronegativity difference. Large difference (greater than 1.7) gives ionic (electron
     transfer, lattice of ions); small difference gives covalent (sharing); zero (two nonmetals) gives
@@ -73,7 +109,24 @@ sections:
       A: That is CO2.
       B: Three bonds only would miss the lone pair.
       D: That is PCl5.
+  - q: How many electron domains does the oxygen in H2O have, and what is the molecular shape?
+    options:
+      C: Four domains; the shape is bent
+      A: Two domains; the shape is linear
+      B: Four domains; the shape is tetrahedral
+      D: Three domains; the shape is trigonal planar
+    answer: C
+    explain: Two bonds plus two lone pairs make four domains (tetrahedral electron geometry), but only
+      the atoms count for shape — bent.
+    distractors:
+      A: Counting bonds and ignoring the lone pairs.
+      B: Confusing electron-domain geometry with molecular shape.
+      D: Missing one lone pair.
 - heading: The mole, formulas, and stoichiometry
+  objectives:
+  - Convert between grams, moles, and particles with molar mass and Avogadro's number.
+  - Identify the limiting reagent in a reaction mixture.
+  - Calculate theoretical and percent yield from a balanced equation.
   body:
   - The mole is Avogadro's number (6.022 times 10 to the 23rd) of particles. Molar mass in grams per mole
     equals the formula mass in amu. Every stoichiometry problem is a three-step bridge — grams to moles,
@@ -93,7 +146,24 @@ sections:
       A: 11.2 / 44.8 — wrong molar volume.
       B: 11.2 / 11.2 — coincidence trap.
       C: 11.2 / 5.6 — inverted.
+  - q: For 2 H2 + O2 -> 2 H2O, a mixture holds 4.0 g of H2 and 16 g of O2. What forms?
+    options:
+      B: O2 is limiting; 18 g of water forms
+      A: H2 is limiting; 36 g of water forms
+      C: O2 is limiting; 36 g of water forms
+      D: Neither is limiting; 36 g of water forms
+    answer: B
+    explain: O2 gives 0.50 mol, enough for 1.0 mol H2O; H2 gives 2.0 mol, enough for 2.0 mol — so oxygen
+      limits and 18 g forms.
+    distractors:
+      A: The 2.0 mol of hydrogen is more than the 1.0 mol of water the oxygen allows.
+      C: Using a 1:1 ratio instead of the 1:2 oxygen-to-water ratio.
+      D: The mixture is not stoichiometric — oxygen runs out first.
 - heading: Solutions and acid-base chemistry
+  objectives:
+  - Prepare a solution of a target molarity from a solid or a stock.
+  - Predict solubility from the solubility rules.
+  - Convert between a strong acid's concentration and the pH.
   body:
   - Molarity M equals moles solute per liter solution. Dilution follows M1V1 = M2V2. Most nitrate, sodium,
     potassium, and ammonium salts dissolve; most carbonate, phosphate, and sulfide salts precipitate.
@@ -113,22 +183,55 @@ sections:
       A: That is pH of 0.1 M.
       B: That is pOH, not pH.
       C: That is maximum basicity.
+  - q: What mass of NaOH (40.0 g/mol) is needed for 500 mL of 0.20 M solution?
+    options:
+      C: 4.0 g
+      A: 0.10 g
+      B: 8.0 g
+      D: 40 g
+    answer: C
+    explain: n = 0.20 x 0.500 = 0.10 mol, so m = 0.10 x 40.0 = 4.0 g.
+    distractors:
+      A: Reporting the moles as if they were grams.
+      B: Using 1.0 L as the volume.
+      D: Treating 0.20 M as 1.0 mol.
   figures:
   - src: general-chemistry/acidbase-b523238d.webp
     caption: Acid-base indicators — color changes across the pH scale.
     credit: Fig 14.3 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
 examples:
 - prompt: How many grams of CO2 form from 5.0 g of CH4 burned in excess O2?
+  strategy: 'Run the three-step bridge: grams of CH4 to moles (divide by 16.0), moles of CH4 to moles
+    of CO2 (the 1:1 coefficient ratio), then moles of CO2 to grams (multiply by 44.0). Balance the equation
+    first — the coefficients ARE the mole ratio, and nothing downstream works without them.'
   solution:
   - 'Balance: CH4 + 2O2 -> CO2 + 2H2O'
   - Moles CH4 = 5.0 g / 16.0 g/mol = 0.3125 mol
   - 'Stoichiometry: 1 mol CH4 -> 1 mol CO2'
   - Mass CO2 = 0.3125 mol times 44.0 g/mol = 13.75 g
   answer: 13.75 g of CO2.
+  discussion: '13.75 g from 5.0 g of fuel looks wrong until you remember each CO2 carries two oxygens
+    taken from O2 — mass is conserved only once that oxygen is counted. Sanity check with the mass ratio
+    alone: 44/16 = 2.75, and 5.0 x 2.75 = 13.75. Note also that methane is the limiting reagent here because
+    the oxygen is in excess; a limiting-oxygen version of the same item would be capped by the O2 instead.'
   distractors:
     A: Using grams directly without converting to moles — 5.0 g.
     B: Using the wrong molar mass for CH4 — 18.3 g.
     C: Dividing instead of multiplying — 0.089 g.
+  practice:
+    q: For C3H8 + 5 O2 -> 3 CO2 + 4 H2O, how many grams of water (18.0 g/mol) form from 11.0 g of propane
+      (44.0 g/mol) in excess oxygen?
+    options:
+      D: 18 g
+      A: 11 g
+      B: 1.1 g
+      C: 72 g
+    answer: D
+    explain: 0.25 mol propane x 4 = 1.0 mol water = 18 g.
+    distractors:
+      A: Assuming a 1:1 mass ratio between fuel and water.
+      B: Dividing by the coefficient instead of multiplying (0.0625 mol).
+      C: Multiplying the water molar mass by 4 without the mole conversion.
 key_points:
 - Z = protons = identity; A = protons + neutrons; isotopes differ in neutrons only.
 - Periodic trends — radius decreases across and increases down; IE and EN increase across, decrease down.

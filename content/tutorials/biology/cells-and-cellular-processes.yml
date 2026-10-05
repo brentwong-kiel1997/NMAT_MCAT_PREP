@@ -8,6 +8,10 @@ overview: 'Chapter 1 named the cell as the lowest level where all life-propertie
   and energy flow. Prerequisite: Unity and Diversity of Life (levels of organization).'
 sections:
 - heading: Cell theory and the two architectures
+  objectives:
+  - State the three claims of cell theory and the evidence behind each.
+  - Distinguish prokaryotic from eukaryotic architecture by named features.
+  - Explain what compartmentalisation buys a eukaryotic cell.
   body:
   - Three statements make up the **cell theory**, and each has been an exam stem at one time or another
     — all living things are made of one or more cells; the cell is the basic unit of structure and function;
@@ -40,7 +44,24 @@ sections:
       B: Naked-but-organized DNA is a normal architecture, not damage.
       C: Even during division, eukaryotic DNA stays within the nuclear-envelope lineage; a naked nucleoid
         is not a eukaryotic state.
+  - q: A newly discovered organism is found to possess membrane-bound organelles including mitochondria.
+      The conclusion is…
+    options:
+      B: It is a eukaryote — membrane-bound organelles are the signature
+      A: It is a bacterium with an unusually complex wall
+      C: It is a virus with a complex envelope
+      D: It is an archaeon, which also keeps organelles
+    answer: B
+    explain: Membrane-bound compartments define the eukaryotic plan; bacteria and archaea lack them.
+    distractors:
+      A: Prokaryotes carry no membrane-bound organelles, whatever their wall.
+      C: Viruses are not cellular at all.
+      D: Archaea are prokaryotes and have no mitochondria.
 - heading: 'Organelles: a division of labor'
+  objectives:
+  - Assign each organelle to its department and to its product's destination.
+  - Trace a secreted protein through the endomembrane system.
+  - Use double membranes and own DNA as evidence for endosymbiosis.
   body:
   - Treat the organelles as departments, not a list to memorize. **Ribosomes** translate mRNA into protein
     in every cell type. The **rough ER** studded with ribosomes folds and checks proteins destined for
@@ -98,6 +119,18 @@ sections:
       A: Lysosomes digest; they do not export.
       B: Secreted proteins never swim free in the cytosol — that is the point of the vesicle system.
       C: The nucleus stores DNA; proteins are not modified there.
+  - q: A cell must detoxify a lipid-soluble drug and release stored calcium. Which organelle does both?
+    options:
+      B: Smooth ER
+      A: Rough ER
+      C: Lysosome
+      D: Golgi apparatus
+    answer: B
+    explain: Lipid metabolism, drug detoxification, and calcium storage are all smooth-ER departments.
+    distractors:
+      A: The rough ER's ribosomes fold secreted proteins; detoxification is not its job.
+      C: Lysosomes digest material brought to them.
+      D: The Golgi modifies and ships; it does not detoxify.
   figures:
   - src: cells-and-cellular-processes/animal-cell.webp
     caption: A typical animal cell — nucleus, ER, Golgi, mitochondria, and the cytoskeleton in place.
@@ -107,6 +140,10 @@ sections:
       animal cells.
     credit: Fig 4.8(b) · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Membranes and transport
+  objectives:
+  - Classify a transport mode by whether it costs ATP.
+  - Predict water movement from a solution's tonicity.
+  - Explain the sodium-potassium pump's stoichiometry and purpose.
   body:
   - The **fluid mosaic** membrane is a phospholipid bilayer with embedded proteins, and its logic is selective
     permeability — small nonpolar molecules cross freely; ions and polar molecules need help. Every transport
@@ -134,11 +171,28 @@ sections:
       A: Isotonic means no net movement.
       B: Hypertonic pulls water OUT — the cell would shrink.
       D: '''Active'' is not a tonicity term.'
+  - q: A plant cell is placed in a hypertonic solution. What happens?
+    options:
+      D: Water leaves and the membrane pulls away from the wall — plasmolysis
+      A: Water enters and the cell presses firmly against its wall
+      B: The cell lyses, since plant cells lack a wall
+      C: Nothing — plant cells are always isotonic with their surroundings
+    answer: D
+    explain: Hypertonic means higher solute outside, so water exits and the protoplast shrinks from the
+      wall.
+    distractors:
+      A: That is the hypotonic, turgid case.
+      B: Plant cells have walls; animal cells lyse in hypotonic solution.
+      C: Tonicity describes the solution, not a plant property.
   figures:
   - src: cells-and-cellular-processes/plasma-membrane.webp
     caption: The fluid mosaic — phospholipid bilayer with integral and peripheral proteins.
     credit: Fig 4.9 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Energy flow and ATP coupling
+  objectives:
+  - Explain how ATP couples an exergonic reaction to an endergonic one.
+  - Place glycolysis, the Krebs cycle, and the electron transport chain in their compartments.
+  - Describe how chemiosmosis turns a proton gradient into ATP.
   body:
   - Cells do work by **coupling** — they run an exergonic reaction (like ATP hydrolysis, releasing energy
     as a phosphate is removed) and strap it to an endergonic one that would not proceed alone. ==ATP is
@@ -167,11 +221,28 @@ sections:
       B: Glycolysis is cytosolic — the chain is not.
       C: The nucleus is not an energy organelle.
       D: Lysosomes digest; they hold no electron chain.
+  - q: A compound collapses the proton gradient across the inner mitochondrial membrane. ATP synthase
+      output…
+    options:
+      D: Falls toward zero, since the gradient is its driving force
+      A: Rises, since more protons are now flowing through
+      B: Is unchanged, because ATP synthase runs on ATP directly
+      C: Stops glycolysis immediately
+    answer: D
+    explain: Remove the gradient and the turbine has no flow to turn — the classic uncoupler effect.
+    distractors:
+      A: Protons now leak elsewhere; flow through synthase falls.
+      B: ATP synthase makes ATP; it does not consume it.
+      C: Glycolysis is cytosolic and keeps running until NAD+ runs out.
   figures:
   - src: cells-and-cellular-processes/mitochondrion.webp
     caption: Transmission electron micrograph — outer membrane, folded cristae, matrix.
     credit: Fig 4.14 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Why cells stay small — surface area to volume
+  objectives:
+  - Compute how surface area and volume scale with linear size.
+  - Predict which shapes maximise the surface-to-volume ratio.
+  - Identify exchange-surface adaptations as surface-to-volume solutions.
   body:
   - As a cell grows, volume increases faster than surface area (area goes with the square, volume with
     the cube). Everything the cell needs must cross the surface while metabolism scales with volume, so
@@ -195,9 +266,25 @@ sections:
       A: Ratio tracking is not linear — compute both scalings.
       B: They scale differently, so the ratio cannot stay fixed.
       D: That would require area to outgrow volume, which never happens with pure enlargement.
+  - q: A cube-shaped cell has each side halved. Its surface-to-volume ratio…
+    options:
+      C: Doubles, since area scales with the square and volume with the cube
+      A: Halves
+      B: Is unchanged
+      D: Quadruples
+    answer: C
+    explain: Area becomes 1/4 of the original and volume 1/8, so the ratio doubles.
+    distractors:
+      A: That is the direction of growth, not shrinkage.
+      B: The two quantities scale differently, so the ratio must move.
+      D: Doubling, not quadrupling — check both scalings.
 examples:
 - prompt: A pancreatic cell secretes a digestive enzyme. Trace the enzyme's path from mRNA to release,
     and identify the membrane each crossing uses.
+  strategy: 'Start at the destination and work backwards: a secreted protein must end up outside the cell,
+    so it must enter the endomembrane system at the rough ER and never dissolve in the cytosol. The plan
+    is to name the route — ER lumen, Golgi, secretory vesicle, exocytosis — and the N-terminal signal
+    sequence that docks the ribosome on the ER in the first place.'
   solution:
   - A ribosome docked on the ROUGH ER translates the protein directly into the ER lumen — the first membrane
     system is entered, not crossed freely.
@@ -208,10 +295,29 @@ examples:
   - Note what never happened — the protein never dissolved in the cytosol, and never entered the nucleus.
   answer: mRNA → rough ER (entry via signal sequence) → Golgi → secretory vesicle → exocytosis through
     the plasma membrane.
+  discussion: 'The decisive point is that the protein crosses no membrane freely — it is threaded into
+    the ER lumen as it is synthesised and then travels entirely inside vesicles, so the cytosol never
+    sees it. Note the sorting logic: the same highway carries lysosomal enzymes, but a mannose-6-phosphate
+    tag added in the Golgi diverts those to the lysosome instead of the surface, which is how one route
+    serves many destinations. A free cytosolic ribosome making this protein would be the error — that
+    happens only for proteins meant to stay in the cytosol.'
   distractors:
     A: Cytosolic ribosomes make CYTOSOLIC proteins; a secretory protein's ribosome docks on the ER first.
     B: Lysosomes are the destination for incoming material, not outgoing enzyme export.
     C: The nucleus exports RNA, not proteins; proteins enter only in special signaled cases.
+  practice:
+    q: A different protein is meant to remain dissolved in the cytosol. Where is it made?
+    options:
+      D: On free ribosomes, with no entry into the ER
+      A: On the rough ER, then sorted back to the cytosol
+      B: Inside the Golgi, then released into the cytosol
+      C: In the nucleus, then exported through a pore
+    answer: D
+    explain: No signal sequence means no ER docking — the protein is made where it will live.
+    distractors:
+      A: ER entry commits a protein to the secretory route.
+      B: The Golgi sorts proteins that already carry the ER-made tag.
+      C: Proteins are not made in the nucleus.
 key_points:
 - Cell theory — all life is cellular; the cell is the basic unit; cells come only from cells.
 - Compartmentalization is the eukaryotic advantage; prokaryotes run the same chemistry without membrane-bound

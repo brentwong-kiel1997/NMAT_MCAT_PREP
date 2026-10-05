@@ -5,6 +5,9 @@ overview: The literal layer of CARS — main idea, paragraph function, detail lo
   how precisely you read, not what you knew before. All answers must come from the passage.
 sections:
 - heading: The CARS game — what is actually asked
+  objectives:
+  - Identify the question family a stem belongs to (main idea, detail, function, tone, inference, beyond).
+  - Restrict every answer to assertions the passage itself makes, rejecting outside knowledge.
   body:
   - ==CARS passages are argumentative; every question rewards EXACT reading of the passage, never outside
     knowledge==. ==Question families — main idea, detail, inference (within), function, tone, and reasoning-beyond
@@ -24,7 +27,25 @@ sections:
       B: Not available.
       C: No such pattern is reliable.
       D: Correct.
+  - q: 'Mini-passage: ''The 1918 influenza killed unusually many young adults; historians long blamed
+      wartime malnutrition. Recent archival work notes the first wave struck in spring, before rationing
+      tightened.'' A CARS item asks why young adults died. The defensible answer is drawn from…'
+    options:
+      A: General immunological knowledge about age and immunity
+      B: Whatever the passage itself argues — here the timing point against the malnutrition account
+      C: The most common answer letter on past exams
+      D: The older historians' account, restated as settled fact
+    answer: B
+    explain: The passage supplies one candidate explanation and one piece of counter-evidence; the answer
+      must live inside that material.
+    distractors:
+      A: Outside science is exactly what CARS excludes.
+      C: No letter pattern is reliable on a reasoning test.
+      D: The passage presents the older account as challenged, not settled.
 - heading: Main idea — thesis hunting
+  objectives:
+  - Locate the thesis using paragraph-initial, contrast-marked, and closing positions.
+  - Reject main-idea answers as too narrow, too broad, outside the passage, or reversed.
   body:
   - ==Thesis signals — the first paragraph's last sentence, the closing paragraph, contrast markers (however,
     yet, but) that pivot the argument==. ==The main idea = the author's central claim — usually one paragraph's
@@ -45,7 +66,25 @@ sections:
       B: Usually explicit.
       C: Not typical.
       D: Correct.
+  - q: 'Mini-passage: ''Cities are replacing lawns with native planting, and supporters cite lower water
+      use. But native plots draw objections from residents accustomed to mown grass, and several councils
+      have scaled back their ordinances after complaints.'' The main idea is…'
+    options:
+      A: Native planting uses less water than lawn
+      B: Residents' objections are always justified
+      C: Municipal native-planting policy has been curtailed where it collides with residents' expectations
+      D: Lawns should be prohibited outright
+    answer: C
+    explain: 'The ''But'' pivot carries the claim: the policy retreats when it meets expectations, not
+      merely that planting saves water.'
+    distractors:
+      A: That is the framing sentence, not the claim.
+      B: Nothing in the passage evaluates the objections' merit.
+      D: The author proposes no prohibition.
 - heading: Paragraph function — the roadmap layer
+  objectives:
+  - Name the job a paragraph does for the argument (introduce, exemplify, contrast, qualify, conclude).
+  - Build the passage's skeleton from first and last sentences of each paragraph.
   body:
   - ==Every paragraph does a job — introduce, define, exemplify, contrast, refute, qualify, transition,
     conclude==. ==Function items ask what the paragraph DOES for the argument, not what it says==
@@ -65,7 +104,25 @@ sections:
       B: Not the close.
       C: No second position shown.
       D: Correct.
+  - q: 'Mini-passage: ''Serial recall falls steadily as list length rises. This is no laboratory artifact
+      — telephone numbers, seed orders, and milling instructions all show the same ceiling. Still, the
+      ceiling lifts when items are chunked.'' The middle sentence functions to…'
+    options:
+      A: Refute the first sentence's claim
+      B: Generalize the finding beyond the laboratory
+      C: Introduce the passage's thesis
+      D: Define the term 'chunking'
+    answer: B
+    explain: It supplies everyday instances, extending the laboratory result's reach — the exemplification
+      move.
+    distractors:
+      A: No contradiction is offered; the instances agree with the finding.
+      C: The thesis arrives in the final, qualified sentence.
+      D: No definition is given — chunking is only named.
 - heading: Detail location and accuracy
+  objectives:
+  - Relocate the exact sentence a detail item targets before comparing options.
+  - Detect one-word scope, degree, or polarity changes between passage and answer.
   body:
   - ==Detail items point at specific claims — relocate the exact sentence, then paraphrase precisely==.
     ==The trap — answer choices that change ONE word (scope, degree, or polarity) of the passage's claim==
@@ -85,7 +142,23 @@ sections:
       B: Correct.
       C: It is stronger, not milder.
       D: All exceeds most.
+  - q: 'Mini-passage: ''Most coastal towns rebuilt their storm-damaged piers; a few declined, citing insurance
+      costs.'' A detail item asks which towns rebuilt. The supported answer is…'
+    options:
+      A: All coastal towns rebuilt
+      B: Most, though a minority declined on insurance grounds
+      C: None rebuilt
+      D: Only towns without insurance rebuilt
+    answer: B
+    explain: '''Most ... a few declined'' must be preserved exactly — the answer cannot upgrade the quantifier.'
+    distractors:
+      A: '''Most'' is not ''all''; the minority is dropped.'
+      C: Reverses the passage outright.
+      D: The passage gives no insurance status for the rebuilders.
 - heading: Tone and attitude
+  objectives:
+  - Map evaluative adjectives and adverbs to a tone label.
+  - Reject tone answers that are too strong, too weak, or reversed relative to the passage's language.
   body:
   - '==Tone items — map adjectives and adverbs: approving, skeptical, neutral, critical, ambivalent==.
     ==The acid test — the author''s attitude must be evidenced in the PASSAGE, not your feelings about
@@ -106,20 +179,59 @@ sections:
       B: Bold blocks hostility.
       C: Correct.
       D: Impractical blocks approval.
+  - q: 'Mini-passage: ''The committee''s report concedes its sample was small before urging national adoption
+      — an admirably candid move, and, frankly, not one the evidence has earned.'' The tone toward the
+      report is…'
+    options:
+      A: Wholly dismissive
+      B: Mixed — crediting its candour while doubting the reach of its recommendation
+      C: Purely neutral description
+      D: Enthusiastically supportive
+    answer: B
+    explain: '''Admirably candid'' grants credit; ''not one the evidence has earned'' withholds agreement
+      — the ambivalence is explicit.'
+    distractors:
+      A: The praise clause blocks pure dismissal.
+      C: Evaluative vocabulary appears on both sides.
+      D: The second clause is a clear reservation.
 examples:
 - prompt: 'Passage opening: ''Urban beekeeping is usually presented as a purely environmental success.
     But the hives also concentrate pesticide exposure in densely planted neighborhoods, and city ordinances
     rarely account for it.'' Ask: the main idea of these two sentences.'
+  strategy: 'Find the pivot before stating the thesis. The contrast marker (''But'') is the hinge: the
+    material before it is framing the author is setting up to qualify, and the claim lives in the clause
+    after it.'
   solution:
   - The pivot is 'But' — the claim shifts after it.
   - First sentence gives the common framing (environmental success).
   - Second sentence is the author's counter — the concentration risk.
   - 'Main idea: the environmental framing obscures a real pesticide concentration problem.'
   answer: The author argues that urban beekeeping's known benefits hide a less-considered pesticide risk.
+  discussion: 'The method generalises to any passage: a main idea that covers only the pre-pivot framing
+    is the classic too-narrow answer. Track each sentence as framing, evidence, or counter, and build
+    the thesis from what the author asserts — when two options both look plausible, prefer the one carrying
+    the author''s qualification.'
   distractors:
     A: Beekeeping is harmless — opposite of the passage.
     B: Ordinances must ban beekeeping — too strong, no ban proposed.
     C: Beekeeping is good for cities — only the first sentence.
+  practice:
+    q: 'Mini-passage: ''Later school start times are usually defended on grounds of adolescent sleep.
+      But the change also reshapes after-school work and sport, and districts that moved the bell report
+      better attendance alongside new transport costs. The gains, then, are real but not free.'' The main
+      idea is…'
+    options:
+      A: Later start times are a mistake
+      B: Sleep research on adolescents is unreliable
+      C: Later bell times bring genuine benefits together with real new costs
+      D: Transport costs are the only significant issue
+    answer: C
+    explain: The closing sentence states both halves — real gains, real costs — which is the author's
+      claim, not the sleep framing alone.
+    distractors:
+      A: The passage does not reject the change.
+      B: Sleep is the framing, not the target.
+      D: Costs are one of several effects named.
 key_points:
 - The passage is the sole authority.
 - Main idea — thesis-first, contrast-marked, closing-restated.

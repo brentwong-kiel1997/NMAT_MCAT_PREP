@@ -6,6 +6,10 @@ overview: Circuit elements, Ohm's law, capacitance, and electrochemistry — red
   energy and nerve signaling.
 sections:
 - heading: Redox chemistry and electrochemical cells
+  objectives:
+  - Assign oxidation numbers and identify the species oxidised and reduced.
+  - Distinguish a galvanic from an electrolytic cell by the sign of the cell potential.
+  - Locate the anode and cathode and trace electron flow through the external wire.
   body:
   - ==Oxidation loses electrons (LEO); reduction gains (GER)==. Oxidation numbers track electron movement
     — assign and balance by half-reactions. ==Galvanic (voltaic) cells run spontaneously (positive E-cell);
@@ -27,7 +31,23 @@ sections:
       B: Ionic conductor.
       C: Correct.
       D: Medium, not a site.
+  - q: In the spontaneous reaction Zn + Cu2+ -> Zn2+ + Cu, which statement is correct?
+    options:
+      B: Zn is oxidised and serves as the anode
+      A: Cu2+ is oxidised and serves as the anode
+      C: Zn is reduced and serves as the cathode
+      D: Cu2+ is reduced and serves as the anode
+    answer: B
+    explain: Zn loses two electrons (oxidation, anode); Cu2+ gains them (reduction, cathode).
+    distractors:
+      A: Copper ion GAINS electrons — that is reduction, so it is the cathode site.
+      C: Zinc loses electrons; gaining them is reduction.
+      D: A reduction site is by definition the cathode, never the anode.
 - heading: Circuit elements — EMF, current, resistance
+  objectives:
+  - Distinguish EMF from terminal voltage and account for internal resistance.
+  - Compute the equivalent resistance of series and parallel combinations.
+  - Apply Ohm's law to solve for current, voltage, or resistance.
   body:
   - '==EMF is the ideal cell voltage; terminal voltage = EMF - I r (internal resistance drop)==. Ohm''s
     law I = V/R. Series: same current, voltages add; parallel: same voltage, currents add.'
@@ -48,6 +68,19 @@ sections:
       B: Terminal can't exceed EMF.
       C: Ignoring internal drop.
       D: Correct — 7.5 V.
+  - q: Two 6 ohm resistors in parallel are connected in series with a third 6 ohm resistor. The total
+      resistance is…
+    options:
+      B: 9 ohm
+      A: 18 ohm
+      C: 2 ohm
+      D: 4 ohm
+    answer: B
+    explain: The parallel pair gives 6/2 = 3 ohm; in series with 6 ohm that is 9 ohm.
+    distractors:
+      A: Adding all three as one series chain.
+      C: Combining all three in parallel (6/3).
+      D: Putting the series pair together first (12 ohm) and then that in parallel with the third.
   figures:
   - src: 4c-electrochemistry-and-electrical-circuits/fig-494753ca.webp
     caption: A simple circuit — conventional current from positive to negative; electrons flow the reverse
@@ -57,6 +90,10 @@ sections:
     caption: Alternating current — the sinusoidal current and the back-and-forth motion of charge carriers.
     credit: Ch 19 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
 - heading: Capacitance and RC behavior
+  objectives:
+  - Calculate capacitance from charge and voltage, or from plate area and separation.
+  - Combine capacitors in series and parallel, recognising the opposite of resistors.
+  - Predict the stored energy or the fractional charge after one time constant.
   body:
   - ==C = Q/V; parallel plate C = epsilon A/d; series capacitors 1/C totals, parallel add — opposite of
     resistors==. Energy U = (1/2)CV2.
@@ -77,7 +114,23 @@ sections:
       B: Half again of wrong.
       C: That's parallel.
       D: Correct.
+  - q: A 100 uF defibrillator capacitor is charged to 200 V. The energy stored is…
+    options:
+      C: 2.0 J
+      A: 0.01 J
+      B: 4.0 J
+      D: 20 J
+    answer: C
+    explain: U = (1/2)CV2 = (1/2)(1.0 x 10-4)(200)2 = (1/2)(1.0 x 10-4)(4.0 x 10^4) = 2.0 J.
+    distractors:
+      A: Using V instead of V2 — the voltage must be squared.
+      B: Omitting the factor of 1/2 in (1/2)CV2.
+      D: Treating 100 uF as 1.0 x 10-3 F, one power of ten too large.
 - heading: Power, heating, and circuit safety
+  objectives:
+  - Choose the power expression that matches the quantities actually known.
+  - Predict which element dissipates the most power in series and in parallel.
+  - Explain why protective devices respond to current rather than to voltage.
   body:
   - ==P = IV = I2R = V2/R==. In series, the biggest resistor burns the most power (same current). In parallel,
     the SMALLEST resistor draws the most current and most power (same voltage).
@@ -98,7 +151,24 @@ sections:
       B: Lower R.
       C: R differs.
       D: They glow, not instantly pop.
+  - q: Two 10 ohm resistors are wired in parallel across a 20 V supply. The total power drawn is…
+    options:
+      B: 80 W
+      A: 20 W
+      C: 40 W
+      D: 160 W
+    answer: B
+    explain: 'Each branch: P = V2/R = 400/10 = 40 W; the parallel pair doubles it to 80 W (equivalently
+      R-eq = 5 ohm, P = 400/5).'
+    distractors:
+      A: Adding the resistances as though they were in series (R = 20 ohm).
+      C: Finding one branch's dissipation and forgetting its twin.
+      D: Squaring the total current but multiplying by a single branch's resistance.
 - heading: Nernst equation and membrane potentials
+  objectives:
+  - Calculate an ion's equilibrium potential with the Nernst equation at 37C.
+  - Explain why the resting potential sits close to the K+ value.
+  - Predict how a change in external ion concentration shifts the membrane potential.
   body:
   - '==Nernst: E-ion = (RT/zF) ln([out]/[in]) — at 37C, E = (61 mV/z) log10([out]/[in])==. The resting
     potential (-70 mV) is dominated by K+ since the membrane at rest is ~50x more permeable to K+ than
@@ -120,18 +190,55 @@ sections:
       B: Opposite direction.
       C: Correct — gradient weakening depolarizes.
       D: The pump still runs.
+  - q: For Na+, [out] = 145 mM and [in] = 15 mM (z = +1). The Nernst potential at 37C is nearest…
+    options:
+      D: +60 mV
+      A: -60 mV
+      B: +30 mV
+      C: +138 mV
+    answer: D
+    explain: E = (61/z) log10(out/in) = 61 log10(9.7) = 61 x 0.99 = +60 mV.
+    distractors:
+      A: Inverting the ratio to [in]/[out] flips the sign; a cation's potential is positive when the ion
+        is concentrated outside.
+      B: Dividing by z = 2, as though sodium were divalent.
+      C: Multiplying 61 by the natural log of the ratio; the 61 mV constant already assumes base-10.
 examples:
 - prompt: Compute the resting potential contribution of K+ with [K+]out = 4 mM, [K+]in = 140 mM at 37C.
+  strategy: 'One permeant ion means the plain Nernst equation answers it — no Goldman weighting, no pump
+    terms. The plan: confirm z = +1 for K+, form the ratio [out]/[in] = 4/140 (outside over inside, the
+    direction students most often flip), take its base-10 log, and multiply by the 61 mV constant for
+    37C.'
   solution:
   - E-K = (61 mV) log10([out]/[in]) = 61 log10(4/140).
   - 4/140 = 0.0286, log10 = -1.54.
   - E-K = 61 x (-1.54) = -94 mV.
   - K+ equilibrium alone is about -94 mV — the cell sits above that due to Na+ leak and Na-K pump.
   answer: About -94 mV — close to the resting potential, which is why K+ dominates at rest.
+  discussion: 'The sign carries the physiology: K+ is ~35x concentrated inside, so the log is negative
+    and the inside is driven negative — exactly the resting polarity. Note that -94 mV is MORE negative
+    than the measured -70 mV; that gap is the evidence that K+ dominates but does not monopolise, since
+    the Na+ leak drags the value back toward Na+''s +60 mV. Sanity check the log by magnitude: a ratio
+    between 10 and 100 must give between 1 and 2, so an answer outside -61 to -122 mV would signal a slipped
+    ratio.'
   distractors:
     A: +94 mV — inverting the gradient.
     B: -61 mV — confusing z with the constant.
     C: 0 mV — using [in]/[out].
+  practice:
+    q: For chloride, [Cl-]out = 110 mM and [Cl-]in = 10 mM (z = -1). The Nernst potential at 37C is nearest…
+    options:
+      C: -64 mV
+      A: +64 mV
+      B: -128 mV
+      D: -6.4 mV
+    answer: C
+    explain: E = (61/-1) log10(110/10) = -61 x 1.04 = -64 mV; the negative charge flips the sign a cation
+      would give.
+    distractors:
+      A: Dropping the sign of z, which treats chloride as a cation and flips the polarity.
+      B: Using z = -2, as though chloride were divalent.
+      D: Reading the ratio as 1.1 instead of 11 — one power of ten lost.
 key_points:
 - Red Cat; An Ox. Electrons flow anode → cathode outside.
 - Terminal voltage = EMF - I r.

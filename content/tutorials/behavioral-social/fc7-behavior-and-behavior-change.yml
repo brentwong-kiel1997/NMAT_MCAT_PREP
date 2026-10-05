@@ -6,6 +6,11 @@ overview: Individual differences, learning, memory, and attitude change — the 
   survey chapter and MCAT 7A-7B.
 sections:
 - heading: Learning and memory mechanics
+  objectives:
+  - Assign a described contingency to the correct operant quadrant by what happened to the behavior.
+  - Contrast classical (stimulus pairing) with operant (consequence-shaped) learning in a scenario.
+  - Name the memory store and type (explicit episodic/semantic vs implicit procedural/priming) a described
+    task taps.
   body:
   - '==Classical — CS-US pairing; extinction; generalization==. Operant — contingencies: ==positive/negative
     reinforcement (add/remove to increase), positive/negative punishment (add/remove to decrease); schedules
@@ -26,11 +31,30 @@ sections:
       A: Withholding reinforcement.
       B: Adding reward.
       C: Adding aversive.
+  - q: A clinic gives patients a token after each medication dose; tokens buy extras at the canteen. Later,
+      a patient's dose-taking collapses when the canteen closes. What happened, and which schedule was
+      in force?
+    options:
+      A: Extinction — continuous reinforcement held the behavior until the reinforcer stopped
+      B: Positive punishment — the tokens suppressed dose-taking
+      C: Negative reinforcement — removing tokens increased the behavior
+      D: Shaping — successive approximations were rewarded
+    answer: A
+    explain: Tokens on every dose is a continuous schedule; removing the reinforcer drops the behavior
+      — extinction, the classic token-economy fragility.
+    distractors:
+      B: Punishment decreases behavior by adding an aversive; tokens were added rewards.
+      C: Reinforcement is defined by the behavior increasing — dose-taking fell.
+      D: Shaping builds a new behavior by degrees; the dose-taking was already established.
   figures:
   - src: behavioral-social/fc7-behavior-and-behavior-change/fig-0a68ead5.webp
     caption: Classical conditioning's classic case — bell-food pairing producing the conditioned response.
     credit: Ch 6 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Cognition — thinking and decision
+  objectives:
+  - Identify the heuristic or bias in a described judgment and name the alternative it displaced.
+  - Distinguish an algorithm from a heuristic in a problem-solving scenario.
+  - Recognize functional fixedness or mental set as the block in a stalled solution.
   body:
   - '==Heuristics: availability (ease of recall), representativeness (prototype match), anchoring (initial
     values); biases — confirmation, hindsight, overconfidence, framing effects==. Language — Broca production,
@@ -51,7 +75,27 @@ sections:
       A: That is representativeness.
       B: That is conformity theory.
       D: That is availability.
+  - q: After hearing that a plane crash made the news, a traveler rates flying as far more dangerous than
+      driving. Which shortcut is at work, and what would correct it?
+    options:
+      A: Representativeness — compare flying to the prototype of an accident
+      B: Availability — ease of recall inflates the estimate; base rates correct it
+      C: Anchoring — the first number heard drags the estimate
+      D: Framing — the question was worded as losses
+    answer: B
+    explain: Vivid, recent coverage makes crashes easy to retrieve, so they feel frequent; per-kilometer
+      base rates restore the comparison.
+    distractors:
+      A: No prototype is being matched — only recalled instances.
+      C: No initial numeric anchor is mentioned.
+      D: The wording did not change between options — recall did.
 - heading: Motivation and emotion
+  objectives:
+  - Apply the Yerkes-Dodson inverted U to predict performance at low, moderate, and high arousal for a
+    given task.
+  - Match an emotion episode to James-Lange, Cannon-Bard, or Schachter-Singer by the order of arousal
+    and label.
+  - Distinguish intrinsic drive, incentive, and Maslow-level explanations for a described motive.
   body:
   - ==Drive-reduction (homeostasis), incentive (external goals), arousal (Yerkes-Dodson — inverted U),
     Maslow's hierarchy==. Emotion theories — James-Lange (arousal then label), Cannon-Bard (parallel),
@@ -72,7 +116,26 @@ sections:
       B: Tasks differ but the peak is moderate.
       C: Correct.
       D: High arousal narrows attention.
+  - q: A surgeon's hands tremble and her attention narrows in the middle of a delicate step. A colleague
+      in the same theatre, doing routine suturing, works faster than usual. Which law covers both?
+    options:
+      A: Maslow's hierarchy — safety needs come before precision
+      B: Drive reduction — arousal removes a homeostatic need
+      C: Yerkes-Dodson — the same arousal helps the simple task and wrecks the hard one
+      D: James-Lange — the tremor is labeled as fear after it happens
+    answer: C
+    explain: 'High arousal biases dominant responses: gains for well-practised simple tasks, losses for
+      complex or newly learned ones.'
+    distractors:
+      A: No need hierarchy is at issue in the theatre.
+      B: Drive reduction concerns physiological deficits, not task difficulty.
+      D: James-Lange orders body before label; it does not predict task-dependent accuracy.
 - heading: Attitude and behavior change
+  objectives:
+  - Classify a persuasion attempt as central or peripheral by the audience's motivation and ability to
+    elaborate.
+  - Explain a described attitude shift through cognitive dissonance or insufficient justification.
+  - Apply the foot-in-the-door logic to predict compliance after a small initial yes.
   body:
   - ==Attitude = affect + behavior + cognition (ABC); formed by classical conditioning, operant, observational
     learning==. Persuasion — central route (careful argument) vs peripheral route (cues, credibility,
@@ -94,7 +157,26 @@ sections:
       B: Correct.
       C: Dissonance is post-decision.
       D: Attitudes inferred from action.
+  - q: A volunteer agrees to put a small sticker in her window; two weeks later she consents to a large
+      billboard. A neighbour who declined the sticker refuses the billboard. Which mechanism, and why
+      did the sticker work?
+    options:
+      A: Door-in-the-face — the large request makes the sticker look small by contrast
+      B: Dissonance — the sticker made her see herself as civic, and the billboard fits that self-view
+      C: Peripheral route — the volunteer liked the canvasser's appearance
+      D: Insufficient justification — she was paid too little for the sticker
+    answer: B
+    explain: 'Foot-in-the-door: a small voluntary act shifts the self-concept, and later requests are
+      judged against it.'
+    distractors:
+      A: Door-in-the-face starts large and retreats; the order here is reversed.
+      C: No surface cue is described — the sequence of commitments carries the effect.
+      D: No payment is mentioned; the act was voluntary, which is what makes the self-view move.
 - heading: Psychological disorders and treatments
+  objectives:
+  - Sort described symptoms into positive versus negative schizophrenia categories.
+  - Match a disorder to its first-line psychological or pharmacological treatment and say why it fits.
+  - Distinguish obsessions from compulsions in an OCD presentation.
   body:
   - ==Anxiety — GAD, panic, phobias (classical conditioning + avoidance); OCD (obsessions, compulsions);
     PTSD==. Mood — major depressive disorder (low serotonin/norepinephrine, learned helplessness, cognitive
@@ -116,6 +198,20 @@ sections:
       A: Drug-only is incomplete.
       B: That is psychodynamic.
       C: That is pharmacology.
+  - q: A patient with panic disorder refuses to drive after an attack on a bridge. Which treatment package
+      targets both halves of the problem, and how?
+    options:
+      A: Benzodiazepines alone — they remove the fear chemically
+      B: Psychodynamic therapy — the bridge stands for an unresolved conflict
+      C: CBT with interoceptive and in-vivo exposure — reframe catastrophic thoughts and end avoidance
+      D: Lithium — stabilise the mood cycle
+    answer: C
+    explain: CBT attacks the catastrophic interpretation of bodily sensations and uses graded exposure
+      to break the avoidance that maintains the fear.
+    distractors:
+      A: Medication alone leaves the avoidance and the misreading of sensations intact.
+      B: Insight into symbolism is not the evidence-based mechanism for phobic avoidance.
+      D: Lithium treats bipolar mania, not panic.
   figures:
   - src: behavioral-social/fc7-behavior-and-behavior-change/fig-35b14c98.webp
     caption: Individuals introduced as case studies in the psychological disorders chapter.
@@ -123,16 +219,38 @@ sections:
 examples:
 - prompt: A smoking cessation program pays participants for each abstinent week, then withdraws the payment.
     Relapse spikes after withdrawal. Change the schedule to improve maintenance, and explain why.
+  strategy: Diagnose the schedule before redesigning it. Payment for every abstinent week is continuous
+    reinforcement, so removal produces rapid extinction; the fix is a schedule that resists extinction
+    — variable — plus a thinning plan that stretches the habit across the gap.
   solution:
   - Continuous or dense reward creates rapid extinction once removed.
   - Shift to a VARIABLE ratio schedule — unpredictable rewards resist extinction longest.
   - Spreading thinning plus booster payments stretches the habit across the gap.
   - Pair with CBT for internal coping — extrinsic + intrinsic maintenance.
   answer: Variable-ratio reinforcement in place of fixed payment — the slot-machine resilience law.
+  discussion: 'The general law: resistance to extinction tracks unpredictability, which is why variable
+    ratio sustains the highest rates (slot machines) and variable interval the steadiest. The clinical
+    corollary is that extrinsic reinforcers should be faded on a variable, tapering schedule and paired
+    with intrinsically rewarding coping skills, so the behavior no longer depends on the program.'
   distractors:
     A: Fixed interval — builds predictable scallops, still extinction-prone.
     B: Punishment — suppresses, does not build the habit.
     C: Keeping continuous cash — financial sustainability fails and relapse remains.
+  practice:
+    q: A workplace attendance bonus pays staff at unpredictable intervals regardless of how many days
+      they clock in, and attendance holds steady at a modest rate with no pauses. Which schedule is this?
+    options:
+      A: Fixed ratio
+      B: Fixed interval
+      C: Variable ratio
+      D: Variable interval
+    answer: D
+    explain: Reinforcement arrives after an unpredictable amount of TIME, which yields a slow, steady
+      response rate — the variable interval signature.
+    distractors:
+      A: Ratio schedules count responses, not clock time.
+      B: Fixed intervals produce scalloped pauses before each expected payout.
+      C: Variable ratio pays after an unpredictable NUMBER of responses and drives high rates.
 key_points:
 - Reinforcement adds/removes to increase; punishment to decrease.
 - Availability = ease of recall; representativeness = prototype.

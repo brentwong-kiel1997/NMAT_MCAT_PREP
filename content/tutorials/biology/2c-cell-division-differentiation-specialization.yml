@@ -6,6 +6,10 @@ overview: 2C is the cell's biography — the cycle that copies it, the controls 
   — Cells (organelles, mitosis mechanics), Genetics (chromosomes), Development (determination).
 sections:
 - heading: The cell cycle — phases and licenses
+  objectives:
+  - Order the phases of the cell cycle and state what each accomplishes.
+  - Identify what each checkpoint samples before granting passage.
+  - Explain why the G1 restriction point is the commitment point.
   body:
   - The cycle runs **G1 → S → G2 → M**, with G0 as the parking lot for cells that exited. DNA replicates
     once in ==S==; the cycle exists to partition those copies exactly. Duration lives mostly in G1 — which
@@ -27,12 +31,29 @@ sections:
       A: Suicide is the damaged-cell branch.
       B: M is two phases away.
       C: That is the no-signal outcome, not commitment.
+  - q: A cell's DNA is damaged by UV before it has replicated. Which checkpoint halts it?
+    options:
+      B: The G1 checkpoint, where p53 pauses the cycle before replication
+      A: The spindle checkpoint, which monitors metaphase attachment
+      C: The G2/M checkpoint, which sits downstream of the damage
+      D: No checkpoint — the cell proceeds into S phase
+    answer: B
+    explain: Damaged template DNA is exactly what the G1 quality control exists to catch, via p53 and
+      p21.
+    distractors:
+      A: The spindle checkpoint watches chromosome attachment, not DNA integrity.
+      C: The G2/M checkpoint is the backup; the first halt happens before S.
+      D: Checkpoints exist precisely to prevent that.
   figures:
   - src: 2c-cell-division-differentiation-specialization/chromosome-packing.webp
     caption: From 2-nm double helix to mitotic chromosome — the compaction ladder the cycle must untangle
       and re-pack.
     credit: Fig 10.4 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: The engine — cyclins and CDKs
+  objectives:
+  - Explain how cyclin binding and degradation drive CDK activity.
+  - Match cyclin-CDK pairs to their phase transitions.
+  - Describe the p53 and Rb brakes and what losing them causes.
   body:
   - Progression is driven by **cyclin-dependent kinases** — always present, ==active only when bound to
     a cyclin== partner whose concentration oscillates. The archetypal **MPF** (M-phase promoting factor
@@ -56,7 +77,23 @@ sections:
       A: G0 cells idle without cycling.
       B: p53 is not a kinase of CDKs.
       C: Damage turns the cycle OFF.
+  - q: Cyclin B is prematurely degraded in a cell about to divide. The consequence is…
+    options:
+      A: Mitosis cannot be triggered, because MPF loses its regulatory subunit
+      B: The cell enters S phase repeatedly
+      C: p53 is stabilised and apoptosis begins
+      D: CDK1 becomes constitutively active without cyclin
+    answer: A
+    explain: MPF is cyclin B plus CDK1; remove the cyclin and the kinase has no on-switch.
+    distractors:
+      B: Cyclin B drives M phase, not S phase.
+      C: Cyclin B degradation is part of normal exit, not a damage signal.
+      D: CDKs are inactive until a cyclin binds — that is the whole control logic.
 - heading: Differentiation — same genome, different readers
+  objectives:
+  - Define differentiation as differential gene expression sealed by chromatin state.
+  - Order the potency ladder from totipotent to multipotent.
+  - Explain what induced pluripotent stem cells demonstrated.
   body:
   - Every nucleated cell carries the same DNA; differentiation is ==differential gene expression==, set
     by transcription factors and sealed by chromatin state (methylation, histone marks). Stem cells sit
@@ -80,12 +117,28 @@ sections:
       A: Totipotency includes extraembryonic tissues.
       B: Pluripotency spans ALL embryonic lineages.
       D: The opposite — it is committed to blood.
+  - q: A cell can form every embryonic lineage but not placental tissue. Its potency is…
+    options:
+      C: Pluripotent
+      A: Totipotent
+      B: Multipotent
+      D: Unipotent
+    answer: C
+    explain: All embryonic lineages without extraembryonic tissue is the pluripotency definition.
+    distractors:
+      A: Totipotency includes the placenta-forming lineages.
+      B: Multipotent cells are restricted to one lineage family.
+      D: Unipotent cells make a single cell type.
   figures:
   - src: 2c-cell-division-differentiation-specialization/karyotype.webp
     caption: A human karyotype — 23 chromosome pairs painted by fluorescent staining; the chromosomal
       scale of division errors.
     credit: Fig 10.3 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Apoptosis and necrosis — two ways to die
+  objectives:
+  - Distinguish apoptosis from necrosis by morphology and by inflammation.
+  - Contrast the intrinsic and extrinsic apoptotic pathways.
+  - Explain why development and chemotherapy both exploit apoptosis.
   body:
   - ==Apoptosis== is programmed, tidy death — caspase cascade, membrane blebs, DNA laddering, no inflammation,
     corpses eaten by neighbors. ==Necrosis== is accidental, messy death — swelling, rupture, inflammation.
@@ -107,7 +160,23 @@ sections:
       A: Necrosis.
       B: Necrosis provokes it.
       D: Necrosis.
+  - q: Fas ligand binding to its receptor on a target cell triggers which pathway?
+    options:
+      D: The extrinsic pathway, through a death receptor
+      A: The intrinsic pathway, through mitochondrial permeabilisation
+      B: Necrosis, because it is receptor-mediated
+      C: Mitotic catastrophe
+    answer: D
+    explain: Death receptors are the extrinsic entry point; both routes converge on the executioner caspases.
+    distractors:
+      A: The intrinsic route reads internal damage, not an external ligand.
+      B: Being receptor-mediated does not make it necrotic; it is still tidy demolition.
+      C: Mitotic catastrophe is a different failure mode entirely.
 - heading: Cancer — the cycle with the brakes cut
+  objectives:
+  - Classify a cancer gene as an oncogene or a tumour suppressor from its behaviour.
+  - Explain why tumour-suppressor loss requires two hits.
+  - Relate metastasis to lethality and to treatment choice.
   body:
   - Cancer is a multi-hit failure of growth control — oncogenes (accelerators stuck on — HER2, RAS) versus
     **tumor suppressors** (brakes cut — p53, Rb); ==oncogenes act dominantly, suppressors recessively==,
@@ -131,9 +200,26 @@ sections:
       B: Inverted statement.
       C: p53, Rb are autosomal.
       D: They are active in dividing cells.
+  - q: A tumour overexpresses HER2 from a single amplified allele. At the cellular level this mutation
+      is…
+    options:
+      D: Dominant — one overactive copy is enough to drive growth
+      A: Recessive — both copies must be lost
+      B: X-linked, since HER2 sits on the X chromosome
+      C: Mitochondrial, since it is inherited maternally
+    answer: D
+    explain: Stuck-on accelerators are gain-of-function, and gain-of-function needs only one copy.
+    distractors:
+      A: Recessivity is the suppressor-loss pattern, not the oncogene pattern.
+      B: HER2 is autosomal.
+      C: Inheritance mode is irrelevant to a somatic amplification.
 examples:
 - prompt: HPV's E6 protein binds p53 and targets it for destruction; E7 inactivates Rb. Explain why persistent
     HPV infection is a cervical-cancer risk in one causal chain.
+  strategy: 'Assign each viral protein to the brake it disables before writing any chain: E7 acts on Rb,
+    the S-phase gate; E6 acts on p53, the damage sensor. With the two targets assigned, the causal chain
+    writes itself — release the gate, blind the sensor, divide with unrepaired damage, accumulate the
+    hits.'
   solution:
   - Step 1 — E7 disables Rb, freeing E2F and pushing the cell into S phase without growth-signal clearance.
   - Step 2 — E6 destroys p53, so DNA damage no longer pauses the cycle or triggers apoptosis.
@@ -141,11 +227,31 @@ examples:
   - Step 4 — decades of this double failure yield the multi-hit progression to carcinoma.
   answer: E6+E7 remove both brakes (p53, Rb); unchecked cycling with unrepaired damage accumulates the
     hits cancer needs.
+  discussion: 'The chain explains the long latency: two checkpoints are gone, but multi-hit progression
+    still takes years of division with damaged DNA, which is why HPV infection is common and cervical
+    cancer is rare. Note the asymmetry — losing Rb pushes cells into cycle while losing p53 removes the
+    quality control, so the two lesions are complementary rather than redundant. This is also why the
+    vaccine is preventive and not therapeutic: it blocks infection, not the checkpoint sabotage already
+    installed.'
   distractors:
     A: Calling HPV directly mutagenic like radiation — its risk is checkpoint sabotage, not DNA damage
       per se.
     B: Blaming inflammation alone — the mechanism is molecular, not just irritative.
     C: Saying one hit suffices — progression still needs accumulated mutation.
+  practice:
+    q: A tumour carries a gain-of-function RAS mutation plus homozygous p53 loss. How do the two behave
+      at the cellular level?
+    options:
+      A: RAS acts dominantly (one mutant copy suffices); p53 loss is recessive (both copies must go)
+      B: Both act recessively
+      C: Both act dominantly
+      D: RAS is recessive and p53 is dominant
+    answer: A
+    explain: Gain-of-function needs one copy; loss-of-function in a brake needs both.
+    distractors:
+      B: A stuck accelerator does not need a second hit.
+      C: One intact p53 copy still brakes the cycle.
+      D: The two patterns are the reverse of this.
 key_points:
 - Cycle order G1→S→G2→M with G0 parking; S replicates DNA once.
 - Checkpoints — G1 restriction (commitment), G2/M (replication complete), metaphase spindle (attachment/tension).

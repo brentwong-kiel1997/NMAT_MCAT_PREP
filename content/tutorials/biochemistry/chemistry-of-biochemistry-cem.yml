@@ -6,6 +6,10 @@ overview: 'The NMAT''s own biochemistry pass under the Chemistry subtest — bio
   depth. Connect everything to the 5D and 1D charts.'
 sections:
 - heading: Macromolecules — the big four
+  objectives:
+  - Classify a biomolecule into one of the four macromolecule families.
+  - Name the bond that joins each family's monomers.
+  - Explain why humans cannot digest cellulose.
   body:
   - ==Carbohydrates — monosaccharides (glucose), disaccharides (sucrose, lactose, maltose), polysaccharides
     (starch, glycogen, cellulose); glycosidic bonds link them==. ==Lipids — fatty acids, triacylglycerols,
@@ -26,6 +30,18 @@ sections:
       B: Not a biomolecule type.
       C: Humans cannot digest it.
       D: Correct.
+  - q: Which bond joins the fatty acids to glycerol in a triglyceride?
+    options:
+      B: Ester bonds
+      A: Glycosidic bonds
+      C: Peptide bonds
+      D: Phosphodiester bonds
+    answer: B
+    explain: Carboxyl plus alcohol condenses to an ester — three of them for a triacylglycerol.
+    distractors:
+      A: Glycosidic bonds join sugars.
+      C: Peptide bonds join amino acids.
+      D: Phosphodiester bonds join nucleotides.
   figures:
   - src: chemistry-of-biochemistry-cem/fig-35fa1423.webp
     caption: Amylose (linear) versus amylopectin (branched) — glucose polymers differing in glycosidic
@@ -35,6 +51,10 @@ sections:
     caption: Sucrose formation — a glycosidic bond condenses glucose and fructose, eliminating water.
     credit: Fig 3.6 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Enzymes — the NMAT essentials
+  objectives:
+  - Explain how an enzyme lowers activation energy without being consumed.
+  - Predict how temperature, pH, and concentration changes alter the rate.
+  - Distinguish competitive from noncompetitive inhibition.
   body:
   - ==Enzymes are catalytic proteins — lower Ea, unaltered at the end, highly specific (active sites,
     induced fit)==. ==Factors — temperature (optimum, then denature), pH (optimum), substrate concentration
@@ -56,7 +76,24 @@ sections:
       B: Saturates elsewhere.
       C: Correct.
       D: Shape destruction is irreversible.
+  - q: An enzyme's Vmax falls but its Km is unchanged. What is happening?
+    options:
+      A: Noncompetitive inhibition — the inhibitor binds away from the active site
+      B: Competitive inhibition — the inhibitor sits in the active site
+      C: Denaturation, which is reversible
+      D: Nothing — Vmax cannot change under inhibition
+    answer: A
+    explain: Binding elsewhere reduces the number of working enzymes (Vmax) without touching substrate
+      affinity (Km).
+    distractors:
+      B: Competitive inhibition raises the apparent Km instead.
+      C: Denaturation destroys the shape irreversibly.
+      D: Lowering the number of active enzymes lowers Vmax by definition.
 - heading: Bioenergetics — energy flow in cells
+  objectives:
+  - Explain why ATP serves as the universal energy currency.
+  - Order the stages of cellular respiration and where each occurs.
+  - Distinguish catabolic from anabolic reactions by energy flow.
   body:
   - ==ATP is the universal currency (hydrolysis releases ~30 kJ/mol); ADP + P -> ATP requires input (respiration/photosynthesis)==.
     ==Cellular respiration — glycolysis (cytosol, net 2 ATP), TCA (matrix), electron transport (membrane)
@@ -78,7 +115,23 @@ sections:
       B: Glycogenesis.
       C: Correct.
       D: That is digestion.
+  - q: Glycolysis alone yields what net ATP per glucose?
+    options:
+      C: '2'
+      A: '4'
+      B: 30-32
+      D: '0'
+    answer: C
+    explain: Four are made and two are spent in the priming phase.
+    distractors:
+      A: That is the gross yield before the investment is repaid.
+      B: That is the full aerobic total, which needs the TCA cycle and the ETC.
+      D: Glycolysis needs no oxygen to make ATP.
 - heading: Vitamins, minerals, and clinical chemistry
+  objectives:
+  - Sort the vitamins into water-soluble and fat-soluble groups.
+  - Match each B vitamin to the coenzyme it generates.
+  - Relate a mineral to its principal physiological role.
   body:
   - ==Water-soluble vitamins (B complex, C) — coenzymes or their precursors (NAD from niacin, FAD from
     riboflavin, PLP from B6, CoA from pantothenate); fat-soluble (A, D, E, K) — absorption needs fat;
@@ -100,7 +153,23 @@ sections:
       B: Correct.
       C: Calcium metabolism.
       D: One-carbon transfers.
+  - q: Pantothenate (vitamin B5) is the precursor of which coenzyme?
+    options:
+      C: Coenzyme A
+      A: NAD
+      B: FAD
+      D: PLP
+    answer: C
+    explain: Pantothenate sits at the heart of CoA, the acyl-group carrier.
+    distractors:
+      A: NAD comes from niacin (B3).
+      B: FAD comes from riboflavin (B2).
+      D: PLP comes from vitamin B6.
 - heading: Practical biochemistry — food label and medical test literacy
+  objectives:
+  - Apply the 4-4-9 rule to a food label.
+  - Match an enzyme test to the organ damage it reports.
+  - Interpret a lab value in light of its reference range and trend.
   body:
   - ==Calorie math — 4-4-9 rule (carb/protein/fat kcal per gram); % daily values are per-2000-kcal references==.
     ==Enzyme tests — cardiac troponin (heart muscle damage), ALT/AST (liver), amylase/lipase (pancreas),
@@ -121,19 +190,54 @@ sections:
       B: Creatinine does.
       C: Fingertip glucose does that.
       D: Correct.
+  - q: A snack provides 20 g carbohydrate, 10 g protein, and 8 g fat. Its energy content is…
+    options:
+      B: 192 kcal
+      A: 152 kcal
+      C: 304 kcal
+      D: 38 kcal
+    answer: B
+    explain: (20 x 4) + (10 x 4) + (8 x 9) = 80 + 40 + 72 = 192 kcal.
+    distractors:
+      A: Counting the fat at 4 kcal/g instead of 9.
+      C: Counting every gram at 9 kcal/g.
+      D: Adding the gram amounts without converting.
 examples:
 - prompt: A patient presents with lactose intolerance after a gastric infection. Explain the enzyme and
     the biochemical basis.
+  strategy: 'Anchor on the substrate, not the symptom: lactose is a disaccharide that needs a brush-border
+    disaccharidase, so the plan is to name the enzyme, state what it hydrolyses into (glucose plus galactose),
+    and then trace what happens to the sugar that never gets absorbed once it reaches the colon.'
   solution:
   - Lactase — brush-border enzyme hydrolyzing lactose -> glucose + galactose.
   - Reduced lactase -> undigested disaccharide reaches the colon.
   - Colonic bacteria ferment it — gas, osmotic water, cramps.
   - Management — lactase supplements or lactose-free diet.
   answer: Lactase deficiency — undigested lactose feeds colonic fermentation.
+  discussion: 'One mechanism explains every symptom: unabsorbed lactose holds water into the lumen while
+    colonic bacteria ferment it to gas, producing cramps and diarrhoea together. Note what this is not
+    — an enzyme deficiency, not an allergy, so no immune mechanism is involved, and secondary lactase
+    loss after a gastric infection is often reversible. The same logic generalises to sucrase-isomaltase
+    deficiency, where the symptoms are identical but the offending disaccharide differs.'
   distractors:
     A: Sucrase deficiency — wrong disaccharide.
     B: Insulin — wrong axis entirely.
     C: Milk allergy — immune, not enzymatic.
+  practice:
+    q: A patient develops bloating and diarrhoea after drinking ordinary milk and eating ice cream, but
+      tolerates aged hard cheese and lactose-free milk. Which enzyme is deficient?
+    options:
+      B: Lactase — fresh dairy carries lactose, and ageing removes most of it
+      A: Sucrase — table sugar is the trigger
+      C: Amylase — starch is the trigger
+      D: Lipase — fat is the trigger
+    answer: B
+    explain: 'The pattern tracks lactose content exactly: hard cheese and lactose-free milk have little
+      or none.'
+    distractors:
+      A: Sucrose is not present in fresh milk as the trigger.
+      C: Starch digestion is unaffected by dairy.
+      D: Fat intolerance would not spare lactose-free milk, which keeps its fat.
 key_points:
 - Big four — carbs (glycosidic), lipids (ester), proteins (peptide), nucleic acids (phosphodiester).
 - 'Enzymes lower Ea — factor effects: T, pH, [S], [E].'

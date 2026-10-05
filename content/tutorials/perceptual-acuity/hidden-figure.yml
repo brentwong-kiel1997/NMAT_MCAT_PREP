@@ -6,6 +6,9 @@ overview: Finding a target outline within a complex, cluttered figure — the NM
   within the clutter.
 sections:
 - heading: What the item asks
+  objectives:
+  - State what must survive in a hidden figure — the outline, not the fill or orientation.
+  - Reject a candidate whose contour fails to close, whatever its overall look.
   body:
   - ==A target shape (usually simple — triangle, square, arrow, letter) is hidden inside a busy background
     figure==. ==The target may be rotated, mirrored, scaled, or partially overlapped — but its OUTLINE
@@ -26,7 +29,23 @@ sections:
       B: Texture is noise.
       C: Correct.
       D: Color is irrelevant.
+  - q: Two candidate squares appear in the clutter; one is missing its fourth side. The defensible choice
+      is…
+    options:
+      A: The larger-looking outline
+      B: The one inside the hatched band
+      C: The one sharing the most lines with the frame
+      D: Neither — only the outline that closes on all four sides counts
+    answer: D
+    explain: 'Closure is the criterion: a three-sided figure is not the target, however square it looks.'
+    distractors:
+      A: Size carries no evidential weight.
+      B: Hatching is clutter and neither helps nor disqualifies.
+      C: Overlap with the frame is coincidence, not contour.
 - heading: Contour tracking, not whole-figure matching
+  objectives:
+  - Anchor the trace on the target's longest or most distinctive edge.
+  - Walk the perimeter segment by segment, verifying each corner angle.
   body:
   - ==Whole-figure matching fails under rotation — the target must be TRACED, not just recognized==. ==Segment
     tracking — pick the longest straight edge of the target and slide it along the clutter until a corner
@@ -47,7 +66,24 @@ sections:
       B: Centroid says nothing about edges.
       C: Correct.
       D: Area is ambiguous.
+  - q: A target rectangle measures 3 by 8 units. Which segment is the best anchor, and what must be verified
+      at its end?
+    options:
+      A: One of the 3-unit sides — verify the hatching direction
+      B: An 8-unit side — verify the corner angle is 90 degrees before walking the perimeter
+      C: The enclosed area — verify its colour
+      D: The diagonal — verify its midpoint
+    answer: B
+    explain: The long side is the rarest feature in the clutter, and its corner must confirm the right
+      angle before the rest of the perimeter is traced.
+    distractors:
+      A: The short side is common in clutter and hatching is noise.
+      C: Area is not a contour feature.
+      D: A rectangle's diagonal is not part of its outline.
 - heading: Rotation and mirror tolerance
+  objectives:
+  - Mentally rotate a target through 90 and 180 degrees and re-trace it.
+  - Recognise a mirrored placement as valid, including direction-bearing shapes.
   body:
   - ==The target often appears rotated 90 or 180 degrees — rotate the target mentally and re-trace==.
     ==Mirroring — a mirrored target flips; b/d-type confusion applies to shapes with direction (arrows,
@@ -68,7 +104,23 @@ sections:
       B: It happens.
       C: Correct.
       D: The shape matches.
+  - q: A target letter 'L' appears with its stem upright and its foot extending LEFT instead of right.
+      This candidate is…
+    options:
+      A: Rotated 90 degrees — not allowed
+      B: A different letter entirely
+      C: A mirror image, which counts as a valid placement
+      D: An error in the item
+    answer: C
+    explain: Left-right reversal is reflection, and reflection is explicitly permitted in these items.
+    distractors:
+      A: No rotation occurred — the stem is still upright.
+      B: The shape is still an L; only its handedness changed.
+      D: Mirrored placements are standard, not errors.
 - heading: Dealing with clutter
+  objectives:
+  - Continue a target edge straight through background crossings.
+  - Treat a shared edge as belonging to both shapes and verify the corners at its ends.
   body:
   - ==Cut through clutter — ignore hatching, dots, and secondary lines; they are distractors==. ==Crossing
     lines — where background lines cross the shape, the outline continues straight through the crossing
@@ -89,7 +141,23 @@ sections:
       B: Edges do not stop at crossings.
       C: That would trace the clutter.
       D: Correct.
+  - q: Two adjacent figures share one complete edge of the target. The correct handling is…
+    options:
+      A: Discard the edge as background
+      B: Treat the edge as belonging to both shapes and verify the corners at each end
+      C: End the search there
+      D: Mirror the edge to check it
+    answer: B
+    explain: Shared edges are common in cluttered displays; ownership is decided at the corners, where
+      each figure's contour turns.
+    distractors:
+      A: The edge is part of the target's contour, not clutter.
+      C: The corners beyond the shared edge are exactly what must be checked.
+      D: Mirroring is irrelevant to ownership.
 - heading: Speed tactics and item hygiene
+  objectives:
+  - Sweep the clutter region by region, switching quadrants to break fixation.
+  - Require every segment of the outline to match in sequence before marking an option.
   body:
   - ==Scan order — hibernate the target image mentally, then sweep the clutter region by region (quadrants)==.
     ==Timebox — 45 seconds; a region-switch clears fixation==. ==Eyestrain guard — hold the page at a
@@ -110,19 +178,54 @@ sections:
       B: Correct.
       C: Fixation worsens.
       D: It is still winnable.
+  - q: After 45 seconds in the upper-left quadrant with no candidate, the best next move is…
+    options:
+      A: Mark a guess in the current quadrant
+      B: Switch to another quadrant and re-anchor on the target's longest edge
+      C: Keep staring at the same region
+      D: Re-read the instructions
+    answer: B
+    explain: A region switch breaks fixation, and re-anchoring restarts the trace from the most distinctive
+      feature.
+    distractors:
+      A: 45 seconds leaves time for the remaining quadrants.
+      C: Fixation deepens with continued staring.
+      D: The instructions have not changed.
 examples:
 - prompt: 'Target: an arrow (shaft with two symmetric fletches). In the clutter, the shaft could be the
     2 cm vertical rule crossing the grid, the fletches the two short diagonals to its right.'
+  strategy: 'Anchor on the target''s most distinctive feature and expand outward. For an arrow that is
+    the shaft: find a clean segment of matching length, then require both fletches to attach at the same
+    end and symmetrically before walking the rest of the perimeter.'
   solution:
   - Fix the largest distinctive feature — the long straight shaft.
   - Find a matching-length rule in the clutter running without crossing.
   - Check both ends — fletches must attach at the same end, symmetric.
   - Confirm the whole perimeter — then mark.
   answer: The arrow whose shaft and symmetric tail both trace clean segments.
+  discussion: 'Anchoring generalises to every embedded-figure item: the largest or most distinctive contour
+    feature is the cheapest test, and rejecting a candidate on a single missing feature is faster than
+    confirming all of them. Symmetric attachments — both fletches, both wings, both bars — are the classic
+    partial-match trap.'
   distractors:
     A: A similar shape missing one fletch — partial match.
     B: The mirror variant — valid but check which option shows it.
     C: The shape formed by three background lines — they cross openly.
+  practice:
+    q: 'Target: a capital H. In the clutter, two vertical rules of the right length stand 1 cm apart,
+      and a horizontal rule crosses both at their midpoints. Is this the target?'
+    options:
+      A: Yes — three rules of roughly the right shape are sufficient
+      B: No — a crossing produces X junctions where the H requires T junctions, so the contour fails
+      C: Yes, provided the H is mirrored
+      D: Impossible to decide from the junctions
+    answer: B
+    explain: The crossbar of an H butts into the uprights, forming T junctions; rules that pass through
+      make X junctions, which is a different contour.
+    distractors:
+      A: Junction type is exactly what distinguishes candidates here.
+      C: Mirroring would not change the junction type.
+      D: Junction type is decisive and cheap to read.
 key_points:
 - Track the outline; ignore fill and texture.
 - Anchor the longest distinctive edge or L-corner.

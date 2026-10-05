@@ -6,6 +6,10 @@ overview: Everything psychology studies begins here — how raw physical energy 
   and perception (interpretation) — and loves thresholds and adaptation. Prerequisite — 3A (action potentials).
 sections:
 - heading: Sensation versus perception — the two-stage pipeline
+  objectives:
+  - Label a described case as a sensation (transduction) or perception (interpretation) failure.
+  - Compute or predict a threshold change using Weber's law — the JND as a constant fraction of the baseline.
+  - Distinguish the absolute threshold (50% detection) from the difference threshold (JND).
   body:
   - Draw the line once and keep it. Sensation is transduction — receptors convert physical energy into
     neural signals. Perception is the brain's interpretation into objects and meaning. Stimulus → receptor
@@ -29,11 +33,31 @@ sections:
       A: Absolute threshold is about detecting presence, not change.
       B: Damage is not the mechanism at normal volumes.
       C: Nothing is skipped; the fraction grows with the base.
+  - q: A listener hears a 40 dB tone and a 43 dB tone as different, but cannot tell a 90 dB tone from
+      a 93 dB tone. Which law, and what does it predict would separate the loud pair?
+    options:
+      A: Absolute threshold — both pairs exceed detection limits
+      B: Weber's law — the JND is proportional, so the loud pair needs a bigger increment (about 6.75
+        dB) to be told apart
+      C: Sensory adaptation — the loud pair has adapted
+      D: Signal detection — the criterion shifts with volume
+    answer: B
+    explain: 'Weber''s fraction is constant: a 3/40 increment at the soft end maps to roughly 3/90 x 90
+      ≈ 6.75 dB at the loud end.'
+    distractors:
+      A: Both pairs are well above the absolute threshold; the problem is change detection.
+      C: Adaptation concerns constant stimulation over time, not simultaneous comparison.
+      D: Criterion shifts change willingness to report, not the proportional size of the JND.
   figures:
   - src: 6a-sensing-the-environment/top-down-bottom-up.webp
     caption: Top-down versus bottom-up processing — expectation-driven versus stimulus-driven perception.
     credit: Fig 5.2 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: The senses — receptors and pathways
+  objectives:
+  - Match each sense to its receptor and stimulus (rods/cones, hair cells, chemical receptors).
+  - Assign a pitch discrimination finding to place theory or frequency theory by frequency range.
+  - Explain a described acuity-versus-sensitivity trade-off using rod convergence versus cone one-to-one
+    wiring.
   body:
   - Know each sense by receptor and stimulus — vision (rods for dim light and motion, cones for color
     and detail), hearing (hair cells on the basilar membrane — place coding for pitch), touch (pressure,
@@ -55,11 +79,31 @@ sections:
       B: Thresholds govern detection of new stimuli, not fading of constant ones.
       C: No receptor loss occurs.
       D: Attention is top-down; this happens pre-attentively.
+  - q: An audiologist finds a patient loses detection of a 4000 Hz tone but still detects 150 Hz well.
+      Which theory explains the spared low frequency, and how?
+    options:
+      A: Place theory — low frequencies peak near the oval window
+      B: Frequency theory — low frequencies are coded by firing rate matching the wave
+      C: Gate control — spinal gating of pitch
+      D: Opponent process — color-pair coding of sound
+    answer: B
+    explain: Frequency theory handles the low range by neural firing locked to the waveform; place theory
+      owns the high frequencies near the base.
+    distractors:
+      A: Place theory puts HIGH frequencies at the oval window end; the high loss here is its domain.
+      C: Gate control modulates pain, not pitch.
+      D: Opponent processing is a color account.
   figures:
   - src: 6a-sensing-the-environment/muller-lyer.webp
     caption: The Müller-Lyer illusion — identical lines appear different; culture modulates susceptibility.
     credit: Fig 5.4 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Perception — building the world from signals
+  objectives:
+  - Classify a described grouping as the correct Gestalt principle (proximity, similarity, continuity,
+    closure).
+  - Sort a depth cue as binocular (retinal disparity, convergence) or monocular (relative size, interposition,
+    linear perspective, texture gradient).
+  - Predict how perceptual set changes the reading of an ambiguous figure.
   body:
   - Perception runs bottom-up (feature-driven — edges, colors combine into objects) and top-down (knowledge-driven
     — context and expectation resolve ambiguity). Gestalt principles name the shortcuts — proximity, similarity,
@@ -81,12 +125,32 @@ sections:
       A: Binocular cue — needs two eyes.
       B: A Gestalt grouping principle, not depth.
       C: Binocular cue — eyes angling inward.
+  - q: A radiologist trained to look for nodules reads the same chest film differently after being told
+      the prior probability is high. Which construct, and which processing direction does it illustrate?
+    options:
+      A: Sensory adaptation — receptor response declines
+      B: Perceptual set — top-down expectation shaping interpretation of an ambiguous stimulus
+      C: Retinal disparity — binocular comparison of the two images
+      D: Closure — completing a missing contour
+    answer: B
+    explain: Knowledge-driven expectation resolving ambiguity is top-down perception — the definition
+      of perceptual set.
+    distractors:
+      A: Adaptation is receptor-level, not expectation-driven.
+      C: Disparity is a binocular cue; the film is a single flat image.
+      D: Closure is a Gestalt grouping rule about contours, not expectation about prevalence.
   figures:
   - src: 6a-sensing-the-environment/inattentional-blindness.webp
     caption: Inattentional blindness — one third miss the red cross while attending to black or white
       objects.
     credit: Fig 5.3 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Disorders of sensation and perception
+  objectives:
+  - Localize a described deficit to the receptor, pathway, or interpretive cortex using the two-stage
+    model.
+  - Distinguish an illusion (real stimulus misread) from a hallucination (no external stimulus).
+  - Name the perceptual disorder (prosopagnosia, achromatopsia) matching a described preserved-and-lost
+    pair.
   body:
   - When the pipeline breaks, the exam wants you to name WHERE. Damage to receptors (retinal degeneration,
     cochlear hair-cell loss) removes sensation — no signal reaches the brain. Damage to cortical interpretation
@@ -108,19 +172,55 @@ sections:
       A: Already established as intact.
       B: Threshold is detection, not recognition.
       D: Signal arrives normally.
+  - q: A patient with intact cones and acuity insists a coat hanging in a dark hallway is an intruder;
+      when the light comes on he sees the coat clearly. Classify the episode and name its level.
+    options:
+      A: A hallucination — perception with no external stimulus, at the perception level
+      B: An illusion — a REAL stimulus (the coat) misinterpreted, at the perception level
+      C: A sensation failure — the rods failed to transduce the coat
+      D: A transduction failure in the visual cortex
+    answer: B
+    explain: The coat is a real stimulus that was misread in dim light, and once the signal is clear interpretation
+      succeeds — an illusion at the perception level.
+    distractors:
+      A: No external stimulus is the hallucination criterion; a coat is present.
+      C: Acuity is intact and the stimulus was detected — the failure was interpretive.
+      D: Transduction happens in receptors, not cortex.
 examples:
 - prompt: In signal detection terms, a radiologist flags a shadow that turns out normal. Name the outcome
     and one perceptual factor that raises its rate.
+  strategy: Separate sensitivity from criterion before naming the outcome. Signal detection theory puts
+    the stimulus on one axis and the decision rule on the other, so any expectation or cost asymmetry
+    moves the criterion while leaving the signal itself untouched.
   solution:
   - A positive call without a true signal = a false positive (false alarm).
   - A liberal response criterion (set by expectation or cost of missing cancer) shifts calls toward yes.
   - Top-down expectation for pathology biases interpretation of ambiguous noise.
   answer: False alarm; a low criterion and strong expectation for rare-but-costly signals raise its rate.
+  discussion: The four outcomes (hit, miss, false alarm, correct rejection) form a 2x2 that generalises
+    far beyond radiology — to screening tests, polygraph decisions, and any yes/no judgment under noise.
+    When a vignette offers a cost asymmetry (missing cancer is worse than a false alarm), predict the
+    liberal shift and its predictable price in false positives.
   distractors:
     A: Calling it a hit — no true signal existed.
     B: A miss — nothing was missed; the call was wrong, not absent.
     C: Blaming receptor sensitivity — detection theory separates sensitivity from criterion; expectation
       moves the criterion.
+  practice:
+    q: A screening program decides to lower its referral threshold so fewer cancers are missed. Which
+      outcome rises as the price, and which construct changed?
+    options:
+      A: Misses rise; sensitivity changed
+      B: Correct rejections fall and false alarms rise; the criterion shifted, not sensitivity
+      C: Hits rise; the stimulus intensity changed
+      D: Nothing changes; outcome rates are fixed by the disease
+    answer: B
+    explain: A more liberal criterion turns borderline noise into positives — more false alarms and fewer
+      correct rejections, while the underlying signal distribution is untouched.
+    distractors:
+      A: Misses FALL when the threshold is lowered.
+      C: Hits may rise, but the stimulus itself never changed — only the decision rule.
+      D: Outcome rates depend jointly on the distributions and the criterion, both adjustable.
 key_points:
 - Sensation = transduction; perception = interpretation — label the stage before answering.
 - Absolute threshold (50% detection) versus JND (Weber's fraction).

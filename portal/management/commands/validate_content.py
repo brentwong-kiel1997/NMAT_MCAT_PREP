@@ -188,7 +188,12 @@ class Command(BaseCommand):
                 for section in doc.get("sections") or []:
                     if not section.get("heading") or not section.get("body"):
                         problems.append(f"{rel}: section missing heading/body")
-                    for check in section.get("check") or []:
+                    checks = section.get("check") or []
+                    if len(checks) < 2:
+                        problems.append(
+                            f"{rel}: section '{section.get('heading')}' has "
+                            f"{len(checks)} check(s), need >= 2 (recall + application)")
+                    for check in checks:
                         if not check.get("q") or not check.get("answer"):
                             problems.append(f"{rel}: section check missing q/answer")
                         else:

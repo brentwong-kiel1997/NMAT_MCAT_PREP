@@ -6,6 +6,9 @@ overview: The application layer of CARS — applying the passage's principles to
   the passage is the lens.
 sections:
 - heading: New-scenario application items
+  objectives:
+  - State the passage's principle in abstract form before applying it.
+  - Test a new case against the principle's stated condition rather than its surface details.
   body:
   - ==Application items hand you a NEW case and ask which principle from the passage governs it==. ==Extract
     the principle in abstract form first — 'the author holds that X is justified when Y' — then test the
@@ -26,7 +29,25 @@ sections:
       B: Not the ethical core.
       C: The author does not ban research.
       D: Correct.
+  - q: 'Mini-passage: ''A trial period for a policy is justified when the cost of reversal is low and
+      the information gained is high.'' New scenario: a hospital proposes piloting a two-bed ward change
+      for one month at negligible cost. The author would…'
+    options:
+      A: Reject any trial on principle
+      B: Endorse the pilot, since both conditions — cheap reversal and high information — are met
+      C: Endorse only a permanent change
+      D: Require the ward be expanded before trialling
+    answer: B
+    explain: Both conditions of the stated principle are satisfied by the scenario, so the principle licenses
+      the pilot.
+    distractors:
+      A: The passage endorses trials under exactly these conditions.
+      C: Permanence removes the reversibility condition.
+      D: Scale-up is not part of the principle.
 - heading: Argument evaluation — strengthen, weaken, evidence
+  objectives:
+  - Select new evidence that bears on the passage's stated mechanism.
+  - Recognize alternative causes, confounds, and parallel comparison groups as the main weakeners.
   body:
   - ==Beyond-the-text strengthen/weaken — the new evidence connects to the passage's mechanism==. ==Weakening
     favorites — alternative explanations, confounds, and reversed causality==
@@ -46,7 +67,24 @@ sections:
       B: Sampling helps, does not refute.
       C: Strength is not direction.
       D: Correct.
+  - q: 'Mini-passage: ''A city credits its new bike lanes for a fall in cyclist injuries.'' Which additional
+      finding most weakens that attribution?'
+    options:
+      A: Injuries fell by a similar amount in districts that received no new lanes
+      B: Bicycle sales rose citywide during the same period
+      C: The lanes were popular with residents surveyed afterwards
+      D: The city also repaired some of its existing lanes
+    answer: A
+    explain: A comparable drop where the intervention is absent supplies the rival explanation and undercuts
+      the causal claim.
+    distractors:
+      B: Sales do not test the injury mechanism.
+      C: Popularity is not evidence about injuries.
+      D: Repairs are unspecified and unconnected to the decline.
 - heading: Viewpoint reasoning — identifying with an author
+  objectives:
+  - Construct the author's position from the passage's commitments, not from personal agreement.
+  - Predict the author's reaction to a new case and reject options belonging to other authors' views.
   body:
   - ==Viewpoint items ask what the author would think/say/do in a new context — character and reasoning,
     not facts==. ==The position must be singled out from the passage; options that fit OTHER passages'
@@ -67,7 +105,24 @@ sections:
       B: Correct.
       C: It endorses this.
       D: Likely favored.
+  - q: 'Mini-passage: ''Preservation is not nostalgia; it is the refusal to let present convenience erase
+      the record of earlier labor.'' The author would most likely object to…'
+    options:
+      A: Restoring a building to its original use
+      B: Demolishing a workshop because the cleared land is worth more
+      C: Publishing an architectural survey of the district
+      D: Teaching local history in schools
+    answer: B
+    explain: Demolition for convenience is precisely the erasure of the record of labor the passage defines
+      itself against.
+    distractors:
+      A: Restoration preserves the record.
+      C: A survey documents the record.
+      D: Teaching history preserves it.
 - heading: Analogy and principle transfer
+  objectives:
+  - Match the logical relation between entities rather than their surface features.
+  - Reject analogies whose relation is reversed or merely thematically adjacent.
   body:
   - '==Analogy items — find the structural match: entities, relations, and direction must parallel the
     passage''s argument==. ==The failure mode — matching surface features (birds vs airplanes) instead
@@ -87,7 +142,24 @@ sections:
       B: Correct.
       C: Tools support the task.
       D: Rule-following, not overreach.
+  - q: 'Mini-passage: ''Judges who read only case summaries risk ruling on someone else''s compression
+      of the record.'' Which is the best structural analogy?'
+    options:
+      A: A pilot flying with complete instrumentation
+      B: A student citing a textbook summary instead of the primary study
+      C: A librarian shelving volumes by catalogue number
+      D: A chef tasting a dish before serving it
+    answer: B
+    explain: Both act on a compressed second-hand version of the underlying evidence — the relation is
+      preserved.
+    distractors:
+      A: Full instrumentation is the opposite of relying on a compression.
+      C: Cataloguing is organisational, not evidentiary substitution.
+      D: Direct inspection is the opposite relation.
 - heading: Answer hygiene for beyond items
+  objectives:
+  - Use both halves — the passage's standard and the option's case — when answering.
+  - Prefer the author's strongest, most specific commitment when two options both fit.
   body:
   - ==The passage supplies the standard; the option supplies the case — both halves must be used==. ==Reject
     bars — options about the passage's facts (too literal), options needing unprovided facts, and options
@@ -108,19 +180,57 @@ sections:
       B: Length is noise.
       C: Correct.
       D: No word-count bias.
+  - q: 'Mini-passage: ''Public data should be open by default; where openness embarrasses officials, that
+      is an argument for better conduct rather than for secrecy.'' A ministry proposes withholding a dataset
+      because its release is inconvenient. Which answer applies the strongest commitment?'
+    options:
+      A: Withhold it, since officials' convenience matters
+      B: Release it, because inconvenience is not a stated ground for secrecy and the default is openness
+      C: Release only the parts that flatter the ministry
+      D: Withhold it until public opinion shifts
+    answer: B
+    explain: The operative principle is the default of openness with better conduct as the remedy — inconvenience
+      is not among the grounds.
+    distractors:
+      A: Convenience is exactly what the passage refuses as a ground.
+      C: Partial release contradicts a default of openness.
+      D: Public opinion is not part of the passage's standard.
 examples:
 - prompt: 'Passage: ''Graffiti is evidence of a neighborhood''s self-expression and should be channeled,
     not erased.'' New scenario: a city proposes a legal mural program. What would the author say?'
+  strategy: Abstract the principle before touching the scenario. 'Channeled, not erased' is a claim about
+    giving expression a legitimate outlet, so the test for the mural program is whether it preserves the
+    outlet — not whether it removes unsanctioned graffiti.
   solution:
   - Extract the principle — channeling expression beats erasing it.
   - The mural program channels expression into legal walls.
   - Therefore the author would endorse the program, with nuance — legal spaces still permit self-expression.
   - Answers claiming the author would ban graffiti misread the position.
   answer: The author would support a legal venue that preserves self-expression.
+  discussion: 'Principle-first reading also tells you what would count as a counterexample: a program
+    allowing only pre-approved expression would strain the principle. The same two-step — principle, then
+    case — separates genuine application from surface matching, which is why ''legal walls'' read as an
+    anti-graffiti policy mislead here.'
   distractors:
     A: The author would ban graffiti — negation of the passage.
     B: The author is indifferent to municipal art policy — the passage cares.
     C: Murals are vandalism — conflating the author with opponents.
+  practice:
+    q: 'Mini-passage: ''Wild landscaping should be tolerated, not fined: a city that criminalises untended
+      yards is policing an aesthetic it does not own.'' New scenario: the city offers certification for
+      native-plant yards, exempting them from fines. What would the author say?'
+    options:
+      A: The author would object, since fines should increase
+      B: The author would endorse it, because it removes the penalty and legitimises the practice
+      C: The author is indifferent to yard codes
+      D: The author would require all yards to be paved
+    answer: B
+    explain: The principle demands tolerance rather than penalty; certification-and-exemption delivers
+      exactly that.
+    distractors:
+      A: That reverses the passage's position.
+      C: The passage takes a clear stand on the policing of yards.
+      D: Nothing in the passage supports paving.
 key_points:
 - Extract the principle, then apply to the new case.
 - Outside evidence is fair in strengthen/weaken — passage is the standard.

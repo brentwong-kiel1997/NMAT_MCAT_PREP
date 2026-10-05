@@ -6,6 +6,10 @@ overview: Carbon's chemistry — nomenclature, stereochemistry, and the major re
   and prediction.
 sections:
 - heading: Structure, nomenclature, and isomers
+  objectives:
+  - Name an alkane, alkene, or alkyne from its drawn structure.
+  - Distinguish constitutional isomers from stereoisomers.
+  - Assign E/Z or R/S configuration from a structure.
   body:
   - Hydrocarbons — alkanes (single bonds, tetrahedral, 109.5), alkenes (double, trigonal planar, 120),
     alkynes (triple, linear, 180). ==Constitutional isomers differ in connectivity; stereoisomers differ
@@ -26,6 +30,18 @@ sections:
       A: Different functional groups.
       B: Different connectivity — constitutional.
       D: Different formulas.
+  - q: Butane and 2-methylpropane are which kind of isomers?
+    options:
+      C: Constitutional isomers
+      A: Stereoisomers
+      B: Conformers
+      D: The same compound drawn differently
+    answer: C
+    explain: Same formula C4H10, different connectivity — the definition of constitutional isomerism.
+    distractors:
+      A: Stereoisomers require identical connectivity.
+      B: Conformers interconvert by rotating single bonds; these cannot.
+      D: Different skeletons means different compounds.
   figures:
   - src: organic-chemistry/fig-05dc78c5.webp
     caption: Isomers sharing a formula but differing in carbon skeleton — cyclic versus linear arrangements.
@@ -34,6 +50,10 @@ sections:
     caption: Resonance structures of benzene — delocalized pi electrons across the ring.
     credit: Ch 20 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
 - heading: Chirality and optical activity
+  objectives:
+  - Identify a stereocenter from its four different substituents.
+  - Distinguish enantiomers from diastereomers by their relationship.
+  - Predict the optical rotation of a racemic or meso sample.
   body:
   - ==A chiral center has four different groups== and exists as enantiomers — non-superimposable mirror
     images. Enantiomers share every physical property except optical rotation direction and interactions
@@ -54,7 +74,23 @@ sections:
       A: Same formula.
       B: Identical BP.
       C: Same connectivity by definition.
+  - q: A single pure compound with two stereocenters shows no optical rotation. The explanation is…
+    options:
+      A: It is a meso compound with an internal mirror plane
+      B: It is a racemic mixture of enantiomers
+      C: It has no stereocenters after all
+      D: It is a single enantiomer, which never rotates light
+    answer: A
+    explain: An internal plane of symmetry makes a molecule with stereocenters achiral overall.
+    distractors:
+      B: A racemate is a mixture; a single pure compound cannot be one.
+      C: That contradicts the setup of the question.
+      D: A single enantiomer always rotates plane-polarised light.
 - heading: Substitution and elimination
+  objectives:
+  - Choose between SN1, SN2, E1, and E2 from substrate and conditions.
+  - Predict the stereochemical outcome of an SN2 reaction.
+  - Explain why tertiary substrates favour SN1 and E1 pathways.
   body:
   - ==SN2 — one step, backside attack, inversion of configuration, favored by strong nucleophile, good
     leaving group, unhindered substrate (methyl > 1 > 2)==. SN1 — two steps via carbocation, racemization,
@@ -76,7 +112,24 @@ sections:
       A: Needs polar protic and weak nucleophile.
       B: Heat and bulky base favor elimination.
       D: Weak base would be needed.
+  - q: Tert-butyl bromide is stirred in water (weak nucleophile, polar protic). The main pathway is…
+    options:
+      A: SN1, via ionisation to a tertiary carbocation
+      B: SN2, by backside attack
+      C: E2, by concerted elimination
+      D: No reaction occurs
+    answer: A
+    explain: A tertiary substrate ionises readily, and the protic solvent stabilises the carbocation;
+      water then attacks.
+    distractors:
+      B: Backside attack is blocked at a tertiary centre.
+      C: E2 needs a strong base; water is far too weak.
+      D: Tertiary halides react readily under exactly these conditions.
 - heading: Addition reactions of alkenes
+  objectives:
+  - Predict Markovnikov regiochemistry for hydrohalogenation and hydration.
+  - Identify the conditions that produce anti-Markovnikov products.
+  - State the stereochemistry of hydrogenation, halogenation, and oxidation.
   body:
   - 'Electrophiles add across the double bond — ==Markovnikov: H goes to the carbon with more hydrogens,
     X to the more substituted carbon== (through the more stable carbocation). Hydrohalogenation and hydration
@@ -97,7 +150,23 @@ sections:
       A: One Cl adds.
       B: Nonsense option.
       C: Anti-Markovnikov needs peroxides (and HBr only).
+  - q: Propene is treated with HBr in the presence of peroxides. The major product is…
+    options:
+      C: 1-bromopropane
+      A: 2-bromopropane
+      B: 1,2-dibromopropane
+      D: Propane
+    answer: C
+    explain: Peroxides switch HBr to a radical pathway and give the anti-Markovnikov product.
+    distractors:
+      A: That is the Markovnikov product, which peroxides override.
+      B: Adding two bromines requires Br2, not HBr.
+      D: That is hydrogenation with a metal catalyst.
 - heading: Aldehydes, ketones, and carboxylic acid derivatives
+  objectives:
+  - Predict the product of nucleophilic addition to an aldehyde or ketone.
+  - Rank carboxylic acid derivatives by acyl reactivity.
+  - Recognise the aldol condensation as a carbon-carbon bond-forming step.
   body:
   - Nucleophilic addition to aldehydes and ketones — hydride (LiAlH4, NaBH4) gives alcohols; organometallics
     (Grignard) give alcohols with new C-C bonds; water in acid gives gem-diols; alcohols give hemiacetals
@@ -118,18 +187,55 @@ sections:
       B: Reduces alkenes and aldehydes/ketones, not typically esters.
       C: Too weak for esters.
       D: Oxidizer.
+  - q: A ketone is treated with NaBH4 followed by aqueous workup. The product is…
+    options:
+      B: A secondary alcohol
+      A: A primary alcohol
+      C: A carboxylic acid
+      D: No reaction
+    answer: B
+    explain: Hydride adds to the carbonyl carbon; the two remaining substituents make the alcohol secondary.
+    distractors:
+      A: A primary alcohol would need an aldehyde (or a strong hydride on an ester).
+      C: NaBH4 reduces; it never oxidises.
+      D: NaBH4 reduces aldehydes and ketones readily.
 examples:
 - prompt: (R)-2-bromobutane reacts with HO- in acetone via SN2. What is the configuration of 2-butanol
     product?
+  strategy: 'Classify the mechanism before touching stereochemistry: strong nucleophile, aprotic solvent,
+    secondary substrate — that is SN2, and SN2 means backside attack with inversion at the stereocentre.
+    The whole item is a mechanism decision followed by a stereochemical consequence; there is nothing
+    to calculate.'
   solution:
   - SN2 is backside attack — one concerted step through a transition state.
   - Backside attack forces inversion of the stereocenter (umbrella flip).
   - (R)-2-bromobutane inverts to (S)-2-butanol (given no priority re-ranking surprises).
   answer: (S)-2-butanol — Walden inversion.
+  discussion: 'The inversion is geometric, not a property of the labels: the nucleophile enters opposite
+    the leaving group, so the tetrahedron flips like an umbrella. Note the caveat the solution flags —
+    the R/S designation also depends on the CIP priorities, and swapping Br for OH changes them, so the
+    reliable statement is ''inversion of configuration'' with the letter checked afterward. The exam''s
+    favourite contrast is SN1, which would have racemised instead, cutting the optical activity toward
+    zero rather than flipping its sign.'
   distractors:
     A: Retention — that is SN1 with a full return, not SN2.
     B: Racemization — SN1 ionizes first; SN2 does not.
     C: No stereochemistry — the center is not destroyed.
+  practice:
+    q: A tertiary alkyl chloride reacts in water and methanol (weak nucleophile, polar protic) by SN1.
+      The stereochemical outcome at the stereocentre is…
+    options:
+      C: Racemisation, since the planar carbocation is attacked from either face
+      A: Complete inversion, as in SN2
+      B: Complete retention, because the carbocation blocks backside attack
+      D: No reaction, since tertiary halides are inert
+    answer: C
+    explain: Ionisation gives a flat carbocation; nucleophilic attack from both faces gives both configurations
+      in equal measure.
+    distractors:
+      A: Inversion requires a concerted backside attack, which SN1 never does.
+      B: A planar intermediate leaves both faces open.
+      D: Tertiary halides are the most reactive substrates under these conditions.
 key_points:
 - Constitutional vs stereoisomers; E/Z and R/S assignments.
 - Enantiomers differ only in rotation and chiral interactions.

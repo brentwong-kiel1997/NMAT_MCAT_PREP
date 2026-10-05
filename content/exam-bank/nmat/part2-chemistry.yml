@@ -111,34 +111,39 @@ items:
     C: 4.5 mol inverts the ratio and uses 1 mol NH3 per 2 mol H2.
   chapter: general-chemistry
 - id: nmat-p2c-008
-  q: The percent by mass of water in copper(II) sulfate pentahydrate, CuSO4.5H2O, is
+  q: In a gravimetric chloride determination, a 0.500-g ore sample yields 0.287 g of dried AgCl precipitate.
+    What is the mass percent of chlorine in the sample? (AgCl = 143.4 g/mol, Cl = 35.5 g/mol)
   choices:
-    A: 64.0%
-    B: 56.4%
-    C: 36.1%
-    D: 7.2%
+    A: 43.2%
+    B: 57.4%
+    C: 14.2%
+    D: 28.4%
   answer: C
-  explain: M(CuSO4) = 63.5 + 32.1 + 4(16.0) = 159.6; add 5(18.0) = 90.0 for the waters, total 249.6 g/mol;
-    %H2O = 90.0/249.6 x 100 = 36.1%.
+  explain: n(AgCl) = 0.287/143.4 = 2.00 x 10^-3 mol, so m(Cl) = 2.00 x 10^-3 x 35.5 = 0.0710 g; %Cl =
+    0.0710/0.500 x 100 = 14.2%.
   distractors:
-    A: 64.0% is the CuSO4 fraction (159.6/249.6), not the water's.
-    B: 56.4% divides by the anhydrous salt mass (159.6) instead of the whole hydrate mass.
-    D: 7.2% counts only one water of crystallization (18.0/249.6).
-  chapter: general-chemistry
+    A: 43.2% multiplies the moles by the silver molar mass (107.9 g/mol) instead of chlorine's 35.5 g/mol.
+    B: 57.4% reports the precipitate's own mass fraction (0.287/0.500) without converting AgCl to Cl.
+    D: 28.4% doubles the chlorine amount, as if each AgCl unit carried two chlorides.
+  chapter: analytical-chemistry
 - id: nmat-p2c-009
-  q: A 0.500 g sample of a gas occupies 250 mL at 25.0 C and 1.00 atm. Its molar mass is about
+  q: Four titration readings give 0.1042, 0.1048, 0.1050 and 0.1130 L. Using the Q-test at 90% confidence
+    (Q_crit = 0.76 for four readings), what should the analyst do?
   choices:
-    A: 48.9 g/mol
-    B: 24.5 g/mol
-    C: 12.2 g/mol
-    D: 97.9 g/mol
+    A: Reject the 0.1130 reading (Q = 0.91 > 0.76) and average the remaining three
+    B: Keep all four readings, because a Q above the critical value confirms the suspect one
+    C: Reject the 0.1130 reading, because it lies more than one standard deviation from the mean
+    D: Reject the 0.1042 reading and average the remaining three
   answer: A
-  explain: M = mRT/PV = (0.500)(0.0821)(298) / (1.00)(0.250) = 48.9 g/mol, with V in liters and T in kelvin.
+  explain: Q = gap/range = (0.1130 - 0.1050)/(0.1130 - 0.1042) = 0.0080/0.0088 = 0.91, which exceeds 0.76,
+    so 0.1130 is discarded and the mean of the rest, 0.1047 L, is reported.
   distractors:
-    B: 24.5 doubles the volume in the denominator (0.500 L was used).
-    C: 12.2 uses 0.125 L, a fourfold volume error.
-    D: 97.9 doubles the mass (1.00 g used instead of 0.500 g).
-  chapter: general-chemistry
+    B: Exceeding Q_crit means the suspect value is REJECTED; keeping it drags the mean to 0.1068 L.
+    C: The Q-test compares the gap with the range, not the spread about the mean; the standard deviation
+      is not its criterion.
+    D: The gap below 0.1042 is only 0.0006, giving Q = 0.068, far below 0.76; the outlier is the value
+      separated by the largest gap.
+  chapter: analytical-chemistry
 - id: nmat-p2c-010
   q: How many grams of NaOH (40.0 g/mol) are needed to prepare 250 mL of 0.500 M solution?
   choices:
@@ -304,35 +309,38 @@ items:
     D: 4 treats both reactants as second order (2 + 2).
   chapter: 5e-chemical-thermodynamics-and-kinetics
 - id: nmat-p2c-021
-  q: A first-order reaction has k = 2.31 x 10^-2 /min. Its half-life is
+  q: Ethanol is heated with glacial acetic acid and a few drops of concentrated H2SO4. The chief organic
+    product is
   choices:
-    A: 30.0 min
-    B: 43.3 min
-    C: 15.0 min
-    D: 60.0 min
+    A: ethyl acetate, an ester, formed with water as the by-product
+    B: sodium acetate, the salt of the acid
+    C: acetaldehyde, from oxidation of the ethanol
+    D: diethyl ether, from condensation of two ethanol molecules
   answer: A
-  explain: t1/2 = 0.693/k = 0.693/0.0231 = 30.0 min, independent of the starting concentration.
+  explain: 'Fischer esterification joins the acyl group of the acid to the ethoxy group of the alcohol:
+    CH3COOH + C2H5OH -> CH3COOC2H5 + H2O, with the H2SO4 acting as catalyst and dehydrating agent.'
   distractors:
-    B: 43.3 min is 1/k, forgetting the 0.693 factor.
-    C: 15.0 min halves the half-life.
-    D: 60.0 min doubles the half-life.
-  chapter: 5e-chemical-thermodynamics-and-kinetics
+    B: A salt forms only when a base neutralizes the acid, and no base is present in this mixture.
+    C: Esterification changes no oxidation states, so the ethanol is not oxidized to an aldehyde.
+    D: Diethyl ether comes from dehydrating two alcohols in strong acid; the carboxylic acid present channels
+      the reaction to the ester instead.
+  chapter: organic-chemistry
 - id: nmat-p2c-022
-  q: Given E degrees of +0.34 V for Cu2+/Cu and -0.76 V for Zn2+/Zn, the standard cell potential of the
-    Daniell cell is
+  q: How many constitutional isomers of C4H10O are alcohols?
   choices:
-    A: +0.34 V
-    B: +1.10 V
-    C: -1.10 V
-    D: +0.76 V
+    A: '2'
+    B: '4'
+    C: '3'
+    D: '7'
   answer: B
-  explain: E cell = E cathode - E anode = (+0.34) - (-0.76) = +1.10 V, positive as a spontaneous galvanic
-    cell requires.
+  explain: The four are butan-1-ol, butan-2-ol, 2-methylpropan-1-ol and 2-methylpropan-2-ol; changing
+    either the carbon skeleton or the position of the -OH group gives a new constitutional isomer.
   distractors:
-    A: +0.34 V is the cathode potential alone.
-    C: -1.10 V flips the sign, giving the nonspontaneous electrolytic direction.
-    D: +0.76 V is the anode's oxidation potential alone.
-  chapter: general-chemistry
+    A: 2 counts only the two carbon skeletons (straight and branched) and ignores the position isomers
+      of the -OH group.
+    C: 3 drops one of the four, usually the tertiary alcohol 2-methylpropan-2-ol.
+    D: 7 is the total for C4H10O including the three ethers; the question asks only for alcohols.
+  chapter: organic-chemistry
 - id: nmat-p2c-023
   q: How many grams of copper (63.5 g/mol) plate out when 2.00 A flows through CuSO4(aq) for 965 s?
   choices:
@@ -425,20 +433,22 @@ items:
     D: Decantation separates immiscible layers or solids, not two miscible liquids.
   chapter: 5c-separation-and-purification-methods
 - id: nmat-p2c-029
-  q: Complete hydrolysis of the disaccharide sucrose (table sugar) yields which monosaccharides?
+  q: The alpha helix and the beta-pleated sheet, both stabilized by hydrogen bonds between backbone C=O
+    and N-H groups, belong to which level of protein structure?
   choices:
-    A: glucose + fructose
-    B: glucose + galactose
-    C: glucose only
-    D: fructose only
+    A: secondary structure
+    B: primary structure
+    C: tertiary structure
+    D: quaternary structure
   answer: A
-  explain: Sucrose is a glucose-(1->2)-fructose disaccharide, so hydrolysis ('inversion') releases one
-    glucose and one fructose.
+  explain: Secondary structure is the local folding of the polypeptide backbone itself into alpha helices
+    and beta sheets; the R-group side chains are not involved.
   distractors:
-    B: Glucose + galactose is the hydrolysis of lactose.
-    C: Glucose alone is what maltose (or starch) hydrolysis gives.
-    D: Fructose alone ignores the glucose unit of the disaccharide.
-  chapter: 5d-biologically-relevant-molecules
+    B: Primary structure is simply the linear sequence of amino acids joined by peptide bonds.
+    C: Tertiary structure is the overall three-dimensional fold of one whole polypeptide, driven by interactions
+      among R groups.
+    D: Quaternary structure describes how several separate polypeptide subunits assemble, as in hemoglobin.
+  chapter: biochemistry
 - id: nmat-p2c-030
   q: An enzyme has Vmax = 60 umol/min and Km = 2.0 mM. At [S] = 6.0 mM the initial velocity is
   choices:

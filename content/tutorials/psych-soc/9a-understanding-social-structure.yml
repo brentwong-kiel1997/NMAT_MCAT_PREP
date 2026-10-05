@@ -5,6 +5,10 @@ overview: 9A moves from interaction to structure — institutions, groups, cultu
   theory families, components, bureaucracies, culture. Prerequisites — 8A-C.
 sections:
 - heading: Three lenses on society
+  objectives:
+  - Match a research question to its lens — functionalism, conflict theory, or symbolic interactionism.
+  - Combine two lenses on one institution and state what each contributes.
+  - Name the level of analysis (macro function, distribution, micro meaning) a described study occupies.
   body:
   - Match theory to question — functionalism (what it DOES for society), conflict theory (WHO BENEFITS),
     symbolic interactionism (what it MEANS in interaction). A hospital's function is functionalist; who
@@ -22,12 +26,31 @@ sections:
       A: Interpersonal.
       B: Not sociological three.
       C: Micro-meaning.
+  - q: A study examines how nurses use charts to manage what they may say to physicians. Which lens, and
+      what would the other two ask?
+    options:
+      A: Functionalism; the others would ask about profit
+      B: Symbolic interactionism — meaning made in routine interaction; functionalism would ask what charting
+        does for the organization, conflict who benefits from the hierarchy
+      C: Conflict theory; the others would ask about meaning
+      D: All three lenses reduce to the same question
+    answer: B
+    explain: How a tool shapes everyday talk is micro-level meaning-making; the other lenses occupy macro
+      levels.
+    distractors:
+      A: The vignette concerns interactional meaning, not system function.
+      C: Distributional questions are not the focus here.
+      D: The lenses ask different questions at different levels of analysis.
   figures:
   - src: 9a-understanding-social-structure/fig-962529d0.webp
     caption: Religious community life moving onto video calls — institutions adapting their routines to
       new technology (a culture-lag moment in real time).
     credit: OpenStax Introduction to Sociology 3e (religion chapter) — CC BY-NC-SA 4.0
 - heading: Status, role, groups
+  objectives:
+  - Classify a described status as ascribed or achieved and name its role expectations.
+  - Distinguish role strain within one role from role conflict between two roles.
+  - Identify primary, secondary, and reference groups in a described case.
   body:
   - Status is a position; role is its expectations — ascribed vs. achieved. Role strain (tension within
     ONE role) versus role conflict (between roles — parent vs. resident on call). Primary groups (family)
@@ -45,7 +68,24 @@ sections:
       A: Group defect.
       B: Within a single role.
       D: Misaligned ranks.
+  - q: A teacher who must both support a struggling student and submit honest failing grades to the district
+      experiences tension. Count the roles and name the concept.
+    options:
+      A: Role conflict — two separate roles collide
+      B: Role strain — incompatible expectations inside the single teacher role
+      C: Status inconsistency — ranks are misaligned
+      D: Role exit — she has left the role
+    answer: B
+    explain: Both demands belong to one position, which makes this role strain.
+    distractors:
+      A: No second role is implicated; the district reporting duty is part of the same job.
+      C: No prestige mismatch between her statuses is described.
+      D: She still occupies the role.
 - heading: Bureaucracy and organizations
+  objectives:
+  - Name the features of Weber's ideal bureaucracy present in a described organization.
+  - Identify goal displacement or red tape in a described institutional failure.
+  - Recognize institutional discrimination operating without individual intent.
   body:
   - Weber's ideal type — hierarchy, written rules, division of labor, impersonality. Predictability as
     function; red tape and goal displacement as pathology (metrics becoming ends). The hidden curriculum
@@ -63,11 +103,29 @@ sections:
       A: Leaving a role.
       B: Bystander mechanism.
       C: Birth-assigned.
+  - q: A clinic adopts a documentation rule meant to catch errors; within a year, staff spend more time
+      on the form than on patients and error rates are unchanged. Name the pathology and its mechanism.
+    options:
+      A: Red tape alone — rules are merely slow
+      B: Goal displacement — the means (the form) became the end and displaced the original purpose
+      C: Role conflict — two roles collided
+      D: Culture lag — technology outpaced norms
+    answer: B
+    explain: When compliance with the procedure replaces the outcome it was designed to secure, the goal
+      has been displaced by the instrument.
+    distractors:
+      A: The slowness is not the failure — the loss of purpose is.
+      C: No individual occupies two conflicting roles here.
+      D: No material-norm gap is described; the rule is being followed perfectly.
   figures:
   - src: 9a-understanding-social-structure/fig-af42b92c.webp
     caption: Formal organizations and bureaucracy — Weber's ideal type and its variations.
     credit: Fig 6.2 · OpenStax Introduction to Sociology 3e — CC BY-NC-SA 4.0
 - heading: Culture and institutions
+  objectives:
+  - Order a described norm on the folkway-more-law ladder by sanction severity.
+  - Identify culture lag when material change outruns normative change.
+  - Distinguish ethnocentrism from cultural relativism in a described judgment.
   body:
   - Norms ladder — folkways (etiquette), mores (morality), laws (codified). Culture lag — norms trailing
     technology (genetics outpacing consent). Ethnocentrism vs. cultural relativism; institutions reproduce
@@ -85,17 +143,52 @@ sections:
       A: Adoption curve.
       B: Minority absorption.
       D: Trait spread.
+  - q: Wearable devices can monitor employees' sleep and heart rate continuously, while workplace privacy
+      norms and statutes have not caught up. Name the concept and place one existing rule on the norms
+      ladder.
+    options:
+      A: Assimilation; the statute is a more
+      B: Culture lag; where a written statute exists it sits on the law rung, the codified tier above
+        mores and folkways
+      C: Cultural diffusion; the device is a folkway
+      D: Ethnocentrism; the norm is a folkway
+    answer: B
+    explain: Technology moving faster than the rules that govern it is culture lag; codified rules occupy
+      the law tier.
+    distractors:
+      A: Assimilation concerns a group adopting majority norms, not a technology-norm gap.
+      C: Diffusion is the spread of a trait across cultures.
+      D: Ethnocentrism is judging others by one's own standard.
 examples:
 - prompt: Analyze a medical school's grading system through all three lenses.
+  strategy: 'Assign one question to each lens and keep them separate: what the system DOES (function),
+    WHO BENEFITS (conflict), what it MEANS in daily interaction (interactionism). The answer is three
+    parallel analyses, not one blended verdict.'
   solution:
   - Functionalist — grading enforces competence standards society needs.
   - Conflict — grading sorts students; class resources navigate the sorting differently.
   - Interactionist — grades become identity markers negotiated in everyday talk.
   answer: Three lenses — standards served, sorting by power, meaning made.
+  discussion: 'The multi-lens reading is the exam''s default for institutional vignettes — most passages
+    are written so that only one lens answers the actual question asked. Train the reflex of naming the
+    level of analysis before choosing the lens: macro function, macro distribution, micro meaning.'
   distractors:
     A: One lens only — the prompt asks for three.
     B: Moralizing instead of analyzing.
     C: Lenses as mutually exclusive.
+  practice:
+    q: A hospital introduces patient-satisfaction bonuses. Which pairing of question and lens is correct?
+    options:
+      A: Which departments gain funding and which lose staff — symbolic interactionism
+      B: What a satisfaction score means to nurses at the bedside — functionalism
+      C: Who captures the bonus and whose workload absorbs the pressure — conflict theory
+      D: All three questions belong to functionalism
+    answer: C
+    explain: Distribution of benefit and burden is the conflict-theory question.
+    distractors:
+      A: Distributional questions belong to conflict theory, not interactionism.
+      B: Bedside meaning-making is the interactionist question.
+      D: The lenses ask different questions at different levels.
 key_points:
 - Three lenses — function, conflict, interactionist.
 - Role strain (within) vs. role conflict (between).

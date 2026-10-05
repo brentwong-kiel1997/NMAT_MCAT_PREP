@@ -5,6 +5,9 @@ overview: Extending patterns in number and letter sequences. The skill is recogn
   — arithmetic, geometric, alternating, prime, and alphabetical relations — before arithmetic ever happens.
 sections:
 - heading: Arithmetic patterns — add, subtract, alternate
+  objectives:
+  - Compute first differences and identify a constant (arithmetic) or growing (quadratic) generator.
+  - Split an alternating series into odd- and even-position tracks before applying a single rule.
   body:
   - ==Difference-spotting — compute first differences; constant difference = arithmetic; growing difference
     = quadratic (add 1, add 2, add 3...)==. ==Alternating rules — odd positions follow one rule, even
@@ -25,7 +28,23 @@ sections:
       B: Alternating +5/+4.
       C: Correct.
       D: Wrong step.
+  - q: 'Complete: 20, 17, 14, 11, ?'
+    options:
+      A: 9 — the differences were added instead of subtracted
+      B: '8'
+      C: 7 — a step of 4 was assumed
+      D: 14 — the sequence restarted
+    answer: B
+    explain: Constant difference of -3 gives 11 - 3 = 8.
+    distractors:
+      A: Adding 3 reverses the direction of the series.
+      C: The step is 3, not 4.
+      D: Nothing restarts — the rule holds throughout.
 - heading: Geometric and alternating patterns
+  objectives:
+  - Test ratios of successive terms to confirm a geometric generator before multiplying on.
+  - Combine add-and-multiply rules by testing each operation in turn at every step.
+  - Recognize squares, cubes, primes, and shifted forms (n2 + 1) on sight.
   body:
   - '==Ratios — test ratios of successive terms; constant ratio = geometric; alternating ×2, ÷3 — split
     into two interleaved sequences==. ==Combination rules — alternately add and multiply: 2, 3, 6, 7,
@@ -46,7 +65,22 @@ sections:
       B: 18 + 72.
       C: Correct.
       D: ×2 slip.
+  - q: 'Complete: 3, 4, 12, 13, 39, ?'
+    options:
+      A: 40 — the +1, x3 alternation continues
+      B: 117 — the multiplication was continued
+      C: 52 — a constant +13 was assumed
+      D: 38 — a -1 step was assumed
+    answer: A
+    explain: 'The rule alternates +1 and x3: 3+1=4, 4x3=12, 12+1=13, 13x3=39, so 39+1=40.'
+    distractors:
+      B: That applies x3 twice in a row.
+      C: No constant difference exists — the steps alternate in kind.
+      D: Nothing in the series subtracts.
 - heading: Letter sequences — alphabet algebra
+  objectives:
+  - Convert letters to positions (A=1 through Z=26) and apply a numeric rule to them.
+  - Handle wraparound past Z and reversed-alphabet pairs (A-Z, B-Y, C-X).
   body:
   - ==Alphabet positions — A=1 ... Z=26; operations on positions mirror number patterns==. ==Skipping
     — A, C, E, G — +2 positions; reversed sequences — Z, X, V, T — -2==.
@@ -67,7 +101,22 @@ sections:
       B: '+4.'
       C: '+1.'
       D: Correct.
+  - q: 'Complete: D, G, J, M, ?'
+    options:
+      A: P — the +3 step continues
+      B: O — a +2 step was assumed
+      C: N — a +1 step was assumed
+      D: Q — a +4 step was assumed
+    answer: A
+    explain: Positions 4, 7, 10, 13 step by 3; the next is 16, which is P.
+    distractors:
+      B: O is position 15, one short.
+      C: N is position 14 — that would be a +1 step.
+      D: Q is position 17, one past the step.
 - heading: Identifying the generator — the strategy layer
+  objectives:
+  - Probe in order — differences, ratios, interleaving, then squares, primes, and letters.
+  - Test a candidate option by checking that the rule survives one further step.
   body:
   - ==Test order — differences, then ratios, then interleaving, then squares/primes/letters — the generator
     reveals itself in two or three probes==. ==Interleaved series — when one rule fails, split odd/even
@@ -89,7 +138,23 @@ sections:
       B: Alternating 1,2,3.
       C: Wrong generator.
       D: Correct.
+  - q: 'Complete: 2, 3, 5, 9, 17, ?'
+    options:
+      A: 26 — a constant +9 was assumed
+      B: 33 — the doubling differences continue
+      C: 25 — the terms were treated as doubling
+      D: 32 — a powers-of-two series was assumed
+    answer: B
+    explain: Differences are 1, 2, 4, 8 — doubling — so the next difference is 16 and the next term is
+      33.
+    distractors:
+      A: No constant difference holds beyond the first pair.
+      C: 'The terms do not double: 9 x 2 = 18, not 17.'
+      D: The series is not 1, 2, 4, 8 — it starts at 2.
 - heading: Speed tactics and common traps
+  objectives:
+  - Verify that a rule holds across the whole series, not only the first three terms.
+  - Use parity (odd/even) constraints to eliminate options before computing.
   body:
   - ==The trap of too-easy rules — 1, 4, 9, 16 looks like squares (correct), but 1, 4, 9, 16, 25, 36 could
     also hide interleaving — check the tail options==. ==Broken arithmetic — the generator stops (1, 2,
@@ -111,18 +176,50 @@ sections:
       B: There is a very good rule.
       C: Correct.
       D: Wrong pattern.
+  - q: The series 5, 11, 17, 23 continues by adding 6. Which option is eliminated by parity alone?
+    options:
+      A: 29 — the next term
+      B: 30 — an even number
+      C: 35 — a jump of 12
+      D: 41 — a jump of 18
+    answer: B
+    explain: Every term in the series is odd, and adding 6 preserves oddness, so an even option cannot
+      fit.
+    distractors:
+      A: 29 is the correct continuation.
+      C: 35 = 29 + 6 also fits the rule and is odd.
+      D: 41 = 35 + 6 also fits and is odd.
 examples:
 - prompt: 5, 7, 12, 19, 31, 50, ? — find the next term.
+  strategy: Write the differences before touching the terms. Here the differences are +2, +5, +7, +12,
+    +19, and the question is what generates THAT sequence — not what generates the terms.
   solution:
   - 'Differences: +2, +5, +7, +12, +19.'
   - Each difference = the sum of the two preceding terms' differences? 2+5=7, 5+7=12, 7+12=19 — yes.
   - So the next difference = 12 + 19 = 31.
   - Next term = 50 + 31 = 81.
   answer: '81.'
+  discussion: 'Second-order generators are the standard hard case: a series whose differences themselves
+    form a recognizable series (sum of previous differences, doubling runs, arithmetic growth). The same
+    move reads letter series once positions are substituted, and it is why three terms is the practical
+    minimum — two cannot separate a rule from a coincidence.'
   distractors:
     A: 62 — differences +11 fallback.
     B: 69 — misreading 12+19.
     C: 73 — constant-growth assumption.
+  practice:
+    q: 'Find the next term: 2, 3, 5, 8, 13, 21, ?'
+    options:
+      A: 34 — each term is the sum of the two before it
+      B: 29 — the last difference reused
+      C: 30 — a constant +9 assumed
+      D: 21 — the last term repeated
+    answer: A
+    explain: 2+3=5, 3+5=8, 5+8=13, 8+13=21, so 13+21=34.
+    distractors:
+      B: Adding the previous difference alone ignores the two-term structure.
+      C: The differences grow rather than holding constant.
+      D: The series always moves forward — it never repeats a term.
 key_points:
 - Write differences first — the generator lives there.
 - Alternating rules — split odd/even positions.

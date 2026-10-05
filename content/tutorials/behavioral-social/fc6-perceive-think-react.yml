@@ -6,6 +6,11 @@ overview: Biological bases of behavior — neurotransmitters, brain organization
   and emotion. Deep overlap with psychology chapters 3A and 6A-6C.
 sections:
 - heading: Neurotransmitters and synaptic transmission
+  objectives:
+  - Trace the neurotransmitter lifecycle — synthesis, storage, release, binding, reuptake, degradation
+    — and place a named drug at its step.
+  - Match each major transmitter (acetylcholine, dopamine, serotonin, GABA, glutamate, norepinephrine)
+    to its behavioral role and its signature loss or excess.
   body:
   - 'Transmission — action potential arrives at the terminal, vesicles fuse, neurotransmitter crosses
     the cleft, binds receptors on the postsynaptic cell. ==Lifecycle: synthesis, storage, release, binding,
@@ -26,7 +31,26 @@ sections:
       A: SSRIs do that.
       B: Opposite direction.
       D: That is antipsychotics.
+  - q: A new compound blocks the transporter that clears serotonin from the cleft. Which lifecycle step
+      does it hit, and what happens to signaling?
+    options:
+      A: Storage — less serotonin is packaged into vesicles
+      B: Degradation — synaptic enzymes are inhibited
+      C: Binding — postsynaptic receptors lose affinity
+      D: Reuptake — serotonin lingers in the synapse and binding is prolonged
+    answer: D
+    explain: Blocking the transporter removes the normal clearance route, so serotonin stays active in
+      the cleft — the SSRI logic.
+    distractors:
+      A: Storage blockers act inside the terminal on vesicle packaging, not at the membrane transporter.
+      B: Enzymatic degradation inhibitors (MAOIs) work inside the terminal; this drug acts at the cleft
+        surface.
+      C: Receptor affinity is untouched — only the removal of transmitter is slowed.
 - heading: Sensation and perception — getting the world in
+  objectives:
+  - Label a described case as a sensation (transduction) failure or a perception (interpretation) failure.
+  - Classify a described grouping or completion as the correct Gestalt principle.
+  - Distinguish rod-based from cone-based vision in a dim-light or color scenario.
   body:
   - ==Sensation = transduction — receptors convert stimuli into neural signals; perception = interpretation==.
     Vision — rods (dim light) vs cones (color, three types); dark adaptation; the trichromatic and opponent-process
@@ -47,11 +71,29 @@ sections:
       A: Grouping by appearance.
       B: Separating object from background.
       D: Grouping by nearness.
+  - q: A driver with healthy eyes can read road signs sharply but cannot judge whether a shape far ahead
+      is a parked truck or a bush until very close. Where is the failure, and which cue family was lost?
+    options:
+      A: Transduction in the receptors; absolute threshold
+      B: Perception; monocular depth cues such as relative size
+      C: Sensation; cone saturation in bright light
+      D: Perception; opponent-process color coding
+    answer: B
+    explain: Acuity is intact, so sensation works; the missing judgment is depth from a static monocular
+      cue — relative size and texture gradient.
+    distractors:
+      A: The receptors transduce fine — signs read clearly.
+      C: Cone saturation would blur color and detail, not distance.
+      D: Opponent processing explains afterimages, not range judgment.
   figures:
   - src: behavioral-social/fc6-perceive-think-react/muller-lyer.webp
     caption: The Müller-Lyer illusion — the mind's depth cues override equal line lengths.
     credit: Ch 5 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Consciousness and its states
+  objectives:
+  - Sequence NREM 1-3 and REM across a ~90-minute cycle and give the EEG and muscle signature of each.
+  - Match a consciousness-altering drug class to its receptor mechanism (GABA agonist, serotonergic, endorphin
+    agonist).
   body:
   - ==Sleep stages — NREM 1, 2, 3 (slow wave) and REM (dreaming, atonia, rapid eye movement); the cycle
     repeats ~90 minutes==. Sleep deprivation impairs cognition and immune function; melatonin drives the
@@ -73,7 +115,26 @@ sections:
       B: Stage 3 has slow waves.
       C: Correct.
       D: Brain is very active.
+  - q: A child is found asleep, confused and hard to rouse, with no dream recall and slow synchronized
+      EEG. Which state, and why the confusion?
+    options:
+      A: REM — dreaming always produces confusion on waking
+      B: NREM 1 — theta activity blocks arousal
+      C: NREM 3 slow-wave sleep — the deepest arousal threshold
+      D: REM atonia — paralysis prevents waking
+    answer: C
+    explain: Night terrors arise out of stage 3 slow-wave sleep, where the waking threshold is highest
+      and dream recall is absent.
+    distractors:
+      A: REM waking gives vivid dream recall, not amnesia and confusion.
+      B: Stage 1 is light sleep — the person rouses easily.
+      D: Atonia affects movement during REM, not the depth of arousal threshold.
 - heading: Cognition and emotion — thinking makes feeling
+  objectives:
+  - Name the heuristic or bias operating in a described judgment (availability, representativeness, anchoring,
+    confirmation, framing).
+  - Predict how a change in appraisal changes the emotion and stress response in Lazarus's model.
+  - Distinguish the leptin and ghrelin signals in a described hunger scenario.
   body:
   - '==Heuristics and biases again — availability, representativeness, anchoring, confirmation, framing==.
     Emotional appraisal — Lazarus: how we appraise an event determines the emotion and stress. ==Epigenesis
@@ -95,7 +156,27 @@ sections:
       B: Not its signal.
       C: Ghrelin does that.
       D: Correct.
+  - q: Two students receive the same B grade. One concludes she is not cut out for medicine; the other
+      concludes his study schedule needs restructuring. Same event, different fallout. Which construct
+      explains the gap, and what follows for each?
+    options:
+      A: Reappraisal is impossible after the grade is given
+      B: Appraisal — threat versus challenge reading drives stress and the coping path each chooses
+      C: Cognitive distortion only for the second student; the first is accurate
+      D: Drive reduction — both reduce the same hunger drive
+    answer: B
+    explain: 'Lazarus: the emotion and stress load come from the appraisal, not the event; the challenge
+      reading pushes problem-focused coping, the threat reading pushes withdrawal.'
+    distractors:
+      A: Reappraisal is precisely the lever — the event is fixed, the reading is not.
+      C: The first student's reading is the distorted one; the second is problem-focused.
+      D: Drive reduction concerns physiological needs, not the interpretation of a grade.
 - heading: Stress and the biology of reaction
+  objectives:
+  - Trace the HPA axis in order (CRH → ACTH → cortisol) and name each gland's contribution.
+  - Assign a described reaction to the fast sympathetic-adrenal channel or the slow HPA channel by its
+    timing.
+  - Classify a described coping effort as problem-focused or emotion-focused.
   body:
   - ==HPA axis — hypothalamus releases CRH, pituitary ACTH, adrenal cortex cortisol; SNS gives the quick
     adrenaline response==. Chronic stress — cortisol drives immune suppression, hippocampal atrophy risk,
@@ -116,6 +197,20 @@ sections:
       A: HPA step.
       B: The slow HPA path.
       C: Not a stress channel.
+  - q: Seconds after a near-collision a driver's heart pounds and her mouth goes dry; twenty minutes later
+      she feels shaky and drained. Match each phase to its channel.
+    options:
+      A: Both phases are cortisol driven
+      B: First phase sympathetic epinephrine; second phase HPA cortisol
+      C: First phase HPA cortisol; second phase sympathetic epinephrine
+      D: Both phases are ACTH driven
+    answer: B
+    explain: The immediate fight-or-flight surge is sympathetic-adrenal-medullary (seconds); the hormonal
+      cortisol cascade trails by minutes.
+    distractors:
+      A: Cortisol cannot arrive in seconds — the cascade has three glands to traverse.
+      C: The order is reversed — cortisol is the slow arm.
+      D: ACTH is an intermediate HPA step, not the fast arm.
   figures:
   - src: behavioral-social/fc6-perceive-think-react/fig-b561c8c9.webp
     caption: The autonomic nervous system — sympathetic emergency mobilization versus parasympathetic
@@ -124,6 +219,9 @@ sections:
 examples:
 - prompt: A patient with a tumor compressing his left optic nerve loses vision in the LEFT eye only. In
     which region does the crossover explain why right-eye vision is spared?
+  strategy: Localize before naming. Lay the pathway out — retina, optic nerve, chiasm, tract, LGN, V1
+    — and ask what each lesion candidate would take. The chiasm is the only place the two eyes' fibers
+    mix, so a deficit confined to one eye must sit upstream of it.
   solution:
   - Optic nerves from both eyes join at the optic chiasm.
   - Some fibers cross — temporal fibers stay ipsilateral, nasal fibers cross.
@@ -131,10 +229,30 @@ examples:
   - Post-chiasm lesions cause hemifield loss in BOTH eyes — not seen here.
   answer: The lesion must be PRE-chiasm (left optic nerve) — fibers from the right eye still reach the
     brain.
+  discussion: 'The same localization logic reads every visual-field vignette: a chiasm lesion pressed
+    from below (pituitary) takes the crossing nasal fibers and gives bitemporal hemianopia; anything past
+    the chiasm takes one field from both eyes; a purely retinal or receptor disease degrades the eye''s
+    own function rather than a field. Contrast with the cortical case — V1 damage preserves the eyes and
+    destroys a half-world.'
   distractors:
     A: Post-chiasm — would cut both eyes' visual fields.
     B: Optic tract — same bilateral loss pattern.
     C: Occipital cortex — bilateral half-fields, not one eye.
+  practice:
+    q: A pituitary adenoma grows upward and presses on the optic chiasm from below. Which visual loss
+      follows?
+    options:
+      A: Total blindness of the left eye
+      B: A central blind spot in the right eye only
+      C: Loss of the temporal (outer) half of each visual field
+      D: Loss of the nasal half of each visual field
+    answer: C
+    explain: Compression at the chiasm severs the crossing nasal retinal fibers, which carry the temporal
+      fields of both eyes — bitemporal hemianopia.
+    distractors:
+      A: One-eye total loss requires a pre-chiasm optic nerve lesion.
+      B: Scotomas come from retinal or cortical damage, not chiasm compression.
+      D: The crossed fibers serve the temporal fields, not the nasal fields.
 key_points:
 - Neurotransmitter lifecycle — drugs act at synthesis, release, binding, reuptake, degradation.
 - GABA-inhibits / glutamate-excites; dopamine reward-movement.

@@ -5,6 +5,10 @@ overview: 8A builds the self — identity development, self-concept machinery, a
   becomes identity. Expect Erikson, Marcia, self-serving biases, social identity. Prerequisite — 7A.
 sections:
 - heading: Identity development — Erikson's ladder
+  objectives:
+  - Match a described life stage to its Eriksonian crisis.
+  - Classify a described adolescent into Marcia's four statuses from the explored/committed bits.
+  - Predict the developmental task ordering across the lifespan.
   body:
   - Erikson frames life as eight psychosocial stages, each a crisis — trust vs. mistrust (infancy) through
     identity vs. role confusion (adolescence) to integrity. The MCAT tests the stage-crisis match.
@@ -23,6 +27,19 @@ sections:
       A: Exploring, no commitment.
       B: Neither.
       D: Requires exploration first.
+  - q: A college student has tried three majors, changed friend groups twice, and has committed to nothing
+      yet. Name the Marcia status and its two bits.
+    options:
+      A: Foreclosure — explored yes, committed yes
+      B: Moratorium — exploration high, commitment low
+      C: Diffusion — exploration high, commitment high
+      D: Identity achievement — exploration low, commitment low
+    answer: B
+    explain: Active exploration with decision deferred is moratorium.
+    distractors:
+      A: Foreclosure commits WITHOUT exploring — the reverse of this student.
+      C: That pairing is achievement, not diffusion.
+      D: Low exploration plus low commitment is diffusion.
   figures:
   - src: 8a-self-identity/fig-1752bba5.webp
     caption: Stages of development — Erikson's psychosocial crises across the lifespan.
@@ -31,6 +48,10 @@ sections:
     caption: Identity development — transitions through childhood and adolescence.
     credit: Fig 9.11 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Self-concept, esteem, efficacy
+  objectives:
+  - Distinguish global self-esteem from task-specific self-efficacy in a described self-belief.
+  - Name the self-serving mechanism (bias, better-than-average, self-handicapping) in a described account.
+  - Explain self-handicapping as pre-emptive excuse-making protecting self-worth.
   body:
   - Self-esteem is the evaluation; self-efficacy (Bandura) is task-specific confidence — the confusion
     is a planted trap. The self defends — self-serving bias (success = me, failure = situation), better-than-average,
@@ -48,7 +69,25 @@ sections:
       A: Pre-emptive excuse.
       B: Self-discrepancy term.
       D: Global self-worth.
+  - q: Before an important exam, a student stays out late and does not revise, then explains the low score
+      by the late night. Identify the mechanism and what it protects.
+    options:
+      A: Self-efficacy — his belief in his capability
+      B: Self-handicapping — a pre-emptive external excuse that protects self-worth if he fails
+      C: Self-serving bias in its standard credit form
+      D: Better-than-average effect — he rates himself above peers
+    answer: B
+    explain: Creating the obstacle before the test manufactures the excuse; the attribution is arranged
+      in advance.
+    distractors:
+      A: No capability belief is measured — only the excuse construction.
+      C: Self-serving bias usually operates after the outcome; here the excuse is manufactured beforehand.
+      D: No comparison with peers is described.
 - heading: Social identity — the group in the self
+  objectives:
+  - Sequence Tajfel's categorize-identify-compare and predict bias from a minimal-group assignment.
+  - Distinguish out-group homogeneity from in-group differentiation.
+  - Explain stereotype threat as working-memory consumption under an activated negative expectation.
   body:
   - Tajfel — categorize, identify, compare. Minimal-group experiments (random label assignment alone produces
     in-group favoritism). Out-group homogeneity; stereotype threat — performance decrements under negative
@@ -66,7 +105,27 @@ sections:
       A: Familiarity, not allocation.
       B: Effort drop.
       D: Anonymity disinhibition.
+  - q: Participants are assigned to groups by coin flip and then allocate resources, giving more to their
+      own group even though they never met. What does this show, and what does it rule out?
+    options:
+      A: In-group favoritism needs a history of conflict — the coin flip was not enough
+      B: Categorization alone is sufficient for in-group favoritism; it rules out competition or prior
+        contact as necessary conditions
+      C: The allocation reflects rational self-interest
+      D: The effect is out-group homogeneity
+    answer: B
+    explain: Tajfel's minimal-group paradigm shows mere labeling produces bias with no conflict, no contact
+      history, and no material gain.
+    distractors:
+      A: That is the conclusion the experiment refutes.
+      C: Allocations favoured the group, not the individual allocator, so self-interest does not explain
+        it.
+      D: Homogeneity is a perception of the out-group's variability, not resource allocation.
 - heading: Self-concept across cultures
+  objectives:
+  - Contrast the independent and interdependent self-construals in a described self-description.
+  - Predict how individualist and collectivist settings shift self-enhancement and attribution patterns.
+  - Interpret self-criticism in a collectivist context without misreading it as low self-esteem.
   body:
   - Culture shapes the default self — **individualist** cultures build an independent self (traits, autonomy,
     consistency across situations); **collectivist** cultures build an interdependent self (roles, relationships,
@@ -90,18 +149,58 @@ sections:
       A: Culture is a systematic shaper.
       B: Culture shifts the default.
       C: Independent selves lead with traits.
+  - q: In one sample, respondents begin 'I am hardworking and curious'; in another, 'I am a daughter,
+      a colleague, and from a farming town'. Which construals, and what does each predict for self-enhancement?
+    options:
+      A: Both interdependent; both show strong self-enhancement
+      B: Independent first, interdependent second; the independent sample shows stronger better-than-average
+        self-enhancement
+      C: Both independent; neither self-enhances
+      D: Interdependent first, independent second; the interdependent sample self-enhances more
+    answer: B
+    explain: Trait-led self-description marks the independent self, which also carries the stronger self-enhancement
+      bias.
+    distractors:
+      A: The two self-descriptions are the paradigm contrast, not the same construal.
+      C: Role-and-relationship led description is the interdependent signature.
+      D: The order is reversed, and Markus and Kitayama's finding places stronger enhancement in individualist
+        samples.
 examples:
 - prompt: A stereotype-threat experiment — math test framed as diagnostic of ability vs. problem-solving
     exercise, stereotyped vs. non-stereotyped group. Predict the 2×2.
+  strategy: Read the design as an interaction before reading the means. The claim is not that a group
+    scores lower, nor that a framing scores lower, but that one framing removes the threat for the comparison
+    group — so predict the cell pattern first.
   solution:
   - Threat activates under diagnostic framing for the stereotyped group only.
   - Working memory consumed by monitoring — performance drops.
   - The interaction (group × framing) is the signature.
   answer: Stereotyped group underperforms only in the diagnostic condition — an interaction effect.
+  discussion: 'Interaction-first reading generalises to every priming and threat design in this exam:
+    main effects are the boring hypothesis, and the diagnostic claim lives in the cell where group and
+    condition cross. The mechanism check (working-memory consumption, sparse encoding of surface detail)
+    is what turns the pattern into an explanation rather than a description.'
   distractors:
     A: Main effects of group alone — the design lives in the interaction.
     B: Framing main effect — controls are flat.
     C: Preparation differences — random assignment holds ability constant.
+  practice:
+    q: The same math test is given with a 'problem-solving exercise' cover story. Stereotyped and non-stereotyped
+      groups score alike; switching back to the 'diagnostic of ability' framing reproduces the gap for
+      the stereotyped group only. What does this pattern establish?
+    options:
+      A: A main effect of group — the stereotyped group is weaker
+      B: A main effect of framing — the cover story alone changed scores
+      C: An interaction — the framing's effect depends on group, supporting stereotype threat rather than
+        ability difference
+      D: A floor effect in all cells
+    answer: C
+    explain: The gap appears only when group and framing combine, which is the signature of stereotype
+      threat and rules out a fixed ability account.
+    distractors:
+      A: The stereotyped group scores equally well when the threat cue is removed.
+      B: The non-stereotyped group is unaffected by the framing.
+      D: Scores are not described as uniformly low — they differ by condition.
 key_points:
 - Erikson — eight crises; adolescence = identity vs. role confusion.
 - Marcia — achievement, moratorium, foreclosure, diffusion.

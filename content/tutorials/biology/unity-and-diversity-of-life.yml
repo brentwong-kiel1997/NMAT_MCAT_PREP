@@ -9,6 +9,10 @@ overview: 'This opening chapter answers two questions that both exams return to 
   where diversity comes from. No prerequisites; everything later in biology builds on it.'
 sections:
 - heading: A working definition of life
+  objectives:
+  - List the shared properties used as a working checklist for life.
+  - Apply the checklist to a borderline case such as a virus.
+  - Explain why imperfect inheritance supplies the raw material for evolution.
   body:
   - Biology has no single-sentence definition of life that everyone accepts, but exams expect you to know
     the property checklist that living things share. A living organism maintains **order**, harvests **energy**
@@ -39,7 +43,23 @@ sections:
       B: Wrong — a virus's nucleic acid IS heritable information.
       C: Wrong — viruses DO evolve; drug resistance in viruses is a textbook example.
       D: Wrong — inside a host, viruses do respond to (hijack) cellular machinery.
+  - q: A robot vacuum maintains order, responds to stimuli, and consumes energy. Is it alive?
+    options:
+      B: No — it has no cells, cannot reproduce with inheritance, and does not evolve
+      A: Yes, since it meets most items on the checklist
+      C: Yes, since it processes energy from its environment
+      D: It is alive only while docked and charging
+    answer: B
+    explain: The checklist is conjunctive — failing the cellular and hereditary items settles the question.
+    distractors:
+      A: Meeting most items is not meeting all of them.
+      C: Energy processing alone describes a furnace as much as an organism.
+      D: Docking state has no bearing on any property of life.
 - heading: Levels of organization and **emergent properties**
+  objectives:
+  - Order the levels of biological organisation from atom to biosphere.
+  - Define an emergent property and supply an example.
+  - Justify why the cell, not the molecule, is the basic unit of life.
   body:
   - Life is organized on a nested ladder — atoms, molecules, organelles, cells, tissues, organs, organ
     systems, organisms, populations, communities, ecosystems, and the biosphere. Each rung is built entirely
@@ -65,7 +85,23 @@ sections:
       B: Organs already depend on cells — they are ABOVE the basic unit, not the lowest level.
       D: The organism shows the full checklist, but it is built of cells; the lowest level is not the
         most complex.
+  - q: An ecosystem cycles nutrients although none of its individual species does. This illustrates…
+    options:
+      B: An emergent property of the ecosystem level
+      A: A property of a single population scaled upward
+      C: Evidence that the ecosystem is the basic unit of life
+      D: A violation of the levels-of-organisation ladder
+    answer: B
+    explain: The whole shows behaviour no part possesses — the definition of emergence.
+    distractors:
+      A: No single population cycles nutrients on its own.
+      C: The cell remains the basic unit; the ecosystem is far above it.
+      D: Emergence is exactly what the ladder predicts, not a contradiction of it.
 - heading: 'Naming and classifying: taxonomy and the three domains'
+  objectives:
+  - Write a binomial name correctly, with the genus capitalised and italicised.
+  - Order the taxonomic ranks from domain down to species.
+  - Assign an organism to a domain from its cell type and membrane chemistry.
   body:
   - Taxonomy is the discipline of naming and classifying organisms. Every species has a two-part name,
     Homo sapiens, where the first word is the **genus** (capitalized) and the second is the specific epithet;
@@ -121,11 +157,28 @@ sections:
       B: Eukarya's membrane biology resembles archaea more than bacteria; sequence data agree.
       C: The three-domain split is not a three-way simultaneous event; Archaea and Eukarya share a later
         node.
+  - q: A newly described organism is unicellular, has a nucleus, and absorbs nutrients from dead matter.
+      It belongs to…
+    options:
+      C: The fungi, within Eukarya
+      A: The bacteria, since it is unicellular
+      B: The archaea, since it absorbs nutrients
+      D: The plants, since it has a nucleus
+    answer: C
+    explain: Eukaryotic, unicellular, and absorptive heterotrophic is the fungal profile.
+    distractors:
+      A: Unicellular does not imply prokaryotic; it has a nucleus.
+      B: Absorption is not an archaeal marker, and it has a nucleus.
+      D: Plants photosynthesise; they do not absorb from dead matter.
   figures:
   - src: unity-and-diversity-of-life/tree-of-life.webp
     caption: The three-domain tree of life — rooted (a) and unrooted (b) renderings of the same relationships.
     credit: Fig 20.2 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: 'Unity: the shared molecular toolkit'
+  objectives:
+  - Identify the molecular features every known organism shares.
+  - Distinguish homologous from analogous structures.
+  - Use vestigial structures as evidence of inheritance.
   body:
   - 'Underneath the diversity, every known organism runs on the same chemistry. All use DNA as the hereditary
     material, and the **genetic code** — which triplet codon specifies which amino acid — ==is essentially
@@ -156,7 +209,23 @@ sections:
         still function.
       C: Bats and butterflies diverged far down the tree; similarity here is function, not recent common
         ancestry.
+  - q: A human arm and a dolphin flipper share the same bone arrangement. They are…
+    options:
+      B: Homologous — the same underlying skeleton from a shared ancestor
+      A: Analogous, since both are used for swimming
+      C: Vestigial, since neither is functional
+      D: Unrelated, because the species occupy different habitats
+    answer: B
+    explain: The tetrapod forelimb plan is inherited; the functions differ, which is the homology signature.
+    distractors:
+      A: Similar function with the SAME parts is still homology.
+      C: Both structures work perfectly in their owners.
+      D: Habitat has nothing to do with structural ancestry.
 - heading: 'Diversity: where it comes from and how we read it'
+  objectives:
+  - Identify mutation as the ultimate source of new alleles.
+  - Read a phylogenetic tree to judge relatedness by node recency.
+  - Define a clade and explain what makes a tree valid.
   body:
   - If unity comes from shared inheritance, diversity comes from its imperfection. Mutation introduces
     new alleles; sexual reproduction and genetic recombination shuffle existing alleles into new combinations.
@@ -189,6 +258,18 @@ sections:
       B: Recombination rearranges existing alleles into new combinations — new to an individual, but not
         new to the species.
       D: Drift changes allele frequencies by chance; the alleles already existed.
+  - q: On a phylogenetic tree, species A and B share the most recent node. What follows?
+    options:
+      B: They are each other's closest relatives, wherever their tips sit on the page
+      A: They are unrelated, since every pair shares some ancestor
+      C: Whichever tip sits nearest the other on the page is the closer relative
+      D: A and B must be the same species
+    answer: B
+    explain: Recency of common ancestry is the only measure of relatedness a tree encodes.
+    distractors:
+      A: All pairs share ancestors; the tree ranks them by recency.
+      C: Tip position is an artefact of drawing, not information.
+      D: Sharing a recent node is compatibility with being distinct species.
   figures:
   - src: unity-and-diversity-of-life/tree-anatomy.webp
     caption: Tree anatomy — root, branch points, sister taxa, basal taxon, polytomy.
@@ -200,12 +281,20 @@ examples:
 - prompt: A researcher isolates an unidentified microbe from a deep-sea hydrothermal vent. It has no membrane-bound
     nucleus. Its small-subunit rRNA sequence clusters nearest to eukaryotic sequences, and its membrane
     lipids contain ether linkages rather than ester linkages. To which domain does it belong?
+  strategy: 'Order the evidence by decisiveness: the absence of a nucleus narrows the choice to the two
+    prokaryotic domains, and then the two molecular signatures — rRNA clustering with Eukarya and ether-linked
+    membrane lipids — decide between them. Morphology and habitat are never decisive on their own.'
   solution:
   - Step 1 — no nucleus → prokaryotic → Bacteria or Archaea.
   - Step 2 — sequence data cluster it with Eukarya — a relationship unique to Archaea.
   - Step 3 — ether-linked membrane lipids confirm the archaeal signature (bacterial/eukaryotic membranes
     use ester-linked lipids).
   answer: Archaea
+  discussion: 'This is the lesson in why molecular data outrank appearance: the microbe looks prokaryotic
+    and lives somewhere extreme, yet both facts are consistent with two different domains, and only the
+    chemistry and the sequence resolve them. Note the one feature that rules out Eukarya outright — no
+    membrane-bound nucleus — which is why the rRNA similarity is evidence of relatedness rather than of
+    membership. The recipe generalises: sequence first, chemistry second, appearance last.'
   distractors:
     A: Bacteria, if chosen only because it is a prokaryote — molecular and membrane evidence overrides
       appearance.
@@ -213,8 +302,26 @@ examples:
       be a eukaryote.
     C: A viral particle, if confused by the extreme habitat — viruses lack an rRNA of their own; this
       microbe has ribosomes.
+  practice:
+    q: A newly isolated microbe is unicellular, lacks a nucleus, has ester-linked membrane lipids, and
+      its wall contains peptidoglycan. Which domain?
+    options:
+      D: Bacteria — peptidoglycan and ester-linked lipids are the bacterial signatures
+      A: Archaea, since it lacks a nucleus
+      B: Eukarya, since it is unicellular
+      C: A virus, since it lacks a nucleus
+    answer: D
+    explain: Prokaryotic plus peptidoglycan plus ester lipids is the bacterial profile; archaea use ether
+      links and lack peptidoglycan.
+    distractors:
+      A: Lacking a nucleus only says prokaryote; the chemistry says bacteria.
+      B: Unicellular eukaryotes have nuclei and no peptidoglycan wall.
+      C: It has its own ribosomes and metabolism, which no virus does.
 - prompt: A passage describes four organisms — a mushroom, a palm tree, a thermophilic archaeon from a
     hot spring, and E. coli — then asks which two are most closely related.
+  strategy: 'Sort by domain before anything else, since domain is the broadest and therefore the most
+    decisive cut: two of the four are prokaryotes and two are Eukarya. Then compare only the candidates
+    sharing a domain, asking which pair shares the most recent common ancestor.'
   solution:
   - Step 1 — sort by domain first. The archaeon is Archaea; E. coli is Bacteria; the mushroom (a fungus)
     and the palm (a plant) are both Eukarya.
@@ -222,14 +329,38 @@ examples:
     recent eukaryotic common ancestor than either shares with a prokaryote.
   - Answer — the mushroom and the palm. The trap is picking organisms that look alike (palm and any 'plant-like'
     thing) or live alike — ==relatedness is about recency of common ancestry, nothing else==.
+  discussion: 'The mushroom and the palm win despite looking little alike and living completely differently,
+    which is exactly the point — relatedness is recency of common ancestry, not resemblance or lifestyle.
+    Note the two traps the question plants: the archaeon and E. coli both look ''prokaryotic'', but prokaryote
+    is a bundle of traits rather than a branch of the tree; and plant-like appearance tempts you toward
+    whatever looks most planty. Fungi are biochemically closer to animals than to plants, which makes
+    the palm-mushroom pairing even more instructive.'
   distractors:
     A: Picking the palm and any plant-like organism — resemblance is not relatedness; the mushroom is
       the closer relative of the palm.
     B: Picking the archaeon with E. coli — both are prokaryotes, but prokaryotic appearance is a trait
       collection, not a branch.
     C: Picking the thermophile by habitat — shared extreme environment is convergent, not ancestral.
+  practice:
+    q: 'Four organisms: a human, a bread mould (a fungus), a maple tree, and E. coli. Which pair is most
+      closely related?'
+    options:
+      C: The human and the bread mould
+      A: The maple and the bread mould, since both are sedentary
+      B: E. coli and the bread mould, since both are small
+      D: The maple and E. coli, since both have cell walls
+    answer: C
+    explain: Animals and fungi are both opisthokonts within Eukarya — a closer shared ancestor than either
+      shares with a plant or a bacterium.
+    distractors:
+      A: Shared lifestyle is convergence, not ancestry.
+      B: Size is irrelevant, and E. coli is in a different domain entirely.
+      D: Cell walls evolved independently in these groups; the wall chemistry differs.
 - prompt: Which pair of structures is homologous, and which is analogous? — (i) a whale flipper and a
     bat wing, (ii) a bat wing and an insect wing.
+  strategy: 'Ask about the PARTS rather than the function: homology is a claim about shared structural
+    or developmental origin, so trace the bone plan — or its absence — before considering what the structure
+    does. Function is identical in both pairs here, so it cannot discriminate between the labels.'
   solution:
   - (i) Whale flipper and bat wing share the tetrapod forelimb bone plan (humerus, radius, ulna, carpals)
     inherited from a common ancestor — homologous.
@@ -237,10 +368,30 @@ examples:
     origins and evolved independently — analogous.
   - The exam trap — both pairs fly, but only one shares ancestry.
   answer: (i) Homologous (shared ancestry); (ii) Analogous (convergent function).
+  discussion: 'The discriminating question is always whether the parts share a common ancestral structure
+    — and flight is useless as evidence, since it evolved independently in insects, pterosaurs, birds,
+    and bats. Note that ''analogous'' is not a weaker homology; it is a different claim produced by convergent
+    evolution. Vestigial structures sit between the two: a whale''s pelvis is homologous with a walking
+    ancestor''s limb even though it no longer serves that function.'
   distractors:
     A: Calling both homologous — flight alone does not make homology; the PARTS must share origin.
     B: Calling both analogous — the tetrapod forelimb IS shared ancestry.
     C: Swapping the labels — the parts, not the function, decide.
+  practice:
+    q: A shark's fusiform body and a dolphin's fusiform body are both streamlined for swimming. Homologous
+      or analogous?
+    options:
+      D: Analogous — similar form evolved independently in a fish and a mammal
+      A: Homologous, since both are streamlined swimmers
+      B: Vestigial, since neither needs to swim fast
+      C: Both — the shapes share a common ancestor
+    answer: D
+    explain: The last common ancestor of sharks and dolphins was not fusiform; the shape is a convergent
+      solution.
+    distractors:
+      A: Shared function is exactly what analogy, not homology, describes.
+      B: Both structures are fully functional; vestigial means reduced in function.
+      C: The shapes cannot be both — the common ancestor lacked them.
 key_points:
 - Life's checklist — order, energy processing, cellular organization, response to stimuli, reproduction
   with inheritance, homeostasis/growth, and evolution; viruses fail most items outside a host cell.

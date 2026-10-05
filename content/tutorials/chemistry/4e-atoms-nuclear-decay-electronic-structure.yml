@@ -7,6 +7,10 @@ overview: This chapter covers what makes atoms tick at the deepest MCAT level �
   curves.
 sections:
 - heading: Quantum numbers and orbital shapes
+  objectives:
+  - Assign the four quantum numbers to any electron in an atom.
+  - Predict an orbital's capacity from l and the Pauli principle.
+  - Order subshell filling with the Aufbau sequence, including the 4s/3d order.
   body:
   - Four quantum numbers define every electron — n (shell, 1 to infinity), l (subshell, 0 to n-1, labeled
     s/p/d/f), ml (orientation, -l to +l), and ms (spin, plus or minus one-half). The ==Pauli principle
@@ -29,7 +33,23 @@ sections:
       A: That is one orbital.
       B: That is p (3 orbitals).
       C: That is f (7 orbitals).
+  - q: How many orbitals are in the n = 4 shell?
+    options:
+      A: '16'
+      B: '4'
+      C: '32'
+      D: '9'
+    answer: A
+    explain: n = 4 allows l = 0, 1, 2, 3 — that is 1 + 3 + 5 + 7 = 16 orbitals (32 electrons).
+    distractors:
+      B: Counting subshells (s, p, d, f) rather than the orbitals inside them.
+      C: Quoting the electron capacity rather than the orbital count.
+      D: Counting only s, p, and d — the n = 3 shell.
 - heading: Nuclear notation and isotopes
+  objectives:
+  - Write and interpret nuclear notation for isotopes and for ions.
+  - Determine proton, neutron, and electron counts from A, Z, and charge.
+  - Relate mass defect to binding energy through E = mc2.
   body:
   - Write isotopes as upper-left mass number, lower-left atomic number, symbol. Carbon-14 is 14/6 C. The
     ==number of neutrons = A minus Z==. For ions, the electron count changes but the nucleus does not
@@ -50,7 +70,23 @@ sections:
       B: That is A + Z.
       C: That is the mass number.
       D: That is the proton count.
+  - q: The oxide ion 16/8 O2- contains…
+    options:
+      C: 8 protons, 8 neutrons, 10 electrons
+      A: 8 protons, 8 neutrons, 8 electrons
+      B: 8 protons, 16 neutrons, 10 electrons
+      D: 10 protons, 6 neutrons, 8 electrons
+    answer: C
+    explain: Z = 8 protons never change; N = A - Z = 8; the 2- charge adds two electrons for 10.
+    distractors:
+      A: Ignoring the charge, which is what makes it an ion.
+      B: Taking A as the neutron count instead of subtracting Z.
+      D: Treating the charge as a nuclear change — electrons, not protons, move.
 - heading: Nuclear decay — alpha, beta, gamma
+  objectives:
+  - Balance a nuclear equation for alpha, beta, or gamma decay.
+  - Predict how A and Z change in each decay mode.
+  - Calculate the activity remaining after a given number of half-lives.
   body:
   - ==Alpha decay emits a helium-4 nucleus== (A decreases by 4, Z decreases by 2). Beta-minus decay emits
     an electron from neutron conversion (Z increases by 1, A unchanged). Gamma emission releases a photon
@@ -72,6 +108,18 @@ sections:
       B: That is four half-lives.
       C: That is one half-life.
       D: That is two half-lives.
+  - q: 226/88 Ra undergoes alpha decay. The daughter nuclide is…
+    options:
+      C: 222/86 Rn
+      A: 226/86 Rn
+      B: 222/87 Fr
+      D: 230/90 Th
+    answer: C
+    explain: 'Alpha decay takes A down by 4 and Z down by 2: 226/88 -> 222/86.'
+    distractors:
+      A: Lowering Z without lowering A.
+      B: Raising Z, which is beta-minus, not alpha.
+      D: Adding to A and Z — that would be capture, not decay.
   figures:
   - src: 4e-atoms-nuclear-decay-electronic-structure/4e-1a783933.webp
     caption: Nuclear stability and decay modes — the valley of stability.
@@ -80,6 +128,10 @@ sections:
     caption: Nuclear equations — balancing alpha and beta decay.
     credit: Fig 21.2 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
 - heading: Electronic transitions and atomic spectra
+  objectives:
+  - Relate a transition's energy gap to the photon's frequency and wavelength.
+  - Identify which spectral series falls in which region of the spectrum.
+  - Predict from the photoelectric effect whether electrons are ejected.
   body:
   - Electrons absorb energy and jump to higher levels; they emit photons when they fall back. The photon
     energy equals the gap — ==E = hf = hc/wavelength==. The Lyman series (to n=1) is ultraviolet; the
@@ -101,7 +153,25 @@ sections:
       A: Lyman series (to n = 1) is UV.
       B: X-rays are inner-shell transitions in heavy atoms.
       C: Paschen series (to n = 3) is IR.
+  - q: An electron climbs from n = 1 to n = 4 in hydrogen. Compared with a climb from n = 1 to n = 2,
+      the absorbed photon has…
+    options:
+      A: Higher energy and shorter wavelength
+      B: Lower energy and longer wavelength
+      C: The same energy, since both start at n = 1
+      D: Higher energy but longer wavelength
+    answer: A
+    explain: 'The n = 4 level sits higher, so the gap is larger: E = hf, and higher frequency means shorter
+      wavelength.'
+    distractors:
+      B: Assuming the higher final level means a smaller jump — the levels converge upward, not downward.
+      C: The starting level alone does not fix the energy; the gap does.
+      D: Energy and wavelength move inversely — E = hc/lambda.
 - heading: Absorption and emission spectroscopy
+  objectives:
+  - Distinguish absorption from emission spectra and what each displays.
+  - Explain why every element's line spectrum is unique.
+  - Apply the Beer-Lambert law to find an unknown concentration.
   body:
   - Absorption spectra show dark lines where atoms absorb specific wavelengths; emission spectra show
     bright lines where atoms emit at the same wavelengths. ==Every element has a unique line spectrum==
@@ -122,17 +192,52 @@ sections:
       A: Only b — epsilon is missing.
       B: Wavelength is fixed.
       C: That is the x-axis variable.
+  - q: A sample has absorbance 0.40 in a 1.0 cm cuvette with molar absorptivity 2000 M-1 cm-1. Its concentration
+      is…
+    options:
+      A: 2.0 x 10^-4 M
+      B: 800 M
+      C: 5.0 x 10^3 M
+      D: 2.0 x 10^-2 M
+    answer: A
+    explain: A = epsilon b c, so c = A/(epsilon b) = 0.40/(2000 x 1.0) = 2.0 x 10^-4 M.
+    distractors:
+      B: Multiplying by epsilon b instead of dividing by it.
+      C: Inverting the relation and computing epsilon/A.
+      D: Using an absorptivity of 20 instead of 2000.
 examples:
 - prompt: Uranium-238 undergoes alpha decay followed by beta-minus decay. What is the daughter nuclide?
+  strategy: 'Track the two numbers that define a nuclide through each step separately: alpha decay takes
+    4 from A and 2 from Z, beta-minus leaves A untouched and adds 1 to Z. Write the intermediate nuclide
+    after the first step before attempting the second, then confirm that both A and Z balance at the end
+    — the answer is whichever daughter satisfies both.'
   solution:
   - 'Start: 238/92 U'
   - 'Alpha decay: A decreases by 4, Z decreases by 2 -> 234/90 Th'
   - 'Beta-minus: Z increases by 1, A unchanged -> 234/91 Pa'
   answer: Protactinium-234 (234/91 Pa).
+  discussion: '234/91 Pa confirms both balances: A runs 238 to 234 and then stays put, while Z runs 92
+    to 90 to 91. The physics behind the second step is worth stating — beta-minus converts a NEUTRON into
+    a proton, which is how the daughter climbs back toward the valley of stability after the alpha step
+    pushed it neutron-rich. Sanity check by mass and charge conservation every time; a daughter whose
+    nucleons do not add up is not a possible product, whatever its symbol.'
   distractors:
     A: Stopping after alpha — 234/90 Th is the intermediate.
     B: Beta before alpha — wrong sequence.
     C: Beta-minus decreases Z instead of increasing — that is positron emission.
+  practice:
+    q: 222/86 Rn undergoes alpha decay followed by beta-minus decay. The final nuclide is…
+    options:
+      D: 218/85 At
+      A: 218/84 Po
+      B: 214/84 Po
+      C: 222/85 At
+    answer: D
+    explain: 'Alpha: 222/86 -> 218/84 (Po). Beta-minus: Z +1 with A unchanged -> 218/85 (At).'
+    distractors:
+      A: Stopping after the alpha step.
+      B: Subtracting 4 twice, as though two alpha decays occurred.
+      C: Applying the beta-minus without the preceding alpha decay.
 key_points:
 - Four quantum numbers (n, l, ml, ms) — Pauli forbids duplicates.
 - s spherical, p dumbbell, d four-lobed; energy s < p < d < f within a shell.

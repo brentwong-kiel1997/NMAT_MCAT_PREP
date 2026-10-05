@@ -6,6 +6,10 @@ overview: 7A turns inward — biological roots (genes, hormones), motivation and
   — 3A (HPA axis), 6C.
 sections:
 - heading: Behavioral biology — genes, twins, heritability
+  objectives:
+  - Read a twin or adoption design and conclude whether genetic influence is supported.
+  - State why heritability is a population statistic and reject individual-determinism readings.
+  - Apply gene-environment interaction to a described genotype-by-context difference.
   body:
   - Behavior runs on the same biology as everything else — genes set ranges, environment sculpts. The
     twin study is the tool — MZ twins share ~100% of genes, DZ ~50% — so if MZ twins resemble each other
@@ -26,7 +30,26 @@ sections:
       A: Contradicts the shared-environment control.
       B: No such comparison implied.
       D: The MZ-DZ gap is the signal.
+  - q: Adopted children of biological parents with schizophrenia raised in healthy homes show elevated
+      risk, but the risk rises further when the adoptive home is disturbed. Which two conclusions follow?
+    options:
+      A: Genes decide entirely; the adoptive home is irrelevant
+      B: Environment decides entirely; the biological history is irrelevant
+      C: Heritability in this sample is zero
+      D: Genetic risk is present and gene-environment interaction amplifies it in adverse rearing contexts
+    answer: D
+    explain: The biological link supplies the risk and the adoptive context modifies its expression —
+      interaction, not either alone.
+    distractors:
+      A: The adoptive-home finding shows the environment changes the outcome.
+      B: The biological-parent history carries risk on its own.
+      C: A nonzero biological-parent effect is precisely what was observed.
 - heading: Motivation and emotion — drives and displays
+  objectives:
+  - Match a described motive to drive-reduction, arousal (Yerkes-Dodson), incentive, or Maslow's hierarchy.
+  - Assign an emotion episode to James-Lange, Cannon-Bard, or Schachter-Singer by the order of arousal
+    and label.
+  - Predict a Yerkes-Dodson outcome when arousal changes for a simple versus complex task.
   body:
   - Motivation theories stack — drive reduction (homeostatic pushes), arousal theory (Yerkes-Dodson curve),
     incentive, Maslow's hierarchy. The MCAT asks you to MATCH the theory to a scenario.
@@ -46,6 +69,21 @@ sections:
       A: James-Lange ties emotion to specific bodily patterns.
       B: Simultaneity without labeling is not the point.
       D: Motivation, not emotion theory.
+  - q: A student is equally aroused before a routine quiz and before a viva; performance rises on the
+      quiz and collapses in the viva. Which account, and what does it predict with more arousal?
+    options:
+      A: Cannon-Bard — arousal and evaluation run in parallel, so both improve
+      B: Yerkes-Dodson — optimal arousal is lower for the complex task, so further arousal would worsen
+        the viva further
+      C: James-Lange — the trembling caused the poor viva
+      D: Incentive theory — the viva offered a bigger reward
+    answer: B
+    explain: 'The inverted U is task-dependent: complex tasks peak at lower arousal, so extra arousal
+      pushes the hard task down the curve.'
+    distractors:
+      A: Cannon-Bard makes no task-difficulty prediction.
+      C: James-Lange orders body before emotion; it does not explain the task difference.
+      D: Reward size is not the manipulated variable — arousal is.
   figures:
   - src: 7a-individual-influences-on-behavior/maslow-pyramid.webp
     caption: Maslow's hierarchy of needs — physiological through self-actualization.
@@ -54,6 +92,11 @@ sections:
     caption: Yerkes-Dodson law — optimal arousal differs for simple versus difficult tasks.
     credit: Fig 10.7 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Personality — four theoretical families
+  objectives:
+  - Match a described account of personality to its family — psychoanalytic, humanistic, trait, social-cognitive.
+  - Identify a described defense mechanism by its operation (project, displace, rationalize, sublimate,
+    react).
+  - Name the Big Five dimension a described stable behavioral style belongs to.
   body:
   - Match the family to its fingerprint — psychoanalytic (Freud — id/ego/superego, defense mechanisms),
     humanistic (Rogers, Maslow — growth), trait (Big Five OCEAN — stable measurable dimensions), and social-cognitive
@@ -74,7 +117,25 @@ sections:
       A: Channeling into valued activity.
       B: Attributing one's own feelings TO others.
       C: Behaving opposite to the impulse.
+  - q: A student who is furious at a supervisor writes a scathing anonymous review of a restaurant instead.
+      Identify the defense and contrast it with sublimation.
+    options:
+      A: Sublimation — the anger is channelled into a valued activity
+      B: Displacement — the impulse is retargeted from the dangerous source to a safer one
+      C: Projection — the anger is attributed to others
+      D: Reaction formation — the opposite attitude is expressed
+    answer: B
+    explain: Displacement keeps the impulse and swaps the target; sublimation would convert the energy
+      into something socially valued, not a hostile act.
+    distractors:
+      A: An anonymous hostile review is not a valued creative or professional outlet.
+      C: Nothing indicates she ascribes anger to others rather than acting it out elsewhere.
+      D: She is not being warm to the supervisor — the impulse is redirected, not inverted.
 - heading: Stress — physiology, appraisal, health
+  objectives:
+  - Order the stress response by timing — sympathetic epinephrine in seconds, HPA cortisol in minutes.
+  - Place a described stage in Selye's GAS (alarm, resistance, exhaustion).
+  - Apply Lazarus's primary and secondary appraisal to predict who becomes ill under the same stressor.
   body:
   - The stress response is 3A's axis — sympathetic surge (epinephrine seconds) and HPA cascade (cortisol
     minutes-hours). Selye's general adaptation syndrome — alarm → resistance → exhaustion — predicts chronic-cost
@@ -95,19 +156,58 @@ sections:
       A: Initial mobilization.
       B: Sustained coping before collapse.
       D: Lazarus, not Selye.
+  - q: Two clinicians face identical staffing cuts. One, with savings and a side practice, treats it as
+      a solvable problem; the other, with no buffer, develops insomnia and infections within months. Name
+      the two appraisals and the physiological stage reached.
+    options:
+      A: Both reached exhaustion — the stressor is identical
+      B: Primary appraisal differed (threat vs challenge) and secondary appraisal (coping resources) followed;
+        only the second reached exhaustion
+      C: Only primary appraisal matters; secondary appraisal is a clinical afterthought
+      D: Alarm in both — the acute phase explains the infections
+    answer: B
+    explain: Lazarus splits appraisal into is-this-a-threat and can-I-cope; the answer to the second is
+      what sustains the HPA cascade into Selye's exhaustion stage.
+    distractors:
+      A: Identical stressors do not produce identical physiology once appraisal differs.
+      C: Secondary appraisal of resources is the variable that separated the two cases.
+      D: Alarm is the initial mobilization; insomnia and infection after months indicate exhaustion.
 examples:
 - prompt: Two employees face the same layoff. One develops insomnia and illness; the other enrolls in
     retraining. Explain via Lazarus and Selye.
+  strategy: 'Run the causal chain in order: stressor, primary appraisal, secondary appraisal, axis selection,
+    chronicity, outcome. Assign each observation to a link rather than to the stimulus.'
   solution:
   - Lazarus — primary appraisals differ (threat vs challenge); secondary appraisals of coping resources
     differ.
   - The threatened employee mounts a chronic response — sustained cortisol.
   - Prolonged HPA activation reaches exhaustion — sleep disruption and immune suppression.
   answer: Different appraisals → different HPA timelines — challenge vs chronic stress to exhaustion.
+  discussion: 'The chain explains why identical stressors produce divergent illness: appraisal selects
+    the response and control selects its duration. It generalises to any health-outcome vignette — before
+    crediting the stressor, ask what the person believed about the threat and about their own resources,
+    and whether the response was allowed to terminate.'
   distractors:
     A: Objective stressor severity — the stimulus was identical.
     B: Genetics decides all — appraisal mediates here.
     C: Both adaptive equally — outcomes diverge.
+  practice:
+    q: A nurse with a supportive partner and savings is reassigned to a new ward and adapts within weeks.
+      A colleague with neither is reassigned similarly and develops hypertension over months. Same stressor,
+      different outcomes. Which pairing is correct?
+    options:
+      A: Primary appraisal differs; secondary appraisal of resources differs; only the second sustains
+        the HPA response
+      B: The stressor was objectively more severe for the second nurse
+      C: Genetics alone separated the outcomes
+      D: Both nurses reached exhaustion at the same rate
+    answer: A
+    explain: Threat-plus-coping appraisal determines whether the stress response terminates or becomes
+      chronic, and chronic activation carries the somatic cost.
+    distractors:
+      B: The reassignment was described as similar.
+      C: Nothing here requires a genetic account; the buffers differ.
+      D: Only the second shows the chronic pattern that leads to exhaustion.
 key_points:
 - MZ ~100% / DZ ~50% shared genes; heritability is population-level.
 - Motivation stack — drive, arousal (Yerkes-Dodson), incentive, Maslow.

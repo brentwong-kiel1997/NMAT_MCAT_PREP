@@ -7,6 +7,10 @@ overview: Development is the question of how one fertilized egg becomes an organ
   Prerequisites — Cells (mitosis), Genetics (meiosis, fertilization).
 sections:
 - heading: Fertilization and cleavage — setting up the blueprint
+  objectives:
+  - Describe the two jobs fertilization performs at once.
+  - Distinguish cleavage from ordinary mitosis.
+  - Explain why early blastomeres are described as totipotent.
   body:
   - Fertilization does two jobs at once — restore diploidy and ==activate the egg==. Species block polyspermy
     fast (the cortical reaction hardens the fertilization envelope) because a third chromosome set is
@@ -29,7 +33,23 @@ sections:
       A: Every division needs replicated DNA.
       B: Cytokinesis is what makes them separate cells.
       D: Reduction is meiosis, not cleavage.
+  - q: Fertilization by two sperm (polyspermy) is lethal because…
+    options:
+      A: The embryo carries three chromosome sets, which derails development
+      B: The egg's own DNA is destroyed
+      C: Cleavage cannot begin without a single sperm
+      D: The cortical reaction blocks all further cell division
+    answer: A
+    explain: Gene dosage is tuned for two sets; a third disrupts every dosage-balanced programme.
+    distractors:
+      B: The egg's pronucleus is untouched by a second sperm.
+      C: Cleavage begins; it is the outcome that fails.
+      D: The block stops further sperm, not cell division.
 - heading: Gastrulation — the decisive rearrangement
+  objectives:
+  - Name the sheet movements that establish the three germ layers.
+  - Assign an organ to its germ layer of origin.
+  - Relate the blastopore to protostome and deuterostome body plans.
   body:
   - Gastrulation physically moves cells into place — "the most important time in your life," as Lewis
     Wolpert put it. Sheet movements (invagination, involution, epiboly) form three germ layers whose fates
@@ -52,12 +72,28 @@ sections:
       A: Ectoderm is skin and nervous system.
       B: Mesoderm is muscle, bone, kidney, heart.
       D: The blastocoel is a cavity, not a layer.
+  - q: The heart, blood, and kidneys derive from which germ layer?
+    options:
+      D: Mesoderm
+      A: Ectoderm
+      B: Endoderm
+      C: The blastocoel
+    answer: D
+    explain: Muscle, skeleton, heart, blood, and kidney are the mesoderm's portfolio.
+    distractors:
+      A: Ectoderm gives the nervous system and epidermis.
+      B: Endoderm lines the gut and forms its glands.
+      C: The blastocoel is a cavity, not a tissue source.
   figures:
   - src: development/fig-3bcd40f8.webp
     caption: Gastrulation at work — the three germ layers (ectoderm, mesoderm, endoderm) and the body
       systems each gives rise to.
     credit: Ch 28 · OpenStax Anatomy & Physiology 2e — CC BY-NC-SA 4.0
 - heading: Pattern formation — position becomes identity
+  objectives:
+  - Explain induction as one tissue changing another's fate.
+  - Describe how a morphogen gradient encodes positional information.
+  - Recognise Hox colinearity as evidence for common ancestry.
   body:
   - Cells discover their identity from neighbors and gradients. **Induction** — one tissue changes another's
     fate by signal — is the master mechanism; the classical example is the vertebrate eye cup inducing
@@ -81,7 +117,23 @@ sections:
       A: Competence varies, but is not mesoderm-exclusive.
       B: Identical signaling cannot make different fates.
       C: Gradients instruct, not execute.
+  - q: A cell sits where a morphogen's concentration is just above the high threshold. Its fate is…
+    options:
+      B: The fate specified by the highest-concentration band
+      A: The fate of the lowest band, since thresholds accumulate
+      C: No fate at all — only cells at the source respond
+      D: A random fate, because gradients carry no information
+    answer: B
+    explain: Thresholds partition a gradient into bands, and the band a cell occupies is its identity.
+    distractors:
+      A: Higher concentration specifies higher-threshold fates, not lower ones.
+      C: Every cell in the field reads the gradient.
+      D: Concentration IS the positional information.
 - heading: Development in plants — a different operating system
+  objectives:
+  - Explain why meristems keep plant development open-ended.
+  - Contrast plant totipotency with animal commitment.
+  - Predict what a cutting can regenerate and why.
   body:
   - Animals commit fates early and mostly stop; plants keep ==totipotent stem-cell zones for life==. **Meristems**
     at root and shoot tips produce new organs continuously, and many differentiated plant cells can dedifferentiate
@@ -103,12 +155,30 @@ sections:
       B: Plants have no neurons; the mechanism is cellular, not neural.
       C: Meiosis would halve the genome; propagation stays diploid.
       D: One cutting suffices.
+  - q: Why can one differentiated plant cell rebuild a whole plant while a differentiated animal cell
+      usually cannot?
+    options:
+      B: Plant cells can dedifferentiate and re-establish meristem identity; animal fates are largely
+        fixed
+      A: Animal cells lack nuclei and cannot reprogramme
+      C: Plant cells reset by undergoing meiosis
+      D: Animal cells are incapable of dividing
+    answer: B
+    explain: The plant body keeps its stem-cell zones open; the animal body closes them during determination.
+    distractors:
+      A: Animal cells are nucleated; reprogramming is hard, not impossible in principle.
+      C: Meiosis halves the genome and makes gametes, not new bodies.
+      D: Animal cells divide readily; the limit is potency, not mitosis.
   figures:
   - src: development/sea-star-fragmentation.webp
     caption: Regeneration by fragmentation — a single sea-star arm rebuilding a whole individual, the
       animal echo of plant totipotency.
     credit: Fig 43.4 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: When development goes wrong — teratogens and windows
+  objectives:
+  - Identify the embryonic window of greatest teratogen sensitivity.
+  - Predict the system affected from the stage of exposure.
+  - Match a named teratogen to its classic defect.
   body:
   - Sensitivity is stage-dependent. The **embryonic period** (organogenesis, roughly weeks 3–8 in humans)
     is the ==critical window for structural birth defects== — organs are being patterned, and a signal
@@ -130,18 +200,54 @@ sections:
       A: Long-latency effects are not the primary teratogen risk.
       B: Nondisjunction is a meiotic error, not a drug effect.
       C: Weeks 3–8 organs are forming, not formed.
+  - q: An exposure occurs at week 6 of human gestation. The most likely outcome is…
+    options:
+      D: Structural malformation of organs that are forming
+      A: No effect, since the embryo is only a ball of cells
+      B: A purely growth effect with no structural consequence
+      C: A chromosomal nondisjunction in the mother
+    answer: D
+    explain: Week 6 sits inside organogenesis, the critical window for structural birth defects.
+    distractors:
+      A: By week 6 organs are well underway.
+      B: Later exposures tend toward growth and function effects; this is the structural window.
+      C: Nondisjunction is a meiotic event, not a drug effect at week 6.
 examples:
 - prompt: Spemann-style experiment — a transplanted dorsal blastopore lip (the organizer) into a host
     embryo's ventral side yields a second body axis. Explain the logic.
+  strategy: 'Ask what the graft contributes versus what the host contributes before interpreting anything:
+    the organiser is a signalling source, so the question is whether the second axis is built from graft
+    tissue or from host tissue. The plan is to trace the signal — a morphogen source moved to a new address
+    respecifies whatever neighbouring cells can still read it.'
   solution:
   - Step 1 — the organizer emits diffusible signals (morphogens such as the BMP antagonists).
   - Step 2 — host ventral cells read the new signal source and interpret their position as dorsal.
   - Step 3 — a second axis is induced from host tissue, proving position — not lineage — sets fate.
   answer: Induction by organizer signals respecifies host position, doubling the axis.
+  discussion: 'The decisive evidence is that most of the second axis is HOST tissue — the graft recruits
+    rather than builds alone — which is why the experiment proves induction and not self-differentiation.
+    Note the stage dependence this rides on: the host''s ventral cells were still competent to respond,
+    and the same graft into a determined field would fail. That is the same lesson as the gut-into-skin
+    transplant — competence has a closing window, and determination is the moment it shuts.'
   distractors:
     A: Claiming the graft itself became the second body — most of the new axis is host tissue.
     B: Mutation of host genes — nothing heritable changed; fates were re-addressed.
     C: Random migration — responses follow the signal gradient, not chance.
+  practice:
+    q: A piece of future-skin ectoderm from an early gastrula is moved into a region fated to become gut,
+      and it develops as gut. What does this show?
+    options:
+      B: Fate at this stage follows position rather than lineage
+      A: The skin cells were genetically gut cells all along
+      C: The graft was killed and replaced by host cells
+      D: Gut fate universally dominates skin fate
+    answer: B
+    explain: The same cells gave skin at the old address and gut at the new one — position instructed
+      them.
+    distractors:
+      A: Genotype did not change; only the signals did.
+      C: Respecification, not replacement, is the mechanism shown.
+      D: No universal hierarchy is implied — competence is stage-limited.
 key_points:
 - Fertilization restores diploidy and activates the egg; blocks prevent polyspermy.
 - Cleavage is mitosis without growth — blastula, totipotent early blastomeres.

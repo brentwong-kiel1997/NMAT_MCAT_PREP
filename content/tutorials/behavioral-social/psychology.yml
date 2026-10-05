@@ -6,6 +6,12 @@ overview: The full NMAT psychology pass — brain-behavior, learning, memory, co
   MCAT psych/soc category.
 sections:
 - heading: Biological bases of behavior
+  objectives:
+  - Walk through an action potential — resting potential, threshold, repolarization by the sodium-potassium
+    pump — and place a drug or lesion at its step.
+  - Map a described deficit to the lobe or structure responsible (frontal, temporal, parietal, occipital,
+    amygdala, hippocampus, cerebellum).
+  - Predict a transmitter-level change (dopamine, serotonin, acetylcholine, GABA) from a described syndrome.
   body:
   - '==Neurons fire via action potentials — resting -70 mV, threshold -55 mV, restored by the sodium-potassium
     pump (3 Na+ out, 2 K+ in)==. Synaptic transmission: neurotransmitter released into the cleft binds
@@ -28,7 +34,25 @@ sections:
       A: Temporal/occipital junction.
       B: Broca area does that.
       D: Cerebellum.
+  - q: A patient after a stroke can see and move normally but cannot repeat a spoken sentence although
+      she understands it. Which area, and which function?
+    options:
+      A: Occipital cortex — visual decoding
+      B: Broca area in the frontal lobe — speech production
+      C: Cerebellum — motor coordination
+      D: Hippocampus — consolidating the sentence into memory
+    answer: B
+    explain: Comprehension intact with nonfluent, effortful production localizes to Broca's area in the
+      frontal lobe.
+    distractors:
+      A: Vision is explicitly normal.
+      C: Coordination is intact; language production is the deficit.
+      D: Repetition is immediate — no consolidation is required.
 - heading: Learning and conditioning
+  objectives:
+  - Assign a described contingency to classical or operant conditioning by what controls the behavior.
+  - Classify a reinforcement schedule from its response pattern and predict resistance to extinction.
+  - Distinguish positive/negative reinforcement from punishment in a described consequence.
   body:
   - '==Classical conditioning (Pavlov) — neutral stimulus paired with an unconditioned one acquires the
     response; extinction and spontaneous recovery shape it; generalization and discrimination set the
@@ -50,6 +74,21 @@ sections:
       A: Predictable payouts.
       B: Time-based.
       C: Time-based.
+  - q: A child tantrums in shops; the parent buys a toy to end each tantrum. Months later tantrums occur
+      in every shop. What was reinforced, whose behavior, and with which operation?
+    options:
+      A: The child's tantrum behavior, negatively reinforced — an aversive (the tantrum) was removed
+      B: The parent's buying behavior, negatively reinforced — the aversive tantrum stops when they comply
+      C: The child's tantrum, positively punished — the toy suppresses it
+      D: The parent's buying, positively punished — the cost suppresses shopping
+    answer: B
+    explain: The parent's compliance rises because it removes the aversive tantrum — negative reinforcement
+      of the parent, and the trap the vignette is built on.
+    distractors:
+      A: Negative reinforcement always INCREASES the behavior that produced relief — here that is the
+        parent's buying, not the child's tantrum.
+      C: The tantrums increased, so nothing was punished.
+      D: The parent's shopping did not decrease.
   figures:
   - src: behavioral-social/psychology/fig-0a68ead5.webp
     caption: Classical conditioning — the dog salivating to the bell after repeated bell-food pairings.
@@ -58,6 +97,11 @@ sections:
     caption: A founding figure of learning research — the conditioning chapter's portrait.
     credit: Ch 6 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Memory systems
+  objectives:
+  - Trace a described item through sensory, working, and long-term stores with each store's capacity and
+    duration.
+  - Sort a described memory into explicit episodic, explicit semantic, or implicit procedural/priming.
+  - Distinguish proactive from retroactive interference in a described forgetting episode.
   body:
   - '==Three-store model: sensory (<1 s) → short-term/working (about 7 +/- 2 items, ~20 s) → long-term
     (potentially permanent)==. Encoding, storage, retrieval; forgetting via decay, interference (proactive
@@ -78,7 +122,24 @@ sections:
       B: Event recall.
       C: Not storing the skill.
       D: Fact recall.
+  - q: A student learned Spanish in high school and French last year. In a Spanish test she keeps producing
+      French words. Which interference, and which direction?
+    options:
+      A: Proactive — the older Spanish list disrupts the new French learning
+      B: Retroactive — the newer French list disrupts recall of the older Spanish
+      C: Decay — the Spanish trace faded with time
+      D: Source confusion — she cannot remember where she learned the words
+    answer: B
+    explain: New learning acting backwards on old memory is retroactive interference.
+    distractors:
+      A: Proactive is old-blocking-new; here the old material is the casualty.
+      C: Decay predicts uniform fading, not intrusion of specific competing words.
+      D: She knows the language of origin — she retrieves the wrong items.
 - heading: Cognition, language, and intelligence
+  objectives:
+  - Name the heuristic or bias in a described judgment and say what evidence would correct it.
+  - Locate a described aphasia to Broca or Wernicke by fluency and comprehension.
+  - Distinguish reliability from validity when evaluating a described test.
   body:
   - '==Heuristics — availability (judge by ease of recall), representativeness (match prototypes), anchoring;
     biases — confirmation, hindsight, overconfidence==. Problem solving: algorithms (guaranteed), heuristics
@@ -99,7 +160,25 @@ sections:
       B: Initial value bias.
       C: Prototype matching.
       D: How options are worded.
+  - q: A patient speaks fluently and at length but with invented words, and follows no instructions. Which
+      area and which deficit?
+    options:
+      A: Broca area — nonfluent production with preserved comprehension
+      B: Wernicke area — fluent but meaningless output with poor comprehension
+      C: Occipital cortex — visual word-form loss
+      D: Arcuate fasciculus — intact comprehension and production but broken repetition
+    answer: B
+    explain: Fluent neologistic speech plus failed comprehension is the Wernicke signature.
+    distractors:
+      A: The speech is fluent, so this is not Broca.
+      C: Nothing visual is reported.
+      D: Conduction aphasia spares comprehension — here it fails.
 - heading: Motivation, emotion, and stress
+  objectives:
+  - Match an emotion episode to James-Lange, Cannon-Bard, or Schachter's two-factor theory by the order
+    of arousal and label.
+  - Locate a task on the Yerkes-Dodson curve and predict the effect of raising arousal.
+  - Sequence Selye's GAS stages and name the appraisal variable that sets the severity.
   body:
   - ==Motivation theories — drive-reduction (hunger, thirst), incentive, arousal (Yerkes-Dodson — moderate
     arousal = peak performance), Maslow's hierarchy==. Emotion — James-Lange (body first, then label),
@@ -119,19 +198,55 @@ sections:
       A: Body alone.
       B: Simultaneous.
       D: Expressions shape feeling.
+  - q: Given caffeine, participants on an easy sorting task speed up while those on a difficult reasoning
+      task make more errors. Which theory, and which claim does it make?
+    options:
+      A: Cannon-Bard — arousal and emotion run in parallel, so both tasks improve
+      B: Yerkes-Dodson — arousal's effect depends on task difficulty, an inverted U
+      C: James-Lange — the body's arousal produces the emotion afterwards
+      D: Schachter two-factor — arousal is labeled by the situation
+    answer: B
+    explain: 'Identical arousal, opposite outcomes: the inverted U says optimal arousal is lower for complex
+      tasks.'
+    distractors:
+      A: Cannon-Bard makes no task-difficulty prediction.
+      C: James-Lange orders body before feeling; it does not predict accuracy.
+      D: Attribution is not manipulated here — only arousal level is.
 examples:
 - prompt: A rat is trained to press a lever for food — then the food stops. The pressing rate falls but
     periodically clusters right before what used to be feeding times. What schedule was used?
+  strategy: 'Read the response record, not the description. Pauses and their position relative to reinforcement
+    identify the schedule: time-based schedules produce anticipatory scallops or steady rates, count-based
+    schedules produce post-reinforcement pauses or high steady output.'
   solution:
   - Pressing continued after reinforcement stopped — extinction resistance.
   - The time-clustered bursts, not count-clustered, point to time-based reinforcement.
   - Scheduled food at fixed times = fixed interval — scalloped responding before each.
   - Variable schedules would give steady rates, not pauses before expected times.
   answer: Fixed interval schedule — the scallop pattern gives it away.
+  discussion: 'The diagnostic generalises: fixed interval gives the pre-reinforcement scallop, variable
+    interval a slow steady line, fixed ratio a post-reward pause, variable ratio the highest and most
+    extinction-resistant rate. Whenever a vignette gives you a pattern of behavior over time, reconstruct
+    the schedule before naming it — the pattern, not the reward, is the evidence.'
   distractors:
     A: Variable ratio — would keep a high steady rate without pauses.
     B: Fixed ratio — pauses come after reinforcement, not before it.
     C: Continuous reinforcement — extinguishes fastest.
+  practice:
+    q: A security guard patrols a fixed route; supervisors appear at unpredictable times. He keeps a steady,
+      moderate patrol pace throughout the shift. Which schedule maintains this?
+    options:
+      A: Fixed interval
+      B: Variable interval
+      C: Fixed ratio
+      D: Variable ratio
+    answer: B
+    explain: Reinforcement after unpredictable TIME intervals produces the slow, steady rate described
+      — the variable interval signature.
+    distractors:
+      A: Fixed intervals create a scallop of anticipation before each expected check.
+      C: Ratio schedules tie reinforcement to a count of patrols completed.
+      D: Variable ratio drives a high rate, not a steady moderate one.
 key_points:
 - Action potential — all-or-none; reset by Na-K pump.
 - Classical = stimulus pairing; operant = consequence-shaped.

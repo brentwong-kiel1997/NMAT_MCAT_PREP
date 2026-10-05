@@ -5,6 +5,9 @@ overview: Visual patterns — shape, rotation, shading, position, count, and siz
   of figures. Pattern literacy — describe the change in words before scanning options.
 sections:
 - heading: The pattern vocabulary
+  objectives:
+  - Name a figure change as shape, rotation, reflection, position, count, shading, or size.
+  - Track two simultaneous channels without conflating them.
   body:
   - '==Every figure change reduces to one of: shape, rotation, reflection, position, count, shading, size,
     or combination==. ==Name the change FIRST — ''the square rotates 90 degrees clockwise each step''
@@ -24,7 +27,24 @@ sections:
       A: No shading rule shown.
       C: Size unchanged.
       D: That is one step of half-turn.
+  - q: A circle carries a dot that moves one position clockwise around the rim each frame, starting at
+      12 o'clock. Frame 7 shows the dot at…
+    options:
+      A: 12 o'clock — the start position
+      B: 6 o'clock — the third cycle position
+      C: 3 o'clock — one step short
+      D: The centre — the dot moved inward
+    answer: B
+    explain: The dot cycles 12, 3, 6, 9 and repeats; frame 7 is the third position of the second full
+      cycle — 12, 3, 6.
+    distractors:
+      A: Frame 5 sits at 12 o'clock, not frame 7.
+      C: Frame 6 sits at 3 o'clock.
+      D: No inward motion is described.
 - heading: Rotation and reflection reads
+  objectives:
+  - Determine a rotation's direction and step, and detect an accelerating step size.
+  - Distinguish a reflection across a stated axis from a rotation by the winding of interior features.
   body:
   - ==Rotation direction — clockwise vs counterclockwise; fixed step (90, 45, 180) vs acceleration (30,
     60, 90...)==. ==Reflection — mirror reversal across a fixed axis; the option arm bends the other way==.
@@ -44,7 +64,24 @@ sections:
       A: That is the starting position, not the next step.
       B: Half step.
       C: One step short.
+  - q: A pointer starts at 12 o'clock and rotates counterclockwise by 45, then 90, then 135 degrees. Where
+      does it point after the third step?
+    options:
+      A: 9 o'clock — the rotation read as clockwise
+      B: 12 o'clock — a full turn assumed
+      C: 6 o'clock — a half turn assumed
+      D: 3 o'clock
+    answer: D
+    explain: Total counterclockwise rotation is 45 + 90 + 135 = 270 degrees, which from 12 o'clock lands
+      at 3 o'clock.
+    distractors:
+      A: That is 270 degrees clockwise — the direction is reversed.
+      B: The steps sum to 270 degrees, not 360.
+      C: The steps sum to 270 degrees, not 180.
 - heading: Shading, hatching, and color coding
+  objectives:
+  - Continue a shading cycle by counting positions modulo the cycle length.
+  - Keep shading channels separate from rotation, count, or size channels.
   body:
   - ==Shading patterns — solid → hatched → empty → repeat; or increasing fill proportion==. ==Two-channel
     sequences — fill changes on the outer shape while the inner shape rotates — track both channels separately==
@@ -62,7 +99,22 @@ sections:
       B: Correct.
       C: Back to start early.
       D: Outside the cycle.
+  - q: Fill runs through four states — empty, quarter, half, solid — repeating. Frame 10 shows which state?
+    options:
+      A: Empty — the cycle restarted at frame 9
+      B: Quarter
+      C: Half
+      D: Solid
+    answer: B
+    explain: The cycle length is 4; frame 10 is 10 mod 4 = 2, the second state — quarter.
+    distractors:
+      A: Frame 9 is empty; frame 10 has moved on.
+      C: Half occupies the third position of each cycle.
+      D: Solid occupies the fourth position.
 - heading: Counting and size rules
+  objectives:
+  - Continue a count channel by its increment or ratio.
+  - Apply a size rule (fixed multiplier or shrink to a limit) across frames.
   body:
   - ==Count-track — number of elements increments (1, 2, 3, 4) or decrements==. ==Size-track — dimensions
     grow by a fixed multiplier or shrink to a limit !==
@@ -82,7 +134,23 @@ sections:
       B: Down trend.
       C: '+4.'
       D: Correct.
+  - q: A square's side halves each frame, starting at 16 units. What is the side length in frame 4?
+    options:
+      A: 8 units — one frame short
+      B: 2 units
+      C: 1 unit — one frame too far
+      D: 4 units — two frames short
+    answer: B
+    explain: The sides run 16, 8, 4, 2 across frames 1 to 4.
+    distractors:
+      A: 8 is frame 2.
+      C: 1 would be frame 5.
+      D: 4 is frame 3.
 - heading: 'Strategy: describe, then match'
+  objectives:
+  - State the rule in words before consulting the options.
+  - Eliminate options that fail any single channel, then apply the diagnostic order — rotation, count,
+    shading.
   body:
   - ==Describe the rule in words — if you cannot say it, you cannot pick it==. ==Eliminate — options violating
     any single channel die; often only one option survives three channel checks==.
@@ -102,9 +170,24 @@ sections:
       B: Correct.
       C: Options come after the rule.
       D: It is only a minute.
+  - q: 'A triangle rotates 90 degrees clockwise each frame while its inner dot count climbs by one: 1,
+      2, 3, 4. Frame 5 shows…'
+    options:
+      A: The triangle rotated a further 90 degrees with five dots
+      B: The triangle rotated 180 degrees further with five dots
+      C: The triangle rotated a further 90 degrees with four dots
+      D: The triangle unrotated with six dots
+    answer: A
+    explain: 'Both channels continue: one more 90-degree clockwise step, and the count reaches 5.'
+    distractors:
+      B: The rotation step is 90 degrees, not 180.
+      C: The count channel climbed past 4 — it does not stall.
+      D: Neither channel reverses or doubles its step.
 examples:
 - prompt: 'Frames: (1) open square; (2) closed square with a dot in the center; (3) open square with dot;
     (4) closed square no dot. Predict frame 5.'
+  strategy: Separate the channels before predicting. One channel (open/closed) is a plain two-state cycle;
+    the other (the dot) must be tested against the first for a possible offset before any rule is accepted.
   solution:
   - 'Separate the channels: open/closed cycles O,C,O,C → next O.'
   - 'Dot channel: no, yes, yes, no → this is ''where the dot is'' logic — dot appears opposite to openness?
@@ -112,10 +195,29 @@ examples:
   - Frame 5 = open square with a dot (matches frame 3 pattern offset).
   - 'Rule: dot follows the ''closed'' state by one frame.'
   answer: Open square with a centered dot.
+  discussion: 'Two-channel structure is the standard figure-series architecture: one shape or rotation
+    channel plus one independent shading, count, or position channel. Tabulating each channel''s state
+    per frame is faster than staring at the frames, and it exposes offsets such as ''the dot lags the
+    closed state by one frame''.'
   distractors:
     A: Closed with dot — one frame off.
     B: Open without dot — follows only the O/C channel.
     C: Closed without dot — that is frame 4 itself.
+  practice:
+    q: 'A series runs: F1 triangle pointing up, unshaded; F2 pointing right, shaded; F3 pointing down,
+      unshaded; F4 pointing left, shaded. Frame 5 is…'
+    options:
+      A: Pointing up, shaded
+      B: Pointing up, unshaded
+      C: Pointing right, unshaded
+      D: Pointing down, shaded
+    answer: B
+    explain: 'Two channels of period two combine into a four-frame cycle that returns to F1''s state:
+      up and unshaded.'
+    distractors:
+      A: The shading channel has returned to unshaded at frame 5.
+      C: That is one rotation step short of completing the cycle.
+      D: That is frame 3's state.
 key_points:
 - Name the change in words before options.
 - Rotations — step and direction; reflections mirror.

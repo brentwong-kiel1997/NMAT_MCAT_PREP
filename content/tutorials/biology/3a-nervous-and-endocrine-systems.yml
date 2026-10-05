@@ -7,6 +7,10 @@ overview: 3A is the body's telecom — electrical signaling down neurons, chemic
   solid. Prerequisites — Cells (membrane transport), Life Processes (feedback).
 sections:
 - heading: The resting potential — a battery made of gradients
+  objectives:
+  - Explain how the Na+/K+ pump and K+ leak build the resting potential.
+  - Distinguish graded potentials from action potentials by their properties.
+  - Predict the effect of demyelination on conduction velocity.
   body:
   - A neuron at rest sits near ==−70 mV==, and the battery is built from two forces — the ==Na⁺/K⁺ ATPase==
     (3 out, 2 in, keeping Na⁺ low and K⁺ high inside) and K⁺ leak channels (K⁺ drifts OUT down its concentration
@@ -29,11 +33,27 @@ sections:
       A: Too small — pump plus K⁺ leak goes much further.
       B: No gradient, no signaling.
       C: That is near the AP peak.
+  - q: A poison irreversibly blocks the Na+/K+ ATPase. Over minutes, the ion gradients…
+    options:
+      A: Dissipate — Na+ leaks in and K+ leaks out until they equalise
+      B: Steepen, because pumping has stopped
+      C: Lose only the potassium gradient
+      D: Are unchanged, since the pump is irrelevant at rest
+    answer: A
+    explain: The pump is the only thing rebuilding what the leaks erode; without it the battery runs flat.
+    distractors:
+      B: Stopping the pump removes the maintenance, not the leak.
+      C: Both gradients depend on the same pump.
+      D: The resting potential is the pump's product.
   figures:
   - src: 3a-nervous-and-endocrine-systems/neuron-structure.webp
     caption: The neuron — soma, dendrites, axon, myelin with nodes of Ranvier, and the synapse.
     credit: Fig 35.3 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: The action potential — a stereotyped spike
+  objectives:
+  - Sequence the channel events that produce a spike.
+  - Explain what the refractory periods enforce and what they limit.
+  - Predict a drug's effect on the waveform from its channel target.
   body:
   - The spike is a voltage-gated channel ballet — a stimulus depolarizes to ==threshold== (≈−55 mV); voltage-gated
     **Na⁺ channels open** (rising phase), then inactivate while slower **K⁺ channels open** (falling phase),
@@ -56,7 +76,24 @@ sections:
       A: K⁺ closure is not what defines the period.
       B: It is a functional state, not death.
       D: That is the opposite of 'absolute'.
+  - q: A drug blocks voltage-gated K+ channels. The action potential becomes…
+    options:
+      D: Broadened, since repolarisation is delayed
+      A: Abolished, since no spike can rise
+      B: Unchanged, since potassium is irrelevant to the spike
+      C: Hyperpolarised far beyond the usual afterpotential
+    answer: D
+    explain: Sodium entry still depolarises; without the potassium efflux there is nothing to bring it
+      back down quickly.
+    distractors:
+      A: The rising phase depends on Na+ channels, which are untouched.
+      B: K+ efflux IS the falling phase.
+      C: Less K+ leaves, so the cell hyperpolarises less, not more.
 - heading: The synapse — chemistry across a 20-nanometer gap
+  objectives:
+  - Order the events from spike arrival to postsynaptic potential.
+  - Explain why the receptor, not the transmitter, defines the response.
+  - Identify the three mechanisms that terminate transmission.
   body:
   - A spike reaches the terminal, ==voltage-gated Ca²⁺ channels open==, vesicles fuse, and neurotransmitter
     crosses the cleft to receptors on the far side. The post-synaptic response can excite (depolarize)
@@ -80,11 +117,28 @@ sections:
       A: Sodium drives the spike, not the fusion.
       B: Potassium ends the spike.
       D: Chloride mediates inhibition receptors.
+  - q: An acetylcholinesterase inhibitor is given. The effect at the neuromuscular junction is…
+    options:
+      D: Acetylcholine accumulates and overstimulates the muscle
+      A: Acetylcholine release stops
+      B: The nicotinic receptor is blocked
+      C: Calcium entry into the terminal is prevented
+    answer: D
+    explain: Blocking removal is the opposite of blocking release — the transmitter piles up and keeps
+      firing the receptor.
+    distractors:
+      A: Release machinery is untouched.
+      B: The receptor still binds; the problem is too much ligand.
+      C: Presynaptic calcium entry is upstream and unaffected.
   figures:
   - src: 3a-nervous-and-endocrine-systems/glial-cells.webp
     caption: The glial cast — oligodendrocytes and astrocytes (CNS), Schwann and satellite cells (PNS).
     credit: Fig 35.7 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Hormones — broadcasting through blood
+  objectives:
+  - Contrast peptide and steroid hormone mechanisms of action.
+  - Explain why receptor presence, not proximity, defines a hormone's target.
+  - Trace the hypothalamus-pituitary axis and its negative feedback.
   body:
   - Endocrine glands release hormones that reach all cells but act only on those with the receptor — ==selectivity
     by receptor, not by address==. Chemistry splits the mechanism — **peptide/protein hormones** (insulin)
@@ -108,7 +162,24 @@ sections:
       A: Surface receptors are the peptide-hormone pattern.
       B: Wrong compartment story.
       C: Not a neurotransmitter arrangement.
+  - q: A patient has high cortisol and LOW ACTH. Where is the problem?
+    options:
+      A: The adrenal cortex, overproducing autonomously
+      B: The anterior pituitary, which would raise ACTH
+      C: The hypothalamus, which would raise CRH
+      D: The posterior pituitary, which does not make ACTH
+    answer: A
+    explain: Excess hormone from the target gland suppresses its trophic hormone — the feedback signature
+      of a primary adrenal problem.
+    distractors:
+      B: A pituitary source would drive ACTH up along with cortisol.
+      C: A hypothalamic source would raise CRH and ACTH too.
+      D: ACTH is an anterior pituitary product.
 - heading: One body, two speeds — integration of neural and hormonal
+  objectives:
+  - Compare neural and endocrine signalling by speed and by addressing.
+  - Trace the stress response through its fast and slow arms.
+  - Localise an endocrine lesion from hormone and trophic-hormone levels.
   body:
   - The systems differ by design — neural signaling is ==millisecond and point-to-point== (a wire); hormonal
     signaling is ==seconds-to- hours and broadcast== (a radio station) — and they interlock. The stress
@@ -134,10 +205,25 @@ sections:
       B: Pituitary failure would give low TSH.
       C: Also presents with low driving hormones.
       D: Not a thyroid-command organ.
+  - q: A patient has low thyroid hormone and LOW TSH. The lesion sits…
+    options:
+      B: Centrally — the pituitary is failing to drive the gland
+      A: In the thyroid gland, which would push TSH high
+      C: In the liver, which converts T4 to T3
+      D: In the posterior pituitary, which stores oxytocin and ADH
+    answer: B
+    explain: Low output with low drive means the command centre is the problem, not the gland.
+    distractors:
+      A: A failing gland provokes high TSH.
+      C: Peripheral conversion does not set TSH.
+      D: The posterior pituitary has no thyroid role.
 examples:
 - prompt: Curare blocks the nicotinic receptor at the neuromuscular junction; botulinum toxin blocks ACh
     vesicle release; and organophosphates inhibit acetylcholinesterase. Predict each effect on muscle
     and explain the locus of action.
+  strategy: 'Place each agent on the timeline before predicting anything: botulinum acts at vesicle release,
+    curare at the receptor, organophosphates at degradation. Locus first, effect second — the same transmitter
+    pathway produces opposite physiology depending on which step is jammed.'
   solution:
   - Step 1 — curare — receptor-level block — ACh is released but muscle cannot read it — flaccid paralysis.
   - Step 2 — botulinum — release-level block — no ACh leaves the terminal — same flaccid result, earlier
@@ -145,10 +231,29 @@ examples:
   - Step 3 — organophosphate — removal-level failure — ACh accumulates endlessly at junctions and synapses
     — overstimulation, then desensitization/spasm and autonomic chaos.
   answer: Same pathway, three different blocked steps — receptor, vesicle release, degradation.
+  discussion: 'The three cases show why ''cholinergic'' is not a diagnosis: release, receptor, and removal
+    all involve acetylcholine, yet two paralyse and one causes spasm. Note the shared signature of the
+    first two — flaccid paralysis despite different loci — which is exactly why the exam asks for the
+    locus rather than the symptom. Organophosphate poisoning is the mirror image, and its treatment blocks
+    the receptor: the same target curare blocks, used to oppose rather than cause paralysis.'
   distractors:
     A: Calling all three 'the same poison' — locus determines the physiology.
     B: Expecting organophosphate to mimic curare — accumulation overstimulates first.
     C: Claiming botulinum blocks the receptor — its target is the fusion machinery.
+  practice:
+    q: A drug blocks voltage-gated Ca2+ channels at the presynaptic terminal. What happens to transmitter
+      release?
+    options:
+      B: It stops, because calcium influx is the vesicle-fusion trigger
+      A: It increases, as calcium accumulates in the terminal
+      C: The postsynaptic receptor is blocked
+      D: Acetylcholinesterase is inhibited
+    answer: B
+    explain: No calcium entry, no fusion, no transmitter in the cleft — even though the spike still arrives.
+    distractors:
+      A: Blocking the channel lowers calcium entry; it cannot raise it.
+      C: The receptor is downstream and untouched.
+      D: That is a removal step, not a release step.
 key_points:
 - Resting −70 mV from Na⁺/K⁺ pump + K⁺ leak; Na⁺ gradient is loaded ammunition.
 - Graded potentials sum and decay; action potentials are all-or-none and code by frequency.

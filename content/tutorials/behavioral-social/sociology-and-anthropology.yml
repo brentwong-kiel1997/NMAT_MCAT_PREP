@@ -6,6 +6,10 @@ overview: The NMAT social science pass over society, culture, and human variatio
   with MCAT FC8-9.
 sections:
 - heading: Culture — the shared template
+  objectives:
+  - Sort a described norm into folkway, more, or law by the severity of its sanction.
+  - Identify ethnocentrism versus cultural relativism in a described cross-cultural judgment.
+  - Apply Sapir-Whorf, culture lag, or diffusion to a described cultural change.
   body:
   - '==Culture = shared beliefs, values, norms, and material artifacts transmitted across generations==.
     Components — symbols, language (Sapir-Whorf: language shapes thought), values, beliefs, norms (folkways,
@@ -26,11 +30,29 @@ sections:
       A: Minority adoption of majority norms.
       B: That judges within context.
       D: Adjustment to a new culture.
+  - q: In one society, eating with the left hand draws amused glances; in another, the same act is a serious
+      moral offense enforced by community exclusion. Which norm pair is this?
+    options:
+      A: Two laws — both are codified and prosecuted
+      B: A folkway in the first society, a more in the second — same act, different sanction severity
+      C: Culture shock in both — visitors cannot adjust
+      D: Culture lag — etiquette has outpaced technology
+    answer: B
+    explain: Folkways carry light, informal reactions; mores carry moral weight and community sanction.
+      The act is constant; the norm's tier is not.
+    distractors:
+      A: Neither response described is codified or legally prosecuted.
+      C: Culture shock is the visitor's disorientation, not a norm tier.
+      D: No material-norm gap is described.
   figures:
   - src: behavioral-social/sociology-and-anthropology/fig-2cba6a31.webp
     caption: Judo as cultural practice — sport encodes values, rules, and ritual.
     credit: Ch 3 · OpenStax Introduction to Sociology 3e — CC BY-NC-SA 4.0
 - heading: Socialization and the self
+  objectives:
+  - Name the socialization agent at work in a described episode and what it transmits.
+  - Distinguish Mead's I and Me and the generalized other in a described role-taking sequence.
+  - Apply the looking-glass self or dramaturgy (front/back stage) to a described self-presentation.
   body:
   - '==Socialization = learning norms, roles, and identities through life. Key agents — family (primary),
     schools (hidden curriculum), peers, media==. Mead — the self develops through role-taking: the I (impulsive)
@@ -50,7 +72,26 @@ sections:
       A: Labels from others.
       B: One role's conflict.
       C: Forced relearning.
+  - q: A waiter is warm and attentive all shift, then complains bitterly to colleagues in the kitchen
+      about the same customers. Which concept, and what are the two regions?
+    options:
+      A: Role strain — the waiter role makes contradictory demands
+      B: Resocialization — a total institution retrained his behavior
+      C: Dramaturgy — the dining room is front stage performance, the kitchen is back stage
+      D: The generalized other — he has internalised society's expectations
+    answer: C
+    explain: 'Goffman: the performed self faces the audience in front stage regions; the private self
+      appears in back stage regions out of the audience''s view.'
+    distractors:
+      A: No contradiction within the single role is described — the same role is performed differently
+        by region.
+      B: Nothing indicates a total institution or forced relearning.
+      D: The generalized other explains role-taking generally, not the two-region split.
 - heading: Social structure and groups
+  objectives:
+  - Classify a described status as ascribed or achieved, and a group as primary or secondary.
+  - Distinguish role strain within one role from role conflict between two roles.
+  - Identify a bureaucratic pathology (goal displacement, red tape) in a described organization.
   body:
   - ==Status (ascribed by birth vs achieved by effort) and roles — role strain within one role; role conflict
     between roles==. Groups — primary (intimate) vs secondary (instrumental); in-groups/out-groups; reference
@@ -70,7 +111,24 @@ sections:
       A: One role's tension.
       B: Mismatched statuses.
       C: Normative breakdown.
+  - q: A nurse-manager must discipline a close friend on her ward. Which concept, and why not the alternative?
+    options:
+      A: Role strain — the managerial role contains contradictory expectations
+      B: Role conflict — the nurse role and the manager role make incompatible demands on the same person
+      C: Anomie — norms have broken down on the ward
+      D: Status inconsistency — her statuses are misaligned in rank
+    answer: B
+    explain: Two different positions she occupies collide — the textbook role conflict, not tension inside
+      a single role.
+    distractors:
+      A: Role strain stays inside one role; here two roles are implicated.
+      C: No normative breakdown is described — the norms are painfully clear.
+      D: No prestige mismatch between statuses is at issue.
 - heading: Inequality, stratification, and mobility
+  objectives:
+  - Rank stratification systems from most open to most closed and place a described society in one.
+  - Distinguish intergenerational from intragenerational mobility in a described case.
+  - Contrast structural and individual-blame explanations for a described poverty pattern.
   body:
   - '==Stratification = systematic ranking by class, status, power (Weber) or by relationship to the means
     of production (Marx: bourgeoisie vs proletariat)==. Slavery, caste (closed), estate, and class (open)
@@ -91,11 +149,30 @@ sections:
       A: Estates are less rigid than caste.
       B: Class allows movement.
       D: Meritocracy is open.
+  - q: A society assigns occupations, marriage partners, and residence by birth, with no legitimate path
+      between ranks. A second society lets children of laborers enter professions by examination. Which
+      systems, and what is the key variable?
+    options:
+      A: Both are class systems — mobility differs only in rate
+      B: Caste (closed) versus class (open); the variable is whether rank is fixed at birth
+      C: Estate versus meritocracy; the variable is law versus religion
+      D: Caste in both — examinations are only a formality
+    answer: B
+    explain: Closure at birth defines caste; legitimate mobility through achievement defines class.
+    distractors:
+      A: A class system admits movement by definition.
+      C: Estate systems allow some mobility through law or clergy; the core distinction here is closed
+        versus open.
+      D: The examination path is a real mobility channel, which caste forbids.
   figures:
   - src: behavioral-social/sociology-and-anthropology/fig-c4a4fedf.webp
     caption: An estate viewed from above — wealth made visible at the top of the class hierarchy.
     credit: Ch 9 · OpenStax Introduction to Sociology 3e — CC BY-NC-SA 4.0
 - heading: Deviance, institutions, and anthropology
+  objectives:
+  - Assign a described act's explanation to labeling, strain, control, or differential association theory.
+  - Match a described field method or perspective to the correct anthropology subfield.
+  - Distinguish emic from etic accounts of a described practice.
   body:
   - '==Deviance — labeling theory (deviance is a label others apply), strain theory (Merton — anomie between
     goals and means), control theory, differential association==. Crime — Durkheim: deviance is functional,
@@ -117,19 +194,57 @@ sections:
       B: That is labeling theory.
       C: Biological determinism.
       D: Correct.
+  - q: A boy in a neighborhood with few legitimate jobs begins running errands for a local theft ring
+      and gradually adopts the ring's values. Which theory, and what is its mechanism?
+    options:
+      A: Labeling — officials applied a deviant label first
+      B: Strain — the gap between goals and means pushed him into innovation
+      C: Control theory — his bonds to school were weak
+      D: Differential association — deviance is learned through interaction with a deviant subgroup
+    answer: D
+    explain: 'Sutherland: criminal behavior is acquired in intimate groups, along with the techniques
+      and the rationalizations.'
+    distractors:
+      A: Nothing indicates a prior official label — the learning sequence is described instead.
+      B: Strain would predict innovation without the gradual value transmission described.
+      C: Weak bonds are a control-theory account, but the vignette specifies learning from associates.
 examples:
 - prompt: A researcher moves into a farming village for 14 months, lives with families, and writes a detailed
     account of local harvest rituals. Identify the method, its key features, and its characteristic strengths/limits.
+  strategy: Identify the method by what the researcher does rather than by topic. Living inside the setting
+    and recording from within is participant observation; the output is ethnography, and the perspective
+    claim — insider or outsider — must be stated separately.
   solution:
   - Participant observation — the hallmark of cultural anthropology field work.
   - Produces an ethnography — thick description from the insider's flow of life.
   - Strengths — emic depth, context, unexpected discovery.
   - Limits — small n, researcher reactivity, reproducibility low.
   answer: Ethnographic participant observation — rich emic data at cost of generality.
+  discussion: 'The trade-off is structural, not a flaw of execution: depth and context are bought with
+    small n, reactivity, and low reproducibility, which is exactly the complement of the survey''s strengths.
+    The same pairing recurs whenever the exam contrasts thick description with generalizable estimates
+    — match the method to the claim being made, and name emic versus etic only when the perspective, not
+    the technique, is asked about.'
   distractors:
     A: Survey — would use questionnaires, not embedded living.
     B: Experiment — no manipulation, no control group.
     C: Secondary analysis — no first-hand accounts.
+  practice:
+    q: A second researcher studies the same harvest rituals using a structured questionnaire administered
+      to 400 villagers and compares responses across age groups. Which method, and what does it gain and
+      lose relative to the first?
+    options:
+      A: Participant observation — gains depth, loses generality
+      B: Survey research — gains generality and comparability, loses contextual depth and insider meaning
+      C: Archaeological analysis — gains material evidence, loses living voices
+      D: An experiment — gains causal control, loses ecological validity
+    answer: B
+    explain: A structured questionnaire across many respondents is survey research; it trades the emic
+      depth of embedding for sample size and comparability.
+    distractors:
+      A: No embedding or living-with occurs in the second design.
+      C: No material remains are excavated.
+      D: Nothing is manipulated or assigned in a questionnaire study.
 key_points:
 - Culture = symbols, language, values, norms; relativism not ethnocentrism.
 - Socialization agents — family first; looking-glass self; dramaturgy.

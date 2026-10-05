@@ -6,6 +6,10 @@ overview: The distribution of resources — class, race, gender, age — and how
   with FC9 on structure.
 sections:
 - heading: Theoretical views on stratification
+  objectives:
+  - Match a described distribution of rewards to functionalist, conflict, or symbolic interactionist reasoning.
+  - Apply Weber's three dimensions — class, status, party — and spot status inconsistency in a case.
+  - Contrast meritocracy as an ideal with measured mobility as evidence.
   body:
   - ==Functionalism (Davis-Moore) — stratification motivates talent by rewarding positions==; conflict
     theory (Marx, Weber) — power and exploitation structure the distribution; ==symbolic interactionism
@@ -27,7 +31,26 @@ sections:
       B: An exclusion mechanism — different concept.
       C: Correct — Weber's dimensions misaligned.
       D: Comparing to a reference group — not misalignment.
+  - q: A tech founder earns little publicly visible prestige but can lobby a legislature successfully.
+      A retired judge earns modest income and wide deference but no such access. Which analysis fits?
+    options:
+      A: Davis-Moore — each role is rewarded by its functional importance
+      B: Marx's ownership of the means of production — only the founder counts as a class actor
+      C: Status inconsistency — Weber's class, status, and party diverge across both figures
+      D: Social closure — each group excludes the other from credentials
+    answer: C
+    explain: The cases show wealth, prestige, and power coming apart — exactly why Weber split the dimensions.
+    distractors:
+      A: Functionalist theory does not explain the misalignment; it predicts rewards track importance.
+      B: Marx's single dimension cannot register the judge's prestige or the founder's low status.
+      D: No exclusion by credential is described.
 - heading: Class, poverty, and mobility
+  objectives:
+  - Distinguish absolute from relative poverty using a described threshold.
+  - Explain the intergenerational transmission of disadvantage through schooling, neighborhood, and wealth
+    channels.
+  - Evaluate a mobility claim by asking whether opportunity structure or individual effort is the varying
+    factor.
   body:
   - '==Class measures — occupation, income, wealth (assets matter most), education; poverty — absolute
     vs relative; the poverty line threshold==. ==Cycle of poverty — the intergenerational transmission:
@@ -49,11 +72,31 @@ sections:
       B: Correct.
       C: Not just the extreme.
       D: Incomes too.
+  - q: Country A sets its poverty line at a fixed basket of calories and shelter; Country B sets it at
+      50% of the median income. A household in B is above A's basket but below B's line. Which classification,
+      and why does the distinction matter for policy?
+    options:
+      A: Absolutely poor by both standards — the two lines coincide
+      B: Relatively poor in B, not absolutely poor — B's measure targets exclusion from the society's
+        standard of living
+      C: Not poor anywhere — the basket is met
+      D: Relatively poor in A as well — both lines are relative
+    answer: B
+    explain: Absolute lines track a material floor; relative lines track standing within the distribution,
+      so a household can clear one and miss the other.
+    distractors:
+      A: The two definitions diverge by construction here.
+      C: Clearing the basket removes absolute poverty but not relative standing.
+      D: Country A's line is fixed to a basket — it is the absolute measure.
   figures:
   - src: behavioral-social/fc10-stratification-and-resources/fig-c4a4fedf.webp
     caption: An estate viewed from above — wealth made visible at the top of the class hierarchy.
     credit: Ch 9 · OpenStax Introduction to Sociology 3e — CC BY-NC-SA 4.0
 - heading: Race, ethnicity, and health disparities
+  objectives:
+  - Explain a health disparity as exposure-driven rather than essence-driven.
+  - Define weathering and allostatic load and connect them to a described morbidity pattern.
+  - Identify access, care-quality, and environmental drivers in a described disparity.
   body:
   - ==Race is a social category with biological effects through exposure, not biology as fixed essence
     — racism frames illness (slavery to hypertension and weathering)==. ==Minority stress — chronic discrimination
@@ -74,7 +117,25 @@ sections:
       A: No genetic claim.
       B: Diet is one channel among many.
       C: Systematic, not random.
+  - q: Two groups have equal insurance and equal clinic access; one shows earlier hypertension onset,
+      and the gap widens with age. Which explanation fits, and which mechanism?
+    options:
+      A: Genetic difference — the groups differ in ancestry
+      B: Weathering — cumulative discrimination-driven allostatic load accelerates biological aging
+      C: Reverse causation — hypertension causes discrimination
+      D: Lead-time bias — screening differs between the groups
+    answer: B
+    explain: Equal access removes the care channel; an age-widening gap points at cumulative stress physiology,
+      Geronimus's weathering.
+    distractors:
+      A: The chapter explicitly rejects essence claims; the driver is exposure.
+      C: The exposure precedes and predicts the outcome across ages.
+      D: Screening is described as equal, and bias affects detection dates, not onset.
 - heading: Gender, age, and other axes
+  objectives:
+  - Distinguish cohort, aging, and period effects in a described cross-sectional comparison.
+  - Apply intersectionality to explain why a health profile differs at the crossing of two axes.
+  - Contrast the medical and social models of disability in a described barrier.
   body:
   - ==Gender stratification — occupational segregation, wage gaps, double burden; sex vs gender (biologic
     vs social)==. Age — ageism, cohort effects vs aging effects (health differences of generations vs
@@ -94,7 +155,27 @@ sections:
       A: Same people growing old need longitudinal data.
       C: A time-point event affects everyone.
       D: Not that.
+  - q: A wheelchair user cannot enter a clinic because the entrance has steps. One plan installs a ramp;
+      another offers a home-visit program and leaves the steps. Which models, and what does each imply
+      about the cause?
+    options:
+      A: Both plans are medical-model interventions
+      B: Ramp = social model — the environment is the barrier; home visit = medical model — the person
+        is the unit to accommodate
+      C: Ramp = medical model; home visit = social model
+      D: Both plans are social-model interventions
+    answer: B
+    explain: The social model locates disability in the built environment and removes it; the medical
+      model locates it in the body and routes around the person.
+    distractors:
+      A: The ramp changes the environment, which is the social model's signature move.
+      C: The two are reversed — check which unit each plan treats as the problem.
+      D: The home visit leaves the barrier standing and adapts the individual's care.
 - heading: Health systems and access
+  objectives:
+  - Break a described access barrier into availability, affordability, and acceptability components.
+  - State the inverse care law and identify it in a supply pattern.
+  - Distinguish cultural competence from structural competence as a response to a care gap.
   body:
   - ==Health system models — fee-for-service vs insurance pools; universal vs market; waitlists vs access
     barriers==. ==Access components — availability, affordability, acceptability; underinsurance as hidden
@@ -114,6 +195,22 @@ sections:
       A: Marginal care plateaus.
       B: Availability is uneven.
       D: Prevention is key.
+  - q: A district has enough physicians, but none accept the public insurance plan that low-income patients
+      hold; those patients travel two hours for routine care. Which access component fails, and which
+      fix targets it?
+    options:
+      A: Availability — recruit more physicians to the district
+      B: Affordability — subsidise the patients' insurance premiums
+      C: Acceptability — train patients to prefer available clinics
+      D: Availability is fine; affordability and network participation fail — mandate or incentivise plan
+        participation
+    answer: D
+    explain: Physicians are present (availability), the coverage exists (so affordability of premiums
+      is not the gap); the missing piece is provider participation in the plan.
+    distractors:
+      A: More physicians will not help if none accept the plan.
+      B: Premiums are not the barrier described — coverage already exists.
+      C: Acceptability concerns patient-facing fit; the barrier sits on the provider side.
   figures:
   - src: behavioral-social/fc10-stratification-and-resources/fig-226fa5f7.webp
     caption: Commuting through a snowstorm — transportation access as a daily resource.
@@ -122,16 +219,39 @@ examples:
 - prompt: 'Two neighborhoods — one 90th-percentile income with a primary care clinic per 5,000 people,
     one 10th percentile with one clinic per 40,000. Waiting time for the same procedure: 2 weeks vs 14
     weeks. Interpret through the inverse care law and propose a structural fix.'
+  strategy: Read the pattern as supply following demand rather than need. Separate the two levers — where
+    care sits (supply) and who can reach it (payment and transit) — then match each proposed fix to the
+    lever it moves.
   solution:
   - Care supply tracks demand, not need — the inverse care pattern.
   - 'Long waits compound: late diagnosis, worse outcomes, higher cost.'
   - Supply-side fix — need-based clinics, better transit, evening hours.
   - Payment fix — capitation and outreach rebalance the economics.
   answer: Need-based deployment, not market following — the structural response.
+  discussion: 'The inverse care law is a market prediction, not a moral one: unrestrained supply chases
+    reimbursement. Any system design that decouples revenue from need — need-based clinic placement, capitation
+    with outreach targets, transit subsidies — moves against the gradient. The general lesson for exam
+    vignettes: locate whether the barrier named is supply-side, payment-side, or transport-side before
+    choosing the intervention.'
   distractors:
     A: Only advocacy — changes attitudes, not supply.
     B: Blame individuals for delay — victim-blaming.
     C: Uniform redistribution — ignores need-based logic.
+  practice:
+    q: A city finds that its newest specialist centers all opened in high-income districts while the highest
+      disease burden sits in low-income districts. Which statement applies the inverse care law correctly?
+    options:
+      A: Specialists avoid low-income districts because disease burden there is low
+      B: Care supply follows purchasing power, so care is scarcest where need is greatest
+      C: The distribution reflects the burden, since clinics open where patients are sickest
+      D: The gap is an artifact of unequal screening in the two districts
+    answer: B
+    explain: 'Tudor Hart''s law: market-routed supply tracks ability to pay, producing the paradox that
+      need and care are inversely distributed.'
+    distractors:
+      A: The vignette says burden is highest exactly where supply is lowest.
+      C: That is the opposite of the observed pattern.
+      D: Screening differences change detection, not where centers were built.
 key_points:
 - Functionalism rewards; conflict theory exploits; Weber splits power from class from status.
 - Absolute vs relative poverty; wealth transmits across generations.

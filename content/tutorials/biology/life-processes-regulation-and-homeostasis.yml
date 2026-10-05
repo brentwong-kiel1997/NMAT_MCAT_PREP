@@ -8,6 +8,10 @@ overview: Homeostasis is the master idea of physiology — every organ in the ch
   Prerequisites — Cells (transport), Development (signal reading).
 sections:
 - heading: The homeostatic machine — set points and feedback
+  objectives:
+  - Name the four parts of a homeostatic loop.
+  - Distinguish negative from positive feedback by what each does to the disturbance.
+  - Recognise the legitimate physiological uses of positive feedback.
   body:
   - A homeostatic system has four parts — a **variable** with a set point (e.g. 37°C), a **sensor** that
     measures it, a **control center** that compares measurement to set point, and **effectors** that correct.
@@ -29,7 +33,24 @@ sections:
       A: Positive feedback reinforces the deviation.
       B: No anticipatory pathway is described.
       D: The target never moved.
+  - q: During labour, oxytocin increases contractions, and stronger contractions release more oxytocin.
+      This is…
+    options:
+      C: Positive feedback — the response amplifies its own stimulus
+      A: Negative feedback, because a hormone is involved
+      B: Feed-forward control anticipating the birth
+      D: A set-point shift
+    answer: C
+    explain: Amplification toward a fast, self-ending climax is positive feedback's signature.
+    distractors:
+      A: The chemical class of the messenger is irrelevant to the loop's polarity.
+      B: Nothing anticipates the birth here; the loop responds to it.
+      D: The target was never reset.
 - heading: Temperature — endotherms, ectotherms, and countercurrents
+  objectives:
+  - Distinguish endotherms from ectotherms by their heat source.
+  - Assign each thermoregulatory effector to heat gain or heat loss.
+  - Explain how countercurrent exchange conserves core heat.
   body:
   - The ==Endotherms== generate heat metabolically and hold temperature near    constant; **ectotherms**
     ride the environment but behaviorally regulate (basking, burrowing). Both obey the same physics —
@@ -53,7 +74,23 @@ sections:
       B: It is a conservation device, not a radiator.
       C: Friction is negligible; this is passive physics.
       D: Vessels exchange heat, not contents.
+  - q: A dog pants in hot weather. Classify the effector and its purpose.
+    options:
+      B: Evaporative heat loss — water is spent to dump heat
+      A: Heat generation by muscular work
+      C: Vasoconstriction conserving core heat
+      D: Countercurrent exchange within the lungs
+    answer: B
+    explain: Evaporation removes latent heat — the same mechanism sweating uses, at the tongue instead.
+    distractors:
+      A: Panting costs a little heat to drive, but its product is cooling.
+      C: Constriction conserves heat; hot weather calls for the opposite.
+      D: Countercurrent exchange appears in limbs and gills, not as a panting mechanism.
 - heading: Water and solutes — osmoregulation across habitats
+  objectives:
+  - Predict an animal's osmotic problem from its habitat.
+  - Match an osmoregulatory strategy to the environment it serves.
+  - Relate the form of nitrogenous waste to water availability.
   body:
   - Water follows solutes, so osmoregulation IS solute management. Marine bony fish (surrounded by salt)
     drink seawater and pump ions out at the gills; freshwater fish (surrounded by dilution) never drink
@@ -76,6 +113,18 @@ sections:
       A: Salt EXCRETION belongs to seawater fish.
       B: That is the marine bony fish strategy.
       D: Freshwater fish release ammonia directly.
+  - q: A desert reptile excretes uric acid rather than urea. The advantage is…
+    options:
+      D: Uric acid leaves as a near-solid paste, costing almost no water
+      A: Uric acid is the cheapest molecule to synthesise
+      B: Ammonia would be unsafe to store in a desert
+      C: Urea can only be excreted with seawater
+    answer: D
+    explain: Water conservation is the whole point — energetically costlier, water-cheaper.
+    distractors:
+      A: Uric acid is the most expensive of the three to make.
+      B: Ammonia is toxic everywhere; the issue is water, not safety.
+      C: Urea is the mammalian product and needs only liquid water.
   figures:
   - src: life-processes-regulation-and-homeostasis/tonicity.webp
     caption: Tonicity in action — red cells shrink in hypertonic, hold in isotonic, and swell toward lysis
@@ -86,6 +135,10 @@ sections:
       drink and excrete salt at the gills.
     credit: Fig 41.3 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Fuel regulation — glucose as a case study
+  objectives:
+  - Trace the insulin and glucagon arms of glucose regulation.
+  - Identify which pancreatic cell type releases each hormone.
+  - Distinguish type 1 from type 2 diabetes by the broken part.
   body:
   - Blood glucose is the cleanest loop to learn because both arms have names. After a meal, pancreatic
     **beta cells** release ==insulin== — cells take up glucose, liver and muscle store it as glycogen,
@@ -108,7 +161,23 @@ sections:
       A: Insulin LOWERS glucose — that arm is quiet while fasting.
       B: Thermoregulation, not fuel.
       C: Heat conservation, not fuel.
+  - q: A patient has high blood glucose AND high circulating insulin. Which diagnosis fits?
+    options:
+      B: Type 2 diabetes — insulin is present but the tissues respond poorly
+      A: Type 1 diabetes, in which insulin is absent
+      C: Diabetes insipidus, an ADH problem
+      D: Neither — this pattern is physiologically normal
+    answer: B
+    explain: Hormone present with a blunted response is insulin resistance — the type 2 signature.
+    distractors:
+      A: Type 1 is defined by the absence of insulin.
+      C: Diabetes insipidus concerns water, not glucose.
+      D: Persisting hyperglycaemia with high insulin is not normal physiology.
 - heading: When loops fail — fever, dehydration, and the general rule
+  objectives:
+  - Explain fever as a raised set point with feedback still intact.
+  - Predict the compensations engaged by progressive dehydration.
+  - Diagnose a pathological loop by naming the variable and the broken part.
   body:
   - Fever is instructive — infection pyrogens RAISE the hypothalamic set point, so the body shivers to
     reach a higher target; antipyretics lower the set point and the patient sweats. It is still negative
@@ -130,9 +199,25 @@ sections:
       B: The loop still closes at the new set point.
       C: Sweating returns as fever breaks.
       D: Unrelated axis.
+  - q: An antipyretic is given during a fever. What follows?
+    options:
+      D: The set point falls and sweating replaces shivering as the effector
+      A: The set point rises further, intensifying the fever
+      B: Positive feedback takes over the loop
+      C: Shivering continues unchanged
+    answer: D
+    explain: Lowering the target puts the body above it, so heat-dumping effectors switch on.
+    distractors:
+      A: Antipyretics do the opposite — they lower the hypothalamic target.
+      B: The loop's polarity never changes, only its set point.
+      C: Shivering stops once the target is below body temperature.
 examples:
 - prompt: A marathon runner drinks only seawater by mistake. Predict the osmotic events and the body's
     compensations.
+  strategy: 'Follow the osmotic chain in one direction and let each step cause the next: absorbed salt
+    raises plasma osmolarity, raised osmolarity pulls water out of cells, and the kidney must then excrete
+    the salt load using water it cannot spare. Name the variable (osmolarity), its direction (up), and
+    each effector''s response in order.'
   solution:
   - Step 1 — gut absorbs salt and water — plasma osmolarity RISES.
   - Step 2 — water shifts OUT of cells (cells shrink); thirst intensifies.
@@ -140,10 +225,30 @@ examples:
   - Step 4 — net effect — dehydration worsens; drinking seawater accelerates water loss.
   answer: Seawater intake raises osmolarity, pulls water from cells, and forces the kidney to spend water
     excreting salt — worsening dehydration.
+  discussion: The cruel arithmetic is that excreting a gram of salt costs more water than the seawater
+    delivered, which is why drinking seawater accelerates dehydration rather than relieving it. Every
+    loop is working correctly — ADH rises maximally, thirst peaks, urine concentrates — so the failure
+    is in the input, not in the control system, and that distinction is exactly what exam questions probe.
+    The same reasoning explains why isotonic intravenous saline hydrates while seawater cannot.
   distractors:
     A: Saying seawater hydrates — its salt demands MORE water to excrete than it provides.
     B: Cells swelling — water flows toward the hyperosmolar plasma, not into cells.
     C: ADH suppression — high osmolarity maximally stimulates ADH.
+  practice:
+    q: A patient with uncontrolled diabetes mellitus has very high blood glucose. What does this do to
+      plasma osmolarity and to urine output?
+    options:
+      C: Osmolarity rises and glucose drags water into the urine — osmotic diuresis
+      A: Osmolarity falls and the urine becomes concentrated
+      B: ADH is suppressed, so water is retained
+      D: The kidney reabsorbs all of the filtered glucose
+    answer: C
+    explain: Filtered glucose exceeds the transport maximum, stays in the tubule, and carries water with
+      it.
+    distractors:
+      A: Dissolved glucose raises osmolarity, it cannot lower it.
+      B: High osmolarity stimulates ADH, not suppresses it.
+      D: Once the carriers saturate, the excess spills.
 key_points:
 - Homeostasis loop — variable, set point, sensor, control center, effector; negative feedback self-limits.
 - Positive feedback is a climax tool — clotting, birth, action potential.

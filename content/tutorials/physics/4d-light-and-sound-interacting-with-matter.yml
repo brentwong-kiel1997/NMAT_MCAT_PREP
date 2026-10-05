@@ -6,6 +6,10 @@ overview: Electromagnetic waves, geometric optics, and sound — how light and s
   all live here.
 sections:
 - heading: Electromagnetic waves and the spectrum
+  objectives:
+  - Order the regions of the EM spectrum by frequency and by wavelength.
+  - Convert between frequency and wavelength using c = f lambda.
+  - Match an imaging modality to the band of radiation it exploits.
   body:
   - '==EM waves: transverse, travel at c = 3e8 m/s in vacuum; E and B fields perpendicular to propagation==.
     Frequency and wavelength relate by c = f lambda — higher frequency, shorter wavelength, more energy
@@ -27,7 +31,23 @@ sections:
       B: Shorter than visible.
       C: X-rays are shortest.
       D: Correct — longest of the four.
+  - q: A radio wave has a frequency of 1.5 x 10^8 Hz. Its wavelength is…
+    options:
+      A: 2.0 m
+      B: 0.5 m
+      C: 4.5 x 10^16 m
+      D: 3.0 x 10^8 m
+    answer: A
+    explain: lambda = c/f = (3.0 x 10^8)/(1.5 x 10^8) = 2.0 m.
+    distractors:
+      B: Inverting the relation and computing f/c.
+      C: Multiplying c by f instead of dividing by it.
+      D: Quoting the speed of light as though it were the wavelength.
 - heading: Reflection, refraction, and total internal reflection
+  objectives:
+  - Apply Snell's law to predict which way a ray bends at an interface.
+  - State the two conditions required for total internal reflection.
+  - Calculate a critical angle from two refractive indices.
   body:
   - '==Reflection: angle of incidence = angle of reflection; specular (mirror) vs diffuse (rough)==. Refraction:
     Snell''s law n1 sin(theta1) = n2 sin(theta2); light bends toward the normal entering a denser medium.'
@@ -48,7 +68,25 @@ sections:
       B: Only above the critical angle.
       C: Correct.
       D: n difference matters.
+  - q: Light travels from water (n = 1.33) toward air. The critical angle for total internal reflection
+      is nearest…
+    options:
+      D: 49 degrees
+      A: 41 degrees
+      B: 53 degrees
+      C: No critical angle exists
+    answer: D
+    explain: sin(theta-c) = n2/n1 = 1.00/1.33 = 0.75, so theta-c = arcsin(0.75) = 49 degrees.
+    distractors:
+      A: Using cos instead of sin (arccos of 0.75).
+      B: Using tan of the index ratio instead of its sine.
+      C: Applying the formula as though light travelled rare to dense; a critical angle needs dense to
+        rare.
 - heading: Lenses and the eye as an optical instrument
+  objectives:
+  - Distinguish myopia, hyperopia, and presbyopia and the lens that corrects each.
+  - Use the lens equation to relate object distance, image distance, and focal length.
+  - Convert between focal length and lens power in diopters.
   body:
   - ==The eye is a converging-lens system — cornea does most refraction, the lens fine-tunes via accommodation==.
     Emmetropia focuses on the retina; myopia (nearsighted) focuses in front — diverging lens corrects;
@@ -69,7 +107,24 @@ sections:
       B: That fixes hyperopia.
       C: They clearly need correction.
       D: Correct.
+  - q: A +4.0 D converging lens has an object placed 0.50 m in front of it. The image forms…
+    options:
+      A: 0.25 m beyond the lens
+      B: 0.50 m beyond the lens
+      C: 0.33 m beyond the lens
+      D: 0.50 m on the object's side
+    answer: B
+    explain: f = 1/4.0 = 0.25 m; 1/di = 1/f - 1/do = 4.0 - 2.0 = 2.0, so di = 0.50 m — real, beyond the
+      lens.
+    distractors:
+      A: Equating the image distance with the focal length.
+      C: Adding the reciprocals instead of subtracting them (1/6.0).
+      D: Subtracting in the wrong order (1/do - 1/f), which invents a virtual image on the object's side.
 - heading: Sound waves and biological media
+  objectives:
+  - Relate sound speed, frequency, and wavelength in soft tissue.
+  - Convert an intensity ratio into a change in decibels.
+  - Explain why acoustic impedance mismatches generate ultrasound echoes.
   body:
   - ==Sound is longitudinal; speed in tissue ~1540 m/s (soft tissue average)==. Echo reflection at tissue
     boundaries — ultrasound imaging; Doppler shift measures blood flow velocity (v = f delta-lambda).
@@ -89,6 +144,18 @@ sections:
       B: Bone attenuates heavily.
       C: Correct.
       D: Tissue is mostly water.
+  - q: A machine's output intensity rises by a factor of 100. The sound pressure level increases by…
+    options:
+      A: 20 dB
+      B: 2 dB
+      C: 100 dB
+      D: 10 dB
+    answer: A
+    explain: dB = 10 log10(100) = 10 x 2 = 20 dB.
+    distractors:
+      B: Reporting the logarithm alone without multiplying by 10.
+      C: Equating the intensity factor with the decibel change — the scale is logarithmic.
+      D: Treating a hundredfold rise as a single decade; each decade (x10) is 10 dB.
   figures:
   - src: 4d-light-and-sound-interacting-with-matter/fig-4f7a2c07.webp
     caption: A sound wave's compressions and rarefactions pressing on the eardrum — F = PA at work in
@@ -99,6 +166,10 @@ sections:
       uses.
     credit: Ch 14 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
 - heading: Attenuation and medical imaging physics
+  objectives:
+  - Describe the exponential decay of beam intensity with depth.
+  - Trade ultrasound frequency against penetration depth when choosing a probe.
+  - Identify the physical principle underlying each major imaging modality.
   body:
   - ==Attenuation — intensity decays exponentially with depth (I = I0 e^-mu x); higher frequency attenuates
     MORE (shallow imaging), lower penetrates deeper==. X-ray and CT measure differential attenuation across
@@ -119,18 +190,54 @@ sections:
       B: Bone blocks ultrasound almost entirely.
       C: Correct.
       D: Lower f penetrates.
+  - q: An X-ray beam has an attenuation coefficient mu = 0.35 cm-1 in soft tissue. The thickness that
+      halves its intensity is nearest…
+    options:
+      A: 2.0 cm
+      B: 0.5 cm
+      C: 0.35 cm
+      D: 20 cm
+    answer: A
+    explain: I/I0 = e^-mu x = 0.5 when x = ln 2 / mu = 0.693/0.35 = 2.0 cm.
+    distractors:
+      B: Inverting the relation and computing mu / ln 2.
+      C: Equating the half-value layer with the coefficient itself.
+      D: Slipping a factor of ten in the coefficient (0.035 cm-1).
 examples:
 - prompt: A person with near point at 40 cm needs glasses to read at 25 cm. What lens power is required?
+  strategy: 'Reading glasses must take an object at the wanted 25 cm and form a VIRTUAL image at the wearer''s
+    40 cm near point, so the sign convention is the whole problem: di = -0.40 m. The plan is one line
+    of the lens equation, 1/f = 1/do + 1/di = 1/0.25 - 1/0.40, and the result reads directly as power
+    in diopters — its sign then tells you converging versus diverging before you commit.'
   solution:
   - The lens must make a 25 cm object appear as if at 40 cm — virtual image at the near point.
   - 1/f = 1/do - 1/di = 1/0.25 - 1/0.40 (virtual, negative di convention).
   - 1/f = 4 - 2.5 = 1.5 diopters (converging).
   - Presbyopia reading glasses are exactly this — positive power.
   answer: +1.5 D converging lens.
+  discussion: '+1.5 D is a weak positive lens, which is exactly what over-the-counter readers are. The
+    sign is diagnostic, not decorative: positive means the eye has too little converging power (presbyopia
+    or hyperopia); a negative result would signal myopia and too much. Check by limits — if the near point
+    were still 25 cm the required power would be zero, and it grows as the near point recedes, so +1.5
+    D for 40 cm sits sensibly in between. Every clinical presbyopia item reduces to this one subtraction.'
   distractors:
     A: -1.5 D — sign flip, that would be myopia.
     B: +2.5 D — using only 1/0.40.
     C: +6.5 D — wrong focus distance.
+  practice:
+    q: A person's near point has receded to 50 cm. What lens power lets them read at 25 cm?
+    options:
+      B: +2.0 D
+      A: -2.0 D
+      C: +6.0 D
+      D: +1.3 D
+    answer: B
+    explain: 1/f = 1/0.25 - 1/0.50 = 4.0 - 2.0 = 2.0, so +2.0 D — a stronger lens than the 40 cm case,
+      as expected.
+    distractors:
+      A: Flipping the sign, which is the myopia (diverging) correction.
+      C: Adding the reciprocals (4 + 2) instead of subtracting them.
+      D: Adding the distances (0.25 + 0.50) instead of their reciprocals.
 key_points:
 - 'c = f lambda; EM: radio → gamma order.'
 - 'Snell: toward normal in denser; TIR only dense → rare.'

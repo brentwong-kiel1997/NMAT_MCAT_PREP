@@ -6,6 +6,10 @@ overview: Prokaryotes and viruses run the planet's small end and supply the MCAT
   vocabulary. Prerequisites — Cells (architectures), Genetics (expression basics), 1C (operon detail).
 sections:
 - heading: The prokaryotic body — small, fast, layered in armor
+  objectives:
+  - Diagram the prokaryotic envelope and name each layer.
+  - Predict the Gram stain outcome from wall architecture.
+  - Relate lipopolysaccharide to Gram-negative sepsis.
   body:
   - The prokaryotic plan — nucleoid (no envelope), ribosomes, plasmids, and a cell envelope built as ==inner
     membrane + peptidoglycan wall (+ outer membrane in Gram-negatives)==. The Gram stain rides on that
@@ -29,7 +33,24 @@ sections:
       A: Gram-positives lack an outer membrane entirely.
       B: Eukaryotic plasma membranes carry no LPS.
       C: Viruses have no envelope chemistry of this kind.
+  - q: An antibiotic that blocks peptidoglycan cross-linking works best against which organisms?
+    options:
+      C: Gram-positive bacteria, whose thick peptidoglycan is the target
+      A: Gram-negative bacteria, with their thin wall
+      B: Viruses, which lack a wall entirely
+      D: Both Gram classes equally, since their walls are identical
+    answer: C
+    explain: The thicker the peptidoglycan, the more target there is — Gram-positives are the classic
+      susceptible group.
+    distractors:
+      A: Gram-negatives still have a wall, but the outer membrane shields it and the layer is thin.
+      B: Viruses have no cell wall and no such target.
+      D: The two classes differ precisely in wall architecture.
 - heading: Horizontal gene transfer — sex without reproduction
+  objectives:
+  - Match each transfer mechanism to its vector.
+  - Predict how DNase or a contact filter changes a transfer experiment.
+  - Explain how R plasmids spread resistance across species.
   body:
   - Prokaryotes shuffle genes three ways without dividing. **Transformation** — uptake of free environmental
     DNA (the Griffith mouse experiment's mechanism). **Transduction** — bacteriophages accidentally package
@@ -52,7 +73,23 @@ sections:
       A: Fission is reproduction, not transfer.
       B: Conjugation requires cell-to-cell contact.
       D: Transformation is naked-DNA uptake.
+  - q: Adding DNase to a broth abolishes gene transfer between two strains. The mechanism was…
+    options:
+      D: Transformation, since free DNA was the vehicle
+      A: Transduction, which protects DNA inside a capsid
+      B: Conjugation, which passes DNA through a pilus
+      C: Binary fission, which copies DNA internally
+    answer: D
+    explain: Only transformation exposes naked DNA to the medium, so only it is DNase-sensitive.
+    distractors:
+      A: A capsid shields phage-carried DNA from nuclease.
+      B: Pilus-delivered DNA never enters the medium.
+      C: Fission transfers DNA to daughter cells, not between adults.
 - heading: Viruses — genomes in boxes
+  objectives:
+  - Describe a virion's parts and what each contributes.
+  - Explain why antibiotics have no effect on viruses.
+  - Deduce which enzyme a given viral genome must carry.
   body:
   - A virus is genome (DNA or RNA, single- or double-stranded) in a **capsid** of repeating units, sometimes
     wrapped in a stolen host **envelope** studded with spike glycoproteins. They have no metabolism, no
@@ -76,6 +113,18 @@ sections:
       B: Size is not the mechanism.
       C: Most viruses do not; location is irrelevant.
       D: They have no metabolism at all.
+  - q: A minus-strand single-stranded RNA virus must carry which enzyme to be infectious?
+    options:
+      C: An RNA-dependent RNA polymerase
+      A: Reverse transcriptase
+      B: A DNA-dependent RNA polymerase
+      D: None — the host ribosomes read it directly
+    answer: C
+    explain: A negative strand is the template, not the message, so the virion must bring its own copier.
+    distractors:
+      A: Reverse transcriptase is the retrovirus's enzyme, not a -ssRNA virus's.
+      B: Host polymerases transcribe DNA, and this genome is RNA.
+      D: Only a plus-strand RNA genome can be translated as delivered.
   figures:
   - src: 2b-prokaryotes-and-viruses/virus-shapes.webp
     caption: Capsid architectures — helical (TMV), icosahedral (rhinovirus), and complex.
@@ -85,6 +134,10 @@ sections:
       spikes.
     credit: Fig 21.5 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: The viral life cycle — lytic, lysogenic, and the economy of bursts
+  objectives:
+  - Order the steps of the lytic cycle.
+  - Distinguish the lytic from the lysogenic choice in bacteriophages.
+  - Interpret a one-step growth curve's eclipse and burst.
   body:
   - The cycle is a fixed script — **attach** to a specific receptor, **enter**, **uncoat**, **replicate**
     genome and proteins, **assemble**, **release** (lysis or budding). In bacteriophages the choice is
@@ -108,12 +161,28 @@ sections:
       B: Degradation would end the infection.
       C: Release defines the end of the cycle.
       D: Dormancy is lysogeny, not eclipse.
+  - q: UV stress induces a prophage in a lysogenised bacterium. What follows?
+    options:
+      A: The prophage excises and enters the lytic cycle
+      B: The prophage integrates more deeply into the chromosome
+      C: The phage converts to a retrovirus
+      D: The host becomes permanently immune to superinfection
+    answer: A
+    explain: Induction is the switch from lysogeny to lysis — excision, replication, and host lysis follow.
+    distractors:
+      B: Integration is the entry into lysogeny, not the exit from it.
+      C: Retroviruses are a separate class of virus.
+      D: Superinfection immunity lasts only while the prophage represses the lytic genes.
   figures:
   - src: 2b-prokaryotes-and-viruses/virus-em-grid.webp
     caption: Transmission electron micrographs — naked icosahedral, enveloped, helical, and complex capsids
       side by side.
     credit: Fig 21.7 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Defense and counterattack — vaccines, antivirals, resistance
+  objectives:
+  - Compare vaccine platforms by what each delivers.
+  - Match an antiviral drug to the viral step it targets.
+  - Distinguish antigenic drift from antigenic shift.
   body:
   - Vaccines train ahead of time — attenuated, inactivated, subunit, and mRNA platforms all deliver antigen
     without disease. Antiviral drugs target virus-specific steps — entry inhibitors, polymerase inhibitors
@@ -137,20 +206,56 @@ sections:
       A: Phage-to-bacterium gene gift — wrong player.
       B: Bacterial DNA transfer.
       C: Drift is year-to-year point-mutation accumulation.
+  - q: Acyclovir is activated almost only in infected cells because…
+    options:
+      D: The viral kinase performs the first phosphorylation
+      A: It blocks the bacterial ribosome
+      B: It is delivered as a vaccine into infected cells
+      C: It inhibits host DNA polymerase indiscriminately
+    answer: D
+    explain: Parasitising a virus-specific enzyme is what gives the drug its selectivity.
+    distractors:
+      A: That is an antibacterial target, not an antiviral one.
+      B: Vaccines deliver antigen; they do not deliver antiviral prodrugs.
+      C: Indiscriminate host inhibition would be toxicity, not selectivity.
 examples:
 - prompt: In the Hershey-Chase style logic — one culture's phage particles are labeled in protein (³⁵S),
     another's in DNA (³²P). After infection and blending, which label enters the cells and enters the
     progeny, and what does that prove?
+  strategy: 'Separate the labels from the conclusion before reasoning: ³⁵S tags protein only, ³²P tags
+    DNA only, and the blender exists to strip the empty capsids off the outside. The plan is to ask where
+    each label ends up — inside the cells and progeny versus sheared away — and let that location decide
+    which molecule is the hereditary material.'
   solution:
   - Step 1 — the phage attaches and injects its genome; blender shears off empty capsids.
   - Step 2 — ³²P (DNA) is found inside cells and in progeny phage; ³⁵S (protein) stays with the capsids
     outside.
   - Step 3 — therefore the heritable instruction is DNA, not protein.
   answer: DNA enters and is inherited by progeny — the injecting genome is the hereditary material.
+  discussion: 'The inference is airtight only because the two labels partition so cleanly — protein stays
+    with the ghost capsids while DNA appears both inside the infected cells and in the next phage generation.
+    Note what the experiment does NOT address: nothing about RNA as genetic material in other systems,
+    and nothing about the mechanics of injection. The design lesson generalises — pick a label unique
+    to the component whose role you are testing, then find a physical step that separates them.'
   distractors:
     A: Claiming both enter — the shear step separates them cleanly.
     B: Claiming protein enters — radioactivity says otherwise.
     C: Claiming it proves RNA is the genetic material — that is tobacco mosaic virus work, not phage.
+  practice:
+    q: Mice injected with heat-killed S cells plus live R cells die, and live S cells are recovered from
+      them. What does this show?
+    options:
+      D: A transforming substance from the dead S cells converted live R cells
+      A: The heat-killed cells revived
+      B: The R cells mutated into S cells spontaneously at a high rate
+      C: The mouse's immune system manufactured S cells
+    answer: D
+    explain: Heritable change in the living cells, caused by material from the dead ones, is the definition
+      of transformation.
+    distractors:
+      A: Heat-killed cells cannot divide.
+      B: Spontaneous mutation at that frequency would appear in the controls.
+      C: The immune system destroys bacteria; it does not rewrite them.
 key_points:
 - Envelope architecture sets Gram reaction; LPS is the Gram-negative endotoxin.
 - Division speed (~20 min) explains culture behavior and resistance tempo.

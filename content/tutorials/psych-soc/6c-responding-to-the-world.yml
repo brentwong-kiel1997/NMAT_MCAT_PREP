@@ -6,6 +6,10 @@ overview: This chapter is behavior's motor side — classical and operant condit
   identification. Prerequisite — 6A/B.
 sections:
 - heading: Classical conditioning — learning by association
+  objectives:
+  - Map a described episode onto the CS-US-CR vocabulary before and after learning.
+  - Distinguish extinction, spontaneous recovery, generalization, and discrimination in a described curve.
+  - Explain one-trial taste aversion as biological preparedness challenging general-process theory.
   body:
   - Pavlov's architecture — a neutral stimulus (bell) pairs with an unconditioned stimulus (food) until
     the bell alone elicits a conditioned response. US→UR before learning; CS→CR after. Extinction (CS
@@ -26,11 +30,30 @@ sections:
       A: Operant procedure.
       B: Similar-stimulus spread.
       D: New neutral stimulus paired with the CS.
+  - q: A patient nauseated by chemotherapy begins feeling sick in the oncology waiting room, then later
+      at the smell of the hospital cafeteria food. Name the phenomenon and its mechanism.
+    options:
+      A: Spontaneous recovery — the extinguished response returns after rest
+      B: Stimulus generalization spreading the conditioned nausea to a similar cue
+      C: Higher-order (second-order) conditioning — the cafeteria smell pairs with the established CS
+      D: Shaping — successive approximations of nausea
+    answer: C
+    explain: A previously neutral cue paired with an established conditioned stimulus acquires the response
+      — second-order conditioning.
+    distractors:
+      A: Nothing was extinguished and no rest interval is described.
+      B: The cafeteria smell is not a graded variant of the waiting room; it is a new cue linked through
+        association.
+      D: Shaping is an operant procedure with reinforcement of approximations.
   figures:
   - src: 6c-responding-to-the-world/skinner-box.webp
     caption: B.F. Skinner and the operant chamber — lever press, food dispenser, consequence loop.
     credit: Fig 6.10 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Operant conditioning — learning by consequence
+  objectives:
+  - Classify a consequence as positive/negative reinforcement or punishment by what happened to the behavior.
+  - Identify a reinforcement schedule from its response pattern and predict extinction resistance.
+  - Explain shaping as reinforcement of successive approximations.
   body:
   - Consequences shape voluntary behavior — reinforcement increases (positive adds good; negative removes
     bad — negative reinforcement is NOT punishment), punishment decreases. Shaping builds complex behavior
@@ -51,12 +74,31 @@ sections:
       B: Fixed counts are predictable.
       C: Interval schedules time the FIRST response.
       D: Same objection.
+  - q: A teenager's nagging stops the moment a parent hands over the car keys; over weeks the parent hands
+      over keys faster and faster. Name what increased, in whom, and by which operation.
+    options:
+      A: The teen's nagging increased — positive reinforcement by adding keys
+      B: The parent's compliance increased — negative reinforcement by removing the aversive nagging
+      C: The parent's compliance increased — positive punishment by adding nagging
+      D: The teen's nagging decreased — extinction by withholding keys
+    answer: B
+    explain: The parent's key-giving rose because it terminated an aversive stimulus — textbook negative
+      reinforcement, and the reason the loop persists.
+    distractors:
+      A: The keys were already the parent's to give; the reinforced act is the parent's, and removing
+        an aversive is not 'positive'.
+      C: Punishment DECREASES behavior; compliance rose.
+      D: The nagging grew more effective, not less.
   figures:
   - src: 6c-responding-to-the-world/reinforcement-schedules.webp
     caption: The four reinforcement schedules yield distinct response patterns — variable ratio is steepest
       and most extinction-resistant.
     credit: Fig 6.13 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Observational learning and cognition in learning
+  objectives:
+  - Sequence Bandura's four steps — attention, retention, reproduction, motivation — for a described imitation.
+  - Explain latent learning as learning without performance and identify it in a maze or workplace case.
+  - Distinguish vicarious reinforcement from direct reinforcement.
   body:
   - Bandura's Bobo-doll studies — children who watched an adult rewarded for aggression imitated more
     — established observational learning with vicarious reinforcement. Four steps — attention, retention,
@@ -77,11 +119,33 @@ sections:
       B: No approximations were reinforced.
       C: No stimulus-stimulus pairing.
       D: No consequence decreased behavior.
+  - q: A new nurse performs a sterile technique perfectly on her first attempt, having watched a senior
+      do it for weeks, though she was never permitted to practise. Which concept, and which step was she
+      missing until now?
+    options:
+      A: Latent learning — she was missing motivation
+      B: Observational learning — attention and retention were in place; reproduction was the step she
+        had not yet performed
+      C: Classical conditioning — the senior's presence paired with equipment
+      D: Shaping — successive approximations were reinforced
+    answer: B
+    explain: Watching a model built the skill without practice; reproduction converts retained observation
+      into action on the first attempt.
+    distractors:
+      A: Latent learning describes knowledge held without expression in a maze, and nothing was missing
+        motivationally here.
+      C: No stimulus-stimulus pairing produced the technique.
+      D: No one reinforced approximations — she performed it correctly at once.
   figures:
   - src: 6c-responding-to-the-world/cognitive-map.webp
     caption: Tolman's cognitive map — latent learning in maze-running rats without reinforcement.
     credit: Fig 6.15 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Responding under uncertainty — heuristics
+  objectives:
+  - Name the heuristic (representativeness, availability, anchoring) operating in a described judgment.
+  - State the correction for each heuristic — base rates for representativeness, reference-class data
+    for availability, a wide range for anchoring.
+  - Distinguish heuristic-driven bias from random error.
   body:
   - Cognition's shortcuts cut errors too — representativeness (judging by similarity to prototype), availability
     (judging frequency by ease of recall), anchoring (insufficient adjustment from an initial value).
@@ -101,18 +165,56 @@ sections:
       A: Initial-value adjustment failure.
       B: Similarity-to-prototype.
       D: Problem-solving rigidity.
+  - q: After a widely shared story about a vaccine side effect, a clinician estimates its rate at 1 in
+      200 when the true figure is 1 in 100,000. Which heuristic, and what corrects it?
+    options:
+      A: Anchoring — re-anchor on a higher number
+      B: Representativeness — compare the case to a prototype
+      C: Availability — vivid, easily recalled instances inflate frequency; published base rates correct
+        it
+      D: Confirmation bias — seek disconfirming cases only
+    answer: C
+    explain: A vivid single case is far easier to retrieve than a statistics table, so judged frequency
+      tracks recall ease.
+    distractors:
+      A: No initial numeric anchor was offered to adjust from.
+      B: No prototype match is described — only recall of an instance.
+      D: Confirmation bias is selective search; the error here is frequency estimation.
 examples:
 - prompt: A child receives a candy each time she puts toys away. Later, candy is given only after several
     cleanups, unpredictably. Describe the shift and predict extinction resistance.
+  strategy: Identify the schedule by what the reinforcer counts. Candy after EVERY response is continuous;
+    unpredictable candy after several responses ties reinforcement to a varying response count — the defining
+    feature of a variable ratio.
   solution:
   - Candy per response = continuous reinforcement.
   - Unpredictable candy after several responses = variable ratio.
   - Variable ratio yields high, steady responding and greatest extinction resistance.
   answer: Continuous → variable ratio shift; resistance rises.
+  discussion: 'The general law: resistance to extinction tracks unpredictability and partialness, which
+    is why variable ratio sustains the highest rates. The applied corollary is that behavior reinforced
+    on a thin variable schedule survives removal far longer than continuously reinforced behavior — the
+    reason gambling is so persistent and why token programs thin their schedules deliberately.'
   distractors:
     A: Fixed interval — no time gate described.
     B: Predicting faster extinction — data run opposite.
     C: Negative reinforcement — nothing aversive is removed.
+  practice:
+    q: A clinic praises a patient after each of three exercises, then switches to praising after an unpredictable
+      number of completed exercises. Attendance stays high and survives a two-week therapist absence.
+      Which schedule produced the persistence?
+    options:
+      A: Fixed interval — praise on a time gate
+      B: Variable ratio — praise after a varying number of responses
+      C: Continuous reinforcement — praise after every exercise
+      D: Classical conditioning — the clinic paired exercise with praise
+    answer: B
+    explain: Reinforcement tied to a varying response count is variable ratio, and its unpredictability
+      is what carries the resistance to extinction observed during the absence.
+    distractors:
+      A: No time gate is described, and fixed intervals produce scalloped pausing.
+      C: Continuous schedules extinguish fastest once praise stops.
+      D: No stimulus-stimulus pairing is involved — the consequence follows a voluntary response.
 key_points:
 - Classical = stimulus-stimulus; operant = consequence-behavior.
 - Negative reinforcement strengthens; punishment weakens — never conflate.

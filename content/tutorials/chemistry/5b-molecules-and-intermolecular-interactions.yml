@@ -5,6 +5,10 @@ overview: Intermolecular forces determine physical properties from boiling point
   MCAT tests IMF ranking, polarity, and the hydrophobic effect.
 sections:
 - heading: The intermolecular force hierarchy
+  objectives:
+  - Rank the intermolecular forces from strongest to weakest.
+  - State the structural requirement for a hydrogen bond to form.
+  - Recognise that London dispersion operates in every molecule.
   body:
   - From strongest to weakest — ion-ion > ion-dipole > hydrogen bonding > dipole-dipole > London dispersion.
     London dispersion exists in ALL molecules (temporary dipoles from electron fluctuation) and is the
@@ -24,6 +28,18 @@ sections:
       A: Dispersion only.
       B: Dipole-dipole.
       C: Hydrogen bonding but less than ionic.
+  - q: Which molecule can act as BOTH a hydrogen-bond donor and an acceptor?
+    options:
+      D: CH3NH2
+      A: CH3OCH3
+      B: CH4
+      C: CCl4
+    answer: D
+    explain: An N-H bond donates, and the nitrogen lone pair accepts — methylamine does both.
+    distractors:
+      A: The ether has lone pairs to accept but no O-H or N-H to donate.
+      B: No electronegative atom means neither role is available.
+      C: Chlorine is not electronegative enough to hydrogen-bond.
   figures:
   - src: 5b-molecules-and-intermolecular-interactions/fig-031c6194.webp
     caption: Intramolecular forces (covalent bonds within a molecule) versus intermolecular forces (attractions
@@ -33,6 +49,10 @@ sections:
     caption: Dipole-dipole attractions between polar molecules via partial charges.
     credit: Ch 10 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
 - heading: Polarity and dipole moments
+  objectives:
+  - Predict molecular polarity from bond dipoles combined with geometry.
+  - Identify molecules that are nonpolar despite containing polar bonds.
+  - Relate amphipathic structure to micelle and membrane formation.
   body:
   - Molecular polarity depends on bond polarity AND geometry. CO2 is linear and nonpolar (dipoles cancel).
     H2O is bent and polar. CCl4 is tetrahedral nonpolar; CHCl3 is tetrahedral polar. Like dissolves like
@@ -52,7 +72,23 @@ sections:
       A: Bent and polar.
       B: Trigonal pyramidal and polar.
       D: Diatomic with large EN difference.
+  - q: Which molecule is POLAR?
+    options:
+      A: CH2Cl2
+      B: CO2
+      C: CCl4
+      D: BF3
+    answer: A
+    explain: Dichloromethane is tetrahedral but its substituents differ, so the bond dipoles cannot cancel.
+    distractors:
+      B: Linear, with two equal dipoles pointing opposite — net zero.
+      C: Tetrahedral and symmetric — the four dipoles cancel.
+      D: Trigonal planar and symmetric — the three dipoles cancel.
 - heading: Physical properties from IMFs
+  objectives:
+  - Predict boiling point, melting point, and viscosity from IMF strength.
+  - Rank vapor pressures using intermolecular forces.
+  - Explain why longer hydrocarbon chains boil at higher temperatures.
   body:
   - Stronger IMFs mean higher boiling point, higher melting point, higher viscosity, and higher surface
     tension. Water boils at 100C (vs methane at -162C) due to hydrogen bonding. Longer hydrocarbon chains
@@ -71,7 +107,24 @@ sections:
       A: Dispersion only.
       B: Some H-bonding.
       C: Strong H-bonding but not metallic.
+  - q: Rank propane (C3H8), butane (C4H10), and pentane (C5H12) by boiling point.
+    options:
+      C: pentane > butane > propane
+      A: propane > butane > pentane
+      B: All three boil at about the same temperature
+      D: butane > pentane > propane
+    answer: C
+    explain: Same functional group, so dispersion decides — and dispersion grows with electron count and
+      chain length.
+    distractors:
+      A: Reversing the trend; more surface area means more dispersion, not less.
+      B: Sharing a functional group does not make the IMFs equal — mass still matters.
+      D: No non-monotonic effect is at work here.
 - heading: The hydrophobic effect and biology
+  objectives:
+  - Describe the hydrophobic effect as an entropy-driven process.
+  - Explain how it drives protein folding and membrane assembly.
+  - Identify which noncovalent interactions stabilise secondary structure.
   body:
   - The hydrophobic effect is entropy-driven exclusion of nonpolar molecules from water. Water forms ordered
     cages around nonpolar surfaces; burying those surfaces releases water, increasing entropy. This is
@@ -91,7 +144,23 @@ sections:
       A: Nonpolar molecules attract weakly.
       B: No ions involved.
       C: No new bonds.
+  - q: When a protein buries its nonpolar side chains, what happens to the surrounding water?
+    options:
+      A: Ordered cage water is released, raising the water's entropy
+      B: Water is consumed, releasing enthalpy
+      C: Water forms stronger hydrogen bonds to the buried groups
+      D: Water is unaffected — burial is a covalent event
+    answer: A
+    explain: Releasing structured cage water is the entropic payoff that drives folding.
+    distractors:
+      B: The effect is entropic, not enthalpic — no bonds are made or broken.
+      C: Nonpolar surfaces cannot hydrogen-bond; that is the whole problem.
+      D: Folding rearranges noncovalent contacts only, but the water is very much affected.
 - heading: Partition and gas solubility
+  objectives:
+  - Define the partition coefficient and what a high value predicts.
+  - Predict membrane permeability from a compound's lipophilicity.
+  - Apply Henry's law to the solubility of a gas above a liquid.
   body:
   - 'Partition coefficient P equals concentration in organic phase divided by concentration in aqueous
     phase. High P means lipophilic — crosses membranes readily. Henrys law: gas solubility is proportional
@@ -109,15 +178,50 @@ sections:
       A: log P < 0 is water-soluble.
       C: Lipophilic drugs cross membranes well.
       D: log P does not indicate charge.
+  - q: A diver breathes air at twice the normal nitrogen partial pressure. The nitrogen dissolved in her
+      blood…
+    options:
+      C: Doubles
+      A: Quadruples
+      B: Is unchanged
+      D: Falls by half
+    answer: C
+    explain: Henry's law is linear — dissolved gas is proportional to the partial pressure above the liquid.
+    distractors:
+      A: Squaring the factor has no basis; the law is linear.
+      B: The composition of the gas has not changed, but its pressure has.
+      D: Inverting the relation — higher pressure drives MORE gas into solution.
 examples:
 - prompt: 'Rank by boiling point: CH4, CH3Cl, CH3OH, LiF.'
+  strategy: 'Sort by the strongest intermolecular force each species can deploy, not by mass: ionic LiF
+    first, then the hydrogen-bonding methanol, then the polar but non-donating CH3Cl, then dispersion-only
+    methane. The plan is one pass down the IMF ladder, testing each molecule for an N-H or O-H donor before
+    falling back to dipole or dispersion.'
   solution:
   - LiF (ionic, ~1700C) > CH3OH (H-bonding, 65C) > CH3Cl (dipole-dipole, -24C) > CH4 (dispersion, -162C).
   answer: LiF > CH3OH > CH3Cl > CH4.
+  discussion: 'The spread from roughly 1700C down to -162C is the lesson: each rung down the IMF ladder
+    costs hundreds of degrees, dwarfing any mass effect among small molecules. The ranking also guards
+    against the classic trap — CH3Cl is heavier than CH3OH yet boils some 90 degrees lower, because a
+    hydrogen bond beats a dipole regardless of molecular weight. Note that LiF is an ionic solid at room
+    temperature, so ''boiling'' it means dismantling a lattice first.'
   distractors:
     A: Putting CH4 above CH3Cl — dispersion is weaker.
     B: Putting CH3Cl above CH3OH — H-bonding wins.
     C: Putting molecular above ionic LiF.
+  practice:
+    q: 'Rank by boiling point: ethane (CH3CH3), chloroethane (CH3CH2Cl), ethanol (CH3CH2OH).'
+    options:
+      A: ethanol > chloroethane > ethane
+      B: chloroethane > ethanol > ethane
+      C: ethane > chloroethane > ethanol
+      D: ethanol > ethane > chloroethane
+    answer: A
+    explain: Ethanol hydrogen-bonds; chloroethane is only dipole-dipole; ethane has dispersion alone.
+    distractors:
+      B: Putting dipole-dipole above hydrogen bonding.
+      C: Reversing the ladder entirely.
+      D: Placing dispersion above dipole-dipole for these similar-sized molecules.
 key_points:
 - IMF hierarchy — ionic > H-bond > dipole-dipole > dispersion.
 - Dispersion exists everywhere; scales with electron count.

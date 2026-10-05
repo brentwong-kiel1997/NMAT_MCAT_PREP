@@ -6,6 +6,10 @@ overview: Once signals arrive, the brain must organize and interpret them — at
   and change/inattentional blindness. Prerequisite — 6A.
 sections:
 - heading: Attention — the selective gateway
+  objectives:
+  - Classify a described miss as inattentional blindness or change blindness from the task structure.
+  - Predict the encoding cost of divided attention in a described study scenario.
+  - Identify the cocktail-party effect as selection by meaning rather than by physical channel.
   body:
   - Attention is the bottleneck that turns parallel sensory abundance into serial thought. Selective attention
     favors one channel — the cocktail-party effect shows selection by meaning. Divided attention splits
@@ -26,11 +30,29 @@ sections:
       A: Adaptation needs constant stimulation.
       B: Change blindness compares scene versions.
       D: The counting task consumed attention — the failure mode.
+  - q: A student studies a chapter while watching a video and later insists the page 'looks familiar'
+      but cannot answer a single question. Name the stage that failed and why familiarity survived.
+    options:
+      A: Retrieval failure — the trace is intact but the cue is wrong
+      B: Encoding — divided attention blocked semantic processing, leaving only perceptual fluency
+      C: Decay — the memory faded over the retention interval
+      D: Proactive interference — older chapters blocked the new one
+    answer: B
+    explain: Splitting attention prevents deep encoding; the resulting perceptual fluency produces familiarity
+      without retrievable content.
+    distractors:
+      A: Nothing strong was stored, so there is no intact trace to retrieve.
+      C: Decay needs time to act; the failure occurred at input.
+      D: No competing material is described.
   figures:
   - src: 6b-making-sense-of-the-environment/memory-stages.webp
     caption: Atkinson-Shiffrin model — sensory memory → short-term → long-term with rehearsal loop.
     credit: Fig 8.4 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Memory systems — the three-box model
+  objectives:
+  - Assign a described task to sensory, working, or long-term memory using capacity and duration.
+  - Sort a described memory into explicit episodic, explicit semantic, or implicit procedural/priming.
+  - Use the H.M. dissociation to localize a described spared-and-lost pattern.
   body:
   - Memory is a pipeline — sensory memory (iconic/echoic, under 2 seconds), working memory (~7 items,
     20-30 s without rehearsal), and long-term memory (unlimited, meaning-organized). Encoding → storage
@@ -52,12 +74,31 @@ sections:
       B: Sensory registers are unaffected.
       C: Working memory is cortical and largely spared.
       D: Procedural learning persisted.
+  - q: A patient with dense amnesia is asked to complete word stems (LET__) after a word list was read
+      to her; she performs above chance yet denies seeing the list. Which system, and what does the dissociation
+      show?
+    options:
+      A: Working memory — the span is short but intact
+      B: Explicit episodic memory — she recalls the list unconsciously
+      C: Implicit priming — prior exposure speeds completion without conscious recollection
+      D: Sensory memory — the echoic register holds the list
+    answer: C
+    explain: 'Priming is implicit: performance improves from exposure while explicit recall of the episode
+      is gone — the classic H.M.-style split.'
+    distractors:
+      A: Working memory would require her to hold and manipulate the list now.
+      B: She explicitly denies any recollection, which is the opposite of episodic memory.
+      D: The register lasts under two seconds and does not produce stem completion priming.
   figures:
   - src: 6b-making-sense-of-the-environment/ltm-types.webp
     caption: Long-term memory taxonomy — explicit (episodic, semantic) versus implicit (procedural, priming,
       conditioning).
     credit: Fig 8.6 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Encoding, retrieval, and their failures
+  objectives:
+  - Name the forgetting mechanism (decay, proactive, retroactive, retrieval failure) in a described case.
+  - Apply encoding specificity to predict whether a given cue will work.
+  - Contrast the testing effect with rereading as an encoding strategy.
   body:
   - Depth of processing governs encoding — shallow (structural) loses to deep (semantic). Retrieval is
     cue-dependent — encoding specificity and context-dependent memory mean memory is state-sensitive;
@@ -78,7 +119,25 @@ sections:
       A: Time-based fading is not described.
       B: Retroactive runs backward — new blocks old.
       D: The code was learned; retrieval is contaminated.
+  - q: A student revises pharmacology for six weeks and can no longer recall the physiology learned before
+      it. Name the mechanism and its direction.
+    options:
+      A: Proactive interference — old physiology blocks the new pharmacology
+      B: Decay — the physiology faded with time alone
+      C: Retroactive interference — new pharmacology acts backwards on older physiology
+      D: Encoding failure — physiology was never stored
+    answer: C
+    explain: New learning displacing old is retroactive interference.
+    distractors:
+      A: Proactive runs the other way — old blocking new.
+      B: The physiology was retrievable before the new course; time alone is not the mechanism.
+      D: It was stored and retrievable until the second course arrived.
 - heading: Consciousness and its states
+  objectives:
+  - Give the EEG and behavioral signature that distinguishes N3 from REM.
+  - Place a described sleep phenomenon (sleepwalking, night terrors, growth-hormone release, vivid dreams)
+    in its stage.
+  - Describe consciousness as a global workspace binding attention and working memory.
   body:
   - Consciousness ranges along a continuum — alertness through sleep stages (N1-N3 and REM) to altered
     states. Sleep questions test stage physiology — N3 deep sleep with growth hormone, REM with skeletal-muscle
@@ -98,18 +157,53 @@ sections:
       B: N3 hosts slow waves and sleepwalking.
       C: That is N1.
       D: N3 again.
+  - q: A sleepwalking episode ends with no dream recall and no muscle paralysis; the EEG showed slow delta
+      waves. Which stage, and which REM feature was absent?
+    options:
+      A: N3 slow-wave sleep; REM's skeletal-muscle atonia was absent
+      B: REM; the absent feature was dreaming
+      C: N1 theta; the absent feature was growth-hormone release
+      D: REM rebound; the absent feature was slow waves
+    answer: A
+    explain: Delta activity with sleepwalking and preserved movement is N3; atonia is the REM-only feature.
+    distractors:
+      B: REM carries vivid dream recall and atonia — both mismatched here.
+      C: N1 theta would give easy arousal and hypnagogic imagery, not slow-wave sleepwalking.
+      D: Rebound is extra REM after deprivation, not this episode.
 examples:
 - prompt: A student reads a chapter while texting and later recalls almost nothing, yet feels the material
     is familiar. Explain the memory-system stages.
+  strategy: Trace the failure to its stage before naming it. Ask what the input got at each step — attention,
+    depth of processing, storage, cue availability — and let the symptom (familiarity without recall)
+    pick the stage.
   solution:
   - Divided attention at encoding shallow-processed the text (structural, not semantic).
   - Weak encoding left a fragile trace; familiarity reflects fluency, not retrieval.
   - Recognition-without-recall follows — the cue is too weak to access semantic content.
   answer: Divided attention caused shallow encoding; fluency-based familiarity without semantic retrieval.
+  discussion: 'The same triage separates every ''I studied but blanked'' report: divided attention and
+    shallow processing damage encoding; interference damages retrieval of stored material; missing context
+    cues produce retrieval failure on intact traces. Fluency-based familiarity is the tell for encoding
+    failure, because it survives without any semantic content.'
   distractors:
     A: Blaming decay — the failure predates storage time.
     B: Blaming retrieval effort alone — nothing strong was stored.
     C: Calling it proactive interference — no competing material is described.
+  practice:
+    q: A second student studies in silence with full attention but revises physiology immediately after
+      pharmacology and now mixes the two drug lists. Which stage and mechanism?
+    options:
+      A: Encoding — divided attention blocked semantic processing
+      B: Retrieval — interference between two similarly structured lists
+      C: Sensory memory — the material never registered
+      D: Consolidation — sleep loss erased the traces
+    answer: B
+    explain: Attention and depth were intact; two overlapping sets of associations compete at retrieval
+      — interference, not encoding failure.
+    distractors:
+      A: Nothing divided her attention at study time.
+      C: Material registered fine — she recalls parts of both lists.
+      D: No sleep variable is described, and the material was learned.
 key_points:
 - Selective attention filters by meaning; divided attention taxes encoding.
 - Inattentional blindness and change blindness — perception needs attention.

@@ -7,6 +7,10 @@ overview: This chapter surveys the two multicellular kingdoms exam writers expec
   — Cells (organelles, walls) and Unity and Diversity (domains, kingdoms).
 sections:
 - heading: The plant body — three tissue systems
+  objectives:
+  - Assign a plant tissue to the dermal, ground, or vascular system.
+  - State what each vascular tissue carries and in which direction.
+  - Distinguish primary from secondary growth and their meristems.
   body:
   - A plant is built from three tissue systems that repeat in every organ. The **dermal** system is the
     skin (epidermis, cuticle, and in roots the water-absorbing root hairs). The **ground** system fills
@@ -31,7 +35,23 @@ sections:
       A: Sclerenchyma is dead support tissue.
       B: Cambium is the growth layer, not a transport tissue.
       D: Xylem is the water-and-mineral one-way elevator.
+  - q: Leaves need water and roots need sugar. Which tissue carries which, and where?
+    options:
+      A: Xylem carries water upward; phloem carries sugars from source to sink
+      B: Phloem carries water upward and xylem carries sugars down
+      C: Both tissues carry sugars; only xylem carries water
+      D: Xylem carries sugars and water upward only
+    answer: A
+    explain: One-way water up, source-to-sink sugar in whichever direction the sinks demand.
+    distractors:
+      B: The two tissues' cargoes are swapped here.
+      C: Phloem's cargo is sugar, not water.
+      D: Xylem never carries sugar.
 - heading: Plant reproduction and the alternation of generations
+  objectives:
+  - Trace the alternation of generations between sporophyte and gametophyte.
+  - Describe double fertilisation and its two products.
+  - Explain the evolutionary trend in gametophyte size.
   body:
   - Plants live ==two alternating lives== — a diploid **sporophyte** that makes spores by meiosis, and
     a haploid **gametophyte** that makes gametes by mitosis. Fertilization restores the diploid and the
@@ -55,11 +75,27 @@ sections:
       B: Wrong ploidy and wrong parentage.
       C: Spores are made by meiosis in the anther/ovule, not by fusion.
       D: The embryo is the other product of double fertilization.
+  - q: Which generation makes spores, and by what process?
+    options:
+      D: The diploid sporophyte, by meiosis
+      A: The haploid gametophyte, by meiosis
+      B: The sporophyte, by mitosis
+      C: The gametophyte, by fertilisation
+    answer: D
+    explain: Meiosis in the sporophyte halves the chromosome number and yields spores.
+    distractors:
+      A: The gametophyte makes gametes by mitosis, not spores by meiosis.
+      B: Mitosis preserves ploidy; spores are haploid.
+      C: Fertilisation restores diploidy; it does not make spores.
   figures:
   - src: the-world-of-plants-and-animals/hydra-budding.webp
     caption: Budding in hydra — asexual reproduction where the offspring detaches as a clone.
     credit: Fig 43.3 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Animal body plans — the organizing decisions
+  objectives:
+  - Order the body-plan decisions — symmetry, germ layers, coelom.
+  - Distinguish a true coelom from a pseudocoel by its lining.
+  - Classify a phylum as protostome or deuterostome from its development.
   body:
   - Animal diversity is easier to learn as a chain of developmental decisions. **Symmetry** — radial (jellyfish,
     hydra) versus bilateral (everything that crawls or swims with a front end). **Germ layers** — diploblastic
@@ -82,12 +118,28 @@ sections:
       A: The gut is endoderm-derived and open to the outside.
       B: Pseudocoels and acoels are cavities too — the lining decides.
       C: The blastocoel is an early embryo space, not an adult cavity.
+  - q: An animal is triploblastic with a body cavity only partly lined by mesoderm. It is…
+    options:
+      D: A pseudocoelomate
+      A: An acoelomate
+      B: A true coelomate
+      C: A diploblast
+    answer: D
+    explain: A cavity present but not fully mesoderm-lined is the pseudocoel definition.
+    distractors:
+      A: Acoelomates have no cavity at all.
+      B: True coeloms are lined entirely by mesoderm.
+      C: Triploblastic means three germ layers by definition.
   figures:
   - src: the-world-of-plants-and-animals/fig-1116bfbf.webp
     caption: Features of the animal kingdom — a black bear beside preserved zoological specimens, the
       opening contrast of animal diversity.
     credit: Ch 27 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: The invertebrate hallmarks
+  objectives:
+  - Match each anchor phylum to its defining trait.
+  - Explain why arthropods must molt in order to grow.
+  - Relate flatworm body shape to its exchange strategy.
   body:
   - Do not memorize thirty phyla — anchor six. **Porifera** (sponges — no true tissues, filter feeding).
     **Cnidaria** (radial, cnidocyte stinging cells). **Platyhelminthes** (flatworms — flat because diffusion
@@ -108,7 +160,23 @@ sections:
       A: Chordates grow continuously; no molting.
       B: Sponges have no exoskeleton to shed.
       D: Annelids grow within soft segments.
+  - q: Why are flatworms flat?
+    options:
+      A: Flattening keeps every cell near the surface, since they lack a circulatory system
+      B: Flatness creates the pseudocoel they need
+      C: It is a leftover of their radial ancestry
+      D: They flatten to escape predators
+    answer: A
+    explain: No circulatory system means exchange by diffusion, and diffusion demands a short distance.
+    distractors:
+      B: Flatworms are acoelomate — no cavity, flat or otherwise.
+      C: Flatworms are bilaterally symmetric triploblasts.
+      D: Nothing in their anatomy suggests a defensive origin.
 - heading: Chordates and the amniotic revolution
+  objectives:
+  - List the four chordate trademarks and the stage at which each appears.
+  - Explain how the amniotic egg freed reproduction from water.
+  - Distinguish the three mammal groups by reproductive strategy.
   body:
   - Chordate trademarks at some life stage — **notochord**, dorsal hollow nerve cord, pharyngeal slits,
     post-anal tail. Vertebrates add the backbone; the vertebrate story runs jawless → cartilaginous →
@@ -132,9 +200,24 @@ sections:
       B: Gills are the opposite — they bind you to water.
       C: That is a fish sensory system.
       D: The notochord is a support rod, present even in aquatic chordates.
+  - q: Which extraembryonic membrane handles the embryo's nitrogenous waste?
+    options:
+      C: The allantois
+      A: The amnion
+      B: The chorion
+      D: The yolk sac
+    answer: C
+    explain: The allantois stores waste; each of the four membranes has its own single job.
+    distractors:
+      A: The amnion is the fluid bath.
+      B: The chorion handles gas exchange.
+      D: The yolk sac carries the food supply.
 examples:
 - prompt: A student sectioned a stem and a root and must tell them apart in one field of view. Give the
     fastest discriminating features.
+  strategy: 'Pick features that cannot appear in both organs: vascular bundle arrangement and the presence
+    of root hairs versus a cuticle separate root from stem unambiguously. Anything both organs can show
+    — chloroplasts, cellulose walls, the mere presence of phloem — is not a test.'
   solution:
   - Step 1 — xylem and phloem arrangement — roots keep vascular tissue in a central cylinder with xylem
     star; stems scatter bundles in a ring.
@@ -142,10 +225,28 @@ examples:
   - Step 3 — ground tissue proportions — roots store (large cortex), stems support (more sclerenchyma
     near bundles).
   answer: Bundle arrangement plus root hairs versus cuticle separates root from stem in seconds.
+  discussion: 'The principle is to choose a diagnostic that is exclusive rather than merely common, since
+    a test both subjects can pass proves nothing. Note why the anatomy differs functionally: a root''s
+    central cylinder with star-shaped xylem suits anchoring and uptake, while a stem''s ring of bundles
+    resists bending. The same habit — one decisive trait over a list of shared ones — transfers directly
+    to phylum identification.'
   distractors:
     A: Counting chloroplasts — both can lack or carry them depending on light; not decisive.
     B: Looking for phloem only — both organs have it; direction does not differ by organ.
     C: Checking cell walls — cellulose is everywhere in plants.
+  practice:
+    q: You must tell a monocot leaf from a dicot leaf in cross-section. Which single feature is decisive?
+    options:
+      A: Vein pattern — parallel veins indicate a monocot
+      B: Presence of chloroplasts, which both possess
+      C: Presence of a waxy cuticle, which both possess
+      D: Presence of vascular tissue, which both possess
+    answer: A
+    explain: Venation is the one feature that differs reliably between the two groups.
+    distractors:
+      B: Both groups photosynthesise with chloroplasts.
+      C: Both groups have a cuticle.
+      D: Both groups have veins; only their arrangement differs.
 key_points:
 - Three plant tissue systems — dermal (boundary), ground (metabolism, support), vascular (xylem up, phloem
   both ways).

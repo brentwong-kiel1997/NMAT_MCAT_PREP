@@ -363,21 +363,21 @@ items:
     D: Negative feedback operates continuously throughout life.
   chapter: life-processes-regulation-and-homeostasis
 - id: nmat-p2b-024
-  q: When body temperature rises above its set point, the hypothalamus triggers dilation of skin blood
-    vessels and sweating. These responses lower body temperature mainly by
+  q: Which sequence correctly traces the earliest stages of animal embryonic development?
   choices:
-    A: increasing metabolic heat production
-    B: triggering shivering in skeletal muscle
-    C: constricting blood vessels in the skin
-    D: promoting heat loss through radiation and evaporation
+    A: gastrula -> blastula -> morula -> zygote
+    B: zygote -> gastrula -> morula -> blastula
+    C: morula -> zygote -> blastula -> gastrula
+    D: zygote -> morula -> blastula -> gastrula
   answer: D
-  explain: Vasodilation carries warm blood to the skin surface for radiation, and evaporating sweat removes
-    additional heat.
+  explain: Cleavage divides the single-celled zygote into a solid ball (the morula), which hollows into
+    a blastula; gastrulation then rearranges the cells into the three germ layers.
   distractors:
-    A: Metabolic heat production increases when the body is cold.
-    B: Shivering generates heat and is a response to a falling body temperature.
-    C: Vasoconstriction, not dilation, conserves heat by reducing blood flow to the skin.
-  chapter: life-processes-regulation-and-homeostasis
+    A: This runs the sequence backwards after the zygote; cleavage and hollowing precede gastrulation.
+    B: Gastrulation is the last of these stages, not the second; it acts on the ball of cells that cleavage
+      has already produced.
+    C: Cleavage starts from the single-celled zygote, so the zygote cannot come second.
+  chapter: development
 - id: nmat-p2b-025
   q: The resting membrane potential of a neuron is established mainly by
   choices:
@@ -394,21 +394,20 @@ items:
     D: Chloride movement is not the main determinant of the resting potential.
   chapter: 3a-nervous-and-endocrine-systems
 - id: nmat-p2b-026
-  q: After strenuous exercise a person's blood glucose falls below its set point. Which hormonal response
-    corrects this?
+  q: Which of these structures develops from the mesoderm?
   choices:
-    A: Increased insulin secretion by pancreatic beta cells
-    B: Increased ADH release, raising water reabsorption in the kidney
-    C: Glucagon stimulating glycogen breakdown in the liver
-    D: A decrease in thyroxine secretion
+    A: the liver
+    B: the brain and spinal cord
+    C: skeletal muscle
+    D: the lining of the digestive tract
   answer: C
-  explain: Pancreatic alpha cells release glucagon, which promotes glycogenolysis in the liver and raises
-    blood glucose.
+  explain: Mesoderm gives rise to muscle, bone, cartilage, blood and the circulatory system; endoderm
+    builds the gut lining with the liver and pancreas, and ectoderm the nervous system and epidermis.
   distractors:
-    A: Insulin is secreted when glucose is high and would lower it further.
-    B: ADH regulates water balance, not blood glucose concentration.
-    D: Thyroxine sets the overall metabolic rate and is not the acute correction for low blood glucose.
-  chapter: 3a-nervous-and-endocrine-systems
+    A: The liver grows out of the embryonic gut, so it is an endoderm derivative.
+    B: The brain and spinal cord arise from ectoderm through the neural tube.
+    D: The epithelial lining of the digestive tract is endoderm.
+  chapter: development
 - id: nmat-p2b-027
   q: Which sequence correctly traces a drop of blood through the heart and lungs?
   choices:

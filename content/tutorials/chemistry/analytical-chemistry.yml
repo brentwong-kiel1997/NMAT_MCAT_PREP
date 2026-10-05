@@ -6,6 +6,10 @@ overview: Measurement science — titrations, buffers, spectroscopy, and error a
   and 5A solution chemistry.
 sections:
 - heading: Solution concentration and stoichiometry
+  objectives:
+  - Calculate molarity and molality and choose the right one for the job.
+  - Apply M1V1 = M2V2 to a dilution.
+  - Identify the limiting reagent from solution stoichiometry.
   body:
   - Molarity M = moles solute per liter solution; molality m = moles per kilogram solvent (temperature-independent,
     used for colligative properties). ==Dilution follows M1V1 = M2V2== — moles are conserved, concentration
@@ -27,7 +31,23 @@ sections:
       B: That is concentration going up.
       C: Unchanged only if volume unchanged.
       D: Correct arithmetic.
+  - q: How many moles of solute are in 250 mL of 0.40 M KBr?
+    options:
+      D: 0.10 mol
+      A: 0.0010 mol
+      B: 0.625 mol
+      C: 1.0 mol
+    answer: D
+    explain: n = M V = 0.40 x 0.250 L = 0.10 mol.
+    distractors:
+      A: Reading the millilitres as litres.
+      B: Dividing the molarity by the volume.
+      C: Slipping a power of ten in the molarity (4.0 instead of 0.40).
 - heading: Acid-base titrations
+  objectives:
+  - Locate the equivalence point from a mole balance of acid and base.
+  - Predict the equivalence pH for each acid-base pairing.
+  - Read a titration curve to extract pKa at half-equivalence.
   body:
   - At the equivalence point, moles of acid equal moles of base. ==Strong acid + strong base gives pH
     7 at equivalence==; weak acid + strong base ends basic (conjugate base dominates); weak base + strong
@@ -49,12 +69,28 @@ sections:
       B: Half of pKa is not the rule.
       C: Equivalence for weak acid is basic (~8.7); half-equivalence is pKa.
       D: Correct — equal HA and A- gives pH = pKa.
+  - q: 35.0 mL of 0.100 M HCl is titrated with 0.200 M NaOH. The volume of base at equivalence is…
+    options:
+      A: 17.5 mL
+      B: 35.0 mL
+      C: 70.0 mL
+      D: 8.75 mL
+    answer: A
+    explain: Moles acid = 0.100 x 0.0350 = 3.50 x 10^-3 mol; V = n/M = 3.50 x 10^-3 / 0.200 = 0.0175 L.
+    distractors:
+      B: Assuming equal volumes, which holds only at equal concentrations.
+      C: Doubling when the base is twice as concentrated — it should be halved.
+      D: Inverting the concentration ratio and dividing by four.
   figures:
   - src: analytical-chemistry/fig-457d4944.webp
     caption: Titration curves for weak versus strong acid with 0.100 M NaOH — equivalence pH 8.72 vs 7.00,
       with indicator ranges overlaid.
     credit: Ch 14 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
 - heading: Buffers
+  objectives:
+  - Compose a buffer from a weak acid and its conjugate base.
+  - Predict the pH shift when strong acid or base is added.
+  - Explain what sets a buffer's working range and its capacity.
   body:
   - 'A buffer resists pH change — a weak acid plus its conjugate base. ==Henderson-Hasselbalch: pH = pKa
     + log([A-]/[HA])==. Buffers are most effective when pH is within pKa +/- 1, where both species are
@@ -75,11 +111,28 @@ sections:
       A: The buffer does resist but not infinitely.
       B: Unbuffered behavior.
       C: pH does change slightly.
+  - q: A buffer holds 0.10 mol HA and 0.10 mol A-. Adding 0.010 mol of HCl shifts the ratio to…
+    options:
+      B: About 0.82, dropping the pH roughly 0.09 units
+      A: A fall of several pH units, since strong acid was added
+      C: No change at all, because the buffer cancels the addition
+      D: Above 1, because HA is being consumed
+    answer: B
+    explain: 'H+ converts A- to HA: 0.090 mol A- and 0.110 mol HA, ratio 0.818 — pH drops by log(0.818)
+      = 0.09.'
+    distractors:
+      A: That is the unbuffered response.
+      C: Buffers resist, they do not cancel — the ratio has moved.
+      D: The acid is being formed, not consumed; the ratio falls.
   figures:
   - src: analytical-chemistry/fig-620c6acf.webp
     caption: pH color-change ranges of common indicators — choose one that brackets the equivalence point.
     credit: Ch 14 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
 - heading: Spectroscopy and Beer-Lambert law
+  objectives:
+  - Use the Beer-Lambert law with a calibration curve to find a concentration.
+  - Match each spectroscopic method to what it measures.
+  - Predict how path length and molar absorptivity change absorbance.
   body:
   - ==A = epsilon x l x c== — absorbance scales with molar absorptivity, path length, concentration. Calibration
     curves (A versus c) turn absorbance into concentration. Color intensity tracks concentration — the
@@ -100,7 +153,23 @@ sections:
       B: Wrong direction.
       C: Transmittance falls.
       D: A depends on c.
+  - q: A 2.0 x 10^-4 M standard gives A = 0.30 in a 1.0 cm cell. The molar absorptivity is…
+    options:
+      B: 1500 M-1 cm-1
+      A: 6.7 x 10^-4 M-1 cm-1
+      C: 0.60 M-1 cm-1
+      D: 3000 M-1 cm-1
+    answer: B
+    explain: epsilon = A/(l c) = 0.30/(1.0 x 2.0 x 10^-4) = 1500 M-1 cm-1.
+    distractors:
+      A: Inverting the relation and computing c/A.
+      C: Multiplying absorbance by concentration instead of dividing.
+      D: Treating the cell as 0.5 cm.
 - heading: Error, precision, and accuracy
+  objectives:
+  - Distinguish accuracy from precision in a set of measurements.
+  - Classify an error as systematic or random and name its remedy.
+  - Report a calculated result with honest significant figures.
   body:
   - Accuracy is closeness to truth; precision is reproducibility. ==Systematic errors bias all measurements
     the same way (calibration); random errors scatter (averaging helps)==. Significant figures carry uncertainty
@@ -121,17 +190,51 @@ sections:
       B: Scatter is low.
       C: Scatter would be high.
       D: Close to true value would make it both.
+  - q: A laboratory balance reads 0.5 g too high on every sample. The best remedy is to…
+    options:
+      C: Recalibrate the balance — a systematic offset never averages away
+      A: Take more replicates and average them
+      B: Report the mean with extra decimal places
+      D: Randomise the order in which samples are weighed
+    answer: C
+    explain: A constant bias affects every reading the same way, so only calibration or a correction removes
+      it.
+    distractors:
+      A: Averaging reduces random scatter, not bias.
+      B: Extra digits add false precision without touching the offset.
+      D: Order has no effect on a constant offset.
 examples:
 - prompt: 25.0 mL of 0.100 M HCl is titrated with 0.050 M NaOH. What volume of base reaches equivalence?
+  strategy: 'Equivalence is a mole balance, so the plan is three moves: convert acid volume and molarity
+    to moles, set the base moles equal to that, then divide by the base molarity for its volume. Predict
+    the ratio before computing — the base is half as concentrated, so it should take twice the volume.'
   solution:
   - Moles acid = 0.100 x 0.0250 L = 2.50e-3 mol.
   - Equivalence — moles base = moles acid = 2.50e-3 mol.
   - Volume base = 2.50e-3 mol / 0.050 M = 0.050 L = 50.0 mL.
   answer: 50.0 mL of NaOH.
+  discussion: '50.0 mL is exactly double the acid volume because the base is half as concentrated — that
+    ratio check catches most slips instantly. Note what this titration cannot show: with a strong acid
+    and a strong base the equivalence pH is 7.00 and there is no half-equivalence plateau, unlike a weak-acid
+    curve. The mole balance would be unchanged for a weaker titrant; only the endpoint pH would move.'
   distractors:
     A: 25.0 mL — forgetting the base is half as concentrated.
     B: 12.5 mL — inverting the ratio.
     C: 100 mL — doubling the wrong way.
+  practice:
+    q: 40.0 mL of 0.250 M HCl is titrated with 0.500 M NaOH. What volume of base reaches equivalence?
+    options:
+      A: 20.0 mL
+      B: 40.0 mL
+      C: 80.0 mL
+      D: 5.0 mL
+    answer: A
+    explain: Moles acid = 0.250 x 0.0400 = 0.0100 mol; V = 0.0100/0.500 = 0.0200 L = 20.0 mL — half the
+      acid volume, as the 2:1 concentration ratio demands.
+    distractors:
+      B: Assuming equal volumes at equal moles — the concentrations differ by two.
+      C: Doubling instead of halving.
+      D: Inverting the concentration ratio.
 key_points:
 - M1V1 = M2V2 for dilutions.
 - Half-equivalence pH = pKa.

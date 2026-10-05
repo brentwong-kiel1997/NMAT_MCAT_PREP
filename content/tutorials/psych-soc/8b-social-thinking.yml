@@ -5,6 +5,10 @@ overview: 8B is how we think ABOUT people — impression formation, stereotypes 
   depth, judgment shortcuts. Prerequisites — 7B, 8A.
 sections:
 - heading: Impression formation
+  objectives:
+  - Identify primacy effects and central traits in a described impression shift.
+  - Name the halo effect when one trait fills in unrelated ones.
+  - Explain how priming biases interpretation of an ambiguous behavior.
   body:
   - Asch's experiments found primacy effects — early traits (warm/cold) recolor everything after; central
     traits outweigh peripheral. Implicit personality theory fills gaps (attractive → good — the halo effect).
@@ -23,11 +27,29 @@ sections:
       A: Familiarity.
       B: Expectation changing BEHAVIOR.
       D: Late info dominating — reversed.
+  - q: An interviewer finds a candidate attractive and then rates his unrelated technical answers as stronger
+      than the tape shows. Which effect, and which trap does it create for hiring?
+    options:
+      A: Recency effect — the last answers dominated
+      B: Halo effect — one salient trait (attractiveness) colors unrelated judgments
+      C: Self-fulfilling prophecy — the candidate changed his behavior
+      D: Illusory correlation — two rarities were paired
+    answer: B
+    explain: Implicit personality theory fills the gaps from a central trait, inflating judgments outside
+      its scope.
+    distractors:
+      A: Nothing indicates late information dominated.
+      C: The candidate's actual answers did not change — the ratings did.
+      D: No distinctive-rarity pairing is described.
   figures:
   - src: 8b-social-thinking/fig-195a9b26.webp
     caption: Personality assessment — trait models and individual differences in social cognition.
     credit: Fig 11.2 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Stereotypes — automatic and controlled
+  objectives:
+  - Sort a described case into stereotype (cognition), prejudice (affect), or discrimination (behavior).
+  - Describe the dual-process account — automatic activation with effortful override at cognitive cost.
+  - State what an IAT latency index measures and one critique of its use.
   body:
   - Stereotype (cognitive schema), prejudice (affective), discrimination (behavioral) — keep the three
     levels separate. Dual-process — stereotypes activate automatically; controlled processing can override
@@ -46,12 +68,31 @@ sections:
       A: History, not association.
       B: Explicit misses automatic.
       D: Unrelated.
+  - q: A hiring manager feels uneasy about an applicant group, writes equal-scoring CVs, but schedules
+      fewer interviews with them. Identify all three levels in order.
+    options:
+      A: Stereotype, prejudice, discrimination — schema, affect, and differential behavior
+      B: Prejudice only — no behavior changed
+      C: Discrimination only — the feeling is irrelevant
+      D: Institutional discrimination without any individual component
+    answer: A
+    explain: The three-layer model requires cognition, affect, and behavior — here all three are present
+      in sequence.
+    distractors:
+      B: Interview scheduling is a behavioral change.
+      C: The unease is the affective layer and the schema behind it is cognitive.
+      D: Individual-level mechanisms are all present; the institutional label adds nothing here.
   figures:
   - src: 8b-social-thinking/fig-a14732df.webp
     caption: Phrenology — the discredited practice of reading personality from skull shape; an early lesson
       in how easily trait inferences outpace evidence.
     credit: OpenStax Psychology 2e (history of personality assessment) — CC BY-NC-SA 4.0
 - heading: Attribution in depth — covariation
+  objectives:
+  - Apply Kelley's consensus, distinctiveness, and consistency to reach a situational or dispositional
+    verdict.
+  - Read a described data table into the correct covariation conclusion.
+  - Distinguish Kelley's model from the fundamental attribution error as accounts of the same judgment.
   body:
   - Kelley's model — consensus (do others do it?), distinctiveness (only here?), consistency (every time?)
     — high all three → situational; low consensus/distinctiveness with high consistency → dispositional.
@@ -70,7 +111,25 @@ sections:
       A: Not a model term.
       B: Low consensus would support that.
       C: Consistency rules out instability.
+  - q: A patient is rude to one nurse only, other patients are polite to that nurse, and the patient is
+      rude at every visit. Which verdict, and which cue drove it?
+    options:
+      A: Dispositional — the patient is rude; low distinctiveness and low consensus with high consistency
+      B: Situational — the nurse is provoking it; high consensus and high distinctiveness
+      C: Unstable coincidence; consistency was low
+      D: Fundamental attribution error; the observer over-credited the patient
+    answer: A
+    explain: Only-this-person-here (low distinctiveness), others-do-not (low consensus), and always (high
+      consistency) resolves to the person.
+    distractors:
+      B: That pattern would require high consensus and high distinctiveness — the opposite of the data.
+      C: High consistency across visits rules out an unstable cause.
+      D: The covariation data supports the dispositional call; the error term does not apply.
 - heading: Judgment shortcuts
+  objectives:
+  - Name the heuristic behind a described frequency or category judgment.
+  - Explain base-rate neglect and apply the base rate to override a vivid description.
+  - Define illusory correlation and show how it manufactures a stereotype from paired rarities.
   body:
   - Availability drives stereotype-consistent frequency estimates; representativeness drives base-rate
     neglect (librarian/farmer); anchoring taints judgments. Illusory correlation — over-pairing two rarities
@@ -89,18 +148,57 @@ sections:
       A: No real covariation established.
       B: Expectancy altering behavior.
       D: Allocation bias.
+  - q: A hospital records a cluster of a rare rash in a small minority population and staff begin to over-associate
+      the two, although the true co-occurrence rate is unchanged. Which mechanism, and why does the pairing
+      stick in memory?
+    options:
+      A: Valid covariation — the data support the link
+      B: Illusory correlation — two distinctive stimuli are encoded together and over-retrieved
+      C: Self-fulfilling prophecy — expectations changed the patients' behavior
+      D: Availability heuristic for a common event
+    answer: B
+    explain: Distinctive pairs (two rare things co-occurring) are disproportionately encoded and retrieved,
+      producing correlation without covariation.
+    distractors:
+      A: The co-occurrence rate is explicitly unchanged.
+      C: No expectation altered patient behavior — only staff memory did.
+      D: The event is rare, which is exactly what drives the effect.
 examples:
 - prompt: The librarian/farmer problem — Tom is withdrawn, meticulous; the pool is 70% farmers. Most judge
     librarian. Diagnose and answer rationally.
+  strategy: Separate the diagnostic evidence from the prior. Representativeness judges the description's
+    fit to a category; the rational answer weighs that fit against the base rate — a weak likelihood ratio
+    cannot overcome a 70% prior.
   solution:
   - Representativeness — the description matches the stereotype.
   - Base-rate neglect — the 70% prior is ignored.
   - The Bayesian answer usually still favors farmer — the prior dominates weak evidence.
   answer: Representativeness + base-rate neglect; the base-rate-dominated estimate favors farmer.
+  discussion: 'The general lesson: vivid individuating information arrives with psychological weight out
+    of proportion to its evidential value. The correction is mechanical, not intuitive — ask for the prior,
+    then ask how much the description actually shifts it. The same structure underlies diagnostic-test
+    reasoning, where a low-prevalence disease and a decent sensitivity still yield mostly false positives.'
   distractors:
     A: Endorsing librarian — the heuristic answer itself.
     B: Availability — no recall-frequency shortcut.
     C: Anchoring — no initial value.
+  practice:
+    q: A screening test detects 90% of cases of a disease with prevalence 1 in 1,000 and has a 5% false-positive
+      rate. A random patient tests positive. Most clinicians say the disease is likely. What is the rational
+      read?
+    options:
+      A: The disease is likely — sensitivity dominates
+      B: False positives outnumber true positives roughly 50 to 1, so the disease remains unlikely — base
+        rate dominates the diagnostic cue
+      C: The test is useless and should be discarded
+      D: Prevalence is irrelevant once the test result is known
+    answer: B
+    explain: 'Per 1,000 patients: 0.9 true positives versus about 50 false positives — the prior, not
+      the vivid positive result, sets the probability.'
+    distractors:
+      A: Sensitivity alone cannot establish posterior probability without the base rate.
+      C: A test with these properties is still useful as one input; the error is in the interpretation.
+      D: Prevalence is precisely what determines the prior odds the test updates.
 key_points:
 - Primacy and central traits; halo effect fills gaps.
 - Stereotype/prejudice/discrimination — cognition/affect/behavior.

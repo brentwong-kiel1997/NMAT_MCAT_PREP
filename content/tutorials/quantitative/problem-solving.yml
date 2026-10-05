@@ -6,6 +6,10 @@ overview: 'NMAT''s applied-mathematics face — word problems, ages, mixtures, w
   story. Everything from Fundamental Operations applies.'
 sections:
 - heading: Word problem translation
+  objectives:
+  - Translate a sentence into one linear equation using the translation table ('is', 'of', 'more than',
+    'less than').
+  - Check a solved answer against the story for impossible ages, counts, or units.
   body:
   - ==The translation table — 'is' =, 'of' = x, 'more than' +, 'less than' -, 'per' /, 'twice' 2x, 'consecutive'
     n, n+1==. ==Name the unknown, write one equation per sentence, then solve — the algebra does the thinking==.
@@ -25,7 +29,23 @@ sections:
       B: Division slip.
       C: Correct.
       D: Subtracting 10 yields 24/2 = 12 — mirror.
+  - q: Three less than four times a number is 29. Find the number.
+    options:
+      A: '8'
+      B: 11 — 'three less than four times' was written as 3n - 4
+      C: 6.5 — 26 divided by 4
+      D: 32 — the intermediate value reported
+    answer: A
+    explain: '4n - 3 = 29 gives 4n = 32 and n = 8; check: 4(8) - 3 = 29.'
+    distractors:
+      B: The order swaps both the multiplier and the subtraction.
+      C: Subtracting 3 first then dividing by 4 uses 26 as the left side.
+      D: 32 is 4n, not n.
 - heading: Age, ratio, and consecutive-number problems
+  objectives:
+  - Build present ages, then shift BOTH parties by the same x years for a 'years from now' relation.
+  - Use the constant age difference as a check on any age-problem solution.
+  - Set up a ratio problem with parts kx and mx and solve for k from a sum or difference.
   body:
   - ==Age problems — build the present ages, then write the 'x years ago/from now' relation==. ==Ratio
     problems — let parts be kx and mx, then use the sum or difference to solve k==.
@@ -45,7 +65,24 @@ sections:
       B: Half the gap.
       C: Sum of ages.
       D: Correct.
+  - q: A mother is 30 years older than her daughter. In 12 years she will be twice her daughter's age.
+      How old is the daughter now?
+    options:
+      A: 6 — the 12-year shift was applied to only one person
+      B: 42 — the mother's future age reported instead of solving
+      C: '18'
+      D: 12 — the shift value reported
+    answer: C
+    explain: 'D + 30 + 12 = 2(D + 12) gives D + 42 = 2D + 24, so D = 18. Check: mother now 48, daughter
+      18; in 12 years, 60 and 30 — and 2 x 30 = 60.'
+    distractors:
+      A: Only the daughter was aged by 12 years, which breaks the shared shift.
+      B: 42 is the mother's age in 12 years, not the daughter's now.
+      D: 12 is the number of years shifted, not an age.
 - heading: Mixture and work problems
+  objectives:
+  - Set up a mixture equation balancing quantity x concentration on both sides.
+  - Solve a dilution by tracking the amount of pure substance as the volume changes.
   body:
   - '==Mixtures — value equation: Q1 x C1 + Q2 x C2 = (Q1 + Q2) x C-final==. ==Work — rate x time = 1
     job; combined rate adds: 1/t = 1/t1 + 1/t2==.'
@@ -65,7 +102,24 @@ sections:
       B: Median guess.
       C: Correct.
       D: Symmetric double.
+  - q: How much water must be added to 20 L of 50% acid to dilute it to 20%?
+    options:
+      A: 50 L — the final volume reported as the added volume
+      B: 10 L — the amount of pure acid reported
+      C: 20 L — the original volume added again
+      D: 30 L
+    answer: D
+    explain: Pure acid = 0.5 x 20 = 10 L, unchanged by adding water. Final volume must satisfy 10/V =
+      0.20, so V = 50 L and water added = 50 - 20 = 30 L.
+    distractors:
+      A: 50 L is the FINAL volume; 20 L of it was already present.
+      B: 10 L is the acid content, which dilution does not change.
+      C: Doubling the volume gives 25%, not 20%.
 - heading: Distance, rate, and time
+  objectives:
+  - Use relative speed — added for converging travelers, subtracted for a chase.
+  - Compute a round-trip average speed as total distance over total time (the harmonic mean).
+  - Convert between km/h and m/s inside a rate computation.
   body:
   - '==d = r t — same units throughout; converging problems — relative speed = r1 + r2 (head-on); chasing
     — r1 - r2==. ==Round trips — average speed is the harmonic mean, NOT the arithmetic: avg = 2d/(d/v1
@@ -87,7 +141,24 @@ sections:
       B: Weighted wrong.
       C: Correct — harmonic mean.
       D: Downstream only.
+  - q: Two buses leave towns 240 km apart at the same time, driving toward each other at 55 and 65 km/h.
+      After how long do they meet?
+    options:
+      A: About 4.4 h — the slower bus's solo time
+      B: 2 h
+      C: About 3.7 h — the faster bus's solo time
+      D: 1 h — the relative-speed division inverted
+    answer: B
+    explain: Relative speed = 55 + 65 = 120 km/h; time = 240/120 = 2 h.
+    distractors:
+      A: Using one speed alone ignores that the gap closes from both ends.
+      C: Same error with the other bus — neither travels the whole 240 km.
+      D: Dividing speed by distance gives units of h/km, not hours.
 - heading: Geometry and measurement applied
+  objectives:
+  - Apply area and perimeter formulas for rectangles, triangles, and circles.
+  - Scale areas and volumes of similar figures by the square and cube of the side ratio.
+  - Carry a map scale through a unit conversion to a real-world distance.
   body:
   - ==Shapes — rectangle P = 2(l + w), A = lw; triangle A = (1/2)bh; circle A = pi r2, C = 2 pi r; the
     right-triangle triplets 3-4-5, 5-12-13 (and 6-8-10, 9-12-15)==. ==Ratios of similar figures — areas
@@ -108,9 +179,24 @@ sections:
       B: Constant factors.
       C: Cubed — spheres.
       D: Correct.
+  - q: A map scale is 1:25,000. Two towns are 6.4 cm apart on the map. What is the real distance?
+    options:
+      A: 160 km — two decimal places slipped in the cm-to-m step
+      B: 16 km — one decimal place slipped
+      C: 1.6 km
+      D: 0.16 km — the scale was divided instead of multiplied
+    answer: C
+    explain: 6.4 x 25,000 = 160,000 cm = 1,600 m = 1.6 km.
+    distractors:
+      A: 160,000 cm is 1.6 km; 160 km would need 16,000,000 cm.
+      B: 16 km corresponds to 1,600,000 cm, ten times too far.
+      D: Dividing shrinks the map distance rather than scaling it up.
 examples:
 - prompt: Ana is 3 years older than Ben. In 5 years, Ana will be twice as old as Ben. Find their ages
     now.
+  strategy: Write one equation per sentence and let the story reject bad parses. Age problems shift EVERY
+    party by the same x years, and the age difference stays fixed — a solution that violates either rule
+    signals a misread relation rather than bad arithmetic.
   solution:
   - Let Ben = b; Ana = b + 3.
   - 'In 5 years: Ana = b + 8, Ben = b + 5.'
@@ -123,10 +209,29 @@ examples:
     The clean story that solves: ''In 5 years, Ana will be twice as old as Ben is now'' gives a + 5 =
     2(a - 3) -> a = 11, Ben 8.'
   answer: 'Ana is 11 and Ben is 8 — verified: 11 + 5 = 16 = 2 x 8.'
+  discussion: 'The story check is the portable skill: negative or fractional ages, half-people, and impossible
+    units are parse errors, not arithmetic ones. Whenever a relation yields nonsense, re-read the clause
+    that carries the ambiguity (''twice as old'' — whose age, at which moment?) before recomputing.'
   distractors:
     A: Forcing 'twice' against Ben's future age too gives negative ages — the story-check catches it.
     B: Forgetting the +5 applies to both people.
     C: Writing two equations for one unknown — redundant.
+  practice:
+    q: Mara is 4 years older than her brother. In 6 years she will be twice as old as he is now. How old
+      is each now?
+    options:
+      A: Mara 8, brother 4 — the 6-year shift was never applied
+      B: Mara 14, brother 10
+      C: Both 6 — the 4-year gap was dropped from the setup
+      D: Mara 20, brother 10 — the 6-year shift was applied to Mara alone
+    answer: B
+    explain: 'M = B + 4 and M + 6 = 2B give B + 10 = 2B, so B = 10 and M = 14. Check: 14 + 6 = 20 = 2
+      x 10.'
+    distractors:
+      A: Without shifting Mara forward, M = 2B with M = B + 4 gives brother 4 — but the 'in 6 years' clause
+        is then unused.
+      C: Dropping the gap leaves M = B + 6 = 2B with no relation between them; the gap is load-bearing.
+      D: Shifting only Mara gives M + 6 = 2B with M = B + 4 + 6, which overshoots to brother 10.
 key_points:
 - Translate sentence to equation; name the unknown.
 - Age problems — build present, then shift both sides by x.

@@ -6,6 +6,10 @@ overview: ATP as the energy currency, the pathways that make and spend it, and t
   MCAT biochem content in metabolism passages.
 sections:
 - heading: ATP and energy currencies
+  objectives:
+  - Explain how ATP hydrolysis drives an unfavourable reaction through coupling.
+  - Distinguish NADH from NADPH by their metabolic roles.
+  - Compare fuels by energy density in kcal per gram.
   body:
   - ==ATP hydrolysis (delta-G about -30 kJ/mol = -7.3 kcal/mol) drives unfavorable reactions through coupled
     phosphate transfer==. ==Phosphoryl transfer is the currency — kinases transfer phosphate; ATP regenerates
@@ -26,7 +30,24 @@ sections:
       A: ATP is the currency.
       B: Not its lane.
       C: NADH fuels the ETC.
+  - q: The pentose phosphate pathway produces which currency, and for what purpose?
+    options:
+      A: NADPH, for reductive biosynthesis
+      B: NADH, to feed the electron transport chain
+      C: FADH2, for the TCA cycle
+      D: ATP, to drive biosynthesis
+    answer: A
+    explain: NADPH is the anabolic reducer — fatty acid synthesis, steroid synthesis, and detoxification
+      all draw on it.
+    distractors:
+      B: NADH is the catabolic currency; this pathway makes the phosphorylated form.
+      C: FADH2 arises from succinate dehydrogenase and beta-oxidation.
+      D: The pentose phosphate pathway makes reducing power, not ATP.
 - heading: Glycolysis and its regulation
+  objectives:
+  - Tally the ATP and NADH invested and earned in glycolysis.
+  - Identify the committed step and its regulators.
+  - Predict pyruvate's fate under aerobic and anaerobic conditions.
   body:
   - '==Glycolysis (cytosol): glucose -> 2 pyruvate; investment 2 ATP, payoff 4 ATP, net 2 ATP + 2 NADH==.
     ==Key steps — hexokinase (1), PFK-1 (3, the committed step), pyruvate kinase (10). Regulation — PFK-1
@@ -48,7 +69,24 @@ sections:
       B: First step but reversible hexose trap.
       C: Correct.
       D: An intermediate conversion.
+  - q: A cell's ATP is low and its AMP high. What happens at PFK-1?
+    options:
+      D: It is activated, speeding glycolysis
+      A: It is inhibited, slowing glycolysis
+      B: Nothing — PFK-1 is not regulated
+      C: It is blocked by fructose-2,6-bisphosphate
+    answer: D
+    explain: AMP signals a low energy charge; together with fructose-2,6-bisphosphate it turns the committed
+      step on.
+    distractors:
+      A: ATP and citrate are the inhibitors; AMP is the opposite signal.
+      B: PFK-1 is the most heavily regulated step in the pathway.
+      C: Fructose-2,6-bisphosphate is the pathway's strongest activator, not a blocker.
 - heading: The TCA cycle and oxidative phosphorylation
+  objectives:
+  - Tally the products of one turn of the TCA cycle.
+  - Convert NADH and FADH2 into ATP using P/O ratios.
+  - Explain how an uncoupler changes the energy accounting.
   body:
   - '==TCA (mitochondrial matrix): pyruvate -> acetyl-CoA -> citrate (6C) -> 4C cycle; per acetyl-CoA:
     3 NADH, 1 FADH2, 1 GTP; two CO2 ==. ==Key enzymes: citrate synthase, isocitrate dehydrogenase (regulated),
@@ -64,13 +102,26 @@ sections:
       C: 3 NADH, 2 FADH2, 2 GTP
       D: 1 NADH, 1 FADH2, 1 GTP
     answer: B
-    explain: Three NAD+-linked oxidation steps give 3 NADH; succinate dehydrogenase
-      gives FADH2; one GTP by substrate-level phosphorylation.
+    explain: Three NAD+-linked oxidation steps give 3 NADH; succinate dehydrogenase gives FADH2; one GTP
+      by substrate-level phosphorylation.
     distractors:
       A: One NADH short.
       B: Correct — 3 NADH, 1 FADH2, 1 GTP.
       C: Double count.
       D: Every turn generates more.
+  - q: Thermogenin (an uncoupler) is active in a mitochondrion. What happens to the ATP yield?
+    options:
+      B: It falls, and the gradient's energy leaves as heat
+      A: It rises, because more fuel is oxidised
+      C: It is unchanged, since the proton gradient is intact
+      D: NADH stops being consumed by the chain
+    answer: B
+    explain: Protons re-enter without driving ATP synthase, so oxidation continues but the energy is released
+      as heat.
+    distractors:
+      A: More fuel is burned, but the ATP captured per mole of fuel drops.
+      C: The gradient is precisely what the uncoupler collapses.
+      D: The electron transport chain keeps running — it simply stops making ATP efficiently.
   figures:
   - src: 1d-bioenergetics-and-fuel-metabolism/fig-30c947dd.webp
     caption: Mitochondrion architecture — electron transport chain and ATP synthase embedded in the inner
@@ -80,6 +131,10 @@ sections:
     caption: Substrate-level phosphorylation — an enzyme transfers a phosphate group to ADP, making ATP.
     credit: Fig 7.5 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Fat and amino acid metabolism
+  objectives:
+  - Tally the yield of beta-oxidation for a fatty acid of given length.
+  - Explain when and why ketone bodies are produced.
+  - Classify an amino acid as glucogenic or ketogenic.
   body:
   - '==Fatty acid oxidation (beta-oxidation, mitochondrial matrix) — each cycle: 1 FADH2, 1 NADH, 1 acetyl-CoA;
     palmitate (C16) yields 7 cycles -> 8 acetyl-CoA -> about 106 ATP==. Ketogenesis — liver converts excess
@@ -102,7 +157,23 @@ sections:
       B: Correct.
       C: ATP comes from the ETC.
       D: Lipids store energy.
+  - q: A 12-carbon fatty acid undergoes complete beta-oxidation. How many acetyl-CoA result?
+    options:
+      C: '6'
+      A: '5'
+      B: '12'
+      D: '7'
+    answer: C
+    explain: Each cycle clips two carbons, so n/2 = 6 acetyl-CoA from C12.
+    distractors:
+      A: The number of cycles is one fewer than the number of acetyl-CoA.
+      B: Two carbons travel together — one per pair, not one per carbon.
+      D: Seven is the cycle count for C16 palmitate, not for C12.
 - heading: Integration — fed, fasting, and hormones
+  objectives:
+  - Assign each pathway to the fed or the fasting state.
+  - Predict how insulin and glucagon shift fuel traffic.
+  - Tally the energetic cost of gluconeogenesis.
   body:
   - ==Fed state (insulin high) — glucose uptake, glycolysis, glycogen synthesis, lipogenesis==. ==Fasting
     (glucagon, epinephrine) — glycogenolysis, gluconeogenesis (liver, Cori cycle), lipolysis, ketogenesis==.
@@ -123,19 +194,54 @@ sections:
       A: That is the fed flow.
       B: Ketones spare glucose, not make it.
       D: Muscle stores glycogen locally.
+  - q: Insulin rises after a carbohydrate-rich meal. Which pathway is favoured?
+    options:
+      B: Storage — glycogenesis and lipogenesis
+      A: Glycogenolysis and gluconeogenesis
+      C: Lipolysis in adipose tissue
+      D: Ketogenesis in the liver
+    answer: B
+    explain: 'Insulin is the fed-state hormone: it promotes laying fuel down, not mobilising it.'
+    distractors:
+      A: Those are glucagon's fasting pathways.
+      C: Lipolysis belongs to fasting and to epinephrine signalling.
+      D: Ketones are made when fatty acid oxidation floods the liver — a fasting event.
 examples:
-- prompt: 'Calculate the net ATP from one glucose under aerobic conditions using modern
-    P/O accounting (NADH 2.5, FADH2 1.5).'
+- prompt: Calculate the net ATP from one glucose under aerobic conditions using modern P/O accounting
+    (NADH 2.5, FADH2 1.5).
+  strategy: 'Account stage by stage instead of recalling a total: glycolysis''s net 2 ATP plus its 2 cytosolic
+    NADH, the PDH step''s 2 NADH, then two TCA turns at 3 NADH, 1 FADH2, and 1 GTP each. Apply the P/O
+    ratios (NADH 2.5, FADH2 1.5) only to the reduced cofactors — the substrate-level ATP and GTP are already
+    currency and must not be multiplied.'
   solution:
   - 'Glycolysis net: 2 ATP + 2 NADH (cytosolic NADH ~2.5 each — malate shuttle) = 2 + 5 = 7.'
   - 'Pyruvate PDH: 2 NADH = 5.'
   - 'TCA (2 turns): 3 NADH + 1 FADH2 + 1 GTP each = (3x2.5 + 1.5 + 1) x 2 = 10 x 2 = 20.'
   - Total = 7 + 5 + 20 = 32 ATP per glucose (range 30-32 by shuttle).
   answer: About 30-32 ATP per glucose using P/O ratios of 2.5 and 1.5.
+  discussion: '32 is the modern figure, and the 30-32 range exists only because cytosolic NADH''s shuttle
+    differs (malate-aspartate versus glycerol phosphate). The classic trap is 36-38, which comes from
+    the outdated 3-per-NADH ratio. Check the two halves separately: substrate-level phosphorylation contributes
+    4 (two glycolytic ATP plus two GTP) and oxidative phosphorylation contributes the remaining ~28 —
+    a split that catches most accounting slips at a glance.'
   distractors:
     A: 36-38 — the old 3/2 ratio era.
     B: 2 — that is glycolysis alone.
     C: 4 — that mixes gross and net.
+  practice:
+    q: Palmitate (C16) is completely beta-oxidised. How many FADH2 and NADH do the beta-oxidation cycles
+      alone produce?
+    options:
+      A: 7 FADH2 and 7 NADH
+      B: 8 FADH2 and 8 NADH
+      C: 6 FADH2 and 6 NADH
+      D: 16 FADH2 and 16 NADH
+    answer: A
+    explain: C16 gives 8 acetyl-CoA, which means 7 cycles; each cycle yields one FADH2 and one NADH.
+    distractors:
+      B: Counting the final acetyl-CoA as if it came from a cycle.
+      C: One cycle short of the seven required.
+      D: One cofactor pair per carbon rather than per two-carbon clip.
 key_points:
 - ATP -30 kJ/mol; NADH catabolic, NADPH anabolic.
 - 'Glycolysis: net 2 ATP + 2 NADH; PFK-1 is the valve; F-2,6-BP activates.'

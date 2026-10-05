@@ -6,6 +6,10 @@ overview: This chapter connects general chemistry to biochemistry — functional
   and reaction mechanisms.
 sections:
 - heading: Functional groups — the reactive parts
+  objectives:
+  - Identify the major functional groups present in a biomolecule.
+  - Predict a reaction's product from the functional groups involved.
+  - Rank carboxylic acid derivatives by reactivity in acyl substitution.
   body:
   - Every biomolecule's chemistry flows from its functional groups. ==Alcohols (OH) form esters and ethers;
     carboxylic acids (COOH) form amides and esters; amines (NH2) form amides and salts; thiols (SH) form
@@ -26,7 +30,24 @@ sections:
       B: Amides have the worst leaving group.
       C: Esters are intermediate.
       D: Carboxylates are the leaving group, not the reactant.
+  - q: Two cysteine residues on the same peptide are oxidised. The product is…
+    options:
+      D: A disulfide bridge between them
+      A: A thioester with the solvent
+      B: An amide linking the two chains
+      C: An ester with water eliminated
+    answer: D
+    explain: Thiol plus thiol under oxidation gives the disulfide — the covalent cross-link of protein
+      structure.
+    distractors:
+      A: Thioesters need a carboxyl partner, not another thiol.
+      B: Amides require a carboxyl group and an amine.
+      C: Esters need a carboxyl and an alcohol.
 - heading: Carbohydrates — polyhydroxy aldehydes and ketones
+  objectives:
+  - Distinguish aldoses from ketoses and follow their cyclisation in water.
+  - Identify the anomeric carbon and its alpha or beta configuration.
+  - Predict the products of hydrolysing a named glycosidic linkage.
   body:
   - Sugars contain multiple hydroxyl groups plus one aldehyde (aldose) or ketone (ketose). ==Monosaccharides
     cyclize in water== — glucose forms a six-membered pyranose ring via intramolecular hemiacetal. The
@@ -48,6 +69,18 @@ sections:
       B: That beta linkage is cellobiose — the repeating unit of cellulose.
       C: That is maltose.
       D: Sucrose contains glucose and fructose.
+  - q: Maltose is two glucose units joined alpha-1,4. Complete hydrolysis yields…
+    options:
+      B: Two glucose molecules
+      A: Glucose and galactose
+      C: Glucose and fructose
+      D: Two galactose molecules
+    answer: B
+    explain: Hydrolysis reverses the condensation and releases the two monomers that made the bond.
+    distractors:
+      A: Glucose plus galactose is lactose.
+      C: Glucose plus fructose is sucrose.
+      D: No galactose is present in maltose.
   figures:
   - src: 5d-biologically-relevant-molecules/fig-35fa1423.webp
     caption: Amylose (linear) versus amylopectin (branched) — glucose polymers differing in glycosidic
@@ -57,6 +90,10 @@ sections:
     caption: Sucrose formation — a glycosidic bond condenses glucose and fructose with loss of water.
     credit: Ch 3 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Amino acids and peptide bonds
+  objectives:
+  - Draw the general amino acid structure and its zwitterionic form.
+  - Assign each of the twenty amino acids to its R-group class.
+  - Predict a side chain's charge at a given pH from its pKa.
   body:
   - Amino acids carry an amino group, a carboxyl group, an H, and a variable R group on the same alpha
     carbon. At physiological pH, they exist as zwitterions — NH3+ and COO-. ==The peptide bond is an amide
@@ -77,7 +114,23 @@ sections:
       A: Serine is neutral.
       B: Alanine is nonpolar.
       C: Glutamate is negative.
+  - q: At pH 7, which side chain carries a NEGATIVE charge?
+    options:
+      C: Glutamate
+      A: Lysine
+      B: Valine
+      D: Asparagine
+    answer: C
+    explain: Glutamate's carboxylate has a pKa near 4, so at pH 7 it is deprotonated and negative.
+    distractors:
+      A: Lysine's pKa near 10.5 keeps it protonated and positive at pH 7.
+      B: Valine's isopropyl group has nothing to ionise.
+      D: An amide side chain does not ionise in water.
 - heading: Nucleic acids — phosphate esters of nucleosides
+  objectives:
+  - Identify a nucleotide's three parts and the 3-5 phosphodiester linkage.
+  - Distinguish DNA from RNA by sugar and by base set.
+  - Relate GC content to a duplex's melting temperature.
   body:
   - DNA and RNA are polymers of nucleotides — sugar + base + phosphate. ==The 3-5 phosphodiester bond
     links nucleotides== via a phosphate ester on both sides. DNA uses deoxyribose (no 2-OH) and A, T,
@@ -98,7 +151,23 @@ sections:
       A: Mass is irrelevant.
       B: Stacking matters but is secondary.
       C: No covalent bonds between bases.
+  - q: An RNA strand contains which sugar, and which base absent from DNA?
+    options:
+      A: Ribose, and uracil in place of thymine
+      B: Deoxyribose, and uracil in place of thymine
+      C: Ribose, and thymine in place of uracil
+      D: Deoxyribose, and adenine in place of guanine
+    answer: A
+    explain: RNA uses ribose (with the 2-OH) and substitutes uracil for thymine.
+    distractors:
+      B: Deoxyribose is the DNA sugar — the missing 2-OH is the difference.
+      C: Reversing which base belongs to which nucleic acid.
+      D: Adenine appears in both; the substitution concerns the pyrimidine.
 - heading: Lipids — hydrophobic and amphipathic
+  objectives:
+  - Classify a fatty acid as saturated or unsaturated from its structure.
+  - Explain why phospholipids self-assemble into bilayers.
+  - Recognise the fused four-ring skeleton shared by steroids.
   body:
   - Lipids are defined by insolubility in water, not by a shared structure. Fatty acids are long hydrocarbon
     chains with a terminal carboxyl — saturated (no double bonds, straight chains, tight packing, solid)
@@ -119,19 +188,53 @@ sections:
       A: Protective coating.
       B: Energy storage only.
       C: Transport form.
+  - q: A membrane must stay fluid at low temperature. Which fatty acid tail helps most?
+    options:
+      D: An unsaturated tail with a cis double bond
+      A: A fully saturated tail
+      B: A longer saturated tail
+      C: A triacylglycerol backbone
+    answer: D
+    explain: The cis kink disrupts packing, lowering the melting point and keeping the membrane fluid.
+    distractors:
+      A: Saturated chains pack tightly and stiffen the membrane.
+      B: Longer saturated chains pack even more tightly.
+      C: Triacylglycerols store energy; they are not membrane structural lipids.
 examples:
 - prompt: 'A biochemist treats a tetrapeptide with chymotrypsin (cleaves after aromatic amino acids Phe,
     Tyr, Trp). Sequence: Ala-Phe-Gly-Trp-Lys. Predict the fragments.'
+  strategy: Scan the sequence once, marking every aromatic residue (Phe, Tyr, Trp), and cut on the C-terminal
+    side of each. Non-aromatic residues are never cut sites, and whatever follows the last marked residue
+    remains as a final fragment. The plan is a single pass, not a search for weak bonds.
   solution:
   - Chymotrypsin cleaves the peptide bond AFTER each aromatic residue.
   - 'Fragment 1: Ala-Phe (cleaved after Phe).'
   - 'Fragment 2: Gly-Trp (cleaved after Trp).'
   - 'Fragment 3: Lys (remains as single residue).'
   answer: Ala-Phe, Gly-Trp, Lys.
+  discussion: 'Two cuts must produce three fragments, so the count itself is the check — any other number
+    signals a missed or invented cut. Note that the specificity is the whole experiment: trypsin on the
+    same peptide would cut after Lys instead and produce a completely different map. That is why protease
+    choice defines a peptide-mapping strategy, and why an unknown sequence can be worked out by digesting
+    it with two different enzymes.'
   distractors:
     A: Cleaving BEFORE aromatics — wrong direction.
     B: Treating as trypsin (cleaves after Lys/Arg).
     C: Random hydrolysis at every bond.
+  practice:
+    q: The peptide Gly-Tyr-Ala-Phe-Ser is treated with chymotrypsin. What fragments result?
+    options:
+      D: Gly-Tyr, Ala-Phe, Ser
+      A: Gly, Tyr-Ala, Phe-Ser
+      B: Gly-Tyr-Ala, Phe-Ser
+      C: Gly, Tyr, Ala, Phe, Ser
+    answer: D
+    explain: Chymotrypsin cuts after each aromatic residue — after Tyr and after Phe — leaving Gly-Tyr,
+      Ala-Phe, and the trailing Ser.
+    distractors:
+      A: Cutting BEFORE the aromatic residues reverses the specificity.
+      B: Missing the cut after Tyr.
+      C: Cutting at every peptide bond, which is total hydrolysis, not chymotryptic specificity.
 key_points:
 - Functional groups predict reactivity — carbonyl > ester > amide.
 - Sugars cyclize; anomeric carbon creates alpha/beta; glycosidic bonds link.

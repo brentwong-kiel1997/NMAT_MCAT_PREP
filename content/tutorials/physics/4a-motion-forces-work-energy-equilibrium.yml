@@ -6,6 +6,10 @@ overview: The MCAT's mechanics core — kinematics, Newton's laws, work-energy, 
   heavily with this content.
 sections:
 - heading: Kinematics — motion in one and two dimensions
+  objectives:
+  - Select the constant-acceleration equation that matches a given set of knowns.
+  - Decompose projectile motion into independent horizontal and vertical components.
+  - Predict the time of flight of a horizontal launch from the drop height alone.
   body:
   - 'Uniformly accelerated motion — ==x = v0t + (1/2)at2, v = v0 + at, v2 = v02 + 2ax==. Vertical motion:
     a = g down. In 2D, decompose vectors — the horizontal and vertical motions evolve independently (projectile:
@@ -25,6 +29,20 @@ sections:
       A: KE grows — speed rises.
       B: No horizontal force → no acceleration.
       C: No horizontal force.
+  - q: A marble rolls off a 20 m high rooftop travelling horizontally at 15 m/s. How long is it in the
+      air? (g = 9.8 m/s2)
+    options:
+      A: 2.0 s
+      B: 1.3 s
+      C: 1.4 s
+      D: 4.0 s
+    answer: A
+    explain: 'Only the vertical motion sets the fall time: h = (1/2)gt2, so t = sqrt(2h/g) = sqrt(40/9.8)
+      = 2.0 s. The 15 m/s is irrelevant to the timing.'
+    distractors:
+      B: Dividing the height by the horizontal speed — treating the fall as uniform horizontal motion.
+      C: Dropping the factor 1/2 and using t = sqrt(h/g).
+      D: Doubling the fall time, as if h had been squared under the root.
   figures:
   - src: 4a-motion-forces-work-energy-equilibrium/fig-072de49c.webp
     caption: Projectile trajectories — initial speed and launch angle shape the range.
@@ -33,6 +51,10 @@ sections:
     caption: Projectile motion from a tower — the launch speed that becomes an orbital path.
     credit: Ch 3 · OpenStax College Physics 2e — CC BY-NC-SA 4.0
 - heading: Newtonian mechanics — forces and F = ma
+  objectives:
+  - Resolve a weight into components parallel and perpendicular to an inclined plane.
+  - Decide whether a given force pair is a true action-reaction pair.
+  - Calculate the acceleration of a mass hoisted by a rope from the net force.
   body:
   - '==F_net = ma — the sum of all forces==; weight mg; normal perpendicular to surface; friction opposes
     relative motion. Action-reaction pairs act on different bodies — a book on a table: its weight and
@@ -54,7 +76,24 @@ sections:
       B: Full g would need a straight drop.
       C: Gravity acts.
       D: g > g sin(theta).
+  - q: A 10 kg bucket is hoisted straight up by a rope with 150 N of tension. Its acceleration is nearest…
+      (g = 10 m/s2)
+    options:
+      A: 9.8 m/s2
+      B: 15 m/s2
+      C: 5.0 m/s2
+      D: 0.5 m/s2
+    answer: C
+    explain: Net force = T - mg = 150 - 100 = 50 N upward, so a = 50/10 = 5.0 m/s2.
+    distractors:
+      A: Treating the bucket as being in free fall, as though the rope were slack.
+      B: Dividing the tension alone by the mass and ignoring the bucket's weight.
+      D: Dividing the net force by the weight instead of by the mass (50/100).
 - heading: Work, energy, and power
+  objectives:
+  - Classify a force's work as positive, negative, or zero from its angle to the displacement.
+  - Convert between gravitational potential energy and speed using energy conservation.
+  - Compute power output from work and time, or from force times speed.
   body:
   - '==W = F d cos(theta); KE = (1/2)mv2; PE-g = mgh; PE-s = (1/2)kx2; mechanical energy conserved with
     conservative forces only==. Work-energy theorem: W-net = delta-KE.'
@@ -74,7 +113,23 @@ sections:
       B: Perpendicular forces do no work.
       C: Correct.
       D: Speed stays constant — no braking.
+  - q: A 0.50 kg ball is dropped from rest at 5.0 m and lands with what speed, ignoring air resistance?
+    options:
+      A: 7.0 m/s
+      B: 9.9 m/s
+      C: 24.5 m/s
+      D: 49 m/s
+    answer: B
+    explain: mgh = (1/2)mv2, so v = sqrt(2gh) = sqrt(2 x 9.8 x 5.0) = sqrt(98) = 9.9 m/s. Mass cancels.
+    distractors:
+      A: Omitting the factor 2 and using v = sqrt(gh).
+      C: Reporting the potential energy (24.5 J) as if it were a speed.
+      D: Using 2gh as the speed instead of square-rooting it.
 - heading: Linear and angular momentum
+  objectives:
+  - Predict the post-collision motion from the collision type (elastic, inelastic, perfectly inelastic).
+  - Relate impulse to the momentum change it produces over the contact time.
+  - Explain how a change in moment of inertia alters angular velocity.
   body:
   - ==Momentum p = mv conserved with no external impulse; impulse = F delta-t = delta-p==. Elastic collision
     (KE conserved, relative speed reverses); inelastic (KE lost); perfectly inelastic (stick together).
@@ -95,7 +150,24 @@ sections:
       B: Tucking LOWERS I.
       C: She clearly can.
       D: Correct — no external torque.
+  - q: A 1200 kg car travelling east at 20 m/s strikes a stationary 800 kg car and the two lock together.
+      Their shared speed just after impact is…
+    options:
+      A: 12 m/s
+      B: 20 m/s
+      C: 10 m/s
+      D: 30 m/s
+    answer: A
+    explain: 'Momentum is conserved: 1200 x 20 = 2000 x v, so v = 24000/2000 = 12 m/s.'
+    distractors:
+      B: Assuming the striking car keeps its speed — that would require momentum to be created.
+      C: Averaging the two speeds instead of mass-weighting them; the heavy car dominates.
+      D: Dividing the total momentum by the struck car's mass alone (24000/800).
 - heading: Equilibrium and elasticity in biology
+  objectives:
+  - Compute stress and strain from an applied force, cross-sectional area, and length change.
+  - Set up the lever (torque) balance that gives the muscle force needed to hold a load.
+  - Explain why a short muscle lever arm multiplies the force across a joint.
   body:
   - ==Bones and tendons experience stress (F/A) and strain (delta-L/L); the elastic modulus E = stress/strain
     — the slope of the stress-strain curve==. Beyond the elastic limit, materials yield; bones are viscoelastic
@@ -117,19 +189,54 @@ sections:
       A: 39 N — the weight, before lever amplification.
       B: 6.5 N — inverted lever ratio (0.05/0.30).
       C: 400 N — the load mass, not the force.
+  - q: A 500 N compressive load acts on a bone whose cross-sectional area is 2.0 cm2. The stress in the
+      bone is…
+    options:
+      C: 2.5 x 10^6 Pa
+      A: 250 Pa
+      B: 2.5 x 10^4 Pa
+      D: 2.5 x 10^5 Pa
+    answer: C
+    explain: Stress = F/A = 500 / (2.0 x 10-4 m2) = 2.5 x 10^6 Pa (2.5 MPa).
+    distractors:
+      A: Dividing by the bare number 2 and skipping the cm2 to m2 conversion.
+      B: Dividing by a 2.0 cm length instead of by an area.
+      D: Slipping one power of ten in the cm2 to m2 conversion (using 2.0 x 10-3 m2).
 examples:
 - prompt: A 70 kg person stands on a scale in an elevator accelerating upward at 2.0 m/s2. What does the
     scale read?
+  strategy: 'Recognise that the scale reads the NORMAL force, not the weight, so the whole problem is
+    one vertical Newton''s-second-law balance: N - mg = ma with a = +2.0 m/s2. Solve for N, then divide
+    by g only at the end to convert the reading into the kilograms the dial displays.'
   solution:
   - The scale reads the NORMAL force, not weight.
   - 'Forces: N up, mg down; net = N - mg = ma (a = +2.0).'
   - N = m(g + a) = 70(9.8 + 2.0) = 826 N.
   - The scale displays N/g ≈ 84 kg — 'apparent weight'.
   answer: ≈ 830 N, equivalent to ~84 kg — up to 20% heavier than true weight.
+  discussion: '826 N against a true weight of 686 N is a 20% gain, and that percentage is exactly a/g
+    — a useful ratio to memorise, since every apparent-weight item is this same equation with a different
+    sign. Accelerating downward flips the sign and the passenger reads light; set a = g and N = 0, which
+    is why weightlessness in orbit is free fall rather than the absence of gravity. Sanity check the direction:
+    the answer must exceed mg when the floor pushes harder to speed the person up.'
   distractors:
     A: 686 N — forgetting acceleration changes the reading.
     B: 546 N — subtracting instead of adding.
     C: 70 N — mixing mass with force units.
+  practice:
+    q: A 50 kg passenger rides an elevator accelerating downward at 3.0 m/s2. What does the scale read?
+    options:
+      D: 340 N
+      A: 490 N
+      B: 640 N
+      C: 150 N
+    answer: D
+    explain: 'N - mg = ma with a = -3.0: N = m(g - a) = 50(9.8 - 3.0) = 340 N, about 35 kg — the passenger
+      reads light.'
+    distractors:
+      A: The true weight — ignoring the acceleration entirely.
+      B: Adding the acceleration term instead of subtracting it, which is the upward case.
+      C: Reporting the net force ma instead of the normal force the scale actually measures.
 key_points:
 - 'Kinematics: three constant-a equations; vertical and horizontal independent.'
 - F = ma sums forces; action-reaction on different bodies.

@@ -6,6 +6,10 @@ overview: Water is the MCAT's favorite molecule — its polarity and hydrogen bo
   and molarity, and the pH scale with buffer chemistry.
 sections:
 - heading: Water's polarity and hydrogen bonding
+  objectives:
+  - Explain water's polarity from its bent geometry and the oxygen-hydrogen electronegativity gap.
+  - Count the hydrogen bonds a single water molecule can form.
+  - Predict whether a given solute will dissolve in water.
   body:
   - Water is bent (104.5 degrees) with a strong dipole — oxygen pulls electrons from the two hydrogens.
     This makes water a ==polar solvent that dissolves ionic and polar molecules== while excluding nonpolar
@@ -26,7 +30,24 @@ sections:
       B: Temperature is irrelevant to density here.
       C: Air bubbles are incidental.
       D: Water is densest at 4C, not when heated.
+  - q: Which of these is most soluble in water?
+    options:
+      B: Sodium chloride, an ionic solid
+      A: Hexane, a six-carbon alkane
+      C: Octane, an eight-carbon alkane
+      D: Mineral oil, a mix of long hydrocarbons
+    answer: B
+    explain: Water's dipole solvates ions; the hydrocarbons are nonpolar and are excluded by the hydrophobic
+      effect.
+    distractors:
+      A: A nonpolar hydrocarbon offers water nothing to hydrogen-bond or ion-dipole with.
+      C: Longer still, and therefore even less soluble.
+      D: Also nonpolar hydrocarbons — the same exclusion, only more so.
 - heading: Solutions, electrolytes, and solubility
+  objectives:
+  - Classify a solute as a strong, weak, or non-electrolyte.
+  - Use the solubility rules to predict whether a precipitate forms.
+  - Explain why colligative properties depend only on particle count.
   body:
   - 'A solution is a homogeneous mixture — solute dissolved in solvent. ==Electrolytes dissociate into
     ions in water== (strong: NaCl, HCl; weak: acetic acid; nonelectrolyte: glucose). Colligative properties
@@ -48,6 +69,18 @@ sections:
       A: Glucose is a nonelectrolyte.
       B: Ammonia is a weak base.
       C: Acetic acid is a weak electrolyte.
+  - q: Which salt is INSOLUBLE in water?
+    options:
+      C: CaCO3
+      A: Na2CO3
+      B: K3PO4
+      D: NH4Cl
+    answer: C
+    explain: Carbonates are insoluble except with the alkali metals and ammonium — calcium carbonate precipitates.
+    distractors:
+      A: All sodium salts dissolve.
+      B: All potassium salts dissolve.
+      D: All ammonium salts dissolve.
   figures:
   - src: 5a-unique-nature-of-water-and-its-solutions/fig-9f65aae0.webp
     caption: Dissolution — a solute dispersing into solvent to form a homogeneous solution.
@@ -56,6 +89,10 @@ sections:
     caption: Diffusion of helium and argon after a valve opens — spontaneous mixing driven by entropy.
     credit: Ch 11 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
 - heading: Acids, bases, and the pH scale
+  objectives:
+  - Compare the Arrhenius, Bronsted-Lowry, and Lewis definitions of acid and base.
+  - Convert between [H+], pH, pOH, and [OH-].
+  - Recognise the strong acids and bases that dissociate completely.
   body:
   - 'Arrhenius: acids produce H+, bases produce OH-. Bronsted-Lowry: acids donate protons, bases accept
     them. Lewis: acids accept electron pairs, bases donate them. ==Strong acids (HCl, HNO3, H2SO4, HClO4)
@@ -75,7 +112,23 @@ sections:
       A: That is just the pH value as molarity.
       B: That is the product [H+][OH-].
       C: That is [H+].
+  - q: What is the pH of 0.0010 M HCl?
+    options:
+      D: '3.0'
+      A: '11.0'
+      B: '0.0010'
+      C: '1.3'
+    answer: D
+    explain: HCl is a strong acid, so [H+] = 1.0 x 10^-3 M and pH = -log(10^-3) = 3.0.
+    distractors:
+      A: Computing pOH as though hydrochloric acid were a base.
+      B: Reporting the molarity instead of its negative logarithm.
+      C: Using the natural logarithm instead of log base 10.
 - heading: Buffers and the Henderson-Hasselbalch equation
+  objectives:
+  - Identify the conjugate pair required for a solution to act as a buffer.
+  - Calculate a buffer's pH with the Henderson-Hasselbalch equation.
+  - Explain why buffering capacity peaks when pH equals pKa.
   body:
   - A buffer is a weak acid plus its conjugate base (or weak base plus conjugate acid) that resists pH
     change. ==The Henderson-Hasselbalch equation — pH = pKa + log([A-]/[HA])== — predicts the buffer pH
@@ -97,7 +150,23 @@ sections:
       B: That is neutral pH, unrelated to the buffer.
       C: That is when [A-] = 10 times [HA].
       D: That is pOH.
+  - q: A buffer contains 0.40 M A- and 0.040 M HA, with pKa = 5.0. Its pH is…
+    options:
+      A: '6.0'
+      B: '4.0'
+      C: '5.0'
+      D: '7.0'
+    answer: A
+    explain: pH = 5.0 + log(0.40/0.040) = 5.0 + log(10) = 6.0.
+    distractors:
+      B: Inverting the ratio and putting the acid on top.
+      C: Quoting the pKa and ignoring the actual ratio.
+      D: Assuming neutrality, which has nothing to do with a buffer's pH.
 - heading: Titrations and equivalence points
+  objectives:
+  - Locate the equivalence point and half-equivalence point on a titration curve.
+  - Predict whether an equivalence point is acidic, basic, or neutral.
+  - Choose an indicator whose colour change brackets the equivalence point.
   body:
   - Titration curves plot pH versus volume of titrant added. The ==equivalence point is where moles of
     titrant equal moles of analyte==. Strong acid plus strong base gives an equivalence point at pH 7;
@@ -119,18 +188,52 @@ sections:
       A: That is strong-strong only.
       B: That is the equivalence point.
       C: That relates to the base, not the acid.
+  - q: A weak base is titrated with a strong acid. The pH at the equivalence point is…
+    options:
+      D: Below 7
+      A: Exactly 7
+      B: Above 7
+      C: Undefined until the indicator changes
+    answer: D
+    explain: The conjugate acid of the weak base hydrolyses to release H+, so the equivalence solution
+      is acidic.
+    distractors:
+      A: Neutral equivalence belongs to strong acid plus strong base only.
+      B: That is the weak acid plus strong base case — the reverse pairing.
+      C: The indicator follows the equivalence point; it does not define it.
 examples:
 - prompt: Calculate the pH of a buffer containing 0.10 M acetic acid (pKa = 4.76) and 0.15 M sodium acetate.
+  strategy: 'A conjugate pair in water means Henderson-Hasselbalch applies directly: pH = pKa + log([A-]/[HA])
+    = 4.76 + log(0.15/0.10). Two decisions carry the whole item — which species sits on top of the ratio
+    (the base) and whether the log''s sign is consistent with which one is in excess.'
   solution:
   - pH = pKa + log([A-]/[HA])
   - pH = 4.76 + log(0.15/0.10)
   - pH = 4.76 + log(1.5)
   - pH = 4.76 + 0.18 = 4.94
   answer: pH = 4.94.
+  discussion: '4.94 is 0.18 above the pKa, which confirms the base is in excess; a 1.5-fold ratio buys
+    about a fifth of a pH unit, while a tenfold ratio buys a whole unit. Read the context too: a pKa of
+    4.76 makes this a lab buffer, not a blood buffer — the bicarbonate pair at pKa 6.1 is the physiological
+    one. Sanity check the limits: with [A-] = [HA] the log vanishes and pH = pKa, so any answer below
+    4.76 means the ratio was inverted.'
   distractors:
     A: Forgetting the log — pH = 4.76 + 1.5 = 6.26.
     B: Inverting the ratio — pH = 4.76 + log(0.67) = 4.58.
     C: Using pKa of water (7) instead of the acid.
+  practice:
+    q: A buffer contains 0.050 M HA (pKa = 3.00) and 0.50 M NaA. What is its pH?
+    options:
+      B: '4.00'
+      A: '2.00'
+      C: '3.00'
+      D: '5.30'
+    answer: B
+    explain: pH = 3.00 + log(0.50/0.050) = 3.00 + log(10) = 4.00.
+    distractors:
+      A: Inverting the ratio — the conjugate base goes on top.
+      C: Quoting the pKa and ignoring the tenfold excess of base.
+      D: Using the natural logarithm of the ratio instead of log base 10.
 key_points:
 - Water is bent, polar, and hydrogen-bonded — this drives its solvent power and anomalies.
 - Electrolytes dissociate; colligative properties depend on particle count.

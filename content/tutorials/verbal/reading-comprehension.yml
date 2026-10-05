@@ -6,6 +6,9 @@ overview: The NMAT prose-reading items — main idea, detail, inference, functio
   density.
 sections:
 - heading: Passage reading strategy
+  objectives:
+  - Annotate a passage in one pass — thesis, per-paragraph function, and transition words.
+  - Predict what a transition word ('nevertheless', 'for example') signals before reading on.
   body:
   - ==Read actively — mark the thesis, one-line paragraph summaries, and transition words (however, therefore,
     for example)==. ==The reading pass should take 2-3 minutes for a 500-word passage — no more; the questions
@@ -26,7 +29,25 @@ sections:
       B: Questions assume the whole passage.
       C: Thesis alone is not enough.
       D: Correct.
+  - q: 'Mini-passage: ''Clinics once assumed patients preferred phone reminders. Surveys confirmed high
+      phone satisfaction. Nevertheless, no-shows fell only after text reminders were introduced.'' Marked
+      during the first read, ''Nevertheless'' signals…'
+    options:
+      A: That the opening sentence is the thesis
+      B: That the survey finding is about to be qualified by a contradicting result
+      C: That the passage has no claim
+      D: That phone contact is preferred
+    answer: B
+    explain: The pivot word announces a contrast, so the upcoming finding must be read against the satisfaction
+      data rather than alongside it.
+    distractors:
+      A: The thesis arrives at the pivot and after it, not before.
+      C: The passage clearly argues something about reminders.
+      D: Satisfaction is stated; preference for reminders is not.
 - heading: Main idea and title items
+  objectives:
+  - State a main idea as a claim ('argues that…') rather than a topic label ('about…').
+  - Reject main-idea options as too narrow, too broad, off-topic, or reversed.
   body:
   - ==Main idea items reward the claim, not the topic — 'about X' answers fail; 'argues that X' answers
     win==. ==Title items paraphrase the same claim compactly==
@@ -46,7 +67,25 @@ sections:
       B: Correct.
       C: Examples support, not constitute, the claim.
       D: A noun is a topic, not the claim.
+  - q: 'Mini-passage: ''Farmed seaweed needs no freshwater, no fertiliser, and little land. It absorbs
+      dissolved nitrogen, easing coastal eutrophication. Yields per hectare exceed most land crops, though
+      processing capacity remains the bottleneck.'' The main idea is…'
+    options:
+      A: Seaweed is an unusual crop
+      B: Seaweed farming is resource-light and high-yielding, with processing the main constraint
+      C: Land crops are obsolete
+      D: Seaweed causes eutrophication
+    answer: B
+    explain: The passage advances a claim about seaweed's advantages and names its limiting factor; the
+      other options are topic labels or reversals.
+    distractors:
+      A: That is a topic label, not a claim.
+      C: Nothing in the passage dismisses land crops.
+      D: Reversed — seaweed absorbs the nitrogen that drives eutrophication.
 - heading: Detail and evidence items
+  objectives:
+  - Relocate the exact sentence a detail item targets and preserve its quantifiers.
+  - Detect a one-word scope or polarity change between the passage and an answer option.
   body:
   - ==Detail items point at a specific claim — relocate the sentence and paraphrase precisely, keeping
     scope (most vs all, some vs only)==. ==Evidence items ask which fact the passage cites for a claim
@@ -66,7 +105,24 @@ sections:
       B: Correct.
       C: Stronger is not accurate.
       D: Same topic, but the claim differs.
+  - q: 'Mini-passage: ''Several district hospitals adopted the checklist; uptake was voluntary.'' A detail
+      item asks about adoption. The supported answer is…'
+    options:
+      A: All district hospitals adopted it
+      B: Adoption was mandatory across the district
+      C: Some district hospitals adopted it, and doing so was optional
+      D: No district hospital adopted it
+    answer: C
+    explain: '''Several'' limits the count and ''voluntary'' limits the compulsion — both must survive
+      into the answer.'
+    distractors:
+      A: '''Several'' is not ''all''.'
+      B: '''Voluntary'' is the opposite of mandatory.'
+      D: '''Several adopted'' contradicts ''none adopted''.'
 - heading: Inference and application items
+  objectives:
+  - Draw an inference one measured step inside the passage's own logic.
+  - Reject inferences requiring facts the passage does not supply.
   body:
   - ==Inference stays inside the passage's logic — one measured step, never outside facts==. ==Application
     transfers the passage's principle to a new case==. ==Both reject any answer needing unprovided information==
@@ -86,7 +142,23 @@ sections:
       B: Limits were stated.
       C: Urbanity mattered to the design.
       D: Correct.
+  - q: 'Mini-passage: ''The ferry''s captain reported the weather as marginal; the crossing proceeded
+      as scheduled.'' A safe inference is…'
+    options:
+      A: The captain misreported the weather
+      B: The weather was irrelevant to the crossing
+      C: Conditions were less than ideal, and the crossing was not cancelled
+      D: Ferries never sail in marginal conditions
+    answer: C
+    explain: 'Both halves are given: the weather was described as marginal, and the schedule was kept.'
+    distractors:
+      A: No evidence about reporting accuracy is offered.
+      B: The captain's report makes the weather plainly relevant.
+      D: The passage shows the opposite.
 - heading: Tone, function, and speed hygiene
+  objectives:
+  - Read tone from the passage's own evaluative language rather than from the topic.
+  - Name a sentence's function (define, exemplify, concede, conclude) from its connectives.
   body:
   - ==Tone items — the emotional register from language, evidenced in the passage==. ==Function items
     — what a sentence or paragraph does (define, exemplify, concede, conclude)==
@@ -106,20 +178,56 @@ sections:
       B: No alarm.
       C: Correct.
       D: No irony markers.
+  - q: 'Mini-passage: ''The report is, to put it generously, optimistic; its projections assume growth
+      that no scenario in its own appendix supports.'' The tone toward the report is…'
+    options:
+      A: Enthusiastic support
+      B: Neutral description
+      C: Ironic — 'generously' flags understated criticism
+      D: Sorrowful
+    answer: C
+    explain: The hedge 'to put it generously' inverts the praise, and the appendix point supplies the
+      evidence for the criticism.
+    distractors:
+      A: The second clause withdraws the support.
+      B: Both sentences evaluate rather than describe.
+      D: No grief vocabulary appears.
 examples:
 - prompt: 'Passage: ''The jeepney''s persistence is usually explained by economics alone. But its cultural
     load — the decorated body, the community of drivers, the route folklore — is what preserves it as
     the fares shift.'' — Ask: the main idea.'
+  strategy: Locate the pivot before answering. The 'But' moves the explanatory weight from the economic
+    account to the cultural load, so the main idea must carry culture and demote economics to a presented
+    view.
   solution:
   - Pivot marker 'But' redirects from the economic explanation.
   - Second sentence carries the claim — cultural load explains persistence.
   - The first sentence is the presented view, not the author's.
   - 'Main idea: cultural significance, not economics, best explains the jeepney''s endurance.'
   answer: The jeepney endures mainly because of its cultural meaning, not just fares.
+  discussion: 'The same read scales to any passage whose opening sentence reports a view the author then
+    pivots from: that first sentence belongs to someone else. Tracking functions — presented view, evidence,
+    claim — makes the main idea fall out of the author''s own sentence rather than from the passage''s
+    subject matter.'
   distractors:
     A: The jeepney will disappear with rising fares — unsupported.
     B: Jeepneys are purely economic — the first sentence, not the author's view.
     C: All public transport carries cultural load — a generalization beyond scope.
+  practice:
+    q: 'Mini-passage: ''Mobile clinics are usually justified on cost grounds. But their deeper value is
+      continuity — the same nurse returning monthly builds the trust that makes hypertension follow-up
+      happen at all.'' The main idea is…'
+    options:
+      A: Mobile clinics are inexpensive
+      B: Cost is the strongest argument for mobile clinics
+      C: The chief value of mobile clinics lies in continuity of care rather than cost
+      D: Hypertension cannot be treated outside hospitals
+    answer: C
+    explain: The pivot hands the argument to continuity; cost is the framing the author is qualifying.
+    distractors:
+      A: That is the framing sentence, not the claim.
+      B: Reversed — cost is the view being displaced.
+      D: Nothing in the passage supports that limit.
 key_points:
 - Read once, mark structures, then answer.
 - Main idea = claim, not topic.

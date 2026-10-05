@@ -5,6 +5,10 @@ overview: 7B is social psychology's core — conformity, obedience, group proces
   The MCAT's most famous experiments and scenario-friendly questions. Prerequisite — 7A.
 sections:
 - heading: Conformity — yielding to the group
+  objectives:
+  - Name the influence type (informational or normative) behind a described conforming act.
+  - Predict how unanimity, group size, and one dissenting ally move the Asch conformity rate.
+  - Distinguish group polarization, groupthink, and deindividuation in a described group episode.
   body:
   - Conformity is changing behavior to match the group. Asch's line experiments — a unanimous majority
     pulls ~75% to err at least once — and moderators are currency — one dissenting ally slashes conformity,
@@ -26,6 +30,22 @@ sections:
       A: No planted majority.
       B: Effort drop — not this.
       D: Anonymity effects, absent.
+  - q: In a line-judgment task a participant privately insists the answer is B but publicly says A with
+      the group. A second participant then says B, and the participant switches back. Name both phases
+      and the influence at work.
+    options:
+      A: Both phases are informational influence — the participant lacked knowledge
+      B: First phase normative influence (public compliance to fit in); the ally's dissent breaks unanimity
+        and restores the private answer
+      C: Both phases are obedience — the group commanded the answer
+      D: Deindividuation — anonymity produced the wrong answer
+    answer: B
+    explain: Private knowledge with public compliance is normative influence, and it is unanimity — not
+      group size — that one ally collapses.
+    distractors:
+      A: Informational influence requires genuine uncertainty about the answer; she was certain.
+      C: No authority gave an order; peers supplied the pressure.
+      D: Nothing here hinges on anonymity or loss of self-awareness.
   figures:
   - src: 7b-social-processes-that-influence-behavior/social-roles.webp
     caption: Social roles — the student role dictates studious behavior in the classroom.
@@ -34,6 +54,11 @@ sections:
     caption: Social norms — young people dress alike to fit in with peer groups.
     credit: Fig 12.9 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Obedience — authority's pull
+  objectives:
+  - Predict the Milgram obedience rate's movement when authority proximity, victim proximity, institutional
+    setting, or peer dissent changes.
+  - Distinguish conformity, compliance, and obedience by the source of the influence.
+  - Name the compliance tactic (foot-in-the-door, door-in-the-face) in a described request sequence.
   body:
   - Milgram — ~65% administered maximum shock when an experimenter insisted. Levers — proximity of authority
     (up), proximity of victim (down), institutional setting (up), dissenting peers (sharply down).
@@ -52,7 +77,25 @@ sections:
       A: Performance in mere presence.
       B: Group decision defect.
       C: No group norm — a hierarchy.
+  - q: A charity calls asking for a 5,000-peso donation; the caller refuses, then is asked for a 500-peso
+      donation and agrees. Which tactic, and why does it work?
+    options:
+      A: Foot-in-the-door — the small request came first
+      B: Door-in-the-face — a large request refused makes the smaller one look like a concession
+      C: Obedience — the charity is an authority
+      D: Groupthink — the caller conformed to a group norm
+    answer: B
+    explain: The retreat from an extreme request is read as movement toward the caller, triggering reciprocity
+      — the door-in-the-face sequence.
+    distractors:
+      A: Foot-in-the-door starts small and escalates; the order here is reversed.
+      C: No command from a legitimate authority was issued.
+      D: No cohesive group suppressed dissent here.
 - heading: Attribution, attitudes, persuasion
+  objectives:
+  - Apply the fundamental attribution error and actor-observer bias to a paired self/other judgment.
+  - Classify a persuasion attempt as central or peripheral by elaboration likelihood.
+  - Explain a described attitude shift via cognitive dissonance and its justification level.
   body:
   - Attribution — dispositional versus situational — with the fundamental attribution error (overweighting
     disposition judging OTHERS) and actor-observer bias (we excuse ourselves situationally). Culture modulates
@@ -73,7 +116,27 @@ sections:
       A: Related but the two-sided pattern is the signature.
       C: Group process.
       D: Persuasion model.
+  - q: A manager explains a subordinate's missed deadline as 'lazy' and her own missed deadline as 'the
+      system was down'. Which pair of effects, and which correction would help the first judgment?
+    options:
+      A: Self-serving bias twice; correction is more praise
+      B: Fundamental attribution error for the subordinate, actor-observer bias for herself; correction
+        is Kelley's covariation check — consensus, distinctiveness, consistency
+      C: Groupthink and deindividuation; correction is an anonymous vote
+      D: Peripheral-route persuasion; correction is a central-route argument
+    answer: B
+    explain: Dispositional blame for others plus situational excuse for self is the classic asymmetry,
+      and covariation data is the standard antidote.
+    distractors:
+      A: The self-serving bias concerns her own outcomes; the subordinate's case is judged dispositionally.
+      C: No group decision or anonymity is involved.
+      D: No persuasive message is being evaluated.
 - heading: Social facilitation and social loafing — audience effects
+  objectives:
+  - Classify a described performance change as social facilitation (arousal on individual tasks) or social
+    loafing (accountability in groups).
+  - Predict facilitation's direction from task complexity — simple improves, complex degrades.
+  - Design the accountability fix for a described loafing case.
   body:
   - The mere presence of others changes performance — **social facilitation** (better on simple or well-learned
     tasks, worse on complex or novel ones — Zajonc's arousal account) and **social loafing** (LESS effort
@@ -97,18 +160,58 @@ sections:
       A: The sprint shows facilitation.
       B: Reversed.
       C: The group task shows loafing.
+  - q: An experienced pianist plays a rehearsed piece better in front of an audience, but stumbles on
+      sight-reading. Name both effects and the mechanism that explains the split.
+    options:
+      A: Both are social loafing — the audience reduced effort
+      B: Social facilitation via Zajonc's arousal account — arousal strengthens the dominant response,
+        helping the well-learned piece and hurting the novel one
+      C: Deindividuation — anonymity changed the performance
+      D: Social loafing for the sight-reading only
+    answer: B
+    explain: Arousal biases execution toward dominant responses, which is exactly why mastery benefits
+      and novelty suffers under observation.
+    distractors:
+      A: Loafing concerns effort in collective tasks; the pianist performs alone.
+      C: Nothing here depends on anonymity or lost self-awareness.
+      D: The sight-reading decline is arousal on a complex task, not effort loss in a group.
 examples:
 - prompt: Festinger's design — participants paid $1 or $20 to tell a peer a boring task was fun. Predict
     the attitude change.
+  strategy: Compute the justification balance before predicting the attitude. Attitude change is the leftover
+    after external justification is subtracted from the counter-attitudinal act — so the smaller the payment,
+    the larger the internal shift required.
   solution:
   - All said the task was fun; behavior contradicts the private belief.
   - $20 is sufficient justification — no dissonance to resolve.
   - $1 is insufficient — dissonance resolved by shifting the private attitude.
   answer: The $1 group shows GREATER attitude change — insufficient justification maximizes dissonance.
+  discussion: 'The same arithmetic explains effort justification and the overjustification effect in reverse:
+    when external reasons are too LARGE they crowd out intrinsic motivation, and when too small the attitude
+    moves to close the gap. Whenever a vignette pairs a behavior with its justification, ask whether the
+    justification is thin, sufficient, or excessive.'
   distractors:
     A: More pay → more change — reverses the logic.
     B: Both equal — ignores justification size.
     C: Obedience — no authority commanded belief.
+  practice:
+    q: A student who secretly found a workshop dull tells incoming students it was excellent. One group
+      was given course credit worth little; another was paid generously. Which group later rates the workshop
+      best, and why?
+    options:
+      A: The paid group — money buys persuasion
+      B: The lightly compensated group — insufficient justification leaves dissonance to be resolved by
+        changing the private attitude
+      C: Both equally — the statement determines the attitude directly
+      D: Neither — attitudes never follow behavior
+    answer: B
+    explain: Thin external justification maximizes dissonance, and the cheapest resolution is to believe
+      the statement.
+    distractors:
+      A: Generous payment supplies ample justification, so no dissonance remains to resolve.
+      C: Attitude change differs precisely because the justification differs.
+      D: The induced-compliance paradigm is the standard demonstration that attitudes follow behavior
+        under thin justification.
 key_points:
 - Asch — unanimity and size drive conformity; one ally breaks it.
 - Milgram — ~65% full obedience; authority proximity raises, peer dissent drops it.

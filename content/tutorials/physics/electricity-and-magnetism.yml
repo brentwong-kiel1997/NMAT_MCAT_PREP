@@ -6,6 +6,10 @@ overview: Charges, fields, circuits, and magnetism. The circuit half (resistors,
   MCAT leans conceptual with simple math.
 sections:
 - heading: Coulomb's law and electric fields
+  objectives:
+  - Calculate the force between two point charges with Coulomb's law.
+  - Relate electric field to force per unit charge and potential to energy per charge.
+  - Predict the work done moving charge along and across field lines.
   body:
   - ==F = k q1 q2 / r2 — same sign repels, opposite attracts; direction along the joining line==. Charge
     is quantized in e = 1.6e-19 C and conserved. The field E = F/q = k Q/r2 points away from positive,
@@ -26,6 +30,18 @@ sections:
       A: No.
       B: Inverse square.
       C: Inverse-square gives 4, not 2.
+  - q: Two point charges are moved apart from a separation r to 3r. The force between them becomes…
+    options:
+      A: One-ninth of the original
+      B: One-third of the original
+      C: Nine times larger
+      D: Unchanged, since the charges are the same
+    answer: A
+    explain: F ~ 1/r2, so tripling r divides the force by 3^2 = 9.
+    distractors:
+      B: Using a 1/r dependence instead of inverse-square.
+      C: Inverting the relation — spreading charges apart weakens the force.
+      D: The charge magnitudes are irrelevant once the separation changes.
   figures:
   - src: electricity-and-magnetism/fig-74e73828.webp
     caption: Electric force — attraction between opposite charges, repulsion between like charges.
@@ -34,6 +50,10 @@ sections:
     caption: A torsion balance — the instrument Coulomb used to measure the force between charges.
     credit: Ch 18 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
 - heading: Circuits — current, resistance, and power
+  objectives:
+  - Reduce a series-parallel network to a single equivalent resistance.
+  - Apply Kirchhoff's junction and loop rules to a multi-branch circuit.
+  - Predict which element dissipates the most power in each configuration.
   body:
   - ==I = V/R (Ohm's law); series resistors add (R = R1 + R2); parallel obeys 1/R = 1/R1 + 1/R2 — total
     LESS than either==. Current splits at junctions (Kirchhoff's node) and voltages sum around a loop
@@ -54,7 +74,24 @@ sections:
       A: Decimal slip.
       B: Parallel math.
       D: 10 ohm, not 2.
+  - q: Two 12 ohm resistors are wired in parallel across a 12 V battery. The total current the battery
+      supplies is…
+    options:
+      C: 2 A
+      A: 0.5 A
+      B: 1 A
+      D: 4 A
+    answer: C
+    explain: R-eq = 12/2 = 6 ohm, so I = 12/6 = 2 A (each branch draws 1 A).
+    distractors:
+      A: Adding the resistances as though they were in series (24 ohm).
+      B: Dividing by a single branch's resistance and ignoring the second path.
+      D: Halving the parallel equivalent twice (6 ohm to 3 ohm).
 - heading: Capacitors and RC circuits
+  objectives:
+  - Compute capacitance from plate geometry or from stored charge and voltage.
+  - Combine capacitors in series and parallel, opposite to the resistor rules.
+  - Predict a capacitor's charge or voltage after a given number of time constants.
   body:
   - ==Capacitance C = Q/V; parallel plates C = epsilon A/d==. Energy stored = (1/2)CV2. In series, 1/C
     = sum of reciprocals (LESS); in parallel, C adds (MORE) — opposite of resistors.
@@ -73,7 +110,24 @@ sections:
       A: 37% is the discharge remaining.
       B: e^-1 vs 1-e^-1 mix-up.
       D: Wrong exponent.
+  - q: A 2.0 uF and a 6.0 uF capacitor are connected in parallel and charged to 12 V. The total charge
+      stored is…
+    options:
+      C: 96 uC
+      A: 24 uC
+      B: 18 uC
+      D: 72 uC
+    answer: C
+    explain: 'Parallel capacitances add: C = 8.0 uF, so Q = CV = 8.0 x 10-6 x 12 = 96 uC.'
+    distractors:
+      A: Counting only the 2.0 uF capacitor.
+      B: Combining them in series (1.5 uF) instead of in parallel.
+      D: Counting only the 6.0 uF capacitor.
 - heading: Magnetism — fields, forces, and induction
+  objectives:
+  - Determine the direction of the magnetic force on a moving charge.
+  - Calculate the force on a current-carrying wire in a magnetic field.
+  - Apply Faraday's law and Lenz's law to a changing magnetic flux.
   body:
   - ==Moving charges feel magnetic force F = q v B sin(theta) — perpendicular to BOTH velocity and field.
     ==Charged particles in a uniform B spiral in circles (centripetal). Current-carrying wires feel F
@@ -93,7 +147,23 @@ sections:
       A: That needs v perpendicular.
       B: That IS the case when perpendicular.
       C: No force means no acceleration.
+  - q: A proton moves at 2.0 x 10^6 m/s PERPENDICULAR to a 0.50 T field. The magnetic force on it is…
+    options:
+      D: 1.6 x 10^-13 N
+      A: 0 N
+      B: 3.2 x 10^-13 N
+      C: 8.0 x 10^-20 N
+    answer: D
+    explain: F = qvB sin(90) = (1.6 x 10-19)(2.0 x 10^6)(0.50) = 1.6 x 10^-13 N.
+    distractors:
+      A: Zero force needs v parallel to B; here they are perpendicular, so sin = 1.
+      B: Doubling the field strength.
+      C: Multiplying qB and omitting the velocity factor.
 - heading: Electrochemistry and biological fields
+  objectives:
+  - Distinguish galvanic from electrolytic cells by their driving source.
+  - Identify which half-reaction occurs at the anode and at the cathode.
+  - Relate the Nernst equation to a measured membrane potential.
   body:
   - Nernst equation V = (RT/zF) ln([out]/[in]) ties concentration gradients to membrane potentials; ==resting
     potential ~ -70 mV arises from selective ion permeability==. Electrocardiograms and electroencephalograms
@@ -114,19 +184,55 @@ sections:
       A: Galvanic do that.
       C: Anode is oxidation (electrons leave), but the driving source matters.
       D: Wires conduct too.
+  - q: A galvanic cell has E-cathode = +0.34 V and E-anode = -0.76 V. Its cell potential is…
+    options:
+      B: 1.10 V
+      A: -0.42 V
+      C: 0.42 V
+      D: -1.10 V
+    answer: B
+    explain: E-cell = E-cathode - E-anode = 0.34 - (-0.76) = 1.10 V — positive, so spontaneous.
+    distractors:
+      A: Adding the two potentials instead of subtracting them.
+      C: Dropping the negative sign on the anode potential and then reporting the magnitude.
+      D: Reversing which electrode is the cathode, which flips both the sign and the spontaneity.
 examples:
 - prompt: A cell membrane (0.10 um thick, area 1e-5 m2) has dielectric constant 5 and a potential difference
     of 70 mV. Estimate its capacitance and stored charge.
+  strategy: 'Two formulas in sequence: the parallel-plate capacitance with a dielectric, C = k epsilon0
+    A/d, then Q = CV. Convert the thickness to SI (0.10 um = 1.0 x 10^-7 m) BEFORE substituting — the
+    whole answer''s order of magnitude is decided by the A/d ratio, so the unit handling is the actual
+    problem, not the algebra.'
   solution:
   - C = k epsilon0 A/d = (5)(8.85e-12)(1e-5)/(0.10e-6).
   - C = 4.4e-9 / 1e-7 = 4.4e-9 F ≈ 4.4 nF.
   - Q = CV = (4.4e-9)(0.070) = 3.1e-10 C.
   - That is ~2e9 elementary charges — a plausible membrane charge.
   answer: About 4.4 nF carrying ~3e-10 C.
+  discussion: '4.4 nF is tiny by circuit standards yet huge for a nanometre-scale sheet — the enormous
+    area-to-thickness ratio is why membranes are such good capacitors, and therefore why shifting a millivolt
+    takes only a few thousand ions per square micrometre. Check the scaling rather than the arithmetic:
+    halve the thickness and C doubles; double the voltage and Q doubles but the stored energy QUADRUPLES,
+    because U = (1/2)CV2. The ~2 x 10^9 elementary charges is the reality check that the number describes
+    a real membrane.'
   distractors:
     A: Forgetting epsilon0 — gives 8.8e-10 F.
     B: Using d in meters wrong (0.10 um → 1e-7 m, not 1e-6).
     C: Neglecting the thickness conversion — 44 nF.
+  practice:
+    q: A membrane has dielectric constant 2, thickness 0.050 um, and area 1.0 x 10^-5 m2. Its capacitance
+      is nearest…
+    options:
+      C: 3.5 nF
+      A: 1.8 nF
+      B: 0.35 nF
+      D: 35 nF
+    answer: C
+    explain: C = k epsilon0 A/d = (2)(8.85 x 10-12)(1.0 x 10-5)/(5.0 x 10-8) = 3.5 x 10-9 F = 3.5 nF.
+    distractors:
+      A: Omitting the dielectric constant k.
+      B: Slipping one power of ten in the area (1.0 x 10^-6 m2).
+      D: Slipping a factor of ten in the thickness (5.0 x 10^-9 m).
 key_points:
 - 'Coulomb: F ~ q1q2/r2, signs attract/repel.'
 - Series resistance adds; parallel drops below smallest.

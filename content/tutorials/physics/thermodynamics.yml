@@ -6,6 +6,10 @@ overview: Heat, temperature, the laws of thermodynamics, and engines — with th
   work of breathing, metabolic efficiency).
 sections:
 - heading: Temperature, heat, and thermal expansion
+  objectives:
+  - Distinguish heat as energy in transit from temperature as average kinetic energy.
+  - Calculate heat exchanged using Q = mc delta-T and Q = mL.
+  - Predict a change in length from the linear expansion coefficient.
   body:
   - 'Temperature measures average KE per molecule; heat is energy TRANSFER. ==Heat in: Q = mc delta-T
     (no phase change) and Q = mL (at a phase change)==. Water''s specific heat is the highest common material
@@ -27,7 +31,23 @@ sections:
       B: Ten times too large — that melts 100 g.
       C: That warms liquid water by 100 K.
       D: Correct — Q = mL for fusion.
+  - q: How much heat raises 0.50 kg of water from 20C to 60C? (c = 4186 J/kg·K)
+    options:
+      D: 84 kJ
+      A: 8.4 kJ
+      B: 209 kJ
+      C: 21 kJ
+    answer: D
+    explain: Q = mc delta-T = 0.50 x 4186 x 40 = 8.4 x 10^4 J = 84 kJ.
+    distractors:
+      A: Slipping a factor of ten in the mass.
+      B: Using a 100 K rise instead of the actual 40 K.
+      C: Using 1.0 kJ/(kg·K) instead of water's specific heat.
 - heading: Kinetic theory and the gas laws
+  objectives:
+  - Apply PV = nRT to predict how pressure, volume, and temperature trade off.
+  - State what average molecular kinetic energy depends on — and what it ignores.
+  - Classify a process as isothermal, isobaric, isochoric, or adiabatic.
   body:
   - '==Ideal gas: PV = nRT==. Doubling temperature at constant volume doubles pressure; halving volume
     at constant temperature doubles pressure. ==Kinetic theory: average KE per molecule = (3/2)kT — depends
@@ -48,7 +68,24 @@ sections:
       B: Same T gives same KE.
       C: Same T gives same KE.
       D: Pressure changes density, not average KE.
+  - q: A gas at 1.0 atm and 300 K is compressed to half its volume with the temperature held fixed. The
+      new pressure is…
+    options:
+      A: 2.0 atm
+      B: 0.5 atm
+      C: 1.0 atm
+      D: 4.0 atm
+    answer: A
+    explain: Isothermal means PV is constant, so halving V doubles P to 2.0 atm.
+    distractors:
+      B: Inverting the relation — compression raises pressure.
+      C: Assuming the pressure is unaffected, which would violate PV = nRT.
+      D: Squaring the volume factor; the isothermal relation is linear in 1/V.
 - heading: The laws of thermodynamics
+  objectives:
+  - State the zeroth through third laws and what each conserves or forbids.
+  - Track a system's internal energy with the first-law sign convention.
+  - Decide whether a given process raises or lowers entropy.
   body:
   - Zero — thermal equilibrium transitivity. First — energy conservation with heat and work; delta-U =
     Q - W. ==Second — heat never spontaneously flows from cold to hot; entropy of an isolated system never
@@ -69,6 +106,19 @@ sections:
       A: Adiabatic compression decreases entropy.
       B: Freezing releases latent heat.
       D: Never happens.
+  - q: A gas absorbs 500 J of heat while doing 200 J of work on its surroundings. Its internal energy
+      changes by…
+    options:
+      D: +300 J
+      A: +700 J
+      B: -300 J
+      C: +200 J
+    answer: D
+    explain: 'First law: delta-U = Q - W = 500 - 200 = +300 J.'
+    distractors:
+      A: Adding heat and work; work done BY the gas must be subtracted.
+      B: Reversing the sign convention.
+      C: Reporting the work alone and dropping the heat term.
   figures:
   - src: thermodynamics/fig-51526c87.webp
     caption: Three irreversible processes — heat flowing from hot to cold, kinetic energy dissipating
@@ -79,6 +129,10 @@ sections:
       the colder drink.
     credit: Ch 12 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
 - heading: Heat engines, refrigerators, and efficiency
+  objectives:
+  - Compute an engine's efficiency from heat absorbed and work delivered.
+  - Evaluate the Carnot bound from reservoir temperatures in Kelvin.
+  - Explain why a refrigerator cannot be run backwards to make free work.
   body:
   - ==Efficiency e = W/Qh = 1 - Qc/Qh== for any engine; the Carnot engine gives the MAXIMUM possible e
     = 1 - Tc/Th (Kelvin). Refrigerators and heat pumps move heat against its natural direction at a cost
@@ -98,7 +152,23 @@ sections:
       B: That would need Tc = 200 K.
       C: That is Qc/Qh, not the complement.
       D: Correct — 25%.
+  - q: A Carnot engine running between 500 K and 300 K delivers 1000 J of work. The heat it exhausts is…
+    options:
+      B: 1500 J
+      A: 2500 J
+      C: 1000 J
+      D: 400 J
+    answer: B
+    explain: e = 1 - 300/500 = 0.40, so Qh = W/e = 2500 J and Qc = Qh - W = 1500 J.
+    distractors:
+      A: Reporting the heat INPUT as the exhaust.
+      C: Assuming all the input heat converts to work — no real or ideal engine does.
+      D: Quoting the efficiency as though it were the exhausted heat.
 - heading: Heat transfer and physiology
+  objectives:
+  - Distinguish conduction, convection, and radiation and their scaling laws.
+  - Explain evaporative cooling as the body's main route for heat loss.
+  - Predict how wind, humidity, and vasodilation change the rate of heat loss.
   body:
   - Three mechanisms — ==conduction (contact, proportional to delta-T and area, inverse to thickness),
     convection (fluid movement carrying heat), radiation (electromagnetic, proportional to T^4)==. Evaporation
@@ -120,9 +190,25 @@ sections:
       B: Convection still acts.
       C: Fever often dilates vessels.
       D: Core heat does escape.
+  - q: If a surface's absolute temperature doubles, the power it radiates rises by a factor of…
+    options:
+      B: '16'
+      A: '2'
+      C: '8'
+      D: '4'
+    answer: B
+    explain: Radiated power scales as T^4, so 2^4 = 16.
+    distractors:
+      A: Linear scaling — radiation is far steeper than that.
+      C: Cubed rather than fourth-power dependence.
+      D: Squared rather than fourth-power dependence.
 examples:
 - prompt: 0.20 kg of steam at 100C is bubbled into 0.80 kg of water at 20C in an insulated cup. Find the
     final temperature.
+  strategy: 'Set up an energy ledger: assume all the steam condenses and the condensate cools to the final
+    temperature, then write latent heat out = sensible heat in and solve for T. The plan only works if
+    the result survives a physical ceiling check — anything above 100C in an open cup is impossible, and
+    that failure mode, not the arithmetic, is the actual question.'
   solution:
   - 'Steam condenses: Q = mLv = 0.20 x 2260 kJ/kg = 452 kJ released.'
   - 'Water warms: Q = mc delta-T — 452,000 = (0.80)(4186)(T - 20).'
@@ -130,10 +216,31 @@ examples:
   - 'Therefore the steam cannot fully condense: final state is boiling water at 100C with steam mass reduced.'
   answer: Final temperature 100C — the latent heat dominates; leftover steam condenses only while water
     is at 100C.
+  discussion: 'The hypothetical 155C overshoot is the lesson: latent heat (2260 kJ/kg) dwarfs sensible
+    heat (4.2 kJ per kg per kelvin), so a little steam pins the temperature at boiling and the rest simply
+    condenses at 100C. The same asymmetry explains why a steam burn is far worse than an equal-mass boiling-water
+    burn. Generalise the habit: whenever a phase change sits inside a mixing problem, compute the naive
+    end state first — if it crosses a phase boundary, the boundary value is the answer and the leftover
+    mass does the adjusting.'
   distractors:
     A: Assuming full condensation would overshoot to about 155C.
     B: Forgetting the latent heat term — gives only ~35C.
     C: Mixing masses linearly.
+  practice:
+    q: 0.10 kg of ice at 0C is dropped into 0.50 kg of water at 40C in an insulated cup. What is the final
+      state?
+    options:
+      D: About 20C, with all the ice melted
+      A: 0C, with ice left over
+      B: 40C — the ice has no effect
+      C: About 33C, from averaging the two temperatures
+    answer: D
+    explain: Melting needs 0.10 x 334 = 33.4 kJ while cooling to 0C releases 0.50 x 4.186 x 40 = 83.7
+      kJ, so all the ice melts; the balance gives 0.4186T + 33.4 = 2.093(40 - T), so T = 20C.
+    distractors:
+      A: The warm water holds far more than the 33.4 kJ the melting requires.
+      B: Melting absorbs latent heat whether or not the final state is checked.
+      C: Averaging by mass ignores the latent heat absorbed on melting.
 key_points:
 - Q = mc delta-T; Q = mL at phase changes.
 - Average KE = (3/2)kT — temperature alone.

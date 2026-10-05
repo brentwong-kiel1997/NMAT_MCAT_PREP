@@ -7,6 +7,10 @@ overview: Genetics is where biology starts predicting instead of only describing
   and Cellular Processes (mitosis, nucleus) and Unity and Diversity (variation as raw material for evolution).
 sections:
 - heading: Meiosis — the engine of variation
+  objectives:
+  - Contrast meiosis with mitosis in outcome and in chromosome number.
+  - Locate crossing over and independent assortment within the stages.
+  - Predict gamete chromosome number from a given 2n.
   body:
   - Where mitosis makes two identical copies for growth and repair, ==meiosis makes four genetically different
     gametes==, each with half the chromosome number. One diploid cell (2n) passes through DNA replication,
@@ -31,6 +35,19 @@ sections:
       B: Meiosis halves; it never doubles.
       C: That describes mitosis products.
       D: Haploid sets draw from BOTH homologs after recombination, not one.
+  - q: A species has 2n = 16. How many chromosome combinations can independent assortment alone generate
+      in a gamete?
+    options:
+      B: '256'
+      A: '16'
+      C: 32,768
+      D: '8'
+    answer: B
+    explain: 'The formula is 2^n with n the haploid number: 2^8 = 256.'
+    distractors:
+      A: That is the diploid number, not 2 raised to it.
+      C: Using the diploid number as the exponent (2^15).
+      D: Quoting the haploid number instead of 2 raised to it.
   figures:
   - src: genetics/meiosis-stages.webp
     caption: Meiosis end to end (2n = 4) — one replication, two divisions, four haploid gametes.
@@ -44,6 +61,10 @@ sections:
       I.
     credit: Fig 11.8 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Mendel's laws and the Punnett toolkit
+  objectives:
+  - Translate each of Mendel's laws into the meiotic event that produces it.
+  - Predict phenotype ratios for monohybrid, dihybrid, and test crosses.
+  - Set up a branch diagram rather than a full grid under time pressure.
   body:
   - Mendel's two laws are bookkeeping for what meiosis does physically. The **law of segregation** — two
     alleles separate into different gametes — IS the behavior of homologs at meiosis I. The **law of independent
@@ -67,7 +88,24 @@ sections:
       A: That is the double-recessive class aabb.
       B: 1/4 is P(bb) alone; you dropped the A trait.
       C: That is the double-dominant class.
+  - q: A heterozygote (Aa) is crossed with a homozygous recessive (aa). What fraction of offspring are
+      carriers?
+    options:
+      C: 1/2
+      A: 1/4
+      B: All of them
+      D: 3/4
+    answer: C
+    explain: The heterozygote makes A and a gametes in equal numbers, so half the offspring are Aa.
+    distractors:
+      A: That is the carrier share from Aa x Aa.
+      B: Only Aa x AA makes every offspring a carrier.
+      D: That is the dominant phenotype fraction from Aa x Aa.
 - heading: Beyond simple dominance
+  objectives:
+  - Distinguish incomplete dominance from codominance by what the heterozygote shows.
+  - Solve an ABO cross with three alleles and four phenotypes.
+  - Recognise an epistatic ratio when one gene masks another.
   body:
   - Complete dominance is the exception, not the rule, and the MCAT tests the exceptions. **Incomplete
     dominance** blends (red × white → pink; genotype shows through phenotype). **Codominance** expresses
@@ -91,7 +129,23 @@ sections:
       A: There is no mechanism that erases the heterozygote class.
       B: Only RW × RR-or-ww style crosses fix one phenotype.
       D: That is complete-dominance thinking (Aa × Aa).
+  - q: IAi (type A) is crossed with IBi (type B). The offspring's blood types are…
+    options:
+      D: A, B, AB, and O in equal proportions
+      A: Only type AB
+      B: Only types A and B in a 1:1 ratio
+      C: A, B, and AB, with no type O
+    answer: D
+    explain: Each parent contributes IA/IB/i at random, so all four phenotype classes appear at 1/4 each.
+    distractors:
+      A: Type AB needs an A allele and a B allele from the same child — 1/4, not all.
+      B: The i allele from either parent can pair with the other's i to give type O.
+      C: The ii combination is exactly 1/4 of the offspring and gives type O.
 - heading: Linkage, recombination, and gene maps
+  objectives:
+  - Explain why linked genes violate independent assortment.
+  - Convert a recombination frequency into a map distance.
+  - Recognise a linked testcross from its parental-heavy ratio.
   body:
   - Genes on the SAME chromosome do not assort independently — they travel together unless crossing over
     separates them. Two loci close together recombine rarely; distant loci recombine often. This gradient
@@ -115,7 +169,25 @@ sections:
       A: That is the UNLINKED testcross signature.
       B: 9:3:3:1 belongs to a dihybrid self-cross, not a testcross.
       D: Only complete linkage (0 map units) forbids recombinants.
+  - q: Two genes are 8 cM apart. In a testcross producing 200 offspring, the total number of recombinants
+      is expected to be…
+    options:
+      C: 16, split across both recombinant classes
+      A: 8, from one recombinant class
+      B: 92, which is one parental class
+      D: 184, which is the parental total
+    answer: C
+    explain: '8 cM means 8% recombinants overall: 0.08 x 200 = 16, divided between the two recombinant
+      classes.'
+    distractors:
+      A: The distance counts BOTH recombinant classes together.
+      B: That is a parental class size, not a recombinant count.
+      D: That is the parental fraction — the inverse of what the distance measures.
 - heading: From genotype to molecule — DNA and mutation
+  objectives:
+  - Describe base pairing and its consequence for strand complementarity.
+  - Classify a mutation as silent, missense, nonsense, or frameshift.
+  - Distinguish a sequence-level change from a chromosome-level change.
   body:
   - Watson-Crick pairing is the machine behind every ratio above — ==A bonds T (2 hydrogen bonds), G bonds
     C (3)==, antiparallel strands, sugar-phosphate backbone outside. The complementarity is what makes
@@ -140,19 +212,54 @@ sections:
       B: Silent changes leave the amino acid unchanged; frameshifts rarely do.
       C: No mechanism improves folding as a rule.
       D: Trisomy is a whole-chromosome nondisjunction outcome, not a one-pair deletion.
+  - q: A point mutation replaces one codon with another that specifies the same amino acid. This is…
+    options:
+      B: A silent mutation, buffered by the code's degeneracy
+      A: A missense mutation
+      C: A nonsense mutation
+      D: A frameshift mutation
+    answer: B
+    explain: Synonymous codons leave the protein untouched — that is precisely what degeneracy buys.
+    distractors:
+      A: Missense changes the amino acid inserted.
+      C: Nonsense creates a stop codon.
+      D: Frameshifts require an insertion or deletion, not a substitution.
 examples:
 - prompt: In a testcross of AaBb × aabb, the offspring are 420 Ab, 400 aB, 90 AB, and 90 ab. What is happening,
     and what is the distance between the genes?
+  strategy: 'Read the class sizes before touching any formula: the two largest classes are the parentals
+    and the two smallest are the recombinants. The plan is to identify the parentals, sum the recombinants,
+    and divide by the total — that percentage is the map distance, with no further conversion.'
   solution:
   - Step 1 — find the parental classes (the big numbers) — Ab and aB; the parent was therefore Ab/aB in
     repulsion configuration.
   - Step 2 — recombinants are the small classes — AB and ab, totaling 180 of 1000 offspring.
   - Step 3 — recombination frequency = 180/1000 = 18%, so the genes are 18 map units apart.
   answer: The genes are linked about 18 cM apart; the excess parental classes prove linkage.
+  discussion: '18 cM is close enough to prove linkage yet far enough that recombination is plainly happening
+    — under about 1 cM the recombinants would nearly vanish, while at 50 cM the result would be indistinguishable
+    from independent assortment. Two slips account for most lost marks: forgetting to add BOTH recombinant
+    classes, and reading the parental excess as support for free assortment rather than against it. Note
+    what the parental classes reveal about the F1''s arrangement — Ab/aB, in repulsion rather than coupling.'
   distractors:
     A: Calling 1:1:1:1 — ignores the glaring parental excess.
     B: Taking 90/1000 as the distance — forgot to add BOTH recombinant classes.
     C: Concluding independent assortment — the data scream against it.
+  practice:
+    q: A testcross of AaBb x aabb yields 380 AB, 370 ab, 120 Ab, and 130 aB out of 1000 offspring. What
+      is the map distance, and which classes are parental?
+    options:
+      B: 25 cM, with AB and ab parental
+      A: 12.5 cM, using one recombinant class
+      C: 75 cM, from the parental fraction
+      D: The genes are unlinked, since four classes appear
+    answer: B
+    explain: 'Recombinants are the two small classes: (120 + 130)/1000 = 25%, so 25 cM; AB and ab are
+      the parental (coupling) classes.'
+    distractors:
+      A: Counting only one of the two recombinant classes.
+      C: Reading the parental share as the distance.
+      D: Four classes always appear; their SIZES, not their existence, show linkage.
 key_points:
 - Meiosis — one replication, two divisions, four recombined haploid gametes.
 - Segregation and independent assortment are meiosis I in genetic language.
@@ -195,8 +302,8 @@ passage:
       C: Homozygous affected
       D: An obligate carrier
     answer: D
-    explain: An unaffected woman with an affected son and an affected brother must carry one
-      recessive X — she is an obligate carrier.
+    explain: An unaffected woman with an affected son and an affected brother must carry one recessive
+      X — she is an obligate carrier.
     distractors:
       A: Dominance would affect daughters and sons equally without skipping.
       B: Her sons' affected status derives from her X.

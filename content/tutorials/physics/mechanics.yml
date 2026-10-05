@@ -6,6 +6,10 @@ overview: Motion, forces, energy, and momentum — the backbone of the physics s
   diagnostic imaging angles).
 sections:
 - heading: Kinematics — describing motion
+  objectives:
+  - Choose the constant-acceleration equation that matches the knowns.
+  - Predict the velocity and acceleration of a projectile at its peak.
+  - Compute a displacement from initial velocity, acceleration, and time.
   body:
   - Kinematics ignores causes. ==Constant acceleration ties displacement, velocity, and time through x
     = v0t + (1/2)at2, v = v0 + at, and v2 = v02 + 2ax==. Choose the equation that matches your knowns;
@@ -26,7 +30,23 @@ sections:
       A: Gravity is constant.
       B: Velocity at peak is zero.
       C: Same error.
+  - q: A car accelerates from rest at 3.0 m/s2 for 5.0 s. How far does it travel?
+    options:
+      C: 37.5 m
+      A: 75 m
+      B: 15 m
+      D: 7.5 m
+    answer: C
+    explain: x = v0t + (1/2)at2 = 0 + (1/2)(3.0)(25) = 37.5 m.
+    distractors:
+      A: Dropping the factor of 1/2 from x = v0t + (1/2)at2.
+      B: Reporting the final speed (v = at = 15 m/s) as the distance.
+      D: Slipping a factor of five in the time.
 - heading: Newton's laws and forces
+  objectives:
+  - Draw a free-body diagram and resolve forces along chosen axes.
+  - Identify the action-reaction partner of a given force.
+  - Decompose a weight on an incline into slope and normal components.
   body:
   - ==F = ma sums ALL forces; equilibrium means a = 0, not v = 0==. Every force has a paired equal-and-opposite
     reaction on a DIFFERENT body. Weight is mg; normal force is perpendicular to the surface; friction
@@ -47,6 +67,19 @@ sections:
       B: Net force is zero.
       C: Normal has a different direction.
       D: mg is not the slope component.
+  - q: A 20 kg crate is dragged across a level floor by a 60 N horizontal pull against 20 N of friction.
+      Its acceleration is…
+    options:
+      B: 2.0 m/s2
+      A: 3.0 m/s2
+      C: 4.0 m/s2
+      D: 0.33 m/s2
+    answer: B
+    explain: F_net = 60 - 20 = 40 N, so a = 40/20 = 2.0 m/s2.
+    distractors:
+      A: Dividing the applied force by the mass and ignoring friction.
+      C: Adding the friction to the pull instead of subtracting it.
+      D: Dividing the net force by the weight rather than by the mass.
   figures:
   - src: mechanics/fig-61192c4a.webp
     caption: The same force acting on a basketball and a car — smaller mass accelerates faster (F = ma).
@@ -55,6 +88,10 @@ sections:
     caption: Forces on a train — thrust, friction, normal, and weight — with the resulting free-body diagram.
     credit: Ch 4 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
 - heading: Work, energy, and power
+  objectives:
+  - Compute the work done by a force at any angle to the displacement.
+  - Apply conservation of mechanical energy to ramps and springs.
+  - Calculate power as the rate of energy transfer.
   body:
   - '==Work = F d cos(theta) where theta is the angle between force and displacement== — perpendicular
     forces (normal force on a level walk, centripetal) do zero work. Energy is conserved in its total:
@@ -75,7 +112,23 @@ sections:
       A: Friction opposes motion.
       B: Parallel force.
       D: Gravity acts along the ramp component.
+  - q: A 60 kg runner climbs a 4.0 m staircase in 8.0 s. Her average power output is about…
+    options:
+      B: 294 W
+      A: 2352 W
+      C: 30 W
+      D: 589 W
+    answer: B
+    explain: W = mgh = 60 x 9.8 x 4.0 = 2352 J, so P = W/t = 2352/8.0 = 294 W.
+    distractors:
+      A: Reporting the energy in joules as though it were power in watts.
+      C: Omitting g and computing m h / t.
+      D: Using 4.0 s instead of 8.0 s for the climb.
 - heading: Momentum and collisions
+  objectives:
+  - Apply momentum conservation to a collision or an explosion.
+  - Relate impulse to the force delivered over a contact time.
+  - Classify a collision from its kinetic energy bookkeeping.
   body:
   - ==Momentum p = mv is conserved in any collision with no external impulse==. Impulse = F avg * delta-t
     = change in momentum — same change delivered over longer time is gentler (airbags, catching balls).
@@ -95,7 +148,24 @@ sections:
       B: Momentum always conserved in collisions.
       C: KE is NOT conserved.
       D: Only elastic head-on.
+  - q: A 0.15 kg ball travelling at 40 m/s is caught and brought to rest in 0.010 s. The average force
+      on the hand is…
+    options:
+      A: 600 N
+      B: 6 N
+      C: 0.0015 N
+      D: 6000 N
+    answer: A
+    explain: Impulse = F delta-t = delta-p = (0.15)(40) = 6.0 kg·m/s, so F = 6.0/0.010 = 600 N.
+    distractors:
+      B: Dividing the momentum change by one second instead of by 0.010 s.
+      C: Multiplying momentum by time instead of dividing.
+      D: Slipping a factor of ten in the contact time.
 - heading: Rotational mechanics
+  objectives:
+  - Calculate the torque a force exerts about a chosen pivot.
+  - Explain how a skater's spin rate responds to a falling moment of inertia.
+  - Solve a static equilibrium problem using both the force and torque sums.
   body:
   - Rotational analogues — torque tau = r F sin(theta) replaces force; moment of inertia I replaces mass
     (distribution matters!); angular momentum L = I omega. ==Angular momentum is conserved when net external
@@ -116,19 +186,54 @@ sections:
       B: No braking torque.
       C: Conserved under zero net torque.
       D: Wrong direction.
+  - q: A 12 N force acts 0.25 m from a pivot, at 60 degrees to the lever arm. The torque is…
+    options:
+      C: 2.6 N·m
+      A: 3.0 N·m
+      B: 1.5 N·m
+      D: 6.0 N·m
+    answer: C
+    explain: tau = r F sin(theta) = 0.25 x 12 x sin(60) = 3.0 x 0.866 = 2.6 N·m.
+    distractors:
+      A: Ignoring the angle and using sin(90) = 1.
+      B: Using cos(60) instead of sin(60) — the sine carries the perpendicular component.
+      D: Dividing by sin(60) rather than multiplying by it.
 examples:
 - prompt: A 2.0 kg block slides off a 1.0 m high table with initial speed 3.0 m/s horizontally. Find its
     speed just before hitting the floor.
+  strategy: 'With no friction the mechanical energy is conserved, so one equation does it: (1/2)mv0^2
+    + mgh = (1/2)mv^2. Note before substituting that the mass will cancel and that the horizontal and
+    vertical contributions to the speed combine in quadrature, not linearly — that square root is where
+    every wrong magnitude on this item comes from.'
   solution:
   - 'Energy: total energy = KE + PE-vertical.'
   - 'Initial: (1/2)(2)(3.0)2 + (2)(9.8)(1.0) = 9 + 19.6 = 28.6 J.'
   - 'Just before impact: (1/2)(2)v2 = 28.6 — horizontal KE unaffected by drop.'
   - v2 = 28.6, v = 5.35 m/s.
   answer: About 5.3 m/s — the drop adds speed to the existing horizontal motion.
+  discussion: '5.35 m/s sits above sqrt(2gh) = 4.4 m/s, which is the reminder that the initial horizontal
+    speed still counts. Check by limits: zero table height must return 3.0 m/s and zero launch speed must
+    return 4.4 m/s. The mass cancels, so a 20 kg block lands just as fast — and note that the flight TIME
+    is a separate question answered by the vertical motion alone, which is why the two halves of this
+    problem should never be mixed.'
   distractors:
     A: 3.0 m/s — ignoring gravitational gain.
     B: 4.6 m/s — using sqrt(2gh) alone and adding wrong.
     C: 9.9 m/s — adding energies linearly instead of under the root.
+  practice:
+    q: A 1.5 kg ball rolls off a 3.0 m high bench already moving at 4.0 m/s horizontally. Its speed just
+      before landing is about…
+    options:
+      B: 8.7 m/s
+      A: 7.7 m/s
+      C: 11.7 m/s
+      D: 4.0 m/s
+    answer: B
+    explain: v = sqrt(v0^2 + 2gh) = sqrt(16 + 58.8) = 8.6 m/s; the mass never enters.
+    distractors:
+      A: Using sqrt(2gh) alone and dropping the initial horizontal speed.
+      C: Adding the horizontal and vertical speeds instead of combining them in quadrature.
+      D: Quoting the launch speed and ignoring the fall.
 key_points:
 - 'Kinematics: pick v0, v, a, x, t equation to match knowns.'
 - 'At projectile peak: v=0, a=g.'

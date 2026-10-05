@@ -7,6 +7,10 @@ overview: 3B tours the organ systems as integrated machines — exchange surface
   experiments. Prerequisites — Life Processes (homeostasis), 3A (neural-hormonal control).
 sections:
 - heading: Circulation and respiration — the transport pair
+  objectives:
+  - Trace blood through the two pumps in series and the vessel types.
+  - Sequence the cardiac conduction system and read it on an ECG.
+  - Predict how CO2, H+, temperature, and 2,3-BPG shift the Hb curve.
   body:
   - The heart is two pumps in series — right side to the lungs (pulmonary circuit), left side to the body
     (systemic). The cardiac cycle squeezes in **systole** and refills in **diastole**; the ==SA node paces==
@@ -31,7 +35,24 @@ sections:
       A: Affinity DROPS — that is the point.
       B: Not a flow effect.
       C: Not a cardiac effect.
+  - q: A patient hyperventilates and her arterial CO2 falls. What happens to oxygen unloading at her tissues?
+    options:
+      C: It is impaired, because the curve shifts left
+      A: It improves, because the curve shifts right
+      B: It is unchanged, since only temperature matters
+      D: Haemoglobin saturation in the lungs falls
+    answer: C
+    explain: Removing CO2 removes H+, which raises haemoglobin's affinity — the curve moves left and unloading
+      suffers.
+    distractors:
+      A: That is what rising CO2 does, not falling CO2.
+      B: CO2 and H+ are the classic shapers of the curve.
+      D: Lung loading actually improves; the problem is at the tissue end.
 - heading: Digestion — a selective disassembly line
+  objectives:
+  - Match each digestive enzyme to its substrate and its station.
+  - Explain bile's role and where it is made versus stored.
+  - Assign each gut hormone to the secretion it triggers.
   body:
   - The gut is a tube open at both ends, technically OUTSIDE the body — so digestion is disassembly in
     a channel, and ==absorption is the border crossing==. Enzymes by station — salivary amylase (starch,
@@ -56,7 +77,24 @@ sections:
       A: Pancreatic bicarbonate.
       B: Proteases do that.
       C: Enterocytes absorb.
+  - q: A patient loses pancreatic exocrine function. What fails?
+    options:
+      C: Digestion of all three macronutrients, along with acid neutralisation
+      A: Only fat digestion, since bile is pancreatic
+      B: Only protein digestion, since pepsin is pancreatic
+      D: Only water reabsorption, a colonic function
+    answer: C
+    explain: The pancreas supplies the enzymes for fat, protein, and starch, plus the bicarbonate that
+      raises pH so they work.
+    distractors:
+      A: Bile is hepatic; the gallbladder merely stores it.
+      B: Pepsin is gastric; the pancreas contributes proteases but not pepsin.
+      D: Water reclamation belongs to the large intestine, not the pancreas.
 - heading: Excretion — the kidney as precision filter
+  objectives:
+  - Order filtration, reabsorption, and secretion along the nephron.
+  - Predict what appears in urine when a transport maximum is exceeded.
+  - Distinguish ADH's effect on water from aldosterone's on Na+ and K+.
   body:
   - The nephron does three jobs in order — ==filtration== (glomerulus — pressure drives plasma into Bowman's
     capsule, cells and protein stay behind), **reabsorption** (tubules reclaim glucose, salts, water —
@@ -80,7 +118,24 @@ sections:
       B: Aldosterone handles Na⁺/K⁺.
       C: ADH governs water only.
       D: Filtration failure reduces urine, not glycosuria.
+  - q: Protein is detected in a patient's urine. The most direct interpretation is…
+    options:
+      A: Damage to the glomerular filter, which normally excludes proteins
+      B: Excess ADH acting on the collecting duct
+      C: Saturation of a glucose transporter
+      D: Increased tubular secretion of protein
+    answer: A
+    explain: Proteins are too large to be filtered in the first place, so their presence means the filter
+      itself is leaking.
+    distractors:
+      B: ADH handles water permeability, not protein size exclusion.
+      C: Transport maximum explains glycosuria, not proteinuria.
+      D: The tubules do not secrete plasma proteins.
 - heading: Defense — innate first, adaptive after
+  objectives:
+  - Sort immune components into the innate and adaptive branches.
+  - Compare the humoral and cell-mediated adaptive responses.
+  - Explain why memory makes the secondary response faster and stronger.
   body:
   - The **innate** system answers instantly and generically — barriers (skin, acid, mucus), phagocytes
     (neutrophils, macrophages), natural killer cells, complement, and inflammation (the vascular response
@@ -104,6 +159,18 @@ sections:
       A: Innate, always available.
       B: Innate effector.
       D: The first innate barrier.
+  - q: A patient has no B cells but normal T cells. Which defence is lost?
+    options:
+      D: Antibody-mediated (humoral) immunity, including its memory
+      A: Cytotoxic T-cell killing of infected cells
+      B: Phagocytosis by neutrophils
+      C: The skin barrier
+    answer: D
+    explain: B cells are the antibody factory, so humoral immunity and its memory clones are what vanish.
+    distractors:
+      A: Cytotoxic killing is CD8 T-cell work, which is intact.
+      B: Neutrophils are innate and unrelated to B cells.
+      C: Barriers are anatomical, not lymphocyte-dependent.
   figures:
   - src: 3b-main-organ-systems/wbc-lineup.webp
     caption: The innate immune cast — each leukocyte type with its job and location.
@@ -112,6 +179,10 @@ sections:
     caption: The inflammatory response — mast-cell histamine, vasodilation, and phagocyte arrival.
     credit: Fig 42.5 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Integration — one demand, every system at once
+  objectives:
+  - Trace the physiological responses to exercise across systems.
+  - Predict blood flow redistribution from sympathetic vasomotor tone.
+  - Tabulate cross-system responses before answering an integration item.
   body:
   - Exercise is the canonical integration exam — muscle demand raises CO₂ and H⁺ (chemoreceptors), sympathetic
     output climbs (heart rate and stroke volume), breathing deepens (more CO₂ cleared), skin vessels dilate
@@ -134,9 +205,25 @@ sections:
       B: Gut flow FALLS.
       C: Not an acute redistribution target.
       D: Renal flow drops moderately.
+  - q: During moderate exercise, ventilation rises mainly because…
+    options:
+      D: Rising CO2 and H+ stimulate chemoreceptors
+      A: Falling oxygen is the primary driver at this intensity
+      B: The heart directly commands the respiratory centre
+      C: The kidney releases erythropoietin acutely
+    answer: D
+    explain: Chemoreceptor drive tracks the metabolic by-product, which is exactly what exercise produces.
+    distractors:
+      A: Arterial oxygen barely moves at moderate intensity; CO2 is the signal.
+      B: The two are coordinated centrally but not by a direct command line.
+      C: Erythropoietin acts on red-cell production over days, not breaths.
 examples:
 - prompt: Predict the shifts, and their causes, when a person moves from sea level to high altitude for
     two weeks.
+  strategy: 'Separate the timescales before predicting anything: minutes bring hyperventilation via peripheral
+    chemoreceptors, days bring erythropoietin and rising red-cell mass, and weeks bring 2,3-BPG and a
+    right-shifted curve. Assign each compensation to its own clock — mixing the clocks is how this question
+    is usually lost.'
   solution:
   - Step 1 — immediate — low inspired PO₂ → lower arterial O₂ content → hyperventilation via peripheral
     chemoreceptors (CO₂ drops, pH rises slightly).
@@ -144,10 +231,28 @@ examples:
   - Step 3 — tissues — 2,3-BPG rises → curve shifts right → unloading eased at tissues.
   answer: Hyperventilation acutely, erythropoiesis and a right-shifted curve chronically — three systems
     converging on one gas.
+  discussion: 'Three systems converge on one variable — arterial oxygen content — and each buys a different
+    amount: ventilation is instant but limited, red-cell mass is slow but decisive, and the 2,3-BPG shift
+    makes the extra haemoglobin actually unload its oxygen. Note what does NOT adapt well — maximal exercise
+    capacity stays reduced, because the ceiling is set by delivery rather than by compensation. The same
+    right-shift logic explains why a fever makes patients feel breathless: hot blood releases oxygen sooner.'
   distractors:
     A: Claiming the curve shifts left — unloading would worsen.
     B: Expecting instant red-cell change — erythropoiesis takes days-to-weeks.
     C: Blaming the medulla's pH sensor alone — it responds to CO₂/pH, not O₂.
+  practice:
+    q: A patient with chronic lung disease retains CO2 for weeks. What renal compensation develops?
+    options:
+      A: The kidney retains bicarbonate to buffer the chronic acid load
+      B: The kidney excretes bicarbonate, further acidifying the blood
+      C: The kidney stops producing erythropoietin
+      D: The kidney increases free-water excretion only
+    answer: A
+    explain: Retained CO2 is an acid load, and the kidney's answer is to generate and retain bicarbonate.
+    distractors:
+      B: That is the response to alkalosis, not to acidosis.
+      C: Erythropoietin responds to oxygen, not to CO2, and chronic hypoxia often raises it.
+      D: Water handling is ADH's business; this compensation is about acid-base.
 key_points:
 - Two pumps in series; SA node paces; capillaries are the exchange surface; pressure falls artery → capillary
   → vein.

@@ -7,6 +7,10 @@ overview: Ecology scales biology from the organism outward — population, commu
   Prerequisites — Unity and Diversity (niches, adaptation), Life Processes (regulation).
 sections:
 - heading: Populations — growth models that explain the curves
+  objectives:
+  - Distinguish exponential from logistic growth by their graphical landmarks.
+  - Predict where growth peaks on a logistic curve.
+  - Match a life-history strategy to its survivorship pattern.
   body:
   - A population grows exponentially whenever per-capita growth stays positive — the ==J-curve==. Real
     environments impose limits — food, space, waste — producing the ==logistic S-curve== that decelerates
@@ -30,7 +34,24 @@ sections:
       B: At K, growth is zero.
       C: Decline requires negative net growth.
       D: No — it is thriving.
+  - q: A fishery is managed for maximum sustainable yield. At what population density should it be held?
+    options:
+      D: About half the carrying capacity, where growth is fastest
+      A: At the carrying capacity, where the population is largest
+      B: As low as possible, to maximise per-capita growth
+      C: Above the carrying capacity, so the surplus can be harvested
+    answer: D
+    explain: Growth peaks at the logistic inflection, K/2 — the largest sustainable harvest comes from
+      there.
+    distractors:
+      A: At K net growth is zero, so any harvest shrinks the population.
+      B: Very small populations grow slowly and risk collapse.
+      C: Above K the population is already declining.
 - heading: Interactions — who does what to whom
+  objectives:
+  - Classify an interaction from its effect on each participant.
+  - Explain the competitive exclusion principle and its possible outcomes.
+  - Identify a keystone species by its disproportionate structural role.
   body:
   - Community interactions reduce to a payoff matrix. **Competition** (−/−) — two species share a limiting
     resource; the ==competitive exclusion principle== says full overlap is unstable — one wins, or **natural
@@ -54,7 +75,24 @@ sections:
       A: No benefit flows both ways.
       B: Nobody is eaten.
       C: Exclusion is the OUTCOME when partitioning fails.
+  - q: Barnacles and mussels crowd the same rock face; when researchers remove the barnacles, mussels
+      expand. The interaction is…
+    options:
+      C: Competition — each species depresses the other's numbers
+      A: Mutualism, since both benefit from the removal
+      B: Commensalism, since only mussels gained
+      D: Predation, since one consumes the other
+    answer: C
+    explain: A shared limiting resource with reciprocal harm is the definition of competition.
+    distractors:
+      A: The interaction being studied is between the two species, and it harms both.
+      B: Commensalism requires a +/0 pairing, not a −/− one.
+      D: Neither species eats the other; they crowd it.
 - heading: Communities — succession and structure
+  objectives:
+  - Distinguish primary from secondary succession by starting conditions.
+  - Order the stages of a successional sequence.
+  - Describe richness and evenness as the two axes of diversity.
   body:
   - After a disturbance, structure reassembles. **Primary succession** starts on bare rock (pioneer lichens
     → soil → grasses → shrubs → forest); **secondary succession** starts where soil survives (after fire
@@ -76,7 +114,23 @@ sections:
       A: Climax arrives last.
       B: Trees need the soil the pioneers build.
       C: Grazers need forage first.
+  - q: After a forest fire, grasses and shrubs regrow from surviving soil and seed banks. This is…
+    options:
+      C: Secondary succession — soil and propagules survived
+      A: Primary succession, which begins on bare rock
+      B: No succession, since the forest was destroyed
+      D: Immediate arrival at a climax community
+    answer: C
+    explain: The soil head start is exactly what defines secondary succession and makes it fast.
+    distractors:
+      A: Primary succession has to build soil from nothing.
+      B: Disturbance is what starts succession, not what prevents it.
+      D: A climax community takes many stages to assemble.
 - heading: Ecosystems — energy flows, one-way
+  objectives:
+  - Explain why energy flows one way while matter cycles.
+  - Apply the 10% rule to estimate the producer mass behind a consumer.
+  - Predict which pyramids can invert and why others cannot.
   body:
   - The master sentence of ecology — ==energy flows; matter cycles==. Producers fix sunlight (or chemicals);
     each transfer up the trophic ladder loses roughly 90% to heat and respiration, so ==about 10% makes
@@ -99,6 +153,18 @@ sections:
       A: That assumes ONE 10% transfer.
       B: Two transfers.
       D: Four transfers, one too many.
+  - q: 2,000 kg of producers support how much tertiary-consumer biomass across three transfers?
+    options:
+      D: 2 kg
+      A: 20 kg
+      B: 200 kg
+      C: 20,000 kg
+    answer: D
+    explain: 'Three 10% transfers: 2000 to 200 to 20 to 2 kg.'
+    distractors:
+      A: That is two transfers, not three.
+      B: That is one transfer, not three.
+      C: That reverses the direction of the flow.
   figures:
   - src: organisms-and-their-environment/food-chain.webp
     caption: Trophic levels in a Lake Ontario food chain — from green algae to Chinook salmon.
@@ -108,6 +174,10 @@ sections:
       consumers.
     credit: Fig 46.5 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Biogeochemical cycles — carbon and nitrogen
+  objectives:
+  - Trace carbon through the fast biological loop and the slow geological one.
+  - Identify which organisms carry out each step of the nitrogen cycle.
+  - Predict how fossil-fuel combustion alters the carbon cycle.
   body:
   - The ==Carbon== moves fast through the living loop (photosynthesis    fixes CO₂; respiration and decomposition
     return it) and slowly through the rock pool; the modern imbalance — fossil-carbon burned into the
@@ -132,10 +202,25 @@ sections:
       A: Animals neither fix nor absorb N₂ directly.
       B: Plants absorb but cannot split N₂.
       C: Fungi decompose, they do not fix N₂.
+  - q: A farmer rotates a legume crop into a field. What does the legume add, and how?
+    options:
+      B: Usable nitrogen, fixed by bacteria in its root nodules
+      A: Nitrate absorbed directly from the atmosphere by the plant
+      C: Denitrified nitrogen returned to the air
+      D: Phosphorus supplied by mycorrhizal fungi
+    answer: B
+    explain: Symbiotic nitrogen fixers convert N2 into ammonium the soil can use.
+    distractors:
+      A: Plants cannot split N2; they need it already fixed.
+      C: Denitrification removes nitrogen from the soil — the opposite of the goal.
+      D: Mycorrhizae trade phosphorus, not nitrogen.
 examples:
 - prompt: A wildlife reserve's wolf population is removed. Over a decade, elk numbers triple, young willows
     and aspens vanish, beavers decline, and songbird diversity drops. Name the mechanism and predict the
     outcome of wolf reintroduction.
+  strategy: 'Read the chain in trophic order before naming the mechanism: predator lost, herbivore released,
+    producers suppressed, then the species depending on that vegetation decline. Trace each effect one
+    level at a time so the cascade is explicit rather than asserted.'
   solution:
   - Step 1 — wolves are a predator limiting elk — removal is a top-down cascade (trophic cascade).
   - Step 2 — elk over-browse riparian vegetation — producers are suppressed, habitat engineers (beavers)
@@ -146,10 +231,30 @@ examples:
     and birds return (the Yellowstone pattern).
   answer: Keystone-predator removal triggered a trophic cascade; reintroduction rebuilds it bottom-up
     from the plants.
+  discussion: 'The diagnostic feature is direction — removing a top predator pushes effects DOWNWARD through
+    the levels, which distinguishes a trophic cascade from bottom-up failure, where a producer loss pushes
+    upward. Note also that the mechanism is partly behavioural: elk browse less daringly where wolves
+    hunt, so reintroduction helps even before numbers fall. This is the Yellowstone pattern, and it is
+    the cleanest demonstration of a keystone predator holding structure disproportionate to its abundance.'
   distractors:
     A: Blaming climate alone — the timing and trophic specificity point at predator loss.
     B: Calling elk invasive — they are native; the predator, not the prey, was removed.
     C: Mutualism collapse — the interactions lost were predation and habitat engineering.
+  practice:
+    q: Sea otters decline along a kelp coast; sea urchin numbers explode and the kelp forest is grazed
+      to bare rock. What is the mechanism?
+    options:
+      A: A trophic cascade — losing the urchin predator released the grazer and collapsed the kelp
+      B: Bottom-up failure, since the kelp vanished first
+      C: Mutualism between urchins and kelp
+      D: Competitive exclusion of urchins by kelp
+    answer: A
+    explain: A top predator's loss releases its prey, which then strips the producer — effects running
+      downward.
+    distractors:
+      B: The kelp did not vanish first; it collapsed after the urchins rose.
+      C: The urchin eats the kelp — that is predation, not mutual benefit.
+      D: Kelp cannot exclude an animal that eats it.
 key_points:
 - Exponential J-curve versus logistic S-curve; growth peaks at K/2, stops at K.
 - r-strategist versus K-strategist; survivorship Types I/II/III.

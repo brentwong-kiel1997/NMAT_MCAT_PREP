@@ -5,6 +5,10 @@ overview: SHM, wave properties, sound, light, lenses and mirrors. Optics pairs w
   interaction; sound and hearing link to physiology. Expect graph-reading (waves) and lens-ray questions.
 sections:
 - heading: Simple harmonic motion
+  objectives:
+  - Calculate the period of a mass-spring or a pendulum oscillator.
+  - Describe where velocity and acceleration peak within a cycle of SHM.
+  - Explain why amplitude and mass do not affect a pendulum's period.
   body:
   - '==SHM: restoring force proportional to displacement — F = -kx==. The period T = 2 pi sqrt(m/k) for
     a mass-spring; T = 2 pi sqrt(L/g) for a pendulum (mass-independent!). Frequency f = 1/T; amplitude
@@ -25,7 +29,23 @@ sections:
       A: Mass cancels.
       B: Amplitude does not enter.
       C: T ~ 1/sqrt(g) — would halve.
+  - q: A mass on a spring has period T. What mass would make the period T/2?
+    options:
+      A: One-quarter of the original mass
+      B: Half the original mass
+      C: Twice the original mass
+      D: No change of mass can do it
+    answer: A
+    explain: T ~ sqrt(m), so halving T requires quartering m.
+    distractors:
+      B: Scaling the mass linearly with the period instead of with its square.
+      C: Reversing the direction — a larger mass gives a LONGER period.
+      D: That is true of a pendulum, not of a mass on a spring.
 - heading: Wave properties
+  objectives:
+  - Relate wave speed, frequency, and wavelength with v = f lambda.
+  - Distinguish transverse from longitudinal waves with examples of each.
+  - Predict the result of superposing two waves at a point.
   body:
   - Waves carry energy, not matter. ==v = f lambda== — speed is a medium property; changing frequency
     changes wavelength, not speed. Transverse (light, rope) versus longitudinal (sound, compression).
@@ -45,7 +65,23 @@ sections:
       A: Not so.
       B: Inverse relation.
       D: Medium sets speed.
+  - q: A wave of wavelength 2.0 m travels at 340 m/s. Its frequency is…
+    options:
+      D: 170 Hz
+      A: 680 Hz
+      B: 0.0059 Hz
+      C: 342 Hz
+    answer: D
+    explain: f = v/lambda = 340/2.0 = 170 Hz.
+    distractors:
+      A: Multiplying speed by wavelength instead of dividing.
+      B: Inverting the relation and computing lambda/v.
+      C: Adding the wavelength to the speed.
 - heading: Sound, hearing, and beats
+  objectives:
+  - Convert an intensity ratio into a change in decibels.
+  - Calculate a beat frequency from two nearly equal tones.
+  - Explain resonance as the basis of hearing and of blood-pressure measurement.
   body:
   - Sound intensity level dB = 10 log(I/I0) — ==+10 dB = 10x intensity; doubling intensity adds ~3 dB==.
     Loudness is logarithmic perception. Intensity falls as 1/r2 from a point source.
@@ -64,6 +100,18 @@ sections:
       A: That is wrong math.
       B: Sum is not heard as a single tone.
       D: Interference does not cancel steady tones.
+  - q: A 256 Hz and a 253 Hz tuning fork sound together. What is heard?
+    options:
+      C: 3 beats per second
+      A: A 509 Hz tone
+      B: A 254.5 Hz tone
+      D: 1.5 beats per second
+    answer: C
+    explain: Beat frequency = |f1 - f2| = 3 Hz.
+    distractors:
+      A: Adding the frequencies; the sum is not what the ear resolves as beats.
+      B: Averaging the two pitches — the mean is the tone, the difference is the beat.
+      D: Halving the frequency difference.
   figures:
   - src: vibrations-waves-and-optics/fig-4f7a2c07.webp
     caption: A sound wave's compressions and rarefactions pressing on the eardrum — F = PA at work in
@@ -73,6 +121,10 @@ sections:
     caption: Echolocation — a bat emitting sound waves and reading their reflection to locate prey.
     credit: Ch 14 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
 - heading: Geometric optics — lenses and mirrors
+  objectives:
+  - Locate an image with the thin-lens equation.
+  - Compute magnification from the object and image distances.
+  - Predict whether a lens forms a real or virtual, upright or inverted image.
   body:
   - ==1/f = 1/do + 1/di (thin-lens equation); magnification m = -di/do==. Converging (convex) lenses can
     form real or virtual images; diverging form virtual, upright, reduced — clear for nearsighted correction.
@@ -92,7 +144,24 @@ sections:
       A: Never magnified.
       B: Reference to magnification.
       C: Only converging lenses focus to real images.
+  - q: An object sits 0.30 m from a converging lens of focal length 0.10 m. The image is…
+    options:
+      D: 0.15 m away, real and half-size
+      A: 0.075 m away, real and half-size
+      B: 0.20 m away, virtual and upright
+      C: 0.30 m away, the same size as the object
+    answer: D
+    explain: 1/di = 1/f - 1/do = 10 - 3.33 = 6.67, so di = 0.15 m and m = -di/do = -0.5 — real, inverted,
+      half-size.
+    distractors:
+      A: Quoting the magnification magnitude as an image distance.
+      B: Subtracting f from do and treating the result as an image distance.
+      C: Equating the image distance with the object distance.
 - heading: Mirror and prism applications
+  objectives:
+  - Describe the image formed by flat, concave, and convex mirrors.
+  - Explain dispersion as the wavelength dependence of refractive index.
+  - Relate total internal reflection to light guiding in fibres.
   body:
   - '==Flat mirrors: virtual image, same size, distance behind mirror equals object distance in front==.
     Concave mirrors (shaving, dental) magnify when the object sits inside the focal length — virtual,
@@ -113,19 +182,56 @@ sections:
       B: Violet is slower in glass.
       C: No absorption.
       D: No interference at work.
+  - q: You stand 1.0 m from a flat mirror. Your image is…
+    options:
+      D: 1.0 m behind the mirror, the same size, virtual
+      A: 0.5 m behind the mirror, half-size, virtual
+      B: 1.0 m in front of the mirror, real and inverted
+      C: 2.0 m behind the mirror, enlarged
+    answer: D
+    explain: A flat mirror puts the image as far behind the glass as the object is in front — same size,
+      upright, virtual.
+    distractors:
+      A: Halving the distance, as though the mirror were convex.
+      B: Putting the image on the wrong side of the glass and calling it real.
+      C: Doubling the distance instead of matching it.
 examples:
 - prompt: A 50 g mass on a spring (k = 200 N/m) is pulled 3 cm from equilibrium and released. Find the
     period and max speed.
+  strategy: 'Two independent formulas cover it: the period from T = 2 pi sqrt(m/k), which needs the mass
+    in kilograms; and the maximum speed from v_max = omega A with omega = 2 pi/T and A the amplitude.
+    Energy gives the same speed through (1/2)kA2 = (1/2)mv2 and is worth running as a cross-check rather
+    than as a second derivation.'
   solution:
   - T = 2 pi sqrt(m/k) = 2 pi sqrt(0.050/200) ≈ 0.099 s.
   - 'Max speed at equilibrium: v_max = omega A = (2 pi/T)(0.03).'
   - omega = 63.2 rad/s, so v_max = 63.2 x 0.03 = 1.9 m/s.
   - 'Alternatively energy: (1/2)kA2 = (1/2)mv_max2.'
   answer: T ≈ 0.10 s, v_max ≈ 1.9 m/s.
+  discussion: 'T = 0.10 s and v_max = 1.9 m/s — note that the speed depends on amplitude while the period
+    does not, which is the signature of SHM: a harder pull sends the mass faster but costs no extra time
+    per cycle. Check the limits and the units: doubling k shortens T by sqrt(2) and raises v_max by sqrt(2);
+    doubling m does the reverse. A period near 3 s here would mean grams were never converted — the single
+    most common way this exact item is missed.'
   distractors:
     A: Forgetting to convert 50 g to kg — gives 3.1 s.
     B: Using amplitude as displacement in energy equation.
     C: Multiplying instead of sqrt in the period.
+  practice:
+    q: A 0.20 kg mass on a spring (k = 320 N/m) oscillates with amplitude 5.0 cm. Find the period and
+      maximum speed.
+    options:
+      C: T = 0.16 s, v_max = 2.0 m/s
+      A: T = 0.16 s, v_max = 8.0 m/s
+      B: T = 0.025 s, v_max = 2.0 m/s
+      D: T = 0.16 s, v_max = 200 m/s
+    answer: C
+    explain: omega = sqrt(k/m) = sqrt(320/0.20) = 40 rad/s, so T = 2 pi/40 = 0.16 s and v_max = omega
+      A = 40 x 0.050 = 2.0 m/s.
+    distractors:
+      A: Multiplying omega by the mass instead of by the amplitude.
+      B: Quoting sqrt(m/k) and dropping the 2 pi.
+      D: Using the amplitude in centimetres instead of metres.
 key_points:
 - 'SHM: T = 2pi sqrt(m/k); pendulum period mass-independent.'
 - v = f lambda; medium sets speed; frequency does not.

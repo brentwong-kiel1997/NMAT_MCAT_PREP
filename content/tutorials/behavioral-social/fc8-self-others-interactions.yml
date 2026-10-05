@@ -5,6 +5,10 @@ overview: The self-concept, social cognition, and the mechanics of interaction �
   conformity, aggression, helping, and group processes. Overlaps heavily with psych-soc chapters 8A-8C.
 sections:
 - heading: The self and identity
+  objectives:
+  - Distinguish self-efficacy, self-esteem, and self-schema in a described self-belief.
+  - Apply reciprocal determinism to show how person, behavior, and environment feed each other.
+  - Name the self-presentation effect (spotlight effect, self-serving bias) illustrated by a scenario.
   body:
   - '==Self-concept — how we see ourselves; self-schema (stable, self-relevant beliefs); self-esteem evaluation;
     self-efficacy (Bandura — belief in capability)==. ==Identity — personal vs social; Erikson: identity
@@ -26,7 +30,24 @@ sections:
       A: Stable self-belief.
       B: Attribution of success.
       D: Global evaluation.
+  - q: After flubbing a presentation, a student blames the faulty projector; after an earlier success
+      he credited his own preparation. Which pattern, and what does it protect?
+    options:
+      A: Self-serving bias — internal credit for success, external blame for failure, protecting self-esteem
+      B: Self-efficacy — his belief in his presentation capability
+      C: The spotlight effect — he overestimates how much the audience noticed
+      D: Reciprocal determinism — the room shaped his behavior
+    answer: A
+    explain: Asymmetric attribution by outcome is the self-serving bias; it buffers self-esteem.
+    distractors:
+      B: No capability belief is measured — only where credit lands.
+      C: Nothing here concerns how noticed he felt.
+      D: Reciprocal determinism describes person-behavior-environment loops, not credit assignment.
 - heading: Social cognition — how we judge others
+  objectives:
+  - Label an attribution as internal or external and spot the fundamental attribution error in it.
+  - Contrast the actor-observer asymmetry with the self-serving bias in a paired scenario.
+  - Identify just-world reasoning in a described victim-blaming judgment.
   body:
   - ==Attribution — internal (dispositional) vs external (situational); fundamental attribution error
     — over-credit disposition; actor-observer asymmetry==. ==Self-serving bias — success internal, failure
@@ -47,7 +68,27 @@ sections:
       A: Related but centered on self-other difference.
       B: Post-decision discomfort.
       C: That is a self-serving success effect.
+  - q: A patient arrives late and a nurse thinks 'irresponsible'. The nurse herself arrives late the next
+      day and explains the traffic. What pair of effects is shown, and why do they differ?
+    options:
+      A: Groupthink and social loafing — the ward is a poorly functioning group
+      B: Self-serving bias twice over — both accounts are self-flattering
+      C: Fundamental attribution error for the patient, actor-observer asymmetry for herself — perspective
+        supplies the information difference
+      D: Cognitive dissonance — the nurse must reduce the inconsistency
+    answer: C
+    explain: For others we default to disposition; for ourselves we have rich access to situational pressure
+      — the same lateness, two explanations.
+    distractors:
+      A: No group decision or effort loss is involved.
+      B: Only her own account is self-serving; the patient's is dispositional.
+      D: No attitude-behavior inconsistency needs resolving here.
 - heading: Conformity, obedience, and group influence
+  objectives:
+  - Distinguish informational from normative influence in a described conformity episode.
+  - Predict how Milgram's obedience rate moves when authority proximity or learner distance changes.
+  - Name the group process (deindividuation, polarization, groupthink, social loafing, social facilitation)
+    at work in a scenario.
   body:
   - ==Asch — conformity with unambiguous stimuli under group pressure; informational (accurate belief)
     vs normative (fit in) influence==. Milgram — obedience to authority escalates with proximity of the
@@ -69,7 +110,28 @@ sections:
       B: Dull tasks loaf more.
       C: Correct — monitoring kills it.
       D: Strangers loaf more.
+  - q: A junior resident stays silent as the team agrees on a plan she thinks is wrong; nobody has dissented
+      and the senior is confident. Afterwards the plan is clearly riskier than any member's private view.
+      Name the two stacked effects.
+    options:
+      A: Social loafing plus deindividuation — no one was identifiable
+      B: Pluralistic ignorance feeding groupthink — silence reads as agreement and dissent is suppressed
+        before the decision
+      C: Bystander effect plus pluralistic ignorance — help was withheld
+      D: Social facilitation — the audience improved everyone's performance
+    answer: B
+    explain: Each member reads the others' silence as endorsement (pluralistic ignorance) and the group
+      converges prematurely on a risky consensus (groupthink).
+    distractors:
+      A: Effort and anonymity are not the failure here; information flow is.
+      C: There is no emergency or helping decision in play.
+      D: Facilitation concerns individual performance in front of others, not group judgment.
 - heading: Aggression, altruism, and attraction
+  objectives:
+  - Trace a helping decision through the Latané-Darley steps and name the step that failed.
+  - Separate the bystander effect's diffusion of responsibility from pluralistic ignorance.
+  - Identify proximity, similarity, mere exposure, or reciprocity as the attraction factor in a described
+    pairing.
   body:
   - ==Aggression — biological (amygdala drive, prefrontal brake, testosterone/serotonin) × situational
     (frustration-aggression, heat, weapons effect)==. Bystander effect — more witnesses → less helping
@@ -90,6 +152,21 @@ sections:
       A: Effort loss, not interpretation.
       B: Loss of self-awareness.
       C: Consensus in decisions.
+  - q: A shopper collapses in a busy market. Many witnesses see him; each assumes someone else has already
+      called for help, so no one does. Which mechanism, and which single intervention restores helping?
+    options:
+      A: Pluralistic ignorance — make one person shout for help loudly
+      B: Social loafing — reduce the crowd size only
+      C: Diffusion of responsibility — single out one individual with a direct request
+      D: Mere exposure — repeated exposure to emergencies dulls helping
+    answer: C
+    explain: With responsibility divided across witnesses, pointing at one person ('you in the green jacket,
+      call now') re-concentrates it.
+    distractors:
+      A: Interpretation is not the failure — everyone saw the collapse clearly.
+      B: Loafing concerns effort on shared tasks, not emergency intervention, and crowd size alone is
+        not the lever.
+      D: Exposure is an attraction principle, not the emergency mechanism.
   figures:
   - src: behavioral-social/fc8-self-others-interactions/fig-9fdf2315.webp
     caption: Non-human primate social behavior — displays and interaction in natural context.
@@ -98,6 +175,11 @@ sections:
     caption: Prosocial behavior — helping, altruism, and the bystander calculus.
     credit: Ch 12 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Group identity, social identity, and discrimination
+  objectives:
+  - Sort a described case into stereotype (belief), prejudice (attitude), or discrimination (behavior).
+  - Apply social identity theory to explain in-group favoritism arising from minimal group assignment.
+  - Explain how stereotype threat depresses measured performance and design the removal of the threat
+    cue.
   body:
   - ==Social identity theory (Tajfel) — we favor in-groups to elevate self-esteem; minimal groups already
     show bias. ==Stereotypes (beliefs), prejudice (attitudes), discrimination (behavior); implicit bias
@@ -118,19 +200,61 @@ sections:
       A: Effort in groups.
       B: That is attribution of others.
       D: Group discussion effect.
+  - q: Before a diagnostic exam, one group of students is told the test is a valid measure of ability,
+      another that it is a problem-solving exercise with no group differences ever found. The second group
+      scores higher. Name the effect removed and the mechanism.
+    options:
+      A: Group polarization — discussion intensified the first group's answers
+      B: Stereotype threat — removing the evaluative cue frees working memory the anxiety was consuming
+      C: Self-fulfilling prophecy via teacher expectation — examiners graded differently
+      D: In-group favoritism — the second group felt more identified with the test
+    answer: B
+    explain: Explicitly decoupling the test from a group comparison removes the threat, which otherwise
+      taxes working memory and depresses scores.
+    distractors:
+      A: No group discussion occurred.
+      C: Nothing indicates examiner bias — the same test produced both scores.
+      D: Identification with the test is not the manipulated variable.
 examples:
 - prompt: Design a field experiment showing the bystander effect while controlling for pluralistic ignorance
     as the mechanism.
+  strategy: Isolate one mechanism at a time. The bystander effect has two candidate engines — responsibility
+    diffusion and misinterpretation — so hold group size constant where possible and vary only the cue
+    being tested; a passive confederate supplies the interpretation cue, and its removal supplies the
+    control.
   solution:
   - Manipulate perceived group size while holding real help-availability constant.
   - Actor collapses loudly; measure time to help alone versus with one confederate.
   - 'Variant: confederate gives visible ''non-alarm'' cues (looks away) — dissociation test.'
   - 'Predict: more passive models → slower, less help — informational influence confirmed.'
   answer: Passive-confederate design isolates informational social influence.
+  discussion: 'The design generalises: whenever two mechanisms predict the same outcome, build a condition
+    in which one is disabled. Here the blindfolded control keeps the crowd but strips the misleading signal,
+    and the recovery of helping shows interpretation was the hinge. The same dissociation logic separates
+    diffusion from interpretation in any emergency, and separates arousal from criterion in signal detection
+    work.'
   distractors:
     A: Correlational CCTV — can't separate causes.
     B: Case study of one event — no control.
     C: Survey of intentions — stated helping ≠ real helping.
+  practice:
+    q: In a staged emergency, participants are tested alone, with two passive confederates, and with two
+      confederates who are visibly on phone calls to the study team. Helping is fastest alone, slowest
+      with passive confederates, and intermediate in the phone condition. What does the phone condition
+      add?
+    options:
+      A: It removes the group entirely, confirming group size is the cause
+      B: It holds group size constant while removing the misleading not-an-emergency signal, isolating
+        interpretation
+      C: It adds an authority figure, so obedience drives the helping
+      D: It measures social loafing among the confederates
+    answer: B
+    explain: The confederates are still present, so crowding is unchanged, but they cannot model passivity
+      about the emergency — any improvement points to the interpretation step.
+    distractors:
+      A: The group is still physically present in that condition.
+      C: The calls are to the study team for coordination, not an authority commanding help.
+      D: Loafing is effort loss on shared tasks, not emergency interpretation.
 key_points:
 - Self-efficacy is domain-specific; self-esteem is global.
 - Fundamental attribution error — others' dispositions, our situations.

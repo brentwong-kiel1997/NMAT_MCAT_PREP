@@ -62,10 +62,12 @@ assert val(5) == "CO2"                                                 # nonpola
 assert val(6) == "sp"                                                  # alkyne carbon
 # limiting reagent: H2 limits -> 6.0 mol NH3
 assert abs(min(6.0 * 2 / 1, 9.0 * 2 / 3) - float(val(7).split()[0])) < 0.001
-# percent water in CuSO4.5H2O
-assert abs(90.0 / (159.6 + 90.0) * 100 - float(val(8).rstrip("%"))) < 0.06
-# ideal gas molar mass
-assert abs(0.500 * 0.0821 * 298.0 / (1.00 * 0.250) - float(val(9).split()[0])) < 0.06
+# gravimetric chloride: 0.287 g AgCl (M = 143.4) -> %Cl in a 0.500 g sample
+assert abs(0.287 / 143.4 * 35.45 / 0.500 * 100 - float(val(8).rstrip("%"))) < 0.06
+# Q-test: gap/range = (0.1130 - 0.1050) / (0.1130 - 0.1042) = 0.91 > 0.76
+q_gap = 0.1130 - 0.1050
+q_range = 0.1130 - 0.1042
+assert abs(q_gap / q_range - 0.91) < 0.01 and "0.1130" in val(9) and "0.91" in val(9)
 # grams NaOH for 250 mL of 0.500 M
 assert abs(0.500 * 0.250 * 40.0 - float(val(10).split()[0])) < 0.001
 # dilution volume in mL
@@ -83,9 +85,10 @@ assert abs(2 * -393.5 + 3 * -285.8 - (-277.7) - float(val(17).split()[0])) < 0.7
 # Gibbs free energy at 310 K
 assert abs(40.0 - 310 * 0.150 - float(val(18).split()[0])) < 0.001
 # first-order half-life
-assert abs(0.693 / 0.0231 - float(val(21).split()[0])) < 0.06
-# Daniell cell emf
-assert abs(0.34 - (-0.76) - float(val(22).lstrip("+").split()[0])) < 0.001
+# Fischer esterification: ethanol + acetic acid -> ethyl acetate + water
+assert "ethyl acetate" in val(21) and "water" in val(21)
+# constitutional alcohol isomers of C4H10O
+assert val(22) == "4"
 # Faraday mass of copper
 assert abs(2.00 * 965 / 96500.0 / 2 * 63.5 - float(val(23).split()[0])) < 0.0006
 # Michaelis-Menten velocity

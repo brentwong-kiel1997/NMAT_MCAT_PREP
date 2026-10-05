@@ -5,6 +5,10 @@ overview: Chemistry inside living systems — protein structure, enzymes, metabo
   MCAT's biochem passages live here. Prerequisites — 5D biomolecules and 5E thermodynamics/kinetics.
 sections:
 - heading: Protein structure — four levels
+  objectives:
+  - Define each of the four levels of protein structure and its stabilising forces.
+  - Predict how a given denaturant changes a protein's structure.
+  - Summarise what the Anfinsen refolding experiment established.
   body:
   - ==Primary is sequence; secondary is local folding (alpha-helix, beta-sheet, held by backbone H-bonds);
     tertiary is the full 3D fold (hydrophobic effect, H-bonds, ion pairs, disulfides); quaternary is multi-subunit
@@ -25,7 +29,23 @@ sections:
       A: Tertiary stabilizer.
       B: That drives tertiary fold.
       D: Destroys structure.
+  - q: Beta-mercaptoethanol, a reducing agent, disrupts which feature of a protein?
+    options:
+      B: Disulfide bridges, reducing them to free thiols
+      A: Backbone hydrogen bonds, melting the helices
+      C: Peptide bonds, fragmenting the chain
+      D: Hydrophobic core packing
+    answer: B
+    explain: Reducing agents cleave the S-S bond that locks tertiary structure together.
+    distractors:
+      A: Backbone H-bonds need heat or pH, not a reductant.
+      C: Denaturation never hydrolyses the peptide backbone.
+      D: Hydrophobic packing is disrupted by detergents or organic solvents.
 - heading: Enzymes — catalysis and kinetics
+  objectives:
+  - Explain how catalysis changes rate without changing delta-G or K.
+  - Characterise an enzyme using Km and Vmax.
+  - Identify an inhibitor type from Km, Vmax, or a Lineweaver-Burk plot.
   body:
   - Enzymes lower activation energy by stabilizing the transition state — ==they raise kcat, never shift
     delta-G or K==. Michaelis-Menten — v = Vmax[S]/(Km + [S]). ==Km is the substrate concentration at
@@ -46,7 +66,23 @@ sections:
       A: Vmax is unchanged.
       B: Wrong direction.
       D: It can be overcome by substrate.
+  - q: An enzyme has Km = 4 mM and Vmax = 60 umol/min. At [S] = 4 mM the rate is…
+    options:
+      B: 30 umol/min
+      A: 60 umol/min
+      C: 15 umol/min
+      D: 4 umol/min
+    answer: B
+    explain: '[S] = Km means half-saturation, so v = Vmax/2 = 30 umol/min.'
+    distractors:
+      A: Full saturation needs [S] far above Km.
+      C: Dividing Vmax by Km instead of computing the fractional saturation.
+      D: Quoting the Km value as though it were a rate.
 - heading: Regulation — allostery and covalent modification
+  objectives:
+  - Explain cooperative binding and the sigmoid curve it produces.
+  - Predict how an allosteric activator or inhibitor shifts the rate curve.
+  - Distinguish reversible covalent modification from zymogen activation.
   body:
   - Allosteric enzymes show sigmoid kinetics — cooperativity (binding at one site shifts others). ==Allosteric
     effectors shift the curve — activators left, inhibitors right== without being overcome by substrate.
@@ -67,7 +103,23 @@ sections:
       A: Denaturation kills activity.
       B: Competitive keeps hyperbolic shape.
       C: Order is unrelated.
+  - q: Trypsinogen is cleaved to trypsin in the gut. This is an example of…
+    options:
+      A: Irreversible proteolytic activation of a zymogen
+      B: Reversible allosteric activation by a small molecule
+      C: Competitive inhibition overcome by more substrate
+      D: Feedback inhibition by the pathway's end product
+    answer: A
+    explain: Proteolysis cuts the inactive precursor into the active enzyme — one-way and amplifying.
+    distractors:
+      B: Allostery is noncovalent and reversible.
+      C: Nothing here is competing at an active site.
+      D: Feedback inhibition slows a pathway; this switches one on.
 - heading: Metabolism overview — the energy map
+  objectives:
+  - Trace glucose through glycolysis, the TCA cycle, and oxidative phosphorylation.
+  - Tally the ATP and reduced cofactors each stage yields.
+  - Explain why fermentation regenerates NAD+.
   body:
   - Glycolysis — glucose to 2 pyruvate, cytosol, ==net 2 ATP + 2 NADH==; investment phase spends 2 ATP,
     payoff makes 4. Pyruvate enters mitochondria — acetyl-CoA, then the TCA cycle (2 ATP/GTP, 6 NADH,
@@ -88,6 +140,18 @@ sections:
       A: Full aerobic total.
       B: Gross, not net.
       C: Older textbook total.
+  - q: A cell can only ferment. Its net ATP per glucose is…
+    options:
+      B: 2 — glycolysis alone
+      A: 30-32 — the full aerobic yield
+      C: 4 — the gross glycolytic yield
+      D: 0 — no ATP forms without oxygen
+    answer: B
+    explain: Without oxygen there is no oxidative phosphorylation, so only glycolysis' net 2 ATP remain.
+    distractors:
+      A: That total needs the electron transport chain and oxygen.
+      C: The investment phase has to be paid back out of the four.
+      D: Substrate-level phosphorylation in glycolysis needs no oxygen at all.
   figures:
   - src: biochemistry/fig-30c947dd.webp
     caption: Mitochondrion architecture — electron transport chain and ATP synthase embedded in the inner
@@ -97,6 +161,10 @@ sections:
     caption: Substrate-level phosphorylation — an enzyme transfers a phosphate group to ADP, making ATP.
     credit: Ch 7 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Metabolic regulation and integration
+  objectives:
+  - Identify the committed step that controls each metabolic pathway.
+  - Predict the hormonal shift between fed and fasting metabolism.
+  - Explain how the Cori cycle recycles muscle lactate.
   body:
   - Key control points match committed steps — ==phosphofructokinase (glycolysis, inhibited by ATP and
     citrate, activated by AMP), pyruvate dehydrogenase (acetyl-CoA entry), isocitrate dehydrogenase (TCA)==.
@@ -118,17 +186,50 @@ sections:
       A: AMP activates — low energy.
       B: F2,6BP activates PFK-1 strongly.
       C: Insulin works upstream.
+  - q: During a fast, the liver's main contribution to blood glucose is…
+    options:
+      B: Generating and exporting glucose via glycogenolysis and gluconeogenesis
+      A: Storing glucose as glycogen under insulin drive
+      C: Converting glucose into fat for adipose storage
+      D: Taking up fatty acids from the blood for storage
+    answer: B
+    explain: Glucagon signalling makes the liver a glucose producer, protecting the brain's supply.
+    distractors:
+      A: Glycogen storage is the fed-state response.
+      C: Lipogenesis is a fed-state activity.
+      D: In the fast, adipose releases fatty acids rather than taking them up.
 examples:
 - prompt: An enzyme has Km = 2 mM and Vmax = 100 umol/min. At [S] = 6 mM, what fraction of Vmax is observed?
+  strategy: Michaelis-Menten is a ratio, so compute the fractional velocity first — [S]/(Km + [S]) — and
+    only then multiply by Vmax. Recognising that [S] = 3Km pins the fraction at 0.75 turns the item into
+    a one-line recognition rather than arithmetic; the same recognition at [S] = Km gives 0.50.
   solution:
   - Michaelis-Menten — v = Vmax[S]/(Km + [S]).
   - v/Vmax = 6 / (2 + 6) = 6/8 = 0.75.
   - When [S] = 3Km, the rate is always 75% of Vmax.
   answer: 75 umol/min — 0.75 Vmax.
+  discussion: '75% at three times Km shows how slowly the curve approaches its ceiling — even at ten times
+    Km the enzyme is only about 91% saturated, which is why Vmax is an extrapolation rather than a measurement.
+    Run the same formula backwards to read Km off a curve: it is the substrate concentration giving exactly
+    half of Vmax. Check the limits as a habit — the fraction must be 0.5 at [S] = Km and must approach
+    1 as [S] grows without bound.'
   distractors:
     A: Assuming saturation — that needs [S] >> Km.
     B: 50% only holds at [S] = Km.
     C: Computing 6/(6-2) or similar ratio errors.
+  practice:
+    q: An enzyme has Km = 5 mM and Vmax = 80 umol/min. At [S] = 5 mM the rate is…
+    options:
+      C: 40 umol/min
+      A: 80 umol/min
+      B: 20 umol/min
+      D: 5 umol/min
+    answer: C
+    explain: '[S] = Km gives half-saturation: v = 0.50 x 80 = 40 umol/min.'
+    distractors:
+      A: Saturation requires substrate far in excess of Km.
+      B: Quartering rather than halving the maximum rate.
+      D: Quoting the Km as though it were a rate.
 key_points:
 - Four structure levels; denaturation spares peptide bonds.
 - Enzymes lower Ea — Vmax and Km diagnostics of inhibition type.

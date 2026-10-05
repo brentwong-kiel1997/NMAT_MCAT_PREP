@@ -5,6 +5,10 @@ overview: Why reactions happen (thermodynamics) and how fast (kinetics) — the 
   pairing on the exam. Gibbs free energy, equilibrium, rate laws, and catalysis anchor bioenergetics.
 sections:
 - heading: Enthalpy, entropy, and Gibbs free energy
+  objectives:
+  - Calculate delta-G from delta-H, delta-S, and temperature.
+  - Predict the temperature range over which a reaction is spontaneous.
+  - Interpret the sign of delta-G in terms of product favourability.
   body:
   - Spontaneity is decided by delta-G = delta-H - T delta-S. ==Negative delta-G means spontaneous (product-favored)==,
     but says nothing about rate. Enthalpy (H) is heat at constant pressure; entropy (S) is dispersal of
@@ -25,7 +29,24 @@ sections:
       A: Not never.
       B: That is delta-H>0, delta-S>0.
       D: Not all temperatures — high T makes -T delta-S positive.
+  - q: A reaction has delta-H = -100 kJ/mol and delta-S = -200 J/mol·K. Its spontaneity is…
+    options:
+      C: Spontaneous below 500 K, nonspontaneous above
+      A: Spontaneous at all temperatures
+      B: Never spontaneous
+      D: Spontaneous above 500 K, nonspontaneous below
+    answer: C
+    explain: The crossover sits at T = delta-H/delta-S = (-100,000)/(-200) = 500 K; below it the favourable
+      enthalpy wins.
+    distractors:
+      A: The two terms disagree in sign, so a crossover temperature must exist.
+      B: The enthalpy term is favourable — the reaction runs cold even if it dies hot.
+      D: Inverting the direction of the crossover.
 - heading: Equilibrium — the balance point
+  objectives:
+  - Write an equilibrium expression, omitting pure solids and liquids.
+  - Predict the direction of a shift from a Le Chatelier stress.
+  - Distinguish a change in K from a change in equilibrium position.
   body:
   - Every reversible reaction reaches equilibrium where forward and reverse rates equal. ==K = products
     over reactants, each raised to its stoichiometric coefficient== — only gases and aqueous species appear;
@@ -46,7 +67,23 @@ sections:
       A: Direction inconsistent with exothermic.
       B: Temperature always matters.
       D: Direction wrong.
+  - q: For N2 + 3H2 <-> 2NH3, the container volume is decreased. What happens?
+    options:
+      C: The position shifts right, toward the side with fewer gas moles
+      A: The position shifts left, toward the side with more gas moles
+      B: Nothing shifts — pressure only changes K
+      D: The position shifts right and K increases
+    answer: C
+    explain: Four moles of gas on the left against two on the right — compression favours the right.
+    distractors:
+      A: Relieving the stress means fewer particles, not more.
+      B: Pressure shifts the position; only temperature changes K.
+      D: The position moves, but K is untouched by pressure.
 - heading: Kinetics — rates and rate laws
+  objectives:
+  - Determine a reaction's order from experimental rate data.
+  - Use the Arrhenius equation to predict a temperature effect on rate.
+  - Explain why a catalyst changes rate but not the equilibrium position.
   body:
   - Rate measures concentration change per time — ==rate = k[A]^m[B]^n== where m and n come ONLY from
     experiment, never from stoichiometry (except elementary steps). Zero order is constant rate; first
@@ -68,6 +105,19 @@ sections:
       A: Same final concentrations.
       B: Delta-G is a state function — unchanged.
       C: K is temperature-only.
+  - q: Doubling [A] quadruples the rate; doubling [B] leaves the rate unchanged. The rate law is…
+    options:
+      A: rate = k[A]2
+      B: rate = k[A][B]
+      C: rate = k[A]2[B]2
+      D: rate = k[A]
+    answer: A
+    explain: A fourfold change on doubling [A] is second order; no change on doubling [B] is zero order,
+      so B does not appear.
+    distractors:
+      B: The data say B has no effect, so it cannot be in the law.
+      C: B drops out entirely — zero order means exponent zero.
+      D: Doubling A gives four times the rate, not twice.
   figures:
   - src: 5e-principles-of-chemical-thermodynamics-and-kinetics/fig-29762773.webp
     caption: Reaction rate from a concentration-time curve — initial and instantaneous rates as slopes.
@@ -77,6 +127,10 @@ sections:
       rates equalize.
     credit: Ch 13 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
 - heading: Coupled reactions and bioenergetics
+  objectives:
+  - Sum the free energies of coupled reactions to predict feasibility.
+  - Compute the actual delta-G from delta-G standard and the reaction quotient.
+  - Explain how ATP hydrolysis drives otherwise unfavourable steps.
   body:
   - Thermodynamically unfavorable reactions proceed when coupled to favorable ones. ==ATP hydrolysis (delta-G
     about -30 kJ/mol) drives biosynthesis== by coupling through shared intermediates. The cell spends
@@ -97,7 +151,25 @@ sections:
       A: Unphysical.
       B: Catalyst changes rate, not direction.
       C: Q > K makes it reverse.
+  - q: A reaction has delta-G standard = +20 kJ/mol. At 298 K, Q = 1.0 x 10^-5. The actual delta-G is
+      about…
+    options:
+      C: -8.5 kJ/mol, so it runs forward
+      A: +20 kJ/mol, so it cannot run
+      B: +48.5 kJ/mol, so it runs backward
+      D: Zero, since Q and K are both small
+    answer: C
+    explain: delta-G = delta-G standard + RT ln Q = 20 + (8.314 x 298 x ln 10^-5)/1000 = 20 - 28.5 = -8.5
+      kJ/mol.
+    distractors:
+      A: That is the standard value; the cell does not run at standard concentrations.
+      B: Adding the RT ln Q term with the wrong sign.
+      D: Q is not K, so delta-G is not zero.
 - heading: Reaction mechanisms
+  objectives:
+  - Sum elementary steps to recover the overall reaction.
+  - Identify the rate-determining step and write its rate law.
+  - Test a proposed mechanism against an observed rate law.
   body:
   - Mechanisms are stepwise elementary reactions that sum to the overall equation. ==The slowest step
     is the rate-determining step== — it fixes the rate law. Intermediates are produced then consumed;
@@ -118,18 +190,52 @@ sections:
       A: The fast step is not limiting.
       B: Catalyst location is separate.
       C: Not necessarily first.
+  - q: A mechanism's slow step is A + B -> C. The observed rate law must be…
+    options:
+      A: rate = k[A][B]
+      B: rate = k[C]
+      C: rate = k[A]2
+      D: rate = k, a zero-order law
+    answer: A
+    explain: The slow step fixes the rate law, and it consumes one A and one B.
+    distractors:
+      B: Products do not set the rate; reactants in the slow step do.
+      C: The overall stoichiometry is irrelevant — only the slow step counts.
+      D: Two steps do not make a reaction zero order.
 examples:
 - prompt: For a reaction, delta-H = +75 kJ/mol and delta-S = +150 J/mol-K. Above what temperature does
     it become spontaneous?
+  strategy: Two terms of opposite sign mean a crossover temperature exists, so the plan is to set delta-G
+    = 0 and solve T = delta-H/delta-S — converting delta-S from J to kJ FIRST, because that unit slip
+    is the entire trap in this item. Above the crossover the entropy term wins; below it the enthalpy
+    penalty does.
   solution:
   - 'Set delta-G = 0 — the crossover: 0 = delta-H - T delta-S.'
   - T = delta-H / delta-S = 75,000 J/mol / 150 J/mol-K.
   - T = 500 K — above this, the -T delta-S term outweighs the unfavorable enthalpy.
   answer: Spontaneous above 500 K.
+  discussion: '500 K is the answer, and the sign check matters more than the arithmetic: with delta-H
+    and delta-S both positive, high temperature must help, so this is a reaction that only runs when hot.
+    Sanity check the units — 75,000 J divided by 150 J/K leaves kelvin, while forgetting the kJ-to-J conversion
+    yields a nonsense 0.5 K. The mirror-image case (delta-H and delta-S both negative) is why steam condenses
+    as it cools.'
   distractors:
     A: Forgetting to convert kJ to J — gives 0.5 K.
     B: Dividing delta-S by delta-H inverts the answer.
     C: Sign error — below 500 K the reaction is nonspontaneous.
+  practice:
+    q: A reaction has delta-H = +40 kJ/mol and delta-S = +100 J/mol·K. Above what temperature is it spontaneous?
+    options:
+      A: 400 K
+      B: 0.4 K
+      C: 2500 K
+      D: It is spontaneous at all temperatures
+    answer: A
+    explain: T = delta-H/delta-S = 40,000/100 = 400 K; above that, T delta-S exceeds the enthalpy cost.
+    distractors:
+      B: Forgetting to convert kJ to J before dividing.
+      C: Inverting the ratio and dividing delta-S by delta-H.
+      D: The enthalpy term is unfavourable, so cold runs are not spontaneous.
 key_points:
 - delta-G = delta-H - T delta-S; negative means spontaneous.
 - K changes only with temperature; stresses shift position.

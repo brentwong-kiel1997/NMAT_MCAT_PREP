@@ -6,6 +6,10 @@ overview: Relativity, quantum phenomena, nuclear physics, and the atom-level phy
   relativistic time dilation.
 sections:
 - heading: Special relativity
+  objectives:
+  - State the two postulates of special relativity and name their consequences.
+  - Apply the time dilation formula to a clock in a moving frame.
+  - Interconvert mass and energy using E = mc2.
   body:
   - '==Two postulates: (1) the speed of light is the same in every inertial frame; (2) laws of physics
     identical in all inertial frames==. Consequences — time dilation (moving clock runs slow), length
@@ -26,7 +30,24 @@ sections:
       A: Rotation is not the mechanism.
       B: Physics, not hardware.
       D: Weak gravity — general relativity is separate.
+  - q: A ship cruises at 0.6c relative to Earth. A leg that Earth clocks at 10 years takes how long by
+      the ship's clock?
+    options:
+      A: 8 years
+      B: 12.5 years
+      C: 10 years
+      D: 6 years
+    answer: A
+    explain: gamma = 1/sqrt(1 - 0.6^2) = 1/0.8 = 1.25; the ship's proper time is 10/1.25 = 8 years.
+    distractors:
+      B: Multiplying by gamma instead of dividing — the moving clock runs SLOW.
+      C: Ignoring dilation entirely; at 0.6c gamma is already 1.25.
+      D: Scaling time by the speed fraction rather than by gamma.
 - heading: Photoelectric effect and photons
+  objectives:
+  - Relate photon energy to frequency and to wavelength.
+  - Decide whether ejection occurs from the work function or threshold frequency.
+  - Distinguish what intensity changes from what frequency changes in the effect.
   body:
   - '==Light arrives in energy quanta E = h f = hc/lambda — intensity raises the NUMBER of photons, not
     their energy==. The photoelectric threshold: if f < f0, no electrons eject no matter the intensity.
@@ -46,7 +67,24 @@ sections:
       A: KE fixed by f.
       B: The work function is a material constant.
       C: Frequency sets energy.
+  - q: Light of wavelength 620 nm falls on a metal whose work function is 2.1 eV. What happens?
+    options:
+      A: Electrons leave with 0.1 eV
+      B: No electrons are ejected
+      C: Electrons leave with 2.0 eV
+      D: Ejection occurs only if the light is made brighter
+    answer: B
+    explain: E = hc/lambda = 1240/620 = 2.0 eV, which is below the 2.1 eV work function — no ejection
+      at any intensity.
+    distractors:
+      A: Subtracting anyway; the photoelectric gate must be passed before there is any KE to compute.
+      C: Equating the electron's kinetic energy with the photon energy and ignoring the work function.
+      D: Intensity adds photons, not energy per photon — below threshold, brightness changes nothing.
 - heading: Nuclear structure and binding energy
+  objectives:
+  - Interconvert mass number, atomic number, and neutron count.
+  - Explain the mass defect as binding energy through E = mc2.
+  - Predict from the N/Z ratio whether a nuclide is proton- or neutron-rich.
   body:
   - ==Nuclei carry Z protons and N neutrons; mass number A = Z + N==. Isotopes share Z, differ N. Mass
     defect — a nucleus weighs less than its parts; that missing mass is binding energy by E = mc2.
@@ -66,6 +104,19 @@ sections:
       A: It is stable.
       B: The peak means it will not split easily.
       C: Peak stability = stable nucleus.
+  - q: A nuclide has Z = 6 and A = 14. Its neutron count and likely decay tendency are…
+    options:
+      A: 8 neutrons; neutron-rich
+      B: 20 neutrons; neutron-rich
+      C: 6 neutrons; proton-rich
+      D: 8 neutrons; proton-rich
+    answer: A
+    explain: N = A - Z = 8, so N/Z = 1.33 — neutron-rich, which points toward beta-minus decay (this is
+      carbon-14).
+    distractors:
+      B: Adding A and Z instead of subtracting them.
+      C: Setting N equal to Z.
+      D: Reversing which excess drives beta-minus; beta-minus is the neutron-rich response.
   figures:
   - src: modern-physics/fig-12db370a.webp
     caption: Atomic scale — atom about 10^-10 m, nucleus about 10^-15 m — most of the atom is empty space.
@@ -75,6 +126,10 @@ sections:
       gap.
     credit: Ch 22 · OpenStax Physics (High School) — CC BY-NC-SA 4.0
 - heading: Radioactive decay modes and half-life
+  objectives:
+  - Name each decay mode and its effect on A and on Z.
+  - Calculate the fraction of a sample remaining after a number of half-lives.
+  - Choose a tracer half-life appropriate to a protocol's duration.
   body:
   - '==Alpha (He-4 nucleus, stops in paper), beta-minus (neutron→proton + e- + antineutrino, thin metal),
     beta-plus (positron), electron capture, gamma (high-energy photon, thick lead/bone==). Decay shifts
@@ -95,7 +150,23 @@ sections:
       B: One half-life gives 1/2.
       C: 1/3 of 24 is wrong.
       D: Correct.
+  - q: A source's activity falls to 1/16 of its starting value over 40 hours. Its half-life is…
+    options:
+      A: 10 hours
+      B: 2.5 hours
+      C: 40 hours
+      D: 8 hours
+    answer: A
+    explain: '1/16 = (1/2)^4, so 40 hours is 4 half-lives: 40/4 = 10 hours.'
+    distractors:
+      B: Dividing the elapsed time by 16 rather than by the number of half-lives.
+      C: Ignoring the decay — the activity has clearly fallen.
+      D: Counting three half-lives (1/8) instead of four.
 - heading: Quantum numbers and atomic spectra
+  objectives:
+  - Assign the four quantum numbers to a given electron.
+  - Decide whether a transition emits or absorbs a photon and its relative energy.
+  - Build a ground-state configuration with the Aufbau and Hund rules.
   body:
   - '==Electron configuration: n (shell), l (subshell 0..n-1), ml, ms — Pauli excludes identical quadruples==.
     Orbitals fill lowest energy first (Aufbau), one-by-one before pairing (Hund).'
@@ -115,19 +186,54 @@ sections:
       A: Smaller gap.
       B: Absorption.
       D: Absorption, not emission.
+  - q: How many electrons can the n = 3 shell hold in total?
+    options:
+      A: '9'
+      B: '18'
+      C: '8'
+      D: '6'
+    answer: B
+    explain: 'n = 3 carries l = 0, 1, 2 — that is 1 + 3 + 5 = 9 orbitals, two electrons each: 18.'
+    distractors:
+      A: Counting orbitals rather than the two electrons each orbital holds.
+      C: Quoting the n = 2 capacity (s and p only).
+      D: Counting only the p subshell.
 examples:
 - prompt: A light source gives photons with wavelength 400 nm. Find the photon energy in eV and the max
     KE of electrons expelled from cesium (work function 2.1 eV).
+  strategy: 'Two steps in a fixed order: convert wavelength to photon energy with E = hc/lambda (hc =
+    1240 eV·nm skips the SI arithmetic), then apply the photoelectric equation KE_max = hf - phi. The
+    gate comes FIRST — if the photon energy lands below the work function, the subtraction never happens
+    and the answer is simply no emission.'
   solution:
   - E = hc/lambda = (6.626e-34)(3e8)/(400e-9) = 4.97e-19 J.
   - 'Convert: 4.97e-19 / 1.6e-19 = 3.1 eV.'
   - KE_max = E - phi = 3.1 - 2.1 = 1.0 eV.
   - Cesium is famously photoelectric — electrons fly off with 1 eV.
   answer: Photon 3.1 eV; electrons leave with up to 1.0 eV.
+  discussion: '3.1 eV clears the 2.1 eV threshold, so emission occurs and the 1.0 eV left over is the
+    MAXIMUM kinetic energy — only surface electrons get it, and deeper ones leave with less. Note what
+    would not change: raising the intensity adds more electrons at the same 1.0 eV, while raising the
+    frequency raises the energy per electron but cuts the count. Sanity check the energy scale: visible
+    photons are 1.8-3.1 eV, so 3.1 eV for violet is right where it should be.'
   distractors:
     A: Using cm instead of nm in lambda — off by 10^.
     B: Adding the work function instead of subtracting.
     C: Calling all emitted electrons 3.1 eV — that is the photon energy, minus work.
+  practice:
+    q: Light of wavelength 248 nm strikes a metal whose work function is 3.0 eV. The maximum kinetic energy
+      of the emitted electrons is…
+    options:
+      A: 5.0 eV
+      B: 2.0 eV
+      C: 8.0 eV
+      D: None — the threshold is not reached
+    answer: B
+    explain: E = 1240/248 = 5.0 eV; KE_max = 5.0 - 3.0 = 2.0 eV.
+    distractors:
+      A: Reporting the photon energy as the electron's kinetic energy and ignoring the work function.
+      C: Adding the work function instead of subtracting it.
+      D: The photon energy exceeds 3.0 eV, so ejection does occur.
 key_points:
 - c same in all frames; moving clocks run slow; E = mc2.
 - 'Photoelectric: f sets energy, intensity sets count.'

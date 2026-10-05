@@ -2,19 +2,23 @@ subject: biochemistry
 chapter: 1C · Heritable information & diversity
 title: 1C · Heritable Information and Diversity
 overview: 'The molecular half of heredity: how DNA copies itself faithfully, gets damaged, gets repaired,
-  and gets reshuffled at the sequence level. Pairs with the biology 1C chapter, which carries the
-  transmission side — Mendelian patterns, pedigrees, nondisjunction, and population allele frequencies.'
+  and gets reshuffled at the sequence level. Pairs with the biology 1C chapter, which carries the transmission
+  side — Mendelian patterns, pedigrees, nondisjunction, and population allele frequencies.'
 sections:
 - heading: Mutation types — reading-frame consequences
+  objectives:
+  - Classify a mutation from its effect on the reading frame and the codon.
+  - Predict whether a given insertion or deletion causes a frameshift.
+  - Relate each lesion type to the mutagen that produces it.
   body:
-  - ==Mutation types — point (silent, missense, nonsense), frameshift (insertion/deletion not a
-    multiple of 3), and larger rearrangements==. Causes — replication errors, oxidative damage, UV
-    dimers, chemical mutagens. ==Exposure pattern — frameshift = function severely compromised;
-    nonsense = truncation; silent = no change==.
-  - '==Spontaneous chemistry supplies most lesions — depurination, cytosine deamination, oxidative
-    hits — while mutagens add signatures of their own (UV dimers, alkylation, intercalation)==.
-    ==The codon table sets the cost of a point mutation — silent keeps the amino acid, missense swaps
-    one, nonsense stops the chain early==.'
+  - ==Mutation types — point (silent, missense, nonsense), frameshift (insertion/deletion not a multiple
+    of 3), and larger rearrangements==. Causes — replication errors, oxidative damage, UV dimers, chemical
+    mutagens. ==Exposure pattern — frameshift = function severely compromised; nonsense = truncation;
+    silent = no change==.
+  - ==Spontaneous chemistry supplies most lesions — depurination, cytosine deamination, oxidative hits
+    — while mutagens add signatures of their own (UV dimers, alkylation, intercalation)==. ==The codon
+    table sets the cost of a point mutation — silent keeps the amino acid, missense swaps one, nonsense
+    stops the chain early==.
   check:
   - q: A single-base insertion early in a coding sequence usually…
     options:
@@ -23,28 +27,43 @@ sections:
       C: Swaps one amino acid for another
       D: Shifts the reading frame and scrambles everything downstream
     answer: D
-    explain: An indel not in multiples of three re-reads every downstream codon, usually to an early
-      stop.
+    explain: An indel not in multiples of three re-reads every downstream codon, usually to an early stop.
     distractors:
       A: Reading frames rarely survive an indel.
       B: The sequence stays — the meaning is what changes.
       C: That is a missense point mutation.
       D: Correct.
+  - q: A coding exon loses 2 bases near its 5' end. The consequence is…
+    options:
+      C: A frameshift that re-reads every downstream codon
+      A: The loss of one amino acid with the rest intact
+      B: A nonsense mutation truncating the protein immediately
+      D: No effect, because two bases is a very small change
+    answer: C
+    explain: Only multiples of three preserve the frame; two bases shift every codon downstream.
+    distractors:
+      A: Losing exactly one residue requires deleting exactly one codon (3 bases).
+      B: A stop codon is not created by the deletion itself, though one often appears downstream.
+      D: Size is irrelevant — the frame is what matters.
   figures:
   - src: 1c-heritable-information-diversity/dna-double-helix.webp
     caption: Antiparallel strands, A-T (2 H-bonds) and G-C (3 H-bonds) pairing — the template logic of
       replication.
     credit: Fig 14.7 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Repair pathways — proofreading to excision lanes
+  objectives:
+  - Match each repair pathway to the lesion it corrects.
+  - Choose between homologous recombination and NHEJ by cell-cycle stage.
+  - Predict the syndrome produced by a named repair defect.
   body:
   - ==Mutation rates stay low because proofreading (3'-5' exonuclease), mismatch repair, and DNA damage
-    checkpoints police every division==. ==Repair lanes are matched to lesion size — mismatch (G-T
-    mispairs after replication), base excision (BER, one damaged base via a glycosylase), nucleotide
-    excision (NER, a patch around bulky lesions like thymine dimers), double-strand break repair
-    (homologous recombination in S/G2, non-homologous end joining any time)==.
-  - '==Which lane runs decides the phenotype — NER defects give xeroderma pigmentosum, mismatch-repair
-    defects give Lynch syndrome with microsatellite instability, BRCA1/2 defects leave double-strand
-    breaks to error-prone end joining==.'
+    checkpoints police every division==. ==Repair lanes are matched to lesion size — mismatch (G-T mispairs
+    after replication), base excision (BER, one damaged base via a glycosylase), nucleotide excision (NER,
+    a patch around bulky lesions like thymine dimers), double-strand break repair (homologous recombination
+    in S/G2, non-homologous end joining any time)==.
+  - ==Which lane runs decides the phenotype — NER defects give xeroderma pigmentosum, mismatch-repair
+    defects give Lynch syndrome with microsatellite instability, BRCA1/2 defects leave double-strand breaks
+    to error-prone end joining==.
   check:
   - q: UV-induced thymine dimers are repaired by…
     options:
@@ -59,7 +78,24 @@ sections:
       B: Small damaged bases only.
       C: Correct.
       D: Ends replication.
+  - q: A double-strand break occurs in G1, before replication. Which pathway repairs it?
+    options:
+      D: Non-homologous end joining
+      A: Homologous recombination
+      B: Base excision repair
+      C: Nucleotide excision repair
+    answer: D
+    explain: With no sister chromatid yet available, the cell trims and ligates the ends directly — fast
+      but error-prone.
+    distractors:
+      A: Homologous recombination needs the S/G2 sister template.
+      B: Excision repair handles single damaged bases, not broken backbones.
+      C: Excision repair handles bulky lesions, not broken backbones.
 - heading: Recombination — homologous and site-specific
+  objectives:
+  - Describe homologous recombination and its role in meiosis.
+  - Explain how V(D)J recombination assembles antibody diversity.
+  - Distinguish recombination, which shuffles alleles, from mutation, which creates them.
   body:
   - ==Homologous recombination — exchanging DNA between similar sequences; in meiosis, crossing over in
     prophase I creates chiasmata and new allele combinations==. ==Site-specific — V(D)J recombination
@@ -81,7 +117,23 @@ sections:
       B: No frameshifts involved.
       C: Duplication is a different process.
       D: Correct.
+  - q: Crossing over during prophase I produces…
+    options:
+      A: Recombinant chromatids carrying new combinations of parental alleles
+      B: New alleles that did not exist in either parent
+      C: Whole-chromosome nondisjunction
+      D: Epigenetic silencing of one homologue
+    answer: A
+    explain: Recombination reshuffles existing variation — it does not invent new sequence.
+    distractors:
+      B: Creating new alleles is mutation's job, not recombination's.
+      C: Nondisjunction is a segregation failure, not an exchange.
+      D: Silencing is epigenetic and unrelated to crossing over.
 - heading: Epigenetics — heritable but not sequence-based
+  objectives:
+  - Define epigenetics and name its principal mechanisms.
+  - Explain imprinting by parental origin using a named example.
+  - Describe X-inactivation and the mosaicism it produces.
   body:
   - '==Epigenetics = heritable changes in expression with DNA sequence unchanged — DNA methylation (CpG
     islands, silences), histone modifications (acetylation opens, methylation can silence), chromatin
@@ -104,19 +156,37 @@ sections:
       B: Mutations are rare.
       C: Chromosomes persist.
       D: Correct.
+  - q: Two siblings carry the same chromosome 15 deletion but show different syndromes. The explanation
+      is…
+    options:
+      D: Genomic imprinting — the effect depends on which parent transmitted the deletion
+      A: Different point mutations within the same gene
+      B: Random X-inactivation in one of the two children
+      C: A nucleotide excision repair defect in one sibling
+    answer: D
+    explain: Only one parental allele is active in the imprinted region, so the same deletion hits a different
+      working copy in each child (Prader-Willi versus Angelman).
+    distractors:
+      A: The deletion is stated to be the same in both.
+      B: X-inactivation is irrelevant to an autosomal region.
+      C: No repair defect is implicated by a shared deletion.
   figures:
   - src: 1c-heritable-information-diversity/chromosome-packing.webp
     caption: Chromosome packing — DNA wrapped around histones into nucleosomes, then coiled into chromosomes.
     credit: Fig 14.6 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Genome instability — when a repair lane is missing
+  objectives:
+  - Map each repair-defect syndrome to its pathway and its cancer risk.
+  - Explain why a tumour's mutation burden climbs when a lane is lost.
+  - Relate telomerase reactivation to replicative immortality.
   body:
-  - '==Repair defects map onto cancer syndromes — xeroderma pigmentosum (NER → UV-driven skin cancers),
-    Lynch syndrome (mismatch repair → microsatellite instability in colorectal cancer), BRCA1/2
-    (homologous recombination → breast/ovarian)==. ==Tumor genomes accumulate damage faster because a
-    lane is missing, not because mutagens got stronger==.'
-  - '==Telomeres cap chromosome ends — the end-replication problem shortens them each division==.
-    ==Telomerase re-extends telomeres in germline and stem cells, and most cancers reactivate it to
-    escape the replicative limit==.'
+  - ==Repair defects map onto cancer syndromes — xeroderma pigmentosum (NER → UV-driven skin cancers),
+    Lynch syndrome (mismatch repair → microsatellite instability in colorectal cancer), BRCA1/2 (homologous
+    recombination → breast/ovarian)==. ==Tumor genomes accumulate damage faster because a lane is missing,
+    not because mutagens got stronger==.
+  - ==Telomeres cap chromosome ends — the end-replication problem shortens them each division==. ==Telomerase
+    re-extends telomeres in germline and stem cells, and most cancers reactivate it to escape the replicative
+    limit==.
   check:
   - q: A colorectal tumor shows microsatellite instability. The likeliest defect is in…
     options:
@@ -125,26 +195,60 @@ sections:
       C: Mismatch repair
       D: Telomerase
     answer: C
-    explain: Slipped repeats escape mismatch repair, so repeat tracts lengthen or shorten between
-      generations.
+    explain: Slipped repeats escape mismatch repair, so repeat tracts lengthen or shorten between generations.
     distractors:
       A: BER clears oxidized and deaminated bases.
       B: NER defects show UV sensitivity, not repeat instability.
       C: Correct.
       D: Telomerase sets replicative lifespan.
+  - q: BRCA1/2 mutations raise breast and ovarian cancer risk because…
+    options:
+      D: Homologous recombination repair of double-strand breaks fails
+      A: Nucleotide excision repair fails, so UV damage accumulates
+      B: Mismatch repair fails, producing microsatellite instability
+      C: Telomerase is lost and cells cannot divide
+    answer: D
+    explain: Without HR, breaks are left to error-prone end joining, so rearrangements accumulate.
+    distractors:
+      A: That combination gives xeroderma pigmentosum and skin cancer.
+      B: That combination gives Lynch syndrome and colorectal cancer.
+      C: Most cancers reactivate telomerase rather than losing it.
 examples:
 - prompt: CFTR has a deletion of 3 bases removing phenylalanine at position 508 (delta-F508). Classify
     the mutation and explain why most heterozygotes are healthy.
+  strategy: 'Count the missing bases before naming the mutation: three bases is exactly one codon, so
+    the reading frame survives and the deletion is in-frame. The plan is frame first, consequence second
+    — the frame decides whether downstream sequence is scrambled, and only then does the phenotype follow.'
   solution:
   - Three bases = one codon removed — an in-frame deletion of Phe.
   - Not a frameshift — the reading frame survives downstream.
   - The altered protein misfolds and is degraded — loss of function.
   - Heterozygotes retain one working allele — haplo-sufficiency → carrier phenotype mild.
   answer: In-frame codon deletion — recessive loss-of-function, carriers unaffected.
+  discussion: 'In-frame is not the same as harmless: the protein keeps its length and register yet the
+    missing phenylalanine still breaks folding, which is a reminder that one residue can decide a domain''s
+    stability. The recessive inheritance follows because a single good allele makes enough functional
+    CFTR — haplo-sufficiency — whereas a dominant-negative mechanism would sicken the carriers. Contrast
+    the arithmetic: deleting one base at the same spot would shift the frame and typically produce an
+    earlier, more severe phenotype.'
   distractors:
     A: Frameshift — that would need non-multiple-of-3 bases.
     B: Nonsense — that stops translation early.
     C: Silent — the amino acid clearly changed.
+  practice:
+    q: A coding exon loses 2 bases at position 100 of a 1200-base open reading frame. What is the consequence?
+    options:
+      A: A frameshift that re-reads every downstream codon, usually adding an early stop
+      B: The loss of a single amino acid, leaving the rest of the protein intact
+      C: A silent change with no effect on the protein
+      D: A duplication of everything downstream
+    answer: A
+    explain: Two is not a multiple of three, so the frame shifts at position 100 and the remaining 1100
+      bases are read in the wrong register.
+    distractors:
+      B: That outcome needs exactly one codon (3 bases) removed.
+      C: A deletion changes the sequence; silent mutations are single-base substitutions.
+      D: Deletion removes sequence; it does not duplicate it.
 key_points:
 - Point vs frameshift — reading frame is the hinge; nonsense truncates, silent changes nothing.
 - NER for bulky dimers; BER for single damaged bases; mismatch for post-replication mispairs.
@@ -184,8 +288,7 @@ passage:
       C: Base excision repair
       D: Telomerase
     answer: A
-    explain: Thymine dimers are bulky lesions — NER cuts a patch around them; its loss is xeroderma
-      pigmentosum.
+    explain: Thymine dimers are bulky lesions — NER cuts a patch around them; its loss is xeroderma pigmentosum.
     distractors:
       A: Correct.
       B: Mispairs after replication, not UV lesions.
@@ -212,8 +315,8 @@ passage:
       C: Unrepaired dimers stall replication, and bypass past them is error-prone
       D: Mitochondrial DNA takes the damage
     answer: C
-    explain: Replication across an unrepaired dimer needs translesion polymerases — the errors fix in as
-      mutations.
+    explain: Replication across an unrepaired dimer needs translesion polymerases — the errors fix in
+      as mutations.
     distractors:
       A: Telomere loss limits divisions, not fidelity.
       B: Lesion-bypass polymerases are the inaccurate ones.

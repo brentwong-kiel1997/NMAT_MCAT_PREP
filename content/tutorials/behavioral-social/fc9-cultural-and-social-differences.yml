@@ -6,6 +6,10 @@ overview: Social structure, culture, institutions, and demographics — how soci
   linkages in health passages.
 sections:
 - heading: Social structure and institutions
+  objectives:
+  - Name the institution at work in a described scenario and the resource it distributes.
+  - Identify the hidden curriculum or self-fulfilling prophecy operating inside a school episode.
+  - Trace how credentialing or tracking reproduces inequality across a generation.
   body:
   - ==Social structure = statuses, roles, groups, institutions organizing life==. Institutions — family,
     education, religion, economy, government, health care; each reproduces norms and distributes resources
@@ -26,7 +30,25 @@ sections:
       A: Not an academic channel.
       B: Regulatory layer.
       C: That is the formal transcript.
+  - q: Teachers told that randomly selected pupils are 'bloomers' give them more feedback; those pupils'
+      scores rise by year's end. Which institution-level mechanism, and what does it show about schools?
+    options:
+      A: Culture lag — grading technology outpaced norms
+      B: Tracking — pupils were sorted into ability rooms
+      C: The hidden curriculum — pupils learned obedience to teachers
+      D: Self-fulfilling prophecy — teacher expectation, not measured ability, moved outcomes
+    answer: D
+    explain: Rosenthal's design randomised the label, so the only changed input was expectation — the
+      school amplified whatever it anticipated.
+    distractors:
+      A: No technology-norm gap is involved.
+      B: No ability grouping occurred — the labels were random.
+      C: Obedience norms are implicit teaching, not the mechanism that raised scores here.
 - heading: Culture — shared meaning in groups
+  objectives:
+  - Distinguish ethnocentrism from cultural relativism in a described cross-cultural judgment.
+  - Identify cultural capital and code-switching in a described social encounter.
+  - Apply culture lag, assimilation, or pluralism to a described change in material life.
   body:
   - ==Culture = symbols, language, values, norms, artifacts; ethnocentrism vs cultural relativism==. Subculture
     vs counterculture; ==culture lag (materials outpace norms), cultural imperialism, assimilation vs
@@ -47,6 +69,21 @@ sections:
       A: Normative confusion.
       B: A norm-technology gap.
       D: Full identity replacement.
+  - q: A firm's hiring panel rewards candidates who discuss sailing and classical music — knowledge unrelated
+      to the job. Applicants from families without that exposure lose out. Which concept, and what does
+      it convert into?
+    options:
+      A: Culture lag — interview norms trail technology
+      B: Assimilation — applicants must abandon their home culture entirely
+      C: Cultural capital — tastes and knowledge convert into hiring advantage
+      D: Counterculture — the panel rejects mainstream values
+    answer: C
+    explain: 'Bourdieu: inherited familiarity with high-status culture functions as capital and reproduces
+      advantage without any job relevance.'
+    distractors:
+      A: Nothing about material change outrunning norms.
+      B: Assimilation describes a group adopting majority norms, not a hiring mechanism.
+      D: The panel enforces dominant taste, not opposition to it.
   figures:
   - src: behavioral-social/fc9-cultural-and-social-differences/fig-4e6565f8.webp
     caption: The ribbon as a shared symbol — meaning carried by the health-awareness campaign.
@@ -55,6 +92,10 @@ sections:
     caption: Judo as cultural practice — sport encodes values, rules, and ritual.
     credit: Ch 3 · OpenStax Introduction to Sociology 3e — CC BY-NC-SA 4.0
 - heading: Deviance and social control
+  objectives:
+  - Classify a described act into Merton's five adaptations by what happened to goals and means.
+  - Distinguish formal from informal social control in a described sanction.
+  - Explain a described behavior through labeling theory or medicalization.
   body:
   - ==Strain theory (Merton) — gaps between goals and means push adaptation (conformity, innovation, ritualism,
     retreatism, rebellion)==. Labeling (Becker) — deviance is a label with career effects. ==Control theory
@@ -77,7 +118,27 @@ sections:
       B: Rejecting both.
       C: Correct.
       D: Dropping goals, keeping routine.
+  - q: An employee keeps filing reports exactly as required, long after admitting to herself that the
+      promotion she was promised will never come. She has dropped the goal but kept the routine. Which
+      Merton adaptation?
+    options:
+      A: Innovation — goals kept, means substituted
+      B: Ritualism — means kept, goal abandoned
+      C: Retreatism — both goal and means rejected
+      D: Conformity — both goal and means accepted
+    answer: B
+    explain: 'Ritualism is the going-through-the-motions response: the rules are followed and the ambition
+      is gone.'
+    distractors:
+      A: Innovation keeps the goal and swaps in illegitimate means.
+      C: Retreatism drops the routine as well — the employee still files everything.
+      D: Conformity retains both the goal and belief in reaching it.
 - heading: Social stratification and mobility
+  objectives:
+  - Separate absolute from relative mobility, and intragenerational from intergenerational mobility, in
+    a described case.
+  - Apply Weber's class, status, and party dimensions to a described position.
+  - Explain how credentialing and social closure reproduce inequality without differing test scores.
   body:
   - ==Stratification dimensions — class, status, power (Weber); Marx — ownership of production.== Closed
     (caste) vs open (class) systems; ==reproduction of inequality — credentialing, social closure, intergenerational
@@ -99,7 +160,25 @@ sections:
       B: No.
       C: Correct.
       D: No genetic claim.
+  - q: A nurse becomes a hospital director — a big rise within her working life. Her daughter then starts
+      from that director's salary rather than from nursing school. Which two mobility types are these?
+    options:
+      A: Both are intergenerational mobility
+      B: Intragenerational for the nurse, intergenerational for the daughter
+      C: Both are absolute mobility
+      D: Horizontal mobility for the nurse, vertical for the daughter
+    answer: B
+    explain: Within-one-career movement is intragenerational; movement measured across parent and child
+      is intergenerational.
+    distractors:
+      A: The nurse's rise happened inside her own career.
+      C: Absolute mobility concerns overall growth of the distribution, not these two linked cases.
+      D: The nurse's move changed rank — that is vertical, not horizontal.
 - heading: Demographic and health population patterns
+  objectives:
+  - Place a described country in a demographic transition stage from its birth and death rate pattern.
+  - Compute the prevalence-incidence-duration relation for a described condition.
+  - Distinguish lead-time and length-time bias in a described screening program.
   body:
   - ==Demographic transition — stage 1 (both high), 2 (deaths fall, boom), 3 (fertility falls), 4 (both
     low)==. Pyramids encode history. Migration — push/pull, chain, remittances.
@@ -119,20 +198,57 @@ sections:
       B: Correct.
       C: Short duration lowers prevalence.
       D: Consistent with chronic disease.
+  - q: A new therapy does not prevent a disease but keeps patients alive far longer. What happens to incidence
+      and prevalence?
+    options:
+      A: Incidence rises, prevalence falls
+      B: Incidence unchanged, prevalence rises
+      C: Both fall
+      D: Incidence falls, prevalence unchanged
+    answer: B
+    explain: New cases per year are untouched, but each case persists longer, so the number living with
+      the disease at any time grows.
+    distractors:
+      A: Nothing changes who develops the disease.
+      C: Neither the rate of new cases nor duration falls.
+      D: Only duration changed, and prevalence follows duration upward.
 examples:
 - prompt: A hospital's discharge planning assumes single-family caregivers. Multicultural families send
     children abroad and rely on community elders. Explain the institutional mismatch and a culturally
     humble fix.
+  strategy: Read the policy as culture made institutional. Ask what template of family the protocol silently
+    encodes, name the mismatch as a structural conflict rather than family noncompliance, then design
+    a fix that changes the institution instead of the household.
   solution:
   - The assumption encodes one cultural template of caregiving.
   - Mismatch — compliance metrics punish families who 'deviate'.
   - '=> conflict/structural reading: norms favor majority family forms.'
   - Fix — family-defined care plans, cultural navigators, flexible discharge criteria.
   answer: Institutional culture clashes with plural family realities — responsive design fixes it.
+  discussion: 'The move generalises to any access problem: when outcomes differ by group, ask first what
+    default the system assumed. The same reasoning covers clinic hours that assume daytime availability,
+    forms printed in one language, and referral paths that assume car ownership. Structural competence
+    — redesigning the system — outperforms cultural competence training aimed only at attitudes.'
   distractors:
     A: Blame-the-family — repeats the bias.
     B: Universal protocols without localization — enacts the problem.
     C: Cultural relativism doesn't excuse clinical standards — this is about access design.
+  practice:
+    q: A clinic's reminder system calls patients only on weekday mornings and labels repeated non-attendance
+      as 'noncompliant'. Shift workers miss most appointments. Which reading and fix follow?
+    options:
+      A: Patient education — teach patients to keep morning appointments
+      B: Ethnocentrism — require patients to adopt clinic norms
+      C: Structural mismatch — the protocol encodes a nine-to-five template; add evening and message-based
+        reminders
+      D: Culture lag — patients' phones outpace clinic policy
+    answer: C
+    explain: The system's default assumes standard working hours; non-attendance is produced by the design,
+      so the design should change.
+    distractors:
+      A: Education does not touch a scheduling barrier.
+      B: Blaming the household repeats the mismatch this chapter warns about.
+      D: Culture lag is about material change outpacing norms, not appointment windows.
 key_points:
 - Institutions reproduce norms AND distribute resources.
 - Culture lag — materials outrun norms; cultural capital converts heritage into advantage.

@@ -6,6 +6,9 @@ overview: Fluency with arithmetic and algebra primitives — order of operations
   mechanical about them.
 sections:
 - heading: Order of operations and signed arithmetic
+  objectives:
+  - Evaluate a mixed expression in PEMDAS order, resolving parentheses and exponents before multiply/divide.
+  - Predict the sign of a product or quotient involving negatives before computing.
   body:
   - '==PEMDAS — parentheses, exponents, multiplication/division (left to right), addition/subtraction
     (left to right)==. ==Negative arithmetic — the signs matter: minus times minus is plus; subtracting
@@ -26,7 +29,23 @@ sections:
       B: Wrong precedence on exponents.
       C: Correct.
       D: Left-to-right without PEMDAS.
+  - q: 'Evaluate: 8 + 2 x (10 - 4)^2 / 3'
+    options:
+      A: 20 — the exponent was dropped
+      B: '32'
+      C: 80 — the division by 3 was skipped
+      D: 24 — the final addition was dropped
+    answer: B
+    explain: (10 - 4)^2 = 36; 2 x 36 = 72; 72/3 = 24; 8 + 24 = 32.
+    distractors:
+      A: Using 6 in place of 6^2 loses the exponent step.
+      C: 'Stopping after 2 x 36 = 72 leaves the division undone: 8 + 72 = 80.'
+      D: 72/3 = 24 is correct so far, but the leading 8 was never added.
 - heading: Fractions, decimals, and percents
+  objectives:
+  - Convert fluently among fraction, decimal, and percent forms without a calculator.
+  - Set up percent-over-base problems by identifying the 'of' quantity first.
+  - Compute a percent change against the earlier value as base.
   body:
   - ==Fraction fraction rules — add/subtract require common denominators; multiply straight across; divide
     by inverting the divisor==. ==Percent = per hundred — 25% = 0.25 = 1/4; convert fluently both directions==.
@@ -46,7 +65,23 @@ sections:
       B: That is 3/7.
       C: Rounding 3/8 up.
       D: Correct.
+  - q: A price rises from 250 to 310 pesos. The percent increase is…
+    options:
+      A: 60% — the absolute increase reported as a percent
+      B: 19.4% — the new value used as the base
+      C: 24%
+      D: 124% — 310/250 read as an increase
+    answer: C
+    explain: 'Increase = 310 - 250 = 60 over the ORIGINAL base 250: 60/250 = 0.24 = 24%.'
+    distractors:
+      A: The raw difference must be divided by the base.
+      B: Dividing by 310 gives the change relative to the NEW price, which is not the percent increase.
+      D: 310/250 = 1.24 is the new price as a fraction of the old, not the increase.
 - heading: Ratios, proportions, and unit alignment
+  objectives:
+  - Solve a proportion by cross-multiplying only after units are aligned.
+  - Combine fill and drain rates into a single net rate and convert it to a time.
+  - Convert between unit systems (km/h and m/s, hours and minutes) inside a rate computation.
   body:
   - ==A ratio compares parts (3:2); a proportion states equality of two ratios — cross-multiply only after
     aligning units==. ==Unit alignment — convert everything to one system before any ratio step; wrong
@@ -67,7 +102,24 @@ sections:
       B: Half the sum.
       C: Average of times.
       D: Correct.
+  - q: Pipe A fills a cistern in 3 hours, pipe B fills it in 6 hours, and a drain empties it in 8 hours.
+      With all three open, how long to fill?
+    options:
+      A: 2 hours — the drain was ignored
+      B: 1.6 hours — the drain rate was added instead of subtracted
+      C: 2.67 hours (8/3)
+      D: 0.375 hours — the net rate was reported as a time
+    answer: C
+    explain: Net rate = 1/3 + 1/6 - 1/8 = 8/24 + 4/24 - 3/24 = 9/24 = 3/8 per hour, so t = 8/3 ≈ 2.67
+      h.
+    distractors:
+      A: Ignoring the drain gives 1/3 + 1/6 = 1/2, hence 2 h — but the drain is open.
+      B: Adding the drain's rate gives 15/24 = 5/8, hence 1.6 h — the drain removes, not adds.
+      D: 3/8 is the RATE per hour; the time is its reciprocal.
 - heading: Exponents and roots
+  objectives:
+  - Apply the exponent laws — add on multiply, subtract on divide, multiply on a power of a power.
+  - Handle zero and negative exponents, including conversion to fractional form.
   body:
   - '==Multiplication adds exponents (x^a x^b = x^(a+b)); division subtracts (x^a/x^b = x^(a-b)); power
     of a power multiplies ((x^a)^b = x^(ab))==. ==Zero power = 1; negative power inverts: x^-2 = 1/x^2==.'
@@ -87,7 +139,22 @@ sections:
       B: Adding exponents only.
       C: Correct.
       D: Subtracting wrong.
+  - q: Simplify 5^0 + 5^1 + 5^-1 and express the result as a fraction.
+    options:
+      A: 31/5
+      B: 6 — the 1/5 term was dropped
+      C: 1 — the zero exponent was applied to the whole sum
+      D: 125 — the terms were multiplied instead of added
+    answer: A
+    explain: 5^0 = 1, 5^1 = 5, 5^-1 = 1/5; the sum is 6 + 1/5 = 31/5.
+    distractors:
+      B: Omitting the negative exponent loses the 1/5.
+      C: The zero exponent belongs to the single factor 5, not to the expression.
+      D: No product is requested — the operation between terms is addition.
 - heading: Estimation and answer-sanity checks
+  objectives:
+  - Estimate a product or percent by rounding to clean values before computing.
+  - Eliminate options by magnitude, sign, and unit filters before any exact work.
   body:
   - ==Kill absurd options first — magnitude, sign, and unit filters remove 2-3 options before any computation==.
     ==Round-then-compute — 19.7 x 3.1 ≈ 20 x 3 = 60; distractor traps hide behind 5-10% errors==.
@@ -107,17 +174,48 @@ sections:
       B: Underestimate.
       C: That is 10%.
       D: Correct.
+  - q: Estimate 49.6 x 4.08 without multiplying exactly.
+    options:
+      A: About 200
+      B: About 240 — both factors rounded upward
+      C: About 160 — both factors rounded downward
+      D: About 25 — an order-of-magnitude slip
+    answer: A
+    explain: 50 x 4 = 200, and the small overshoot in 49.6 is nearly cancelled by 4.08.
+    distractors:
+      B: Rounding 4.08 up to 4.8 is not a rounding — it is a 17% distortion.
+      C: Neither factor justifies rounding down by 20%.
+      D: 25 is off by a factor of eight — the magnitude filter should have killed it.
 examples:
 - prompt: A shirt costs 1,200 pesos after a 20% discount. What was the original price?
+  strategy: Name the base before operating. 'After a 20% discount' makes 1,200 the 80% remainder of the
+    original, so the original is recovered by division — never by subtracting another 20%.
   solution:
   - The current price is 80% of the original — 0.8P = 1200.
   - P = 1200/0.8 = 1500.
   - Never subtract 20% from the final price — that error gives 960.
   answer: 1,500 pesos.
+  discussion: 'The same base discipline covers markups, tax, and successive changes: successive percents
+    MULTIPLY rather than add. A 20% discount followed by a 20% markup returns to 96% of the start, and
+    the asymmetry is why every percent step needs its base written down.'
   distractors:
     A: 960 — applying 20% off the wrong base.
     B: 1,440 — adding 20% of 1,200 back on instead of dividing by 0.8.
     C: 1,000 — rounding the base down.
+  practice:
+    q: A phone is marked up 25% over wholesale, then sold at 10% off the marked price for 1,080 pesos.
+      What was the wholesale price?
+    options:
+      A: 1,200 pesos — only the 10% discount was reversed
+      B: 960 pesos
+      C: 864 pesos — the 10% discount was applied again rather than reversed
+      D: 1,350 pesos — the final price was treated as 80% of wholesale
+    answer: B
+    explain: Marked = 1.25W; final = 0.9 x 1.25W = 1.125W = 1,080, so W = 1,080/1.125 = 960 pesos.
+    distractors:
+      A: 1,200 is the marked price; the 25% markup has not been undone.
+      C: Multiplying by 0.9 moves further from the answer instead of recovering the base.
+      D: The final price is 1.125 times wholesale, not 0.8 times it.
 key_points:
 - PEMDAS — left to right within tiers; -3^2 = -9.
 - Percents rebase on the 'of' quantity.

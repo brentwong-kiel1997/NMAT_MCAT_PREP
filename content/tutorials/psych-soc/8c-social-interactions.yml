@@ -5,6 +5,10 @@ overview: 8C covers the mechanics of interaction — exchange, cooperation, aggr
   logic, attraction. Expect game scenarios and helping experiments. Prerequisite — 7B, 8A.
 sections:
 - heading: Interaction as exchange
+  objectives:
+  - Frame a described interaction in costs and benefits and judge it against equity.
+  - Explain the prisoner's dilemma and tragedy of the commons as incentive misalignment.
+  - Name the conditions (repeated play, reciprocity, identity) that sustain cooperation.
   body:
   - Social exchange — costs and benefits, with equity's fairness rider. Prisoner's dilemma and tragedy
     of the commons — mutual cooperation maximizes joint payoff, yet incentive defects; repeated play with
@@ -22,7 +26,26 @@ sections:
       A: Commons are shared.
       B: Animosity unnecessary.
       D: Institutions can sustain cooperation.
+  - q: Two departments must share a limited scanner; each books it excessively because unused slots may
+      be lost. Both end up worse off than under a shared quota. Which structure, and which remedy?
+    options:
+      A: The prisoner's dilemma; punishment of defectors only
+      B: Tragedy of the commons; a binding quota or repeated-play reciprocity agreement
+      C: Social loafing; make contributions identifiable
+      D: Mere exposure; increase contact between departments
+    answer: B
+    explain: A shared resource depleted by private incentive is the commons structure; institutions and
+      an ongoing relationship restore cooperation.
+    distractors:
+      A: The dilemma's structure is a shared commons, not a two-party defection matrix.
+      C: Loafing concerns effort within a group task, not resource depletion.
+      D: Exposure affects liking, not the incentive structure.
 - heading: Aggression — biology meets learning
+  objectives:
+  - Assign a described influence to biological channel (amygdala, prefrontal brake, serotonin, testosterone)
+    or situational trigger (frustration, heat, weapons effect).
+  - Reject single-cause aggression answers and assemble the multi-factor account.
+  - Explain the frustration-aggression link in a described episode.
   body:
   - Biological channels — amygdala activation, prefrontal regulation (frontal damage → dysregulation),
     serotonin and testosterone as modulators. Environment fires — frustration-aggression, heat, weapons
@@ -40,7 +63,26 @@ sections:
       A: No such claim.
       B: Frustration still occurs.
       D: Endocrine route.
+  - q: During a heatwave, a man with a prior frontal injury gets into a fight after being refused service.
+      Assemble the causal layers.
+    options:
+      A: Single cause — the heat alone explains the fight
+      B: Single cause — the frontal injury alone explains it
+      C: Prefrontal regulatory weakness (biology) plus heat and frustration-aggression (situational triggers)
+        jointly produced the outburst
+      D: Testosterone alone; no situational input needed
+    answer: C
+    explain: 'Aggression in this exam is multi-factor: a weakened brake plus environmental triggers that
+      raise arousal and block goals.'
+    distractors:
+      A: The pre-existing injury is a relevant layer and cannot be discarded.
+      B: The heatwave and refusal are described triggers; biology alone under-predicts situational spikes.
+      D: Hormonal accounts are one modulator, and nothing here isolates it.
 - heading: Helping — the bystander calculus
+  objectives:
+  - Trace a helping decision through the Latané-Darley nodes and name the failing node.
+  - Distinguish diffusion of responsibility from pluralistic ignorance.
+  - Interpret a Batson easy-escape design as evidence for egoistic versus empathic helping.
   body:
   - The bystander effect — more bystanders, less helping each — via diffusion of responsibility and pluralistic
     ignorance. Latané and Darley's tree — notice → interpret → assume responsibility → implement — fails
@@ -58,6 +100,20 @@ sections:
       A: Performance under observation.
       B: Anonymity.
       C: Group favoritism.
+  - q: In an emergency, a witness hears others chatting calmly and concludes nothing serious is happening.
+      Which node failed, and what is the mechanism called?
+    options:
+      A: Assuming responsibility — diffusion of responsibility
+      B: Interpreting — pluralistic ignorance, each reads others' calm as evidence of safety
+      C: Noticing — distraction blocked the cue
+      D: Implementing — lack of competence stopped the action
+    answer: B
+    explain: 'The failure is at interpretation: ambiguous cues plus passive models produce a false consensus
+      that nothing is wrong.'
+    distractors:
+      A: Responsibility division happens after the event is accepted as an emergency.
+      C: The witness clearly noticed the emergency cues.
+      D: No skill deficit is described.
   figures:
   - src: 8c-social-interactions/fig-c5959bf5.webp
     caption: Prosocial behavior — helping, altruism, and the bystander calculus.
@@ -66,6 +122,11 @@ sections:
     caption: Aggression and its situational triggers — the interaction of biology and context.
     credit: Fig 12.17 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Attraction
+  objectives:
+  - Identify the attraction determinant (proximity, mere exposure, similarity, reciprocity) operating
+    in a described pairing.
+  - State which single predictor is strongest and apply it.
+  - Classify a described relationship into Sternberg's love types from its corners.
   body:
   - Determinants stack — proximity and mere exposure, similarity (strongest single predictor), attractiveness
     (matching), reciprocity. Sternberg's triangle — intimacy, passion, commitment — types love by which
@@ -83,17 +144,55 @@ sections:
       B: Pairing with similar partners.
       C: Arousal component.
       D: Cost-benefit framing.
+  - q: Two colleagues who initially disagreed grow close after discovering they share clinical interests
+      and humor. Which determinant is doing the work, and how does it rank?
+    options:
+      A: Mere exposure — repeated contact alone
+      B: Similarity — the strongest single predictor of attraction
+      C: Reciprocity — liking returned for liking
+      D: Physical attractiveness matching
+    answer: B
+    explain: Similarity of attitudes and values is the strongest established determinant; exposure and
+      proximity set the opportunity, not the bond.
+    distractors:
+      A: They had already been in contact without becoming close — exposure is insufficient here.
+      C: Nothing indicates liking was returned before it developed.
+      D: No attractiveness information is given.
 examples:
 - prompt: Batson's design — easy vs. hard escape crossed with empathy level. Predict the finding.
+  strategy: Read the design as a test of motive, not of helping rate. The escape manipulation separates
+    helping done to stop one's own distress (only needed when escape is blocked) from helping done for
+    the other (immune to escape difficulty).
   solution:
   - Low-empathy helping mostly under difficult escape (distress relief).
   - High-empathy helping at high rates under BOTH escapes.
   - The interaction supports empathic altruism.
   answer: High-empathy helping regardless of escape — evidence for empathy-altruism.
+  discussion: 'The dissociation logic — vary the alternative route to the same payoff and see who keeps
+    helping — generalises well beyond altruism: it separates attitude change from compliance, and intrinsic
+    from extrinsic motivation, by removing one route at a time. Expect the answer to live in the interaction,
+    never in a main effect.'
   distractors:
     A: Main effects only — the design lives in the interaction.
     B: Nobody helps under easy escape — some do.
     C: Reversed — egoists help when trapped.
+  practice:
+    q: In a variant, low-empathy participants help more when the experimenter watches, and less when unobserved;
+      high-empathy participants help at the same rate either way. What does the observation manipulation
+      isolate?
+    options:
+      A: Diffusion of responsibility among participants
+      B: Whether helping is driven by impression management (egoistic) or by concern for the other (empathic)
+      C: Social loafing on a group task
+      D: Mere exposure to the experimenter
+    answer: B
+    explain: Observation supplies a self-presentational payoff; only those helping for that payoff should
+      drop when it disappears.
+    distractors:
+      A: Responsibility diffusion operates in groups of bystanders, not between observed and unobserved
+        conditions.
+      C: No shared task or effort measure is described.
+      D: Exposure affects liking, not the motive for helping.
 key_points:
 - Exchange framing; commons need repetition or identity to sustain cooperation.
 - Aggression — amygdala drive, prefrontal brake, frustration fires.

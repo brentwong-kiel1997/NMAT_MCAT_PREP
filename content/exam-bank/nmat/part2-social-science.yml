@@ -129,26 +129,28 @@ items:
       items.
   chapter: psychology
 - id: nmat-p2s-007
-  q: A child agrees that two identical glasses hold the same amount of water, but
-    says the taller, narrower glass has 'more' once the water is poured into it. In
-    Piaget's terms the child lacks…
+  q: In a male initiation ceremony, boys are taken from the village, live in seclusion
+    in the bush for weeks under strict rules of silence, and finally return to be
+    greeted as full adults. In van Gennep's and Turner's analysis, the middle phase
+    of seclusion — in which the initiates are no longer children but not yet adults
+    — is called…
   choices:
-    A: object permanence
-    B: conservation of quantity
-    C: abstract and hypothetical reasoning
-    D: egocentrism
+    A: separation
+    B: liminality
+    C: incorporation
+    D: enculturation
   answer: B
-  explain: Conservation — knowing quantity is unchanged by a change in appearance
-    — is the hallmark of moving from the preoperational to the concrete operational
-    stage.
+  explain: Rites of passage have three phases — separation, transition (liminality)
+    and incorporation; Turner stressed the liminal phase as 'betwixt and between'
+    fixed statuses.
   distractors:
-    A: Object permanence is knowing an object still exists when out of sight, mastered
-      in the sensorimotor stage.
-    C: Formal operational reasoning appears in early adolescence, far beyond this
-      liquid task.
-    D: Egocentrism is difficulty taking another's viewpoint; the child here is comparing
-      amounts, not perspectives.
-  chapter: psychology
+    A: Separation is the first phase, in which initiates are symbolically removed
+      from their old status.
+    C: Incorporation is the final phase, when the initiate re-enters the community
+      holding the new status.
+    D: Enculturation is the lifelong learning of one's own culture, not a phase of
+      a single rite.
+  chapter: sociology-and-anthropology
 - id: nmat-p2s-008
   q: In Ainsworth's Strange Situation, a toddler plays with the toys while his mother
     is present, cries when she leaves, greets her warmly when she returns, and is
@@ -304,22 +306,26 @@ items:
       of someone's fall.
   chapter: fc8-self-others-interactions
 - id: nmat-p2s-016
-  q: A researcher randomly assigns one class to study with flashcards and another
-    to reread their notes, then compares scores on the same exam. The dependent variable
-    is…
+  q: In an island society, a man's land and title pass at his death not to his own
+    sons but to the sons of his eldest sister. Anthropologists describe this society's
+    rule of descent as…
   choices:
-    A: the study method
-    B: the class section
-    C: random assignment
-    D: the exam score
+    A: patrilineal, because men are the ones holding the property
+    B: bilateral, because both husbands and wives appear in the transfers
+    C: matrilocal, because the heirs stay on the family land
+    D: matrilineal, because descent and inheritance run through the mother's line
   answer: D
-  explain: The dependent variable is the measured outcome presumed to depend on the
-    manipulated independent variable — here, the study method.
+  explain: In a matrilineal system membership and property follow the mother's line,
+    so a man's heirs are his sister's children (the avunculate); which sex holds office
+    in a given generation does not define the descent line.
   distractors:
-    A: The study method is what the researcher manipulates — the independent variable.
-    B: Class section belongs to the assignment procedure used to control confounds.
-    C: Random assignment is a design procedure, not an outcome that is measured.
-  chapter: psychology
+    A: Patrilineal descent passes property from father to son; handing it to a sister's
+      sons is the opposite rule.
+    B: Bilateral descent recognizes kin through both parents equally and yields overlapping
+      claims, not a single line of heirs.
+    C: Matrilocal names a residence rule — living with or near the wife's kin — not
+      a rule of descent or inheritance.
+  chapter: sociology-and-anthropology
 - id: nmat-p2s-017
   q: A study finds that neighborhoods with more ice cream shops also have higher drowning
     rates. The soundest conclusion is that…

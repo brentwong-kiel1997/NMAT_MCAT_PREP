@@ -21,20 +21,21 @@ items:
     D: used t instead of t^2 (1/2 g t)
   chapter: 4a-motion-forces-work-energy-equilibrium
 - id: nmat-p2p-002
-  q: A marble rolls horizontally off a 20-m-high bench at 15 m/s. Taking g = 10 m/s^2, how long is it
-    in the air?
+  q: In the Bohr model the energy of hydrogen level n is E_n = -13.6/n^2 eV. How much energy is emitted
+    when the electron drops from n = 3 to n = 2?
   choices:
-    A: 1.5 s
-    B: 2.0 s
-    C: 1.4 s
-    D: 4.0 s
+    A: 3.40 eV
+    B: 1.89 eV
+    C: 13.6 eV
+    D: 1.51 eV
   answer: B
-  explain: 'Only h sets the fall time: t = sqrt(2h/g) = sqrt(2 x 20/10) = sqrt 4 = 2.0 s.'
+  explain: E_3 = -13.6/9 = -1.51 eV and E_2 = -13.6/4 = -3.40 eV, so the transition releases a photon
+    of 1.89 eV.
   distractors:
-    A: treated the 15 m/s launch speed as a vertical speed (t = v/g)
-    C: dropped the factor of 2 under the root (sqrt(h/g) = sqrt 2)
-    D: used t = 2h/g = 4 s, omitting the square root
-  chapter: 4a-motion-forces-work-energy-equilibrium
+    A: 3.40 eV is the binding energy of the n = 2 level itself, not the gap between the two levels.
+    C: 13.6 eV ionizes the atom from the ground state; a 3 -> 2 jump releases far less.
+    D: 1.51 eV is the binding energy of the n = 3 level, the initial state alone.
+  chapter: modern-physics
 - id: nmat-p2p-003
   q: A 1200-kg car accelerates from rest to 24 m/s in 8.0 s. What net force acts on it?
   choices:
@@ -140,35 +141,38 @@ items:
     C: multiplied by the contact time instead of dividing by it
   chapter: mechanics
 - id: nmat-p2p-010
-  q: A wheel is acted on by a 20-N force at 0.30 m from the axle (counterclockwise) and a 15-N force at
-    0.50 m (clockwise). What is the magnitude of the net torque?
+  q: A gas absorbs 800 J of heat from its surroundings while doing 300 J of work pushing back the piston.
+    What is the change in the internal energy of the gas?
   choices:
-    A: 13.5 N.m
-    B: 1.5 N.m
-    C: 6.0 N.m
-    D: 4.5 N.m
+    A: +1100 J
+    B: +500 J
+    C: -500 J
+    D: +800 J
   answer: B
-  explain: tau = 20 x 0.30 - 15 x 0.50 = 6.0 - 7.5 = 1.5 N.m, in the clockwise sense.
+  explain: 'First law, with Q positive into the gas and W positive done by the gas: delta-U = 800 - 300
+    = +500 J.'
   distractors:
-    A: added the two torques, ignoring that they oppose each other
-    C: kept only the 20-N force's torque
-    D: paired the 15-N force with the 0.30-m radius
-  chapter: mechanics
+    A: +1100 J adds the heat and the work, but work done BY the gas is energy leaving it.
+    C: -500 J reverses the subtraction (W - Q), reading an expansion with heat added as a loss of internal
+      energy.
+    D: +800 J uses the heat alone and ignores the work the gas performs.
+  chapter: thermodynamics
 - id: nmat-p2p-011
-  q: What is the gauge pressure 10 m below the surface of a freshwater lake? (rho = 1000 kg/m^3, g = 10
-    m/s^2)
+  q: The measured mass of a helium-4 nucleus is 4.0026 u, while two free protons and two free neutrons
+    total 4.0330 u. How much energy binds the nucleus? (1 u = 931.5 MeV/c^2)
   choices:
-    A: 1.0 x 10^5 Pa
-    B: 1.0 x 10^4 Pa
-    C: 2.0 x 10^5 Pa
-    D: 1.0 x 10^6 Pa
+    A: 28.3 MeV
+    B: 0.0304 MeV
+    C: 3756 MeV
+    D: 4.03 MeV
   answer: A
-  explain: P_gauge = rho g h = 1000 x 10 x 10 = 1.0 x 10^5 Pa.
+  explain: Mass defect = 4.0330 - 4.0026 = 0.0304 u; E = 0.0304 x 931.5 MeV = 28.3 MeV, the energy released
+    when the four nucleons combine.
   distractors:
-    B: slipped a decimal in the density (100 kg/m^3)
-    C: added atmospheric pressure, but the question asks for gauge
-    D: an extra factor of 10 (used a depth of 100 m)
-  chapter: 4b-fluids-for-circulation-and-gas-exchange
+    B: 0.0304 is the defect in mass units; it still has to be multiplied by 931.5 MeV/u.
+    C: 3756 MeV multiplies the whole nuclear mass (4.0330 u) by 931.5 instead of the defect.
+    D: 4.03 MeV treats the nucleons' rest mass in u as if it were already an energy.
+  chapter: modern-physics
 - id: nmat-p2p-012
   q: A 2.0-kg object of density 800 kg/m^3 hangs fully submerged in water (rho = 1000 kg/m^3, g = 10 m/s^2).
     What buoyant force acts on it?
@@ -200,20 +204,21 @@ items:
     C: assumed the speed is conserved rather than the flow rate
   chapter: 4b-fluids-for-circulation-and-gas-exchange
 - id: nmat-p2p-014
-  q: Water flows through a horizontal pipe and speeds up from 2.0 m/s to 6.0 m/s at a constriction. How
-    much does the pressure fall? (rho = 1000 kg/m^3)
+  q: How much heat is released when 0.20 kg of steam at 100 degrees C condenses and the resulting water
+    then cools to 40 degrees C? (L_v = 2.26 x 10^6 J/kg, c = 4200 J/kg.degC)
   choices:
-    A: 1.6 x 10^4 Pa
-    B: 3.2 x 10^4 Pa
-    C: 8.0 x 10^3 Pa
-    D: 1.8 x 10^4 Pa
+    A: 5.0 x 10^5 J
+    B: 4.5 x 10^5 J
+    C: 5.0 x 10^4 J
+    D: 2.3 x 10^5 J
   answer: A
-  explain: delta P = 1/2 rho (v2^2 - v1^2) = 500 x (36 - 4) = 1.6 x 10^4 Pa.
+  explain: Condensing releases Q1 = mL_v = 0.20 x 2.26 x 10^6 = 4.52 x 10^5 J; cooling over the 60-degree
+    drop adds Q2 = mc(delta T) = 0.20 x 4200 x 60 = 5.0 x 10^4 J; total 5.0 x 10^5 J.
   distractors:
-    B: dropped the factor of 1/2
-    C: subtracted the speeds before squaring
-    D: took the inlet speed as zero
-  chapter: 4b-fluids-for-circulation-and-gas-exchange
+    B: 4.5 x 10^5 J counts only the condensation and drops the cooling stage.
+    C: 5.0 x 10^4 J counts only the cooling and drops the latent heat.
+    D: 2.3 x 10^5 J halves the latent-heat term, as if only 0.10 kg of steam condensed.
+  chapter: thermodynamics
 - id: nmat-p2p-015
   q: An artery's radius falls to half its original value while the pressure difference along it stays
     the same. The flow rate becomes what fraction of the original? (Poiseuille flow)

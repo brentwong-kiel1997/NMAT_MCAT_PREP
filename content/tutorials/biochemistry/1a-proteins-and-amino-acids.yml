@@ -5,6 +5,10 @@ overview: Amino acid chemistry, peptide bonds, protein structure, and folding �
   biochemistry topic on the MCAT. Enzyme structure and function connect directly (pKa, charge, chirality).
 sections:
 - heading: Amino acid structure and chemistry
+  objectives:
+  - Identify the four substituents every alpha carbon carries.
+  - Classify an amino acid into its side-chain family.
+  - Predict a side chain's charge at a given pH from its pKa.
   body:
   - '==Amino acids share an amino group, carboxyl group, H, and variable R group on the alpha carbon —
     only glycine''s R is H, so glycine is not chiral==. At physiological pH, amino acids exist as zwitterions
@@ -27,12 +31,29 @@ sections:
       B: Ala has CH3 R.
       C: Correct.
       D: Val has branched R.
+  - q: A peptide segment holds Lys (side-chain pKa ~10.5) and Glu (side-chain pKa ~4.2). The net side-chain
+      charge at pH 7 is…
+    options:
+      B: Zero — Lys is +1 and Glu is -1
+      A: +2 — both side chains are protonated at pH 7
+      C: -1 — lysine is neutral at pH 7
+      D: +1 — glutamate is still protonated at pH 7
+    answer: B
+    explain: pH 7 lies below Lys's pKa (protonated, +1) and above Glu's (deprotonated, -1); they cancel.
+    distractors:
+      A: pH 7 is far below lysine's pKa but far above glutamate's — they cannot both be protonated.
+      C: Lysine only loses its proton above about pH 10.5.
+      D: Glutamate's pKa is around 4.2, so it is long since deprotonated by pH 7.
   figures:
   - src: 1a-proteins-and-amino-acids/fig-2865acde.webp
     caption: The amino acid template — amino group, carboxyl group, H, and the variable R group on the
       alpha carbon.
     credit: Fig 3.27 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Peptide bonds and protein primary structure
+  objectives:
+  - Describe the condensation reaction that forms a peptide bond.
+  - Explain why the peptide bond is planar and cannot rotate.
+  - Count peptide bonds and disulfide links in a chain of given length.
   body:
   - ==Peptide bonds are amide linkages formed by condensation (water lost) between the carboxyl of one
     residue and the amino of the next — written N-terminus to C-terminus==. The bond is planar because
@@ -54,7 +75,25 @@ sections:
       B: Circular counting.
       C: Correct — 9.
       D: That is residues.
+  - q: A pentapeptide contains two cysteine pairs joined by disulfide bonds. How many covalent links between
+      residues are there in total?
+    options:
+      B: 6 — four peptide bonds plus two disulfides
+      A: 5 — the peptide bonds only
+      C: 7 — one extra for the C-terminus
+      D: 10 — one for every pair of residues
+    answer: B
+    explain: Five residues in a linear chain give n - 1 = 4 peptide bonds, and the two disulfides add
+      two more.
+    distractors:
+      A: Forgetting the covalent disulfide cross-links.
+      C: Termini do not form bonds with anything.
+      D: Every pair is not bonded — only neighbours are.
 - heading: Secondary structure — local folds
+  objectives:
+  - Describe the i to i+4 hydrogen-bonding pattern of the alpha-helix.
+  - Contrast parallel with antiparallel beta-sheets.
+  - Explain why proline and glycine disrupt helices.
   body:
   - ==Alpha-helix — backbone C=O H-bonds to the N-H four residues ahead (i, i+4); 3.6 residues/turn; proline
     and glycine disrupt it==. ==Beta-sheet — extended strands H-bonded side by side; parallel (same direction,
@@ -76,7 +115,23 @@ sections:
       B: Ionic side chain pairs.
       C: Side-chain effect is tertiary.
       D: Correct.
+  - q: Which residue most disrupts an alpha-helix, and why?
+    options:
+      D: Proline — its rigid ring cannot adopt helix angles or donate a backbone N-H
+      A: Alanine — its methyl group is too small
+      B: Leucine — hydrophobic side chains repel the backbone
+      C: Lysine — its positive charge repels the helix
+    answer: D
+    explain: Proline's cyclic backbone locks its torsion angles and leaves no amide hydrogen to donate.
+    distractors:
+      A: Alanine is actually the strongest helix former.
+      B: Hydrophobic side chains face outward and do not disturb the backbone.
+      C: Charged side chains point away from the backbone hydrogen-bonding pattern.
 - heading: Tertiary and quaternary structure
+  objectives:
+  - List the forces that stabilise a protein's tertiary fold.
+  - Distinguish tertiary from quaternary structure.
+  - Predict what each denaturant disrupts.
   body:
   - ==Tertiary structure = the full 3D fold from side-chain interactions — hydrophobic effect (dominant),
     H-bonds, ion pairs, disulfide covalent links==. ==Quaternary structure = assembly of multiple polypeptide
@@ -98,12 +153,30 @@ sections:
       B: Sequence.
       C: Correct.
       D: Local folding.
+  - q: A functional protein is a dimer of two identical 30 kDa chains. The dimerisation itself is which
+      level of structure?
+    options:
+      A: Quaternary — assembly of multiple polypeptide chains
+      B: Tertiary — the fold of each chain
+      C: Secondary — local helices and sheets
+      D: Primary — the amino acid sequence
+    answer: A
+    explain: More than one polypeptide chain assembling means quaternary structure, whatever each chain's
+      own fold.
+    distractors:
+      B: Tertiary describes a single chain's 3D fold.
+      C: Local backbone folding does not join two chains.
+      D: Sequence alone never assembles subunits.
   figures:
   - src: 1a-proteins-and-amino-acids/fig-0971e65c.webp
     caption: Tertiary structure stabilizers — ionic bonds, hydrogen bonds, disulfide linkages, and hydrophobic
       interactions.
     credit: Fig 3.26 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Protein function — binding and enzymes
+  objectives:
+  - Relate an active site's structure to its substrate specificity.
+  - Describe how antibody variable regions generate binding diversity.
+  - Explain a classic structure-function pair such as collagen or haemoglobin.
   body:
   - ==Enzymes bind substrates at active sites (induced fit); the structure determines specificity — with
     a few side-chain contacts deciding affinity==. ==Antibodies (immunoglobulins) — Y-shaped, variable
@@ -124,19 +197,55 @@ sections:
       B: Constant mediates effector function.
       C: Hinge allows flexibility.
       D: Correct.
+  - q: Collagen's triple helix demands glycine at every third position because…
+    options:
+      C: Glycine's tiny side chain is the only one that fits the crowded core
+      A: Glycine's charge stabilises the three strands
+      B: Glycine forms the interchain disulfide bonds
+      D: Glycine makes the superhelix right-handed
+    answer: C
+    explain: Three strands pack so tightly that anything bulkier than a hydrogen wedges the core open.
+    distractors:
+      A: Glycine carries no ionisable side chain at all.
+      B: Collagen's cross-links involve lysine-derived aldehydes, not glycine.
+      D: The individual strands are left-handed; glycine's size, not its identity, allows it.
 examples:
 - prompt: 'A protein segment is analyzed: sequence Gly-Pro-Leu forms a left-handed structure with a period
     of about 3.0 A per residue. Identify the structure and name the residue that makes it unique.'
+  strategy: 'Identify by structural signature before naming anything: a repeating triplet with about 3.0
+    A rise per residue and a left-handed twist matches collagen''s building block, not an alpha-helix
+    (3.6 residues per turn) or a beta-sheet (extended). Once the pattern is named, ask which residue''s
+    size makes that geometry physically possible.'
   solution:
   - Triplet Gly-X-Y repeating period — that is collagen's left-handed helix.
   - Glycine is the only residue with room in the tight center.
   - Proline's ring locks phi/psi and forces the helix geometry.
   - Three strands then wrap into the right-handed superhelix of collagen fibers.
   answer: Collagen triple-helix building block — Gly at every third position makes it possible.
+  discussion: 'Glycine is the answer because the three strands pack so tightly that anything larger than
+    a hydrogen wedges the core apart — which is precisely why Gly-to-X mutations cause osteogenesis imperfecta.
+    Watch the handedness subtlety: each strand is left-handed while the three-strand superhelix winds
+    right-handed, and proline''s rigid ring sets the strand geometry rather than disrupting it. The 3.0
+    A per-residue rise is the fingerprint that rules out every other fold.'
   distractors:
     A: Alpha-helix — 3.6 residues/turn, not a Gly-X-Y pattern.
     B: Beta-sheet — extended, no 3.0 A rule.
     C: Random coil — repetition is structural, not random.
+  practice:
+    q: A fibrous protein forms a structure of 3.6 residues per turn with backbone H-bonds from residue
+      i to i+4. Which residue most disrupts it, and why?
+    options:
+      C: Proline, which cannot adopt the helix torsion angles or donate a backbone N-H
+      A: Glycine, which is too small to reach the H-bond
+      B: Alanine, which is too hydrophobic
+      D: Cysteine, which always forms a disulfide
+    answer: C
+    explain: The description is an alpha-helix; proline breaks it by locking the backbone and lacking
+      an amide hydrogen.
+    distractors:
+      A: Glycine is helix-tolerant precisely because it is small.
+      B: Side-chain hydrophobicity does not touch backbone hydrogen bonding.
+      D: Disulfides are optional and depend on oxidation, not on cysteine's mere presence.
 key_points:
 - Zwitterion at pH 7; pI = (pKa1 + pKa2)/2 for neutral residues.
 - Glycine achiral; cysteine disulfides; proline kinks.

@@ -5,6 +5,9 @@ overview: Rapid same/different comparison of strings, codes, and records — the
   item. Precision beats speed; systematic scanning beats holistic guessing.
 sections:
 - heading: The comparison mindset
+  objectives:
+  - Compare strings character by character from left to right, including punctuation and case.
+  - Verify a match with a second pass in the opposite direction.
   body:
   - '==Identical-information items give two (or four) strings and ask: same or different? Every character
     counts — letters, digits, spaces, punctuation, case==. ==Read the whole string; the difference hides
@@ -25,7 +28,22 @@ sections:
       B: No variance.
       C: They are written out.
       D: Correct.
+  - q: Compare 'NX-4471' with 'NX-447I' where the final character of the second string is the letter I.
+    options:
+      A: Nowhere — both look the same
+      B: At the final character — the digit 1 versus the letter I
+      C: At the hyphen
+      D: At the first two letters
+    answer: B
+    explain: 'Position 7 is the only mismatch: the numeral 1 and the capital I are glyph look-alikes.'
+    distractors:
+      A: The last position differs, so the strings are not identical.
+      C: Both strings use the same hyphen after NX.
+      D: NX matches exactly.
 - heading: The classic traps
+  objectives:
+  - Detect case differences (aBc versus Abc) at a named position.
+  - Separate glyph look-alikes (0/O, 1/l/I, 5/S, 8/B) and transpositions from true matches.
   body:
   - ==Case traps — 'aBc' vs 'Abc' differ at position 2==. ==Zero-letter traps — 0 vs O vs the letter O;
     1 vs l vs I — glyph confusions across fonts==. ==Space and punctuation — 'AB 12' vs 'AB12' differ;
@@ -46,7 +64,23 @@ sections:
       B: Correct — middle swap.
       C: Identical.
       D: Identical.
+  - q: 'Which pair is DIFFERENT? A: ''2027-03-04'' vs ''2027-03-04''; B: ''A1B2C3'' vs ''A1B2C3''; C:
+      ''5S88'' vs ''5S88''; D: ''Q-77p'' vs ''Q-77P''.'
+    options:
+      A: A — the date pair
+      B: B — the alternating pair
+      C: C — the digit-letter pair
+      D: D — the code pair
+    answer: D
+    explain: 'The trailing character differs in case: lowercase p versus uppercase P.'
+    distractors:
+      A: Both strings are identical character for character.
+      B: Both strings are identical, including the digits.
+      C: Both strings are identical; 5 and S appear in both.
 - heading: Systematic scanning strategies
+  objectives:
+  - Chunk a long string into 3-4 character groups and compare chunk by chunk.
+  - Anchor the first and last chunks before scanning the interior, where differences hide.
   body:
   - ==Chunk — break long strings into 3-4 character groups ('AB12-34CD' → AB12, 34CD) and compare chunk
     by chunk==. ==Anchor the extremes — different strings almost always differ in the interior; verify
@@ -67,7 +101,23 @@ sections:
       B: Correct.
       C: Length rarely differs alone.
       D: Misses everything else.
+  - q: Two 18-character codes must be compared. The most reliable procedure is…
+    options:
+      A: Compare only the first six characters
+      B: Compare the overall length and move on
+      C: Anchor the first and last chunks, then compare 6-character chunks left to right
+      D: Compare every other character
+    answer: C
+    explain: Anchoring the ends catches gross errors, and equal-sized chunks guarantee no position is
+      skipped.
+    distractors:
+      A: Interior differences are the norm and would be missed.
+      B: Length rarely differs on its own.
+      D: Skipping positions is exactly what creates phantom matches.
 - heading: Speed and accuracy balance
+  objectives:
+  - Stop at the first confirmed difference and move on.
+  - Eliminate pairs with confirmed differences first in multi-option formats.
   body:
   - ==Accuracy first — the items are individually fast; one careless miss costs as much as several guesses==.
     ==Pacing — 15-25 seconds per pair; two passes at moderate pace beat one rushed pass==
@@ -88,7 +138,22 @@ sections:
       B: The difference is at 6.
       C: Correct.
       D: Over-verification.
+  - q: A four-option item asks which pair is identical. The efficient order of attack is…
+    options:
+      A: Read all four pairs fully, twice each
+      B: Eliminate any pair with a confirmed difference immediately, then verify the survivors only
+      C: Compare only the first characters of each pair
+      D: Choose the shortest pair
+    answer: B
+    explain: One confirmed difference removes a pair permanently, so the search narrows instead of repeating.
+    distractors:
+      A: Re-reading eliminated pairs wastes the clock.
+      C: First characters almost always match across options.
+      D: Length has nothing to do with identity.
 - heading: Applied formats — codes, IDs, records
+  objectives:
+  - Verify each structural segment of a formatted code independently.
+  - Catch date-order swaps (DD/MM versus MM/DD) in record fields.
   body:
   - ==Codes and IDs — alphanumeric with fixed structure (e.g., PHL-2026-0925); verify each segment independently==.
     ==Transcripts — names, numbers, and dates align column-wise==. ==Dates — 04/05 vs 05/04 swap months
@@ -109,18 +174,48 @@ sections:
       B: Dashes match.
       C: Correct.
       D: REF matches.
+  - q: 'Record A: 04/05/2026. Record B: 05/04/2026. Under a day-first convention, they differ…'
+    options:
+      A: Nowhere
+      B: In the year segment
+      C: In the separators
+      D: In day and month — 4 May versus 5 May, a transposition
+    answer: D
+    explain: The first two fields are swapped; the year and the separators are identical.
+    distractors:
+      A: The day and month fields hold different values.
+      B: 2026 appears in both records.
+      C: Both records use the same slash separators.
 examples:
 - prompt: 'Compare: 09F4-88K2-L7P vs 09F4-88K2-L7P — same or different?'
+  strategy: Anchor the ends, then sweep the interior chunk by chunk. The 4-3-3 structure gives three chunks,
+    and both hyphens are characters to verify like any other.
   solution:
   - Line up positions — 0,9,F,4,-,8,8,K,2,-,L,7,P on both sides.
   - Every character including both hyphens matches — SAME.
   - Anchor the ends — 09F4 matches, L7P matches — then the interior 88K2 confirms.
   - 'Answer: same.'
   answer: Identical — all 13 characters match.
+  discussion: 'Chunking scales to any fixed-format code: verify each structural segment independently
+    and treat glyph look-alikes (0/O, 1/l, 5/S, 8/B) as suspects in the interior, where transpositions
+    live. A confirmed match across all segments ends the item — no further pass is needed.'
   distractors:
     A: Calling it different — the tail spells L7P, not L8P.
     B: Hyphen counted twice — separators match.
     C: Focusing only on digits — the letters also match.
+  practice:
+    q: Compare 'BR-7719-KQ' with 'BR-7791-KQ'. Same or different?
+    options:
+      A: Same — the ends match
+      B: Different — 19 versus 91 in the interior chunk is a transposition
+      C: Same — the letters match throughout
+      D: Different — the separator differs
+    answer: B
+    explain: 'The third and fourth digits are swapped: 7719 versus 7791.'
+    distractors:
+      A: Anchoring the ends is necessary but not sufficient — the interior differs.
+      C: The letters do match, but the digits decide the item.
+      D: Both strings use the same hyphen in the same positions.
 key_points:
 - Every character counts — letters, digits, case, punctuation, spaces.
 - Differences hide in the interior — anchor ends, scan the middle.

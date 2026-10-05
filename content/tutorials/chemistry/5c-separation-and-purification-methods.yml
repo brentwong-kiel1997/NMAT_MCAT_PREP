@@ -6,6 +6,10 @@ overview: Every biochemistry experiment begins with separation — this chapter 
   separated) and reads chromatograms and gels from data.
 sections:
 - heading: Chromatography — separation by differential affinity
+  objectives:
+  - Predict elution order from a compound's affinity for each phase.
+  - Calculate an Rf value from distances measured on a TLC plate.
+  - Choose between TLC, column, GC, and HPLC for a given separation.
   body:
   - All chromatography separates compounds by their relative attraction to a stationary phase versus a
     mobile phase. ==The compound that spends more time in the mobile phase elutes first== (moves faster).
@@ -28,7 +32,23 @@ sections:
       A: Size is secondary to polarity here.
       B: Polar compounds bind to the polar stationary phase and lag.
       D: Size is secondary.
+  - q: On a TLC plate the solvent front travels 8.0 cm while a spot travels 4.0 cm. The Rf is…
+    options:
+      A: '0.50'
+      B: '2.0'
+      C: '8.0'
+      D: '4.0'
+    answer: A
+    explain: Rf = distance of compound / distance of solvent front = 4.0/8.0 = 0.50.
+    distractors:
+      B: Inverting the ratio and putting the solvent front underneath.
+      C: Reporting the solvent front itself.
+      D: Reporting the spot distance without dividing.
 - heading: Electrophoresis — separation by charge and size
+  objectives:
+  - Predict migration direction and speed from a molecule's charge and size.
+  - Explain why DNA fragments separate by length alone.
+  - Contrast SDS-PAGE, native PAGE, and isoelectric focusing.
   body:
   - Electrophoresis separates charged molecules by migration through a gel under an electric field. ==Small,
     highly charged molecules move fastest== toward the oppositely charged electrode. DNA is uniformly
@@ -49,12 +69,28 @@ sections:
       B: Smallest fragments run furthest.
       C: All DNA has the same charge density.
       D: Intermediate position.
+  - q: In isoelectric focusing, a protein stops migrating when…
+    options:
+      B: The gel pH equals its pI and its net charge is zero
+      A: It reaches the electrode of opposite charge
+      C: Its size prevents further movement through the gel
+      D: The buffer's charge capacity is exhausted
+    answer: B
+    explain: At its pI a protein carries no net charge, so the field exerts no force on it.
+    distractors:
+      A: Reaching the electrode is exactly what it avoids — it stops on the way.
+      C: Size governs gel electrophoresis, not focusing.
+      D: Nothing is exhausted; the stop is a property of the protein itself.
   figures:
   - src: 5c-separation-and-purification-methods/fig-10cd10e1.webp
     caption: Southern blotting — DNA fragments separated by size via gel electrophoresis, then detected
       with a probe.
     credit: Ch 17 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Distillation and extraction
+  objectives:
+  - Choose simple versus fractional distillation from the boiling-point gap.
+  - Explain why an azeotrope defeats distillation.
+  - Predict which phase a solute partitions into during extraction.
   body:
   - Distillation separates liquids by boiling point — the lower-BP component vaporizes first and is condensed.
     ==Simple distillation works when BPs differ by more than 25C==; fractional distillation uses a column
@@ -76,11 +112,27 @@ sections:
       A: BP difference exists (78C vs 100C).
       B: Ethanol BP is moderate.
       C: They do not react.
+  - q: A two-liquid mixture boils at 80C and 150C. Which separation is appropriate?
+    options:
+      B: Simple distillation, since the 70C gap exceeds 25C
+      A: Fractional distillation, which is always the safer choice
+      C: Neither — the boiling points are far too close
+      D: Nothing will work, because an azeotrope must form
+    answer: B
+    explain: A gap larger than 25C is exactly the case simple distillation handles.
+    distractors:
+      A: A fractionating column is for gaps SMALLER than about 25C.
+      C: A 70C difference is not close — it is comfortably wide.
+      D: Azeotrope formation is a specific property of particular pairs, not a general rule.
   figures:
   - src: 5c-separation-and-purification-methods/fig-5ac75f50.webp
     caption: Boiling and condensation — the vaporization-condensation cycle that underlies distillation.
     credit: Ch 1 · OpenStax Chemistry 2e — CC BY-NC-SA 4.0
 - heading: Centrifugation and filtration
+  objectives:
+  - Predict which particles sediment at a given centrifugal force.
+  - Order the fractions collected in a differential centrifugation run.
+  - Distinguish filtration from ultrafiltration by what each separates.
   body:
   - Centrifugation separates by density and size — denser particles sediment faster at higher centrifugal
     force. ==Differential centrifugation spins at increasing speeds to isolate cell fractions== — nuclei
@@ -101,7 +153,25 @@ sections:
       A: Proteins remain soluble.
       B: Ribosomes need ultracentrifugation.
       D: DNA fragments stay in solution.
+  - q: A lysate is spun at 10,000g and the pellet discarded. The supernatant is then spun at 100,000g.
+      The new pellet contains…
+    options:
+      D: Ribosomes and membrane fragments
+      A: Nuclei
+      B: Soluble proteins
+      C: Nothing — everything has already pelleted
+    answer: D
+    explain: After nuclei (low speed) and mitochondria (10,000g) are gone, the next fraction to pellet
+      is the ribosomal/membrane one.
+    distractors:
+      A: Nuclei pellet at the lowest speed and were removed first.
+      B: Soluble proteins stay in the supernatant at every speed used here.
+      C: The supernatant still holds smaller particles that 100,000g will bring down.
 - heading: Reading separation data
+  objectives:
+  - Read a chromatogram to identify compounds and to quantify them.
+  - Interpret gel bands against a molecular-weight ladder.
+  - Distinguish what peak area, peak height, and retention time each report.
   body:
   - The MCAT expects you to interpret chromatograms (peaks and retention times), gels (bands and molecular-weight
     ladders), and fractionation profiles. ==Peak area is proportional to amount; retention time identifies
@@ -119,19 +189,55 @@ sections:
       A: Solvent is the same for all peaks.
       B: Width varies with efficiency.
       C: Height varies with concentration.
+  - q: Two peaks in a chromatogram share the same retention time, but one has twice the area. This means…
+    options:
+      D: The same compound, present at twice the amount
+      A: Two different compounds that co-elute
+      B: The same compound at the same amount, since the times match
+      C: One peak is an artifact, since only the largest peak is real
+    answer: D
+    explain: Retention time gives identity; area is proportional to amount.
+    distractors:
+      A: Under fixed conditions, equal retention time means equal identity.
+      B: Matching times match identities, not quantities.
+      C: Peak size reflects how much is there, not whether the peak is genuine.
 examples:
 - prompt: A mixture of amino acids is separated by paper chromatography with a polar stationary phase
     and a moderately polar solvent. Predict the elution order for glycine, phenylalanine, and lysine.
+  strategy: 'Work down the polarity ladder rather than by size: whatever likes the polar stationary phase
+    least comes off first. Rank the three side chains — phenylalanine''s benzyl group is the most hydrophobic,
+    glycine''s hydrogen is small and neutral, lysine''s terminal ammonium carries a full positive charge
+    — then reverse that ranking to get the elution order.'
   solution:
   - Phenylalanine (hydrophobic side chain) has least affinity for the polar stationary phase — elutes
     first.
   - Glycine (small, neutral) has intermediate affinity — elutes second.
   - Lysine (positively charged, polar) binds strongly to the polar paper — elutes last.
   answer: Phenylalanine > glycine > lysine.
+  discussion: 'The order holds because the stationary phase is polar: every step toward charge or hydrogen
+    bonding buys more sticking and a lower Rf. Note what this rules out — chromatography separates on
+    INTERACTION strength, never on molecular weight, which is why size-based reasoning fails here. Generalise
+    by flipping the phases: a nonpolar stationary phase reverses the order entirely, which is precisely
+    what reverse-phase HPLC does.'
   distractors:
     A: Reversing the order — lysine does NOT elute first with a polar stationary phase.
     B: Putting glycine last — lysine is more polar than glycine.
     C: Size-based ordering is wrong — affinity matters, not just size.
+  practice:
+    q: A reverse-phase column has a NONPOLAR stationary phase and a water/methanol mobile phase. Predict
+      the elution order for alanine (small, polar), leucine (hydrophobic), and aspartate (charged).
+    options:
+      C: aspartate, then alanine, then leucine
+      A: leucine, then alanine, then aspartate
+      B: alanine, then leucine, then aspartate
+      D: They co-elute, since all three are amino acids
+    answer: C
+    explain: 'Reversed phases reverse the order: the hydrophobic leucine sticks to the nonpolar stationary
+      phase, so the charged aspartate comes off first.'
+    distractors:
+      A: That is the normal-phase order — reverse phase flips it.
+      B: Putting the moderately polar alanine ahead of the charged aspartate ignores their affinity gap.
+      D: Sharing a functional class does not make affinities equal.
 key_points:
 - Chromatography separates by relative affinity for stationary vs mobile phase.
 - Rf = distance of compound / distance of solvent front.

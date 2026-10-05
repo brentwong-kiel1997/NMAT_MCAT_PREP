@@ -6,6 +6,10 @@ overview: Fluid statics and dynamics applied to the circulation and respiration 
   MCAT.
 sections:
 - heading: Fluid statics — pressure and buoyancy
+  objectives:
+  - Calculate the pressure at a depth from P = P0 + rho g h.
+  - Compute a buoyant force as the weight of the displaced fluid.
+  - Predict the output force of a hydraulic lift from the ratio of piston areas.
   body:
   - '==Pressure = F/A; gauge pressure = P - P-atm; hydrostatic: P = P0 + rho g h==. Pressure in a fluid
     is isotropic — the same in all directions at a depth. ==Pascal''s principle: pressure applied to an
@@ -27,6 +31,21 @@ sections:
       B: That is exactly the object weight — object floats.
       C: Correct — 490 N.
       D: Double the weight.
+  - q: A 200 N push on a small hydraulic piston of area 0.005 m2 is transmitted to a large piston of area
+      0.25 m2. The load it can lift is…
+    options:
+      B: 10000 N
+      A: 4 N
+      C: 200 N
+      D: 1000 N
+    answer: B
+    explain: 'Pressure is what transmits undiminished: F2 = F1 x (A2/A1) = 200 x (0.25/0.005) = 200 x
+      50 = 10000 N.'
+    distractors:
+      A: Inverting the area ratio and multiplying by A1/A2.
+      C: Assuming force rather than pressure is transmitted undiminished — the gain is the whole point
+        of a hydraulic lift.
+      D: Misreading the small piston area as 0.05 m2, which costs a factor of ten.
   figures:
   - src: 4b-fluids-for-circulation-and-gas-exchange/fig-1a74f230.webp
     caption: Pressure in a fluid column — volume V = Ah and weight mg set the pressure at the base.
@@ -35,6 +54,10 @@ sections:
     caption: Atmospheric pressure — the weight of a 1 m2 column of air is about 1.01 x 10^5 N.
     credit: Ch 11 · OpenStax College Physics 2e — CC BY-NC-SA 4.0
 - heading: Fluid dynamics — continuity and Bernoulli
+  objectives:
+  - Apply A1v1 = A2v2 to predict velocity where a vessel narrows or widens.
+  - Relate a local speed increase to a drop in lateral pressure in a horizontal tube.
+  - Explain the venturi effect as the operating principle of flowmeters.
   body:
   - '==Continuity: A1 v1 = A2 v2 — narrower channel, faster flow.== Volume flow rate Q = A v is conserved
     along a pipe (incompressible flow). Bernoulli: P + (1/2)rho v2 + rho g h = constant.'
@@ -54,7 +77,25 @@ sections:
       B: Wrong direction.
       C: A v is constant, so v cannot stay.
       D: Correct.
+  - q: Water flows through a horizontal pipe that narrows to half its cross-sectional area. In the narrow
+      section…
+    options:
+      A: Speed doubles and pressure falls
+      B: Speed halves and pressure rises
+      C: Speed doubles and pressure rises
+      D: Speed and pressure both double
+    answer: A
+    explain: Continuity halves the area so v doubles; Bernoulli then requires the pressure to drop where
+      the speed rose.
+    distractors:
+      B: Continuity forces a higher speed in the narrow section — flow rate is conserved.
+      C: Fast flow costs pressure energy; it cannot also raise the static pressure.
+      D: Speed doubles, but Bernoulli trades that speed for a LOWER pressure, not a higher one.
 - heading: Viscosity and resistance to flow
+  objectives:
+  - Predict the change in flow rate produced by a change in vessel radius (r^4).
+  - Calculate the resistance ratio that results from a fractional change in radius.
+  - Use a Reynolds number to decide whether a flow is laminar or turbulent.
   body:
   - '==Poiseuille: Q = (pi delta-P r4)/(8 eta L) — the radius to the FOURTH power decides flow==. Doubling
     radius increases flow 16x — why vasodilation is so potent. ==Resistance R ~ 1/r4; series adds, parallel
@@ -75,7 +116,23 @@ sections:
       B: r^2 — Bernoulli slip.
       C: Correct — 16x.
       D: r^3 — misuse.
+  - q: Vasospasm cuts an arteriole's radius to 70% of normal. Its resistance becomes roughly…
+    options:
+      A: 4x normal
+      B: 1.4x normal
+      C: 2x normal
+      D: 0.24x normal
+    answer: A
+    explain: R ~ 1/r4, so R-ratio = (1/0.7)^4 = (1.43)^4 = 4.2 — about a fourfold rise.
+    distractors:
+      B: Scaling resistance linearly with 1/r instead of 1/r4.
+      C: Using an r^2 dependence (that is the continuity/velocity law, not Poiseuille).
+      D: Inverting the relation — 0.7^4 gives the fall in FLOW, not the rise in resistance.
 - heading: Gas exchange — partial pressures and diffusion
+  objectives:
+  - Calculate a gas's partial pressure from its mole fraction and the total pressure.
+  - Predict how membrane thickness and area alter diffusive flux (Fick's law).
+  - Explain why alveolar PO2 sits below ambient PO2.
   body:
   - '==Dalton: total pressure = sum of partial pressures; partial pressure = mole fraction x total. Henry:
     dissolved gas concentration = k P-gas==. Alveolar gas O2 at ~100 mmHg drives diffusion into blood;
@@ -97,7 +154,23 @@ sections:
       B: Viscosity is secondary.
       C: Hemoglobin is unchanged.
       D: Alveoli adapt, not shrink.
+  - q: On a day when barometric pressure is 700 mmHg, the PO2 of dry ambient air is nearest…
+    options:
+      D: 147 mmHg
+      A: 137 mmHg
+      B: 160 mmHg
+      C: 700 mmHg
+    answer: D
+    explain: 'Dalton: PO2 = 0.21 x 700 = 147 mmHg.'
+    distractors:
+      A: Subtracting water vapour as well — that computes alveolar PO2, not that of dry ambient air.
+      B: Quoting the sea-level value instead of using the day's barometric pressure.
+      C: Reading the total atmospheric pressure as the oxygen partial pressure.
 - heading: Fluids in the body — circulation mechanics
+  objectives:
+  - Relate mean arterial pressure to cardiac output and total peripheral resistance.
+  - Predict the direction of net fluid movement across a capillary from Starling forces.
+  - Explain how intrapleural pressure holds the lung open and what a pneumothorax changes.
   body:
   - '==Mean arterial pressure = cardiac output x total peripheral resistance (P = Q R)==. Starling forces
     — hydrostatic vs oncotic across capillaries — decide filtration: arterial end filters, venous end
@@ -119,19 +192,55 @@ sections:
       B: Blood viscosity is not the driver.
       C: Normal physiology lets small proteins across.
       D: Oncotic pulls IN.
+  - q: Haemorrhage drops a patient's cardiac output from 5.0 to 4.0 L/min while total peripheral resistance
+      is unchanged. Mean arterial pressure…
+    options:
+      D: Falls by 20%
+      A: Falls by 25%
+      B: Is unchanged
+      C: Rises by 20%
+    answer: D
+    explain: 'MAP = Q x R, so with R fixed the pressure tracks flow: 4.0/5.0 = 0.8 — a 20% fall.'
+    distractors:
+      A: Inverting the ratio (5/4 = 1.25); the 25% figure is the rise needed to get back, not the fall.
+      B: MAP is the product of both terms — halving one halves the product.
+      C: Losing volume lowers output, so the pressure must fall, not rise.
 examples:
 - prompt: A vessel with radius 1.0 mm carries 5 mL/s. A branch with radius 2.0 mm and the same pressure
     drop carries how much?
+  strategy: 'Same fluid, same pressure drop, so in Poiseuille''s law every factor cancels except r^4.
+    The plan is purely a ratio: take the radius ratio (2.0/1.0 = 2), raise it to the fourth power, and
+    multiply the known flow by that factor. No viscosity or length values are needed, so any time spent
+    hunting for them is wasted.'
   solution:
   - Poiseuille — Q ~ r4.
   - r ratio = 2.0/1.0 = 2.
   - Q-ratio = 2^4 = 16.
   - New flow = 5 x 16 = 80 mL/s.
   answer: 80 mL/s — the fourth power amplifies radius changes dramatically.
+  discussion: '16x is far more than intuition suggests, and that gap is exactly why arterioles — where
+    small radius changes are cheap — are the body''s flow control points. The flip side is clinical: halving
+    a radius through stenosis cuts flow to 1/16. Sanity check the direction and the limits: a wider tube
+    with the same pressure gradient must carry more flow, and as r goes to zero the flow must vanish,
+    which the fourth power delivers aggressively.'
   distractors:
     A: 10 mL/s — linear scaling.
     B: 20 mL/s — squared scaling.
     C: 40 mL/s — cubed scaling.
+  practice:
+    q: Stenosis halves a vessel's radius. At the same pressure drop, a segment that normally carries 8.0
+      mL/s now carries…
+    options:
+      A: 0.5 mL/s
+      B: 4.0 mL/s
+      C: 2.0 mL/s
+      D: 1.0 mL/s
+    answer: A
+    explain: 'Q ~ r4, so halving the radius divides the flow by 2^4 = 16: 8.0/16 = 0.5 mL/s.'
+    distractors:
+      B: Applying the radius ratio linearly instead of to the fourth power.
+      C: Using an r^2 law (that is the velocity/continuity scaling).
+      D: Using an r^3 law — one power short.
 key_points:
 - P = P0 + rho g h; buoyancy = displaced fluid weight.
 - Continuity A v constant; Bernoulli pressure falls where flow speeds.

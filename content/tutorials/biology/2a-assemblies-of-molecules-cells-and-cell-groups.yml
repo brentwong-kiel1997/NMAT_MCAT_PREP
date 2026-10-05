@@ -7,6 +7,10 @@ overview: AAMC's 2A treats the cell as an engineered assembly — how molecules 
   in intro-cell items. Prerequisites — Cells and Cellular Processes (full chapter).
 sections:
 - heading: Self-assembly — why membranes build themselves
+  objectives:
+  - Explain why amphipathic phospholipids self-assemble with no energy input.
+  - Predict how tail saturation and cholesterol shift membrane fluidity.
+  - Describe the evidence that membrane proteins drift laterally.
   body:
   - Phospholipids are **amphipathic** — charged head, fatty tail — and in water they hide their tails
     by forming bilayers, micelles, or liposomes ==with no energy input==. Every biological membrane is
@@ -29,7 +33,24 @@ sections:
       B: That is saturated-tail behavior.
       C: Composition shifts always move fluidity.
       D: Proteins stay anchored regardless.
+  - q: Bacteria shifted to a cold environment increase the unsaturated fatty-acyl tails in their membranes.
+      Why?
+    options:
+      D: Kinked tails pack poorly, keeping the membrane fluid in the cold
+      A: Unsaturated tails stiffen the membrane against the cold
+      B: To reduce water permeability at low temperature
+      C: To anchor membrane proteins more firmly
+    answer: D
+    explain: Cold makes tails pack tightly; the cis double-bond kink is how the cell counters it.
+    distractors:
+      A: Unsaturated tails do the opposite of stiffening.
+      B: Fluidity, not permeability, is what cold threatens.
+      C: Protein anchoring is a protein-lipid interaction, not a tail-composition response.
 - heading: The extracellular matrix — the cell's load-bearing exterior
+  objectives:
+  - Assign each ECM component to its mechanical role.
+  - Explain how integrins link the ECM to the cytoskeleton and signal both ways.
+  - Relate collagen chemistry to a named deficiency disease.
   body:
   - Animal cells sit in the **ECM** — a mesh of **collagen** (tensile rods), **proteoglycans** (water-trapping
     ground substance), and **fibronectin** and friends linking it all to cells through **integrins** —
@@ -53,7 +74,23 @@ sections:
       B: Cholesterol tunes fluidity.
       C: Collagen is the scaffold itself, not the link.
       D: An amino acid, not a connector.
+  - q: A patient's wounds heal poorly and his gums bleed. Which ECM component and which reason?
+    options:
+      C: Collagen, whose hydroxylation requires vitamin C
+      A: Proteoglycans, which trap water
+      B: Integrins, which are signalling receptors
+      D: Cholesterol, a membrane lipid
+    answer: C
+    explain: Without hydroxyproline and hydroxylysine the triple helix is unstable — that is scurvy.
+    distractors:
+      A: Proteoglycans hydrate the ground substance; they are not the tensile failure here.
+      B: Integrins span the membrane; they are not the vitamin-C-dependent scaffold.
+      D: Cholesterol has no role in the ECM.
 - heading: Junctions — how cells weld, rivet, and wire together
+  objectives:
+  - Match each junction to its job — seal, rivet, or wire.
+  - Explain how tight junctions create epithelial polarity.
+  - Compare the plasmodesma with the gap junction.
   body:
   - Four junctions, four jobs. **Tight junctions** seal neighboring epithelial cells into a leak-proof
     belt — nothing slips BETWEEN the cells. **Adherens and desmosomes** rivet cells together (cadherins
@@ -76,7 +113,24 @@ sections:
       A: Desmosomes add strength, not signaling.
       B: Scaffold, not conduction.
       C: Sealing junctions — no channel.
+  - q: A toxin selectively blocks connexons. Which function is lost?
+    options:
+      D: Direct exchange of ions and small molecules between neighbouring cytoplasms
+      A: The paracellular seal between epithelial cells
+      B: Mechanical strength of the epidermis
+      C: Anchorage of cells to the basal lamina
+    answer: D
+    explain: Connexons are the gap-junction channels; blocking them cuts electrical and metabolic coupling
+      only.
+    distractors:
+      A: Sealing is tight-junction work.
+      B: Riveting is desmosome work.
+      C: Anchoring to the basal lamina is hemidesmosome work.
 - heading: Tissues — the four fabrics
+  objectives:
+  - Assign a tissue to one of the four types from its structure.
+  - Layer the four fabrics to explain an organ's architecture.
+  - Predict which fabric dominates in an organ with a named function.
   body:
   - Assemblies of cells plus ECM make four tissue types — **epithelial** (sheets — barriers, absorption,
     secretion; tightly joined, polarized, avascular), **connective** (cells sparse in a rich ECM — bone,
@@ -99,12 +153,29 @@ sections:
       A: No fibers contracting.
       B: Blood is not a sheet.
       D: No neurons.
+  - q: A tissue is a packed sheet of avascular cells joined by tight junctions, resting on a basement
+      membrane. Which type is it?
+    options:
+      D: Epithelial
+      A: Connective
+      B: Muscle
+      C: Nervous
+    answer: D
+    explain: Packed, polarised, avascular, and tightly joined is the epithelial signature.
+    distractors:
+      A: Connective tissue is cell-sparse in an abundant matrix.
+      B: Muscle is bundled contractile fibres.
+      C: Nervous tissue is a signalling network of neurons and glia.
   figures:
   - src: 2a-assemblies-of-molecules-cells-and-cell-groups/body-symmetry.webp
     caption: Body symmetry — asymmetrical sponge, radial sea anemone, bilateral goat with its directional
       axes.
     credit: Fig 33.2 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Polarity — the epithelium as a one-way valve
+  objectives:
+  - Assign transporters to the apical and basal domains of an epithelial cell.
+  - Explain how the tight junction maintains vectorial transport.
+  - Predict the effect of blocking the Na+/K+-ATPase on glucose absorption.
   body:
   - An absorptive epithelial cell is two different machines bolted together — apical (lumen-facing) transporters
     for uptake, basal (blood-facing) transporters for export, kept apart by the tight junction fence.
@@ -128,6 +199,19 @@ sections:
       A: The ATP is burned elsewhere (basolateral pump).
       B: Charged ion + uphill glucose = not simple.
       D: GLUT on the basal side is the facilitated step — wrong side.
+  - q: A Na+/K+-ATPase inhibitor halts glucose absorption across the gut. The reason is that…
+    options:
+      A: The apical cotransporter loses the sodium gradient it rides
+      B: The basal GLUT transporter is inhibited directly
+      C: The tight junction dissolves and glucose leaks back
+      D: The apical cotransporter runs out of ATP
+    answer: A
+    explain: Secondary active transport borrows a gradient; abolish the pump that builds it and the borrowing
+      stops.
+    distractors:
+      B: GLUT is passive and untouched by the pump inhibitor.
+      C: Tight junctions are unaffected by the pump.
+      D: The ATP is spent on the basal side, not by the apical cotransporter.
   figures:
   - src: 2a-assemblies-of-molecules-cells-and-cell-groups/body-cavities.webp
     caption: Vertebrate body cavities — dorsal (cranial, spinal) and ventral (thoracic, abdominopelvic)
@@ -136,6 +220,10 @@ sections:
 examples:
 - prompt: A drug blocks the basolateral Na⁺/K⁺-ATPase of gut epithelial cells. Predict glucose absorption
     and explain the chain of causation.
+  strategy: 'Trace the dependency chain backwards from the failure: apical glucose uptake is secondary
+    active, so it rides the sodium gradient; that gradient is built and maintained by the basolateral
+    Na+/K+-ATPase. Therefore the pump — not either glucose transporter — is the step whose loss explains
+    the collapse.'
   solution:
   - Step 1 — the pump normally keeps intracellular Na⁺ LOW, storing energy as the sodium gradient.
   - Step 2 — with the pump blocked, intracellular Na⁺ rises; the apical Na⁺-glucose cotransporter loses
@@ -145,10 +233,30 @@ examples:
   - Step 4 — result — glucose absorption falls despite normal luminal glucose.
   answer: Pump blockade collapses the sodium gradient that powers secondary active uptake at the apical
     membrane.
+  discussion: 'The chain shows why epithelial transport is an engineering problem rather than a list of
+    channels: every transporter depends on a gradient that something else must build, and in a polarised
+    cell that builder sits on the opposite side of the membrane. Note the diagnostic value of the setup
+    — the apical cotransporter and the basal GLUT are both intact, so a blocker acting purely at the pump
+    still shuts the whole line down. This is exactly the logic behind oral rehydration therapy, which
+    keeps the sodium-glucose cotransporter supplied so it keeps working.'
   distractors:
     A: Blaming the apical cotransporter directly — the drug never touched it.
     B: Blaming GLUT — basal exit is passive and intact; entry is the failed step.
     C: Claiming cell death — acute pharmacology before pathology.
+  practice:
+    q: In a separate experiment, luminal sodium is replaced by an impermeant cation. What happens to apical
+      glucose uptake?
+    options:
+      C: It collapses, because the cotransporter has no luminal sodium to ride
+      A: It accelerates, because sodium no longer competes with glucose
+      B: It is unchanged, because the cotransporter hydrolyses ATP directly
+      D: It reverses, pumping glucose back into the lumen
+    answer: C
+    explain: The apical transporter is a symport — no sodium gradient, no uphill glucose entry.
+    distractors:
+      A: The two substrates are cotransported, not competitors.
+      B: That would make it primary active transport, which it is not.
+      D: Nothing here reverses the transporter's direction.
 key_points:
 - Amphipathic lipids self-assemble into bilayers; unsaturation loosens packing, cholesterol buffers fluidity.
 - ECM — collagen for tensile strength, proteoglycans for hydration, integrins as two-way links to the

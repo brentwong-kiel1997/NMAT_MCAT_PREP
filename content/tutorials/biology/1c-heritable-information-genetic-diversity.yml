@@ -1,22 +1,26 @@
 subject: biology
 chapter: 1C · Heritable information & genetic diversity
 title: 1C · Heritable information & genetic diversity
-overview: 'The transmission half of heredity: how information crosses generations and how processes
-  generate, shuffle, and fix variation. Covers replication as inheritance, expression control, Mendelian
-  patterns and pedigrees, aneuploidy, H-W population logic, and the read/write toolkit (PCR, CRISPR).
-  The molecular machinery itself — polymerases, repair pathways, mutation signatures — lives in the
-  biochemistry 1C chapter. Prerequisites — Genetics (meiosis, mutation), Cells (nucleus, ribosome).'
+overview: 'The transmission half of heredity: how information crosses generations and how processes generate,
+  shuffle, and fix variation. Covers replication as inheritance, expression control, Mendelian patterns
+  and pedigrees, aneuploidy, H-W population logic, and the read/write toolkit (PCR, CRISPR). The molecular
+  machinery itself — polymerases, repair pathways, mutation signatures — lives in the biochemistry 1C
+  chapter. Prerequisites — Genetics (meiosis, mutation), Cells (nucleus, ribosome).'
 sections:
 - heading: Replication — how information crosses generations
+  objectives:
+  - Explain what semi-conservative replication means and what evidence supports it.
+  - Order the transmission sequence from S phase through fertilization.
+  - Connect replication fidelity to the supply of heritable alleles.
   body:
-  - '==Semi-conservative replication — each old strand templates a new partner== — is how heritable
-    information physically passes from cell to cell, and the Meselson–Stahl density experiment is the
-    evidence. ==Fidelity matters here for a transmission reason: an error that survives replication
-    becomes a heritable allele — the raw material the variation toolkit below works with==.'
-  - ==The transmission sequence — replication copies the message in S phase, meiosis I segregates
-    homologs, meiosis II separates sisters, fertilization restores diploidy==. Failures of that
-    packaging, not of chemistry, produce the aneuploidies later in this chapter. (Polymerase mechanics
-    and the repair stack are the biochemistry 1C chapter's territory.)
+  - '==Semi-conservative replication — each old strand templates a new partner== — is how heritable information
+    physically passes from cell to cell, and the Meselson–Stahl density experiment is the evidence. ==Fidelity
+    matters here for a transmission reason: an error that survives replication becomes a heritable allele
+    — the raw material the variation toolkit below works with==.'
+  - ==The transmission sequence — replication copies the message in S phase, meiosis I segregates homologs,
+    meiosis II separates sisters, fertilization restores diploidy==. Failures of that packaging, not of
+    chemistry, produce the aneuploidies later in this chapter. (Polymerase mechanics and the repair stack
+    are the biochemistry 1C chapter's territory.)
   check:
   - q: The Meselson–Stahl experiment showed that DNA replication is…
     options:
@@ -32,12 +36,29 @@ sections:
       B: One mechanism fit all the density data.
       C: That would leave the original duplex at full density.
       D: Correct.
+  - q: A replication error escapes repair and is carried into a gamete. Its status in the offspring is…
+    options:
+      A: A heritable allele present in every cell
+      B: A somatic mutation affecting only some tissues
+      C: An epigenetic mark that silences one allele
+      D: A chromosomal aneuploidy
+    answer: A
+    explain: Once copied and transmitted, the changed base is just another allele — present in every cell
+      descended from the zygote.
+    distractors:
+      B: Somatic changes arise after fertilization and stay in the lineage where they occurred.
+      C: The sequence changed, which is mutation rather than a methylation or histone mark.
+      D: Chromosome number is untouched by a single-base error.
   figures:
   - src: 1c-heritable-information-genetic-diversity/dna-double-helix.webp
     caption: Antiparallel strands, A-T (2 H-bonds) and G-C (3 H-bonds) pairing — the template logic of
       replication.
     credit: Fig 14.7 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: Expression — from gene to working protein
+  objectives:
+  - Trace the central dogma and name the control point at each arrow.
+  - Predict lac operon output under combinations of lactose and glucose.
+  - State the properties of the genetic code and what each one buffers.
   body:
   - The central dogma runs ==DNA → (transcription) → RNA → (translation) → protein==, and the control
     points are where exams live. In prokaryotes, the **operon** clusters regulated genes — the lac operon's
@@ -61,14 +82,31 @@ sections:
       A: The code is non-overlapping.
       B: Mitochondrial code differences exist but are not the definition.
       C: That would be the opposite of degenerate.
+  - q: Lactose is present and glucose is absent. The lac operon…
+    options:
+      A: Transcribes maximally — the repressor is lifted and CAP boosts binding
+      B: Stays off, because the repressor remains bound
+      C: Transcribes at basal level only, with no activation
+      D: Halts at translation, because the ribosome stalls
+    answer: A
+    explain: Lactose frees the repressor while low glucose raises cAMP so CAP binds — both switches point
+      on.
+    distractors:
+      B: Repression requires lactose to be ABSENT.
+      C: Basal transcription is what you get when only one of the two signals is met.
+      D: This is transcriptional control, not a ribosome event.
 - heading: The variation toolkit — sources and shufflers
+  objectives:
+  - Distinguish mutation, recombination, and assortment as sources of variation.
+  - Calculate a recombination frequency from testcross offspring counts.
+  - Apply the Hardy-Weinberg expression to predict genotype frequencies.
   body:
   - Variation enters by three doors — **mutation** (new alleles, ultimate source, mostly neutral or harmful),
     ==recombination== (crossing over shuffles existing alleles into new combinations), and **assortment
     + fertilization** (randomized packaging and union). ==Recombination frequency is measurable — in a
-    testcross, recombinant offspring over total gives map units, the distance between genes==. Add
-    migration (gene flow) bringing alleles in, and drift sampling them at random, and you hold the full
-    microevolution kit.
+    testcross, recombinant offspring over total gives map units, the distance between genes==. Add migration
+    (gene flow) bringing alleles in, and drift sampling them at random, and you hold the full microevolution
+    kit.
   - The Hardy-Weinberg equilibrium formalizes "no evolution" — allele frequencies p and q stay put when
     five conditions hold (no mutation, no selection, no drift [large population], no migration, random
     mating), giving ==p² + 2pq + q²==. Its exam use is as a NULL MODEL — real populations deviate, and
@@ -86,12 +124,29 @@ sections:
       A: That is q(1−q), a common slip.
       B: That is p² — homozygous dominant.
       D: That is q² — homozygous recessive.
+  - q: In a population at Hardy-Weinberg equilibrium, 4% of people show a recessive phenotype. The carrier
+      frequency is…
+    options:
+      B: '0.32'
+      A: '0.16'
+      C: '0.04'
+      D: '0.20'
+    answer: B
+    explain: q2 = 0.04 gives q = 0.2 and p = 0.8, so 2pq = 2(0.8)(0.2) = 0.32.
+    distractors:
+      A: That is q(1-q), a common slip.
+      C: That is the affected fraction, not the carriers.
+      D: That is the allele frequency q, not the heterozygote frequency.
 - heading: Inheritance patterns and pedigrees
+  objectives:
+  - Classify a pedigree's mode of inheritance by exclusion.
+  - Predict transmission from an affected parent under each mode.
+  - Recognise mitochondrial and Y-linked patterns in a pedigree.
   body:
-  - '==Mendelian patterns — autosomal dominant (every generation, both sexes, father-to-son possible),
-    autosomal recessive (skips generations, unaffected carriers), X-linked recessive (more males, no
-    male-to-male), X-linked dominant (affected father passes to every daughter)==. Mitochondrial traits
-    run mother-to-all-children; Y-linked run father-to-all-sons.'
+  - ==Mendelian patterns — autosomal dominant (every generation, both sexes, father-to-son possible),
+    autosomal recessive (skips generations, unaffected carriers), X-linked recessive (more males, no male-to-male),
+    X-linked dominant (affected father passes to every daughter)==. Mitochondrial traits run mother-to-all-children;
+    Y-linked run father-to-all-sons.
   - '==Pedigree reading — squares are male, circles female, shading marks affected, a horizontal bar is
     a mating, a vertical line descent==. ==Exam items usually turn on exclusions: an affected child of
     unaffected parents rules out dominant, an affected daughter rules out X-linked recessive, father-to-son
@@ -105,14 +160,33 @@ sections:
       C: X-linked recessive
       D: X-linked dominant
     answer: A
-    explain: Vertical transmission plus male-to-male transfer requires an autosome — no X-linked mode can
-      give father-to-son.
+    explain: Vertical transmission plus male-to-male transfer requires an autosome — no X-linked mode
+      can give father-to-son.
     distractors:
       A: Correct.
       B: Recessive traits skip generations.
       C: X-linked recessive skews male and never passes father to son.
       D: X-linked dominant gives an affected father affected daughters only.
+  - q: An affected father has an affected son, an unaffected daughter, and an unaffected wife. Which statement
+      is certainly true?
+    options:
+      B: Every X-linked mode is excluded, since fathers pass the X to daughters only
+      A: Autosomal dominant is excluded, since not every child is affected
+      C: Mitochondrial inheritance is supported by the father's transmission
+      D: Autosomal recessive is excluded because the son is affected
+    answer: B
+    explain: Father-to-son transfer is the single cleanest exclusion in pedigree logic — no X-linked mode
+      can do it.
+    distractors:
+      A: Dominant traits do not require every child of an affected parent to be affected.
+      C: Mitochondrial traits are maternal only.
+      D: An affected child of an unaffected mother is exactly what recessive inheritance with a carrier
+        mother predicts.
 - heading: Chromosomal variation — when the packages mis-segregate
+  objectives:
+  - Predict the gamete outcome of meiotic nondisjunction.
+  - Name the viable aneuploidies and their karyotypes.
+  - Distinguish balanced from unbalanced structural rearrangements.
   body:
   - Nondisjunction in meiosis I or II yields gametes with extra or missing chromosomes — after fertilization,
     ==aneuploidy==. Autosomal survivors are few — trisomy 21 (Down syndrome) the classic; sex-chromosome
@@ -137,7 +211,24 @@ sections:
       B: Fertility may be reduced but is not certainly absent.
       C: Not a somatic-disease mechanism.
       D: Trisomy 21 requires specific chromosome 21 mis-segregation.
+  - q: Nondisjunction in meiosis I yields an egg with 24 chromosomes. After fertilization by a normal
+      sperm, the zygote has…
+    options:
+      C: 47 chromosomes — trisomic for one
+      A: 45 chromosomes — monosomic for one
+      B: 46 chromosomes — nondisjunction never changes the total
+      D: 48 chromosomes — both homologues counted twice
+    answer: C
+    explain: A 24-chromosome gamete plus a 23-chromosome sperm gives 47 — one chromosome in triplicate.
+    distractors:
+      A: A 22-chromosome gamete would give the monosomic case.
+      B: The whole point of nondisjunction is that the gamete count changes.
+      D: Only two copies of one chromosome are present in the gamete, not three.
 - heading: Reading and writing DNA — the technology toolkit
+  objectives:
+  - Match each technique to the scale of change it can detect.
+  - Calculate PCR copy number after a given number of cycles.
+  - Explain how the guide RNA and the repair pathway determine a CRISPR outcome.
   body:
   - PCR amplifies a chosen segment exponentially — denature, anneal primers, extend, repeat; ==each cycle
     roughly doubles the target==, so copy number is 2ⁿ. Gel electrophoresis separates fragments by size
@@ -161,6 +252,18 @@ sections:
       A: Linear, not exponential, thinking.
       B: That is 2×5.
       D: That is 5² — the wrong exponent base.
+  - q: You need to detect a single-base substitution somewhere in a 5 kb gene. Which tool fits?
+    options:
+      D: Sequencing, which reads identity directly
+      A: PCR, which reports presence and quantity
+      B: Gel electrophoresis, which reports fragment length
+      C: Karyotyping, which sees chromosome-scale change
+    answer: D
+    explain: One base out of 5,000 is a sequence identity question, and only sequencing reads identity.
+    distractors:
+      A: PCR amplifies but does not read; the product would look normal.
+      B: A single-base change does not alter fragment length.
+      C: The change is thousands of times below a karyotype's resolution.
   figures:
   - src: 1c-heritable-information-genetic-diversity/gel-electrophoresis.webp
     caption: Gel electrophoresis — fragments separate by size; the smallest run farthest.
@@ -172,20 +275,44 @@ examples:
 - prompt: In family one, unaffected parents have an affected daughter and an unaffected son. In family
     two, an affected father passes the trait to his son. Classify the likeliest mode in each family and
     justify it with pedigree logic.
+  strategy: 'Work by exclusion rather than by naming a favourite: first ask whether every affected person
+    has an affected parent (dominant), then whether an affected child of unaffected parents exists (recessive),
+    and finally whether any father-to-son transfer occurs, which removes every X-linked mode at once.
+    Each pedigree here provides exactly one clean exclusion, and whatever survives is the answer.'
   solution:
   - Family one — an affected child of unaffected parents means both parents carry the allele silently.
   - An affected daughter rules out X-linked recessive — she would need a mutant X from an affected father.
   - Dominant modes need an affected parent in every case — so family one is autosomal recessive.
   - Family two — father-to-son transmission needs an autosome, so the likeliest mode is autosomal dominant.
-  answer: Family one autosomal recessive (unaffected carrier parents); family two autosomal dominant
-    (vertical transmission with male-to-male transfer).
+  answer: Family one autosomal recessive (unaffected carrier parents); family two autosomal dominant (vertical
+    transmission with male-to-male transfer).
+  discussion: 'Family one''s affected daughter with an unaffected father is the decisive observation —
+    it removes X-linked recessive immediately, and the unaffected parents remove the dominant modes, leaving
+    autosomal recessive with both parents as silent carriers. Family two is the mirror image: father-to-son
+    transfer excludes every X-linked mode, and the vertical pattern then makes autosomal dominant the
+    best fit. Practise stating the exclusion rather than only the label — that is precisely what the MCAT''s
+    rationale marks reward.'
   distractors:
     A: X-linked recessive — an affected daughter would require an affected father.
     B: X-linked dominant — fathers pass the X to daughters only, never to sons.
     C: Mitochondrial — mothers transmit to all children; paternal transmission does not occur.
+  practice:
+    q: Unaffected parents have an affected daughter and an unaffected son. Nobody in previous generations
+      is affected. Which mode fits best?
+    options:
+      C: Autosomal recessive — skipping generations with both parents as carriers
+      A: Autosomal dominant — vertical transmission through every generation
+      B: X-linked recessive — passed from carrier mothers to sons
+      D: X-linked dominant — an affected father passes it to every daughter
+    answer: C
+    explain: The unaffected parents make dominant impossible, and the affected daughter makes X-linked
+      recessive impossible, so autosomal recessive is what remains.
+    distractors:
+      A: An affected child of unaffected parents rules out every dominant mode.
+      B: An X-linked recessive daughter needs a mutant X from an affected father.
+      D: Dominant modes require an affected parent in every generation.
 key_points:
-- Semi-conservative replication copies the genome before meiosis — the physical basis of heritable
-  transmission.
+- Semi-conservative replication copies the genome before meiosis — the physical basis of heritable transmission.
 - Prokaryotic operons integrate signals (lac — lactose on, glucose off); eukaryotes regulate at chromatin,
   transcription, processing, translation.
 - Triplet, degenerate, near-universal code — AUG starts, three stops.
@@ -273,9 +400,9 @@ pitfalls:
 exam_map:
   NMAT: Intro-depth transmission vocabulary — pedigree symbols, aneuploidy examples, and one-step H-W
     algebra.
-  MCAT: Content Category 1C builds passages on pedigree-plus-H-W calculation, inheritance patterns,
-    aneuploidy mechanisms, and PCR/CRISPR experiment interpretation. Mutation typing and repair pathways
-    sit in the biochemistry 1C chapter.
+  MCAT: Content Category 1C builds passages on pedigree-plus-H-W calculation, inheritance patterns, aneuploidy
+    mechanisms, and PCR/CRISPR experiment interpretation. Mutation typing and repair pathways sit in the
+    biochemistry 1C chapter.
 sources:
 - ref: openstax-biology-2e
   used:
@@ -321,8 +448,8 @@ review_questions:
     A: Structural rearrangement, wrong scale.
     C: Sequence-level, wrong scale.
     D: Not a natural meiotic event.
-- q: An F1 dihybrid is testcrossed and yields 18 recombinant offspring out of 100 progeny. The map
-    distance between the two genes is…
+- q: An F1 dihybrid is testcrossed and yields 18 recombinant offspring out of 100 progeny. The map distance
+    between the two genes is…
   options:
     A: 36 map units
     B: 18 map units
@@ -341,8 +468,8 @@ review_questions:
     C: Unaffected mothers who are carriers
     D: An affected mother transmitting to a son
   answer: A
-  explain: An X-linked recessive daughter needs a mutant X from each parent, so her father would have to
-    be affected.
+  explain: An X-linked recessive daughter needs a mutant X from each parent, so her father would have
+    to be affected.
   distractors:
     A: Correct.
     B: That supports X-linked recessive.

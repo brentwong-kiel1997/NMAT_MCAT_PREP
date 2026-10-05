@@ -5,6 +5,9 @@ overview: Reading tables, graphs, and charts the way the NMAT asks — trend ext
   quick percentage math on real data. The data layer is where most lost points happen, not the arithmetic.
 sections:
 - heading: Tables — read the structure first
+  objectives:
+  - Apply the header's scale ('in thousands', 'per 100,000') to a raw cell before using it.
+  - Locate the row-column pair a question targets before computing a difference or ratio.
   body:
   - ==Table anatomy — margins are labels, not numbers; the body is the data; check units in the header
     row and column==. ==Always note the TIME axis and the SCALE — 'in thousands' or 'per 100,000' changes
@@ -26,7 +29,24 @@ sections:
       B: Correct.
       C: Adding zeroes.
       D: Unit confusion.
+  - q: 'A table lists ''City, Area (km2), Population (thousands)''. One row reads: Quezon, 160, 2,900.
+      The population density per km2 is…'
+    options:
+      A: About 18.1 — the thousands scale was ignored
+      B: 18,125 per km2
+      C: 181.25 per km2 — a misplaced decimal
+      D: About 0.055 — the ratio was inverted
+    answer: B
+    explain: Population = 2,900 x 1,000 = 2,900,000; density = 2,900,000/160 = 18,125 per km2.
+    distractors:
+      A: The header says thousands, so the cell must be scaled before dividing.
+      C: 160 x 10,000 is not part of the computation — recheck the arithmetic.
+      D: Area divided by population gives km2 per person, not people per km2.
 - heading: Bar and line graphs — trends and magnitudes
+  objectives:
+  - Read a line graph for direction, slope, and turning points rather than level alone.
+  - Compute a percent change between two bar heights against the earlier bar as base.
+  - Detect a non-zero axis origin that exaggerates visual differences.
   body:
   - ==Line graphs tell trends — direction, steepness (rate), and turning points==. ==Bar graphs compare
     magnitudes across categories — read the exact value where the bar ends, and compare heights for rough
@@ -46,7 +66,24 @@ sections:
       A: Contradicts the slope.
       B: Opposite direction.
       C: Rate is wrong.
+  - q: A bar chart shows quarterly sales of 40, 60, 90, and 100 units. The percent increase from Q1 to
+      Q4 is…
+    options:
+      A: 60 — the absolute increase reported as a percent
+      B: 250% — the new value used as the base
+      C: 150%
+      D: 40% — compared against 100 as the base
+    answer: C
+    explain: (100 - 40)/40 = 60/40 = 1.5 = 150%.
+    distractors:
+      A: The difference 60 must be divided by the Q1 base.
+      B: 100/40 = 2.5 measures the new level against the base, not the growth.
+      D: The base and the new value are swapped.
 - heading: Pie charts and parts-of-a-whole
+  objectives:
+  - Find a missing slice as 100% minus the labeled slices.
+  - Convert a slice percent into a count using the chart's stated total.
+  - Convert between degrees and percent using the 360-degree circle.
   body:
   - ==Pie slices — each percent is a fraction of the total; the WHOLE must sum to 100%==. ==Computing
     a missing slice — 100 minus the given slices; computing a count — percent x total / 100==.
@@ -67,7 +104,24 @@ sections:
       B: 30/250.
       C: Correct.
       D: The 'other' slice.
+  - q: A pie chart of 4,000 respondents labels three slices 34%, 22%, and 19%. How many respondents fall
+      in the unlabeled remainder?
+    options:
+      A: 3,000 — the labeled slices' share counted as the remainder
+      B: 400 — the 25 percent read as a raw count
+      C: 4,000 — the whole total
+      D: 1,000
+    answer: D
+    explain: Missing percent = 100 - (34 + 22 + 19) = 25%; count = 0.25 x 4,000 = 1,000.
+    distractors:
+      A: 3,000 is 75% of the total — the labeled part, not the remainder.
+      B: 25 is a percent here; it must be multiplied by the total.
+      C: The remainder is only a quarter of the chart.
 - heading: Ratios, rates, and percent change from data
+  objectives:
+  - Compute per-capita and per-100,000 rates from counts and population.
+  - Compare two ratios formed from grouped data rather than comparing the raw counts.
+  - Apply percent change with the earlier value as base.
   body:
   - ==Percent change = (new - old)/old x 100% — the BASE is always the earlier value==. ==Rates — per
     capita = total / population; density = count/area; per-100,000 rates matter in health tables==.
@@ -87,7 +141,25 @@ sections:
       B: Four percent.
       C: New base % change.
       D: Correct.
+  - q: Enrollment rises from 1,250 to 1,500 while faculty grow from 50 to 60. The student-to-faculty ratio
+      has changed by…
+    options:
+      A: 20% — the enrollment growth applied to the ratio
+      B: 0% — the ratio is unchanged at 25 students per faculty member
+      C: 25% — the base-year ratio reported as a change
+      D: 4% — the numerator and denominator changes mixed
+    answer: B
+    explain: 'Before: 1,250/50 = 25. After: 1,500/60 = 25. Both numerators and denominators grew by 20%,
+      so the ratio is unchanged.'
+    distractors:
+      A: Equal proportional growth in numerator and denominator leaves a ratio untouched.
+      C: 25 is the ratio's value, not its change.
+      D: The two 20% changes cancel exactly.
 - heading: Reading experimental graphs in other sections
+  objectives:
+  - State a scatter-plot relationship descriptively (direction and strength) without claiming causation.
+  - Extend a trend by its last segment and identify an outlier for exclusion from a trend claim.
+  - Interpolate a value between two plotted points using the segment's slope.
   body:
   - ==Scatter plots — direction, strength, clusters; correlation is not causation==. ==Grouped bar/multiple
     series — the legend is the key; comparison questions need matching series across categories==.
@@ -107,19 +179,53 @@ sections:
       B: Correct.
       C: Contradicts the cluster.
       D: No basis.
+  - q: A trend line predicts 40 points at 2 study hours and 80 points at 10 hours. The predicted score
+      at 6 hours is…
+    options:
+      A: 50 — the two scores averaged without regard to hours
+      B: '60'
+      C: 80 — the endpoint value used directly
+      D: 20 — the slope reported as a score
+    answer: B
+    explain: 'Slope = (80 - 40)/(10 - 2) = 5 points per hour; at 6 hours: 40 + 5 x 4 = 60.'
+    distractors:
+      A: The point 6 hours is not midway between 2 and 10 hours, and averaging ignores the axis.
+      C: 80 belongs to 10 hours, not 6.
+      D: 5 points per hour is a rate, not a score at a given hour.
 examples:
 - prompt: 'Year 2017: Science 12,000; Math 8,000. Year 2019: Science 15,000; Math 9,000. Which subject
     grew faster in percent terms, and by how much?'
+  strategy: Compute each percent against its own base before comparing anything. The trap is comparing
+    absolute gains (3,000 versus 1,000), which answers a question the item never asked.
   solution:
   - 'Science: (15000-12000)/12000 = 25%.'
   - 'Math: (9000-8000)/8000 = 12.5%.'
   - Science grew twice as fast in percent terms.
   - Absolute growth is larger for science too (3000 vs 1000) — but the item asked percent.
   answer: Science — 25% vs 12.5%.
+  discussion: 'Percent comparisons need the base named, and ratio-of-growth questions often reward dividing
+    the two percent changes rather than subtracting them: 25/12.5 = 2 states the result more cleanly than
+    the difference. When a table gives raw counts, also ask whether per-capita rates would reverse the
+    ranking.'
   distractors:
     A: Math — comparing absolute growth only.
     B: Science by 15% — mixing bases.
     C: Equal — using absolute differences.
+  practice:
+    q: Region X's cases rise from 600 to 720 while Region Y's fall from 800 to 700. Which changed more
+      in percent terms?
+    options:
+      A: Y — a fall of 12.5% is the larger change
+      B: X — up 20%, against Y's fall of 12.5%
+      C: Equal — both changed by 20%
+      D: X — up 120, which is the largest change
+    answer: B
+    explain: 'X: (720 - 600)/600 = 20% up. Y: (700 - 800)/800 = 12.5% down. The X movement is larger in
+      percent terms.'
+    distractors:
+      A: 12.5% is smaller than 20% regardless of direction.
+      C: Y's change is 12.5%, not 20%.
+      D: 120 is an absolute count, not a percent — the bases differ.
 key_points:
 - Scale headers — thousands/millions change meaning.
 - Percent change bases on the EARLIER value.

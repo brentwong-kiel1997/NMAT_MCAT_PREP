@@ -6,6 +6,9 @@ overview: 'Classifying figures into categories — the odd-one-out and two-group
   then sort.'
 sections:
 - heading: Finding the discriminator
+  objectives:
+  - List candidate discriminators (symmetry, sides, fill, orientation, open/closed) before testing any.
+  - Apply a double discriminator — both features must hold for membership.
   body:
   - '==Grouping items ask: what feature do members of the set share that non-members lack? ==Discriminator
     candidates — symmetry, side count, angle type, fill state, open/closed, orientation, ornament presence=='
@@ -26,7 +29,24 @@ sections:
       A: The diamond is not in the set at all — a distractor label, not a member.
       B: The square fits the straight-sided rule.
       C: The triangle fits the straight-sided rule.
+  - q: 'Five figures: three are closed and hatched, one is closed but empty, one is open and hatched.
+      Under the rule ''closed AND hatched'', how many belong?'
+    options:
+      A: 4 — the closed empty figure was included
+      B: '3'
+      C: 2 — the open hatched figure was excluded as well
+      D: 5 — no feature was applied
+    answer: B
+    explain: 'Only figures satisfying both features count: three are closed and hatched; the closed-empty
+      one fails the fill test and the open-hatched one fails the closure test.'
+    distractors:
+      A: Being closed alone does not satisfy the rule — the fill must match too.
+      C: The open hatched figure is indeed excluded, but the three closed hatched figures remain.
+      D: Two of the five fail one or both conditions.
 - heading: Symmetry-first strategies
+  objectives:
+  - Test line symmetry by a fold test and rotational symmetry by a spin test.
+  - Group by the NUMBER of symmetry axes rather than by their mere presence.
   body:
   - '==Line symmetry — fold test: does the figure match across an axis? Rotational symmetry — spin test:
     does it repeat before 360 degrees? ==Group by type — all symmetric vs all asymmetric; or by NUMBER
@@ -47,7 +67,23 @@ sections:
       A: Letter strokes here are straight lines.
       C: None of the set letters is horizontal-only.
       D: True of A alone — the shared feature must cover all four set letters.
+  - q: Under the rule 'exactly one line of symmetry', which figure belongs?
+    options:
+      A: Square — four axes
+      B: Isosceles triangle — a single axis
+      C: Rectangle — two axes
+      D: Circle — infinitely many axes
+    answer: B
+    explain: An isosceles triangle has exactly one mirror axis; the others have several or infinitely
+      many.
+    distractors:
+      A: Four axes violates 'exactly one'.
+      C: Two axes violates 'exactly one'.
+      D: A circle has infinitely many.
 - heading: Shape family grouping — sides and angles
+  objectives:
+  - Group figures by side count or angle type before reaching for finer distinctions.
+  - Distinguish regular from irregular members of a family.
   body:
   - ==Sides rule — group by number of sides (triangles/quadrilaterals) or by aspect (acute vs obtuse dominant)==.
     ==Regularity — regular (equal sides/angles) vs irregular==
@@ -66,7 +102,22 @@ sections:
       A: Rectangle has 90s but rhombus may not.
       C: Square only.
       D: All are convex.
+  - q: 'Set: trapezoid, rhombus, kite. Which shared family is defensible?'
+    options:
+      A: All have four sides
+      B: All have right angles
+      C: All are regular polygons
+      D: All have equal diagonals
+    answer: A
+    explain: Each is a quadrilateral — the family they genuinely share.
+    distractors:
+      B: Only some quadrilaterals carry right angles; the rhombus and kite need not.
+      C: A trapezoid is not regular, and regular quadrilaterals are squares only.
+      D: Equal diagonals characterise rectangles and squares, not this set.
 - heading: Fill, pattern, and texture sorting
+  objectives:
+  - Sort by fill state, fill gradient, or hatch direction when shape is uninformative.
+  - Use an arrangement or pattern feature (dot layout, stripe spacing) as the discriminator.
   body:
   - ==Fill states — solid, hatched, empty, dot-filled; grouping can be by fill state or by fill gradient
     (emptiness order)==. ==Texture — hatch direction (/// vs \\) or spacing sorts groups==
@@ -86,7 +137,24 @@ sections:
       A: Shapes vary within groups.
       B: No size change.
       D: No rotation.
+  - q: Two tiles each carry four dots. On one tile the dots form a square; on the other they lie in a
+      straight line. The discriminator is…
+    options:
+      A: Dot count — both are four
+      B: Dot arrangement — square versus line
+      C: Tile size
+      D: Tile shape
+    answer: B
+    explain: The identical count rules out quantity; the spatial layout of the dots is the feature that
+      separates them.
+    distractors:
+      A: Both tiles have four dots, so count cannot separate them.
+      C: No size information is given.
+      D: No shape information is given.
 - heading: Odd-one-out strategy and answer hygiene
+  objectives:
+  - Apply both directions of the test — members hold the rule, the outsider breaks it.
+  - Prefer the discriminator that partitions the set most specifically and evenly.
   body:
   - ==In paper versions, the odd-one-out is the outsider; in digital formats, group-sort questions partition
     into two named groups — apply BOTH criteria (membership and rejection)==. ==When multiple features
@@ -106,19 +174,54 @@ sections:
       A: Shading is absent.
       B: The highest is a gradient, not a group.
       C: All have symmetry.
+  - q: Four figures repeat their shape every 90 degrees of rotation; one repeats only every 120 degrees.
+      The odd one out is…
+    options:
+      A: The figure with 120-degree rotational symmetry
+      B: The most symmetric figure
+      C: The least symmetric figure
+      D: The shaded figure
+    answer: A
+    explain: The rule 'rotational order 4' (90 degrees) holds for four figures and fails for the 120-degree
+      one — a clean discriminator.
+    distractors:
+      B: Symmetry degree is a gradient, not a two-group rule.
+      C: All five figures are rotationally symmetric; none is asymmetric.
+      D: No shading rule is described.
 examples:
 - prompt: 'Sort into two groups: figure 1 (pentagon, empty), 2 (pentagon, hatched), 3 (square, empty),
     4 (hexagon, hatched), 5 (square, hatched).'
+  strategy: List the candidate features, then test each against every member AND every outsider. When
+    two candidates survive, prefer the one that splits the set evenly and most specifically — the exam
+    builds its sets to partition cleanly.
   solution:
   - Candidate features — shape (n sides) and fill.
   - Fill splits 1,3 (empty) vs 2,4,5 (hatched) — but that is uneven.
   - Sides split 3,5 (4 sides) vs 1,2,4 (5-6 sides) — every figure belongs to one side family.
   - 'Best discriminator: number of sides — 4-side vs 5+-side groups.'
   answer: 'Group by side count: squares vs pentagon/hexagon.'
+  discussion: The two-way test — members hold, outsiders break — is the portable skill behind every classification
+    item, including odd-one-out. Uneven splits are usually evidence the wrong feature was chosen, which
+    is why checking the group sizes is the cheapest diagnostic before committing.
   distractors:
     A: Fill — leaves three vs two unevenly but valid; side count is more specific.
     B: Symmetry — all are symmetric.
     C: Size — not varied.
+  practice:
+    q: 'Five tiles: (1) triangle, empty; (2) square, hatched; (3) triangle, hatched; (4) square, empty;
+      (5) circle, empty. Which feature splits them into two groups?'
+    options:
+      A: Shape — two triangles, two squares, one circle
+      B: Fill state — empty (1, 4, 5) versus hatched (2, 3)
+      C: Size — not varied across the tiles
+      D: Symmetry — every tile is symmetric
+    answer: B
+    explain: Fill divides the set cleanly into three empty and two hatched tiles; no other feature produces
+      a two-group split.
+    distractors:
+      A: Shape yields a three-way split, not two groups.
+      C: No size variation is described, so it cannot discriminate.
+      D: A feature shared by every member cannot split anything.
 key_points:
 - The discriminator must fail every outsider.
 - Symmetry — line and rotational; count the axes.

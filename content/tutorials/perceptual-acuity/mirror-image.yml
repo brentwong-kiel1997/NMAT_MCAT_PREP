@@ -5,6 +5,9 @@ overview: 'Judging whether a figure is the mirror image of another — the class
   core skills: know your mirror axis, separate flip from rotation, and check asymmetric features fast.'
 sections:
 - heading: Flip vs rotation — the core distinction
+  objectives:
+  - Distinguish a reflection from a 180-degree rotation using a direction-bearing letter.
+  - State which features a reflection reverses and which it preserves.
   body:
   - ==A mirror image REVERSES left-right (vertical axis) or top-bottom (horizontal axis) — it is a reflection,
     never a rotation==. ==Rotation preserves left-right order and the winding of interior crosses; reflection
@@ -24,7 +27,22 @@ sections:
       A: That is a horizontal flip.
       B: Unchanged — impossible.
       C: That is 180-degree rotation.
+  - q: The vertical mirror image of 'p' is…
+    options:
+      A: q — the bowl flips to the other side of the stem
+      B: b — that is p rotated 180 degrees
+      C: d — that is the mirror of b, not of p
+      D: p — unchanged
+    answer: A
+    explain: A left-right reflection moves the bowl from the right of the stem to the left, giving q.
+    distractors:
+      B: Rotation, not reflection, produces b.
+      C: d is the vertical mirror of b.
+      D: p is not symmetric about a vertical axis.
 - heading: Vertical vs horizontal mirror axes
+  objectives:
+  - Identify the mirror axis from the stem or figure before reflecting anything.
+  - Apply the b-d (vertical) and b-p (horizontal) mappings correctly.
   body:
   - '==Vertical mirror (left-right) — the most common NMAT axis: reverses left and right, keeps top and
     bottom=='
@@ -45,7 +63,22 @@ sections:
       B: No change.
       C: Rotation.
       D: Correct.
+  - q: With a horizontal mirror (top-bottom flip), 'd' becomes…
+    options:
+      A: q — the horizontal flip swaps the b/d family with the p/q family
+      B: b — that is d's vertical mirror
+      C: d — unchanged
+      D: p — that is d rotated 180 degrees
+    answer: A
+    explain: 'Flipping top for bottom moves the bowl to the top of a right-side stem: q.'
+    distractors:
+      B: The vertical mirror of d is b — a left-right change, not top-bottom.
+      C: d is not symmetric about a horizontal axis.
+      D: Rotation is not reflection.
 - heading: Asymmetric-feature checking
+  objectives:
+  - Locate each asymmetric mark and predict its mirrored position on both axes.
+  - Reject a candidate whose body matches but whose ornament sits on the wrong side.
   body:
   - '==Scan the asymmetric details — the notch, the protruding line, the loop — then decide its mirrored
     position: left-right then up-down==. ==The b/d and p/q loop pairs are the favorite confusers=='
@@ -66,7 +99,24 @@ sections:
       B: Correct.
       C: Horizontal axis needed.
       D: No.
+  - q: An arrow points upward and carries a small notch on its RIGHT side. Under a vertical mirror, the
+      arrow points… and the notch moves to the…
+    options:
+      A: Up; right side
+      B: Up; left side
+      C: Down; left side
+      D: Up; it disappears
+    answer: B
+    explain: The vertical axis preserves the parallel (vertical) direction and reverses the perpendicular
+      offset, so the notch swaps sides.
+    distractors:
+      A: The notch must cross the mirror axis.
+      C: Nothing rotates the arrow downward — that would be a horizontal mirror.
+      D: Marks are reflected, not erased.
 - heading: Mirror confusion with digits and letters
+  objectives:
+  - Classify letters and digits as vertical-symmetric, horizontal-symmetric, both, or neither.
+  - Read a mirrored word from the mirror side, reversing letter order.
   body:
   - ==Digit mirror traps — 6 and 9 flip under a horizontal axis; 2 and 5 under vertical; symmetric digits
     — 0, 8 survive both==. ==Letter traps — b/d/p/q family; symmetric letters (A, H, I, M, O, T, U, V,
@@ -87,7 +137,23 @@ sections:
       B: R reverses.
       C: Correct.
       D: d is its image.
+  - q: A badge shows the word MOM. Under a vertical mirror, the word…
+    options:
+      A: Becomes unreadable
+      B: Still reads MOM — M and O are vertical-symmetric and the reversed order is palindromic
+      C: Reads WOW
+      D: Reads its letters reversed into non-letters
+    answer: B
+    explain: Each letter mirrors to itself and the letter order reverses, which for a palindrome restores
+      the same word.
+    distractors:
+      A: Symmetric letters survive the reflection intact.
+      C: W is not produced by mirroring M — reflection never changes a letter's identity.
+      D: No letter changes identity under reflection.
 - heading: Speed tactics for mirror items
+  objectives:
+  - Reflect the stem once and match, rather than generating every option's image.
+  - Eliminate a candidate on a single reversed asymmetric feature.
   body:
   - ==Fix the axis mentally — decide left/right and up/down mapping before scanning options==. ==Eliminate
     options that kept the wrong feature — half die on one asymmetric mark==
@@ -107,9 +173,26 @@ sections:
       B: Every item is winnable.
       C: Correct.
       D: Four-way waste.
+  - q: An option matches the stem's mirror on four of five features, but its arrow points the wrong way.
+      The verdict is…
+    options:
+      A: Accept it — four out of five is close enough
+      B: Reject it — one reversed asymmetric feature defeats the match
+      C: Accept it if the figure is large
+      D: Change the mirror axis and retry
+    answer: B
+    explain: A single mismatch on an asymmetric feature is disqualifying; partial matches are the standard
+      decoy.
+    distractors:
+      A: Mirror items require every feature to match.
+      C: Size has no bearing on the transformation.
+      D: The axis is given by the stem; it is not adjustable.
 examples:
 - prompt: 'Given figure: an ''L'' rotated 90 degrees clockwise with a dot above the long end. Which option
     is its vertical mirror image?'
+  strategy: Fix the axis first, then reflect the stem ONCE and track the asymmetric marks in order — the
+    direction of the long end, the side of the short foot, the position of the dot. Comparing one generated
+    image against every option is faster than reflecting each option in turn.
   solution:
   - Decide the axis — vertical mirror (left-right).
   - The L's long end currently points down; in a left-right mirror the corner structure flips — the long
@@ -117,10 +200,28 @@ examples:
   - The dot above the long end — 'above' stays above (vertical mirror keeps up/down).
   - 'Match: option showing the same L with the dot still above and the foot on the opposite side.'
   answer: The option with the foot switched and the dot still above.
+  discussion: 'The once-and-compare habit scales: every extra reflection multiplies the chance of a slip.
+    Two perpendicular reflections compose a 180-degree rotation, which is exactly why ''rotated'' options
+    are the standard decoys — the right silhouette with the wrong transformation.'
   distractors:
     A: Rotated L with dot below — that is rotation + flip error.
     B: Same-L as stem — the mirror erased nothing.
     C: Foot same side, dot above — that is the stem itself.
+  practice:
+    q: The stem shows an arrow pointing up-right at 45 degrees with a dot on its upper-left side. Under
+      a vertical mirror, the arrow points… and the dot sits…
+    options:
+      A: Up-right; upper-left
+      B: Up-left; upper-right
+      C: Down-left; upper-right
+      D: Up-left; upper-left
+    answer: B
+    explain: The vertical axis reverses horizontal components and preserves vertical ones, so the heading
+      mirrors to up-left and the dot crosses to the upper-right.
+    distractors:
+      A: That is the stem itself — nothing was reflected.
+      C: Down-left is the 180-degree rotation, not a reflection.
+      D: The heading is reflected correctly here, but the dot was not carried across the axis.
 key_points:
 - Mirror = reflection; rotation is NOT reflection.
 - b-d vertical, b-p horizontal.

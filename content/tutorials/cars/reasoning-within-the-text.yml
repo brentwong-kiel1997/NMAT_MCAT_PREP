@@ -5,6 +5,9 @@ overview: The inference, function, and structure layer of CARS — what the text
   exists, and how claims connect. Answers stay inside the passage's own logic; nothing from outside enters.
 sections:
 - heading: Inference — the inside-the-text layer
+  objectives:
+  - Move exactly one measured step from the passage's wording to a safe inference.
+  - Reject inferences that import outside facts, reverse direction, or overreach the stated relation.
   body:
   - ==Inference items ask what the author's words LOGICALLY imply, without stating==. ==The safe inference
     moves one measured step from the passage — closer paraphrases of examples, stated consequences, or
@@ -26,7 +29,23 @@ sections:
       B: Reversed direction.
       C: Correct.
       D: Outside the passage.
+  - q: 'Mini-passage: ''Clinics that adopted shared decision-making aids saw appointment lengths rise
+      about ten percent; malpractice claims did not rise over the same period.'' A safe inference is…'
+    options:
+      A: Shared decision-making prevents lawsuits
+      B: Patients prefer longer appointments
+      C: The aids coincided with longer visits, and no rise in claims was observed over the period described
+      D: Appointment length determines claim rates
+    answer: C
+    explain: Both halves are stated; neither causation between them nor preference is.
+    distractors:
+      A: No causal link between the aids and claims is offered.
+      B: No preference data appears.
+      D: Direction of causation is absent from the passage.
 - heading: Question forms — strengthen, weaken, assumption
+  objectives:
+  - Identify the unstated assumption an argument needs and apply the negation test.
+  - Choose the option that adds or removes support through the claim's own mechanism.
   body:
   - ==Strengthen/weaken — add or subtract support from the author's claim; the correct answer connects
     directly to the claim's mechanism or evidence==. ==Assumption — the unstated link the argument needs;
@@ -46,7 +65,24 @@ sections:
       B: Mentioned statements are explicit.
       C: The conclusion is the destination.
       D: Correct.
+  - q: 'Mini-passage: ''The village''s new well reduced gastrointestinal illness; therefore the old well
+      water was the source of the earlier illness.'' The argument requires the assumption that…'
+    options:
+      A: Villagers now drink more water than before
+      B: Nothing else changed at the same time that could account for the drop
+      C: The old well was deeper than the new one
+      D: Illness reports had been falsified
+    answer: B
+    explain: Negate it and the inference collapses — an alternative cause could explain the improvement,
+      which is exactly the assumption's signature.
+    distractors:
+      A: Consumption volume is not required by the reasoning.
+      C: Well depth is irrelevant to the inference.
+      D: Falsification is not assumed by the argument; it would refute the data, not bridge them.
 - heading: Structure questions — how the argument is built
+  objectives:
+  - Label passages into premise, counterclaim, concession, evidence, and qualification.
+  - Recognize the grant-then-pivot concession pattern and hedged versus asserted claims.
   body:
   - ==Structure items — identify premise, counterclaim, concession, evidence, qualification — and the
     logical relationship between chunks==. ==The concession — the author grants a point before limiting
@@ -68,7 +104,25 @@ sections:
       B: Correct.
       C: The pivot follows it.
       D: The 'But' clause concludes.
+  - q: 'Mini-passage: ''Critics argue the archive''s digitisation favours famous letters. Admittedly,
+      the famous ones are scanned first. But the ordering reflects fragility rather than fame — the most
+      damaged items go first, whatever their subject.'' Which structure describes this?'
+    options:
+      A: Thesis, example, conclusion
+      B: Counterclaim, concession, rebuttal
+      C: Definition, list, definition
+      D: Question, answer, question
+    answer: B
+    explain: The critics' view is presented, the ordering fact is conceded, and 'But' pivots into the
+      author's rebuttal.
+    distractors:
+      A: No thesis is stated at the start — the critics' claim is.
+      C: No terms are defined.
+      D: No question is posed.
 - heading: Purposes and functions of sentences
+  objectives:
+  - Classify a sentence's role — premise, evidence, counter, conclusion — from its connectives.
+  - Distinguish what a sentence says from what it does for the argument.
   body:
   - '==Function questions — what a sentence does: introduce the thesis, give evidence, present a counterargument,
     draw a conclusion==. ==Evidence vs conclusion — evidence supports; conclusions assert; counterarguments
@@ -89,7 +143,24 @@ sections:
       B: Same direction.
       C: The second clause concludes.
       D: Correct.
+  - q: 'Mini-passage: ''Fern regeneration requires canopy gaps. Because fern spores persist in soil for
+      decades, such gaps can be recolonised long after a clearing closes.'' The first sentence functions
+      as…'
+    options:
+      A: A conclusion drawn from the second sentence
+      B: A statement of requirement whose consequence the second sentence supplies
+      C: A counterexample to the second sentence
+      D: A definition of 'canopy gap'
+    answer: B
+    explain: The requirement is asserted first; 'Because' then licenses the recolonisation consequence.
+    distractors:
+      A: The second sentence depends on the first, not the reverse.
+      C: The two sentences agree rather than oppose.
+      D: No definition is offered.
 - heading: Answer hygiene for within-the-text items
+  objectives:
+  - Test each answer for scope, polarity, and degree against the passage's wording.
+  - Reject true-but-irrelevant answers by checking the question asked.
   body:
   - ==Every word of an answer is testable — scope, polarity, and degree all come from the passage==. ==Reject
     bars — outside information, overstatement, understatement (missing the author's strength), and half-right
@@ -110,10 +181,27 @@ sections:
       B: Relevance is scored.
       C: Nothing is free.
       D: Correct.
+  - q: 'Mini-passage: ''Ferry service to the island runs twice weekly in winter and daily in summer; the
+      year-round population is under 300 while summer visitors number in the thousands.'' The question
+      asks why winter service is reduced. Which option best answers it?'
+    options:
+      A: Ferries burn fuel
+      B: Summer service runs daily
+      C: The island's year-round population is under 300 while summer visitors number in the thousands
+      D: The island has two harbours
+    answer: C
+    explain: It ties the passage's own numbers to a demand account of the reduced winter schedule.
+    distractors:
+      A: True in general but not stated or needed here.
+      B: Restates the pattern instead of explaining it.
+      D: Not in the passage and not explanatory.
 examples:
 - prompt: 'Passage: ''The museum''s acquisitions policy favors modern works. Consequently, its nineteenth-century
     holdings are thinning — many sold to fund purchases. The director defends the pattern as fiscal, but
     the effect on the collection''s coherence is undeniable.'' — Ask: which statement is best supported?'
+  strategy: Layer the claims before answering. Tag each sentence — policy, consequence, reported rebuttal,
+    author's judgment — and answer from the layer the question targets, since most wrong options are borrowed
+    from a different layer.
   solution:
   - 'Layer the claims — policy (modern focus), consequence (thinning 19th-c holdings), rebuttal (director:
     fiscal), author''s judgment (coherence eroding).'
@@ -122,10 +210,29 @@ examples:
   - 'Not supported: the director''s defense is false (must be shown wrong, not merely doubted).'
   - Answer — the author contends the sales impair collection coherence.
   answer: The author believes the policy, however justified fiscally, damages coherence.
+  discussion: 'Layering scales to full passages: it shows where the author''s voice sits and which options
+    merely restate a reported claim. A defense being reported is never a defense being endorsed — the
+    most common within-the-text trap — and an untested explanation is not thereby a false one.'
   distractors:
     A: The director lies — the passage only reports the defense.
     B: Modern works are bad — no valuation stated.
     C: All nineteenth-century works are gone — 'thinning' ≠ absent.
+  practice:
+    q: 'Mini-passage: ''The library cut weekend hours, citing utility costs. Staff call the reductions
+      manageable. Patrons in outlying districts report losing their only study space, and the board records
+      no plan to restore hours.'' Which is best supported?'
+    options:
+      A: The utility-cost explanation is false
+      B: Staff are lying about the cuts being manageable
+      C: The author presents the reduction as cost-driven while recording a real loss for outlying patrons
+      D: Every patron lost a study space
+    answer: C
+    explain: The passage reports the fiscal reason and the patron harm without endorsing or refuting either
+      — the author's own stance is the pairing of the two.
+    distractors:
+      A: The reason is reported, not tested.
+      B: No evidence of deception appears.
+      D: Only outlying districts are said to have lost access.
 key_points:
 - Inference — one measured step, inside the logic.
 - Assumption — negation breaks the argument.

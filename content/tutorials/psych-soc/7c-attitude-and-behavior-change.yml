@@ -5,6 +5,11 @@ overview: 7C narrows onto change itself — attitude structure, dissonance/self-
   behavior change, and barriers to change. Prerequisite — 7B.
 sections:
 - heading: Attitude structure and the behavior link
+  objectives:
+  - Decompose a described attitude into affect, behavior, and cognition.
+  - Predict when an attitude will predict behavior — specificity, direct experience, planned-behavior
+    norms and control.
+  - Explain the LaPiere inconsistency as an attitude-behavior gap produced by situational pressure.
   body:
   - An attitude has three components — affect, behavior, cognition — the ABC model. Attitudes predict
     behavior best when specific, formed from direct experience, and when matched to the measured behavior
@@ -26,7 +31,26 @@ sections:
       A: Tension between inconsistent cognitions.
       B: Familiarity effect.
       D: Persuasion routes.
+  - q: A physician states strong support for hand hygiene on a survey, yet compliance at the bedside is
+      40%. Which design feature would most improve prediction, and which model supplies it?
+    options:
+      A: Ask about other attitudes instead; LaPiere's model
+      B: Measure attitude toward hand hygiene at THIS bedside moment plus norms and perceived control;
+        the theory of planned behavior
+      C: Repeat the survey; attitudes always predict behavior directly
+      D: Measure mere exposure to posters; the ABC model
+    answer: B
+    explain: Specific, situation-anchored attitudes plus subjective norms and perceived behavioral control
+      predict action far better than a global endorsement.
+    distractors:
+      A: Repeating a global measure reproduces the same gap.
+      C: LaPiere's own finding is the demonstration that broad attitudes fail to predict specific behavior.
+      D: Mere exposure concerns familiarity effects, not the attitude-behavior link.
 - heading: Dissonance and self-perception — behavior leads
+  objectives:
+  - Identify induced compliance, effort justification, or hypocrisy induction in a described study.
+  - Contrast dissonance theory with Bem's self-perception theory as accounts of the same behavior.
+  - Predict the overjustification effect when external reward is withdrawn from an enjoyed activity.
   body:
   - Beyond induced compliance — effort justification (we value what we suffer for) and hypocrisy induction
     (publicly advocating, then facing lapses). Bem's self-perception theory — we infer attitudes by observing
@@ -46,7 +70,27 @@ sections:
       A: Compliance escalation.
       B: Valuing suffering — reverse.
       D: Resistance to threatened freedom.
+  - q: A hospital requires staff to give a public talk on hand hygiene, then shows them their own poor
+      compliance data on video. Compliance rises over the following month. Which technique, and what drives
+      it?
+    options:
+      A: Overjustification — external reward eroded intrinsic motivation
+      B: Hypocrisy induction — public advocacy confronted with one's own lapse creates dissonance that
+        behavior resolves
+      C: Foot-in-the-door — the talk was a small request
+      D: Mere exposure — repetition of the message increased liking
+    answer: B
+    explain: Aronson's hypocrisy procedure pairs public commitment with evidence of one's own inconsistency,
+      and the dissonance is resolved by complying.
+    distractors:
+      A: No reward was given for the behavior — the mechanism is inconsistency, not crowding-out.
+      C: Foot-in-the-door escalates requests; no escalation sequence appears.
+      D: Exposure changes liking for a stimulus, not compliance with a norm one has publicly violated.
 - heading: Engineering behavior change — therapy techniques
+  objectives:
+  - Match a therapy technique to its learning mechanism (classical, operant, cognitive).
+  - Distinguish systematic desensitization from flooding by the exposure schedule.
+  - Place a described patient in a transtheoretical-model stage and name the stage-matched intervention.
   body:
   - The clinical toolkit maps onto learning — systematic desensitization (hierarchy + relaxation — classical),
     aversive conditioning, token economies (operant), flooding, modeling. Cognitive approaches — Beck
@@ -66,6 +110,21 @@ sections:
       B: Immediate full exposure.
       C: Pairing with aversive stimulus.
       D: Reinforcement tokens.
+  - q: A patient in the contemplation stage for smoking is handed a quit date and a nicotine patch and
+      fails within two weeks. Which stage-mismatch error was made, and what fits the stage?
+    options:
+      A: Wrong therapy mechanism; flooding was needed
+      B: Action-stage tools were given to a contemplation-stage patient; motivational exploration of ambivalence
+        fits the stage
+      C: Wrong diagnosis; the patient was in maintenance
+      D: Correct match; the patch simply failed
+    answer: B
+    explain: Precontemplation and contemplation need ambivalence work, not action tools; the transtheoretical
+      model matches intervention to stage.
+    distractors:
+      A: No flooding or exposure hierarchy is at issue — the failure is staging, not mechanism.
+      C: Maintenance follows successful action; nothing had been sustained.
+      D: The model's whole point is that the tool must match the stage.
   figures:
   - src: 7c-attitude-and-behavior-change/fig-71aa092a.webp
     caption: Sandplay therapy — arranging miniature scenes in a tray as a nonverbal route to expressing
@@ -75,6 +134,10 @@ sections:
     caption: Behavior therapy applies learning principles to modify target behaviors.
     credit: Fig 16.3 · OpenStax Psychology 2e — CC BY-NC-SA 4.0
 - heading: Barriers to change — reactance and relapse
+  objectives:
+  - Identify psychological reactance in a described reaction to a freedom-threatening message.
+  - Name the abstinence violation effect and design the reframe that prevents it.
+  - Distinguish a lapse from a relapse in a described episode.
   body:
   - Change meets resistance — psychological reactance (threatened freedom produces opposition), boomerang
     effects, and relapse. The abstinence violation effect (one lapse read as total failure) is the cognitive
@@ -93,18 +156,55 @@ sections:
       B: Reward undermining.
       C: Disposition over situation.
       D: Frequency by recall.
+  - q: A health campaign warns 'if you keep drinking sweetened drinks you WILL get diabetes'; consumption
+      in the target group rises. Which barrier, and which framing avoids it?
+    options:
+      A: Abstinence violation effect — reframe the lapse as data
+      B: Reactance — a freedom-threatening imperative invites opposition; autonomy-preserving framing
+        avoids it
+      C: Overjustification — remove the reward for drinking
+      D: Boomerang effect from too much information
+    answer: B
+    explain: 'Brehm''s reactance: perceived threat to a free behavior produces oppositional restoration,
+      including doing more of the behavior.'
+    distractors:
+      A: The abstinence violation effect concerns a lapse after quitting, not a campaign response.
+      C: No reward is described for drinking.
+      D: The boomerang label alone does not name the mechanism — threat to freedom does.
 examples:
 - prompt: Design a behavior-change plan for home glucose monitoring using implementation intentions, stages,
     relapse framing.
+  strategy: Match the tool to the stage before choosing the tool. Diagnose the stage first (precontemplation
+    through maintenance), because action-stage machinery applied to an ambivalent patient produces failure
+    and drop-out, then supply the if-then plan and the relapse frame.
   solution:
   - Stage-match — precontemplators get motivational engagement, not action tools.
   - Action-stage patients write implementation intentions — after breakfast, before dishes, I will test.
   - Missed tests framed as data — what interfered? — preventing collapse.
   answer: Stage-matched messaging + if-then plans + lapse-as-data framing.
+  discussion: 'The general design rule: stage-match, then automate the cue (implementation intentions
+    delegate initiation to the environment), then protect against the abstinence violation effect by reframing
+    lapses as information. The same template applies to medication adherence, exercise, and any self-monitored
+    behavior.'
   distractors:
     A: All patients at action tools — ignores stage.
     B: Fear messages — invites reactance.
     C: Punishing misses — undermines autonomy.
+  practice:
+    q: A patient who sees no reason to test his glucose is enrolled in a detailed logging app and stops
+      using it within days. Which error, and which first step?
+    options:
+      A: Wrong app design; a simpler app was needed
+      B: Action-stage tools offered in precontemplation; begin with motivational exploration of his ambivalence
+      C: Maintenance-stage relapse; restart the app immediately
+      D: Reactance; remove his choice entirely
+    answer: B
+    explain: Precontemplation precedes any tool use — the transtheoretical model requires ambivalence
+      work before action-stage machinery will stick.
+    distractors:
+      A: The tool was never the limiting factor; the stage was.
+      C: Maintenance presumes a period of successful action that never occurred.
+      D: Removing autonomy would increase reactance, not reduce it.
 key_points:
 - ABC attitudes; strongest prediction from specific, direct experience.
 - Dissonance applications — thin justification, effort justification, hypocrisy.

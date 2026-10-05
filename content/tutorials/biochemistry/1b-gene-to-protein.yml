@@ -6,6 +6,10 @@ overview: DNA structure and replication, transcription, translation, and the reg
   editing).
 sections:
 - heading: DNA structure and the central dogma
+  objectives:
+  - Describe the antiparallel, complementary architecture of the double helix.
+  - Distinguish DNA from RNA by sugar and by base set.
+  - State the central dogma and what each arrow represents.
   body:
   - '==DNA — antiparallel double helix: sugar-phosphate backbone outside, A-T (2 H-bonds) and G-C (3 H-bonds)
     inside; 3'' to 5'' on one strand, 5'' to 3'' on the other==. DNA uses deoxyribose (no 2''-OH), A/G/C/T;
@@ -27,12 +31,28 @@ sections:
       B: Base composition is complementary.
       C: Correct.
       D: Both DNA.
+  - q: One strand reads 5'-ATGC-3'. Its complement, written 5' to 3', is…
+    options:
+      D: 5'-GCAT-3'
+      A: 5'-TACG-3'
+      B: 5'-ATGC-3'
+      C: 5'-UACG-3'
+    answer: D
+    explain: 'Complement 3''-TACG-5'', then reverse it for the 5''-to-3'' convention: 5''-GCAT-3''.'
+    distractors:
+      A: Correct bases, wrong direction — the strand was not reversed.
+      B: That is the original strand, not its partner.
+      C: Uracil belongs to RNA, not DNA.
   figures:
   - src: 1b-gene-to-protein/fig-5eb113a0.webp
     caption: DNA-protein interaction, alpha-helices, and the folded protein — the hierarchy from information
       molecule to function.
     credit: Ch 15 · OpenStax Biology 2e — CC BY-NC-SA 4.0
 - heading: DNA replication — semiconservative machinery
+  objectives:
+  - Explain what semiconservative replication means and how it was demonstrated.
+  - Name each enzyme at the replication fork and its job.
+  - Distinguish leading-strand from lagging-strand synthesis.
   body:
   - ==Semiconservative (Meselson-Stahl) — each daughter has one old and one new strand==. Replication
     fork — helicase unwinds; SSB stabilizes; primase lays RNA primers; ==DNA polymerase III extends 5'
@@ -54,7 +74,24 @@ sections:
       B: It pairs faithful bases.
       C: It reads the template.
       D: Correct.
+  - q: Why does the lagging strand require DNA ligase?
+    options:
+      A: To seal the nicks left between Okazaki fragments
+      B: To unwind the helix ahead of the fork
+      C: To lay down the RNA primers
+      D: To proofread the newly synthesised strand
+    answer: A
+    explain: Discontinuous synthesis leaves breaks between fragments; ligase closes the phosphodiester
+      backbone.
+    distractors:
+      B: That is helicase's job.
+      C: Primase makes the primers.
+      D: Proofreading belongs to the polymerase's exonuclease activity.
 - heading: Transcription — DNA to RNA
+  objectives:
+  - Relate the template and coding strands to the mRNA sequence.
+  - Identify the processing steps a eukaryotic pre-mRNA undergoes.
+  - Explain how chromatin state controls transcription.
   body:
   - ==RNA polymerase reads the template strand 3' to 5', synthesizing RNA 5' to 3'; the coding strand
     matches the RNA sequence (T->U)==. Prokaryotes — single polymerase, polycistronic messages, no splicing.
@@ -75,7 +112,24 @@ sections:
       B: Correct.
       C: It always matches one.
       D: Only the complementary one.
+  - q: The template strand reads 3'-TAC-5'. The mRNA codon is…
+    options:
+      A: 5'-AUG-3'
+      B: 5'-ATG-3'
+      C: 3'-ATG-5'
+      D: 5'-UAC-3'
+    answer: A
+    explain: Complement the template (AUG) and write it 5' to 3' — and note this equals the coding strand
+      with U for T.
+    distractors:
+      B: DNA letters in an RNA transcript.
+      C: Right bases, wrong direction.
+      D: Copying the template instead of complementing it.
 - heading: Translation — RNA to protein
+  objectives:
+  - Decode a codon sequence into an amino acid chain.
+  - Describe the ribosome's A, P, and E sites and their order.
+  - Identify what post-translational processing does to a nascent protein.
   body:
   - ==mRNA triplets (codons) decode via the genetic code; wobble lets one tRNA read multiple codons; start
     AUG, stop UAA/UAG/UGA==. Ribosome — small 40S + large 60S (eukaryotes); ==A (aminoacyl), P (peptidyl),
@@ -97,7 +151,23 @@ sections:
       B: That is the ribosome.
       C: Chaperones do.
       D: Correct.
+  - q: An mRNA reads AUG-CCC-UAA. How many amino acids does the peptide carry?
+    options:
+      D: Two — the third codon is a stop
+      A: Three — every codon contributes
+      B: One — translation halts at the second codon
+      C: Zero — the start codon is never translated
+    answer: D
+    explain: AUG codes methionine, CCC proline, and UAA is a stop codon that releases the chain.
+    distractors:
+      A: Stop codons specify no amino acid.
+      B: Nothing halts translation at CCC; it is a proline codon.
+      C: AUG is translated — it is methionine.
 - heading: 'Methods: blots, sequencing, and editing'
+  objectives:
+  - Match each blot type to the molecule it detects.
+  - Predict PCR yield after a given number of cycles.
+  - Describe how CRISPR-Cas9 produces an edit at a chosen locus.
   body:
   - ==Southern blot = DNA, Northern = RNA, Western = protein — probe on membrane (labeled nucleic acid
     or antibody)==. PCR — denature 95, anneal 50-65, extend 72; ==amplification is 2^n==— requires primers
@@ -119,6 +189,18 @@ sections:
       B: dNTPs are monomers.
       C: It stops at product completion.
       D: Correct.
+  - q: Starting from one template molecule, how many copies does 20 PCR cycles yield?
+    options:
+      A: About 1 x 10^6 copies (2^20)
+      B: 40 copies
+      C: 400 copies
+      D: 10^20 copies
+    answer: A
+    explain: Every cycle doubles every template, so the count is 2^n, not 2n or n^2.
+    distractors:
+      B: Multiplying the cycle number by two.
+      C: Squaring the cycle number instead of exponentiating.
+      D: Confusing the exponent base with the cycle count.
   figures:
   - src: 1b-gene-to-protein/gel-electrophoresis.webp
     caption: Gel electrophoresis — fragments separate by size; the smallest run farthest.
@@ -126,16 +208,38 @@ sections:
 examples:
 - prompt: A gene with 3 exons (40, 60, 50 nt coding) and 2 introns (95 nt each) is transcribed, capped,
     spliced, and polyadenylated. Estimate the mature mRNA length.
+  strategy: 'Split the accounting into two independent parts: the exons sum to the coding length, and
+    the introns are deleted by splicing before the mRNA ever leaves the nucleus, so they contribute nothing.
+    Add the cap and poly-A tail last, since neither is transcribed off the template.'
   solution:
   - 'Before splicing: primary transcript = 40 + 60 + 50 + 95 + 95 = 340 nt.'
   - Splicing removes the introns — 190 nt gone.
   - Mature mRNA = 40 + 60 + 50 = 150 nt coding region.
   - Plus 5' cap and ~200 nt poly-A tail — total around 350 nt.
   answer: ~150 nt of coding sequence plus cap and poly-A — introns never reach the ribosome.
+  discussion: '150 nt is what the ribosome sees; the 190 nt of intron is transcribed and thrown away,
+    which is why the primary transcript is more than twice the mature message. Note the general bookkeeping
+    rule — the poly-A tail is added post-transcriptionally, so it never appears in the gene''s exon count.
+    Follow the arithmetic one step further: 150 nt of coding sequence means 50 codons, i.e. 49 amino acids
+    once the stop is discounted, which is exactly the translation question the MCAT recycles.'
   distractors:
     A: 340 nt — that is pre-mRNA, before splicing.
     B: 150 nt without cap/tail — incomplete.
     C: Counting introns as translated — never happens.
+  practice:
+    q: A gene has four exons of 30, 45, 60, and 15 nt and three introns of 80 nt each. What is the coding
+      length of the mature mRNA?
+    options:
+      B: 150 nt
+      A: 390 nt
+      C: 240 nt
+      D: 90 nt
+    answer: B
+    explain: Exons sum to 30 + 45 + 60 + 15 = 150 nt; the 240 nt of intron is spliced out.
+    distractors:
+      A: That is the primary transcript before splicing.
+      C: Reporting the intron total instead of the exon total.
+      D: Adding only two of the four exons.
 key_points:
 - Antiparallel; A-T 2 bonds, G-C 3 — Tm scales with GC.
 - Semiconservative; lagging strand made in Okazaki fragments.

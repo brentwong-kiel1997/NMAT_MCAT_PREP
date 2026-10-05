@@ -6,6 +6,9 @@ overview: 'The NMAT lexical-reasoning item — A : B :: C : ? — requiring prec
   vocabulary is the gate.'
 sections:
 - heading: The analogy convention
+  objectives:
+  - Read an analogy in its printed direction and name the relation in one clause.
+  - Reject options that satisfy the words but reverse the slot order.
   body:
   - '==Read ''A is to B as C is to ?'' — the relationship between A and B must fit exactly onto C and
     the unknown==. ==Name the relation in one clause: ''synonyms'', ''whole to part'', ''tool to function'',
@@ -26,7 +29,23 @@ sections:
       B: Worker to tool.
       C: Worker to client — relational mismatch.
       D: Correct.
+  - q: 'Painter : studio :: judge : ?'
+    options:
+      A: Gavel — worker to tool
+      B: Courtroom — worker to workplace, matching the direction
+      C: Verdict — worker to product
+      D: Law — worker to body of rules
+    answer: B
+    explain: Painter works in a studio; a judge works in a courtroom — the same worker-to-workplace relation
+      in the same slot order.
+    distractors:
+      A: A gavel is an instrument the judge uses, not a place of work.
+      C: A verdict is produced, not inhabited.
+      D: The law is the domain of rules, not the workplace.
 - heading: The relation families
+  objectives:
+  - Classify a pair into its relation family (synonym, antonym, part-whole, degree, cause-effect, worker-tool).
+  - Distinguish a degree relation from a true antonym by whether the quality intensifies or inverts.
   body:
   - ==Core families — synonyms, antonyms, part-whole, class-member, cause-effect, worker-tool/workplace,
     degree, agent-action, container-content, product-material==. ==Each family maps cleanly; a mislabeled
@@ -47,7 +66,23 @@ sections:
       B: Degree, not opposition.
       C: Necessary-for.
       D: Correct.
+  - q: 'Which pair has the same relation as ''chilly : frigid''?'
+    options:
+      A: 'Damp : soaked — the same quality taken from less to more'
+      B: 'Dry : wet — an outright antonym pair'
+      C: 'Warm : cool — the degree runs the opposite way'
+      D: 'River : stream — near-synonyms rather than degrees of one quality'
+    answer: A
+    explain: Chilly and frigid are two intensities of cold; damp and soaked are two intensities of wetness
+      — the same less-to-more degree relation.
+    distractors:
+      B: Dry and wet are opposites, not graduated intensities.
+      C: The direction of the intensity is reversed.
+      D: River and stream are close in kind, not points on one scale.
 - heading: Applying the relation to the second pair
+  objectives:
+  - Test each option by placing it in the unknown slot and re-reading the stem.
+  - Apply the full relation — direction, part of speech, and intensity — when two options both relate.
   body:
   - ==Test each option — the relation named must hold with the unknown in the same slot-position==. ==When
     two options both relate — apply the FULL relation, including nuance (level of intensity, direction,
@@ -68,7 +103,23 @@ sections:
       B: Correct.
       C: Class renaming.
       D: Outer layer, not the covered part.
+  - q: 'Bee : hive :: bird : ?'
+    options:
+      A: Feather — part to whole
+      B: Nest — creature to its dwelling, matching the direction
+      C: Flock — creature to its group
+      D: Sky — creature to its environment
+    answer: B
+    explain: A bee lives in a hive; a bird lives in a nest. The slot requires the dwelling, in the same
+      creature-to-dwelling order.
+    distractors:
+      A: A feather is a body part, not a dwelling.
+      C: A flock is a collection of birds, not where one bird lives.
+      D: Sky is far too broad — hives and nests are specific structures.
 - heading: Vocabulary dependence and recovery
+  objectives:
+  - Recover an unknown word's family from register, suffix, and root cues.
+  - Use the known word's relation to constrain the unknown's part of speech and polarity.
   body:
   - ==The relation is only as good as the word set — the highest-yield study is word families, not isolated
     definitions==. ==When a word is unknown — use part-of-speech, connotation, and common roots (-phil,
@@ -90,7 +141,23 @@ sections:
       B: Correct.
       C: There are recoverable cues.
       D: The stem is fixed.
+  - q: The word 'gregarious' is unfamiliar. The best recovery is…
+    options:
+      A: Skip the item — unknown words are unwinnable
+      B: Use the root grex/greg- (flock) and the adjective ending to place it as a sociable-type adjective
+      C: Choose whichever option is longest
+      D: Match it to the only noun among the options
+    answer: B
+    explain: Root and register cues place the word in the sociable family, which is usually enough to
+      test the options' relations.
+    distractors:
+      A: Analogy items reward exactly this kind of pattern recovery.
+      C: Length carries no relational information.
+      D: Part of speech constrains the slot but does not identify the relation.
 - heading: Speed and hygiene
+  objectives:
+  - Timebox an analogy item and fall back to the backward option test when stuck.
+  - Catch the common wrong-patterns — reversed order, synonym-for-antonym, wrong degree.
   body:
   - '==Timebox — 20-30 seconds per item; the relation is discoverable in the first pass==. ==When stuck
     — test the options backward: put each unknown in the slot and check if the relation still reads naturally=='
@@ -110,18 +177,52 @@ sections:
       B: Rarity does not add relation.
       C: Correct.
       D: Length is noise.
+  - q: 'You cannot name the relation for ''Pillory : ridicule''. The most reliable next step is…'
+    options:
+      A: Choose the rarest-sounding option
+      B: Place each option in the second slot and read the stem aloud, keeping the one that reads naturally
+      C: Match by part of speech alone and move on
+      D: Skip the item without testing anything
+    answer: B
+    explain: The backward test converts an unknown relation into a read-aloud check, which exposes reversals
+      and near-misses.
+    distractors:
+      A: Rarity is not a relation.
+      C: Part of speech eliminates some options but rarely decides the item.
+      D: The backward test is fast — a full skip is premature.
 examples:
 - prompt: 'Opaque : transparent :: rigid : ?'
+  strategy: Name the relation in one clause and generate the answer before looking at the options. Here
+    the relation is antonyms of material properties, so the expected answer is 'flexible' — then check
+    which option carries it.
   solution:
   - Name the relation — antonyms (describing properties of materials).
   - Apply to rigid — the antonym is flexible.
   - Check the degree — complete opposition, not partial.
   - 'Answer: flexible.'
   answer: Flexible.
+  discussion: 'Generate-then-verify turns a multiple-choice item into recall, which is why it beats option-scanning:
+    near-synonyms and reversed orders look plausible until the generated answer is compared against them.
+    When two options both oppose the stem word, the full relation — register and degree, not just opposition
+    — decides.'
   distractors:
     A: Solid — a near-match but not the opposite (firm vs rigid).
     B: Hard — a synonym.
     C: Brittle — the failure mode under stress, not the opposite.
+  practice:
+    q: 'Fragile : sturdy :: vague : ?'
+    options:
+      A: Obscure — a synonym of the stem word
+      B: Precise — the antonym, matching the relation
+      C: Brief — a different dimension entirely
+      D: Dim — a visual rather than a definitional opposite
+    answer: B
+    explain: Fragile and sturdy are opposites of one quality; vague and precise are opposites of another,
+      in the same slots.
+    distractors:
+      A: Obscure restates the stem word rather than opposing it.
+      C: Length is not the quality at issue.
+      D: Dim opposes bright, not vague.
 key_points:
 - Name the relation in one clause first.
 - Direction matters — match A:B onto C:? in the same order.
