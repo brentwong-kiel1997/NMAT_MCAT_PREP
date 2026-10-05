@@ -4,3 +4,4 @@ PyYAML>=6,<7
 weasyprint>=61
 cryptography>=42
 django-axes>=7,<8
+genanki>=0.13,<0.14

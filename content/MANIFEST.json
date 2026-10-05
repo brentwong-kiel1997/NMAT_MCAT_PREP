@@ -1,5 +1,5 @@
 {
-  "source_rev": "5aad30f",
+  "source_rev": "47eec95",
   "counts": {
     "chapters": 70,
     "note_bullets": 453,
@@ -11,7 +11,7 @@
     "checklists": 3,
     "diseases": 8,
     "exam_items": 770,
-    "exam_passages": 32
+    "exam_passages": 41
   },
   "files": {
     "SOURCES.yml": "e8c37335da395e1e1fd8c3f6fcf194a060fe2691d6882d83c2e857762ff5974d",
@@ -94,14 +94,14 @@
     "diseases/pneumonia.yml": "55e29fc8e07d3ecd72915f5aeca1826d4164f7baad2b4ee783157758f00263f3",
     "diseases/tuberculosis.yml": "1070adfaac1f01e8a4d5926ebc90b8b4dc6aefbc6f147e6632c5adf7b76f8f37",
     "diseases/type-2-diabetes.yml": "f43e169842dfb86f7c2f332893aa95c919892b2cb8898bcab7ac223954d011ce",
-    "exam-bank/mcat/bio-biochem.yml": "5ea5356148be4aee9491ebffd61e996cfdf123539a091bc00b430f4570207475",
+    "exam-bank/mcat/bio-biochem.yml": "75f69bca2b8b6537239c865b23b259135203092ad65534712129313b3da02b5e",
     "exam-bank/mcat/cars.yml": "262443843b5a014f80a04f9b7caef671f6648fe11450446099f00cfec7acbfe4",
-    "exam-bank/mcat/chem-phys.yml": "d91b671e2183e927451da1a1a36735a3cbba9587de81023bf8ba6bdac8c449b9",
+    "exam-bank/mcat/chem-phys.yml": "66e2095b44e2f25e8c4ce153fb6eca57b6d1986eb451e115ce7e70367f435c51",
     "exam-bank/mcat/drill/bio-biochem.yml": "e008bd213773b2c215c3b213844f024d64de583d3d97b301327b200e4ed24f75",
     "exam-bank/mcat/drill/cars.yml": "96d3288ddd421c92eaf2141b719095fd629972a5161dd207db6468d8612db487",
     "exam-bank/mcat/drill/chem-phys.yml": "6c4084aef06ef437879e54eecf61e22d0111bd197fc5c84fa1c0a8234ae98e41",
     "exam-bank/mcat/drill/psych-soc.yml": "42b2c4e22be691ddf29ba9e2f0c1046f3e51658d5c4fbca3976be7bb01b3b192",
-    "exam-bank/mcat/psych-soc.yml": "3d65cec6f17c9075bbdbf0cc2570f4aa39a2a288bd03059fb3eb520778cc5020",
+    "exam-bank/mcat/psych-soc.yml": "000dbcc5b95cadc9eac8156e38584087893ab56d8d67f1b5e3d01b2eecc77e93",
     "exam-bank/nmat/drill/part1-inductive.yml": "28e788e3116d37d66c94107136931d5e60604ec2e8ebb2f6953635277260e151",
     "exam-bank/nmat/drill/part1-perceptual.yml": "064fcdd2271f2faee2c8749218cbe44e0367ef10dddb5dd2122939b82bfb8be8",
     "exam-bank/nmat/drill/part1-quantitative.yml": "6983a5525961fd1503befb0c8cc16051633948f0c88e5ca5ca6bfbc24de03225",

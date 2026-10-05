@@ -413,15 +413,12 @@ def exam_result(request, attempt_id: int):
 @login_required
 @require_GET
 def flashcards_export(request):
-    """Export the learner's whole SRS deck as CSV (Anki-importable)."""
+    """Export the learner's whole SRS deck: CSV (default) or a ready-to-open
+    Anki package (.apkg) with ?format=apkg."""
     import csv
 
     from .models import SrsCard
 
-    response = HttpResponse(content_type="text/csv; charset=utf-8")
-    response["Content-Disposition"] = 'attachment; filename="gabay-flashcards.csv"'
-    writer = csv.writer(response)
-    writer.writerow(["front", "back", "chapter", "subject", "due", "reps", "lapses"])
     def _safe(cell):
         # neutralise spreadsheet formula injection (=, +, -, @ prefixes)
         text = str(cell)
@@ -429,6 +426,46 @@ def flashcards_export(request):
 
     cards = (SrsCard.objects.filter(profile__username=request.user.username)
              .order_by("subject_slug", "chapter", "front"))
+
+    if request.GET.get("format") == "apkg":
+        import os
+        import tempfile
+
+        import genanki
+
+        model = genanki.Model(
+            1607392319,
+            "Gabay card",
+            fields=[{"name": "Front"}, {"name": "Back"}, {"name": "Source"}],
+            templates=[{
+                "qfmt": "{{Front}}",
+                "afmt": "{{Front}}<hr id=answer>{{Back}}<br><br><small>{{Source}}</small>",
+            }])
+        deck = genanki.Deck(
+            2059400110 + abs(hash(request.user.username)) % 1000,
+            f"Gabay — {request.user.username}")
+        for c in cards:
+            source = " · ".join(x for x in (c.subject_slug, c.chapter) if x)
+            deck.add_note(genanki.Note(
+                model=model,
+                fields=[c.front, c.back, source],
+                tags=[t for t in (c.subject_slug,) if t]))
+        fd, apkg_path = tempfile.mkstemp(suffix=".apkg")
+        os.close(fd)
+        try:
+            genanki.Package(deck).write_to_file(apkg_path)
+            with open(apkg_path, "rb") as fh:
+                payload = fh.read()
+        finally:
+            os.unlink(apkg_path)
+        response = HttpResponse(payload, content_type="application/octet-stream")
+        response["Content-Disposition"] = 'attachment; filename="gabay-flashcards.apkg"'
+        return response
+
+    response = HttpResponse(content_type="text/csv; charset=utf-8")
+    response["Content-Disposition"] = 'attachment; filename="gabay-flashcards.csv"'
+    writer = csv.writer(response)
+    writer.writerow(["front", "back", "chapter", "subject", "due", "reps", "lapses"])
     for c in cards:
         writer.writerow([_safe(c.front), _safe(c.back), _safe(c.chapter),
                          _safe(c.subject_slug), c.due_date, c.reps, c.lapses])

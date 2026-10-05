@@ -51,66 +51,6 @@ items:
     D: Counted only 2.5 waters of hydration.
   chapter: general-chemistry
   passage_id: ''
-- id: mcat-cp-036
-  q: Which pure substance has the highest normal boiling point?
-  choices:
-    A: H2S
-    B: CH4
-    C: CO2
-    D: H2O
-  answer: D
-  explain: O-H bonds give water an extensive hydrogen-bonded network, the strongest IMF here.
-  distractors:
-    A: Heavier than water, but S-H is not polar enough to hydrogen-bond.
-    B: Nonpolar; only weak London dispersion forces.
-    C: A nonpolar linear molecule held together only by London forces.
-  chapter: 5b-molecules-and-intermolecular-interactions
-  passage_id: ''
-- id: mcat-cp-037
-  q: The H-N-H bond angle in NH3 is closest to
-  choices:
-    A: 107°
-    B: 109.5°
-    C: 120°
-    D: 104.5°
-  answer: A
-  explain: sp3 nitrogen with one lone pair compresses 109.5° to about 107°.
-  distractors:
-    B: Ignores the extra repulsion from the nitrogen lone pair.
-    C: That is trigonal planar (sp2) geometry.
-    D: That is water, which carries two lone pairs.
-  chapter: 5b-molecules-and-intermolecular-interactions
-  passage_id: ''
-- id: mcat-cp-038
-  q: Which atom has the largest atomic radius?
-  choices:
-    A: Na
-    B: Mg
-    C: K
-    D: Cl
-  answer: C
-  explain: Radius grows down a group faster than it shrinks across a period, so K (period 4) wins.
-  distractors:
-    A: Same group as K but one period higher, so it is smaller.
-    B: Sits to the right of Na in period 3, so it is smaller still.
-    D: Far right of period 3; its high effective nuclear charge pulls the radius in.
-  chapter: general-chemistry
-  passage_id: ''
-- id: mcat-cp-039
-  q: Which atom has the highest first ionization energy?
-  choices:
-    A: Na
-    B: Cl
-    C: Al
-    D: Mg
-  answer: B
-  explain: IE1 rises left to right as Zeff increases; Cl is the farthest right of the four.
-  distractors:
-    A: Its single 3s electron is the easiest of the four to remove.
-    C: Its lone 3p electron is shielded, so Al is below Mg and far below Cl.
-    D: Its 3s pair is held tightly, but Cl has the greater effective nuclear charge.
-  chapter: general-chemistry
-  passage_id: ''
 - id: mcat-cp-040
   q: Assuming both protons dissociate completely, the pH of 0.0050 M H2SO4 is
   choices:
@@ -234,53 +174,6 @@ items:
     D: Took the moles of electrons as grams of copper.
   chapter: 4c-electrochemistry-and-electrical-circuits
   passage_id: ''
-- id: mcat-cp-048
-  q: Ice of density 0.92 g/cm³ floats in seawater of density 1.025 g/cm³. What fraction of the ice is
-    submerged?
-  choices:
-    A: 92%
-    B: 8%
-    C: 50%
-    D: 90%
-  answer: D
-  explain: Fraction submerged = ρice/ρfluid = 0.92/1.025 = 0.90.
-  distractors:
-    A: Compared with fresh water (1.00 g/cm³) instead of seawater.
-    B: That is the fraction sitting above the surface.
-    C: Nothing supports an even split; Archimedes sets it by the density ratio.
-  chapter: 4b-fluids-for-circulation-and-gas-exchange
-  passage_id: ''
-- id: mcat-cp-049
-  q: Water flows through a pipe that narrows to half its radius. In the narrow section the water's speed
-    is
-  choices:
-    A: 4 times the original speed
-    B: 2 times the original speed
-    C: 8 times the original speed
-    D: one quarter of the original speed
-  answer: A
-  explain: A' = A/4, so A1v1 = A2v2 gives v' = 4v.
-  distractors:
-    B: Scaled by the radius instead of the cross-sectional area.
-    C: Used r³ rather than r² for the area scaling.
-    D: Speed increases where the area shrinks; it does not decrease.
-  chapter: 4b-fluids-for-circulation-and-gas-exchange
-  passage_id: ''
-- id: mcat-cp-050
-  q: The gauge pressure 10.0 m below the surface of a freshwater lake (ρ = 1.0 x 10^3 kg/m³) is about
-  choices:
-    A: 9.8 x 10^5 Pa
-    B: 9.8 x 10^3 Pa
-    C: 9.8 x 10^4 Pa
-    D: 1.96 x 10^5 Pa
-  answer: C
-  explain: P = ρgh = (1.0 x 10^3)(9.8)(10.0) = 9.8 x 10^4 Pa, about one atmosphere.
-  distractors:
-    A: Slipped a power of ten in ρgh.
-    B: Dropped a factor of ten in ρgh.
-    D: Used a 20 m depth instead of 10.0 m.
-  chapter: 4b-fluids-for-circulation-and-gas-exchange
-  passage_id: ''
 - id: mcat-cp-051
   q: In the circuit shown, a 6.0 Ω resistor in parallel with a 3.0 Ω resistor is connected in series with
     a 4.0 Ω resistor across a 12 V battery. The battery current is
@@ -297,51 +190,6 @@ items:
     D: Used only the 2.0 Ω equivalent of the parallel pair.
   chapter: electricity-and-magnetism
   figure: items/mcat-cp-051-circuit.svg
-  passage_id: ''
-- id: mcat-cp-052
-  q: A sound wave of wavelength 0.68 m travels at 340 m/s. Its frequency is
-  choices:
-    A: 2.3 x 10^2 Hz
-    B: 2.0 x 10^-3 s
-    C: 6.8 x 10^2 Hz
-    D: 5.0 x 10^2 Hz
-  answer: D
-  explain: f = v/λ = 340/0.68 = 5.0 x 10^2 Hz.
-  distractors:
-    A: Multiplied v by λ instead of dividing.
-    B: That is the period, not the frequency.
-    C: Doubled the correct value.
-  chapter: vibrations-waves-and-optics
-  passage_id: ''
-- id: mcat-cp-053
-  q: Two tuning forks of 440 Hz and 444 Hz are struck together. What is heard?
-  choices:
-    A: A loudness that pulses 4 times per second
-    B: A steady pitch at 442 Hz
-    C: A pitch at 884 Hz
-    D: No interference, since the frequencies differ
-  answer: A
-  explain: Beat frequency = |f1 - f2| = |444 - 440| = 4 Hz.
-  distractors:
-    B: The average is not what is produced; the amplitude oscillates at the frequency difference.
-    C: Added the frequencies instead of taking their difference.
-    D: Any small frequency difference produces audible beats.
-  chapter: 4d-light-and-sound-interacting-with-matter
-  passage_id: ''
-- id: mcat-cp-054
-  q: The speed of light in a glass with index of refraction 1.5 is
-  choices:
-    A: 4.5 x 10^8 m/s
-    B: 1.5 x 10^8 m/s
-    C: 2.0 x 10^8 m/s
-    D: 3.0 x 10^8 m/s
-  answer: C
-  explain: v = c/n = 3.0 x 10^8/1.5 = 2.0 x 10^8 m/s.
-  distractors:
-    A: Multiplied c by n instead of dividing.
-    B: Confused the index with the speed itself.
-    D: That is the vacuum speed; light slows in glass.
-  chapter: 4d-light-and-sound-interacting-with-matter
   passage_id: ''
 - id: mcat-cp-055
   q: An 80 g sample of a radionuclide with a half-life of 5.0 days is stored for 15 days. How much remains?
@@ -374,36 +222,6 @@ items:
     D: No nucleon is captured in beta decay; the nucleon count is conserved.
   chapter: modern-physics
   passage_id: ''
-- id: mcat-cp-057
-  q: How much heat is needed to warm 200 g of water from 25 °C to 75 °C (c = 4.18 J g⁻¹ °C⁻¹)?
-  choices:
-    A: 8.4 x 10^3 J
-    B: 2.1 x 10^4 J
-    C: 8.4 x 10^4 J
-    D: 4.2 x 10^4 J
-  answer: D
-  explain: q = mcΔT = 200 x 4.18 x 50 = 4.2 x 10^4 J.
-  distractors:
-    A: Used a temperature change of 10 °C.
-    B: Halved the temperature change.
-    C: Doubled the temperature change.
-  chapter: thermodynamics
-  passage_id: ''
-- id: mcat-cp-058
-  q: How many moles of an ideal gas occupy 11.2 L at STP?
-  choices:
-    A: 1.00 mol
-    B: 0.250 mol
-    C: 0.500 mol
-    D: 2.00 mol
-  answer: C
-  explain: n = 11.2/22.4 = 0.500 mol.
-  distractors:
-    A: Treated 11.2 L as a full molar volume.
-    B: Divided by 44.8 L instead of 22.4 L.
-    D: Multiplied by 2 instead of dividing 22.4 by 11.2.
-  chapter: general-chemistry
-  passage_id: ''
 - id: mcat-cp-059
   q: What is the oxidation number of Mn in the permanganate ion, MnO4⁻?
   choices:
@@ -431,8 +249,7 @@ passages:
   chapter: 5e-chemical-thermodynamics-and-kinetics
   items:
   - id: mcat-cp-001
-    q: The double-reciprocal plot for the uninhibited runs is shown. What is the Vmax of the enzyme
-      preparation?
+    q: The double-reciprocal plot for the uninhibited runs is shown. What is the Vmax of the enzyme preparation?
     choices:
       A: 0.025 µmol min⁻¹ mL⁻¹
       B: 40 µmol min⁻¹ mL⁻¹
@@ -830,6 +647,21 @@ passages:
       D: Assumed the volume is unaffected by a temperature change.
     chapter: thermodynamics
     passage_id: mcat-cp-p05
+  - id: mcat-cp-058
+    q: How many moles of an ideal gas occupy 11.2 L at STP?
+    choices:
+      A: 1.00 mol
+      B: 0.250 mol
+      C: 0.500 mol
+      D: 2.00 mol
+    answer: C
+    explain: n = 11.2/22.4 = 0.500 mol.
+    distractors:
+      A: Treated 11.2 L as a full molar volume.
+      B: Divided by 44.8 L instead of 22.4 L.
+      D: Multiplied by 2 instead of dividing 22.4 by 11.2.
+    chapter: general-chemistry
+    passage_id: mcat-cp-p05
 - id: mcat-cp-p06
   text: On an optical bench a student placed a luminous arrow 15.0 cm in front of a thin converging lens
     whose focal length was 10.0 cm; the bench scale reads to 0.1 cm. The student slid a screen along the
@@ -966,3 +798,203 @@ passages:
       D: If q were zero the water temperature would not have changed.
     chapter: 5e-chemical-thermodynamics-and-kinetics
     passage_id: mcat-cp-p07
+  - id: mcat-cp-057
+    q: How much heat is needed to warm 200 g of water from 25 °C to 75 °C (c = 4.18 J g⁻¹ °C⁻¹)?
+    choices:
+      A: 8.4 x 10^3 J
+      B: 2.1 x 10^4 J
+      C: 8.4 x 10^4 J
+      D: 4.2 x 10^4 J
+    answer: D
+    explain: q = mcΔT = 200 x 4.18 x 50 = 4.2 x 10^4 J.
+    distractors:
+      A: Used a temperature change of 10 °C.
+      B: Halved the temperature change.
+      C: Doubled the temperature change.
+    chapter: thermodynamics
+    passage_id: mcat-cp-p07
+- id: mcat-cp-p08
+  text: 'A physical-properties session compared five small molecules: CH4, NH3, H2O, H2S, and CO2. Students
+    tabulated molar mass, the number of lone pairs on the central atom, and the gas-phase dipole moment
+    (16, 17, 18, 34, and 44 g/mol; 0, 1, 2, 2, and 0 lone pairs; and 0, 1.47, 1.85, 0.97, and 0 D, respectively).
+    The samples were never heated, so relative boiling points had to be argued from structure. A second
+    exercise drew on a database of gas-phase atoms: across period 3 the covalent radius falls steadily
+    from 186 pm for sodium through 160 pm (magnesium) and 143 pm (aluminium) to about 100 pm for chlorine,
+    while the first ionization energy climbs from 496 kJ/mol (sodium) through 738 (magnesium) and 578
+    (aluminium) to 1251 kJ/mol (chlorine); descending group 1 from sodium to potassium the radius grows
+    to 227 pm and the ionization energy drops to 419 kJ/mol.'
+  chapter: 5b-molecules-and-intermolecular-interactions
+  items:
+  - id: mcat-cp-036
+    q: Which pure substance has the highest normal boiling point?
+    choices:
+      A: H2S
+      B: CH4
+      C: CO2
+      D: H2O
+    answer: D
+    explain: O-H bonds give water an extensive hydrogen-bonded network, the strongest IMF here.
+    distractors:
+      A: Heavier than water, but S-H is not polar enough to hydrogen-bond.
+      B: Nonpolar; only weak London dispersion forces.
+      C: A nonpolar linear molecule held together only by London forces.
+    chapter: 5b-molecules-and-intermolecular-interactions
+    passage_id: mcat-cp-p08
+  - id: mcat-cp-037
+    q: The H-N-H bond angle in NH3 is closest to
+    choices:
+      A: 107°
+      B: 109.5°
+      C: 120°
+      D: 104.5°
+    answer: A
+    explain: sp3 nitrogen with one lone pair compresses 109.5° to about 107°.
+    distractors:
+      B: Ignores the extra repulsion from the nitrogen lone pair.
+      C: That is trigonal planar (sp2) geometry.
+      D: That is water, which carries two lone pairs.
+    chapter: 5b-molecules-and-intermolecular-interactions
+    passage_id: mcat-cp-p08
+  - id: mcat-cp-038
+    q: Which atom has the largest atomic radius?
+    choices:
+      A: Na
+      B: Mg
+      C: K
+      D: Cl
+    answer: C
+    explain: Radius grows down a group faster than it shrinks across a period, so K (period 4) wins.
+    distractors:
+      A: Same group as K but one period higher, so it is smaller.
+      B: Sits to the right of Na in period 3, so it is smaller still.
+      D: Far right of period 3; its high effective nuclear charge pulls the radius in.
+    chapter: general-chemistry
+    passage_id: mcat-cp-p08
+  - id: mcat-cp-039
+    q: Which atom has the highest first ionization energy?
+    choices:
+      A: Na
+      B: Cl
+      C: Al
+      D: Mg
+    answer: B
+    explain: IE1 rises left to right as Zeff increases; Cl is the farthest right of the four.
+    distractors:
+      A: Its single 3s electron is the easiest of the four to remove.
+      C: Its lone 3p electron is shielded, so Al is below Mg and far below Cl.
+      D: Its 3s pair is held tightly, but Cl has the greater effective nuclear charge.
+    chapter: general-chemistry
+    passage_id: mcat-cp-p08
+- id: mcat-cp-p09
+  text: On a wave bench a 440 Hz and a 444 Hz tuning fork were struck together beside a microphone feeding
+    an oscilloscope, whose trace showed the amplitude of the sound rising and falling periodically; a
+    third fork, sounded alone in air at 20 C, drew a steady sinusoid whose wavelength students read off
+    the graticule, the speed of sound being taken as 340 m/s. In the optics part of the bench a short
+    pulse of light was sent through a 1.0 cm plate of crown glass whose refractive index the manufacturer
+    quoted as 1.5, and a fast photodiode timed the pulse, letting students compute how fast light travels
+    in the glass (c = 3.0 x 10^8 m/s in vacuum).
+  chapter: 4d-light-and-sound-interacting-with-matter
+  items:
+  - id: mcat-cp-052
+    q: A sound wave of wavelength 0.68 m travels at 340 m/s. Its frequency is
+    choices:
+      A: 2.3 x 10^2 Hz
+      B: 2.0 x 10^-3 s
+      C: 6.8 x 10^2 Hz
+      D: 5.0 x 10^2 Hz
+    answer: D
+    explain: f = v/λ = 340/0.68 = 5.0 x 10^2 Hz.
+    distractors:
+      A: Multiplied v by λ instead of dividing.
+      B: That is the period, not the frequency.
+      C: Doubled the correct value.
+    chapter: vibrations-waves-and-optics
+    passage_id: mcat-cp-p09
+  - id: mcat-cp-053
+    q: Two tuning forks of 440 Hz and 444 Hz are struck together. What is heard?
+    choices:
+      A: A loudness that pulses 4 times per second
+      B: A steady pitch at 442 Hz
+      C: A pitch at 884 Hz
+      D: No interference, since the frequencies differ
+    answer: A
+    explain: Beat frequency = |f1 - f2| = |444 - 440| = 4 Hz.
+    distractors:
+      B: The average is not what is produced; the amplitude oscillates at the frequency difference.
+      C: Added the frequencies instead of taking their difference.
+      D: Any small frequency difference produces audible beats.
+    chapter: 4d-light-and-sound-interacting-with-matter
+    passage_id: mcat-cp-p09
+  - id: mcat-cp-054
+    q: The speed of light in a glass with index of refraction 1.5 is
+    choices:
+      A: 4.5 x 10^8 m/s
+      B: 1.5 x 10^8 m/s
+      C: 2.0 x 10^8 m/s
+      D: 3.0 x 10^8 m/s
+    answer: C
+    explain: v = c/n = 3.0 x 10^8/1.5 = 2.0 x 10^8 m/s.
+    distractors:
+      A: Multiplied c by n instead of dividing.
+      B: Confused the index with the speed itself.
+      D: That is the vacuum speed; light slows in glass.
+    chapter: 4d-light-and-sound-interacting-with-matter
+    passage_id: mcat-cp-p09
+- id: mcat-cp-p10
+  text: A fluids bench used a transparent flow loop fed from a constant-head tank. The supply pipe, of
+    radius r, stepped down abruptly to a section of half that radius, and dye streaks let students compare
+    the speed of the thread of dye in the two sections. A pressure tap at the base of a 10.0 m standpipe
+    filled with fresh water (density 1.0 x 10^3 kg/m^3) was connected to a gauge reading only the difference
+    between absolute and atmospheric pressure. In a second part of the bench a block of artificial ice
+    (density 0.92 g/cm^3) floated in a tank of artificial seawater (density 1.025 g/cm^3), and students
+    marked the waterline on the block with a grease pencil before lifting it out to measure the submerged
+    fraction.
+  chapter: 4b-fluids-for-circulation-and-gas-exchange
+  items:
+  - id: mcat-cp-048
+    q: Ice of density 0.92 g/cm³ floats in seawater of density 1.025 g/cm³. What fraction of the ice is
+      submerged?
+    choices:
+      A: 92%
+      B: 8%
+      C: 50%
+      D: 90%
+    answer: D
+    explain: Fraction submerged = ρice/ρfluid = 0.92/1.025 = 0.90.
+    distractors:
+      A: Compared with fresh water (1.00 g/cm³) instead of seawater.
+      B: That is the fraction sitting above the surface.
+      C: Nothing supports an even split; Archimedes sets it by the density ratio.
+    chapter: 4b-fluids-for-circulation-and-gas-exchange
+    passage_id: mcat-cp-p10
+  - id: mcat-cp-049
+    q: Water flows through a pipe that narrows to half its radius. In the narrow section the water's speed
+      is
+    choices:
+      A: 4 times the original speed
+      B: 2 times the original speed
+      C: 8 times the original speed
+      D: one quarter of the original speed
+    answer: A
+    explain: A' = A/4, so A1v1 = A2v2 gives v' = 4v.
+    distractors:
+      B: Scaled by the radius instead of the cross-sectional area.
+      C: Used r³ rather than r² for the area scaling.
+      D: Speed increases where the area shrinks; it does not decrease.
+    chapter: 4b-fluids-for-circulation-and-gas-exchange
+    passage_id: mcat-cp-p10
+  - id: mcat-cp-050
+    q: The gauge pressure 10.0 m below the surface of a freshwater lake (ρ = 1.0 x 10^3 kg/m³) is about
+    choices:
+      A: 9.8 x 10^5 Pa
+      B: 9.8 x 10^3 Pa
+      C: 9.8 x 10^4 Pa
+      D: 1.96 x 10^5 Pa
+    answer: C
+    explain: P = ρgh = (1.0 x 10^3)(9.8)(10.0) = 9.8 x 10^4 Pa, about one atmosphere.
+    distractors:
+      A: Slipped a power of ten in ρgh.
+      B: Dropped a factor of ten in ρgh.
+      D: Used a 20 m depth instead of 10.0 m.
+    chapter: 4b-fluids-for-circulation-and-gas-exchange
+    passage_id: mcat-cp-p10

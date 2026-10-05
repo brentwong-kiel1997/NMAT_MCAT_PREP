@@ -27,7 +27,8 @@
       {% endfor %}
     </p>
     {% if active_subject %}<p class="note-line">Active deck: <strong>{{ active_subject }}</strong></p>{% endif %}
-    <p class="note-line"><a href="{% url 'flashcards_export' %}">⬇ Export deck as CSV</a> — imports into Anki (front / back / chapter / subject / due).</p>
+    <p class="note-line"><a href="{% url 'flashcards_export' %}">⬇ Export deck as CSV</a> or
+      <a href="{% url 'flashcards_export' %}?format=apkg">⬇ .apkg (opens directly in Anki)</a>.</p>
   </div>
 
   <div class="practice-card" id="srs-root" data-srs

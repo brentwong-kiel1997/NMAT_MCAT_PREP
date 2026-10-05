@@ -345,6 +345,25 @@ class FlashcardExportTests(TestCase):
         self.assertEqual(res.status_code, 302)
         self.assertIn("/login/", res.url)
 
+    def test_export_apkg_contents(self):
+        from django.utils import timezone
+
+        from .models import SrsCard
+
+        SrsCard.objects.create(
+            profile=self.profile, subject_slug="biology", card_key="k1",
+            front="What is the powerhouse of the cell?",
+            back="Mitochondrion", chapter="Cells",
+            due_date=timezone.localdate(),
+        )
+        self.client.force_login(self.user)
+        res = self.client.get("/flashcards/export/?format=apkg")
+        self.assertEqual(res.status_code, 200)
+        self.assertEqual(res["Content-Type"], "application/octet-stream")
+        self.assertTrue(res["Content-Disposition"].endswith('.apkg"'))
+        # apkg is a zip container
+        self.assertEqual(res.content[:2], b"PK")
+
     def test_export_csv_contents(self):
         from django.utils import timezone
 
@@ -397,7 +416,8 @@ class DifficultyBadgeTests(TestCase):
         item_id = "nmat-p2p-022"
         self._graded_attempt(item_id, "mechanics")
         m = item_difficulty_map()
-        self.assertEqual(m[item_id], {"n": 5, "miss_pct": 60})
+        self.assertEqual(m[item_id], {"n": 5, "miss_pct": 60,
+                                      "top_wrong": "A", "top_wrong_pct": 60})
 
         # a wrong answer routes the item into the review notebook with a badge
         from .learners import record_practice

@@ -1338,3 +1338,20 @@ details.tut-question[open] summary, details.tut-check-q[open] summary { margin-b
 }
 .tut-objectives ul { margin: .3rem 0 0 1rem; }
 .tut-objectives li { margin: .15rem 0; }
+
+/* ---- mobile practice/exam layout ---- */
+@media (max-width: 640px) {
+  .exam-shell { padding: .5rem; }
+  .exam-bar { flex-wrap: wrap; gap: .5rem; padding: .5rem .7rem; }
+  .exam-brand { font-size: .85rem; flex: 1 1 100%; }
+  .exam-clock { font-size: 1rem; }
+  .exam-main { padding: .9rem; border-radius: 10px; }
+  .exam-stem { font-size: 1.05rem; }
+  .exam-choice-row { flex-direction: column; }
+  .choice-cross { flex: 0 0 2rem; align-self: stretch; }
+  .practice-shell, .practice-card { padding: .8rem; }
+  .practice-nav { flex-wrap: wrap; }
+  .tutor-controls { flex-wrap: wrap; gap: .4rem; }
+  .mini-table { display: block; overflow-x: auto; white-space: nowrap; }
+  .trend-bar { min-width: 120px; }
+}

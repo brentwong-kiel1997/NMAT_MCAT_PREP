@@ -5,143 +5,6 @@ subject: psych-soc
 block: psych-soc
 items_expected: 59
 items:
-- id: mcat-ps-001
-  q: A researcher measures “academic stress” as each participant's total score on a validated 20-item
-    self-report scale. This measurement decision is best described as
-  choices:
-    B: An operational definition of the dependent variable.
-    C: A theoretical construct that cannot be studied scientifically.
-    D: A confounding variable that distorts the stress-performance relationship.
-    A: A random sample drawn from the population of stressed students.
-  answer: B
-  explain: An operational definition states the specific procedure used to measure an abstract construct;
-    here, stress = score on the 20-item scale.
-  distractors:
-    C: Stress is an unobservable construct, but it can be studied once it is operationalized, which is
-      exactly what the scale does.
-    D: A confounder is a third variable related to both the predictor and the outcome; the scale is simply
-      how stress is measured.
-    A: Sampling concerns who is studied, not how a variable is measured.
-  chapter: psychology
-  passage_id: ''
-- id: mcat-ps-002
-  q: A decision-making study runs participants one at a time in a sound-attenuated laboratory, uses a
-    highly standardized task, and finds a large effect. The participants are all 18-to-22-year-old undergraduates
-    and the task bears little resemblance to real-world decisions. The study most clearly shows
-  choices:
-    D: High internal validity with limited external validity.
-    A: High external validity with limited internal validity.
-    B: Good test-retest reliability but poor construct validity.
-    C: A true experiment that is free of any generalizability concerns.
-  answer: D
-  explain: Control over extraneous variables strengthens internal validity; an artificial task with a
-    homogeneous undergraduate sample weakens generalizability to other settings and populations (external
-    validity).
-  distractors:
-    A: Random assignment and tight control raise internal validity; the artificial task and narrow sample
-      are what limit generalizability.
-    B: Reliability and construct validity are not the issue raised by an artificial task and a narrow
-      sample; control versus realism is.
-    C: Even a well-controlled experiment can generalize poorly when the setting and sample are unrepresentative.
-  chapter: psychology
-  passage_id: ''
-- id: mcat-ps-003
-  q: A public-health analyst finds that neighborhoods with higher ice-cream sales also have higher drowning
-    rates (r = 0.72). The strongest interpretation is that
-  choices:
-    A: A third variable, hot summer weather, plausibly increases both swimming and ice-cream purchases.
-    B: Ice-cream consumption causes people to swim unsafely.
-    C: Near-drowning experiences later drive ice-cream purchases in the neighborhood.
-    D: The correlation is meaningless because r = 0.72 is below statistical significance.
-  answer: A
-  explain: Correlation does not establish causation; a plausible confounder (seasonal heat) can produce
-    both variables, so the finding supports association only.
-  distractors:
-    B: A cross-sectional correlation cannot establish causal direction, and no mechanism links ice cream
-      to drowning.
-    C: Reverse causation is equally unsupported by a single correlation.
-    D: Nothing in the stem indicates non-significance; the issue is interpretation, not the size or significance
-      of r.
-  chapter: psychology
-  passage_id: ''
-- id: mcat-ps-004
-  q: A participant can just detect that a 100 g weight differs from a 104 g weight. According to Weber's
-    law, if the standard weight is increased to 400 g the participant will need a difference of about
-  choices:
-    A: 16 g, because the just-noticeable difference is a constant fraction of the stimulus.
-    B: 4 g, because the absolute threshold is unchanged by the size of the standard.
-    C: 2 g, because sensitivity improves as the standard gets heavier.
-    D: 100 g, because detection requires doubling the original stimulus.
-  answer: A
-  explain: 'Weber fractions are constant: 4/100 = 0.04, and 0.04 × 400 g = 16 g.'
-  distractors:
-    B: The 4 g figure is this participant's difference threshold at 100 g; it is not an absolute threshold
-      and it scales with stimulus intensity.
-    C: Absolute sensitivity does not improve with stimulus intensity; the ratio stays constant, so the
-      increment grows.
-    D: Weber's law concerns a constant proportion (here 4%), not a doubling rule.
-  chapter: 6a-sensing-the-environment
-  passage_id: ''
-- id: mcat-ps-005
-  q: Radiologists at one hospital are told that the clinic faces litigation whenever a tumor is missed.
-    Compared with colleagues who receive no such message, these radiologists will most likely show
-  choices:
-    C: A more liberal response criterion, producing more hits and more false alarms.
-    D: Higher sensitivity (d′), because motivation sharpens perception of the stimulus.
-    A: A more conservative criterion, producing fewer false alarms and more misses.
-    B: No change in criterion, because the images themselves are unchanged.
-  answer: C
-  explain: In signal detection theory, payoffs and expectations move the response criterion; fear of misses
-    pushes observers toward saying “tumor,” raising both hits and false alarms while d′ stays put.
-  distractors:
-    D: The instruction changes the payoff structure, which shifts the criterion; it does not improve the
-      observer's ability to discriminate tumor from healthy tissue.
-    A: A conservative criterion reduces false alarms at the cost of misses — the opposite of what the
-      threat of litigation encourages.
-    B: Signal detection theory holds that criteria shift with expectations and payoffs even when the stimulus
-      is identical.
-  chapter: 6a-sensing-the-environment
-  passage_id: ''
-- id: mcat-ps-006
-  q: After studying a 30-word list, participants recall the first few and the last few words best. The
-    advantage for the words at the START of the list is best explained by
-  choices:
-    A: Greater rehearsal, which transferred those items into long-term memory (the primacy effect).
-    B: The words still being held in short-term store at the moment of recall.
-    C: Proactive interference from the items that preceded them in the list.
-    D: Sensory memory retaining the first items for several seconds.
-  answer: A
-  explain: 'The serial position curve reflects two systems: primacy comes from extra rehearsal and long-term
-    storage of early items, recency from items still in working memory.'
-  distractors:
-    B: That is the recency explanation; it applies to the last items, which are vulnerable to a filled
-      delay.
-    C: Interference in this list comes from within, and it works against the middle items rather than
-      explaining the first-position advantage.
-    D: Sensory memory lasts under a few seconds and cannot explain recall after the whole list has been
-      presented.
-  chapter: 6b-making-sense-of-the-environment
-  passage_id: ''
-- id: mcat-ps-007
-  q: Patient H.M., after bilateral removal of much of the medial temporal lobe, steadily improved at mirror
-    tracing across three days yet insisted each day that he had never performed the task. The best interpretation
-    is that
-  choices:
-    C: Encoding of new explicit (declarative) memories was impaired while procedural memory was spared.
-    D: Procedural memory depends on an intact hippocampus, which H.M. lacked.
-    A: Rehearsal allowed the tracing skill to be stored consciously.
-    B: Implicit memory requires deliberate recall of prior practice sessions.
-  answer: C
-  explain: H.M. formed no new declarative memories (hippocampal damage) but retained motor-skill learning,
-    dissociating explicit from procedural memory.
-  distractors:
-    D: 'His improving mirror tracing shows the opposite: skill learning survived the hippocampal damage.'
-    A: He could not consciously recall practicing at all, so conscious rehearsal of the episodes is ruled
-      out.
-    B: Implicit memory is defined by the absence of deliberate recall; that is precisely what his performance
-      shows.
-  chapter: 6b-making-sense-of-the-environment
-  passage_id: ''
 - id: mcat-ps-008
   q: A trainer rewards a pigeon first for facing a lever, then for approaching it, then for touching it,
     and finally for pressing it. This procedure is best described as
@@ -180,68 +43,6 @@ items:
     C: Preparedness explains why some associations (taste-illness) form readily, not why unreinforced
       learning stays hidden.
   chapter: psychology
-  passage_id: ''
-- id: mcat-ps-010
-  q: While hiking you see a snake, your heart pounds and your muscles tense, and only then do you experience
-    fear. This sequence best illustrates
-  choices:
-    B: The James-Lange theory, in which bodily arousal produces the emotional experience.
-    C: The Cannon-Bard theory, in which arousal and feeling occur simultaneously.
-    D: The Schachter-Singer two-factor theory, in which arousal is labeled using situational cues.
-    A: The facial feedback hypothesis, in which facial expression drives the emotion.
-  answer: B
-  explain: James-Lange theory holds that the perception of the stimulus triggers autonomic and motor responses,
-    and the emotion is the perception of those bodily changes.
-  distractors:
-    C: Simultaneity is Cannon-Bard's claim; the stem describes a felt emotion that follows the body's
-      response.
-    D: Two-factor theory requires a cognitive label for undifferentiated arousal; here the emotion follows
-      directly from the body's response.
-    A: The facial feedback account runs through facial musculature, not through autonomic arousal such
-      as a pounding heart.
-  chapter: 6c-responding-to-the-world
-  passage_id: ''
-- id: mcat-ps-011
-  q: Cannon objected to the James-Lange view partly by noting that patients with spinal cord injuries
-    that cut off most bodily feedback still reported feeling emotion. This evidence is most consistent
-    with which claim?
-  choices:
-    A: Physiological arousal and subjective emotion are independent outputs triggered together.
-    B: Emotional intensity depends entirely on the amount of bodily feedback available.
-    C: Each distinct emotion is produced by a unique pattern of autonomic activity.
-    D: Emotion arises only after cortical interpretation of autonomic feedback.
-  answer: A
-  explain: Cannon-Bard theory holds that the thalamus sends signals simultaneously to the cortex (felt
-    emotion) and to the body (arousal), so emotion survives lost feedback.
-  distractors:
-    B: That is the James-Lange prediction, which the spinal-injury observation undermines, since patients
-      still report emotion.
-    C: Distinct autonomic signatures are a James-Lange assumption, not a Cannon-Bard one; Cannon argued
-      arousal is too undifferentiated for that.
-    D: Interpreting feedback is the James-Lange sequence; Cannon-Bard locates the experience in the brain
-      alongside arousal, not downstream of it.
-  chapter: 6c-responding-to-the-world
-  passage_id: ''
-- id: mcat-ps-012
-  q: In Schachter and Singer's study, participants injected with epinephrine but not told of its effects
-    reported the emotion displayed by a confederate in the room, while informed participants reported
-    little emotion. This best supports the idea that
-  choices:
-    D: Emotional experience requires both undifferentiated physiological arousal and a cognitive label
-      drawn from the situation.
-    A: Arousal alone is sufficient to produce a specific, recognizable emotion.
-    B: Arousal and emotional experience are produced simultaneously and independently.
-    C: Emotions are innate programs triggered by evolutionary prepared stimuli.
-  answer: D
-  explain: The two-factor theory (Schachter-Singer, 1962) treats arousal as generic and the emotion label
-    as a cognitive interpretation of context, so mislabeling is possible.
-  distractors:
-    A: Aroused but uninformed participants borrowed the label from the confederate, showing that arousal
-      by itself does not specify which emotion is felt.
-    B: That is Cannon-Bard; the study instead manipulated how participants interpreted their arousal.
-    C: Evolutionary accounts make the label automatic rather than socially supplied, which contradicts
-      the confederate's influence.
-  chapter: 6c-responding-to-the-world
   passage_id: ''
 - id: mcat-ps-013
   q: A student who has not eaten in 12 hours and who has just been threatened by a roommate declines an
@@ -484,24 +285,6 @@ items:
     A: That is a conflict argument about stratified outcomes, not Merton's distinction between intended
       and unintended functions.
   chapter: 9a-understanding-social-structure
-  passage_id: ''
-- id: mcat-ps-025
-  q: A country's total fertility rate is 1.7. Which statement about this figure is correct?
-  choices:
-    C: It is the average number of children a woman would bear at prevailing age-specific rates, and it
-      lies below the replacement level of about 2.1.
-    D: It is the number of births per 1,000 people in the population each year.
-    A: It is the average number of children per household in the country.
-    B: It means the population must begin shrinking immediately.
-  answer: C
-  explain: The total fertility rate projects lifetime births per woman at current age-specific fertility
-    rates; roughly 2.1 is needed to replace a population with low mortality.
-  distractors:
-    D: Births per 1,000 population is the crude birth rate, a different measure that is not age-adjusted.
-    A: Children per household is distorted by household size and structure; TFR is a per-woman, age-standardized
-      measure.
-    B: Growth can continue for decades despite sub-replacement fertility because of population momentum.
-  chapter: 9b-demographic-characteristics-and-processes
   passage_id: ''
 - id: mcat-ps-026
   q: A young entrepreneur accepts her society's goal of becoming wealthy but pursues it through fraudulent
@@ -1218,6 +1001,24 @@ passages:
     with fertility below replacement, total population would peak around 2045 and then decline.'
   chapter: 9b-demographic-characteristics-and-processes
   items:
+  - id: mcat-ps-025
+    q: A country's total fertility rate is 1.7. Which statement about this figure is correct?
+    choices:
+      C: It is the average number of children a woman would bear at prevailing age-specific rates, and
+        it lies below the replacement level of about 2.1.
+      D: It is the number of births per 1,000 people in the population each year.
+      A: It is the average number of children per household in the country.
+      B: It means the population must begin shrinking immediately.
+    answer: C
+    explain: The total fertility rate projects lifetime births per woman at current age-specific fertility
+      rates; roughly 2.1 is needed to replace a population with low mortality.
+    distractors:
+      D: Births per 1,000 population is the crude birth rate, a different measure that is not age-adjusted.
+      A: Children per household is distorted by household size and structure; TFR is a per-woman, age-standardized
+        measure.
+      B: Growth can continue for decades despite sub-replacement fertility because of population momentum.
+    chapter: 9b-demographic-characteristics-and-processes
+    passage_id: mcat-ps-p07
   - id: mcat-ps-056
     q: The graph plots Country X's crude birth and death rates from 1900 to 2020. Between 1900 and 1940
       the death rate fell from 38 to 20 per 1,000 while the birth rate stayed near 40 per 1,000 and the
@@ -1239,8 +1040,8 @@ passages:
     figure: items/mcat-ps-056-transition.svg
     passage_id: mcat-ps-p07
   - id: mcat-ps-057
-    q: As the graph of birth and death rates shows, what accounted for Country X's population growth
-      between 1900 and 1940?
+    q: As the graph of birth and death rates shows, what accounted for Country X's population growth between
+      1900 and 1940?
     choices:
       B: A falling death rate driven by public health and sanitation, with fertility essentially unchanged.
       C: A rising birth rate caused by earlier marriage and larger families.
@@ -1298,3 +1099,243 @@ passages:
       C: Longer life combined with fewer births raises, not lowers, the median age.
     chapter: 9b-demographic-characteristics-and-processes
     passage_id: mcat-ps-p07
+- id: mcat-ps-p08
+  text: A study of emotional experience recruited two groups. The first consisted of patients with high
+    spinal cord injuries that had severed most of the ascending autonomic feedback from the body to the
+    brain; in structured interviews they reported episodes of fear, anger, and sadness at roughly the
+    usual frequency, although several remarked that their feelings seemed less intense than before the
+    injury. The second group consisted of healthy volunteers injected with either epinephrine or a saline
+    placebo. Half of each group was accurately told that the injection would produce a pounding heart
+    and flushing; the other half was told it was a vitamin supplement with no side effects. Each volunteer
+    then completed a questionnaire in the presence of a confederate who behaved either euphorically or
+    openly angrily. Volunteers given epinephrine without an accurate explanation reported feeling euphoric
+    or angry in step with the confederate, whereas the accurately informed volunteers and the placebo
+    recipients reported little emotion of either kind.
+  chapter: 6c-responding-to-the-world
+  items:
+  - id: mcat-ps-010
+    q: While hiking you see a snake, your heart pounds and your muscles tense, and only then do you experience
+      fear. This sequence best illustrates
+    choices:
+      B: The James-Lange theory, in which bodily arousal produces the emotional experience.
+      C: The Cannon-Bard theory, in which arousal and feeling occur simultaneously.
+      D: The Schachter-Singer two-factor theory, in which arousal is labeled using situational cues.
+      A: The facial feedback hypothesis, in which facial expression drives the emotion.
+    answer: B
+    explain: James-Lange theory holds that the perception of the stimulus triggers autonomic and motor
+      responses, and the emotion is the perception of those bodily changes.
+    distractors:
+      C: Simultaneity is Cannon-Bard's claim; the stem describes a felt emotion that follows the body's
+        response.
+      D: Two-factor theory requires a cognitive label for undifferentiated arousal; here the emotion follows
+        directly from the body's response.
+      A: The facial feedback account runs through facial musculature, not through autonomic arousal such
+        as a pounding heart.
+    chapter: 6c-responding-to-the-world
+    passage_id: mcat-ps-p08
+  - id: mcat-ps-011
+    q: Cannon objected to the James-Lange view partly by noting that patients with spinal cord injuries
+      that cut off most bodily feedback still reported feeling emotion. This evidence is most consistent
+      with which claim?
+    choices:
+      A: Physiological arousal and subjective emotion are independent outputs triggered together.
+      B: Emotional intensity depends entirely on the amount of bodily feedback available.
+      C: Each distinct emotion is produced by a unique pattern of autonomic activity.
+      D: Emotion arises only after cortical interpretation of autonomic feedback.
+    answer: A
+    explain: Cannon-Bard theory holds that the thalamus sends signals simultaneously to the cortex (felt
+      emotion) and to the body (arousal), so emotion survives lost feedback.
+    distractors:
+      B: That is the James-Lange prediction, which the spinal-injury observation undermines, since patients
+        still report emotion.
+      C: Distinct autonomic signatures are a James-Lange assumption, not a Cannon-Bard one; Cannon argued
+        arousal is too undifferentiated for that.
+      D: Interpreting feedback is the James-Lange sequence; Cannon-Bard locates the experience in the
+        brain alongside arousal, not downstream of it.
+    chapter: 6c-responding-to-the-world
+    passage_id: mcat-ps-p08
+  - id: mcat-ps-012
+    q: In Schachter and Singer's study, participants injected with epinephrine but not told of its effects
+      reported the emotion displayed by a confederate in the room, while informed participants reported
+      little emotion. This best supports the idea that
+    choices:
+      D: Emotional experience requires both undifferentiated physiological arousal and a cognitive label
+        drawn from the situation.
+      A: Arousal alone is sufficient to produce a specific, recognizable emotion.
+      B: Arousal and emotional experience are produced simultaneously and independently.
+      C: Emotions are innate programs triggered by evolutionary prepared stimuli.
+    answer: D
+    explain: The two-factor theory (Schachter-Singer, 1962) treats arousal as generic and the emotion
+      label as a cognitive interpretation of context, so mislabeling is possible.
+    distractors:
+      A: Aroused but uninformed participants borrowed the label from the confederate, showing that arousal
+        by itself does not specify which emotion is felt.
+      B: That is Cannon-Bard; the study instead manipulated how participants interpreted their arousal.
+      C: Evolutionary accounts make the label automatic rather than socially supplied, which contradicts
+        the confederate's influence.
+    chapter: 6c-responding-to-the-world
+    passage_id: mcat-ps-p08
+- id: mcat-ps-p09
+  text: An undergraduate laboratory course in cognition ran four classic paradigms over the term. In the
+    first, students lifted a standard weight and a comparison weight and reported whether they could tell
+    them apart, then repeated the judgements with progressively heavier standards. In the second, students
+    served as observers in a medical-imaging task, judging each of 200 noisy scans as tumor or normal
+    tissue; one group was told that a missed tumor would be reported to the teaching committee, while
+    a control group received no such message. In the third, each student studied a 30-word list presented
+    at two seconds per word and immediately wrote down as many words as possible. In the fourth, a volunteer
+    who had undergone bilateral medial temporal-lobe surgery and could no longer form new explicit memories
+    practiced mirror tracing on three successive days and was asked at the start of each session whether
+    she recognized the apparatus.
+  chapter: 6b-making-sense-of-the-environment
+  items:
+  - id: mcat-ps-004
+    q: A participant can just detect that a 100 g weight differs from a 104 g weight. According to Weber's
+      law, if the standard weight is increased to 400 g the participant will need a difference of about
+    choices:
+      A: 16 g, because the just-noticeable difference is a constant fraction of the stimulus.
+      B: 4 g, because the absolute threshold is unchanged by the size of the standard.
+      C: 2 g, because sensitivity improves as the standard gets heavier.
+      D: 100 g, because detection requires doubling the original stimulus.
+    answer: A
+    explain: 'Weber fractions are constant: 4/100 = 0.04, and 0.04 × 400 g = 16 g.'
+    distractors:
+      B: The 4 g figure is this participant's difference threshold at 100 g; it is not an absolute threshold
+        and it scales with stimulus intensity.
+      C: Absolute sensitivity does not improve with stimulus intensity; the ratio stays constant, so the
+        increment grows.
+      D: Weber's law concerns a constant proportion (here 4%), not a doubling rule.
+    chapter: 6a-sensing-the-environment
+    passage_id: mcat-ps-p09
+  - id: mcat-ps-005
+    q: Radiologists at one hospital are told that the clinic faces litigation whenever a tumor is missed.
+      Compared with colleagues who receive no such message, these radiologists will most likely show
+    choices:
+      C: A more liberal response criterion, producing more hits and more false alarms.
+      D: Higher sensitivity (d′), because motivation sharpens perception of the stimulus.
+      A: A more conservative criterion, producing fewer false alarms and more misses.
+      B: No change in criterion, because the images themselves are unchanged.
+    answer: C
+    explain: In signal detection theory, payoffs and expectations move the response criterion; fear of
+      misses pushes observers toward saying “tumor,” raising both hits and false alarms while d′ stays
+      put.
+    distractors:
+      D: The instruction changes the payoff structure, which shifts the criterion; it does not improve
+        the observer's ability to discriminate tumor from healthy tissue.
+      A: A conservative criterion reduces false alarms at the cost of misses — the opposite of what the
+        threat of litigation encourages.
+      B: Signal detection theory holds that criteria shift with expectations and payoffs even when the
+        stimulus is identical.
+    chapter: 6a-sensing-the-environment
+    passage_id: mcat-ps-p09
+  - id: mcat-ps-006
+    q: After studying a 30-word list, participants recall the first few and the last few words best. The
+      advantage for the words at the START of the list is best explained by
+    choices:
+      A: Greater rehearsal, which transferred those items into long-term memory (the primacy effect).
+      B: The words still being held in short-term store at the moment of recall.
+      C: Proactive interference from the items that preceded them in the list.
+      D: Sensory memory retaining the first items for several seconds.
+    answer: A
+    explain: 'The serial position curve reflects two systems: primacy comes from extra rehearsal and long-term
+      storage of early items, recency from items still in working memory.'
+    distractors:
+      B: That is the recency explanation; it applies to the last items, which are vulnerable to a filled
+        delay.
+      C: Interference in this list comes from within, and it works against the middle items rather than
+        explaining the first-position advantage.
+      D: Sensory memory lasts under a few seconds and cannot explain recall after the whole list has been
+        presented.
+    chapter: 6b-making-sense-of-the-environment
+    passage_id: mcat-ps-p09
+  - id: mcat-ps-007
+    q: Patient H.M., after bilateral removal of much of the medial temporal lobe, steadily improved at
+      mirror tracing across three days yet insisted each day that he had never performed the task. The
+      best interpretation is that
+    choices:
+      C: Encoding of new explicit (declarative) memories was impaired while procedural memory was spared.
+      D: Procedural memory depends on an intact hippocampus, which H.M. lacked.
+      A: Rehearsal allowed the tracing skill to be stored consciously.
+      B: Implicit memory requires deliberate recall of prior practice sessions.
+    answer: C
+    explain: H.M. formed no new declarative memories (hippocampal damage) but retained motor-skill learning,
+      dissociating explicit from procedural memory.
+    distractors:
+      D: 'His improving mirror tracing shows the opposite: skill learning survived the hippocampal damage.'
+      A: He could not consciously recall practicing at all, so conscious rehearsal of the episodes is
+        ruled out.
+      B: Implicit memory is defined by the absence of deliberate recall; that is precisely what his performance
+        shows.
+    chapter: 6b-making-sense-of-the-environment
+    passage_id: mcat-ps-p09
+- id: mcat-ps-p10
+  text: A research-methods seminar examined three published studies. Study 1 measured academic stress
+    in 300 undergraduates as each participant's total score on a validated 20-item self-report scale and
+    related it to the number of course deadlines that week. Study 2 ran participants one at a time in
+    a sound-attenuated laboratory on a highly standardized decision-making task and reported a large effect;
+    the sample was entirely 18-to-22-year-old undergraduates, and the task bore little resemblance to
+    real-world decisions. Study 3 was a cross-sectional survey reporting that neighborhoods with higher
+    ice-cream sales also had higher drowning rates (r = 0.72). For each study the seminar asked how the
+    key variables were defined, what the design could and could not support, and which alternative explanations
+    remained open.
+  chapter: psychology
+  items:
+  - id: mcat-ps-001
+    q: A researcher measures “academic stress” as each participant's total score on a validated 20-item
+      self-report scale. This measurement decision is best described as
+    choices:
+      B: An operational definition of the dependent variable.
+      C: A theoretical construct that cannot be studied scientifically.
+      D: A confounding variable that distorts the stress-performance relationship.
+      A: A random sample drawn from the population of stressed students.
+    answer: B
+    explain: An operational definition states the specific procedure used to measure an abstract construct;
+      here, stress = score on the 20-item scale.
+    distractors:
+      C: Stress is an unobservable construct, but it can be studied once it is operationalized, which
+        is exactly what the scale does.
+      D: A confounder is a third variable related to both the predictor and the outcome; the scale is
+        simply how stress is measured.
+      A: Sampling concerns who is studied, not how a variable is measured.
+    chapter: psychology
+    passage_id: mcat-ps-p10
+  - id: mcat-ps-002
+    q: A decision-making study runs participants one at a time in a sound-attenuated laboratory, uses
+      a highly standardized task, and finds a large effect. The participants are all 18-to-22-year-old
+      undergraduates and the task bears little resemblance to real-world decisions. The study most clearly
+      shows
+    choices:
+      D: High internal validity with limited external validity.
+      A: High external validity with limited internal validity.
+      B: Good test-retest reliability but poor construct validity.
+      C: A true experiment that is free of any generalizability concerns.
+    answer: D
+    explain: Control over extraneous variables strengthens internal validity; an artificial task with
+      a homogeneous undergraduate sample weakens generalizability to other settings and populations (external
+      validity).
+    distractors:
+      A: Random assignment and tight control raise internal validity; the artificial task and narrow sample
+        are what limit generalizability.
+      B: Reliability and construct validity are not the issue raised by an artificial task and a narrow
+        sample; control versus realism is.
+      C: Even a well-controlled experiment can generalize poorly when the setting and sample are unrepresentative.
+    chapter: psychology
+    passage_id: mcat-ps-p10
+  - id: mcat-ps-003
+    q: A public-health analyst finds that neighborhoods with higher ice-cream sales also have higher drowning
+      rates (r = 0.72). The strongest interpretation is that
+    choices:
+      A: A third variable, hot summer weather, plausibly increases both swimming and ice-cream purchases.
+      B: Ice-cream consumption causes people to swim unsafely.
+      C: Near-drowning experiences later drive ice-cream purchases in the neighborhood.
+      D: The correlation is meaningless because r = 0.72 is below statistical significance.
+    answer: A
+    explain: Correlation does not establish causation; a plausible confounder (seasonal heat) can produce
+      both variables, so the finding supports association only.
+    distractors:
+      B: A cross-sectional correlation cannot establish causal direction, and no mechanism links ice cream
+        to drowning.
+      C: Reverse causation is equally unsupported by a single correlation.
+      D: Nothing in the stem indicates non-significance; the issue is interpretation, not the size or
+        significance of r.
+    chapter: psychology
+    passage_id: mcat-ps-p10

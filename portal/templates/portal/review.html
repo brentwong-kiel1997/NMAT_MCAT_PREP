@@ -41,7 +41,7 @@
     <details class="tut-question">
       <summary><span class="exam-verdict">✗</span> {{ it.stem|truncatechars:100 }}
         {% if it.difficulty %}<span class="diff-badge{% if it.difficulty.miss_pct >= 50 %} diff-hot{% endif %}"
-              title="Missed by {{ it.difficulty.miss_pct }}% of {{ it.difficulty.n }} graded attempts across all learners">{{ it.difficulty.miss_pct }}% miss</span>{% endif %}
+              title="Missed by {{ it.difficulty.miss_pct }}% of {{ it.difficulty.n }} graded attempts across all learners">{% if it.difficulty.top_wrong %}trap {{ it.difficulty.top_wrong }} · {% endif %}{{ it.difficulty.miss_pct }}% miss</span>{% endif %}
       </summary>
       <div class="exam-review-body">
         <ul class="tut-q-options">

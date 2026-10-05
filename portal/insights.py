@@ -169,9 +169,9 @@ def item_difficulty_map(min_n: int = 5) -> dict[str, dict]:
     """Anonymised, data-driven difficulty per bank item.
 
     Aggregates every graded ExamResponse repo-wide (attempts of all
-    learners) into a miss rate; items with fewer than `min_n` graded
-    responses stay unlabeled — small samples lie. Purely aggregate data,
-    never per-learner.
+    learners) into a miss rate plus the most-picked wrong option (the trap);
+    items with fewer than `min_n` graded responses stay unlabeled — small
+    samples lie. Purely aggregate data, never per-learner.
     """
     from django.db.models import Count, Q
 
@@ -179,11 +179,23 @@ def item_difficulty_map(min_n: int = 5) -> dict[str, dict]:
             .values("item_id")
             .annotate(n=Count("id"),
                       misses=Count("id", filter=Q(correct=False))))
+    traps = (ExamResponse.objects.filter(correct=False)
+             .values("item_id", "chosen")
+             .annotate(n=Count("id")))
+    trap_map: dict[str, tuple[str, int]] = {}
+    for t in traps:
+        if t["chosen"] and t["n"] > trap_map.get(t["item_id"], ("", 0))[1]:
+            trap_map[t["item_id"]] = (t["chosen"], t["n"])
     out: dict[str, dict] = {}
     for r in rows:
         if r["n"] >= min_n:
-            out[r["item_id"]] = {
+            entry = {
                 "n": r["n"],
                 "miss_pct": int(round(100 * r["misses"] / r["n"])),
             }
+            letter, n_wrong = trap_map.get(r["item_id"], ("", 0))
+            if letter and n_wrong * 100 >= 30 * r["n"]:
+                entry["top_wrong"] = letter
+                entry["top_wrong_pct"] = int(round(100 * n_wrong / r["n"]))
+            out[r["item_id"]] = entry
     return out

@@ -5,22 +5,6 @@ subject: bio-biochem
 block: bio-biochem
 items_expected: 59
 items:
-- id: mcat-bb-033
-  q: In eukaryotic cells, the electron transport chain complexes and ATP synthase are located in the...
-  choices:
-    A: inner mitochondrial membrane (cristae)
-    B: mitochondrial matrix
-    C: outer mitochondrial membrane
-    D: cytosol
-  answer: A
-  explain: Complexes I through IV and F1Fo ATP synthase are embedded in the inner membrane, whose folds
-    (cristae) increase the surface area available for the proton-motive force.
-  distractors:
-    B: The matrix houses the citric acid cycle, the pyruvate dehydrogenase complex, and beta-oxidation.
-    C: The outer membrane is porous (porins) and carries no respiratory complexes.
-    D: Only glycolysis occurs in the cytosol; oxidative phosphorylation is mitochondrial.
-  chapter: cells-and-cellular-processes
-  passage_id: ''
 - id: mcat-bb-034
   q: Proteins destined for secretion are sorted and packaged into vesicles targeted to the plasma membrane
     by the...
@@ -88,108 +72,6 @@ items:
     D: Telophase I reform nuclear envelopes and completes the reductional division.
   chapter: 2c-cell-division-differentiation-specialization
   passage_id: ''
-- id: mcat-bb-038
-  q: Two individuals heterozygous at two unlinked loci are crossed (AaBb x AaBb). Assuming complete dominance
-    at both loci, what phenotypic ratio is expected?
-  choices:
-    A: '1:2:1'
-    B: '3:1'
-    C: '9:7'
-    D: '9:3:3:1'
-  answer: D
-  explain: 'A dihybrid self-cross yields 16 equally likely allele combinations: 9 A_B_, 3 A_bb, 3 aaB_,
-    and 1 aabb, which under complete dominance is the 9:3:3:1 phenotypic ratio.'
-  distractors:
-    A: 1:2:1 is the genotypic ratio of a single-locus monohybrid cross.
-    B: 3:1 is the phenotypic ratio of a single-locus monohybrid cross.
-    C: 9:7 is a modified epistatic ratio requiring two genes for one phenotype, which is not assumed here.
-  chapter: genetics
-  passage_id: ''
-- id: mcat-bb-039
-  q: Two parents heterozygous for an autosomal recessive allele (Aa x Aa) have a phenotypically unaffected
-    child. What is the probability that this child is homozygous dominant (AA)?
-  choices:
-    A: 1/4
-    B: 1/3
-    C: 1/2
-    D: 2/3
-  answer: B
-  explain: 'The cross gives 1 AA : 2 Aa : 1 aa. Conditioning on the child being unaffected removes the
-    aa class, so AA is 1 out of 3 remaining possibilities.'
-  distractors:
-    A: 1/4 is the probability of an affected (aa) child.
-    C: 1/2 is the unconditional probability of Aa before conditioning on the unaffected status.
-    D: 2/3 is the probability that an unaffected child is a carrier, not homozygous dominant.
-  chapter: genetics
-  passage_id: ''
-- id: mcat-bb-040
-  q: A color-blind man (XrY) marries a woman who is a carrier (XRXr). What fraction of their children,
-    counting sons and daughters equally, will be color-blind?
-  choices:
-    A: All of them
-    B: None of them
-    C: 1/2
-    D: 1/4
-  answer: C
-  explain: Daughters are XRXr (carrier) or XrXr (affected); sons are XRY (normal) or XrY (affected). Two
-    of the four genotypes are affected, so 1/2 of all children are color-blind.
-  distractors:
-    A: One daughter (XRXr) and one son (XRY) are unaffected, so not every child is affected.
-    B: The XrXr daughter and the XrY son are both affected.
-    D: 1/4 would apply if only one sex could be affected; here both sons and daughters are at risk.
-  chapter: genetics
-  passage_id: ''
-- id: mcat-bb-041
-  q: The coding (non-template) strand of a DNA segment is 5'-ATG GCT TAC-3'. What mRNA is transcribed
-    from it?
-  choices:
-    A: 5'-AUG GCU UAC-3'
-    B: 5'-GUA AGC CAU-3'
-    C: 5'-ATG GCT TAC-3'
-    D: 5'-TAC CGA ATG-3'
-  answer: A
-  explain: 'The mRNA has the same 5''-to-3'' sequence as the coding strand, with uracil replacing thymine:
-    5''-AUG GCU UAC-3''.'
-  distractors:
-    B: That is the template strand read 5'-to-3'; it would translate as Val-Ser-His rather than Met-Ala-Tyr.
-    C: That is still DNA; thymine must be replaced by uracil in the transcript.
-    D: That is the template strand written antiparallel, not the RNA product.
-  chapter: 1b-gene-to-protein
-  passage_id: ''
-- id: mcat-bb-042
-  q: Which peptide is produced by translating 5'-AUG UUU UCA UAA-3'?
-  choices:
-    A: Met-Lys-Ser
-    B: Phe-Ser-Met
-    C: Met-Tyr-Ser
-    D: Met-Phe-Ser
-  answer: D
-  explain: AUG codes methionine, UUU phenylalanine, UCA serine, and UAA is a stop codon, so the product
-    is Met-Phe-Ser (a tripeptide).
-  distractors:
-    A: UUU is phenylalanine; AAA is lysine.
-    B: Translation begins at the AUG start codon, so the first residue is methionine and the stop codon
-      ends the chain.
-    C: UUU is phenylalanine; UAU is tyrosine.
-  chapter: 1b-gene-to-protein
-  passage_id: ''
-- id: mcat-bb-043
-  q: Before a 100-amino-acid polypeptide is made, each amino acid must be charged onto its tRNA by an
-    aminoacyl-tRNA synthetase. If charging costs 2 ATP equivalents per amino acid, how many ATP equivalents
-    are consumed in activating all 100 residues?
-  choices:
-    A: '50'
-    B: '200'
-    C: '100'
-    D: '400'
-  answer: B
-  explain: 100 residues x 2 ATP equivalents per residue = 200 ATP equivalents.
-  distractors:
-    A: 50 divides instead of multiplying the two quantities.
-    C: 100 counts only one ATP equivalent per residue.
-    D: 400 charges each tRNA twice; each residue is activated once.
-  chapter: 1b-gene-to-protein
-  passage_id: ''
 - id: mcat-bb-044
   q: Which amino acid, when oxidized, forms the disulfide bridge that stabilizes extracellular protein
     structure?
@@ -224,22 +106,6 @@ items:
     C: 7.3 is close to physiological pH and has no relation to the pKa average.
   chapter: 1a-proteins-and-amino-acids
   passage_id: ''
-- id: mcat-bb-046
-  q: Which amino acid most strongly disrupts an alpha-helix when placed in its middle?
-  choices:
-    A: Proline
-    B: Alanine
-    C: Leucine
-    D: Glutamate
-  answer: A
-  explain: Proline's cyclic ring fixes its backbone phi angle and its nitrogen carries no amide hydrogen,
-    so it can neither adopt the helix geometry nor donate a stabilizing hydrogen bond.
-  distractors:
-    B: Alanine is the residue most frequently found in alpha-helices.
-    C: Leucine is hydrophobic and helix-promoting.
-    D: Glutamate is helix-favoring; charged side chains are compatible with helices.
-  chapter: 1a-proteins-and-amino-acids
-  passage_id: ''
 - id: mcat-bb-047
   q: During gastrulation, which embryonic germ layer gives rise to the nervous system?
   choices:
@@ -255,22 +121,6 @@ items:
     B: Mesoderm forms muscle, bone, the cardiovascular system, and the kidneys.
     D: Trophoblast contributes to placental tissues, not to embryonic organs.
   chapter: development
-  passage_id: ''
-- id: mcat-bb-048
-  q: On a Lineweaver-Burk plot, what pattern does a competitive inhibitor produce?
-  choices:
-    A: An unchanged x-intercept with an increased y-intercept
-    B: An unchanged y-intercept with the x-intercept moving closer to zero
-    C: A line parallel to the uninhibited plot
-    D: A decreased y-intercept with an unchanged x-intercept
-  answer: B
-  explain: A competitive inhibitor raises apparent Km without changing Vmax, so 1/Vmax (the y-intercept)
-    is unchanged while -1/Km,app moves toward zero; the slope Km/Vmax therefore increases.
-  distractors:
-    A: That pattern describes pure noncompetitive inhibition, where Vmax falls and Km is unchanged.
-    C: Parallel lines are the signature of uncompetitive inhibition, which lowers both Km and Vmax.
-    D: Inhibition never increases Vmax, so the y-intercept cannot decrease.
-  chapter: 1a-proteins-and-amino-acids
   passage_id: ''
 - id: mcat-bb-049
   q: The pathway summary shown traces glycolysis from one molecule of glucose. What are its net products?
@@ -288,58 +138,6 @@ items:
     C: One glucose yields two pyruvates, not one.
   chapter: 1d-bioenergetics-and-fuel-metabolism
   figure: items/mcat-bb-049-glycolysis.svg
-  passage_id: ''
-- id: mcat-bb-050
-  q: Complete beta-oxidation of palmitoyl-CoA (C16:0) requires how many rounds of the pathway, and how
-    many acetyl-CoA does it yield?
-  choices:
-    A: 7 rounds; 8 acetyl-CoA
-    B: 8 rounds; 8 acetyl-CoA
-    C: 16 rounds; 16 acetyl-CoA
-    D: 7 rounds; 7 acetyl-CoA
-  answer: A
-  explain: Each round removes a two-carbon unit. A 16-carbon chain yields 16/2 = 8 acetyl-CoA and therefore
-    requires 8 - 1 = 7 rounds, producing 7 FADH2 and 7 NADH along the way.
-  distractors:
-    B: 8 is the number of acetyl-CoA produced, not the number of rounds.
-    C: One round removes two carbons, so the counts are not one per carbon.
-    D: 7 acetyl-CoA omits the final two-carbon fragment released as the eighth acetyl-CoA.
-  chapter: 1d-bioenergetics-and-fuel-metabolism
-  passage_id: ''
-- id: mcat-bb-051
-  q: Why does the oxidation of FADH2 yield about 1.5 ATP while the oxidation of NADH yields about 2.5
-    ATP?
-  choices:
-    A: FADH2 carries only one electron instead of two.
-    B: FADH2 is oxidized in the matrix, where proton pumping cannot occur.
-    C: FADH2 donates its electrons to Complex II, bypassing Complex I, so fewer protons are pumped.
-    D: FADH2 cannot be reoxidized by the electron transport chain.
-  answer: C
-  explain: NADH feeds electrons into Complex I, which pumps 4 H+ across the inner membrane. FADH2 enters
-    at Complex II (succinate dehydrogenase), downstream of Complex I, so the proton yield and hence the
-    ATP yield are lower.
-  distractors:
-    A: Both carriers donate two electrons; they differ only in entry point and redox potential.
-    B: Complex I, III, and IV pump protons from the matrix side, so matrix-facing oxidation is normal.
-    D: FADH2 is readily reoxidized at Complex II, which is part of the transport chain.
-  chapter: 1d-bioenergetics-and-fuel-metabolism
-  passage_id: ''
-- id: mcat-bb-052
-  q: Addition of 2,4-dinitrophenol, a protonophore, to actively respiring mitochondria causes which change?
-  choices:
-    A: Both O2 consumption and ATP synthesis stop.
-    B: O2 consumption increases while ATP synthesis falls.
-    C: ATP synthesis increases while O2 consumption falls.
-    D: Neither O2 consumption nor ATP synthesis changes appreciably.
-  answer: B
-  explain: An uncoupler dissipates the proton gradient. Electron transport accelerates because the gradient
-    no longer resists proton pumping, but ATP synthase loses its driving force, and the energy is released
-    as heat.
-  distractors:
-    A: Stopping both is what an electron transport inhibitor such as cyanide does, not an uncoupler.
-    C: ATP synthesis cannot exceed the gradient available; uncoupling reduces it.
-    D: Both parameters change markedly, in opposite directions.
-  chapter: 1d-bioenergetics-and-fuel-metabolism
   passage_id: ''
 - id: mcat-bb-053
   q: Which structural feature is characteristic of Gram-negative but not Gram-positive bacteria?
@@ -643,6 +441,22 @@ passages:
       A: Y binds outside the active site, so no amount of substrate restores the full rate.
       C: X is displaced at high substrate concentration, so its curve still reaches 100.
       D: The two profiles are reversed; substrate competition relieves X's inhibition but not Y's.
+    chapter: 1a-proteins-and-amino-acids
+    passage_id: mcat-bb-p02
+  - id: mcat-bb-048
+    q: On a Lineweaver-Burk plot, what pattern does a competitive inhibitor produce?
+    choices:
+      A: An unchanged x-intercept with an increased y-intercept
+      B: An unchanged y-intercept with the x-intercept moving closer to zero
+      C: A line parallel to the uninhibited plot
+      D: A decreased y-intercept with an unchanged x-intercept
+    answer: B
+    explain: A competitive inhibitor raises apparent Km without changing Vmax, so 1/Vmax (the y-intercept)
+      is unchanged while -1/Km,app moves toward zero; the slope Km/Vmax therefore increases.
+    distractors:
+      A: That pattern describes pure noncompetitive inhibition, where Vmax falls and Km is unchanged.
+      C: Parallel lines are the signature of uncompetitive inhibition, which lowers both Km and Vmax.
+      D: Inhibition never increases Vmax, so the y-intercept cannot decrease.
     chapter: 1a-proteins-and-amino-acids
     passage_id: mcat-bb-p02
 - id: mcat-bb-p03
@@ -1079,3 +893,222 @@ passages:
       D: 20,000 Da uses 100 Da per residue rather than the 110 Da given in the passage.
     chapter: 1a-proteins-and-amino-acids
     passage_id: mcat-bb-p07
+  - id: mcat-bb-046
+    q: Which amino acid most strongly disrupts an alpha-helix when placed in its middle?
+    choices:
+      A: Proline
+      B: Alanine
+      C: Leucine
+      D: Glutamate
+    answer: A
+    explain: Proline's cyclic ring fixes its backbone phi angle and its nitrogen carries no amide hydrogen,
+      so it can neither adopt the helix geometry nor donate a stabilizing hydrogen bond.
+    distractors:
+      B: Alanine is the residue most frequently found in alpha-helices.
+      C: Leucine is hydrophobic and helix-promoting.
+      D: Glutamate is helix-favoring; charged side chains are compatible with helices.
+    chapter: 1a-proteins-and-amino-acids
+    passage_id: mcat-bb-p07
+- id: mcat-bb-p08
+  text: Rat liver mitochondria were suspended in a buffered, stirred chamber fitted with a Clark oxygen
+    electrode and offered either succinate or palmitoyl-CoA as the oxidizable substrate; O2 consumption
+    was recorded continuously and ATP appearing in the medium was assayed at the end of each run. Adding
+    ADP roughly doubled the rate of O2 uptake on either substrate, and cyanide abolished O2 uptake entirely.
+    Per molecule of substrate consumed, palmitoyl-CoA drove far more O2 than succinate, whose electrons
+    enter the transport chain at Complex II. In a final run the protonophore 2,4-dinitrophenol was dripped
+    into a fully coupled chamber and both the electrode trace and the ATP assay were repeated.
+  chapter: 1d-bioenergetics-and-fuel-metabolism
+  items:
+  - id: mcat-bb-033
+    q: In eukaryotic cells, the electron transport chain complexes and ATP synthase are located in the...
+    choices:
+      A: inner mitochondrial membrane (cristae)
+      B: mitochondrial matrix
+      C: outer mitochondrial membrane
+      D: cytosol
+    answer: A
+    explain: Complexes I through IV and F1Fo ATP synthase are embedded in the inner membrane, whose folds
+      (cristae) increase the surface area available for the proton-motive force.
+    distractors:
+      B: The matrix houses the citric acid cycle, the pyruvate dehydrogenase complex, and beta-oxidation.
+      C: The outer membrane is porous (porins) and carries no respiratory complexes.
+      D: Only glycolysis occurs in the cytosol; oxidative phosphorylation is mitochondrial.
+    chapter: cells-and-cellular-processes
+    passage_id: mcat-bb-p08
+  - id: mcat-bb-050
+    q: Complete beta-oxidation of palmitoyl-CoA (C16:0) requires how many rounds of the pathway, and how
+      many acetyl-CoA does it yield?
+    choices:
+      A: 7 rounds; 8 acetyl-CoA
+      B: 8 rounds; 8 acetyl-CoA
+      C: 16 rounds; 16 acetyl-CoA
+      D: 7 rounds; 7 acetyl-CoA
+    answer: A
+    explain: Each round removes a two-carbon unit. A 16-carbon chain yields 16/2 = 8 acetyl-CoA and therefore
+      requires 8 - 1 = 7 rounds, producing 7 FADH2 and 7 NADH along the way.
+    distractors:
+      B: 8 is the number of acetyl-CoA produced, not the number of rounds.
+      C: One round removes two carbons, so the counts are not one per carbon.
+      D: 7 acetyl-CoA omits the final two-carbon fragment released as the eighth acetyl-CoA.
+    chapter: 1d-bioenergetics-and-fuel-metabolism
+    passage_id: mcat-bb-p08
+  - id: mcat-bb-051
+    q: Why does the oxidation of FADH2 yield about 1.5 ATP while the oxidation of NADH yields about 2.5
+      ATP?
+    choices:
+      A: FADH2 carries only one electron instead of two.
+      B: FADH2 is oxidized in the matrix, where proton pumping cannot occur.
+      C: FADH2 donates its electrons to Complex II, bypassing Complex I, so fewer protons are pumped.
+      D: FADH2 cannot be reoxidized by the electron transport chain.
+    answer: C
+    explain: NADH feeds electrons into Complex I, which pumps 4 H+ across the inner membrane. FADH2 enters
+      at Complex II (succinate dehydrogenase), downstream of Complex I, so the proton yield and hence
+      the ATP yield are lower.
+    distractors:
+      A: Both carriers donate two electrons; they differ only in entry point and redox potential.
+      B: Complex I, III, and IV pump protons from the matrix side, so matrix-facing oxidation is normal.
+      D: FADH2 is readily reoxidized at Complex II, which is part of the transport chain.
+    chapter: 1d-bioenergetics-and-fuel-metabolism
+    passage_id: mcat-bb-p08
+  - id: mcat-bb-052
+    q: Addition of 2,4-dinitrophenol, a protonophore, to actively respiring mitochondria causes which
+      change?
+    choices:
+      A: Both O2 consumption and ATP synthesis stop.
+      B: O2 consumption increases while ATP synthesis falls.
+      C: ATP synthesis increases while O2 consumption falls.
+      D: Neither O2 consumption nor ATP synthesis changes appreciably.
+    answer: B
+    explain: An uncoupler dissipates the proton gradient. Electron transport accelerates because the gradient
+      no longer resists proton pumping, but ATP synthase loses its driving force, and the energy is released
+      as heat.
+    distractors:
+      A: Stopping both is what an electron transport inhibitor such as cyanide does, not an uncoupler.
+      C: ATP synthesis cannot exceed the gradient available; uncoupling reduces it.
+      D: Both parameters change markedly, in opposite directions.
+    chapter: 1d-bioenergetics-and-fuel-metabolism
+    passage_id: mcat-bb-p08
+- id: mcat-bb-p09
+  text: 'A genetics recitation section worked three inheritance problems drawn from the teaching greenhouse
+    and the campus counseling clinic. Problem 1 concerned two unlinked loci governing seed color and seed
+    shape in a self-fertilized dihybrid; the F2 generation yielded 400 seeds, scored in the four phenotypic
+    classes under complete dominance at both loci. Problem 2 concerned a rare autosomal recessive metabolic
+    disorder: two unaffected parents, each known from family history to be heterozygous, ask what chance
+    an unaffected child of theirs has of being homozygous for the normal allele. Problem 3 concerned an
+    X-linked recessive form of color blindness: an affected man marries a heterozygous woman, and the
+    couple asks what fraction of their children, sons and daughters counted equally, will be affected.'
+  chapter: genetics
+  items:
+  - id: mcat-bb-038
+    q: Two individuals heterozygous at two unlinked loci are crossed (AaBb x AaBb). Assuming complete
+      dominance at both loci, what phenotypic ratio is expected?
+    choices:
+      A: '1:2:1'
+      B: '3:1'
+      C: '9:7'
+      D: '9:3:3:1'
+    answer: D
+    explain: 'A dihybrid self-cross yields 16 equally likely allele combinations: 9 A_B_, 3 A_bb, 3 aaB_,
+      and 1 aabb, which under complete dominance is the 9:3:3:1 phenotypic ratio.'
+    distractors:
+      A: 1:2:1 is the genotypic ratio of a single-locus monohybrid cross.
+      B: 3:1 is the phenotypic ratio of a single-locus monohybrid cross.
+      C: 9:7 is a modified epistatic ratio requiring two genes for one phenotype, which is not assumed
+        here.
+    chapter: genetics
+    passage_id: mcat-bb-p09
+  - id: mcat-bb-039
+    q: Two parents heterozygous for an autosomal recessive allele (Aa x Aa) have a phenotypically unaffected
+      child. What is the probability that this child is homozygous dominant (AA)?
+    choices:
+      A: 1/4
+      B: 1/3
+      C: 1/2
+      D: 2/3
+    answer: B
+    explain: 'The cross gives 1 AA : 2 Aa : 1 aa. Conditioning on the child being unaffected removes the
+      aa class, so AA is 1 out of 3 remaining possibilities.'
+    distractors:
+      A: 1/4 is the probability of an affected (aa) child.
+      C: 1/2 is the unconditional probability of Aa before conditioning on the unaffected status.
+      D: 2/3 is the probability that an unaffected child is a carrier, not homozygous dominant.
+    chapter: genetics
+    passage_id: mcat-bb-p09
+  - id: mcat-bb-040
+    q: A color-blind man (XrY) marries a woman who is a carrier (XRXr). What fraction of their children,
+      counting sons and daughters equally, will be color-blind?
+    choices:
+      A: All of them
+      B: None of them
+      C: 1/2
+      D: 1/4
+    answer: C
+    explain: Daughters are XRXr (carrier) or XrXr (affected); sons are XRY (normal) or XrY (affected).
+      Two of the four genotypes are affected, so 1/2 of all children are color-blind.
+    distractors:
+      A: One daughter (XRXr) and one son (XRY) are unaffected, so not every child is affected.
+      B: The XrXr daughter and the XrY son are both affected.
+      D: 1/4 would apply if only one sex could be affected; here both sons and daughters are at risk.
+    chapter: genetics
+    passage_id: mcat-bb-p09
+- id: mcat-bb-p10
+  text: In a gene-expression practical a bacterial cell-free system was primed with short synthetic DNA
+    templates, radiolabeled NTPs, and all 20 amino acids; aliquots taken at intervals were run on a gel
+    to follow the RNA and peptide products. For the first template the students were handed the coding
+    (non-template) strand alone and asked to write down the transcript it would yield. A second template
+    was designed so that its transcript begins with the universal start codon, carries two sense codons,
+    and ends with a stop codon. The system's aminoacyl-tRNA synthetases charge each tRNA at a cost of
+    2 ATP equivalents per residue attached, and translation initiates at the first AUG of any transcript.
+  chapter: 1b-gene-to-protein
+  items:
+  - id: mcat-bb-041
+    q: The coding (non-template) strand of a DNA segment is 5'-ATG GCT TAC-3'. What mRNA is transcribed
+      from it?
+    choices:
+      A: 5'-AUG GCU UAC-3'
+      B: 5'-GUA AGC CAU-3'
+      C: 5'-ATG GCT TAC-3'
+      D: 5'-TAC CGA ATG-3'
+    answer: A
+    explain: 'The mRNA has the same 5''-to-3'' sequence as the coding strand, with uracil replacing thymine:
+      5''-AUG GCU UAC-3''.'
+    distractors:
+      B: That is the template strand read 5'-to-3'; it would translate as Val-Ser-His rather than Met-Ala-Tyr.
+      C: That is still DNA; thymine must be replaced by uracil in the transcript.
+      D: That is the template strand written antiparallel, not the RNA product.
+    chapter: 1b-gene-to-protein
+    passage_id: mcat-bb-p10
+  - id: mcat-bb-042
+    q: Which peptide is produced by translating 5'-AUG UUU UCA UAA-3'?
+    choices:
+      A: Met-Lys-Ser
+      B: Phe-Ser-Met
+      C: Met-Tyr-Ser
+      D: Met-Phe-Ser
+    answer: D
+    explain: AUG codes methionine, UUU phenylalanine, UCA serine, and UAA is a stop codon, so the product
+      is Met-Phe-Ser (a tripeptide).
+    distractors:
+      A: UUU is phenylalanine; AAA is lysine.
+      B: Translation begins at the AUG start codon, so the first residue is methionine and the stop codon
+        ends the chain.
+      C: UUU is phenylalanine; UAU is tyrosine.
+    chapter: 1b-gene-to-protein
+    passage_id: mcat-bb-p10
+  - id: mcat-bb-043
+    q: Before a 100-amino-acid polypeptide is made, each amino acid must be charged onto its tRNA by an
+      aminoacyl-tRNA synthetase. If charging costs 2 ATP equivalents per amino acid, how many ATP equivalents
+      are consumed in activating all 100 residues?
+    choices:
+      A: '50'
+      B: '200'
+      C: '100'
+      D: '400'
+    answer: B
+    explain: 100 residues x 2 ATP equivalents per residue = 200 ATP equivalents.
+    distractors:
+      A: 50 divides instead of multiplying the two quantities.
+      C: 100 counts only one ATP equivalent per residue.
+      D: 400 charges each tRNA twice; each residue is activated once.
+    chapter: 1b-gene-to-protein
+    passage_id: mcat-bb-p10
