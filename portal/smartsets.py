@@ -10,8 +10,7 @@ from __future__ import annotations
 import random
 
 from django.contrib.auth.decorators import login_required
-from django.http import Http404
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.views.decorators.http import require_GET
 
 from . import insights
@@ -62,13 +61,16 @@ def _compose(username: str, count: int, seed_extra: str) -> tuple[list, list]:
 @require_GET
 def smart_set(request):
     username = request.user.username
-    count = min(20, max(5, int(request.GET.get("count") or _SET_SIZE)))
+    try:
+        count = min(20, max(5, int(request.GET.get("count") or _SET_SIZE)))
+    except (TypeError, ValueError):
+        count = _SET_SIZE
     gen = request.GET.get("new")
     seed_extra = f"gen:{gen}" if gen else "default"
     items, used_titles = _compose(username, count, seed_extra)
     if not items:
-        raise Http404("No weak-chapter items available yet — take a mock or "
-                      "drill a chapter first.")
+        # no mock/practice history yet — send the learner to build some
+        return redirect("exam_list")
     seconds = items and len(items) * _SECONDS_PER_ITEM
     return render(request, "portal/smart_set.html", {
         "items": items,
