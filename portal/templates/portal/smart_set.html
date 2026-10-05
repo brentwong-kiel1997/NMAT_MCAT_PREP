@@ -1,0 +1,71 @@
+{% extends "portal/base.html" %}
+{% load static %}
+
+{% block title %}Smart set · Gabay{% endblock %}
+
+{% block head_extra %}
+<link rel="stylesheet" href="{% static 'portal/css/exam.css' %}?v=20260902a">
+{% endblock %}
+
+{% block body %}
+<div class="page-hero">
+  <div class="page-hero-inner">
+    {% include "portal/includes/nav.html" with solid=1 %}
+    <p class="section-kicker">Smart set</p>
+    <h1>{{ total }} items from your weakest chapters</h1>
+    <p class="lead">Composed from: {{ weak_used|join:" · " }}. Server-judged, so misses flow
+      into your flashcard deck and the review notebook automatically.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="exam-bar" role="timer">
+    <span class="exam-brand">Pace</span>
+    <span class="exam-progress">Target: {{ seconds }}s total · ~75 s/item</span>
+    <span class="exam-clock" id="smart-clock">{{ seconds }}</span>
+  </div>
+
+  <div class="practice-shell" style="margin-top:1rem;" data-practice
+       data-practice-key="gabay_smart_{{ request.user.username }}"
+       data-practice-subject="" data-server-judge="1">
+    <div class="practice-status">
+      <span>Progress</span>
+      <strong class="practice-pos">1</strong> / <span class="practice-total">{{ total }}</span>
+      · Correct <strong class="practice-score">0</strong>
+    </div>
+    <article class="practice-card">
+      <p class="practice-chapter"></p>
+      <h2 class="practice-q"></h2>
+      <div class="practice-choices" role="group"></div>
+      <div class="practice-feedback" hidden>
+        <p class="practice-verdict"></p>
+        <p class="practice-explain"></p>
+      </div>
+      <div class="practice-nav">
+        <button type="button" class="practice-prev">Previous</button>
+        <button type="button" class="practice-next btn btn-primary">Next</button>
+      </div>
+    </article>
+    <script type="application/json" class="practice-data">{{ items_json|safe }}</script>
+  </div>
+
+  <p class="note-line">A new draw: add <strong>?new=1</strong> to the URL. Misses here enter the
+    SRS deck and the review notebook exactly like mock misses.</p>
+</section>
+
+{% block page_js %}
+<script>
+(function () {
+  var clock = document.getElementById("smart-clock");
+  if (!clock) return;
+  var left = parseInt(clock.textContent, 10) || 0;
+  var t = setInterval(function () {
+    left -= 1;
+    if (left <= 0) { clearInterval(t); clock.textContent = "0 — time"; return; }
+    clock.textContent = left;
+    if (left <= 30) clock.classList.add("is-low");
+  }, 1000);
+})();
+</script>
+{% endblock %}
+{% endblock %}

@@ -63,6 +63,16 @@
       <article class="tut-section" id="section-{{ forloop.counter }}">
         <p class="tut-section-no">Section {{ forloop.counter|stringformat:"02d" }}</p>
         <h2>{{ section.heading }}</h2>
+        {% if section.objectives %}
+        <div class="tut-objectives">
+          <p class="tut-block-label">By the end of this section you will be able to</p>
+          <ul>
+            {% for obj in section.objectives %}
+            <li>{{ obj|rich }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
         {% for para in section.body %}
         <p{% if forloop.first %} class="tut-lead-para"{% endif %}>{{ para|rich }}</p>
         {% endfor %}
@@ -113,8 +123,16 @@
           <li>{{ step|rich }}</li>
           {% endfor %}
         </ol>
+        {% if example.strategy %}
+        <p class="tut-block-label">Strategy</p>
+        <p>{{ example.strategy|rich }}</p>
+        {% endif %}
         {% if example.answer %}
         <p class="tut-example-answer"><strong>Answer:</strong> {{ example.answer|rich }}</p>
+        {% endif %}
+        {% if example.discussion %}
+        <p class="tut-block-label">Discussion</p>
+        <p>{{ example.discussion|rich }}</p>
         {% endif %}
         {% if example.distractors %}
         <p class="tut-q-distractors-label">Why the others are wrong</p>
@@ -123,6 +141,12 @@
           <li><strong>{{ opt }}.</strong> {{ why|rich }}</li>
           {% endfor %}
         </ul>
+        {% endif %}
+        {% if example.practice %}
+        <div class="tut-check">
+          <p class="tut-block-label">Check your learning — same skill, try it yourself</p>
+          {% include "portal/includes/tutorial_question.html" with q=example.practice %}
+        </div>
         {% endif %}
         {% endfor %}
       </article>

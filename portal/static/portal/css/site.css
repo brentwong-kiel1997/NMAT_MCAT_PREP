@@ -1329,3 +1329,12 @@ details.tut-question[open] summary, details.tut-check-q[open] summary { margin-b
 }
 .ai-refresh { margin-left: .4rem; text-decoration: none; color: var(--muted, #666); }
 .ai-refresh:hover { color: #3b5bdb; }
+
+/* per-section learning objectives (OpenStax-style opening box) */
+.tut-objectives {
+  margin: 0 0 1rem; padding: .6rem .9rem;
+  border: 1px solid var(--line, #ddd); border-left: 3px solid #3b5bdb;
+  border-radius: 8px; background: var(--soft, #f6f7fb);
+}
+.tut-objectives ul { margin: .3rem 0 0 1rem; }
+.tut-objectives li { margin: .15rem 0; }

@@ -69,6 +69,12 @@ def build_curriculum_context(
                         chunks.append(kp)
                     if pf:
                         chunks.append(f"[Common pitfalls] {pf}")
+                objectives = []
+                for s in tut.get("sections") or []:
+                    objectives.extend((s.get("objectives") or [])[:2])
+                if objectives:
+                    chunks.append("[Section learning objectives] "
+                                  + "; ".join(objectives)[:600])
 
     return "\n".join(chunks)
 

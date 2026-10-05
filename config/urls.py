@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 
-from portal import accounts, ai_drill, coach_admin, coach_insights, dashboard, exam_views, views
+from portal import accounts, ai_drill, coach_admin, coach_insights, dashboard, exam_views, smartsets, views
 
 urlpatterns = [
     path("", views.home, name="home"),
@@ -97,6 +97,7 @@ urlpatterns = [
     path("scores/", views.score_interpreter, name="score_interpreter"),
     path("coach/insights/", coach_insights.coach_insights, name="coach_insights"),
     path("api/flashcards/grade/", exam_views.flashcard_grade_api, name="flashcard_grade_api"),
+    path("practice/smart/", smartsets.smart_set, name="smart_set"),
     # ---- AI drill (generated practice; never part of official stats) ----
     path("ai/drill/", ai_drill.ai_drill_index, name="ai_drill_index"),
     path("ai/drill/generate/", ai_drill.ai_drill_generate, name="ai_drill_generate"),
