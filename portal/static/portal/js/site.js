@@ -211,6 +211,31 @@
       if (explainEl) explainEl.textContent = explainText;
     }
 
+    function maybeTestOut() {
+      if (root.dataset.testOut !== "1") return;
+      const total = items.length;
+      if (Object.keys(state.answered).length < total) return;
+      const ratio = state.score / total;
+      const banner = root.querySelector("#test-out-banner p");
+      const passed = ratio >= 0.8;
+      if (banner) {
+        const box = root.querySelector("#test-out-banner");
+        if (box) {
+          box.hidden = false;
+          banner.textContent = passed
+            ? `Test-out passed — ${state.score}/${total}. Chapter marked complete; it drops out of your study plan.`
+            : `Test-out not passed (${state.score}/${total}, need 80%). The chapter stays in your plan — review the misses above and retry.`;
+        }
+      }
+      fetch("/api/progress/update/", {
+        method: "POST", credentials: "same-origin",
+        headers: { "Content-Type": "application/json", "X-CSRFToken": csrfToken() },
+        body: JSON.stringify({ subject_slug: root.dataset.subjectSlug || "",
+                               chapter_id: root.dataset.chapterId || "",
+                               done: passed }),
+      }).catch(() => {});
+    }
+
     function paint() {
       const item = items[state.i];
       if (posEl) posEl.textContent = String(state.i + 1);

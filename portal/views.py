@@ -860,5 +860,7 @@ def tutorial_drill(request, slug, chapter_id):
             "count": len(items),
             "practice_key": f"gabay_drill_{chapter_id}",
             "chapter_specific": chapter_specific,
+            "challenge": request.GET.get("challenge") == "1",
+            "subject_slug": slug,
         },
     )

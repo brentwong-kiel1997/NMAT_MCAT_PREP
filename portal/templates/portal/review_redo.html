@@ -15,7 +15,16 @@
 </div>
 
 <section class="section">
-  <div class="practice-shell" data-practice data-server-judge="1" data-practice-key="{{ practice_key }}" data-practice-subject="{{ discipline }}">
+  {% if challenge %}
+  <div class="practice-card" style="border-color:#3b5bdb;">
+    <h2>Test-out challenge</h2>
+    <p class="note-line">Score <strong>≥ 80%</strong> and this chapter is marked complete — it drops out of
+      your study plan automatically. Misses still flow into your flashcards and notebook.</p>
+  </div>
+  {% endif %}
+  <div class="practice-shell" data-practice data-server-judge="1"
+       data-practice-key="{{ practice_key }}" data-practice-subject="{{ discipline }}"
+       {% if challenge %}data-test-out="1" data-subject-slug="{{ discipline }}" data-chapter-id="{{ chapter_id }}"{% endif %}>
     <div class="practice-status">
       <span>Progress</span>
       <strong class="practice-pos">1</strong> / <span class="practice-total">{{ count }}</span>
@@ -23,6 +32,11 @@
       <strong class="practice-score">0</strong>
       · <button type="button" class="btn" id="redo-reset">Restart</button>
     </div>
+    {% if challenge %}
+    <div class="practice-card" id="test-out-banner" hidden>
+      <p class="practice-verdict" style="margin:0;"></p>
+    </div>
+    {% endif %}
     <article class="practice-card">
       <p class="practice-chapter"></p>
       <h2 class="practice-q"></h2>
