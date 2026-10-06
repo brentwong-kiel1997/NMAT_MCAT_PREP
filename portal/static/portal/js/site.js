@@ -305,6 +305,7 @@
                     return;
                   }
                   state.serverFeedback = state.serverFeedback || {};
+                  maybeTestOut();
                   state.serverFeedback[item.id] = {
                     correct: !!data.correct,
                     answer: data.answer || "",
