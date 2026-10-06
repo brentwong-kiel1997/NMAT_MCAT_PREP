@@ -18,6 +18,16 @@ sections:
   - Types — thin-layer (TLC, quick qualitative), column (preparative), gas (GC, volatile compounds), high-performance
     liquid (HPLC, high resolution). In all cases, ==more similar to the mobile phase = faster elution==;
     more similar to the stationary phase = slower.
+  misconception: '"The heaviest compound in the mixture should elute last, since it is the biggest." Molecular
+    weight is not the property being separated here. Chromatography trades on how strongly each compound
+    sticks to the stationary phase versus dissolves in the mobile phase — a small, very polar molecule
+    can lag behind a much heavier hydrocarbon. Size only matters when it changes the interaction, never
+    as a rule of its own.'
+  connection: 'Every Rf you will ever measure is an intermolecular-forces decision in disguise: a polar
+    stationary phase grips compounds by hydrogen bonding and dipole interactions, while a nonpolar one
+    grips by dispersion. Chapter 5B · Molecules and intermolecular interactions supplies that ladder,
+    and this chapter simply turns the ladder into an elution order.'
+  connection_label: How sciences interconnect
   check:
   - q: In column chromatography with a polar stationary phase and nonpolar solvent, which compound elutes
       first?
@@ -56,6 +66,16 @@ sections:
   - SDS-PAGE denatures proteins with a uniform negative charge-to-mass ratio, so molecular weight alone
     determines position. Native PAGE preserves folding — both charge and size matter. Isoelectric focusing
     separates by pI — proteins stop moving at the pH where their net charge is zero.
+  misconception: '"DNA is loaded toward the negative electrode because the fragments are drawn to their
+    own kind." DNA''s phosphate backbone is uniformly NEGATIVE, so it migrates away from the cathode and
+    toward the positive electrode. That is also why size alone decides the banding: with the charge-to-mass
+    ratio fixed for every fragment, the gel''s sieving is the only remaining variable, and small fragments
+    slip through fastest.'
+  connection: 'These gels are the read-out stage of molecular biology methods: a Southern blot begins
+    with exactly this separation, and SDS-PAGE is how a purified protein is checked for size and purity.
+    Chapter 1B · Gene to protein covers the blotting and sequencing toolkit that sits downstream of the
+    gel you are reading here.'
+  connection_label: How sciences interconnect
   check:
   - q: In agarose gel electrophoresis of DNA fragments, which band is closest to the well?
     options:
@@ -98,6 +118,16 @@ sections:
   - Liquid-liquid extraction partitions a solute between two immiscible solvents based on the partition
     coefficient. Multiple small extractions are more efficient than one large one — the total extracted
     equals 1 minus the fraction remaining after each round.
+  misconception: '"Ethanol boils 22 degrees below water, so distilling the mixture should give pure ethanol."
+    The boiling-point gap is real, but ethanol and water form an azeotrope at about 95.6 percent that
+    boils at a single constant temperature — vapour and liquid have the same composition, so no column
+    can enrich beyond it. That is why absolute alcohol needs a chemical drying agent rather than more
+    distillation.'
+  connection: 'Fractional distillation on an industrial scale is how crude oil becomes useful: a tower
+    runs hotter at the bottom than the top, and each hydrocarbon fraction condenses at the height where
+    its boiling point matches the temperature. Same physics as the laboratory column — the boiling-point-gap
+    rule decides whether one plate is enough or a hundred are needed.'
+  connection_label: Real-world connection
   check:
   - q: Why is a mixture of ethanol and water difficult to separate by distillation?
     options:
@@ -140,6 +170,16 @@ sections:
     separates particles by buoyant density.
   - Filtration separates by particle size — the filtrate passes through, the retentate stays. Ultrafiltration
     uses molecular-weight-cutoff membranes for protein concentration and buffer exchange.
+  misconception: '"Spin a lysate hard enough and eventually everything ends up in the pellet." Not everything.
+    Sedimentation competes with diffusion, and small soluble proteins never sediment at the speeds used
+    for organelles — they stay in the supernatant through every spin. Differential centrifugation works
+    because the fractions differ enormously in size and density, not because force alone can drag anything
+    down.'
+  connection: 'The 600g / 10,000g / 100,000g ladder is how cell biology first learned what is inside a
+    cell: each pellet is an organelle fraction that can be assayed separately, which is how enzyme activities
+    got assigned to nuclei, mitochondria, and ribosomes. Chapter Cells and Cellular Processes describes
+    those organelles; this technique is how they were first separated for study.'
+  connection_label: How sciences interconnect
   check:
   - q: At low-speed centrifugation, which sediments first?
     options:
@@ -176,6 +216,15 @@ sections:
   - The MCAT expects you to interpret chromatograms (peaks and retention times), gels (bands and molecular-weight
     ladders), and fractionation profiles. ==Peak area is proportional to amount; retention time identifies
     the compound==. On gels, band intensity correlates with quantity and position indicates size or pI.
+  misconception: '"Two peaks with the same retention time must be two different compounds that happen
+    to co-elute." Under fixed conditions, retention time is the identity card: equal times mean the same
+    compound. What differs between two such peaks is the AREA, and area is proportional to how much is
+    present — one peak at twice the area is simply twice the amount of the same substance.'
+  connection: 'A clinical or forensic lab uses exactly this pair of rules: the retention time identifies
+    what is in the sample, and the peak area — measured against a calibration standard — reports how much.
+    One chromatogram turns a blood or urine sample into both a name and a number, which is why the technique,
+    not just the instrument, is the exam point.'
+  connection_label: Real-world connection
   check:
   - q: In an HPLC chromatogram, peak identity is determined by…
     options:
@@ -238,6 +287,20 @@ examples:
       A: That is the normal-phase order — reverse phase flips it.
       B: Putting the moderately polar alanine ahead of the charged aspartate ignores their affinity gap.
       D: Sharing a functional class does not make affinities equal.
+key_equations:
+- latex: $R_f = \frac{d_{compound}}{d_{solvent}}$
+  symbols: R_f retention factor, d_compound distance the spot travelled, d_solvent distance to the solvent
+    front
+  when: TLC — always 0 to 1; inverting the ratio is the classic slip
+- latex: $\Delta T_{BP} > 25^{\circ}\text{C}$
+  symbols: ΔT_BP difference in boiling points of the two liquids
+  when: simple distillation suffices above this gap; smaller gaps need a fractionating column
+- latex: $\text{extracted} = 1 - f^{n}$
+  symbols: f fraction remaining after one extraction, n number of extractions
+  when: liquid-liquid extraction — several small portions beat one large one
+- latex: $\text{amount} \propto \text{peak area}$
+  symbols: amount of compound in the injected sample, peak area on the chromatogram
+  when: quantification — peak area reports amount, retention time reports identity
 key_points:
 - Chromatography separates by relative affinity for stationary vs mobile phase.
 - Rf = distance of compound / distance of solvent front.

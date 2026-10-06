@@ -705,6 +705,7 @@ def exam_bank_section(exam_id: str, section_id: str) -> dict | None:
 
 def _normalize_item(raw: dict, *, exam_id: str, section_id: str, block_id: str,
                     passage: dict | None) -> dict:
+    skill = raw.get("skill", "")
     return {
         "id": raw.get("id", ""),
         "exam": exam_id,
@@ -717,6 +718,8 @@ def _normalize_item(raw: dict, *, exam_id: str, section_id: str, block_id: str,
         "distractors": dict(raw.get("distractors") or {}),
         "chapter": raw.get("chapter", ""),
         "figure": raw.get("figure", ""),
+        # AAMC SIRS tag on science-bank items (s1-s4); feeds per-skill accuracy
+        "skill": skill if skill in ("s1", "s2", "s3", "s4") else "",
         "passage_id": (passage or {}).get("id", ""),
         "passage_text": (passage or {}).get("text", ""),
     }

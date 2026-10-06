@@ -20,6 +20,15 @@ sections:
     a shell, energy follows s < p < d < f. Across periods, d and f orbitals fill after the next s — the
     4s fills before 3d, and 3d fills before 4p. This explains chromium's half-filled stability and copper's
     filled 3d10 exception.
+  misconception: '"Shells fill in size order, so the bigger 3d orbitals must fill before the smaller 4s."
+    Electrons fill by ENERGY, not by size. The 4s sits just below 3d in energy, so it fills first — and
+    that crossover is exactly what produces chromium''s half-filled d subshell and copper''s filled 3d10
+    exception. A full shell number tells you the capacity, not the filling order.'
+  connection: 'This filling order is the periodic table''s architecture: each block of the table is a
+    subshell taking on electrons, which is why the table''s shape is what it is and why trends run the
+    way they do. Chapter General Chemistry turns that structure into the trend map — radius, ionization
+    energy, electronegativity — that every later chemistry chapter leans on.'
+  connection_label: How sciences interconnect
   check:
   - q: What is the maximum number of electrons in a 3d subshell?
     options:
@@ -57,6 +66,15 @@ sections:
   - Mass defect and binding energy explain why nuclear masses are less than the sum of their parts — E
     = mc2 converts the missing mass to binding energy. Iron-56 has the highest binding energy per nucleon;
     lighter nuclei fuse, heavier nuclei fission, both releasing energy toward iron.
+  misconception: '"An oxide ion has extra neutrons, because gaining a 2- charge means the nucleus gained
+    two particles." Charge lives entirely in the electron count. O2- still has 8 protons and 8 neutrons
+    — the nucleus never moves in ordinary chemistry; it simply carries 10 electrons instead of 8. Isotopes
+    change the neutron number, ions change the electron number, and the two are independent.'
+  connection: 'That division of labour is the whole basis of bonding in chapter General Chemistry: nuclei
+    stay fixed while valence electrons are transferred or shared, and every ionic charge, oxidation number,
+    and covalent bond you will draw is bookkeeping on the electron side alone. When a later chapter says
+    an atom ''gains'' something, check whether it means mass or charge before you count nucleons.'
+  connection_label: How sciences interconnect
   check:
   - q: An isotope has A = 39, Z = 19. How many neutrons?
     options:
@@ -95,6 +113,16 @@ sections:
   - Half-life is the time for half the sample to decay — it is exponential and independent of the starting
     amount. After n half-lives, the remaining fraction is (1/2)n. ==Carbon-14 dating uses this — the ratio
     of C-14 to C-12 reveals when an organism died==, with a half-life of 5,730 years.
+  misconception: '"A bigger sample decays faster, so a large stockpile will be completely gone much sooner."
+    Size changes the activity, not the half-life. Every nucleus has the same fixed probability of decaying
+    per unit time, so half of ANY amount disappears in one half-life — 400 mg and 4 mg both fall to half
+    in 6 hours in the passage. Bigger samples lose more mass per minute but finish on exactly the same
+    schedule.'
+  connection: The scheduling question in the passage is daily hospital routine. A radiopharmacy calibrates
+    a dose for the injection time, and the exponential keeps running whether or not the patient is ready
+    — which is why a delayed scan means either a re-ordered dose or a recalculation of the activity still
+    on hand. Radiocarbon dating runs the identical curve on a 5,730-year clock instead of a 6-hour one.
+  connection_label: Real-world connection
   check:
   - q: A radioactive isotope has a half-life of 8 days. What fraction remains after 24 days?
     options:
@@ -140,6 +168,16 @@ sections:
     electrons are emitted regardless of intensity. Above threshold, the kinetic energy of emitted electrons
     increases linearly with frequency; intensity controls only the rate. This is why the MCAT pairs spectra
     with photon-energy calculations.
+  misconception: '"Higher levels are farther apart, so a jump from n = 3 to n = 4 releases more energy
+    than a jump from n = 1 to n = 2." The spacing works the other way round: the levels converge as n
+    grows, so the widest gaps sit at the bottom. That is why the Lyman series (down to n = 1) lands in
+    the ultraviolet while the Paschen series (down to n = 3) slips into the infrared.'
+  connection: The photon arithmetic here is the same one that orders the whole electromagnetic spectrum
+    in chapter 4D · Light and sound interacting with matter — E = hf = hc/lambda ties a transition's energy
+    to the region of the spectrum its line lands in. That single equation is why atomic spectra can be
+    read with an ultraviolet lamp, a visible spectroscope, or an infrared detector, depending on which
+    gaps the element happens to offer.
+  connection_label: How sciences interconnect
   check:
   - q: An electron falls from n = 3 to n = 2 in hydrogen. This emits a photon in the…
     options:
@@ -179,6 +217,16 @@ sections:
   - The Beer-Lambert law connects absorbance to concentration — A = epsilon times b times c, where epsilon
     is molar absorptivity, b is path length, and c is molarity. This linear relationship is the basis
     for quantitative spectroscopy and is the MCAT's most common spectrophotometry setup.
+  misconception: '"Beer-Lambert works at any concentration — just keep the line going and read off whatever
+    absorbance you measure." The law is linear only over a limited range. At high concentration the absorbing
+    species interact and scatter, the plot bends, and a straight-line read-out silently returns the wrong
+    concentration. Dilute into range first; the pitfalls list calls this out because it is the standard
+    way to lose marks on a spectroscopy passage.'
+  connection: 'That slope is a clinical workhorse: a chemistry analyzer measures how much light a coloured
+    product absorbs, then divides by the slope (epsilon times b) determined once from standards to report
+    a concentration in mmol/L. The same division you performed on 0.40/(2000 x 1.0) is what turns an absorbance
+    reading into a patient''s glucose or cholesterol value.'
+  connection_label: Real-world connection
   check:
   - q: In a Beer-Lambert plot of absorbance versus concentration, the slope equals…
     options:
@@ -238,6 +286,31 @@ examples:
       A: Stopping after the alpha step.
       B: Subtracting 4 twice, as though two alpha decays occurred.
       C: Applying the beta-minus without the preceding alpha decay.
+key_equations:
+- latex: $N = A - Z$
+  symbols: N neutron count, A mass number, Z proton number
+  when: isotopes and ions — charge changes electrons, never the nucleus
+- latex: $E = mc^{2}$
+  symbols: E energy (J), m mass defect (kg), c = 3 x 10⁸ m/s
+  when: mass defect to binding energy — iron-56 tops the binding-energy-per-nucleon curve
+- latex: $^{A}_{Z}X \rightarrow \ ^{A-4}_{Z-2}Y + \alpha$
+  symbols: A mass number, Z atomic number, X parent, Y daughter
+  when: alpha decay — beta-minus instead takes Z up by 1 and leaves A unchanged
+- latex: $N_{remains} = N_0\left(\frac{1}{2}\right)^{n}$
+  symbols: N₀ starting amount, n number of half-lives elapsed
+  when: half-life is independent of the starting amount — count halvings
+- latex: $E = hf = \frac{hc}{\lambda}$
+  symbols: E photon energy, h Planck's constant, f frequency, lambda wavelength
+  when: electronic transitions — the photon energy equals the gap between levels
+- latex: $KE_{max} = hf - \phi$
+  symbols: KE_max maximum photoelectron energy, phi work function
+  when: photoelectric effect — below the threshold frequency no electrons eject at any intensity
+- latex: $A = \varepsilon b c$
+  symbols: A absorbance, epsilon molar absorptivity (M⁻¹cm⁻¹), b path length (cm), c concentration (M)
+  when: Beer-Lambert — linear in concentration; the A-vs-c plot's slope is epsilon b
+- latex: $\text{subshell capacity} = 2(2l+1)$
+  symbols: l subshell quantum number (s=0, p=1, d=2, f=3)
+  when: d holds 10, p holds 6, f holds 14; a full shell holds 2n² electrons
 key_points:
 - Four quantum numbers (n, l, ml, ms) — Pauli forbids duplicates.
 - s spherical, p dumbbell, d four-lobed; energy s < p < d < f within a shell.

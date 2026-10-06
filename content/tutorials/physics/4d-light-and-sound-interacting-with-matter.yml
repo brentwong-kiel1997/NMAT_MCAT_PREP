@@ -17,6 +17,15 @@ sections:
   - 'Spectrum order — ==radio, microwave, infrared, visible, ultraviolet, X-ray, gamma (increasing frequency)==.
     Imaging energy ladder: microwave ovens (2.45 GHz water absorption), infrared (thermal cameras), visible
     (ophthalmoscopy), X-ray (bones), gamma (PET).'
+  misconception: '"Gamma rays are the most energetic, so they must be the longest waves." Energy rises
+    with frequency, and the two ends of the spectrum cannot both stretch: all EM waves share one speed
+    c, and c = f lambda ties a high frequency to a SHORT wavelength. Gamma rays have the shortest wavelengths
+    of all — thousands of them would fit inside a single radio wave.'
+  connection: The imaging ladder in the body is the same spectrum you use in a kitchen and an airport.
+    A microwave oven runs at 2.45 GHz because water absorbs strongly there, an infrared camera reads skin
+    temperature without touching it, and the X-ray at security sees through your bag exactly as a radiograph
+    sees soft tissue around bone — one ladder, from warming dinner to diagnosis.
+  connection_label: Real-world connection
   check:
   - q: Which has the LONGEST wavelength?
     options:
@@ -54,6 +63,16 @@ sections:
   - ==Total internal reflection requires light traveling from a DENSER to a RARER medium at an angle above
     the critical angle — sin(theta-c) = n2/n1==. This is the physics of fibre optics, endoscopy, and light
     guiding.
+  misconception: '"Shine a light at a surface steeply enough and it will always reflect completely back
+    — that is total internal reflection." Steepness alone is not enough. Total internal reflection needs
+    BOTH conditions: travel from the denser to the rarer medium, AND exceed the critical angle. Going
+    the other way — air into glass or water — there is no critical angle at all, only refraction toward
+    the normal.'
+  connection: 'An endoscope sees around corners because light stays trapped inside a glass fibre: every
+    bounce meets the wall from the dense side, at an angle beyond critical, so none escapes until the
+    tip. The same critical angle of about 49 degrees at a water-air surface is what a diver sees as the
+    bright circular window overhead, with the water surface beyond it acting as a mirror.'
+  connection_label: Real-world connection
   check:
   - q: Light passes from glass (n = 1.5) into water (n = 1.33). It…
     options:
@@ -93,6 +112,15 @@ sections:
     hyperopia (farsighted) behind — converging lens corrects.
   - ==Lens equation 1/f = 1/do + 1/di; power in diopters = 1/f(meters)==. Near point ~25 cm; presbyopia
     — age-related loss of accommodation. ==Retinal images are real and inverted; the brain flips them==.
+  misconception: '"A nearsighted eye has too little focusing power, so it needs a converging lens to help
+    it focus." The myopic eye has too MUCH power for its length — it pulls the image in front of the retina.
+    The fix is a diverging lens, which subtracts converging power and pushes the image back onto the retina.
+    It is hyperopia and presbyopia that need the converging lens.'
+  connection: 'The +1.5 D computed in the worked example is not a physics abstraction — it is the number
+    printed on a packet of reading glasses. Optometrists quote lens power in diopters precisely because
+    1/f adds: two thin lenses in contact give the sum of their powers, which is why a -4.00 D myope plus
+    a +1.25 D add for reading is just -2.75 D.'
+  connection_label: Real-world connection
   check:
   - q: A myopic person needs…
     options:
@@ -130,6 +158,15 @@ sections:
     boundaries — ultrasound imaging; Doppler shift measures blood flow velocity (v = f delta-lambda).
   - '==Intensity falls as 1/r2; logarithmic dB scale: dB = 10 log(I/I0)==. Beats |f1 - f2|; resonance
     couples tuning forks and the basilar membrane''s tonotopic map.'
+  misconception: '"A sound 100 times more intense is 100 decibels louder." The decibel scale is logarithmic:
+    a hundredfold intensity rise is 10 log10(100) = 20 dB. Each factor of ten in intensity buys only 10
+    dB, so the numbers climb slowly while the energy climbs fast — which is exactly why the scale exists
+    in the first place.'
+  connection: 'Pitch is a place, not a rate: the basilar membrane in the cochlea resonates high frequencies
+    near its base and low frequencies near its apex, so frequency is mapped onto position along a strip
+    of tissue. Chapter 6A · Sensing the environment picks the story up from there — how that tonotopic
+    map becomes the brain''s perception of a chord.'
+  connection_label: How sciences interconnect
   check:
   - q: Ultrasound can see soft-tissue boundaries because…
     options:
@@ -176,6 +213,15 @@ sections:
     tissues — bone's higher mu gives contrast.
   - '==The 1960s-imaging trick: gamma cameras count photons; PET scans detect annihilation pairs (two
     511 keV photons at 180 degrees)==. MRI uses nuclear magnetism — hydrogen spins for soft-tissue contrast.'
+  misconception: '"Higher-frequency ultrasound gives better pictures, so the machine should always run
+    at the highest frequency it has." Higher frequency sharpens resolution but attenuates far faster,
+    so the beam never reaches depth. That tradeoff is why the superficial artery is scanned at 5 MHz while
+    the liver gets 2 MHz — you pay resolution for penetration, and the target decides.'
+  connection: 'PET sits downstream of nuclear decay physics: a positron emitted by the injected isotope
+    meets an electron and annihilates into two 511 keV photons flying apart at 180 degrees, and the detector
+    reconstructs the line between them. Chapter 4E · Atoms, nuclear decay, electronic structure supplies
+    the decay-mode tables that decide which isotopes can do this job.'
+  connection_label: How sciences interconnect
   check:
   - q: Higher ultrasound frequencies are used for…
     options:
@@ -238,6 +284,31 @@ examples:
       A: Flipping the sign, which is the myopia (diverging) correction.
       C: Adding the reciprocals (4 + 2) instead of subtracting them.
       D: Adding the distances (0.25 + 0.50) instead of their reciprocals.
+key_equations:
+- latex: $c = f\lambda$
+  symbols: c = 3 x 10⁸ m/s in vacuum, f frequency (Hz), lambda wavelength (m)
+  when: all EM waves — high frequency means short wavelength, not long
+- latex: $n_1\sin\theta_1 = n_2\sin\theta_2$
+  symbols: n₁ n₂ refractive indices, theta₁ theta₂ angles from the normal
+  when: Snell's law — bends toward the normal entering a denser medium, away leaving it
+- latex: $\sin\theta_c = \frac{n_2}{n_1}$
+  symbols: theta_c critical angle, n₂ rarer index, n₁ denser index
+  when: total internal reflection — dense to rare only, at angles beyond theta_c
+- latex: $\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}$
+  symbols: f focal length (m), d_o object distance, d_i image distance (negative for a virtual image)
+  when: thin lens — a virtual image on the object's side carries the minus sign
+- latex: $P = \frac{1}{f}$
+  symbols: P lens power in diopters (D), f focal length in metres
+  when: prescription lenses — powers in contact simply add
+- latex: $\beta = 10\log_{10}\frac{I}{I_0}$
+  symbols: beta sound level (dB), I intensity, I₀ reference intensity (10⁻¹² W/m²)
+  when: decibels — a factor of 100 in intensity is 20 dB, not 100
+- latex: $I = I_0 e^{-\mu x}$
+  symbols: I intensity at depth x, I₀ incident intensity, mu attenuation coefficient, x thickness
+  when: beam attenuation — half-value layer is ln 2 / mu
+- latex: $d = vt$
+  symbols: d path length (m), v wave speed (1540 m/s in soft tissue, 343 m/s in air), t time (s)
+  when: echo ranging — divide the ROUND TRIP distance by the speed
 key_points:
 - 'c = f lambda; EM: radio → gamma order.'
 - 'Snell: toward normal in denser; TIR only dense → rare.'

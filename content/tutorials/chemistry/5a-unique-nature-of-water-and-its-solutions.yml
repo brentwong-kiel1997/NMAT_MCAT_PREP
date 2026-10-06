@@ -17,6 +17,16 @@ sections:
   - Hydrogen bonding between water molecules gives water its anomalously high boiling point, surface tension,
     and specific heat. ==Each water molecule can form up to four hydrogen bonds== — this network is why
     ice floats (hydrogen bonds hold molecules farther apart than in liquid).
+  misconception: '"Water repels oil — there is an actual push force keeping them apart." Nothing pushes.
+    Water simply has nothing to gain from the contact: a nonpolar hydrocarbon offers no dipole and no
+    hydrogen-bonding partner, so water molecules would have to break hydrogen bonds with each other to
+    make room. They decline, and the solute is excluded — the hydrophobic effect is an outcome of water''s
+    own preferences, not a repulsive force.'
+  connection: Ice floating is not a physics curiosity — it is why a pond freezes from the top down and
+    stays liquid underneath, so fish and other organisms overwinter in 4-degree water under an insulating
+    lid. Chapter Organisms and Their Environment builds entire habitats and seasonal strategies on that
+    one density anomaly.
+  connection_label: How sciences interconnect
   check:
   - q: Why does ice float on liquid water?
     options:
@@ -56,6 +66,15 @@ sections:
   - Solubility rules — all Na+, K+, NH4+, and NO3- salts dissolve; most CO3 2-, PO4 3-, and S2- salts
     precipitate. Molar solubility (mol/L) quantifies how much dissolves at equilibrium; Ksp is the solubility
     product constant.
+  misconception: '"One mole of sugar and one mole of salt affect a solution''s freezing point about the
+    same, since they weigh the sample similarly." Colligative properties count PARTICLES, not moles of
+    compound. Glucose stays one particle per formula unit; NaCl dissociates into two, and CaCl2 into three.
+    Equal molalities of those three give freezing-point depressions in a 1 : 2 : 3 ratio.'
+  connection: 'That particle counting is why an intravenous bag is not just any salty water: osmotic pressure
+    is colligative, so a solution that dissociates into too many particles would drag water out of red
+    cells rather than into them. Chapter Life Processes: Regulation and Homeostasis runs the same arithmetic
+    across membranes in the kidney, where the osmotic gradient is the whole mechanism.'
+  connection_label: How sciences interconnect
   check:
   - q: Which is a strong electrolyte?
     options:
@@ -99,6 +118,16 @@ sections:
     dissociate completely==; weak acids reach equilibrium described by Ka.'
   - pH = -log[H+]; pOH = -log[OH-]; pH + pOH = 14.00 at 25C. Each pH unit is a tenfold change in hydrogen
     ion concentration. A solution of pH 3 has [H+] = 10^-3 M.
+  misconception: '"pH 5 is only slightly more acidic than pH 7 — maybe twice as acidic." The scale is
+    logarithmic, so each unit is a factor of ten in [H+]: pH 5 is a hundred times more acidic than pH
+    7, and pH 2 is a hundred thousand times more than pH 7. Comparisons on this scale are always multiplicative,
+    never additive or ''a bit more''.'
+  connection: The three definitions are not competing trivia — biochemistry uses all three in one enzyme
+    active site. A side chain can donate a proton (Bronsted), accept an electron pair (Lewis), or supply
+    OH- in solution (Arrhenius), and which role a residue plays decides whether catalysis works at a given
+    pH. Chapter 1A · Proteins and amino acids takes this up where the proton donors and acceptors are
+    amino acid side chains.
+  connection_label: How sciences interconnect
   check:
   - q: What is the [OH-] in a solution with pH = 5?
     options:
@@ -137,6 +166,16 @@ sections:
   - Physiological buffers — the bicarbonate system (H2CO3/HCO3-, pKa 6.1) in blood, phosphate intracellularly,
     proteins as flexible buffers. The bicarbonate system works because CO2 is exhaled by lungs, pulling
     the equilibrium.
+  misconception: '"A buffer holds the pH exactly constant, so adding acid to a buffered solution changes
+    nothing." A buffer resists change; it does not abolish it. Added acid consumes A- and converts it
+    to HA, so the ratio in the Henderson-Hasselbalch log shifts and the pH creeps. The passage makes the
+    point precisely: adding NaOH moves the pH up slightly, not dramatically — and once one component is
+    exhausted, the resistance is gone.'
+  connection: 'Blood is the exam''s favorite buffer because it has an escape valve: CO2 from carbonic
+    acid is exhaled by the lungs, which pulls the whole equilibrium and lets the body defend pH 7.4 far
+    better than a sealed beaker could. Chapter 3B · Main organ systems supplies that valve — breathe faster,
+    blow off CO2, and the Henderson-Hasselbalch ratio shifts within seconds.'
+  connection_label: How sciences interconnect
   check:
   - q: A buffer has equal concentrations of HA and A-. The pH equals…
     options:
@@ -175,6 +214,16 @@ sections:
   - The half-equivalence point (where half the acid has been neutralized) is where pH = pKa — the MCAT
     uses this to extract Ka from a titration curve. Indicators are chosen so their color-change range
     brackets the equivalence point.
+  misconception: '"The equivalence point is where the indicator changes colour — that is what the endpoint
+    means." The two are different things that happen to sit close together. The equivalence point is stoichiometric:
+    moles of titrant equal moles of analyte, whether or not anything changes colour. The endpoint is what
+    you SEE. An indicator is chosen so its range brackets the equivalence point, but a badly chosen one
+    reports the wrong volume.'
+  connection: 'This is the daily business of chapter Analytical Chemistry, which treats the titration
+    as a measurement with an uncertainty: picking the indicator, reading the burette, and judging how
+    far the endpoint may stray from equivalence before the answer is wrong. The curve here is the theory;
+    there it becomes a number you have to defend.'
+  connection_label: How sciences interconnect
   check:
   - q: At the half-equivalence point of a weak acid titration…
     options:
@@ -234,6 +283,22 @@ examples:
       A: Inverting the ratio — the conjugate base goes on top.
       C: Quoting the pKa and ignoring the tenfold excess of base.
       D: Using the natural logarithm of the ratio instead of log base 10.
+key_equations:
+- latex: $pH = -\log[H^{+}]$
+  symbols: pH acidity in log units, [H⁺] hydrogen ion concentration (M)
+  when: strong acid or base — dissociation is complete, so [H⁺] is the given molarity
+- latex: $pH + pOH = 14.00$
+  symbols: pH plus pOH at 25 °C
+  when: convert between [H⁺] and [OH⁻] — pH 5 means pOH 9
+- latex: $[H^{+}][OH^{-}] = K_w = 1.0\times10^{-14}$
+  symbols: K_w ion product of water at 25 °C
+  when: any aqueous solution — fixes the partner concentration once one is known
+- latex: $pH = pK_a + \log\frac{[A^{-}]}{[HA]}$
+  symbols: pKa of the acid, [A⁻] conjugate base, [HA] weak acid
+  when: Henderson-Hasselbalch — buffers and the half-equivalence point (ratio 1 gives pH = pKa)
+- latex: $n = MV$
+  symbols: n moles, M molarity (mol/L), V volume (L)
+  when: mixing and dilution — moles from each stock carry over into the combined volume
 key_points:
 - Water is bent, polar, and hydrogen-bonded — this drives its solvent power and anomalies.
 - Electrolytes dissociate; colligative properties depend on particle count.

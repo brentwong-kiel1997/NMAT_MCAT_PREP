@@ -16,6 +16,16 @@ sections:
   - Energy sloshes between KE and elastic PE — total stays constant (no damping). ==At the extremes velocity
     is zero, acceleration maximal; through equilibrium velocity is maximal, acceleration zero==. This
     phase logic is the most-tested SHM idea.
+  misconception: '"Swing the pendulum through a wider arc and it will take longer to come back, and a
+    heavier bob must swing slower too." Neither the amplitude nor the mass touches the period. Doubling
+    the amplitude makes the bob travel farther, but it also moves faster on the way — the two effects
+    cancel exactly. Only length (and the local g) changes a pendulum''s period, which is why a clock pendulum
+    keeps time whether you nudge it gently or hard.'
+  connection: 'A chemical bond is a spring with a stiffness k of its own, and the atoms at its ends are
+    the masses — so every bond has a natural vibration frequency set by T = 2 pi sqrt(m/k). Infrared spectroscopy
+    reads those frequencies to identify functional groups, which is exactly how chapter Analytical Chemistry
+    uses IR: stiff bonds and light atoms vibrate fast, loose bonds and heavy atoms vibrate slowly.'
+  connection_label: How sciences interconnect
   check:
   - q: A pendulum's period doubles if…
     options:
@@ -52,6 +62,15 @@ sections:
   - '==Superposition — waves add when they meet; interference (constructive/destructive) results. Standing
     waves — fixed ends create nodes; only certain wavelengths fit== (harmonics). Doppler: moving source/pitch
     shifts — approaching raises frequency.'
+  misconception: '"A high-pitched sound travels faster than a low-pitched one, because it is carrying
+    more energy." Speed belongs to the medium, not to the wave: sound in air moves at about 343 m/s whether
+    it is a squeak or a bass note. Raise the frequency and the wavelength shrinks to keep v = f lambda
+    satisfied — the wave''s shape changes, its speed does not.'
+  connection: 'Standing waves are why a guitar string plays a note at all: only the wavelengths that fit
+    between the fixed ends survive, and the fundamental plus its harmonics are the allowed set. Press
+    a fret, shorten the string, and the whole allowed set shifts up — the same nodal arithmetic the resonance
+    tube in the passage measures with a sliding piston.'
+  connection_label: Real-world connection
   check:
   - q: Sound travels at 343 m/s in air. Doubling the frequency…
     options:
@@ -87,6 +106,17 @@ sections:
     Loudness is logarithmic perception. Intensity falls as 1/r2 from a point source.
   - '==Beats: two close frequencies f1 and f2 create a beat of |f1 - f2|==. Resonance amplifies matching
     frequencies — the physics of the cochlea and the blood-pressure cuff (Korotkoff).'
+  misconception: '"Play 256 Hz and 253 Hz together and you get one louder 509 Hz tone." You hear neither
+    the sum nor a louder note: the two waves superpose, and the loudness swells and fades |256 - 253|
+    = 3 times per second. The pitch sits near the average of the two, while the difference shows up as
+    beats — a tuning trick musicians use to bring an instrument into tune, since the beats slow and vanish
+    as the frequencies converge.'
+  connection: 'Resonance does the hearing and the measuring: the cochlea''s basilar membrane is laid out
+    so each frequency finds the place that resonates with it, which is how the ear sorts a chord into
+    its notes. The same logic puts a stethoscope to work — blood squeezing through a partly closed brachial
+    artery under a cuff sets up turbulence you hear as Korotkoff sounds, and chapter 3B · Main organ systems
+    uses those sounds to define systolic and diastolic pressure.'
+  connection_label: How sciences interconnect
   check:
   - q: A sound at 440 Hz and another at 444 Hz produce…
     options:
@@ -131,6 +161,16 @@ sections:
   - 'Sign conventions haunt everyone — ==object distance positive, image distance positive when the image
     is on the REFLECTED/TRANSMITTED side ==. Lens-maker: concave mirror converges (f positive); convex
     lens converges.'
+  misconception: '"Lenses always flip the image upside down — the brain simply learns to turn it the right
+    way up." Inversion is not automatic. Only a converging lens or mirror with the object beyond the focal
+    length produces a real, inverted image; a diverging lens, or any object inside the focal length, gives
+    a virtual, upright one. The sign convention in m = -di/do is doing the bookkeeping — a negative di
+    means virtual and upright, and no brain gymnastics are involved.'
+  connection: 'The passenger-side mirror is a convex one, which is why it always gives a virtual, upright,
+    reduced image: the shrinking is the price of a wider field of view, and it is the reason the caption
+    warns that objects are closer than they appear. A concave shaving mirror is the same hardware the
+    other way round — inside the focal length it magnifies your face, upright and virtual.'
+  connection_label: Real-world connection
   check:
   - q: A diverging lens always produces an image that is…
     options:
@@ -169,6 +209,16 @@ sections:
   - Prisms and raindrops disperse white light — ==red bends least, violet most== (dispersion = refractive
     index varies with wavelength). Total internal reflection needs light moving INTO a denser-to-rarer
     interface at an angle above the critical angle — fibre optics.
+  misconception: '"A prism manufactures colours — white light goes in and the glass dyes the beam into
+    a rainbow." The glass adds nothing. White light already contains every visible wavelength, and the
+    prism simply bends each one by a different amount because its refractive index varies with wavelength
+    — violet most, red least. Separation, not creation: shine a single colour in and it comes out as that
+    colour, unbent in spectrum.'
+  connection: 'Total internal reflection is the quiet workhorse of modern medicine: light piped down an
+    optical fibre stays inside because every bounce strikes the wall from the dense side beyond the critical
+    angle. Bundle thousands of fibres and you get the endoscope a surgeon can steer into a joint or a
+    gut, delivering light in and carrying the image back without a single photon escaping along the way.'
+  connection_label: Real-world connection
   check:
   - q: Dispersion through a prism spreads colors because…
     options:
@@ -232,6 +282,31 @@ examples:
       A: Multiplying omega by the mass instead of by the amplitude.
       B: Quoting sqrt(m/k) and dropping the 2 pi.
       D: Using the amplitude in centimetres instead of metres.
+key_equations:
+- latex: $T = 2\pi\sqrt{\frac{m}{k}}$
+  symbols: T period (s), m mass (kg), k spring constant (N/m)
+  when: mass-spring SHM — amplitude does not appear; quarter the mass to halve T
+- latex: $T = 2\pi\sqrt{\frac{L}{g}}$
+  symbols: T period (s), L pendulum length (m), g = 9.8 m/s²
+  when: simple pendulum — mass-independent, T grows with sqrt(L)
+- latex: $v = f\lambda$
+  symbols: v wave speed (m/s, set by the medium), f frequency (Hz), lambda wavelength (m)
+  when: every wave problem — higher f means shorter lambda at fixed speed
+- latex: $f_{beat} = |f_1 - f_2|$
+  symbols: f_beat beat frequency (Hz), f₁ f₂ the two source frequencies
+  when: two close tones — the loudness swells at the difference
+- latex: $\beta = 10\log_{10}\frac{I}{I_0}$
+  symbols: beta sound level (dB), I intensity, I₀ reference intensity
+  when: decibel scale — +10 dB means ten times the intensity
+- latex: $\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}$
+  symbols: f focal length (m), d_o object distance, d_i image distance (negative if virtual)
+  when: thin lens and mirror equation — locate the image
+- latex: $m = -\frac{d_i}{d_o}$
+  symbols: m magnification, d_i image distance, d_o object distance
+  when: image size and orientation — negative m means inverted
+- latex: $v_{max} = \omega A$
+  symbols: v_max maximum speed (m/s), ω angular frequency = 2π/T, A amplitude (m)
+  when: SHM speed peaks at equilibrium; ω = sqrt(k/m) for a spring
 key_points:
 - 'SHM: T = 2pi sqrt(m/k); pendulum period mass-independent.'
 - v = f lambda; medium sets speed; frequency does not.

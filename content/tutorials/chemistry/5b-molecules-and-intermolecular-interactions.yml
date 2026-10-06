@@ -15,6 +15,16 @@ sections:
     only IMF in nonpolar substances.
   - Hydrogen bonding requires H bonded to N, O, or F, attracting a lone pair on another electronegative
     atom.
+  misconception: '"A hydrogen bond is just a weak covalent bond, another kind of electron sharing." No
+    electrons are shared or transferred in a hydrogen bond — it is an attraction between an already-polar
+    N-H, O-H, or F-H bond and a lone pair on a neighbour. That is why it is an interMOLECULAR force: it
+    can be broken by warming, and it is roughly an order of magnitude weaker than the covalent bonds inside
+    the molecule.'
+  connection: 'The same weak attraction, used a few billion times in a row, is what holds biology''s big
+    structures together: hydrogen bonds zip DNA''s base pairs together and pin an alpha-helix''s backbone
+    every few residues. Chapter 1A · Proteins and amino acids shows secondary structure surviving on exactly
+    this force — strong enough to hold a shape, weak enough to let it unfold and refold.'
+  connection_label: How sciences interconnect
   check:
   - q: Which has the strongest intermolecular forces?
     options:
@@ -59,6 +69,15 @@ sections:
     — polar solvents dissolve polar and ionic solutes.
   - Amphipathic molecules with both polar and nonpolar regions form micelles and membranes — the basis
     of biological structure.
+  misconception: '"If a molecule contains polar bonds, the molecule itself must be polar." Geometry decides.
+    CO2 has two strongly polar C=O bonds pointing in exactly opposite directions, so the dipoles cancel
+    and the molecule is nonpolar; H2O has the same kind of bonds but a bent shape, so they reinforce.
+    Ask not ''are the bonds polar'' but ''do the bond dipoles add up or cancel''.'
+  connection: 'Amphipathic is the biologically important answer to this section: one molecule carrying
+    both a polar head and a nonpolar tail self-assembles into bilayers, with the tails hiding from water
+    in the middle. Chapter 2A · Assemblies of molecules, cells, and cell groups starts from exactly this
+    property — the membrane exists because of the molecular asymmetry described here.'
+  connection_label: How sciences interconnect
   check:
   - q: Which molecule is nonpolar despite having polar bonds?
     options:
@@ -94,6 +113,16 @@ sections:
     tension. Water boils at 100C (vs methane at -162C) due to hydrogen bonding. Longer hydrocarbon chains
     mean stronger dispersion and higher BP.
   - Vapor pressure is inverse — stronger IMFs mean lower vapor pressure.
+  misconception: '"CH3Cl is heavier than CH3OH, so it should boil higher." Mass only decides among molecules
+    that offer the same force. Compare the strongest IMF each can deploy first: methanol has an O-H to
+    donate hydrogen bonds, chloromethane has only a dipole, and the hydrogen bond wins by about 90 degrees
+    despite the extra mass in CH3Cl. Chain length matters within a family — the pentane-butane-propane
+    check — not across one.'
+  connection: 'Boiling point differences are an industrial sorting tool: crude oil is a mixture of hydrocarbons
+    whose dispersion forces grow with chain length, so heating it lets each fraction condense at its own
+    level in a column. Chapter 5C · Separation and purification methods covers distillation as a method
+    — this section supplies the reason it works.'
+  connection_label: How sciences interconnect
   check:
   - q: Which liquid has the highest surface tension?
     options:
@@ -131,6 +160,16 @@ sections:
     why proteins fold, membranes form, and oil separates from water.
   - In biology, hydrogen bonds stabilize protein secondary structure, ionic interactions form salt bridges,
     hydrophobic packing buries nonpolar side chains in cores.
+  misconception: '"Nonpolar molecules clump together because they attract each other strongly." The attraction
+    between two hydrocarbons is London dispersion, the weakest force on the ladder. What drives the clumping
+    is water: each nonpolar surface forces nearby water into ordered cages that cost entropy, so burying
+    those surfaces — away from each other as much as from water — releases the caged water and gains entropy.
+    The hydrophobic effect is water pushing, not oil pulling.'
+  connection: 'This is the engine of protein architecture: a chain that folds buries its nonpolar side
+    chains in a core and leaves the polar ones facing water, and that single drive does most of the work
+    before any hydrogen bond or salt bridge is counted. Chapter 1A · Proteins and amino acids walks the
+    same logic up the four levels of structure, and chapter 2A repeats it for whole membranes.'
+  connection_label: How sciences interconnect
   check:
   - q: The hydrophobic effect is primarily driven by…
     options:
@@ -165,6 +204,15 @@ sections:
   - 'Partition coefficient P equals concentration in organic phase divided by concentration in aqueous
     phase. High P means lipophilic — crosses membranes readily. Henrys law: gas solubility is proportional
     to partial pressure above the liquid.'
+  misconception: '"The air a diver breathes is still 78 percent nitrogen, so the nitrogen dissolved in
+    her blood stays the same at depth." What drives gas into solution is its PARTIAL pressure, not its
+    fraction. Doubling the total pressure doubles nitrogen''s partial pressure, and Henry''s law — being
+    linear — doubles the dissolved amount. The composition did not change; the pushing pressure did.'
+  connection: 'Henry''s law runs gas exchange in both directions: oxygen dissolves in the alveolar capillaries
+    in proportion to its partial pressure there, which is exactly why altitude — a lower PO2 — limits
+    uptake. Chapter 4B · Fluids for circulation and gas exchange works the same law on the physiology
+    side, from Dalton''s partial pressures to the driving gradient across the respiratory membrane.'
+  connection_label: How sciences interconnect
   check:
   - q: A drug has log P = 3. This means it…
     options:
@@ -222,6 +270,20 @@ examples:
       B: Putting dipole-dipole above hydrogen bonding.
       C: Reversing the ladder entirely.
       D: Placing dispersion above dipole-dipole for these similar-sized molecules.
+key_equations:
+- latex: $\vec{\mu}_{net} = \sum \vec{\mu}_{bond}$
+  symbols: mu_net molecular dipole moment, mu_bond individual bond dipoles (vectors)
+  when: polarity — equal dipoles pointing opposite cancel (CO2), asymmetric ones reinforce (H2O)
+- latex: $\Delta G = \Delta H - T\Delta S$
+  symbols: ΔG free energy change, ΔH enthalpy change, T absolute temperature, ΔS entropy change
+  when: the hydrophobic effect — releasing ordered cage water makes the -TΔS term dominate
+- latex: $P = \frac{[org]}{[aq]}$
+  symbols: P partition coefficient, [org] concentration in the organic phase, [aq] in the aqueous phase
+  when: lipophilicity — log P of 3 means a 1000-fold preference for the organic phase
+- latex: $C_{gas} = k P_{gas}$
+  symbols: C_gas dissolved gas concentration, k Henry's law constant, P_gas partial pressure above the
+    liquid
+  when: gas solubility — linear in partial pressure, so doubled pressure doubles dissolved gas
 key_points:
 - IMF hierarchy — ionic > H-bond > dipole-dipole > dispersion.
 - Dispersion exists everywhere; scales with electron count.

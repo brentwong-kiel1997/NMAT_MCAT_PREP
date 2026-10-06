@@ -377,6 +377,7 @@ def exam_result(request, attempt_id: int):
                 "flagged": bool(entry.get("f")),
                 "time_spent": (r.time_spent if r else entry.get("s")) or 0,
                 "difficulty": difficulty.get(item_id),
+                "skill": item.get("skill") or "",
                 "chapter": item.get("chapter") or "",
                 "chapter_title": (chapter or {}).get("title", ""),
                 "discipline": (chapter or {}).get("discipline", ""),
@@ -399,11 +400,32 @@ def exam_result(request, attempt_id: int):
                     z = (correct - n * 0.25) / math.sqrt(n * 0.25 * 0.75)
                     sub["ss_est"] = max(200, min(800, round(500 + 100 * z)))
 
+    # MCAT per-skill accuracy (AAMC SIRS): aggregate the review rows by their
+    # bank `skill` tag (s1-s4; present on science-bank items once tagged).
+    skill_rows: dict[str, dict] = {}
+    for r in review:
+        sk = r.get("skill") or ""
+        if sk in ("s1", "s2", "s3", "s4"):
+            slot = skill_rows.setdefault(sk, {"skill": sk, "correct": 0, "items": 0})
+            slot["correct"] += 1 if r["correct"] else 0
+            slot["items"] += 1
+
+    skill_names = {"s1": "Knowledge of Scientific Concepts",
+                   "s2": "Scientific Reasoning and Problem-Solving",
+                   "s3": "Reasoning About Design and Execution",
+                   "s4": "Data-Based and Statistical Reasoning"}
+    skill_accuracy = [
+        {"skill": sk, "name": skill_names[sk],
+         "pct": round(100 * slot["correct"] / slot["items"])}
+        for sk, slot in sorted(skill_rows.items()) if slot["items"] >= 3
+    ]
+
     return render(request, "portal/exam_result.html", {
         "attempt": attempt,
         "score": score,
         "review": review,
         "report_vocab": report_vocab,
+        "skill_accuracy": skill_accuracy,
         "exam_name": (exam_defs().get(attempt.exam) or {}).get("name", attempt.exam),
     })
 

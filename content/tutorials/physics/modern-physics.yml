@@ -17,6 +17,16 @@ sections:
   - ==Moving clocks run slow — a passing spaceship's clock ticks slower per YOUR frame==; the traveler,
     however, sees your clock run slow. Time dilation formula delta-t = gamma delta-t0. Only objects approaching
     c show measurable effects.
+  misconception: '"The astronaut''s watch runs slow because it is being battered or stressed by the speed
+    — the astronaut just feels normal time like we do." Nothing is wrong with the watch, and the astronaut
+    notices nothing odd about it; in their own frame it ticks perfectly. Each inertial observer measures
+    the OTHER frame''s clocks as slow, and the effect is not a mechanical lag or an illusion — it is what
+    time itself does when two frames move relative to each other.'
+  connection: Satellite navigation is relativity in daily use. Clocks aboard positioning satellites tick
+    at rates that differ from ground clocks, and the system corrects for it continuously; skip the correction
+    and the position error grows by kilometres per day. The 0.6c starship in the check item is an extreme
+    case of the same arithmetic your phone performs quietly.
+  connection_label: Real-world connection
   check:
   - q: An astronaut's wristwatch ticks slow when viewed from Earth because…
     options:
@@ -54,6 +64,15 @@ sections:
     ==Kinetic energy of emitted electrons: KE_max = hf - work function==.'
   - 'Photons double as momentum: p = h/lambda. ==Higher frequency = more energetic = deeper penetration
     of quantum effects== — the photoelectric experiment is the classic proof of quantization.'
+  misconception: '"If the lamp is bright enough, even red light will eventually knock electrons out of
+    the metal." Brightness adds photons, not energy per photon. Each red photon carries a fixed, small
+    quantum of energy, and if that is below the work function the electron never leaves — no matter how
+    many photons arrive. The 2.0 eV photons of the check item simply cannot open a 2.1 eV door.'
+  connection: 'Quantized light is half of the story that builds atomic structure: atoms absorb and emit
+    photons only at energies matching the gaps between their allowed electron levels. Chapter 4E · Atoms,
+    nuclear decay, electronic structure turns that pairing into absorption and emission spectra — the
+    fingerprinting method that measures elements in stars and in blood samples alike.'
+  connection_label: How sciences interconnect
   check:
   - q: Shining brighter (higher intensity) light at a fixed frequency above threshold…
     options:
@@ -91,6 +110,15 @@ sections:
   - '==Binding energy per nucleon peaks at iron (Fe-56) — fusion of light, fission of heavy, BOTH release
     energy==. Nuclear stability: proton-rich nuclei decay by positron emission or electron capture; neutron-rich
     by beta-minus — always toward the belt of stability.'
+  misconception: '"The mass defect means some of the protons and neutrons are destroyed when the nucleus
+    assembles." No nucleon vanishes. The assembled nucleus weighs less than its separated parts because
+    binding energy was released, and by E = mc^2 that lost mass is exactly the energy that left. Mass
+    and energy are one ledger here — nothing is destroyed, it is converted.'
+  connection: The iron peak explains both ends of the energy business. Push light nuclei together (fusion
+    — the Sun's furnace) or split heavy ones apart (fission — a reactor core) and both slides release
+    energy because both moves head toward iron's maximum binding energy per nucleon. Energy comes from
+    the direction of travel, not from 'splitting' or 'joining' as such.
+  connection_label: Real-world connection
   check:
   - q: Iron-56 has the highest binding energy per nucleon, so…
     options:
@@ -136,6 +164,15 @@ sections:
     Z: alpha -2, beta-minus +1, beta-plus -1.'
   - '==Half-life: after n half-lives, fraction remains = (1/2)^n==. Activity A = lambda N. Carbon-14 dating
     (t1/2 = 5730 yr), K-40, and PET tracers (F-18, ~110 min) all ride on half-life kinetics.'
+  misconception: '"If the activity falls to 1/16 in 40 hours, the half-life is 40/16 = 2.5 hours." Do
+    not divide by the fraction — divide by the NUMBER of half-lives it represents. 1/16 = (1/2)^4, so
+    four half-lives elapsed and the half-life is 40/4 = 10 hours. The count n always comes from the power
+    of one half, never from the arithmetic of the fraction.'
+  connection: 'The PET passage is standard practice: fluorine-18 loses half its activity in about 110
+    minutes, so a cyclotron produces the isotope in the morning and the scan must happen before the dose
+    decays past usefulness — and the same exponential decides when a patient is safe to leave. Radiocarbon
+    dating is the identical curve run over thousands of years instead of hours.'
+  connection_label: Real-world connection
   check:
   - q: A 24-day half-life isotope is reduced to 1/8 its original after…
     options:
@@ -173,6 +210,15 @@ sections:
   - ==Spectral lines come from electron transitions — emission = drop (h f = energy gap); absorption =
     climb==. Hydrogen Balmer series transitions give the visible lines; ionization energy is the n=infinity
     climb.
+  misconception: '"An excited electron falls back gradually, radiating a smooth smear of colours as it
+    loses energy." Electrons do not spiral. They hold a definite level, then jump, and a jump emits exactly
+    one photon whose energy equals the gap between the levels — h f = energy gap. That is why atomic spectra
+    are sharp lines with a short, fixed menu of wavelengths, not a rainbow.'
+  connection: 'The quantum ladder here is the same one that chemistry stands on: n, l, and m_l are what
+    give each element its orbital occupancy, and therefore its position and chemistry in the periodic
+    table. Chapter 4E · Atoms, nuclear decay, electronic structure builds the configuration rules and
+    reads the spectral lines; this chapter supplies the photon arithmetic behind them.'
+  connection_label: How sciences interconnect
   check:
   - q: Which electron transition emits the MOST energetic photon?
     options:
@@ -234,6 +280,32 @@ examples:
       A: Reporting the photon energy as the electron's kinetic energy and ignoring the work function.
       C: Adding the work function instead of subtracting it.
       D: The photon energy exceeds 3.0 eV, so ejection does occur.
+key_equations:
+- latex: $\Delta t = \gamma \Delta t_0$
+  symbols: Δt dilated time in the observer's frame, Δt₀ proper time on the moving clock, γ the Lorentz
+    factor
+  when: time dilation — the moving clock runs slow; divide by gamma
+- latex: $\gamma = \frac{1}{\sqrt{1 - v^{2}/c^{2}}}$
+  symbols: γ Lorentz factor, v relative speed, c = 3 x 10⁸ m/s
+  when: convert a speed fraction into the dilation factor (γ = 1.25 at 0.6c)
+- latex: $E = hf = \frac{hc}{\lambda}$
+  symbols: E photon energy, h Planck's constant, f frequency, lambda wavelength (hc = 1240 eV·nm)
+  when: photon energy — frequency and wavelength fix it; intensity does not
+- latex: $KE_{max} = hf - \phi$
+  symbols: KE_max maximum photoelectron energy, hf photon energy, phi work function (eV)
+  when: photoelectric effect — only if hf exceeds phi; the gate comes first
+- latex: $E = mc^{2}$
+  symbols: E energy equivalent (J), m mass (kg), c speed of light
+  when: mass defect = binding energy; mass lost is energy released
+- latex: $A = Z + N$
+  symbols: A mass number, Z proton number, N neutron count
+  when: nuclear notation — N = A - Z, and N/Z sets the likely decay mode
+- latex: $N_{remains} = N_0\left(\frac{1}{2}\right)^{n}$
+  symbols: N₀ starting amount, n number of half-lives elapsed
+  when: half-life arithmetic — find n from the fraction, then multiply by the half-life
+- latex: $\Delta E = hf$
+  symbols: ΔE energy gap between levels, hf photon energy
+  when: emission on a downward jump, absorption on an upward one — sharp lines only
 key_points:
 - c same in all frames; moving clocks run slow; E = mc2.
 - 'Photoelectric: f sets energy, intensity sets count.'

@@ -22,6 +22,11 @@
 <section class="section">
   <article class="practice-card">
     <h2>Section scores</h2>
+    {% if skill_accuracy %}
+    <p class="note-line">By AAMC skill:
+      {% for s in skill_accuracy %}{{ s.name }} <strong>{{ s.pct }}%</strong>{% if not forloop.last %} · {% endif %}{% endfor %}
+      (sections with fewer than 3 items omitted)</p>
+    {% endif %}
     {% if report_vocab %}
     <p class="note-line">CEM reports <strong>APT</strong> (Part 1 composite), <strong>SA</strong>
       (Part 2 composite) and <strong>GPS</strong> (eight-subtest composite), each on a 200–800

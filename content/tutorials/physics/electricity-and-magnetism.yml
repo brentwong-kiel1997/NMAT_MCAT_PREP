@@ -17,6 +17,16 @@ sections:
   - ==Potential energy U = k q1 q2 / r and electric potential V = k Q / r== — V is energy per charge;
     the unit volt = J/C. Work moving charge along an equipotential is zero; field does work when charge
     moves along the field.
+  misconception: '"A bigger test charge feels a bigger force at a point, so the electric field there must
+    be bigger too." The force does scale with the test charge — halve it and the force halves — but the
+    FIELD is the force per unit charge, and that ratio is unchanged. E is a property of the source charges
+    and the location, full stop; the probe you bring tells you about it without changing it.'
+  connection: 'Both of nature''s long-range forces obey an inverse square, which is why tripling the separation
+    divides the electric force by 9 exactly as it would divide the gravitational pull between two masses.
+    The difference is sign: mass only attracts, while charge comes in two varieties, so electric forces
+    can cancel — which is why chemistry is electric and gravity is not. Chapter 4A · Motion, forces, work,
+    energy, equilibrium uses the same inverse-square reasoning for the gravitational case.'
+  connection_label: How sciences interconnect
   check:
   - q: Two charges, +2q and -2q, separated by distance d. Halving the distance…
     options:
@@ -61,6 +71,15 @@ sections:
   - Power = IV = I2R = V2/R. ==In series, same current — the big resistor gets the most power==; in parallel,
     equal voltage — the small resistor draws more current and more power. Emf minus internal resistance
     drop sets the terminal voltage.
+  misconception: '"Adding another resistor to a circuit always increases the total resistance." Only in
+    series. In parallel the new branch is a second path for current, so the total resistance drops BELOW
+    the smallest individual resistor — two 12 ohm branches give 6 ohm, and the battery supplies more current
+    than before. More paths, less opposition.'
+  connection: 'Old-style Christmas lights were wired in series, which is why one dead bulb darkened the
+    whole string: break the only path and the current stops everywhere. Modern strings are parallel, so
+    each lamp sees the full voltage and the failure stays local — the same reason a burnt-out kitchen
+    light does not take the refrigerator with it.'
+  connection_label: Real-world connection
   check:
   - q: Two resistors, 2 ohm and 8 ohm, in series with a 12 V battery. The current is…
     options:
@@ -97,6 +116,16 @@ sections:
     = sum of reciprocals (LESS); in parallel, C adds (MORE) — opposite of resistors.
   - '==RC time constant tau = RC — after one tau the capacitor charges to 63% (1 - e^-1)==. Charging curve:
     V(t) = V0(1 - e^-t/tau); discharging V(t) = V0 e^-t/tau. Defibrillators and pacemakers are RC physics.'
+  misconception: '"Capacitors in parallel give a smaller total capacitance, just like resistors do." It
+    is the mirror image. Parallel capacitors add directly — 2.0 uF beside 6.0 uF gives 8.0 uF — because
+    the effective plate area grows; series capacitors add reciprocals and end up smaller than either.
+    Whatever the resistor rule says, assume capacitors do the opposite.'
+  connection: 'The worked example is a cell membrane: a lipid bilayer about 10 nanometres thick — a superb
+    insulator — separating two conducting salt solutions. The enormous area-to-thickness ratio is what
+    makes the capacitance impressive, and that in turn is why only a few thousand ions per square micrometre
+    move the membrane voltage by a millivolt. Chapter 3A · Nervous and endocrine systems spends a whole
+    section on what the body does with that lever.'
+  connection_label: How sciences interconnect
   check:
   - q: In an RC circuit after one time constant the charging capacitor reaches…
     options:
@@ -134,6 +163,15 @@ sections:
     = I L B sin(theta).
   - '==Induction: a CHANGING flux produces EMF — Faraday: EMF = -d(flux)/dt; Lenz says the induced current
     opposes the change==. MRI uses hydrogen spins; transformers step voltage via turns ratio V1/V2 = N1/N2.'
+  misconception: '"A magnetic field speeds up a charge moving along with it, so a moving charge gains
+    energy in a magnetic field." The magnetic force is always perpendicular to the velocity, and a perpendicular
+    force does zero work — so it bends the path but never changes the speed. A charge in a uniform field
+    simply circles; the field steers, it does not push.'
+  connection: 'Faraday''s law is the working principle behind the power grid: spin a coil in a magnetic
+    field and you generate an EMF, then use a transformer — where a CHANGING flux in the core drives the
+    secondary — to step the voltage up for transmission and back down for the wall socket. Moving energy
+    as high voltage and low current keeps the I^2R loss in the wires small.'
+  connection_label: Real-world connection
   check:
   - q: A charge moving PARALLEL to a magnetic field experiences…
     options:
@@ -171,6 +209,16 @@ sections:
   - Electrochemistry — ==oxidation (LEO) at the anode; reduction (GER) at the cathode==; galvanic cells
     convert chemical to electrical spontaneously; electrolytic cells need external voltage. Standard cell
     potential E = E-cathode - E-anode.
+  misconception: '"A cell at rest is electrically neutral, so there is no voltage across its membrane."
+    The resting cell carries a genuine potential difference of about -70 mV, inside relative to outside
+    — roughly a tenth of a volt across a film nanometres thick, which is an enormous field. Rest means
+    no net change over time, not no charge separation; the gradients behind that voltage are exactly what
+    the cell spends ATP to maintain.'
+  connection: 'Every voltage your clinician records is this section made visible: an ECG reads the summed
+    potential of synchronised heart muscle depolarising, an EEG reads the averaged activity of cortical
+    neurons, and both are volume-conducted ionic currents, not electricity injected from outside. Chapter
+    3B · Main organ systems follows the cardiac version beat by beat.'
+  connection_label: How sciences interconnect
   check:
   - q: In an electrolytic cell, electrons flow…
     options:
@@ -233,6 +281,32 @@ examples:
       A: Omitting the dielectric constant k.
       B: Slipping one power of ten in the area (1.0 x 10^-6 m2).
       D: Slipping a factor of ten in the thickness (5.0 x 10^-9 m).
+key_equations:
+- latex: $F = k\frac{q_1 q_2}{r^{2}}$
+  symbols: F force (N), k = 9 x 10⁹ N·m²/C², q₁ q₂ charges (C), r separation (m)
+  when: point charges — inverse square, so halving r quadruples F
+- latex: $V = IR$
+  symbols: V potential difference (V), I current (A), R resistance (ohm)
+  when: Ohm's law — the first line of every circuit reduction
+- latex: $R_{eq} = R_1 + R_2$
+  symbols: R_eq equivalent resistance, R₁ R₂ individual resistors
+  when: series — one path, same current through each
+- latex: $\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2}$
+  symbols: R_eq equivalent resistance, R₁ R₂ branch resistances
+  when: parallel — extra path; the total is below the smallest resistor
+- latex: $P = I^{2}R = \frac{V^{2}}{R}$
+  symbols: P power (W), I current (A), R resistance, V voltage
+  when: dissipation — series favors the big R, parallel the small R
+- latex: $C = \frac{Q}{V} = k\varepsilon_0\frac{A}{d}$
+  symbols: C capacitance (F), Q charge (C), V voltage, k dielectric constant, ε₀ = 8.85 x 10⁻¹² F/m, A
+    plate area, d separation
+  when: parallel-plate capacitance — the membrane example is exactly this
+- latex: $F = qvB\sin\theta$
+  symbols: F force (N), q charge (C), v speed (m/s), B field (T), θ angle between v and B
+  when: magnetic force — zero when v is parallel to B, maximal when perpendicular
+- latex: $E_{cell} = E_{cathode} - E_{anode}$
+  symbols: E_cell cell potential (V), E_cathode reduction potential, E_anode oxidation potential
+  when: positive E_cell means the galvanic cell runs spontaneously
 key_points:
 - 'Coulomb: F ~ q1q2/r2, signs attract/repel.'
 - Series resistance adds; parallel drops below smallest.
