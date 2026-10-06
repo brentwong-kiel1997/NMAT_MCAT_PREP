@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Verify content/exam-bank/mcat/drill/bio-biochem.yml (practice-only drill bank)."""
+from pathlib import Path
 import yaml
 from collections import Counter
 
-PATH = "/home/ubuntu/django-wsgi/content/exam-bank/mcat/drill/bio-biochem.yml"
+ROOT = Path(__file__).resolve().parents[2]
+PATH = str(ROOT / "content/exam-bank/mcat/drill/bio-biochem.yml")
 ALLOWED = {"cells-and-cellular-processes", "development", "genetics",
            "life-processes-regulation-and-homeostasis", "organisms-and-their-environment",
            "the-world-of-plants-and-animals", "unity-and-diversity-of-life",

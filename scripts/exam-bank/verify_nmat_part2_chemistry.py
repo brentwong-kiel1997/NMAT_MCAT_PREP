@@ -2,10 +2,12 @@
 """Verify content/exam-bank/nmat/part2-chemistry.yml against the item schema."""
 import math
 import re
+from pathlib import Path
 import yaml
 from collections import Counter
 
-PATH = "/home/ubuntu/django-wsgi/content/exam-bank/nmat/part2-chemistry.yml"
+ROOT = Path(__file__).resolve().parents[2]
+PATH = str(ROOT / "content/exam-bank/nmat/part2-chemistry.yml")
 d = yaml.safe_load(open(PATH))
 
 ALLOWED = set("""4e-atoms-nuclear-decay-electronic-structure 5a-unique-nature-of-water-and-its-solutions

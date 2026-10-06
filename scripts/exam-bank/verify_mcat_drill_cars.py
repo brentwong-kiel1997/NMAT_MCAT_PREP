@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Verify content/exam-bank/mcat/drill/cars.yml (2 original passages, 10 items)."""
+from pathlib import Path
 import yaml
 from collections import Counter
 
-PATH = "/home/ubuntu/django-wsgi/content/exam-bank/mcat/drill/cars.yml"
+ROOT = Path(__file__).resolve().parents[2]
+PATH = str(ROOT / "content/exam-bank/mcat/drill/cars.yml")
 ALLOWED = {"foundations-of-comprehension", "reasoning-within-the-text",
            "reasoning-beyond-the-text"}  # the CARS subject's own skill chapters
 

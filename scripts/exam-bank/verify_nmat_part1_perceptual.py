@@ -6,10 +6,13 @@ re-checks every mirror transformation against the LR/UD/ROT tables, reading
 both straight out of the delivered YAML.
 """
 import re
+from pathlib import Path
+
 import yaml
 from collections import Counter
 
-PATH = "/home/ubuntu/django-wsgi/content/exam-bank/nmat/part1-perceptual.yml"
+ROOT = Path(__file__).resolve().parents[2]
+PATH = str(ROOT / "content/exam-bank/nmat/part1-perceptual.yml")
 d = yaml.safe_load(open(PATH))
 
 # ---- required top-level keys
@@ -24,7 +27,8 @@ ans = Counter(i["answer"] for i in d["items"])
 assert max(ans.values()) <= 8, ans
 ids, stems = [], []
 from pathlib import Path as _Path
-_IMAGES = _Path("/home/ubuntu/django-wsgi/content/images")
+ROOT = Path(__file__).resolve().parents[2]
+_IMAGES = _Path(str(ROOT / "content/images"))
 for i in d["items"]:
     BASE = {"id", "q", "choices", "answer", "explain", "distractors", "chapter"}
     # figure is optional: mirror/hidden panels ship generated SVG plates

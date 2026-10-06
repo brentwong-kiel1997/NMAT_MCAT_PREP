@@ -14,11 +14,13 @@ Runs four passes:
 import math
 import os
 import re
+from pathlib import Path
 import yaml
 from collections import Counter
 
-PATH = "/home/ubuntu/django-wsgi/content/exam-bank/nmat/part2-physics.yml"
-CONTENT = "/home/ubuntu/django-wsgi/content"
+ROOT = Path(__file__).resolve().parents[2]
+PATH = str(ROOT / "content/exam-bank/nmat/part2-physics.yml")
+CONTENT = str(ROOT / "content")
 d = yaml.safe_load(open(PATH))
 
 ALLOWED = set("""4a-motion-forces-work-energy-equilibrium 4b-fluids-for-circulation-and-gas-exchange

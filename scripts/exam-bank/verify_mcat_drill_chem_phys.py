@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Verify content/exam-bank/mcat/drill/chem-phys.yml (practice-only drill bank)."""
+from pathlib import Path
 import yaml
 from collections import Counter
 
-PATH = "/home/ubuntu/django-wsgi/content/exam-bank/mcat/drill/chem-phys.yml"
+ROOT = Path(__file__).resolve().parents[2]
+PATH = str(ROOT / "content/exam-bank/mcat/drill/chem-phys.yml")
 ALLOWED = {"4a-motion-forces-work-energy-equilibrium", "4b-fluids-for-circulation-and-gas-exchange",
            "4c-electrochemistry-and-electrical-circuits", "4d-light-and-sound-interacting-with-matter",
            "electricity-and-magnetism", "mechanics", "modern-physics", "thermodynamics",
@@ -39,6 +41,7 @@ for i in all_items:
 
 # quantitative answers must appear inside their explanation
 import re
+ROOT = Path(__file__).resolve().parents[2]
 mismatch = []
 for i in all_items:
     key_text = i["choices"][i["answer"]]

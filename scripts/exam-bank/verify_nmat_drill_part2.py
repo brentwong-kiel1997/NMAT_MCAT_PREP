@@ -17,9 +17,11 @@ import os
 import re
 from collections import Counter
 
+from pathlib import Path
 import yaml
 
-CONTENT = "/home/ubuntu/django-wsgi/content"
+ROOT = Path(__file__).resolve().parents[2]
+CONTENT = str(ROOT / "content")
 FILES = {
     "biology": ("exam-bank/nmat/drill/part2-biology.yml", "nmat-d-p2b-"),
     "physics": ("exam-bank/nmat/drill/part2-physics.yml", "nmat-d-p2p-"),

@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Verify content/exam-bank/nmat/part1-verbal.yml against the item schema."""
 import re
+from pathlib import Path
 import yaml
 from collections import Counter
 
-PATH = "/home/ubuntu/django-wsgi/content/exam-bank/nmat/part1-verbal.yml"
+ROOT = Path(__file__).resolve().parents[2]
+PATH = str(ROOT / "content/exam-bank/nmat/part1-verbal.yml")
 d = yaml.safe_load(open(PATH))
 
 # ---- required top-level keys

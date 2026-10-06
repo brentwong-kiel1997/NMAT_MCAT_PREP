@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Verify content/exam-bank/mcat/drill/psych-soc.yml (practice-only drill bank)."""
+from pathlib import Path
 import yaml
 from collections import Counter
 
-PATH = "/home/ubuntu/django-wsgi/content/exam-bank/mcat/drill/psych-soc.yml"
+ROOT = Path(__file__).resolve().parents[2]
+PATH = str(ROOT / "content/exam-bank/mcat/drill/psych-soc.yml")
 ALLOWED = {"psychology", "sociology-and-anthropology", "fc6-perceive-think-react",
            "fc7-behavior-and-behavior-change", "fc8-self-others-interactions",
            "fc9-cultural-and-social-differences", "fc10-stratification-and-resources",

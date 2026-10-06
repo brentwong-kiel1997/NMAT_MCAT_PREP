@@ -2,10 +2,12 @@
 """Verify content/exam-bank/nmat/drill/part1-verbal.yml against the drill schema."""
 import glob
 import re
+from pathlib import Path
 import yaml
 from collections import Counter
 
-PATH = "/home/ubuntu/django-wsgi/content/exam-bank/nmat/drill/part1-verbal.yml"
+ROOT = Path(__file__).resolve().parents[2]
+PATH = str(ROOT / "content/exam-bank/nmat/drill/part1-verbal.yml")
 ALLOWED = {"analogies", "reading-comprehension"}
 
 d = yaml.safe_load(open(PATH))
@@ -52,7 +54,7 @@ assert ids == ["nmat-d-p1v-%03d" % n for n in range(1, 26)], ids[:5]
 
 # ---- global isolation: unique ids, no stem shared with any other bank file
 all_ids, all_stems = set(), {}
-for f in glob.glob("/home/ubuntu/django-wsgi/content/exam-bank/**/*.yml", recursive=True):
+for f in glob.glob(str(ROOT / "content/exam-bank/**/*.yml"), recursive=True):
     for it in (yaml.safe_load(open(f)) or {}).get("items") or []:
         assert it["id"] not in all_ids, ("duplicate id across bank", it["id"], f)
         all_ids.add(it["id"])
@@ -62,7 +64,7 @@ for it in d["items"]:
     assert len(owners) == 1, ("stem shared with another bank", it["id"], owners)
 
 # ---- not a mock bank: the section id must appear in no blueprint
-for f in glob.glob("/home/ubuntu/django-wsgi/content/exams/*.yml"):
+for f in glob.glob(str(ROOT / "content/exams/*.yml")):
     bp = ((yaml.safe_load(open(f)) or {}).get("blueprint") or {}).get("blocks") or []
     for b in bp:
         assert d["section"] not in (b.get("bank") or []), (f, b.get("id"))

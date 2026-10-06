@@ -13,7 +13,8 @@ from pathlib import Path
 
 import yaml
 
-PATH = "/home/ubuntu/django-wsgi/content/exam-bank/nmat/part1-inductive.yml"
+ROOT = Path(__file__).resolve().parents[2]
+PATH = str(ROOT / "content/exam-bank/nmat/part1-inductive.yml")
 IMAGES = Path(__file__).resolve().parents[2] / "content" / "images"
 fails = []
 

@@ -12,7 +12,8 @@ from pathlib import Path
 import yaml
 from collections import Counter
 
-PATH = "/home/ubuntu/django-wsgi/content/exam-bank/nmat/drill/part1-inductive.yml"
+ROOT = Path(__file__).resolve().parents[2]
+PATH = str(ROOT / "content/exam-bank/nmat/drill/part1-inductive.yml")
 REPO = Path(__file__).resolve().parents[2]
 ALLOWED = {"number-and-letter-series", "figure-series", "figure-grouping"}
 
@@ -160,7 +161,7 @@ assert seen_rules == 10, seen_rules
 # ---------------- global isolation ------------------------------------------
 all_ids = set()
 stems = {}
-for f in glob.glob("/home/ubuntu/django-wsgi/content/exam-bank/**/*.yml", recursive=True):
+for f in glob.glob(str(ROOT / "content/exam-bank/**/*.yml"), recursive=True):
     for it in (yaml.safe_load(open(f)) or {}).get("items") or []:
         assert it["id"] not in all_ids, ("duplicate id across bank", it["id"], f)
         all_ids.add(it["id"])
@@ -168,7 +169,7 @@ for f in glob.glob("/home/ubuntu/django-wsgi/content/exam-bank/**/*.yml", recurs
 for i in d["items"]:
     assert len(stems[i["q"].strip()]) == 1, ("stem shared", i["id"])
 
-for f in glob.glob("/home/ubuntu/django-wsgi/content/exams/*.yml"):
+for f in glob.glob(str(ROOT / "content/exams/*.yml")):
     bp = ((yaml.safe_load(open(f)) or {}).get("blueprint") or {}).get("blocks") or []
     for b in bp:
         assert d["section"] not in (b.get("bank") or []), (f, b.get("id"))
