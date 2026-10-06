@@ -20,6 +20,19 @@
 <section class="section">
   <div class="detail-grid">
     <div>
+      {% if skill_bars %}
+      <h2>AAMC skill mix (Scientific Inquiry and Reasoning Skills)</h2>
+      <div class="trend-list">
+        {% for s in skill_bars %}
+        <div class="trend-row">
+          <span class="trend-date">S{{ forloop.counter }}</span>
+          <span class="trend-bar" title="{{ s.name }}"><span class="trend-fill" style="width: {{ s.pct }}%">{{ s.pct }}%</span></span>
+          <span class="muted-inline">{{ s.name }}</span>
+        </div>
+        {% endfor %}
+      </div>
+      <p class="note-line">AAMC scores each science section against these four skills at roughly these weights — practice items are tagged so your accuracy can be reported per skill.</p>
+      {% endif %}
       {% include "portal/includes/chapters.html" with chapters=section.chapters %}
 {% include "portal/includes/cross_map.html" %}
       {% if section.source_note %}

@@ -53,13 +53,14 @@
     <div id="calc-mcat-out" style="margin-top:1rem;" hidden>
       <h2>MCAT section reading</h2>
       <p id="mcat-section-score" class="lead"></p>
-      <p class="note-line">The MCAT section score runs 118–132 (midpoint 125); the total runs 472–528. Section scores combine to the total — a balanced 125/125/125/125 lands 500.</p>
+      <p class="note-line">The MCAT section score runs 118–132 (midpoint 125); the total runs 472–528. Section scores combine to the total — a balanced 125/125/125/125 lands 500. Percentile anchors per AAMC's May 2025–Apr 2026 score table (section means 124.6–125.9, SD 2.9–3.3).</p>
     </div>
 
     <p class="note-line" style="margin-top:1rem;">
       How it works: both exams report on a scale centered near the middle of the cohort.
       For planning we map your raw accuracy through a normal curve (NMAT: mean 500, SD 100;
-      MCAT section: midpoint 125, SD ≈ 2.5 per the published 118–132 range). The
+      MCAT section: per-section AAMC means 124.6–125.9 with SD 2.9–3.3
+      (May 2025–Apr 2026 score table)). The
       "accuracy needed" column additionally assumes cohort accuracy is ~normal with
       mean 60% and SD 12% — a planning assumption, not a CEM/AAMC figure. Real forms
       vary — treat all outputs as targets, not predictions.
@@ -153,16 +154,19 @@
       const header = document.getElementById("nmat-acc-header");
       if (header) header.textContent = `Accuracy needed on ${total} items`;
     } else {
-      // MCAT section: 4-option items, chance floor near 0.25; published midpoint 125
+      // MCAT section: 4-option items, chance floor near 0.25; AAMC score
+      // table: section means 124.6-125.9, SD 2.9-3.3 — modeled with SD 3
       const chance = 0.25;
       const span = 1 - chance;
       const fracAbove = Math.max(0, (frac - chance) / span);
       const z = invNorm(Math.max(0.01, Math.min(0.99, fracAbove)));
-      const score = Math.max(118, Math.min(132, Math.round(125 + 2.5 * z)));
+      const score = Math.max(118, Math.min(132, Math.round(125 + 3 * z)));
       const pctile = Math.round(Math.max(1, Math.min(99, normCdf(z) * 100)));
       document.getElementById("mcat-section-score").textContent =
         `Estimated section score: ${score} / 132 (≈ ${pctile}th percentile within the cohort) — ` +
-        (score >= 128 ? "strong section." : score >= 125 ? "at the midpoint — balanced." : "below midpoint; the weak-chapter list is your syllabus.")
+        (score >= 128 ? "strong section (official anchors: 128 ≈ 84th-90th percentile by section)." :
+         score >= 125 ? "at/near the section mean — official PR for 125 runs 44th-62nd by section; balanced." :
+         "below the section mean; the weak-chapter list is your syllabus.")
         + (frac <= 0.5 ? " Note: with the 0.25 chance floor, the section midpoint (125) corresponds to roughly 62-63% raw accuracy." : "");
     }
   }

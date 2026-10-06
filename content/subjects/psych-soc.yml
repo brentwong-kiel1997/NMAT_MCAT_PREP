@@ -39,3 +39,8 @@ chapters:
 - heading: Foundational Concept 10 (~5%)
   chapters:
   - 10a-social-inequality
+skill_mix:
+  s1: 35
+  s2: 45
+  s3: 10
+  s4: 10

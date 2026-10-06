@@ -34,3 +34,8 @@ chapters:
   - 5c-separation-and-purification-methods
   - 5d-biologically-relevant-molecules
   - 5e-chemical-thermodynamics-and-kinetics
+skill_mix:
+  s1: 35
+  s2: 45
+  s3: 10
+  s4: 10

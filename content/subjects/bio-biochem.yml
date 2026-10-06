@@ -34,3 +34,8 @@ chapters:
   chapters:
   - 3a-nervous-and-endocrine-systems
   - 3b-main-organ-systems
+skill_mix:
+  s1: 35
+  s2: 45
+  s3: 10
+  s4: 10

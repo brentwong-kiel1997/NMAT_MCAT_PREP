@@ -3,6 +3,22 @@
 
 {% block title %}{{ tutorial.title }} · {{ subject.name }} · Gabay{% endblock %}
 
+{% block head_extra %}
+{% if tutorial.key_equations %}
+<link rel="stylesheet" href="{% static 'vendor/katex/katex.min.css' %}">
+<script src="{% static 'vendor/katex/katex.min.js' %}" defer></script>
+<script src="{% static 'vendor/katex/contrib/auto-render.min.js' %}" defer></script>
+<script defer>
+window.addEventListener("DOMContentLoaded", function () {
+  var box = document.querySelector(".tut-key-eqs");
+  if (box && window.renderMathInElement) {
+    renderMathInElement(box, { delimiters: [{ left: "$", right: "$", display: false }] });
+  }
+});
+</script>
+{% endif %}
+{% endblock %}
+
 {% block body %}
 <div class="page-hero">
   <div class="page-hero-inner">
@@ -76,6 +92,17 @@
         {% for para in section.body %}
         <p{% if forloop.first %} class="tut-lead-para"{% endif %}>{{ para|rich }}</p>
         {% endfor %}
+        {% if section.misconception %}
+        <div class="tut-callout tut-misconception">
+          <strong>Misconception alert —</strong> {{ section.misconception|rich }}
+        </div>
+        {% endif %}
+        {% if section.connection %}
+        <div class="tut-callout tut-connection">
+          <strong>{{ section.connection_label|default:"How sciences interconnect" }} —</strong>
+          {{ section.connection|rich }}
+        </div>
+        {% endif %}
         {% if section.table %}
         <div class="table-wrap">
           {% if section.table.caption %}<p class="muted-inline">{{ section.table.caption }}</p>{% endif %}
@@ -189,6 +216,25 @@
         {% for question in tutorial.passage.questions %}
         {% include "portal/includes/tutorial_question.html" with q=question %}
         {% endfor %}
+      </article>
+      {% endif %}
+
+      {% if tutorial.key_equations %}
+      <article class="tut-key-eqs" id="key-equations">
+        <h2>Key equations</h2>
+        <table class="mini-table">
+          <thead><tr><th>Equation</th><th>Use it when</th></tr></thead>
+          <tbody>
+            {% for eq in tutorial.key_equations %}
+            <tr>
+              <td class="eq-cell">{{ eq.latex }}</td>
+              <td>{% if eq.when %}{{ eq.when|rich }}{% endif %}
+                {% if eq.symbols %}<span class="muted-inline">{{ eq.symbols }}</span>{% endif %}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <p class="note-line">Same formulas also live in <a href="{% url 'materials_formulas' tutorial.discipline %}">the formula sheet</a>.</p>
       </article>
       {% endif %}
 

@@ -1355,3 +1355,12 @@ details.tut-question[open] summary, details.tut-check-q[open] summary { margin-b
   .mini-table { display: block; overflow-x: auto; white-space: nowrap; }
   .trend-bar { min-width: 120px; }
 }
+
+/* tutorial key-equations table + OpenStax-style callouts */
+.tut-key-eqs .eq-cell { font-size: 1.02rem; }
+.tut-callout {
+  margin: .8rem 0; padding: .6rem .9rem; border-radius: 8px;
+  border: 1px solid var(--line, #ddd); background: var(--soft, #f6f7fb);
+}
+.tut-misconception { border-left: 4px solid #b00020; background: #fdecec; }
+.tut-connection { border-left: 4px solid #2e7d4f; background: #edf6ef; }

@@ -291,9 +291,22 @@ def mcat_section(request, slug):
     linked = [
         exams.get_shared(s) for s in section.get("shared_links", []) if exams.get_shared(s)
     ]
+    skill_mix = section.get("skill_mix") or (
+        exams.mcat_exam().get("skill_mix") or {})
+    skill_names = [
+        ("s1", "Knowledge of Scientific Concepts"),
+        ("s2", "Scientific Reasoning and Problem-Solving"),
+        ("s3", "Reasoning About Design and Execution (research)"),
+        ("s4", "Data-Based and Statistical Reasoning"),
+    ]
+    skill_bars = [
+        {"key": k, "name": name, "pct": skill_mix.get(k, 0)}
+        for k, name in skill_names if skill_mix.get(k)
+    ]
     ctx = {
         "exam": exams.mcat_exam(),
         "section": section,
+        "skill_bars": skill_bars,
         "linked_subjects": linked,
         "tutor_context": {
             "exam": "MCAT",
