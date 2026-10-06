@@ -17,6 +17,16 @@ sections:
   - Anode = oxidation, cathode = reduction; ==electrons flow anode to cathode through the external wire;
     anions migrate to anode in solution==. Standard cell potential E-cell = E-cathode - E-anode. In biological
     reactions the same rules apply to cellular respiration chains.
+  misconception: '"The anode is always the negative electrode, so in an electrolytic cell the anode must
+    be the reduction site." Electrode SIGN flips with the cell type; electrode JOB does not. In a galvanic
+    cell the anode is negative, in an electrolytic cell it is positive — but in both it is the site of
+    oxidation, because ''anode'' means where oxidation happens, not where the minus sign is. Red Cat and
+    An Ox hold in every cell you will meet.'
+  connection: 'Cellular respiration is this section stretched across a membrane: carbohydrate carbon ends
+    up oxidised to CO2 while oxygen ends up reduced to water, and the electron traffic is what the transport
+    chain banks as ATP. Chapter 1D · Bioenergetics and fuel metabolism follows the electrons; the bookkeeping
+    rules you just used on zinc and copper are the same ones.'
+  connection_label: How sciences interconnect
   check:
   - q: In any electrochemical cell, reduction occurs at the…
     options:
@@ -53,6 +63,16 @@ sections:
     law I = V/R. Series: same current, voltages add; parallel: same voltage, currents add.'
   - ==Series resistors R = R1 + R2; parallel 1/R = 1/R1 + 1/R2 (total less than each)==. Short circuits
     bypass resistance — huge current — the fuse/circuit breaker job.
+  misconception: '"Current gets used up as it flows through a bulb, so the wire leaving the bulb carries
+    less current than the wire entering it." Charge is not consumed — nothing in the bulb destroys it.
+    A bulb offers resistance, which costs voltage and delivers energy as light and heat, but the same
+    current that enters must leave: in a series loop there is only one value of I. What gets ''used up''
+    is electrical potential energy, not current.'
+  connection: 'Parallel wiring is why one blown lamp does not darken the house — every appliance gets
+    the full supply voltage and draws its own current. The cost shows up on one circuit: a space heater
+    plus a kettle plus a hair dryer each add their own current, the total climbs past what the wiring
+    can shed as I^2R heat, and the breaker does its job.'
+  connection_label: Real-world connection
   check:
   - q: A battery with EMF 9 V and internal resistance 1 ohm drives a 5 ohm load. The terminal voltage
       is…
@@ -100,6 +120,16 @@ sections:
   - '==RC transient: tau = RC; charging to 63% in one tau, discharging to 37%.== Formula V(t) = V0(1 -
     e^-t/tau) and V0 e^-t/tau. In defibrillation and neuroscience time-constant logic, tau sets how fast
     a membrane charges.'
+  misconception: '"Capacitors combine the same way resistors do, so two 3 uF capacitors in series give
+    6 uF." They combine in reverse: series capacitors add reciprocals, giving 1.5 uF here — less than
+    either one — while parallel capacitors add directly. Recognising the flip is worth a free mark, because
+    the exam always offers the un-flipped answer as a distractor.'
+  connection: 'A cell membrane is a capacitor in biology clothing: a thin insulating bilayer separating
+    two conducting fluids, roughly a microfarad per square centimetre. Because V = Q/C, that small capacitance
+    is why moving a pittance of charge shifts the membrane voltage by millivolts — the arithmetic that
+    chapter 3A · Nervous and endocrine systems uses for the resting potential and the action potential
+    spike.'
+  connection_label: How sciences interconnect
   check:
   - q: Two 3 uF capacitors in series give…
     options:
@@ -137,6 +167,16 @@ sections:
   - '==Fuses and breakers trip on excess CURRENT — I2R heating melts the element==. Practical ratchets:
     wire gauge limits current; extension cords overloading = fire hazard; the exam likes P vs R behavior
     under fixed V.'
+  misconception: '"The 100 W bulb is always the brighter one, whatever the circuit." Only at its rated
+    voltage. In series the two bulbs share the same current, so the higher-resistance bulb dissipates
+    more power — and the 60 W bulb is the higher-resistance one, since R = V^2/P at the rating. Swap the
+    circuit for parallel and the ranking flips. Brightness follows P = I^2R or V^2/R for the circuit you
+    actually built, not the label on the box.'
+  connection: 'I^2R heating is the physics behind a whole safety code: an undersized extension cord feeding
+    a heater warms along its whole length, a loose connection concentrates that heating at one point,
+    and that is where insulation fails and fires start. The fuse simply asks the same question the wire
+    asks — how much current — and sacrifices itself first.'
+  connection_label: Real-world connection
   check:
   - q: Two bulbs, 60 W and 100 W (designed for 120 V), placed in SERIES across 240 V. The brighter is…
     options:
@@ -176,6 +216,15 @@ sections:
   - ==The Goldman equation weights the Nernst terms by permeability==. Action potential — voltage-gated
     Na+ opens first (depolarize), K+ later (repolarize). ==The membrane capacitance sets how many ions
     shift per mV — RC thinking again==.
+  misconception: '"Raising external K+ pushes more potassium in from outside, so the resting potential
+    should get more negative." The resting potential is not set by how much K+ there is outside — it is
+    set by the GRADIENT. Tripling external K+ shrinks [out]/[in], the log term falls toward zero, and
+    the K+ equilibrium potential moves toward 0 mV: the cell depolarizes, exactly as the check item says.'
+  connection: 'The Nernst equation is the single most physics-loaded line in neuroscience: each ion carries
+    its own equilibrium voltage, and the membrane potential is just the permeability-weighted average
+    of them. Chapter 3A · Nervous and endocrine systems builds the action potential on exactly that base
+    — Na+ rushing toward +60 mV, K+ pulling back toward -94 mV.'
+  connection_label: How sciences interconnect
   check:
   - q: Raising the EXTERNAL K+ concentration (keeping internal fixed) makes the resting potential…
     options:
@@ -239,6 +288,31 @@ examples:
       A: Dropping the sign of z, which treats chloride as a cation and flips the polarity.
       B: Using z = -2, as though chloride were divalent.
       D: Reading the ratio as 1.1 instead of 11 — one power of ten lost.
+key_equations:
+- latex: $V = IR$
+  symbols: V potential difference (V), I current (A), R resistance (ohm)
+  when: any ohmic element — the first line of every circuit problem
+- latex: $V_{term} = \mathcal{E} - Ir$
+  symbols: V_term terminal voltage, Ε emf of the cell, I current, r internal resistance
+  when: a real battery under load — the terminal voltage is below the emf
+- latex: $R_{eq} = R_1 + R_2$
+  symbols: R_eq equivalent resistance, R₁ R₂ individual resistances
+  when: series — same current through both, voltages add
+- latex: $\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2}$
+  symbols: R_eq equivalent resistance, R₁ R₂ branch resistances
+  when: parallel — same voltage across both; two equal resistors halve R
+- latex: $U = \frac{1}{2}CV^{2}$
+  symbols: U stored energy (J), C capacitance (F), V voltage (V)
+  when: energy in a charged capacitor — defibrillator and flash-lamp sizing
+- latex: $P = IV = I^{2}R = \frac{V^{2}}{R}$
+  symbols: P power (W), I current (A), V voltage, R resistance
+  when: pick the form that matches the knowns; series favors high R, parallel low R
+- latex: $\tau = RC$
+  symbols: τ time constant (s), R resistance (ohm), C capacitance (F)
+  when: RC charging and discharging — 63% in one tau, 37% left after one tau
+- latex: $E = \frac{61\text{ mV}}{z}\log_{10}\frac{[\text{out}]}{[\text{in}]}$
+  symbols: E equilibrium potential (mV), z ion valence, [out]/[in] concentration ratio
+  when: Nernst at 37 °C — one ion at a time; sign follows z and the direction of the gradient
 key_points:
 - Red Cat; An Ox. Electrons flow anode → cathode outside.
 - Terminal voltage = EMF - I r.

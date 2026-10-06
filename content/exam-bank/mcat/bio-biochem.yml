@@ -23,6 +23,7 @@ items:
     D: The nucleolus assembles ribosomal subunits.
   chapter: cells-and-cellular-processes
   passage_id: ''
+  skill: s1
 - id: mcat-bb-035
   q: Which organelle contains catalase and oxidases that both generate and decompose hydrogen peroxide?
   choices:
@@ -39,6 +40,7 @@ items:
     D: Mitochondria generate ATP and are a source of reactive oxygen species but do not contain catalase.
   chapter: 2a-assemblies-of-molecules-cells-and-cell-groups
   passage_id: ''
+  skill: s1
 - id: mcat-bb-036
   q: A diploid cell with 2n = 24 has completed meiosis I but not meiosis II. What does each daughter cell
     contain?
@@ -56,6 +58,7 @@ items:
     C: Single-chromatid chromosomes appear only after meiosis II, when centromeres separate.
   chapter: 2c-cell-division-differentiation-specialization
   passage_id: ''
+  skill: s2
 - id: mcat-bb-037
   q: Crossing over between homologous chromosomes occurs during which stage?
   choices:
@@ -72,6 +75,7 @@ items:
     D: Telophase I reform nuclear envelopes and completes the reductional division.
   chapter: 2c-cell-division-differentiation-specialization
   passage_id: ''
+  skill: s1
 - id: mcat-bb-044
   q: Which amino acid, when oxidized, forms the disulfide bridge that stabilizes extracellular protein
     structure?
@@ -89,6 +93,7 @@ items:
     D: Proline is a cyclic imino acid that constrains the backbone; it has no thiol.
   chapter: 1a-proteins-and-amino-acids
   passage_id: ''
+  skill: s1
 - id: mcat-bb-045
   q: An amino acid has pKa1 = 2.3 (alpha-carboxyl) and pKa2 = 9.6 (alpha-amino) with no ionizable side
     chain. What is its isoelectric point?
@@ -106,6 +111,7 @@ items:
     C: 7.3 is close to physiological pH and has no relation to the pKa average.
   chapter: 1a-proteins-and-amino-acids
   passage_id: ''
+  skill: s1
 - id: mcat-bb-047
   q: During gastrulation, which embryonic germ layer gives rise to the nervous system?
   choices:
@@ -122,6 +128,7 @@ items:
     D: Trophoblast contributes to placental tissues, not to embryonic organs.
   chapter: development
   passage_id: ''
+  skill: s1
 - id: mcat-bb-049
   q: The pathway summary shown traces glycolysis from one molecule of glucose. What are its net products?
   choices:
@@ -139,6 +146,7 @@ items:
   chapter: 1d-bioenergetics-and-fuel-metabolism
   figure: items/mcat-bb-049-glycolysis.svg
   passage_id: ''
+  skill: s1
 - id: mcat-bb-053
   q: Which structural feature is characteristic of Gram-negative but not Gram-positive bacteria?
   choices:
@@ -155,6 +163,7 @@ items:
     D: Both groups typically carry a single circular chromosome.
   chapter: 2b-prokaryotes-and-viruses
   passage_id: ''
+  skill: s1
 - id: mcat-bb-054
   q: A virus with an RNA genome copies it into DNA that then integrates into the host chromosome. Which
     enzymatic requirement does this define?
@@ -172,6 +181,7 @@ items:
     C: RNA polymerase II requires a DNA template, so the RNA genome must first be reverse-transcribed.
   chapter: 2b-prokaryotes-and-viruses
   passage_id: ''
+  skill: s1
 - id: mcat-bb-055
   q: The rapid rising phase of a neuronal action potential is caused by which event?
   choices:
@@ -188,6 +198,7 @@ items:
     D: The pump maintains long-term ion gradients but is far too slow to shape the millisecond upstroke.
   chapter: 3a-nervous-and-endocrine-systems
   passage_id: ''
+  skill: s1
 - id: mcat-bb-056
   q: Which cells secrete insulin?
   choices:
@@ -205,6 +216,7 @@ items:
     D: Delta cells secrete somatostatin, which inhibits both insulin and glucagon release.
   chapter: 3b-main-organ-systems
   passage_id: ''
+  skill: s1
 - id: mcat-bb-057
   q: In the dissociation curves shown, vigorous exercise moves the oxygen-hemoglobin curve to the right
     of the resting curve. What does that shift accomplish?
@@ -223,6 +235,7 @@ items:
   chapter: 3b-main-organ-systems
   figure: items/mcat-bb-057-o2hb.svg
   passage_id: ''
+  skill: s4
 - id: mcat-bb-058
   q: How does antidiuretic hormone (ADH, vasopressin) increase water reabsorption?
   choices:
@@ -240,6 +253,7 @@ items:
       by ADH directly.
   chapter: life-processes-regulation-and-homeostasis
   passage_id: ''
+  skill: s1
 - id: mcat-bb-059
   q: A plant closes its stomata during a hot, dry afternoon. Which consequence follows?
   choices:
@@ -256,6 +270,7 @@ items:
     D: Light absorption by chlorophyll depends on illumination, not on stomatal opening.
   chapter: the-world-of-plants-and-animals
   passage_id: ''
+  skill: s2
 passages:
 - id: mcat-bb-p01
   text: 'Geneticists traced a rare form of retinal degeneration through a pedigree. In generation I, an
@@ -286,6 +301,7 @@ passages:
     chapter: genetics
     figure: items/mcat-bb-001-pedigree.svg
     passage_id: mcat-bb-p01
+    skill: s4
   - id: mcat-bb-002
     q: What are the genotypes of I-1 and I-2?
     choices:
@@ -302,6 +318,7 @@ passages:
       D: Both parents are described as unaffected, so neither can be aa.
     chapter: genetics
     passage_id: mcat-bb-p01
+    skill: s4
   - id: mcat-bb-003
     q: What is the probability that the unaffected son II-3 is a heterozygous carrier?
     choices:
@@ -318,6 +335,7 @@ passages:
       D: 3/4 is the probability of being unaffected (1 - 1/4), not the carrier probability.
     chapter: genetics
     passage_id: mcat-bb-p01
+    skill: s2
   - id: mcat-bb-004
     q: II-2 marries the unrelated, unaffected man II-6. Using the carrier frequencies given, what is the
       probability that their first child will be affected?
@@ -335,6 +353,7 @@ passages:
       D: 1/600 applies the 1/4 mendelian risk twice.
     chapter: genetics
     passage_id: mcat-bb-p01
+    skill: s2
   - id: mcat-bb-005
     q: Given a disease prevalence of 1/2,500, the carrier frequency in the population is closest to which
       value?
@@ -352,6 +371,7 @@ passages:
       C: 1/10 would require q near 0.053, giving a prevalence of about 1/360, far above 1/2,500.
     chapter: genetics
     passage_id: mcat-bb-p01
+    skill: s2
 - id: mcat-bb-p02
   text: 'A hydrolase was purified and assayed at 25 degrees C and pH 7.5. With no inhibitor present, Km
     = 0.5 mM and Vmax = 100 umol min^-1 mg^-1. The enzyme was then assayed at the same concentration of
@@ -379,6 +399,7 @@ passages:
     chapter: 1a-proteins-and-amino-acids
     figure: items/mcat-bb-006-saturation.svg
     passage_id: mcat-bb-p02
+    skill: s4
   - id: mcat-bb-007
     q: What does the data for Compound Y indicate about its mechanism?
     choices:
@@ -395,6 +416,7 @@ passages:
       D: Y does not change Km at all, so it does not interfere with substrate binding.
     chapter: 1a-proteins-and-amino-acids
     passage_id: mcat-bb-p02
+    skill: s4
   - id: mcat-bb-008
     q: In the absence of inhibitor, what is the reaction velocity at [S] = 0.5 mM?
     choices:
@@ -410,6 +432,7 @@ passages:
       D: 33 would follow from dividing Vmax by 3; at [S] = Km the ratio is 1:1 and v = Vmax/2.
     chapter: 1a-proteins-and-amino-acids
     passage_id: mcat-bb-p02
+    skill: s1
   - id: mcat-bb-009
     q: In the presence of Compound X, what is the velocity at [S] = 6.0 mM?
     choices:
@@ -426,6 +449,7 @@ passages:
       C: 50 is the velocity at [S] = Km,app (2.0 mM), not at 6.0 mM.
     chapter: 1a-proteins-and-amino-acids
     passage_id: mcat-bb-p02
+    skill: s2
   - id: mcat-bb-010
     q: What happens to the reaction velocity as [S] is raised to a very high level with each inhibitor
       present?
@@ -443,6 +467,7 @@ passages:
       D: The two profiles are reversed; substrate competition relieves X's inhibition but not Y's.
     chapter: 1a-proteins-and-amino-acids
     passage_id: mcat-bb-p02
+    skill: s2
   - id: mcat-bb-048
     q: On a Lineweaver-Burk plot, what pattern does a competitive inhibitor produce?
     choices:
@@ -459,6 +484,7 @@ passages:
       D: Inhibition never increases Vmax, so the y-intercept cannot decrease.
     chapter: 1a-proteins-and-amino-acids
     passage_id: mcat-bb-p02
+    skill: s1
 - id: mcat-bb-p03
   text: 'Uptake of solute S into cultured epithelial cells was measured at 37 degrees C. Uptake versus
     extracellular [S] rose steeply and then saturated, with Vmax = 100 (arbitrary units) and a half-maximal
@@ -487,6 +513,7 @@ passages:
       D: Temperature sensitivity indicates a protein-mediated process but not which molecules it can carry.
     chapter: 2a-assemblies-of-molecules-cells-and-cell-groups
     passage_id: mcat-bb-p03
+    skill: s3
   - id: mcat-bb-012
     q: Which conclusion follows from the Na+ replacement and ouabain results?
     choices:
@@ -507,6 +534,7 @@ passages:
       D: Bilayer diffusion would be Na+-independent and insensitive to ouabain.
     chapter: 2a-assemblies-of-molecules-cells-and-cell-groups
     passage_id: mcat-bb-p03
+    skill: s2
   - id: mcat-bb-013
     q: What is the uptake rate when [S] = 0.6 mM under control conditions?
     choices:
@@ -523,6 +551,7 @@ passages:
       D: 25 units would be one-quarter of Vmax, but 3x Km gives three-quarters of Vmax.
     chapter: 2a-assemblies-of-molecules-cells-and-cell-groups
     passage_id: mcat-bb-p03
+    skill: s2
   - id: mcat-bb-014
     q: The 12-fold drop in uptake at 4 degrees C is best explained by which of the following?
     choices:
@@ -541,6 +570,7 @@ passages:
         fall.
     chapter: 2a-assemblies-of-molecules-cells-and-cell-groups
     passage_id: mcat-bb-p03
+    skill: s2
   - id: mcat-bb-015
     q: Why does ouabain reduce uptake of S?
     choices:
@@ -562,6 +592,7 @@ passages:
       D: Raising intracellular Na+ lowers, not raises, the inward Na+ driving force available to the cotransporter.
     chapter: cells-and-cellular-processes
     passage_id: mcat-bb-p03
+    skill: s1
 - id: mcat-bb-p04
   text: Fibroblasts were incubated with either [3,4-14C]glucose, whose label ends up on the carboxyl carbon
     (C1) of pyruvate, or [1-14C]glucose, whose label ends up on the methyl carbon (C3) of pyruvate. 14CO2
@@ -588,6 +619,7 @@ passages:
       D: Succinate dehydrogenase oxidizes succinate to fumarate without any decarboxylation.
     chapter: 1d-bioenergetics-and-fuel-metabolism
     passage_id: mcat-bb-p04
+    skill: s1
   - id: mcat-bb-017
     q: Why does [1-14C]glucose fail to yield 14CO2 during the first turn of the citric acid cycle?
     choices:
@@ -607,6 +639,7 @@ passages:
       C: Citrate synthase makes a C-C bond and releases no CO2 at all.
     chapter: 1d-bioenergetics-and-fuel-metabolism
     passage_id: mcat-bb-p04
+    skill: s2
   - id: mcat-bb-018
     q: Excluding glycolysis, how many ATP equivalents does one glucose generate through the pyruvate dehydrogenase
       complex and the citric acid cycle?
@@ -625,6 +658,7 @@ passages:
       D: 32 adds the full glycolytic yield, but the question asks only for PDH plus the cycle.
     chapter: 1d-bioenergetics-and-fuel-metabolism
     passage_id: mcat-bb-p04
+    skill: s2
   - id: mcat-bb-019
     q: What is the net ATP yield from glycolysis alone by substrate-level phosphorylation?
     choices:
@@ -643,6 +677,7 @@ passages:
         here yields only 4 gross.
     chapter: 1d-bioenergetics-and-fuel-metabolism
     passage_id: mcat-bb-p04
+    skill: s1
   - id: mcat-bb-020
     q: If cyanide is added to the [3,4-14C]glucose cultures, what happens to 14CO2 production?
     choices:
@@ -662,6 +697,7 @@ passages:
         cofactors.
     chapter: 1d-bioenergetics-and-fuel-metabolism
     passage_id: mcat-bb-p04
+    skill: s2
 - id: mcat-bb-p05
   text: 'A diagnostic laboratory sequenced a 600-bp coding region of gene X from four patients. Patient
     1: codon 45 changed from 5''-CAG-3'' (glutamine) to 5''-TAG-3''. Patient 2: the same codon changed
@@ -687,6 +723,7 @@ passages:
       C: A frameshift requires an insertion or deletion, and the passage reports none.
     chapter: 1b-gene-to-protein
     passage_id: mcat-bb-p05
+    skill: s1
   - id: mcat-bb-022
     q: What type of mutation does patient 2 carry?
     choices:
@@ -703,6 +740,7 @@ passages:
       D: No nucleotides were inserted or deleted, so the reading frame is intact.
     chapter: 1b-gene-to-protein
     passage_id: mcat-bb-p05
+    skill: s1
   - id: mcat-bb-023
     q: How should patient 3's mutation be classified?
     choices:
@@ -720,6 +758,7 @@ passages:
       D: A one-base substitution cannot shift the reading frame; only indels can.
     chapter: 1b-gene-to-protein
     passage_id: mcat-bb-p05
+    skill: s1
   - id: mcat-bb-024
     q: What is the most likely phenotype of patient 4's cells in culture?
     choices:
@@ -738,6 +777,7 @@ passages:
         from post-replicative mismatch repair.
     chapter: 1b-gene-to-protein
     passage_id: mcat-bb-p05
+    skill: s2
 - id: mcat-bb-p06
   text: 'A 34-year-old woman reports fatigue, cold intolerance, constipation, dry skin, and a 6-kg weight
     gain over 8 months. Her pulse is 52/min. Laboratory results: TSH 48 mIU/L (reference 0.4-4.0), free
@@ -763,6 +803,7 @@ passages:
       D: Subclinical disease leaves free T4 within the reference range; here it is 0.3 ng/dL.
     chapter: 3a-nervous-and-endocrine-systems
     passage_id: mcat-bb-p06
+    skill: s4
   - id: mcat-bb-026
     q: What mechanism accounts for the first patient's elevated TSH?
     choices:
@@ -781,6 +822,7 @@ passages:
       C: The thyroid secretes T4 and T3 (and calcitonin from C cells), never TSH.
     chapter: 3a-nervous-and-endocrine-systems
     passage_id: mcat-bb-p06
+    skill: s1
   - id: mcat-bb-027
     q: How should the second patient, with TSH 0.05 and free T4 0.2, be interpreted?
     choices:
@@ -798,6 +840,7 @@ passages:
       D: Resistance leaves thyroid hormone elevated with nonsuppressed TSH; this patient has low T4.
     chapter: 3a-nervous-and-endocrine-systems
     passage_id: mcat-bb-p06
+    skill: s4
   - id: mcat-bb-028
     q: After several weeks of levothyroxine therapy, what change is expected in the first patient's TSH?
     choices:
@@ -817,6 +860,7 @@ passages:
       D: Peripheral 5'-deiodination converts the administered T4 to T3, so T4 is effective.
     chapter: 3a-nervous-and-endocrine-systems
     passage_id: mcat-bb-p06
+    skill: s2
 - id: mcat-bb-p07
   text: 'A single-pass membrane receptor contains a 36-residue alpha-helix that spans the lipid bilayer.
     Substituting aspartate for leucine 20, a residue near the middle of the helix, abolishes folding:
@@ -844,6 +888,7 @@ passages:
       D: Disulfide bonds form between cysteine thiols, and no cysteine was introduced.
     chapter: 2a-assemblies-of-molecules-cells-and-cell-groups
     passage_id: mcat-bb-p07
+    skill: s2
   - id: mcat-bb-030
     q: How long is the intact 36-residue transmembrane helix?
     choices:
@@ -861,6 +906,7 @@ passages:
         per residue.
     chapter: 1a-proteins-and-amino-acids
     passage_id: mcat-bb-p07
+    skill: s1
   - id: mcat-bb-031
     q: Which residues form the hydrogen bonds that stabilize this alpha-helix?
     choices:
@@ -878,6 +924,7 @@ passages:
       C: No covalent cross-links stabilize a helix; hydrogen bonding is noncovalent.
     chapter: 1a-proteins-and-amino-acids
     passage_id: mcat-bb-p07
+    skill: s1
   - id: mcat-bb-032
     q: A soluble relative of this receptor has 200 residues. What is its estimated mass?
     choices:
@@ -893,6 +940,7 @@ passages:
       D: 20,000 Da uses 100 Da per residue rather than the 110 Da given in the passage.
     chapter: 1a-proteins-and-amino-acids
     passage_id: mcat-bb-p07
+    skill: s1
   - id: mcat-bb-046
     q: Which amino acid most strongly disrupts an alpha-helix when placed in its middle?
     choices:
@@ -909,6 +957,7 @@ passages:
       D: Glutamate is helix-favoring; charged side chains are compatible with helices.
     chapter: 1a-proteins-and-amino-acids
     passage_id: mcat-bb-p07
+    skill: s1
 - id: mcat-bb-p08
   text: Rat liver mitochondria were suspended in a buffered, stirred chamber fitted with a Clark oxygen
     electrode and offered either succinate or palmitoyl-CoA as the oxidizable substrate; O2 consumption
@@ -935,6 +984,7 @@ passages:
       D: Only glycolysis occurs in the cytosol; oxidative phosphorylation is mitochondrial.
     chapter: cells-and-cellular-processes
     passage_id: mcat-bb-p08
+    skill: s1
   - id: mcat-bb-050
     q: Complete beta-oxidation of palmitoyl-CoA (C16:0) requires how many rounds of the pathway, and how
       many acetyl-CoA does it yield?
@@ -952,6 +1002,7 @@ passages:
       D: 7 acetyl-CoA omits the final two-carbon fragment released as the eighth acetyl-CoA.
     chapter: 1d-bioenergetics-and-fuel-metabolism
     passage_id: mcat-bb-p08
+    skill: s1
   - id: mcat-bb-051
     q: Why does the oxidation of FADH2 yield about 1.5 ATP while the oxidation of NADH yields about 2.5
       ATP?
@@ -970,6 +1021,7 @@ passages:
       D: FADH2 is readily reoxidized at Complex II, which is part of the transport chain.
     chapter: 1d-bioenergetics-and-fuel-metabolism
     passage_id: mcat-bb-p08
+    skill: s1
   - id: mcat-bb-052
     q: Addition of 2,4-dinitrophenol, a protonophore, to actively respiring mitochondria causes which
       change?
@@ -988,6 +1040,7 @@ passages:
       D: Both parameters change markedly, in opposite directions.
     chapter: 1d-bioenergetics-and-fuel-metabolism
     passage_id: mcat-bb-p08
+    skill: s2
 - id: mcat-bb-p09
   text: 'A genetics recitation section worked three inheritance problems drawn from the teaching greenhouse
     and the campus counseling clinic. Problem 1 concerned two unlinked loci governing seed color and seed
@@ -1017,6 +1070,7 @@ passages:
         here.
     chapter: genetics
     passage_id: mcat-bb-p09
+    skill: s1
   - id: mcat-bb-039
     q: Two parents heterozygous for an autosomal recessive allele (Aa x Aa) have a phenotypically unaffected
       child. What is the probability that this child is homozygous dominant (AA)?
@@ -1034,6 +1088,7 @@ passages:
       D: 2/3 is the probability that an unaffected child is a carrier, not homozygous dominant.
     chapter: genetics
     passage_id: mcat-bb-p09
+    skill: s2
   - id: mcat-bb-040
     q: A color-blind man (XrY) marries a woman who is a carrier (XRXr). What fraction of their children,
       counting sons and daughters equally, will be color-blind?
@@ -1051,6 +1106,7 @@ passages:
       D: 1/4 would apply if only one sex could be affected; here both sons and daughters are at risk.
     chapter: genetics
     passage_id: mcat-bb-p09
+    skill: s1
 - id: mcat-bb-p10
   text: In a gene-expression practical a bacterial cell-free system was primed with short synthetic DNA
     templates, radiolabeled NTPs, and all 20 amino acids; aliquots taken at intervals were run on a gel
@@ -1078,6 +1134,7 @@ passages:
       D: That is the template strand written antiparallel, not the RNA product.
     chapter: 1b-gene-to-protein
     passage_id: mcat-bb-p10
+    skill: s1
   - id: mcat-bb-042
     q: Which peptide is produced by translating 5'-AUG UUU UCA UAA-3'?
     choices:
@@ -1095,6 +1152,7 @@ passages:
       C: UUU is phenylalanine; UAU is tyrosine.
     chapter: 1b-gene-to-protein
     passage_id: mcat-bb-p10
+    skill: s1
   - id: mcat-bb-043
     q: Before a 100-amino-acid polypeptide is made, each amino acid must be charged onto its tRNA by an
       aminoacyl-tRNA synthetase. If charging costs 2 ATP equivalents per amino acid, how many ATP equivalents
@@ -1112,3 +1170,4 @@ passages:
       D: 400 charges each tRNA twice; each residue is activated once.
     chapter: 1b-gene-to-protein
     passage_id: mcat-bb-p10
+    skill: s1

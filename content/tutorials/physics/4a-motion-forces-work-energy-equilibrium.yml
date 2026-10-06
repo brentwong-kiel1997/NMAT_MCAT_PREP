@@ -16,6 +16,15 @@ sections:
     constant horizontal speed, free-fall vertical).'
   - Projectile patterns — ==time of flight depends only on vertical motion (and g); range = vx times flight
     time==. A launch at 45 degrees maximizes range (level ground, no air resistance).
+  misconception: '"The marble fired off the roof at 15 m/s takes longer to land than one just dropped,
+    because it is moving faster." The launch speed does not touch the timing at all. Gravity accelerates
+    only the vertical motion, so the fall time comes from h = (1/2)gt^2 alone — 2.0 s from 20 m whether
+    the marble leaves at 15 m/s, 150 m/s, or not at all. The horizontal velocity simply rides along unchanged.'
+  connection: Range = horizontal speed x flight time is the whole of throwing sports. Because flight time
+    is set by the vertical launch component and range by the horizontal one, the two are traded off exactly
+    at 45 degrees — which is why a shot-putter's optimum release is a little below 45 degrees once the
+    height of the shoulder above the landing field is included.
+  connection_label: Real-world connection
   check:
   - q: 'A ball thrown horizontally off a cliff: which changes as it falls?'
     options:
@@ -62,6 +71,17 @@ sections:
   - 'Inclined planes — ==decompose weight into components mg sin(theta) (parallel) and mg cos(theta) (perpendicular)
     — the normal balances the perpendicular one==. Atwood machines and elevators: T - mg = ma when accelerating
     upward, T = m(g + a).'
+  misconception: '"The table pushing up on a book is the reaction to the book''s weight, so the two can
+    cancel." Those two forces both act on the same book, and an action-reaction pair never does. The true
+    partner of the book''s weight is the gravitational pull the book exerts on the Earth; the true partner
+    of the table''s push is the book pressing down on the table. Pairs always live on different bodies
+    — that is why they can never cancel each other for one object.'
+  connection: 'The bucket check is the template for every ''what drives it'' question in the body: a 150
+    N tension beats a 100 N weight by 50 N, and the leftover sets the acceleration. Chapter 4B · Fluids
+    for circulation and gas exchange runs the identical argument on blood — a segment of fluid accelerates
+    only while upstream pressure exceeds downstream pressure, so a pressure difference plays the role
+    the rope tension plays here.'
+  connection_label: How sciences interconnect
   check:
   - q: A skier accelerates down a 30-degree frictionless slope at…
     options:
@@ -99,6 +119,16 @@ sections:
     conservative forces only==. Work-energy theorem: W-net = delta-KE.'
   - ==Power = W/t = F v==. Efficiency = useful output / input. In MCAT passages watch for which forces
     do work — the normal force and centripetal force NEVER do work (perpendicular to motion).
+  misconception: '"A force acting on a moving object always does work on it, so the centripetal force
+    on a rolling ball must be adding energy and speeding it up." Work needs a component of force along
+    the displacement. A centripetal force points at the centre, perpendicular to the motion at every instant,
+    so W = Fd cos(theta) = 0 and the speed never changes — direction changes, energy does not. The normal
+    force on a level floor fails the same test.'
+  connection: 'The efficiency line cuts both ways: an engine that turns fuel into motion at 25 percent
+    is doing what your muscles do. The missing energy is not destroyed — it leaves as heat, which is why
+    a hard climb in chapter 3B · Main organ systems demands both fuel delivery and sweating. Chapter 1D
+    · Bioenergetics and fuel metabolism prices that fuel in ATP.'
+  connection_label: How sciences interconnect
   check:
   - q: Centripetal force on a rolling ball does…
     options:
@@ -136,6 +166,15 @@ sections:
   - 'Rotational — ==torque tau = r F sin(theta), moment of inertia I = sum mr2, angular momentum L = I
     omega conserved without external torque==. Static equilibrium: sum F = 0 AND sum tau = 0 — the two
     conditions tested in lever problems.'
+  misconception: '"The 1200 kg car is heavier, so after the crash the wreck keeps moving at the striking
+    car''s original 20 m/s." Momentum is mass-weighted, not won by the bigger vehicle. Conservation gives
+    1200 x 20 = 2000 x v, so the locked pair share 12 m/s — the wrecked mass is larger, so its speed must
+    be smaller. The stationary car''s zero momentum counts too.'
+  connection: 'The ''explosive'' row of the collision map is how every rocket works: throw mass one way,
+    and conservation of momentum takes the craft the other. Nothing pushes against the ground or the air
+    — a spacecraft in empty space steers purely by hurling propellant backward, exactly as the two crash
+    bodies here share out momentum with no outside help.'
+  connection_label: Real-world connection
   check:
   - q: A diver tucks her body mid-air — she…
     options:
@@ -175,6 +214,16 @@ sections:
   - ==Static equilibrium of the forearm — the elbow joint force can exceed the load several-fold (lever
     short arm)==. This lever logic — how much muscle force is required to hold a weight — is a standing
     MCAT favorite.
+  misconception: '"To hold a 4 kg weight steady, the muscle must pull with about 40 N — the weight of
+    the load." The muscle pulls with 235 N, nearly six times the load, because it inserts only 5 cm from
+    the elbow while the weight acts at 30 cm. Torque balance forces the short lever arm to be paid for
+    with a large force, which is also why the joint itself ends up compressed well beyond the load it
+    is holding.'
+  connection: Stress = F/A is not just a number to compute — it is a signal the tissue responds to. Bone
+    laid down under repeated compressive stress thickens, and bone unloaded thins, which is why astronauts
+    lose bone mass in orbit. Chapter 2A · Assemblies of molecules, cells, and cell groups describes the
+    collagen scaffold that actually carries the load you are computing here.
+  connection_label: How sciences interconnect
   check:
   - q: The flexor muscle of the forearm acts 5 cm from the elbow while the load is at 30 cm. Holding a
       4 kg weight requires muscle force…
@@ -237,6 +286,31 @@ examples:
       A: The true weight — ignoring the acceleration entirely.
       B: Adding the acceleration term instead of subtracting it, which is the upward case.
       C: Reporting the net force ma instead of the normal force the scale actually measures.
+key_equations:
+- latex: $x = v_0 t + \frac{1}{2}at^{2}$
+  symbols: x displacement, t time, v₀ initial velocity, a acceleration
+  when: constant acceleration; free fall from rest is the special case h = (1/2)gt²
+- latex: $\sum F = ma$
+  symbols: ΣF net force (N), m mass (kg), a acceleration (m/s²)
+  when: every force balance — the bucket gives T - mg = ma, the elevator N - mg = ma
+- latex: $a = g\sin\theta$
+  symbols: a acceleration down the slope, g = 9.8 m/s², θ slope angle
+  when: frictionless incline — only mg sin(theta) drives the motion
+- latex: $W = Fd\cos\theta$
+  symbols: W work (J), F force (N), d displacement (m), θ angle between force and displacement
+  when: sign of work; perpendicular forces such as normal and centripetal give zero
+- latex: $mgh = \frac{1}{2}mv^{2}$
+  symbols: m mass, g = 9.8 m/s², h drop height, v impact speed
+  when: energy conservation for a fall — the mass cancels, v = √(2gh)
+- latex: $m_1 v_1 + m_2 v_2 = (m_1 + m_2)v$
+  symbols: m₁, m₂ masses; v₁, v₂ speeds before; v shared speed after
+  when: perfectly inelastic collision — the bodies lock together
+- latex: $L = I\omega$
+  symbols: L angular momentum, I moment of inertia, ω angular velocity
+  when: no external torque — tucking lowers I, so ω rises
+- latex: $\sigma = \frac{F}{A}$
+  symbols: σ stress (Pa), F force (N), A cross-sectional area (m²)
+  when: bone and tendon loading; strain ΔL/L and modulus E = stress/strain complete the set
 key_points:
 - 'Kinematics: three constant-a equations; vertical and horizontal independent.'
 - F = ma sums forces; action-reaction on different bodies.

@@ -17,6 +17,17 @@ sections:
   - '==Buoyancy: F_b = rho-fluid V-displaced g — the weight of the displaced fluid==. Objects with density
     below the fluid float; above sink. ==Fully submerged objects: apparent weight = object weight minus
     buoyancy==.'
+  misconception: '"A 40 kg object weighs about 392 N, so the water pushes up on it with about 392 N of
+    buoyancy." The buoyant force has nothing to do with what the object weighs — it equals the weight
+    of the FLUID the object displaces: 1000 x 0.05 x 9.8 = 490 N here, more than the object''s weight.
+    Two objects of the same volume get the same buoyancy even if one weighs ten times the other; the density
+    comparison is what decides sinking versus floating.'
+  connection: Pascal's principle is the only reason a 60 kg driver can stop a 1200 kg car. The pedal pushes
+    a small piston; the pressure, not the force, is what transmits undiminished through the brake fluid;
+    and the large pistons at the wheels multiply that pressure back into a force far larger than your
+    foot could ever supply. A hydraulic dentist's chair and a garage lift are the same check item with
+    different numbers.
+  connection_label: Real-world connection
   check:
   - q: A 40 kg object (volume 0.05 m3) fully submerged in water (rho = 1000 kg/m3) has buoyancy about…
     options:
@@ -63,6 +74,15 @@ sections:
     along a pipe (incompressible flow). Bernoulli: P + (1/2)rho v2 + rho g h = constant.'
   - '==In a horizontal tube with faster flow, pressure is LOWER (venturi) — the mechanism of flowmeters
     and aircraft lift==. Applied to circulation: narrowed stenosis → higher velocity → lower lateral pressure.'
+  misconception: '"When a pipe narrows, the flow slows down because it is being squeezed through a tight
+    spot." The opposite happens. Continuity — A1 v1 = A2 v2 — forces the speed to RISE where the area
+    falls, since the same volume per second must get through. What falls is the lateral pressure, which
+    Bernoulli trades away to pay for the extra speed. Squeezed faster, not squeezed slower.'
+  connection: This section is why a stethoscope can hear a narrowed heart valve. Blood accelerates through
+    the stenotic orifice and its lateral pressure drops; downstream, the fast jet becomes turbulent, and
+    that turbulence is the murmur. Chapter 3B · Main organ systems covers the clinical read-out of exactly
+    this flow physics.
+  connection_label: How sciences interconnect
   check:
   - q: Blood moves from the aorta (A = 3 cm2) into arterioles (total A = 20 cm2). The velocity…
     options:
@@ -102,6 +122,16 @@ sections:
     fractions==.'
   - Turbulence — ==Reynolds number Re = rho v d / eta; above ~2000 the flow turns turbulent== (heart murmurs,
     bruits). Viscosity of blood rises with hematocrit and falls with temperature.
+  misconception: '"Doubling a vessel''s radius doubles the flow through it." Doubling the radius multiplies
+    the flow sixteenfold, because Poiseuille''s law carries r^4 — the extra radius widens the low-friction
+    channel at the wall AND raises the average speed. This is also why halving the radius is catastrophic:
+    flow drops to one-sixteenth, not one-half.'
+  connection: 'The fourth power is the reason arterioles, not the aorta, are the body''s flow taps: they
+    are small enough that a small muscle contraction buys a large change in resistance. Chapter 3B · Main
+    organ systems uses that lever continuously — vasodilation to feed exercising muscle, vasoconstriction
+    to defend blood pressure in haemorrhage — and the same viscosity note explains why a raised hematocrit
+    makes the heart''s job harder.'
+  connection_label: How sciences interconnect
   check:
   - q: A vessel doubles its radius while pressure drop is constant. The flow rate…
     options:
@@ -140,6 +170,15 @@ sections:
   - ==Diffusion flux J = D A (delta-P)/d — the Fick law — thickness (pulmonary edema), area (emphysema),
     and gradient drive exchange==. ==Air is ~78% N2 and 21% O2; at 1 atm (760 mmHg) that gives PO2 = 160
     mmHg ambient, 100 in alveoli==.
+  misconception: '"At altitude the air contains a lower percentage of oxygen, and that is what leaves
+    the climber short of breath." The composition does not change: air is 21% O2 on a mountain and 21%
+    at sea level. What falls is the TOTAL barometric pressure, and since PO2 = mole fraction x total pressure,
+    the partial pressure falls with it. The molecules are the same fraction of fewer molecules per litre.'
+  connection: 'Henry''s law — dissolved gas proportional to gas pressure — is why a diver''s blood carries
+    far more nitrogen at depth than at the surface, and why surfacing too fast lets that gas bubble out
+    in joints and tissue: decompression sickness. The same law in reverse is the reason a sealed soda
+    fizzles when you crack the cap, and why climbers pre-acclimatize before an ascent.'
+  connection_label: Real-world connection
   check:
   - q: A mountain climber at high altitude has lower driving pressure for O2 diffusion because…
     options:
@@ -178,6 +217,16 @@ sections:
   - '==Hydrostatics added to respiration: intrapleural pressure ~ -4 mmHg maintains lung inflation==;
     pneumothorax equalizes it and the lung collapses. Breathing work and airway resistance set the energy
     cost of ventilation.'
+  misconception: '"Fluid escaping from a capillary means the capillary must be damaged or leaking abnormally."
+    Filtration at the arterial end is the normal design, not a fault: hydrostatic pressure pushes plasma
+    out there, and oncotic pressure from plasma proteins pulls it back at the venous end. The two nearly
+    balance; oedema is what appears when the balance tips — raised venous pressure, low protein, or a
+    blocked lymph drain.'
+  connection: 'The intrapleural pressure of about -4 mmHg is hydrostatics doing structural work: the chest
+    wall pulls out, the lung recoils in, and the slightly negative pressure between them holds the lung
+    inflated against the pleura. Chapter 3B · Main organ systems takes the clinical case — let air in
+    through a pneumothorax, the pressure equalizes, and the recoil wins, collapsing the lung.'
+  connection_label: How sciences interconnect
   check:
   - q: Capillary filtration at the arterial end exceeds reabsorption at the venous end because…
     options:
@@ -241,6 +290,32 @@ examples:
       B: Applying the radius ratio linearly instead of to the fourth power.
       C: Using an r^2 law (that is the velocity/continuity scaling).
       D: Using an r^3 law — one power short.
+key_equations:
+- latex: $P = P_0 + \rho g h$
+  symbols: P pressure at depth (Pa), P₀ surface pressure, ρ fluid density (kg/m³), g = 9.8 m/s², h depth
+    (m)
+  when: hydrostatic pressure — the IV drip hangs high to build pressure head
+- latex: $F_b = \rho_{fluid} V g$
+  symbols: F_b buoyant force (N), ρ_fluid density of the DISPLACED fluid, V displaced volume (m³)
+  when: buoyancy — weight of displaced fluid, independent of the object's own weight
+- latex: $F_2 = F_1\frac{A_2}{A_1}$
+  symbols: F₁ input force, A₁ input piston area, F₂ output force, A₂ output piston area
+  when: Pascal's principle — hydraulic lifts and brakes; pressure transmits, force multiplies
+- latex: $A_1 v_1 = A_2 v_2$
+  symbols: A cross-sectional area (m²), v mean speed (m/s)
+  when: continuity — narrower vessel, faster flow; v scales as 1/r² in a tube
+- latex: $P + \frac{1}{2}\rho v^{2} + \rho g h = \text{constant}$
+  symbols: P static pressure, ρ density, v speed, h height
+  when: Bernoulli — in a horizontal tube, pressure falls where flow speeds up (venturi)
+- latex: $Q = \frac{\pi \Delta P r^{4}}{8 \eta L}$
+  symbols: Q flow rate (m³/s), ΔP pressure drop, r vessel radius, η viscosity, L vessel length
+  when: Poiseuille — radius to the fourth power; doubling r gives 16x the flow
+- latex: $P_{O_2} = X_{O_2} P_{tot}$
+  symbols: P_O₂ partial pressure of oxygen, X_O₂ mole fraction (0.21 in air), P_tot total pressure
+  when: Dalton's law — altitude cuts total pressure, so PO2 falls with it
+- latex: $MAP = Q \times R$
+  symbols: MAP mean arterial pressure, Q cardiac output, R total peripheral resistance
+  when: cardiovascular control — with R fixed, pressure tracks flow
 key_points:
 - P = P0 + rho g h; buoyancy = displaced fluid weight.
 - Continuity A v constant; Bernoulli pressure falls where flow speeds.

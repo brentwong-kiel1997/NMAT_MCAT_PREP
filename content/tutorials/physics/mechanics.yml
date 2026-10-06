@@ -17,6 +17,16 @@ sections:
   - Free fall is the classic case — a = g = 9.8 m/s2 downward, independent of mass (neglect air). ==At
     the peak of projectile motion, vertical velocity is zero but acceleration is still g== — a favorite
     trap.
+  misconception: '"The ball stops at the top of its flight, so at that instant the forces on it must be
+    balanced and its acceleration is zero." Stopping is not the same as being in equilibrium. At the peak
+    the velocity is momentarily zero while gravity is still pulling down at g, which is exactly why the
+    ball does not hover there — it is already accelerating back toward the ground. Equilibrium means zero
+    **acceleration**, not zero **velocity**; an object with a = 0 keeps whatever velocity it has.'
+  connection: 'A projectile''s vertical and horizontal motions are independent, so a bullet fired horizontally
+    and one dropped at the same instant hit the ground together. The same split shows up in physiology:
+    blood leaving the heart horizontally in chapter 4B · Fluids for circulation and gas exchange keeps
+    its downward fall separate from its forward push, which is why flow problems there are solved one
+    axis at a time.'
   check:
   - q: A ball thrown straight up. At its highest point…
     options:
@@ -54,6 +64,16 @@ sections:
   - 'Free-body diagrams settle most force questions — draw once, resolve along axes. ==Inclined planes:
     decompose weight into mg sin(theta) (down the slope) and mg cos(theta) (into the surface)==; friction
     then scales with the normal mg cos theta.'
+  misconception: '"A crate sliding across the floor at steady speed needs a forward force bigger than
+    friction to keep it going." Motion needs no force — only change in motion does. Constant velocity
+    means the forces already cancel, so the pull equals the friction exactly; the net force is zero. Forces
+    cause acceleration, and the second check item only gives the crate an acceleration of 2.0 m/s² because
+    the 60 N pull beats the 20 N friction by 40 N.'
+  connection: 'The free-body diagram is a physics tool that medicine borrows wholesale: a physiotherapist
+    estimating the load on a healing tendon draws exactly the same arrows you do here. Chapter 4A · Motion,
+    forces, work, energy, equilibrium applies the identical force balance to joint loads and to the normal
+    force a joint must supply during stance and gait.'
+  connection_label: How sciences interconnect
   check:
   - q: A crate slides at constant velocity down an incline. The component mg sin(theta) equals…
     options:
@@ -99,6 +119,17 @@ sections:
   - 'Gravitational PE = mgh, spring PE = (1/2)kx2, KE = (1/2)mv2. ==Power = work/time = F v== — a car''s
     engine power equals thrust times speed. Efficient exam shortcut: compare energies, not force time
     histories.'
+  misconception: '"Carrying a heavy box across a level room is hard work, so physics says I do a lot of
+    work on it." Muscular effort is not the same as mechanical work on the box. The force you exert is
+    vertical (to hold the box up) while the displacement is horizontal, so W = Fd cos(theta) = Fd cos
+    90° = 0 — no energy is transferred to the box. You still get tired because your muscles dissipate
+    energy internally, but the box''s kinetic and potential energy do not change.'
+  connection: The runner in the check item lifts her 60 kg body 4.0 m in 8.0 s, an output near 300 W —
+    chemical energy from food converted to gravitational potential energy at that rate. Chapter 1D · Bioenergetics
+    and fuel metabolism follows the same energy one step back, into the ATP yield that pays for the climb,
+    and chapter 3B · Main organ systems tracks the oxygen delivery that sets how long the rate can be
+    sustained.
+  connection_label: How sciences interconnect
   check:
   - q: Which does NO work while the object moves along a level floor?
     options:
@@ -135,6 +166,16 @@ sections:
   - Collisions — perfectly inelastic (stick together, KE lost), elastic (KE conserved; relative speed
     reverses). ==In equal-mass head-on elastic collisions the objects swap velocities==. Center of mass
     moves at constant velocity with no external force.
+  misconception: '"When two cars crumple and stop together, the momentum of the crash is destroyed." Nothing
+    is destroyed. With no external impulse, total momentum is conserved in every collision, perfectly
+    inelastic ones included — what disappears is kinetic energy, converted into the work of crumpling
+    metal, sound, and heat. Momentum conservation survives; mechanical energy does not, and that distinction
+    is the whole of the collision bookkeeping.'
+  connection: 'The same momentum change can be delivered gently or brutally: F = delta-p / delta-t. An
+    airbag, a crumple zone, or a catcher pulling the mitt backward does not reduce delta-p by much — it
+    stretches the contact time, so the peak force on the passenger or the palm drops by the same factor.
+    That is the entire engineering argument for soft landing surfaces under playground equipment.'
+  connection_label: Real-world connection
   check:
   - q: In a perfectly inelastic collision…
     options:
@@ -173,6 +214,16 @@ sections:
   - Static equilibrium requires BOTH sum F = 0 and sum tau = 0 — choose a pivot to eliminate unknowns.
     ==The lever arm is the perpendicular distance from pivot to the force line== — take moments about
     the contact point to cancel support forces.
+  misconception: '"The skater''s spin speeds up because pulling in her arms gives her extra angular momentum."
+    No push is involved. With zero net external torque her angular momentum L = I omega cannot change;
+    pulling mass toward the axis lowers I, so omega must rise to keep L constant. The spin rate changes
+    because of conservation, not because anything added rotation.'
+  connection: 'Torque explains why your biceps works so hard for such modest loads: it inserts only a
+    few centimetres from the elbow pivot, so a small lever arm r forces a large muscle force F to balance
+    the same torque tau = rF sin(theta). Chapter 3B · Main organ systems and chapter 4A · Motion, forces,
+    work, energy, equilibrium both lean on this joint-mechanics picture when they discuss leverage in
+    limbs and the loads bones must carry.'
+  connection_label: How sciences interconnect
   check:
   - q: A figure skater pulls her arms in while spinning — she…
     options:
@@ -234,6 +285,32 @@ examples:
       A: Using sqrt(2gh) alone and dropping the initial horizontal speed.
       C: Adding the horizontal and vertical speeds instead of combining them in quadrature.
       D: Quoting the launch speed and ignoring the fall.
+key_equations:
+- latex: $v = v_0 + at$
+  symbols: v₀ velocity at time t, v₀ initial velocity, a acceleration
+  when: constant acceleration only — pick the equation that matches your knowns
+- latex: $x = v_0 t + \frac{1}{2}at^{2}$
+  symbols: x displacement, t time, v₀ initial velocity, a acceleration
+  when: displacement under constant acceleration, when time is given
+- latex: $v^{2} = v_0^{2} + 2ax$
+  symbols: v final speed, v₀ initial speed, a acceleration, x displacement
+  when: no time in the problem — the free-fall and ramp shortcut
+- latex: $\sum F = ma$
+  symbols: ΣF vector sum of ALL forces (N), m mass (kg), a acceleration (m/s²)
+  when: every force question — equilibrium is the special case a = 0
+- latex: $W = Fd\cos\theta$
+  symbols: W work (J), F force (N), d displacement (m), θ angle between F and d
+  when: energy added by a force at any angle; perpendicular forces do zero work
+- latex: $P = \frac{W}{t} = Fv$
+  symbols: P power (W), W work (J), t time (s), F force, v speed
+  when: rate of energy transfer — climbing, lifting, engine output
+- latex: $\Delta p = F\Delta t$
+  symbols: Δp momentum change = mΔv (kg·m/s), F average force (N), Δt contact time (s)
+  when: 'impulse — collisions, catches, airbags: stretch the time to cut the force'
+- latex: $\tau = rF\sin\theta$
+  symbols: τ torque (N·m), r distance from pivot to the force line, F force (N), θ angle to the lever
+    arm
+  when: static equilibrium and joint or lever problems — take moments about a chosen pivot
 key_points:
 - 'Kinematics: pick v0, v, a, x, t equation to match knowns.'
 - 'At projectile peak: v=0, a=g.'

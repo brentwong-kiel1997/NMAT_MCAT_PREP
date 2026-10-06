@@ -24,6 +24,7 @@ items:
     C: Nothing aversive is removed; a desirable consequence (food) is added, which is positive reinforcement.
   chapter: psychology
   passage_id: ''
+  skill: s1
 - id: mcat-ps-009
   q: Rats allowed to wander a maze with no food reward later navigated it efficiently as soon as food
     was introduced, performing as well as rats that had been rewarded throughout. This result is best
@@ -44,6 +45,7 @@ items:
       learning stays hidden.
   chapter: psychology
   passage_id: ''
+  skill: s1
 - id: mcat-ps-013
   q: A student who has not eaten in 12 hours and who has just been threatened by a roommate declines an
     invitation to give a speech that would earn praise. Maslow's hierarchy of needs best explains this
@@ -64,6 +66,7 @@ items:
       they are met.
   chapter: psychology
   passage_id: ''
+  skill: s1
 - id: mcat-ps-014
   q: A novice surgeon performing a complicated unfamiliar procedure does best under relatively low arousal,
     whereas an experienced surgeon doing a routine procedure performs best under higher arousal. This
@@ -85,6 +88,7 @@ items:
       arousal is low.
   chapter: psychology
   passage_id: ''
+  skill: s1
 - id: mcat-ps-015
   q: A colleague is always prepared, keeps a detailed calendar, double-checks her work, and has never
     missed a deadline. In the five-factor model her most salient trait is
@@ -105,6 +109,7 @@ items:
       indicate.
   chapter: 7a-individual-influences-on-behavior
   passage_id: ''
+  skill: s1
 - id: mcat-ps-016
   q: Before a difficult procedure, a resident says, “I have practiced this 40 times and I can get the
     line in even if the patient moves.” Bandura would describe this belief as
@@ -125,6 +130,7 @@ items:
       a specific task.
   chapter: 8a-self-identity
   passage_id: ''
+  skill: s1
 - id: mcat-ps-017
   q: Fluoxetine raises synaptic serotonin availability by
   choices:
@@ -144,6 +150,7 @@ items:
     A: Dopamine reuptake is the target of different drugs; SSRIs are selective for the serotonin transporter.
   chapter: psychology
   passage_id: ''
+  skill: s1
 - id: mcat-ps-018
   q: A hospitalized patient with schizophrenia shows poverty of speech, flat affect, and avolition but
     no hallucinations. These features are classified as
@@ -164,6 +171,7 @@ items:
       not disorganization.
   chapter: psychology
   passage_id: ''
+  skill: s1
 - id: mcat-ps-019
   q: A therapist has a client with panic disorder keep a thought record, examine the evidence for the
     belief that “my racing heart means I am dying,” and practice interoceptive exposure exercises between
@@ -185,6 +193,7 @@ items:
       restructures specific beliefs.
   chapter: psychology
   passage_id: ''
+  skill: s1
 - id: mcat-ps-020
   q: In a study, Black participants performed worse on a difficult verbal test only when it was described
     as diagnostic of intellectual ability; performance matched that of white participants when the same
@@ -206,6 +215,7 @@ items:
       with favoritism effects.
   chapter: 8b-social-thinking
   passage_id: ''
+  skill: s1
 - id: mcat-ps-021
   q: Two rival groups at a summer camp stop fighting only after camp staff arrange a broken water system
     that both groups must repair together to restore supply. Prejudice between them declines most because
@@ -225,6 +235,7 @@ items:
     A: Scapegoating increases out-group hostility, the opposite of the observed decline.
   chapter: 8c-social-interactions
   passage_id: ''
+  skill: s1
 - id: mcat-ps-022
   q: At a dinner, a guest eats rice with his hands; the host is mildly amused. A different guest defaces
     a memorial plaque and the community reacts with outrage and formal sanctions. The contrast illustrates
@@ -245,6 +256,7 @@ items:
       consequences.
   chapter: sociology-and-anthropology
   passage_id: ''
+  skill: s1
 - id: mcat-ps-023
   q: The daughter of a plumber completes medical school and becomes a surgeon. Her change of position
     in the stratification system is best described as
@@ -265,6 +277,7 @@ items:
       positions of equal standing.
   chapter: 10a-social-inequality
   passage_id: ''
+  skill: s1
 - id: mcat-ps-024
   q: A sociologist notes that public schools in one district provide supervised childcare, which lets
     parents work full-time, although no law or policy says that is a school's purpose. In Merton's terms
@@ -286,6 +299,7 @@ items:
       and unintended functions.
   chapter: 9a-understanding-social-structure
   passage_id: ''
+  skill: s1
 - id: mcat-ps-026
   q: A young entrepreneur accepts her society's goal of becoming wealthy but pursues it through fraudulent
     investment schemes. In Merton's strain theory her adaptation is
@@ -305,6 +319,7 @@ items:
       unconventional means.
   chapter: sociology-and-anthropology
   passage_id: ''
+  skill: s1
 passages:
 - id: mcat-ps-p01
   text: A researcher advertised a study on “memory and learning” and recruited 40 adult men, each paid
@@ -346,6 +361,7 @@ passages:
       B: The scripted protests were the same tape in every condition, so they cannot explain the difference.
     chapter: 7b-social-processes-that-influence-behavior
     passage_id: mcat-ps-p01
+    skill: s3
   - id: mcat-ps-028
     q: The bar graph summarizes the percentage of participants who continued to 450 V in each variation.
       Which result most strongly supports the claim that the visible behavior of peers, not the demands
@@ -367,6 +383,7 @@ passages:
     chapter: 7b-social-processes-that-influence-behavior
     figure: items/mcat-ps-028-milgram.svg
     passage_id: mcat-ps-p01
+    skill: s4
   - id: mcat-ps-029
     q: A participant begins the study but the experimenter takes a phone call and gives instructions to
       continue from another room; obedience drops sharply. The best explanation for this drop is
@@ -388,6 +405,7 @@ passages:
         and the authority is merely less present.
     chapter: 7b-social-processes-that-influence-behavior
     passage_id: mcat-ps-p01
+    skill: s2
   - id: mcat-ps-030
     q: Which ethical concern is most directly raised by the design described in the passage?
     choices:
@@ -408,6 +426,7 @@ passages:
         its purpose.
     chapter: psychology
     passage_id: mcat-ps-p01
+    skill: s3
   - id: mcat-ps-031
     q: A television commentator, seeing the results, says that ordinary Americans must be secretly cruel
       and that the volunteers were simply sadists. The commentator's reasoning illustrates
@@ -429,6 +448,7 @@ passages:
         common it is.
     chapter: 8b-social-thinking
     passage_id: mcat-ps-p01
+    skill: s1
 - id: mcat-ps-p02
   text: Participants in a study on “personal problems under group discussion” sat alone in small cubicles
     and took part in a conversation over intercoms, taking turns speaking. Each participant believed that
@@ -465,6 +485,7 @@ passages:
         others were present.
     chapter: 7b-social-processes-that-influence-behavior
     passage_id: mcat-ps-p02
+    skill: s3
   - id: mcat-ps-033
     q: A participant hears the seizure, notices the intercom is silent, and remains seated, later explaining
       that he assumed no one else thought it was an emergency. This reasoning illustrates
@@ -486,6 +507,7 @@ passages:
         as an emergency at all.
     chapter: 7b-social-processes-that-influence-behavior
     passage_id: mcat-ps-p02
+    skill: s1
   - id: mcat-ps-034
     q: Comparing the condition with no other bystanders to the condition with four others, helping fell
       from 85% to 31% and latency lengthened. The mechanism most directly responsible for this drop is
@@ -506,6 +528,7 @@ passages:
         indifference to victims.
     chapter: 8c-social-interactions
     passage_id: mcat-ps-p02
+    skill: s2
   - id: mcat-ps-035
     q: One participant who did not help reported, “I wanted to do something, but I had no idea what to
       do or whether I could even reach the room.” In Latané and Darley's five-step model of helping, which
@@ -524,6 +547,7 @@ passages:
       A: He felt the obligation to do something; what stalled him was not knowing how.
     chapter: 8c-social-interactions
     passage_id: mcat-ps-p02
+    skill: s1
   - id: mcat-ps-036
     q: Which intervention, drawn directly from these findings, would most increase the chance that a victim
       receives help in a crowded public place?
@@ -542,6 +566,7 @@ passages:
       D: 'The data show the opposite: helping falls as the number of apparent witnesses rises.'
     chapter: 8c-social-interactions
     passage_id: mcat-ps-p02
+    skill: s2
 - id: mcat-ps-p03
   text: 'Eight researchers with no psychiatric history gained secret admission to hospitals by reporting
     that they had heard voices saying the words “empty,” “hollow,” and “thud.” Apart from this symptom
@@ -578,6 +603,7 @@ passages:
       C: That account explains the social usefulness of deviance, not why a label survived normal behavior.
     chapter: sociology-and-anthropology
     passage_id: mcat-ps-p03
+    skill: s1
   - id: mcat-ps-038
     q: Staff recorded the pseudopatients' routine note-taking in their charts as “engages in writing behavior.”
       This observation best illustrates
@@ -597,6 +623,7 @@ passages:
         meant.
     chapter: 8b-social-thinking
     passage_id: mcat-ps-p03
+    skill: s1
   - id: mcat-ps-039
     q: In the study's second phase, staff were warned that impostors might seek admission and subsequently
       judged 41 genuine patients to be pseudopatients, although no impostor presented. This outcome demonstrates
@@ -616,6 +643,7 @@ passages:
       D: Nothing in the warning threatened a freedom; it created an expectation that distorted judgment.
     chapter: 8b-social-thinking
     passage_id: mcat-ps-p03
+    skill: s2
   - id: mcat-ps-040
     q: Which methodological characterization of the pseudopatient study is accurate?
     choices:
@@ -636,6 +664,7 @@ passages:
         studies.
     chapter: psychology
     passage_id: mcat-ps-p03
+    skill: s3
   - id: mcat-ps-041
     q: A former patient in the study later reports avoiding medical care for years because she feared
       being seen as “formerly insane.” Her experience best illustrates
@@ -656,6 +685,7 @@ passages:
         to her.
     chapter: sociology-and-anthropology
     passage_id: mcat-ps-p03
+    skill: s1
 - id: mcat-ps-p04
   text: 'Investigators enrolled 4,500 adults aged 45-64 from a metropolitan area and followed them annually
     for ten years, measuring income, education, health behaviors, and clinical outcomes. Household income
@@ -693,6 +723,7 @@ passages:
         strata.
     chapter: 10a-social-inequality
     passage_id: mcat-ps-p04
+    skill: s4
   - id: mcat-ps-043
     q: In this cohort, adults in the lowest income quartile experienced uncontrolled hypertension at 2.4
       times the rate of adults in the highest quartile. The most defensible interpretation is…
@@ -712,6 +743,7 @@ passages:
         rather than attributing deaths.
     chapter: 10a-social-inequality
     passage_id: mcat-ps-p04
+    skill: s4
   - id: mcat-ps-044
     q: Adjusting for smoking, diet, and exercise reduced the income-hypertension association by about
       30%, leaving most of the gap intact. The best interpretation is that
@@ -731,6 +763,7 @@ passages:
       C: The association was reduced by 30%, meaning roughly 70% remained after adjustment.
     chapter: 10a-social-inequality
     passage_id: mcat-ps-p04
+    skill: s4
   - id: mcat-ps-045
     q: The investigators argue that income and education remain powerful predictors of mortality across
       many diseases and eras because they confer knowledge, money, power, and social connections that
@@ -752,6 +785,7 @@ passages:
         protecting health across many risks.
     chapter: 10a-social-inequality
     passage_id: mcat-ps-p04
+    skill: s1
   - id: mcat-ps-046
     q: Which statement about the design of this study is accurate?
     choices:
@@ -771,6 +805,7 @@ passages:
       C: Data were collected annually for ten years, which is longitudinal rather than cross-sectional.
     chapter: psychology
     passage_id: mcat-ps-p04
+    skill: s3
 - id: mcat-ps-p05
   text: A 28-year-old client sought treatment for a disabling fear of dogs that began at age nine, when
     she was knocked down and bitten by a neighbor's German shepherd and needed 14 stitches. Since then
@@ -807,6 +842,7 @@ passages:
         a physiological response.
     chapter: psychology
     passage_id: mcat-ps-p05
+    skill: s1
   - id: mcat-ps-048
     q: Which sequence correctly describes the order of steps in this treatment?
     choices:
@@ -826,6 +862,7 @@ passages:
       D: The protocol begins with imagined scenes from the hierarchy and adds in-vivo work later.
     chapter: psychology
     passage_id: mcat-ps-p05
+    skill: s1
   - id: mcat-ps-049
     q: In behavioral terms, the dog bite that began the client's fear at age nine, and the fear she now
       feels when a dog approaches, are respectively the
@@ -846,6 +883,7 @@ passages:
         so neither label fits.
     chapter: psychology
     passage_id: mcat-ps-p05
+    skill: s2
   - id: mcat-ps-050
     q: A colleague proposes instead to take the client straight into a room with three large dogs and
       remain there until her anxiety subsides, without any relaxation training. This alternative is
@@ -865,6 +903,7 @@ passages:
         on extinction, not punishment.
     chapter: 7c-attitude-and-behavior-change
     passage_id: mcat-ps-p05
+    skill: s1
 - id: mcat-ps-p06
   text: Sixteen healthy volunteers aged 21-34 lived for 14 days in a windowless sleep laboratory with
     fixed 23:00 lights-out and 07:00 wake times, no caffeine after 14:00, and standardized meals. In a
@@ -902,6 +941,7 @@ passages:
       B: That system regulates arousal level rather than the circadian phase of melatonin secretion.
     chapter: psychology
     passage_id: mcat-ps-p06
+    skill: s1
   - id: mcat-ps-052
     q: Each participant completed both the blue-light condition and the dim-light condition on separate
       nights. The main methodological advantage of this crossover design is that
@@ -923,6 +963,7 @@ passages:
         variability is removed.
     chapter: psychology
     passage_id: mcat-ps-p06
+    skill: s3
   - id: mcat-ps-053
     q: One participant shows normal circadian melatonin timing but reports profound daytime sleepiness
       after two nights of only four hours of sleep. Which distinction best explains this dissociation?
@@ -945,6 +986,7 @@ passages:
         REM.
     chapter: psychology
     passage_id: mcat-ps-p06
+    skill: s2
   - id: mcat-ps-054
     q: Given the observed 78-minute delay in melatonin onset after evening blue-light exposure, the results
       are best summarized as
@@ -966,6 +1008,7 @@ passages:
         than reported.
     chapter: 6c-responding-to-the-world
     passage_id: mcat-ps-p06
+    skill: s4
   - id: mcat-ps-055
     q: Which statement best evaluates the operationalization of the dependent variable in this study?
     choices:
@@ -986,6 +1029,7 @@ passages:
         the study.
     chapter: psychology
     passage_id: mcat-ps-p06
+    skill: s3
 - id: mcat-ps-p07
   text: 'Demographers assembled the following series for Country X, a country that industrialized over
     the twentieth century. Crude birth rate per 1,000 population: 42 (1900), 41 (1920), 40 (1940), 34
@@ -1019,6 +1063,7 @@ passages:
       B: Growth can continue for decades despite sub-replacement fertility because of population momentum.
     chapter: 9b-demographic-characteristics-and-processes
     passage_id: mcat-ps-p07
+    skill: s1
   - id: mcat-ps-056
     q: The graph plots Country X's crude birth and death rates from 1900 to 2020. Between 1900 and 1940
       the death rate fell from 38 to 20 per 1,000 while the birth rate stayed near 40 per 1,000 and the
@@ -1039,6 +1084,7 @@ passages:
     chapter: 9b-demographic-characteristics-and-processes
     figure: items/mcat-ps-056-transition.svg
     passage_id: mcat-ps-p07
+    skill: s4
   - id: mcat-ps-057
     q: As the graph of birth and death rates shows, what accounted for Country X's population growth between
       1900 and 1940?
@@ -1060,6 +1106,7 @@ passages:
     chapter: 9b-demographic-characteristics-and-processes
     figure: items/mcat-ps-056-transition.svg
     passage_id: mcat-ps-p07
+    skill: s4
   - id: mcat-ps-058
     q: By 2020 Country X's total fertility rate was 1.7, below replacement, yet the population was still
       growing. How is this possible?
@@ -1080,6 +1127,7 @@ passages:
         outnumber them.
     chapter: 9b-demographic-characteristics-and-processes
     passage_id: mcat-ps-p07
+    skill: s2
   - id: mcat-ps-059
     q: If Country X's total fertility rate stays near 1.7 while life expectancy continues to rise, the
       most likely consequence for its society is
@@ -1099,6 +1147,7 @@ passages:
       C: Longer life combined with fewer births raises, not lowers, the median age.
     chapter: 9b-demographic-characteristics-and-processes
     passage_id: mcat-ps-p07
+    skill: s2
 - id: mcat-ps-p08
   text: A study of emotional experience recruited two groups. The first consisted of patients with high
     spinal cord injuries that had severed most of the ascending autonomic feedback from the body to the
@@ -1133,6 +1182,7 @@ passages:
         as a pounding heart.
     chapter: 6c-responding-to-the-world
     passage_id: mcat-ps-p08
+    skill: s1
   - id: mcat-ps-011
     q: Cannon objected to the James-Lange view partly by noting that patients with spinal cord injuries
       that cut off most bodily feedback still reported feeling emotion. This evidence is most consistent
@@ -1154,6 +1204,7 @@ passages:
         brain alongside arousal, not downstream of it.
     chapter: 6c-responding-to-the-world
     passage_id: mcat-ps-p08
+    skill: s2
   - id: mcat-ps-012
     q: In Schachter and Singer's study, participants injected with epinephrine but not told of its effects
       reported the emotion displayed by a confederate in the room, while informed participants reported
@@ -1175,6 +1226,7 @@ passages:
         the confederate's influence.
     chapter: 6c-responding-to-the-world
     passage_id: mcat-ps-p08
+    skill: s2
 - id: mcat-ps-p09
   text: An undergraduate laboratory course in cognition ran four classic paradigms over the term. In the
     first, students lifted a standard weight and a comparison weight and reported whether they could tell
@@ -1206,6 +1258,7 @@ passages:
       D: Weber's law concerns a constant proportion (here 4%), not a doubling rule.
     chapter: 6a-sensing-the-environment
     passage_id: mcat-ps-p09
+    skill: s2
   - id: mcat-ps-005
     q: Radiologists at one hospital are told that the clinic faces litigation whenever a tumor is missed.
       Compared with colleagues who receive no such message, these radiologists will most likely show
@@ -1227,6 +1280,7 @@ passages:
         stimulus is identical.
     chapter: 6a-sensing-the-environment
     passage_id: mcat-ps-p09
+    skill: s2
   - id: mcat-ps-006
     q: After studying a 30-word list, participants recall the first few and the last few words best. The
       advantage for the words at the START of the list is best explained by
@@ -1247,6 +1301,7 @@ passages:
         presented.
     chapter: 6b-making-sense-of-the-environment
     passage_id: mcat-ps-p09
+    skill: s1
   - id: mcat-ps-007
     q: Patient H.M., after bilateral removal of much of the medial temporal lobe, steadily improved at
       mirror tracing across three days yet insisted each day that he had never performed the task. The
@@ -1267,6 +1322,7 @@ passages:
         shows.
     chapter: 6b-making-sense-of-the-environment
     passage_id: mcat-ps-p09
+    skill: s2
 - id: mcat-ps-p10
   text: A research-methods seminar examined three published studies. Study 1 measured academic stress
     in 300 undergraduates as each participant's total score on a validated 20-item self-report scale and
@@ -1298,6 +1354,7 @@ passages:
       A: Sampling concerns who is studied, not how a variable is measured.
     chapter: psychology
     passage_id: mcat-ps-p10
+    skill: s3
   - id: mcat-ps-002
     q: A decision-making study runs participants one at a time in a sound-attenuated laboratory, uses
       a highly standardized task, and finds a large effect. The participants are all 18-to-22-year-old
@@ -1320,6 +1377,7 @@ passages:
       C: Even a well-controlled experiment can generalize poorly when the setting and sample are unrepresentative.
     chapter: psychology
     passage_id: mcat-ps-p10
+    skill: s3
   - id: mcat-ps-003
     q: A public-health analyst finds that neighborhoods with higher ice-cream sales also have higher drowning
       rates (r = 0.72). The strongest interpretation is that
@@ -1339,3 +1397,4 @@ passages:
         significance of r.
     chapter: psychology
     passage_id: mcat-ps-p10
+    skill: s2

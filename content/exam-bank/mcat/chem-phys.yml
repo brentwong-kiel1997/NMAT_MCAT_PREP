@@ -21,6 +21,7 @@ items:
     D: Added the two reactant masses as if everything became water.
   chapter: general-chemistry
   passage_id: ''
+  skill: s2
 - id: mcat-cp-034
   q: What mass of NaCl (58.4 g/mol) is required to prepare 250 mL of a 0.20 M solution?
   choices:
@@ -36,6 +37,7 @@ items:
     D: Slipped a decimal place in the mole calculation.
   chapter: analytical-chemistry
   passage_id: ''
+  skill: s1
 - id: mcat-cp-035
   q: What is the mass percent of water in CuSO4·5H2O (M = 249.7 g/mol)?
   choices:
@@ -51,6 +53,7 @@ items:
     D: Counted only 2.5 waters of hydration.
   chapter: general-chemistry
   passage_id: ''
+  skill: s1
 - id: mcat-cp-040
   q: Assuming both protons dissociate completely, the pH of 0.0050 M H2SO4 is
   choices:
@@ -66,6 +69,7 @@ items:
     C: Misread the concentration as 0.10 M.
   chapter: 5a-unique-nature-of-water-and-its-solutions
   passage_id: ''
+  skill: s1
 - id: mcat-cp-041
   q: Given Ka(formic acid) = 1.8 x 10^-4, what is Kb for the formate ion?
   choices:
@@ -81,6 +85,7 @@ items:
     D: Quoted Kw without dividing it by Ka.
   chapter: 5a-unique-nature-of-water-and-its-solutions
   passage_id: ''
+  skill: s1
 - id: mcat-cp-042
   q: Doubling [A] at fixed [B] quadruples the rate; doubling [B] at fixed [A] doubles it. The overall
     reaction order is
@@ -97,6 +102,7 @@ items:
     D: Counted only the order with respect to B.
   chapter: 5e-chemical-thermodynamics-and-kinetics
   passage_id: ''
+  skill: s2
 - id: mcat-cp-043
   q: For a reaction whose rate law is rate = k[A][B], the units of k are
   choices:
@@ -112,6 +118,7 @@ items:
     D: Those correspond to a third-order rate law.
   chapter: 5e-chemical-thermodynamics-and-kinetics
   passage_id: ''
+  skill: s1
 - id: mcat-cp-044
   q: The equilibrium expression for N2(g) + 3H2(g) ⇌ 2NH3(g) is
   choices:
@@ -127,6 +134,7 @@ items:
     C: Ignored every stoichiometric coefficient.
   chapter: general-chemistry
   passage_id: ''
+  skill: s1
 - id: mcat-cp-045
   q: For N2(g) + 3H2(g) ⇌ 2NH3(g) with ΔH < 0, which change shifts the equilibrium toward more NH3?
   choices:
@@ -142,6 +150,7 @@ items:
     D: Removing a reactant pulls the position toward reactants.
   chapter: general-chemistry
   passage_id: ''
+  skill: s1
 - id: mcat-cp-046
   q: Given E°(Cu²⁺/Cu) = +0.34 V and E°(Zn²⁺/Zn) = -0.76 V, what is E°cell for Zn(s) + Cu²⁺(aq) → Zn²⁺(aq)
     + Cu(s)?
@@ -158,6 +167,7 @@ items:
     D: Reported only the zinc half-cell potential.
   chapter: 4c-electrochemistry-and-electrical-circuits
   passage_id: ''
+  skill: s1
 - id: mcat-cp-047
   q: A current of 1.00 A is passed for 965 s through a Cu²⁺ solution. What mass of copper plates out?
     (F = 9.65 x 10^4 C/mol; Cu = 63.5 g/mol)
@@ -174,6 +184,7 @@ items:
     D: Took the moles of electrons as grams of copper.
   chapter: 4c-electrochemistry-and-electrical-circuits
   passage_id: ''
+  skill: s2
 - id: mcat-cp-051
   q: In the circuit shown, a 6.0 Ω resistor in parallel with a 3.0 Ω resistor is connected in series with
     a 4.0 Ω resistor across a 12 V battery. The battery current is
@@ -191,6 +202,7 @@ items:
   chapter: electricity-and-magnetism
   figure: items/mcat-cp-051-circuit.svg
   passage_id: ''
+  skill: s2
 - id: mcat-cp-055
   q: An 80 g sample of a radionuclide with a half-life of 5.0 days is stored for 15 days. How much remains?
   choices:
@@ -206,6 +218,7 @@ items:
     D: Counted a single half-life.
   chapter: modern-physics
   passage_id: ''
+  skill: s1
 - id: mcat-cp-056
   q: A nucleus emits a beta particle (an electron). What happens to its mass number A and atomic number
     Z?
@@ -222,6 +235,7 @@ items:
     D: No nucleon is captured in beta decay; the nucleon count is conserved.
   chapter: modern-physics
   passage_id: ''
+  skill: s1
 - id: mcat-cp-059
   q: What is the oxidation number of Mn in the permanganate ion, MnO4⁻?
   choices:
@@ -237,6 +251,7 @@ items:
     D: That would fit MnO2, not MnO4⁻.
   chapter: general-chemistry
   passage_id: ''
+  skill: s1
 passages:
 - id: mcat-cp-p01
   text: 'An enzyme preparation isolated from barley was assayed at 25 °C in phosphate buffer, pH 7.2,
@@ -264,6 +279,7 @@ passages:
     chapter: 5e-chemical-thermodynamics-and-kinetics
     figure: items/mcat-cp-001-lb-plot.svg
     passage_id: mcat-cp-p01
+    skill: s4
   - id: mcat-cp-002
     q: What is Km for this substrate?
     choices:
@@ -279,6 +295,7 @@ passages:
       D: That is the y-intercept (1/Vmax), not Km.
     chapter: 5e-chemical-thermodynamics-and-kinetics
     passage_id: mcat-cp-p01
+    skill: s4
   - id: mcat-cp-003
     q: At [S] = 0.50 mM, what initial velocity does the Michaelis–Menten relation predict?
     choices:
@@ -294,6 +311,7 @@ passages:
       C: That is v at [S] = 1.5 mM, not at 0.50 mM.
     chapter: 5e-chemical-thermodynamics-and-kinetics
     passage_id: mcat-cp-p01
+    skill: s2
   - id: mcat-cp-004
     q: Predict v0 when [S] = 1.5 mM.
     choices:
@@ -309,6 +327,7 @@ passages:
       D: Subtracted Km from [S] in the denominator (1.5 - 0.5).
     chapter: biochemistry
     passage_id: mcat-cp-p01
+    skill: s2
   - id: mcat-cp-005
     q: Both double-reciprocal plots are shown. Compared with the uninhibited runs, which kinetic parameter
       does the competitive inhibitor change?
@@ -327,6 +346,7 @@ passages:
     chapter: biochemistry
     figure: items/mcat-cp-005-lb-inhibitor.svg
     passage_id: mcat-cp-p01
+    skill: s4
 - id: mcat-cp-p02
   text: A student titrated 20.0 mL of 0.100 M acetic acid (Ka = 1.8 x 10^-5; pKa = 4.76) with 0.100 M
     NaOH delivered from a buret, recording pH with a calibrated meter. Before any base was added, the
@@ -350,6 +370,7 @@ passages:
       C: 'Dropped the factor of ½ and flipped the sign: pKa − log C = 4.76 + 1.'
     chapter: 5a-unique-nature-of-water-and-its-solutions
     passage_id: mcat-cp-p02
+    skill: s2
   - id: mcat-cp-007
     q: The titration curve for the run is shown. Why does the meter read 4.76 when 10.0 mL of base has
       been added?
@@ -367,6 +388,7 @@ passages:
     chapter: 5a-unique-nature-of-water-and-its-solutions
     figure: items/mcat-cp-007-titration.svg
     passage_id: mcat-cp-p02
+    skill: s1
   - id: mcat-cp-008
     q: What is the molar concentration of acetate ion at the equivalence point?
     choices:
@@ -382,6 +404,7 @@ passages:
       D: Divided by 60.0 mL instead of the actual 40.0 mL total.
     chapter: analytical-chemistry
     passage_id: mcat-cp-p02
+    skill: s2
   - id: mcat-cp-009
     q: What is the pH after 30.0 mL of NaOH has been added?
     choices:
@@ -397,6 +420,7 @@ passages:
       D: Reported the pOH as if it were the pH.
     chapter: 5a-unique-nature-of-water-and-its-solutions
     passage_id: mcat-cp-p02
+    skill: s2
   - id: mcat-cp-010
     q: Which indicator would give the sharpest end point for this titration?
     choices:
@@ -412,6 +436,7 @@ passages:
       D: Changes color before any appreciable neutralization has occurred.
     chapter: analytical-chemistry
     passage_id: mcat-cp-p02
+    skill: s1
 - id: mcat-cp-p03
   text: In a projectile lab a spring launcher fired a 0.150 kg ball horizontally from the edge of a 20.0
     m rooftop. A photogate at the muzzle recorded a launch speed of 15.0 m/s, and air resistance was negligible
@@ -435,6 +460,7 @@ passages:
       C: Doubled the correct fall time.
     chapter: 4a-motion-forces-work-energy-equilibrium
     passage_id: mcat-cp-p03
+    skill: s1
   - id: mcat-cp-012
     q: How far from the base of the building does the ball land?
     choices:
@@ -450,6 +476,7 @@ passages:
       D: Used a flight time of 4.04 s.
     chapter: 4a-motion-forces-work-energy-equilibrium
     passage_id: mcat-cp-p03
+    skill: s2
   - id: mcat-cp-013
     q: The graph shows the ball's velocity components throughout the flight. With what speed does the
       ball strike the ground?
@@ -467,6 +494,7 @@ passages:
     chapter: mechanics
     figure: items/mcat-cp-013-velocity-time.svg
     passage_id: mcat-cp-p03
+    skill: s4
   - id: mcat-cp-014
     q: What is the ball's kinetic energy just before impact?
     choices:
@@ -482,6 +510,7 @@ passages:
       D: Dropped the factor of one half in KE = ½mv².
     chapter: 4a-motion-forces-work-energy-equilibrium
     passage_id: mcat-cp-p03
+    skill: s1
   - id: mcat-cp-015
     q: If the launch speed were doubled to 30.0 m/s, the range would be
     choices:
@@ -497,6 +526,7 @@ passages:
       C: The fall time is unchanged, so no sqrt 2 factor arises.
     chapter: mechanics
     passage_id: mcat-cp-p03
+    skill: s2
 - id: mcat-cp-p04
   text: A 50.0 µF capacitor was connected in series with a 200 kΩ resistor and a 12.0 V battery of negligible
     internal resistance; the capacitor was initially uncharged. The switch closed at t = 0, and a data-logger
@@ -519,6 +549,7 @@ passages:
       D: Slipped a factor of ten in the microfarad conversion.
     chapter: 4c-electrochemistry-and-electrical-circuits
     passage_id: mcat-cp-p04
+    skill: s1
   - id: mcat-cp-017
     q: What is the current through the resistor immediately after the switch closes?
     choices:
@@ -534,6 +565,7 @@ passages:
       D: Converted µA to mA incorrectly, off by three orders of magnitude.
     chapter: electricity-and-magnetism
     passage_id: mcat-cp-p04
+    skill: s1
   - id: mcat-cp-018
     q: What charge does the capacitor hold when it is fully charged?
     choices:
@@ -549,6 +581,7 @@ passages:
       D: That is the stored energy (½CV²) in joules, not the charge.
     chapter: 4c-electrochemistry-and-electrical-circuits
     passage_id: mcat-cp-p04
+    skill: s1
   - id: mcat-cp-019
     q: What does the data-logger read for the capacitor voltage at t = 10.0 s?
     choices:
@@ -564,6 +597,7 @@ passages:
       C: Assumed charging is already complete at t = τ.
     chapter: electricity-and-magnetism
     passage_id: mcat-cp-p04
+    skill: s2
   - id: mcat-cp-020
     q: After the circuit has been connected for many minutes, the current is
     choices:
@@ -579,6 +613,7 @@ passages:
       D: Divided Vc(τ) by R but slipped a factor of 5 (7.58 V / 200 kΩ is 38 µA).
     chapter: 4c-electrochemistry-and-electrical-circuits
     passage_id: mcat-cp-p04
+    skill: s1
 - id: mcat-cp-p05
   text: A rigid 2.00 L steel vessel was filled with air at 1.50 atm and 27 °C, then sealed and placed
     in an oven whose interior was held at 87 °C. The vessel is a rigid container, so its volume does not
@@ -602,6 +637,7 @@ passages:
       D: Quoted the conversion constant instead of applying it.
     chapter: general-chemistry
     passage_id: mcat-cp-p05
+    skill: s1
   - id: mcat-cp-022
     q: What is the pressure inside the rigid vessel once it reaches oven temperature?
     choices:
@@ -617,6 +653,7 @@ passages:
       D: Assumed pressure is independent of temperature in a fixed volume.
     chapter: thermodynamics
     passage_id: mcat-cp-p05
+    skill: s1
   - id: mcat-cp-023
     q: How many moles of gas does the vessel contain?
     choices:
@@ -632,6 +669,7 @@ passages:
       C: Doubled the result, as if the volume were 4.00 L.
     chapter: general-chemistry
     passage_id: mcat-cp-p05
+    skill: s1
   - id: mcat-cp-024
     q: In the piston trial (constant pressure), the 2.00 L volume becomes
     choices:
@@ -647,6 +685,7 @@ passages:
       D: Assumed the volume is unaffected by a temperature change.
     chapter: thermodynamics
     passage_id: mcat-cp-p05
+    skill: s1
   - id: mcat-cp-058
     q: How many moles of an ideal gas occupy 11.2 L at STP?
     choices:
@@ -662,6 +701,7 @@ passages:
       D: Multiplied by 2 instead of dividing 22.4 by 11.2.
     chapter: general-chemistry
     passage_id: mcat-cp-p05
+    skill: s1
 - id: mcat-cp-p06
   text: On an optical bench a student placed a luminous arrow 15.0 cm in front of a thin converging lens
     whose focal length was 10.0 cm; the bench scale reads to 0.1 cm. The student slid a screen along the
@@ -684,6 +724,7 @@ passages:
       D: Treated the image distance as do + f.
     chapter: vibrations-waves-and-optics
     passage_id: mcat-cp-p06
+    skill: s1
   - id: mcat-cp-026
     q: The image caught on the screen is
     choices:
@@ -699,6 +740,7 @@ passages:
       D: Inverted the ratio as di/do instead of computing m = -di/do.
     chapter: 4d-light-and-sound-interacting-with-matter
     passage_id: mcat-cp-p06
+    skill: s1
   - id: mcat-cp-027
     q: In the later trial, with the arrow exactly at the focal point, the student finds
     choices:
@@ -714,6 +756,7 @@ passages:
       C: Unit magnification occurs at do = 2f, not at do = f.
     chapter: vibrations-waves-and-optics
     passage_id: mcat-cp-p06
+    skill: s1
   - id: mcat-cp-028
     q: What is the power of this lens?
     choices:
@@ -729,6 +772,7 @@ passages:
       D: A negative power belongs to a diverging lens.
     chapter: vibrations-waves-and-optics
     passage_id: mcat-cp-p06
+    skill: s1
 - id: mcat-cp-p07
   text: A coffee-cup calorimeter was charged with 100.0 g of water at 22.0 °C. A 4.00 g sample of an unknown
     ionic solid (molar mass 80.0 g/mol) was added with stirring and dissolved completely, and the water
@@ -752,6 +796,7 @@ passages:
       D: Slipped two decimal places in mcΔT.
     chapter: thermodynamics
     passage_id: mcat-cp-p07
+    skill: s1
   - id: mcat-cp-030
     q: What is ΔH of solution for the solid?
     choices:
@@ -767,6 +812,7 @@ passages:
       D: Used 0.0250 mol instead of the actual 0.0500 mol.
     chapter: 5e-chemical-thermodynamics-and-kinetics
     passage_id: mcat-cp-p07
+    skill: s2
   - id: mcat-cp-031
     q: If 8.00 g of the same solid had been dissolved in the same 100.0 g of water, the temperature rise
       would have been about
@@ -783,6 +829,7 @@ passages:
       C: More solute releases more heat, so ΔT rises rather than falls.
     chapter: thermodynamics
     passage_id: mcat-cp-p07
+    skill: s2
   - id: mcat-cp-032
     q: The heat the student measured equals ΔH (rather than ΔU) because
     choices:
@@ -798,6 +845,7 @@ passages:
       D: If q were zero the water temperature would not have changed.
     chapter: 5e-chemical-thermodynamics-and-kinetics
     passage_id: mcat-cp-p07
+    skill: s1
   - id: mcat-cp-057
     q: How much heat is needed to warm 200 g of water from 25 °C to 75 °C (c = 4.18 J g⁻¹ °C⁻¹)?
     choices:
@@ -813,6 +861,7 @@ passages:
       C: Doubled the temperature change.
     chapter: thermodynamics
     passage_id: mcat-cp-p07
+    skill: s1
 - id: mcat-cp-p08
   text: 'A physical-properties session compared five small molecules: CH4, NH3, H2O, H2S, and CO2. Students
     tabulated molar mass, the number of lone pairs on the central atom, and the gas-phase dipole moment
@@ -840,6 +889,7 @@ passages:
       C: A nonpolar linear molecule held together only by London forces.
     chapter: 5b-molecules-and-intermolecular-interactions
     passage_id: mcat-cp-p08
+    skill: s2
   - id: mcat-cp-037
     q: The H-N-H bond angle in NH3 is closest to
     choices:
@@ -855,6 +905,7 @@ passages:
       D: That is water, which carries two lone pairs.
     chapter: 5b-molecules-and-intermolecular-interactions
     passage_id: mcat-cp-p08
+    skill: s1
   - id: mcat-cp-038
     q: Which atom has the largest atomic radius?
     choices:
@@ -870,6 +921,7 @@ passages:
       D: Far right of period 3; its high effective nuclear charge pulls the radius in.
     chapter: general-chemistry
     passage_id: mcat-cp-p08
+    skill: s4
   - id: mcat-cp-039
     q: Which atom has the highest first ionization energy?
     choices:
@@ -885,6 +937,7 @@ passages:
       D: Its 3s pair is held tightly, but Cl has the greater effective nuclear charge.
     chapter: general-chemistry
     passage_id: mcat-cp-p08
+    skill: s4
 - id: mcat-cp-p09
   text: On a wave bench a 440 Hz and a 444 Hz tuning fork were struck together beside a microphone feeding
     an oscilloscope, whose trace showed the amplitude of the sound rising and falling periodically; a
@@ -910,6 +963,7 @@ passages:
       C: Doubled the correct value.
     chapter: vibrations-waves-and-optics
     passage_id: mcat-cp-p09
+    skill: s1
   - id: mcat-cp-053
     q: Two tuning forks of 440 Hz and 444 Hz are struck together. What is heard?
     choices:
@@ -925,6 +979,7 @@ passages:
       D: Any small frequency difference produces audible beats.
     chapter: 4d-light-and-sound-interacting-with-matter
     passage_id: mcat-cp-p09
+    skill: s1
   - id: mcat-cp-054
     q: The speed of light in a glass with index of refraction 1.5 is
     choices:
@@ -940,6 +995,7 @@ passages:
       D: That is the vacuum speed; light slows in glass.
     chapter: 4d-light-and-sound-interacting-with-matter
     passage_id: mcat-cp-p09
+    skill: s1
 - id: mcat-cp-p10
   text: A fluids bench used a transparent flow loop fed from a constant-head tank. The supply pipe, of
     radius r, stepped down abruptly to a section of half that radius, and dye streaks let students compare
@@ -967,6 +1023,7 @@ passages:
       C: Nothing supports an even split; Archimedes sets it by the density ratio.
     chapter: 4b-fluids-for-circulation-and-gas-exchange
     passage_id: mcat-cp-p10
+    skill: s2
   - id: mcat-cp-049
     q: Water flows through a pipe that narrows to half its radius. In the narrow section the water's speed
       is
@@ -983,6 +1040,7 @@ passages:
       D: Speed increases where the area shrinks; it does not decrease.
     chapter: 4b-fluids-for-circulation-and-gas-exchange
     passage_id: mcat-cp-p10
+    skill: s2
   - id: mcat-cp-050
     q: The gauge pressure 10.0 m below the surface of a freshwater lake (ρ = 1.0 x 10^3 kg/m³) is about
     choices:
@@ -998,3 +1056,4 @@ passages:
       D: Used a 20 m depth instead of 10.0 m.
     chapter: 4b-fluids-for-circulation-and-gas-exchange
     passage_id: mcat-cp-p10
+    skill: s1
