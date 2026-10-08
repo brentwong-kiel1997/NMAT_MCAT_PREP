@@ -550,19 +550,23 @@ def practice_attempt_api(request):
     # wrong answers auto-enter SRS as flashcards (the review loop)
     if not correct:
         try:
-            from .srs import card_key, split_card, get_or_create_srs
+            from .srs import card_key, get_or_create_srs
             from .learners import get_or_create_profile
             prof = get_or_create_profile(username)
             text = item.get("q", "")
             chapter_label = item.get("chapter", "")
             ck = card_key(subject_slug, chapter_label, text)
-            front, back = split_card(text)
+            # error-correction card, not a recognition copy: the front asks the
+            # learner to refute their own pick, the back states the right answer
+            stem = text.split("\n")[0].strip()
+            front = f"{stem}\n\n(You answered {chosen}. Correct the reasoning.)"
+            back = f"Correct: {item.get('answer', '')}. {item.get('explain', '')}"
             from .models import SrsCard
             from django.utils import timezone
             SrsCard.objects.get_or_create(
                 profile=prof, card_key=ck,
                 defaults={"subject_slug": subject_slug, "front": front[:400],
-                          "back": (item.get("explain", ""))[:600],
+                          "back": back[:600],
                           "chapter": chapter_label[:200],
                           "due_date": timezone.localdate()})
         except Exception:

@@ -488,19 +488,22 @@ def _queue_miss_srs(attempt: ExamAttempt, index: dict, rows) -> None:
             if r.correct or not r.chosen or r.is_field_test:
                 continue
             item = index.get(r.item_id) or {}
-            stem = str(item.get("q") or "")[:400]
+            stem = str(item.get("q") or "").split("\n")[0].strip()
             if not stem:
                 continue
             card_key = f"exam:{r.item_id}"
             if card_key in existing:
                 continue
             existing.add(card_key)
+            # error-correction card: refute your own pick, not recognize the stem
+            front = f"{stem}\n\n(You answered {r.chosen}. Correct the reasoning.)"
+            back = f"Correct: {item.get('answer', '')}. {item.get('explain', '')}"
             cards.append(SrsCard(
                 profile=attempt.profile,
                 subject_slug=_chapter_subject(item.get("chapter") or ""),
                 card_key=card_key,
-                front=stem,
-                back=str(item.get("explain") or "")[:600],
+                front=front[:400],
+                back=str(back)[:600],
                 chapter=str(item.get("chapter") or "")[:200],
                 due_date=timezone.localdate(),
             ))

@@ -321,6 +321,12 @@ class ExamEngineTests(TestCase):
         seeded = {f"exam:{i}" for i in wrong_ids}
         self.assertEqual({c.card_key for c in cards}, seeded)
         self.assertEqual(cards.first().profile, self.profile)
+        # error-correction format: the front names the learner's wrong pick,
+        # the back leads with the correct answer (not a recognition copy)
+        for c in cards:
+            self.assertIn("You answered", c.front)
+            self.assertIn("Correct the reasoning", c.front)
+            self.assertTrue(c.back.startswith("Correct:"))
 
     def test_zero_out_of_four_attempt_statuses(self):
         # finalize is idempotent: re-finalizing a closed attempt is a no-op
