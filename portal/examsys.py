@@ -107,18 +107,22 @@ def _assign_field_test(exam_id: str, username: str, plan: dict) -> None:
         b["field_test"] = [iid for iid in b["items"] if iid in picked]
 
 
-def _variant_map(item_ids: list[str], seed: str) -> dict:
+def _variant_map(item_ids: list[str], seed: str,
+                 letters_for: dict[str, list[str]] | None = None) -> dict:
     """Retake variant for one block: shuffled item order + a per-item letter
     permutation. Deterministic from (seed, item ids) so a rebuilt plan stays
-    stable. Scores map back to the canonical key, so scoring never changes."""
+    stable. Scores map back to the canonical key, so scoring never changes.
+    letters_for maps item id -> its option letters (A-D or A-E); items absent
+    from the map permute the classic A-D."""
     import random
 
     rng = random.Random(seed)
     order = list(item_ids)
     rng.shuffle(order)
-    letters = ["A", "B", "C", "D"]
+    default = ["A", "B", "C", "D"]
     vmap = {}
     for iid in order:
+        letters = (letters_for or {}).get(iid) or default
         perm = letters[:]
         rng.shuffle(perm)
         vmap[iid] = {shown: original for shown, original in zip(letters, perm)}
@@ -138,12 +142,18 @@ def start_attempt(username: str, exam_id: str, mode: str = "real") -> ExamAttemp
         profile=profile, exam=exam_id, mode="real").exclude(status="active").exists()
     variant_seed = (f"{username}:{exam_id}:{timezone.now().timestamp():.0f}"
                     if seen_before and mode == "real" else "")
+    index = exam_item_index(exam_id) if variant_seed else {}
     blocks = []
     for b in plan["blocks"]:
         entry = {"id": b["id"], "label": b.get("label", b["id"]),
                  "seconds": b.get("seconds", 0), "items": b["items"]}
         if variant_seed:
-            v = _variant_map(b["items"], f"{variant_seed}:{b['id']}")
+            letters_for = {
+                iid: sorted((index.get(iid) or {}).get("choices") or ["A", "B", "C", "D"])
+                for iid in b["items"]
+            }
+            v = _variant_map(b["items"], f"{variant_seed}:{b['id']}",
+                             letters_for=letters_for)
             entry["items"] = v["order"]
             entry["vmap"] = v["vmap"]
         if mode == "diagnostic":
@@ -309,13 +319,13 @@ def save_answer(attempt: ExamAttempt, block_id: str, pos: int,
             shown_map = ((block.get("vmap") or {}).get(item_id) or {})
             if shown_map:
                 chosen = shown_map.get(chosen)
-            if chosen not in ("A", "B", "C", "D"):
+            if chosen not in ("A", "B", "C", "D", "E"):
                 return {"ok": False, "error": "bad-choice"}
             entry["c"] = chosen
         entry["f"] = 1 if flagged else 0
         if crossed is not None:
             # eliminated choices (shown letters); UI-only, never scored
-            clean = sorted({str(c).strip().upper()[:1] for c in crossed} & {"A", "B", "C", "D"})
+            clean = sorted({str(c).strip().upper()[:1] for c in crossed} & {"A", "B", "C", "D", "E"})
             if clean:
                 entry["x"] = clean
             else:

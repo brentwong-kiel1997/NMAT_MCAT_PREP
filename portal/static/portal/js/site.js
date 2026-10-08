@@ -258,7 +258,7 @@
       }
       choicesEl.innerHTML = "";
       const prior = state.answered[item.id];
-      ["A", "B", "C", "D"].forEach((letter) => {
+      Object.keys(item.choices).forEach((letter) => {
         const choice = item.choices[letter];
         if (!choice) return;
         const btn = document.createElement("button");

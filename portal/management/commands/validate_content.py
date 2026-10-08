@@ -56,8 +56,8 @@ def _check_question_key(rel: str, kind: str, q: dict) -> list[str]:
     problems: list[str] = []
     options = q.get("options") or {}
     answer = q.get("answer")
-    if set(options) != {"A", "B", "C", "D"}:
-        problems.append(f"{rel}: {kind} options are not exactly A-D "
+    if set(options) not in ({"A", "B", "C", "D"}, {"A", "B", "C", "D", "E"}):
+        problems.append(f"{rel}: {kind} options must be exactly A-D or A-E "
                         f"(got {sorted(options)!r})")
     if answer and answer not in options:
         problems.append(f"{rel}: {kind} answer {answer!r} not in options")
@@ -105,9 +105,9 @@ class Command(BaseCommand):
                 else:
                     seen_qids.add(q["id"])
                 choices = q.get("choices") or {}
-                if set(choices) != {"A", "B", "C", "D"}:
+                if set(choices) not in ({"A", "B", "C", "D"}, {"A", "B", "C", "D", "E"}):
                     problems.append(
-                        f"practice {q.get('id')}: options are not exactly A-D "
+                        f"practice {q.get('id')}: options must be exactly A-D or A-E "
                         f"(got {sorted(choices)!r})"
                     )
                 if len(set(choices.values())) != len(choices):
@@ -337,8 +337,8 @@ def _validate_exam_bank(store: dict, seen_qids: set[str]) -> list[str]:
                 else:
                     seen_qids.add(iid)
                 choices = item.get("choices") or {}
-                if set(choices.keys()) != {"A", "B", "C", "D"}:
-                    problems.append(f"exam-bank {iid}: choices keys {sorted(choices)} != A-D")
+                if set(choices.keys()) not in ({"A", "B", "C", "D"}, {"A", "B", "C", "D", "E"}):
+                    problems.append(f"exam-bank {iid}: choices keys {sorted(choices)} must be A-D or A-E")
                 if item.get("answer") not in choices:
                     problems.append(f"exam-bank {iid}: answer {item.get('answer')!r} not in choices")
                 elif isinstance(item.get("answer"), str):
