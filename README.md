@@ -25,7 +25,7 @@
 | | |
 | --- | --- |
 | 🗺️ **Dual-exam curriculum map** | 13 subjects covering NMAT Part 1 & 2 and all four MCAT sections, with shared science subjects merged — no duplicated pages, no fake chapters beyond the official blueprints |
-| 📖 **Teaching chapters** | Full-textbook tutorials: overview → teaching sections with figures → worked examples → key points → pitfalls → per-exam mapping, every chapter citing its sources — plus subject key terms, cross-discipline bridges, clinical links into the disease library, high-yield badges, and one-click PDF export |
+| 📖 **Teaching chapters** | Full-textbook tutorials: objectives per section → teaching sections with figures, misconception-alert and cross-science callouts → worked examples in Strategy/Solution/Discussion anatomy with same-skill Check-Your-Learning items → key-equations boxes (KaTeX) → key points → pitfalls → per-exam mapping, every chapter citing its sources — plus subject key terms, cross-discipline bridges, clinical links into the disease library, high-yield badges, and one-click PDF export |
 | 🎯 **Strategy library** | 8 original test-taking technique guides — passage triage, process of elimination, unit analysis, CARS passage mapping, timing protocol, flag discipline, guessing policy, the review loop |
 | 📝 **High-yield notes** | 453 one-line bullets across 70 outline chapters, plus 219 practice MCQs and a 770-question bank (NMAT 240 + MCAT 230 full-length mocks + 300 practice-only drill items, 32 passages) |
 | 🔎 **Materials desk** | 146-term searchable glossary, 113 formulas rendered as real math (vendored KaTeX, no CDN) in per-subject sheets, exam tips, study paths, and checklists |
