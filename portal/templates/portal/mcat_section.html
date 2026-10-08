@@ -20,6 +20,9 @@
 <section class="section">
   <div class="detail-grid">
     <div>
+      {% if section.notes %}
+      <p class="note-line">{% for n in section.notes %}{{ n }}{% endfor %}</p>
+      {% endif %}
       {% if skill_bars %}
       <h2>AAMC skill mix (Scientific Inquiry and Reasoning Skills)</h2>
       <div class="trend-list">

@@ -46,7 +46,7 @@
           <td>{{ b.pct }}%</td>
           {% if report_vocab %}
           <td>
-            {% for sub in b.subtests %}{% if sub.ss_est %}{{ sub.ss_est }}{% if not forloop.last %}/{% endif %}{% endif %}{% endfor %}
+            {% for sub in b.subtests %}{% if sub.ss_est %}{{ sub.ss_est }}{% if sub.pct >= 75 %}<span title="≥75% — CEM's commonly cited per-subtest readiness bar">✓</span>{% endif %}{% if not forloop.last %}/{% endif %}{% endif %}{% endfor %}
           </td>
           {% endif %}
           <td>{{ b.seconds_used }} s</td>
