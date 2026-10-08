@@ -17,6 +17,16 @@ sections:
   - Carbonyl chemistry dominates — aldehydes are more reactive than ketones (less steric hindrance). Nucleophiles
     attack the electrophilic carbonyl carbon. Carboxylic acid derivatives (esters, amides, anhydrides)
     all react by nucleophilic acyl substitution — the leaving group departs as the nucleophile adds.
+  misconception: '"An amide has a carbonyl just like an ester and an anhydride, so it should be just as
+    reactive toward nucleophiles." The carbonyl is the same; the LEAVING GROUP is not. Amides leave as
+    NH2-, the worst leaving group in the set, which is why the amide is the most stable and least reactive
+    of the acid derivatives — and why the peptide bond is a sturdy backbone rather than a liability. Reactivity
+    runs anhydride > ester > amide.'
+  connection: The cysteine disulfide in the check is not a chemistry curiosity — it is a covalent staple
+    of protein tertiary structure, oxidised between two thiol side chains to lock a fold in place. Chapter
+    1A · Proteins and amino acids shows where those bridges sit and why a reducing environment undoes
+    them.
+  connection_label: How sciences interconnect
   check:
   - q: Which functional group is most reactive toward nucleophilic attack?
     options:
@@ -56,6 +66,15 @@ sections:
   - Glycosidic bonds link sugars — formed by condensation (water eliminated) between the anomeric OH of
     one sugar and any OH of another. ==Disaccharides (sucrose, lactose, maltose) and polysaccharides (glycogen,
     starch, cellulose) are all glycoside polymers== with different linkages.
+  misconception: '"Every disaccharide hydrolyses to glucose, since sugars are all basically glucose."
+    The hydrolysis returns exactly the two monomers that built the bond. Maltose is glucose plus glucose,
+    but lactose is glucose plus galactose and sucrose is glucose plus fructose — which is why sucrose
+    is also nonreducing: BOTH of its anomeric carbons are tied up in the linkage.'
+  connection: 'Lactose intolerance is the beta-1,4 galactosidic bond in the passage meeting a human enzyme
+    supply problem: without enough lactase, the bond is not cleaved in the small intestine and the sugar
+    passes to the gut flora, which do the digesting instead. The enzyme specificity the check rewards
+    — beta-galactosidase for lactose, nothing else — is the same specificity the symptoms follow.'
+  connection_label: Real-world connection
   check:
   - q: The glycosidic bond in sucrose links…
     options:
@@ -101,6 +120,16 @@ sections:
   - Twenty standard amino acids sort by R group — nonpolar (Gly, Ala, Val, Leu, Ile, Phe, Met, Pro), polar
     uncharged (Ser, Thr, Cys, Tyr, Asn, Gln), acidic (Asp, Glu), and basic (Lys, Arg, His). The pKa of
     ionizable side chains determines charge at any pH.
+  misconception: '"An amino acid dissolved in water is uncharged, because its acid and base cancel out."
+    Nothing cancels — the proton moves from the carboxyl to the amino group and STAYS there, giving a
+    zwitterion that carries a full positive charge and a full negative charge at the same time. The molecule
+    is net-neutral but strongly dipolar, which is why it dissolves so well in water and why its R group''s
+    pKa decides the extra charge it carries at any pH.'
+  connection: 'That R-group sorting is the entry ticket to protein chemistry: the same nonpolar, polar,
+    acidic, and basic classes decide folding, active-site chemistry, and electrophoretic behaviour. Chapter
+    1A · Proteins and amino acids picks up the identical twenty side chains and shows what each class
+    does once it is wired into a peptide.'
+  connection_label: How sciences interconnect
   check:
   - q: At pH 7, which amino acid side chain is positively charged?
     options:
@@ -138,6 +167,16 @@ sections:
   - Base pairing — A pairs with T (or U) via two hydrogen bonds; G pairs with C via three hydrogen bonds.
     ==GC-rich DNA has a higher melting temperature== because three bonds are harder to break than two.
     The double helix is antiparallel — one strand 5 to 3, the other 3 to 5.
+  misconception: '"GC-rich DNA melts higher because guanine is heavier, or because GC pairs share some
+    covalent link." Neither mass nor covalency has anything to do with it. G-C offers three hydrogen bonds
+    where A-T offers two, so more GC means more noncovalent bonds to break per helix turn and a higher
+    melting temperature. The strands are held by attractions only — which is exactly why they can be separated
+    and copied.'
+  connection: 'That melting difference is a practical tool in molecular biology: higher GC content means
+    a higher annealing temperature for PCR primers and a more stable probe. Chapter 1B · Gene to protein
+    builds the replication, transcription, and translation machinery on the same pairing rules this section
+    quantifies — two hydrogen bonds for A-T, three for G-C.'
+  connection_label: How sciences interconnect
   check:
   - q: Why does GC-rich DNA have a higher melting temperature?
     options:
@@ -175,6 +214,16 @@ sections:
   - Triacylglycerols (three fatty acids + glycerol) store energy. ==Phospholipids (two fatty acids + phosphate
     head) form membranes== because they are amphipathic. Steroids share a four-ring fused skeleton — cholesterol
     is the precursor for all steroid hormones.
+  misconception: '"All lipids share a structure — basically long hydrocarbon chains with a carboxyl at
+    the end." Lipids are defined by what they do in water, not by a shared skeleton. Fatty acids fit that
+    description, but a triacylglycerol has three of them on glycerol, a phospholipid swaps one for a charged
+    head, and a steroid is four fused rings with no chain at all. Insolubility is the membership criterion;
+    structure varies wildly.'
+  connection: 'The amphipathic phospholipid is the direct bridge to cell structure: a polar head facing
+    water on both sides and hydrophobic tails sheltered between them is what a bilayer is, and the cis
+    double bonds that keep tails kinked are what keep that bilayer fluid at low temperature. Chapter 2A
+    · Assemblies of molecules, cells, and cell groups takes the assembly from molecule to membrane.'
+  connection_label: How sciences interconnect
   check:
   - q: Which lipid forms biological membranes?
     options:
@@ -235,6 +284,23 @@ examples:
       A: Cutting BEFORE the aromatic residues reverses the specificity.
       B: Missing the cut after Tyr.
       C: Cutting at every peptide bond, which is total hydrolysis, not chymotryptic specificity.
+key_equations:
+- latex: $\text{pH} < pK_a \Rightarrow \text{protonated}$
+  symbols: pH of the solution, pKa of the ionizable group
+  when: side-chain charge — lysine (pKa 10.5) is positive at pH 7, glutamate (pKa 4) negative
+- latex: $\text{subunits} \rightarrow \text{polymer} + H_{2}O$
+  symbols: subunits = two monomers (or a growing chain plus one)
+  when: condensation builds every biopolymer — glycosidic, peptide, phosphodiester; hydrolysis reverses
+    it
+- latex: $2\text{ RSH} \rightarrow \text{RSSR}$
+  symbols: RSH thiol (cysteine side chain), RSSR disulfide bridge
+  when: oxidation of two cysteine thiols — the covalent cross-link of protein structure
+- latex: $T_m \propto \text{GC content}$
+  symbols: T_m melting temperature of the duplex, GC fraction of the base pairs
+  when: three hydrogen bonds per G-C pair versus two for A-T — more GC melts higher
+- latex: $\text{Cu}^{2+} + e^{-} \rightarrow \text{Cu}^{+}$
+  symbols: Cu²⁺ oxidising agent in Benedict's reagent, e⁻ from the aldehyde
+  when: reducing-sugar test — a free anomeric carbon opens to the aldehyde and reduces Cu²⁺
 key_points:
 - Functional groups predict reactivity — carbonyl > ester > amide.
 - Sugars cyclize; anomeric carbon creates alpha/beta; glycosidic bonds link.

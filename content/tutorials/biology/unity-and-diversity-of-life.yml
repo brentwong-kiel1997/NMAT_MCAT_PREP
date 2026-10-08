@@ -29,6 +29,16 @@ sections:
     of its own, and cannot reproduce without hijacking a host cell. Exams love this contrast — by the
     checklist, ==a virus is not independently alive==, and saying so precisely is usually the point of
     the question.
+  misconception: '"Viruses are alive — they have genes and they evolve, which are the most important properties."
+    The checklist is conjunctive: every item must hold. A virus carries heritable information and does
+    evolve, but it has no cells, no independent metabolism, and cannot reproduce without hijacking a host.
+    Failing those items settles it — a virus is not independently alive, and the exam wants that said
+    precisely.'
+  connection: 'Imperfect inheritance is the hinge of this whole book: copying errors supply the variation
+    that natural selection filters, which is why reproduction with inheritance and evolution are linked
+    properties rather than two separate ones. Chapter Organisms and Their Environment picks up the filtering
+    half as microevolution.'
+  connection_label: How sciences interconnect
   check:
   - q: Which property does a virus lack on its own, outside a host cell?
     options:
@@ -70,6 +80,16 @@ sections:
     level at which all the properties of the checklist operate together. Keep the ladder handy — it is
     also the map of this course, with later chapters climbing from molecules and cells up through regulation
     and organisms to ecology.
+  misconception: '"If I understood every molecule in a cell perfectly, I could predict everything the
+    cell does — the higher levels are just bookkeeping." Each rung shows behaviour its parts do not have:
+    a single actin filament cannot contract, a single neuron cannot think, no single species cycles nutrients.
+    Emergence means the assembly has properties the inventory lacks — which is also why the cell, not
+    the molecule, is the basic unit of life.'
+  connection: 'The ladder is the course map in miniature: molecules and cells, then tissues and organs,
+    then regulation and organisms, then ecology. Each later chapter climbs one rung, and this chapter''s
+    ordering is what keeps the transitions — chemistry to cell, cell to tissue, organism to ecosystem
+    — from blurring.'
+  connection_label: How sciences interconnect
   check:
   - q: What is the lowest level of organization at which ALL properties of life operate together?
     options:
@@ -117,6 +137,15 @@ sections:
     the kingdoms protists (a grab-bag, mostly unicellular), fungi, plants, and animals. A frequent exam
     trap is to classify by superficial looks — fungi look plant-like but are closer to animals biochemically,
     and archaea look bacterial but differ in membrane chemistry and genetics.
+  misconception: '"Bacteria and archaea are close relatives — both are prokaryotes, so they must share
+    the most recent common ancestor." Looking prokaryotic is a trait collection, not a branch of the tree.
+    Molecular data place Archaea and Eukarya as each other''s closest relatives — they share information-processing
+    biochemistry that bacteria lack. Relatedness follows shared ancestry, never cell shape or appearance.'
+  connection: 'Fungi sitting closer to animals than to plants is the same lesson from the biochemical
+    side: appearance misleads, shared molecular machinery does not. The three-domain picture was invisible
+    under the microscope and emerged from sequence comparison — the methods chapter 1B covers are what
+    made this tree drawable.'
+  connection_label: How sciences interconnect
   table:
     caption: The three domains at a glance
     headers:
@@ -192,6 +221,16 @@ sections:
     ==Homology records ancestry; analogy records convergent solutions== to the same problem. **Vestigial
     structures** (the human appendix, pelvic bones in whales) are further inheritance echoes — leftovers
     of ancestors that are no longer functional in the same way.'
+  misconception: '"A bat wing and a butterfly wing are homologous — both are wings built for flight."
+    Same function, unrelated parts. Homology means the SAME underlying structure inherited from a shared
+    ancestor — the human arm, whale flipper, and bat wing all carry the same tetrapod bone arrangement.
+    Bat and insect wings evolved independently from different parts; that is analogy, the signature of
+    convergent evolution.'
+  connection: The universal genetic code — the codon that reads methionine in a bacterium reads methionine
+    in you — is the strongest single piece of evidence for universal common ancestry. It is also why bacteria
+    can be engineered to make human proteins, the biotechnology foundation chapter 1B builds its methods
+    on.
+  connection_label: How sciences interconnect
   check:
   - q: A bat wing and a butterfly wing are best described as…
     options:
@@ -243,6 +282,15 @@ sections:
     ancestor of a group and were inherited by its members. Molecular data (DNA and protein sequences)
     now dominate the evidence, which is why the three-domain picture, invisible under the microscope,
     emerged from sequence comparisons.
+  misconception: '"Two species sitting next to each other on a phylogenetic tree are the closest relatives."
+    Tip order carries no information — it is a drawing convenience. Relatedness is judged by node recency:
+    the two groups sharing the most recent common ancestor are closest, wherever they sit on the page.
+    Rotating branches around a node changes nothing about the relationship.'
+  connection: Mutation as the ultimate source of new alleles, with recombination merely shuffling what
+    exists, is the division of labour this book keeps returning to — and the Hardy-Weinberg machinery
+    of chapter 1C quantifies what happens to those allele frequencies once selection or drift begins to
+    act on them.
+  connection_label: How sciences interconnect
   check:
   - q: What is the ULTIMATE source of new alleles in a population?
     options:

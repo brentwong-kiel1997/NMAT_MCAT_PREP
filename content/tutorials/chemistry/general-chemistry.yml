@@ -17,6 +17,15 @@ sections:
   - Electrons occupy shells and subshells with discrete energies. The Aufbau principle fills lowest energy
     first, Hund's rule maximizes parallel spins in degenerate orbitals, and the Pauli exclusion principle
     caps each orbital at two electrons of opposite spin.
+  misconception: '"Ca2+ has a 2+ charge, so it must have gained two protons — that is what makes it positive."
+    Charge comes from the electron side. Calcium''s Z is 20 whether neutral or doubly charged; the ion
+    has simply lost two of its 22 electrons, leaving 18. Change the proton count and you would have a
+    different element, not an ion.'
+  connection: 'The filling rules here are the machinery behind the periodic trends one section below:
+    Aufbau sets which subshell an element''s last electron enters, and that subshell is what places it
+    in a block of the table. Chapter 4E · Atoms, nuclear decay, electronic structure works the same rules
+    in more depth, including the 4s-before-3d exception.'
+  connection_label: How sciences interconnect
   check:
   - q: An atom has Z = 17, A = 35. Its electron configuration is…
     options:
@@ -58,6 +67,16 @@ sections:
     is highest.
   - Metals lose electrons to form cations; nonmetals gain to form anions. The noble gases are chemically
     inert because their valence shells are full.
+  misconception: '"All the atoms in one period have their electrons in the same shell, so sodium, magnesium,
+    and chlorine should be about the same size." Same shell, different pull. Moving right adds a proton
+    each step with almost no added shielding, so the nucleus draws that same shell progressively tighter
+    — sodium is visibly larger than chlorine. The shell count sets the rough scale; the nuclear charge
+    sets the fine adjustment.'
+  connection: 'Electronegativity, the most-used trend on this map, is the number that decides everything
+    two sections down: it fixes whether a bond is ionic, polar covalent, or purely covalent, and it gives
+    water its dipole. Chapter 5B · Molecules and intermolecular interactions takes that dipole and builds
+    the whole IMF ladder on top of it.'
+  connection_label: How sciences interconnect
   check:
   - q: Which element has the highest first ionization energy?
     options:
@@ -95,6 +114,15 @@ sections:
     (electron sea). Polar covalent sits in between.
   - Lewis structures are the tool — count valence electrons, connect atoms, complete octets, check formal
     charge. VSEPR predicts geometry from electron-domain count — 2 linear, 3 trigonal planar, 4 tetrahedral.
+  misconception: '"Ammonia has three bonds, so it is trigonal planar like a flat triangle." Count the
+    LONE PAIRS too. Nitrogen in NH3 carries three bonding pairs plus one lone pair — four electron domains,
+    tetrahedral electron geometry — but the shape you see counts atoms only, giving trigonal pyramidal.
+    Water is the same story with two lone pairs: four domains, bent shape.'
+  connection: VSEPR geometry is where molecular polarity is decided, because only a shape can cancel or
+    reinforce bond dipoles. CO2 is linear and nonpolar; SO2, with one lone pair, is bent and polar — and
+    that one difference changes solubility, boiling point, and reactivity. Chapter 5B · Molecules and
+    intermolecular interactions picks up exactly at that fork.
+  connection_label: How sciences interconnect
   check:
   - q: A molecule of NH3 has how many electron domains around N?
     options:
@@ -133,6 +161,16 @@ sections:
     moles to moles, moles to grams.
   - Limiting reagent problems compare available moles to stoichiometric demand. Theoretical yield comes
     from the limiting reagent; percent yield = actual divided by theoretical times 100.
+  misconception: '"4.0 g of H2 and 16 g of O2 — the hydrogen mass is smaller, so hydrogen must be the
+    limiting reagent." Limiting reagent is about MOLES against the equation''s demands, never about which
+    mass looks smaller. Converting: 2.0 mol of H2 against 0.50 mol of O2, and the balanced equation needs
+    two H2 per O2 — the oxygen supports only 1.0 mol of water. Oxygen limits despite being the heavier
+    pile.'
+  connection: 'The three-step bridge is the arithmetic behind fuel and combustion calculations of every
+    kind — the worked methane example is a boiler''s efficiency question in miniature. It is also why
+    a balanced equation is non-negotiable before any number is computed: the coefficients ARE the mole
+    ratio, and every downstream figure inherits an error made there.'
+  connection_label: Real-world connection
   check:
   - q: How many moles are in 11.2 L of gas at STP?
     options:
@@ -170,6 +208,15 @@ sections:
   - Acids donate protons; bases accept them. Strong acids (HCl, HNO3, H2SO4, HClO4) dissociate completely
     — their hydrogen ion concentration equals their molarity. pH = -log of hydrogen ion concentration;
     pH + pOH = 14.
+  misconception: '"Every acid is strong, so a 0.01 M acid solution always has pH 2." Only for the strong
+    few — HCl, HNO3, H2SO4, HClO4 — that dissociate completely. A weak acid like acetic acid at the same
+    molarity reaches an equilibrium and releases only a fraction of its protons, so the pH sits well above
+    2. Assuming strength is the single fastest way to lose an acid-base mark.'
+  connection: 'This section is the entry point for the buffer and titration work in chapter Analytical
+    Chemistry and the physiological buffers of chapter 5A · Unique nature of water and its solutions:
+    blood holds pH near 7.4 with a weak acid pair, which is precisely why the strong-acid shortcut fails
+    where it matters most.'
+  connection_label: How sciences interconnect
   check:
   - q: What is the pH of a 0.01 M HCl solution?
     options:
@@ -232,6 +279,25 @@ examples:
       A: Assuming a 1:1 mass ratio between fuel and water.
       B: Dividing by the coefficient instead of multiplying (0.0625 mol).
       C: Multiplying the water molar mass by 4 without the mole conversion.
+key_equations:
+- latex: $n = \frac{m}{M}$
+  symbols: n moles, m mass (g), M molar mass (g/mol)
+  when: the grams-to-moles step of every stoichiometry bridge
+- latex: $n = \frac{V}{22.4\ \text{L/mol}}$
+  symbols: n moles of gas at STP (0 °C, 1 atm), V volume in litres
+  when: gas stoichiometry — one mole of any ideal gas fills 22.4 L at STP
+- latex: $\%\text{ yield} = \frac{\text{actual}}{\text{theoretical}}\times100$
+  symbols: actual measured mass, theoretical mass from the limiting reagent
+  when: theoretical yield always comes from the limiting reagent, never the excess one
+- latex: $M = \frac{n}{V}$
+  symbols: M molarity (mol/L), n moles of solute, V litres of solution
+  when: solution preparation — combine with molar mass to convert grams to volume
+- latex: $M_1V_1 = M_2V_2$
+  symbols: M₁ V₁ stock concentration and volume, M₂ V₂ diluted
+  when: dilution — moles are conserved when only solvent is added
+- latex: $pH = -\log[H^{+}]$
+  symbols: pH, [H⁺] hydrogen ion concentration (M)
+  when: strong acids only — there [H⁺] equals the molarity; pH + pOH = 14 at 25 °C
 key_points:
 - Z = protons = identity; A = protons + neutrons; isotopes differ in neutrons only.
 - Periodic trends — radius decreases across and increases down; IE and EN increase across, decrease down.

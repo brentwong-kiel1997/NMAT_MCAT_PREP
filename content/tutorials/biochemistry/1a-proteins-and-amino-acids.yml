@@ -17,6 +17,15 @@ sections:
   - '==Side chains sort: nonpolar (Gly, Ala, Val, Leu, Ile, Phe, Met, Pro), polar uncharged (Ser, Thr,
     Cys, Tyr, Asn, Gln), acidic (Asp, Glu — negative at pH 7), basic (Lys, Arg, His)==. ==Cysteine forms
     disulfide bonds; Proline kinks helices due to its rigid ring==.'
+  misconception: '"Every amino acid is chiral, since they all have that alpha carbon with four different
+    groups." Not glycine — its fourth substituent is a second hydrogen, and four DIFFERENT groups is the
+    requirement. It is also the only achiral standard amino acid, which is exactly why it is the residue
+    collagen can tolerate at every third position.'
+  connection: 'The pKa rule here is acid-base chemistry doing biology: below the pKa a group is protonated,
+    above it deprotonated, so lysine (pKa 10.5) stays positive at pH 7 while glutamate (pKa 4.2) is negative.
+    Chapter 5A · Unique nature of water and its solutions supplies that rule, and the passage runs it
+    in reverse — dropping to pH 5 protonates an aspartate and makes it buryable again.'
+  connection_label: How sciences interconnect
   check:
   - q: Which amino acid is NOT chiral?
     options:
@@ -61,6 +70,15 @@ sections:
   - '==Primary structure = the sequence; it fully determines the fold (Anfinsen — ribonuclease refolds
     if only primary structure is intact). ==Common exam id: count peptide bonds = residues - 1 in a linear
     peptide; disulfides join cysteines (oxidation)==.'
+  misconception: '"Ten residues in the chain means ten peptide bonds — one per residue." Only the joints
+    count: a linear chain of n residues has n - 1 peptide bonds, so a decapeptide has nine. Count links,
+    not members — and remember disulfides are extra covalent links on top, as the pentapeptide check shows
+    with four bonds plus two bridges.'
+  connection: 'The planarity of the peptide bond is pure chemistry with structural consequences: the C-N
+    bond has partial double-bond character, so it cannot rotate, and the backbone''s freedom lives entirely
+    in the other two torsion angles on either side. That constraint is what limits the conformations Ramachandran
+    space allows — the reason a chain folds into repeating helices rather than a random tangle.'
+  connection_label: How sciences interconnect
   check:
   - q: A decapeptide has how many peptide bonds?
     options:
@@ -101,6 +119,15 @@ sections:
   - ==Secondary structure is stabilized by backbone H-bonds, NOT side chains — that is the tertiary level's
     job==. Beta-turns connect strands; many proteins mix helix and sheet (e.g., the fibrous keratin helix,
     silk beta-sheet).
+  misconception: '"Hydrophobic side chains hold the helix together, since hydrophobic forces are the strongest."
+    Secondary structure runs on backbone hydrogen bonds — C=O to N-H four residues along — not on side
+    chains at all. Hydrophobic packing is a tertiary-level force, and side chains in a helix point outward
+    into the solvent or the core without touching the hydrogen-bonding pattern.'
+  connection: 'Proline and glycine are the two helix breakers for opposite reasons, and the check rewards
+    knowing which is which: proline''s rigid ring locks the backbone and lacks an amide hydrogen to donate,
+    while glycine is too flexible to hold the geometry. In collagen that same rigidity is recruited rather
+    than punished — proline sets the left-handed strand winding that glycine''s small size then lets pack.'
+  connection_label: How sciences interconnect
   check:
   - q: Alpha-helices are stabilized mainly by…
     options:
@@ -139,6 +166,15 @@ sections:
   - ==Denaturation — heat, pH, detergents, urea, reducing agents unfold structure WITHOUT breaking peptide
     bonds; some proteins refold spontaneously, others need chaperones==. SDS denatures with uniform charge;
     beta-mercaptoethanol cuts disulfides.
+  misconception: '"SDS breaks disulfide bonds — that is why it denatures proteins so thoroughly." SDS
+    disrupts noncovalent forces and coats the chain in uniform negative charge; the disulfides survive
+    it untouched. It takes a reducing agent like beta-mercaptoethanol to open an S-S bridge, which is
+    why the two reagents are used together when you want a protein fully taken apart.'
+  connection: 'The dominant tertiary force is the hydrophobic effect — entropy-driven water release, not
+    any attraction between the side chains themselves. Chapter 5B · Molecules and intermolecular interactions
+    derives that mechanism, and the Leu-to-Asp passage here is its most common clinical expression: a
+    charged group in a hydrophobic core refuses to stay buried.'
+  connection_label: How sciences interconnect
   check:
   - q: Hemoglobin's alpha2 beta2 arrangement is…
     options:
@@ -183,6 +219,15 @@ sections:
     regions bind antigens, constant regions recruit effectors==.
   - '==Structure-function classics the MCAT reuses: collagen''s Gly-X-Y triple helix (fibrous strength),
     hemoglobin''s cooperative O2 binding (sigmoid curve), intrinsically disordered regions in signaling==.'
+  misconception: '"Collagen needs glycine because glycine is special chemically — its hydrogen forms a
+    unique bond in the core." No bond is formed. Glycine is simply the only residue small enough: the
+    three strands pack so tightly that anything bulkier than hydrogen wedges the core open. That size
+    requirement is why a single Gly-to-larger mutation in collagen causes osteogenesis imperfecta.'
+  connection: 'Hemoglobin''s sigmoid oxygen-binding curve is quaternary structure made measurable: binding
+    at one subunit shifts the others to a higher-affinity shape, which is cooperative allostery — the
+    same mechanism the enzyme-regulation section of chapter Biochemistry describes. Chapter 3B · Main
+    organ systems follows the physiological payoff, from tissue oxygen delivery to the Bohr effect.'
+  connection_label: How sciences interconnect
   check:
   - q: Antibody specificity comes from…
     options:
@@ -246,6 +291,22 @@ examples:
       A: Glycine is helix-tolerant precisely because it is small.
       B: Side-chain hydrophobicity does not touch backbone hydrogen bonding.
       D: Disulfides are optional and depend on oxidation, not on cysteine's mere presence.
+key_equations:
+- latex: $pI = \frac{pK_{a1} + pK_{a2}}{2}$
+  symbols: pI isoelectric point, pKa1 and pKa2 the flanking ionizations
+  when: neutral side chains only; charged residues must include the side-chain pKa
+- latex: $\text{peptide bonds} = n - 1$
+  symbols: n residues in a linear chain
+  when: add disulfide bridges separately — they are extra covalent links, not peptide bonds
+- latex: $\text{charge} = f(pH - pK_a)$
+  symbols: below the pKa a group is protonated; above it, deprotonated
+  when: side-chain charge at any pH — Lys (10.5) positive and Glu (4.2) negative at pH 7
+- latex: '$\text{helix: } i \rightarrow i+4\ \text{backbone H-bonds}$'
+  symbols: the C=O of residue i bonds the N-H of residue i+4
+  when: 3.6 residues per turn; proline cannot donate the N-H, glycine is too flexible
+- latex: '$\alpha\beta: \ \text{Hb} = \alpha_{2}\beta_{2}$'
+  symbols: two alpha and two beta chains assembling
+  when: quaternary structure — multiple polypeptides, cooperative O2 binding
 key_points:
 - Zwitterion at pH 7; pI = (pKa1 + pKa2)/2 for neutral residues.
 - Glycine achiral; cysteine disulfides; proline kinks.

@@ -17,6 +17,15 @@ sections:
   - ==NADH/NAD+ (catabolic), NADPH/NADP+ (anabolic, reductive biosynthesis — pentose phosphate pathway
     makes it), FADH2 (ETC) are electron currencies. ==Fats yield ~9 kcal/g vs carbs ~4 kcal/g — the energy
     density argument==.
+  misconception: '"NADH and NADPH are basically the same molecule — one phosphate hardly matters." The
+    phosphate is the address label. NADH is the catabolic currency, feeding electrons into the transport
+    chain for ATP; NADPH is the anabolic one, supplying reducing power for biosynthesis and detoxification.
+    The cell keeps the pools separate precisely so building and burning do not compete for the same electrons.'
+  connection: 'ATP''s -30 kJ/mol is chapter 5E · Chemical thermodynamics and kinetics made biological:
+    couple that negative delta-G to an unfavourable step and the sum runs forward. The same coupling arithmetic
+    you practised on Gibbs free energy there is what pays for every biosynthetic step tallied in this
+    chapter.'
+  connection_label: How sciences interconnect
   check:
   - q: NADPH's primary role is…
     options:
@@ -55,6 +64,16 @@ sections:
   - '==Fates of pyruvate: aerobic -> acetyl-CoA (pyruvate dehydrogenase); anaerobic -> lactate (regenerates
     NAD+); yeast -> ethanol + CO2. ==Sugars funnel via fructose-6-phosphate; galactose and fructose feed
     glycolysis at distinct points==.'
+  misconception: '"Glycolysis makes 4 ATP — the two spent at the start come from the same pathway, so
+    they cancel out of the count." They cancel out of the NET, which is 2 — but you must show it, not
+    assume it. The investment phase spends 2 ATP priming the hexose, the payoff phase makes 4, and the
+    net 2 ATP plus 2 NADH is the figure every downstream calculation expects. Reporting gross instead
+    of net is the classic glycolysis mark-loser.'
+  connection: 'Anaerobic pyruvate going to lactate is not a waste route — it is the only way glycolysis
+    can keep running without oxygen, because it regenerates the NAD+ the investment phase consumed. That
+    is chapter 5E redox chemistry under a constraint: no terminal electron acceptor, so the cell recycles
+    its own. Muscle burn during sprinting is the felt version of this bookkeeping.'
+  connection_label: How sciences interconnect
   check:
   - q: The committed step of glycolysis is…
     options:
@@ -94,6 +113,15 @@ sections:
   - ==Oxidative phosphorylation — ETC (Complexes I-IV) pumps protons, ATP synthase (Complex V) makes ATP;
     NADH ~2.5 ATP, FADH2 ~1.5 ATP, total aerobic yield ~30-32 ATP/glucose==. ==Uncouplers (thermogenin
     in brown fat) generate heat instead of ATP==.
+  misconception: '"An uncoupler blocks the electron transport chain, so everything stops." The chain keeps
+    running — often faster. An uncoupler like thermogenin lets protons leak back across the inner membrane
+    without passing through ATP synthase, so the gradient the chain builds is spent as heat and the ATP
+    yield collapses while fuel oxidation continues. Blocked capture, not blocked flow.'
+  connection: 'Brown fat in human infants is that leak doing useful work: the uncoupling protein deliberately
+    wastes the gradient to generate heat without shivering, which is why newborns can defend body temperature
+    with limited muscle mass. The same physics explains dinitrophenol''s toxicity — a chemical uncoupler
+    that cooks from within.'
+  connection_label: Real-world connection
   check:
   - q: Per acetyl-CoA, the TCA cycle yields…
     options:
@@ -143,6 +171,15 @@ sections:
   - ==Amino acid catabolism — transamination (aminotransferases, PLP), oxidative deamination, the urea
     cycle (liver, ornithine-citrulline) for ammonia. ==Glucogenic vs ketogenic — most glucogenic; leucine
     and lysine ketogenic only==.
+  misconception: '"A 16-carbon fatty acid gives 16 acetyl-CoA — one per carbon." Carbons leave in pairs.
+    Each beta-oxidation cycle clips a two-carbon acetyl-CoA, so palmitate gives 8 acetyl-CoA from only
+    7 cycles — one fewer cycle than the number of acetyl units, because the last cleavage yields two at
+    once. C12 therefore means 6 acetyl-CoA and 5 cycles.'
+  connection: 'Ketogenesis is overflow chemistry: during a fast, beta-oxidation floods the liver with
+    more acetyl-CoA than the TCA cycle can take, and the surplus is packaged into ketones the brain can
+    burn instead of glucose. Chapter 3B · Main organ systems follows the physiological adaptation, and
+    the passage''s two-week fast case is exactly that switch completing.'
+  connection_label: How sciences interconnect
   check:
   - q: The urea cycle exists to…
     options:
@@ -181,6 +218,16 @@ sections:
   - '==Gluconeogenesis — essentially glycolysis in reverse (3 bypasses: pyruvate carboxylase + PEPCK,
     fructose-1,6-bisphosphatase, glucose-6-phosphatase), costing 4 ATP + 2 GTP + 2 NADH per glucose; the
     Cori cycle recycles lactate to glucose==.'
+  misconception: '"Muscle glycogen can bail out blood glucose when the liver runs short." Muscle lacks
+    glucose-6-phosphatase, so its glycogen can only feed its own contraction — the glucose stays trapped
+    as glucose-6-phosphate inside the myocyte. The liver is the only tissue that exports free glucose
+    to the blood, which is why hepatic glycogenolysis and gluconeogenesis are the sole defenders of glycaemia
+    in a fast.'
+  connection: 'The Cori cycle is this chapter''s bridge to organ physiology: muscle anaerobically produces
+    lactate, blood carries it to the liver, and gluconeogenesis rebuilds glucose at a cost of 4 ATP +
+    2 GTP + 2 NADH — paid by the liver so the muscle can spend again. Chapter 3B · Main organ systems
+    tracks the same lactate as a clinical signal of tissue hypoperfusion.'
+  connection_label: How sciences interconnect
   check:
   - q: During a 24-hour fast, blood glucose is maintained by…
     options:
@@ -242,6 +289,25 @@ examples:
       B: Counting the final acetyl-CoA as if it came from a cycle.
       C: One cycle short of the seven required.
       D: One cofactor pair per carbon rather than per two-carbon clip.
+key_equations:
+- latex: $\text{ATP} + H_{2}O \rightarrow \text{ADP} + P_{i}\ \Delta G \approx -30\ \text{kJ/mol}$
+  symbols: hydrolysis of ATP to ADP and inorganic phosphate
+  when: the coupling currency — adding it to an unfavourable step makes the total negative
+- latex: '$\text{glycolysis: glucose} \rightarrow 2\ \text{pyruvate}$'
+  symbols: net 2 ATP + 2 NADH from one glucose in the cytosol
+  when: investment 2 ATP, payoff 4 — the net figure is what downstream tallies expect
+- latex: '$\text{TCA per acetyl-CoA: } 3\ \text{NADH} + 1\ \text{FADH}_{2} + 1\ \text{GTP}$'
+  symbols: one turn of the cycle, releasing 2 CO2
+  when: two turns per glucose — each glucose sends two acetyl-CoA in
+- latex: $\text{NADH} \approx 2.5\ \text{ATP};\ \ \text{FADH}_{2} \approx 1.5\ \text{ATP}$
+  symbols: P/O ratios through the electron transport chain
+  when: modern accounting — the aerobic total is 30-32 ATP per glucose, not 36-38
+- latex: '$\text{beta-oxidation: } n/2\ \text{acetyl-CoA},\ (n/2 - 1)\ \text{cycles}$'
+  symbols: n carbon atoms in the fatty acid; each cycle yields 1 FADH2 + 1 NADH
+  when: palmitate C16 — 8 acetyl-CoA from 7 cycles, about 106 ATP total
+- latex: '$\text{gluconeogenesis: } 4\ \text{ATP} + 2\ \text{GTP} + 2\ \text{NADH}$'
+  symbols: cost per glucose made from pyruvate
+  when: glycolysis run backward needs the three bypass enzymes and nearly twice the ATP
 key_points:
 - ATP -30 kJ/mol; NADH catabolic, NADPH anabolic.
 - 'Glycolysis: net 2 ATP + 2 NADH; PFK-1 is the valve; F-2,6-BP activates.'

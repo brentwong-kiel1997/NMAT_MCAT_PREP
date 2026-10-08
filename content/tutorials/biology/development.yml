@@ -20,6 +20,15 @@ sections:
   - Cleavage produces the **blastula** — a hollow ball of small cells (blastomeres) around a blastocoel.
     Crucial fact for exam logic — ==early blastomeres are totipotent== in many animals; separate one and
     it can make a whole individual, which is the biology behind identical twins.
+  misconception: '"Cleavage is just fast mitosis — same cell cycle, only quicker." One feature is missing:
+    growth. Cleavage partitions the same cytoplasm into ever-smaller cells with no G1 expansion between
+    divisions, so the embryo''s total volume stays nearly constant while cell number climbs. That is why
+    early blastomeres get progressively smaller — division without growth, the defining difference from
+    ordinary mitosis.'
+  connection: 'Identical twins are this section''s totipotency made real: an early blastomere separated
+    from its twin retains the ability to build an entire individual, which is the starting point for the
+    potency ladder chapter 2C develops from totipotent to multipotent.'
+  connection_label: How sciences interconnect
   check:
   - q: Cleavage differs from ordinary mitosis because…
     options:
@@ -59,6 +68,16 @@ sections:
   - The archenteron (new cavity) opens through the **blastopore** — mouth-first in protostomes, anus-first
     in deuterostomes, linking this stage back to the body-plan chapter. The blastocoel largely collapses;
     the body axis is now committed.
+  misconception: '"Germ layers are just geography — the ectoderm is the outside because it ends up on
+    the outside." The names describe where cells MOVE to, not where they start. During gastrulation, sheets
+    migrate inward and through; an inner-cell-mass descendant can end up as surface ectoderm and vice
+    versa. The layer is a fate commitment established by movement — which is why Wolpert called gastrulation
+    the most important time in your life.'
+  connection: 'The germ-layer fate table is the master key to later anatomy: ectoderm to nervous system,
+    mesoderm to muscle, skeleton, heart, blood, endoderm to the gut lining and its glands. Chapter 3B
+    · Main organ systems tours the organs; every one of them is reachable from this table by its layer
+    of origin.'
+  connection_label: How sciences interconnect
   check:
   - q: The pancreas derives from which germ layer?
     options:
@@ -104,6 +123,15 @@ sections:
     clusters — ==the same genes order a fly and a mouse== — which is why development is the strongest
     evidence for common ancestry in the unity chapter. Apoptosis is part of the program too — sculpting
     fingers from a paddle requires scheduled cell death, not just growth.
+  misconception: '"Cells know their fate from their lineage — a cell does what its parent cell did." Position,
+    not pedigree, decides. A morphogen gradient exposes every cell in the field to a different concentration,
+    and threshold concentrations trigger different gene programs — so two sister cells can adopt different
+    fates if they sit at different distances from the source. The Spemann organizer experiment proves
+    the point: a moved signal source respecifies host tissue.'
+  connection: 'Hox colinearity — the same genes ordering a fly''s body and a mouse''s — is among the strongest
+    evidence for common ancestry, which is why development feeds directly into the Unity and Diversity
+    of Life chapter. The conservation argument runs: too arbitrary to arise twice, too deep to be coincidence.'
+  connection_label: How sciences interconnect
   check:
   - q: A morphogen gradient assigns cell fate because…
     options:
@@ -142,6 +170,16 @@ sections:
     genome.
   - This contrast is a compact essay topic for the MCAT — commitment versus perpetual juvenility; migration-and-induction
     versus wall-bound positional information; apoptosis as sculpture versus rarely used in plants.
+  misconception: '"Animals and plants develop the same way — cells divide and the body plan unfolds."
+    The operating systems differ fundamentally. Animals commit fates early through determination and mostly
+    stop; plants keep totipotent meristems at root and shoot tips for life, and many mature cells can
+    dedifferentiate and rebuild a whole plant — which is why a stem cutting works and why, in animals,
+    only early embryos or engineered iPSCs can do the equivalent.'
+  connection: 'Vegetative propagation is this totipotency in commercial form: a cutting, a graft, or a
+    tissue-cultured explant can regenerate an entire plant from differentiated cells. Everything from
+    banana plantations free of disease to preserving rare cultivars runs on the fact that a plant''s body
+    plan never locks shut.'
+  connection_label: Real-world connection
   check:
   - q: A gardener roots a cutting from a stem and grows a full plant. The cellular basis is…
     options:
@@ -187,6 +225,15 @@ sections:
   - Classic agents anchor the concept — thalidomide (limb defects), alcohol (fetal alcohol spectrum),
     rubella, retinoids. The general exam rule — identify the stage, predict the system disrupted — works
     for any teratogen a passage invents.
+  misconception: '"A teratogen is dangerous throughout pregnancy at roughly the same level." Sensitivity
+    is stage-dependent. The embryonic period — organogenesis, roughly weeks 3 to 8 — is the structural-defect
+    window because organs are being patterned then; earlier exposure tends to kill or be fully repaired,
+    later exposure more often affects growth or function. Identify the stage and you can predict which
+    system is at risk.'
+  connection: 'Thalidomide is the historical anchor: limb buds were being patterned in exactly the window
+    the drug covered, and the result was phocomelia in thousands of children. It is why teratogen counselling
+    is dated by gestational week, and why retinoids carry strict pregnancy-prevention rules for users.'
+  connection_label: Real-world connection
   check:
   - q: A drug taken during organogenesis is MOST likely to cause…
     options:

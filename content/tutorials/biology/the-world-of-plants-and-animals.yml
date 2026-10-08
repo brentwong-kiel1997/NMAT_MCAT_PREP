@@ -22,6 +22,15 @@ sections:
     growth); **lateral meristems** — the vascular cambium and cork cambium — thicken it (secondary growth,
     which makes wood). A tree ring is a year of cambium activity, dense late-season wood against looser
     spring wood.
+  misconception: '"Xylem and phloem both carry fluid, so they are interchangeable pipes." Their cargoes
+    and directions differ fundamentally. Xylem is a one-way elevator: water and minerals from root to
+    shoot, driven by transpiration. Phloem is bidirectional delivery: sugars from source (a loading leaf)
+    to sink (a growing root or fruit), whichever direction the demand sits. Getting the direction right
+    answers most transport questions outright.'
+  connection: 'A tree ring is secondary growth written in density: cambium lays loose spring wood early
+    in the season and dense late wood as growth slows, so each year leaves one band. Reading rings for
+    age and climate is the same logic as reading growth layers in any periodically varying tissue.'
+  connection_label: How sciences interconnect
   check:
   - q: Sugars from a source leaf travel to a growing root through…
     options:
@@ -61,6 +70,15 @@ sections:
     a tube to the ovule, and double fertilization follows — one sperm fuses the egg (→ embryo), a second
     fuses polar nuclei (→ ==triploid endosperm==, the food supply). Seed plus ovary wall becomes fruit
     — a dispersal vehicle the animals of this chapter's second half help spread.
+  misconception: '"Plants have a haploid stage like animals do — gametes made by meiosis." Plants alternate
+    between two multicellular bodies: the diploid sporophyte makes spores by MEIOSIS, and those spores
+    grow into a haploid gametophyte that makes gametes by MITOSIS. Animals skip the gametophyte stage
+    entirely — their gametes are the direct meiotic products. Two lives, not one.'
+  connection: The evolutionary trend of the shrinking gametophyte — dominant and free-living in mosses,
+    a few-celled passenger inside a pollen grain in angiosperms — is a narrative of increasing sporophyte
+    dominance that tracks plant colonisation of land. Development chapter 2C's determination logic explains
+    what the plant gives up by keeping its gametophyte boxed inside the parent.
+  connection_label: How sciences interconnect
   check:
   - q: In flowering plants, endosperm is…
     options:
@@ -105,6 +123,15 @@ sections:
   - Two more forks finish the map — protostome versus deuterostome (the blastopore becomes mouth or anus
     respectively, with spiral versus radial cleavage), and segmentation (repeated body blocks, powerful
     because each segment can specialize).
+  misconception: '"Any body cavity counts as a coelom — a pseudocoel is just a small one." The LINING
+    decides. A true coelom is lined entirely by mesoderm; a pseudocoelom has mesoderm only on part of
+    its wall, with the gut floating free in the remainder; an acoelomate has no cavity at all. Size is
+    irrelevant — the tissue boundary is the whole definition.'
+  connection: The protostome-deuterostome split — blastopore to mouth or to anus — is gastrulation logic
+    from the Development chapter used as a taxonomic character. The same body-plan decisions made in an
+    embryo are the ones systematists read across animal phyla, which is why developmental events double
+    as evolutionary evidence.
+  connection_label: How sciences interconnect
   check:
   - q: A true coelom is best described as…
     options:
@@ -147,6 +174,15 @@ sections:
     worms — coelom as hydrostatic skeleton). **Arthropoda** — ==jointed appendages and an exoskeleton
     of chitin==, the most successful phylum by numbers, with molting as the price of armor. Mollusca (mantle,
     radula, muscular foot) completes the ecdysozoan/lophotrochozoan picture the MCAT occasionally probes.
+  misconception: '"Arthropods molt because the exoskeleton wears out — a replacement schedule like shedding
+    skin." The exoskeleton is rigid chitin, and a hardened shell cannot expand. Growth therefore requires
+    shedding the old armor and hardening a larger replacement, during which window the animal is soft
+    and vulnerable. Molting is the price of armor, not its maintenance.'
+  connection: 'The flatworm''s flatness is surface-to-volume biology from the Cells chapter: with no circulatory
+    system, every cell must reach its supplies by diffusion, and diffusion only works over short distances.
+    Flattening keeps every cell near the surface — the same arithmetic that keeps cells small, applied
+    to a whole body.'
+  connection_label: How sciences interconnect
   check:
   - q: An animal sheds its outer covering to grow. Which phylum?
     options:
@@ -186,6 +222,14 @@ sections:
   - Mammals split three ways — monotremes (egg-laying), marsupials (pouched, brief placenta), and eutherians
     (long placenta, birth to relatively independent young). The placenta itself is a MCAT-friendly organ
     — maternal and fetal blood exchange materials WITHOUT mixing.
+  misconception: '"In the placenta, the mother''s blood and the baby''s blood mix — that is how nutrients
+    pass." The two circulations never mix. Maternal and fetal blood sit on opposite sides of a thin exchange
+    surface, and materials cross by diffusion and active transport — the same barrier logic as any epithelium.
+    Mixing would trigger immune attack and allow direct pressure transmission.'
+  connection: 'The amniotic egg is a packaged aquatic nursery: amnion for the bath, chorion for gas exchange,
+    yolk sac for food, allantois for waste. Those four extraembryonic membranes are homologous to the
+    ones a mammalian placenta deploys — the same membranes, repurposed inside a womb instead of a shell.'
+  connection_label: How sciences interconnect
   check:
   - q: Which innovation most directly freed vertebrates from needing water to reproduce?
     options:

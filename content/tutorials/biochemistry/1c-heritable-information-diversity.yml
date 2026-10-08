@@ -19,6 +19,16 @@ sections:
     — while mutagens add signatures of their own (UV dimers, alkylation, intercalation)==. ==The codon
     table sets the cost of a point mutation — silent keeps the amino acid, missense swaps one, nonsense
     stops the chain early==.
+  misconception: '"Deleting two bases is a tiny change — the protein should barely notice." The frame,
+    not the size, decides. Codons are read in threes from the start, so a deletion that is not a multiple
+    of three re-reads every codon downstream in the wrong register, usually hitting a premature stop.
+    Deleting three bases is far more damaging to look at and far less damaging in effect — it removes
+    exactly one amino acid and keeps the register.'
+  connection: 'The delta-F508 CFTR example is this arithmetic meeting clinical medicine: three bases out,
+    one phenylalanine gone, the frame intact — yet the protein still misfolds. Chapter Life Processes:
+    Regulation and Homeostasis follows the physiological fallout in the lung and pancreas, and the recessive
+    inheritance pattern is chapter 1C · Heritable information and genetic diversity territory.'
+  connection_label: How sciences interconnect
   check:
   - q: A single-base insertion early in a coding sequence usually…
     options:
@@ -64,6 +74,16 @@ sections:
   - ==Which lane runs decides the phenotype — NER defects give xeroderma pigmentosum, mismatch-repair
     defects give Lynch syndrome with microsatellite instability, BRCA1/2 defects leave double-strand breaks
     to error-prone end joining==.
+  misconception: '"There is one DNA repair system that fixes everything — the cell just sends the damage
+    there." There is a lane for each lesion class. Mismatch repair clears post-replication mispairs, base
+    excision handles a single small damaged base, nucleotide excision cuts a patch around bulky helix-distorting
+    lesions like thymine dimers, and double-strand breaks go to homologous recombination or NHEJ. Telling
+    the lanes apart by lesion size is the entire exam question.'
+  connection: 'The G1-versus-S/G2 choice for double-strand breaks is cell-cycle biology constraining biochemistry:
+    homologous recombination needs the sister chromatid as a template, so before replication the cell
+    has no accurate option and falls back on error-prone end joining. Chapter 2C · Cell division, differentiation,
+    specialization supplies the cycle stages that make the decision.'
+  connection_label: How sciences interconnect
   check:
   - q: UV-induced thymine dimers are repaired by…
     options:
@@ -103,6 +123,15 @@ sections:
   - ==Recombination vs mutation — recombination shuffles existing variation; mutation creates new alleles.
     ==Gene conversion and unequal crossing over produce tandem duplications — the engines of gene family
     expansion==.
+  misconception: '"Crossing over creates new alleles — that is where variation comes from." Crossing over
+    shuffles alleles that already exist; mutation is what creates them. The recombinant chromatid in the
+    check carries new COMBINATIONS of parental variants, not new sequence. Keep the division of labour
+    straight and a whole family of exam distractors falls away.'
+  connection: 'V(D)J recombination is the immune system''s private edition of this section: gene segments
+    joined combinatorially, then somatic hypermutation layered on top, produce antibody diversity no genome
+    could store as a ready-made list. Chapter 3B · Main organ systems covers the adaptive immunity that
+    this mechanism makes possible.'
+  connection_label: How sciences interconnect
   check:
   - q: V(D)J recombination generates antibody diversity by…
     options:
@@ -142,6 +171,16 @@ sections:
   - '==X-inactivation — females are mosaics: one X silenced per cell; traits like color-blindness show
     patchy expression in carriers==. ==Epigenetic marks are environmentally responsive — early-life stress
     shapes methylation profiles==.'
+  misconception: '"The two siblings have the same chromosome 15 deletion, so they must have the same disease."
+    Not when the region is imprinted. Prader-Willi and Angelman syndromes both map to the same 15q11-13
+    segment, but only the paternal copy of some genes and the maternal copy of others is active — so the
+    parent who transmitted the deletion decides which working copies are lost. Same lesion, different
+    silence, different phenotype.'
+  connection: 'X-inactivation is dosage compensation built on the same silencing chemistry: each female
+    cell shuts down one X at random, freezes that choice, and passes it to daughter cells, producing the
+    mosaic expression the check describes. Chapter genetics covers the pedigree consequences for X-linked
+    traits in carrier females.'
+  connection_label: How sciences interconnect
   check:
   - q: A woman heterozygous for a X-linked trait can show patchy expression because…
     options:
@@ -187,6 +226,15 @@ sections:
   - ==Telomeres cap chromosome ends — the end-replication problem shortens them each division==. ==Telomerase
     re-extends telomeres in germline and stem cells, and most cancers reactivate it to escape the replicative
     limit==.
+  misconception: '"These patients get more cancers because UV or mutagens hit them harder." The exposure
+    is the same; the response is what failed. With the NER lane out, thymine dimers sit unrepaired, replication
+    stalls, and translesion polymerases bypass the lesion at the cost of errors — the mutation burden
+    climbs because the cleanup crew is absent, not because the damage rate rose.'
+  connection: 'Telomerase is the other half of the immortality story: normal somatic cells lose a little
+    telomere each division and stop, but most cancers reactivate the enzyme that re-extends those ends,
+    escaping the replicative limit. It is why telomerase is a persistent drug-discovery target — block
+    it and the tumour''s divisions become countable again.'
+  connection_label: Real-world connection
   check:
   - q: A colorectal tumor shows microsatellite instability. The likeliest defect is in…
     options:
@@ -249,6 +297,23 @@ examples:
       B: That outcome needs exactly one codon (3 bases) removed.
       C: A deletion changes the sequence; silent mutations are single-base substitutions.
       D: Deletion removes sequence; it does not duplicate it.
+key_equations:
+- latex: $\text{indel}/3\ \text{remainder} \neq 0 \Rightarrow \text{frameshift}$
+  symbols: indel size in bases; a nonzero remainder after dividing by three shifts the frame
+  when: three bases removed is in-frame — one amino acid lost, register preserved
+- latex: $\text{codons} = \frac{\text{coding nt}}{3}$
+  symbols: coding nucleotides of the open reading frame
+  when: a 1200-base ORF is 400 codons — 399 amino acids once the stop is discounted
+- latex: '$\text{BER: 1 base;}\ \ \text{NER: patch;}\ \ \text{MMR: mispair}$'
+  symbols: lesion size each excision lane handles
+  when: matching the lane to the lesion — bulky dimers to NER, oxidized bases to BER, post-replication
+    mispairs to MMR
+- latex: '$\text{HR: S/G2;}\ \ \text{NHEJ: any phase}$'
+  symbols: HR needs the sister chromatid as template
+  when: a double-strand break in G1 has no accurate option — NHEJ trims and ligates, error-prone
+- latex: $\text{V(D)J diversity} \propto V\times D\times J$
+  symbols: number of V, D, and J gene segments available
+  when: combinatorial joining — recombination shuffles existing segments; it does not create new sequence
 key_points:
 - Point vs frameshift — reading frame is the hinge; nonsense truncates, silent changes nothing.
 - NER for bulky dimers; BER for single damaged bases; mismatch for post-replication mispairs.

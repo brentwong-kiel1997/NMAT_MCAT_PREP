@@ -18,6 +18,14 @@ sections:
     and signalled to divide? — the ==restriction point== that commits the cycle), **G2/M** (is DNA fully
     and correctly replicated?), and **spindle/kinetochore checkpoint** in metaphase (are all chromosomes
     attached under tension?). Pass requires clearance; damage forces pause, repair, or apoptosis.
+  misconception: '"Interphase is a rest phase — the cell is idle between divisions." Interphase is where
+    the work happens: S phase duplicates the entire genome, and G1 and G2 are growth and quality-control
+    intervals. The only ''rest'' is G0, the exited state. Calling interphase rest confuses the visible
+    drama of mitosis with the actual workload of the cycle.'
+  connection: 'The G1 checkpoint is p53''s post: DNA damage stabilises p53, which induces p21 and pauses
+    the cycle before replication. That is the same DNA-damage response the biochemistry 1C chapter builds
+    from repair pathways — the checkpoint decides whether to pause for repair or route the cell to apoptosis.'
+  connection_label: How sciences interconnect
   check:
   - q: The restriction point commits the cell to…
     options:
@@ -64,6 +72,14 @@ sections:
     inhibits G1/S CDKs) and routes unsalvageable cells to apoptosis; **Rb** holds E2F transcription (and
     thus S phase) shut until growth signals phosphorylate it aside. ==Lose p53 or Rb and the checkpoint
     system goes blind== — both are classic tumor suppressors.
+  misconception: '"CDKs are made when the cell needs to divide and destroyed afterwards." CDK levels stay
+    roughly constant all cycle; what oscillates is their cyclin partner. Binding the cyclin is the on-switch,
+    and destroying that cyclin is the off-switch — cyclin B destruction at anaphase is what lets the cell
+    exit mitosis. Timing comes from cyclin turnover, not from making new kinase.'
+  connection: 'The cyclin-CDK pair is feedback control made molecular: MPF triggers the events that destroy
+    its own cyclin, an elegant negative-feedback tail. Chapter Life Processes: Regulation and Homeostasis
+    supplies the control-theory framing — set point, sensor, effector — that this circuit instantiates.'
+  connection_label: How sciences interconnect
   check:
   - q: CDKs are enzymatically active only when…
     options:
@@ -104,6 +120,16 @@ sections:
   - Induction and morphogens (Development chapter) drive the choices in embryos; in adults, niches hold
     stem cells in reserve — bone marrow's hematopoietic stem cell is the exam's favorite, replenishing
     blood and immune lineages for life.
+  misconception: '"A skin cell lost the muscle genes when it became a skin cell — that is why it cannot
+    become muscle." Every nucleated cell keeps the full genome. Differentiation is differential gene expression,
+    sealed by chromatin state — methylation and histone marks decide which genes are readable. iPSCs proved
+    the point by walking differentiated cells back to pluripotency with four transcription factors: the
+    information was never lost, only archived.'
+  connection: The potency ladder totipotent to pluripotent to multipotent tracks early development, and
+    the signals that push cells down it are the morphogens and induction events of the Development chapter.
+    The same epigenetic sealing that locks identity here is what the biochemistry 1C chapter covers as
+    chromatin modification.
+  connection_label: How sciences interconnect
   check:
   - q: A cell that can produce all blood cell types but not muscle is…
     options:
@@ -147,6 +173,16 @@ sections:
   - The intrinsic pathway reads internal damage (mitochondrial outer membrane permeabilization — Bcl-2
     family as the rheostat); the extrinsic pathway reads death receptors (Fas, TNF). Both converge on
     executioner caspases — the shared demolition crew.
+  misconception: '"Cell death is cell death — necrosis and apoptosis are two names for the same mess."
+    They are opposites in consequence. Apoptosis is programmed demolition: caspases cut the cell into
+    membrane-bounded parcels that neighbours engulf, with no inflammation. Necrosis is accidental rupture
+    that spills contents and provokes inflammation. Development sculpting and chemotherapy both depend
+    on the tidy version.'
+  connection: The intrinsic pathway runs through the mitochondrion — Bcl-2 family members set the permeabilisation
+    rheostat, cytochrome c escapes, and caspases activate. That makes apoptosis an instance of mitochondrial
+    biology from the Cells chapter, and it is why chemotherapy that damages DNA ultimately converges on
+    this same mitochondrial decision.
+  connection_label: How sciences interconnect
   check:
   - q: Which feature belongs to apoptosis rather than necrosis?
     options:
@@ -187,6 +223,15 @@ sections:
     and colony founding. Treatment logic follows the biology — surgery and radiation for local disease;
     chemotherapy for dividing cells broadly; targeted therapy against the specific stuck accelerator (HER2
     inhibitors).
+  misconception: '"A mutation in p53 causes cancer in one step — that is why it is called a cancer gene."
+    Tumour-suppressor loss needs two hits, because one working copy still brakes the cycle — Knudson''s
+    logic, which is exactly what the check asks. Oncogenes are the opposite: a single overactive copy,
+    like an amplified HER2 allele, is dominant. Accelerators stick on with one hit; brakes need both cut.'
+  connection: 'Multistep progression is why cancer risk climbs with age: initiation is a mutation, promotion
+    is the division that expands the clone, progression is the instability that follows. Metastasis is
+    the lethal upgrade — which is why treatment follows the biology, with local surgery or radiation for
+    contained disease and systemic therapy once colonies found.'
+  connection_label: Real-world connection
   check:
   - q: Why do tumor-suppressor loss mutations behave recessively at the cellular level?
     options:

@@ -16,6 +16,16 @@ sections:
   - Temperature couples the terms — when delta-H and delta-S share a sign, ==temperature decides spontaneity==.
     Exothermic with positive entropy is spontaneous at all temperatures; endothermic with negative entropy
     at none. Memorize the four-sign table.
+  misconception: '"If a reaction releases heat it must run on its own — exothermic always means spontaneous."
+    Enthalpy is only one term. The entropy term -T delta-S can veto it: an exothermic reaction with negative
+    entropy (fewer, more ordered products) becomes nonspontaneous above the crossover temperature, exactly
+    as the check''s -100 kJ/mol, -200 J/mol·K case shows. Both signs must be in the ledger before you
+    call a reaction spontaneous.'
+  connection: 'The cell lives on this equation''s products side: nearly every biosynthetic step has a
+    positive delta-G on its own and only runs because it is coupled to something strongly negative. Chapter
+    1D · Bioenergetics and fuel metabolism is the physiology of that coupling — ATP hydrolysis paying
+    for work the reactants alone would never do.'
+  connection_label: How sciences interconnect
   check:
   - q: A reaction with delta-H < 0 and delta-S < 0 is…
     options:
@@ -54,6 +64,16 @@ sections:
   - Le Chatelier — stress shifts equilibrium to relieve it. ==Adding reactant, removing product, increasing
     pressure (fewer moles gas side), and heating an endothermic reaction all shift right==. K changes
     ONLY with temperature — concentration and pressure changes shift position, not K.
+  misconception: '"Add a catalyst and the equilibrium shifts so you end up with more product." A catalyst
+    speeds the forward and reverse reactions by exactly the same factor, so the balance point does not
+    move — the same K, the same final mixture, reached sooner. The passage makes the point in numbers:
+    a 10^8-fold rate increase and an unchanged product-to-reactant ratio.'
+  connection: 'The ammonia synthesis in the check is the Haber process, run at industrial scale worldwide.
+    Its engineers face the identical Le Chatelier arithmetic: high pressure pushes the four-moles-left,
+    two-moles-right reaction to the right, but high temperature — which speeds the catalyst — drags an
+    exothermic equilibrium backward. The operating compromise between fast and favourable is this section
+    written in steel.'
+  connection_label: Real-world connection
   check:
   - q: For N2 + 3H2 <-> 2NH3 (delta-H < 0), increasing temperature will…
     options:
@@ -92,6 +112,16 @@ sections:
   - Temperature dependence — the Arrhenius equation k = A exp(-Ea/RT). ==Higher temperature or lower activation
     energy means faster rate==. Catalysts lower Ea for BOTH directions equally — they speed equilibrium
     attainment without shifting its position.
+  misconception: '"The reaction is A + 2B, so the rate law must be rate = k[A][B]^2." Coefficients belong
+    to stoichiometry, not kinetics. The exponents m and n are read off experimental data — doubling [A]
+    that quadruples the rate means second order, whatever the equation says. Only an elementary step has
+    a rate law that matches its own stoichiometry, which is why the slow step of a mechanism is the one
+    you can trust.'
+  connection: 'Enzymes are this section''s biological case: an active site holds the substrate in a geometry
+    that lowers the activation barrier, so k rises enormously while delta-G and K stay put. Chapter 1A
+    · Proteins and amino acids covers the binding and catalysis side, and the passage''s 10^8-fold acceleration
+    is a typical enzyme''s signature.'
+  connection_label: How sciences interconnect
   check:
   - q: A catalyst changes…
     options:
@@ -138,6 +168,16 @@ sections:
   - The delta-G of a reaction under actual conditions is delta-G = delta-G standard + RT ln Q — when Q
     < K, delta-G is negative and the reaction runs forward. ==Only the actual delta-G, not the standard
     one, decides direction in the cell==, where concentrations keep Q far from standard.
+  misconception: '"A reaction with a positive standard delta-G cannot proceed, so the cell must avoid
+    those steps." The standard value assumes 1 M of everything — no cell runs there. Direction follows
+    the ACTUAL delta-G, delta-G standard plus RT ln Q, and a small product concentration can push Q far
+    below K and make the real value negative. Unfavourable steps run all the time; they just need coupling
+    and the right concentrations.'
+  connection: ATP hydrolysis at roughly -30 kJ/mol is the currency that makes those unfavourable steps
+    affordable, and chapter 1D · Bioenergetics and fuel metabolism is where the accounting happens — glycolysis,
+    the TCA cycle, and oxidative phosphorylation are all chains of coupled reactions adding their delta-G
+    values to a negative total.
+  connection_label: How sciences interconnect
   check:
   - q: A reaction with delta-G standard > 0 can proceed forward when…
     options:
@@ -177,6 +217,15 @@ sections:
   - Read mechanism data the way the MCAT presents it — a proposed mechanism must reproduce the observed
     rate law, sum to the overall reaction, and account for every intermediate. ==A mechanism consistent
     with the rate law is supported, never proven==.
+  misconception: '"The first step of a mechanism is always the rate-determining step, since everything
+    has to start there." The slow step bottlenecks the sequence wherever it sits — first, middle, or last.
+    A fast first step that reaches a low-concentration intermediate can leave a later slow step controlling
+    the rate, which is why the observed rate law, not the order on paper, is the evidence.'
+  connection: 'It is an assembly-line truth as much as a chemical one: the rate of the whole line is set
+    by its slowest station, so hiring more workers anywhere else changes nothing. Doubling the throughput
+    of a fast step buys exactly as much extra product as the check item''s zero-order distractor — none
+    at all.'
+  connection_label: Real-world connection
   check:
   - q: The rate-determining step is…
     options:
@@ -236,6 +285,32 @@ examples:
       B: Forgetting to convert kJ to J before dividing.
       C: Inverting the ratio and dividing delta-S by delta-H.
       D: The enthalpy term is unfavourable, so cold runs are not spontaneous.
+key_equations:
+- latex: $\Delta G = \Delta H - T\Delta S$
+  symbols: ΔG free energy change (kJ/mol), ΔH enthalpy change, ΔS entropy change (J/mol·K), T temperature
+    (K)
+  when: spontaneity — negative ΔG means product-favoured, and says nothing about rate
+- latex: $T_{crossover} = \frac{\Delta H}{\Delta S}$
+  symbols: T_crossover temperature where ΔG = 0, ΔH in J/mol, ΔS in J/mol·K
+  when: when ΔH and ΔS share a sign — convert kJ to J before dividing
+- latex: $K = \frac{[C]^{c}[D]^{d}}{[A]^{a}[B]^{b}}$
+  symbols: K equilibrium constant, [ ] equilibrium concentrations, a b c d stoichiometric coefficients
+  when: pure solids and liquids drop out; K changes only with temperature
+- latex: $\text{rate} = k[A]^{m}[B]^{n}$
+  symbols: k rate constant, m n orders found only from experiment
+  when: rate laws — exponents never come from the overall equation's coefficients
+- latex: $k = Ae^{-E_a/RT}$
+  symbols: k rate constant, A pre-exponential factor, E_a activation energy (J/mol), R = 8.314 J/mol·K
+  when: Arrhenius — higher T or lower Ea gives a faster rate; catalysts lower Ea
+- latex: $\Delta G = \Delta G^{\circ} + RT\ln Q$
+  symbols: ΔG actual free energy, ΔG° standard free energy, Q reaction quotient
+  when: direction in the cell — Q < K makes the actual ΔG negative
+- latex: $\Delta G^{\circ} = -RT\ln K$
+  symbols: ΔG° standard free energy, R = 8.314 J/mol·K, T temperature (K), K equilibrium constant
+  when: convert a standard free energy into an equilibrium constant and back
+- latex: $\Delta G_{coupled} = \Delta G_{1} + \Delta G_{2}$
+  symbols: ΔG of the coupled process = sum of the steps
+  when: ATP hydrolysis (~ -30 kJ/mol) drives an unfavourable step to a negative total
 key_points:
 - delta-G = delta-H - T delta-S; negative means spontaneous.
 - K changes only with temperature; stresses shift position.

@@ -20,6 +20,16 @@ sections:
   - The fluid mosaic consequence matters for exams — proteins drift laterally (Frye-Edidin fusion experiments),
     rafts cluster signaling molecules, and anisotropy measurements report fluidity. When a passage changes
     temperature or tail saturation, ask what happens to fluidity first — everything else follows.
+  misconception: '"Cells spend ATP assembling their membranes — building a bilayer must cost energy."
+    The assembly is free, and actually favourable: water gains entropy when hydrophobic tails stop touching
+    it, so amphipathic lipids self-organize into bilayers, micelles, or liposomes with no input at all.
+    Drop phospholipids in water and the bilayer forms by itself — the cell only spends energy maintaining
+    what is IN the membrane.'
+  connection: 'Cold-adapted bacteria raising their unsaturated-tail fraction is homeostasis at the molecular
+    scale: the cis double-bond kink counters the tight packing cold would force. Chapter Life Processes:
+    Regulation and Homeostasis makes the general argument — the set point here is membrane fluidity, and
+    the sensor-and-response loop is the tail-composition machinery.'
+  connection_label: How sciences interconnect
   check:
   - q: A membrane is enriched with unsaturated fatty-acyl tails. At a given temperature it will be…
     options:
@@ -60,6 +70,15 @@ sections:
     plants run the parallel system with the **cell wall** (cellulose fibers in a polysaccharide glue),
     rigid yet porous, joined between cells by plasmodesmata. Collagen pathology (scurvy — vitamin C needed
     for hydroxylation) shows the chemistry-clinical bridge.
+  misconception: '"The ECM is inert packing material — structural filler with no signalling role." It
+    is both scaffold and signal. Integrins span the membrane to connect the outside mesh to the cytoskeleton,
+    and information flows both ways: a cell reads the stiffness and composition of its surroundings, and
+    its own state alters how it grips. A stem cell''s fate can hinge on what the matrix tells it.'
+  connection: 'Scurvy is chemistry made clinical: the collagen triple helix needs hydroxyproline and hydroxylysine
+    to be stable, and that hydroxylation requires vitamin C as a cofactor — which is why a dietary deficiency
+    presents as a structural failure of wounds and gums. The hydroxylation chemistry itself lives in 5D
+    · Biologically relevant molecules'' functional-group logic.'
+  connection_label: How sciences interconnect
   check:
   - q: Which molecule physically links the ECM to a cell's cytoskeleton?
     options:
@@ -100,6 +119,16 @@ sections:
   - The plant counterpart is the plasmodesma — a membrane-lined tunnel through the wall. Expect a matching
     question — desmosome for strength, tight for barrier, gap for communication — and remember ==tight
     junctions also create epithelial polarity== by fencing the membrane into apical and basal domains.
+  misconception: '"All junctions stick cells together, so blocking any of them has the same effect." Four
+    junctions, four jobs: tight junctions seal, adherens and desmosomes rivet, gap junctions wire, and
+    hemidesmosomes anchor to the basement membrane. A connexon-blocking toxin dissolves nothing — cells
+    stay glued, but the electrical and metabolic coupling dies, which is why the heart''s synchrony is
+    what fails.'
+  connection: 'Cardiac gap junctions are why the heart beats as one organ rather than as a crowd of cells:
+    ions pass through connexons so depolarisation spreads cell to cell, the topic chapter 3A · Nervous
+    and endocrine systems develops for excitable tissue generally. It is the same membrane physics of
+    that chapter''s action potential, shared laterally.'
+  connection_label: How sciences interconnect
   check:
   - q: Cardiac muscle cells contract nearly in unison largely via…
     options:
@@ -140,6 +169,15 @@ sections:
   - Function follows fabric — a barrier organ leads with epithelium; a load-bearing organ leads with connective
     tissue; a pump leads with muscle wrapped in its own wiring. When a passage names an organ, sketch
     its fabric order before answering structure questions.
+  misconception: '"Blood cannot be a tissue — it is a liquid." Blood fits the connective design rule perfectly:
+    cells sparse and dispersed in an abundant non-cellular matrix. Tissue type is about architecture,
+    not firmness — and the same rule recognises bone, tendon, and fat as one family, since in each the
+    matrix dominates and the cells are scattered through it.'
+  connection: 'Reading the fabric order is how histology and pathology work: the gut''s cross-section
+    is epithelium for absorption, connective lamina for supply, muscle for peristalsis, and a cancer is
+    named partly by which layer it arises from. Function follows fabric — a barrier organ leads with epithelium,
+    a load-bearing one with connective tissue.'
+  connection_label: Real-world connection
   check:
   - q: Blood is classified as which tissue type?
     options:
@@ -185,6 +223,15 @@ sections:
   - This vectorial transport answers a classic MCAT puzzle — why inhibiting the Na⁺/K⁺-ATPase (ouabain,
     for example) kills glucose absorption — the apical cotransporter depends on the sodium gradient that
     the pump maintains on the basolateral side. No gradient, no cotransport, no absorption.
+  misconception: '"The apical cotransporter moves glucose against its gradient, so it must be burning
+    ATP directly — primary active transport." The ATP is spent elsewhere. The apical cotransporter is
+    secondary active: it rides the sodium gradient that the basolateral Na+/K+-ATPase builds and maintains.
+    Which is exactly why ouabain, which only touches the pump, shuts down glucose absorption — no gradient,
+    nothing to ride.'
+  connection: 'That two-membrane loop is the design behind every epithelium in chapter 3B · Main organ
+    systems: gut absorption, kidney reabsorption, and glandular secretion all run apical-uptake plus basal-export,
+    with the tight junction keeping the two transporter sets in their own membrane domains.'
+  connection_label: How sciences interconnect
   check:
   - q: Apical Na⁺-glucose cotransport across the gut epithelium is classified as…
     options:

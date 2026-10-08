@@ -17,6 +17,15 @@ sections:
   - Name from the longest chain, number for lowest locants, order substituents alphabetically. ==Cis-trans
     (or E/Z) describes alkene geometry; R/S describes tetrahedral stereocenters== — priorities by atomic
     number, trace 1 to 2 to 3 with 4 pointing away.
+  misconception: '"Same molecular formula, so they must be the same compound drawn differently." The formula
+    is only the first gate. Butane and 2-methylpropane share C4H10 yet connect those carbons differently
+    — constitutional isomers, genuinely different compounds with different boiling points. Only when the
+    connectivity also matches do you move on to stereoisomers, which differ in arrangement alone.'
+  connection: Geometry is not decoration here — it is reactivity. A trigonal planar alkene carbon presents
+    a flat face for electrophilic attack, while a tetrahedral centre blocks backside approach, which is
+    the steric logic behind the SN1/SN2 decision in the substitution section below. Chapter General Chemistry
+    supplies the VSEPR counts this section assumes.
+  connection_label: How sciences interconnect
   check:
   - q: Which pair are stereoisomers?
     options:
@@ -61,6 +70,15 @@ sections:
   - Diastereomers are stereoisomers that are NOT mirror images — different properties. ==A racemic mixture
     (50/50 enantiomers) is optically inactive== because rotations cancel. Mesocompounds have stereocenters
     but an internal plane of symmetry — achiral.
+  misconception: '"A compound with stereocenters must be chiral, so one with two stereocenters has to
+    rotate light." Not if the molecule carries an internal mirror plane — a meso compound has stereocenters
+    and is achiral, its two halves cancelling each other. The question is never ''how many stereocenters''
+    but ''is the molecule superimposable on its mirror image''.'
+  connection: 'Chirality is why drug regulation exists in its current form: enzymes and receptors are
+    chiral, so the two enantiomers of a drug can behave as two different medicines — one therapeutic,
+    one inert, or worse. Thalidomide is the canonical case, and it is why a single-enantiomer synthesis
+    is now a standard goal in pharmaceutical chemistry.'
+  connection_label: Real-world connection
   check:
   - q: Enantiomers differ in…
     options:
@@ -98,6 +116,16 @@ sections:
   - E2 — one step, concerted, anti-periplanar H and leaving group, strong base. E1 — via carbocation,
     weak base, rearrangements possible. ==Tertiary substrates with strong base go E2; with weak nucleophile
     and polar protic solvent go SN1/E1==.
+  misconception: '"SN1 and SN2 are just two spellings of the same substitution — the product decides,
+    not the mechanism." The mechanism decides everything downstream. SN2 is a single concerted backside
+    attack, so it inverts the stereocentre cleanly; SN1 ionises to a flat carbocation first, so it racemises.
+    Same substrate, same product formula, opposite optical outcome — the passage''s opposite-sign rotation
+    is exactly that signature.'
+  connection: 'The SN1/SN2 fork is carbocation stability physics: a tertiary centre ionises because alkyl
+    groups donate electron density and stabilise the charge, which is the same electron-donation logic
+    as the carbonyl reactivity ladder two sections below. It also explains why enzymes hold substrates
+    in one geometry — biology removes the SN1 option by never letting the intermediate form.'
+  connection_label: How sciences interconnect
   check:
   - q: Secondary alkyl bromide + NaOH in acetone (polar aprotic) at low temperature gives mainly…
     options:
@@ -137,6 +165,15 @@ sections:
   - Other staples — hydrogenation (H2 plus catalyst, syn addition, gives alkane), halogenation (X2, anti
     addition via halonium), and oxidation (KMnO4 or ozonolysis, cleavage to carbonyls). ==The regiochemistry
     and stereochemistry of each reagent is the exam question==.
+  misconception: '"Addition is random, so HCl on propene should give a 50/50 mix of the two chloropropanes."
+    The major product is decided by carbocation stability. The proton adds to the carbon already richer
+    in hydrogens, generating the more substituted — more stable — carbocation, so the chlorine lands on
+    the secondary carbon: Markovnikov selectivity. It is a kinetic preference, not a coin flip.'
+  connection: 'Peroxides are not a footnote — they switch HBr to a radical chain, and the radical intermediate
+    reverses the regiochemistry to anti-Markovnikov. Mechanism determines outcome, the running theme of
+    this chapter, and it is the same lesson the enzyme section of chapter Biochemistry makes: change the
+    pathway, and the product distribution changes with it.'
+  connection_label: How sciences interconnect
   check:
   - q: HCl adds to propene. The major product is…
     options:
@@ -174,6 +211,15 @@ sections:
   - Carboxylic acid derivatives interconvert by ==nucleophilic acyl substitution, reactivity anhydride
     > ester ~ acid > amide==. Aldol condensation couples enols with carbonyls — the classic C-C bond-forming
     reaction the MCAT expects you to recognize in biosynthesis analogues.
+  misconception: '"NaBH4 is a reducing agent, so it reduces everything reducible — esters included." Hydride
+    reagents are not interchangeable. NaBH4 is mild and stops at aldehydes and ketones; LiAlH4 is strong
+    enough to take esters down to alcohols. Knowing the strength ladder, not just the label ''reducing
+    agent'', is what the exam is testing when it offers both.'
+  connection: 'The aldol condensation here is the same C-C bond-forming chemistry biology runs in reverse
+    and forward: glycolysis and gluconeogenesis pass through aldol-type intermediates, and the body''s
+    version is enzyme-controlled but mechanistically identical. Chapter 1D · Bioenergetics and fuel metabolism
+    shows the pathway that this reaction makes possible.'
+  connection_label: How sciences interconnect
   check:
   - q: Which reagent reduces an ester to a primary alcohol?
     options:
@@ -236,6 +282,25 @@ examples:
       A: Inversion requires a concerted backside attack, which SN1 never does.
       B: A planar intermediate leaves both faces open.
       D: Tertiary halides are the most reactive substrates under these conditions.
+key_equations:
+- latex: $\text{alkene} + HX \rightarrow \text{Markovnikov adduct}$
+  symbols: H adds to the carbon already bearing more hydrogens; X to the more substituted carbon
+  when: hydrohalogenation and acid hydration — via the more stable carbocation
+- latex: $\text{alkene} + HBr \ (\text{peroxides}) \rightarrow \text{anti-Markovnikov adduct}$
+  symbols: peroxides start a radical chain
+  when: reverses the regiochemistry — HBr only; HCl and HI ignore peroxides
+- latex: $\text{rate}_{SN1} = k[\text{substrate}]$
+  symbols: k rate constant, substrate concentration only
+  when: unimolecular rate-determining ionisation — the nucleophile is absent from the law
+- latex: $\text{rate}_{SN2} = k[\text{substrate}][\text{nucleophile}]$
+  symbols: both species in the single concerted step
+  when: bimolecular backside attack — and the reason stereochemistry inverts
+- latex: $\text{anhydride} > \text{ester} \approx \text{acid} > \text{amide}$
+  symbols: reactivity order toward nucleophilic acyl substitution
+  when: set by leaving-group ability — amides are the most stable, hence the peptide backbone
+- latex: $\text{ketone} + H^{-} \rightarrow \text{secondary alcohol}$
+  symbols: hydride from NaBH4 or LiAlH4 added to the carbonyl carbon
+  when: reduction — aldehydes give primary alcohols; esters need the stronger LiAlH4
 key_points:
 - Constitutional vs stereoisomers; E/Z and R/S assignments.
 - Enantiomers differ only in rotation and chiral interactions.

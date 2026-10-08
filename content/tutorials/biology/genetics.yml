@@ -21,6 +21,15 @@ sections:
     assortment** (metaphase I) orients each homolog pair independently, giving 2ⁿ combinations before
     crossing over even counts. Nondisjunction — a pair failing to separate — produces gametes with the
     wrong count and, after fertilization, ==aneuploidy== such as trisomy 21.
+  misconception: '"Independent assortment gives 2 raised to the diploid number — 16 types for 2n = 16."
+    The exponent is the HAPLOID number. Each homolog pair orients independently at metaphase I, and a
+    2n = 16 cell has 8 pairs, so 2^8 = 256 gamete types. Crossing over multiplies that further; it never
+    reduces it.'
+  connection: 'Every Mendelian ratio in the next section is meiosis written as arithmetic: segregation
+    IS homologs separating at meiosis I, independent assortment IS their random orientation at metaphase
+    I. Translating a genetics question back to the physical event dissolves half its traps — including
+    why linked genes break the 9:3:3:1 rule.'
+  connection_label: How sciences interconnect
   check:
   - q: A cell with 20 chromosomes (2n = 20) enters meiosis. Each gamete receives…
     options:
@@ -74,6 +83,15 @@ sections:
     a dihybrid AaBb × AaBb gives ==9:3:3:1==; a testcross with a homozygous recessive exposes any genotype
     as a 1:1 ratio. Always write the gametes before multiplying probabilities; branch diagrams beat giant
     grids under time pressure.
+  misconception: '"A dihybrid cross always gives 9:3:3:1 — that is the ratio for AaBb crosses." Only for
+    unlinked genes. The 9:3:3:1 comes from multiplying two independent 3:1 monohybrid ratios, and independence
+    is exactly what linkage destroys. The reliable method is the one the check uses: P(A_) = 3/4 and P(bb)
+    = 1/4, multiply only when the genes genuinely assort freely.'
+  connection: 'A testcross is the cleanest experiment genetics has: cross any unknown with a homozygous
+    recessive and the offspring ratio exposes the parent''s gametes directly. That same logic, scaled
+    up, is how linkage mapping in the next section converts recombinant counts into physical distances
+    along a chromosome.'
+  connection_label: How sciences interconnect
   check:
   - q: AaBb × AaBb (unlinked genes). What fraction shows the dominant A trait and the recessive b trait?
     options:
@@ -115,6 +133,14 @@ sections:
     both sexes equally), **autosomal dominant** (every generation, no skipping), ==X-linked recessive==
     (mostly affected males, passed mother → son, no father → son transmission). A pedigree question is
     pattern recognition plus one Punnett square, nothing more.
+  misconception: '"Incomplete dominance and codominance are two names for blending — the heterozygote
+    is midway in both." The heterozygote''s phenotype differs in kind. Incomplete dominance gives an intermediate
+    (red plus white gives pink — neither allele fully expressed). Codominance expresses BOTH fully and
+    separately (type AB blood carries both A and B antigens on the same red cells). Blend versus both-at-once.'
+  connection: 'ABO typing is multiple alleles plus codominance working together in one clinically used
+    system: IA and IB are codominant with each other, and both dominate the i allele — which is why type
+    A and type B parents can have a type O child when each carries a silent i.'
+  connection_label: How sciences interconnect
   check:
   - q: Two pink-flowered plants (RW) cross. Expected phenotype ratio?
     options:
@@ -155,6 +181,16 @@ sections:
   - Expect the familiar cross to come out distorted — linked genes in a dihybrid testcross give a majority
     of parental combinations and a small recombinant tail, NOT the 1:1:1:1 an unlinked testcross predicts.
     When the numbers scream parental-heavy, linkage is the answer before any other consideration.
+  misconception: '"A testcross always gives 1:1:1:1 — four classes in equal proportions." Only when the
+    genes are unlinked. Linkage bends the ratio toward the parental classes, and the distortion IS the
+    measurement: 20 map units means 20 percent recombinants total, split 10 and 10 between the two recombinant
+    classes, with the remaining 80 percent split between the parentals. Parental-heavy numbers mean linkage
+    before anything else.'
+  connection: 'Recombination frequency as distance is a physical argument: the further apart two loci
+    sit on a chromosome, the more chances a crossover has to fall between them. One map unit equals one
+    percent recombinant offspring, which is how chapter 1C''s crossing over becomes a ruler for ordering
+    genes.'
+  connection_label: How sciences interconnect
   check:
   - q: A testcross of AaBb (genes linked, 20 map units apart) × aabb yields offspring ratios closest to…
     options:
@@ -199,6 +235,14 @@ sections:
     translocation) rearrange large spans. The exam link to keep — meiosis errors give whole-chromosome
     changes; replication errors give sequence changes, and only those in gametes (or early lineages) are
     heritable.
+  misconception: '"Any mutation is a chromosome mutation — the DNA changed, so a chromosome changed."
+    Scale matters. A point mutation swaps one base in the sequence; a frameshift shifts the reading register;
+    only deletion, duplication, inversion, or translocation of large spans counts as chromosomal. A one-nucleotide
+    deletion never produces trisomy — that requires nondisjunction, a meiosis error, not a sequence change.'
+  connection: 'Degeneracy is why a point mutation is often silent: several codons name the same amino
+    acid, so a substitution can land on a synonym and the protein is unchanged. Chapter 1B covers the
+    code''s properties; here it is the reason most point mutations are survivable at all.'
+  connection_label: How sciences interconnect
   check:
   - q: A deletion of one nucleotide pair within an exon most likely causes…
     options:
@@ -260,6 +304,19 @@ examples:
       A: Counting only one of the two recombinant classes.
       C: Reading the parental share as the distance.
       D: Four classes always appear; their SIZES, not their existence, show linkage.
+key_equations:
+- latex: $\text{assortment} = 2^{n}$
+  symbols: n the HAPLOID number of chromosome pairs
+  when: independent assortment alone — 2n = 16 gives 2^8 = 256 gamete types
+- latex: $\text{Aa} \times \text{Aa} \Rightarrow 3:1\ \text{phenotype};\ 1:2:1\ \text{genotype}$
+  symbols: heterozygote self-cross, complete dominance
+  when: the base ratio every other cross multiplies
+- latex: $\text{AaBb} \times \text{AaBb} \Rightarrow 9:3:3:1$
+  symbols: unlinked genes only
+  when: multiply two independent 3:1 ratios — linkage destroys this pattern
+- latex: $\text{map units} = \frac{\text{recombinant offspring}}{\text{total offspring}}\times100$
+  symbols: testcross progeny, both recombinant classes counted together
+  when: 1 percent recombinants is one centimorgan; 8 cM over 200 offspring gives 16 recombinants
 key_points:
 - Meiosis — one replication, two divisions, four recombined haploid gametes.
 - Segregation and independent assortment are meiosis I in genetic language.

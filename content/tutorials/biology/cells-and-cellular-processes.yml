@@ -27,6 +27,16 @@ sections:
   - Keep perspective for later chapters — the domain-level consequences of this split are treated with
     the three domains, and the prokaryotic lifestyle in detail with 2B. Here the exam question is usually
     simple — which structure implies which architecture, and what does the compartment buy the cell?
+  misconception: '"A membrane-free region of DNA means the cell is damaged or primitive junk — real DNA
+    lives in a nucleus." A nucleoid IS the normal prokaryotic architecture: DNA organised, just not membrane-enclosed.
+    And mitochondria keep circular DNA in the same naked state inside eukaryotic cells — one of the strongest
+    endosymbiosis clues, since the ancestor they descend from was free-living bacteria with exactly that
+    layout.'
+  connection: 'Compartmentalisation is why eukaryotic cells can run incompatible chemistry in parallel:
+    a lysosome''s acid hydrolases would shred the cytosol if they were not confined at pH 5 behind a resistant
+    membrane. The membrane physics that makes such partitioning work is the selective permeability of
+    section Membranes and transport below.'
+  connection_label: How sciences interconnect
   check:
   - q: A cell is found to contain a region of DNA that is not surrounded by a membrane. Which conclusion
       follows?
@@ -74,6 +84,15 @@ sections:
     while lysosomal membranes resist their own acid. Second, the endomembrane system is continuous in
     a functional, not literal, sense — nuclear envelope → ER → Golgi → vesicles → plasma membrane — and
     a protein's destination is stamped by the signals it carries, not by chance.
+  misconception: '"Ribosomes are organelles — the table says so, and every cell has them." Ribosomes have
+    no membrane, which is the defining feature of an organelle in the strict sense. They are ribonucleoprotein
+    machines floating free or docked on rough ER — present in every cell including prokaryotes, which
+    is exactly the tell: no prokaryote has organelles, yet all of them have ribosomes.'
+  connection: The secreted-protein route — rough ER to Golgi to vesicle — is the endomembrane system as
+    a supply chain, and its final step, calcium-triggered vesicle fusion with the plasma membrane, is
+    the same exocytosis machinery a neuron uses to release neurotransmitter in chapter 3A. One mechanism,
+    reused everywhere.
+  connection_label: How sciences interconnect
   table:
     caption: The organelle map (eukaryotic cell)
     headers:
@@ -157,6 +176,15 @@ sections:
     their wall), **hypertonic** (water leaves; the cell shrinks — plasmolysis in plants). Tonicity questions
     are cheap points once you fix the direction rule — ==water moves toward the side with more dissolved
     solute==.
+  misconception: '"Water moves toward the side with more water — the dilute side." The opposite. Water
+    moves toward the HIGHER solute concentration, because that is where its own activity is lower. Fix
+    the direction rule and tonicity questions become cheap: a swelling cell is in a hypotonic solution,
+    a shrinking one in a hypertonic solution — the cell is always described relative to its environment.'
+  connection: 'The sodium-potassium pump''s 3-out-2-in stoichiometry is active transport paying for a
+    gradient, and that gradient is what the whole body re-spends: nerve firing in 3A, glucose absorption
+    in the gut epithelium of 3B, and the secondary active transport of 2A all ride the sodium gradient
+    this pump maintains.'
+  connection_label: How sciences interconnect
   check:
   - q: A cell is placed in a solution and begins to swell. The solution is best described as…
     options:
@@ -207,6 +235,15 @@ sections:
   - The detailed enzyme logic belongs to the biochemistry chapters; what this chapter must secure is the
     MAP — where each stage happens, what goes in, what comes out, and where oxygen enters. Passage questions
     routinely test location and order, not enzyme names.
+  misconception: '"Cells store ATP for when they need it — that is why muscles have energy banks." ATP
+    is spent almost as fast as it is made; the pool turns over many times a minute. The actual reserves
+    are creatine phosphate in muscle and, more durably, glycogen and fat. ATP is the currency — high turnover,
+    low standing balance — not the warehouse.'
+  connection: 'Chemiosmosis is energy conversion through a gradient: the electron transport chain stores
+    redox energy as a proton gradient across the inner membrane, and ATP synthase spends it. Collapse
+    that gradient — the uncoupler in the check — and the turbine stalls, the same physics brown fat exploits
+    in chapter 1D to make heat instead of ATP.'
+  connection_label: How sciences interconnect
   check:
   - q: In a eukaryotic cell, the electron transport chain operates…
     options:
@@ -252,6 +289,15 @@ sections:
   - This ratio is one of the most reused MCAT passage setups — exchange surfaces (intestine microvilli,
     alveoli, capillary beds) are all the same idea wearing different organs. When a passage shows a shape
     change, compute or compare the ratio before reading the questions.
+  misconception: '"A bigger cell is better — more surface, more volume, everything scales up together."
+    Nothing scales together. Doubling linear size multiplies surface area by four but volume by eight,
+    so the surface-to-volume ratio is cut in half — and supply must cross the surface while demand grows
+    with the volume. That mismatch is why cells stay small and why big ones flatten, fold, or compartmentalise.'
+  connection: 'The body''s exchange surfaces are all this ratio solved at organ scale: intestinal microvilli,
+    alveoli, and capillary beds each multiply area while keeping the barrier thin, so diffusion distances
+    stay short. Chapter 3B · Main organ systems names the organs; the arithmetic behind every one of them
+    is here.'
+  connection_label: How sciences interconnect
   check:
   - q: A cell doubles all its linear dimensions. Its surface-to-volume ratio…
     options:

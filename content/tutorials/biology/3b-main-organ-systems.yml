@@ -22,6 +22,16 @@ sections:
     shifts right with ↑CO₂, ↑H⁺, ↑temperature, ↑2,3-BPG — the Bohr effect that unloads oxygen exactly
     where metabolism runs hot. The counter-layout — air and blood flowing in opposite directions in fish
     gills — maximizes gradient along the whole surface.
+  misconception: '"Hyperventilating gets more oxygen to the tissues — that is why athletes do it before
+    a sprint." The blood was already near-saturated; what falls is CO2, and removing CO2 removes H+, which
+    shifts haemoglobin''s curve LEFT — higher affinity, so oxygen binds more tightly in the lungs and
+    unloads LESS at the tissues. Loading improves slightly, delivery worsens, and the tingling comes from
+    respiratory alkalosis.'
+  connection: 'The sigmoid oxygen curve is quaternary structure made functional: binding O2 at one haem
+    subunit shifts the others to a higher-affinity shape, which is cooperative allostery exactly as chapter
+    Biochemistry describes it. The Bohr effect is an allosteric modulator — H+ and CO2 stabilise the low-affinity
+    state — placing the release where metabolism is hottest.'
+  connection_label: How sciences interconnect
   check:
   - q: The Bohr effect helps working muscle because increased CO₂ and H⁺…
     options:
@@ -63,6 +73,15 @@ sections:
     supplies enzymes and bicarbonate to neutralize stomach acid. Regulation is hormonal as much as neural
     — gastrin (stomach acid), secretin (bicarbonate), CCK (enzyme and bile release) — a feedback loop
     per station.
+  misconception: '"Bile digests fat — it is the fat-digesting enzyme." Bile contains no enzyme at all.
+    It is a detergent: bile salts emulsify fat into tiny droplets, multiplying the surface area that lipase
+    — a pancreatic enzyme — can work on. Neutralising acid is the pancreas''s bicarbonate job. Bile prepares;
+    lipase digests.'
+  connection: 'The loss of pancreatic exocrine function failing all three macronutrients at once is enzyme
+    specificity made clinical: the pancreas supplies lipase, proteases, and amylase, plus the bicarbonate
+    that raises pH to where they work. The chemistry of each hydrolase is chapter 5D territory — the functional-group
+    cleavage each one catalyses.'
+  connection_label: How sciences interconnect
   check:
   - q: Bile's digestive role is to…
     options:
@@ -104,6 +123,16 @@ sections:
     when dehydrated), and **aldosterone** trades Na⁺ reabsorption for K⁺ secretion. The kidney also secretes
     erythropoietin (red-cell production) and renin (blood-pressure axis) — an endocrine organ wearing
     a filter's clothes.
+  misconception: '"Glucose in the urine means the kidney is filtering too much — a filtration problem."
+    Filtration is normal and free; the failure is reabsorption. Glucose is normally reclaimed to the last
+    molecule by sodium-coupled carriers with a transport maximum, and once plasma glucose outruns those
+    carriers the surplus spills into urine. Protein in urine is the true filtration-failure signal — proteins
+    are too big to be filtered at all unless the barrier is damaged.'
+  connection: 'The transport maximum is Michaelis-Menten running on an epithelial carrier: saturable,
+    with a finite Vmax, which is why glycosuria appears above a threshold rather than gradually. The same
+    apical-cotransport-plus-basal-export design is the polarity loop of chapter 2A, deployed along the
+    proximal tubule.'
+  connection_label: How sciences interconnect
   check:
   - q: Glucose appearing in urine most directly indicates…
     options:
@@ -146,6 +175,15 @@ sections:
     kills infected cells; helper CD4 orchestrates). ==Memory cells== are the whole logic of vaccination
     — faster, stronger response on re-encounter. Self-tolerance failures complete the picture — autoimmunity
     (attacking self) and allergy (misdirected IgE against harmless antigen).
+  misconception: '"Antibodies fight infection — a patient with no B cells has no immune system at all."
+    One branch is gone, not the whole defence. Innate barriers, phagocytes, NK cells, and complement still
+    work, and CD8 cytotoxic T cells still kill infected cells directly. What disappears is humoral immunity
+    — antibodies and the B-cell memory that makes vaccination work.'
+  connection: 'Antibody diversity is the V(D)J recombination of chapter biochemistry 1C applied to immunity:
+    gene segments joined combinatorially, then somatic hypermutation, produce a repertoire no genome could
+    store pre-made. Memory cells are why a second encounter is faster and stronger — the whole logic of
+    vaccination.'
+  connection_label: How sciences interconnect
   check:
   - q: Which feature belongs ONLY to adaptive immunity?
     options:
@@ -191,6 +229,15 @@ sections:
     them together.
   - The exam habit — when a passage stresses one system, tabulate the responses of the other four before
     reading the questions. Most integration items are matching problems wearing a story.
+  misconception: '"During exercise the body just speeds everything up uniformly — heart, breathing, and
+    all vessels dilate together." Redistribution is selective. Sympathetic tone dilates muscle and skin
+    vessels while CONSTRICTING the splanchnic bed, so blood is rerouted to working muscle and heat-dissipating
+    skin at the gut''s expense. Everything speeds up except digestion, which is deliberately throttled.'
+  connection: 'Every arrow in the exercise response has its own chapter: chemoreceptor-driven ventilation
+    is 3A''s neural control, the oxygen unloading to hot muscle is this chapter''s Bohr effect, and the
+    liver''s glycogenolysis is the hormonal control of chapter 1D''s metabolism. Integration items test
+    exactly this — one demand, several systems, each contributing one mechanism.'
+  connection_label: How sciences interconnect
   check:
   - q: During intense exercise, blood is redistributed mainly toward…
     options:

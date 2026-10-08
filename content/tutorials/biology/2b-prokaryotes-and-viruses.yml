@@ -20,6 +20,16 @@ sections:
     motility), and endospores (survival capsules that laugh at boiling). ==Fast division (~20 minutes
     in rich media)== is a feature, not a bug — it is why resistance evolves in weeks and why cultures
     saturate overnight.
+  misconception: '"The Gram stain tells you what colour a bacterium is — pink or purple is just how they
+    look." The colour reports wall architecture. A thick peptidoglycan layer traps crystal violet (Gram-positive,
+    purple); a thin wall under an outer membrane lets it wash out and take the pink counterstain (Gram-negative).
+    That architecture is also why the classes differ in antibiotic susceptibility and why LPS endotoxin
+    is a Gram-negative problem.'
+  connection: 'The roughly 20-minute doubling time is why hospital resistance stories unfold in weeks,
+    not decades: every division is a lottery draw for a beneficial mutation, and a patient on a partial-course
+    antibiotic is selecting the winners in real time. Finish-the-course advice is this arithmetic stated
+    as policy.'
+  connection_label: Real-world connection
   check:
   - q: Lipopolysaccharide (endotoxin) is found in the envelope of…
     options:
@@ -60,6 +70,16 @@ sections:
   - This is the engine of real-world microbiology — resistance genes hopping between species on plasmids
     (R plasmids), and virulence genes moving by phage (diphtheria toxin is phage-encoded). Any "how did
     the non-resistant strain become resistant" passage is one of these three doors.
+  misconception: '"Bacteria only get new genes from their parents, like everything else." Prokaryotes
+    have three sideways channels that need no reproduction at all: transformation takes up naked DNA from
+    the environment, transduction lets a phage mis-package and deliver host DNA, and conjugation passes
+    a plasmid through a pilus between living cells. The DNase test in the check is the tell — only transformation
+    exposes bare DNA to the medium.'
+  connection: 'R plasmids are this section''s clinical headline: a resistance gene that hops onto a plasmid
+    can cross species boundaries by conjugation, which is how a hospital''s bacterial population can share
+    resistance without any single lineage evolving it. Phage-encoded diphtheria toxin shows the same story
+    run by transduction.'
+  connection_label: Real-world connection
   check:
   - q: A phage carries a segment of its previous host's chromosome into a new bacterium. This is…
     options:
@@ -100,6 +120,16 @@ sections:
     and often fecal-oral). Baltimore-style grouping appears in passages as "what must this genome encode
     to be infectious?" — a +ssRNA virus is read as mRNA; a −ssRNA virus must carry an RNA-dependent RNA
     polymerase; a retrovirus must carry reverse transcriptase.
+  misconception: '"Antibiotics don''t work on viruses because viruses are hidden inside cells." Location
+    is not the reason. Antibiotics hit targets viruses simply do not have — peptidoglycan walls, prokaryotic
+    ribosomes, folate-synthesis pathways. A virus is a genome in a capsid with no metabolism of its own,
+    so there is nothing in that list to hit, which is why antivirals must aim at virus-specific enzymes
+    instead.'
+  connection: '"What must this genome encode to be infectious?" is a logic puzzle built on chapter 1B''s
+    central dogma: a plus-strand RNA virus arrives as ready mRNA, a minus-strand virus must carry its
+    own RNA-dependent RNA polymerase, and a retrovirus must carry reverse transcriptase. The Baltimore
+    grouping is just the dogma run backwards.'
+  connection_label: How sciences interconnect
   check:
   - q: Why are antibiotics ineffective against viruses?
     options:
@@ -147,6 +177,16 @@ sections:
   - Two quantitative habits pay off — burst size arithmetic (one infection → N progeny → N new cells infected
     next round) and the one-step growth curve's eclipse period (no infectious particles detectable intracellularly
     — the exam loves asking why plaque counts drop then jump).
+  misconception: '"The eclipse period means the infection has been cleared — no virus can be detected
+    inside the cell." Nothing was cleared. Parts are being made: genomes replicated, capsid proteins synthesised,
+    but not yet assembled into infectious wholes — so a plaque assay of the lysate finds nothing. When
+    assembly completes, the count jumps. The dip is a measurement artefact of looking for finished viruses
+    during construction.'
+  connection: 'Lysogeny is a persistence strategy, not a truce: the prophage replicates quietly with its
+    host and gets a free ride through every division — until UV or other stress flips lambda''s regulatory
+    switch, and it excises and kills its ride. It is the same cost-benefit logic temperate viruses apply
+    in nature, trading immediate reproduction for guaranteed transmission.'
+  connection_label: Real-world connection
   check:
   - q: During the eclipse period of a lytic infection, infectious particles inside the cell are undetectable
       because…
@@ -192,6 +232,16 @@ sections:
     target modification — often on transmissible plasmids), and viruses escape through antigenic **drift**
     (point-mutation accumulation) and **shift** (segment reassortment — the pandemic-flu mechanism). ==Drift
     is slow accumulation; shift is sudden recombination== — the pair is a guaranteed exam distinction.
+  misconception: '"Antigenic drift and shift are the same thing at different speeds." Different mechanisms.
+    Drift is point mutations accumulating in the surface genes — gradual, the reason flu vaccines need
+    annual updating. Shift is reassortment of genome segments when two strains infect one host — sudden,
+    producing a subtype with a novel surface that almost nobody has immunity to, which is the pandemic
+    recipe.'
+  connection: 'Acyclovir''s selectivity is elegant parasitism: the drug is activated by a viral kinase
+    the host cell does not have, so it only turns poisonous where the virus is replicating. That design
+    principle — aim at virus-specific enzymes — is the same targeting logic chapter 3B · Main organ systems
+    covers for the rest of antimicrobial therapy.'
+  connection_label: How sciences interconnect
   check:
   - q: A new influenza subtype appears suddenly with genes from two strains infecting one host. The mechanism
       is…

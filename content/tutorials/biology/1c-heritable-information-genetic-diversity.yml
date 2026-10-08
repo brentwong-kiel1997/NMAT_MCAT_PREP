@@ -21,6 +21,15 @@ sections:
     meiosis II separates sisters, fertilization restores diploidy==. Failures of that packaging, not of
     chemistry, produce the aneuploidies later in this chapter. (Polymerase mechanics and the repair stack
     are the biochemistry 1C chapter's territory.)
+  misconception: '"Semi-conservative means half the DNA is conserved and half is thrown away each generation."
+    Every duplex keeps one whole parental strand and one new one — nothing is discarded. After two rounds,
+    half the duplexes are hybrid and half fully new, which is exactly the density pattern Meselson-Stahl
+    saw. The term describes how the duplex splits, not how much survives.'
+  connection: A replication error that reaches a gamete stops being an error — it becomes an allele in
+    every cell of the offspring. That is the hinge between this chapter and the molecular chapter biochemistry
+    1C · Heritable information and diversity, which covers the polymerases and repair lanes that decide
+    how rarely it happens.
+  connection_label: How sciences interconnect
   check:
   - q: The Meselson–Stahl experiment showed that DNA replication is…
     options:
@@ -69,6 +78,15 @@ sections:
     codons per amino acid, which buffers silent mutations), nearly universal, with fixed start (AUG) and
     three stops. Transcription makes any gene's RNA; translation reads it in the ribosome with charged
     tRNAs delivering amino acids.
+  misconception: '"A degenerate code is a sloppy code — it makes mistakes." Degeneracy is redundancy,
+    not carelessness: several codons name the same amino acid, and the code is still read with total fidelity.
+    The payoff is buffering — a point mutation often lands on a synonymous codon and the protein is unchanged.
+    Unambiguous (one codon, one meaning) and degenerate (many codons, one meaning) hold at once.'
+  connection: 'The lac operon is signal integration in two inputs: lactose lifts the repressor, low glucose
+    raises cAMP so CAP boosts transcription. Neither signal alone gives full output — and that AND-gate
+    logic is the same control principle chapter 2C applies to the cyclin-CDK engine that gates the cell
+    cycle.'
+  connection_label: How sciences interconnect
   check:
   - q: The degeneracy of the genetic code means…
     options:
@@ -111,6 +129,15 @@ sections:
     five conditions hold (no mutation, no selection, no drift [large population], no migration, random
     mating), giving ==p² + 2pq + q²==. Its exam use is as a NULL MODEL — real populations deviate, and
     the deviation tells you which force acts.
+  misconception: '"4% show the recessive phenotype, so 4% are carriers." The 4% is q², not 2pq. Take the
+    square root — q = 0.2 — then compute p = 0.8 and the carriers 2pq = 0.32. Reading the affected fraction
+    directly as the carrier fraction skips the square root and is the single most common Hardy-Weinberg
+    slip.'
+  connection: 'Hardy-Weinberg is a null model in exactly the way a control is in chemistry: it holds only
+    when no force acts, so deviation from p² + 2pq + q² is evidence something IS acting — selection, drift,
+    migration, or non-random mating. Chapter Organisms and Their Environment supplies those forces as
+    its microevolution content.'
+  connection_label: How sciences interconnect
   check:
   - q: In a population at H-W equilibrium with q = 0.2, the frequency of heterozygotes is…
     options:
@@ -151,6 +178,15 @@ sections:
     a mating, a vertical line descent==. ==Exam items usually turn on exclusions: an affected child of
     unaffected parents rules out dominant, an affected daughter rules out X-linked recessive, father-to-son
     transmission rules out everything on the X==.'
+  misconception: '"An affected father with an affected son — that must be X-linked, since the trait runs
+    in the males of the family." Father-to-son transmission excludes every X-linked mode outright, because
+    fathers pass their X to daughters only. A father passes the Y to a son, and the Y carries almost nothing.
+    Male-to-male transfer points to an autosome — usually autosomal dominant.'
+  connection: 'Pedigree exclusion is the logic genetic counselling runs on: a family history is read for
+    pattern, and the mode of inheritance decides who should be tested and what a result means for relatives.
+    Mitochondrial inheritance — mother to all children — is the pattern behind matrilineal traces of our
+    ancestry.'
+  connection_label: Real-world connection
   check:
   - q: A trait appears in every generation, each affected person has an affected parent, and affected
       fathers pass it equally to sons and daughters. The pattern is…
@@ -196,6 +232,15 @@ sections:
   - Detection technology closes the loop — karyotypes see chromosome-scale changes; amniocentesis/chorionic
     villus sampling sample fetal material; and modern screens read fetal DNA in maternal blood. A passage
     pairing "what test sees what scale of change" is standard MCAT furniture.
+  misconception: '"A balanced translocation carrier must be affected — the chromosomes are rearranged,
+    so something must be wrong." The carrier has the full complement of genetic material, just rearranged,
+    and is typically healthy. The risk appears at reproduction: segregation can hand a gamete duplication-and-deletion
+    sets — an unbalanced outcome that is often lethal or disabling. Balanced carrier, unbalanced gametes.'
+  connection: 'Why trisomy 21 survives when most trisomies do not is a dosage question: genes on chromosome
+    21 are relatively few, so the extra copy is tolerable through development. The molecular scale of
+    that imbalance — which genes, what dose — is what sequencing and expression analysis in the biochemistry
+    1C chapter resolve.'
+  connection_label: How sciences interconnect
   check:
   - q: A phenotypically normal parent carries a balanced reciprocal translocation. The main reproductive
       risk is…
@@ -238,6 +283,15 @@ sections:
   - CRISPR-Cas9 writes rather than reads — a guide RNA pairs with the target locus and Cas9 cuts; the
     cell's repair (often error-prone) disrupts the gene, or a supplied template edits it. Ethics passages
     aside, the exam logic is mechanical — ==guide RNA defines the address; repair defines the outcome==.
+  misconception: '"Five PCR cycles gives ten copies — two per cycle times five." The products become templates:
+    2 to the n, not 2n. Five cycles from one molecule is 32 copies, and twenty is about a million. The
+    exponential growth is the whole point of the technique — and the reason a contamination of one molecule
+    ruins a run.'
+  connection: 'Matching the tool to the scale of change is the exam''s recurring setup and daily lab practice:
+    a karyotype sees whole chromosomes, a gel sees length differences, sequencing reads identity. A single
+    base substitution in 5 kb is invisible to everything but sequencing — which is exactly why variant
+    detection moved from gels to reads.'
+  connection_label: Real-world connection
   check:
   - q: After 5 PCR cycles starting from one template molecule, the maximum number of target copies is
       closest to…
@@ -311,6 +365,17 @@ examples:
       A: An affected child of unaffected parents rules out every dominant mode.
       B: An X-linked recessive daughter needs a mutant X from an affected father.
       D: Dominant modes require an affected parent in every generation.
+key_equations:
+- latex: $p^{2} + 2pq + q^{2} = 1$
+  symbols: p dominant-allele frequency, q recessive-allele frequency, at Hardy-Weinberg equilibrium
+  when: genotype frequencies from allele frequencies — 4% affected means q² = 0.04, so q = 0.2 and 2pq
+    = 0.32 carriers
+- latex: $\text{recombinant fraction} = \frac{\text{recombinant offspring}}{\text{total offspring}}$
+  symbols: testcross progeny counts
+  when: recombination frequency in map units — 1% recombinants is one map unit apart
+- latex: $\text{PCR copies} = N_{0}\times2^{n}$
+  symbols: N₀ starting templates, n cycles
+  when: exponential doubling — 5 cycles from one template gives 32 copies, not 10
 key_points:
 - Semi-conservative replication copies the genome before meiosis — the physical basis of heritable transmission.
 - Prokaryotic operons integrate signals (lac — lactose on, glucose off); eukaryotes regulate at chromatin,

@@ -20,6 +20,16 @@ sections:
     can sum) versus **action potentials** (all-or-none, self-regenerating, ==identical every time== —
     strength is coded by FREQUENCY, not amplitude). Myelin speeds propagation by saltatory conduction
     — the signal leaps node to node; demyelination (multiple sclerosis) is a conduction-velocity disease.
+  misconception: '"The resting potential is a one-time charge the cell builds and keeps — blocking the
+    pump changes nothing until the next spike." The battery is being drained continuously by leak channels
+    and rebuilt continuously by the Na+/K+ ATPase. Poison the pump and the gradients run flat over minutes:
+    sodium leaks in, potassium leaks out, and the membrane potential collapses toward zero. Rest is an
+    active equilibrium, not a stored charge.'
+  connection: 'Every number in this section comes from the Nernst equation of chapter 4C · Electrochemistry
+    and electrical circuits: each ion carries an equilibrium potential set by its concentration ratio,
+    and the resting potential is a permeability-weighted blend of them, dominated by potassium. The membrane
+    capacitance there is also why only small charge movements shift the voltage.'
+  connection_label: How sciences interconnect
   check:
   - q: The resting potential is closest to…
     options:
@@ -63,6 +73,15 @@ sections:
   - Tetrodotoxin blocks Na⁺ channels (no spikes at all); tetraethyl- ammonium blocks K⁺ channels (broadened
     spikes); local anesthetics hold Na⁺ channels shut. Drug-versus-waveform questions reduce to which
     gate is jammed.
+  misconception: '"A stronger stimulus gives a bigger action potential — that is how intensity is signalled."
+    Action potentials are all-or-none: every spike is the same size, because it is the regenerative opening
+    of sodium channels, not a copy of the stimulus. Intensity is coded in FREQUENCY — how many spikes
+    per second. A bigger stimulus earns more spikes, never taller ones.'
+  connection: 'Drug-versus-waveform questions are clinical pharmacology in miniature: tetrodotoxin abolishes
+    spikes by closing sodium channels, local anaesthetics hold the same channels shut, and potassium-channel
+    blockers broaden the spike by delaying repolarisation. Reading a waveform change and naming the jammed
+    gate is exactly how channelopathies are reasoned about.'
+  connection_label: Real-world connection
   check:
   - q: During the absolute refractory period…
     options:
@@ -104,6 +123,15 @@ sections:
     amines (dopamine, serotonin, norepinephrine), amino acids (glutamate excites, GABA inhibits), and
     peptides. Summation — the postsynaptic cell integrates EPSPs and IPSPs and fires when the axon hillock
     crosses threshold.
+  misconception: '"Acetylcholine is an excitatory transmitter — that is its job at every synapse." The
+    transmitter does not decide; the receptor does. Acetylcholine at a nicotinic receptor depolarises
+    skeletal muscle, but at muscarinic receptors on the heart it SLOWS the rate. Same molecule, opposite
+    outcomes, because the receptor and its channel or cascade differ. Always ask at which receptor.'
+  connection: Vesicle fusion is calcium-triggered exocytosis, the same membrane-trafficking machinery
+    the Cells chapter covers for secretion generally — and the same logic the immune system uses to release
+    histamine from a mast cell. The three termination handles (reuptake, degradation, diffusion) are also
+    where nearly every psychiatric drug acts.
+  connection_label: How sciences interconnect
   check:
   - q: Release of neurotransmitter requires which ion's entry?
     options:
@@ -149,6 +177,15 @@ sections:
     drive the **anterior pituitary** (which makes true hormones — TSH, ACTH, FSH/LH, GH, prolactin), while
     the **posterior pituitary** merely stores and releases hypothalamic oxytocin and ADH. Axis-negative-feedback
     is the default — thyroid hormones suppress TSH and TRH; cortisol suppresses ACTH and CRH.
+  misconception: '"A hormone travels straight to its target — the blood carries it only where it is needed."
+    Blood delivers a hormone to every cell in the body; what makes the action specific is which cells
+    carry the receptor. Selectivity by receptor, not by address — which is why a hormone-resistant target
+    tissue can sit right next to a sensitive one and respond to nothing.'
+  connection: 'The peptide-versus-steroid split is membrane chemistry deciding mechanism: a lipid-soluble
+    steroid crosses the bilayer this chapter''s 2A neighbour describes and binds an intracellular receptor
+    that acts as a transcription factor, while a peptide cannot cross and must knock from outside via
+    a second messenger. Fast and brief versus slow and gene-level follows directly from that solubility.'
+  connection_label: How sciences interconnect
   check:
   - q: A steroid hormone's receptor is located…
     options:
@@ -191,6 +228,15 @@ sections:
     diabetes mellitus (no insulin response — sweet urine); hyper- versus hypothyroidism (with TSH levels
     telling you WHERE the lesion sits — high TSH means the gland is failing, low TSH means the pituitary
     or above).
+  misconception: '"High hormone means the gland is overactive — so high cortisol with low ACTH means the
+    pituitary is driving too hard." Read the pair together. High cortisol with LOW ACTH is the signature
+    of a primary adrenal problem: the gland is overproducing on its own, and the axis feedback is correctly
+    suppressing the trophic hormone. A pituitary source would raise ACTH along with the cortisol.'
+  connection: 'The stress response interleaves both systems on one program: sympathetic firing reaches
+    the adrenal medulla and releases epinephrine within seconds, while the slower CRH-ACTH-cortisol axis
+    unfolds over hours at the gene level. It is the clearest single example of the fast-wire versus slow-broadcast
+    division this chapter is built around.'
+  connection_label: How sciences interconnect
   check:
   - q: A patient has low thyroid hormone with HIGH TSH. The lesion is most likely in the…
     options:

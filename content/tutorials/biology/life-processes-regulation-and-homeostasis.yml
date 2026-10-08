@@ -20,6 +20,16 @@ sections:
   - The pattern of ==positive feedback== amplifies instead of correcting — blood clotting, the birthing
     contraction cascade, an action potential's rising phase. It is normal and useful ONLY when a fast,
     self-ending climax is the goal; unbounded positive feedback is the physiology of collapse.
+  misconception: '"Positive feedback is always bad — it means the body is out of control." Three physiological
+    positive-feedback loops are normal and essential: blood clotting amplifies until the breach is sealed,
+    labour contractions strengthen until delivery, and the action potential''s rising phase reinforces
+    itself to threshold. What makes each safe is that it is self-ending — a fast climax with a built-in
+    terminus. Unbounded positive feedback is the pathology, not the polarity.'
+  connection: 'The four-part loop — variable, sensor, control centre, effector — is control theory, and
+    it recurs in this book at every scale: a cyclin-CDK circuit in 2C, an endocrine axis in 3A, an ecosystem
+    feedback in Organisms and Their Environment. Learning the frame once here pays off in every chapter
+    that follows.'
+  connection_label: How sciences interconnect
   check:
   - q: Sweating cools the body and stops when temperature normalizes. This is…
     options:
@@ -60,6 +70,16 @@ sections:
   - Countercurrent exchange is the elegant trick to know — arteries and veins lying side by side let cold
     venous blood warm on arterial heat, conserving core temperature in flippers and legs. A heat map of
     "who loses least" explains most thermoregulation passages.
+  misconception: '"Ectotherms cannot regulate their temperature — they just are whatever the environment
+    is." Ectotherms regulate behaviourally: basking, burrowing, seeking shade, adjusting posture. What
+    they lack is metabolic heat generation on the endotherm''s scale. The distinction is the dominant
+    heat SOURCE, not the presence or absence of regulation — and both obey the same four exchange mechanisms:
+    radiation, conduction, convection, evaporation.'
+  connection: 'Countercurrent exchange is physics in service of physiology: heat flows passively from
+    warm outbound arterial blood to cold returning venous blood, so the core keeps its warmth while the
+    foot runs cold. The same geometry in reverse — cool arterial blood against warm venous — is what the
+    kidney''s loop of Henle uses to build an osmotic gradient, and fish gills use for oxygen.'
+  connection_label: How sciences interconnect
   check:
   - q: Countercurrent heat exchange in a duck's legs primarily serves to…
     options:
@@ -100,6 +120,15 @@ sections:
   - Nitrogen disposal is the chemical companion — ammonia (toxic, water-cheap, aquatic), urea (liver-made,
     moderate cost, mammals), uric acid (near-solid paste — water-cheap but energetically costly; birds
     and reptiles). Passages predict habitat from nitrogen product and vice versa.
+  misconception: '"Desert animals excrete uric acid because it is the cheapest waste to make." Uric acid
+    is the most EXPENSIVE of the three to synthesise energetically. What it saves is water — it leaves
+    as a near-solid paste. The trade is energy for water: ammonia is cheap but toxic and water-hungry,
+    urea is moderate on both, and uric acid spends ATP to buy back the water an arid habitat cannot spare.'
+  connection: Water follows solutes, so osmoregulation is solute management — the same transport logic
+    as the Cells chapter's membranes, scaled up to gills and kidneys. The marine fish drinking seawater
+    and pumping ions out at the gill is an epithelium doing active transport against a gradient, exactly
+    as section Membranes and transport describes it.
+  connection_label: How sciences interconnect
   check:
   - q: A freshwater fish's problem and response are…
     options:
@@ -148,6 +177,16 @@ sections:
   - Diabetes shows what loop failure looks like — type 1 (no insulin, autoimmune beta-cell loss) versus
     type 2 (insulin resistance of target tissues). Same hyperglycemia, different broken part, which is
     exactly the question the exams ask.
+  misconception: '"High blood sugar means no insulin — that is what diabetes is." Only type 1. Type 2
+    typically shows HIGH glucose with HIGH circulating insulin: the hormone is there, but the target tissues
+    respond poorly. Same hyperglycaemia, different broken part — which is the diagnostic question the
+    exams ask, and why the insulin/glucagon ratio rather than either hormone alone is the answer key to
+    fuel passages.'
+  connection: 'The insulin-glucagon pair is the endocrine architecture of chapter 1D''s metabolism: insulin
+    drives storage after a meal, glucagon drives mobilisation during a fast, and the liver is the pivot
+    both act on. The metabolic pathways themselves — glycogenolysis, gluconeogenesis, lipolysis — are
+    covered in detail there.'
+  connection_label: How sciences interconnect
   check:
   - q: Between meals, blood glucose is maintained mainly by…
     options:
@@ -186,6 +225,15 @@ sections:
   - The transferable rule — in any pathology passage, first name the variable, then the broken part (sensor,
     center, or effector), and the intervention follows. This chapter's frame is the physiology section's
     skeleton.
+  misconception: '"Fever is a failure of temperature control — the thermostat has broken." The thermostat
+    works perfectly; the set point has been moved. Pyrogens reset the hypothalamic target upward, so the
+    body shivers to climb to the new setting, and when an antipyretic lowers the target again the same
+    intact loop switches to sweating. Negative feedback around a relocated set point, not a broken one.'
+  connection: 'The drinking-seawater example shows loops working correctly and failing anyway: ADH rises
+    maximally, thirst peaks, urine concentrates — but excreting the swallowed salt costs more water than
+    the seawater delivered. The general clinical rule follows: name the variable, name the broken part
+    (or the impossible demand on a working part), and the intervention follows.'
+  connection_label: Real-world connection
   check:
   - q: During a rising fever, a patient shivers because…
     options:

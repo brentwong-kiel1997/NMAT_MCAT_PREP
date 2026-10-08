@@ -17,6 +17,16 @@ sections:
   - Solution stoichiometry converts between reagents through mole ratios exactly as mass stoichiometry
     does — ==the limiting reagent is whichever produces less product==. Titration math is just stoichiometry
     at the equivalence point.
+  misconception: '"Diluting a solution removes solute, so there are fewer moles of NaCl in the flask afterwards."
+    Dilution adds solvent, nothing else. The moles are conserved exactly — M1V1 = M2V2 is just that statement
+    rearranged — so 45 mL of 0.20 M (0.0090 mol) is still 0.0090 mol at 150 mL, only spread through more
+    liquid. What falls is the concentration, never the amount.'
+  connection: 'The distinction matters clinically: an IV dose is prescribed in moles (milligrams of drug)
+    but prepared as a concentration, so dilution arithmetic decides how many millilitres to inject. Get
+    molarity and molality mixed up — the one per litre of solution, the other per kilogram of solvent
+    — and the same slip appears in the colligative-property work of chapter 5A · Unique nature of water
+    and its solutions.'
+  connection_label: How sciences interconnect
   check:
   - q: 45 mL of 0.20 M NaCl is diluted to 150 mL. The new molarity is…
     options:
@@ -55,6 +65,16 @@ sections:
   - The half-equivalence point is special — ==pH there equals pKa==, because [HA] = [A-]. Indicators are
     weak acids whose color change spans about pKa +/- 1 — pick one whose range brackets the expected equivalence
     pH.
+  misconception: '"The equivalence point always lands on pH 7, because neutralization means neutral."
+    Only when a strong acid meets a strong base. Titrating a weak acid with a strong base leaves the CONJUGATE
+    BASE of that acid in solution at equivalence, and it hydrolyses to make the pH basic — about 8.7 for
+    acetic acid. Neutral is a special case, not the definition of equivalence, which is purely a mole
+    balance.'
+  connection: 'That mole balance at equivalence is the assay behind most water-quality and food-acidity
+    numbers you see quoted. A titration is simply a controlled reaction run to exact completion: measure
+    the titrant volume, multiply by its molarity, and the unknown concentration falls out — which is why
+    the arithmetic here, not the glassware, is the exam point.'
+  connection_label: Real-world connection
   check:
   - q: Titrating acetic acid (pKa 4.76) with NaOH, the pH at half-equivalence is…
     options:
@@ -98,6 +118,15 @@ sections:
   - Capacity comes from absolute amounts — more moles absorb more added acid or base. ==Adding a small
     amount of strong acid converts A- to HA==; the ratio shifts one notch rather than the pH jumping,
     which is the whole point.
+  misconception: '"A buffer keeps pH perfectly constant — that is what ''resists change'' means." Resist
+    is not prevent. Added strong acid consumes A- and makes HA, so the ratio inside the Henderson-Hasselbalch
+    log moves and the pH shifts — 0.010 mol of HCl into a 0.10/0.10 mol buffer moves it about 0.09 units.
+    Small is not zero, and once either component runs out the protection stops entirely.'
+  connection: 'Blood is a buffer running the same equation with a pKa of 6.1, and its capacity is what
+    keeps enzyme function possible: most enzymes lose activity a couple of pH units from their optimum.
+    Chapter 5A · Unique nature of water and its solutions covers the bicarbonate pair, and chapter 3B
+    · Main organ systems shows the lungs and kidneys defending it.'
+  connection_label: How sciences interconnect
   check:
   - q: A buffer has equal moles of HA and A-. Adding a small amount of HCl will…
     options:
@@ -140,6 +169,16 @@ sections:
   - Structural spectroscopy — IR identifies bonds (stretching frequencies), NMR identifies hydrogen environments
     (chemical shift, splitting), mass spectrometry gives molecular mass and fragmentation. ==The MCAT
     mostly tests what each method measures, not detailed spectra reading==.
+  misconception: '"Twice as concentrated means the solution looks twice as dark, so transmittance halves."
+    Absorbance doubles; transmittance does not halve, because absorbance is the NEGATIVE logarithm of
+    transmittance. The linear quantity is A = -log T, and the eye''s sense of ''darker'' tracks that log
+    scale roughly, not the raw fraction of light getting through. Doubling c doubles A and squares T.'
+  connection: 'Every colored product assay in a clinical analyzer runs on this law: an enzyme-linked reaction
+    makes something colored in proportion to the analyte, the instrument reads absorbance, and a calibration
+    curve turns it into a concentration. The IR/NMR/MS triad in the body does the same job for structure,
+    and chapter 5D · Biologically relevant molecules supplies the functional groups those instruments
+    look for.'
+  connection_label: How sciences interconnect
   check:
   - q: Doubling the concentration of an absorbing species…
     options:
@@ -177,6 +216,16 @@ sections:
   - Percent error = |experimental - true| / true x 100. When a passage reports replicate measurements,
     read the scatter as precision and the mean's distance from a reference as accuracy — the MCAT loves
     distinguishing the two in data interpretation.
+  misconception: '"If I repeat the measurement enough times, the average will converge on the true value."
+    Averaging only cures RANDOM error. A balance reading 0.5 g high does so on every single weighing,
+    and averaging fifty biased readings returns the same bias with more confidence. Tight clusters sitting
+    above the true value — the check''s five measurements — are the signature: precision without accuracy,
+    cured only by recalibration or correction.'
+  connection: 'This distinction is why a laboratory runs controls alongside samples: the control with
+    a known value exposes systematic bias, while the spread across replicates reports random noise. A
+    diagnostic lab that reports a tight but shifted glucose would be precise, reproducible — and wrong
+    on every patient, which is exactly the failure mode quality control exists to catch.'
+  connection_label: Real-world connection
   check:
   - q: Five measurements cluster tightly but all sit above the true value. This is…
     options:
@@ -235,6 +284,26 @@ examples:
       B: Assuming equal volumes at equal moles — the concentrations differ by two.
       C: Doubling instead of halving.
       D: Inverting the concentration ratio.
+key_equations:
+- latex: $M = \frac{n}{V}$
+  symbols: M molarity (mol/L), n moles of solute, V litres of solution
+  when: concentration — the base of every dilution and titration calculation
+- latex: $M_1V_1 = M_2V_2$
+  symbols: M₁ V₁ before dilution, M₂ V₂ after
+  when: dilution — moles are conserved, so concentration falls as volume rises
+- latex: $n_{acid} = n_{base}$
+  symbols: n moles at the equivalence point
+  when: titration equivalence — a mole balance; the endpoint pH depends on the acid/base strengths
+- latex: $pH = pK_a + \log\frac{[A^{-}]}{[HA]}$
+  symbols: pKa of the buffer acid, [A⁻] conjugate base, [HA] weak acid
+  when: Henderson-Hasselbalch — buffer pH, and pH = pKa at half-equivalence where the ratio is 1
+- latex: $A = \varepsilon l c$
+  symbols: A absorbance, epsilon molar absorptivity (M⁻¹cm⁻¹), l path length (cm), c concentration (M)
+  when: Beer-Lambert — linear in both path length and concentration; the calibration curve's slope is
+    epsilon l
+- latex: $\%\text{ error} = \frac{|x_{exp} - x_{true}|}{x_{true}}\times100$
+  symbols: x_exp experimental value, x_true accepted value
+  when: reporting accuracy — distinct from precision, which is the scatter among replicates
 key_points:
 - M1V1 = M2V2 for dilutions.
 - Half-equivalence pH = pKa.

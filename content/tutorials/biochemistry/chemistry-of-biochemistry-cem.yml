@@ -16,6 +16,15 @@ sections:
     phospholipids (membranes), steroids (cholesterol) — hydrophobic==.
   - ==Proteins — amino acids -> peptide bonds -> structure levels; enzymes are proteins that lower activation
     energy==. ==Nucleic acids — nucleotides, DNA double helix (A-T, G-C), RNA; store and transmit information==.
+  misconception: '"Cellulose and starch are both made of glucose, so humans should be able to digest both
+    equally." Same monomer, different LINKAGE. Starch uses alpha-1,4 bonds our amylase hydrolyses; cellulose
+    uses beta-1,4 bonds, and no human enzyme cuts those. Cows digest grass only because their gut microbes
+    supply the cellulase — the animal itself still cannot make it.'
+  connection: 'Each family has its own joining chemistry, and that chemistry is the door to the deeper
+    chapters: glycosidic bonds to 5D''s carbohydrate section, ester bonds to its lipid section, peptide
+    bonds to 1A''s protein folding. Learn the four linkages here and you hold the indexing system for
+    the whole biomolecule map.'
+  connection_label: How sciences interconnect
   check:
   - q: Cellulose differs from starch because…
     options:
@@ -62,6 +71,16 @@ sections:
   - ==Inhibitors — competitive (same site, overcome by substrate) vs noncompetitive (elsewhere, lowers
     Vmax) — the NMAT favorite comparison. ==Enzyme denaturation vs inhibition — inhibition reversible,
     denaturation destroys shape==; coenzymes (vitamins) assist catalysis.
+  misconception: '"Both inhibitor types slow the enzyme, so more substrate should fix either one." Only
+    competitive inhibition can be out-competed, because there the inhibitor sits in the active site the
+    substrate wants. A noncompetitive inhibitor binds elsewhere and removes working enzyme — fewer catalysts,
+    each with unchanged affinity — so Vmax falls and no amount of substrate restores it. That Vmax-versus-Km
+    split is the whole diagnostic.'
+  connection: 'Denaturation and inhibition are different failures, and the difference matters clinically:
+    an inhibitor is a molecule you can wash out or out-compete, while a denatured enzyme — heat or extreme
+    pH — has lost its shape permanently. The same distinction appears in chapter 1A''s folding section,
+    where the four structure levels show exactly what a denaturant untangles.'
+  connection_label: How sciences interconnect
   check:
   - q: Increasing substrate concentration overcomes…
     options:
@@ -101,6 +120,15 @@ sections:
   - ==Catabolic vs anabolic — breakdown releases (exergonic); synthesis requires input (endergonic); coupled
     reactions transfer energy==. ==Photosynthesis — light reactions make ATP/NADPH, Calvin cycle fixes
     CO2==.
+  misconception: '"Glycolysis needs oxygen — that is why sprinting makes you breathe hard." Glycolysis
+    is anaerobic by design: it runs in the cytosol, needs no oxygen, and nets 2 ATP per glucose on its
+    own. The heavy breathing comes later — the oxygen is the terminal electron acceptor for the much larger
+    aerobic yield, which is why a sprint accumulates lactate when that demand cannot be met fast enough.'
+  connection: 'Chemiosmosis is the energy-coupling idea of chapter 5E made physical: the electron transport
+    chain stores redox energy as a proton gradient across a membrane, and ATP synthase spends that gradient.
+    The same arrangement in reverse — a proton gradient driving work — appears in chapter 2A as the membrane
+    principle the cell exploits everywhere.'
+  connection_label: How sciences interconnect
   check:
   - q: The main role of the electron transport chain is…
     options:
@@ -139,6 +167,14 @@ sections:
     sodium/potassium (membrane potential)==.
   - ==Clinical chemistry — glucose, lipids (cholesterol profile), uric acid (gout), blood gases==. ==Reference
     ranges are context — fasting vs postprandial; liver enzymes (ALT, AST) mark damage==.
+  misconception: '"Vitamins are just healthy — take them all and the more the better." Water-soluble excess
+    is excreted, but the fat-soluble group (A, D, E, K) is stored in body fat and can accumulate to toxicity.
+    Absorption also needs dietary fat, which is why a fat-free meal wastes a supplement. The classification
+    is a functional one, not a trivia label.'
+  connection: 'Most B vitamins are coenzyme precursors, which makes them the hinge between nutrition and
+    the metabolism of chapter 1D: niacin builds NAD, riboflavin FAD, pantothenate CoA. A deficiency shows
+    up as a metabolic bottleneck, not a vague tiredness — the pathway stalls where its cofactor runs out.'
+  connection_label: How sciences interconnect
   check:
   - q: Which vitamin is a precursor of NAD+?
     options:
@@ -176,6 +212,15 @@ sections:
     HbA1c (3-month glucose average)==.
   - '==Normal lab literacy — the units and the trend matter: rising creatinine = renal function; rising
     BNP = heart failure; D-dimer as rule-out for thromboembolism==.'
+  misconception: '"HbA1c measures today''s blood sugar — it is just another glucose test." It measures
+    a three-month average, because glucose attaches to hemoglobin over the red cell''s lifetime and the
+    fraction glycated reflects the running mean. A single fasting glucose is a snapshot; HbA1c is the
+    long exposure. Confusing the two time windows is the standard error.'
+  connection: 'The 4-4-9 rule is Atwater''s energy-density arithmetic, and it explains the pattern on
+    any food label: fat carries more than twice the kilocalories per gram of carbohydrate or protein,
+    which is why the same mass of oil out-energy sugar. The clinical tests in this section are the same
+    idea read in reverse — a lab value interpreted against its reference range and its trend.'
+  connection_label: Real-world connection
   check:
   - q: HbA1c reflects…
     options:
@@ -238,6 +283,23 @@ examples:
       A: Sucrose is not present in fresh milk as the trigger.
       C: Starch digestion is unaffected by dairy.
       D: Fat intolerance would not spare lactose-free milk, which keeps its fat.
+key_equations:
+- latex: $\text{kcal} = 4c + 4p + 9f$
+  symbols: c grams carbohydrate, p grams protein, f grams fat
+  when: the 4-4-9 rule — food-label energy arithmetic per gram of each macronutrient
+- latex: '$\text{glycolysis: } 4\ \text{made} - 2\ \text{spent} = 2\ \text{net ATP}$'
+  symbols: gross payoff minus priming investment, per glucose
+  when: the net figure is what any further tally expects; the aerobic total is 30-32 with the TCA cycle
+    and ETC
+- latex: $\text{ATP} + H_{2}O \rightarrow \text{ADP} + P_{i}$
+  symbols: hydrolysis releasing about 30 kJ/mol
+  when: the coupling currency — transfer the phosphate to drive an endergonic step
+- latex: $v = \frac{V_{max}[S]}{K_m + [S]}$
+  symbols: v rate, V_max, [S] substrate, K_m Michaelis constant
+  when: competitive inhibition raises apparent Km; noncompetitive lowers Vmax with Km unchanged
+- latex: $\text{glycosidic/ester/peptide/phosphodiester}$
+  symbols: the joining bond of each macromolecule family
+  when: linkage identity decides digestibility — beta-1,4 cellulose resists human amylase
 key_points:
 - Big four — carbs (glycosidic), lipids (ester), proteins (peptide), nucleic acids (phosphodiester).
 - 'Enzymes lower Ea — factor effects: T, pH, [S], [E].'

@@ -21,6 +21,15 @@ sections:
     heavy investment, strong competition — large mammals) fit saturated habitats. Survivorship curves
     complete the picture — Type I (die old, humans), Type II (constant risk, some birds), Type III (mass
     juvenile death, most fish and plants).
+  misconception: '"Maximum sustainable yield means keeping the fish population at carrying capacity —
+    the most fish means the most harvest." At K, net growth is zero, so any harvest pushes the population
+    below its replacement rate. Growth peaks at the logistic inflection, K/2, where resources are still
+    ample and numbers already compound — that is where the largest sustainable yield lives.'
+  connection: 'The logistic curve is exponential growth meeting a limit, and both are the mathematics
+    of chapter 1B''s replication arithmetic applied to populations: compounding whenever the per-capita
+    rate stays positive, braking as density-dependent factors bite. The same curve shapes PCR amplification,
+    bacterial growth, and epidemic spread.'
+  connection_label: How sciences interconnect
   check:
   - q: A population at logistic inflection is…
     options:
@@ -62,6 +71,16 @@ sections:
   - The ==keystone species== holds community structure out of proportion to their number — remove the
     sea star Pisaster and mussels overrun the tide pool. **Invasive species** are the pathology case —
     released from their co-evolved enemies, they competitively exclude natives.
+  misconception: '"Competition always ends with one species driving the other extinct — that is what competitive
+    exclusion means." Exclusion is one possible outcome, and only when niches fully overlap. The equally
+    common resolution is niche partitioning — natural selection shifts one species onto a different resource
+    or zone, as with the barnacles that split a rock face into wet and dry bands. Coexistence through
+    division, not necessarily a loser.'
+  connection: 'Keystone species are why counting heads misjudges importance: removing the sea star Pisaster
+    from a tide pool lets mussels overrun it and collapse the diversity, though the star was numerically
+    rare. Conservation targets keystones precisely because community structure hangs on them out of proportion
+    to abundance.'
+  connection_label: Real-world connection
   check:
   - q: Two barnacle species overlap; one shifts to a drier zone. This is…
     options:
@@ -101,6 +120,16 @@ sections:
   - Diversity has two axes — richness (how many species) and evenness (how evenly numbers spread). A community
     of ten equally common species is more diverse than ten individuals of one plus stragglers; both axes
     appear in MCAT index questions (Shannon-style setups).
+  misconception: '"After a fire, the area starts over from bare rock — primary succession, from scratch."
+    A fire leaves the soil intact, along with seed banks and surviving roots, which is exactly what defines
+    SECONDARY succession and makes it fast. Primary succession — bare rock, no soil, lichens first — is
+    reserved for lava flows, glacial scrapings, and newly exposed surfaces where soil must be built from
+    nothing.'
+  connection: 'Richness and evenness as the two axes of diversity mirror the distinction between counting
+    and weighing: two communities with the same species list can differ enormously if one is dominated
+    by a single abundant species. The same paired-axis logic appears in any index calculation the MCAT
+    builds around Shannon-style setups.'
+  connection_label: How sciences interconnect
   check:
   - q: Lava creates new land; the first colonizers are most likely…
     options:
@@ -139,6 +168,15 @@ sections:
   - Follow the food chain upward and the numbers shrink — 10,000 kg phytoplankton → 1,000 kg zooplankton
     → 100 kg fish → 10 kg secondary-fish → 1 kg of top-predator growth. Any passage asking "how much base
     supports X kg of top predator" is testing powers of ten, nothing more.
+  misconception: '"Energy cycles through the ecosystem like water and carbon do." Energy flows one way
+    and leaks at every step — roughly 90 percent is lost to heat and respiration at each transfer, which
+    is why food chains are short and pyramids of energy are always upright. Matter is what cycles: carbon,
+    nitrogen, and water are reused indefinitely. Two different behaviours, one sentence each.'
+  connection: 'The 10 percent rule is thermodynamics made ecological: the second law of chapter Thermodynamics
+    guarantees that no transfer is complete, so each trophic step wastes most of what it takes in. The
+    10,000 kg of phytoplankton behind 1 kg of top predator is the same energy bookkeeping as an engine''s
+    efficiency ceiling.'
+  connection_label: How sciences interconnect
   check:
   - q: How much producer biomass is needed to add 5 kg of a third-level carnivore's mass (three transfers
       above producers)?
@@ -188,6 +226,15 @@ sections:
     decomposers return ammonium. Legumes' root-nodule mutualists are the classic fixation example. Water
     cycles by evaporation-transpiration-condensation-precipitation, with the ocean as reservoir and land
     as throughput.
+  misconception: '"Plants fix nitrogen from the air — that is what fertiliser-free farming relies on."
+    Plants cannot split N2 at all; only certain prokaryotes carry nitrogenase. Legumes get their nitrogen
+    from symbiotic bacteria in root nodules, and every other organism inherits already-fixed nitrogen
+    downstream. Crop rotation with legumes borrows that mutualism, not a plant ability.'
+  connection: 'The nitrogen cycle is the prokaryote chapter run as chemistry: fixation, nitrification,
+    and denitrification are each performed by specific bacteria with specific enzymes, which is why the
+    cycle stops without them. Carbon''s fast biological loop — photosynthesis drawing down, respiration
+    returning — is the same metabolism covered in the energy chapters.'
+  connection_label: How sciences interconnect
   check:
   - q: The conversion of atmospheric N₂ into biologically usable forms is performed by…
     options:

@@ -16,6 +16,16 @@ sections:
   - Denaturation unfolds structure without breaking peptide bonds — heat, pH extremes, detergents, reducing
     agents for disulfides. ==The Anfinsen experiment (ribonuclease refolding) established that primary
     sequence encodes the native fold== — the central dogma of protein folding.
+  misconception: '"A denatured protein is destroyed — its peptide bonds are broken, so the damage is permanent
+    and total." Denaturation disturbs the fold, not the backbone. Heat or extreme pH strips the secondary
+    and tertiary structure while the sequence of amino acids survives intact — which is precisely why
+    Anfinsen''s ribonuclease could refold spontaneously once the denaturant was removed. Only a reductant
+    aimed at disulfide bridges, like beta-mercaptoethanol, touches a covalent link.'
+  connection: 'Each structure level is one chapter of intermolecular forces applied: backbone hydrogen
+    bonds hold the helix, the hydrophobic effect drives the core, ion pairs form salt bridges, and disulfides
+    are the covalent staple. Chapter 5B · Molecules and intermolecular interactions supplies the force
+    ladder; here it is deployed at four escalating scales.'
+  connection_label: How sciences interconnect
   check:
   - q: Alpha-helices are stabilized primarily by…
     options:
@@ -53,6 +63,16 @@ sections:
   - Inhibition — competitive raises apparent Km (Vmax unchanged, overcome by more substrate); noncompetitive
     lowers Vmax (Km unchanged); uncompetitive lowers both. ==Lineweaver-Burk plots expose the pattern
     — competitive lines cross on the y-axis==.
+  misconception: '"An enzyme makes the reaction more favourable, so it shifts the equilibrium toward more
+    product." An enzyme changes only the speed. It lowers the activation energy by the same amount in
+    both directions, so delta-G, K, and the final product-to-reactant ratio all stay exactly as they were
+    — the system just arrives there faster. Equilibrium position is thermodynamic territory; a catalyst
+    has no vote.'
+  connection: 'Km and Vmax are the vocabulary every pharmacology chapter borrows: a drug that competes
+    at an active site raises the apparent Km, which is why overdose can sometimes be out-competed by substrate
+    or blocked by a different ligand. Chapter 5E · Chemical thermodynamics and kinetics supplies the Arrhenius
+    reasoning underneath — the enzyme lowers Ea, nothing else.'
+  connection_label: How sciences interconnect
   check:
   - q: A competitive inhibitor…
     options:
@@ -90,6 +110,17 @@ sections:
   - Covalent modification — phosphorylation by kinases, dephosphorylation by phosphatases — flips activity
     in seconds. ==Zymogens are inactive enzyme precursors activated by proteolysis (trypsinogen to trypsin)==
     — irreversible but amplifying.
+  misconception: '"Every inhibitor competes with the substrate at the active site, so more substrate should
+    always overcome it." Only competitive inhibition works that way. An allosteric inhibitor binds elsewhere
+    and changes the enzyme''s shape; piling on substrate cannot displace it because nothing is competing
+    for the same site. That is the diagnostic difference — competitive is out-run by substrate, allosteric
+    is not.'
+  connection: 'Zymogen activation is the gut''s safety design: the pancreas manufactures trypsinogen and
+    amylase precursors in an inactive form precisely so that premature activation inside the pancreas
+    cannot digest the organ itself. Acute pancreatitis is what happens when that safeguard fails — the
+    zymogens activate in the wrong place, and the amplifying one-way cascade the check describes turns
+    on its own tissue.'
+  connection_label: Real-world connection
   check:
   - q: Sigmoid (rather than hyperbolic) kinetics indicates…
     options:
@@ -127,6 +158,15 @@ sections:
   - ==Total aerobic yield about 30-32 ATP per glucose==. NADH feeds about 2.5 ATP, FADH2 about 1.5 through
     the electron transport chain. Fermentation regenerates NAD+ when oxygen is absent — lactate (muscle)
     or ethanol plus CO2 (yeast).
+  misconception: '"Glycolysis makes 4 ATP, so that is its yield — the investment phase is a detail." The
+    gross figure is 4, but the cell spent 2 ATP priming the glucose before the payoff phase began, and
+    the net that matters is 2. The same accounting discipline gives the aerobic total of 30-32: add substrate-level
+    phosphorylation and the NADH/FADH2 harvests, and subtract what was already paid.'
+  connection: 'The 30-32 ATP per glucose figure is this chapter''s link to the electron-transport physics
+    in chapter 1D · Bioenergetics and fuel metabolism: each NADH pumps enough protons across the inner
+    membrane to drive roughly 2.5 ATP synthase turnovers, each FADH2 about 1.5. The chemiosmotic gradient
+    is the intermediate currency that converts redox energy into ATP.'
+  connection_label: How sciences interconnect
   check:
   - q: The net ATP from glycolysis alone per glucose is…
     options:
@@ -173,6 +213,16 @@ sections:
   - Fed versus fasting states re-route traffic — liver buffers blood glucose, adipose stores or releases
     fatty acids, muscle takes glucose or burns fat. ==The Cori cycle and the glucose-alanine cycle move
     muscle intermediates back to the liver for gluconeogenesis==.
+  misconception: '"Insulin and glucagon act at every step of every pathway, so metabolism is one big hormonal
+    switch." Hormones set the direction; the local metabolites do the moment-to-moment throttling. PFK-1
+    responds to ATP, citrate, and AMP within seconds regardless of what insulin is doing — the hormone
+    shifts the enzyme''s sensitivity through fructose-2,6-bisphosphate rather than commanding it directly.
+    Two control layers, operating on different clocks.'
+  connection: 'The control-point logic here is biochemistry''s answer to feedback control in chapter Life
+    Processes: Regulation and Homeostasis — a committed, irreversible step is the valve, and the pathway''s
+    end product is the signal that closes it. Insulin and glucagon are the hormonal overlay the same chapter
+    describes as endocrine regulation.'
+  connection_label: How sciences interconnect
   check:
   - q: PFK-1 is inhibited by…
     options:
@@ -230,6 +280,22 @@ examples:
       A: Saturation requires substrate far in excess of Km.
       B: Quartering rather than halving the maximum rate.
       D: Quoting the Km as though it were a rate.
+key_equations:
+- latex: $v = \frac{V_{max}[S]}{K_m + [S]}$
+  symbols: v reaction rate, V_max maximum rate, [S] substrate concentration, K_m Michaelis constant
+  when: Michaelis-Menten — at [S] = Km the rate is exactly half of Vmax
+- latex: $\text{rate} = \frac{k_{cat}[E]_{tot}[S]}{K_m + [S]}$
+  symbols: k_cat turnover number, [E]_tot total enzyme concentration
+  when: when the enzyme concentration is known — kcat/Km compares enzyme efficiency
+- latex: $\text{ATP}_{aerobic} \approx 30\text{-}32\ \text{per glucose}$
+  symbols: net ATP from glycolysis (2), TCA (2 GTP), and oxidative phosphorylation (26-28)
+  when: full aerobic tally — fermentation alone leaves only the glycolytic net of 2
+- latex: $\text{NADH} \approx 2.5\ \text{ATP};\ \ \text{FADH}_{2} \approx 1.5\ \text{ATP}$
+  symbols: reduced cofactor entering the electron transport chain
+  when: oxidative phosphorylation yields — NADH enters at complex I, FADH2 at complex II
+- latex: $\Delta G_{coupled} = \Delta G_{1} + \Delta G_{2}$
+  symbols: free energies of the coupled steps
+  when: how ATP hydrolysis (~ -30 kJ/mol) drives an unfavourable biosynthetic step
 key_points:
 - Four structure levels; denaturation spares peptide bonds.
 - Enzymes lower Ea — Vmax and Km diagnostics of inhibition type.

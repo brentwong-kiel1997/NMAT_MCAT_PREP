@@ -17,6 +17,15 @@ sections:
   - '==Central dogma: DNA -> RNA -> protein. ==Chromatin — DNA wrapped around histones (nucleosomes);
     heterochromatin (condensed, silenced) vs euchromatin (open, active)==. Genes — promoters upstream,
     exons/introns, terminators.'
+  misconception: '"Complement of 5''-ATGC-3'' is 5''-TACG-3'' — I just swapped each base." The bases are
+    right but the direction was never flipped. The partner strand physically runs the other way, so pairing
+    ATGC gives 3''-TACG-5'', and rewriting it in the 5''-to-3'' convention reverses it to 5''-GCAT-3''.
+    Antiparallel means both the pairing AND the polarity flip, and only one of the two is visible in the
+    answer choices.'
+  connection: 'Antiparallelity is a structural fact with a mechanical consequence: because DNA polymerase
+    can only extend a free 3''-OH, the fork needs a continuous strand and a discontinuous one — the entire
+    leading-versus-lagging machinery of the next section exists because the two strands run opposite ways.'
+  connection_label: How sciences interconnect
   check:
   - q: A DNA double helix is antiparallel because…
     options:
@@ -60,6 +69,16 @@ sections:
   - ==Leading vs lagging — leading is continuous toward the fork; lagging is discontinuous (Okazaki fragments)
     away from the fork==. ==Proofreading — 3' to 5' exonuclease fixes errors, error rate ~1 in 10^9 with
     mismatch repair==. Telomerase extends chromosome ends in germline/STEM cells.
+  misconception: '"DNA polymerase starts the chain — it reads the template and begins adding nucleotides
+    at the origin." It cannot start anything. The enzyme only extends an existing chain from a free 3''-OH,
+    which is why primase must first lay a short RNA primer. That single limitation explains the lagging
+    strand''s Okazaki fragments and ligase''s sealing job — remove the primer requirement and half the
+    fork machinery becomes unnecessary.'
+  connection: 'The proofreading exonuclease here is the first line of the repair hierarchy chapter 1C
+    · Heritable information and diversity builds out: 3''-to-5'' checking during replication, then mismatch
+    repair after it, and the excision lanes for damage that survives both. The ~1 in 10^9 fidelity is
+    the combined result, not one enzyme''s.'
+  connection_label: How sciences interconnect
   check:
   - q: DNA polymerase cannot…
     options:
@@ -98,6 +117,15 @@ sections:
     ==Eukaryotes — RNA Pol II for mRNA; 5' cap, poly-A tail, splicing removed introns==.
   - ==Regulation — promoters and enhancers; transcription factors (activators, repressors); histone acetylation
     opens chromatin (genes ON), deacetylation silences. ==Alternative splicing — one gene, many proteins==.
+  misconception: '"The mRNA matches the template strand, since that is the strand being read." It matches
+    the OTHER one. RNA polymerase reads the template 3'' to 5'' and builds a complement of it — which
+    is, base for base, the coding strand with U replacing T. Template is read; coding is echoed. The check''s
+    3''-TAC-5'' giving 5''-AUG-3'' shows the double step.'
+  connection: 'Histone acetylation is where chemistry meets gene control: neutralising lysine''s positive
+    charge releases the DNA it was gripping, the nucleosome loosens, and transcription machinery gains
+    access. Chapter 1C · Heritable information and diversity treats the same mechanism as epigenetics
+    — heritable change in expression with no change in sequence.'
+  connection_label: How sciences interconnect
   check:
   - q: The mRNA sequence resembles…
     options:
@@ -137,6 +165,14 @@ sections:
   - ==Peptide chain grows N to C; energy from GTP (EF-Tu in bacteria, eEF1 in eukaryotes)==. Antibiotics
     exploit the machinery — tetracycline blocks A-site binding, puromycin premature termination. ==Post-translational
     — folding, glycosylation, cleavage, targeting signal sequences==.
+  misconception: '"AUG-CCC-UAA is three codons, so the peptide has three amino acids." Stop codons specify
+    nothing. AUG (methionine) and CCC (proline) are translated; UAA recruits a release factor and the
+    chain ends with two residues. Counting codons only counts when every codon is a sense codon.'
+  connection: 'The energy bookkeeping of translation is a GTP story, not ATP: charging tRNAs costs ATP,
+    but the elongation and translocation steps spend GTP — a different nucleotide running a different
+    pool. That distinction is the same ATP-versus-GTP currency split chapter 1D · Bioenergetics and fuel
+    metabolism keeps track of across the cell.'
+  connection_label: How sciences interconnect
   check:
   - q: Aminoacyl-tRNA synthetase…
     options:
@@ -175,6 +211,15 @@ sections:
   - ==Sanger sequencing — dideoxynucleotides terminate chains; read bands by length==. NGS — massively
     parallel short reads. ==CRISPR-Cas9 — guide RNA targets Cas9 to cut; homology-directed repair or NHEJ
     edits the locus==. Restriction enzymes cut at palindromic sites; vectors (plasmids) carry inserts.
+  misconception: '"Twenty PCR cycles from one template gives forty copies — two per cycle, twenty cycles."
+    Two per cycle is not added, it is multiplied: every product becomes a template in the next cycle,
+    so the count is 2^20, about a million. PCR is exponential precisely because the copies replicate —
+    2n would be the arithmetic if they did not.'
+  connection: 'That exponential curve is why PCR turned diagnostics inside out: a handful of viral genomes
+    in a swab become a detectable signal within hours. The same GC-melting arithmetic in the passage sets
+    primer design — a GC-rich target demands a higher annealing temperature, and getting it wrong gives
+    primer dimers or no product at all.'
+  connection_label: Real-world connection
   check:
   - q: PCR amplifies DNA exponentially because…
     options:
@@ -240,6 +285,22 @@ examples:
       A: That is the primary transcript before splicing.
       C: Reporting the intron total instead of the exon total.
       D: Adding only two of the four exons.
+key_equations:
+- latex: '$\text{A-T: } 2\ \text{H-bonds};\ \ \text{G-C: } 3\ \text{H-bonds}$'
+  symbols: hydrogen bonds per base pair
+  when: GC-rich duplexes melt higher — the basis of primer and probe design
+- latex: $\text{copies} = N_{0}\times2^{n}$
+  symbols: N₀ starting template molecules, n cycle number
+  when: PCR amplification — exponential, never 2n; 20 cycles from one template gives about a million copies
+- latex: $\text{codons} = \frac{\text{coding nt}}{3}$
+  symbols: coding nucleotides in the mature mRNA
+  when: translation arithmetic — subtract the stop codon before counting amino acids
+- latex: $\text{mature mRNA} = \sum \text{exons} + \text{cap} + \text{poly-A}$
+  symbols: exon lengths in nucleotides; introns are spliced out and never counted
+  when: splicing bookkeeping — the primary transcript is exon plus intron, the message is exon only
+- latex: $\text{error rate} \approx 10^{-9}\ \text{per base}$
+  symbols: combined replication fidelity with proofreading and mismatch repair
+  when: polymerase alone is far sloppier — the repair layers of chapter 1C close the gap
 key_points:
 - Antiparallel; A-T 2 bonds, G-C 3 — Tm scales with GC.
 - Semiconservative; lagging strand made in Okazaki fragments.
