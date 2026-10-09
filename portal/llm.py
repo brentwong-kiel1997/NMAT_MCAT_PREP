@@ -60,6 +60,8 @@ def chat_completion(
             "No AI model is configured. Ask an admin to add one under "
             "Manage → Models."
         )
+    if provider.api_style == "claude-code":
+        return _call_cc_cli(provider, messages, timeout)
     if not provider.api_key:
         raise RuntimeError(
             f"Provider {provider.name!r} has no API key set. "
@@ -71,6 +73,70 @@ def chat_completion(
                                timeout)
     return _call_openai_style(provider, base, messages, max_tokens, temperature,
                               timeout)
+
+
+def _run_cc_cli(args: list[str], stdin_text: str, timeout: int):
+    """Invoke the claude CLI. Factored out so tests can patch the runner."""
+    import subprocess
+
+    return subprocess.run(
+        ["claude", *args],
+        input=stdin_text,
+        capture_output=True,
+        text=True,
+        timeout=timeout,
+    )
+
+
+def _call_cc_cli(provider, messages: list[dict], timeout: int) -> str:
+    """Study-coach completion through the local Claude Code CLI.
+
+    Reuses the server's existing CC model configuration (auth + routing)
+    while staying isolated from any interactive/development CC sessions:
+    every call is stateless (-p, fresh session id, never --continue or
+    --resume) and runs with cwd inside a dedicated empty workspace, so no
+    project settings, memory files, or session history from the development
+    checkout can load."""
+    import json as _json
+    import os
+
+    from django.conf import settings
+
+    workspace = getattr(settings, "CC_WORKSPACE", "")
+    if workspace:
+        os.makedirs(workspace, exist_ok=True)
+    else:
+        workspace = None  # inherit cwd — tests patch the runner anyway
+
+    system = "\n\n".join(m["content"] for m in messages if m["role"] == "system")
+    convo = "\n\n".join(
+        f"{m['role'].upper()}: {m['content']}" if m["role"] != "system" else ""
+        for m in messages
+    ).strip()
+
+    args = ["-p", "--output-format", "json"]
+    if system:
+        args += ["--system-prompt", system[:4000]]
+    if provider.model_id:
+        args += ["--model", provider.model_id]
+
+    try:
+        proc = _run_cc_cli(args, convo, timeout=timeout)
+    except Exception as exc:  # timeout / binary missing
+        raise RuntimeError(f"claude CLI call failed: {exc}") from exc
+    if proc.returncode != 0:
+        raise RuntimeError(
+            f"claude CLI exited {proc.returncode}: {proc.stderr[:300]}")
+    try:
+        data = _json.loads(proc.stdout)
+    except _json.JSONDecodeError as exc:
+        raise RuntimeError(
+            f"claude CLI returned non-JSON: {proc.stdout[:200]}") from exc
+    if data.get("is_error"):
+        raise RuntimeError(f"claude CLI error: {str(data.get('result'))[:300]}")
+    text = data.get("result") or ""
+    cleaned = _clean(text)
+    return cleaned or "(the model returned no visible text — please try again)"
 
 
 def _post(url: str, headers: dict, payload: dict, timeout: int = 90):

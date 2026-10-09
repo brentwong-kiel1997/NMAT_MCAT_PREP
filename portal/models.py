@@ -69,12 +69,15 @@ class AIProvider(models.Model):
     STYLE_CHOICES = [
         ("openai", "OpenAI-compatible"),
         ("anthropic", "Anthropic"),
+        ("claude-code", "Claude Code CLI (this server)"),
     ]
 
     name = models.CharField(max_length=120, unique=True, help_text="Display label")
     api_style = models.CharField(max_length=16, choices=STYLE_CHOICES, default="openai")
     base_url = models.CharField(
-        max_length=300, help_text="API root, e.g. https://api.openai.com/v1"
+        max_length=300, blank=True,
+        help_text="API root, e.g. https://api.openai.com/v1 (unused for the "
+                  "Claude Code CLI style — it reuses this server's CC config)",
     )
     model_id = models.CharField(max_length=120, help_text="Model id sent to the API")
     # Fernet ciphertext (portal.fieldcrypto), key derived from SECRET_KEY.

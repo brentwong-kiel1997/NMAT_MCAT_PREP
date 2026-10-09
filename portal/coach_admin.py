@@ -17,14 +17,14 @@ def _staff_required(user) -> bool:
 
 
 def _validate(name: str, api_style: str, base_url: str, model_id: str) -> str:
-    """Return an error code (''), 'invalid' or 'exists' semantics are handled
-    by callers that need name-uniqueness scope."""
-    if (
-        not name
-        or api_style not in dict(AIProvider.STYLE_CHOICES)
-        or not base_url.startswith(("http://", "https://"))
-        or not model_id
-    ):
+    """Return an error code; callers handle name-uniqueness scope."""
+    if not name or api_style not in dict(AIProvider.STYLE_CHOICES):
+        return "invalid"
+    if api_style == "claude-code":
+        # no endpoint/key needed — the CLI reuses this server's CC config;
+        # model_id is optional there (falls back to the CLI default)
+        return "" if model_id or True else "invalid"
+    if not base_url.startswith(("http://", "https://")) or not model_id:
         return "invalid"
     return ""
 

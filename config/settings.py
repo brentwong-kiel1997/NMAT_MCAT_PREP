@@ -165,3 +165,9 @@ CSRF_TRUSTED_ORIGINS = [
 # MiniMax study tutor keys are read from a .env file by portal.envfile.
 # Override the file location with GABAY_ENV_FILE; see `manage.py env_status`.
 GABAY_ENV_FILE = os.environ.get("GABAY_ENV_FILE", str(BASE_DIR / ".env"))
+
+# Dedicated workspace for study-coach calls that run through the Claude
+# Code CLI: stateless calls execute with cwd here so the app's CC usage is
+# isolated from any development CC sessions on this machine.
+CC_WORKSPACE = os.environ.get(
+    "GABAY_CC_WORKSPACE", str(RUNTIME_DIR / "cc-workspace"))

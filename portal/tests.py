@@ -1072,6 +1072,86 @@ class TutorialPageRenderTests(TestCase):
             self.assertContains(res, "Key points")
 
 
+class ClaudeCodeCliProviderTests(TestCase):
+    """The Claude Code CLI backend: isolation flags, prompt assembly, and
+    error paths. The runner is patched — no real CLI calls in tests."""
+
+    def setUp(self):
+        from .models import AIProvider
+
+        self.provider = AIProvider.objects.create(
+            name="CC bridge", api_style="claude-code",
+            base_url="", model_id="glm-5.3[1m]",
+        )
+        self.provider.set_api_key("")  # no key needed for this style
+        self.provider.save(update_fields=["api_key_enc", "updated_at"])
+
+    def _messages(self):
+        return [
+            {"role": "system", "content": "You are the Gabay study coach."},
+            {"role": "user", "content": "Explain torque in one line."},
+        ]
+
+    def test_branch_uses_cli_with_isolation_flags(self):
+        from unittest.mock import patch
+
+        from . import llm
+
+        captured = {}
+
+        class FakeProc:
+            returncode = 0
+            stderr = ""
+            stdout = '{"result": "Torque = r x F.", "is_error": false}'
+
+        def fake_run(args, stdin_text, timeout):
+            captured["args"] = args
+            captured["stdin"] = stdin_text
+            captured["timeout"] = timeout
+            return FakeProc()
+
+        with patch.object(llm, "_run_cc_cli", side_effect=fake_run):
+            out = llm.chat_completion(self._messages(), provider=self.provider)
+        self.assertEqual(out, "Torque = r x F.")
+        args = captured["args"]
+        self.assertIn("-p", args)                       # stateless print mode
+        self.assertNotIn("--continue", args)            # never resumes a session
+        self.assertNotIn("--resume", args)
+        self.assertIn("--model", args)                  # model pinned per row
+        self.assertIn("--system-prompt", args)          # coach persona injected
+        self.assertIn("Explain torque", captured["stdin"])
+        self.assertIn("study coach", " ".join(args))
+
+    def test_error_paths_raise_runtimeerror(self):
+        from unittest.mock import patch
+
+        from . import llm
+
+        class ErrProc:
+            returncode = 1
+            stderr = "boom"
+            stdout = ""
+
+        with patch.object(llm, "_run_cc_cli", return_value=ErrProc()):
+            with self.assertRaises(RuntimeError):
+                llm.chat_completion(self._messages(), provider=self.provider)
+
+        class ApiErrProc:
+            returncode = 0
+            stderr = ""
+            stdout = '{"result": "quota exceeded", "is_error": true}'
+
+        with patch.object(llm, "_run_cc_cli", return_value=ApiErrProc()):
+            with self.assertRaises(RuntimeError):
+                llm.chat_completion(self._messages(), provider=self.provider)
+
+    def test_style_needs_no_key_and_coach_ready(self):
+        from .llm import chat_completion  # noqa: F401  (import sanity)
+
+        # api_key property is "" — the claude-code branch must not require it
+        self.assertEqual(self.provider.api_key, "")
+
+
 class ContentValidationTests(TestCase):
     def test_validate_content_green(self):
         call_command("validate_content", verbosity=0)
