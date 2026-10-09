@@ -22,8 +22,14 @@ def _validate(name: str, api_style: str, base_url: str, model_id: str) -> str:
         return "invalid"
     if api_style == "claude-code":
         # no endpoint/key needed — the CLI reuses this server's CC config;
-        # model_id is optional there (falls back to the CLI default)
-        return "" if model_id or True else "invalid"
+        # model_id is optional there (falls back to the CLI default).
+        # Pattern-guard the id: it becomes a CLI --model value, so keep it a
+        # plain token even though the parser would consume it as a value.
+        import re as _re
+
+        if model_id and not _re.fullmatch(r"[A-Za-z0-9._\[\]-]{1,120}", model_id):
+            return "invalid"
+        return ""
     if not base_url.startswith(("http://", "https://")) or not model_id:
         return "invalid"
     return ""

@@ -1104,10 +1104,11 @@ class ClaudeCodeCliProviderTests(TestCase):
             stderr = ""
             stdout = '{"result": "Torque = r x F.", "is_error": false}'
 
-        def fake_run(args, stdin_text, timeout):
+        def fake_run(args, stdin_text, timeout, cwd):
             captured["args"] = args
             captured["stdin"] = stdin_text
             captured["timeout"] = timeout
+            captured["cwd"] = cwd
             return FakeProc()
 
         with patch.object(llm, "_run_cc_cli", side_effect=fake_run):
@@ -1119,8 +1120,20 @@ class ClaudeCodeCliProviderTests(TestCase):
         self.assertNotIn("--resume", args)
         self.assertIn("--model", args)                  # model pinned per row
         self.assertIn("--system-prompt", args)          # coach persona injected
+        # tools are denied outright + manual permission mode: a crafted
+        # learner prompt must not reach Bash/Write even though this
+        # machine's user CC settings carry bypassPermissions
+        self.assertIn("--disallowedTools", args)
+        self.assertIn("Bash", args[args.index("--disallowedTools") + 1])
+        self.assertIn("--permission-mode", args)
+        self.assertEqual(args[args.index("--permission-mode") + 1], "manual")
+        # cwd MUST be the dedicated workspace (R1-style audit: it used to be
+        # computed and never passed — every call ran in the deploy checkout)
+        from django.conf import settings
+
+        self.assertEqual(captured["cwd"], settings.CC_WORKSPACE)
+        self.assertTrue(captured["cwd"])
         self.assertIn("Explain torque", captured["stdin"])
-        self.assertIn("study coach", " ".join(args))
 
     def test_error_paths_raise_runtimeerror(self):
         from unittest.mock import patch
@@ -1145,11 +1158,45 @@ class ClaudeCodeCliProviderTests(TestCase):
             with self.assertRaises(RuntimeError):
                 llm.chat_completion(self._messages(), provider=self.provider)
 
-    def test_style_needs_no_key_and_coach_ready(self):
-        from .llm import chat_completion  # noqa: F401  (import sanity)
+        class NotJsonProc:
+            returncode = 0
+            stderr = ""
+            stdout = "CLI update notice, not JSON"
 
-        # api_key property is "" — the claude-code branch must not require it
-        self.assertEqual(self.provider.api_key, "")
+        with patch.object(llm, "_run_cc_cli", return_value=NotJsonProc()):
+            with self.assertRaises(RuntimeError):
+                llm.chat_completion(self._messages(), provider=self.provider)
+
+        import subprocess
+
+        with patch.object(llm, "_run_cc_cli",
+                          side_effect=subprocess.TimeoutExpired("claude", 90)):
+            with self.assertRaises(RuntimeError):
+                llm.chat_completion(self._messages(), provider=self.provider)
+
+    def test_style_needs_no_key_and_coach_ready(self):
+        from unittest.mock import patch
+
+        from . import llm
+        from .models import AIProvider
+
+        with patch.object(llm, "active_provider", return_value=self.provider):
+            # empty key + claude-code style must read as ready — the old
+            # api_key gate dead-ended the whole feature at activation
+            self.assertTrue(llm.coach_ready())
+
+    def test_missing_workspace_refuses_to_run(self):
+        from unittest.mock import patch
+
+        from django.test import override_settings
+
+        from . import llm
+
+        with override_settings(CC_WORKSPACE=""):
+            with patch.object(llm, "_run_cc_cli") as fake:
+                with self.assertRaises(RuntimeError):
+                    llm.chat_completion(self._messages(), provider=self.provider)
+            fake.assert_not_called()  # never inherit the caller's cwd
 
 
 class ContentValidationTests(TestCase):

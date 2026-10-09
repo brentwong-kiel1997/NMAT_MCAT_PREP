@@ -18,15 +18,29 @@ coach call ──portal/llm.py chat_completion()
 
 - Every call is **stateless**: `-p` print mode, a fresh session id per
   call, never `--continue` / `--resume`.
-- **Isolated from development CC** by construction: the process runs with
-  its cwd inside a dedicated empty workspace, so no development checkout
-  settings, project memory, or session history can load into the call.
+- **Isolated from development CC by four locks** (verified by audit):
+  1. `cwd` is pinned to the dedicated empty workspace — a missing
+     `CC_WORKSPACE` refuses to run rather than inheriting the deploy
+     checkout's project config;
+  2. **all tools are denied** (`--disallowedTools` covers Bash/Write/Edit/
+     Web*/Task/…) so a crafted learner prompt cannot reach the shell even
+     though this machine's user CC settings carry `bypassPermissions`
+     (empirically confirmed: the model reports "no Bash tool in this
+     session");
+  3. `--permission-mode manual` as a second lock against permissive
+     user-level settings;
+  4. session transcripts the CLI writes under `~/.claude/projects/` are
+     swept daily (best-effort) so learner prompt content and disk do not
+     accumulate.
 - The coach persona arrives via `--system-prompt`; the model is pinned per
-  provider row via `--model`.
-- Failures (CLI missing, timeout, non-zero exit, `is_error` payload)
-  degrade exactly like the other backends: a flash message, never a 500.
-- The shared daily per-user coach budget (`GABAY_COACH_DAILY_LIMIT`)
-  applies to these calls like any other.
+  provider row via `--model` (pattern-guarded to a plain token).
+- `max_tokens`/`temperature` have no CLI equivalents — replies are bounded
+  only by the CLI; the shared daily per-user coach budget
+  (`GABAY_COACH_DAILY_LIMIT`) caps total use.
+- Failures (CLI missing, timeout, non-zero exit, `is_error`, non-JSON
+  output) degrade exactly like the other backends: a message, never a 500.
+- gunicorn runs with `--timeout 120`, above the coach's 90 s CLI ceiling,
+  so a slow call can't abort the worker and orphan the CLI child.
 
 ## Enabling it (staff)
 

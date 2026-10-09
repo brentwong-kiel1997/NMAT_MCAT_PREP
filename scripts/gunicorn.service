@@ -14,6 +14,7 @@ Environment=DJANGO_CSRF_TRUSTED_ORIGINS=https://127.0.0.1:8888,https://localhost
 ExecReload=/bin/kill -HUP $MAINPID
 ExecStart=/home/ubuntu/runtime/django-wsgi/venv/bin/gunicorn config.wsgi:application \
   --bind 127.0.0.1:8000 \
+  --timeout 120 \
   --workers 2 \
   --access-logfile /home/ubuntu/runtime/django-wsgi/logs/gunicorn.access.log \
   --error-logfile /home/ubuntu/runtime/django-wsgi/logs/gunicorn.error.log

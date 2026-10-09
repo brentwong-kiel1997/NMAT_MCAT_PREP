@@ -78,7 +78,7 @@ def chat_completion(
                               timeout)
 
 
-def _run_cc_cli(args: list[str], stdin_text: str, timeout: int):
+def _run_cc_cli(args: list[str], stdin_text: str, timeout: int, cwd: str):
     """Invoke the claude CLI. Factored out so tests can patch the runner."""
     import subprocess
 
@@ -88,7 +88,16 @@ def _run_cc_cli(args: list[str], stdin_text: str, timeout: int):
         capture_output=True,
         text=True,
         timeout=timeout,
+        cwd=cwd,
     )
+
+
+# The study coach never needs tools; denying the full set keeps a crafted
+# learner prompt from driving Bash/Write even though this machine's user
+# settings carry bypassPermissions (verified: tools stay unavailable under
+# --disallowedTools regardless of that setting).
+_CC_DENIED_TOOLS = ("Bash BashOutput KillShell Write Edit NotebookEdit "
+                    "WebFetch WebSearch Task TodoWrite TodoRead Read Grep Glob")
 
 
 def _call_cc_cli(provider, messages: list[dict], timeout: int) -> str:
@@ -97,19 +106,24 @@ def _call_cc_cli(provider, messages: list[dict], timeout: int) -> str:
     Reuses the server's existing CC model configuration (auth + routing)
     while staying isolated from any interactive/development CC sessions:
     every call is stateless (-p, fresh session id, never --continue or
-    --resume) and runs with cwd inside a dedicated empty workspace, so no
-    project settings, memory files, or session history from the development
-    checkout can load."""
+    --resume), runs with cwd inside a dedicated empty workspace (REQUIRED —
+    inheriting the deploy checkout would load its project config and write
+    session transcripts into its project space), denies all tools, and
+    forces the manual permission mode as a second lock against the
+    user-level bypassPermissions setting.
+
+    Note: max_tokens/temperature have no CLI equivalents — replies are
+    bounded only by the CLI itself; the shared daily budget caps total use.
+    """
     import json as _json
     import os
 
     from django.conf import settings
 
     workspace = getattr(settings, "CC_WORKSPACE", "")
-    if workspace:
-        os.makedirs(workspace, exist_ok=True)
-    else:
-        workspace = None  # inherit cwd — tests patch the runner anyway
+    if not workspace:
+        raise RuntimeError("CC_WORKSPACE is not configured")
+    os.makedirs(workspace, exist_ok=True)
 
     system = "\n\n".join(m["content"] for m in messages if m["role"] == "system")
     convo = "\n\n".join(
@@ -117,16 +131,22 @@ def _call_cc_cli(provider, messages: list[dict], timeout: int) -> str:
         for m in messages
     ).strip()
 
-    args = ["-p", "--output-format", "json"]
+    args = [
+        "-p", "--output-format", "json",
+        "--permission-mode", "manual",
+        "--disallowedTools", _CC_DENIED_TOOLS,
+    ]
     if system:
         args += ["--system-prompt", system[:4000]]
     if provider.model_id:
         args += ["--model", provider.model_id]
 
     try:
-        proc = _run_cc_cli(args, convo, timeout=timeout)
+        proc = _run_cc_cli(args, convo, timeout=timeout, cwd=workspace)
     except Exception as exc:  # timeout / binary missing
         raise RuntimeError(f"claude CLI call failed: {exc}") from exc
+    finally:
+        _sweep_cc_transcripts(workspace)
     if proc.returncode != 0:
         raise RuntimeError(
             f"claude CLI exited {proc.returncode}: {proc.stderr[:300]}")
@@ -140,6 +160,29 @@ def _call_cc_cli(provider, messages: list[dict], timeout: int) -> str:
     text = data.get("result") or ""
     cleaned = _clean(text)
     return cleaned or "(the model returned no visible text — please try again)"
+
+
+def _sweep_cc_transcripts(workspace: str) -> None:
+    """Best-effort hygiene: -p calls still write session transcripts under
+    ~/.claude/projects/<workspace-slug>/. Drop files older than a day so
+    learner prompt content (and disk) does not accumulate forever."""
+    import os
+    import time
+
+    home = os.path.expanduser("~")
+    slug = workspace.strip("/").replace("/", "-")
+    proj = os.path.join(home, ".claude", "projects", slug)
+    try:
+        cutoff = time.time() - 24 * 3600
+        for name in os.listdir(proj):
+            path = os.path.join(proj, name)
+            try:
+                if os.path.isfile(path) and os.path.getmtime(path) < cutoff:
+                    os.unlink(path)
+            except OSError:
+                pass
+    except OSError:
+        pass
 
 
 def _post(url: str, headers: dict, payload: dict, timeout: int = 90):
