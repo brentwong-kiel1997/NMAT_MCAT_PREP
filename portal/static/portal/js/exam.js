@@ -124,10 +124,10 @@
           savedNote.textContent = res.ok ? "Saved" : "Not saved — retrying";
           if (res.ok) setTimeout(() => { savedNote.textContent = ""; }, 1500);
         }
-        if (!res.ok && body.chosen) { pending = body; setTimeout(() => flush(true), 2000); }
+        if (!res.ok && (body.chosen || body.crossed || body.flagged)) { pending = body; setTimeout(() => flush(true), 2000); }
       }).catch(() => {
         if (savedNote) savedNote.textContent = "Offline — will retry";
-        if (body.chosen) { pending = body; setTimeout(() => flush(true), 3000); }
+        if (body.chosen || body.crossed || body.flagged) { pending = body; setTimeout(() => flush(true), 3000); }
       });
     }
     function queueSave() {

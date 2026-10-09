@@ -55,7 +55,7 @@ def chapter_accuracy(profile) -> dict[str, dict]:
         if r.correct:
             slot["correct"] += 1
     submitted = ExamAttempt.objects.filter(profile=profile).exclude(status="active")
-    for resp in ExamResponse.objects.filter(attempt__in=submitted):
+    for resp in ExamResponse.objects.filter(attempt__in=submitted).exclude(is_field_test=True):
         if not resp.chapter_id:
             continue
         slot = acc[resp.chapter_id]
@@ -107,6 +107,9 @@ def wrong_questions(profile, limit: int = 300) -> list[dict]:
     submitted = ExamAttempt.objects.filter(profile=profile).exclude(status="active")
     for resp in (ExamResponse.objects
                  .filter(attempt__in=submitted)
+                 # field-test rows are recorded for calibration but never
+                 # scored — they must not distort the learner's own stats
+                 .exclude(is_field_test=True)
                  .select_related("attempt").order_by("attempt__finished_at")):
         consider(resp.item_id, resp.attempt.finished_at, resp.correct,
                  {"source": "exam", "question_id": resp.item_id,

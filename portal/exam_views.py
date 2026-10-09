@@ -92,21 +92,6 @@ def _plan_block(attempt: ExamAttempt, block_id: str) -> dict:
     raise Http404("Block not found")
 
 
-def _nav_context(attempt: ExamAttempt, block_id: str) -> dict:
-    blocks = attempt.plan.get("blocks") or []
-    idx = examsys.block_index(attempt, block_id)
-    s = attempt.sections[idx]
-    return {
-        "blocks": blocks,
-        "block": blocks[idx],
-        "section": s,
-        "block_idx": idx,
-        "remaining": examsys.remaining_seconds(attempt, block_id),
-        "is_last_block": idx == len(blocks) - 1,
-        "break_before": blocks[idx].get("break_before"),
-    }
-
-
 @require_GET
 def exam_take(request, exam_id: str, attempt_id: int):
     if not request.user.is_authenticated:
@@ -184,6 +169,15 @@ def exam_question(request, exam_id: str, attempt_id: int,
         "nav": examsys.navigator(attempt, block_id),
         "is_first": pos == 1,
         "is_last": pos == len(block["items"]),
+        # the template's Submit-exam branch keys on these; they were never
+        # in the context, so the last block rendered the finish form and the
+        # submit API was unreachable from the UI
+        "is_last_block": examsys.block_index(attempt, block_id) == len(blocks) - 1,
+        "break_before": next(
+            (b.get("break_before") for b in blocks
+             if b["id"] != block_id
+             and examsys.block_index(attempt, b["id"])
+             == examsys.block_index(attempt, block_id) + 1), None),
         "next_block": (blocks[examsys.block_index(attempt, block_id) + 1]
                        if examsys.block_index(attempt, block_id) + 1 < len(blocks) else None),
     })
@@ -195,6 +189,13 @@ def exam_break(request, exam_id: str, attempt_id: int, block_id: str):
     attempt = _owned_attempt(request, exam_id, attempt_id)
     if attempt.status != "active":
         return redirect("exam_result", attempt_id=attempt.id)
+    # a break page exists only for the NEXT block (previous one just
+    # finished, this one not yet begun) — anything else bounces to the take
+    # flow so a stale URL can't park a learner on a break for a block that
+    # is running or already done
+    if (examsys.current_block(attempt) != block_id
+            or examsys.block_started(attempt, block_id)):
+        return redirect("exam_take", exam_id=exam_id, attempt_id=attempt.id)
     block = _plan_block(attempt, block_id)
     return render(request, "portal/exam_break.html", {
         "attempt": attempt, "exam": {"id": exam_id}, "blk": block,

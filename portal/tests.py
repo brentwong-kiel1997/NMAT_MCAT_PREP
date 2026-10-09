@@ -1274,6 +1274,140 @@ class R2SecurityRegressionTests(TestCase):
         self.assertIn(429, codes[60:])             # bulk harvesting throttled
 
 
+class R3EngineRegressionTests(TestCase):
+    """Round 3: engine state-machine regressions."""
+
+    def setUp(self):
+        self.user = User.objects.create_user("r3user", password="pw-123456789")
+        self.profile = ensure_profile_for_user(self.user)
+        self.client = Client()
+        self.client.force_login(self.user)
+
+    def test_write_retry_absorbs_snapshot_lock(self):
+        from unittest.mock import patch
+
+        from . import examsys
+        from .examsys import begin_block, save_answer, start_attempt
+
+        attempt = start_attempt(self.user.username, "nmat")
+        block_id = attempt.sections[0]["id"]
+        begin_block(attempt, block_id)
+
+        calls = {"n": 0}
+        real_once = examsys._save_answer_once
+
+        def flaky_once(*args, **kwargs):
+            calls["n"] += 1
+            if calls["n"] == 1:
+                from django.db import OperationalError
+
+                raise OperationalError("database is locked")
+            return real_once(*args, **kwargs)
+
+        with patch.object(examsys, "_save_answer_once", side_effect=flaky_once):
+            res = save_answer(attempt, block_id, 1, "A", False)
+        self.assertEqual(res.get("ok"), True)      # first shot BUSY, retry lands
+        self.assertEqual(calls["n"], 2)
+        item_id = attempt.plan["blocks"][0]["items"][0]
+        self.assertEqual((attempt.answers or {})[item_id]["c"], "A")
+
+    def test_submit_exam_form_mounts_on_last_block(self):
+        from . import examsys
+        from .examsys import begin_block, save_answer, start_attempt
+        from .content import exam_item_index
+
+        attempt = start_attempt(self.user.username, "nmat")
+        index = exam_item_index("nmat")
+        # walk through every block: begin, answer, finish
+        for section in attempt.sections:
+            block_id = section["id"]
+            begin_block(attempt, block_id)
+            block = next(b for b in attempt.plan["blocks"]
+                         if b["id"] == block_id)
+            for pos, item_id in enumerate(block["items"], start=1):
+                save_answer(attempt, block_id, pos,
+                            index[item_id]["answer"], False, 1)
+            examsys.finish_block(attempt, block_id)
+        attempt.refresh_from_db()
+        self.assertEqual(attempt.status, "submitted")
+        last = attempt.plan["blocks"][-1]
+        pos = len(last["items"])
+        res = self.client.get(
+            f"/exams/nmat/take/{attempt.id}/{last['id']}/{pos}/")
+        # finished attempt bounces to the result — assert via the break-page
+        # gate instead: the form mount is covered by template rendering of
+        # an in-progress last block below.
+        attempt2 = start_attempt(self.user.username, "nmat")  # active again
+        begin_block(attempt2, attempt2.sections[0]["id"])
+        b0 = attempt2.plan["blocks"][0]
+        for pos, item_id in enumerate(b0["items"], start=1):
+            save_answer(attempt2, b0["id"], pos, index[item_id]["answer"], False, 1)
+        examsys.finish_block(attempt2, b0["id"])
+        begin_block(attempt2, attempt2.sections[1]["id"])
+        last2 = attempt2.plan["blocks"][-1]
+        res = self.client.get(
+            f"/exams/nmat/take/{attempt2.id}/{last2['id']}/{len(last2['items'])}/")
+        html = res.content.decode("utf-8")
+        self.assertIn("exam-submit-form", html)    # was: dead branch
+        self.assertNotIn(f"Finish {last2['label']}", html)
+
+    def test_break_page_only_for_next_unstarted_block(self):
+        from . import examsys
+        from .examsys import start_attempt
+
+        attempt = start_attempt(self.user.username, "nmat")
+        first, second = attempt.sections[0]["id"], attempt.sections[1]["id"]
+        # break for the CURRENT (first, unstarted) block: fine
+        res = self.client.get(f"/exams/nmat/break/{attempt.id}/{first}/")
+        self.assertEqual(res.status_code, 200)
+        # begin + run past block 1, finish it; break for the finished block bounces
+        examsys.begin_block(attempt, first)
+        s = examsys._section_state(attempt, first)
+        s["started_ts"] = 1000
+        s["finished_ts"] = 2000
+        attempt.save(update_fields=["sections"])
+        res = self.client.get(f"/exams/nmat/break/{attempt.id}/{first}/")
+        self.assertEqual(res.status_code, 302)      # redirect, not a break page
+        # break for the genuinely-next block still renders
+        res = self.client.get(f"/exams/nmat/break/{attempt.id}/{second}/")
+        self.assertEqual(res.status_code, 200)
+
+    def test_field_test_excluded_from_learner_aggregates(self):
+        from unittest.mock import patch
+
+        from django.utils import timezone
+
+        from . import examsys, insights
+        from .models import ExamAttempt, ExamResponse
+
+        real_bp = examsys.exam_blueprint("nmat") or {}
+        with patch("portal.examsys.exam_blueprint",
+                   side_effect=lambda eid: {**real_bp, "field_test": 2}):
+            attempt = examsys.start_attempt(self.user.username, "nmat")
+        ft_ids = set(attempt.plan["blocks"][0].get("field_test") or [])
+        self.assertTrue(ft_ids)
+        examsys.begin_block(attempt, attempt.sections[0]["id"])
+        from .content import exam_item_index
+
+        index = exam_item_index("nmat")
+        block = attempt.plan["blocks"][0]
+        from .examsys import save_answer
+
+        for pos, item_id in enumerate(block["items"], start=1):
+            wrong = "B" if index[item_id]["answer"] != "B" else "C"
+            save_answer(attempt, block["id"], pos, wrong, False, 1)
+        examsys.finish_block(attempt, block["id"])
+        # engine refused to score the FT items, and the learner aggregates
+        # must not count them either (chapter_accuracy / wrong_questions)
+        acc = insights.chapter_accuracy(self.profile)
+        counted = sum(v["total"] for v in acc.values())
+        scored = len(block["items"]) - len(ft_ids)
+        self.assertLessEqual(counted, scored)
+        wrong_ids = {w["question_id"]
+                     for w in insights.wrong_questions(self.profile, limit=50)}
+        self.assertFalse(wrong_ids & ft_ids)
+
+
 class ContentValidationTests(TestCase):
     def test_validate_content_green(self):
         call_command("validate_content", verbosity=0)

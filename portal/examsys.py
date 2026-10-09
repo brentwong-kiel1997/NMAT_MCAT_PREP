@@ -247,14 +247,42 @@ def block_position(attempt: ExamAttempt, block_id: str) -> int:
     return int(_section_state(attempt, block_id).get("pos") or 0)
 
 
+def _write_retry(fn, *args, attempts: int = 3, **kwargs):
+    """Run an engine write, retrying on SQLite snapshot-lock races.
+
+    Under WAL, Django's DEFERRED BEGIN upgrades to a write lock at UPDATE;
+    if another request committed in between, SQLite raises
+    OperationalError('database is locked') (SQLITE_BUSY_SNAPSHOT)
+    IMMEDIATELY — busy_timeout never engages. Restarting the transaction
+    resolves it, so a short retry with jitter absorbs the cross-tab /
+    two-worker overlap that the old docstring claimed WAL handled alone.
+    """
+    import random
+    import time as _time
+
+    from django.db import OperationalError
+
+    for try_no in range(attempts):
+        try:
+            return fn(*args, **kwargs)
+        except OperationalError as exc:
+            if "database is locked" not in str(exc) or try_no == attempts - 1:
+                raise
+            _time.sleep((0.02 + 0.03 * random.random()) * (try_no + 1))
+    return None
+
+
 def set_position(attempt: ExamAttempt, block_id: str, pos: int) -> None:
-    with transaction.atomic():
-        locked = ExamAttempt.objects.select_for_update().get(id=attempt.id)
-        s = _section_state(locked, block_id)
-        if s.get("pos") != pos:
-            s["pos"] = pos
-            locked.save(update_fields=["sections", "updated_at"])
-            attempt.sections = locked.sections
+    def _write() -> None:
+        with transaction.atomic():
+            locked = ExamAttempt.objects.select_for_update().get(id=attempt.id)
+            s = _section_state(locked, block_id)
+            if s.get("pos") != pos:
+                s["pos"] = pos
+                locked.save(update_fields=["sections", "updated_at"])
+                attempt.sections = locked.sections
+
+    _write_retry(_write)
 
 
 def maybe_finalize(attempt: ExamAttempt) -> ExamAttempt:
@@ -268,7 +296,10 @@ def maybe_finalize(attempt: ExamAttempt) -> ExamAttempt:
     started = [s for s in (attempt.sections or []) if s.get("started_ts")]
     if (started and len(started) == len(attempt.sections)
             and all(s.get("finished_ts") for s in started)):
-        return finalize(attempt, reason="expired")
+        # every block finished through its own flow — that is a completed
+        # sitting, not a deadline expiry (the old blanket 'expired' mislabeled
+        # attempts whose final finish didn't itself finalize)
+        return finalize(attempt, reason="submitted")
     return attempt
 
 
@@ -295,8 +326,17 @@ def save_answer(attempt: ExamAttempt, block_id: str, pos: int,
                 elapsed_seconds: int | None = None,
                 crossed: list | None = None) -> dict:
     """Autosave one item's captured state. select_for_update is a no-op on
-    SQLite — correctness comes from the atomic block plus SQLite's whole-DB
-    write serialization (WAL + busy_timeout, see settings.DATABASES)."""
+    SQLite and WAL's busy_timeout does NOT cover DEFERRED->write lock
+    upgrades (SQLITE_BUSY_SNAPSHOT fails fast) — _write_retry absorbs the
+    cross-tab / two-worker race by restarting the transaction."""
+    def _write() -> dict:
+        return _save_answer_once(attempt, block_id, pos, chosen, flagged,
+                                 elapsed_seconds, crossed)
+    return _write_retry(_write)
+
+
+def _save_answer_once(attempt, block_id, pos, chosen, flagged,
+                      elapsed_seconds, crossed) -> dict:
     with transaction.atomic():
         locked = ExamAttempt.objects.select_for_update().get(id=attempt.id)
         if locked.status != "active":
