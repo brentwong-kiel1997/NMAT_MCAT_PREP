@@ -62,7 +62,9 @@ def manage_models(request):
     providers = list(AIProvider.objects.all())
     for p in providers:  # view-side key status: decrypt once, show tail only
         key = p.api_key
-        p.key_set = bool(key)
+        # claude-code style rides the CLI's own config — no stored key,
+        # and the Test button must stay usable for it
+        p.key_set = bool(key) or p.api_style == "claude-code"
         p.key_tail = key[-4:] if key else ""
     return render(
         request,
@@ -125,7 +127,7 @@ def manage_model_edit(request, provider_id: int):
 def manage_model_test(request, provider_id: int):
     """Send a tiny completion to this provider and report the outcome."""
     provider = get_object_or_404(AIProvider, pk=provider_id)
-    if not provider.api_key:
+    if not provider.api_key and provider.api_style != "claude-code":
         messages.error(request, f"{provider.name}: no API key set — edit the model and add one.")
         return redirect("manage_models")
     try:

@@ -294,6 +294,11 @@ defaults apply instead.
 
 ## 11. Admin account & AI coach
 
+> The study coach can also run through this server's **Claude Code CLI**
+> (no API key; isolated from any development CC sessions) — full setup in
+> [`CC_CLI_PROVIDER.md`](CC_CLI_PROVIDER.md).
+
+
 ```bash
 cd /home/ubuntu/deploy/django-wsgi
 /home/ubuntu/runtime/django-wsgi/venv/bin/python manage.py \

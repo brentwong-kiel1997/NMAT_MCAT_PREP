@@ -34,7 +34,10 @@ def coach_label() -> str:
 
 def coach_ready() -> bool:
     provider = active_provider()
-    return bool(provider and provider.api_key)
+    # the Claude Code CLI style needs no stored key — it reuses the CLI's
+    # own configuration, so an empty api_key must not read as "offline"
+    return bool(provider and (provider.api_style == "claude-code"
+                              or provider.api_key))
 
 
 def coach_context(request) -> dict:
