@@ -1,5 +1,6 @@
 {% extends "portal/base.html" %}
 {% load rich %}
+{% load static %}
 
 {% block title %}{{ tutorial.title }} · {{ subject.name }} · Gabay{% endblock %}
 
@@ -234,7 +235,7 @@ window.addEventListener("DOMContentLoaded", function () {
             {% endfor %}
           </tbody>
         </table>
-        <p class="note-line">Same formulas also live in <a href="{% url 'materials_formulas' tutorial.discipline %}">the formula sheet</a>.</p>
+        <p class="note-line">Same formulas also live in <a href="{% url 'materials_hub' %}">the formula sheets</a>.</p>
       </article>
       {% endif %}
 

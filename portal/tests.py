@@ -965,6 +965,25 @@ class CoachLearnerContextTests(TestCase):
         self.assertNotIn("[Learner context]", prompt)
 
 
+class TutorialPageRenderTests(TestCase):
+    """R1 critical regression: tutorial_detail 500'd live (missing {% load
+    static %}, bad url kwarg) because no test rendered the view."""
+
+    def test_tutorial_pages_render(self):
+        from .content import tutorial_titles
+
+        # cover a key-equations chapter (physics), a callout-heavy one
+        # (chemistry) and a plain one
+        for slug, chapter_id in [
+            ("physics", "mechanics"),
+            ("chemistry", "5e-chemical-thermodynamics-and-kinetics"),
+            ("biology", "genetics"),
+        ]:
+            res = self.client.get(f"/tutorials/{slug}/{chapter_id}/")
+            self.assertEqual(res.status_code, 200, f"{slug}/{chapter_id}")
+            self.assertContains(res, "Key points")
+
+
 class ContentValidationTests(TestCase):
     def test_validate_content_green(self):
         call_command("validate_content", verbosity=0)
