@@ -16,10 +16,17 @@ def _staff_required(user) -> bool:
     return bool(user.is_authenticated and user.is_staff)
 
 
+def _safe_next(next_url: str) -> str | None:
+    """Only same-site paths may be used as a post-login redirect target."""
+    if next_url and next_url.startswith("/") and not next_url.startswith("//"):
+        return next_url
+    return None
+
+
 @require_http_methods(["GET", "POST"])
 def login_view(request):
     if request.user.is_authenticated:
-        return redirect(request.GET.get("next") or "account")
+        return redirect(_safe_next(request.GET.get("next") or "") or "account")
 
     error = ""
     if request.method == "POST":
@@ -34,9 +41,7 @@ def login_view(request):
             login(request, user)
             ensure_profile_for_user(user)
             next_url = request.POST.get("next") or request.GET.get("next") or ""
-            if next_url.startswith("/") and not next_url.startswith("//"):
-                return redirect(next_url)
-            return redirect("account")
+            return redirect(_safe_next(next_url) or "account")
 
     return render(
         request,
@@ -110,9 +115,7 @@ def register_view(request):
             login(request, user,
                   backend="django.contrib.auth.backends.ModelBackend")
             next_url = request.POST.get("next") or request.GET.get("next") or ""
-            if next_url.startswith("/") and not next_url.startswith("//"):
-                return redirect(next_url)
-            return redirect("account")
+            return redirect(_safe_next(next_url) or "account")
 
     return render(
         request,

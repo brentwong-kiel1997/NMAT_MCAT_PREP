@@ -347,6 +347,10 @@ git push deploy main     # server (auto-migrates, gates, restarts)
 
 **Restart without a deploy**: `sudo systemctl restart gunicorn`.
 
+The runtime directory holds bearer secrets (session keys, password
+hashes) — keep `users.sqlite3*` and every backup at mode `0600`
+(`chmod 600`); the directory itself should not be world-writable.
+
 **Back up the user DB** (accounts, sessions, all progress):
 
 ```bash

@@ -270,8 +270,12 @@ def ai_drill_generate(request):
     try:
         quiz = generate_quiz(request.user.username, mode, chapter_id or None,
                              difficulty=difficulty)
-    except RuntimeError as exc:
-        messages.error(request, f"AI drill: {exc}")
+    except RuntimeError:
+        # no upstream/CLI error detail on a learner page — log it, stay generic
+        import logging
+
+        logging.getLogger("portal.coach").exception("ai drill generation failed")
+        messages.error(request, "AI drill: the model backend is unavailable right now — try again shortly.")
         return redirect("ai_drill_index")
     messages.success(request, "AI quiz generated — not counted in official stats.")
     return redirect("ai_drill_quiz", quiz_id=quiz.id)

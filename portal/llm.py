@@ -97,7 +97,10 @@ def _run_cc_cli(args: list[str], stdin_text: str, timeout: int, cwd: str):
 # settings carry bypassPermissions (verified: tools stay unavailable under
 # --disallowedTools regardless of that setting).
 _CC_DENIED_TOOLS = ("Bash BashOutput KillShell Write Edit NotebookEdit "
-                    "WebFetch WebSearch Task TodoWrite TodoRead Read Grep Glob")
+                    "WebFetch WebSearch Task TodoWrite TodoRead Read Grep Glob "
+                    "Agent Skill Workflow SendMessage CronCreate CronDelete "
+                    "CronList EnterWorktree ExitWorktree ScheduleWakeup "
+                    "ListAgents TaskOutput TaskStop ReportFindings")
 
 
 def _call_cc_cli(provider, messages: list[dict], timeout: int) -> str:
@@ -135,6 +138,10 @@ def _call_cc_cli(provider, messages: list[dict], timeout: int) -> str:
         "-p", "--output-format", "json",
         "--permission-mode", "manual",
         "--disallowedTools", _CC_DENIED_TOOLS,
+        # zero out this machine's globally configured MCP servers (they
+        # would otherwise expose web-fetch/search tools to an injected
+        # prompt); verified: --mcp-config '{}' removes every mcp__* tool
+        "--mcp-config", "{}",
     ]
     if system:
         args += ["--system-prompt", system[:4000]]
@@ -164,25 +171,36 @@ def _call_cc_cli(provider, messages: list[dict], timeout: int) -> str:
 
 def _sweep_cc_transcripts(workspace: str) -> None:
     """Best-effort hygiene: -p calls still write session transcripts under
-    ~/.claude/projects/<workspace-slug>/. Drop files older than a day so
-    learner prompt content (and disk) does not accumulate forever."""
+    ~/.claude/projects/<cwd-slug>/ where the CLI's slug convention is
+    '-'+path-with-dashes (verified against installed 2.1.258). Drop files
+    older than a day so learner prompt content (and disk) does not
+    accumulate. A missing directory is normal (first call); anything else
+    logs once instead of silently disabling the control."""
+    import logging
     import os
     import time
 
     home = os.path.expanduser("~")
-    slug = workspace.strip("/").replace("/", "-")
-    proj = os.path.join(home, ".claude", "projects", slug)
-    try:
-        cutoff = time.time() - 24 * 3600
-        for name in os.listdir(proj):
+    stripped = workspace.strip("/").replace("/", "-")
+    candidates = [f"-{stripped}", stripped]  # CLI writes the leading dash
+    cutoff = time.time() - 24 * 3600
+    for slug in candidates:
+        proj = os.path.join(home, ".claude", "projects", slug)
+        try:
+            names = os.listdir(proj)
+        except FileNotFoundError:
+            continue
+        except OSError as exc:
+            logging.getLogger("portal.cc").warning(
+                "transcript sweep could not list %s: %s", proj, exc)
+            continue
+        for name in names:
             path = os.path.join(proj, name)
             try:
                 if os.path.isfile(path) and os.path.getmtime(path) < cutoff:
                     os.unlink(path)
             except OSError:
                 pass
-    except OSError:
-        pass
 
 
 def _post(url: str, headers: dict, payload: dict, timeout: int = 90):

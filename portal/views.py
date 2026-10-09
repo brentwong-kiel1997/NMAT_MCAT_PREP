@@ -540,6 +540,27 @@ def practice_attempt_api(request):
         from .content import all_bank_items
         bank_item = all_bank_items().get(question_id)
         if bank_item and bank_item.get("chapter"):
+            # Anti-oracle: without a cap, a scripted caller could feed every
+            # bank id + letter through this endpoint and harvest the whole
+            # answer key pre-exam. Legit drill pages serve a few dozen items
+            # a day; 60 first-time bank gradings/day per user is plenty for
+            # study and starves bulk harvesting.
+            from django.conf import settings as _cfg
+            from django.utils import timezone as _tz
+            from .ratelimit import hit as _hit
+
+            from .learners import get_or_create_profile as _gop
+            from .models import PracticeAttempt as _PA
+            _uname = _learner_name(request)
+            seen_before = _PA.objects.filter(
+                profile=_gop(_uname), question_id=question_id).exists()
+            if not seen_before and not _hit(
+                    f"bankgrade:{_uname}:{_tz.localdate()}",
+                    60, 86400):
+                return JsonResponse(
+                    {"ok": False,
+                     "error": "daily practice limit reached — back tomorrow"},
+                    status=429)
             # q + chapter ride along: the miss→SRS hook builds the card from
             # them, and without q the card front came out blank with a
             # colliding card_key (every empty stem hashed identically)
@@ -671,8 +692,15 @@ def study_api(request):
 
     try:
         answer = chat_completion(messages, max_tokens=1400 if mode == "explain" else 900)
-    except RuntimeError as exc:
-        return JsonResponse({"ok": False, "error": str(exc)}, status=502)
+    except RuntimeError:
+        # never echo upstream URLs/bodies (or CLI stderr) to a learner —
+        # log the real error, show a generic message (coach_insights pattern)
+        import logging
+
+        logging.getLogger("portal.coach").exception("study coach call failed")
+        return JsonResponse(
+            {"ok": False, "error": "The study coach is unavailable right now — try again shortly."},
+            status=502)
 
     return JsonResponse(
         {

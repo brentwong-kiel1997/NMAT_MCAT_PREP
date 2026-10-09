@@ -1199,6 +1199,81 @@ class ClaudeCodeCliProviderTests(TestCase):
             fake.assert_not_called()  # never inherit the caller's cwd
 
 
+class R2SecurityRegressionTests(TestCase):
+    """Regression coverage for the R2 security sweep."""
+
+    def setUp(self):
+        self.user = User.objects.create_user("r2user", password="pw-123456789")
+        ensure_profile_for_user(self.user)
+        self.client = Client()
+        from . import ratelimit
+
+        ratelimit.reset()
+
+    def test_login_get_fastpath_rejects_offsite_next(self):
+        self.client.force_login(self.user)
+        res = self.client.get("/login/?next=https://phish.example")
+        self.assertEqual(res.status_code, 302)
+        self.assertEqual(res["Location"], "/account/")  # falls back, not off-site
+        res = self.client.get("/login/?next=//phish.example")
+        self.assertEqual(res["Location"], "/account/")
+        res = self.client.get("/login/?next=/dashboard/")
+        self.assertEqual(res["Location"], "/dashboard/")  # same-site still honored
+
+    def test_coach_error_never_leaks_upstream_detail(self):
+        from unittest.mock import patch
+
+        self.client.force_login(self.user)
+        with patch("portal.views.chat_completion",
+                   side_effect=RuntimeError(
+                       "https://internal-gateway/v1 HTTP 401: secret body")):
+            res = self.client.post("/api/study/", {"message": "hi"},
+                                   content_type="application/json")
+        self.assertEqual(res.status_code, 502)
+        err = res.json()["error"]
+        self.assertNotIn("internal-gateway", err)
+        self.assertNotIn("secret body", err)
+        self.assertIn("unavailable", err)
+
+    def test_cc_sweep_uses_cli_slug_convention(self):
+        import os
+        import time
+
+        from . import llm
+
+        base = os.path.expanduser("~/.claude/projects")
+        slug = "-r2sweep-test-workspace"
+        proj = os.path.join(base, slug)
+        os.makedirs(proj, exist_ok=True)
+        try:
+            old = os.path.join(proj, "old.jsonl")
+            new = os.path.join(proj, "new.jsonl")
+            open(old, "w").write("x")
+            open(new, "w").write("x")
+            os.utime(old, (time.time() - 48 * 3600,) * 2)
+            llm._sweep_cc_transcripts("/r2sweep/test/workspace")
+            self.assertFalse(os.path.exists(old))   # aged transcript removed
+            self.assertTrue(os.path.exists(new))    # fresh transcript kept
+        finally:
+            import shutil
+            shutil.rmtree(proj, ignore_errors=True)
+
+    def test_bank_fallback_oracle_capped(self):
+        from .content import all_bank_items
+
+        self.client.force_login(self.user)
+        bank = [i for i in all_bank_items().values() if i.get("chapter")][:65]
+        codes = []
+        for item in bank:
+            res = self.client.post("/api/practice/attempt/", {
+                "subject_slug": "physics", "question_id": item["id"],
+                "chosen": "A",
+            }, content_type="application/json")
+            codes.append(res.status_code)
+        self.assertEqual(codes[:60], [200] * 60)   # study-level volume passes
+        self.assertIn(429, codes[60:])             # bulk harvesting throttled
+
+
 class ContentValidationTests(TestCase):
     def test_validate_content_green(self):
         call_command("validate_content", verbosity=0)
