@@ -60,14 +60,18 @@ fi
 origin=$([[ "$target" == "$local_tip" ]] && echo local || echo github)
 log "new commit ${target:0:7} ($origin, last deployed: ${last:-none}) — deploying"
 
-# Mirror the post-receive sequence: move main to the target, sync the
-# checkout, then deploy. Guarded by `if` so a failure retries next tick.
-# `9>&-` stops the daemonized Gunicorn from inheriting this script's lock
-# fd — an inherited fd would hold the flock forever and stall every poll.
+# Mirror the post-receive sequence: move main to the target, materialize a
+# STAGING tree via git archive, then run deploy.sh from staging (it swaps
+# staging onto $DEPLOY itself — running it from $DEPLOY would collide with
+# its own swap and fail every time). Guarded by `if` so a failure retries
+# next tick. `9>&-` stops the daemonized Gunicorn from inheriting this
+# script's lock fd — an inherited fd would hold the flock forever.
+STAGING="/home/ubuntu/runtime/staging"
 if git -C "$BARE" update-ref "refs/heads/$BRANCH" "$target" \
-   && GIT_WORK_TREE="$DEPLOY" GIT_DIR="$BARE" git checkout -f "$BRANCH" >>"$LOG" 2>&1 \
-   && chmod +x "$DEPLOY/scripts/deploy.sh" \
-   && "$DEPLOY/scripts/deploy.sh" >>"$LOG" 2>&1 9>&-; then
+   && rm -rf "$STAGING" && mkdir -p "$STAGING" \
+   && git --git-dir="$BARE" archive "$BRANCH" | tar -x -C "$STAGING" >>"$LOG" 2>&1 \
+   && chmod +x "$STAGING/scripts/deploy.sh" \
+   && "$STAGING/scripts/deploy.sh" >>"$LOG" 2>&1 9>&-; then
   echo "$target" >"$STATE"
   log "deployed ${target:0:7} ($origin)"
 else

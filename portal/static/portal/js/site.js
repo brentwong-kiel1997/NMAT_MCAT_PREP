@@ -1,4 +1,9 @@
 (function () {
+  // per-account localStorage namespace: practice/drill/smart-set state keys
+  // must not leak across accounts sharing one browser
+  const ACCOUNT = (document.body.dataset.username || "anon").replace(/[^\w-]/g, "_");
+  const lsKey = (name) => ACCOUNT + ":" + name;
+
   function csrfToken() {
     const m = document.cookie.match(/(?:^|; )csrftoken=([^;]+)/);
     if (m) return decodeURIComponent(m[1]);
@@ -18,7 +23,7 @@
   function mountProgress(root) {
     if (!root || root.dataset.ready === "1") return;
     root.dataset.ready = "1";
-    const key = root.dataset.progressKey || "gabay_progress";
+    const key = lsKey(root.dataset.progressKey || "gabay_progress");
     const subject = root.dataset.progressSubject || "";
     const checks = Array.from(document.querySelectorAll(".progress-check"));
     if (!checks.length) return;
@@ -166,7 +171,7 @@
     const items = readJson(root.querySelector(".practice-data")) || [];
     if (!items.length) return;
 
-    const key = root.dataset.practiceKey || "gabay_practice";
+    const key = lsKey(root.dataset.practiceKey || "gabay_practice");
     let state = { i: 0, score: 0, answered: {} };
     try {
       const saved = JSON.parse(localStorage.getItem(key) || "{}");
@@ -280,7 +285,7 @@
             if (!serverJudge && letter === item.answer) state.score += 1;
             save();
             paint();
-            const subject = root.dataset.practiceSubject || "";
+            const subject = item.subject || root.dataset.practiceSubject || "";
             if (subject) {
               fetch("/api/practice/attempt/", {
                 method: "POST",
@@ -305,7 +310,6 @@
                     return;
                   }
                   state.serverFeedback = state.serverFeedback || {};
-                  maybeTestOut();
                   state.serverFeedback[item.id] = {
                     correct: !!data.correct,
                     answer: data.answer || "",
@@ -314,6 +318,7 @@
                   if (data.correct) state.score += 1;
                   save();
                   paint();
+                  maybeTestOut();
                 })
                 .catch(() => {
                   if (serverJudge) {
@@ -475,7 +480,7 @@
         addBubble("assistant", data.answer);
         lastMode = effectiveMode === "grade" ? "ask" : effectiveMode;
         try {
-          const key = "gabay_study_count";
+          const key = lsKey("gabay_study_count");
           localStorage.setItem(key, String(Number(localStorage.getItem(key) || 0) + 1));
         } catch (_) {}
       } catch (err) {

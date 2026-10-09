@@ -540,8 +540,13 @@ def practice_attempt_api(request):
         from .content import all_bank_items
         bank_item = all_bank_items().get(question_id)
         if bank_item and bank_item.get("chapter"):
+            # q + chapter ride along: the miss→SRS hook builds the card from
+            # them, and without q the card front came out blank with a
+            # colliding card_key (every empty stem hashed identically)
             item = {"id": bank_item["id"], "answer": bank_item["answer"],
-                    "explain": bank_item.get("explain", "")}
+                    "explain": bank_item.get("explain", ""),
+                    "q": bank_item.get("q", ""),
+                    "chapter": bank_item.get("chapter", "")}
     if not item:
         return JsonResponse({"ok": False, "error": "Unknown question"}, status=404)
     correct = chosen == item["answer"]

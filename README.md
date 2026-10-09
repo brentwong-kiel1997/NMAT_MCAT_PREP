@@ -27,12 +27,12 @@
 | 🗺️ **Dual-exam curriculum map** | 13 subjects covering NMAT Part 1 & 2 and all four MCAT sections, with shared science subjects merged — no duplicated pages, no fake chapters beyond the official blueprints |
 | 📖 **Teaching chapters** | Full-textbook tutorials: objectives per section → teaching sections with figures, misconception-alert and cross-science callouts → worked examples in Strategy/Solution/Discussion anatomy with same-skill Check-Your-Learning items → key-equations boxes (KaTeX) → key points → pitfalls → per-exam mapping, every chapter citing its sources — plus subject key terms, cross-discipline bridges, clinical links into the disease library, high-yield badges, and one-click PDF export |
 | 🎯 **Strategy library** | 8 original test-taking technique guides — passage triage, process of elimination, unit analysis, CARS passage mapping, timing protocol, flag discipline, guessing policy, the review loop |
-| 📝 **High-yield notes** | 453 one-line bullets across 70 outline chapters, plus 219 practice MCQs and a 770-question bank (NMAT 240 + MCAT 230 full-length mocks + 300 practice-only drill items, 32 passages) |
+| 📝 **High-yield notes** | 453 one-line bullets across 70 outline chapters, plus 219 practice MCQs and a 770-question bank (NMAT 240 + MCAT 230 full-length mocks + 300 practice-only drill items, 41 passages) |
 | 🔎 **Materials desk** | 146-term searchable glossary, 113 formulas rendered as real math (vendored KaTeX, no CDN) in per-subject sheets, exam tips, study paths, and checklists |
 | 🩺 **Disease library** | 8 mechanism-first articles (TB, dengue, MI, …) bridging basic science to clinical intuition — enrichment reading, honestly labeled as such |
 | 🔁 **Spaced-repetition flashcards** | SM-2-style scheduling over the full 625-card deck: due queue, new cards capped per session, Again/Hard/Good/Easy grading, per-subject decks |
 | ✅ **Mock exams & progress tracking** | Real-mode full-length simulations (server-authoritative clocks, autosave with cross-out elimination, retake variants that reshuffle items and options, optional MCAT-style unscored field-test items, per-question review with data-driven difficulty badges), wrong-answer notebook with redo, study-plan generator, per-chapter progress |
-| 🖼️ **Real figures where the exam shows figures** | Diagram items render generated SVG art instead of describing panels in words — NMAT Part 1 inductive/perceptual panels (formal + drill banks fully plated), MCAT circuits, titration and kinetics plots, pedigrees, pathway maps |
+| 🖼️ **Real figures where the exam shows figures** | Diagram items render generated SVG art instead of describing panels in words — NMAT Part 1 inductive/perceptual panels (formal banks fully plated; perceptual drill still text-described), MCAT circuits, titration and kinetics plots, pedigrees, pathway maps |
 | 📊 **Score interpreter** | Convert mock-exam percentages to the NMAT 200–800 scale (with CHED 40th minimum and commonly cited percentile reference rows) or MCAT 118–132 sections — labeled planning estimates, no school names |
 | 🤖 **AI study coach, model-agnostic** | Explain / hint / quiz / grade modes, aware of your own miss record in the current chapter, grounded in the chapter's tutorial text. Mock and practice misses flow into spaced repetition automatically. Any OpenAI-compatible endpoint or Anthropic API — admins add, edit, and switch models at runtime |
 | 📁 **File-based content** | The entire curriculum is version-controlled YAML: edit, validate, push — no database migration, no build step |
@@ -52,7 +52,7 @@
 | Exam tips / study paths / checklists | **21 / 7 / 3** |
 | Disease articles | **8** |
 | Full textbook tutorials | **70 / 70 — complete** |
-| Mock-exam + drill questions | **770** + 32 passages |
+| Mock-exam + drill questions | **770** + 41 passages |
 
 Everything lives in [`content/`](content/) as plain YAML and is documented
 standalone in [`content/README.md`](content/README.md). Per-chapter tutorial

@@ -965,6 +965,94 @@ class CoachLearnerContextTests(TestCase):
         self.assertNotIn("[Learner context]", prompt)
 
 
+class R1FixRegressionTests(TestCase):
+    """Regression coverage for the R1 sweep's confirmed findings."""
+
+    def setUp(self):
+        self.user = User.objects.create_user("r1user", password="pw-123456789")
+        self.profile = ensure_profile_for_user(self.user)
+        self.client = Client()
+        self.client.force_login(self.user)
+        from . import ratelimit
+
+        ratelimit.reset()
+
+    def test_smart_set_ships_no_keys_and_carries_subject(self):
+        from .smartsets import _compose
+
+        # seed a weak chapter with a bank miss
+        from django.utils import timezone
+
+        from .learners import record_practice
+        from .models import ExamAttempt, ExamResponse
+
+        attempt = ExamAttempt.objects.create(
+            profile=self.profile, exam="nmat", mode="real", status="submitted",
+            finished_at=timezone.now())
+        for i in range(5):
+            ExamResponse.objects.create(
+                attempt=attempt, item_id="nmat-p2p-022", block_id="b1",
+                chapter_id="4d-light-and-sound-interacting-with-matter",
+                position=i + 1, chosen="C", correct=(i < 2))
+        record_practice(self.user.username, "physics", "nmat-p2p-022", "C", False)
+        items, _ = _compose(self.user.username, 5, "default")
+        self.assertTrue(items)
+        for it in items:
+            self.assertNotIn("answer", it)      # no key before scoring
+            self.assertNotIn("explain", it)
+            self.assertTrue(it["subject"])      # attempt POST can book-keep
+
+    def test_miss_cards_reach_due_queue_and_grade(self):
+        from django.utils import timezone
+
+        from .models import ExamAttempt, ExamResponse, SrsCard
+        from .srs import due_queue
+
+        attempt = ExamAttempt.objects.create(
+            profile=self.profile, exam="nmat", mode="real", status="submitted",
+            finished_at=timezone.now())
+        for i in range(5):
+            ExamResponse.objects.create(
+                attempt=attempt, item_id="nmat-p2p-022", block_id="b1",
+                chapter_id="4d-light-and-sound-interacting-with-matter",
+                position=i + 1, chosen="C", correct=(i < 2))
+        card = SrsCard.objects.create(
+            profile=self.profile, subject_slug="physics",
+            card_key="exam:nmat-p2p-022",
+            front="Stem?\n\n(You answered C. Correct the reasoning.)",
+            back="Correct: A. because.", chapter="Waves",
+            due_date=timezone.localdate())
+        queue = due_queue(self.user.username, None)
+        keys = [c.card_key for c in queue["due"]]
+        self.assertIn("exam:nmat-p2p-022", keys)   # ghost guard lets it through
+        # and the grade API accepts it (was: 404 — deck-only lookup)
+        res = self.client.post("/api/flashcards/grade/", {
+            "subject_slug": "physics", "key": "exam:nmat-p2p-022",
+            "grade": "good",
+        }, content_type="application/json")
+        self.assertEqual(res.status_code, 200)
+        card.refresh_from_db()
+        self.assertGreater(card.interval_days, 0)
+
+    def test_field_test_survives_into_persisted_plan(self):
+        from unittest.mock import patch
+
+        from . import examsys
+        from .content import exam_blueprint
+
+        real_bp = exam_blueprint("nmat") or {}
+
+        def bp_with_ft(exam_id):
+            out = dict(real_bp)
+            out["field_test"] = 3
+            return out
+
+        with patch("portal.examsys.exam_blueprint", side_effect=bp_with_ft):
+            attempt = examsys.start_attempt(self.user.username, "nmat")
+        stored = [b.get("field_test") for b in attempt.plan["blocks"]]
+        self.assertTrue(any(stored), "field_test list must persist in the plan")
+
+
 class TutorialPageRenderTests(TestCase):
     """R1 critical regression: tutorial_detail 500'd live (missing {% load
     static %}, bad url kwarg) because no test rendered the view."""

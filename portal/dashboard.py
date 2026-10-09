@@ -78,7 +78,8 @@ def dashboard(request):
         # build_plan re-resolves the whole syllabus (~1.4 s) — cache per
         # (plan shape, progress) so a dashboard render doesn't recompute it
         key = (sp.exam, str(sp.exam_date), sp.weekly_hours,
-               hash(tuple(sorted(done))), hash(tuple(sorted(weak))))
+               hash(tuple(sorted(done))), hash(tuple(sorted(weak))),
+               str(dt.date.today()))  # "Today" must not survive midnight
         cached = _PLAN_CACHE.get(key)
         if cached is None:
             cached = build_plan(exam_id=sp.exam, exam_date=sp.exam_date,

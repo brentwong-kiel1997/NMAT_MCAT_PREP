@@ -758,12 +758,25 @@ def exam_item_index(exam_id: str) -> dict[str, dict]:
     return {i["id"]: i for i in exam_items(exam_id, with_key=True)}
 
 
+_all_bank_cache: dict | None = None
+_all_bank_stamp: tuple | None = None
+
+
 def all_bank_items() -> dict[str, dict]:
-    """Cross-exam item index (with keys) for the attempt/redo APIs."""
-    out: dict[str, dict] = {}
-    for exam_id in (store().get("exam_bank") or {}).get("exams", {}):
-        out.update(exam_item_index(exam_id))
-    return out
+    """Cross-exam item index (with keys) for the attempt/redo APIs.
+
+    Cached on the content stamp — this used to re-normalize the whole bank
+    on every exam-question GET and practice-attempt POST (~57 ms each)."""
+    global _all_bank_cache, _all_bank_stamp
+    s = store()  # also refreshes the shared stamp
+    stamp = _cache_stamp
+    if _all_bank_cache is None or stamp != _all_bank_stamp:
+        out: dict[str, dict] = {}
+        for exam_id in (s.get("exam_bank") or {}).get("exams", {}):
+            out.update(exam_item_index(exam_id))
+        _all_bank_cache = out
+        _all_bank_stamp = stamp
+    return _all_bank_cache
 
 
 def render_item(item: dict, *, with_key: bool) -> dict:

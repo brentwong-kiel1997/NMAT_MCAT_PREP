@@ -14,7 +14,7 @@ from django.shortcuts import redirect, render
 from django.views.decorators.http import require_GET
 
 from . import insights
-from .content import all_bank_items, chapters_store
+from .content import all_bank_items, chapters_store, figure_url
 from .learners import get_or_create_profile
 from .views import _json_for_script
 
@@ -24,10 +24,13 @@ _SECONDS_PER_ITEM = 75
 
 def _compose(username: str, count: int, seed_extra: str) -> tuple[list, list]:
     """(items, weak_used) — items drawn round-robin from the weakest
-    chapters, bank items only (server-judged)."""
+    chapters, bank items only. Ships WITHOUT answer keys: grading happens
+    server-side through practice_attempt_api's bank fallback, matching the
+    exam engine's no-keys-before-scoring invariant."""
     profile = get_or_create_profile(username)
     weak = insights.wrong_chapters(profile, limit=5)
     bank = all_bank_items()
+    chs = chapters_store()
     by_chapter: dict[str, list] = {}
     for w in weak:
         pool = [b for b in bank.values()
@@ -43,16 +46,17 @@ def _compose(username: str, count: int, seed_extra: str) -> tuple[list, list]:
         for pool in pools:
             if pool and len(items) < count:
                 b = pool.pop(0)
+                ch = chs.get(b.get("chapter") or "") or {}
                 items.append({"id": b["id"], "q": b["q"],
                               "choices": b.get("choices") or {},
-                              "answer": b["answer"],
-                              "explain": b.get("explain", ""),
+                              # per-item subject so the attempt POST can
+                              # book-keep even when chapters mix disciplines
+                              "subject": ch.get("discipline") or "",
+                              "figure": figure_url(b.get("figure", "")),
                               "chapter": next(
                                   (w["title"] for w in weak
                                    if w["chapter_id"] == b.get("chapter")), "")})
         used = list(by_chapter.keys())
-    # chapter titles for display
-    chs = chapters_store()
     used_titles = [chs.get(cid, {}).get("title", cid) for cid in used]
     return items, used_titles
 

@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="{% static 'portal/css/tutor.css' %}?v=20260831a">
   {% block head_extra %}{% endblock %}
 </head>
-<body>
+<body data-username="{{ user.username|default:'anon' }}">
   <div class="csrf-slot" hidden>{% csrf_token %}</div>
   {% block body %}{% endblock %}
   <footer class="site-footer">

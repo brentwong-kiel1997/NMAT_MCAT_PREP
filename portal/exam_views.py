@@ -372,7 +372,14 @@ def exam_result(request, attempt_id: int):
                 "chosen": shown,
                 "correct": bool(chosen) and chosen == item["answer"],
                 "explain": item.get("explain", ""),
-                "distractors": item.get("distractors") or {},
+                # retake variants permute shown letters: fold the distractor
+                # keys through the same map so each note sits under the
+                # option text it explains (was: canonical letters against a
+                # permuted choice list)
+                "distractors": ({shown: item["distractors"][original]
+                                 for shown, original in vmap.items()
+                                 if original in (item.get("distractors") or {})}
+                                if vmap else item.get("distractors") or {}),
                 "passage_text": item.get("passage_text", ""),
                 "flagged": bool(entry.get("f")),
                 "time_spent": (r.time_spent if r else entry.get("s")) or 0,
@@ -395,10 +402,10 @@ def exam_result(request, attempt_id: int):
                     n, correct = sub.get("items") or 0, sub.get("correct") or 0
                     if n <= 0:
                         continue
-                    import math
-
-                    z = (correct - n * 0.25) / math.sqrt(n * 0.25 * 0.75)
+                    # same accuracy model as the interpreter/gps_estimate
+                    z = (correct / n - 0.6) / 0.12
                     sub["ss_est"] = max(200, min(800, round(500 + 100 * z)))
+                    sub["pct"] = round(100 * correct / n)
 
     # MCAT per-skill accuracy (AAMC SIRS): aggregate the review rows by their
     # bank `skill` tag (s1-s4; present on science-bank items once tagged).
@@ -463,8 +470,11 @@ def flashcards_export(request):
                 "qfmt": "{{Front}}",
                 "afmt": "{{Front}}<hr id=answer>{{Back}}<br><br><small>{{Source}}</small>",
             }])
+        import hashlib
+
+        stable = int(hashlib.md5(request.user.username.encode()).hexdigest()[:8], 16)
         deck = genanki.Deck(
-            2059400110 + abs(hash(request.user.username)) % 1000,
+            2059400110 + stable % 1000,
             f"Gabay — {request.user.username}")
         for c in cards:
             source = " · ".join(x for x in (c.subject_slug, c.chapter) if x)
@@ -526,11 +536,21 @@ def flashcard_grade_api(request):
     if grade not in ("again", "hard", "good", "easy"):
         return JsonResponse({"ok": False, "error": "bad grade"}, status=400)
     # card identity is verified against the content deck — the client never
-    # dictates front/back text
+    # dictates front/back text. Learner-created miss cards (exam:* keys,
+    # error-correction fronts) have no deck entry; they verify against the
+    # learner's OWN SrsCard row instead.
     key = str(payload.get("key") or "").strip()[:64]
     card = next((c for c in deck_for(subject_slug) if c["key"] == key), None)
-    if not card:
-        return JsonResponse({"ok": False, "error": "Unknown card"}, status=404)
+    if card:
+        front, back, chapter = card["front"], card["back"], card["chapter"]
+    else:
+        from .models import SrsCard as _Card
+
+        row = _Card.objects.filter(
+            profile__username=request.user.username, card_key=key).first()
+        if not row:
+            return JsonResponse({"ok": False, "error": "Unknown card"}, status=404)
+        front, back, chapter = row.front, row.back, row.chapter
     return JsonResponse(grade_card(
         request.user.username, subject_slug, key,
-        card["front"], card["back"], card["chapter"], grade))
+        front, back, chapter, grade))

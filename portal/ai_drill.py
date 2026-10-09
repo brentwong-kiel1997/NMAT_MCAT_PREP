@@ -57,9 +57,13 @@ def _miss_grounding(username: str, chapter_id: str | None) -> tuple[str, str]:
     from .content import all_bank_items
 
     profile = get_or_create_profile(username)
-    wrong = insights.wrong_questions(profile, limit=30)
+    # fetch deep, filter by chapter, THEN cap: a 30-cap before the filter
+    # made listed weak chapters yield "no misses" whenever the learner's
+    # recent misses sat in other chapters
+    wrong = insights.wrong_questions(profile, limit=300)
     if chapter_id:
         wrong = [w for w in wrong if w.get("chapter_id") == chapter_id]
+    wrong = wrong[:30]
     bank = all_bank_items()
     practice_store = {}
     from .content import store

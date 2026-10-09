@@ -107,6 +107,12 @@
   {% endif %}
   {% endfor %}
 
+  {% if section.misconception %}
+  <p class="callout"><strong>Misconception alert —</strong> {{ section.misconception|rich }}</p>
+  {% endif %}
+  {% if section.connection %}
+  <p class="callout"><strong>{{ section.connection_label|default:"How sciences interconnect" }} —</strong> {{ section.connection|rich }}</p>
+  {% endif %}
   {% for check in section.check %}
   <div class="question">
     <p class="q">Check: {{ check.q }}</p>
@@ -123,7 +129,17 @@
   <div class="avoid-break">
     <p><strong>{{ example.prompt|rich }}</strong></p>
     <ol>{% for step in example.solution %}<li>{{ step|rich }}</li>{% endfor %}</ol>
+    {% if example.strategy %}<p><strong>Strategy:</strong> {{ example.strategy|rich }}</p>{% endif %}
     <p><strong>Answer:</strong> {{ example.answer|rich }}</p>
+    {% if example.discussion %}<p><strong>Discussion:</strong> {{ example.discussion|rich }}</p>{% endif %}
+    {% if example.practice %}
+      <p class="tut-label">Check your learning</p>
+      <p>{{ example.practice.q|rich }}</p>
+      {% for letter, text in example.practice.options.items %}
+      <p class="opt">{{ letter }}. {{ text|rich }}</p>
+      {% endfor %}
+      <p><em>Answer: {{ example.practice.answer }}</em></p>
+    {% endif %}
     {% if example.distractors %}
     <p class="tut-label" style="margin-top:.4em;">Why the others are wrong</p>
     <ul class="distractors">
@@ -144,6 +160,14 @@
   {% if mp.note %}<p style="font-size:9pt;color:#555;">{{ mp.note|rich }}</p>{% endif %}
   {% endfor %}
 
+  {% if tut.key_equations %}
+  <p class="tut-label">Key equations</p>
+  <table class="eqs">
+    {% for eq in tut.key_equations %}
+    <tr><td>{{ eq.latex }}</td><td>{{ eq.when|rich }}{% if eq.symbols %} <em>({{ eq.symbols }})</em>{% endif %}</td></tr>
+    {% endfor %}
+  </table>
+  {% endif %}
   {% if tut.key_points %}
   <h2>Key points</h2>
   <ul class="keypoints">{% for point in tut.key_points %}<li>{{ point|rich }}</li>{% endfor %}</ul>

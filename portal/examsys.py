@@ -147,6 +147,10 @@ def start_attempt(username: str, exam_id: str, mode: str = "real") -> ExamAttemp
     for b in plan["blocks"]:
         entry = {"id": b["id"], "label": b.get("label", b["id"]),
                  "seconds": b.get("seconds", 0), "items": b["items"]}
+        if b.get("field_test"):
+            # must survive into the persisted plan: finalize reads it to
+            # exclude unscored items and tag ExamResponse rows
+            entry["field_test"] = b["field_test"]
         if variant_seed:
             letters_for = {
                 iid: sorted((index.get(iid) or {}).get("choices") or ["A", "B", "C", "D"])
@@ -364,6 +368,22 @@ def score_attempt(attempt: ExamAttempt) -> dict:
     """Pure scoring: bank index + captured answers → snapshot dict."""
     index = exam_item_index(attempt.exam)
     blocks = attempt.plan.get("blocks") or []
+    # hoisted lookups: section_label and _chapter_discipline each hit a
+    # deepcopy-ing content store; called per item they made finalize take
+    # ~8 s on a 240-item sitting
+    from .content import chapters_store as _chs, exam_bank_section as _section_doc
+
+    _ch_store = _chs()
+    _label_cache: dict[str, str] = {}
+
+    def _label(section_id: str) -> str:
+        if section_id not in _label_cache:
+            _label_cache[section_id] = (_section_doc(attempt.exam, section_id)
+                                        or {}).get("label", section_id)
+        return _label_cache[section_id]
+
+    def _disc(chapter_id: str) -> str:
+        return (_ch_store.get(chapter_id) or {}).get("discipline", "")
     out_blocks = []
     total = correct_total = answered_total = 0
     weak: dict[str, dict] = {}
@@ -392,7 +412,7 @@ def score_attempt(attempt: ExamAttempt) -> dict:
                 b_correct += 1
             sec = subtests.setdefault(
                 item["section_id"],
-                {"id": item["section_id"], "label": section_label(attempt.exam, item["section_id"]),
+                {"id": item["section_id"], "label": _label(item["section_id"]),
                  "items": 0, "correct": 0})
             sec["items"] += 1
             if is_correct:
@@ -401,7 +421,7 @@ def score_attempt(attempt: ExamAttempt) -> dict:
             chapter = item.get("chapter") or ""
             if chapter:
                 agg = weak.setdefault(chapter, {"chapter_id": chapter, "items": 0, "correct": 0,
-                                                "discipline": _chapter_discipline(chapter)})
+                                                "discipline": _disc(chapter)})
                 agg["items"] += 1
                 if is_correct:
                     agg["correct"] += 1
@@ -546,12 +566,11 @@ def navigator(attempt: ExamAttempt, block_id: str) -> list[dict]:
 
 def gps_estimate(score: dict) -> dict | None:
     """NMAT composite estimates from a score snapshot: per-subtest 200-800
-    standard scores on CEM's norm (mean 500 / SD 100) via a binomial z, then
-    the official APT / SA / GPS averages. Planning estimates only — CEM
+    standard scores on CEM's norm (mean 500 / SD 100), using the SAME
+    accuracy model as the score interpreter (cohort accuracy mean 0.60 /
+    SD 0.12) so the two never disagree. Planning estimates only — CEM
     equates forms and reports percentile rank, never these raw conversions.
     Returns None for non-NMAT snapshots."""
-    import math
-
     part_sss: dict[str, list] = {"part1": [], "part2": []}
     seen = False
     for b in score.get("blocks") or []:
@@ -561,7 +580,7 @@ def gps_estimate(score: dict) -> dict | None:
             if n <= 0:
                 continue
             seen = True
-            z = (correct - n * 0.25) / math.sqrt(n * 0.25 * 0.75)
+            z = (correct / n - 0.6) / 0.12
             part_sss[part].append(max(200, min(800, round(500 + 100 * z))))
     if not seen or not part_sss["part1"] or not part_sss["part2"]:
         return None

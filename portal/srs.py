@@ -60,13 +60,20 @@ def due_queue(username: str, subject_slug: str | None) -> dict:
         reviews = reviews.filter(subject_slug=subject_slug)
     # ghost guard: drop scheduling rows whose card left the content deck
     # (edited notes change their key; the row would otherwise be shown and
-    # be ungradable forever)
+    # be ungradable forever) — EXCEPT learner-created miss cards (exam:* keys
+    # and the error-correction cards whose fronts carry the marker): those
+    # have no content-deck key by design and are graded from their own row.
     live_keys: set[str] = set()
     deck_cache: dict[str, list[dict]] = {}
     for subj in ([subject_slug] if subject_slug else _subjects_with_decks()):
         deck_cache[subj] = deck_for(subj)
         live_keys.update(c["key"] for c in deck_cache[subj])
-    due = [c for c in reviews.order_by("due_date") if c.card_key in live_keys]
+
+    def _is_miss_card(c) -> bool:
+        return c.card_key.startswith("exam:") or "You answered" in (c.front or "")
+
+    due = [c for c in reviews.order_by("due_date")
+           if c.card_key in live_keys or _is_miss_card(c)]
     # refresh stored text so edited notes show their current wording
     for c in due:
         for subj, deck in deck_cache.items():
@@ -86,7 +93,7 @@ def due_queue(username: str, subject_slug: str | None) -> dict:
     subjects = [subject_slug] if subject_slug else _subjects_with_decks()
     new_cards = []
     for subj in subjects:
-        for card in deck_for(subj):
+        for card in deck_cache.get(subj) or deck_for(subj):
             if card["key"] not in learned_keys:
                 new_cards.append({**card, "subject_slug": subj})
     new_cards = new_cards[:NEW_PER_DAY]
