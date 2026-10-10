@@ -171,8 +171,9 @@
     const items = readJson(root.querySelector(".practice-data")) || [];
     if (!items.length) return;
 
+    const serverJudge = root.dataset.serverJudge === "1";
     const key = lsKey(root.dataset.practiceKey || "gabay_practice");
-    let state = { i: 0, score: 0, answered: {} };
+    let state = { i: 0, score: 0, answered: {}, serverFeedback: {} };
     try {
       const saved = JSON.parse(localStorage.getItem(key) || "{}");
       state = Object.assign(state, saved);
@@ -192,7 +193,10 @@
     function save() {
       localStorage.setItem(
         key,
-        JSON.stringify({ i: state.i, score: state.score, answered: state.answered })
+        JSON.stringify({
+          i: state.i, score: state.score, answered: state.answered,
+          serverFeedback: state.serverFeedback,
+        })
       );
     }
 
@@ -275,11 +279,24 @@
         btn.append(strong, ` ${choice}`);
         if (prior) {
           btn.disabled = true;
-          if (letter === item.answer) btn.classList.add("is-correct");
-          if (letter === prior && prior !== item.answer) btn.classList.add("is-wrong");
+          if (serverJudge) {
+            // the answer key is stripped from server-judge items — highlight
+            // from the stored verdict instead of the (undefined) key
+            const fb = (state.serverFeedback || {})[item.id];
+            if (fb) {
+              if (letter === fb.answer) btn.classList.add("is-correct");
+              if (letter === prior && !fb.correct) btn.classList.add("is-wrong");
+            }
+          } else {
+            if (letter === item.answer) btn.classList.add("is-correct");
+            if (letter === prior && prior !== item.answer) btn.classList.add("is-wrong");
+          }
         } else {
           btn.addEventListener("click", () => {
-            if (state.answered[item.id]) return;
+            // on server-judge pages, an answered item without a stored
+            // verdict (in-flight POST or a reload lost it) may be re-picked
+            if (state.answered[item.id]
+                && ((state.serverFeedback || {})[item.id] || !serverJudge)) return;
             const serverJudge = root.dataset.serverJudge === "1";
             state.answered[item.id] = letter;
             if (!serverJudge && letter === item.answer) state.score += 1;
@@ -300,13 +317,19 @@
                   chosen: letter,
                 }),
               })
-                .then((res) => (res.ok ? res.json() : null))
-                .then((data) => {
+                .then(async (res) => {
                   if (!serverJudge) { return; }
+                  let data = null;
+                  if (res.ok) {
+                    try { data = await res.json(); } catch (_) {}
+                  }
                   if (!data) {
-                    delete state.answered[item.id];
-                    save();
-                    paint();
+                    // grading failed (401/429/500/network): surface it instead
+                    // of silently reverting the pick
+                    feedback.hidden = false;
+                    verdict.textContent = "Not recorded — connection or sign-in problem. Click the answer again.";
+                    verdict.className = "practice-verdict is-bad";
+                    if (explainEl) explainEl.textContent = "";
                     return;
                   }
                   state.serverFeedback = state.serverFeedback || {};
@@ -321,11 +344,9 @@
                   maybeTestOut();
                 })
                 .catch(() => {
-                  if (serverJudge) {
-                    delete state.answered[item.id];
-                    save();
-                    paint();
-                  }
+                  feedback.hidden = false;
+                  verdict.textContent = "Not recorded — connection problem. Click the answer again.";
+                  verdict.className = "practice-verdict is-bad";
                 });
             }
           });
