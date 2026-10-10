@@ -85,6 +85,14 @@ class Command(BaseCommand):
                     problems.append(f"missing content file: {rel}")
                 elif hashlib.sha256(file.read_bytes()).hexdigest() != digest:
                     problems.append(f"{rel} changed without regenerating MANIFEST.json")
+            # every content yml must be listed — an unmanifested file can
+            # silently shadow a reviewed one (the loader is last-file-wins)
+            listed = set(manifest.get("files", {}))
+            on_disk = {str(f.relative_to(CONTENT))
+                       for f in CONTENT.rglob("*.yml")}
+            for rel in sorted(on_disk - listed):
+                problems.append(
+                    f"content file not listed in MANIFEST.json: {rel}")
 
         store = content.store()
         chapters = store["chapters"]
@@ -116,6 +124,9 @@ class Command(BaseCommand):
                     problems.append(
                         f"practice {q.get('id')}: answer {q.get('answer')!r} not in choices"
                     )
+                sk = q.get("skill")
+                if sk not in ("", None, "s1", "s2", "s3", "s4"):
+                    problems.append(f"practice {q.get('id')}: bad skill tag {sk!r}")
                 if q.get("chapter") and q["chapter"] != ch.get("title"):
                     problems.append(
                         f"practice {q.get('id')}: chapter back-link {q['chapter']!r} "
@@ -183,6 +194,20 @@ class Command(BaseCommand):
                     problems.append(
                         f"{rel}: chapter {doc.get('chapter')!r} not a library chapter title"
                     )
+                eqs = doc.get("key_equations") or []
+                if eqs and not (1 <= len(eqs) <= 8):
+                    problems.append(f"{rel}: key_equations has {len(eqs)} entries, need 1-8")
+                for eq in eqs:
+                    latex = str(eq.get("latex") or "").strip()
+                    if not (latex.startswith("$") and latex.endswith("$")
+                            and latex.count("$") % 2 == 0 and len(latex) >= 2):
+                        problems.append(
+                            f"{rel}: key_equation latex must be $-wrapped "
+                            f"with balanced delimiters: {latex[:40]!r}")
+                for i, ex in enumerate(doc.get("examples") or []):
+                    if ex.get("practice"):
+                        problems.extend(_check_question_key(
+                            rel, f"example {i} practice", ex["practice"]))
                 if not doc.get("sections"):
                     problems.append(f"{rel}: no sections")
                 for section in doc.get("sections") or []:
@@ -193,6 +218,15 @@ class Command(BaseCommand):
                         problems.append(
                             f"{rel}: section '{section.get('heading')}' has "
                             f"{len(checks)} check(s), need >= 2 (recall + application)")
+                    mis = section.get("misconception")
+                    if mis is not None and not str(mis).strip():
+                        problems.append(
+                            f"{rel}: empty misconception in {section.get('heading')!r}")
+                    objs = section.get("objectives")
+                    if objs is not None and len(objs) < 2:
+                        problems.append(
+                            f"{rel}: section {section.get('heading')!r} has "
+                            f"{len(objs)} objective(s), need >= 2")
                     for check in checks:
                         if not check.get("q") or not check.get("answer"):
                             problems.append(f"{rel}: section check missing q/answer")
@@ -298,6 +332,23 @@ def _validate_exam_bank(store: dict, seen_qids: set[str]) -> list[str]:
         bp = ((exam_defs.get(exam_id) or {}).get("blueprint") or {})
         blocks = bp.get("blocks") or []
         declared_banks = [sid for b in blocks for sid in (b.get("bank") or [])]
+        # [11] blueprint coverage must be two-directional: every bank ref
+        # must resolve to a real section file
+        for b in blocks:
+            for sid in b.get("bank") or []:
+                if sid not in sections:
+                    problems.append(
+                        f"exam-bank {exam_id} block {b.get('id')}: bank ref "
+                        f"{sid!r} has no section file")
+            bb = b.get("break_before")
+            if bb is not None:
+                secs = (bb or {}).get("seconds")
+                if not isinstance(secs, int) or isinstance(secs, bool) or secs < 0:
+                    problems.append(
+                        f"exam-bank {exam_id} block {b.get('id')}: "
+                        f"break_before seconds must be a non-negative int")
+        # [8] stem dedup across the WHOLE exam (was per-section)
+        exam_stems: dict[str, str] = {}
         seen_section_items: dict[str, int] = {}
 
         for section_id, doc in sorted(sections.items()):
@@ -312,8 +363,42 @@ def _validate_exam_bank(store: dict, seen_qids: set[str]) -> list[str]:
             if not is_drill and section_id not in declared_banks:
                 problems.append(f"exam-bank {section_id}: not listed in any {exam_id} blueprint block")
 
+            passages = doc.get("passages") or []
+            passage_ids = set()
+            in_passage_ids = set()
+            for passage in passages:
+                pid = passage.get("id")
+                passage_ids.add(pid)
+                p_items = passage.get("items") or []
+                # a passage exists to anchor several items — a 1-item passage
+                # is almost always a mis-structured move
+                if len(p_items) < 2:
+                    problems.append(
+                        f"exam-bank {section_id} passage {pid}: "
+                        f"{len(p_items)} item(s), need >= 2")
+                for it in p_items:
+                    in_passage_ids.add(it.get("id"))
+                    # containment must agree with the field: an item inside
+                    # passage X carries passage_id X (or nothing)
+                    if it.get("passage_id") not in ("", None, pid):
+                        problems.append(
+                            f"exam-bank {it.get('id')}: sits in passage {pid} "
+                            f"but claims passage_id {it.get('passage_id')!r}")
+            for it in doc.get("items") or []:
+                # standalone items must not claim a passage — the loader
+                # ignores the field, so the file would lie about the engine's
+                # view of the item
+                if it.get("passage_id"):
+                    problems.append(
+                        f"exam-bank {it.get('id')}: standalone item carries "
+                        f"passage_id {it.get('passage_id')!r}")
+                    if it.get("passage_id") not in passage_ids:
+                        problems.append(
+                            f"exam-bank {it.get('id')}: passage_id "
+                            f"{it.get('passage_id')!r} references no passage "
+                            f"in this section")
             raw_items = list(doc.get("items") or [])
-            for passage in doc.get("passages") or []:
+            for passage in passages:
                 if not (passage.get("text") or "").strip():
                     problems.append(f"exam-bank {section_id} passage {passage.get('id')}: empty text")
                 raw_items.extend(passage.get("items") or [])
@@ -327,7 +412,6 @@ def _validate_exam_bank(store: dict, seen_qids: set[str]) -> list[str]:
                 seen_section_items[section_id] = len(raw_items)
 
             letters_count = {"A": 0, "B": 0, "C": 0, "D": 0}
-            stems: dict[str, str] = {}
             for item in raw_items:
                 iid = item.get("id")
                 if not iid:
@@ -360,6 +444,12 @@ def _validate_exam_bank(store: dict, seen_qids: set[str]) -> list[str]:
                 figure = item.get("figure")
                 if figure and not (CONTENT / "images" / figure).is_file():
                     problems.append(f"exam-bank {iid}: figure file missing: {figure}")
+                # [0] raw skill tag must be in-domain BEFORE the loader's
+                # whitelist coercion silently empties it (a typo'd tag used
+                # to drop the item out of per-skill accuracy with no signal)
+                sk = item.get("skill")
+                if sk not in ("", None, "s1", "s2", "s3", "s4"):
+                    problems.append(f"exam-bank {iid}: bad skill tag {sk!r}")
                 elif chapter_id not in chapters:
                     problems.append(f"exam-bank {iid}: unknown chapter {chapter_id!r}")
                 else:
@@ -368,9 +458,9 @@ def _validate_exam_bank(store: dict, seen_qids: set[str]) -> list[str]:
                     if not tut:
                         problems.append(f"exam-bank {iid}: chapter {chapter_id} has no tutorial to link")
                 stem = (item.get("q") or "").strip()
-                if stem and stems.get(stem) and stems[stem] != iid:
-                    problems.append(f"exam-bank: duplicate stem {stem[:40]!r} ({stems[stem]} / {iid})")
-                stems[stem] = iid
+                if stem and exam_stems.get(stem) and exam_stems[stem] != iid:
+                    problems.append(f"exam-bank: duplicate stem {stem[:40]!r} ({exam_stems[stem]} / {iid})")
+                exam_stems[stem] = iid
 
             # soft warning: answer-letter balance
             total_letters = sum(letters_count.values())
