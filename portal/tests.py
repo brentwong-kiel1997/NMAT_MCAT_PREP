@@ -1384,24 +1384,28 @@ class R3EngineRegressionTests(TestCase):
         with patch("portal.examsys.exam_blueprint",
                    side_effect=lambda eid: {**real_bp, "field_test": 2}):
             attempt = examsys.start_attempt(self.user.username, "nmat")
-        ft_ids = set(attempt.plan["blocks"][0].get("field_test") or [])
-        self.assertTrue(ft_ids)
-        examsys.begin_block(attempt, attempt.sections[0]["id"])
         from .content import exam_item_index
+        from .examsys import begin_block, finish_block, save_answer
 
         index = exam_item_index("nmat")
-        block = attempt.plan["blocks"][0]
-        from .examsys import save_answer
-
-        for pos, item_id in enumerate(block["items"], start=1):
-            wrong = "B" if index[item_id]["answer"] != "B" else "C"
-            save_answer(attempt, block["id"], pos, wrong, False, 1)
-        examsys.finish_block(attempt, block["id"])
+        # FT items sample across blocks — blocks must be driven in order
+        # (the sequential guard); answer FT-block items wrong, others right
+        for block in attempt.plan["blocks"]:
+            begin_block(attempt, block["id"])
+            is_ft = bool(block.get("field_test"))
+            for pos, item_id in enumerate(block["items"], start=1):
+                wrong = "B" if index[item_id]["answer"] != "B" else "C"
+                letter = wrong if is_ft else index[item_id]["answer"]
+                save_answer(attempt, block["id"], pos, letter, False, 1)
+            examsys.finish_block(attempt, block["id"])
         # engine refused to score the FT items, and the learner aggregates
         # must not count them either (chapter_accuracy / wrong_questions)
         acc = insights.chapter_accuracy(self.profile)
         counted = sum(v["total"] for v in acc.values())
-        scored = len(block["items"]) - len(ft_ids)
+        ft_ids = set()
+        for b in attempt.plan["blocks"]:
+            ft_ids.update(b.get("field_test") or [])
+        scored = sum(len(b["items"]) for b in attempt.plan["blocks"]) - len(ft_ids)
         self.assertLessEqual(counted, scored)
         wrong_ids = {w["question_id"]
                      for w in insights.wrong_questions(self.profile, limit=50)}
