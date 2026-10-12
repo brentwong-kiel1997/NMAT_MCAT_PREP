@@ -178,6 +178,14 @@ def item_difficulty_map(min_n: int = 5) -> dict[str, dict]:
     """
     from django.db.models import Count, Q
 
+    # immutable historical rows: cache keyed on the row count so a finalize
+    # (bulk-create) invalidates, everything else reuses — two full-table
+    # GROUP BY scans used to run on every review/result render, growing
+    # linearly with every sitting anyone takes
+    total = ExamResponse.objects.count()
+    cache = globals().get("_DIFF_CACHE")
+    if cache and cache[0] == total:
+        return cache[1]
     rows = (ExamResponse.objects
             .values("item_id")
             .annotate(n=Count("id"),
@@ -201,4 +209,5 @@ def item_difficulty_map(min_n: int = 5) -> dict[str, dict]:
                 entry["top_wrong"] = letter
                 entry["top_wrong_pct"] = int(round(100 * n_wrong / r["n"]))
             out[r["item_id"]] = entry
+    globals()["_DIFF_CACHE"] = (total, out)
     return out

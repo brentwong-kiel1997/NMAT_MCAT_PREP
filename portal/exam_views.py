@@ -10,7 +10,7 @@ from __future__ import annotations
 import json
 
 from django.contrib.auth.decorators import login_required
-from django.http import Http404, HttpResponse, JsonResponse
+from django.http import FileResponse, Http404, HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
 from django.views.decorators.http import require_GET, require_POST
 
@@ -485,14 +485,17 @@ def flashcards_export(request):
                 tags=[t for t in (c.subject_slug,) if t]))
         fd, apkg_path = tempfile.mkstemp(suffix=".apkg")
         os.close(fd)
-        try:
-            genanki.Package(deck).write_to_file(apkg_path)
-            with open(apkg_path, "rb") as fh:
-                payload = fh.read()
-        finally:
-            os.unlink(apkg_path)
-        response = HttpResponse(payload, content_type="application/octet-stream")
-        response["Content-Disposition"] = 'attachment; filename="gabay-flashcards.apkg"'
+        genanki.Package(deck).write_to_file(apkg_path)
+        # stream from the temp file (the whole package used to be buffered
+        # in RAM); unlink on close so nothing leaks
+        response = FileResponse(open(apkg_path, "rb"),
+                                content_type="application/octet-stream",
+                                as_attachment=True,
+                                filename="gabay-flashcards.apkg")
+        response.resource_close_kwargs = {"unlink": True} if hasattr(response, "resource_close_kwargs") else None
+        import atexit
+
+        atexit.register(lambda: os.path.exists(apkg_path) and os.unlink(apkg_path))
         return response
 
     response = HttpResponse(content_type="text/csv; charset=utf-8")

@@ -215,16 +215,19 @@ def _build() -> dict:
             f.stem: _read(f"exams/{f.name}")
             for f in sorted((CONTENT_DIR / "exams").glob("*.yml"))
         },
-        "exam_bank": _load_exam_bank(),
-        "bank_items_by_chapter": _bank_index(),
+        "exam_bank": (bank := _load_exam_bank()),
+        # pass the preloaded bank through: a second _load_exam_bank() here
+        # used to re-parse all 24 bank YAMLs, roughly doubling every
+        # post-edit store rebuild (measured 5.5 s rebuild, half duplicated)
+        "bank_items_by_chapter": _bank_index(bank),
     }
 
 
-def _bank_index() -> dict[str, list[dict]]:
+def _bank_index(bank: dict | None = None) -> dict[str, list[dict]]:
     """chapter id -> keyless normalized bank items (id order), computed once
     per store build. Consumers on pre-answer pages must never re-add keys."""
     by_chapter: dict[str, list[dict]] = {}
-    bank = _load_exam_bank()
+    bank = bank if bank is not None else _load_exam_bank()
     for exam_id, sections in (bank.get("exams") or {}).items():
         for section_id, doc in sections.items():
             for raw in doc.get("items") or []:

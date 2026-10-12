@@ -365,10 +365,11 @@ class FlashcardExportTests(TestCase):
         self.client.force_login(self.user)
         res = self.client.get("/flashcards/export/?format=apkg")
         self.assertEqual(res.status_code, 200)
-        self.assertEqual(res["Content-Type"], "application/octet-stream")
+        self.assertTrue(res["Content-Type"].startswith("application/octet-stream"))
         self.assertTrue(res["Content-Disposition"].endswith('.apkg"'))
-        # apkg is a zip container
-        self.assertEqual(res.content[:2], b"PK")
+        # apkg is a zip container (streaming response)
+        first = next(res.streaming_content)[:2]
+        self.assertEqual(first, b"PK")
 
     def test_export_csv_contents(self):
         from django.utils import timezone
