@@ -30,6 +30,13 @@ def hit(key: str, limit: int, window_seconds: int) -> bool:
     return True
 
 
+def peek_used(key: str) -> int:
+    """How many hits are recorded under `key` (check without recording)."""
+    now = time.monotonic()
+    bucket = [t for t in _hits.get(key, ()) if now - t < 86400]
+    return len(bucket)
+
+
 def reset() -> None:
     """Test helper: clear all counters."""
     _hits.clear()

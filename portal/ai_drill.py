@@ -135,15 +135,20 @@ def validate_questions(questions, max_items: int = 5) -> list[dict]:
         if not isinstance(q, dict):
             problems.append(f"item {n}: not an object")
             continue
-        stem = str(q.get("q") or "").strip()[:2000]
+        # lone surrogates pass json.loads but brick the page at UTF-8
+        # encode time — strip them before any text is validated/stored
+        def _s(v) -> str:
+            return str(v or "").strip()[:2000].encode("utf-8", "ignore").decode("utf-8")
+
+        stem = _s(q.get("q"))
         choices_raw = q.get("choices")
         if not isinstance(choices_raw, dict):
             problems.append(f"q{n}: choices not an object")
             continue
-        choices = {str(k).strip().upper()[:1]: str(v).strip()[:2000]
+        choices = {str(k).strip().upper()[:1]: _s(v)
                    for k, v in choices_raw.items()}
         answer = str(q.get("answer") or "").strip().upper()[:1]
-        explain = str(q.get("explain") or "").strip()[:2000]
+        explain = _s(q.get("explain"))
         if not stem:
             problems.append(f"q{n}: empty stem")
             continue
@@ -193,11 +198,14 @@ def generate_quiz(username: str, mode: str, chapter_id: str | None,
         if not grounding.strip():
             raise RuntimeError("Unknown chapter — pick one from the list.")
 
-    if not hit(f"aidrill:{username}:{timezone.localdate()}",
-               _MAX_SETS_PER_DAY, 86400):
+    # caps count GENERATED SETS, not attempts: peek now, and only record
+    # the hits after the quiz actually persists — a run of malformed model
+    # replies used to burn both counters with nothing to show
+    from .ratelimit import peek_used
+
+    if peek_used(f"aidrill:{username}:{timezone.localdate()}") >= _MAX_SETS_PER_DAY:
         raise RuntimeError("Daily AI-drill limit reached (10 sets) — back tomorrow.")
-    if not hit(f"coach:{username}:{timezone.localdate()}",
-               settings.GABAY_COACH_DAILY_LIMIT, 86400):
+    if peek_used(f"coach:{username}:{timezone.localdate()}") >= settings.GABAY_COACH_DAILY_LIMIT:
         raise RuntimeError("Daily coach limit reached — the AI drill is back tomorrow.")
 
     prompt = _build_prompt(mode, title, grounding, difficulty)
@@ -226,10 +234,15 @@ def generate_quiz(username: str, mode: str, chapter_id: str | None,
         q["id"] = f"ai-{n}"
         q["chapter"] = title
         q["difficulty"] = difficulty
-    return AiQuiz.objects.create(
+    quiz = AiQuiz.objects.create(
         profile=get_or_create_profile(username),
         chapter_id=chapter_id or "", mode=mode, payload=questions,
     )
+    # success: now the generation counts against both daily caps
+    hit(f"aidrill:{username}:{timezone.localdate()}", _MAX_SETS_PER_DAY, 86400)
+    hit(f"coach:{username}:{timezone.localdate()}",
+        settings.GABAY_COACH_DAILY_LIMIT, 86400)
+    return quiz
 
 
 # ---- views -------------------------------------------------------------------

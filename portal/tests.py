@@ -1419,6 +1419,11 @@ class R7MathRegressionTests(TestCase):
     def setUp(self):
         self.user = User.objects.create_user("r7user", password="pw-123456789")
         self.profile = ensure_profile_for_user(self.user)
+        self.client = Client()
+        self.client.force_login(self.user)
+        from . import ratelimit
+
+        ratelimit.reset()
 
     def test_stats_count_only_servable_cards(self):
         from django.utils import timezone
@@ -1467,6 +1472,56 @@ class R7MathRegressionTests(TestCase):
         for a, b in zip(mock_offsets, mock_offsets[1:]):
             self.assertGreaterEqual(b - a, 2,
                                     f"mocks on consecutive days {a},{b}")
+
+
+    def test_failed_generations_do_not_burn_daily_caps(self):
+        """Caps count generated SETS: a run of malformed replies must leave
+        both counters untouched (R8: ten failures used to lock the learner
+        out all day with zero quizzes)."""
+        from unittest.mock import patch
+
+        from . import ai_drill, ratelimit
+        from .models import AiQuiz
+
+        ratelimit.reset()
+        with patch("portal.llm.coach_ready", return_value=True), \
+             patch("portal.llm.chat_completion",
+                   side_effect=["garbage", "still garbage"] * 5):
+            for _ in range(5):
+                with self.assertRaises(RuntimeError):
+                    ai_drill.generate_quiz(self.user.username, "chapter",
+                                           "mechanics")
+        self.assertEqual(AiQuiz.objects.count(), 0)
+        self.assertEqual(
+            ratelimit.peek_used(f"aidrill:{self.user.username}:"
+                                f"{timezone.localdate()}"), 0)
+        self.assertEqual(
+            ratelimit.peek_used(f"coach:{self.user.username}:"
+                                f"{timezone.localdate()}"), 0)
+
+    def test_surrogate_reply_never_bricks_the_quiz_page(self):
+        from unittest.mock import patch
+
+        from . import ai_drill
+
+        bad = json.dumps({"questions": [
+            {"q": f"surrogate \ud800 stem {i}",
+             "choices": {"A": f"opt{i}a", "B": f"opt{i}b",
+                         "C": f"opt{i}c", "D": f"opt{i}d"},
+             "answer": "A", "explain": f"fine \ud800 {i}"}
+            for i in range(4)]})
+        with patch("portal.llm.coach_ready", return_value=True), \
+             patch("portal.llm.chat_completion", side_effect=[bad]):
+            quiz = ai_drill.generate_quiz(self.user.username, "chapter",
+                                          "mechanics")
+        # sanitized at validation: no lone surrogate is stored...
+        for q in quiz.payload:
+            q["q"].encode("utf-8")
+            q["explain"].encode("utf-8")
+        self.assertNotIn("\ud800", quiz.payload[0]["q"])
+        # ...and the page renders instead of 500ing forever
+        res = self.client.get(f"/ai/drill/{quiz.id}/")
+        self.assertEqual(res.status_code, 200)
 
 
 class ContentValidationTests(TestCase):

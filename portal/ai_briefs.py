@@ -101,7 +101,7 @@ def _cached(key: tuple, username: str, prompt: str, max_tokens: int,
 def daily_brief(username: str, due_cards: int, today_tasks: list,
                 refresh: bool = False) -> str:
     """Two-three sentence 'today' nudge for the dashboard."""
-    snap = _snapshot(username)
+    snap = _snapshot(username, refresh=refresh)
     worst = snap["weak"][0] if snap["weak"] else None
     data = (
         f"Due flashcards today: {due_cards}. "
@@ -129,7 +129,7 @@ def exam_eve_brief(username: str, refresh: bool = False) -> str:
     days = (sp.exam_date - timezone.localdate()).days
     if days < 0:
         return ""
-    snap = _snapshot(username)
+    snap = _snapshot(username, refresh=refresh)
     weak_txt = "; ".join("%s %d%%" % (w["title"], w["pct"])
                          for w in snap["weak"][:3]) or "none on record"
     prompt = (

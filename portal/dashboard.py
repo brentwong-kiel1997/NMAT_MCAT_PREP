@@ -173,8 +173,9 @@ def review(request):
 
     # one shared snapshot feeds both briefs (previously each rebuilt it:
     # 26 queries per render); refresh= targets a single card
-    snap = ai_briefs._snapshot(request.user.username)
     refresh = request.GET.get("refresh") or ""
+    snap = ai_briefs._snapshot(request.user.username,
+                               refresh=refresh in ("autopsy", "bridge"))
     autopsy = ai_briefs.miss_autopsy(
         request.user.username, snap=snap, refresh=refresh == "autopsy")
     bridge = ai_briefs.bridge_brief(

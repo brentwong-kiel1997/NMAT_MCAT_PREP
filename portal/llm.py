@@ -218,6 +218,10 @@ def _post(url: str, headers: dict, payload: dict, timeout: int = 90):
         raise RuntimeError(f"{url} HTTP {exc.code}: {body}") from exc
     except urllib.error.URLError as exc:
         raise RuntimeError(f"{url} network error: {exc}") from exc
+    except (TimeoutError, OSError) as exc:
+        # a stalled upstream raises TimeoutError from urlopen/getresponse —
+        # consumers only catch RuntimeError, so normalize at the source
+        raise RuntimeError(f"{url} timeout/network error: {exc}") from exc
 
 
 def _call_openai_style(

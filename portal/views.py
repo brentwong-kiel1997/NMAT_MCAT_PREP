@@ -49,7 +49,9 @@ def api_login_required(view):
 
 
 def _json_for_script(data) -> str:
-    return (json.dumps(data, ensure_ascii=False)
+    # ensure_ascii=True also neutralizes lone surrogates that would raise
+    # UnicodeEncodeError when the response body is encoded
+    return (json.dumps(data, ensure_ascii=True)
             .replace("<", "\\u003c").replace("<!--", "\\u003c!--"))
 
 
