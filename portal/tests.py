@@ -1413,6 +1413,62 @@ class R3EngineRegressionTests(TestCase):
         self.assertFalse(wrong_ids & ft_ids)
 
 
+class R7MathRegressionTests(TestCase):
+    """Round 7: SM-2 / planner math regressions."""
+
+    def setUp(self):
+        self.user = User.objects.create_user("r7user", password="pw-123456789")
+        self.profile = ensure_profile_for_user(self.user)
+
+    def test_stats_count_only_servable_cards(self):
+        from django.utils import timezone
+
+        from .srs import deck_for, srs_stats
+        from .models import SrsCard
+
+        live = deck_for("behavioral-social")[0]
+        SrsCard.objects.create(profile=self.profile, subject_slug="behavioral-social",
+                               card_key=live["key"], front=live["front"],
+                               back=live["back"], chapter=live["chapter"],
+                               interval_days=0, due_date=timezone.localdate())
+        SrsCard.objects.create(profile=self.profile, subject_slug="behavioral-social",
+                               card_key="feedfacefeedface",  # ghost (edited note)
+                               front="orphan", back="", chapter="",
+                               due_date=timezone.localdate())
+        SrsCard.objects.create(profile=self.profile, subject_slug="physics",
+                               card_key="exam:nmat-q7",
+                               front="Stem?\n\n(You answered C. Correct the reasoning.)",
+                               back="Correct: A.", chapter="Waves",
+                               due_date=timezone.localdate())
+        stats = srs_stats(self.user.username)
+        self.assertEqual(stats["due_today"], 2)   # live + miss; ghost excluded
+        self.assertEqual(stats["total"], 3)       # totals keep every row
+
+    def test_planner_days_respect_budget_and_mock_gap(self):
+        import datetime as dt
+
+        from .planner import build_plan
+
+        days = build_plan(exam_id="nmat",
+                          exam_date=dt.date.today() + dt.timedelta(days=30),
+                          weekly_hours=10, done=set(), weak=set())
+        daily = 600 // 7
+        mock_offsets = []
+        for i, d in enumerate(days):
+            # study days only (skip mock/rest days for the budget assertion)
+            if any(t["kind"] == "mock" for t in d["tasks"]):
+                mock_offsets.append(i)
+                continue
+            if any(t["kind"] == "rest" for t in d["tasks"]):
+                continue
+            self.assertLessEqual(
+                d["minutes"], daily,
+                f"day {i} ({d['date']}) over budget: {d['minutes']} > {daily}")
+        for a, b in zip(mock_offsets, mock_offsets[1:]):
+            self.assertGreaterEqual(b - a, 2,
+                                    f"mocks on consecutive days {a},{b}")
+
+
 class ContentValidationTests(TestCase):
     def test_validate_content_green(self):
         call_command("validate_content", verbosity=0)

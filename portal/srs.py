@@ -149,10 +149,28 @@ def grade_card(username: str, subject_slug: str, key: str, front: str,
     return {"ok": True, "interval_days": interval, "due": card.due_date.isoformat()}
 
 
-def srs_stats(username: str) -> dict:
+def srs_stats(username: str, subject_slug: str | None = None) -> dict:
+    """Totals for the header widgets. due_today applies the same liveness
+    filter as due_queue (live deck key OR learner miss card) so the number
+    always matches what the queue can actually serve — ghost rows (edited
+    notes whose key changed) used to inflate it forever. subject_slug
+    scopes both counts to one deck when given."""
     profile = get_or_create_profile(username)
     today = timezone.localdate()
-    total = SrsCard.objects.filter(profile=profile).count()
-    due = (SrsCard.objects.filter(profile=profile,
-                                  due_date__lte=today).count())
+    cards = SrsCard.objects.filter(profile=profile)
+    if subject_slug:
+        cards = cards.filter(subject_slug=subject_slug)
+    total = cards.count()
+
+    live_keys: set[str] = set()
+    for subj in ([subject_slug] if subject_slug else _subjects_with_decks()):
+        live_keys.update(c["key"] for c in deck_for(subj))
+
+    def _is_miss(c) -> bool:
+        return c.card_key.startswith("exam:") or "You answered" in (c.front or "")
+
+    due = sum(
+        1 for c in cards.filter(due_date__lte=today)
+        if c.card_key in live_keys or _is_miss(c)
+    )
     return {"total": total, "due_today": due}

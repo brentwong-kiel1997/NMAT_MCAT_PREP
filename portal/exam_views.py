@@ -516,7 +516,7 @@ def flashcards_hub(request):
 
     subject = request.GET.get("subject") or ""
     queue = due_queue(request.user.username, subject or None)
-    stats = srs_stats(request.user.username)
+    stats = srs_stats(request.user.username, subject or None)
     decks = [{"slug": s, "label": labels().get(s, s)} for s in _subjects_with_decks()]
     return render(request, "portal/flashcards.html", {
         "decks": decks, "active_subject": subject,

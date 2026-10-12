@@ -74,9 +74,14 @@ def build_plan(*, exam_id: str, exam_date: dt.date, weekly_hours: int,
         day = {"date": date.isoformat(), "minutes": 0, "tasks": []}
         remaining_days = days - offset
         # mock cadence: every 14th day, then every 3rd day in the last 10 —
-        # never on the eve of the exam (that day is rest)
-        is_mock_day = ((offset > 0 and offset % 14 == 0 and remaining_days > 1)
-                       or (1 < remaining_days <= 10 and remaining_days % 3 == 0))
+        # never on the eve of the exam (rest) and never on the day after
+        # another mock (two full-length sittings back-to-back burned the
+        # learner out right before exam day)
+        is_mock_day = (
+            (offset > 0 and offset % 14 == 0 and remaining_days > 10)
+            or (1 < remaining_days <= 10 and remaining_days % 3 == 0))
+        if is_mock_day and plan and plan[-1].get("is_mock"):
+            is_mock_day = False  # keep at least one rest day between mocks
         if remaining_days == 1:
             day["tasks"].append({"kind": "rest", "label": "Light review + early night",
                                  "url": "/review/", "minutes": 60, "chapter_id": ""})
@@ -84,22 +89,26 @@ def build_plan(*, exam_id: str, exam_date: dt.date, weekly_hours: int,
             plan.append(day)
             continue
         if is_mock_day:
+            day["is_mock"] = True
             day["tasks"].append({"kind": "mock", "label": f"Full-length {exam_id.upper()} mock exam",
                                  "url": f"/exams/{exam_id}/", "minutes": 240,
                                  "chapter_id": ""})
             day["minutes"] += 240
         budget = daily_minutes - day["minutes"]
-        while budget >= 20 and qi < len(queue):
+        while qi < len(queue):
             entry = queue[qi]
-            mins = task_minutes(entry)
             read_mins = min(45, 20 + 2 * entry["notes"])
+            # admit only what fits — the old `budget >= 20` floor admitted
+            # any task above the theoretical minimum, overshooting the day
+            if read_mins > budget:
+                break
             day["tasks"].append({"kind": "read", "label": f"Read: {entry['title']}",
                                  "url": f"/tutorials/{entry['discipline']}/{entry['chapter_id']}/",
                                  "minutes": read_mins, "chapter_id": entry["chapter_id"]})
             day["minutes"] += read_mins
             budget -= read_mins
-            if entry["practice"] and budget >= 10:
-                drill = 5 + 2 * entry["practice"]
+            drill = 5 + 2 * entry["practice"] if entry["practice"] else 0
+            if drill and drill <= budget:
                 day["tasks"].append({"kind": "drill", "label": f"Drill: {entry['title']} practice",
                                      "url": f"/practice/{subject_slug_for(exam_id, entry['chapter_id'])}/",
                                      "minutes": drill, "chapter_id": entry["chapter_id"]})
