@@ -74,6 +74,9 @@ export GABAY_RUNTIME_DIR="$PWD/runtime"
 # required: the app refuses to start without a secret (never commit one)
 export DJANGO_SECRET_KEY="$(python3 -c 'import secrets; print(secrets.token_urlsafe(64))')"
 
+# dev-only: runserver serves static files and skips secure-cookie flags
+export DJANGO_DEBUG=1
+
 .venv/bin/python manage.py migrate
 .venv/bin/python manage.py ensure_admin --username admin --password <pick-one>
 .venv/bin/python manage.py runserver

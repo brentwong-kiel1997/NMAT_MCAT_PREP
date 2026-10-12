@@ -166,6 +166,7 @@ Environment=DJANGO_CSRF_TRUSTED_ORIGINS=https://127.0.0.1:8888,https://localhost
 ExecReload=/bin/kill -HUP $MAINPID
 ExecStart=/home/ubuntu/runtime/django-wsgi/venv/bin/gunicorn config.wsgi:application \
   --bind 127.0.0.1:8000 \
+  --timeout 120 \
   --workers 2 \
   --access-logfile /home/ubuntu/runtime/django-wsgi/logs/gunicorn.access.log \
   --error-logfile /home/ubuntu/runtime/django-wsgi/logs/gunicorn.error.log
@@ -178,7 +179,20 @@ WantedBy=multi-user.target
 
 ```bash
 sudo systemctl daemon-reload
-sudo systemctl enable gunicorn    # started by the first deploy
+sudo systemctl enable gunicorn
+sudo systemctl start gunicorn
+```
+
+**Passwordless restart for the deploy hooks** — the git hook and the
+GitHub poller call `sudo systemctl reload/restart gunicorn` headless (no
+tty to prompt for a password). Without the rule below, the first push
+swaps the code but the restart fails and the deploy reports an error.
+Create once:
+
+```bash
+echo 'ubuntu ALL=(root) NOPASSWD: /bin/systemctl restart gunicorn, /bin/systemctl reload gunicorn' \
+  | sudo tee /etc/sudoers.d/gabay-deploy
+sudo chmod 440 /etc/sudoers.d/gabay-deploy
 ```
 
 Notes:

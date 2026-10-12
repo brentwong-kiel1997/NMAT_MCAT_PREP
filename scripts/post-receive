@@ -9,11 +9,21 @@
 set -euo pipefail
 
 BARE="/home/ubuntu/repos/django-wsgi.git"
-STAGING="/home/ubuntu/runtime/staging"
+RUNTIME="/home/ubuntu/runtime"
+STAGING="$RUNTIME/staging"
+
+# Serialize with the GitHub poller (it flocks the same file): both channels
+# materialize $STAGING, so an overlapping poll tick deletes this hook's
+# in-flight tree mid-validate and the push falsely reports failure.
+exec 9>"$RUNTIME/poll_github.lock"
+flock 9
 
 rm -rf "$STAGING"
 mkdir -p "$STAGING"
 git --git-dir="$BARE" archive main | tar -x -C "$STAGING"
 
 chmod +x "$STAGING/scripts/deploy.sh" 2>/dev/null || true
+# record the deployed rev so the poller's next tick doesn't re-gate the
+# same commit (it compares against $RUNTIME/last_deploy)
+git --git-dir="$BARE" rev-parse HEAD > "$RUNTIME/last_deploy" 2>/dev/null || true
 exec "$STAGING/scripts/deploy.sh"
